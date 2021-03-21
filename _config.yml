@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
+title: M5Stackを使った自由研究
+subtitle: M5stackを使っていろいろやりたいです。
 description: ''
 keywords:
-author: John Doe
-language: en
-timezone: ''
+author: stemtazoo
+language: jagit
+timezone: Asia/Tokyo
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: https://stemtazoo.github.io
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
