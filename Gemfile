@@ -10,6 +10,8 @@ source "https://rubygems.org"
 gem "jekyll", "~> 4.3.4"
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 # gem "minima", "~> 2.5"
+
+# ローカルでの動作確認時必要。GitHub Pagesにデプロイする場合はコメントアウトする
 # gem "jekyll-theme-yat"
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
@@ -23,7 +25,7 @@ end
 group :jekyll_plugins do
   gem "jekyll-seo-tag", "~> 2.7"
   gem "jekyll-sitemap", "~> 1.4"
-  gem "jekyll-paginate", "~> 2.0" # ページネーションのプラグイン
+  gem "jekyll-paginate", "~> 1.1" # ページネーションのプラグイン
   gem "jekyll-feed", "~> 0.12"    # RSSフィードのプラグイン
 end
 
