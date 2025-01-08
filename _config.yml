@@ -11,6 +11,7 @@
 # If you need help with YAML syntax, here are some quick references for you:
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
+# Website: https://github.com/jeffreytse/jekyll-theme-yat
 #
 # Site settings
 # These are used to personalize your new site. If you look in the HTML files,
@@ -18,21 +19,51 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
-email: your-email@example.com
+title: 初心者のためのPythonデータ分析ガイド
+email: stem.sci.tech.eng.math.2013@gmail.com
+author: stemtazoo
+copyright: "© 2024-{currentYear} <a href='https://github.com/stemtazoo'>{author}</a> | 初心者のためのPythonデータ分析ガイド"
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  仕事や趣味で得たPythonデータ分析の知見を初心者向けに共有。
+  基本から応用まで、誰でも実践できる情報を提供します！
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+
+twitter_username: stemtazoo
+github_username:  stemtazoo
+
+# If you want to link only specific pages in your header, uncomment
+# this and add the path to the pages in order as they should show up
+header_pages:
+  - index.markdown
+#  - archives.html
+#  - categories.html
+#  - tags.html
+  - about.html
+
+# Page default value
+defaults:
+  home:
+    heading: "初心者のためのPythonデータ分析ガイド"
+    subheading: |
+      仕事や趣味で得たPythonデータ分析の知見を初心者向けに共有。
+      基本から応用まで、誰でも実践できる情報を提供します！
+    #banner: "Your image url"
 
 # Build settings
-theme: minima
+# theme: minima
+theme: jekyll-theme-yat
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-spaceship
 
 # Exclude from processing.
 # The following items will not be processed, by default.
