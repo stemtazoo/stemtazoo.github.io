@@ -27,7 +27,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   仕事や趣味で得たPythonデータ分析の知見を初心者向けに共有。
   基本から応用まで、誰でも実践できる情報を提供します！
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://stemtazoo.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 
 twitter_username: stemtazoo
 github_username:  stemtazoo
@@ -52,7 +52,7 @@ defaults:
 
 # Build settings
 # theme: minima
-theme: jekyll-theme-yat
+# theme: jekyll-theme-yat
 
 markdown: kramdown
 kramdown:
@@ -64,6 +64,8 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-spaceship
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Exclude from processing.
 # The following items will not be processed, by default.
