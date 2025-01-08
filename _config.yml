@@ -52,7 +52,7 @@ defaults:
 
 # Build settings
 # theme: minima
-theme: jekyll-theme-yat
+# theme: jekyll-theme-yat
 
 markdown: kramdown
 kramdown:
