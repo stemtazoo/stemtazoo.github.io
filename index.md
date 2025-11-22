@@ -18,10 +18,12 @@ permalink: /
     <p class="tag-filter__label">タグで絞り込む:</p>
     <div class="tag-filter__buttons">
       <button class="tag-button active" data-tag="all">すべて</button>
+
       {% assign tag_pairs = site.tags | sort_natural %}
       {% for tag in tag_pairs %}
         {% assign tag_name = tag[0] %}
         <button class="tag-button" data-tag="{{ tag_name }}">{{ tag_name }}</button>
+
       {% endfor %}
     </div>
   </div>
