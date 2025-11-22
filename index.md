@@ -19,11 +19,10 @@ permalink: /
     <div class="tag-filter__buttons">
       <button class="tag-button active" data-tag="all">すべて</button>
 
-      {% assign tag_pairs = site.tags | sort_natural %}
-      {% for tag in tag_pairs %}
-        {% assign tag_name = tag[0] %}
+      {% assign tag_list = site.posts | map: "tags" | join: "," | split: "," | uniq | sort_natural %}
+      {% assign tag_list = tag_list | reject: "" %}
+      {% for tag_name in tag_list %}
         <button class="tag-button" data-tag="{{ tag_name }}">{{ tag_name }}</button>
-
       {% endfor %}
     </div>
   </div>
