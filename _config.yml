@@ -1,5 +1,28 @@
 remote_theme: pages-themes/cayman@v0.2.0
+
 plugins:
-- jekyll-remote-theme # add this line to the plugins list if you already have one
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
 title: STEMTAZOO Blog
-description: 日々の学びを記録するブログ
+description: G検定対策｜AI・機械学習の用語をやさしく整理するブログ
+lang: ja
+
+# 記事URLを安定させる
+permalink: /:categories/:title/
+
+# G検定用語コレクション
+collections:
+  gk_terms:
+    output: true
+    permalink: /terms/:name/
+
+# Front Matter の省略設定
+defaults:
+  - scope:
+      path: ""
+      type: "gk_terms"
+    values:
+      layout: "post"
+      category: "gk-terms"
