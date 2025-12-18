@@ -160,3 +160,147 @@
     align-items: flex-start;
   }
 }
+
+/* ===== 読みやすさ強化（学習ページ向け） ===== */
+
+/* 本文の横幅を少し絞って読みやすく */
+.post {
+  max-width: 760px;  /* 860px → ちょい細く（好みで720〜820） */
+}
+
+/* 本文の文字・行間 */
+.post-content {
+  line-height: 1.85;
+  font-size: 1.02rem;  /* ほんの少しだけ */
+}
+
+/* 見出しの視認性アップ */
+.post-content h2 {
+  margin-top: 2.2rem;
+  padding-top: 0.2rem;
+  border-bottom: 1px solid #e6ecf1;
+  padding-bottom: 0.4rem;
+}
+
+.post-content h3 {
+  margin-top: 1.6rem;
+}
+
+/* 区切り線をちょいキレイに */
+.post-content hr {
+  border: 0;
+  border-top: 1px solid #e6ecf1;
+  margin: 1.8rem 0;
+}
+
+/* 箇条書きの読みやすさ */
+.post-content ul,
+.post-content ol {
+  padding-left: 1.2rem;
+}
+.post-content li {
+  margin: 0.35rem 0;
+}
+
+/* 引用（⚠️ひっかけブロック）を“カード風”に */
+.post-content blockquote {
+  background: #f6fbff;
+  border-left: 4px solid #1e90ff;
+  border-radius: 10px;
+  padding: 0.9rem 1.1rem;
+  margin: 1.2rem 0;
+}
+
+/* 表がスマホで崩れにくくなる（横スクロール） */
+.post-content table {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+  border-collapse: collapse;
+}
+.post-content th,
+.post-content td {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #e6ecf1;
+}
+.post-content th {
+  background: #f8fafc;
+}
+
+/* コード（単語）を見やすく */
+.post-content code {
+  background: #f3f6fa;
+  border: 1px solid #e6ecf1;
+  border-radius: 6px;
+  padding: 0.1rem 0.35rem;
+}
+
+/* 画像がはみ出ないように */
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* スマホの余白を少し増やして読みやすく */
+@media (max-width: 768px) {
+  .post {
+    padding: 1.5rem 1.15rem;
+  }
+  .post-content {
+    font-size: 1rem;
+  }
+}
+
+/* ===== ページ / 記事 両対応 ===== */
+
+.post,
+.page {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.post-content,
+.page-content {
+  line-height: 1.85;
+  font-size: 1.02rem;
+}
+
+/* 見出し */
+.post-content h2,
+.page-content h2 {
+  margin-top: 2.2rem;
+  border-bottom: 1px solid #e6ecf1;
+  padding-bottom: 0.4rem;
+}
+
+.post-content h3,
+.page-content h3 {
+  margin-top: 1.6rem;
+}
+
+/* 区切り線 */
+.post-content hr,
+.page-content hr {
+  border: 0;
+  border-top: 1px solid #e6ecf1;
+  margin: 1.8rem 0;
+}
+
+/* 引用（ひっかけ） */
+.post-content blockquote,
+.page-content blockquote {
+  background: #f6fbff;
+  border-left: 4px solid #1e90ff;
+  border-radius: 10px;
+  padding: 0.9rem 1.1rem;
+  margin: 1.2rem 0;
+}
+
+/* 表 */
+.post-content table,
+.page-content table {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+}
