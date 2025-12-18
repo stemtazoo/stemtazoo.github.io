@@ -304,3 +304,59 @@
   overflow-x: auto;
   white-space: nowrap;
 }
+
+/* ===== 固定ページ（pages）にも確実に効かせる ===== */
+
+/* 本文幅・行間（posts / pages 両対応） */
+.post-content,
+.page-content,
+.content {
+  max-width: 760px;
+  margin: 0 auto;
+  line-height: 1.85;
+  font-size: 1.02rem;
+}
+
+/* 見出し */
+.post-content h2,
+.page-content h2,
+.content h2 {
+  margin-top: 2.2rem;
+  border-bottom: 1px solid #e6ecf1;
+  padding-bottom: 0.4rem;
+}
+
+.post-content h3,
+.page-content h3,
+.content h3 {
+  margin-top: 1.6rem;
+}
+
+/* 区切り線 */
+.post-content hr,
+.page-content hr,
+.content hr {
+  border: 0;
+  border-top: 1px solid #e6ecf1;
+  margin: 1.8rem 0;
+}
+
+/* ひっかけブロック */
+.post-content blockquote,
+.page-content blockquote,
+.content blockquote {
+  background: #f6fbff;
+  border-left: 4px solid #1e90ff;
+  border-radius: 10px;
+  padding: 0.9rem 1.1rem;
+  margin: 1.2rem 0;
+}
+
+/* 表（スマホ対応） */
+.post-content table,
+.page-content table,
+.content table {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+}
