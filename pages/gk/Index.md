@@ -4,8 +4,16 @@ title: G検定 用語集
 permalink: /gk/
 ---
 
-## 分野別まとめ
-- [教師あり学習](/gk/supervised-learning/)
-- [教師なし学習](/gk/unsupervised-learning/)
-- [強化学習](/gk/reinforcement-learning/)
-- [機械学習3手法の比較まとめ](/gk/learning-types-comparison/)
+## 機械学習 分野別まとめ
+
+{% raw %}
+<ul>
+{% for page in site.pages %}
+  {% if page.url contains "/gk/" and page.url != "/gk/" %}
+    <li>
+      <a href="{{ page.url }}">{{ page.title }}</a>
+    </li>
+  {% endif %}
+{% endfor %}
+</ul>
+{% endraw %}
