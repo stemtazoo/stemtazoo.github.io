@@ -8,3 +8,4 @@ permalink: /gk/
 - [教師あり学習](/gk/supervised-learning/)
 - [教師なし学習](/gk/unsupervised-learning/)
 - [強化学習](/gk/reinforcement-learning/)
+- [機械学習3手法の比較まとめ](/gk/learning-types-comparison/)
