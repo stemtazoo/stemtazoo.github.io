@@ -7,4 +7,4 @@ permalink: /gk/
 ## 分野別まとめ
 - [教師あり学習](/gk/supervised-learning/)
 - [教師なし学習](/gk/unsupervised-learning/)
-- 強化学習（準備中）
+- [強化学習](/gk/reinforcement-learning/)
