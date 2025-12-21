@@ -3,7 +3,7 @@ layout: page
 title: 評価指標まとめ（チートシート）
 permalink: /gk/metrics-summary/
 tags: [gk, 機械学習, 評価指標, まとめ, 頻出]
--------------------------------
+---
 
 # 評価指標まとめ（チートシート）
 
