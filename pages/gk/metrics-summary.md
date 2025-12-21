@@ -1,5 +1,4 @@
 ---
-
 layout: page
 title: 評価指標まとめ（チートシート）
 permalink: /gk/metrics-summary/
