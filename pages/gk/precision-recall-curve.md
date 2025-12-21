@@ -5,8 +5,6 @@ permalink: /gk/precision-recall-curve/
 tags: [gk, 機械学習, 評価指標, 頻出]
 ---
 
-# Precision–Recall曲線
-
 ## まず結論
 
 Precision–Recall（PR）曲線は、**しきい値を変化させたときの Precision（適合率）と Recall（再現率）の関係**を表すグラフです。
