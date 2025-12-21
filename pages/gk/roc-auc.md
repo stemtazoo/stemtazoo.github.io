@@ -1,11 +1,8 @@
-
 ---
-
-layout: page title: ROC曲線・AUC permalink: /gk/roc-auc/ tags: [gk, 機械学習, 評価指標, 頻出]
-
-ROC曲線・AUC
-
-
+layout: page 
+title: ROC曲線・AUC 
+permalink: /gk/roc-auc/ 
+tags: [gk, 機械学習, 評価指標, 頻出]
 ---
 
 まず結論
