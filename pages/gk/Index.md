@@ -2,14 +2,82 @@
 layout: page
 title: G検定 用語集
 permalink: /gk/
+tags: [gk]
+# 表示順はここで固定（/gk/〇〇/ ＝ pages/gk/〇〇.md）
+gk_sections:
+  - title: "機械学習の基本"
+    items:
+      - /gk/supervised-learning/
+      - /gk/unsupervised-learning/
+      - /gk/reinforcement-learning/
+      - /gk/learning-types-comparison/
+
+  - title: "評価指標（基本）"
+    items:
+      - /gk/confusion-matrix/
+      - /gk/accuracy/
+      - /gk/precision/
+      - /gk/recall/
+      - /gk/f1-score/
+      - /gk/roc-auc/
+      - /gk/precision-recall-curve/
+      - /gk/metrics-summary/
+
+  - title: "ニューラルネットワーク基礎"
+    items:
+      - /gk/perceptron/
+      - /gk/mlp/
+      - /gk/activation-functions/
+      - /gk/backpropagation/
+      - /gk/optimizers/
+      - /gk/regularization/
+      - /gk/batch-epoch/
+
+  - title: "CNN（画像認識）"
+    items:
+      - /gk/cnn/
+      - /gk/convolution/
+      - /gk/pooling/
+      - /gk/cnn-models/
+
+  - title: "RNN・系列モデル"
+    items:
+      - /gk/rnn/
+      - /gk/vanishing-exploding-gradient/
+      - /gk/lstm/
+      - /gk/gru/
+
+  - title: "Attention・Transformer・Embedding"
+    items:
+      - /gk/attention/
+      - /gk/transformer/
+      - /gk/embedding-word2vec/
+
+  - title: "チートシート（試験直前）"
+    items:
+      - /gk/nn-cheatsheet/
+      - /gk/nn-final-cheatsheet/
 ---
+
+{% comment %}
+  gk_sections に書いた URL から対応する page を引く
+  見つからない場合は赤字で表示（permalink/url の不一致検出）
+{% endcomment %}
 
 ## 機械学習 分野別まとめ
 
+{% for sec in page.gk_sections %}
+### {{ sec.title }}
+
 <ul>
-{% for page in site.pages %}
-  {% if page.url contains "/gk/" and page.url != "/gk/" %}
-    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+{% for url in sec.items %}
+  {% assign p = site.pages | where: "url", url | first %}
+  {% if p %}
+    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% else %}
+    <li><span style="color:#c00">{{ url }}（ページが見つかりません：permalink/url要確認）</span></li>
   {% endif %}
 {% endfor %}
 </ul>
+
+{% endfor %}
