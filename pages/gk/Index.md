@@ -59,6 +59,7 @@ gk_sections:
       - /gk/faster-r-cnn/
       - /gk/yolo/
       - /gk/rcnn-fast-rcnn/
+      - /gk/anchor-defaultbox-rpn/
         
   - title: "チートシート（試験直前）"
     items:
