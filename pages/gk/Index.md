@@ -60,6 +60,7 @@ gk_sections:
       - /gk/yolo/
       - /gk/rcnn-fast-rcnn/
       - /gk/anchor-defaultbox-rpn/
+      - /gk/object-detection-summary/
         
   - title: "チートシート（試験直前）"
     items:
