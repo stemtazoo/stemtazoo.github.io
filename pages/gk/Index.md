@@ -57,6 +57,7 @@ gk_sections:
     items:
       - /gk/ssd/
       - /gk/faster-r-cnn/
+      - /gk/yolo/
         
   - title: "チートシート（試験直前）"
     items:
