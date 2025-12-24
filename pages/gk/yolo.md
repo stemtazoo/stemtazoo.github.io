@@ -2,7 +2,7 @@
 layout: page
 title: YOLO（You Only Look Once）
 permalink: /gk/yolo/
-tags:[gk, 画像認識, 物体検出]
+tags: [gk, 画像認識, 物体検出]
 ---
 
 ## まず結論
