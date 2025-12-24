@@ -56,7 +56,7 @@ gk_sections:
   - title: "物体検出"
     items:
       - /gk/ssd/
-      - /gk/
+      - /gk/faster-r-cnn/
         
   - title: "チートシート（試験直前）"
     items:
