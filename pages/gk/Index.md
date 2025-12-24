@@ -58,6 +58,7 @@ gk_sections:
       - /gk/ssd/
       - /gk/faster-r-cnn/
       - /gk/yolo/
+      - /gk/rcnn-fast-rcnn/
         
   - title: "チートシート（試験直前）"
     items:
