@@ -52,7 +52,12 @@ gk_sections:
       - /gk/attention/
       - /gk/transformer/
       - /gk/embedding-word2vec/
-
+        
+  - title: "物体検出"
+    items:
+      - /gk/ssd/
+      - /gk/
+        
   - title: "チートシート（試験直前）"
     items:
       - /gk/nn-cheatsheet/
