@@ -2,11 +2,7 @@
 layout: page
 title: SSD（Single Shot MultiBox Detector）
 permalink: /gk/ssd/
-tags:
-
-* G検定
-* 画像認識
-* 物体検出
+tags: [gk, 画像認識, 物体検出]
 ---
 
 ## まず結論
