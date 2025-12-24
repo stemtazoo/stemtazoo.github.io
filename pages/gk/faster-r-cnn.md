@@ -2,8 +2,7 @@
 layout: page
 title: Faster R-CNN
 permalink: /gk/faster-r-cnn/
-
-
+tags: [gk, 画像認識, 物体検出]
 ---
 
 ## まず結論
