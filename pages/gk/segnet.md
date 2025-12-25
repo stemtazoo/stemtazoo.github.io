@@ -3,7 +3,7 @@ layout: page
 title: SegNet（セマンティックセグメンテーション）
 permalink: /gk/segnet/
 tags: [gk, neural_network, cnn]
--------------------------------
+---
 
 ## まず結論
 
