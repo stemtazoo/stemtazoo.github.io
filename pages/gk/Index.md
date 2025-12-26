@@ -80,6 +80,7 @@ gk_sections:
   - title: "ディープラーニングの要素技術"
     items:
       - /gk/encoder-decoder/
+      - /gk/lstm-cec/
 
   - title: "ディープラーニングの応用例"
     items:
