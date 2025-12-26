@@ -80,6 +80,7 @@ gk_sections:
   - title: "人工知能をめぐる動向"
     items:
       - /gk/classical-ai/
+      - /gk/knowledge-representation/
   
   - title: "機械学習の具体的手法"
     items:
