@@ -123,6 +123,10 @@ gk_sections:
       - /gk/search-vs-ml-cheatsheet/
       - /gk/ai-ethics-cheatsheet/
       - /gk/speech-recognition-cheatsheet/
+      - 
+  - title: "ひっかけ問題集"
+    items:
+      - /gk/trick-questions-1/
 ---
 
 {% comment %}
