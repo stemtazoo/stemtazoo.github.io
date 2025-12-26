@@ -135,6 +135,7 @@ gk_sections:
   - title: "ひっかけ問題集"
     items:
       - /gk/trick-questions-1/
+      - /gk/trick-questions-xai-1/
 ---
 
 {% comment %}
