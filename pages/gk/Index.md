@@ -76,7 +76,11 @@ gk_sections:
     items:
       - /gk/search-and-inference/
       - /gk/search-vs-rl/
-       
+
+  - title: "ディープラーニングの応用例"
+    items:
+      - /gk/xai-explainability/
+        
   - title: "チートシート（試験直前）"
     items:
       - /gk/nn-cheatsheet/
