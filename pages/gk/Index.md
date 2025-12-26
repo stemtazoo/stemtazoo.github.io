@@ -61,6 +61,12 @@ gk_sections:
       - /gk/rcnn-fast-rcnn/
       - /gk/anchor-defaultbox-rpn/
       - /gk/object-detection-summary/
+
+  - title: "セグメンテーションタスク"
+    items:
+      - /gk/segnet/
+      - /gk/u-net/
+      - /gk/fcn/
         
   - title: "チートシート（試験直前）"
     items:
