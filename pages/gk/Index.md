@@ -108,6 +108,7 @@ gk_sections:
     items:
       - /gk/edge-ai/
       - /gk/edge-vs-cloud-ai/
+      - /gk/crisp-dm/
         
   - title: "AIの法律と倫理"
     items:
