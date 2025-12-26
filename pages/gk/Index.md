@@ -71,6 +71,10 @@ gk_sections:
       - /gk/u-net/
       - /gk/fcn/
       - /gk/segmentation-cheatsheet/
+
+  - title: "機械学習の具体的手法"
+    items:
+      - /gk/search-and-inference/
        
   - title: "チートシート（試験直前）"
     items:
