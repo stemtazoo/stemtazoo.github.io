@@ -74,6 +74,7 @@ gk_sections:
         
   - title: "人工知能（AI）とは"
     items:
+      - /gk/ai-booms-cheatsheet/
       - /gk/second-ai-boom/
   
   - title: "機械学習の具体的手法"
