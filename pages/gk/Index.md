@@ -84,6 +84,7 @@ gk_sections:
   - title: "ディープラーニングの応用例"
     items:
       - /gk/xai-explainability/
+      - /gk/efficientnet/
         
   - title: "AIの法律と倫理"
     items:
