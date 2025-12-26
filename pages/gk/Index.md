@@ -84,6 +84,7 @@ gk_sections:
   - title: "AIの法律と倫理"
     items:
       - /gk/fairness-bias/
+      - /gk/privacy-data-protection/
         
   - title: "チートシート（試験直前）"
     items:
