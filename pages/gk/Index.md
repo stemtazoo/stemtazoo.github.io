@@ -85,6 +85,7 @@ gk_sections:
     items:
       - /gk/xai-explainability/
       - /gk/efficientnet/
+
         
   - title: "AIの法律と倫理"
     items:
@@ -99,6 +100,7 @@ gk_sections:
       - /gk/nn-final-cheatsheet/
       - /gk/search-vs-ml-cheatsheet/
       - /gk/ai-ethics-cheatsheet/
+      - /gk/speech-recognition-cheatsheet/
 ---
 
 {% comment %}
