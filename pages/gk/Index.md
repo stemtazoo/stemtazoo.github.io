@@ -91,6 +91,7 @@ gk_sections:
       - /gk/nn-cheatsheet/
       - /gk/nn-final-cheatsheet/
       - /gk/search-vs-ml-cheatsheet/
+      - /gk/ai-ethics-cheatsheet/
 ---
 
 {% comment %}
