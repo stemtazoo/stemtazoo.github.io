@@ -107,6 +107,7 @@ gk_sections:
       - /gk/xai-explainability/
       - /gk/efficientnet/
       - /gk/cam-grad-cam/
+      - /gk/xai-summary/
 
   - title: "AIの社会実装に向けて"
     items:
