@@ -76,7 +76,11 @@ gk_sections:
     items:
       - /gk/search-and-inference/
       - /gk/search-vs-rl/
-
+        
+  - title: "ディープラーニングの概要"
+    items:
+      - /gk/leaky-relu/
+        
   - title: "ディープラーニングの要素技術"
     items:
       - /gk/encoder-decoder/
