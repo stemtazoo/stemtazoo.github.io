@@ -21,6 +21,7 @@ gk_sections:
       - /gk/f1-score/
       - /gk/roc-auc/
       - /gk/precision-recall-curve/
+      - /gk/rmse-mae/
       - /gk/metrics-summary/
 
   - title: "ニューラルネットワーク基礎"
