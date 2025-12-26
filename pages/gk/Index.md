@@ -90,6 +90,7 @@ gk_sections:
   - title: "AIの社会実装に向けて"
     items:
       - /gk/edge-ai/
+      - /gk/edge-vs-cloud-ai/
         
   - title: "AIの法律と倫理"
     items:
