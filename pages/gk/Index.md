@@ -67,6 +67,7 @@ gk_sections:
       - /gk/segnet/
       - /gk/u-net/
       - /gk/fcn/
+      - /gk/segmentation-cheatsheet/
         
   - title: "チートシート（試験直前）"
     items:
