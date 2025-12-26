@@ -77,6 +77,10 @@ gk_sections:
       - /gk/search-and-inference/
       - /gk/search-vs-rl/
 
+  - title: "ディープラーニングの要素技術"
+    items:
+      - /gk/encoder-decoder/
+
   - title: "ディープラーニングの応用例"
     items:
       - /gk/xai-explainability/
