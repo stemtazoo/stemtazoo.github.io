@@ -80,6 +80,7 @@ gk_sections:
   - title: "ディープラーニングの概要"
     items:
       - /gk/leaky-relu/
+      - /gk/relu-family-cheatsheet/
         
   - title: "ディープラーニングの要素技術"
     items:
