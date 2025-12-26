@@ -87,6 +87,9 @@ gk_sections:
       - /gk/xai-explainability/
       - /gk/efficientnet/
 
+  - title: "AIの社会実装に向けて"
+    items:
+      - /gk/edge-ai/
         
   - title: "AIの法律と倫理"
     items:
