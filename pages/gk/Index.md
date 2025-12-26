@@ -23,8 +23,8 @@ gk_sections:
       - /gk/precision-recall-curve/
       - /gk/metrics-summary/
       - /gk/rmse-mae/
-      - /gk/regression-metrics-cheatsheet
-      - /gk/regression-vs-classification
+      - /gk/regression-metrics-cheatsheet/
+      - /gk/regression-vs-classification/
 
   - title: "ニューラルネットワーク基礎"
     items:
@@ -71,7 +71,11 @@ gk_sections:
       - /gk/u-net/
       - /gk/fcn/
       - /gk/segmentation-cheatsheet/
-        
+
+　- title: "セグメンテーションタスク"
+    items:
+      - /gk/search-and-inference/
+       
   - title: "チートシート（試験直前）"
     items:
       - /gk/nn-cheatsheet/
