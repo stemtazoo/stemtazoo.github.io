@@ -80,6 +80,7 @@ gk_sections:
     items:
       - /gk/nn-cheatsheet/
       - /gk/nn-final-cheatsheet/
+      - /gk/search-vs-ml-cheatsheet/
 ---
 
 {% comment %}
