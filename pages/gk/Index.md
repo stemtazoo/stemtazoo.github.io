@@ -71,10 +71,6 @@ gk_sections:
       - /gk/u-net/
       - /gk/fcn/
       - /gk/segmentation-cheatsheet/
-
-　- title: "その他"
-    items:
-      - /gk/search-and-inference/
        
   - title: "チートシート（試験直前）"
     items:
