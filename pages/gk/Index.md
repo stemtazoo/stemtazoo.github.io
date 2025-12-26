@@ -97,6 +97,7 @@ gk_sections:
   - title: "ディープラーニングの要素技術"
     items:
       - /gk/dilated-convolution/
+      - /gk/pooling-stride-dilation/
       - /gk/encoder-decoder/
       - /gk/lstm-cec/
 
