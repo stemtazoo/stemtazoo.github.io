@@ -72,7 +72,7 @@ gk_sections:
       - /gk/fcn/
       - /gk/segmentation-cheatsheet/
 
-　- title: "セグメンテーションタスク"
+　- title: "その他"
     items:
       - /gk/search-and-inference/
        
