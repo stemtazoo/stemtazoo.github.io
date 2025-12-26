@@ -86,6 +86,7 @@ gk_sections:
       - /gk/fairness-bias/
       - /gk/privacy-data-protection/
       - /gk/safety-robustness/
+      - /gk/ai-governance/
         
   - title: "チートシート（試験直前）"
     items:
