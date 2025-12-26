@@ -108,6 +108,7 @@ gk_sections:
       - /gk/efficientnet/
       - /gk/cam-grad-cam/
       - /gk/xai-summary/
+      - /gk/lime-vs-shap/
 
   - title: "AIの社会実装に向けて"
     items:
