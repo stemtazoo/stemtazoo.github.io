@@ -81,6 +81,10 @@ gk_sections:
     items:
       - /gk/xai-explainability/
         
+  - title: "AIの法律と倫理"
+    items:
+      - /gk/fairness-bias/
+        
   - title: "チートシート（試験直前）"
     items:
       - /gk/nn-cheatsheet/
