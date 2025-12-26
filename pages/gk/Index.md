@@ -100,6 +100,7 @@ gk_sections:
       - /gk/pooling-stride-dilation/
       - /gk/encoder-decoder/
       - /gk/lstm-cec/
+      - /gk/global-average-pooling/
 
   - title: "ディープラーニングの応用例"
     items:
