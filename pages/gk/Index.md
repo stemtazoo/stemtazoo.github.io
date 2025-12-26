@@ -81,6 +81,7 @@ gk_sections:
     items:
       - /gk/classical-ai/
       - /gk/knowledge-representation/
+      - /gk/classical-ai-vs-ml/
   
   - title: "機械学習の具体的手法"
     items:
