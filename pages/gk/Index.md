@@ -77,6 +77,10 @@ gk_sections:
       - /gk/ai-booms-cheatsheet/
       - /gk/second-ai-boom/
   
+  - title: "人工知能をめぐる動向"
+    items:
+      - /gk/classical-ai/
+  
   - title: "機械学習の具体的手法"
     items:
       - /gk/search-and-inference/
