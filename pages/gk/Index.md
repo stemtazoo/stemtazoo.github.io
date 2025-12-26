@@ -75,6 +75,7 @@ gk_sections:
   - title: "機械学習の具体的手法"
     items:
       - /gk/search-and-inference/
+      - /gk/search-vs-rl/
        
   - title: "チートシート（試験直前）"
     items:
