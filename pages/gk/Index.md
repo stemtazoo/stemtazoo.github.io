@@ -114,6 +114,7 @@ gk_sections:
       - /gk/dcgan/
       - /gk/gan-variants/
       - /gk/gan-vs-vae/
+      - /gk/diffusion-model/
 
   - title: "AIの社会実装に向けて"
     items:
