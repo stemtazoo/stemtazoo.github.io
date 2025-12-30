@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 個人情報保護法まとめ（G検定対策）
-permalink: /gk/personal-information-protection-law/
+permalink: /gk/personal-information-protection-law-cheatsheet/
 tags: [gk, ethics, privacy, cheatsheet]
 ---
 
