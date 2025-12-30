@@ -127,6 +127,7 @@ gk_sections:
         items:
           - /gk/bert/
           - /gk/gpt/
+          - /gk/bert-vs-gpt/
 
   - title: "AIの社会実装に向けて"
     items:
