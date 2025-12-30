@@ -7,10 +7,7 @@ tags: [gk]
 gk_sections:
   - title: "機械学習の基本"
     items:
-      - /gk/supervised-learning/
-      - /gk/unsupervised-learning/
-      - /gk/reinforcement-learning/
-      - /gk/learning-types-comparison/
+
 
   - title: "評価指標（基本）"
     items:
@@ -76,6 +73,10 @@ gk_sections:
   
   - title: "機械学習の具体的手法"
     items:
+      - /gk/supervised-learning/
+      - /gk/unsupervised-learning/
+      - /gk/reinforcement-learning/
+      - /gk/learning-types-comparison/
       - /gk/search-and-inference/
       - /gk/search-vs-rl/
       - /gk/overfitting/
