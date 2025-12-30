@@ -118,11 +118,11 @@ gk_sections:
           - /gk/cnn-vs-transformer/
           - /gk/cnn-architectures-comparison/
           - /gk/image-tasks-summary/
-    subsections:
+
       - title: "音声処理"
         items:
           - /gk/timbre-mfcc/
-    subsections:
+
       - title: "自然言語処理"
         items:
           - /gk/bert/
