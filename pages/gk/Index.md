@@ -138,6 +138,7 @@ gk_sections:
       - /gk/mlops/
       - /gk/devops/
       - /gk/roles-in-ml/
+      - /gk/ml-project-lifecycle/
 
   - title: "AIの法律と倫理"
     items:
