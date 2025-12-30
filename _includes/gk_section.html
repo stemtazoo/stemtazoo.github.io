@@ -1,6 +1,17 @@
-{% if include.sec %}
+{% comment %}
+  gk_section.html
+  - sec: {title, items}
+  - items: 表示したいURL配列（任意）。指定があればそれだけ表示
+{% endcomment %}
+
+{% assign list = include.sec.items %}
+{% if include.items %}
+  {% assign list = include.items %}
+{% endif %}
+
+{% if include.sec and list %}
 <ul>
-{% for url in include.sec.items %}
+{% for url in list %}
   {% assign p = site.pages | where: "url", url | first %}
   {% if p %}
     <li><a href="{{ p.url }}">{{ p.title }}</a></li>
