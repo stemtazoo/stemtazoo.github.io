@@ -178,20 +178,52 @@ gk_sections:
   見つからない場合は赤字で表示（permalink/url の不一致検出）
 {% endcomment %}
 
-## 機械学習 分野別まとめ
+## 技術分野
 
-{% for sec in page.gk_sections %}
-### {{ sec.title }}
+## 人工知能とは
+{% assign sec = page.gk_sections | where: "title", "人工知能（AI）とは" | first %}
+{% include gk_section.html sec=sec %}
 
-<ul>
-{% for url in sec.items %}
-  {% assign p = site.pages | where: "url", url | first %}
-  {% if p %}
-    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
-  {% else %}
-    <li><span style="color:#c00">{{ url }}（ページが見つかりません：permalink/url要確認）</span></li>
-  {% endif %}
-{% endfor %}
+## 人工知能をめぐる動向
+{% assign sec = page.gk_sections | where: "title", "人工知能をめぐる動向" | first %}
+{% include gk_section.html sec=sec %}
+
+## 機械学習の概要
+{% assign sec = page.gk_sections | where: "title", "機械学習の基本" | first %}
+{% include gk_section.html sec=sec %}
+
+## ディープラーニングの概要
+{% assign sec = page.gk_sections | where: "title", "ディープラーニングの概要" | first %}
+{% include gk_section.html sec=sec %}
+
+## ディープラーニングの要素技術
+{% assign sec = page.gk_sections | where: "title", "ディープラーニングの要素技術" | first %}
+{% include gk_section.html sec=sec %}
+
+## ディープラーニングの応用例
+{% assign sec = page.gk_sections | where: "title", "ディープラーニングの応用例" | first %}
+{% include gk_section.html sec=sec %}
+
+## AIの社会実装に向けて
+{% assign sec = page.gk_sections | where: "title", "AIの社会実装に向けて" | first %}
+{% include gk_section.html sec=sec %}
+
+---
+
+## 法律・倫理分野
+
+## AI倫理・AIガバナンス
+{% assign sec = page.gk_sections | where: "title", "AIの法律と倫理" | first %}
+{% include gk_section.html sec=sec %}
+
+## チートシート（試験直前）
+{% assign sec = page.gk_sections | where: "title", "チートシート（試験直前）" | first %}
+{% include gk_section.html sec=sec %}
+
+## ひっかけ問題集
+{% assign sec = page.gk_sections | where: "title", "ひっかけ問題集" | first %}
+{% include gk_section.html sec=sec %}
+
 </ul>
 
 {% endfor %}
