@@ -187,6 +187,7 @@ gk_sections:
   - [AIの社会実装に向けて](#aiの社会実装に向けて)
 - [法律・倫理分野](#法律倫理分野)
   - [AI倫理・AIガバナンス](#ai倫理aiガバナンス)
+- [試験対策](#試験対策)
   - [チートシート（試験直前）](#チートシート試験直前)
   - [ひっかけ問題集](#ひっかけ問題集)
 
@@ -229,6 +230,10 @@ gk_sections:
 ## AI倫理・AIガバナンス
 {% assign sec = page.gk_sections | where: "title", "AIの法律と倫理" | first %}
 {% include gk_section.html sec=sec %}
+
+---
+
+## 試験対策
 
 ## チートシート（試験直前）
 {% assign sec = page.gk_sections | where: "title", "チートシート（試験直前）" | first %}
