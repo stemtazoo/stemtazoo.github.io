@@ -1,6 +1,6 @@
 ---
 layout: page
-title: G検定 用語集
+title: G検定 学習まとめ
 permalink: /gk/
 tags: [gk]
 
