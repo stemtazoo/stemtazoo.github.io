@@ -90,6 +90,7 @@ gk_sections:
       - /gk/search-vs-rl/
       - /gk/overfitting/
       - /gk/underfitting/
+      - /gk/learning-curve/
         
   - title: "ディープラーニングの概要"
     items:
