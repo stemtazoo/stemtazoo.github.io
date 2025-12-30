@@ -101,6 +101,7 @@ gk_sections:
       - /gk/encoder-decoder/
       - /gk/lstm-cec/
       - /gk/global-average-pooling/
+      - /gk/activation-derivative/
 
   - title: "ディープラーニングの応用例"
     items:
