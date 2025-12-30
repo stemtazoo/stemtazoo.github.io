@@ -134,6 +134,7 @@ gk_sections:
       - /gk/cnn-cheatsheet/
       - /gk/cnn-vs-transformer/
       - /gk/cnn-architectures-comparison/
+      - /gk/image-tasks-summary/
 
   - title: "AIの社会実装に向けて"
     items:
