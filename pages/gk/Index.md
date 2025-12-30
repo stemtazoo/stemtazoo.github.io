@@ -105,6 +105,7 @@ gk_sections:
       - /gk/learning-rate-scheduling/
       - /gk/regularization/
       - /gk/pruning/
+      - /gk/model-compression/
         
   - title: "ディープラーニングの要素技術"
     items:
