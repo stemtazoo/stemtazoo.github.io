@@ -164,14 +164,44 @@ gk_sections:
 {% include gk_section.html sec=sec %}
 
 ## 機械学習の概要
+{% assign ml = page.gk_sections | where: "title", "機械学習の概要" | first %}
 
 ### 代表的な手法
-{% assign sec = page.gk_sections | where: "title", "機械学習の基本" | first %}
-{% include gk_section.html sec=sec %}
+{% assign ml_methods = "" | split: "" %}
+{% assign ml_methods = ml_methods | push: "/gk/supervised-learning/" %}
+{% assign ml_methods = ml_methods | push: "/gk/unsupervised-learning/" %}
+{% assign ml_methods = ml_methods | push: "/gk/reinforcement-learning/" %}
+{% assign ml_methods = ml_methods | push: "/gk/learning-types-comparison/" %}
+{% include gk_section.html sec=ml items=ml_methods %}
 
 ### モデルの選択・評価
-{% assign sec = page.gk_sections | where: "title", "評価指標（基本）" | first %}
-{% include gk_section.html sec=sec %}
+{% assign ml_eval = "" | split: "" %}
+{% assign ml_eval = ml_eval | push: "/gk/confusion-matrix/" %}
+{% assign ml_eval = ml_eval | push: "/gk/accuracy/" %}
+{% assign ml_eval = ml_eval | push: "/gk/precision/" %}
+{% assign ml_eval = ml_eval | push: "/gk/recall/" %}
+{% assign ml_eval = ml_eval | push: "/gk/f1-score/" %}
+{% assign ml_eval = ml_eval | push: "/gk/roc-auc/" %}
+{% assign ml_eval = ml_eval | push: "/gk/precision-recall-curve/" %}
+{% assign ml_eval = ml_eval | push: "/gk/metrics-summary/" %}
+{% assign ml_eval = ml_eval | push: "/gk/rmse-mae/" %}
+{% assign ml_eval = ml_eval | push: "/gk/regression-metrics-cheatsheet/" %}
+{% assign ml_eval = ml_eval | push: "/gk/regression-vs-classification/" %}
+{% include gk_section.html sec=ml items=ml_eval %}
+
+### よくあるつまずき（過学習など）
+{% assign ml_pitfalls = "" | split: "" %}
+{% assign ml_pitfalls = ml_pitfalls | push: "/gk/overfitting/" %}
+{% assign ml_pitfalls = ml_pitfalls | push: "/gk/underfitting/" %}
+{% assign ml_pitfalls = ml_pitfalls | push: "/gk/learning-curve/" %}
+{% assign ml_pitfalls = ml_pitfalls | push: "/gk/bias-variance-tradeoff/" %}
+{% include gk_section.html sec=ml items=ml_pitfalls %}
+
+### 探索・推論（古典AIとのつながり）
+{% assign ml_search = "" | split: "" %}
+{% assign ml_search = ml_search | push: "/gk/search-and-inference/" %}
+{% assign ml_search = ml_search | push: "/gk/search-vs-rl/" %}
+{% include gk_section.html sec=ml items=ml_search %}
 
 ## ディープラーニングの概要
 {% assign sec = page.gk_sections | where: "title", "ディープラーニングの概要" | first %}
