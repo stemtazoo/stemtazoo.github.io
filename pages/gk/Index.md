@@ -91,6 +91,7 @@ gk_sections:
       - /gk/overfitting/
       - /gk/underfitting/
       - /gk/learning-curve/
+      - /gk/bias-variance-tradeoff/
         
   - title: "ディープラーニングの概要"
     items:
