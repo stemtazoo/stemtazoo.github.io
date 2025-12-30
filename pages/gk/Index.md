@@ -132,6 +132,7 @@ gk_sections:
       - /gk/cnn-trick-calculations/
       - /gk/pooling-trick-calculations/
       - /gk/cnn-cheatsheet/
+      - /gk/cnn-vs-transformer/
 
   - title: "AIの社会実装に向けて"
     items:
