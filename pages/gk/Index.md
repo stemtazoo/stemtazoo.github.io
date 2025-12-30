@@ -164,7 +164,13 @@ gk_sections:
 {% include gk_section.html sec=sec %}
 
 ## 機械学習の概要
+
+### 代表的な手法
 {% assign sec = page.gk_sections | where: "title", "機械学習の基本" | first %}
+{% include gk_section.html sec=sec %}
+
+### モデルの選択・評価
+{% assign sec = page.gk_sections | where: "title", "評価指標（基本）" | first %}
 {% include gk_section.html sec=sec %}
 
 ## ディープラーニングの概要
