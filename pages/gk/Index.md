@@ -24,29 +24,35 @@ gk_sections:
       - /gk/regularization/
       - /gk/batch-epoch/
   
-  - title: "機械学習の概要"
-    items:
-      - /gk/supervised-learning/
-      - /gk/unsupervised-learning/
-      - /gk/reinforcement-learning/
-      - /gk/learning-types-comparison/
-      - /gk/confusion-matrix/
-      - /gk/accuracy/
-      - /gk/precision/
-      - /gk/recall/
-      - /gk/f1-score/
-      - /gk/roc-auc/
-      - /gk/precision-recall-curve/
-      - /gk/metrics-summary/
-      - /gk/rmse-mae/
-      - /gk/regression-metrics-cheatsheet/
-      - /gk/regression-vs-classification/
-      - /gk/search-and-inference/
-      - /gk/search-vs-rl/
-      - /gk/overfitting/
-      - /gk/underfitting/
-      - /gk/learning-curve/
-      - /gk/bias-variance-tradeoff/
+- title: "機械学習の概要"
+  subsections:
+    - title: "代表的な手法"
+      items:
+        - /gk/supervised-learning/
+        - /gk/unsupervised-learning/
+        - /gk/reinforcement-learning/
+        - /gk/learning-types-comparison/
+
+    - title: "モデルの選択・評価"
+      items:
+        - /gk/confusion-matrix/
+        - /gk/accuracy/
+        - /gk/precision/
+        - /gk/recall/
+        - /gk/f1-score/
+        - /gk/roc-auc/
+        - /gk/precision-recall-curve/
+        - /gk/metrics-summary/
+        - /gk/rmse-mae/
+        - /gk/regression-metrics-cheatsheet/
+        - /gk/regression-vs-classification/
+
+    - title: "よくあるつまずき（過学習など）"
+      items:
+        - /gk/overfitting/
+        - /gk/underfitting/
+        - /gk/learning-curve/
+        - /gk/bias-variance-tradeoff/
         
   - title: "ディープラーニングの概要"
     items:
