@@ -102,6 +102,7 @@ gk_sections:
       - /gk/lstm-cec/
       - /gk/global-average-pooling/
       - /gk/activation-derivative/
+      - /gk/gradient-vanishing-exploding/
 
   - title: "ディープラーニングの応用例"
     items:
