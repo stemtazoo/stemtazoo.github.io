@@ -24,7 +24,7 @@ gk_sections:
       - /gk/regularization/
       - /gk/batch-epoch/
   
-  - title: "機械学習の具体的手法"
+  - title: "機械学習の概要"
     items:
       - /gk/supervised-learning/
       - /gk/unsupervised-learning/
