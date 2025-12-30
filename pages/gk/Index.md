@@ -171,22 +171,7 @@ gk_sections:
 
 ## 機械学習の概要
 {% assign ml = page.gk_sections | where: "title", "機械学習の概要" | first %}
-
-### 代表的な手法
-{% assign ml_methods = "/gk/supervised-learning/|/gk/unsupervised-learning/|/gk/reinforcement-learning/|/gk/learning-types-comparison/" | split: "|" %}
-{% include gk_section.html sec=ml items=ml_methods %}
-
-### モデルの選択・評価
-{% assign ml_eval = "/gk/confusion-matrix/|/gk/accuracy/|/gk/precision/|/gk/recall/|/gk/f1-score/|/gk/roc-auc/|/gk/precision-recall-curve/|/gk/metrics-summary/|/gk/rmse-mae/|/gk/regression-metrics-cheatsheet/|/gk/regression-vs-classification/" | split: "|" %}
-{% include gk_section.html sec=ml items=ml_eval %}
-
-### よくあるつまずき（過学習など）
-{% assign ml_pitfalls = "/gk/overfitting/|/gk/underfitting/|/gk/learning-curve/|/gk/bias-variance-tradeoff/" | split: "|" %}
-{% include gk_section.html sec=ml items=ml_pitfalls %}
-
-### 探索・推論（古典AIとのつながり）
-{% assign ml_search = "/gk/search-and-inference/|/gk/search-vs-rl/" | split: "|" %}
-{% include gk_section.html sec=ml items=ml_search %}
+{% include gk_section.html sec=ml %}
 
 ## ディープラーニングの概要
 {% assign sec = page.gk_sections | where: "title", "ディープラーニングの概要" | first %}
