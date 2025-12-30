@@ -49,24 +49,26 @@ gk_sections:
           - /gk/bias-variance-tradeoff/
 
   - title: "ディープラーニングの概要"
-    items:
-      - /gk/perceptron/
-      - /gk/mlp/
-      - /gk/activation-functions/
-      - /gk/backpropagation/
-      - /gk/optimizers/
-      - /gk/regularization/
-      - /gk/batch-epoch/
-      - /gk/leaky-relu/
-      - /gk/relu-family-cheatsheet/
-      - /gk/activation-derivative/
-      - /gk/gradient-vanishing-exploding/
-      - /gk/momentum/
-      - /gk/adam/
-      - /gk/optimization-cheatsheet/
-      - /gk/learning-rate-scheduling/
-      - /gk/pruning/
-      - /gk/model-compression/
+    subsections:
+      - title: "ニューラルネットワークとディープラーニング"
+        items:
+          - /gk/perceptron/
+          - /gk/mlp/
+          - /gk/activation-functions/
+          - /gk/backpropagation/
+          - /gk/optimizers/
+          - /gk/regularization/
+          - /gk/batch-epoch/
+          - /gk/leaky-relu/
+          - /gk/relu-family-cheatsheet/
+          - /gk/activation-derivative/
+          - /gk/gradient-vanishing-exploding/
+          - /gk/momentum/
+          - /gk/adam/
+          - /gk/optimization-cheatsheet/
+          - /gk/learning-rate-scheduling/
+          - /gk/pruning/
+          - /gk/model-compression/
 
   - title: "ディープラーニングの要素技術"
     items:
@@ -87,34 +89,36 @@ gk_sections:
       - /gk/embedding-word2vec/
 
   - title: "ディープラーニングの応用例"
-    items:
-      - /gk/ssd/
-      - /gk/faster-r-cnn/
-      - /gk/yolo/
-      - /gk/rcnn-fast-rcnn/
-      - /gk/anchor-defaultbox-rpn/
-      - /gk/object-detection-summary/
-      - /gk/segnet/
-      - /gk/u-net/
-      - /gk/fcn/
-      - /gk/segmentation-cheatsheet/
-      - /gk/xai-explainability/
-      - /gk/cam-grad-cam/
-      - /gk/lime-vs-shap/
-      - /gk/dcgan/
-      - /gk/gan-variants/
-      - /gk/gan-vs-vae/
-      - /gk/diffusion-model/
-      - /gk/stable-diffusion/
-      - /gk/cnn-output-size/
-      - /gk/cnn-calculation-cheatsheet/
-      - /gk/cnn-trick-calculations/
-      - /gk/pooling-trick-calculations/
-      - /gk/cnn-cheatsheet/
-      - /gk/cnn-vs-transformer/
-      - /gk/cnn-architectures-comparison/
-      - /gk/image-tasks-summary/
-      - /gk/timbre-mfcc/
+    subsections:
+      - title: "画像認識"
+        items:
+          - /gk/ssd/
+          - /gk/faster-r-cnn/
+          - /gk/yolo/
+          - /gk/rcnn-fast-rcnn/
+          - /gk/anchor-defaultbox-rpn/
+          - /gk/object-detection-summary/
+          - /gk/segnet/
+          - /gk/u-net/
+          - /gk/fcn/
+          - /gk/segmentation-cheatsheet/
+          - /gk/xai-explainability/
+          - /gk/cam-grad-cam/
+          - /gk/lime-vs-shap/
+          - /gk/dcgan/
+          - /gk/gan-variants/
+          - /gk/gan-vs-vae/
+          - /gk/diffusion-model/
+          - /gk/stable-diffusion/
+          - /gk/cnn-output-size/
+          - /gk/cnn-calculation-cheatsheet/
+          - /gk/cnn-trick-calculations/
+          - /gk/pooling-trick-calculations/
+          - /gk/cnn-cheatsheet/
+          - /gk/cnn-vs-transformer/
+          - /gk/cnn-architectures-comparison/
+          - /gk/image-tasks-summary/
+          - /gk/timbre-mfcc/
 
   - title: "AIの社会実装に向けて"
     items:
