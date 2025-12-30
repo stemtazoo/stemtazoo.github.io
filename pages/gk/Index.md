@@ -126,7 +126,7 @@ gk_sections:
       - title: "自然言語処理"
         items:
           - /gk/bert/
-
+          - /gk/gpt/
 
   - title: "AIの社会実装に向けて"
     items:
