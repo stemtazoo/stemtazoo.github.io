@@ -167,40 +167,19 @@ gk_sections:
 {% assign ml = page.gk_sections | where: "title", "機械学習の概要" | first %}
 
 ### 代表的な手法
-{% assign ml_methods = "" | split: "" %}
-{% assign ml_methods = ml_methods | push: "/gk/supervised-learning/" %}
-{% assign ml_methods = ml_methods | push: "/gk/unsupervised-learning/" %}
-{% assign ml_methods = ml_methods | push: "/gk/reinforcement-learning/" %}
-{% assign ml_methods = ml_methods | push: "/gk/learning-types-comparison/" %}
+{% assign ml_methods = "/gk/supervised-learning/|/gk/unsupervised-learning/|/gk/reinforcement-learning/|/gk/learning-types-comparison/" | split: "|" %}
 {% include gk_section.html sec=ml items=ml_methods %}
 
 ### モデルの選択・評価
-{% assign ml_eval = "" | split: "" %}
-{% assign ml_eval = ml_eval | push: "/gk/confusion-matrix/" %}
-{% assign ml_eval = ml_eval | push: "/gk/accuracy/" %}
-{% assign ml_eval = ml_eval | push: "/gk/precision/" %}
-{% assign ml_eval = ml_eval | push: "/gk/recall/" %}
-{% assign ml_eval = ml_eval | push: "/gk/f1-score/" %}
-{% assign ml_eval = ml_eval | push: "/gk/roc-auc/" %}
-{% assign ml_eval = ml_eval | push: "/gk/precision-recall-curve/" %}
-{% assign ml_eval = ml_eval | push: "/gk/metrics-summary/" %}
-{% assign ml_eval = ml_eval | push: "/gk/rmse-mae/" %}
-{% assign ml_eval = ml_eval | push: "/gk/regression-metrics-cheatsheet/" %}
-{% assign ml_eval = ml_eval | push: "/gk/regression-vs-classification/" %}
+{% assign ml_eval = "/gk/confusion-matrix/|/gk/accuracy/|/gk/precision/|/gk/recall/|/gk/f1-score/|/gk/roc-auc/|/gk/precision-recall-curve/|/gk/metrics-summary/|/gk/rmse-mae/|/gk/regression-metrics-cheatsheet/|/gk/regression-vs-classification/" | split: "|" %}
 {% include gk_section.html sec=ml items=ml_eval %}
 
 ### よくあるつまずき（過学習など）
-{% assign ml_pitfalls = "" | split: "" %}
-{% assign ml_pitfalls = ml_pitfalls | push: "/gk/overfitting/" %}
-{% assign ml_pitfalls = ml_pitfalls | push: "/gk/underfitting/" %}
-{% assign ml_pitfalls = ml_pitfalls | push: "/gk/learning-curve/" %}
-{% assign ml_pitfalls = ml_pitfalls | push: "/gk/bias-variance-tradeoff/" %}
+{% assign ml_pitfalls = "/gk/overfitting/|/gk/underfitting/|/gk/learning-curve/|/gk/bias-variance-tradeoff/" | split: "|" %}
 {% include gk_section.html sec=ml items=ml_pitfalls %}
 
 ### 探索・推論（古典AIとのつながり）
-{% assign ml_search = "" | split: "" %}
-{% assign ml_search = ml_search | push: "/gk/search-and-inference/" %}
-{% assign ml_search = ml_search | push: "/gk/search-vs-rl/" %}
+{% assign ml_search = "/gk/search-and-inference/|/gk/search-vs-rl/" | split: "|" %}
 {% include gk_section.html sec=ml items=ml_search %}
 
 ## ディープラーニングの概要
