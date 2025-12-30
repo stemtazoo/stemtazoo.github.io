@@ -5,29 +5,10 @@ permalink: /gk/
 tags: [gk]
 # 表示順はここで固定（/gk/〇〇/ ＝ pages/gk/〇〇.md）
 gk_sections:
-  - title: "評価指標（基本）"
-    items:
-
-
-  - title: "ニューラルネットワーク基礎"
-    items:
-      - /gk/perceptron/
-      - /gk/mlp/
-      - /gk/activation-functions/
-      - /gk/backpropagation/
-      - /gk/optimizers/
-      - /gk/regularization/
-      - /gk/batch-epoch/
-
-  - title: "CNN（画像認識）"
-    items:
-
 
   - title: "Attention・Transformer・Embedding"
     items:
-      - /gk/attention/
-      - /gk/transformer/
-      - /gk/embedding-word2vec/
+
         
   - title: "物体検出"
     items:
@@ -56,6 +37,13 @@ gk_sections:
       - /gk/knowledge-representation/
       - /gk/classical-ai-vs-ml/
       - /gk/concepts-final-cheatsheet/
+      - /gk/perceptron/
+      - /gk/mlp/
+      - /gk/activation-functions/
+      - /gk/backpropagation/
+      - /gk/optimizers/
+      - /gk/regularization/
+      - /gk/batch-epoch/
   
   - title: "機械学習の具体的手法"
     items:
@@ -109,6 +97,9 @@ gk_sections:
       - /gk/vanishing-exploding-gradient/
       - /gk/lstm/
       - /gk/gru/
+      - /gk/attention/
+      - /gk/transformer/
+      - /gk/embedding-word2vec/
 
   - title: "ディープラーニングの応用例"
     items:
