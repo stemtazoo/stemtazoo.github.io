@@ -130,6 +130,7 @@ gk_sections:
       - /gk/cnn-output-size/
       - /gk/cnn-calculation-cheatsheet/
       - /gk/cnn-trick-calculations/
+      - /gk/pooling-trick-calculations/
 
   - title: "AIの社会実装に向けて"
     items:
