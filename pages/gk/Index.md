@@ -109,6 +109,7 @@ gk_sections:
       - /gk/cam-grad-cam/
       - /gk/xai-summary/
       - /gk/lime-vs-shap/
+      - /gk/image-open-datasets/
 
   - title: "AIの社会実装に向けて"
     items:
