@@ -151,7 +151,7 @@ gk_sections:
 
 {% comment %}
   gk_sections に書いた URL から対応する page を引く
-  見つからない場合は赤字で表示（permalink/url の不一致検出）
+  見つからない場合は赤字で表示
 {% endcomment %}
 
 ## 技術分野
@@ -165,8 +165,8 @@ gk_sections:
 {% include gk_section.html sec=sec %}
 
 ## 機械学習の概要
-{% assign ml = page.gk_sections | where: "title", "機械学習の概要" | first %}
-{% include gk_section.html sec=ml %}
+{% assign sec = page.gk_sections | where: "title", "機械学習の概要" | first %}
+{% include gk_section.html sec=sec %}
 
 ## ディープラーニングの概要
 {% assign sec = page.gk_sections | where: "title", "ディープラーニングの概要" | first %}
