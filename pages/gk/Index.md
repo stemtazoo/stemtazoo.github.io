@@ -129,6 +129,7 @@ gk_sections:
       - /gk/stable-diffusion/
       - /gk/cnn-output-size/
       - /gk/cnn-calculation-cheatsheet/
+      - /gk/cnn-trick-calculations/
 
   - title: "AIの社会実装に向けて"
     items:
