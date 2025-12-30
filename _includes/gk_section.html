@@ -4,18 +4,16 @@
   - items: 表示したいURL配列（任意）…あればそれだけ表示
 {% endcomment %}
 
-{% if include.sec == nil %}
-  {% exit %}
-{% endif %}
+{% if include.sec %}
 
-{%- assign list = include.sec.items -%}
-{%- if include.items -%}
-  {%- assign list = include.items -%}
-{%- endif -%}
+  {%- assign list = include.sec.items -%}
+  {%- if include.items -%}
+    {%- assign list = include.items -%}
+  {%- endif -%}
 
-{%- if include.sec.subsections -%}
+  {%- if include.sec.subsections -%}
 
-  {%- for sub in include.sec.subsections -%}
+    {%- for sub in include.sec.subsections -%}
 ### {{ sub.title }}
 
 <ul>
@@ -29,9 +27,9 @@
 {%- endfor -%}
 </ul>
 
-  {%- endfor -%}
+    {%- endfor -%}
 
-{%- elsif list -%}
+  {%- elsif list -%}
 
 <ul>
 {%- for url in list -%}
@@ -44,4 +42,6 @@
 {%- endfor -%}
 </ul>
 
-{%- endif -%}
+  {%- endif -%}
+
+{% endif %}
