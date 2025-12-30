@@ -97,6 +97,7 @@ gk_sections:
       - /gk/gradient-vanishing-exploding/
       - /gk/momentum/
       - /gk/adam/
+      - /gk/optimization-cheatsheet/
         
   - title: "ディープラーニングの要素技術"
     items:
