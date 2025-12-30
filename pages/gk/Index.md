@@ -3,27 +3,21 @@ layout: page
 title: G検定 用語集
 permalink: /gk/
 tags: [gk]
+
 # 表示順はここで固定（/gk/〇〇/ ＝ pages/gk/〇〇.md）
-gk_sections:   
+gk_sections:
   - title: "人工知能（AI）とは"
     items:
       - /gk/ai-booms-cheatsheet/
       - /gk/second-ai-boom/
-  
+
   - title: "人工知能をめぐる動向"
     items:
       - /gk/classical-ai/
       - /gk/knowledge-representation/
       - /gk/classical-ai-vs-ml/
       - /gk/concepts-final-cheatsheet/
-      - /gk/perceptron/
-      - /gk/mlp/
-      - /gk/activation-functions/
-      - /gk/backpropagation/
-      - /gk/optimizers/
-      - /gk/regularization/
-      - /gk/batch-epoch/
-  
+
   - title: "機械学習の概要"
     subsections:
       - title: "代表的な手法"
@@ -32,7 +26,7 @@ gk_sections:
           - /gk/unsupervised-learning/
           - /gk/reinforcement-learning/
           - /gk/learning-types-comparison/
-  
+
       - title: "モデルの選択・評価"
         items:
           - /gk/confusion-matrix/
@@ -46,16 +40,23 @@ gk_sections:
           - /gk/rmse-mae/
           - /gk/regression-metrics-cheatsheet/
           - /gk/regression-vs-classification/
-  
+
       - title: "よくあるつまずき（過学習など）"
         items:
           - /gk/overfitting/
           - /gk/underfitting/
           - /gk/learning-curve/
           - /gk/bias-variance-tradeoff/
-        
+
   - title: "ディープラーニングの概要"
     items:
+      - /gk/perceptron/
+      - /gk/mlp/
+      - /gk/activation-functions/
+      - /gk/backpropagation/
+      - /gk/optimizers/
+      - /gk/regularization/
+      - /gk/batch-epoch/
       - /gk/leaky-relu/
       - /gk/relu-family-cheatsheet/
       - /gk/activation-derivative/
@@ -64,10 +65,9 @@ gk_sections:
       - /gk/adam/
       - /gk/optimization-cheatsheet/
       - /gk/learning-rate-scheduling/
-      - /gk/regularization/
       - /gk/pruning/
       - /gk/model-compression/
-        
+
   - title: "ディープラーニングの要素技術"
     items:
       - /gk/cnn/
@@ -77,7 +77,7 @@ gk_sections:
       - /gk/dilated-convolution/
       - /gk/pooling-stride-dilation/
       - /gk/encoder-decoder/
-      - /gk/lstm-cec/
+      - /gk/global-average-pooling/
       - /gk/rnn/
       - /gk/vanishing-exploding-gradient/
       - /gk/lstm/
@@ -99,12 +99,8 @@ gk_sections:
       - /gk/fcn/
       - /gk/segmentation-cheatsheet/
       - /gk/xai-explainability/
-      - /gk/efficientnet/
       - /gk/cam-grad-cam/
-      - /gk/xai-summary/
       - /gk/lime-vs-shap/
-      - /gk/image-open-datasets/
-      - /gk/squad/
       - /gk/dcgan/
       - /gk/gan-variants/
       - /gk/gan-vs-vae/
@@ -119,7 +115,6 @@ gk_sections:
       - /gk/cnn-architectures-comparison/
       - /gk/image-tasks-summary/
       - /gk/timbre-mfcc/
-      - /gk/cnn-convolution/
 
   - title: "AIの社会実装に向けて"
     items:
@@ -127,7 +122,7 @@ gk_sections:
       - /gk/edge-vs-cloud-ai/
       - /gk/crisp-dm/
       - /gk/crisp-dm-vs-ml-pipeline/
-        
+
   - title: "AIの法律と倫理"
     items:
       - /gk/fairness-bias/
@@ -139,7 +134,7 @@ gk_sections:
       - /gk/personal-information-law/
       - /gk/personal-information-protection-law-cheatsheet/
       - /gk/ai-ethics/
-        
+
   - title: "チートシート（試験直前）"
     items:
       - /gk/nn-cheatsheet/
@@ -147,7 +142,7 @@ gk_sections:
       - /gk/search-vs-ml-cheatsheet/
       - /gk/ai-ethics-cheatsheet/
       - /gk/speech-recognition-cheatsheet/
-        
+
   - title: "ひっかけ問題集"
     items:
       - /gk/trick-questions-1/
