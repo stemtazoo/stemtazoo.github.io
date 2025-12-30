@@ -224,6 +224,3 @@ gk_sections:
 {% assign sec = page.gk_sections | where: "title", "ひっかけ問題集" | first %}
 {% include gk_section.html sec=sec %}
 
-</ul>
-
-{% endfor %}
