@@ -96,6 +96,7 @@ gk_sections:
       - /gk/activation-derivative/
       - /gk/gradient-vanishing-exploding/
       - /gk/momentum/
+      - /gk/adam/
         
   - title: "ディープラーニングの要素技術"
     items:
