@@ -12,12 +12,7 @@ gk_sections:
         
   - title: "物体検出"
     items:
-      - /gk/ssd/
-      - /gk/faster-r-cnn/
-      - /gk/yolo/
-      - /gk/rcnn-fast-rcnn/
-      - /gk/anchor-defaultbox-rpn/
-      - /gk/object-detection-summary/
+
 
   - title: "セグメンテーションタスク"
     items:
@@ -103,6 +98,12 @@ gk_sections:
 
   - title: "ディープラーニングの応用例"
     items:
+      - /gk/ssd/
+      - /gk/faster-r-cnn/
+      - /gk/yolo/
+      - /gk/rcnn-fast-rcnn/
+      - /gk/anchor-defaultbox-rpn/
+      - /gk/object-detection-summary/
       - /gk/xai-explainability/
       - /gk/efficientnet/
       - /gk/cam-grad-cam/
