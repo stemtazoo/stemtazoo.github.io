@@ -113,6 +113,7 @@ gk_sections:
       - /gk/squad/
       - /gk/dcgan/
       - /gk/gan-variants/
+      - /gk/gan-vs-vae/
 
   - title: "AIの社会実装に向けて"
     items:
