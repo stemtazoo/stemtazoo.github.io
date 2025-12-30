@@ -135,6 +135,7 @@ gk_sections:
       - /gk/cnn-vs-transformer/
       - /gk/cnn-architectures-comparison/
       - /gk/image-tasks-summary/
+      - /gk/timbre-mfcc/
 
   - title: "AIの社会実装に向けて"
     items:
