@@ -129,6 +129,10 @@ gk_sections:
           - /gk/gpt/
           - /gk/bert-vs-gpt/
 
+      - title: "深層強化学習"
+        items:
+          - /gk/dueling-network/
+
   - title: "AIの社会実装に向けて"
     items:
       - /gk/edge-ai/
