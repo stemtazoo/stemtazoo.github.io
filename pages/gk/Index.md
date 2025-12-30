@@ -135,6 +135,7 @@ gk_sections:
       - /gk/edge-vs-cloud-ai/
       - /gk/crisp-dm/
       - /gk/crisp-dm-vs-ml-pipeline/
+      - /gk/mlops/
 
   - title: "AIの法律と倫理"
     items:
