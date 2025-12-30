@@ -5,23 +5,9 @@ permalink: /gk/
 tags: [gk]
 # 表示順はここで固定（/gk/〇〇/ ＝ pages/gk/〇〇.md）
 gk_sections:
-  - title: "機械学習の基本"
-    items:
-
-
   - title: "評価指標（基本）"
     items:
-      - /gk/confusion-matrix/
-      - /gk/accuracy/
-      - /gk/precision/
-      - /gk/recall/
-      - /gk/f1-score/
-      - /gk/roc-auc/
-      - /gk/precision-recall-curve/
-      - /gk/metrics-summary/
-      - /gk/rmse-mae/
-      - /gk/regression-metrics-cheatsheet/
-      - /gk/regression-vs-classification/
+
 
   - title: "ニューラルネットワーク基礎"
     items:
@@ -77,6 +63,17 @@ gk_sections:
       - /gk/unsupervised-learning/
       - /gk/reinforcement-learning/
       - /gk/learning-types-comparison/
+      - /gk/confusion-matrix/
+      - /gk/accuracy/
+      - /gk/precision/
+      - /gk/recall/
+      - /gk/f1-score/
+      - /gk/roc-auc/
+      - /gk/precision-recall-curve/
+      - /gk/metrics-summary/
+      - /gk/rmse-mae/
+      - /gk/regression-metrics-cheatsheet/
+      - /gk/regression-vs-classification/
       - /gk/search-and-inference/
       - /gk/search-vs-rl/
       - /gk/overfitting/
