@@ -104,6 +104,7 @@ gk_sections:
       - /gk/optimization-cheatsheet/
       - /gk/learning-rate-scheduling/
       - /gk/regularization/
+      - /gk/pruning/
         
   - title: "ディープラーニングの要素技術"
     items:
@@ -136,7 +137,7 @@ gk_sections:
       - /gk/cnn-architectures-comparison/
       - /gk/image-tasks-summary/
       - /gk/timbre-mfcc/
-      - /gk/pruning/
+
 
   - title: "AIの社会実装に向けて"
     items:
