@@ -4,20 +4,7 @@ title: G検定 用語集
 permalink: /gk/
 tags: [gk]
 # 表示順はここで固定（/gk/〇〇/ ＝ pages/gk/〇〇.md）
-gk_sections:
-
-  - title: "Attention・Transformer・Embedding"
-    items:
-
-        
-  - title: "物体検出"
-    items:
-
-
-  - title: "セグメンテーションタスク"
-    items:
-
-        
+gk_sections:   
   - title: "人工知能（AI）とは"
     items:
       - /gk/ai-booms-cheatsheet/
