@@ -127,6 +127,8 @@ gk_sections:
       - /gk/gan-vs-vae/
       - /gk/diffusion-model/
       - /gk/stable-diffusion/
+      - /gk/cnn-output-size/
+      - /gk/cnn-calculation-cheatsheet/
 
   - title: "AIの社会実装に向けて"
     items:
