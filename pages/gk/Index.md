@@ -16,10 +16,7 @@ gk_sections:
 
   - title: "セグメンテーションタスク"
     items:
-      - /gk/segnet/
-      - /gk/u-net/
-      - /gk/fcn/
-      - /gk/segmentation-cheatsheet/
+
         
   - title: "人工知能（AI）とは"
     items:
@@ -104,6 +101,10 @@ gk_sections:
       - /gk/rcnn-fast-rcnn/
       - /gk/anchor-defaultbox-rpn/
       - /gk/object-detection-summary/
+      - /gk/segnet/
+      - /gk/u-net/
+      - /gk/fcn/
+      - /gk/segmentation-cheatsheet/
       - /gk/xai-explainability/
       - /gk/efficientnet/
       - /gk/cam-grad-cam/
