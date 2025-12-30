@@ -1,0 +1,12 @@
+{% if include.sec %}
+<ul>
+{% for url in include.sec.items %}
+  {% assign p = site.pages | where: "url", url | first %}
+  {% if p %}
+    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% else %}
+    <li><span style="color:#c00">{{ url }}（ページが見つかりません）</span></li>
+  {% endif %}
+{% endfor %}
+</ul>
+{% endif %}
