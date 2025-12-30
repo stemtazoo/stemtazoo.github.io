@@ -147,7 +147,7 @@ gk_sections:
       - /gk/ai-governance/
       - /gk/pseudonymized-information/
       - /gk/anonymized-information/
-      - /gk/personal-information-protection-law/
+      - /gk/personal-information-law/
       - /gk/personal-information-protection-law-cheatsheet/
       - /gk/ai-ethics/
         
