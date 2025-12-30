@@ -99,6 +99,7 @@ gk_sections:
       - /gk/adam/
       - /gk/optimization-cheatsheet/
       - /gk/learning-rate-scheduling/
+      - /gk/regularization/
         
   - title: "ディープラーニングの要素技術"
     items:
