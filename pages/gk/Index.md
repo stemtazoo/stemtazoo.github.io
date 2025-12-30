@@ -93,6 +93,8 @@ gk_sections:
     items:
       - /gk/leaky-relu/
       - /gk/relu-family-cheatsheet/
+      - /gk/activation-derivative/
+      - /gk/gradient-vanishing-exploding/
       - /gk/momentum/
         
   - title: "ディープラーニングの要素技術"
@@ -102,8 +104,6 @@ gk_sections:
       - /gk/encoder-decoder/
       - /gk/lstm-cec/
       - /gk/global-average-pooling/
-      - /gk/activation-derivative/
-      - /gk/gradient-vanishing-exploding/
 
   - title: "ディープラーニングの応用例"
     items:
