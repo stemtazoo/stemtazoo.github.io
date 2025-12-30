@@ -93,6 +93,7 @@ gk_sections:
     items:
       - /gk/leaky-relu/
       - /gk/relu-family-cheatsheet/
+      - /gk/momentum/
         
   - title: "ディープラーニングの要素技術"
     items:
