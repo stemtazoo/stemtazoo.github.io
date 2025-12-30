@@ -110,6 +110,7 @@ gk_sections:
       - /gk/xai-summary/
       - /gk/lime-vs-shap/
       - /gk/image-open-datasets/
+      - /gk/squad/
 
   - title: "AIの社会実装に向けて"
     items:
