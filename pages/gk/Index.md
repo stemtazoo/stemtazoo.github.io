@@ -98,6 +98,7 @@ gk_sections:
       - /gk/momentum/
       - /gk/adam/
       - /gk/optimization-cheatsheet/
+      - /gk/learning-rate-scheduling/
         
   - title: "ディープラーニングの要素技術"
     items:
