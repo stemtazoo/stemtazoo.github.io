@@ -115,6 +115,7 @@ gk_sections:
       - /gk/gan-variants/
       - /gk/gan-vs-vae/
       - /gk/diffusion-model/
+      - /gk/stable-diffusion/
 
   - title: "AIの社会実装に向けて"
     items:
