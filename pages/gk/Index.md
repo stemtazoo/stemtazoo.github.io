@@ -139,6 +139,7 @@ gk_sections:
       - /gk/pseudonymized-information/
       - /gk/anonymized-information/
       - /gk/personal-information-protection-law/
+      - /gk/ai-ethics/
         
   - title: "チートシート（試験直前）"
     items:
