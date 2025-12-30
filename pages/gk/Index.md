@@ -112,6 +112,7 @@ gk_sections:
       - /gk/image-open-datasets/
       - /gk/squad/
       - /gk/dcgan/
+      - /gk/gan-variants/
 
   - title: "AIの社会実装に向けて"
     items:
