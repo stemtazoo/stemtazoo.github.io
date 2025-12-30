@@ -133,6 +133,7 @@ gk_sections:
       - /gk/pooling-trick-calculations/
       - /gk/cnn-cheatsheet/
       - /gk/cnn-vs-transformer/
+      - /gk/cnn-architectures-comparison/
 
   - title: "AIの社会実装に向けて"
     items:
