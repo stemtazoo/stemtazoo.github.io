@@ -38,17 +38,7 @@ gk_sections:
 
   - title: "CNN（画像認識）"
     items:
-      - /gk/cnn/
-      - /gk/convolution/
-      - /gk/pooling/
-      - /gk/cnn-models/
 
-  - title: "RNN・系列モデル"
-    items:
-      - /gk/rnn/
-      - /gk/vanishing-exploding-gradient/
-      - /gk/lstm/
-      - /gk/gru/
 
   - title: "Attention・Transformer・Embedding"
     items:
@@ -109,11 +99,18 @@ gk_sections:
         
   - title: "ディープラーニングの要素技術"
     items:
+      - /gk/cnn/
+      - /gk/convolution/
+      - /gk/pooling/
+      - /gk/cnn-models/
       - /gk/dilated-convolution/
       - /gk/pooling-stride-dilation/
       - /gk/encoder-decoder/
       - /gk/lstm-cec/
-      - /gk/global-average-pooling/
+      - /gk/rnn/
+      - /gk/vanishing-exploding-gradient/
+      - /gk/lstm/
+      - /gk/gru/
 
   - title: "ディープラーニングの応用例"
     items:
@@ -166,7 +163,7 @@ gk_sections:
       - /gk/search-vs-ml-cheatsheet/
       - /gk/ai-ethics-cheatsheet/
       - /gk/speech-recognition-cheatsheet/
-      - 
+        
   - title: "ひっかけ問題集"
     items:
       - /gk/trick-questions-1/
