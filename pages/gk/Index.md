@@ -111,6 +111,7 @@ gk_sections:
       - /gk/lime-vs-shap/
       - /gk/image-open-datasets/
       - /gk/squad/
+      - /gk/dcgan/
 
   - title: "AIの社会実装に向けて"
     items:
