@@ -137,6 +137,7 @@ gk_sections:
       - /gk/safety-robustness/
       - /gk/ai-governance/
       - /gk/pseudonymized-information/
+      - /gk/anonymized-information/
         
   - title: "チートシート（試験直前）"
     items:
