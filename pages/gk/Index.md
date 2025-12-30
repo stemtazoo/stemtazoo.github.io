@@ -88,6 +88,7 @@ gk_sections:
     items:
       - /gk/search-and-inference/
       - /gk/search-vs-rl/
+      - /gk/overfitting/
         
   - title: "ディープラーニングの概要"
     items:
