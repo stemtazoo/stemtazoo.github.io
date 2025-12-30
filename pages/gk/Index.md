@@ -136,6 +136,7 @@ gk_sections:
       - /gk/crisp-dm/
       - /gk/crisp-dm-vs-ml-pipeline/
       - /gk/mlops/
+      - /gk/devops/
 
   - title: "AIの法律と倫理"
     items:
