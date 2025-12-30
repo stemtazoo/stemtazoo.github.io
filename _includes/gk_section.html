@@ -1,23 +1,47 @@
 {% comment %}
   gk_section.html
-  - sec: {title, items}
-  - items: 表示したいURL配列（任意）。指定があればそれだけ表示
+  - sec: {title, items?, subsections?}
+  - items: 表示したいURL配列（任意）…あればそれだけ表示
 {% endcomment %}
 
-{% assign list = include.sec.items %}
-{% if include.items %}
-  {% assign list = include.items %}
+{% if include.sec == nil %}
+  {% exit %}
 {% endif %}
 
-{% if include.sec and list %}
+{%- assign list = include.sec.items -%}
+{%- if include.items -%}
+  {%- assign list = include.items -%}
+{%- endif -%}
+
+{%- if include.sec.subsections -%}
+
+  {%- for sub in include.sec.subsections -%}
+### {{ sub.title }}
+
 <ul>
-{% for url in list %}
-  {% assign p = site.pages | where: "url", url | first %}
-  {% if p %}
+{%- for url in sub.items -%}
+  {%- assign p = site.pages | where: "url", url | first -%}
+  {%- if p -%}
     <li><a href="{{ p.url }}">{{ p.title }}</a></li>
-  {% else %}
+  {%- else -%}
     <li><span style="color:#c00">{{ url }}（ページが見つかりません）</span></li>
-  {% endif %}
-{% endfor %}
+  {%- endif -%}
+{%- endfor -%}
 </ul>
-{% endif %}
+
+  {%- endfor -%}
+
+{%- elsif list -%}
+
+<ul>
+{%- for url in list -%}
+  {%- assign p = site.pages | where: "url", url | first -%}
+  {%- if p -%}
+    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {%- else -%}
+    <li><span style="color:#c00">{{ url }}（ページが見つかりません）</span></li>
+  {%- endif -%}
+{%- endfor -%}
+</ul>
+
+{%- endif -%}
