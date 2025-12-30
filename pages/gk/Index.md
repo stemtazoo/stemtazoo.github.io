@@ -136,6 +136,7 @@ gk_sections:
       - /gk/cnn-architectures-comparison/
       - /gk/image-tasks-summary/
       - /gk/timbre-mfcc/
+      - /gk/pruning/
 
   - title: "AIの社会実装に向けて"
     items:
