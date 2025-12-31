@@ -18,6 +18,7 @@ gk_sections:
       - /gk/knowledge-representation/
       - /gk/classical-ai-vs-ml/
       - /gk/concepts-final-cheatsheet/
+      - /gk/torobo-kun/
 
   - title: "機械学習の概要"
     subsections:
