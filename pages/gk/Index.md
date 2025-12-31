@@ -10,6 +10,7 @@ gk_sections:
     items:
       - /gk/ai-booms-cheatsheet/
       - /gk/second-ai-boom/
+      - /gk/strong-vs-weak-ai/
 
   - title: "人工知能をめぐる動向"
     items:
