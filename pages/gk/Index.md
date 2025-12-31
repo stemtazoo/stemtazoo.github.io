@@ -28,6 +28,7 @@ gk_sections:
           - /gk/unsupervised-learning/
           - /gk/reinforcement-learning/
           - /gk/learning-types-comparison/
+          - /gk/distributed-reinforcement-learning/
 
       - title: "モデルの選択・評価"
         items:
