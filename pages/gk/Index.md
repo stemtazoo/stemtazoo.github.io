@@ -29,6 +29,7 @@ gk_sections:
           - /gk/reinforcement-learning/
           - /gk/learning-types-comparison/
           - /gk/distributed-reinforcement-learning/
+          - /gk/reinforcement-learning-cheatsheet/
 
       - title: "モデルの選択・評価"
         items:
