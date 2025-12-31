@@ -72,6 +72,7 @@ gk_sections:
           - /gk/learning-rate-scheduling/
           - /gk/pruning/
           - /gk/model-compression/
+          - /gk/loss-function/
 
   - title: "ディープラーニングの要素技術"
     items:
