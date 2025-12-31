@@ -73,7 +73,10 @@ gk_sections:
           - /gk/pruning/
           - /gk/model-compression/
           - /gk/loss-function/
-
+      - title: "最適化手法"
+        items:
+          - /gk/gradient-descent/
+            
   - title: "ディープラーニングの要素技術"
     items:
       - /gk/cnn/
