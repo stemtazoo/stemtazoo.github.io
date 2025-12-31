@@ -140,6 +140,7 @@ gk_sections:
       - title: "深層強化学習"
         items:
           - /gk/dueling-network/
+          - /gk/rl-methods/
 
   - title: "AIの社会実装に向けて"
     items:
