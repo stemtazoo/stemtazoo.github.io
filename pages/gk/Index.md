@@ -154,6 +154,7 @@ gk_sections:
       - /gk/devops/
       - /gk/roles-in-ml/
       - /gk/ml-project-lifecycle/
+      - /gk/data-leakage/
 
   - title: "AIの法律と倫理"
     items:
