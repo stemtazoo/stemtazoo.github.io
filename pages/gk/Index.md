@@ -139,6 +139,7 @@ gk_sections:
           - /gk/bert/
           - /gk/gpt/
           - /gk/bert-vs-gpt/
+          - /gk/tf-idf/
 
       - title: "深層強化学習"
         items:
