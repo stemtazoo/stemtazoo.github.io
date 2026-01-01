@@ -44,6 +44,7 @@ gk_sections:
           - /gk/rmse-mae/
           - /gk/regression-metrics-cheatsheet/
           - /gk/regression-vs-classification/
+          - /gk/train-validation-test/
 
       - title: "よくあるつまずき（過学習など）"
         items:
