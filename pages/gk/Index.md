@@ -208,6 +208,7 @@ gk_sections:
       - /gk/personal-information-law/
       - /gk/personal-information-protection-law-cheatsheet/
       - /gk/ai-ethics/
+      - /gk/privacy-by-design/
 
   - title: "チートシート（試験直前）"
     items:
