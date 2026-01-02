@@ -147,6 +147,7 @@ gk_sections:
           - /gk/embedding-layer/
           - /gk/self-attention/
           - /gk/transformer-architecture/
+          - /gk/nlp-cheatsheet/
 
       - title: "深層強化学習"
         items:
