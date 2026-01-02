@@ -218,6 +218,7 @@ gk_sections:
       - /gk/ai-ethics/
       - /gk/privacy-by-design/
       - /gk/limited-offer-data/
+      - /gk/data-portability-gdpr/
 
   - title: "チートシート（試験直前）"
     items:
