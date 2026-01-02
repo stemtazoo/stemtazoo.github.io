@@ -12,6 +12,7 @@ gk_sections:
       - /gk/second-ai-boom/
       - /gk/strong-vs-weak-ai/
       - /gk/big-data/
+      - /gk/third-ai-boom/
 
   - title: "人工知能をめぐる動向"
     items:
