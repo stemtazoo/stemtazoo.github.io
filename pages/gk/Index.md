@@ -82,8 +82,6 @@ gk_sections:
           - /gk/relu-family-cheatsheet/
           - /gk/activation-derivative/
           - /gk/gradient-vanishing-exploding/
-          - /gk/momentum/
-          - /gk/optimization-cheatsheet/
           - /gk/learning-rate-scheduling/
           - /gk/pruning/
           - /gk/model-compression/
@@ -96,6 +94,8 @@ gk_sections:
           - /gk/adagrad/
           - /gk/rmsprop/
           - /gk/adam/
+          - /gk/momentum/
+          - /gk/optimization-cheatsheet/
             
   - title: "ディープラーニングの要素技術"
     items:
