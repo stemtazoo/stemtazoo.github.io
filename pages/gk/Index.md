@@ -83,6 +83,8 @@ gk_sections:
           - /gk/pruning/
           - /gk/model-compression/
           - /gk/loss-function/
+          - /gk/vae/
+            
       - title: "最適化手法"
         items:
           - /gk/gradient-descent/
