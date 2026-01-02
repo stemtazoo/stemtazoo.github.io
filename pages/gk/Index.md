@@ -144,6 +144,7 @@ gk_sections:
           - /gk/word2vec/
           - /gk/distributed-representation/
           - /gk/word2vec-vs-bert/
+          - /gk/embedding-layer/
 
       - title: "深層強化学習"
         items:
