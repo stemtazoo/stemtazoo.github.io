@@ -143,6 +143,7 @@ gk_sections:
           - /gk/bag-of-words/
           - /gk/word2vec/
           - /gk/distributed-representation/
+          - /gk/word2vec-vs-bert/
 
       - title: "深層強化学習"
         items:
