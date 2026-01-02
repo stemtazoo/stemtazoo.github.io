@@ -31,6 +31,7 @@ gk_sections:
           - /gk/distributed-reinforcement-learning/
           - /gk/reinforcement-learning-cheatsheet/
           - /gk/dendrogram/
+          - /gk/hierarchical-clustering/
 
       - title: "モデルの選択・評価"
         items:
