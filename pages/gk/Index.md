@@ -93,6 +93,7 @@ gk_sections:
           - /gk/regularization/
           - /gk/regularization-l1-l2/
           - /gk/dropout/
+          - /gk/early-stopping/
     
       - title: "最適化手法"
         items:
