@@ -164,7 +164,11 @@ gk_sections:
           - /gk/multi-agent-rl/
           - /gk/alphago-vs-alphastar/
           - /gk/rl-methods/
-
+            
+      - title: "データ生成"
+        items:
+          - /gk/vae-vs-gan/
+            
   - title: "AIの社会実装に向けて"
     items:
       - /gk/edge-ai/
