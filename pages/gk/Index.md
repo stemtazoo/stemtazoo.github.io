@@ -39,6 +39,7 @@ gk_sections:
           - /gk/pca-vs-svd/
           - /gk/supervised-unsupervised-reinforcement/
           - /gk/ensemble-learning/
+          - /gk/gdpr-rights-erasure-rectification/
 
       - title: "モデルの選択・評価"
         items:
