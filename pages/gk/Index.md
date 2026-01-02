@@ -143,6 +143,7 @@ gk_sections:
         items:
           - /gk/timbre-mfcc/
           - /gk/formant/
+          - /gk/speech-features/
 
       - title: "自然言語処理"
         items:
