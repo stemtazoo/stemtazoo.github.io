@@ -97,6 +97,7 @@ gk_sections:
           - /gk/momentum/
           - /gk/optimization-cheatsheet/
           - /gk/optimization-cheatsheet-2/
+          - /gk/double-descent/
             
   - title: "ディープラーニングの要素技術"
     items:
