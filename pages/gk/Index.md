@@ -33,6 +33,7 @@ gk_sections:
           - /gk/dendrogram/
           - /gk/hierarchical-clustering/
           - /gk/kmeans-vs-hierarchical/
+          - /gk/clustering-vs-dimensionality-reduction/
 
       - title: "モデルの選択・評価"
         items:
