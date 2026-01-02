@@ -35,6 +35,7 @@ gk_sections:
           - /gk/kmeans-vs-hierarchical/
           - /gk/clustering-vs-dimensionality-reduction/
           - /gk/pca-vs-svd/
+          - /gk/supervised-unsupervised-reinforcement/
 
       - title: "モデルの選択・評価"
         items:
