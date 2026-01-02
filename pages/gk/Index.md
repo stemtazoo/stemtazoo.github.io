@@ -181,6 +181,7 @@ gk_sections:
         items:
           - /gk/vae-vs-gan/
           - /gk/pix2pix/
+          - /gk/cyclegan/
             
   - title: "AIの社会実装に向けて"
     items:
