@@ -180,6 +180,7 @@ gk_sections:
       - title: "データ生成"
         items:
           - /gk/vae-vs-gan/
+          - /gk/pix2pix/
             
   - title: "AIの社会実装に向けて"
     items:
