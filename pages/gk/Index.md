@@ -32,6 +32,7 @@ gk_sections:
           - /gk/reinforcement-learning-cheatsheet/
           - /gk/dendrogram/
           - /gk/hierarchical-clustering/
+          - /gk/kmeans-vs-hierarchical/
 
       - title: "モデルの選択・評価"
         items:
