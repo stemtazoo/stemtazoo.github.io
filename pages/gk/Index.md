@@ -220,6 +220,7 @@ gk_sections:
       - /gk/privacy-by-design/
       - /gk/limited-offer-data/
       - /gk/data-portability-gdpr/
+      - /gk/gdpr-rights-erasure-rectification/
       - /gk/gdpr-vs-japan-pipa/
 
   - title: "チートシート（試験直前）"
