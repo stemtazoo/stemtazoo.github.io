@@ -154,6 +154,7 @@ gk_sections:
           - /gk/self-attention/
           - /gk/transformer-architecture/
           - /gk/nlp-cheatsheet/
+          - /gk/mlm/
 
       - title: "深層強化学習"
         items:
