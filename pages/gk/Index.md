@@ -77,7 +77,7 @@ gk_sections:
           - /gk/activation-functions/
           - /gk/backpropagation/
           - /gk/optimizers/
-          - /gk/regularization/
+          
           - /gk/batch-epoch/
           - /gk/leaky-relu/
           - /gk/relu-family-cheatsheet/
@@ -89,6 +89,11 @@ gk_sections:
           - /gk/loss-function/
           - /gk/vae/
             
+      - title: "正則化"
+        items:
+          - /gk/regularization/
+          - /gk/regularization-l1-l2/
+    
       - title: "最適化手法"
         items:
           - /gk/gradient-descent/
