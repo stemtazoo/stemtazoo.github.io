@@ -36,6 +36,7 @@ gk_sections:
           - /gk/clustering-vs-dimensionality-reduction/
           - /gk/pca-vs-svd/
           - /gk/supervised-unsupervised-reinforcement/
+          - /gk/ensemble-learning/
 
       - title: "モデルの選択・評価"
         items:
