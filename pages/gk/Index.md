@@ -34,6 +34,7 @@ gk_sections:
           - /gk/hierarchical-clustering/
           - /gk/kmeans-vs-hierarchical/
           - /gk/clustering-vs-dimensionality-reduction/
+          - /gk/pca-vs-svd/
 
       - title: "モデルの選択・評価"
         items:
