@@ -140,6 +140,7 @@ gk_sections:
           - /gk/gpt/
           - /gk/bert-vs-gpt/
           - /gk/tf-idf/
+          - /gk/bag-of-words/
 
       - title: "深層強化学習"
         items:
