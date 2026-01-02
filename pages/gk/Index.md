@@ -40,6 +40,7 @@ gk_sections:
           - /gk/supervised-unsupervised-reinforcement/
           - /gk/ensemble-learning/
           - /gk/gdpr-rights-erasure-rectification/
+          - /gk/boosting/
 
       - title: "モデルの選択・評価"
         items:
