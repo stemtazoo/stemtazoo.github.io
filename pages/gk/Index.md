@@ -59,6 +59,7 @@ gk_sections:
           - /gk/aic/
           - /gk/bic/
           - /gk/aic-bic/
+          - /gk/bias-variance/
 
       - title: "よくあるつまずき（過学習など）"
         items:
