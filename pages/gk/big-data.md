@@ -1,10 +1,9 @@
 ---
-
 layout: page
 title: ビッグデータとは？G検定対策
 permalink: /gk/big-data/
 tags: [gk]
-----------
+---
 
 ## まず結論
 
