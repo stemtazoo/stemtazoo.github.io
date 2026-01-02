@@ -141,6 +141,7 @@ gk_sections:
           - /gk/bert-vs-gpt/
           - /gk/tf-idf/
           - /gk/bag-of-words/
+          - /gk/word2vec/
 
       - title: "深層強化学習"
         items:
