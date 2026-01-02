@@ -95,6 +95,7 @@ gk_sections:
         items:
           - /gk/gradient-descent/
           - /gk/adagrad/
+          - /gk/rmsprop/
             
   - title: "ディープラーニングの要素技術"
     items:
