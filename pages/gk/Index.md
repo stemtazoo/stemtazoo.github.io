@@ -56,6 +56,7 @@ gk_sections:
           - /gk/time-series-cross-validation/
           - /gk/aic/
           - /gk/bic/
+          - /gk/aic-bic/
 
       - title: "よくあるつまずき（過学習など）"
         items:
