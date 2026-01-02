@@ -142,6 +142,7 @@ gk_sections:
           - /gk/tf-idf/
           - /gk/bag-of-words/
           - /gk/word2vec/
+          - /gk/distributed-representation/
 
       - title: "深層強化学習"
         items:
