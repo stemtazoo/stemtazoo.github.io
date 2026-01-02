@@ -110,6 +110,7 @@ gk_sections:
           - /gk/optimization-cheatsheet-2/
           - /gk/double-descent/
           - /gk/grid-vs-random-search/
+          - /gk/bayesian-optimization/
             
   - title: "ディープラーニングの要素技術"
     items:
