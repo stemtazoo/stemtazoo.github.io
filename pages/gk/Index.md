@@ -94,6 +94,7 @@ gk_sections:
       - title: "最適化手法"
         items:
           - /gk/gradient-descent/
+          - /gk/adagrad/
             
   - title: "ディープラーニングの要素技術"
     items:
