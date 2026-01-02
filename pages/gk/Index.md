@@ -157,6 +157,7 @@ gk_sections:
           - /gk/transformer-architecture/
           - /gk/nlp-cheatsheet/
           - /gk/mlm/
+          - /gk/cbow/
 
       - title: "深層強化学習"
         items:
