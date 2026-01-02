@@ -146,6 +146,7 @@ gk_sections:
           - /gk/word2vec-vs-bert/
           - /gk/embedding-layer/
           - /gk/self-attention/
+          - /gk/transformer-architecture/
 
       - title: "深層強化学習"
         items:
