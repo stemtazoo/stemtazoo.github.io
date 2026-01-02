@@ -183,6 +183,7 @@ gk_sections:
           - /gk/pix2pix/
           - /gk/cyclegan/
           - /gk/gan-vs-conditional-gan/
+          - /gk/vae-vs-gan-vs-pix2pix/
             
   - title: "AIの社会実装に向けて"
     items:
