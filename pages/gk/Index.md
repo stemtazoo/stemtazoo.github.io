@@ -30,6 +30,7 @@ gk_sections:
           - /gk/learning-types-comparison/
           - /gk/distributed-reinforcement-learning/
           - /gk/reinforcement-learning-cheatsheet/
+          - /gk/dendrogram/
 
       - title: "モデルの選択・評価"
         items:
