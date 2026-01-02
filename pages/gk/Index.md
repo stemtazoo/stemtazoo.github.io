@@ -83,7 +83,6 @@ gk_sections:
           - /gk/activation-derivative/
           - /gk/gradient-vanishing-exploding/
           - /gk/momentum/
-          - /gk/adam/
           - /gk/optimization-cheatsheet/
           - /gk/learning-rate-scheduling/
           - /gk/pruning/
