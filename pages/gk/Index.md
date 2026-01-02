@@ -41,6 +41,8 @@ gk_sections:
           - /gk/ensemble-learning/
           - /gk/gdpr-rights-erasure-rectification/
           - /gk/boosting/
+          - /gk/bagging/
+          - /gk/random-forest/
 
       - title: "モデルの選択・評価"
         items:
