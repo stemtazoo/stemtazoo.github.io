@@ -77,7 +77,6 @@ gk_sections:
           - /gk/activation-functions/
           - /gk/backpropagation/
           - /gk/optimizers/
-          
           - /gk/batch-epoch/
           - /gk/leaky-relu/
           - /gk/relu-family-cheatsheet/
@@ -93,6 +92,7 @@ gk_sections:
         items:
           - /gk/regularization/
           - /gk/regularization-l1-l2/
+          - /gk/dropout/
     
       - title: "最適化手法"
         items:
