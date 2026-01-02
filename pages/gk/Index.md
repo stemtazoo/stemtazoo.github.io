@@ -54,6 +54,7 @@ gk_sections:
           - /gk/train-validation-test/
           - /gk/cross-validation/
           - /gk/time-series-cross-validation/
+          - /gk/aic/
 
       - title: "よくあるつまずき（過学習など）"
         items:
