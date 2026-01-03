@@ -260,6 +260,7 @@ gk_sections:
       - /gk/ai-patent/
       - /gk/ai-fake-news/
       - /gk/deepfake/
+      - /gk/deepfake-detection/
 
   - title: "チートシート（試験直前）"
     items:
