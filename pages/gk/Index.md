@@ -237,6 +237,7 @@ gk_sections:
       - /gk/data-portability-gdpr/
       - /gk/gdpr-rights-erasure-rectification/
       - /gk/gdpr-vs-japan-pipa/
+      - /gk/ai-patent/
 
   - title: "チートシート（試験直前）"
     items:
