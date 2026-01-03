@@ -259,6 +259,7 @@ gk_sections:
       - /gk/gdpr-vs-japan-pipa/
       - /gk/ai-patent/
       - /gk/ai-fake-news/
+      - /gk/deepfake/
 
   - title: "チートシート（試験直前）"
     items:
