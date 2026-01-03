@@ -190,6 +190,7 @@ gk_sections:
           - /gk/image-tasks-summary/
           - /gk/instance-segmentation/
           - /gk/detection-vs-semantic-vs-instance/
+          - /gk/mask-r-cnn/
 
       - title: "音声処理"
         items:
