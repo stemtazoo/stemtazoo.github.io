@@ -97,6 +97,7 @@ gk_sections:
           - /gk/model-compression/
           - /gk/loss-function/
           - /gk/vae/
+          - /gk/vanishing-gradient/
             
       - title: "誤差関数"
         items:
