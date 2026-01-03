@@ -191,6 +191,7 @@ gk_sections:
           - /gk/instance-segmentation/
           - /gk/detection-vs-semantic-vs-instance/
           - /gk/mask-r-cnn/
+          - /gk/ellipse-r-cnn/
 
       - title: "音声処理"
         items:
