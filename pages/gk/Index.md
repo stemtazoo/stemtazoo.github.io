@@ -164,6 +164,7 @@ gk_sections:
           - /gk/cnn-architectures-comparison/
           - /gk/image-tasks-summary/
           - /gk/instance-segmentation/
+          - /gk/detection-vs-semantic-vs-instance/
 
       - title: "音声処理"
         items:
