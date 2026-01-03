@@ -200,6 +200,7 @@ gk_sections:
           - /gk/alphago-vs-alphastar/
           - /gk/rl-methods/
           - /gk/sim2real/
+          - /gk/noisy-network/
             
       - title: "データ生成"
         items:
