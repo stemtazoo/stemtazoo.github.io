@@ -195,6 +195,7 @@ gk_sections:
           - /gk/multi-agent-rl/
           - /gk/alphago-vs-alphastar/
           - /gk/rl-methods/
+          - /gk/sim2real/
             
       - title: "データ生成"
         items:
