@@ -120,23 +120,29 @@ gk_sections:
           - /gk/optimizer-lineage/
             
   - title: "ディープラーニングの要素技術"
-    items:
-      - /gk/cnn/
-      - /gk/convolution/
-      - /gk/pooling/
-      - /gk/cnn-models/
-      - /gk/dilated-convolution/
-      - /gk/pooling-stride-dilation/
-      - /gk/encoder-decoder/
-      - /gk/global-average-pooling/
-      - /gk/rnn/
-      - /gk/vanishing-exploding-gradient/
-      - /gk/lstm/
-      - /gk/gru/
-      - /gk/attention/
-      - /gk/transformer/
-      - /gk/embedding-word2vec/
+    subsections:
+      - title: "ネットワークの構成要素"
+        items:
+          - /gk/cnn/
+          - /gk/convolution/
+          - /gk/pooling/
+          - /gk/cnn-models/
+          - /gk/dilated-convolution/
+          - /gk/pooling-stride-dilation/
+          - /gk/encoder-decoder/
+          - /gk/global-average-pooling/
+          - /gk/rnn/
+          - /gk/vanishing-exploding-gradient/
+          - /gk/lstm/
+          - /gk/gru/
+          - /gk/attention/
+          - /gk/transformer/
+          - /gk/embedding-word2vec/
 
+      - title: "リカレントニューラルネットワーク (RNN)"
+        items:
+          - /gk/rnn-encoder-decoder/
+            
   - title: "ディープラーニングの応用例"
     subsections:
       - title: "画像認識"
