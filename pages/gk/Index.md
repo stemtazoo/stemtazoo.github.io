@@ -46,6 +46,7 @@ gk_sections:
           - /gk/random-forest/
           - /gk/var/
           - /gk/time-series-ar-arma-arima/
+          - /gk/var-vs-arima/
 
       - title: "モデルの選択・評価"
         items:
