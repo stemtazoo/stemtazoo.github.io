@@ -129,19 +129,22 @@ gk_sections:
           - /gk/cnn-models/
           - /gk/dilated-convolution/
           - /gk/pooling-stride-dilation/
-          - /gk/encoder-decoder/
           - /gk/global-average-pooling/
-          - /gk/rnn/
           - /gk/vanishing-exploding-gradient/
-          - /gk/lstm/
-          - /gk/gru/
-          - /gk/attention/
-          - /gk/transformer/
           - /gk/embedding-word2vec/
 
       - title: "リカレントニューラルネットワーク (RNN)"
         items:
+          - /gk/rnn/
+          - /gk/lstm/
+          - /gk/gru/
+          - /gk/encoder-decoder/
           - /gk/rnn-encoder-decoder/
+          - /gk/attention/
+            
+        - title: "トランスフォーマー (Transformer)"
+        items:
+          - /gk/transformer/
             
   - title: "ディープラーニングの応用例"
     subsections:
