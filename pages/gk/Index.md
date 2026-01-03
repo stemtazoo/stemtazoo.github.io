@@ -47,6 +47,7 @@ gk_sections:
           - /gk/var/
           - /gk/time-series-ar-arma-arima/
           - /gk/var-vs-arima/
+          - /gk/stationarity/
 
       - title: "モデルの選択・評価"
         items:
