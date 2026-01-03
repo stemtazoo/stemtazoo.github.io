@@ -132,7 +132,7 @@ gk_sections:
           - /gk/global-average-pooling/
           - /gk/vanishing-exploding-gradient/
           - /gk/embedding-word2vec/
-            
+
       - title: "リカレントニューラルネットワーク (RNN)"
         items:
           - /gk/rnn/
@@ -141,8 +141,8 @@ gk_sections:
           - /gk/encoder-decoder/
           - /gk/rnn-encoder-decoder/
           - /gk/attention/
-            
-        - title: "トランスフォーマー (Transformer)"
+          
+      - title: "トランスフォーマー (Transformer)"
         items:
           - /gk/transformer/
             
