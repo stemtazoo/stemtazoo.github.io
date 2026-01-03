@@ -94,6 +94,10 @@ gk_sections:
           - /gk/loss-function/
           - /gk/vae/
             
+      - title: "誤差関数"
+        items:
+          - /gk/contrastive-loss/
+                        
       - title: "正則化"
         items:
           - /gk/regularization/
