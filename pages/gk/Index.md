@@ -187,6 +187,7 @@ gk_sections:
 
       - title: "音声処理"
         items:
+          - /gk/pcm/
           - /gk/timbre-mfcc/
           - /gk/formant/
           - /gk/speech-features/
