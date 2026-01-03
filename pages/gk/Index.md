@@ -107,6 +107,7 @@ gk_sections:
           - /gk/adagrad/
           - /gk/rmsprop/
           - /gk/adam/
+          - /gk/adabound/
           - /gk/momentum/
           - /gk/optimization-cheatsheet/
           - /gk/optimization-cheatsheet-2/
