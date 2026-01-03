@@ -151,6 +151,7 @@ gk_sections:
           - /gk/rnn-encoder-decoder/
           - /gk/attention/
           - /gk/seq2seq-attention-transformer/
+          - /gk/lstm-nonstationary/
           
       - title: "トランスフォーマー (Transformer)"
         items:
