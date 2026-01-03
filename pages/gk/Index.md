@@ -112,6 +112,8 @@ gk_sections:
           - /gk/double-descent/
           - /gk/grid-vs-random-search/
           - /gk/bayesian-optimization/
+          - /gk/cross-validation-with-search/
+          - /gk/hyperparameter-vs-parameter/
             
   - title: "ディープラーニングの要素技術"
     items:
