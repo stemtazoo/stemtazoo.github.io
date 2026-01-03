@@ -192,6 +192,7 @@ gk_sections:
           - /gk/nlp-cheatsheet/
           - /gk/mlm/
           - /gk/cbow/
+          - /gk/skip-gram/
 
       - title: "深層強化学習"
         items:
