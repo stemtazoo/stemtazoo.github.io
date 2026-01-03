@@ -191,6 +191,7 @@ gk_sections:
           - /gk/timbre-mfcc/
           - /gk/formant/
           - /gk/speech-features/
+          - /gk/speech-preprocessing/
 
       - title: "自然言語処理"
         items:
