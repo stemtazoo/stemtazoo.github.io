@@ -163,6 +163,7 @@ gk_sections:
           - /gk/cnn-vs-transformer/
           - /gk/cnn-architectures-comparison/
           - /gk/image-tasks-summary/
+          - /gk/instance-segmentation/
 
       - title: "音声処理"
         items:
