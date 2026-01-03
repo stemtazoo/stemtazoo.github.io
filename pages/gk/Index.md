@@ -109,6 +109,7 @@ gk_sections:
           - /gk/adam/
           - /gk/adabound/
           - /gk/momentum/
+          - /gk/optimizer-compare-4/
           - /gk/optimization-cheatsheet/
           - /gk/optimization-cheatsheet-2/
           - /gk/double-descent/
