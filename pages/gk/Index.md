@@ -193,6 +193,7 @@ gk_sections:
           - /gk/mask-r-cnn/
           - /gk/ellipse-r-cnn/
           - /gk/detection-segmentation-map/
+          - /gk/vit/
 
       - title: "音声処理"
         items:
