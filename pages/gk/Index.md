@@ -44,6 +44,7 @@ gk_sections:
           - /gk/boosting/
           - /gk/bagging/
           - /gk/random-forest/
+          - /gk/var/
 
       - title: "モデルの選択・評価"
         items:
