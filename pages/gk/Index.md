@@ -16,6 +16,7 @@ gk_sections:
       - /gk/ai-effect/
       - /gk/frame-problem/
       - /gk/symbol-grounding-problem/
+      - /gk/toy-problem/
 
   - title: "人工知能をめぐる動向"
     items:
