@@ -14,6 +14,7 @@ gk_sections:
       - /gk/big-data/
       - /gk/third-ai-boom/
       - /gk/ai-effect/
+      - /gk/frame-problem/
 
   - title: "人工知能をめぐる動向"
     items:
