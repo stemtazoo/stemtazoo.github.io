@@ -15,6 +15,7 @@ gk_sections:
       - /gk/third-ai-boom/
       - /gk/ai-effect/
       - /gk/frame-problem/
+      - /gk/symbol-grounding-problem/
 
   - title: "人工知能をめぐる動向"
     items:
