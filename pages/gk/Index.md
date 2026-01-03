@@ -97,6 +97,7 @@ gk_sections:
       - title: "誤差関数"
         items:
           - /gk/contrastive-loss/
+          - /gk/contrastive-vs-triplet-loss/
                         
       - title: "正則化"
         items:
