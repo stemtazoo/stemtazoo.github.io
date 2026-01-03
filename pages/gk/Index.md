@@ -201,6 +201,7 @@ gk_sections:
           - /gk/rl-methods/
           - /gk/sim2real/
           - /gk/noisy-network/
+          - /gk/dqn-advanced/
             
       - title: "データ生成"
         items:
