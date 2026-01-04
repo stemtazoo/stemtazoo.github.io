@@ -17,6 +17,7 @@ gk_sections:
       - /gk/frame-problem/
       - /gk/symbol-grounding-problem/
       - /gk/toy-problem/
+      - /gk/loebner-contest/
 
   - title: "人工知能をめぐる動向"
     items:
