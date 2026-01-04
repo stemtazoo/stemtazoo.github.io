@@ -74,6 +74,7 @@ gk_sections:
           - /gk/bias-variance/
           - /gk/cross-validation-with-search/
           - /gk/occams-razor/
+          - /gk/ai-philosophy-cheatsheet/
 
       - title: "よくあるつまずき（過学習など）"
         items:
