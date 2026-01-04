@@ -160,6 +160,7 @@ gk_sections:
           - /gk/attention/
           - /gk/seq2seq-attention-transformer/
           - /gk/lstm-nonstationary/
+          - /gk/bptt/
           
       - title: "トランスフォーマー (Transformer)"
         items:
