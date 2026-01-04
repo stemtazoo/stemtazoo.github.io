@@ -227,6 +227,7 @@ gk_sections:
       - title: "深層強化学習"
         items:
           - /gk/dueling-network/
+          - /gk/dqn/
           - /gk/multi-agent-rl/
           - /gk/alphago-vs-alphastar/
           - /gk/rl-methods/
