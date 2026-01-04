@@ -73,6 +73,7 @@ gk_sections:
           - /gk/aic-bic/
           - /gk/bias-variance/
           - /gk/cross-validation-with-search/
+          - /gk/occams-razor/
 
       - title: "よくあるつまずき（過学習など）"
         items:
