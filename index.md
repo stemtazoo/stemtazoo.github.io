@@ -12,6 +12,24 @@ permalink: /
   </p>
 </section>
 
+<section style="border: 1px solid #ddd; padding: 1rem; border-radius: 6px; margin: 2rem 0;">
+  <h2>📘 G検定 学習まとめ</h2>
+  <p>
+    G検定の過去問・模擬試験で間違えた内容をもとに、<br>
+    用語・概念を体系的に整理しています。
+  </p>
+  <ul>
+    <li>✔ 用語ごとに1ページ完結</li>
+    <li>✔ ひっかけポイント重視</li>
+    <li>✔ 試験直前の確認にも対応</li>
+  </ul>
+  <p>
+    <a href="{{ '/gk/' | relative_url }}">
+      → G検定 学習まとめページへ
+    </a>
+  </p>
+</section>
+
 <section>
   <h2>最新記事</h2>
   <div class="tag-filter">
