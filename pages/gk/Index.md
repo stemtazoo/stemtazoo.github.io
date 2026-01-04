@@ -234,6 +234,7 @@ gk_sections:
           - /gk/sim2real/
           - /gk/noisy-network/
           - /gk/dqn-advanced/
+          - /gk/dqn-vs-policy-gradient/
             
       - title: "データ生成"
         items:
