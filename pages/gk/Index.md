@@ -258,6 +258,7 @@ gk_sections:
       - /gk/crisp-dm/
       - /gk/crisp-dm-vs-ml-pipeline/
       - /gk/mlops/
+      - /gk/mlops-process/
       - /gk/devops/
       - /gk/roles-in-ml/
       - /gk/ml-project-lifecycle/
