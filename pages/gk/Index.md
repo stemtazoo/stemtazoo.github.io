@@ -282,6 +282,7 @@ gk_sections:
       - /gk/ai-fake-news/
       - /gk/deepfake/
       - /gk/deepfake-detection/
+      - /gk/ethical-assessment/
 
   - title: "チートシート（試験直前）"
     items:
