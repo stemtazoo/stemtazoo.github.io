@@ -131,6 +131,7 @@ gk_sections:
           - /gk/cross-validation-with-search/
           - /gk/hyperparameter-vs-parameter/
           - /gk/optimizer-lineage/
+          - /gk/adadelta/
             
   - title: "ディープラーニングの要素技術"
     subsections:
