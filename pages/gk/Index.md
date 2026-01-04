@@ -175,9 +175,6 @@ gk_sections:
           - /gk/u-net/
           - /gk/fcn/
           - /gk/segmentation-cheatsheet/
-          - /gk/xai-explainability/
-          - /gk/cam-grad-cam/
-          - /gk/lime-vs-shap/
           - /gk/dcgan/
           - /gk/gan-variants/
           - /gk/gan-vs-vae/
@@ -244,6 +241,12 @@ gk_sections:
           - /gk/gan-vs-conditional-gan/
           - /gk/vae-vs-gan-vs-pix2pix/
             
+      - title: "モデルの解釈性"
+        items:
+          - /gk/xai-explainability/
+          - /gk/cam-grad-cam/
+          - /gk/lime-vs-shap/
+             
   - title: "AIの社会実装に向けて"
     items:
       - /gk/edge-ai/
