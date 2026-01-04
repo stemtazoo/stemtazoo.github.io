@@ -197,6 +197,7 @@ gk_sections:
           - /gk/ellipse-r-cnn/
           - /gk/detection-segmentation-map/
           - /gk/vit/
+          - /gk/openpose/
 
       - title: "音声処理"
         items:
