@@ -27,6 +27,7 @@ gk_sections:
       - /gk/concepts-final-cheatsheet/
       - /gk/torobo-kun/
       - /gk/mnasnet/
+      - /gk/simple-perceptron/
 
   - title: "機械学習の概要"
     subsections:
