@@ -153,6 +153,7 @@ gk_sections:
           - /gk/global-average-pooling/
           - /gk/vanishing-exploding-gradient/
           - /gk/embedding-word2vec/
+          - /gk/instance-normalization/
 
       - title: "リカレントニューラルネットワーク (RNN)"
         items:
