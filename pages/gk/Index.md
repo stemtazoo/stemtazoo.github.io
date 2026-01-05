@@ -107,6 +107,7 @@ gk_sections:
           - /gk/loss-function/
           - /gk/vae/
           - /gk/vanishing-gradient/
+          - /gk/dae/
             
       - title: "誤差関数"
         items:
