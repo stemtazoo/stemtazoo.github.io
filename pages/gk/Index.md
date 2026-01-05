@@ -29,6 +29,7 @@ gk_sections:
       - /gk/mnasnet/
       - /gk/simple-perceptron/
       - /gk/xor-problem/
+      - /gk/mlp-xor/
 
   - title: "機械学習の概要"
     subsections:
