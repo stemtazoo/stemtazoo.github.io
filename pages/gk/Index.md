@@ -210,6 +210,7 @@ gk_sections:
           - /gk/detection-segmentation-map/
           - /gk/vit/
           - /gk/openpose/
+          - /gk/fpn/
 
       - title: "音声処理"
         items:
