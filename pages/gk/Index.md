@@ -217,6 +217,7 @@ gk_sections:
           - /gk/fpn/
           - /gk/fpn-ssd-yolo/
           - /gk/deeplab/
+          - /gk/segmentation-models-comparison/
 
       - title: "音声処理"
         items:
