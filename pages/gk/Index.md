@@ -31,6 +31,7 @@ gk_sections:
       - /gk/xor-problem/
       - /gk/mlp-xor/
       - /gk/activation-functions-role/
+      - /gk/neocognitron-to-cnn/
 
   - title: "機械学習の概要"
     subsections:
