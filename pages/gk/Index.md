@@ -229,6 +229,7 @@ gk_sections:
           - /gk/local-vs-distributed-representation/
           - /gk/onehot-vs-embedding/
           - /gk/cbow-vs-skipgram/
+          - /gk/embedding-vs-contextual-embedding/
 
       - title: "深層強化学習"
         items:
