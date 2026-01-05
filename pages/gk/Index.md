@@ -309,6 +309,7 @@ gk_sections:
       - /gk/deepfake/
       - /gk/deepfake-detection/
       - /gk/ethical-assessment/
+      - /gk/filter-bubble/
 
   - title: "チートシート（試験直前）"
     items:
