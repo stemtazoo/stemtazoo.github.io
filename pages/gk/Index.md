@@ -30,6 +30,7 @@ gk_sections:
       - /gk/simple-perceptron/
       - /gk/xor-problem/
       - /gk/mlp-xor/
+      - /gk/activation-functions-role/
 
   - title: "機械学習の概要"
     subsections:
