@@ -226,6 +226,7 @@ gk_sections:
           - /gk/mlm/
           - /gk/cbow/
           - /gk/skip-gram/
+          - /gk/local-vs-distributed-representation/
 
       - title: "深層強化学習"
         items:
