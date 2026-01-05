@@ -108,6 +108,7 @@ gk_sections:
           - /gk/model-compression/
           - /gk/loss-function/
           - /gk/vanishing-gradient/
+          - /gk/gpgpu/
             
       - title: "誤差関数"
         items:
