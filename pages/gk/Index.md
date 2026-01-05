@@ -216,6 +216,7 @@ gk_sections:
           - /gk/openpose/
           - /gk/fpn/
           - /gk/fpn-ssd-yolo/
+          - /gk/deeplab/
 
       - title: "音声処理"
         items:
