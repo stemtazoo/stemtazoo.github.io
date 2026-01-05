@@ -53,6 +53,7 @@ gk_sections:
           - /gk/var-vs-arima/
           - /gk/stationarity/
           - /gk/poisson-regression/
+          - /gk/poisson-vs-binomial/
 
       - title: "モデルの選択・評価"
         items:
