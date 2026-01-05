@@ -216,6 +216,7 @@ gk_sections:
           - /gk/formant/
           - /gk/speech-features/
           - /gk/speech-preprocessing/
+          - /gk/vad/
 
       - title: "自然言語処理"
         items:
