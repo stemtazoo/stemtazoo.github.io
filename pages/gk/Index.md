@@ -105,9 +105,7 @@ gk_sections:
           - /gk/pruning/
           - /gk/model-compression/
           - /gk/loss-function/
-          - /gk/vae/
           - /gk/vanishing-gradient/
-          - /gk/dae/
             
       - title: "誤差関数"
         items:
@@ -170,6 +168,12 @@ gk_sections:
         items:
           - /gk/transformer/
             
+      - title: "オートエンコーダ"
+        items:
+          - /gk/vae/
+          - /gk/dae/
+          - /gk/cae/
+                        
   - title: "ディープラーニングの応用例"
     subsections:
       - title: "画像認識"
