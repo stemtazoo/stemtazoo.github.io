@@ -154,6 +154,7 @@ gk_sections:
           - /gk/vanishing-exploding-gradient/
           - /gk/embedding-word2vec/
           - /gk/instance-normalization/
+          - /gk/normalization-cheatsheet/
 
       - title: "リカレントニューラルネットワーク (RNN)"
         items:
