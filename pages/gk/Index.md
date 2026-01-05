@@ -54,6 +54,7 @@ gk_sections:
           - /gk/stationarity/
           - /gk/poisson-regression/
           - /gk/poisson-vs-binomial/
+          - /gk/binomial-vs-logistic/
 
       - title: "モデルの選択・評価"
         items:
