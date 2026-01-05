@@ -211,6 +211,7 @@ gk_sections:
           - /gk/vit/
           - /gk/openpose/
           - /gk/fpn/
+          - /gk/fpn-ssd-yolo/
 
       - title: "音声処理"
         items:
