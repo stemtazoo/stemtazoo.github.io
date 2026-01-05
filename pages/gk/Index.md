@@ -230,6 +230,7 @@ gk_sections:
           - /gk/onehot-vs-embedding/
           - /gk/cbow-vs-skipgram/
           - /gk/embedding-vs-contextual-embedding/
+          - /gk/bert-why-transformer/
 
       - title: "深層強化学習"
         items:
