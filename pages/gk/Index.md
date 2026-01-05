@@ -26,6 +26,7 @@ gk_sections:
       - /gk/classical-ai-vs-ml/
       - /gk/concepts-final-cheatsheet/
       - /gk/torobo-kun/
+      - /gk/mnasnet/
 
   - title: "機械学習の概要"
     subsections:
