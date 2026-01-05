@@ -56,6 +56,7 @@ gk_sections:
           - /gk/poisson-vs-binomial/
           - /gk/binomial-vs-logistic/
           - /gk/reinforce/
+          - /gk/reinforce-vs-actor-critic/
 
       - title: "モデルの選択・評価"
         items:
