@@ -28,6 +28,7 @@ gk_sections:
       - /gk/torobo-kun/
       - /gk/mnasnet/
       - /gk/simple-perceptron/
+      - /gk/xor-problem/
 
   - title: "機械学習の概要"
     subsections:
