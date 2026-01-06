@@ -233,6 +233,7 @@ gk_sections:
           - /gk/segmentation-models-comparison/
           - /gk/pspnet/
           - /gk/segnet-2/
+          - /gk/segnet-vs-unet/
 
       - title: "音声処理"
         items:
