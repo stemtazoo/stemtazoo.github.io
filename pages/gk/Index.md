@@ -232,6 +232,7 @@ gk_sections:
           - /gk/deeplab/
           - /gk/segmentation-models-comparison/
           - /gk/pspnet/
+          - /gk/segnet/
 
       - title: "音声処理"
         items:
