@@ -20,6 +20,7 @@ gk_sections:
       - /gk/loebner-contest/
       - /gk/turing-test/
       - /gk/chinese-room/
+      - /gk/symbol-grounding/
 
   - title: "人工知能をめぐる動向"
     items:
