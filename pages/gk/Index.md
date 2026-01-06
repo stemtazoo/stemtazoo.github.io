@@ -278,6 +278,7 @@ gk_sections:
           - /gk/noisy-network/
           - /gk/dqn-advanced/
           - /gk/dqn-vs-policy-gradient/
+          - /gk/agent57/
             
       - title: "データ生成"
         items:
