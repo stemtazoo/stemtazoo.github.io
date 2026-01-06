@@ -18,6 +18,7 @@ gk_sections:
       - /gk/symbol-grounding-problem/
       - /gk/toy-problem/
       - /gk/loebner-contest/
+      - /gk/turing-test/
 
   - title: "人工知能をめぐる動向"
     items:
