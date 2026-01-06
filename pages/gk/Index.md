@@ -19,6 +19,7 @@ gk_sections:
       - /gk/toy-problem/
       - /gk/loebner-contest/
       - /gk/turing-test/
+      - /gk/chinese-room/
 
   - title: "人工知能をめぐる動向"
     items:
