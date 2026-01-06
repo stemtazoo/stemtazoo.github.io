@@ -279,6 +279,7 @@ gk_sections:
           - /gk/dqn-advanced/
           - /gk/dqn-vs-policy-gradient/
           - /gk/agent57/
+          - /gk/dqn-alphago-alphastar-agent57/
             
       - title: "データ生成"
         items:
