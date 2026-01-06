@@ -64,6 +64,7 @@ gk_sections:
           - /gk/binomial-vs-logistic/
           - /gk/reinforce/
           - /gk/reinforce-vs-actor-critic/
+          - /gk/gradient-boosting/
 
       - title: "モデルの選択・評価"
         items:
