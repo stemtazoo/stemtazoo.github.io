@@ -32,6 +32,7 @@ gk_sections:
       - /gk/mlp-xor/
       - /gk/activation-functions-role/
       - /gk/neocognitron-to-cnn/
+      - /gk/strips/
 
   - title: "機械学習の概要"
     subsections:
