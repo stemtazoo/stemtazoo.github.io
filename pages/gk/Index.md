@@ -319,6 +319,7 @@ gk_sections:
       - /gk/ethical-assessment/
       - /gk/filter-bubble/
       - /gk/echo-chamber/
+      - /gk/laws/
 
   - title: "チートシート（試験直前）"
     items:
