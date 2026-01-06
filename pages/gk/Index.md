@@ -38,6 +38,7 @@ gk_sections:
       - /gk/neocognitron-to-cnn/
       - /gk/strips/
       - /gh/ilsvrc/
+      - /gk/curse-of-dimensionality/
 
   - title: "機械学習の概要"
     subsections:
