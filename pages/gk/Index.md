@@ -21,6 +21,7 @@ gk_sections:
       - /gk/turing-test/
       - /gk/chinese-room/
       - /gk/symbol-grounding/
+      - /gk/singularity/
 
   - title: "人工知能をめぐる動向"
     items:
