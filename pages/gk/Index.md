@@ -46,36 +46,38 @@ gk_sections:
   - title: "機械学習の概要"
     subsections:
       - title: "代表的な手法"
-        items:
-          - /gk/supervised-learning/
-          - /gk/unsupervised-learning/
-          - /gk/reinforcement-learning/
-          - /gk/learning-types-comparison/
-          - /gk/distributed-reinforcement-learning/
-          - /gk/reinforcement-learning-cheatsheet/
-          - /gk/dendrogram/
-          - /gk/hierarchical-clustering/
-          - /gk/kmeans-vs-hierarchical/
-          - /gk/clustering-vs-dimensionality-reduction/
-          - /gk/pca-vs-svd/
-          - /gk/supervised-unsupervised-reinforcement/
-          - /gk/ensemble-learning/
-          - /gk/gdpr-rights-erasure-rectification/
-          - /gk/boosting/
-          - /gk/bagging/
-          - /gk/random-forest/
-          - /gk/var/
-          - /gk/time-series-ar-arma-arima/
-          - /gk/var-vs-arima/
-          - /gk/stationarity/
-          - /gk/poisson-regression/
-          - /gk/poisson-vs-binomial/
-          - /gk/binomial-vs-logistic/
-          - /gk/reinforce/
-          - /gk/reinforce-vs-actor-critic/
-          - /gk/gradient-boosting/
-          - /gk/actor-critic/
-          - /gk/a2c-a3c/
+        subsections:
+          - title: "学習の種類"
+            items:
+              - /gk/supervised-learning/
+              - /gk/unsupervised-learning/
+              - /gk/reinforcement-learning/
+              - /gk/learning-types-comparison/
+              - /gk/distributed-reinforcement-learning/
+              - /gk/reinforcement-learning-cheatsheet/
+              - /gk/dendrogram/
+              - /gk/hierarchical-clustering/
+              - /gk/kmeans-vs-hierarchical/
+              - /gk/clustering-vs-dimensionality-reduction/
+              - /gk/pca-vs-svd/
+              - /gk/supervised-unsupervised-reinforcement/
+              - /gk/ensemble-learning/
+              - /gk/gdpr-rights-erasure-rectification/
+              - /gk/boosting/
+              - /gk/bagging/
+              - /gk/random-forest/
+              - /gk/var/
+              - /gk/time-series-ar-arma-arima/
+              - /gk/var-vs-arima/
+              - /gk/stationarity/
+              - /gk/poisson-regression/
+              - /gk/poisson-vs-binomial/
+              - /gk/binomial-vs-logistic/
+              - /gk/reinforce/
+              - /gk/reinforce-vs-actor-critic/
+              - /gk/gradient-boosting/
+              - /gk/actor-critic/
+              - /gk/a2c-a3c/
 
       - title: "モデルの選択・評価"
         items:
