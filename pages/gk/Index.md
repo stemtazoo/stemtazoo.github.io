@@ -294,6 +294,7 @@ gk_sections:
           - /gk/xai-explainability/
           - /gk/cam-grad-cam/
           - /gk/lime-vs-shap/
+          - /gk/permutation-importance/
              
   - title: "AIの社会実装に向けて"
     items:
