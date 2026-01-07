@@ -244,6 +244,7 @@ gk_sections:
           - /gk/brightness/
           - /gk/contrast-saturation-hue/
           - /gk/data-augmentation-cheatsheet/
+          - /gk/image-terms-check/
 
       - title: "音声処理"
         items:
