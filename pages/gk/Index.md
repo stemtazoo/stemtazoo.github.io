@@ -37,8 +37,9 @@ gk_sections:
       - /gk/activation-functions-role/
       - /gk/neocognitron-to-cnn/
       - /gk/strips/
-      - /gh/ilsvrc/
+      - /gk/ilsvrc/
       - /gk/curse-of-dimensionality/
+      - /gk/dendral/
 
   - title: "機械学習の概要"
     subsections:
