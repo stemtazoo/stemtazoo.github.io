@@ -316,6 +316,7 @@ gk_sections:
           - /gk/palm-e/
           - /gk/clip/
           - /gk/blip/
+          - /gk/unified-io/
             
       - title: "モデルの解釈性"
         items:
