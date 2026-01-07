@@ -53,7 +53,7 @@ gk_sections:
               - /gk/unsupervised-learning/
               - /gk/reinforcement-learning/
               - /gk/learning-types-comparison/
-              
+
           - title: "強化学習"
             items:
               - /gk/distributed-reinforcement-learning/
@@ -315,6 +315,7 @@ gk_sections:
           - /gk/palm/
           - /gk/palm-e/
           - /gk/clip/
+          - /gk/blip/
             
       - title: "モデルの解釈性"
         items:
