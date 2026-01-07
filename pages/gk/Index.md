@@ -242,6 +242,7 @@ gk_sections:
           - /gk/segnet-2/
           - /gk/segnet-vs-unet/
           - /gk/brightness/
+          - /gk/contrast-saturation-hue/
 
       - title: "音声処理"
         items:
