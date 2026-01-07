@@ -314,6 +314,7 @@ gk_sections:
           - /gk/flamingo/
           - /gk/palm/
           - /gk/palm-e/
+          - /gk/clip/
             
       - title: "モデルの解釈性"
         items:
