@@ -126,6 +126,7 @@ gk_sections:
           - /gk/loss-function/
           - /gk/vanishing-gradient/
           - /gk/gpgpu/
+          - /gk/sigmoid-function/
             
       - title: "誤差関数"
         items:
