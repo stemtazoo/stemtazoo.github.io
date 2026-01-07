@@ -308,6 +308,10 @@ gk_sections:
           - /gk/cyclegan/
           - /gk/gan-vs-conditional-gan/
           - /gk/vae-vs-gan-vs-pix2pix/
+
+      - title: "マルチモーダル"
+        items:
+          - /gk/flamingo/
             
       - title: "モデルの解釈性"
         items:
