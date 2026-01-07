@@ -1,12 +1,5 @@
 {%- assign sec = include.sec -%}
 
-{%- comment -%}
-  sec:
-    - title
-    - items: ["/gk/xxx/", ...]
-    - subsections: [{title, items, subsections}, ...]
-{%- endcomment -%}
-
 {%- if sec.items -%}
 <ul>
   {%- for url in sec.items -%}
@@ -14,7 +7,7 @@
     {%- if p -%}
       <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
     {%- else -%}
-      <li style="color:#c00;">NOT FOUND: {{ url }}</li>
+      <li><span style="color:#c00;">NOT FOUND: {{ url }}</span></li>
     {%- endif -%}
   {%- endfor -%}
 </ul>
@@ -22,7 +15,7 @@
 
 {%- if sec.subsections -%}
   {%- for sub in sec.subsections -%}
-### {{ sub.title }}
-    {% include gk_section.html sec=sub %}
+<h3>{{ sub.title }}</h3>
+{% include gk_section.html sec=sub %}
   {%- endfor -%}
 {%- endif -%}
