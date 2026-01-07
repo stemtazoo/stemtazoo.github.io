@@ -295,6 +295,7 @@ gk_sections:
           - /gk/cam-grad-cam/
           - /gk/lime-vs-shap/
           - /gk/permutation-importance/
+          - /gk/permutation-importance-vs-shap/
              
   - title: "AIの社会実装に向けて"
     items:
