@@ -74,7 +74,6 @@ gk_sections:
           - /gk/reinforce/
           - /gk/reinforce-vs-actor-critic/
           - /gk/gradient-boosting/
-          - /gk/ape-x/
 
       - title: "モデルの選択・評価"
         items:
@@ -287,6 +286,8 @@ gk_sections:
           - /gk/dqn-vs-policy-gradient/
           - /gk/agent57/
           - /gk/dqn-alphago-alphastar-agent57/
+          - /gk/ape-x/
+          - /gk/dqn-family/
             
       - title: "データ生成"
         items:
