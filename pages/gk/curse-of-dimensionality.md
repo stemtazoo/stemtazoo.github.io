@@ -3,7 +3,7 @@ layout: page
 title: 次元の呪い（Curse of Dimensionality）とは？G検定対策
 permalink: /gk/curse-of-dimensionality/
 tags: [gk, machine_learning]
-----------------------------
+---
 
 ## まず結論
 
