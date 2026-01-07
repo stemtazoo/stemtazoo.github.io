@@ -312,6 +312,8 @@ gk_sections:
       - title: "マルチモーダル"
         items:
           - /gk/flamingo/
+          - /gk/palm/
+          - /gk/palm-e/
             
       - title: "モデルの解釈性"
         items:
