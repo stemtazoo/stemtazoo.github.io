@@ -40,6 +40,7 @@ gk_sections:
       - /gk/ilsvrc/
       - /gk/curse-of-dimensionality/
       - /gk/dendral/
+      - /gk/mycin/
 
   - title: "機械学習の概要"
     subsections:
