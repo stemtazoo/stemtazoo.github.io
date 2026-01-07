@@ -41,6 +41,7 @@ gk_sections:
       - /gk/curse-of-dimensionality/
       - /gk/dendral/
       - /gk/mycin/
+      - /gk/expert-system-limitations/
 
   - title: "機械学習の概要"
     subsections:
