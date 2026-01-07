@@ -241,6 +241,7 @@ gk_sections:
           - /gk/pspnet/
           - /gk/segnet-2/
           - /gk/segnet-vs-unet/
+          - /gk/brightness/
 
       - title: "音声処理"
         items:
