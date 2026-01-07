@@ -243,6 +243,7 @@ gk_sections:
           - /gk/segnet-vs-unet/
           - /gk/brightness/
           - /gk/contrast-saturation-hue/
+          - /gk/data-augmentation-cheatsheet/
 
       - title: "音声処理"
         items:
