@@ -288,6 +288,7 @@ gk_sections:
           - /gk/dqn-alphago-alphastar-agent57/
           - /gk/ape-x/
           - /gk/dqn-family/
+          - /gk/on-policy-off-policy/
             
       - title: "データ生成"
         items:
