@@ -74,6 +74,7 @@ gk_sections:
           - /gk/reinforce/
           - /gk/reinforce-vs-actor-critic/
           - /gk/gradient-boosting/
+          - /gk/actor-critic/
 
       - title: "モデルの選択・評価"
         items:
