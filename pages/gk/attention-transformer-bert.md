@@ -53,7 +53,7 @@ tags: [gk, neural_network, attention, transformer]
 ポイント：
 - **具体的なモデル名**
 - NLPタスクで高性能
-- 事前学習＋微調整が前提
+- 事前学習＋ファインチューニングが前提
 
 ## いつ使う？（得意・不得意）
 ### Attentionが活躍する場面
