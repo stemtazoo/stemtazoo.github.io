@@ -53,17 +53,22 @@ gk_sections:
               - /gk/unsupervised-learning/
               - /gk/reinforcement-learning/
               - /gk/learning-types-comparison/
+              - /gk/supervised-unsupervised-reinforcement/
+
+          - title: "教師なし学習"
+            items:
+              - /gk/k-means/
+              - /gk/kmeans-vs-hierarchical/
+              - /gk/hierarchical-clustering/
+              - /gk/clustering-vs-dimensionality-reduction/
+              - /gk/dendrogram/
+              - /gk/pca-vs-svd/
+              - /gk/k-means-vs-knn/
 
           - title: "強化学習"
             items:
               - /gk/distributed-reinforcement-learning/
               - /gk/reinforcement-learning-cheatsheet/
-              - /gk/dendrogram/
-              - /gk/hierarchical-clustering/
-              - /gk/kmeans-vs-hierarchical/
-              - /gk/clustering-vs-dimensionality-reduction/
-              - /gk/pca-vs-svd/
-              - /gk/supervised-unsupervised-reinforcement/
               - /gk/ensemble-learning/
               - /gk/gdpr-rights-erasure-rectification/
               - /gk/boosting/
@@ -81,6 +86,7 @@ gk_sections:
               - /gk/gradient-boosting/
               - /gk/actor-critic/
               - /gk/a2c-a3c/
+              - /gk/multi-armed-bandit/
 
       - title: "モデルの選択・評価"
         items:
@@ -186,6 +192,8 @@ gk_sections:
           - /gk/embedding-word2vec/
           - /gk/instance-normalization/
           - /gk/normalization-cheatsheet/
+          - /gk/atrous-convolution/
+          - /gk/atrous-vs-pooling/
 
       - title: "リカレントニューラルネットワーク (RNN)"
         items:
@@ -200,10 +208,13 @@ gk_sections:
           - /gk/bptt/
           - /gk/jordan-network/
           - /gk/jordan-vs-elman/
+          - /gk/vanishing-gradient-2/
+          - /gk/teacher-forcing/
           
       - title: "トランスフォーマー (Transformer)"
         items:
           - /gk/transformer/
+          - /gk/positional-encoding/
             
       - title: "オートエンコーダ"
         items:
@@ -260,6 +271,14 @@ gk_sections:
           - /gk/contrast-saturation-hue/
           - /gk/data-augmentation-cheatsheet/
           - /gk/image-terms-check/
+          - /gk/randaugment/
+          - /gk/auto-rand-trivial-augment/
+          - /gk/data-augmentation-vs-normalization/
+          - /gk/regularization-vs-augmentation-vs-normalization/
+          - /gk/random-flip/
+          - /gk/random-crop-vs-translation/
+          - /gk/cutmix/
+          - /gk/image-augmentation-cheatsheet/
 
       - title: "音声処理"
         items:
@@ -298,6 +317,7 @@ gk_sections:
           - /gk/attention-transformer-bert/
           - /gk/word-embedding/
           - /gk/word2vec-fasttext-glove/
+          - /gk/n-gram/
 
       - title: "深層強化学習"
         items:
@@ -315,6 +335,8 @@ gk_sections:
           - /gk/ape-x/
           - /gk/dqn-family/
           - /gk/on-policy-off-policy/
+          - /gk/openai-five/
+          - /gk/ai-project-comparison/
             
       - title: "データ生成"
         items:
@@ -332,6 +354,8 @@ gk_sections:
           - /gk/transfer-vs-forgetting/
           - /gk/pretraining-finetuning-transfer/
           - /gk/continual-learning/
+          - /gk/few-shot-learning/
+          - /gk/few-shot-vs-zero-shot-vs-transfer/
 
       - title: "マルチモーダル"
         items:
