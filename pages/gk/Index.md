@@ -30,7 +30,6 @@ gk_sections:
       - /gk/classical-ai-vs-ml/
       - /gk/concepts-final-cheatsheet/
       - /gk/torobo-kun/
-      - /gk/mnasnet/
       - /gk/simple-perceptron/
       - /gk/xor-problem/
       - /gk/mlp-xor/
@@ -79,6 +78,13 @@ gk_sections:
               - /gk/pca-vs-svd/
               - /gk/k-means-vs-knn/
               - /gk/cold-start-problem/
+              - /gk/mds/
+              - /gk/tsne/
+              - /gk/umap/
+              - /gk/svd/
+              - /gk/evd/
+              - /gk/lda/
+              - /gk/pca/
 
           - title: "強化学習"
             items:
@@ -93,6 +99,7 @@ gk_sections:
               - /gk/multi-armed-bandit/
               - /gk/discount-factor/
               - /gk/state-value-function/
+              - /gk/td-learning/
 
       - title: "モデルの選択・評価"
         items:
@@ -163,6 +170,8 @@ gk_sections:
       - title: "最適化手法"
         items:
           - /gk/gradient-descent/
+          - /gk/sgd/
+          - /gk/mini-batch/
           - /gk/adagrad/
           - /gk/rmsprop/
           - /gk/adam/
@@ -244,57 +253,64 @@ gk_sections:
   - title: "ディープラーニングの応用例"
     subsections:
       - title: "画像認識"
-        items:
-          - /gk/ssd/
-          - /gk/faster-r-cnn/
-          - /gk/yolo/
-          - /gk/rcnn-fast-rcnn/
-          - /gk/anchor-defaultbox-rpn/
-          - /gk/object-detection-summary/
-          - /gk/segnet/
-          - /gk/u-net/
-          - /gk/fcn/
-          - /gk/segmentation-cheatsheet/
-          - /gk/dcgan/
-          - /gk/gan-variants/
-          - /gk/gan-vs-vae/
-          - /gk/diffusion-model/
-          - /gk/stable-diffusion/
-          - /gk/cnn-output-size/
-          - /gk/cnn-calculation-cheatsheet/
-          - /gk/cnn-trick-calculations/
-          - /gk/pooling-trick-calculations/
-          - /gk/cnn-cheatsheet/
-          - /gk/cnn-vs-transformer/
-          - /gk/cnn-architectures-comparison/
-          - /gk/image-tasks-summary/
-          - /gk/instance-segmentation/
-          - /gk/detection-vs-semantic-vs-instance/
-          - /gk/mask-r-cnn/
-          - /gk/ellipse-r-cnn/
-          - /gk/detection-segmentation-map/
-          - /gk/vit/
-          - /gk/openpose/
-          - /gk/fpn/
-          - /gk/fpn-ssd-yolo/
-          - /gk/deeplab/
-          - /gk/segmentation-models-comparison/
-          - /gk/pspnet/
-          - /gk/segnet-2/
-          - /gk/segnet-vs-unet/
-          - /gk/brightness/
-          - /gk/contrast-saturation-hue/
-          - /gk/data-augmentation-cheatsheet/
-          - /gk/image-terms-check/
-          - /gk/randaugment/
-          - /gk/auto-rand-trivial-augment/
-          - /gk/data-augmentation-vs-normalization/
-          - /gk/regularization-vs-augmentation-vs-normalization/
-          - /gk/random-flip/
-          - /gk/random-crop-vs-translation/
-          - /gk/cutmix/
-          - /gk/image-augmentation-cheatsheet/
-          - /gk/panoptic-segmentation/
+        subsections:
+          - title: "画像データの入力"
+            items:
+              - /gk/ssd/
+              - /gk/faster-r-cnn/
+              - /gk/yolo/
+              - /gk/rcnn-fast-rcnn/
+              - /gk/anchor-defaultbox-rpn/
+              - /gk/object-detection-summary/
+              - /gk/segnet/
+              - /gk/u-net/
+              - /gk/fcn/
+              - /gk/segmentation-cheatsheet/
+              - /gk/dcgan/
+              - /gk/gan-variants/
+              - /gk/gan-vs-vae/
+              - /gk/diffusion-model/
+              - /gk/stable-diffusion/
+              - /gk/cnn-output-size/
+              - /gk/cnn-calculation-cheatsheet/
+              - /gk/cnn-trick-calculations/
+              - /gk/pooling-trick-calculations/
+              - /gk/cnn-cheatsheet/
+              - /gk/cnn-vs-transformer/
+              - /gk/cnn-architectures-comparison/
+              - /gk/image-tasks-summary/
+              - /gk/instance-segmentation/
+              - /gk/detection-vs-semantic-vs-instance/
+              - /gk/mask-r-cnn/
+              - /gk/ellipse-r-cnn/
+              - /gk/detection-segmentation-map/
+              - /gk/vit/
+              - /gk/openpose/
+              - /gk/fpn/
+              - /gk/fpn-ssd-yolo/
+              - /gk/deeplab/
+              - /gk/segmentation-models-comparison/
+              - /gk/pspnet/
+              - /gk/segnet-2/
+              - /gk/segnet-vs-unet/
+              - /gk/brightness/
+              - /gk/contrast-saturation-hue/
+              - /gk/data-augmentation-cheatsheet/
+              - /gk/image-terms-check/
+              - /gk/randaugment/
+              - /gk/auto-rand-trivial-augment/
+              - /gk/data-augmentation-vs-normalization/
+              - /gk/regularization-vs-augmentation-vs-normalization/
+              - /gk/random-flip/
+              - /gk/random-crop-vs-translation/
+              - /gk/cutmix/
+              - /gk/image-augmentation-cheatsheet/
+              - /gk/panoptic-segmentation/
+          - title: "物体認識タスク"
+            items:
+              - /gk/mobilenet/
+              - /gk/mnasnet/
+              - /gk/senet/
 
       - title: "音声処理"
         items:
@@ -355,6 +371,7 @@ gk_sections:
           - /gk/openai-five/
           - /gk/ai-project-comparison/
           - /gk/domain-randomization/
+          - /gk/td-learning/
             
       - title: "データ生成"
         items:
@@ -408,6 +425,7 @@ gk_sections:
       - /gk/edge-vs-cloud-ai/
       - /gk/crisp-dm/
       - /gk/crisp-dm-vs-ml-pipeline/
+      - /gk/crisp-ml/
       - /gk/mlops/
       - /gk/mlops-process/
       - /gk/devops/
@@ -442,6 +460,7 @@ gk_sections:
       - /gk/human-centered-ai-principles/
       - /gk/inclusion/
       - /gk/gdpr-rights-erasure-rectification/
+      - /gk/skill-loss/
 
   - title: "チートシート（試験直前）"
     items:
