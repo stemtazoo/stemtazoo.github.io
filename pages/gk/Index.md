@@ -156,6 +156,8 @@ gk_sections:
           - /gk/adam/
           - /gk/adabound/
           - /gk/momentum/
+          - /gk/adadelta/
+          - /gk/amsbound/
           - /gk/optimizer-compare-4/
           - /gk/optimization-cheatsheet/
           - /gk/optimization-cheatsheet-2/
@@ -165,7 +167,9 @@ gk_sections:
           - /gk/cross-validation-with-search/
           - /gk/hyperparameter-vs-parameter/
           - /gk/optimizer-lineage/
-          - /gk/adadelta/
+          - /gk/optimizer-comparison/
+          - /gk/optimizer-trick-questions/
+
             
   - title: "ディープラーニングの要素技術"
     subsections:
@@ -194,6 +198,8 @@ gk_sections:
           - /gk/seq2seq-attention-transformer/
           - /gk/lstm-nonstationary/
           - /gk/bptt/
+          - /gk/jordan-network/
+          - /gk/jordan-vs-elman/
           
       - title: "トランスフォーマー (Transformer)"
         items:
@@ -287,6 +293,11 @@ gk_sections:
           - /gk/embedding-vs-contextual-embedding/
           - /gk/bert-why-transformer/
           - /gk/rlhf/
+          - /gk/sentiment-analysis/
+          - /gk/tfidf-word2vec-bert/
+          - /gk/attention-transformer-bert/
+          - /gk/word-embedding/
+          - /gk/word2vec-fasttext-glove/
 
       - title: "深層強化学習"
         items:
@@ -320,6 +331,7 @@ gk_sections:
           - /gk/catastrophic-forgetting-solution/
           - /gk/transfer-vs-forgetting/
           - /gk/pretraining-finetuning-transfer/
+          - /gk/continual-learning/
 
       - title: "マルチモーダル"
         items:
