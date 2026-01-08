@@ -55,6 +55,20 @@ gk_sections:
               - /gk/learning-types-comparison/
               - /gk/supervised-unsupervised-reinforcement/
 
+          - title: "教師あり学習"
+            items:
+              - /gk/ensemble-learning/
+              - /gk/boosting/
+              - /gk/bagging/
+              - /gk/random-forest/
+              - /gk/var/
+              - /gk/time-series-ar-arma-arima/
+              - /gk/var-vs-arima/
+              - /gk/poisson-regression/
+              - /gk/poisson-vs-binomial/
+              - /gk/binomial-vs-logistic/
+              - /gk/softmax/
+
           - title: "教師なし学習"
             items:
               - /gk/k-means/
@@ -64,29 +78,21 @@ gk_sections:
               - /gk/dendrogram/
               - /gk/pca-vs-svd/
               - /gk/k-means-vs-knn/
+              - /gk/cold-start-problem/
 
           - title: "強化学習"
             items:
               - /gk/distributed-reinforcement-learning/
               - /gk/reinforcement-learning-cheatsheet/
-              - /gk/ensemble-learning/
-              - /gk/gdpr-rights-erasure-rectification/
-              - /gk/boosting/
-              - /gk/bagging/
-              - /gk/random-forest/
-              - /gk/var/
-              - /gk/time-series-ar-arma-arima/
-              - /gk/var-vs-arima/
               - /gk/stationarity/
-              - /gk/poisson-regression/
-              - /gk/poisson-vs-binomial/
-              - /gk/binomial-vs-logistic/
               - /gk/reinforce/
               - /gk/reinforce-vs-actor-critic/
               - /gk/gradient-boosting/
               - /gk/actor-critic/
               - /gk/a2c-a3c/
               - /gk/multi-armed-bandit/
+              - /gk/discount-factor/
+              - /gk/state-value-function/
 
       - title: "モデルの選択・評価"
         items:
@@ -176,6 +182,10 @@ gk_sections:
           - /gk/optimizer-comparison/
           - /gk/optimizer-trick-questions/
 
+      - title: "誤差逆伝播法（Backpropagation）"
+        items:
+          - /gk/gradient-descent/
+          - /gk/credit-assignment-problem/
             
   - title: "ディープラーニングの要素技術"
     subsections:
@@ -194,6 +204,9 @@ gk_sections:
           - /gk/normalization-cheatsheet/
           - /gk/atrous-convolution/
           - /gk/atrous-vs-pooling/
+          - /gk/whitening/
+          - /gk/standardization/
+          - /gk/normalization/
 
       - title: "リカレントニューラルネットワーク (RNN)"
         items:
@@ -207,6 +220,7 @@ gk_sections:
           - /gk/lstm-nonstationary/
           - /gk/bptt/
           - /gk/jordan-network/
+          - /gk/elman-network/
           - /gk/jordan-vs-elman/
           - /gk/vanishing-gradient-2/
           - /gk/teacher-forcing/
@@ -215,6 +229,7 @@ gk_sections:
         items:
           - /gk/transformer/
           - /gk/positional-encoding/
+          - /gk/multi-head-attention/
             
       - title: "オートエンコーダ"
         items:
@@ -279,6 +294,7 @@ gk_sections:
           - /gk/random-crop-vs-translation/
           - /gk/cutmix/
           - /gk/image-augmentation-cheatsheet/
+          - /gk/panoptic-segmentation/
 
       - title: "音声処理"
         items:
@@ -318,6 +334,7 @@ gk_sections:
           - /gk/word-embedding/
           - /gk/word2vec-fasttext-glove/
           - /gk/n-gram/
+          - /gk/paraphrasing/
 
       - title: "深層強化学習"
         items:
@@ -337,6 +354,7 @@ gk_sections:
           - /gk/on-policy-off-policy/
           - /gk/openai-five/
           - /gk/ai-project-comparison/
+          - /gk/domain-randomization/
             
       - title: "データ生成"
         items:
@@ -346,6 +364,7 @@ gk_sections:
           - /gk/gan-vs-conditional-gan/
           - /gk/vae-vs-gan-vs-pix2pix/
           - /gk/gan-anomaly-detection/
+          - /gk/nerf/
 
       - title: "転移学習・ファインチューニング"
         items:
@@ -353,9 +372,11 @@ gk_sections:
           - /gk/catastrophic-forgetting-solution/
           - /gk/transfer-vs-forgetting/
           - /gk/pretraining-finetuning-transfer/
+          - /gk/self-supervised-learning/
           - /gk/continual-learning/
           - /gk/few-shot-learning/
           - /gk/few-shot-vs-zero-shot-vs-transfer/
+          - /gk/one-shot-learning/
 
       - title: "マルチモーダル"
         items:
@@ -367,6 +388,7 @@ gk_sections:
           - /gk/unified-io/
           - /gk/dall-e/
           - /gk/multimodal-cheatsheet/
+          - /gk/visual-question-answering/
             
       - title: "モデルの解釈性"
         items:
@@ -375,7 +397,11 @@ gk_sections:
           - /gk/lime-vs-shap/
           - /gk/permutation-importance/
           - /gk/permutation-importance-vs-shap/
-             
+
+      - title: "モデルの軽量化"
+        items:
+          - /gk/lottery-ticket-hypothesis/
+          
   - title: "AIの社会実装に向けて"
     items:
       - /gk/edge-ai/
@@ -413,6 +439,9 @@ gk_sections:
       - /gk/filter-bubble/
       - /gk/echo-chamber/
       - /gk/laws/
+      - /gk/human-centered-ai-principles/
+      - /gk/inclusion/
+      - /gk/gdpr-rights-erasure-rectification/
 
   - title: "チートシート（試験直前）"
     items:
