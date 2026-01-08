@@ -202,6 +202,10 @@ gk_sections:
       - title: "オートエンコーダ"
         items:
           - /gk/vae/
+          - /gk/ae-vs-vae/
+          - /gk/anomaly-detection-ae/
+          - /gk/vae-anomaly-detection/
+          - /gk/anomaly-detection-methods/
           - /gk/dae/
           - /gk/cae/
                         
@@ -308,6 +312,14 @@ gk_sections:
           - /gk/cyclegan/
           - /gk/gan-vs-conditional-gan/
           - /gk/vae-vs-gan-vs-pix2pix/
+          - /gk/gan-anomaly-detection/
+
+      - title: "転移学習・ファインチューニング"
+        items:
+          - /gk/catastrophic-forgetting/
+          - /gk/catastrophic-forgetting-solution/
+          - /gk/transfer-vs-forgetting/
+          - /gk/pretraining-finetuning-transfer/
 
       - title: "マルチモーダル"
         items:
