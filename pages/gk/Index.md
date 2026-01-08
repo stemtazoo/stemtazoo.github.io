@@ -104,6 +104,8 @@ gk_sections:
               - /gk/sarsa/
               - /gk/q-learning/
               - /gk/ucb/
+              - /gk/ppo/
+              - /gk/q-learning-vs-policy-gradient/
 
       - title: "モデルの選択・評価"
         items:
@@ -157,6 +159,8 @@ gk_sections:
         items:
           - /gk/contrastive-loss/
           - /gk/contrastive-vs-triplet-loss/
+          - /gk/cross-entropy/
+          - /gk/cross-entropy-vs-kl/
                         
       - title: "正則化"
         items:
@@ -168,6 +172,7 @@ gk_sections:
       - title: "最適化手法"
         items:
           - /gk/gradient-descent/
+          - /gk/batch-gradient-descent/
           - /gk/sgd/
           - /gk/mini-batch/
           - /gk/adagrad/
@@ -259,14 +264,17 @@ gk_sections:
           - /gk/anomaly-detection-methods/
           - /gk/dae/
           - /gk/cae/
+          - /gk/vq-vae/
+          - /gk/vae-variants-cheatsheet/
                         
   - title: "ディープラーニングの応用例"
     subsections:
       - title: "画像認識"
         subsections:
-          - title: "画像データの入力"
+          - title: "ネオコグニトロンとLeNet"
             items:
               - /gk/neocognitron/
+              - /gk/lenet/
               - /gk/anchor-defaultbox-rpn/
               - /gk/cnn-output-size/
               - /gk/cnn-calculation-cheatsheet/
@@ -351,6 +359,7 @@ gk_sections:
           - /gk/speech-preprocessing/
           - /gk/vad/
           - /gk/hmm/
+          - /gk/phoneme/
 
       - title: "自然言語処理"
         items:
@@ -380,6 +389,8 @@ gk_sections:
           - /gk/word2vec-fasttext-glove/
           - /gk/n-gram/
           - /gk/paraphrasing/
+          - /gk/morphological-analysis/
+          - /gk/nlp-three-steps/
 
       - title: "深層強化学習"
         items:
@@ -401,6 +412,9 @@ gk_sections:
           - /gk/ai-project-comparison/
           - /gk/domain-randomization/
           - /gk/td-learning/
+          - /gk/rainbow/
+          - /gk/reward-shaping/
+          - /gk/noisy-nets/
             
       - title: "データ生成"
         items:
@@ -496,6 +510,11 @@ gk_sections:
       - /gk/gdpr-rights-erasure-rectification/
       - /gk/skill-loss/
       - /gk/third-party-provision/
+      - /gk/data-extraction-attack/
+      - /gk/membership-inference-attack/
+      - /gk/model-extraction-attack/
+      - /gk/privacy-attacks-cheatsheet/
+      - /gk/differential-privacy/
 
   - title: "チートシート（試験直前）"
     items:
