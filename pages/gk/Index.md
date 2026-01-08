@@ -317,6 +317,8 @@ gk_sections:
           - /gk/clip/
           - /gk/blip/
           - /gk/unified-io/
+          - /gk/dall-e/
+          - /gk/multimodal-cheatsheet/
             
       - title: "モデルの解釈性"
         items:
