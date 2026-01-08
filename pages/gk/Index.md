@@ -83,6 +83,7 @@ gk_sections:
               - /gk/umap/
               - /gk/svd/
               - /gk/evd/
+              - /gk/topic-model/
               - /gk/lda/
               - /gk/pca/
 
@@ -100,6 +101,9 @@ gk_sections:
               - /gk/discount-factor/
               - /gk/state-value-function/
               - /gk/td-learning/
+              - /gk/sarsa/
+              - /gk/q-learning/
+              - /gk/ucb/
 
       - title: "モデルの選択・評価"
         items:
@@ -138,12 +142,8 @@ gk_sections:
         items:
           - /gk/perceptron/
           - /gk/mlp/
-          - /gk/activation-functions/
-          - /gk/backpropagation/
           - /gk/optimizers/
           - /gk/batch-epoch/
-          - /gk/leaky-relu/
-          - /gk/relu-family-cheatsheet/
           - /gk/activation-derivative/
           - /gk/gradient-vanishing-exploding/
           - /gk/learning-rate-scheduling/
@@ -152,8 +152,6 @@ gk_sections:
           - /gk/loss-function/
           - /gk/vanishing-gradient/
           - /gk/gpgpu/
-          - /gk/sigmoid-function/
-          - /gk/vanishing-gradient-sigmoid/
             
       - title: "誤差関数"
         items:
@@ -193,9 +191,18 @@ gk_sections:
 
       - title: "誤差逆伝播法（Backpropagation）"
         items:
+          - /gk/backpropagation/
           - /gk/gradient-descent/
           - /gk/credit-assignment-problem/
-            
+
+      - title: "活性化関数"
+        items:
+          - /gk/sigmoid-function/
+          - /gk/vanishing-gradient-sigmoid/
+          - /gk/leaky-relu/
+          - /gk/relu-family-cheatsheet/
+          - /gk/activation-functions/
+
   - title: "ディープラーニングの要素技術"
     subsections:
       - title: "ネットワークの構成要素"
@@ -237,7 +244,10 @@ gk_sections:
       - title: "トランスフォーマー (Transformer)"
         items:
           - /gk/transformer/
+          - /gk/source-target-attention/
+          - /gk/self-attention/
           - /gk/positional-encoding/
+          - /gk/transformer-architecture/
           - /gk/multi-head-attention/
             
       - title: "オートエンコーダ"
@@ -256,21 +266,8 @@ gk_sections:
         subsections:
           - title: "画像データの入力"
             items:
-              - /gk/ssd/
-              - /gk/faster-r-cnn/
-              - /gk/yolo/
-              - /gk/rcnn-fast-rcnn/
+              - /gk/neocognitron/
               - /gk/anchor-defaultbox-rpn/
-              - /gk/object-detection-summary/
-              - /gk/segnet/
-              - /gk/u-net/
-              - /gk/fcn/
-              - /gk/segmentation-cheatsheet/
-              - /gk/dcgan/
-              - /gk/gan-variants/
-              - /gk/gan-vs-vae/
-              - /gk/diffusion-model/
-              - /gk/stable-diffusion/
               - /gk/cnn-output-size/
               - /gk/cnn-calculation-cheatsheet/
               - /gk/cnn-trick-calculations/
@@ -281,22 +278,15 @@ gk_sections:
               - /gk/image-tasks-summary/
               - /gk/instance-segmentation/
               - /gk/detection-vs-semantic-vs-instance/
-              - /gk/mask-r-cnn/
-              - /gk/ellipse-r-cnn/
               - /gk/detection-segmentation-map/
               - /gk/vit/
-              - /gk/openpose/
-              - /gk/fpn/
-              - /gk/fpn-ssd-yolo/
-              - /gk/deeplab/
-              - /gk/segmentation-models-comparison/
-              - /gk/pspnet/
-              - /gk/segnet-2/
-              - /gk/segnet-vs-unet/
+              - /gk/image-terms-check/
+
+          - title: "データ拡張"
+            items:
               - /gk/brightness/
               - /gk/contrast-saturation-hue/
               - /gk/data-augmentation-cheatsheet/
-              - /gk/image-terms-check/
               - /gk/randaugment/
               - /gk/auto-rand-trivial-augment/
               - /gk/data-augmentation-vs-normalization/
@@ -305,12 +295,52 @@ gk_sections:
               - /gk/random-crop-vs-translation/
               - /gk/cutmix/
               - /gk/image-augmentation-cheatsheet/
-              - /gk/panoptic-segmentation/
+
           - title: "物体認識タスク"
             items:
+              - /gk/alexnet/
+              - /gk/vgg/
+              - /gk/googlenet/
+              - /gk/resnet/
+              - /gk/wideresnet/
+              - /gk/densenet/
+              - /gk/senet/
               - /gk/mobilenet/
               - /gk/mnasnet/
-              - /gk/senet/
+              - /gk/efficientnet/
+
+          - title: "物体検出タスク"
+            items:
+              - /gk/object-detection/
+              - /gk/object-detection-summary/
+              - /gk/ssd/
+              - /gk/faster-r-cnn/
+              - /gk/yolo/
+              - /gk/rcnn-fast-rcnn/
+              - /gk/fpn/
+              - /gk/fpn-ssd-yolo/
+
+          - title: "セグメンテーションタスク"
+            items:
+              - /gk/segnet/
+              - /gk/segnet-2/
+              - /gk/u-net/
+              - /gk/segnet-vs-unet/
+              - /gk/fcn/
+              - /gk/segmentation-cheatsheet/
+              - /gk/segmentation-models-comparison/
+              - /gk/pspnet/
+              - /gk/panoptic-segmentation/
+              - /gk/deeplab/
+
+          - title: "姿勢推定タスク"
+            items:
+              - /gk/openpose/
+
+          - title: "マルチタスク学習"
+            items:
+              - /gk/mask-r-cnn/
+              - /gk/ellipse-r-cnn/
 
       - title: "音声処理"
         items:
@@ -320,6 +350,7 @@ gk_sections:
           - /gk/speech-features/
           - /gk/speech-preprocessing/
           - /gk/vad/
+          - /gk/hmm/
 
       - title: "自然言語処理"
         items:
@@ -332,8 +363,6 @@ gk_sections:
           - /gk/distributed-representation/
           - /gk/word2vec-vs-bert/
           - /gk/embedding-layer/
-          - /gk/self-attention/
-          - /gk/transformer-architecture/
           - /gk/nlp-cheatsheet/
           - /gk/mlm/
           - /gk/cbow/
@@ -375,6 +404,11 @@ gk_sections:
             
       - title: "データ生成"
         items:
+          - /gk/dcgan/
+          - /gk/gan-variants/
+          - /gk/gan-vs-vae/
+          - /gk/diffusion-model/
+          - /gk/stable-diffusion/
           - /gk/vae-vs-gan/
           - /gk/pix2pix/
           - /gk/cyclegan/
@@ -461,6 +495,7 @@ gk_sections:
       - /gk/inclusion/
       - /gk/gdpr-rights-erasure-rectification/
       - /gk/skill-loss/
+      - /gk/third-party-provision/
 
   - title: "チートシート（試験直前）"
     items:
