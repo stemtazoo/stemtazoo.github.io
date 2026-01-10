@@ -103,6 +103,7 @@ gk_sections:
               - /gk/td-learning/
               - /gk/sarsa/
               - /gk/q-learning/
+              - /gk/epsilon-greedy/
               - /gk/ucb/
               - /gk/ppo/
               - /gk/q-learning-vs-policy-gradient/
@@ -130,6 +131,8 @@ gk_sections:
           - /gk/cross-validation-with-search/
           - /gk/occams-razor/
           - /gk/ai-philosophy-cheatsheet/
+          - /gk/mutual-information/
+          - /gk/chain-rule/
 
       - title: "よくあるつまずき（過学習など）"
         items:
@@ -160,6 +163,7 @@ gk_sections:
           - /gk/contrastive-loss/
           - /gk/contrastive-vs-triplet-loss/
           - /gk/cross-entropy/
+          - /gk/kl-divergence/
           - /gk/cross-entropy-vs-kl/
                         
       - title: "正則化"
@@ -349,6 +353,7 @@ gk_sections:
             items:
               - /gk/mask-r-cnn/
               - /gk/ellipse-r-cnn/
+              - /gk/multi-task-learning/
 
       - title: "音声処理"
         items:
@@ -391,6 +396,8 @@ gk_sections:
           - /gk/paraphrasing/
           - /gk/morphological-analysis/
           - /gk/nlp-three-steps/
+          - /gk/fixed-expression/
+          - /gk/glue/
 
       - title: "深層強化学習"
         items:
