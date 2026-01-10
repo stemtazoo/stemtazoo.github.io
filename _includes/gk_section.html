@@ -4,6 +4,10 @@
 <ul>
   {%- for url in sec.items -%}
     {%- assign p = site.pages | where: "url", url | first -%}
+    {%- if p == nil -%}
+      {%- assign p = site.posts | where: "url", url | first -%}
+    {%- endif -%}
+
     {%- if p -%}
       <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
     {%- else -%}
