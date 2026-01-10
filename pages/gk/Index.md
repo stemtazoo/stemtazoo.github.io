@@ -631,16 +631,31 @@ gk_sections:
 
 ---
 
-## 人口知能(AI)とは/人口知能(AI)とは（自動）
+## 人口知能(AI)とは
 
-{% assign gk_pages = site.pages | where_exp: "p", "p.url contains '/gk/'" | where_exp: "p", "p.url != '/gk/'" %}
-{% assign items = gk_pages | where: "gk_section", "人口知能(AI)とは/人口知能(AI)とは" | sort: "gk_order" %}
+{% assign gk_pages = site.pages
+  | where_exp: "p", "p.url contains '/gk/'"
+  | where_exp: "p", "p.url != '/gk/'" %}
 
+{% assign chapter = "人口知能(AI)とは" %}
+
+{% assign chapter_items = gk_pages
+  | where_exp: "p", "p.gk_section and p.gk_section contains chapter | append: '/'" %}
+
+{% assign grouped = chapter_items
+  | group_by_exp: "p", "p.gk_section | split: '/' | last" %}
+
+{% for g in grouped %}
+### {{ g.name }}
+
+{% assign items = g.items | sort: "gk_order" %}
 <ul>
-{% for p in items %}
-  <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
-{% endfor %}
+  {% for p in items %}
+    <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
+  {% endfor %}
 </ul>
+{% endfor %}
+
 
 ---
 
