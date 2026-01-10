@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: gk_index
 title: G検定 学習まとめ
 permalink: /gk/
 tags: [gk]
