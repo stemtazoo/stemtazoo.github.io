@@ -1,0 +1,15 @@
+{%- assign sec = include.sec -%}
+{%- assign acc = include.acc -%}
+
+{%- if sec.items -%}
+  {%- assign acc = acc | concat: sec.items -%}
+{%- endif -%}
+
+{%- if sec.subsections -%}
+  {%- for sub in sec.subsections -%}
+    {%- capture _tmp -%}{% include gk_collect_urls.html sec=sub acc=acc %}{%- endcapture -%}
+    {%- assign acc = _tmp | split: "|||" -%}
+  {%- endfor -%}
+{%- endif -%}
+
+{{ acc | join: "|||" }}

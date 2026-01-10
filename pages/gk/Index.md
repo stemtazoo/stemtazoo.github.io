@@ -538,6 +538,17 @@ gk_sections:
 ---
 
 {% comment %}
+  Indexに登録されているURLを全部集める（未分類検知用・subsections再帰対応）
+{% endcomment %}
+{% assign registered_urls = "" | split: "" %}
+
+{% for s in page.gk_sections %}
+  {% capture collected %}{% include gk_collect_urls.html sec=s acc=registered_urls %}{% endcapture %}
+  {% assign registered_urls = collected | split: "|||" %}
+{% endfor %}
+
+
+{% comment %}
   gk_sections に書いた URL から対応する page を引く
   見つからない場合は赤字で表示
 {% endcomment %}
@@ -618,3 +629,31 @@ gk_sections:
 {% assign sec = page.gk_sections | where: "title", "ひっかけ問題集" | first %}
 {% include gk_section.html sec=sec %}
 
+---
+
+## 未分類（Index未登録）
+
+{% comment %}
+  /gk/配下の全ページ（pages + posts）を集める
+{% endcomment %}
+{% assign gk_pages = site.pages | where_exp: "p", "p.url contains '/gk/'" | where_exp: "p", "p.url != '/gk/'" %}
+{% assign gk_posts = site.posts | where_exp: "p", "p.url contains '/gk/'" %}
+{% assign gk_all = gk_pages | concat: gk_posts %}
+
+{% assign unlisted = "" | split: "" %}
+
+{% for p in gk_all %}
+  {% unless registered_urls contains p.url %}
+    {% assign unlisted = unlisted | push: p %}
+  {% endunless %}
+{% endfor %}
+
+{% if unlisted.size == 0 %}
+<p>✅ Index未登録ページはありません。</p>
+{% else %}
+<ul>
+  {% for p in unlisted %}
+    <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a>（{{ p.url }}）</li>
+  {% endfor %}
+</ul>
+{% endif %}
