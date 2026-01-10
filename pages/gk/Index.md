@@ -3,8 +3,6 @@ layout: gk_index
 title: G検定 学習まとめ
 permalink: /gk/
 tags: [gk]
-
-# 表示順はここで固定（/gk/〇〇/ ＝ pages/gk/〇〇.md）
 gk_sections:
   - title: "人工知能（AI）とは"
     items:
@@ -632,6 +630,8 @@ gk_sections:
 ---
 
 ## 人口知能(AI)とは
+{% assign sec = page.gk_sections | where: "title", "人工知能（AI）とは" | first %}
+{% include gk_section.html sec=sec %}
 
 {% assign gk_pages = site.pages
   | where_exp: "p", "p.url contains '/gk/'"
