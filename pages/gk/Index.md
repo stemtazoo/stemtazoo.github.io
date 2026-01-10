@@ -631,6 +631,19 @@ gk_sections:
 
 ---
 
+## 人口知能(AI)とは/人口知能(AI)とは（自動）
+
+{% assign gk_pages = site.pages | where_exp: "p", "p.url contains '/gk/'" | where_exp: "p", "p.url != '/gk/'" %}
+{% assign items = gk_pages | where: "gk_section", "人口知能(AI)とは/人口知能(AI)とは" | sort: "gk_order" %}
+
+<ul>
+{% for p in items %}
+  <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
+{% endfor %}
+</ul>
+
+---
+
 ## 未分類（Index未登録）
 
 {% comment %}
