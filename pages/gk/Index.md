@@ -638,9 +638,10 @@ gk_sections:
   | where_exp: "p", "p.url != '/gk/'" %}
 
 {% assign chapter = "人口知能(AI)とは" %}
+{% assign chapter_prefix = chapter | append: "/" %}
 
 {% assign chapter_items = gk_pages
-  | where_exp: "p", "p.gk_section and p.gk_section contains chapter | append: '/'" %}
+  | where_exp: "p", "p.gk_section and p.gk_section contains chapter_prefix" %}
 
 {% assign grouped = chapter_items
   | group_by_exp: "p", "p.gk_section | split: '/' | last" %}
@@ -655,7 +656,6 @@ gk_sections:
   {% endfor %}
 </ul>
 {% endfor %}
-
 
 ---
 
