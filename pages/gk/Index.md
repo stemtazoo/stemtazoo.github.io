@@ -36,7 +36,7 @@ gk_order: 15
 
 {% for group in gk_top_groups %}
 ## {{ group.name }}
-{% assign group_items = group.items %}
+{% assign group_items = group['items'] %}
 {% include gk_section_tree.html items=group_items depth=1 %}
 
 {% endfor %}
