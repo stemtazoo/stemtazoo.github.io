@@ -1,0 +1,23 @@
+{%- assign depth = include.depth | default: 0 -%}
+{%- assign grouped = include.items | group_by_exp: "p", "p.gk_section | split: '/' | slice: depth, 1 | first" -%}
+{%- assign next_depth = depth | plus: 1 -%}
+
+{%- for group in grouped -%}
+  {%- if group.name != nil and group.name != "" -%}
+<h{{ depth | plus: 2 }}>{{ group.name }}</h{{ depth | plus: 2 }}>
+  {%- endif -%}
+
+  {%- assign leaf_items = group.items | where_exp: "p", "p.gk_section | split: '/' | size == next_depth" -%}
+  {%- if leaf_items.size > 0 -%}
+<ul>
+    {%- for p in leaf_items -%}
+  <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
+    {%- endfor -%}
+</ul>
+  {%- endif -%}
+
+  {%- assign deeper_items = group.items | where_exp: "p", "p.gk_section | split: '/' | size > next_depth" -%}
+  {%- if deeper_items.size > 0 -%}
+    {% include gk_section_tree.html items=deeper_items depth=next_depth %}
+  {%- endif -%}
+{%- endfor -%}
