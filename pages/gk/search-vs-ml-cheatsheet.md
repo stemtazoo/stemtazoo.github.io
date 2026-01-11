@@ -3,6 +3,8 @@ layout: page
 title: 探索と機械学習の違い（どっちを使う？）
 permalink: /gk/search-vs-ml-cheatsheet/
 tags: [gk, cheatsheet]
+gk_section: チートシート（試験直前）/チートシート（試験直前）
+gk_order: 3
 ---
 
 ## まず結論（この1ページで即断）

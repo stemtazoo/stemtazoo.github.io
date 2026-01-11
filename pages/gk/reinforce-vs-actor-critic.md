@@ -3,6 +3,8 @@ layout: page
 title: REINFORCEとActor-Criticの違いとは？G検定対策
 permalink: /gk/reinforce-vs-actor-critic/
 tags: [gk, reinforcement_learning]
+gk_section: 機械学習の概要/代表的な手法/強化学習
+gk_order: 5
 ---
 
 ## まず結論

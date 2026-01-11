@@ -3,6 +3,8 @@ layout: page
 title: DenseNet（高密度接続CNN）とは？G検定対策
 permalink: /gk/densenet/
 tags: [gk, cnn]
+gk_section: ディープラーニングの応用例/画像認識/物体認識タスク
+gk_order: 6
 ---
 
 ## まず結論

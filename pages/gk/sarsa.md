@@ -3,6 +3,8 @@ layout: page
 title: SARSA（オンポリシー強化学習）とは？G検定対策
 permalink: /gk/sarsa/
 tags: [gk, reinforcement_learning]
+gk_section: 機械学習の概要/代表的な手法/強化学習
+gk_order: 13
 ---
 
 ## まず結論

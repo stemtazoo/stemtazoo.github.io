@@ -3,6 +3,8 @@ layout: page
 title: AIモデルの説明可能性（XAIと性能のトレードオフ）
 permalink: /gk/xai-explainability/
 tags: [gk]
+gk_section: ディープラーニングの応用例/モデルの解釈性
+gk_order: 1
 ---
 
 ## まず結論

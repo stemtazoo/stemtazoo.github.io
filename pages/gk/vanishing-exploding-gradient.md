@@ -3,6 +3,8 @@ layout: page
 title: 勾配消失・勾配爆発
 permalink: /gk/vanishing-exploding-gradient/
 tags: [gk, neural_network, rnn, gradient]
+gk_section: ディープラーニングの要素技術/ネットワークの構成要素
+gk_order: 8
 ---
 
 ## まず結論

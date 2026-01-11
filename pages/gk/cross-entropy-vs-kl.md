@@ -3,6 +3,8 @@ layout: page
 title: 交差エントロピーとKLダイバージェンスの違い【G検定頻出】
 permalink: /gk/cross-entropy-vs-kl/
 tags: [gk, metrics, neural_network]
+gk_section: ディープラーニングの概要/誤差関数
+gk_order: 5
 ---
 
 ## まず結論

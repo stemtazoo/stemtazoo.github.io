@@ -3,6 +3,8 @@ layout: page
 title: CRISP-ML（機械学習プロセス標準）とは？G検定対策
 permalink: /gk/crisp-ml/
 tags: [gk, ml_process]
+gk_section: AIの社会実装に向けて/AIの社会実装に向けて
+gk_order: 5
 ---
 
 ## まず結論

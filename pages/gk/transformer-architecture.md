@@ -3,6 +3,8 @@ layout: page
 title: Transformerの全体構造（Encoder / Decoder）とは？【BERT・GPTとの関係｜G検定対策】
 permalink: /gk/transformer-architecture/
 tags: [gk, transformer, attention]
+gk_section: ディープラーニングの要素技術/トランスフォーマー (Transformer)
+gk_order: 5
 ---
 
 ## まず結論

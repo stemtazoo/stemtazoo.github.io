@@ -3,6 +3,8 @@ layout: page
 title: 最適化手法まとめ（SGD / Adam など）
 permalink: /gk/optimizers/
 tags: [gk, neural_network, optimizer]
+gk_section: ディープラーニングの概要/ニューラルネットワークとディープラーニング
+gk_order: 3
 ---
 
 ## まず結論

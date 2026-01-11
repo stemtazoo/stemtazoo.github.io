@@ -3,6 +3,8 @@ layout: page
 title: U-Net（セマンティックセグメンテーション）
 permalink: /gk/u-net/
 tags: [gk, neural_network, cnn]
+gk_section: ディープラーニングの応用例/画像認識/セグメンテーションタスク
+gk_order: 3
 ---
 
 ## まず結論

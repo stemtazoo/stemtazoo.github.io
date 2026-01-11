@@ -3,6 +3,8 @@ layout: page
 title: 位置エンコーディング（Positional Encoding）とは？【Transformerの弱点補完｜G検定対策】
 permalink: /gk/positional-encoding/
 tags: [gk, attention, transformer]
+gk_section: ディープラーニングの要素技術/トランスフォーマー (Transformer)
+gk_order: 4
 ---
 
 ## まず結論

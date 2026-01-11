@@ -3,6 +3,8 @@ layout: page
 title: LSTMはなぜ非定常データを扱えるのか？【G検定対策】
 permalink: /gk/lstm-nonstationary/
 tags: [gk, rnn, time_series]
+gk_section: ディープラーニングの要素技術/リカレントニューラルネットワーク (RNN)
+gk_order: 8
 ---
 
 ## まず結論

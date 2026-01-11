@@ -3,6 +3,8 @@ layout: page
 title: シンボルグラウンディング問題とは？G検定対策
 permalink: /gk/symbol-grounding/
 tags: [gk, ethics]
+gk_section: 人工知能（AI）とは/人工知能（AI）とは
+gk_order: 13
 ---
 
 ## まず結論

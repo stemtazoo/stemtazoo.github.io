@@ -3,6 +3,8 @@ layout: page
 title: G検定 ひっかけ問題集（考え方付き）
 permalink: /gk/trick-questions-1/
 tags: [gk, cheatsheet]
+gk_section: ひっかけ問題集/ひっかけ問題集
+gk_order: 1
 ---
 
 ## まず結論

@@ -3,6 +3,8 @@ layout: page
 title: DENDRAL（初期の専門家システム）とは？【G検定対策】
 permalink: /gk/dendral/
 tags: [gk, neural_network]
+gk_section: 人工知能をめぐる動向/人工知能をめぐる動向
+gk_order: 14
 ---
 
 ## まず結論

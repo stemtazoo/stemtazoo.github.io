@@ -3,6 +3,8 @@ layout: page
 title: ResNet・DenseNet・EfficientNet 比較（G検定対策）
 permalink: /gk/cnn-architectures-comparison/
 tags: [gk, cnn, neural_network, cheatsheet]
+gk_section: ディープラーニングの応用例/画像認識/ネオコグニトロンとLeNet
+gk_order: 10
 ---
 
 ## まず結論（試験はここだけ見ればOK）

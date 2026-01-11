@@ -3,6 +3,8 @@ layout: page
 title: 破壊的忘却（Catastrophic Forgetting）とは？【連続学習の落とし穴｜G検定対策】
 permalink: /gk/catastrophic-forgetting/
 tags: [gk, neural_network]
+gk_section: ディープラーニングの応用例/転移学習・ファインチューニング
+gk_order: 1
 ---
 
 ## まず結論

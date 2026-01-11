@@ -3,6 +3,8 @@ layout: page
 title: MLM（Masked Language Model）とは？【BERTの学習方法｜G検定対策】
 permalink: /gk/mlm/
 tags: [gk, nlp, transformer]
+gk_section: ディープラーニングの応用例/自然言語処理
+gk_order: 11
 ---
 
 ## まず結論

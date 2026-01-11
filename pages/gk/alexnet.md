@@ -3,6 +3,8 @@ layout: page
 title: AlexNet（ディープラーニング革命の起点）とは？G検定対策
 permalink: /gk/alexnet/
 tags: [gk, cnn]
+gk_section: ディープラーニングの応用例/画像認識/物体認識タスク
+gk_order: 1
 ---
 
 ## まず結論

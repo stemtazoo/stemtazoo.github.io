@@ -3,6 +3,8 @@ layout: page
 title: Random Flipとは？左右反転データ拡張の基本【G検定対策】
 permalink: /gk/random-flip/
 tags: [gk, cnn, neural_network]
+gk_section: ディープラーニングの応用例/画像認識/データ拡張
+gk_order: 8
 ---
 
 ## まず結論

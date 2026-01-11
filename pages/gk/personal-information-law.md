@@ -3,6 +3,8 @@ layout: page
 title: 個人情報保護法（重要ポイント整理）
 permalink: /gk/personal-information-law/
 tags: [gk, ethics, privacy]
+gk_section: AIの法律と倫理/AIの法律と倫理
+gk_order: 7
 ---
 
 ## まず結論

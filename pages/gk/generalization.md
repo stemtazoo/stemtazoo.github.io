@@ -3,6 +3,8 @@ layout: page
 title: 汎化性能
 permalink: /gk/generalization/
 tags: [gk, machine_learning, generalization]
+gk_section: 機械学習の概要/モデルの選択・評価
+gk_order: 24
 ---
 
 ## まず結論

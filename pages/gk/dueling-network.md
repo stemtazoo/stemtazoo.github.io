@@ -3,6 +3,8 @@ layout: page
 title: デュエリングネットワーク（Dueling Network）とは？G検定対策
 permalink: /gk/dueling-network/
 tags: [gk, reinforcement_learning, neural_network]
+gk_section: ディープラーニングの応用例/深層強化学習
+gk_order: 1
 ---
 
 ## まず結論

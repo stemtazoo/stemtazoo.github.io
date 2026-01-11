@@ -3,6 +3,8 @@ layout: page
 title: 最適化手法まとめ（SGD / AdaGrad / RMSprop / Adam）
 permalink: /gk/optimization-cheatsheet-2/
 tags: [gk, neural_network, cheatsheet]
+gk_section: ディープラーニングの概要/最適化手法
+gk_order: 14
 ---
 
 ## まず結論

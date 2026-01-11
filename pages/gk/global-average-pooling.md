@@ -3,6 +3,8 @@ layout: page
 title: グローバルアベレージプーリング（Global Average Pooling）
 permalink: /gk/global-average-pooling/
 tags: [gk, neural_network, cnn]
+gk_section: ディープラーニングの要素技術/ネットワークの構成要素
+gk_order: 7
 ---
 
 ## まず結論

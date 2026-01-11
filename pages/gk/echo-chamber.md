@@ -3,6 +3,8 @@ layout: page
 title: エコーチェンバー（Echo Chamber）とは？G検定対策
 permalink: /gk/echo-chamber/
 tags: [gk, ethics, personalization]
+gk_section: AIの法律と倫理/AIの法律と倫理
+gk_order: 21
 ---
 
 ## まず結論

@@ -3,6 +3,8 @@ layout: page
 title: 交差エントロピー誤差（Cross Entropy）とは？【G検定対策】
 permalink: /gk/cross-entropy/
 tags: [gk, metrics, neural_network]
+gk_section: ディープラーニングの概要/誤差関数
+gk_order: 3
 ---
 
 ## まず結論

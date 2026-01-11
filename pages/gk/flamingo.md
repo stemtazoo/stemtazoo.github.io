@@ -3,6 +3,8 @@ layout: page
 title: Flamingo（マルチモーダルFew-shotモデル）とは？G検定対策
 permalink: /gk/flamingo/
 tags: [gk, neural_network, attention]
+gk_section: ディープラーニングの応用例/マルチモーダル
+gk_order: 1
 ---
 
 ## まず結論

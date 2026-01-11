@@ -3,6 +3,8 @@ layout: page
 title: PaLM（大規模言語モデル）とは？G検定対策
 permalink: /gk/palm/
 tags: [gk, neural_network, transformer]
+gk_section: ディープラーニングの応用例/マルチモーダル
+gk_order: 2
 ---
 
 ## まず結論

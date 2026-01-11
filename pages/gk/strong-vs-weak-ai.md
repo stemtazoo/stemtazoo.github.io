@@ -3,6 +3,8 @@ layout: page
 title: 強いAIと弱いAIの違いとは？【汎用AIと特化AI｜G検定対策】
 permalink: /gk/strong-vs-weak-ai/
 tags: [gk, ai_history]
+gk_section: 人工知能（AI）とは/人工知能（AI）とは
+gk_order: 3
 ---
 
 ## まず結論

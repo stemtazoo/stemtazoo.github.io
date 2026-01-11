@@ -3,6 +3,8 @@ layout: page
 title: DQNとPolicy Gradientの違い【強化学習体系図・G検定対策】
 permalink: /gk/dqn-vs-policy-gradient/
 tags: [gk]
+gk_section: ディープラーニングの応用例/深層強化学習
+gk_order: 9
 ---
 
 ## まず結論

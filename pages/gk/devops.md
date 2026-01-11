@@ -3,6 +3,8 @@ layout: page
 title: DevOps（開発と運用の連携）とは？MLOpsとの対比【G検定対策】
 permalink: /gk/devops/
 tags: [gk, devops, mlops]
+gk_section: AIの社会実装に向けて/AIの社会実装に向けて
+gk_order: 8
 ---
 
 ## まず結論

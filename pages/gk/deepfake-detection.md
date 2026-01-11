@@ -3,6 +3,8 @@ layout: page
 title: ディープフェイク検出技術とは？【G検定対策】
 permalink: /gk/deepfake-detection/
 tags: [gk, ethics, social_issues]
+gk_section: AIの法律と倫理/AIの法律と倫理
+gk_order: 18
 ---
 
 ## まず結論

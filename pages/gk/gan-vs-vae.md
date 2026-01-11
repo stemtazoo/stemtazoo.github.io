@@ -3,6 +3,8 @@ layout: page
 title: GAN と VAE の違い（生成モデル比較）
 permalink: /gk/gan-vs-vae/
 tags: [gk, neural_network, generative_model, cheatsheet]
+gk_section: ディープラーニングの応用例/データ生成
+gk_order: 3
 ---
 
 ## まず結論

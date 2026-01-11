@@ -3,6 +3,8 @@ layout: page
 title: AIとプライバシー・個人情報保護
 permalink: /gk/privacy-data-protection/
 tags: [gk]
+gk_section: AIの法律と倫理/AIの法律と倫理
+gk_order: 2
 ---
 
 ## まず結論

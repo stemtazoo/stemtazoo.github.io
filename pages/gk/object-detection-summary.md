@@ -3,6 +3,8 @@ layout: page
 title: 物体検出モデル総まとめ（SSD / YOLO / R-CNN系）
 permalink: /gk/object-detection-summary/
 tags: [gk, 画像認識, 物体検出, まとめ]
+gk_section: ディープラーニングの応用例/画像認識/物体検出タスク
+gk_order: 2
 ---
 
 ## まず結論

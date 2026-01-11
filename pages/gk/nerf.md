@@ -3,6 +3,8 @@ layout: page
 title: NeRF（Neural Radiance Fields）とは？3D再構成のためのニューラルレンダリング【G検定対策】
 permalink: /gk/nerf/
 tags: [gk, vision]
+gk_section: ディープラーニングの応用例/データ生成
+gk_order: 12
 ---
 
 ## まず結論

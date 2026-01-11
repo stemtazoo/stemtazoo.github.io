@@ -3,6 +3,8 @@ layout: page
 title: 宝くじ仮説（Lottery Ticket Hypothesis）とは？剪定と高性能サブネット【G検定対策】
 permalink: /gk/lottery-ticket-hypothesis/
 tags: [gk, neural_network]
+gk_section: ディープラーニングの応用例/モデルの軽量化
+gk_order: 1
 ---
 
 ## まず結論

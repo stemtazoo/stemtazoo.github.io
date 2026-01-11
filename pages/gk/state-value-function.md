@@ -3,6 +3,8 @@ layout: page
 title: 状態価値関数（State Value Function）とは？G検定対策
 permalink: /gk/state-value-function/
 tags: [gk, reinforcement_learning]
+gk_section: 機械学習の概要/代表的な手法/強化学習
+gk_order: 11
 ---
 
 ## まず結論

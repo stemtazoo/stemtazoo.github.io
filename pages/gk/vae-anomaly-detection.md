@@ -3,6 +3,8 @@ layout: page
 title: VAEを異常検知に使うと何が違う？AEとの比較【G検定対策】
 permalink: /gk/vae-anomaly-detection/
 tags: [gk, neural_network]
+gk_section: ディープラーニングの要素技術/オートエンコーダ
+gk_order: 4
 ---
 
 ## まず結論

@@ -3,6 +3,8 @@ layout: page
 title: DQN（Deep Q-Network）とは？Experience Replay【G検定対策】
 permalink: /gk/dqn/
 tags: [gk]
+gk_section: ディープラーニングの応用例/深層強化学習
+gk_order: 2
 ---
 
 ## まず結論

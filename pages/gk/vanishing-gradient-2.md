@@ -3,6 +3,8 @@ layout: page
 title: 勾配消失問題とは？原因と対策まとめ【RNN・深層学習｜G検定対策】
 permalink: /gk/vanishing-gradient-2/
 tags: [gk, neural_network]
+gk_section: ディープラーニングの要素技術/リカレントニューラルネットワーク (RNN)
+gk_order: 13
 ---
 
 ## まず結論

@@ -3,6 +3,8 @@ layout: page
 title: 探索と推論（探索問題・推論問題）
 permalink: /gk/search-and-inference/
 tags: [gk]
+gk_section: 人工知能をめぐる動向/人工知能をめぐる動向
+gk_order: 17
 ---
 
 ## まず結論

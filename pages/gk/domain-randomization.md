@@ -3,6 +3,8 @@ layout: page
 title: ドメインランダム化とは？（リアリティギャップ対策）【G検定対策】
 permalink: /gk/domain-randomization/
 tags: [gk]
+gk_section: ディープラーニングの応用例/深層強化学習
+gk_order: 17
 ---
 
 ## まず結論

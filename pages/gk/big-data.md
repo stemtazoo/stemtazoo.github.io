@@ -3,6 +3,8 @@ layout: page
 title: ビッグデータとは？G検定対策
 permalink: /gk/big-data/
 tags: [gk]
+gk_section: 人工知能（AI）とは/人工知能（AI）とは
+gk_order: 4
 ---
 
 ## まず結論

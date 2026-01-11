@@ -3,6 +3,8 @@ layout: page
 title: 差分プライバシー（Differential Privacy）とは？【G検定対策】
 permalink: /gk/differential-privacy/
 tags: [gk, security, privacy]
+gk_section: AIの法律と倫理/AIの法律と倫理
+gk_order: 32
 ---
 
 ## まず結論

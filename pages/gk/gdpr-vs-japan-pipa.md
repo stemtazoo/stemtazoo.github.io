@@ -3,6 +3,8 @@ layout: page
 title: GDPRと日本の個人情報保護法の違いとは？【G検定対策】
 permalink: /gk/gdpr-vs-japan-pipa/
 tags: [gk]
+gk_section: AIの法律と倫理/AIの法律と倫理
+gk_order: 14
 ---
 
 ## まず結論

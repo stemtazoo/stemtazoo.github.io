@@ -3,6 +3,8 @@ layout: page
 title: REINFORCEとは？（方策勾配法）G検定対策
 permalink: /gk/reinforce/
 tags: [gk, reinforcement_learning]
+gk_section: 機械学習の概要/代表的な手法/強化学習
+gk_order: 4
 ---
 
 ## まず結論

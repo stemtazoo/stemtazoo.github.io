@@ -3,6 +3,8 @@ layout: page
 title: "MnasNetとは？AutoML時代のモバイル向けCNN【G検定対策】"
 permalink: /gk/mnasnet/
 tags: [gk, cnn, neural_network]
+gk_section: ディープラーニングの応用例/画像認識/物体認識タスク
+gk_order: 9
 ---
 
 ## まず結論

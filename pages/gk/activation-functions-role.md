@@ -3,6 +3,8 @@ layout: page
 title: 活性化関数（ReLU / Sigmoid / tanh）の役割とは？G検定対策
 permalink: /gk/activation-functions-role/
 tags: [gk, neural_network]
+gk_section: 人工知能をめぐる動向/人工知能をめぐる動向
+gk_order: 9
 ---
 
 ## まず結論

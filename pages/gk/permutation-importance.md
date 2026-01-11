@@ -3,6 +3,8 @@ layout: page
 title: Permutation Importance（置換重要度）とは？【G検定対策】
 permalink: /gk/permutation-importance/
 tags: [gk, metrics]
+gk_section: ディープラーニングの応用例/モデルの解釈性
+gk_order: 4
 ---
 
 ## まず結論

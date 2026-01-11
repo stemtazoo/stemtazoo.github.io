@@ -3,6 +3,8 @@ layout: page
 title: AIガバナンスと社会実装
 permalink: /gk/ai-governance/
 tags: [gk]
+gk_section: AIの法律と倫理/AIの法律と倫理
+gk_order: 4
 ---
 
 ## まず結論

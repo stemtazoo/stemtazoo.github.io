@@ -3,6 +3,8 @@ layout: page
 title: 音韻（phoneme）とは？【G検定対策】
 permalink: /gk/phoneme/
 tags: [gk, speech, nlp]
+gk_section: ディープラーニングの応用例/音声処理
+gk_order: 8
 ---
 
 ## まず結論

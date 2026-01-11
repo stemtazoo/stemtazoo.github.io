@@ -3,6 +3,8 @@ layout: page
 title: バッチ学習・ミニバッチ・エポックまとめ
 permalink: /gk/batch-epoch/
 tags: [gk, neural_network, training]
+gk_section: ディープラーニングの概要/ニューラルネットワークとディープラーニング
+gk_order: 4
 ---
 
 ## まず結論

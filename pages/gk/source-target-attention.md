@@ -3,6 +3,8 @@ layout: page
 title: Source-Target Attention（Encoder-Decoder Attention）とは？G検定対策
 permalink: /gk/source-target-attention/
 tags: [gk, attention, transformer]
+gk_section: ディープラーニングの要素技術/トランスフォーマー (Transformer)
+gk_order: 2
 ---
 
 ## まず結論

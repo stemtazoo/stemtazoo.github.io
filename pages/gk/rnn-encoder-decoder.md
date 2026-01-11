@@ -3,6 +3,8 @@ layout: page
 title: RNNエンコーダ・デコーダ（Seq2Seq）とは？【G検定対策】
 permalink: /gk/rnn-encoder-decoder/
 tags: [gk, rnn, nlp]
+gk_section: ディープラーニングの要素技術/リカレントニューラルネットワーク (RNN)
+gk_order: 5
 ---
 
 ## まず結論

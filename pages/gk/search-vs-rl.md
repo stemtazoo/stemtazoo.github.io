@@ -3,6 +3,8 @@ layout: page
 title: 探索・推論と強化学習の違い（どれを使う？）
 permalink: /gk/search-vs-rl/
 tags: [gk]
+gk_section: 機械学習の概要/代表的な手法/強化学習
+gk_order: 19
 ---
 
 ## まず結論

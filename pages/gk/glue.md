@@ -3,6 +3,8 @@ layout: page
 title: GLUE（General Language Understanding Evaluation）とは？【G検定対策】
 permalink: /gk/glue/
 tags: [gk, nlp]
+gk_section: ディープラーニングの応用例/自然言語処理
+gk_order: 30
 ---
 
 ## まず結論

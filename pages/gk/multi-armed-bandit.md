@@ -3,6 +3,8 @@ layout: page
 title: パンディットアルゴリズム（Multi-Armed Bandit）とは？【探索と活用｜G検定対策】
 permalink: /gk/multi-armed-bandit/
 tags: [gk, reinforcement_learning]
+gk_section: 機械学習の概要/代表的な手法/強化学習
+gk_order: 9
 ---
 
 ## まず結論

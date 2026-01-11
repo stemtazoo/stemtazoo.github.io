@@ -3,6 +3,8 @@ layout: page
 title: オートエンコーダまとめ（AE / CAE / DAE / VAE）とは？G検定対策
 permalink: /gk/autoencoder-cheatsheet/
 tags: [gk, neural_network, cheatsheet]
+gk_section: ディープラーニングの要素技術/オートエンコーダ
+gk_order: 10
 ---
 
 ## まず結論

@@ -3,6 +3,8 @@ layout: page
 title: 自己教師あり学習（Self-Supervised Learning）とは？疑似ラベルで学ぶ仕組み【G検定対策】
 permalink: /gk/self-supervised-learning/
 tags: [gk, neural_network]
+gk_section: ディープラーニングの応用例/転移学習・ファインチューニング
+gk_order: 5
 ---
 
 ## まず結論

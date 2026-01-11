@@ -3,6 +3,8 @@ layout: page
 title: パノプティックセグメンテーション（Panoptic Segmentation）とは？G検定対策
 permalink: /gk/panoptic-segmentation/
 tags: [gk, cnn]
+gk_section: ディープラーニングの応用例/画像認識/セグメンテーションタスク
+gk_order: 9
 ---
 
 ## まず結論

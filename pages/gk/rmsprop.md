@@ -3,6 +3,8 @@ layout: page
 title: RMSpropとは？G検定対策
 permalink: /gk/rmsprop/
 tags: [gk, neural_network]
+gk_section: ディープラーニングの概要/最適化手法
+gk_order: 6
 ---
 
 ## まず結論

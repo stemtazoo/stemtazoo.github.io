@@ -3,6 +3,8 @@ layout: page
 title: 中国語の部屋（チューリングテストとの対比）とは？G検定対策
 permalink: /gk/chinese-room/
 tags: [gk, ethics]
+gk_section: 人工知能（AI）とは/人工知能（AI）とは
+gk_order: 12
 ---
 
 ## まず結論

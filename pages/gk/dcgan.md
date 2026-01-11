@@ -3,6 +3,8 @@ layout: page
 title: DCGAN（Deep Convolutional GAN）
 permalink: /gk/dcgan/
 tags: [gk, neural_network, cnn, gan]
+gk_section: ディープラーニングの応用例/データ生成
+gk_order: 1
 ---
 
 ## まず結論

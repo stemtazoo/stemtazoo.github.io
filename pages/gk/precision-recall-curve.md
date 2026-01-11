@@ -3,6 +3,8 @@ layout: page
 title: Precision–Recall曲線
 permalink: /gk/precision-recall-curve/
 tags: [gk, 機械学習, 評価指標, 頻出]
+gk_section: 機械学習の概要/モデルの選択・評価
+gk_order: 7
 ---
 
 ## まず結論

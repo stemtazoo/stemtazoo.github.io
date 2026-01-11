@@ -3,6 +3,8 @@ layout: page
 title: AIの公平性とバイアス（Fairness）
 permalink: /gk/fairness-bias/
 tags: [gk]
+gk_section: AIの法律と倫理/AIの法律と倫理
+gk_order: 1
 ---
 
 ## まず結論

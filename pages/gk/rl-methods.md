@@ -3,6 +3,8 @@ layout: page
 title: 強化学習の代表的手法まとめ（DQN・Policy Gradient・Actor-Critic）【G検定対策】
 permalink: /gk/rl-methods/
 tags: [gk, reinforcement_learning, cheatsheet]
+gk_section: ディープラーニングの応用例/深層強化学習
+gk_order: 5
 ---
 
 ## まず結論

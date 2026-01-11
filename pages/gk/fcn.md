@@ -3,6 +3,8 @@ layout: page
 title: FCN（Fully Convolutional Network）
 permalink: /gk/fcn/
 tags: [gk, neural_network, cnn]
+gk_section: ディープラーニングの応用例/画像認識/セグメンテーションタスク
+gk_order: 5
 ---
 
 ## まず結論

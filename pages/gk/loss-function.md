@@ -3,6 +3,8 @@ layout: page
 title: 損失関数（Loss / Cost / Objective）とは？【違いと使い分け｜G検定対策】
 permalink: /gk/loss-function/
 tags: [gk, neural_network, optimization]
+gk_section: ディープラーニングの概要/ニューラルネットワークとディープラーニング
+gk_order: 10
 ---
 
 ## まず結論

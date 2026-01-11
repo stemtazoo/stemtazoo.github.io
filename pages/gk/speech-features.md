@@ -3,6 +3,8 @@ layout: page
 title: 音声特徴量まとめ（フォルマント / MFCC / スペクトログラム）【G検定対策】
 permalink: /gk/speech-features/
 tags: [gk, speech, signal_processing]
+gk_section: ディープラーニングの応用例/音声処理
+gk_order: 4
 ---
 
 ## まず結論

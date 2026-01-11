@@ -3,6 +3,8 @@ layout: page
 title: 連鎖律（Chain Rule）とは？【G検定対策】
 permalink: /gk/chain-rule/
 tags: [gk, neural_network]
+gk_section: 機械学習の概要/モデルの選択・評価
+gk_order: 23
 ---
 
 ## まず結論

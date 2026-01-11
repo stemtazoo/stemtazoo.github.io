@@ -3,6 +3,8 @@ layout: page
 title: Multi-Head Attentionとは？複数視点で関係性を学ぶ仕組み【G検定対策】
 permalink: /gk/multi-head-attention/
 tags: [gk, attention, transformer]
+gk_section: ディープラーニングの要素技術/トランスフォーマー (Transformer)
+gk_order: 6
 ---
 
 ## まず結論

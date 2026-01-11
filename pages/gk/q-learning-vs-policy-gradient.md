@@ -3,6 +3,8 @@ layout: page
 title: Q学習と方策勾配法の違いとは？【G検定超重要対比】
 permalink: /gk/q-learning-vs-policy-gradient/
 tags: [gk, reinforcement_learning, neural_network]
+gk_section: 機械学習の概要/代表的な手法/強化学習
+gk_order: 18
 ---
 
 ## まず結論

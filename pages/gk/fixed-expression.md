@@ -3,6 +3,8 @@ layout: page
 title: 固定表現とは？【G検定対策】
 permalink: /gk/fixed-expression/
 tags: [gk, nlp]
+gk_section: ディープラーニングの応用例/自然言語処理
+gk_order: 29
 ---
 
 ## まず結論

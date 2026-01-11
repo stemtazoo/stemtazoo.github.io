@@ -3,6 +3,8 @@ layout: page
 title: ResNet（残差接続）とは？G検定対策
 permalink: /gk/resnet/
 tags: [gk, cnn]
+gk_section: ディープラーニングの応用例/画像認識/物体認識タスク
+gk_order: 4
 ---
 
 ## まず結論

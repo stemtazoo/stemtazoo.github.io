@@ -3,6 +3,8 @@ layout: page
 title: 変分オートエンコーダ（VAE）とは？【生成モデルの基本｜G検定対策】
 permalink: /gk/vae/
 tags: [gk, neural_network, generative_model]
+gk_section: ディープラーニングの要素技術/オートエンコーダ
+gk_order: 1
 ---
 
 ## まず結論

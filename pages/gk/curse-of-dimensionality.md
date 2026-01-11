@@ -3,6 +3,8 @@ layout: page
 title: 次元の呪い（Curse of Dimensionality）とは？G検定対策
 permalink: /gk/curse-of-dimensionality/
 tags: [gk, machine_learning]
+gk_section: 人工知能をめぐる動向/人工知能をめぐる動向
+gk_order: 13
 ---
 
 ## まず結論

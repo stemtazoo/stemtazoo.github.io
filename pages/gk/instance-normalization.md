@@ -3,6 +3,8 @@ layout: page
 title: インスタンス正規化（Instance Normalization）とは？G検定対策
 permalink: /gk/instance-normalization/
 tags: [gk, neural_network, cnn]
+gk_section: ディープラーニングの要素技術/ネットワークの構成要素
+gk_order: 10
 ---
 
 ## まず結論

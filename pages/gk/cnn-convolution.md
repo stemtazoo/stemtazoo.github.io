@@ -3,6 +3,8 @@ layout: page
 title: 畳み込みニューラルネットワーク（CNN）における畳み込み処理
 permalink: /gk/cnn-convolution/
 tags: [gk, cnn, convolution]
+gk_section: ディープラーニングの応用例/画像認識/ネオコグニトロンとLeNet
+gk_order: 17
 ---
 
 ## まず結論

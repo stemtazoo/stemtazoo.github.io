@@ -3,6 +3,8 @@ layout: page
 title: 音色の違い（MFCC）
 permalink: /gk/timbre-mfcc/
 tags: [gk, audio, mfcc, signal_processing]
+gk_section: ディープラーニングの応用例/音声処理
+gk_order: 2
 ---
 
 ## まず結論

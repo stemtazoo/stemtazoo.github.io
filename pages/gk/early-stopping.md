@@ -3,6 +3,8 @@ layout: page
 title: Early Stoppingとは？（暗黙的正則化）【G検定対策】
 permalink: /gk/early-stopping/
 tags: [gk, neural_network]
+gk_section: ディープラーニングの概要/正則化
+gk_order: 4
 ---
 
 ## まず結論

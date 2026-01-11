@@ -3,6 +3,8 @@ layout: page
 title: DAE（デノイジングオートエンコーダ）とは？G検定対策
 permalink: /gk/dae/
 tags: [gk, neural_network]
+gk_section: ディープラーニングの要素技術/オートエンコーダ
+gk_order: 6
 ---
 
 ## まず結論

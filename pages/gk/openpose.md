@@ -3,6 +3,8 @@ layout: page
 title: OpenPoseとは？（姿勢推定アルゴリズム）【G検定対策】
 permalink: /gk/openpose/
 tags: [gk, cnn]
+gk_section: ディープラーニングの応用例/画像認識/姿勢推定タスク
+gk_order: 1
 ---
 
 ## まず結論

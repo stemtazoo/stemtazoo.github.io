@@ -3,6 +3,8 @@ layout: page
 title: ポアソン回帰とは？（カウントデータ）G検定対策
 permalink: /gk/poisson-regression/
 tags: [gk, metrics]
+gk_section: 機械学習の概要/代表的な手法/教師あり学習
+gk_order: 8
 ---
 
 ## まず結論

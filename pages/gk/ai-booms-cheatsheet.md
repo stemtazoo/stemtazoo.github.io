@@ -3,6 +3,8 @@ layout: page
 title: AI三大ブームまとめ（第一次〜第三次）
 permalink: /gk/ai-booms-cheatsheet/
 tags: [gk, cheatsheet]
+gk_section: 人工知能（AI）とは/人工知能（AI）とは
+gk_order: 1
 ---
 
 ## まず結論（ここだけ覚えればOK）

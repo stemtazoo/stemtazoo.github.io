@@ -3,6 +3,8 @@ layout: page
 title: CAE（畳み込みオートエンコーダ）とは？G検定対策
 permalink: /gk/cae/
 tags: [gk, neural_network, cnn]
+gk_section: ディープラーニングの要素技術/オートエンコーダ
+gk_order: 7
 ---
 
 ## まず結論

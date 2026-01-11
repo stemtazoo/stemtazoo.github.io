@@ -3,6 +3,8 @@ layout: page
 title: Attention（注意機構）
 permalink: /gk/attention/
 tags: [gk, neural_network, attention]
+gk_section: ディープラーニングの要素技術/リカレントニューラルネットワーク (RNN)
+gk_order: 6
 ---
 
 ## まず結論

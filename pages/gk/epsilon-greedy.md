@@ -3,6 +3,8 @@ layout: page
 title: ε-greedy方策（epsilon-greedy policy）とは？【G検定対策】
 permalink: /gk/epsilon-greedy/
 tags: [gk, reinforcement_learning, policy]
+gk_section: 機械学習の概要/代表的な手法/強化学習
+gk_order: 15
 ---
 
 ## まず結論

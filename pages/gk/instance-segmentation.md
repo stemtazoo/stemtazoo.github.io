@@ -3,6 +3,8 @@ layout: page
 title: インスタンスセグメンテーションとは？（物体検出・セマンティックとの違い）【G検定対策】
 permalink: /gk/instance-segmentation/
 tags: [gk, cnn]
+gk_section: ディープラーニングの応用例/画像認識/ネオコグニトロンとLeNet
+gk_order: 12
 ---
 
 ## まず結論

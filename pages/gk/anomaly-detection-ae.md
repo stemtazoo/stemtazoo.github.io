@@ -3,6 +3,8 @@ layout: page
 title: 異常検知でAE（オートエンコーダ）を使う理由とは？【G検定頻出】
 permalink: /gk/anomaly-detection-ae/
 tags: [gk, neural_network]
+gk_section: ディープラーニングの要素技術/オートエンコーダ
+gk_order: 3
 ---
 
 ## まず結論

@@ -3,6 +3,8 @@ layout: page
 title: 勾配消失・勾配爆発（ひっかけ対策）
 permalink: /gk/gradient-vanishing-exploding/
 tags: [gk, neural_network, cheatsheet]
+gk_section: ディープラーニングの概要/ニューラルネットワークとディープラーニング
+gk_order: 6
 ---
 
 ## まず結論

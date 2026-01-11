@@ -3,6 +3,8 @@ layout: page
 title: 物体検出（Object Detection）とは？G検定対策
 permalink: /gk/object-detection/
 tags: [gk, cnn]
+gk_section: ディープラーニングの応用例/画像認識/物体検出タスク
+gk_order: 1
 ---
 
 ## まず結論

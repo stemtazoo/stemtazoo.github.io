@@ -3,6 +3,8 @@ layout: page
 title: 分散型強化学習とは？【特徴とマルチエージェントとの違い｜G検定対策】
 permalink: /gk/distributed-reinforcement-learning/
 tags: [gk, reinforcement_learning]
+gk_section: 機械学習の概要/代表的な手法/強化学習
+gk_order: 1
 ---
 
 ## まず結論

@@ -3,6 +3,8 @@ layout: page
 title: CNN代表モデルまとめ（LeNet / AlexNet / VGG / ResNet）
 permalink: /gk/cnn-models/
 tags: [gk, neural_network, cnn, models]
+gk_section: ディープラーニングの要素技術/ネットワークの構成要素
+gk_order: 4
 ---
 
 ## まず結論

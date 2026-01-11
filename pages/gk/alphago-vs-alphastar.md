@@ -3,6 +3,8 @@ layout: page
 title: AlphaGoとAlphaStarの違い【比較チートシート｜G検定対策】
 permalink: /gk/alphago-vs-alphastar/
 tags: [gk, reinforcement_learning, cheatsheet]
+gk_section: ディープラーニングの応用例/深層強化学習
+gk_order: 4
 ---
 
 ## まず結論

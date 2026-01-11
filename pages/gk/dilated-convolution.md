@@ -3,6 +3,8 @@ layout: page
 title: Dilated Convolution（空洞畳み込み）
 permalink: /gk/dilated-convolution/
 tags: [gk, neural_network, cnn]
+gk_section: ディープラーニングの要素技術/ネットワークの構成要素
+gk_order: 5
 ---
 
 ## まず結論

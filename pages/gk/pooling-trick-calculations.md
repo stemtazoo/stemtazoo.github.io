@@ -3,6 +3,8 @@ layout: page
 title: Pooling層の計算ひっかけ問題集（出力サイズ）
 permalink: /gk/pooling-trick-calculations/
 tags: [gk, cnn, pooling, cheatsheet]
+gk_section: ディープラーニングの応用例/画像認識/ネオコグニトロンとLeNet
+gk_order: 7
 ---
 
 ## まず結論

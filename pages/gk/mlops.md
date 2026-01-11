@@ -3,6 +3,8 @@ layout: page
 title: MLOps（機械学習運用）とは？G検定対策
 permalink: /gk/mlops/
 tags: [gk, mlops, devops]
+gk_section: AIの社会実装に向けて/AIの社会実装に向けて
+gk_order: 6
 ---
 
 ## まず結論

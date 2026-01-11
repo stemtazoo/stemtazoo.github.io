@@ -3,6 +3,8 @@ layout: page
 title: 画像系頻出用語 一気通貫チェック【G検定対策】
 permalink: /gk/image-terms-check/
 tags: [gk, cnn, cheatsheet]
+gk_section: ディープラーニングの応用例/画像認識/ネオコグニトロンとLeNet
+gk_order: 16
 ---
 
 ## まず結論

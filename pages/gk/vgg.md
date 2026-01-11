@@ -3,6 +3,8 @@ layout: page
 title: VGG（Very Deep CNN）とは？G検定対策
 permalink: /gk/vgg/
 tags: [gk, cnn]
+gk_section: ディープラーニングの応用例/画像認識/物体認識タスク
+gk_order: 2
 ---
 
 ## まず結論

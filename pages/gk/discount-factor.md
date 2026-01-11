@@ -3,6 +3,8 @@ layout: page
 title: 割引率（γ）とは？将来報酬をどう評価するか【G検定対策】
 permalink: /gk/discount-factor/
 tags: [gk, reinforcement_learning]
+gk_section: 機械学習の概要/代表的な手法/強化学習
+gk_order: 10
 ---
 
 ## まず結論

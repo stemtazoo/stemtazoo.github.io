@@ -3,6 +3,8 @@ layout: page
 title: DQN / AlphaGo / AlphaStar / Agent57【強化学習の系譜まとめ】
 permalink: /gk/dqn-alphago-alphastar-agent57/
 tags: [gk, neural_network, cheatsheet]
+gk_section: ディープラーニングの応用例/深層強化学習
+gk_order: 11
 ---
 
 ## まず結論

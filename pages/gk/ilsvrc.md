@@ -3,6 +3,8 @@ layout: page
 title: ILSVRC（ImageNet Large Scale Visual Recognition Challenge）とは？G検定対策
 permalink: /gk/ilsvrc/
 tags: [gk, cnn]
+gk_section: 人工知能をめぐる動向/人工知能をめぐる動向
+gk_order: 12
 ---
 
 ## まず結論

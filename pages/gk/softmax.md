@@ -3,6 +3,8 @@ layout: page
 title: ソフトマックス関数（Softmax）とは？G検定対策
 permalink: /gk/softmax/
 tags: [gk, neural_network]
+gk_section: 機械学習の概要/代表的な手法/教師あり学習
+gk_order: 11
 ---
 
 ## まず結論

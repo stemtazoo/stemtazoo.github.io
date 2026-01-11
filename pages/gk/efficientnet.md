@@ -3,6 +3,8 @@ layout: page
 title: EfficientNet（Compound Scaling による高効率CNN）
 permalink: /gk/efficientnet/
 tags: [gk, neural_network, cnn]
+gk_section: ディープラーニングの応用例/画像認識/物体認識タスク
+gk_order: 10
 ---
 
 ## まず結論

@@ -3,6 +3,8 @@ layout: page
 title: CNN全体のサイズ遷移まとめ（入力→出力）
 permalink: /gk/cnn-size-flow/
 tags: [gk, cnn, cheatsheet]
+gk_section: ディープラーニングの応用例/画像認識/ネオコグニトロンとLeNet
+gk_order: 18
 ---
 
 ## まず結論

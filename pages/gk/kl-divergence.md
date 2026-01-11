@@ -3,6 +3,8 @@ layout: page
 title: KLダイバージェンス（Kullback-Leibler Divergence）とは？【G検定対策】
 permalink: /gk/kl-divergence/
 tags: [gk, metrics, probability]
+gk_section: ディープラーニングの概要/誤差関数
+gk_order: 4
 ---
 
 ## まず結論

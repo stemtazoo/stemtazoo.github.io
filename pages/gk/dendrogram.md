@@ -3,6 +3,8 @@ layout: page
 title: デンドログラムとは？（階層型クラスタリングの可視化）【G検定対策】
 permalink: /gk/dendrogram/
 tags: [gk, unsupervised_learning, clustering]
+gk_section: 機械学習の概要/代表的な手法/教師なし学習
+gk_order: 5
 ---
 
 ## まず結論

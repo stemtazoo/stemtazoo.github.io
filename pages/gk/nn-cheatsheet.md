@@ -3,6 +3,8 @@ layout: page
 title: ニューラルネットワーク総まとめ（チートシート）
 permalink: /gk/nn-cheatsheet/
 tags: [gk, neural_network, cheatsheet]
+gk_section: チートシート（試験直前）/チートシート（試験直前）
+gk_order: 1
 ---
 
 ## まず結論

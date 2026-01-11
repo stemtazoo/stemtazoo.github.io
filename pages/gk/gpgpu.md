@@ -3,6 +3,8 @@ layout: page
 title: GPGPUとは？（GPU汎用計算）G検定対策
 permalink: /gk/gpgpu/
 tags: [gk]
+gk_section: ディープラーニングの概要/ニューラルネットワークとディープラーニング
+gk_order: 12
 ---
 
 ## まず結論

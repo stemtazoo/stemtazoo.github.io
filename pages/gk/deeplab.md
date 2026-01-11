@@ -3,6 +3,8 @@ layout: page
 title: DeepLab（セマンティックセグメンテーション）とは？G検定対策
 permalink: /gk/deeplab/
 tags: [gk, cnn]
+gk_section: ディープラーニングの応用例/画像認識/セグメンテーションタスク
+gk_order: 10
 ---
 
 ## まず結論

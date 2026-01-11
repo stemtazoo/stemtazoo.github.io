@@ -3,6 +3,8 @@ layout: page
 title: AI倫理まとめ（XAI・公平性・プライバシー）
 permalink: /gk/ai-ethics-cheatsheet/
 tags: [gk, cheatsheet]
+gk_section: チートシート（試験直前）/チートシート（試験直前）
+gk_order: 4
 ---
 
 ## まず結論（この1ページで即断）

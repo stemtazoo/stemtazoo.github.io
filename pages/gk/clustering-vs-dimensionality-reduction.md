@@ -3,6 +3,8 @@ layout: page
 title: クラスタリングと次元削減の違い【最終混同対策・G検定】
 permalink: /gk/clustering-vs-dimensionality-reduction/
 tags: [gk, unsupervised_learning]
+gk_section: 機械学習の概要/代表的な手法/教師なし学習
+gk_order: 4
 ---
 
 ## まず結論

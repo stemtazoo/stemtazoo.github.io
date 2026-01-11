@@ -3,6 +3,8 @@ layout: page
 title: 畳み込み（Convolution）
 permalink: /gk/convolution/
 tags: [gk, neural_network, cnn, convolution]
+gk_section: ディープラーニングの要素技術/ネットワークの構成要素
+gk_order: 2
 ---
 
 ## まず結論

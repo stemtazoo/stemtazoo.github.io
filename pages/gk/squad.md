@@ -3,6 +3,8 @@ layout: page
 title: SQuAD（Stanford Question Answering Dataset）
 permalink: /gk/squad/
 tags: [gk, nlp, dataset]
+gk_section: ディープラーニングの応用例/自然言語処理
+gk_order: 31
 ---
 
 ## まず結論

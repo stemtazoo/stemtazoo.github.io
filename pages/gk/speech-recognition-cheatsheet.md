@@ -3,6 +3,8 @@ layout: page
 title: 音声認識まとめ（WaveNet・CTC・RNN）
 permalink: /gk/speech-recognition-cheatsheet/
 tags: [gk, cheatsheet]
+gk_section: チートシート（試験直前）/チートシート（試験直前）
+gk_order: 5
 ---
 
 ## まず結論（この1ページで即断）

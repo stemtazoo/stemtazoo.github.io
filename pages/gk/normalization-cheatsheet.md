@@ -3,6 +3,8 @@ layout: page
 title: Batch・Layer・Instance Normalizationの違いとは？【正規化まとめ】G検定対策
 permalink: /gk/normalization-cheatsheet/
 tags: [gk, neural_network, cnn, cheatsheet]
+gk_section: ディープラーニングの要素技術/ネットワークの構成要素
+gk_order: 11
 ---
 
 ## まず結論

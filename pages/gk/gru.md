@@ -3,6 +3,8 @@ layout: page
 title: GRU（Gated Recurrent Unit）
 permalink: /gk/gru/
 tags: [gk, neural_network, rnn, gru]
+gk_section: ディープラーニングの要素技術/リカレントニューラルネットワーク (RNN)
+gk_order: 3
 ---
 
 ## まず結論

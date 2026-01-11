@@ -3,6 +3,8 @@ layout: page
 title: 最適化手法まとめ（チートシート）
 permalink: /gk/optimization-cheatsheet/
 tags: [gk, neural_network, optimization, cheatsheet]
+gk_section: ディープラーニングの概要/最適化手法
+gk_order: 13
 ---
 
 ## まず結論（これだけ見ればOK）

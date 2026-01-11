@@ -3,6 +3,8 @@ layout: page
 title: エッジAI vs クラウドAI（使い分けチートシート）
 permalink: /gk/edge-vs-cloud-ai/
 tags: [gk, cheatsheet]
+gk_section: AIの社会実装に向けて/AIの社会実装に向けて
+gk_order: 2
 ---
 
 ## まず結論（試験で即使う）

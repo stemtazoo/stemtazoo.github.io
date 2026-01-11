@@ -3,6 +3,8 @@ layout: page
 title: ポアソン分布と二項分布の違いとは？G検定対策
 permalink: /gk/poisson-vs-binomial/
 tags: [gk, probability]
+gk_section: 機械学習の概要/代表的な手法/教師あり学習
+gk_order: 9
 ---
 
 ## まず結論

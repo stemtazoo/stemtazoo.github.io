@@ -3,6 +3,8 @@ layout: page
 title: GANの派生モデルまとめ
 permalink: /gk/gan-variants/
 tags: [gk, neural_network, gan, cheatsheet]
+gk_section: ディープラーニングの応用例/データ生成
+gk_order: 2
 ---
 
 ## まず結論

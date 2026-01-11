@@ -3,6 +3,8 @@ layout: page
 title: Random CropとRandom Translationの違いとは？【画像データ拡張｜G検定対策】
 permalink: /gk/random-crop-vs-translation/
 tags: [gk, cnn, neural_network]
+gk_section: ディープラーニングの応用例/画像認識/データ拡張
+gk_order: 9
 ---
 
 ## まず結論

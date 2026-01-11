@@ -3,6 +3,8 @@ layout: page
 title: Rainbow（強化学習アルゴリズム）とは？【G検定対策】
 permalink: /gk/rainbow/
 tags: [gk, reinforcement_learning]
+gk_section: ディープラーニングの応用例/深層強化学習
+gk_order: 19
 ---
 
 ## まず結論

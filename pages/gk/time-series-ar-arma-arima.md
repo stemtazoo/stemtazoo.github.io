@@ -3,6 +3,8 @@ layout: page
 title: AR / MA / ARMA / ARIMAの違いまとめ【G検定対策】
 permalink: /gk/time-series-ar-arma-arima/
 tags: [gk, time_series]
+gk_section: 機械学習の概要/代表的な手法/教師あり学習
+gk_order: 6
 ---
 
 ## まず結論

@@ -3,6 +3,8 @@ layout: page
 title: G検定ひっかけ最適化問題10連発【SGD / Adam / RMSprop ほか｜解説付き】
 permalink: /gk/optimizer-trick-questions/
 tags: [gk, cheatsheet, neural_network]
+gk_section: ディープラーニングの概要/最適化手法
+gk_order: 22
 ---
 
 ## まず結論

@@ -3,6 +3,8 @@ layout: page
 title: PaLM-E（環境対応マルチモーダルモデル）とは？G検定対策
 permalink: /gk/palm-e/
 tags: [gk, neural_network, transformer, attention]
+gk_section: ディープラーニングの応用例/マルチモーダル
+gk_order: 3
 ---
 
 ## まず結論

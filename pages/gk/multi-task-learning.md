@@ -3,6 +3,8 @@ layout: page
 title: マルチタスク学習（Multi-task Learning）とは？【G検定対策】
 permalink: /gk/multi-task-learning/
 tags: [gk, neural_network]
+gk_section: ディープラーニングの応用例/画像認識/マルチタスク学習
+gk_order: 3
 ---
 
 ## まず結論

@@ -3,6 +3,8 @@ layout: page
 title: 多層パーセプトロン（MLP）
 permalink: /gk/mlp/
 tags: [gk, neural_network, mlp]
+gk_section: ディープラーニングの概要/ニューラルネットワークとディープラーニング
+gk_order: 2
 ---
 
 ## まず結論

@@ -3,6 +3,8 @@ layout: page
 title: Rotation / Flip / Crop とは？（幾何変換系データ拡張）【G検定対策】
 permalink: /gk/geometry-augmentation/
 tags: [gk, cnn]
+gk_section: ディープラーニングの応用例/画像認識/データ拡張
+gk_order: 12
 ---
 
 ## まず結論

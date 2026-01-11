@@ -3,6 +3,8 @@ layout: page
 title: RMSEとMAEの違い（回帰評価指標）
 permalink: /gk/rmse-mae/
 tags: [gk, metrics]
+gk_section: 機械学習の概要/モデルの選択・評価
+gk_order: 9
 ---
 
 ## まず結論

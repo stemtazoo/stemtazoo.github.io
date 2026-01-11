@@ -3,6 +3,8 @@ layout: page
 title: ベイズ情報量基準（BIC）とは？G検定対策
 permalink: /gk/bic/
 tags: [gk, metrics]
+gk_section: 機械学習の概要/モデルの選択・評価
+gk_order: 16
 ---
 
 ## まず結論

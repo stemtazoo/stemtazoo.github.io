@@ -3,6 +3,8 @@ layout: page
 title: 学習データ・検証データ・テストデータの役割とは？【使い分け完全整理｜G検定対策】
 permalink: /gk/train-validation-test/
 tags: [gk, machine_learning, evaluation]
+gk_section: 機械学習の概要/モデルの選択・評価
+gk_order: 12
 ---
 
 ## まず結論

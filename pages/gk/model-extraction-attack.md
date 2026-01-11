@@ -3,6 +3,8 @@ layout: page
 title: モデル窃取攻撃（Model Extraction Attack）とは？【G検定対策】
 permalink: /gk/model-extraction-attack/
 tags: [gk, security, privacy]
+gk_section: AIの法律と倫理/AIの法律と倫理
+gk_order: 30
 ---
 
 ## まず結論

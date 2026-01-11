@@ -3,6 +3,8 @@ layout: page
 title: 単純パーセプトロン（Simple Perceptron）とは？G検定対策
 permalink: /gk/simple-perceptron/
 tags: [gk, neural_network]
+gk_section: 人工知能をめぐる動向/人工知能をめぐる動向
+gk_order: 6
 ---
 
 ## まず結論

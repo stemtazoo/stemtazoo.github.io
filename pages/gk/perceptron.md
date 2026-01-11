@@ -3,6 +3,8 @@ layout: page
 title: パーセプトロン（Perceptron）
 permalink: /gk/perceptron/
 tags: [gk, neural_network, perceptron]
+gk_section: ディープラーニングの概要/ニューラルネットワークとディープラーニング
+gk_order: 1
 ---
 
 ## まず結論

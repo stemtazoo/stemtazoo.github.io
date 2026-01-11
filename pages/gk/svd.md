@@ -3,6 +3,8 @@ layout: page
 title: SVD（特異値分解）とは？G検定対策
 permalink: /gk/svd/
 tags: [gk, linear_algebra]
+gk_section: 機械学習の概要/代表的な手法/教師なし学習
+gk_order: 12
 ---
 
 ## まず結論

@@ -3,6 +3,8 @@ layout: page
 title: 継続学習（Continual Learning）とは？破壊的忘却と対策まとめ【G検定対策】
 permalink: /gk/continual-learning/
 tags: [gk, neural_network]
+gk_section: ディープラーニングの応用例/転移学習・ファインチューニング
+gk_order: 6
 ---
 
 ## まず結論

@@ -3,6 +3,8 @@ layout: page
 title: VAE・GAN・Pix2Pixの違い【最終チートシート｜G検定対策】
 permalink: /gk/vae-vs-gan-vs-pix2pix/
 tags: [gk, neural_network, cheatsheet]
+gk_section: ディープラーニングの応用例/データ生成
+gk_order: 10
 ---
 
 ## まず結論

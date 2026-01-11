@@ -3,6 +3,8 @@ layout: page
 title: Precision（適合率）
 permalink: /gk/precision/
 tags: [gk, 機械学習, 評価指標, 頻出]
+gk_section: 機械学習の概要/モデルの選択・評価
+gk_order: 3
 ---
 
 ## まず結論

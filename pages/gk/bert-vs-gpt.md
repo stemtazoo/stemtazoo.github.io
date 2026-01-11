@@ -3,6 +3,8 @@ layout: page
 title: BERTとGPTの違い【比較チートシート｜G検定対策】
 permalink: /gk/bert-vs-gpt/
 tags: [gk, nlp, transformer, cheatsheet]
+gk_section: ディープラーニングの応用例/自然言語処理
+gk_order: 3
 ---
 
 ## まず結論

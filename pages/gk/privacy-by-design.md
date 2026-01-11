@@ -3,6 +3,8 @@ layout: page
 title: プライバシー・バイ・デザインとは？（考え方）【G検定対策】
 permalink: /gk/privacy-by-design/
 tags: [gk]
+gk_section: AIの法律と倫理/AIの法律と倫理
+gk_order: 10
 ---
 
 ## まず結論

@@ -3,6 +3,8 @@ layout: page
 title: ミニバッチ学習（Mini-batch Gradient Descent）とは？G検定対策
 permalink: /gk/mini-batch/
 tags: [gk, optimization]
+gk_section: ディープラーニングの概要/最適化手法
+gk_order: 4
 ---
 
 ## まず結論

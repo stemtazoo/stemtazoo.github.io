@@ -3,6 +3,8 @@ layout: page
 title: Pooling・Stride・Dilated Convolution の違い
 permalink: /gk/pooling-stride-dilation/
 tags: [gk, neural_network, cnn, cheatsheet]
+gk_section: ディープラーニングの要素技術/ネットワークの構成要素
+gk_order: 6
 ---
 
 ## まず結論

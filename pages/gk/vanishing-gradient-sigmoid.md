@@ -3,6 +3,8 @@ layout: page
 title: 勾配消失問題とは？（なぜシグモイドが減った？）【G検定対策】
 permalink: /gk/vanishing-gradient-sigmoid/
 tags: [gk, neural_network]
+gk_section: ディープラーニングの概要/活性化関数
+gk_order: 2
 ---
 
 ## まず結論

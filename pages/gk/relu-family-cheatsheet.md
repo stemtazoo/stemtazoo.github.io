@@ -3,6 +3,8 @@ layout: page
 title: ReLU / Leaky ReLU / PReLU（比較チートシート）
 permalink: /gk/relu-family-cheatsheet/
 tags: [gk, cheatsheet, neural_network]
+gk_section: ディープラーニングの概要/活性化関数
+gk_order: 4
 ---
 
 ## まず結論（試験で即切る）

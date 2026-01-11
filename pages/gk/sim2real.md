@@ -3,6 +3,8 @@ layout: page
 title: Sim2Realとは？（シミュレーションから現実へ）【G検定対策】
 permalink: /gk/sim2real/
 tags: [gk]
+gk_section: ディープラーニングの応用例/深層強化学習
+gk_order: 6
 ---
 
 ## まず結論

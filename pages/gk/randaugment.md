@@ -3,6 +3,8 @@ layout: page
 title: RandAugmentとは？AutoAugmentとの違い【画像データ拡張｜G検定対策】
 permalink: /gk/randaugment/
 tags: [gk, cnn, neural_network]
+gk_section: ディープラーニングの応用例/画像認識/データ拡張
+gk_order: 4
 ---
 
 ## まず結論

@@ -3,6 +3,8 @@ layout: page
 title: セマンティックセグメンテーション系まとめ（FCN / U-Net / SegNet）
 permalink: /gk/segmentation-cheatsheet/
 tags: [gk, cheatsheet, cnn]
+gk_section: ディープラーニングの応用例/画像認識/セグメンテーションタスク
+gk_order: 6
 ---
 
 ## まず結論（この1ページで即断する）

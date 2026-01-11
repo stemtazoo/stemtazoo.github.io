@@ -3,6 +3,8 @@ layout: page
 title: LAWS（自律型致死兵器システム）とは？G検定対策
 permalink: /gk/laws/
 tags: [gk, ethics]
+gk_section: AIの法律と倫理/AIの法律と倫理
+gk_order: 22
 ---
 
 ## まず結論

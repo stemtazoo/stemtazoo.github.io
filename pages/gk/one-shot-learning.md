@@ -3,6 +3,8 @@ layout: page
 title: One-shot学習とは？1例だけで未知クラスを識別【G検定対策】
 permalink: /gk/one-shot-learning/
 tags: [gk, neural_network]
+gk_section: ディープラーニングの応用例/転移学習・ファインチューニング
+gk_order: 9
 ---
 
 ## まず結論

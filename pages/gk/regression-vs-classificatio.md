@@ -3,6 +3,8 @@ layout: page
 title: 回帰と分類の違い（評価指標の選び方）
 permalink: /gk/regression-vs-classification/
 tags: [gk, metrics]
+gk_section: 機械学習の概要/モデルの選択・評価
+gk_order: 11
 ---
 
 ## まず結論

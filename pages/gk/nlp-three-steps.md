@@ -3,6 +3,8 @@ layout: page
 title: 形態素解析・構文解析・意味解析の違い【NLP3段階まとめ｜G検定対策】
 permalink: /gk/nlp-three-steps/
 tags: [gk, nlp, cheatsheet]
+gk_section: ディープラーニングの応用例/自然言語処理
+gk_order: 28
 ---
 
 ## まず結論

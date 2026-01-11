@@ -3,6 +3,8 @@ layout: page
 title: ランダムフォレストとは？（バギングの代表例）【G検定対策】
 permalink: /gk/random-forest/
 tags: [gk, neural_network]
+gk_section: 機械学習の概要/代表的な手法/教師あり学習
+gk_order: 4
 ---
 
 ## まず結論

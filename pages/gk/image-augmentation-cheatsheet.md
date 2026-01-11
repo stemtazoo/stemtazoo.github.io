@@ -3,6 +3,8 @@ layout: page
 title: 画像データ拡張 全操作チートシート【G検定1ページ総まとめ】
 permalink: /gk/image-augmentation-cheatsheet/
 tags: [gk, cnn, cheatsheet]
+gk_section: ディープラーニングの応用例/画像認識/データ拡張
+gk_order: 11
 ---
 
 ## まず結論

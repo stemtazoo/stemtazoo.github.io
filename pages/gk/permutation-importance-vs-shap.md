@@ -3,6 +3,8 @@ layout: page
 title: Permutation Importance vs SHAP【G検定頻出比較】
 permalink: /gk/permutation-importance-vs-shap/
 tags: [gk, metrics, cheatsheet]
+gk_section: ディープラーニングの応用例/モデルの解釈性
+gk_order: 5
 ---
 
 ## まず結論

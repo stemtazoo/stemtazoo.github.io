@@ -3,6 +3,8 @@ layout: page
 title: RNN（再帰型ニューラルネットワーク）
 permalink: /gk/rnn/
 tags: [gk, neural_network, rnn]
+gk_section: ディープラーニングの要素技術/リカレントニューラルネットワーク (RNN)
+gk_order: 1
 ---
 
 ## まず結論

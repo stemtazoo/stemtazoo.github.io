@@ -3,6 +3,8 @@ layout: page
 title: ベクトル自己回帰モデル（VAR）とは？【G検定対策】
 permalink: /gk/var/
 tags: [gk, time_series]
+gk_section: 機械学習の概要/代表的な手法/教師あり学習
+gk_order: 5
 ---
 
 ## まず結論

@@ -3,6 +3,8 @@ layout: page
 title: 勾配降下法（Gradient Descent）とは？【訓練誤差との関係｜G検定対策】
 permalink: /gk/gradient-descent/
 tags: [gk, neural_network, optimization]
+gk_section: ディープラーニングの概要/誤差逆伝播法（Backpropagation）
+gk_order: 2
 ---
 
 ## まず結論

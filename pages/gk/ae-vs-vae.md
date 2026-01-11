@@ -3,6 +3,8 @@ layout: page
 title: オートエンコーダ（AE）と変分オートエンコーダ（VAE）の違いとは？【G検定対策】
 permalink: /gk/ae-vs-vae/
 tags: [gk, neural_network]
+gk_section: ディープラーニングの要素技術/オートエンコーダ
+gk_order: 2
 ---
 
 ## まず結論

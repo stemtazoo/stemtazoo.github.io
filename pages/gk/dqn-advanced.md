@@ -3,6 +3,8 @@ layout: page
 title: DQN改良手法まとめ（Double / Dueling / Noisy / Prioritized）【G検定対策】
 permalink: /gk/dqn-advanced/
 tags: [gk]
+gk_section: ディープラーニングの応用例/深層強化学習
+gk_order: 8
 ---
 
 ## まず結論

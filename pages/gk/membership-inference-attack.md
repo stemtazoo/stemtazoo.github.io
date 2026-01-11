@@ -3,6 +3,8 @@ layout: page
 title: メンバーシップ推論攻撃（Membership Inference Attack）とは？【G検定対策】
 permalink: /gk/membership-inference-attack/
 tags: [gk, security, privacy]
+gk_section: AIの法律と倫理/AIの法律と倫理
+gk_order: 29
 ---
 
 ## まず結論

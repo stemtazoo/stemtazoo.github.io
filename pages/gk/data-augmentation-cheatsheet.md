@@ -3,6 +3,8 @@ layout: page
 title: データ拡張まとめチートシート（色系 × 幾何系）【G検定対策】
 permalink: /gk/data-augmentation-cheatsheet/
 tags: [gk, cnn, cheatsheet]
+gk_section: ディープラーニングの応用例/画像認識/データ拡張
+gk_order: 3
 ---
 
 ## まず結論

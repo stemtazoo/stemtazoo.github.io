@@ -3,6 +3,8 @@ layout: page
 title: 匿名加工情報
 permalink: /gk/anonymized-information/
 tags: [gk, ethics, privacy]
+gk_section: AIの法律と倫理/AIの法律と倫理
+gk_order: 6
 ---
 
 ## まず結論

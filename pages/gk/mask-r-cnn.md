@@ -3,6 +3,8 @@ layout: page
 title: Mask R-CNN（インスタンスセグメンテーション）とは？G検定対策
 permalink: /gk/mask-r-cnn/
 tags: [gk, cnn, neural_network]
+gk_section: ディープラーニングの応用例/画像認識/マルチタスク学習
+gk_order: 1
 ---
 
 ## まず結論

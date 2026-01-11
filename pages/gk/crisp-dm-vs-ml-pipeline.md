@@ -3,6 +3,8 @@ layout: page
 title: CRISP-DM と 機械学習パイプラインの違い
 permalink: /gk/crisp-dm-vs-ml-pipeline/
 tags: [gk, crisp-dm, ml_pipeline, comparison]
+gk_section: AIの社会実装に向けて/AIの社会実装に向けて
+gk_order: 4
 ---
 
 ## まず結論

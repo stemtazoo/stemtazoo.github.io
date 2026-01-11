@@ -3,6 +3,8 @@ layout: page
 title: UMAP（Uniform Manifold Approximation and Projection）とは？G検定対策
 permalink: /gk/umap/
 tags: [gk, unsupervised_learning]
+gk_section: 機械学習の概要/代表的な手法/教師なし学習
+gk_order: 11
 ---
 
 ## まず結論
