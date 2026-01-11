@@ -1,33 +1,35 @@
 {%- assign depth = include.depth | default: 0 -%}
-{%- capture items_yaml -%}
-{%- for p in include.items -%}
-- url: {{ p.url | jsonify }}
-  title: {{ p.title | jsonify }}
-  gk_section: {{ p.gk_section | jsonify }}
-  section_parts: {{ p.gk_section | split: '/' | jsonify }}
-  parts_size: {{ p.gk_section | split: '/' | size }}
-{%- endfor -%}
-{%- endcapture -%}
-{%- assign items_with_parts = items_yaml | from_yaml -%}
-{%- assign grouped = items_with_parts | group_by_exp: "p", "p.gk_section | split: '/' | slice: depth, 1 | first" -%}
+{%- assign grouped = include.items | group_by_exp: "p", "p.gk_section | split: '/' | slice: depth, 1 | first" -%}
 {%- assign next_depth = depth | plus: 1 -%}
 
 {%- for group in grouped -%}
   {%- if group.name != nil and group.name != "" -%}
 <h{{ depth | plus: 2 }}>{{ group.name }}</h{{ depth | plus: 2 }}>
-  {%- endif -%}
-
-  {%- assign leaf_items = group.items | where_exp: "p", "p.parts_size == next_depth" -%}
-  {%- if leaf_items.size > 0 -%}
+  {%- assign has_leaf = false -%}
+  {%- for p in group.items -%}
+    {%- assign parts_size = p.gk_section | split: '/' | size -%}
+    {%- if parts_size == next_depth -%}
+      {%- if has_leaf == false -%}
 <ul>
-    {%- for p in leaf_items -%}
+        {%- assign has_leaf = true -%}
+      {%- endif -%}
   <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
-    {%- endfor -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {%- if has_leaf -%}
 </ul>
   {%- endif -%}
 
-  {%- assign deeper_items = group.items | where_exp: "p", "p.parts_size > next_depth" -%}
-  {%- if deeper_items.size > 0 -%}
-    {% include gk_section_tree.html items=deeper_items depth=next_depth %}
+  {%- assign has_deeper = false -%}
+  {%- for p in group.items -%}
+    {%- assign parts_size = p.gk_section | split: '/' | size -%}
+    {%- if parts_size > next_depth -%}
+      {%- assign has_deeper = true -%}
+      {%- break -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {%- if has_deeper -%}
+    {% include gk_section_tree.html items=group.items depth=next_depth %}
+  {%- endif -%}
   {%- endif -%}
 {%- endfor -%}
