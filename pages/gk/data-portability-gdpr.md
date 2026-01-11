@@ -3,6 +3,8 @@ layout: page
 title: データポータビリティの権利とは？（GDPR）【G検定対策】
 permalink: /gk/data-portability-gdpr/
 tags: [gk]
+gk_section: AIの法律と倫理/AIの法律と倫理
+gk_order: 12
 ---
 
 ## まず結論

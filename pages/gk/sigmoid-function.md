@@ -3,6 +3,8 @@ layout: page
 title: シグモイド関数（Sigmoid Function）とは？【G検定対策】
 permalink: /gk/sigmoid-function/
 tags: [gk, neural_network]
+gk_section: ディープラーニングの概要/活性化関数
+gk_order: 1
 ---
 
 ## まず結論

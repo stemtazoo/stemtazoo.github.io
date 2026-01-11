@@ -3,6 +3,8 @@ layout: page
 title: XAI ひっかけ問題集①
 permalink: /gk/trick-questions-xai-1/
 tags: [gk, xai, cheatsheet]
+gk_section: ひっかけ問題集/ひっかけ問題集
+gk_order: 2
 ---
 
 ## まず結論

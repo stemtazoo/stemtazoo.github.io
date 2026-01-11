@@ -3,6 +3,8 @@ layout: page
 title: Unified-IO（統一入出力マルチモーダルモデル）とは？G検定対策
 permalink: /gk/unified-io/
 tags: [gk, neural_network, attention]
+gk_section: ディープラーニングの応用例/マルチモーダル
+gk_order: 6
 ---
 
 ## まず結論

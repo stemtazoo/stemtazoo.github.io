@@ -3,6 +3,8 @@ layout: page
 title: 回帰評価指標まとめ（MSE / RMSE / MAE / R²）
 permalink: /gk/regression-metrics-cheatsheet/
 tags: [gk, metrics, cheatsheet]
+gk_section: 機械学習の概要/モデルの選択・評価
+gk_order: 10
 ---
 
 ## まず結論（この1ページで即断）

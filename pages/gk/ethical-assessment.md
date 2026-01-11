@@ -3,6 +3,8 @@ layout: page
 title: AIの開発における倫理アセスメントとは？【G検定対策】
 permalink: /gk/ethical-assessment/
 tags: [gk]
+gk_section: AIの法律と倫理/AIの法律と倫理
+gk_order: 19
 ---
 
 ## まず結論

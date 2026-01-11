@@ -3,6 +3,8 @@ layout: page
 title: 教師あり学習
 permalink: /gk/supervised-learning/
 tags: [gk, 機械学習, 頻出]
+gk_section: 機械学習の概要/代表的な手法/学習の種類
+gk_order: 1
 ---
 
 ## まず結論

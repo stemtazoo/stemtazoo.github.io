@@ -3,6 +3,8 @@ layout: page
 title: 分散表現とは？【One-hotとの比較で理解｜G検定対策】
 permalink: /gk/distributed-representation/
 tags: [gk, nlp, machine_learning]
+gk_section: ディープラーニングの応用例/自然言語処理
+gk_order: 7
 ---
 
 ## まず結論

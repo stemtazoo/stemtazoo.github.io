@@ -3,6 +3,8 @@ layout: page
 title: LSTM（長短期記憶）
 permalink: /gk/lstm/
 tags: [gk, neural_network, rnn, lstm]
+gk_section: ディープラーニングの要素技術/リカレントニューラルネットワーク (RNN)
+gk_order: 2
 ---
 
 ## まず結論

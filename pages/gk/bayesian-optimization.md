@@ -3,6 +3,8 @@ layout: page
 title: ベイズ最適化とは？（グリッド・ランダムとの違い）【G検定対策】
 permalink: /gk/bayesian-optimization/
 tags: [gk]
+gk_section: ディープラーニングの概要/最適化手法
+gk_order: 17
 ---
 
 ## まず結論

@@ -3,6 +3,8 @@ layout: page
 title: CycleGAN（Pix2Pixとの違い）とは？G検定対策
 permalink: /gk/cyclegan/
 tags: [gk, cnn, neural_network]
+gk_section: ディープラーニングの応用例/データ生成
+gk_order: 8
 ---
 
 ## まず結論

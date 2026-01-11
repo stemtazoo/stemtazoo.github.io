@@ -3,6 +3,8 @@ layout: page
 title: BPTT（時間方向の誤差逆伝播）とは？G検定対策
 permalink: /gk/bptt/
 tags: [gk, rnn, neural_network]
+gk_section: ディープラーニングの要素技術/リカレントニューラルネットワーク (RNN)
+gk_order: 9
 ---
 
 ## まず結論

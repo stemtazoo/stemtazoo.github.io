@@ -3,6 +3,8 @@ layout: page
 title: Q学習（オフポリシー強化学習）とは？G検定対策
 permalink: /gk/q-learning/
 tags: [gk, reinforcement_learning]
+gk_section: 機械学習の概要/代表的な手法/強化学習
+gk_order: 14
 ---
 
 ## まず結論

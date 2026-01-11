@@ -3,6 +3,8 @@ layout: page
 title: 画像のオープンデータセットまとめ
 permalink: /gk/image-open-datasets/
 tags: [gk, dataset, cnn, cheatsheet]
+gk_section: ディープラーニングの応用例/画像認識/ネオコグニトロンとLeNet
+gk_order: 19
 ---
 
 ## まず結論

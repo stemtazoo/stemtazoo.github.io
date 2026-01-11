@@ -3,6 +3,8 @@ layout: page
 title: エンコーダ・デコーダ（Encoder-Decoder）
 permalink: /gk/encoder-decoder/
 tags: [gk, neural_network, rnn]
+gk_section: ディープラーニングの要素技術/リカレントニューラルネットワーク (RNN)
+gk_order: 4
 ---
 
 ## まず結論

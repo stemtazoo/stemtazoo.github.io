@@ -3,6 +3,8 @@ layout: page
 title: β-VAE・infoVAE・VQ-VAEの違い【G検定頻出比較】
 permalink: /gk/vae-variants-cheatsheet/
 tags: [gk, generative_model, neural_network, cheatsheet]
+gk_section: ディープラーニングの要素技術/オートエンコーダ
+gk_order: 9
 ---
 
 ## まず結論

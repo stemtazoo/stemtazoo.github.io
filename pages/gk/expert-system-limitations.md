@@ -3,6 +3,8 @@ layout: page
 title: 専門家システムの限界（なぜ衰退した？）【G検定対策】
 permalink: /gk/expert-system-limitations/
 tags: [gk, neural_network]
+gk_section: 人工知能をめぐる動向/人工知能をめぐる動向
+gk_order: 16
 ---
 
 ## まず結論

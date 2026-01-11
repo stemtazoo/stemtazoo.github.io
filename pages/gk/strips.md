@@ -3,6 +3,8 @@ layout: page
 title: STRIPS（計画問題）とは？G検定対策
 permalink: /gk/strips/
 tags: [gk, planning]
+gk_section: 人工知能をめぐる動向/人工知能をめぐる動向
+gk_order: 11
 ---
 
 ## まず結論

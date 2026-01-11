@@ -3,6 +3,8 @@ layout: page
 title: TF-IDFとは？【単語の重要度指標｜G検定対策】
 permalink: /gk/tf-idf/
 tags: [gk, nlp, machine_learning]
+gk_section: ディープラーニングの応用例/自然言語処理
+gk_order: 4
 ---
 
 ## まず結論

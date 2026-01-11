@@ -3,6 +3,8 @@ layout: page
 title: Few-shot・Zero-shot・転移学習の違い【少量データ学習の整理｜G検定対策】
 permalink: /gk/few-shot-vs-zero-shot-vs-transfer/
 tags: [gk, neural_network]
+gk_section: ディープラーニングの応用例/転移学習・ファインチューニング
+gk_order: 8
 ---
 
 ## まず結論

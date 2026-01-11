@@ -3,6 +3,8 @@ layout: page
 title: Word2Vec（CBOW / Skip-gram）とは？【分散表現の基本｜G検定対策】
 permalink: /gk/word2vec/
 tags: [gk, nlp, machine_learning]
+gk_section: ディープラーニングの応用例/自然言語処理
+gk_order: 6
 ---
 
 ## まず結論

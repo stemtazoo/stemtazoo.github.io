@@ -3,6 +3,8 @@ layout: page
 title: 正規化（Normalization）とは？G検定対策
 permalink: /gk/normalization/
 tags: [gk, neural_network]
+gk_section: ディープラーニングの要素技術/ネットワークの構成要素
+gk_order: 16
 ---
 
 ## まず結論

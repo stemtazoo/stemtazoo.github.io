@@ -3,6 +3,8 @@ layout: page
 title: 隠れマルコフモデル（HMM）とは？G検定対策
 permalink: /gk/hmm/
 tags: [gk, nlp]
+gk_section: ディープラーニングの応用例/音声処理
+gk_order: 7
 ---
 
 ## まず結論

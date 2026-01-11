@@ -3,6 +3,8 @@ layout: page
 title: 差分学習（TD学習, Temporal Difference Learning）とは？G検定対策
 permalink: /gk/td-learning/
 tags: [gk, reinforcement_learning]
+gk_section: ディープラーニングの応用例/深層強化学習
+gk_order: 18
 ---
 
 ## まず結論

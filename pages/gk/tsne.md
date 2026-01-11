@@ -3,6 +3,8 @@ layout: page
 title: t-SNE（t-distributed Stochastic Neighbor Embedding）とは？G検定対策
 permalink: /gk/tsne/
 tags: [gk, unsupervised_learning]
+gk_section: 機械学習の概要/代表的な手法/教師なし学習
+gk_order: 10
 ---
 
 ## まず結論

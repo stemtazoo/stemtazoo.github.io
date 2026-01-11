@@ -3,6 +3,8 @@ layout: page
 title: CAM と Grad-CAM（クラス活性化マップ）
 permalink: /gk/cam-grad-cam/
 tags: [gk, neural_network, cnn, xai]
+gk_section: ディープラーニングの応用例/モデルの解釈性
+gk_order: 2
 ---
 
 ## まず結論

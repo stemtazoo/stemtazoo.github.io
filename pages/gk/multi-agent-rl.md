@@ -3,6 +3,8 @@ layout: page
 title: マルチエージェント強化学習とは？【AlphaStarとの関係｜G検定対策】
 permalink: /gk/multi-agent-rl/
 tags: [gk, reinforcement_learning]
+gk_section: ディープラーニングの応用例/深層強化学習
+gk_order: 3
 ---
 
 ## まず結論

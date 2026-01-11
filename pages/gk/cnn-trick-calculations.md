@@ -3,6 +3,8 @@ layout: page
 title: CNN 計算ひっかけ問題集（出力サイズ・パラメータ数）
 permalink: /gk/cnn-trick-calculations/
 tags: [gk, cnn, cheatsheet]
+gk_section: ディープラーニングの応用例/画像認識/ネオコグニトロンとLeNet
+gk_order: 6
 ---
 
 ## まず結論

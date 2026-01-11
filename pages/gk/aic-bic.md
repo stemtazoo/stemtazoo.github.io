@@ -3,6 +3,8 @@ layout: page
 title: AICとBICの違いまとめ（モデル選択）
 permalink: /gk/aic-bic/
 tags: [gk, metrics, cheatsheet]
+gk_section: 機械学習の概要/モデルの選択・評価
+gk_order: 17
 ---
 
 ## まず結論

@@ -533,6 +533,8 @@ gk_sections:
     items:
       - /gk/trick-questions-1/
       - /gk/trick-questions-xai-1/
+gk_section: 人工知能（AI）とは/人工知能（AI）とは
+gk_order: 15
 ---
 
 {% comment %}
@@ -626,36 +628,6 @@ gk_sections:
 ## ひっかけ問題集
 {% assign sec = page.gk_sections | where: "title", "ひっかけ問題集" | first %}
 {% include gk_section.html sec=sec %}
-
----
-
-## 人口知能(AI)とは
-{% assign sec = page.gk_sections | where: "title", "人工知能（AI）とは" | first %}
-{% include gk_section.html sec=sec %}
-
-{% assign gk_pages = site.pages
-  | where_exp: "p", "p.url contains '/gk/'"
-  | where_exp: "p", "p.url != '/gk/'" %}
-
-{% assign chapter = "人口知能(AI)とは" %}
-{% assign chapter_prefix = chapter | append: "/" %}
-
-{% assign chapter_items = gk_pages
-  | where_exp: "p", "p.gk_section and p.gk_section contains chapter_prefix" %}
-
-{% assign grouped = chapter_items
-  | group_by_exp: "p", "p.gk_section | split: '/' | last" %}
-
-{% for g in grouped %}
-### {{ g.name }}
-
-{% assign items = g.items | sort: "gk_order" %}
-<ul>
-  {% for p in items %}
-    <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
-  {% endfor %}
-</ul>
-{% endfor %}
 
 ---
 

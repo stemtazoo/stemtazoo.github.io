@@ -3,6 +3,8 @@ layout: page
 title: Embedding と ELMo・BERT の違いとは？G検定対策
 permalink: /gk/embedding-vs-contextual-embedding/
 tags: [gk, nlp, attention]
+gk_section: ディープラーニングの応用例/自然言語処理
+gk_order: 17
 ---
 
 ## まず結論

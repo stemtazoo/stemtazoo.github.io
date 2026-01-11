@@ -3,6 +3,8 @@ layout: page
 title: CNN vs Transformer（G検定対策）
 permalink: /gk/cnn-vs-transformer/
 tags: [gk, cnn, transformer, cheatsheet]
+gk_section: ディープラーニングの応用例/画像認識/ネオコグニトロンとLeNet
+gk_order: 9
 ---
 
 ## まず結論

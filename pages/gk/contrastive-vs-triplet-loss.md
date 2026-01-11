@@ -3,6 +3,8 @@ layout: page
 title: Contrastive LossとTriplet Lossの違い【G検定対策】
 permalink: /gk/contrastive-vs-triplet-loss/
 tags: [gk, neural_network, metrics]
+gk_section: ディープラーニングの概要/誤差関数
+gk_order: 2
 ---
 
 ## まず結論

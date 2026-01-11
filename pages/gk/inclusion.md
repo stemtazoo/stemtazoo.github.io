@@ -3,6 +3,8 @@ layout: page
 title: インクルージョン（包摂性）とは？AI開発で重視される社会的視点【G検定対策】
 permalink: /gk/inclusion/
 tags: [gk, ethics]
+gk_section: AIの法律と倫理/AIの法律と倫理
+gk_order: 24
 ---
 
 ## まず結論

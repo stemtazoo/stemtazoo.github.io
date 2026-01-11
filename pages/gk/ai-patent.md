@@ -3,6 +3,8 @@ layout: page
 title: AI技術の特許とは？（特許対象になる・ならない境界）【G検定対策】
 permalink: /gk/ai-patent/
 tags: [gk]
+gk_section: AIの法律と倫理/AIの法律と倫理
+gk_order: 15
 ---
 
 ## まず結論

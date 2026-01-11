@@ -4,7 +4,9 @@ layout: page
 title: 個人情報の第三者提供とは？【G検定対策】
 permalink: /gk/third-party-provision/
 tags: [gk, ethics]
-------------------
+gk_section: AIの法律と倫理/AIの法律と倫理
+gk_order: 27
+---
 
 ## まず結論
 

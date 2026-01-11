@@ -3,6 +3,8 @@ layout: page
 title: 勾配ブースティング（Gradient Boosting）とは？G検定対策
 permalink: /gk/gradient-boosting/
 tags: [gk, ensemble]
+gk_section: 機械学習の概要/代表的な手法/強化学習
+gk_order: 6
 ---
 
 ## まず結論

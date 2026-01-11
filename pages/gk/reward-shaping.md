@@ -3,6 +3,8 @@ layout: page
 title: 報酬成形（Reward Shaping）とは？【G検定対策】
 permalink: /gk/reward-shaping/
 tags: [gk, reinforcement_learning]
+gk_section: ディープラーニングの応用例/深層強化学習
+gk_order: 20
 ---
 
 ## まず結論

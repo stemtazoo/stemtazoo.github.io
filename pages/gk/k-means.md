@@ -3,6 +3,8 @@ layout: page
 title: k-means法とは？教師なし学習とクラスタリングの基本【G検定対策】
 permalink: /gk/k-means/
 tags: [gk, clustering]
+gk_section: 機械学習の概要/代表的な手法/教師なし学習
+gk_order: 1
 ---
 
 ## まず結論

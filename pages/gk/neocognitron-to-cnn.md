@@ -3,6 +3,8 @@ layout: page
 title: ネオコグニトロンからCNNへの進化の流れとは？G検定対策
 permalink: /gk/neocognitron-to-cnn/
 tags: [gk, cnn, neural_network]
+gk_section: 人工知能をめぐる動向/人工知能をめぐる動向
+gk_order: 10
 ---
 
 ## まず結論

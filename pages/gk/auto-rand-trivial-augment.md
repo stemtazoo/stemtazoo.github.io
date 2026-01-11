@@ -3,6 +3,8 @@ layout: page
 title: AutoAugment・RandAugment・TrivialAugmentの違い【画像データ拡張 完全比較｜G検定対策】
 permalink: /gk/auto-rand-trivial-augment/
 tags: [gk, cnn, cheatsheet]
+gk_section: ディープラーニングの応用例/画像認識/データ拡張
+gk_order: 5
 ---
 
 ## まず結論

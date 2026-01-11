@@ -3,6 +3,8 @@ layout: page
 title: Brightness（明るさ調整）とは？【データ拡張｜G検定対策】
 permalink: /gk/brightness/
 tags: [gk, cnn]
+gk_section: ディープラーニングの応用例/画像認識/データ拡張
+gk_order: 1
 ---
 
 ## まず結論

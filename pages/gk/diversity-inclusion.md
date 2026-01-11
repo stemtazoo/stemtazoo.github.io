@@ -3,6 +3,8 @@ layout: page
 title: ダイバーシティ＆インクルージョンとは？（AI開発における責任）【G検定対策】
 permalink: /gk/diversity-inclusion/
 tags: [gk]
+gk_section: AIの法律と倫理/AIの法律と倫理
+gk_order: 33
 ---
 
 ## まず結論

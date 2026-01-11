@@ -3,6 +3,8 @@ layout: page
 title: LIME と SHAP の違い（XAI 深掘り）
 permalink: /gk/lime-vs-shap/
 tags: [gk, xai, cheatsheet]
+gk_section: ディープラーニングの応用例/モデルの解釈性
+gk_order: 3
 ---
 
 ## まず結論

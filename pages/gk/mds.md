@@ -3,6 +3,8 @@ layout: page
 title: MDS（多次元尺度構成法）とは？G検定対策
 permalink: /gk/mds/
 tags: [gk, unsupervised_learning]
+gk_section: 機械学習の概要/代表的な手法/教師なし学習
+gk_order: 9
 ---
 
 ## まず結論

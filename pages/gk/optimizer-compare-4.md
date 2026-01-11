@@ -3,6 +3,8 @@ layout: page
 title: Adam / RMSProp / AdaDelta / AdaBound の違い【4点比較｜G検定対策】
 permalink: /gk/optimizer-compare-4/
 tags: [gk]
+gk_section: ディープラーニングの概要/最適化手法
+gk_order: 12
 ---
 
 ## まず結論

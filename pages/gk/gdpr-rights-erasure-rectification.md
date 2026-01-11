@@ -3,6 +3,8 @@ layout: page
 title: GDPRの権利とは？（消去権・訂正権）【G検定対策】
 permalink: /gk/gdpr-rights-erasure-rectification/
 tags: [gk]
+gk_section: AIの法律と倫理/AIの法律と倫理
+gk_order: 25
 ---
 
 ## まず結論

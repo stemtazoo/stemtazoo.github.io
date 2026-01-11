@@ -3,6 +3,8 @@ layout: page
 title: F1-score
 permalink: /gk/f1-score/
 tags: [gk, 機械学習, 評価指標, 頻出]
+gk_section: 機械学習の概要/モデルの選択・評価
+gk_order: 5
 ---
 
 ## まず結論

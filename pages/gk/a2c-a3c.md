@@ -3,6 +3,8 @@ layout: page
 title: A2C / A3C とは？（Actor–Critic の実装差）【G検定対策】
 permalink: /gk/a2c-a3c/
 tags: [gk, neural_network]
+gk_section: 機械学習の概要/代表的な手法/強化学習
+gk_order: 8
 ---
 
 ## まず結論

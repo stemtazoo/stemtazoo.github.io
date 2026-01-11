@@ -3,6 +3,8 @@ layout: page
 title: 標準化（Standardization）とは？G検定対策
 permalink: /gk/standardization/
 tags: [gk, neural_network]
+gk_section: ディープラーニングの要素技術/ネットワークの構成要素
+gk_order: 15
 ---
 
 ## まず結論

@@ -3,6 +3,8 @@ layout: page
 title: Vision Transformer（ViT）とは？CNNとの違い【G検定対策】
 permalink: /gk/vit/
 tags: [gk, transformer, attention]
+gk_section: ディープラーニングの応用例/画像認識/ネオコグニトロンとLeNet
+gk_order: 15
 ---
 
 ## まず結論

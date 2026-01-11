@@ -3,6 +3,8 @@ layout: page
 title: OpenAI Fiveとは？Dota2特化AIの正しい理解【G検定対策】
 permalink: /gk/openai-five/
 tags: [gk, reinforcement_learning]
+gk_section: ディープラーニングの応用例/深層強化学習
+gk_order: 15
 ---
 
 ## まず結論

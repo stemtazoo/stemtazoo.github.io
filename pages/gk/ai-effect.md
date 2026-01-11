@@ -3,8 +3,8 @@ layout: page
 title: AI効果とは？（当たり前化するAI）【G検定対策】
 permalink: /gk/ai-effect/
 tags: [gk]
-gk_section: 人口知能(AI)とは/人口知能(AI)とは
-gk_order: 20
+gk_section: 人工知能（AI）とは/人工知能（AI）とは
+gk_order: 6
 ---
 
 ## まず結論

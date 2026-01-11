@@ -3,6 +3,8 @@ layout: page
 title: ノイズネットワーク（Noisy Nets）とは？【G検定対策】
 permalink: /gk/noisy-nets/
 tags: [gk, reinforcement_learning]
+gk_section: ディープラーニングの応用例/深層強化学習
+gk_order: 21
 ---
 
 ## まず結論

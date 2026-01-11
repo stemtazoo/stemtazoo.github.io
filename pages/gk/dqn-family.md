@@ -3,6 +3,8 @@ layout: page
 title: DQN / Double DQN / Prioritized Replay / APE-X【強化学習の系譜まとめ】
 permalink: /gk/dqn-family/
 tags: [gk, neural_network, cheatsheet]
+gk_section: ディープラーニングの応用例/深層強化学習
+gk_order: 13
 ---
 
 ## まず結論

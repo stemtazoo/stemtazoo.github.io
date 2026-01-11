@@ -3,6 +3,8 @@ layout: page
 title: 強化学習チートシート（完全版）【G検定対策まとめ】
 permalink: /gk/reinforcement-learning-cheatsheet/
 tags: [gk, reinforcement_learning, cheatsheet]
+gk_section: 機械学習の概要/代表的な手法/強化学習
+gk_order: 2
 ---
 
 ## まず結論

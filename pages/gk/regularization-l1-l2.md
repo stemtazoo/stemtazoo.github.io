@@ -3,6 +3,8 @@ layout: page
 title: 正則化（L1・L2）とは？バイアス・バリアンスとの関係【G検定対策】
 permalink: /gk/regularization-l1-l2/
 tags: [gk, neural_network]
+gk_section: ディープラーニングの概要/正則化
+gk_order: 2
 ---
 
 ## まず結論

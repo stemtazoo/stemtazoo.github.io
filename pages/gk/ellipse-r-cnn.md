@@ -3,6 +3,8 @@ layout: page
 title: Ellipse R-CNN（楕円物体検出）とは？G検定対策
 permalink: /gk/ellipse-r-cnn/
 tags: [gk, cnn, neural_network]
+gk_section: ディープラーニングの応用例/画像認識/マルチタスク学習
+gk_order: 2
 ---
 
 ## まず結論

@@ -3,6 +3,8 @@ layout: page
 title: SGD / Momentum / Adam 系の系譜まとめ【1枚理解｜G検定対策】
 permalink: /gk/optimizer-lineage/
 tags: [gk]
+gk_section: ディープラーニングの概要/最適化手法
+gk_order: 20
 ---
 
 ## まず結論

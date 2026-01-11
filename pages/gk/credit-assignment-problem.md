@@ -3,6 +3,8 @@ layout: page
 title: 信用割当問題（Credit Assignment Problem）とは？G検定対策
 permalink: /gk/credit-assignment-problem/
 tags: [gk, neural_network]
+gk_section: ディープラーニングの概要/誤差逆伝播法（Backpropagation）
+gk_order: 3
 ---
 
 ## まず結論

@@ -3,6 +3,8 @@ layout: page
 title: ハイパーパラメータとパラメータの違いとは？【G検定対策】
 permalink: /gk/hyperparameter-vs-parameter/
 tags: [gk]
+gk_section: ディープラーニングの概要/最適化手法
+gk_order: 19
 ---
 
 ## まず結論

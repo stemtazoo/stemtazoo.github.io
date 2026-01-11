@@ -3,6 +3,8 @@ layout: page
 title: 定常性とは何か？なぜ差分するのか【G検定対策】
 permalink: /gk/stationarity/
 tags: [gk, time_series]
+gk_section: 機械学習の概要/代表的な手法/強化学習
+gk_order: 3
 ---
 
 ## まず結論

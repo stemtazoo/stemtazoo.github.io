@@ -3,6 +3,8 @@ layout: page
 title: 最適化手法まとめ（SGD / Adam / AdaGrad / RMSprop / AMSGrad / AdaBound / AMSBound / Adadelta）【G検定対策】
 permalink: /gk/optimizer-comparison/
 tags: [gk, cheatsheet, neural_network]
+gk_section: ディープラーニングの概要/最適化手法
+gk_order: 21
 ---
 
 ## まず結論

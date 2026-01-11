@@ -3,6 +3,8 @@ layout: page
 title: Faster R-CNN
 permalink: /gk/faster-r-cnn/
 tags: [gk, 画像認識, 物体検出]
+gk_section: ディープラーニングの応用例/画像認識/物体検出タスク
+gk_order: 4
 ---
 
 ## まず結論

@@ -3,6 +3,8 @@ layout: page
 title: SSD（Single Shot MultiBox Detector）
 permalink: /gk/ssd/
 tags: [gk, 画像認識, 物体検出]
+gk_section: ディープラーニングの応用例/画像認識/物体検出タスク
+gk_order: 3
 ---
 
 ## まず結論

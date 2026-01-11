@@ -3,6 +3,8 @@ layout: page
 title: 過学習（Overfitting）
 permalink: /gk/overfitting/
 tags: [gk, machine_learning, overfitting, regularization]
+gk_section: 機械学習の概要/よくあるつまずき（過学習など）
+gk_order: 1
 ---
 
 ## まず結論

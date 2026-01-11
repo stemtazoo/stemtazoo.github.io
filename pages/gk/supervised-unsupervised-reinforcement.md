@@ -3,6 +3,8 @@ layout: page
 title: 教師あり・教師なし・強化学習の違い【最終比較まとめ｜G検定対策】
 permalink: /gk/supervised-unsupervised-reinforcement/
 tags: [gk, machine_learning, cheatsheet]
+gk_section: 機械学習の概要/代表的な手法/学習の種類
+gk_order: 5
 ---
 
 ## まず結論

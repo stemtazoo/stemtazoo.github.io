@@ -3,6 +3,8 @@ layout: page
 title: k-means法とk-NNの違いとは？名前ひっかけ完全対策【G検定頻出】
 permalink: /gk/k-means-vs-knn/
 tags: [gk, clustering]
+gk_section: 機械学習の概要/代表的な手法/教師なし学習
+gk_order: 7
 ---
 
 ## まず結論

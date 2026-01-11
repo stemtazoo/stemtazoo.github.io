@@ -3,6 +3,8 @@ layout: page
 title: バイアス・バリアンス トレードオフ
 permalink: /gk/bias-variance-tradeoff/
 tags: [gk, machine_learning, evaluation]
+gk_section: 機械学習の概要/よくあるつまずき（過学習など）
+gk_order: 4
 ---
 
 ## まず結論

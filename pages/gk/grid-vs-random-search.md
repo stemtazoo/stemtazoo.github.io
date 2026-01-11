@@ -3,6 +3,8 @@ layout: page
 title: グリッドサーチとランダムサーチとは？【G検定対策】
 permalink: /gk/grid-vs-random-search/
 tags: [gk]
+gk_section: ディープラーニングの概要/最適化手法
+gk_order: 16
 ---
 
 ## まず結論

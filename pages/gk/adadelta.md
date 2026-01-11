@@ -3,6 +3,8 @@ layout: page
 title: AdaDelta（適応的学習率最適化）とは？【G検定対策】
 permalink: /gk/adadelta/
 tags: [gk]
+gk_section: ディープラーニングの概要/最適化手法
+gk_order: 10
 ---
 
 ## まず結論

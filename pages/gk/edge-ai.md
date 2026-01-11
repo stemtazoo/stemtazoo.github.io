@@ -3,6 +3,8 @@ layout: page
 title: エッジAI（Edge AI）
 permalink: /gk/edge-ai/
 tags: [gk, edge_ai]
+gk_section: AIの社会実装に向けて/AIの社会実装に向けて
+gk_order: 1
 ---
 
 ## まず結論

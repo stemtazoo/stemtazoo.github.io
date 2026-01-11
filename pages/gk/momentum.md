@@ -3,6 +3,8 @@ layout: page
 title: モーメンタム（Momentum）
 permalink: /gk/momentum/
 tags: [gk, neural_network, optimization]
+gk_section: ディープラーニングの概要/最適化手法
+gk_order: 9
 ---
 
 ## まず結論

@@ -3,6 +3,8 @@ layout: page
 title: パルス符号変調（PCM）とは？【G検定対策】
 permalink: /gk/pcm/
 tags: [gk, signal_processing]
+gk_section: ディープラーニングの応用例/音声処理
+gk_order: 1
 ---
 
 ## まず結論

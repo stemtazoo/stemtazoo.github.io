@@ -3,6 +3,8 @@ layout: page
 title: 物体検出・セマンティック・インスタンスの違い【3点比較チート｜G検定対策】
 permalink: /gk/detection-vs-semantic-vs-instance/
 tags: [gk, cnn, cheatsheet]
+gk_section: ディープラーニングの応用例/画像認識/ネオコグニトロンとLeNet
+gk_order: 13
 ---
 
 ## まず結論

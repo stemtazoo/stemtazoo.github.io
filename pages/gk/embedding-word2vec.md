@@ -3,6 +3,8 @@ layout: page
 title: Embedding / Word2Vec
 permalink: /gk/embedding-word2vec/
 tags: [gk, neural_network, nlp, embedding]
+gk_section: ディープラーニングの要素技術/ネットワークの構成要素
+gk_order: 9
 ---
 
 ## まず結論

@@ -3,6 +3,8 @@ layout: page
 title: 仮名加工情報
 permalink: /gk/pseudonymized-information/
 tags: [gk, ethics, privacy]
+gk_section: AIの法律と倫理/AIの法律と倫理
+gk_order: 5
 ---
 
 ## まず結論

@@ -3,6 +3,8 @@ layout: page
 title: FPN・SSD・YOLOの違いとは？【物体検出まとめ】G検定対策
 permalink: /gk/fpn-ssd-yolo/
 tags: [gk, cnn, cheatsheet]
+gk_section: ディープラーニングの応用例/画像認識/物体検出タスク
+gk_order: 8
 ---
 
 ## まず結論

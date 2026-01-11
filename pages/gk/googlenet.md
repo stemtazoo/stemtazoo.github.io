@@ -3,6 +3,8 @@ layout: page
 title: GoogLeNet（Inception）とは？G検定対策
 permalink: /gk/googlenet/
 tags: [gk, cnn]
+gk_section: ディープラーニングの応用例/画像認識/物体認識タスク
+gk_order: 3
 ---
 
 ## まず結論

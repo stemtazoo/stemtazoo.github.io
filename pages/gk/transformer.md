@@ -3,6 +3,8 @@ layout: page
 title: Transformer（概要）
 permalink: /gk/transformer/
 tags: [gk, neural_network, transformer]
+gk_section: ディープラーニングの要素技術/トランスフォーマー (Transformer)
+gk_order: 1
 ---
 
 ## まず結論

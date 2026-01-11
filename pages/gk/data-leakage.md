@@ -3,6 +3,8 @@ layout: page
 title: データリーケージ（Data Leakage）とは？【原因と典型例｜G検定対策】
 permalink: /gk/data-leakage/
 tags: [gk, machine_learning, evaluation]
+gk_section: AIの社会実装に向けて/AIの社会実装に向けて
+gk_order: 11
 ---
 
 ## まず結論

@@ -3,6 +3,8 @@ layout: page
 title: MLOpsの手順とは？【G検定対策】
 permalink: /gk/mlops-process/
 tags: [gk]
+gk_section: AIの社会実装に向けて/AIの社会実装に向けて
+gk_order: 7
 ---
 
 ## まず結論

@@ -3,6 +3,8 @@ layout: page
 title: 赤池情報量基準（AIC）とは？G検定対策
 permalink: /gk/aic/
 tags: [gk, metrics]
+gk_section: 機械学習の概要/モデルの選択・評価
+gk_order: 15
 ---
 
 ## まず結論

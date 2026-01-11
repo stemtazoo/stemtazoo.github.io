@@ -3,6 +3,8 @@ layout: page
 title: k-means と階層型クラスタリングの違い【G検定頻出比較】
 permalink: /gk/kmeans-vs-hierarchical/
 tags: [gk, unsupervised_learning, clustering]
+gk_section: 機械学習の概要/代表的な手法/教師なし学習
+gk_order: 2
 ---
 
 ## まず結論

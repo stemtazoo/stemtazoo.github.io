@@ -3,6 +3,8 @@ layout: page
 title: 正則化・データ拡張・正規化の違いとは？【L1/L2/Dropout vs BatchNorm｜G検定対策】
 permalink: /gk/regularization-vs-augmentation-vs-normalization/
 tags: [gk, neural_network, cnn]
+gk_section: ディープラーニングの応用例/画像認識/データ拡張
+gk_order: 7
 ---
 
 ## まず結論

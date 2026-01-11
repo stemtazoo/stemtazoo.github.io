@@ -3,6 +3,8 @@ layout: page
 title: 活性化関数の微分（ひっかけ対策）
 permalink: /gk/activation-derivative/
 tags: [gk, neural_network, cheatsheet]
+gk_section: ディープラーニングの概要/ニューラルネットワークとディープラーニング
+gk_order: 5
 ---
 
 ## まず結論

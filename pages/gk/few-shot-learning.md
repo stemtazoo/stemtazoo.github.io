@@ -3,6 +3,8 @@ layout: page
 title: Few-shot学習とは？少量データで学ぶ仕組み【G検定対策】
 permalink: /gk/few-shot-learning/
 tags: [gk, neural_network]
+gk_section: ディープラーニングの応用例/転移学習・ファインチューニング
+gk_order: 7
 ---
 
 ## まず結論

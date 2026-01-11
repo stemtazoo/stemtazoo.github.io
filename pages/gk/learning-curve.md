@@ -3,6 +3,8 @@ layout: page
 title: 学習曲線（Learning Curve）
 permalink: /gk/learning-curve/
 tags: [gk, machine_learning, evaluation]
+gk_section: 機械学習の概要/よくあるつまずき（過学習など）
+gk_order: 3
 ---
 
 ## まず結論

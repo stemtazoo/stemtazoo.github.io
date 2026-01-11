@@ -3,6 +3,8 @@ layout: page
 title: AI哲学4兄弟まとめ（オッカム・ノーフリーランチ・アヒル・フレーム）【G検定対策】
 permalink: /gk/ai-philosophy-cheatsheet/
 tags: [gk, cheatsheet]
+gk_section: 機械学習の概要/モデルの選択・評価
+gk_order: 21
 ---
 
 ## まず結論

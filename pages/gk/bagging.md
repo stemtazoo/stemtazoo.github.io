@@ -3,6 +3,8 @@ layout: page
 title: バギングとは？（Boostingとの違い）【G検定対策】
 permalink: /gk/bagging/
 tags: [gk, neural_network]
+gk_section: 機械学習の概要/代表的な手法/教師あり学習
+gk_order: 3
 ---
 
 ## まず結論

@@ -3,6 +3,8 @@ layout: page
 title: AIを活用したフェイクニュースとは？【G検定対策】
 permalink: /gk/ai-fake-news/
 tags: [gk, ethics, social_issues]
+gk_section: AIの法律と倫理/AIの法律と倫理
+gk_order: 16
 ---
 
 ## まず結論

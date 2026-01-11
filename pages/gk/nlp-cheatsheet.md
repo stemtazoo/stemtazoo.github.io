@@ -3,6 +3,8 @@ layout: page
 title: NLP完全チートシート（最終まとめ）【G検定対策】
 permalink: /gk/nlp-cheatsheet/
 tags: [gk, nlp, cheatsheet]
+gk_section: ディープラーニングの応用例/自然言語処理
+gk_order: 10
 ---
 
 ## まず結論

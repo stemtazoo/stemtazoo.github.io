@@ -3,6 +3,8 @@ layout: page
 title: ジョルダンネットワークとElmanネットワークの違いとは？【RNN比較｜G検定対策】
 permalink: /gk/jordan-vs-elman/
 tags: [gk, neural_network, rnn]
+gk_section: ディープラーニングの要素技術/リカレントニューラルネットワーク (RNN)
+gk_order: 12
 ---
 
 ## まず結論

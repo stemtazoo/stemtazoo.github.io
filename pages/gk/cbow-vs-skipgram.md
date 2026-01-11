@@ -3,6 +3,8 @@ layout: page
 title: CBOW と Skip-gram の違いとは？G検定対策
 permalink: /gk/cbow-vs-skipgram/
 tags: [gk, nlp]
+gk_section: ディープラーニングの応用例/自然言語処理
+gk_order: 16
 ---
 
 ## まず結論

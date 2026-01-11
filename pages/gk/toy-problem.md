@@ -3,6 +3,8 @@ layout: page
 title: トイプロブレム（Toy Problem）とは？【G検定対策】
 permalink: /gk/toy-problem/
 tags: [gk]
+gk_section: 人工知能（AI）とは/人工知能（AI）とは
+gk_order: 9
 ---
 
 ## まず結論

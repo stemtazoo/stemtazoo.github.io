@@ -3,6 +3,8 @@ layout: page
 title: マルチモーダルモデル総まとめ【最終チートシート｜G検定対策】
 permalink: /gk/multimodal-cheatsheet/
 tags: [gk, cheatsheet, neural_network, attention]
+gk_section: ディープラーニングの応用例/マルチモーダル
+gk_order: 8
 ---
 
 ## まず結論

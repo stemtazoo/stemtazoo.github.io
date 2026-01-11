@@ -3,6 +3,8 @@ layout: page
 title: 主成分分析（PCA：Principal Component Analysis）とは？G検定対策
 permalink: /gk/pca/
 tags: [gk, unsupervised_learning]
+gk_section: 機械学習の概要/代表的な手法/教師なし学習
+gk_order: 16
 ---
 
 ## まず結論

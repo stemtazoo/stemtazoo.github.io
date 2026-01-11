@@ -3,6 +3,8 @@ layout: page
 title: なぜXOR問題は解けないのか？（単純パーセプトロン）G検定対策
 permalink: /gk/xor-problem/
 tags: [gk, neural_network]
+gk_section: 人工知能をめぐる動向/人工知能をめぐる動向
+gk_order: 7
 ---
 
 ## まず結論

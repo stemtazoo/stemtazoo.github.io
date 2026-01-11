@@ -3,6 +3,8 @@ layout: page
 title: GPT（自己回帰モデル）とは？G検定対策
 permalink: /gk/gpt/
 tags: [gk, nlp, transformer, attention]
+gk_section: ディープラーニングの応用例/自然言語処理
+gk_order: 2
 ---
 
 ## まず結論

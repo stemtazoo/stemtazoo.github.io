@@ -3,6 +3,8 @@ layout: page
 title: 人間中心のAI社会原則とは？7つの原則とG検定ひっかけ整理
 permalink: /gk/human-centered-ai-principles/
 tags: [gk, ethics]
+gk_section: AIの法律と倫理/AIの法律と倫理
+gk_order: 23
 ---
 
 ## まず結論

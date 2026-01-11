@@ -3,6 +3,8 @@ layout: page
 title: GANとConditional GANの違いとは？【1ページ比較・G検定対策】
 permalink: /gk/gan-vs-conditional-gan/
 tags: [gk, neural_network, cheatsheet]
+gk_section: ディープラーニングの応用例/データ生成
+gk_order: 9
 ---
 
 ## まず結論

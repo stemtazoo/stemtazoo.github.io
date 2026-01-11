@@ -3,6 +3,8 @@ layout: page
 title: LeNetとは？【G検定対策】
 permalink: /gk/lenet/
 tags: [gk, neural_network, cnn]
+gk_section: ディープラーニングの応用例/画像認識/ネオコグニトロンとLeNet
+gk_order: 2
 ---
 
 ## まず結論

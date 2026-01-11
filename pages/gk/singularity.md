@@ -3,6 +3,8 @@ layout: page
 title: シンギュラリティ（技術的特異点）とは？G検定対策
 permalink: /gk/singularity/
 tags: [gk, ethics]
+gk_section: 人工知能（AI）とは/人工知能（AI）とは
+gk_order: 14
 ---
 
 ## まず結論

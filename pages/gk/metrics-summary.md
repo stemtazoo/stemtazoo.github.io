@@ -3,6 +3,8 @@ layout: page
 title: 評価指標まとめ（チートシート）
 permalink: /gk/metrics-summary/
 tags: [gk, 機械学習, 評価指標, まとめ, 頻出]
+gk_section: 機械学習の概要/モデルの選択・評価
+gk_order: 8
 ---
 
 ## まず結論

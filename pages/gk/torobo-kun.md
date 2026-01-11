@@ -3,6 +3,8 @@ layout: page
 title: 東ロボくんプロジェクトとは？【成果と限界｜G検定対策】
 permalink: /gk/torobo-kun/
 tags: [gk, ai_history]
+gk_section: 人工知能をめぐる動向/人工知能をめぐる動向
+gk_order: 5
 ---
 
 ## まず結論

@@ -3,6 +3,8 @@ layout: page
 title: 第二次AIブーム
 permalink: /gk/second-ai-boom/
 tags: [gk, cheatsheet]
+gk_section: 人工知能（AI）とは/人工知能（AI）とは
+gk_order: 2
 ---
 
 ## まず結論

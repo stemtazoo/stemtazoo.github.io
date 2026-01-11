@@ -3,6 +3,8 @@ layout: page
 title: Contrastive Loss（コントラスト損失）とは？【G検定対策】
 permalink: /gk/contrastive-loss/
 tags: [gk, neural_network, metrics]
+gk_section: ディープラーニングの概要/誤差関数
+gk_order: 1
 ---
 
 ## まず結論

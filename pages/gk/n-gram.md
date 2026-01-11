@@ -3,6 +3,8 @@ layout: page
 title: N-gramとは？文字・単語を分割する基本手法【NLP基礎｜G検定対策】
 permalink: /gk/n-gram/
 tags: [gk, nlp]
+gk_section: ディープラーニングの応用例/自然言語処理
+gk_order: 25
 ---
 
 ## まず結論

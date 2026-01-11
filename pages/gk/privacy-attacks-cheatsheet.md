@@ -3,6 +3,8 @@ layout: page
 title: データ窃取・メンバーシップ推論・モデル窃取 攻撃まとめ【G検定チートシート】
 permalink: /gk/privacy-attacks-cheatsheet/
 tags: [gk, security, privacy, cheatsheet]
+gk_section: AIの法律と倫理/AIの法律と倫理
+gk_order: 31
 ---
 
 ## まず結論

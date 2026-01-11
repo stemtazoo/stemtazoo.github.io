@@ -3,6 +3,8 @@ layout: page
 title: UCB方策（Upper-Confidence Bound）とは？【G検定対策】
 permalink: /gk/ucb/
 tags: [gk, reinforcement_learning]
+gk_section: 機械学習の概要/代表的な手法/強化学習
+gk_order: 16
 ---
 
 ## まず結論

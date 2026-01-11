@@ -3,6 +3,8 @@ layout: page
 title: 時系列データの交差検証はなぜNG？【未来情報とデータリーケージ｜G検定対策】
 permalink: /gk/time-series-cross-validation/
 tags: [gk, machine_learning, evaluation]
+gk_section: 機械学習の概要/モデルの選択・評価
+gk_order: 14
 ---
 
 ## まず結論

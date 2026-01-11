@@ -3,6 +3,8 @@ layout: page
 title: オッカムの剃刀とは？（Occam's Razor）【G検定対策】
 permalink: /gk/occams-razor/
 tags: [gk]
+gk_section: 機械学習の概要/モデルの選択・評価
+gk_order: 20
 ---
 
 ## まず結論

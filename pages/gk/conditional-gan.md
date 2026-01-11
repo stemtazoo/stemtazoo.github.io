@@ -3,6 +3,8 @@ layout: page
 title: Conditional GAN（条件付きGAN）とは？Pix2Pixとの関係【G検定対策】
 permalink: /gk/conditional-gan/
 tags: [gk, neural_network, cnn]
+gk_section: ディープラーニングの応用例/データ生成
+gk_order: 13
 ---
 
 ## まず結論

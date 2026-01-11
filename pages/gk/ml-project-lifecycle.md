@@ -3,6 +3,8 @@ layout: page
 title: 機械学習プロジェクトの全体像（企画〜運用）【G検定対策】
 permalink: /gk/ml-project-lifecycle/
 tags: [gk, mlops, cheatsheet]
+gk_section: AIの社会実装に向けて/AIの社会実装に向けて
+gk_order: 10
 ---
 
 ## まず結論

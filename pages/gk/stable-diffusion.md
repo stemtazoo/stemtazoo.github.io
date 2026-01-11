@@ -3,6 +3,8 @@ layout: page
 title: Stable Diffusion（拡散モデルの代表例）
 permalink: /gk/stable-diffusion/
 tags: [gk, neural_network, generative_model, diffusion]
+gk_section: ディープラーニングの応用例/データ生成
+gk_order: 5
 ---
 
 ## まず結論

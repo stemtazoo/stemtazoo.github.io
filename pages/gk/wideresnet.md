@@ -3,6 +3,8 @@ layout: page
 title: WideResNet（幅を広げたResNet）とは？G検定対策
 permalink: /gk/wideresnet/
 tags: [gk, cnn]
+gk_section: ディープラーニングの応用例/画像認識/物体認識タスク
+gk_order: 5
 ---
 
 ## まず結論

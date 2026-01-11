@@ -3,6 +3,8 @@ layout: page
 title: コールドスタート問題とは？推薦システム最大の弱点【G検定対策】
 permalink: /gk/cold-start-problem/
 tags: [gk, recommendation]
+gk_section: 機械学習の概要/代表的な手法/教師なし学習
+gk_order: 8
 ---
 
 ## まず結論

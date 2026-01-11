@@ -3,6 +3,8 @@ layout: page
 title: ローブナーコンテスト（Loebner Contest）とは？【G検定対策】
 permalink: /gk/loebner-contest/
 tags: [gk]
+gk_section: 人工知能（AI）とは/人工知能（AI）とは
+gk_order: 10
 ---
 
 ## まず結論

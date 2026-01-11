@@ -3,6 +3,8 @@ layout: page
 title: TF-IDF・Word2Vec・BERTの違いとは？役割で整理するNLP基礎【G検定対策】
 permalink: /gk/tfidf-word2vec-bert/
 tags: [gk, nlp, neural_network]
+gk_section: ディープラーニングの応用例/自然言語処理
+gk_order: 21
 ---
 
 ## まず結論

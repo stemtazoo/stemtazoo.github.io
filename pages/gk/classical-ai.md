@@ -3,6 +3,8 @@ layout: page
 title: 古典AIまとめ（探索・推論・知識表現）
 permalink: /gk/classical-ai/
 tags: [gk, cheatsheet]
+gk_section: 人工知能をめぐる動向/人工知能をめぐる動向
+gk_order: 1
 ---
 
 ## まず結論（試験での切り方）

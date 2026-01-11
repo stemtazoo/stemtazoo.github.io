@@ -3,6 +3,8 @@ layout: page
 title: プルーニング（Pruning）
 permalink: /gk/pruning/
 tags: [gk, neural_network, model_compression]
+gk_section: ディープラーニングの概要/ニューラルネットワークとディープラーニング
+gk_order: 8
 ---
 
 ## まず結論

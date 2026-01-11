@@ -3,6 +3,8 @@ layout: page
 title: Contrast / Saturation / Hue とは？（色系データ拡張の違い）【G検定対策】
 permalink: /gk/contrast-saturation-hue/
 tags: [gk, cnn]
+gk_section: ディープラーニングの応用例/画像認識/データ拡張
+gk_order: 2
 ---
 
 ## まず結論

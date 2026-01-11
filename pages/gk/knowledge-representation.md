@@ -3,6 +3,8 @@ layout: page
 title: 知識表現まとめ（フレーム・意味ネット・論理）
 permalink: /gk/knowledge-representation/
 tags: [gk, cheatsheet]
+gk_section: 人工知能をめぐる動向/人工知能をめぐる動向
+gk_order: 2
 ---
 
 ## まず結論（試験での切り方）

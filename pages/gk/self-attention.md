@@ -3,6 +3,8 @@ layout: page
 title: Attention機構（Self-Attention）とは？【文脈理解の仕組み｜G検定対策】
 permalink: /gk/self-attention/
 tags: [gk, attention, transformer]
+gk_section: ディープラーニングの要素技術/トランスフォーマー (Transformer)
+gk_order: 3
 ---
 
 ## まず結論

@@ -3,6 +3,8 @@ layout: page
 title: データ拡張と正規化（BatchNormなど）の違いとは？【G検定頻出整理】
 permalink: /gk/data-augmentation-vs-normalization/
 tags: [gk, cnn, neural_network]
+gk_section: ディープラーニングの応用例/画像認識/データ拡張
+gk_order: 6
 ---
 
 ## まず結論

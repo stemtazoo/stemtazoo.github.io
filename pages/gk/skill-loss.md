@@ -3,6 +3,8 @@ layout: page
 title: スキルの喪失（Skill Loss）とは？G検定対策
 permalink: /gk/skill-loss/
 tags: [gk, ethics]
+gk_section: AIの法律と倫理/AIの法律と倫理
+gk_order: 26
 ---
 
 ## まず結論

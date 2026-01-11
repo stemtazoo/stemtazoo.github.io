@@ -3,6 +3,8 @@ layout: page
 title: Pix2Pix（画像変換モデル）とは？G検定対策
 permalink: /gk/pix2pix/
 tags: [gk, cnn, neural_network]
+gk_section: ディープラーニングの応用例/データ生成
+gk_order: 7
 ---
 
 ## まず結論

@@ -3,6 +3,8 @@ layout: page
 title: データサイエンティスト・ビジネスアナリスト・エンジニアの役割整理【G検定対策】
 permalink: /gk/roles-in-ml/
 tags: [gk, mlops, cheatsheet]
+gk_section: AIの社会実装に向けて/AIの社会実装に向けて
+gk_order: 9
 ---
 
 ## まず結論

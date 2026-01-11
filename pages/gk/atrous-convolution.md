@@ -3,6 +3,8 @@ layout: page
 title: Atrous Convolution（拡張畳み込み）とは？【DeepLabで使われる理由｜G検定対策】
 permalink: /gk/atrous-convolution/
 tags: [gk, cnn]
+gk_section: ディープラーニングの要素技術/ネットワークの構成要素
+gk_order: 12
 ---
 
 ## まず結論

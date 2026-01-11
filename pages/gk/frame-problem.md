@@ -3,6 +3,8 @@ layout: page
 title: 機械学習におけるフレーム問題とは？【G検定対策】
 permalink: /gk/frame-problem/
 tags: [gk]
+gk_section: 人工知能（AI）とは/人工知能（AI）とは
+gk_order: 7
 ---
 
 ## まず結論

@@ -3,6 +3,8 @@ layout: page
 title: CutMixとは？画像を切って混ぜるデータ拡張【G検定対策】
 permalink: /gk/cutmix/
 tags: [gk, cnn, neural_network]
+gk_section: ディープラーニングの応用例/画像認識/データ拡張
+gk_order: 10
 ---
 
 ## まず結論

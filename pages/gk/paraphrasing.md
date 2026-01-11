@@ -3,6 +3,8 @@ layout: page
 title: Paraphrasing（言い換え）とは？意味を保つテキスト拡張【G検定対策】
 permalink: /gk/paraphrasing/
 tags: [gk, nlp]
+gk_section: ディープラーニングの応用例/自然言語処理
+gk_order: 26
 ---
 
 ## まず結論

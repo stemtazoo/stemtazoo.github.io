@@ -3,6 +3,8 @@ layout: page
 title: 多層パーセプトロン（MLP）でなぜXOR問題が解けるのか？G検定対策
 permalink: /gk/mlp-xor/
 tags: [gk, neural_network]
+gk_section: 人工知能をめぐる動向/人工知能をめぐる動向
+gk_order: 8
 ---
 
 ## まず結論

@@ -3,6 +3,8 @@ layout: page
 title: 確率的勾配降下法（SGD）とは？G検定対策
 permalink: /gk/sgd/
 tags: [gk, optimization]
+gk_section: ディープラーニングの概要/最適化手法
+gk_order: 3
 ---
 
 ## まず結論

@@ -3,6 +3,8 @@ layout: page
 title: Visual Question Answering（VQA）とは？画像に質問して答えるAI【G検定対策】
 permalink: /gk/visual-question-answering/
 tags: [gk, vision, nlp]
+gk_section: ディープラーニングの応用例/マルチモーダル
+gk_order: 9
 ---
 
 ## まず結論

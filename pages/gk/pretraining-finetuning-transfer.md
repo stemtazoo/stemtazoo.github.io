@@ -3,6 +3,8 @@ layout: page
 title: 事前学習とファインチューニングは何が違う？転移学習との関係【G検定対策】
 permalink: /gk/pretraining-finetuning-transfer/
 tags: [gk, neural_network]
+gk_section: ディープラーニングの応用例/転移学習・ファインチューニング
+gk_order: 4
 ---
 
 ## まず結論

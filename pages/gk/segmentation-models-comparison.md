@@ -3,6 +3,8 @@ layout: page
 title: DeepLab vs U-Net vs Mask R-CNN（役割比較）G検定対策
 permalink: /gk/segmentation-models-comparison/
 tags: [gk, cnn, cheatsheet]
+gk_section: ディープラーニングの応用例/画像認識/セグメンテーションタスク
+gk_order: 7
 ---
 
 ## まず結論

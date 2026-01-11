@@ -3,6 +3,8 @@ layout: page
 title: 限定提供データとは？（不正競争防止法）【G検定対策】
 permalink: /gk/limited-offer-data/
 tags: [gk]
+gk_section: AIの法律と倫理/AIの法律と倫理
+gk_order: 11
 ---
 
 ## まず結論

@@ -3,6 +3,8 @@ layout: page
 title: 階層型クラスタリングとは？（凝集型・分割型）【G検定対策】
 permalink: /gk/hierarchical-clustering/
 tags: [gk, unsupervised_learning, clustering]
+gk_section: 機械学習の概要/代表的な手法/教師なし学習
+gk_order: 3
 ---
 
 ## まず結論

@@ -3,6 +3,8 @@ layout: page
 title: Bag of Words（BoW）とは？【文章の数値化手法｜G検定対策】
 permalink: /gk/bag-of-words/
 tags: [gk, nlp, machine_learning]
+gk_section: ディープラーニングの応用例/自然言語処理
+gk_order: 5
 ---
 
 ## まず結論

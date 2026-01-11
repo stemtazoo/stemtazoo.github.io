@@ -3,6 +3,8 @@ layout: page
 title: PSPNet（ピラミッドシーンパースネットワーク）とは？G検定対策
 permalink: /gk/pspnet/
 tags: [gk, cnn, semantic_segmentation]
+gk_section: ディープラーニングの応用例/画像認識/セグメンテーションタスク
+gk_order: 8
 ---
 
 ## まず結論

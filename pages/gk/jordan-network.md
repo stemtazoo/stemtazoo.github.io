@@ -3,6 +3,8 @@ layout: page
 title: ジョルダンネットワーク（Jordan Network）とは？【RNNの基本構造｜G検定対策】
 permalink: /gk/jordan-network/
 tags: [gk, neural_network, rnn]
+gk_section: ディープラーニングの要素技術/リカレントニューラルネットワーク (RNN)
+gk_order: 10
 ---
 
 ## まず結論

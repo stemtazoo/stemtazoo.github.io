@@ -3,6 +3,8 @@ layout: page
 title: フォルマントとは？（音声スペクトルのピーク）【G検定対策】
 permalink: /gk/formant/
 tags: [gk, speech, signal_processing]
+gk_section: ディープラーニングの応用例/音声処理
+gk_order: 3
 ---
 
 ## まず結論

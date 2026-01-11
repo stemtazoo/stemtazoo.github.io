@@ -3,6 +3,8 @@ layout: page
 title: スキップグラム（Skip-gram）とは？【G検定対策】
 permalink: /gk/skip-gram/
 tags: [gk, nlp]
+gk_section: ディープラーニングの応用例/自然言語処理
+gk_order: 13
 ---
 
 ## まず結論

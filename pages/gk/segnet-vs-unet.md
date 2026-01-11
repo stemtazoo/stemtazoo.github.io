@@ -3,6 +3,8 @@ layout: page
 title: SegNet vs U-Net 比較チートシート【G検定頻出】
 permalink: /gk/segnet-vs-unet/
 tags: [gk, cnn, cheatsheet]
+gk_section: ディープラーニングの応用例/画像認識/セグメンテーションタスク
+gk_order: 4
 ---
 
 ## まず結論

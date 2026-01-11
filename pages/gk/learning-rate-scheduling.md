@@ -3,6 +3,8 @@ layout: page
 title: 学習率スケジューリング（Learning Rate Scheduling）
 permalink: /gk/learning-rate-scheduling/
 tags: [gk, neural_network, cheatsheet]
+gk_section: ディープラーニングの概要/ニューラルネットワークとディープラーニング
+gk_order: 7
 ---
 
 ## まず結論

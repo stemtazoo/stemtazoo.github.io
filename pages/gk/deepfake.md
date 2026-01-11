@@ -3,6 +3,8 @@ layout: page
 title: ディープフェイク（Deepfake）とは？【フェイクニュースとの違い】
 permalink: /gk/deepfake/
 tags: [gk, ethics, social_issues]
+gk_section: AIの法律と倫理/AIの法律と倫理
+gk_order: 17
 ---
 
 ## まず結論

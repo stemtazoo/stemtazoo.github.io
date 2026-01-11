@@ -3,6 +3,8 @@ layout: page
 title: AI倫理まとめ（G検定対策）
 permalink: /gk/ai-ethics/
 tags: [gk, ethics, cheatsheet]
+gk_section: AIの法律と倫理/AIの法律と倫理
+gk_order: 9
 ---
 
 ## まず結論

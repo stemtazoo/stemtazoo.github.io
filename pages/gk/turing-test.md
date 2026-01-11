@@ -3,6 +3,8 @@ layout: page
 title: チューリングテスト（Turing Test）とは？G検定対策
 permalink: /gk/turing-test/
 tags: [gk, ethics]
+gk_section: 人工知能（AI）とは/人工知能（AI）とは
+gk_order: 11
 ---
 
 ## まず結論

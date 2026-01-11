@@ -3,6 +3,8 @@ layout: page
 title: 破壊的忘却を防ぐ方法とは？EWCとリプレイ手法【G検定対策】
 permalink: /gk/catastrophic-forgetting-solution/
 tags: [gk, neural_network]
+gk_section: ディープラーニングの応用例/転移学習・ファインチューニング
+gk_order: 2
 ---
 
 ## まず結論

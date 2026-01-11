@@ -3,6 +3,8 @@ layout: page
 title: オンポリシー vs オフポリシーとは？（DQN系の位置づけ）【G検定対策】
 permalink: /gk/on-policy-off-policy/
 tags: [gk, neural_network]
+gk_section: ディープラーニングの応用例/深層強化学習
+gk_order: 14
 ---
 
 ## まず結論

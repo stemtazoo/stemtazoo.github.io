@@ -3,6 +3,8 @@ layout: page
 title: Diffusion Model（拡散モデル）
 permalink: /gk/diffusion-model/
 tags: [gk, neural_network, generative_model]
+gk_section: ディープラーニングの応用例/データ生成
+gk_order: 4
 ---
 
 ## まず結論

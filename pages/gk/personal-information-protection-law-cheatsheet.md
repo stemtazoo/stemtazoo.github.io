@@ -3,6 +3,8 @@ layout: page
 title: 個人情報保護法まとめ（G検定対策）
 permalink: /gk/personal-information-protection-law-cheatsheet/
 tags: [gk, ethics, privacy, cheatsheet]
+gk_section: AIの法律と倫理/AIの法律と倫理
+gk_order: 8
 ---
 
 ## まず結論

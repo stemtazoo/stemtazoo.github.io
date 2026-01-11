@@ -3,6 +3,8 @@ layout: page
 title: AdaBoundとは？（学習率に上下限を持つ最適化手法）【G検定対策】
 permalink: /gk/adabound/
 tags: [gk]
+gk_section: ディープラーニングの概要/最適化手法
+gk_order: 8
 ---
 
 ## まず結論

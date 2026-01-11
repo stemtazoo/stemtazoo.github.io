@@ -3,6 +3,8 @@ layout: page
 title: AIの安全性とロバスト性（Safety / Robustness）
 permalink: /gk/safety-robustness/
 tags: [gk]
+gk_section: AIの法律と倫理/AIの法律と倫理
+gk_order: 3
 ---
 
 ## まず結論

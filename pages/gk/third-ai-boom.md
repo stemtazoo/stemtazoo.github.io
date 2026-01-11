@@ -3,6 +3,8 @@ layout: page
 title: 第3次AIブームとは？（要因まとめ）
 permalink: /gk/third-ai-boom/
 tags: [gk]
+gk_section: 人工知能（AI）とは/人工知能（AI）とは
+gk_order: 5
 ---
 
 ## まず結論

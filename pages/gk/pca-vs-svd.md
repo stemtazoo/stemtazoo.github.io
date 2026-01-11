@@ -3,6 +3,8 @@ layout: page
 title: PCAとSVDの関係とは？（数式なしで理解）【G検定対策】
 permalink: /gk/pca-vs-svd/
 tags: [gk, unsupervised_learning, dimensionality_reduction]
+gk_section: 機械学習の概要/代表的な手法/教師なし学習
+gk_order: 6
 ---
 
 ## まず結論

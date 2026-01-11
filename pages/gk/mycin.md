@@ -3,6 +3,8 @@ layout: page
 title: MYCIN（医療の専門家システム）とは？【G検定対策】
 permalink: /gk/mycin/
 tags: [gk, neural_network]
+gk_section: 人工知能をめぐる動向/人工知能をめぐる動向
+gk_order: 15
 ---
 
 ## まず結論

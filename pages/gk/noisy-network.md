@@ -3,6 +3,8 @@ layout: page
 title: ノイジーネットワークとは？（ε-greedyを使わない探索）【G検定対策】
 permalink: /gk/noisy-network/
 tags: [gk]
+gk_section: ディープラーニングの応用例/深層強化学習
+gk_order: 7
 ---
 
 ## まず結論

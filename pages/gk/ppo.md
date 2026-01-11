@@ -3,6 +3,8 @@ layout: page
 title: PPO（Proximal Policy Optimization）とは？【G検定対策】
 permalink: /gk/ppo/
 tags: [gk, reinforcement_learning, neural_network]
+gk_section: 機械学習の概要/代表的な手法/強化学習
+gk_order: 17
 ---
 
 ## まず結論

@@ -3,6 +3,8 @@ layout: page
 title: G検定 概念系 最終チートシート
 permalink: /gk/concepts-final-cheatsheet/
 tags: [gk, cheatsheet]
+gk_section: 人工知能をめぐる動向/人工知能をめぐる動向
+gk_order: 4
 ---
 
 ## まず結論（ここだけ見ればOK）

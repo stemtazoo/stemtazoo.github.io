@@ -3,6 +3,8 @@ layout: page
 title: FPN（Feature Pyramid Network）とは？G検定対策
 permalink: /gk/fpn/
 tags: [gk, cnn]
+gk_section: ディープラーニングの応用例/画像認識/物体検出タスク
+gk_order: 7
 ---
 
 ## まず結論

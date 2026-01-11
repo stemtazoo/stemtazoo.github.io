@@ -3,6 +3,8 @@ layout: page
 title: AMSBound（AMSGrad＋SGDの最適化手法）とは？【G検定対策】
 permalink: /gk/amsbound/
 tags: [gk, neural_network]
+gk_section: ディープラーニングの概要/最適化手法
+gk_order: 11
 ---
 
 ## まず結論

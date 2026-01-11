@@ -3,6 +3,8 @@ layout: page
 title: CNNまとめ1枚チートシート（G検定対策）
 permalink: /gk/cnn-cheatsheet/
 tags: [gk, cnn, cheatsheet]
+gk_section: ディープラーニングの応用例/画像認識/ネオコグニトロンとLeNet
+gk_order: 8
 ---
 
 ## まず結論（この1枚でOK）

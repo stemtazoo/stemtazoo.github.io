@@ -3,6 +3,8 @@ layout: page
 title: データ窃取攻撃（Data Extraction Attack）とは？【G検定対策】
 permalink: /gk/data-extraction-attack/
 tags: [gk, security, privacy]
+gk_section: AIの法律と倫理/AIの法律と倫理
+gk_order: 28
 ---
 
 ## まず結論

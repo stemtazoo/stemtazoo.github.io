@@ -3,6 +3,8 @@ layout: page
 title: BERTはなぜRNNではなくTransformerなのか？G検定対策
 permalink: /gk/bert-why-transformer/
 tags: [gk, attention, transformer]
+gk_section: ディープラーニングの応用例/自然言語処理
+gk_order: 18
 ---
 
 ## まず結論

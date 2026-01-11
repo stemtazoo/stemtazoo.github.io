@@ -3,6 +3,8 @@ layout: page
 title: ブースティングとは？（Boosting）【G検定対策】
 permalink: /gk/boosting/
 tags: [gk, neural_network]
+gk_section: 機械学習の概要/代表的な手法/教師あり学習
+gk_order: 2
 ---
 
 ## まず結論

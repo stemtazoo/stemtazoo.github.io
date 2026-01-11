@@ -3,6 +3,8 @@ layout: page
 title: CBOWモデルとは？（Word2Vec）【G検定対策】
 permalink: /gk/cbow/
 tags: [gk, nlp, embedding]
+gk_section: ディープラーニングの応用例/自然言語処理
+gk_order: 12
 ---
 
 ## まず結論

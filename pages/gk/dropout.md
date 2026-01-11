@@ -3,6 +3,8 @@ layout: page
 title: Dropoutとは？（暗黙的正則化）【G検定対策】
 permalink: /gk/dropout/
 tags: [gk, neural_network]
+gk_section: ディープラーニングの概要/正則化
+gk_order: 3
 ---
 
 ## まず結論

@@ -3,6 +3,8 @@ layout: page
 title: 勾配消失問題とは？回避するための手法【G検定対策】
 permalink: /gk/vanishing-gradient/
 tags: [gk, neural_network]
+gk_section: ディープラーニングの概要/ニューラルネットワークとディープラーニング
+gk_order: 11
 ---
 
 ## まず結論

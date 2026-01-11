@@ -3,6 +3,8 @@ layout: page
 title: モデル選択・評価フロー完全チートシート【G検定対策】
 permalink: /gk/model-selection-evaluation-cheatsheet/
 tags: [gk, cheatsheet]
+gk_section: 機械学習の概要/モデルの選択・評価
+gk_order: 25
 ---
 
 ## まず結論

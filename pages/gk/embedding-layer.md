@@ -3,6 +3,8 @@ layout: page
 title: Embedding層とは？【単語IDを意味ベクトルに変換｜G検定対策】
 permalink: /gk/embedding-layer/
 tags: [gk, nlp, neural_network]
+gk_section: ディープラーニングの応用例/自然言語処理
+gk_order: 9
 ---
 
 ## まず結論

@@ -3,6 +3,8 @@ layout: page
 title: AlphaGo・AlphaGo Zero・AlphaZero・OpenAI Five・AlphaStar 完全比較【G検定対策】
 permalink: /gk/ai-project-comparison/
 tags: [gk, reinforcement_learning, cheatsheet]
+gk_section: ディープラーニングの応用例/深層強化学習
+gk_order: 16
 ---
 
 ## まず結論

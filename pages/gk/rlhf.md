@@ -3,6 +3,8 @@ layout: page
 title: RLHF（人間フィードバックによる強化学習）とは？【G検定対策】
 permalink: /gk/rlhf/
 tags: [gk, neural_network]
+gk_section: ディープラーニングの応用例/自然言語処理
+gk_order: 19
 ---
 
 ## まず結論

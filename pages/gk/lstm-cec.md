@@ -3,6 +3,8 @@ layout: page
 title: LSTMの内部構造（CECと学習アルゴリズムの切り分け）
 permalink: /gk/lstm-cec/
 tags: [gk, neural_network, rnn, lstm]
+gk_section: ディープラーニングの要素技術/リカレントニューラルネットワーク (RNN)
+gk_order: 15
 ---
 
 ## まず結論

@@ -3,6 +3,8 @@ layout: page
 title: 相互情報量（Mutual Information）とは？【G検定対策】
 permalink: /gk/mutual-information/
 tags: [gk, metrics, probability]
+gk_section: 機械学習の概要/モデルの選択・評価
+gk_order: 22
 ---
 
 ## まず結論

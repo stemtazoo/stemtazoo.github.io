@@ -3,6 +3,8 @@ layout: page
 title: 古典AI vs 機械学習（最終比較チートシート）
 permalink: /gk/classical-ai-vs-ml/
 tags: [gk, cheatsheet]
+gk_section: 人工知能をめぐる動向/人工知能をめぐる動向
+gk_order: 3
 ---
 
 ## まず結論（G検定での即断）

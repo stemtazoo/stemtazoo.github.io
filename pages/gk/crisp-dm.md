@@ -3,6 +3,8 @@ layout: page
 title: CRISP-DM
 permalink: /gk/crisp-dm/
 tags: [gk, data_mining, process, crisp-dm]
+gk_section: AIの社会実装に向けて/AIの社会実装に向けて
+gk_order: 3
 ---
 
 ## まず結論

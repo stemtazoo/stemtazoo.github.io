@@ -3,6 +3,8 @@ layout: page
 title: CNN（畳み込みニューラルネットワーク）
 permalink: /gk/cnn/
 tags: [gk, neural_network, cnn]
+gk_section: ディープラーニングの要素技術/ネットワークの構成要素
+gk_order: 1
 ---
 
 ## まず結論

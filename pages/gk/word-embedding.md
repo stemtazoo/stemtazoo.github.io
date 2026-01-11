@@ -3,6 +3,8 @@ layout: page
 title: 単語分散表現とは？TF-IDFが含まれない理由【G検定対策】
 permalink: /gk/word-embedding/
 tags: [gk, nlp, neural_network]
+gk_section: ディープラーニングの応用例/自然言語処理
+gk_order: 23
 ---
 
 ## まず結論

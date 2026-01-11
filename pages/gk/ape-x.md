@@ -3,6 +3,8 @@ layout: page
 title: APE-X（Distributed Prioritized Experience Replay）とは？【G検定対策】
 permalink: /gk/ape-x/
 tags: [gk, neural_network]
+gk_section: ディープラーニングの応用例/深層強化学習
+gk_order: 12
 ---
 
 ## まず結論

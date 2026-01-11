@@ -3,6 +3,8 @@ layout: page
 title: 音声認識における前処理まとめ（PCMから特徴量まで）【G検定対策】
 permalink: /gk/speech-preprocessing/
 tags: [gk, signal_processing, nlp]
+gk_section: ディープラーニングの応用例/音声処理
+gk_order: 5
 ---
 
 ## まず結論

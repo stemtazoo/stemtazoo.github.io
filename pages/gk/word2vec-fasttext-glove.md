@@ -3,6 +3,8 @@ layout: page
 title: Word2Vec・FastText・GloVeの違いとは？単語分散表現の整理【G検定対策】
 permalink: /gk/word2vec-fasttext-glove/
 tags: [gk, nlp, neural_network]
+gk_section: ディープラーニングの応用例/自然言語処理
+gk_order: 24
 ---
 
 ## まず結論

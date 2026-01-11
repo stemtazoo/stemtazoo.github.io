@@ -3,6 +3,8 @@ layout: page
 title: フィルターバブル（Filter Bubble）とは？G検定対策
 permalink: /gk/filter-bubble/
 tags: [gk, ethics, personalization]
+gk_section: AIの法律と倫理/AIの法律と倫理
+gk_order: 20
 ---
 
 ## まず結論

@@ -3,6 +3,8 @@ layout: page
 title: エルマンネットワークとは？RNNの基本構造【G検定対策】
 permalink: /gk/elman-network/
 tags: [gk, rnn]
+gk_section: ディープラーニングの要素技術/リカレントニューラルネットワーク (RNN)
+gk_order: 11
 ---
 
 ## まず結論

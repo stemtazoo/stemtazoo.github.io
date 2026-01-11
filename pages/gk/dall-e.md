@@ -3,6 +3,8 @@ layout: page
 title: DALL·E（テキストから画像を生成するモデル）とは？G検定対策
 permalink: /gk/dall-e/
 tags: [gk, neural_network, attention]
+gk_section: ディープラーニングの応用例/マルチモーダル
+gk_order: 7
 ---
 
 ## まず結論

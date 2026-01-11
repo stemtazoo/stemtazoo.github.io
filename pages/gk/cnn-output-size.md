@@ -3,6 +3,8 @@ layout: page
 title: CNNの畳み込み層の出力サイズ
 permalink: /gk/cnn-output-size/
 tags: [gk, cnn, convolution]
+gk_section: ディープラーニングの応用例/画像認識/ネオコグニトロンとLeNet
+gk_order: 4
 ---
 
 ## まず結論

@@ -3,6 +3,8 @@ layout: page
 title: 形態素解析（Morphological Analysis）とは？【G検定対策】
 permalink: /gk/morphological-analysis/
 tags: [gk, nlp]
+gk_section: ディープラーニングの応用例/自然言語処理
+gk_order: 27
 ---
 
 ## まず結論

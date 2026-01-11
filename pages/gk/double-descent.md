@@ -3,6 +3,8 @@ layout: page
 title: 二重降下現象とは？（Double Descent）【G検定対策】
 permalink: /gk/double-descent/
 tags: [gk, neural_network]
+gk_section: ディープラーニングの概要/最適化手法
+gk_order: 15
 ---
 
 ## まず結論

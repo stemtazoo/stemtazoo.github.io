@@ -3,6 +3,8 @@ layout: page
 title: VQ-VAE（Vector Quantized Variational AutoEncoder）とは？【G検定対策】
 permalink: /gk/vq-vae/
 tags: [gk, generative_model, neural_network]
+gk_section: ディープラーニングの要素技術/オートエンコーダ
+gk_order: 8
 ---
 
 ## まず結論

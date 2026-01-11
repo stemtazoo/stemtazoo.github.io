@@ -3,6 +3,8 @@ layout: page
 title: SegNet（セグメンテーションネットワーク）とは？【G検定対策】
 permalink: /gk/segnet-2/
 tags: [gk, neural_network, cnn]
+gk_section: ディープラーニングの応用例/画像認識/セグメンテーションタスク
+gk_order: 2
 ---
 
 ## まず結論
