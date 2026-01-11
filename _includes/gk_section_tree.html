@@ -28,7 +28,8 @@
     {%- endif -%}
   {%- endfor -%}
   {%- if has_deeper -%}
-    {% include gk_section_tree.html items=group['items'] depth=next_depth %}
+    {%- assign group_items = group['items'] -%}
+    {% include gk_section_tree.html items=group_items depth=next_depth %}
   {%- endif -%}
   {%- endif -%}
 {%- endfor -%}
