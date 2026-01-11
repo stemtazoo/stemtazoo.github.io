@@ -25,7 +25,6 @@
     {%- assign parts_size = p.gk_section | split: '/' | size -%}
     {%- if parts_size > next_depth -%}
       {%- assign has_deeper = true -%}
-      {%- break -%}
     {%- endif -%}
   {%- endfor -%}
   {%- if has_deeper -%}
