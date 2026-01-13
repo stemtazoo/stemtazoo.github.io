@@ -11,21 +11,19 @@ gk_order: 15
   /gk/配下の全ページ（pages + posts）を集める
 {% endcomment %}
 
-{% comment %} 1. ページを取得（外側をシングル、内側をダブルクォートに統一） {% endcomment %}
-{% assign gk_pages = site.pages | where_exp: 'p', 'p.url contains "/gk/"' | where_exp: 'p', 'p.url != "/gk/"' %}
+{% comment %} 1. データの収集（クォーテーションをシンプルに） {% endcomment %}
+{% assign gk_pages = site.pages | where_exp: "p", "p.url contains '/gk/'" %}
+{% assign gk_posts = site.posts | where_exp: "p", "p.url contains '/gk/'" %}
+{% assign gk_all = gk_pages | concat: gk_posts %}
 
-{% comment %} 2. 投稿を取得（空の場合でもエラーにならないよう配慮） {% endcomment %}
-{% assign gk_posts = site.posts | where_exp: 'p', 'p.url contains "/gk/"' %}
+{% comment %} 2. gk_section があるものだけ抽出し、ソート {% endcomment %}
+{% assign gk_section_pages = gk_all | where_exp: "p", "p.gk_section != nil" | sort: "gk_section" %}
 
-{% comment %} 3. 結合とフィルタリング {% endcomment %}
-{% if gk_posts %}
-  {% assign gk_all = gk_pages | concat: gk_posts %}
-{% else %}
-  {% assign gk_all = gk_pages %}
-{% endif %}
-
-{% comment %} p.gk_section が存在するかどうかの判定を明示的に記述 {% endcomment %}
-{% assign gk_section_pages = gk_all | where_exp: 'p', 'p.gk_section != nil' | sort: 'gk_section' %}
+{% comment %} 
+   3. group_by_exp のエラー回避策
+   フィルタ (| split: '/' | first) を使わず、プロパティ名だけでグループ化します。
+{% endcomment %}
+{% assign gk_top_groups = gk_section_pages | group_by: "gk_section" %}
 
 ## まずどこから？
 
@@ -39,17 +37,19 @@ gk_order: 15
 
 <ul>
   {% for group in gk_top_groups %}
-    <li><a href="#{{ group.name | slugify }}">{{ group.name }}</a></li>
+    {% comment %} gk_section の最初の階層だけを取り出す処理をループ内で行う {% endcomment %}
+    {% assign display_name = group.name | split: '/' | first %}
+    <li><a href="#{{ display_name | slugify }}">{{ display_name }}</a></li>
   {% endfor %}
 </ul>
 
 ---
 
 {% for group in gk_top_groups %}
-## {{ group.name }}
-{% assign group_items = group.items %}
-{% include gk_section_tree.html items=group_items depth=1 %}
-
+  {% assign display_name = group.name | split: '/' | first %}
+  ## {{ display_name }}
+  {% assign group_items = group.items %}
+  {% include gk_section_tree.html items=group_items depth=1 %}
 {% endfor %}
 
 ---
