@@ -16,8 +16,8 @@ gk_order: 15
 {% comment %}
 {% assign gk_posts = site.posts | where_exp: "p", "p.url contains '/gk/'" %}
 {% assign gk_all = gk_pages | concat: gk_posts %}
-{% endcomment %}
 {% assign gk_section_pages = gk_all | where_exp: "p", "p.gk_section" | sort: "gk_section" %}
+{% endcomment %}
 {% assign gk_top_groups = gk_section_pages | group_by_exp: "p", "p.gk_section | split: '/' | first" %}
 
 
