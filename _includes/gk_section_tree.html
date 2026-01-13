@@ -1,35 +1,37 @@
 {%- assign depth = include.depth | default: 0 -%}
-{%- assign grouped = include.items | group_by_exp: "p", "p.gk_section | split: '/' | slice: depth, 1 | first" -%}
 {%- assign next_depth = depth | plus: 1 -%}
 
-{%- for group in grouped -%}
-  {%- if group.name != nil and group.name != "" -%}
-<h{{ depth | plus: 2 }}>{{ group.name }}</h{{ depth | plus: 2 }}>
-  {%- assign has_leaf = false -%}
-  {%- for p in group.items -%}
-    {%- assign parts_size = p.gk_section | split: '/' | size -%}
-    {%- if parts_size == next_depth -%}
-      {%- if has_leaf == false -%}
-<ul>
-        {%- assign has_leaf = true -%}
-      {%- endif -%}
-  <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
-    {%- endif -%}
-  {%- endfor -%}
-  {%- if has_leaf -%}
-</ul>
+{% comment %} 現在の階層にあるサブカテゴリ名を抽出 {% endcomment %}
+{%- assign sub_names = "" -%}
+{%- for p in include.items -%}
+  {%- assign parts = p.gk_section | split: '/' -%}
+  {%- if parts.size > next_depth -%}
+    {%- capture sub_names -%}{{ sub_names }}|{{ parts[next_depth] }}{%- endcapture -%}
   {%- endif -%}
+{%- endfor -%}
+{%- assign unique_subs = sub_names | remove_first: "|" | split: "|" | uniq | sort -%}
 
-  {%- assign has_deeper = false -%}
-  {%- for p in group.items -%}
-    {%- assign parts_size = p.gk_section | split: '/' | size -%}
-    {%- if parts_size > next_depth -%}
-      {%- assign has_deeper = true -%}
+{% comment %} 1. この階層に直属するページ（記事）を表示 {% endcomment %}
+<ul>
+{%- for p in include.items -%}
+  {%- assign parts = p.gk_section | split: '/' -%}
+  {%- if parts.size == next_depth -%}
+    <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
+  {%- endif -%}
+{%- endfor -%}
+</ul>
+
+{% comment %} 2. 下位階層（サブセクション）があれば再帰的に表示 {% endcomment %}
+{%- for sub_name in unique_subs -%}
+  <h{{ depth | plus: 3 }}>{{ sub_name }}</h{{ depth | plus: 3 }}>
+  
+  {%- assign sub_items = "" | split: "" -%}
+  {%- for p in include.items -%}
+    {%- assign parts = p.gk_section | split: '/' -%}
+    {%- if parts[next_depth] == sub_name -%}
+      {%- assign sub_items = sub_items | push: p -%}
     {%- endif -%}
   {%- endfor -%}
-  {%- if has_deeper -%}
-    {%- assign group_items = group.items -%}
-    {% include gk_section_tree.html items=group_items depth=next_depth %}
-  {%- endif -%}
-  {%- endif -%}
+  
+  {% include gk_section_tree.html items=sub_items depth=next_depth %}
 {%- endfor -%}
