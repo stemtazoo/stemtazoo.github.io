@@ -10,8 +10,9 @@ gk_order: 15
 {% comment %}
   /gk/配下の全ページ（pages + posts）を集める
 {% endcomment %}
-{% comment %}
+
 {% assign gk_pages = site.pages | where_exp: "p", "p.url contains '/gk/'" | where_exp: "p", "p.url != '/gk/'" %}
+{% comment %}
 {% assign gk_posts = site.posts | where_exp: "p", "p.url contains '/gk/'" %}
 {% assign gk_all = gk_pages | concat: gk_posts %}
 {% assign gk_section_pages = gk_all | where_exp: "p", "p.gk_section" | sort: "gk_section" %}
