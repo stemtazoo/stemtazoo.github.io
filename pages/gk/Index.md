@@ -11,15 +11,21 @@ gk_order: 15
   /gk/配下の全ページ（pages + posts）を集める
 {% endcomment %}
 
-{% assign gk_pages = site.pages | where_exp: "p", "p.url contains '/gk/'" | where_exp: "p", "p.url != '/gk/'" %}
+{% comment %} 1. ページを取得（外側をシングル、内側をダブルクォートに統一） {% endcomment %}
+{% assign gk_pages = site.pages | where_exp: 'p', 'p.url contains "/gk/"' | where_exp: 'p', 'p.url != "/gk/"' %}
 
-{% comment %}
-{% assign gk_posts = site.posts | where_exp: "p", "p.url contains '/gk/'" %}
-{% assign gk_all = gk_pages | concat: gk_posts %}
-{% assign gk_section_pages = gk_all | where_exp: "p", "p.gk_section" | sort: "gk_section" %}
-{% endcomment %}
-{% assign gk_top_groups = gk_section_pages | group_by_exp: "p", "p.gk_section | split: '/' | first" %}
+{% comment %} 2. 投稿を取得（空の場合でもエラーにならないよう配慮） {% endcomment %}
+{% assign gk_posts = site.posts | where_exp: 'p', 'p.url contains "/gk/"' %}
 
+{% comment %} 3. 結合とフィルタリング {% endcomment %}
+{% if gk_posts %}
+  {% assign gk_all = gk_pages | concat: gk_posts %}
+{% else %}
+  {% assign gk_all = gk_pages %}
+{% endif %}
+
+{% comment %} p.gk_section が存在するかどうかの判定を明示的に記述 {% endcomment %}
+{% assign gk_section_pages = gk_all | where_exp: 'p', 'p.gk_section != nil' | sort: 'gk_section' %}
 
 ## まずどこから？
 
