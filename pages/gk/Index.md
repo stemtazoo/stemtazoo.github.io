@@ -46,9 +46,9 @@ gk_order: 15
 ---
 
 ## 未分類（gk_section未設定）
-{% comment %}
+
 {% assign unclassified = gk_all | where_exp: "p", "p.gk_section == nil or p.gk_section == ''" %}
-{% endcomment %}
+
 
 {% if unclassified.size == 0 %}
 <p>✅ gk_section未設定ページはありません。</p>
