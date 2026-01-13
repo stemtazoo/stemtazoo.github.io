@@ -11,6 +11,7 @@ gk_order: 15
   1. 配列を初期化し、ループで条件に合うものだけを手動で追加する
   where_exp を使わないことで構文エラーを回避します。
 {% endcomment %}
+{% comment %} 1. データの収集（ここは変更なし） {% endcomment %}
 {% assign gk_all = "" | split: "" %}
 {% for p in site.pages %}
   {% if p.url contains "/gk/" and p.url != "/gk/" %}
@@ -23,16 +24,22 @@ gk_order: 15
   {% endif %}
 {% endfor %}
 
-{% comment %} 2. gk_section が設定されているページのみ抽出 {% endcomment %}
-{% assign gk_section_pages = "" | split: "" %}
+{% comment %} 
+  2. 親カテゴリを抽出するための前処理
+  各ページオブジェクトに、第一階層のみを取り出した「gk_parent」という仮想プロパティをセットします。
+{% endcomment %}
 {% for p in gk_all %}
   {% if p.gk_section %}
-    {% assign gk_section_pages = gk_section_pages | push: p %}
+    {% assign parts = p.gk_section | split: "/" %}
+    {% assign p.gk_parent = parts[0] %}
   {% endif %}
 {% endfor %}
 
-{% comment %} 3. gk_section でグループ化（フィルタを使わない） {% endcomment %}
-{% assign gk_top_groups = gk_section_pages | group_by: "gk_section" %}
+{% comment %} 3. 親カテゴリがあるものだけ抽出し、親カテゴリ名でグループ化 {% endcomment %}
+{% assign gk_section_pages = gk_all | where: "gk_parent" | sort: "gk_section" %}
+{% assign gk_top_groups = gk_section_pages | group_by: "gk_parent" %}
+
+---
 
 ## まずどこから？
 
@@ -46,18 +53,17 @@ gk_order: 15
 
 <ul>
   {% for group in gk_top_groups %}
-    {% assign display_name = group.name | split: '/' | first %}
-    <li><a href="#{{ display_name | slugify }}">{{ display_name }}</a></li>
+    <li><a href="#{{ group.name | slugify }}">{{ group.name }}</a></li>
   {% endfor %}
 </ul>
 
 ---
 
 {% for group in gk_top_groups %}
-  {% assign display_name = group.name | split: '/' | first %}
-  <h2 id="{{ display_name | slugify }}">{{ display_name }}</h2>
+  <h2 id="{{ group.name | slugify }}">{{ group.name }}</h2>
   {% assign group_items = group.items %}
-  {% include gk_section_tree.html items=group_items depth=1 %}
+  {% comment %} depth=0 から開始することで tree 側で正しく階層化させます {% endcomment %}
+  {% include gk_section_tree.html items=group_items depth=0 %}
 {% endfor %}
 
 ---
