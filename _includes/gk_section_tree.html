@@ -1,29 +1,30 @@
 {%- assign depth = include.depth | default: 0 -%}
 {%- assign next_depth = depth | plus: 1 -%}
 
-{% comment %} 現在の階層にあるサブカテゴリ名を抽出 {% endcomment %}
-{%- assign sub_names = "" -%}
-{%- for p in include.items -%}
-  {%- assign parts = p.gk_section | split: '/' -%}
-  {%- if parts.size > next_depth -%}
-    {%- capture sub_names -%}{{ sub_names }}|{{ parts[next_depth] }}{%- endcapture -%}
-  {%- endif -%}
-{%- endfor -%}
-{%- assign unique_subs = sub_names | remove_first: "|" | split: "|" | uniq | sort -%}
-
-{% comment %} 1. この階層に直属するページ（記事）を表示 {% endcomment %}
-<ul>
+{% comment %} 1. この階層に直属する記事を表示 {% endcomment %}
+{%- assign leaf_exists = false -%}
 {%- for p in include.items -%}
   {%- assign parts = p.gk_section | split: '/' -%}
   {%- if parts.size == next_depth -%}
+    {%- if leaf_exists == false -%}<ul>{%- assign leaf_exists = true -%}{%- endif -%}
     <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
   {%- endif -%}
 {%- endfor -%}
-</ul>
+{%- if leaf_exists -%}</ul>{%- endif -%}
 
-{% comment %} 2. 下位階層（サブセクション）があれば再帰的に表示 {% endcomment %}
+{% comment %} 2. サブカテゴリを抽出してループ {% endcomment %}
+{%- assign sub_names_str = "" -%}
+{%- for p in include.items -%}
+  {%- assign parts = p.gk_section | split: '/' -%}
+  {%- if parts.size > next_depth -%}
+    {%- capture sub_names_str -%}{{ sub_names_str }}|{{ parts[next_depth] }}{%- endcapture -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign unique_subs = sub_names_str | remove_first: "|" | split: "|" | uniq | sort -%}
+
 {%- for sub_name in unique_subs -%}
-  <h{{ depth | plus: 3 }}>{{ sub_name }}</h{{ depth | plus: 3 }}>
+  {% comment %} depth 0 の親は Index.md で H2 を出すので、それ以下を H3, H4 にする {% endcomment %}
+  <h{{ depth | plus: 3 }} style="margin-left: {{ depth | times: 10 }}px;">{{ sub_name }}</h{{ depth | plus: 3 }}>
   
   {%- assign sub_items = "" | split: "" -%}
   {%- for p in include.items -%}
@@ -33,5 +34,5 @@
     {%- endif -%}
   {%- endfor -%}
   
-  {% include gk_section_tree.html items=sub_items depth=next_depth %}
+  {%- include gk_section_tree.html items=sub_items depth=next_depth -%}
 {%- endfor -%}
