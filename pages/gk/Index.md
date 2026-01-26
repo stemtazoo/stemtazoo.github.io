@@ -546,27 +546,16 @@ gk_sections:
 ## 目次
 
 <ul>
-  {% for name in unique_parents %}
-    <li><a href="#{{ name | slugify }}">{{ name }}</a></li>
+  {% for sec in page.gk_sections %}
+    <li><a href="#{{ sec.title | slugify }}">{{ sec.title }}</a></li>
   {% endfor %}
 </ul>
 
 ---
 
-{% for name in unique_parents %}
-  <h2 id="{{ name | slugify }}">{{ name }}</h2>
-  
-  {% comment %} その親カテゴリに属するアイテムだけを抽出 {% endcomment %}
-  {% assign group_items = "" | split: "" %}
-  {% for p in gk_all %}
-    {% assign parts = p.gk_section | split: "/" %}
-    {% if parts[0] == name %}
-      {% assign group_items = group_items | push: p %}
-    {% endif %}
-  {% endfor %}
-  
-  {% comment %} 抽出したアイテムを tree に渡す {% endcomment %}
-  {% include gk_section_tree.html items=group_items depth=0 %}
+{% for sec in page.gk_sections %}
+  <h2 id="{{ sec.title | slugify }}">{{ sec.title }}</h2>
+  {% include gk_section.html sec=sec %}
 {% endfor %}
 
 ---
