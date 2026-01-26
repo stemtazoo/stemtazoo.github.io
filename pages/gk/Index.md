@@ -571,12 +571,16 @@ gk_sections:
 
 ---
 
+{% assign gk_all = site.pages | where_exp: "p", "p.tags contains 'gk'" %}
+
 ## 未分類（gk_section未設定）
 
 <ul>
   {% for p in gk_all %}
-    {% unless p.gk_section %}
-      <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a>（{{ p.url }}）</li>
-    {% endunless %}
+    {% if p.gk_section == nil or p.gk_section == "" %}
+      {% unless p.url == page.url %}
+        <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a>（{{ p.url }}）</li>
+      {% endunless %}
+    {% endif %}
   {% endfor %}
 </ul>
