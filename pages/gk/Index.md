@@ -543,24 +543,22 @@ gk_sections:
 
 ---
 
+{% assign gk_all = site.pages | where_exp: "p", "p.tags contains 'gk'" %}
+{% assign unique_parents = "" | split: "" %}
+{% for p in gk_all %}
+  {% assign parent = p.gk_section | split: "/" | first %}
+  {% assign unique_parents = unique_parents | push: parent %}
+{% endfor %}
+{% assign unique_parents = unique_parents | uniq | sort %}
+
 ## 目次
 
-<ul>
-  {% for sec in page.gk_sections %}
-    <li><a href="#{{ sec.title | slugify }}">{{ sec.title }}</a></li>
-  {% endfor %}
-</ul>
-
----
-
 {% for sec in page.gk_sections %}
-  <h2 id="{{ sec.title | slugify }}">{{ sec.title }}</h2>
-  {% include gk_section.html sec=sec %}
+## {{ sec.title }}
+{% include gk_section.html sec=sec heading_level=3 %}
 {% endfor %}
 
 ---
-
-{% assign gk_all = site.pages | where_exp: "p", "p.tags contains 'gk'" %}
 
 ## 未分類（gk_section未設定）
 
