@@ -543,6 +543,14 @@ gk_sections:
 
 ---
 
+{% assign gk_all = site.pages | where_exp: "p", "p.tags contains 'gk'" %}
+{% assign unique_parents = "" | split: "" %}
+{% for p in gk_all %}
+  {% assign parent = p.gk_section | split: "/" | first %}
+  {% assign unique_parents = unique_parents | push: parent %}
+{% endfor %}
+{% assign unique_parents = unique_parents | uniq | sort %}
+
 ## 目次
 
 <ul>
@@ -570,8 +578,6 @@ gk_sections:
 {% endfor %}
 
 ---
-
-{% assign gk_all = site.pages | where_exp: "p", "p.tags contains 'gk'" %}
 
 ## 未分類（gk_section未設定）
 
