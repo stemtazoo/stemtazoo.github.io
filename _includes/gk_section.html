@@ -1,4 +1,5 @@
 {%- assign sec = include.sec -%}
+{%- assign heading_level = include.heading_level | default: 3 -%}
 
 {%- if sec.items -%}
 <ul>
@@ -19,7 +20,8 @@
 
 {%- if sec.subsections -%}
   {%- for sub in sec.subsections -%}
-<h3>{{ sub.title }}</h3>
-{% include gk_section.html sec=sub %}
+<h{{ heading_level }}>{{ sub.title }}</h{{ heading_level }}>
+{% assign next_level = heading_level | plus: 1 %}
+{% include gk_section.html sec=sub heading_level=next_level %}
   {%- endfor -%}
 {%- endif -%}
