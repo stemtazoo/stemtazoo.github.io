@@ -1,5 +1,5 @@
 ---
-layout: gk_index
+layout: page
 title: G検定 学習まとめ
 permalink: /gk/
 tags: [gk]
@@ -543,21 +543,73 @@ gk_sections:
 
 ---
 
-{% assign gk_all = site.pages | where_exp: "p", "p.tags contains 'gk'" %}
-{% assign unique_parents = "" | split: "" %}
-{% for p in gk_all %}
-  {% assign parent = p.gk_section | split: "/" | first %}
-  {% assign unique_parents = unique_parents | push: parent %}
-{% endfor %}
-{% assign unique_parents = unique_parents | uniq | sort %}
-
 ## 目次
 
-{% for sec in page.gk_sections %}
-## {{ sec.title }}
-{% include gk_section.html sec=sec heading_level=3 %}
-{% endfor %}
+- [技術分野](#技術分野)
+  - [人工知能とは](#人工知能とは)
+  - [人工知能をめぐる動向](#人工知能をめぐる動向)
+  - [機械学習の概要](#機械学習の概要)
+  - [ディープラーニングの概要](#ディープラーニングの概要)
+  - [ディープラーニングの要素技術](#ディープラーニングの要素技術)
+  - [ディープラーニングの応用例](#ディープラーニングの応用例)
+  - [AIの社会実装に向けて](#aiの社会実装に向けて)
+- [法律・倫理分野](#法律倫理分野)
+  - [AI倫理・AIガバナンス](#ai倫理aiガバナンス)
+- [試験対策](#試験対策)
+  - [チートシート（試験直前）](#チートシート試験直前)
+  - [ひっかけ問題集](#ひっかけ問題集)
 
+---
+
+## 技術分野
+
+## 人工知能とは
+{% assign sec = page.gk_sections | where: "title", "人工知能（AI）とは" | first %}
+{% include gk_section.html sec=sec %}
+
+## 人工知能をめぐる動向
+{% assign sec = page.gk_sections | where: "title", "人工知能をめぐる動向" | first %}
+{% include gk_section.html sec=sec %}
+
+## 機械学習の概要
+{% assign sec = page.gk_sections | where: "title", "機械学習の概要" | first %}
+{% include gk_section.html sec=sec %}
+
+## ディープラーニングの概要
+{% assign sec = page.gk_sections | where: "title", "ディープラーニングの概要" | first %}
+{% include gk_section.html sec=sec %}
+
+## ディープラーニングの要素技術
+{% assign sec = page.gk_sections | where: "title", "ディープラーニングの要素技術" | first %}
+{% include gk_section.html sec=sec %}
+
+## ディープラーニングの応用例
+{% assign sec = page.gk_sections | where: "title", "ディープラーニングの応用例" | first %}
+{% include gk_section.html sec=sec %}
+
+## AIの社会実装に向けて
+{% assign sec = page.gk_sections | where: "title", "AIの社会実装に向けて" | first %}
+{% include gk_section.html sec=sec %}
+
+---
+
+## 法律・倫理分野
+
+## AI倫理・AIガバナンス
+{% assign sec = page.gk_sections | where: "title", "AIの法律と倫理" | first %}
+{% include gk_section.html sec=sec %}
+
+---
+
+## 試験対策
+
+## チートシート（試験直前）
+{% assign sec = page.gk_sections | where: "title", "チートシート（試験直前）" | first %}
+{% include gk_section.html sec=sec %}
+
+## ひっかけ問題集
+{% assign sec = page.gk_sections | where: "title", "ひっかけ問題集" | first %}
+{% include gk_section.html sec=sec %}
 ---
 
 ## 未分類（gk_section未設定）
