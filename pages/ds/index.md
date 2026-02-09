@@ -6,16 +6,16 @@ tags: [ds]
 
 # 表示順はここで固定（/ds/〇〇/ ＝ pages/ds/〇〇.md）
 ds_sections:
-  - title: "データサイエンスとは"
+  - title: "ビジネス力"
     items:
       - /ds/data-science-overview/
       - /ds/data-driven-decision/
       - /ds/descriptive-predictive-prescriptive/
       - /ds/ds-role/
 
-  - title: "データの扱いと前処理"
+  - title: "データサイエンス力"
     items:
-      - /ds/data-types/
+      - /ds/vector-dot-product/
       - /ds/structured-vs-unstructured/
       - /ds/missing-values/
       - /ds/outliers/
