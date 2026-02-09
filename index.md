@@ -30,6 +30,24 @@ permalink: /
   </p>
 </section>
 
+<section style="border: 1px solid #ddd; padding: 1rem; border-radius: 6px; margin: 2rem 0;">
+  <h2>📊 DS検定 リテラシー 学習まとめ</h2>
+  <p>
+    DS検定（リテラシーレベル）の出題範囲をもとに、<br>
+    統計・確率・データ活用の考え方を整理しています。
+  </p>
+  <ul>
+    <li>✔ 数式より「意味」と「使い分け」を重視</li>
+    <li>✔ よくある誤解・ひっかけポイントを整理</li>
+    <li>✔ 実務と試験の両方に役立つ構成</li>
+  </ul>
+  <p>
+    <a href="{{ '/ds/' | relative_url }}">
+      → DS検定 リテラシー 学習まとめページへ
+    </a>
+  </p>
+</section>
+
 <section>
   <h2>最新記事</h2>
   <div class="tag-filter">

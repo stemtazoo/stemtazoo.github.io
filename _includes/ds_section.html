@@ -1,0 +1,31 @@
+{%- assign sec = include.sec -%}
+{%- assign heading_level = include.heading_level | default: 3 -%}
+{%- assign max_heading_level = include.max_heading_level | default: 4 -%}
+
+{%- if sec.items -%}
+<ul>
+  {%- for url in sec.items -%}
+    {%- assign p = site.pages | where: "url", url | first -%}
+    {%- if p == nil -%}
+      {%- assign p = site.posts | where: "url", url | first -%}
+    {%- endif -%}
+
+    {%- if p -%}
+      <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
+    {%- else -%}
+      <li><span style="color:#c00;">NOT FOUND: {{ url }}</span></li>
+    {%- endif -%}
+  {%- endfor -%}
+</ul>
+{%- endif -%}
+
+{%- if sec.subsections -%}
+  {%- for sub in sec.subsections -%}
+<h{{ heading_level }}>{{ sub.title }}</h{{ heading_level }}>
+{%- assign next_level = heading_level | plus: 1 -%}
+{%- if next_level > max_heading_level -%}
+  {%- assign next_level = max_heading_level -%}
+{%- endif -%}
+{% include gk_section.html sec=sub heading_level=next_level max_heading_level=max_heading_level %}
+  {%- endfor -%}
+{%- endif -%}
