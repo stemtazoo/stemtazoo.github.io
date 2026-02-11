@@ -1,5 +1,4 @@
 ---
-
 layout: page
 title: 行列の掛け算とは？（行列同士の掛け算）【DS検定リテラシー】
 permalink: /ds/matrix-multiplication/

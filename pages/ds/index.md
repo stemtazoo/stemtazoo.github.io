@@ -18,7 +18,7 @@ ds_sections:
       - title: "数学的理解"
         items:
             - /ds/vector-dot-product/
-            - /ds/e-calculus.md
+            - /ds/e-calculus/
             - /ds/matrix-multiplication/
             - /ds/inverse-matrix/
 

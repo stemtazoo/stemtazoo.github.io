@@ -1,7 +1,7 @@
 ---
 layout: page
 title: DS検定 リテラシー｜データサイエンス力シート
-permalink: /ds/skillcheck/
+permalink: /ds/business-skillcheck/
 tags: [ds, skillcheck]
 ---
 
