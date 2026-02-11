@@ -19,6 +19,8 @@ ds_sections:
         items:
             - /ds/vector-dot-product/
             - /ds/e-calculus.md
+            - /ds/matrix-multiplication/
+            - /ds/inverse-matrix/
 
   - title: "統計・確率の基礎"
     subsections:
