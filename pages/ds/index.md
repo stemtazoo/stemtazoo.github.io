@@ -21,6 +21,7 @@ ds_sections:
             - /ds/e-calculus/
             - /ds/matrix-multiplication/
             - /ds/inverse-matrix/
+            - /ds/eigenvalue/
 
   - title: "統計・確率の基礎"
     subsections:
