@@ -14,9 +14,11 @@ ds_sections:
       - /ds/ds-role/
 
   - title: "データサイエンス力"
-    items:
-      - /ds/vector-dot-product/
-      - /ds/e-calculus.md
+    subsections:
+      - title: "数学的理解"
+        items:
+            - /ds/vector-dot-product/
+            - /ds/e-calculus.md
 
   - title: "統計・確率の基礎"
     subsections:
@@ -119,8 +121,8 @@ ds_sections:
 
 ## 基礎理解
 
-## データサイエンスとは
-{% assign sec = page.ds_sections | where: "title", "データサイエンスとは" | first %}
+## データサイエンス力
+{% assign sec = page.ds_sections | where: "title", "データサイエンス力" | first %}
 {% include ds_section.html sec=sec %}
 
 ## データの扱いと前処理
