@@ -16,12 +16,7 @@ ds_sections:
   - title: "データサイエンス力"
     items:
       - /ds/vector-dot-product/
-      - /ds/structured-vs-unstructured/
-      - /ds/missing-values/
-      - /ds/outliers/
-      - /ds/data-cleaning/
-      - /ds/normalization-standardization/
-      - /ds/train-test-split/
+      - /ds/e-calculus.md
 
   - title: "統計・確率の基礎"
     subsections:
