@@ -28,6 +28,7 @@ ds_sections:
             - /ds/sample-variance-unbiased-variance/
             - /ds/pearson-correlation/
             - /ds/covariance-and-correlation/
+            - /ds/variance-and-standard-deviation/
 
   - title: "統計・確率の基礎"
     subsections:
