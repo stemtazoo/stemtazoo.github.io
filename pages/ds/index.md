@@ -22,6 +22,7 @@ ds_sections:
             - /ds/matrix-multiplication/
             - /ds/inverse-matrix/
             - /ds/eigenvalue/
+            - /ds/quartile/
 
   - title: "統計・確率の基礎"
     subsections:
