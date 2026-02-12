@@ -24,6 +24,7 @@ ds_sections:
             - /ds/eigenvalue/
             - /ds/symmetric-difference/
             - /ds/quartile/
+            - /ds/euclidean-norm/
 
   - title: "統計・確率の基礎"
     subsections:
