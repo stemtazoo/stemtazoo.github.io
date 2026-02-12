@@ -25,6 +25,7 @@ ds_sections:
             - /ds/symmetric-difference/
             - /ds/quartile/
             - /ds/euclidean-norm/
+            - /ds/sample-variance-unbiased-variance/
 
   - title: "統計・確率の基礎"
     subsections:
