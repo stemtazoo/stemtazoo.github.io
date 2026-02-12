@@ -26,6 +26,7 @@ ds_sections:
             - /ds/quartile/
             - /ds/euclidean-norm/
             - /ds/sample-variance-unbiased-variance/
+            - /da/pearson-correlation/
 
   - title: "統計・確率の基礎"
     subsections:
