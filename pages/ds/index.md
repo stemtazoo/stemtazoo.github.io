@@ -23,8 +23,10 @@ ds_sections:
             - /ds/inverse-matrix/
             - /ds/eigenvalue/
             - /ds/symmetric-difference/
-            - /ds/quartile/
             - /ds/euclidean-norm/
+      - title: "科学的解析の基礎"
+        items:
+            - /ds/quartile/
             - /ds/sample-variance-unbiased-variance/
             - /ds/pearson-correlation/
             - /ds/covariance-and-correlation/
