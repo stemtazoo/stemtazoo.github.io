@@ -183,12 +183,31 @@ ds_sections:
 
 ---
 
-## 未分類（ds_section未設定）
+## 未分類（ds_sections未登録）
+
+{% assign classified_urls = "" | split: "" %}
+{% for sec in page.ds_sections %}
+  {% if sec.items %}
+    {% for item_url in sec.items %}
+      {% assign classified_urls = classified_urls | push: item_url %}
+    {% endfor %}
+  {% endif %}
+
+  {% if sec.subsections %}
+    {% for subsection in sec.subsections %}
+      {% if subsection.items %}
+        {% for item_url in subsection.items %}
+          {% assign classified_urls = classified_urls | push: item_url %}
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
 
 <ul>
   {% for p in site.pages %}
-    {% if p.url contains '/ds/' and p.ds_section == nil %}
-      {% unless p.url == page.url %}
+    {% if p.url contains '/ds/' %}
+      {% unless classified_urls contains p.url or p.url == page.url %}
         <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a>（{{ p.url }}）</li>
       {% endunless %}
     {% endif %}
