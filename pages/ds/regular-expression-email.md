@@ -1,9 +1,11 @@
-
+---
+layout: page
+title: メールアドレスの正規表現とは？なぜ難しいのかを整理【DS検定】
+permalink: /ds/regular-expression-email/
+tags: [ds, preprocessing, cheatsheet]
 ---
 
-layout: page title: メールアドレスの正規表現とは？なぜ難しいのかを整理【DS検定】 permalink: /ds/regular-expression-email/ tags: [ds, preprocessing, cheatsheet]
-
-まず結論
+## まず結論
 
 メールアドレスの正規表現は「文字列の構造」を確認するためのパターンですが、完全に正しいメールアドレスを保証することはできません。
 DS検定では、「正規表現で何が保証できて、何が保証できないか」を判断できるかが問われます。
@@ -11,7 +13,7 @@ DS検定では、「正規表現で何が保証できて、何が保証できな
 
 ---
 
-直感的な説明
+## 直感的な説明
 
 メールアドレスは、
 
@@ -45,7 +47,7 @@ sample@example.com
 
 ---
 
-定義・仕組み
+## 定義・仕組み
 
 よくある簡易的なメールアドレスの正規表現は次の形です。
 
@@ -83,7 +85,7 @@ $ ：末尾
 
 ---
 
-どんな場面で使う？
+## どんな場面で使う？
 
 使う場面
 
