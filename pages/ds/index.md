@@ -34,14 +34,14 @@ ds_sections:
 
   - title: "データエンジニアリング力"
     subsections:
-      - title: "記述統計"
+      - title: "環境構築"
         items:
           - /ds/mean-median-mode/
           - /ds/variance-standard-deviation/
           - /ds/distribution/
           - /ds/histogram-boxplot/
 
-      - title: "確率と分布"
+      - title: "データ構造"
         items:
           - /ds/probability-basics/
           - /ds/conditional-probability/
@@ -50,7 +50,7 @@ ds_sections:
           - /ds/binomial-distribution/
           - /ds/poisson-distribution/
 
-      - title: "推測統計"
+      - title: "データ蓄積"
         items:
           - /ds/sampling/
           - /ds/hypothesis-testing/
@@ -58,7 +58,7 @@ ds_sections:
           - /ds/confidence-interval/
           - /ds/correlation-vs-causation/
 
-  - title: "データ可視化"
+  - title: "AI利活用スキル"
     items:
       - /ds/visualization-purpose/
       - /ds/bar-line-scatter/
