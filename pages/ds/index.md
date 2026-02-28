@@ -32,7 +32,7 @@ ds_sections:
             - /ds/covariance-and-correlation/
             - /ds/variance-and-standard-deviation/
 
-  - title: "統計・確率の基礎"
+  - title: "データエンジニアリング力"
     subsections:
       - title: "記述統計"
         items:
