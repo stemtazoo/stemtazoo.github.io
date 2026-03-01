@@ -24,6 +24,7 @@ ds_sections:
             - /ds/eigenvalue/
             - /ds/symmetric-difference/
             - /ds/euclidean-norm/
+
       - title: "科学的解析の基礎"
         items:
             - /ds/quartile/
@@ -65,7 +66,7 @@ ds_sections:
       - /ds/when-to-use-which-graph/
       - /ds/misleading-visualization/
 
-  - title: "分析手法の理解"
+  - title: "モデルカリキュラム"
     items:
       - /ds/regression-overview/
       - /ds/linear-regression/
@@ -73,30 +74,6 @@ ds_sections:
       - /ds/clustering-overview/
       - /ds/k-means/
       - /ds/classification-vs-regression/
-
-  - title: "評価と解釈"
-    items:
-      - /ds/confusion-matrix/
-      - /ds/accuracy-precision-recall/
-      - /ds/f1-score/
-      - /ds/overfitting-underfitting/
-      - /ds/bias-variance/
-
-  - title: "ビジネス活用・プロセス"
-    items:
-      - /ds/crisp-dm/
-      - /ds/problem-definition/
-      - /ds/kpi-metric/
-      - /ds/eda/
-      - /ds/communication/
-
-  - title: "法律・倫理・データリテラシー"
-    items:
-      - /ds/personal-data/
-      - /ds/privacy/
-      - /ds/data-ethics/
-      - /ds/bias-fairness/
-      - /ds/security/
 
   - title: "試験対策"
     items:
@@ -132,8 +109,8 @@ ds_sections:
 
   <a href="https://www.datascientist.or.jp/news/n-pressrelease/post-1757/" target="_blank" rel="noopener noreferrer" style="display:block;padding:18px;border-radius:14px;text-decoration:none;background:linear-gradient(135deg,#0b3b2e,#0ea5a5);color:#fff;box-shadow:0 10px 25px rgba(11,59,46,.18);transition:transform .2s ease,box-shadow .2s ease;">
     <div style="font-size:12px;opacity:.8;letter-spacing:.06em;">PRESS RELEASE</div>
-    <div style="margin-top:8px;font-size:18px;font-weight:700;line-height:1.45;">DS検定 関連ニュース</div>
-    <div style="margin-top:10px;font-size:14px;opacity:.92;">最新の発表内容や公式アナウンスをチェックできます。</div>
+    <div style="margin-top:8px;font-size:18px;font-weight:700;line-height:1.45;">2023年度版「データサイエンティスト スキルチェックリストver.5」および「データサイエンス領域タスクリスト ver.4」</div>
+    <div style="margin-top:10px;font-size:14px;opacity:.92;">データサイエンティスト スキルチェックリストver.5に沿って、記事を作成しています。ver.6は2026年度のDS検定から適用</div>
   </a>
 </div>
 
@@ -141,54 +118,35 @@ ds_sections:
 
 ## 目次
 
-- [基礎理解](#基礎理解)
-- [統計・確率](#統計確率)
-- [可視化・分析](#可視化分析)
-- [ビジネス・倫理](#ビジネス倫理)
+- [ビジネス力](#ビジネス力)
+- [データサイエンス力](#データサイエンス力)
+- [データエンジニアリング力](#データエンジニアリング力)
+- [AI利活用スキル](#AI利活用スキル)
+- [モデルカリキュラム](#モデルカリキュラム)
 - [試験対策](#試験対策)
 
 ---
 
-## 基礎理解
+## ビジネス力
+{% assign sec = page.ds_sections | where: "title", "ビジネス力" | first %}
+{% include ds_section.html sec=sec %}
+
+---
 
 ## データサイエンス力
 {% assign sec = page.ds_sections | where: "title", "データサイエンス力" | first %}
 {% include ds_section.html sec=sec %}
 
-## データの扱いと前処理
-{% assign sec = page.ds_sections | where: "title", "データの扱いと前処理" | first %}
+---
+
+## データエンジニアリング力
+{% assign sec = page.ds_sections | where: "title", "データエンジニアリング力" | first %}
 {% include ds_section.html sec=sec %}
 
 ---
 
-## 統計・確率
-
-## 統計・確率の基礎
-{% assign sec = page.ds_sections | where: "title", "統計・確率の基礎" | first %}
-{% include ds_section.html sec=sec %}
-
----
-
-## 可視化・分析
-
-## データ可視化
-{% assign sec = page.ds_sections | where: "title", "データ可視化" | first %}
-{% include ds_section.html sec=sec %}
-
-## 分析手法の理解
-{% assign sec = page.ds_sections | where: "title", "分析手法の理解" | first %}
-{% include ds_section.html sec=sec %}
-
----
-
-## ビジネス倫理
-
-## ビジネス活用・プロセス
-{% assign sec = page.ds_sections | where: "title", "ビジネス活用・プロセス" | first %}
-{% include ds_section.html sec=sec %}
-
-## 法律・倫理・データリテラシー
-{% assign sec = page.ds_sections | where: "title", "法律・倫理・データリテラシー" | first %}
+## モデルカリキュラム
+{% assign sec = page.ds_sections | where: "title", "モデルカリキュラム" | first %}
 {% include ds_section.html sec=sec %}
 
 ---
