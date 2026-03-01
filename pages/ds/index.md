@@ -121,6 +121,24 @@ ds_sections:
 
 ---
 
+## DS検定 公式リンク
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:12px;">
+  <a href="https://www.datascientist.or.jp/dscertification/what/#summary" target="_blank" rel="noopener noreferrer" style="display:block;padding:18px;border-radius:14px;text-decoration:none;background:linear-gradient(135deg,#0f172a,#1d4ed8);color:#fff;box-shadow:0 10px 25px rgba(15,23,42,.18);transition:transform .2s ease,box-shadow .2s ease;">
+    <div style="font-size:12px;opacity:.8;letter-spacing:.06em;">OFFICIAL</div>
+    <div style="margin-top:8px;font-size:18px;font-weight:700;line-height:1.45;">DS検定とは（概要）</div>
+    <div style="margin-top:10px;font-size:14px;opacity:.92;">試験の目的・対象者・出題範囲を公式情報で確認できます。</div>
+  </a>
+
+  <a href="https://www.datascientist.or.jp/news/n-pressrelease/post-1757/" target="_blank" rel="noopener noreferrer" style="display:block;padding:18px;border-radius:14px;text-decoration:none;background:linear-gradient(135deg,#0b3b2e,#0ea5a5);color:#fff;box-shadow:0 10px 25px rgba(11,59,46,.18);transition:transform .2s ease,box-shadow .2s ease;">
+    <div style="font-size:12px;opacity:.8;letter-spacing:.06em;">PRESS RELEASE</div>
+    <div style="margin-top:8px;font-size:18px;font-weight:700;line-height:1.45;">DS検定 関連ニュース</div>
+    <div style="margin-top:10px;font-size:14px;opacity:.92;">最新の発表内容や公式アナウンスをチェックできます。</div>
+  </a>
+</div>
+
+---
+
 ## 目次
 
 - [基礎理解](#基礎理解)
