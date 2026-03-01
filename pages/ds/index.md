@@ -6,6 +6,12 @@ tags: [ds]
 
 # 表示順はここで固定（/ds/〇〇/ ＝ pages/ds/〇〇.md）
 ds_sections:
+  - title: "スキルレベル定義"
+    items:
+      - /ds/skilllevel-2023-assistant-ds-business/
+      - /ds/skilllevel-2023-assistant-ds-datascience/
+      - /ds/skilllevel-2023-assistant-ds-dataengineering/
+
   - title: "ビジネス力"
     items:
       - /ds/data-science-overview/
@@ -118,12 +124,19 @@ ds_sections:
 
 ## 目次
 
+- [スキルレベル定義](#スキルレベル定義)
 - [ビジネス力](#ビジネス力)
 - [データサイエンス力](#データサイエンス力)
 - [データエンジニアリング力](#データエンジニアリング力)
 - [AI利活用スキル](#AI利活用スキル)
 - [モデルカリキュラム](#モデルカリキュラム)
 - [試験対策](#試験対策)
+
+---
+
+## スキルレベル定義
+{% assign sec = page.ds_sections | where: "title", "スキルレベル定義" | first %}
+{% include ds_section.html sec=sec %}
 
 ---
 
