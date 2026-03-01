@@ -77,8 +77,8 @@ ds_sections:
 
   - title: "試験対策"
     items:
-      - /ds/skillcheck/
       - /ds/business-skillcheck/
+      - /ds/skillcheck/
       - /ds/engineering-skillcheck/
       - /ds/ai-utilization-skillcheck/
       - /ds/cheatsheet/
