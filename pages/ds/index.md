@@ -11,6 +11,10 @@ ds_sections:
       - /ds/skilllevel-2023-assistant-ds-business/
       - /ds/skilllevel-2023-assistant-ds-datascience/
       - /ds/skilllevel-2023-assistant-ds-dataengineering/
+      - /ds/social-data-ai-utilization/
+      - /ds/data-literacy/
+      - /ds/data-ai-precautions/
+      - /ds/optional-math-algorithm/
 
   - title: "ビジネス力"
     items:
