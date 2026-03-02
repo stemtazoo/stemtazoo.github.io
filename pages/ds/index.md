@@ -85,12 +85,7 @@ ds_sections:
 
   - title: "モデルカリキュラム"
     items:
-      - /ds/regression-overview/
-      - /ds/linear-regression/
-      - /ds/logistic-regression/
-      - /ds/clustering-overview/
-      - /ds/k-means/
-      - /ds/classification-vs-regression/
+      - /ds/image-metadata/
 
   - title: "試験対策"
     items:
@@ -98,8 +93,7 @@ ds_sections:
       - /ds/skillcheck/
       - /ds/engineering-skillcheck/
       - /ds/ai-utilization-skillcheck/
-      - /ds/cheatsheet/
-      - /ds/trick-questions/
+
 ---
 
 {% comment %}
