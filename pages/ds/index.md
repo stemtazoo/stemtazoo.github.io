@@ -8,9 +8,14 @@ tags: [ds]
 ds_sections:
   - title: "スキルレベル定義"
     items:
+      - /ds/skilllevel-2023-summary/
       - /ds/skilllevel-2023-assistant-ds-business/
       - /ds/skilllevel-2023-assistant-ds-datascience/
       - /ds/skilllevel-2023-assistant-ds-dataengineering/
+
+  - title: "モデルカリキュラム"
+    items:
+      - /ds/model-curriculum-summary/
       - /ds/social-data-ai-utilization/
       - /ds/data-literacy/
       - /ds/data-ai-precautions/
