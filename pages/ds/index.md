@@ -22,11 +22,19 @@ ds_sections:
       - /ds/optional-math-algorithm/
 
   - title: "ビジネス力"
-    items:
-      - /ds/data-science-overview/
-      - /ds/data-driven-decision/
-      - /ds/descriptive-predictive-prescriptive/
-      - /ds/ds-role/
+    subsections:
+      - title: "行動規範"
+        items:
+            - /ds/business-logic-and-data-importance/
+
+      - title: "論理的思考"
+        items:
+            - /ds/mece/
+            - /ds/paper-structure/
+            
+      - title: "アプローチ設計"
+        items:
+            - /ds/hallucination/
 
   - title: "データサイエンス力"
     subsections:
