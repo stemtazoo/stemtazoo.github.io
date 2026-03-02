@@ -51,9 +51,9 @@ DS検定では「どの指標を選ぶべきか」を判断させる問題が多
 
 ### Accuracy（正解率）
 
-\[
+$$
 Accuracy = \frac{TP + TN}{全体}
-\]
+$$
 
 全体のうちどれだけ正解したか。
 
@@ -63,9 +63,9 @@ Accuracy = \frac{TP + TN}{全体}
 
 ### Precision（適合率）
 
-\[
+$$
 Precision = \frac{TP}{TP + FP}
-\]
+$$
 
 陽性と予測した人のうち、本当に陽性だった割合。  
 → 偽陽性を減らしたいとき。
@@ -74,9 +74,9 @@ Precision = \frac{TP}{TP + FP}
 
 ### Recall（再現率・感度・TPR）
 
-\[
+$$
 Recall = \frac{TP}{TP + FN}
-\]
+$$
 
 実際に陽性の人をどれだけ拾えたか。  
 → 偽陰性を減らしたいとき。
@@ -87,9 +87,9 @@ Recall = \frac{TP}{TP + FN}
 
 ### Specificity（特異度）
 
-\[
+$$
 Specificity = \frac{TN}{TN + FP}
-\]
+$$
 
 実際に陰性をどれだけ正しく除外できたか。
 
@@ -97,9 +97,9 @@ Specificity = \frac{TN}{TN + FP}
 
 ### FPR（偽陽性率）
 
-\[
+$$
 FPR = \frac{FP}{FP + TN}
-\]
+$$
 
 実際に陰性なのに陽性と誤判定した割合。
 
@@ -109,9 +109,9 @@ FPR = \frac{FP}{FP + TN}
 
 ### F1スコア
 
-\[
+$$
 F1 = \frac{2 \times Precision \times Recall}{Precision + Recall}
-\]
+$$
 
 PrecisionとRecallのバランスを見る指標。
 

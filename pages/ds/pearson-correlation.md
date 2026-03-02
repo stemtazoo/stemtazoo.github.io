@@ -35,9 +35,9 @@ DS検定では、「相関の強さ」と「因果関係」を区別できるか
 
 ピアソンの相関係数（Pearson correlation coefficient）は、次の式で定義されます。
 
-\[
+$$
 r = \frac{\mathrm{Cov}(X, Y)}{\sigma_X \sigma_Y}
-\]
+$$
 
 ### 式の意味
 
@@ -64,10 +64,10 @@ r = \frac{\mathrm{Cov}(X, Y)}{\sigma_X \sigma_Y}
 
 より具体的な形は次の通りです。
 
-\[
+$$
 r = \frac{\sum (x_i - \bar{x})(y_i - \bar{y})}
 {\sqrt{\sum (x_i - \bar{x})^2} \sqrt{\sum (y_i - \bar{y})^2}}
-\]
+$$
 
 式を丸暗記する必要はありません。
 
