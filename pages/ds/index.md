@@ -6,14 +6,14 @@ tags: [ds]
 
 # 表示順はここで固定（/ds/〇〇/ ＝ pages/ds/〇〇.md）
 ds_sections:
-  - title: "スキルレベル定義"
+  - title: "試験概要：スキルレベル定義"
     items:
       - /ds/skilllevel-2023-summary/
       - /ds/skilllevel-2023-assistant-ds-business/
       - /ds/skilllevel-2023-assistant-ds-datascience/
       - /ds/skilllevel-2023-assistant-ds-dataengineering/
 
-  - title: "モデルカリキュラム"
+  - title: "試験概要：モデルカリキュラム"
     items:
       - /ds/model-curriculum-summary/
       - /ds/social-data-ai-utilization/
@@ -133,7 +133,8 @@ ds_sections:
 
 ## 目次
 
-- [スキルレベル定義](#スキルレベル定義)
+- [試験概要：スキルレベル定義](#試験概要：スキルレベル定義)
+- [試験概要：モデルカリキュラム](#試験概要：モデルカリキュラム)
 - [ビジネス力](#ビジネス力)
 - [データサイエンス力](#データサイエンス力)
 - [データエンジニアリング力](#データエンジニアリング力)
