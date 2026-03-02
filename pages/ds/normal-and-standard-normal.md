@@ -61,10 +61,10 @@ DS検定では
 
 正規分布は、次の式で表されます。
 
-\[
+$$
 f(x)=\frac{1}{\sqrt{2\pi\sigma^2}} 
 \exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)
-\]
+$$
 
 意味だけ押さえましょう。
 
@@ -97,9 +97,9 @@ f(x)=\frac{1}{\sqrt{2\pi\sigma^2}}
 
 標準化は次の式です。
 
-\[
+$$
 Z=\frac{X-\mu}{\sigma}
-\]
+$$
 
 意味は：
 
