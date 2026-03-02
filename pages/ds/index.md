@@ -60,27 +60,21 @@ ds_sections:
     subsections:
       - title: "環境構築"
         items:
-          - /ds/mean-median-mode/
-          - /ds/variance-standard-deviation/
-          - /ds/distribution/
-          - /ds/histogram-boxplot/
+          - /ds/docker/
+          - /ds/managed-service/
+
+      - title: "データ収集"
+        items:
+          - /ds/web-crawling-scraping/
 
       - title: "データ構造"
         items:
-          - /ds/probability-basics/
-          - /ds/conditional-probability/
-          - /ds/bayes-theorem/
-          - /ds/normal-distribution/
-          - /ds/binomial-distribution/
-          - /ds/poisson-distribution/
+          - /ds/er-diagram/
 
       - title: "データ蓄積"
         items:
-          - /ds/sampling/
-          - /ds/hypothesis-testing/
-          - /ds/p-value/
-          - /ds/confidence-interval/
-          - /ds/correlation-vs-causation/
+          - /ds/nosql/
+          - /ds/datalake-vs-nosql/
 
   - title: "AI利活用スキル"
     items:
