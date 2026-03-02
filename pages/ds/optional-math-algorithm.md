@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "数理・アルゴリズム・データ活用基礎（オプション）【DS検定対応】"
-permalink: /pages/ds/optional-math-algorithm/
+permalink: /ds/optional-math-algorithm/
 tags:
   - ds
   - literacy
@@ -25,7 +25,7 @@ tags:
 
 **データ・AI利活用を支える「土台の技術」を理解する分野**です。
 
-DS検定では必ずしも高度な計算は求められませんが、
+DS検定の出題範囲からは外れていますが、
 
 - 数学の基礎
 - アルゴリズムの考え方

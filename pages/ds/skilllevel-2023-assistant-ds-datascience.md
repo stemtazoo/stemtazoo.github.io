@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "④ Assistant Data Scientist（見習い）に求められるデータサイエンス力"
-permalink: /pages/ds/skilllevel-2023-assistant-ds-datascience/
+permalink: /ds/skilllevel-2023-assistant-ds-datascience/
 tags:
   - ds
   - skilllevel

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "④ Assistant Data Scientist（見習い）に求められるデータエンジニアリング力"
-permalink: /pages/ds/skilllevel-2023-assistant-ds-dataengineering/
+permalink: /ds/skilllevel-2023-assistant-ds-dataengineering/
 tags:
   - ds
   - skilllevel

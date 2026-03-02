@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "④ Assistant Data Scientist（見習い）に求められるビジネス力"
-permalink: /pages/ds/skilllevel-2023-assistant-ds-business/
+permalink: /ds/skilllevel-2023-assistant-ds-business/
 tags:
   - ds
   - skilllevel
