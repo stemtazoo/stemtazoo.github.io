@@ -144,12 +144,17 @@ ds_sections:
 
 ---
 
-## スキルレベル定義
-{% assign sec = page.ds_sections | where: "title", "スキルレベル定義" | first %}
+## 試験概要：スキルレベル定義
+{% assign sec = page.ds_sections | where: "title", "試験概要：スキルレベル定義" | first %}
 {% include ds_section.html sec=sec %}
 
 ---
 
+## 試験概要：モデルカリキュラム
+{% assign sec = page.ds_sections | where: "title", "試験概要：モデルカリキュラム" | first %}
+{% include ds_section.html sec=sec %}
+
+---
 ## ビジネス力
 {% assign sec = page.ds_sections | where: "title", "ビジネス力" | first %}
 {% include ds_section.html sec=sec %}
