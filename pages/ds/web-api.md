@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: Web APIとは？HTTPでサービスとデータをやり取りする仕組み【DS検定】 permalink: /ds/web-api/ tags: [ds, business]
+layout: page
+title: Web APIとは？HTTPでサービスとデータをやり取りする仕組み【DS検定】
+permalink: /ds/web-api/
+tags: [ds, business]
+---
 
 まず結論
 
