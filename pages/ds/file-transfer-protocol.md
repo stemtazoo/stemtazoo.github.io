@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: ファイル転送プロトコルとは？主要プロトコルの違いを整理【DS検定】 permalink: /ds/file-transfer-protocol/ tags: [ds, dataengineering, business]
+layout: page
+title: ファイル転送プロトコルとは？主要プロトコルの違いを整理【DS検定】
+permalink: /ds/file-transfer-protocol/
+tags: [ds, dataengineering, business]
+---
 
 まず結論
 
@@ -16,8 +18,6 @@ FTP：暗号化なし
 FTPS：SSL/TLSで暗号化
 
 SFTP：SSHで暗号化
-
-
 
 ---
 
