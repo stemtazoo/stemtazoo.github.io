@@ -1,11 +1,8 @@
-
 ---
-
 layout: page
 title: 相関係数と決定係数の違いとは？回帰分析の基本を理解する【DS検定】
 permalink: /ds/correlation-coefficient-determination/
 tags: [ds, statistics, evaluation]
-
 ---
 
 まず結論

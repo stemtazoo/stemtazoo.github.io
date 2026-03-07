@@ -1,11 +1,8 @@
-
 ---
-
 layout: page
 title: 分散と標準偏差とは？ばらつきを理解する基本統計【DS検定】
 permalink: /ds/variance-standard-deviation/
 tags: [ds, statistics]
-
 ---
 
 まず結論

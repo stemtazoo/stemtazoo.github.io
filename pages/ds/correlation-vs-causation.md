@@ -1,11 +1,8 @@
-
 ---
-
 layout: page
 title: 相関と因果の違いを一発で整理【DS検定リテラシー】
 permalink: /ds/correlation-vs-causation/
 tags: [ds, statistics, business]
-
 ---
 
 まず結論

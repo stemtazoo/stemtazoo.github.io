@@ -1,11 +1,8 @@
-
 ---
-
 layout: page
 title: 統計の基本まとめ（平均・分散・相関・回帰の関係を整理）【DS検定】
 permalink: /ds/statistics-overview/
 tags: [ds, statistics, cheatsheet]
-
 ---
 
 まず結論

@@ -1,11 +1,8 @@
-
 ---
-
 layout: page
 title: 決定係数と寄与率とは？回帰モデルの説明力を理解する【DS検定】
 permalink: /ds/coefficient-of-determination-contribution/
 tags: [ds, statistics, evaluation]
-
 ---
 
 まず結論
