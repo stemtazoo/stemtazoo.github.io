@@ -1,7 +1,12 @@
 
 ---
 
-layout: page title: 共分散と相関係数の違いとは？2つのデータの関係を理解する【DS検定】 permalink: /ds/covariance-correlation/ tags: [ds, statistics]
+layout: page
+title: 共分散と相関係数の違いとは？2つのデータの関係を理解する【DS検定】
+permalink: /ds/covariance-correlation/
+tags: [ds, statistics]
+
+---
 
 まず結論
 
