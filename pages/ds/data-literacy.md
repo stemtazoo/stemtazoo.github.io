@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "データリテラシーとは？【DS検定リテラシー対応】"
-permalink: /ds/data-literacy/
+title: "データを読む・説明する・扱うとは？データリテラシー実践ガイド【DS検定】"
+permalink: /ds/data-literacy-practice/
 tags:
   - ds
   - literacy
