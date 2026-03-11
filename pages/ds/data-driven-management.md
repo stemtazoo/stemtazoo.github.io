@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: データドリブン経営とは？データにもとづいて意思決定する考え方【DS検定】 permalink: /ds/data-driven-management/ tags: [ds, business]
+layout: page
+title: データドリブン経営とは？データにもとづいて意思決定する考え方【DS検定】
+permalink: /ds/data-driven-management/
+tags: [ds, business]
+---
 
 まず結論
 

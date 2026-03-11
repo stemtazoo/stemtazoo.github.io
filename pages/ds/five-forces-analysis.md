@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: 5フォース分析とは？業界の競争環境を分析するフレームワーク【DS検定】 permalink: /ds/five-forces-analysis/ tags: [ds, business]
+layout: page
+title: 5フォース分析とは？業界の競争環境を分析するフレームワーク【DS検定】
+permalink: /ds/five-forces-analysis/
+tags: [ds, business]
+---
 
 まず結論
 

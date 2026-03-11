@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: RFM分析とは？顧客価値を評価するマーケティング分析【DS検定】 permalink: /ds/rfm-analysis/ tags: [ds, business]
+layout: page
+title: RFM分析とは？顧客価値を評価するマーケティング分析【DS検定】
+permalink: /ds/rfm-analysis/
+tags: [ds, business]
+---
 
 まず結論
 

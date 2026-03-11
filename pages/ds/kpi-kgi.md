@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: KPIとKGIの違いとは？目標管理の基本を整理【DS検定】 permalink: /ds/kpi-kgi/ tags: [ds, business]
+layout: page
+title: KPIとKGIの違いとは？目標管理の基本を整理【DS検定】
+permalink: /ds/kpi-kgi/
+tags: [ds, business]
+---
 
 まず結論
 

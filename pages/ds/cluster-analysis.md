@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: クラスタ分析とは？似たデータをグループ分けする分析手法【DS検定】 permalink: /ds/cluster-analysis/ tags: [ds, ai]
+layout: page
+title: クラスタ分析とは？似たデータをグループ分けする分析手法【DS検定】
+permalink: /ds/cluster-analysis/
+tags: [ds, ai]
+---
 
 まず結論
 

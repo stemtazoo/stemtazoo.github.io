@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: A/Bテストとは？データで施策を比較する方法【DS検定】 permalink: /ds/ab-test/ tags: [ds, statistics, business]
+layout: page
+title: A/Bテストとは？データで施策を比較する方法【DS検定】
+permalink: /ds/ab-test/
+tags: [ds, statistics, business]
+---
 
 まず結論
 

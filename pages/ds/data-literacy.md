@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: データリテラシーとは？データを読み解く力【DS検定】 permalink: /ds/data-literacy/ tags: [ds, literacy, business]
+layout: page
+title: データリテラシーとは？データを読み解く力【DS検定】
+permalink: /ds/data-literacy/
+tags: [ds, literacy, business]
+---
 
 まず結論
 

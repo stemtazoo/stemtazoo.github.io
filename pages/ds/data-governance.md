@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: データガバナンスとは？データ活用に必要な管理の仕組み【DS検定】 permalink: /ds/data-governance/ tags: [ds, data_management, governance]
+layout: page
+title: データガバナンスとは？データ活用に必要な管理の仕組み【DS検定】
+permalink: /ds/data-governance/
+tags: [ds, data_management, governance]
+---
 
 まず結論
 

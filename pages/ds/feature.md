@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: 特徴量（Feature）とは？機械学習で使う入力データを理解する【DS検定】 permalink: /ds/feature/ tags: [ds, preprocessing, ai]
+layout: page
+title: 特徴量（Feature）とは？機械学習で使う入力データを理解する【DS検定】
+permalink: /ds/feature/
+tags: [ds, preprocessing, ai]
+---
 
 特徴量（Feature）とは？
 

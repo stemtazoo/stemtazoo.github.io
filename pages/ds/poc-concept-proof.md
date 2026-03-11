@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: PoC（概念実証）とは？AIプロジェクトで重要な理由【DS検定】 permalink: /ds/poc-concept-proof/ tags: [ds, business, ai]
+layout: page
+title: PoC（概念実証）とは？AIプロジェクトで重要な理由【DS検定】
+permalink: /ds/poc-concept-proof/
+tags: [ds, business, ai]
+---
 
 まず結論
 
