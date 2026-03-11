@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: PEST分析とは？マクロ環境を分析するフレームワーク【DS検定】 permalink: /ds/pest-analysis/ tags: [ds, business]
+layout: page
+title: PEST分析とは？マクロ環境を分析するフレームワーク【DS検定】
+permalink: /ds/pest-analysis/
+tags: [ds, business]
+---
 
 まず結論
 

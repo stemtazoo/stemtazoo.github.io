@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: PDCAサイクルとは？継続的改善の基本フレームワーク【DS検定】 permalink: /ds/pdca-cycle/ tags: [ds, business]
+layout: page
+title: PDCAサイクルとは？継続的改善の基本フレームワーク【DS検定】
+permalink: /ds/pdca-cycle/
+tags: [ds, business]
+---
 
 まず結論
 

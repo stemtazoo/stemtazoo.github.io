@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: OLAPとは？BIツール分析の基本概念をわかりやすく解説【DS検定】 permalink: /ds/olap/ tags: [ds, visualization, business]
+layout: page
+title: OLAPとは？BIツール分析の基本概念をわかりやすく解説【DS検定】
+permalink: /ds/olap/
+tags: [ds, visualization, business]
+---
 
 まず結論
 

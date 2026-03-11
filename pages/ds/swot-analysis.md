@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: SWOT分析とは？企業の強みと外部環境を整理するフレームワーク【DS検定】 permalink: /ds/swot-analysis/ tags: [ds, business]
+layout: page
+title: SWOT分析とは？企業の強みと外部環境を整理するフレームワーク【DS検定】
+permalink: /ds/swot-analysis/
+tags: [ds, business]
+---
 
 まず結論
 

@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: カスタマージャーニーとは？顧客体験を理解するフレームワーク【DS検定】 permalink: /ds/customer-journey/ tags: [ds, business, marketing]
+layout: page
+title: カスタマージャーニーとは？顧客体験を理解するフレームワーク【DS検定】
+permalink: /ds/customer-journey/
+tags: [ds, business, marketing]
+---
 
 まず結論
 

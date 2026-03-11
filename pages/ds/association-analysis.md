@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: アソシエーション分析とは？購買データの関係性を見つける分析【DS検定】 permalink: /ds/association-analysis/ tags: [ds, ai, business]
+layout: page
+title: アソシエーション分析とは？購買データの関係性を見つける分析【DS検定】
+permalink: /ds/association-analysis/
+tags: [ds, ai, business]
+---
 
 まず結論
 

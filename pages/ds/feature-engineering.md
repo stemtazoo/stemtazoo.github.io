@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: 特徴量エンジニアリングとは？モデル性能を高めるデータ加工【DS検定】 permalink: /ds/feature-engineering/ tags: [ds, preprocessing, machine-learning]
+layout: page
+title: 特徴量エンジニアリングとは？モデル性能を高めるデータ加工【DS検定】
+permalink: /ds/feature-engineering/
+tags: [ds, preprocessing, machine-learning]
+---
 
 特徴量エンジニアリングとは？
 
