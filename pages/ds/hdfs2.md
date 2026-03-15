@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: HDFS（Hadoop分散ファイルシステム）とは？大規模データを保存する仕組み【DS検定】 permalink: /ds/hdfs/ tags: [ds, データエンジニアリング, ai]
+layout: page
+title: HDFS（Hadoop分散ファイルシステム）とは？大規模データを保存する仕組み【DS検定】
+permalink: /ds/hdfs/
+tags: [ds, データエンジニアリング, ai]
+---
 
 まず結論
 

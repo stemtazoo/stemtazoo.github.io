@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: Sparkとは？ビッグデータを高速処理する分散処理エンジン【DS検定】 permalink: /ds/spark/ tags: [ds, ai]
+layout: page
+title: Sparkとは？ビッグデータを高速処理する分散処理エンジン【DS検定】
+permalink: /ds/spark/
+tags: [ds, ai]
+---
 
 まず結論
 

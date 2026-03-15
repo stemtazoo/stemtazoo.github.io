@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: エンコーディングとは？カテゴリ変数を数値化する理由【DS検定】 permalink: /ds/encoding/ tags: [ds, preprocessing]
+layout: page
+title: エンコーディングとは？カテゴリ変数を数値化する理由【DS検定】
+permalink: /ds/encoding/
+tags: [ds, preprocessing]
+---
 
 まず結論
 

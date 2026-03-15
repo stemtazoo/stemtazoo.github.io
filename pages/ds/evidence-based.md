@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: エビデンスベースドとは？（Evidence-Basedの考え方）【DS検定】 permalink: /ds/evidence-based/ tags: [ds, statistics, business]
+layout: page
+title: エビデンスベースドとは？（Evidence-Basedの考え方）【DS検定】
+permalink: /ds/evidence-based/
+tags: [ds, statistics, business]
+---
 
 まず結論
 

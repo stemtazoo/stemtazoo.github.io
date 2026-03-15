@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: オペレーショナルリスクとは？レピュテーションリスクとの違いを整理【DS検定】 permalink: /ds/operational-risk/ tags: [ds, business]
+layout: page
+title: オペレーショナルリスクとは？レピュテーションリスクとの違いを整理【DS検定】
+permalink: /ds/operational-risk/
+tags: [ds, business]
+---
 
 まず結論
 

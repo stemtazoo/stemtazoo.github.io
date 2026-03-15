@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: 公開鍵認証基盤（PKI）とは？電子署名の信頼を保証する仕組み【DS検定】 permalink: /ds/pki/ tags: [ds, security, ai]
+layout: page
+title: 公開鍵認証基盤（PKI）とは？電子署名の信頼を保証する仕組み【DS検定】
+permalink: /ds/pki/
+tags: [ds, security, ai]
+---
 
 まず結論
 

@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: データ拡張（Data Augmentation）とは？画像AIの学習データを増やす方法【DS検定】 permalink: /ds/data-augmentation/ tags: [ds, ai, preprocessing]
+layout: page
+title: データ拡張（Data Augmentation）とは？画像AIの学習データを増やす方法【DS検定】
+permalink: /ds/data-augmentation/
+tags: [ds, ai, preprocessing]
+---
 
 まず結論
 

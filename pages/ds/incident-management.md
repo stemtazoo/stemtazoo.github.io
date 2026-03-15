@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: インシデント管理とは？障害対応と報告の基本【DS検定】 permalink: /ds/incident-management/ tags: [ds, business]
+layout: page
+title: インシデント管理とは？障害対応と報告の基本【DS検定】
+permalink: /ds/incident-management/
+tags: [ds, business]
+---
 
 まず結論
 

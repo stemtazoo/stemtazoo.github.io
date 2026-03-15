@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: 特徴量エンジニアリングとは？モデル精度を左右する重要工程【DS検定】 permalink: /ds/feature-engineering2/ tags: [ds, preprocessing]
+layout: page
+title: 特徴量エンジニアリングとは？モデル精度を左右する重要工程【DS検定】
+permalink: /ds/feature-engineering2/
+tags: [ds, preprocessing]
+---
 
 まず結論
 

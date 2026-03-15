@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: レピュテーションリスクとは？企業評価が下がる仕組みを理解する【DS検定】 permalink: /ds/reputation-risk/ tags: [ds, business]
+layout: page
+title: レピュテーションリスクとは？企業評価が下がる仕組みを理解する【DS検定】
+permalink: /ds/reputation-risk/
+tags: [ds, business]
+---
 
 まず結論
 

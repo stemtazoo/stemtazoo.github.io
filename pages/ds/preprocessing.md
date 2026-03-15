@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: データ前処理（Preprocessing）とは？分析前に行う重要ステップ【DS検定】 permalink: /ds/preprocessing/ tags: [ds, preprocessing]
+layout: page
+title: データ前処理（Preprocessing）とは？分析前に行う重要ステップ【DS検定】
+permalink: /ds/preprocessing/
+tags: [ds, preprocessing]
+---
 
 まず結論
 

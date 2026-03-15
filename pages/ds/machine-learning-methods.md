@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: 機械学習の解析手法とは？（代表的アルゴリズムを整理）【DS検定】 permalink: /ds/machine-learning-methods/ tags: [ds, ai]
+layout: page
+title: 機械学習の解析手法とは？（代表的アルゴリズムを整理）【DS検定】
+permalink: /ds/machine-learning-methods/
+tags: [ds, ai]
+---
 
 まず結論
 

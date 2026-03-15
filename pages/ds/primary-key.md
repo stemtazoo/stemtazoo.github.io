@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: 主キー（Primary Key）とは？データベースの基本ルールを理解【DS検定】 permalink: /ds/primary-key/ tags: [ds, preprocessing, business]
+layout: page
+title: 主キー（Primary Key）とは？データベースの基本ルールを理解【DS検定】
+permalink: /ds/primary-key/
+tags: [ds, preprocessing, business]
+---
 
 まず結論
 

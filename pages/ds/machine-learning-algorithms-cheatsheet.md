@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: 機械学習アルゴリズム一覧チートシート（教師あり・教師なし・強化学習）【DS検定】 permalink: /ds/machine-learning-algorithms-cheatsheet/ tags: [ds, ai, cheatsheet]
+layout: page
+title: 機械学習アルゴリズム一覧チートシート（教師あり・教師なし・強化学習）【DS検定】
+permalink: /ds/machine-learning-algorithms-cheatsheet/
+tags: [ds, ai, cheatsheet]
+---
 
 まず結論
 

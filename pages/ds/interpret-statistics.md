@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: 数字やグラフの持つメッセージを理解するとは？（統計情報の正しい読み取り）【DS検定】 permalink: /ds/interpret-statistics/ tags: [ds, statistics, business]
+layout: page
+title: 数字やグラフの持つメッセージを理解するとは？（統計情報の正しい読み取り）【DS検定】
+permalink: /ds/interpret-statistics/
+tags: [ds, statistics, business]
+---
 
 まず結論
 

@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: BCP（事業継続計画）とは？災害時でも業務を止めない仕組み【DS検定】 permalink: /ds/bcp/ tags: [ds, business]
+layout: page
+title: BCP（事業継続計画）とは？災害時でも業務を止めない仕組み【DS検定】
+permalink: /ds/bcp/
+tags: [ds, business]
+---
 
 まず結論
 

@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: リスクマネジメントとは？企業がリスクを管理する基本【DS検定】 permalink: /ds/risk-management/ tags: [ds, business]
+layout: page
+title: リスクマネジメントとは？企業がリスクを管理する基本【DS検定】
+permalink: /ds/risk-management/
+tags: [ds, business]
+---
 
 まず結論
 

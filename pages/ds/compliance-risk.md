@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: コンプライアンスリスクとは？オペレーショナルリスクとの違い【DS検定】 permalink: /ds/compliance-risk/ tags: [ds, business]
+layout: page
+title: コンプライアンスリスクとは？オペレーショナルリスクとの違い【DS検定】
+permalink: /ds/compliance-risk/
+tags: [ds, business]
+---
 
 まず結論
 

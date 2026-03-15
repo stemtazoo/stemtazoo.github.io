@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: 参照整合性とは？外部キーとデータ整合性を理解【DS検定】 permalink: /ds/referential-integrity/ tags: [ds, preprocessing, business]
+layout: page
+title: 参照整合性とは？外部キーとデータ整合性を理解【DS検定】
+permalink: /ds/referential-integrity/
+tags: [ds, preprocessing, business]
+---
 
 まず結論
 

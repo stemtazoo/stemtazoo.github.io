@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: WBS（Work Breakdown Structure）とは？タスクを分解してプロジェクトを管理する方法【DS検定】 permalink: /ds/wbs/ tags: [ds, business]
+layout: page
+title: WBS（Work Breakdown Structure）とは？タスクを分解してプロジェクトを管理する方法【DS検定】
+permalink: /ds/wbs/
+tags: [ds, business]
+---
 
 まず結論
 

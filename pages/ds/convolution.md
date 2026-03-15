@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: 畳み込み（Convolution）とは？画像フィルタ処理の基本【DS検定】 permalink: /ds/convolution/ tags: [ds, ai, preprocessing]
+layout: page
+title: 畳み込み（Convolution）とは？画像フィルタ処理の基本【DS検定】
+permalink: /ds/convolution/
+tags: [ds, ai, preprocessing]
+---
 
 まず結論
 

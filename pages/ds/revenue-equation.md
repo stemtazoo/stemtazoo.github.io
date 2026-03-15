@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: 収益方程式とは？KPI設計の基本となるビジネスモデル【DS検定】 permalink: /ds/revenue-equation/ tags: [ds, business]
+layout: page
+title: 収益方程式とは？KPI設計の基本となるビジネスモデル【DS検定】
+permalink: /ds/revenue-equation/
+tags: [ds, business]
+---
 
 まず結論
 

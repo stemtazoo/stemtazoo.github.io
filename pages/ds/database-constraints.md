@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: データベースの制約とは？NOT NULL・一意性・外部キーを整理【DS検定】 permalink: /ds/database-constraints/ tags: [ds, preprocessing, business]
+layout: page
+title: データベースの制約とは？NOT NULL・一意性・外部キーを整理【DS検定】
+permalink: /ds/database-constraints/
+tags: [ds, preprocessing, business]
+---
 
 まず結論
 
