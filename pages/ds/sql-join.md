@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: JOINとは？テーブル結合の基本を理解する【DS検定】 permalink: /ds/sql-join/ tags: [ds, dataengineering]
+layout: page
+title: JOINとは？テーブル結合の基本を理解する【DS検定】
+permalink: /ds/sql-join/
+tags: [ds, dataengineering]
+---
 
 まず結論
 

@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: DDL文とDML文の違いとは？SQLの基本操作を整理【DS検定】 permalink: /ds/sql-ddl-dml/ tags: [ds, dataengineering]
+layout: page
+title: DDL文とDML文の違いとは？SQLの基本操作を整理【DS検定】
+permalink: /ds/sql-ddl-dml/
+tags: [ds, dataengineering]
+---
 
 まず結論
 

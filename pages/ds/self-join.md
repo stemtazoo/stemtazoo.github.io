@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: 自己結合とは？同じテーブルを結合する理由を理解する【DS検定】 permalink: /ds/self-join/ tags: [ds, preprocessing, business]
+layout: page
+title: 自己結合とは？同じテーブルを結合する理由を理解する【DS検定】
+permalink: /ds/self-join/
+tags: [ds, preprocessing, business]
+---
 
 まず結論
 

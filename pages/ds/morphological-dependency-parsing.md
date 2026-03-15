@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: 形態素解析と係り受け解析とは？（自然言語処理の基本）【DS検定】 permalink: /ds/morphological-dependency-parsing/ tags: [ds, ai]
+layout: page
+title: 形態素解析と係り受け解析とは？（自然言語処理の基本）【DS検定】
+permalink: /ds/morphological-dependency-parsing/
+tags: [ds, ai]
+---
 
 まず結論
 

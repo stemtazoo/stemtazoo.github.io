@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: GROUP BYとは？データ集計の基本を理解する【DS検定】 permalink: /ds/sql-groupby/ tags: [ds, dataengineering]
+layout: page
+title: GROUP BYとは？データ集計の基本を理解する【DS検定】
+permalink: /ds/sql-groupby/
+tags: [ds, dataengineering]
+---
 
 まず結論
 

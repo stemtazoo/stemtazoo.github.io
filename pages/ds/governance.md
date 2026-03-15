@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: ガバナンスとは？企業統治とリスク管理の関係【DS検定】 permalink: /ds/governance/ tags: [ds, business]
+layout: page
+title: ガバナンスとは？企業統治とリスク管理の関係【DS検定】
+permalink: /ds/governance/
+tags: [ds, business]
+---
 
 まず結論
 

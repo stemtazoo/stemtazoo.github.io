@@ -1,9 +1,11 @@
-
+---
+layout: page
+title: アノテーションとは？（AI学習データを作る重要な作業）【DS検定】
+permalink: /ds/annotation/
+tags: [ds, ai, preprocessing]
 ---
 
-layout: page title: アノテーションとは？（AI学習データを作る重要な作業）【DS検定】 permalink: /ds/annotation/ tags: [ds, ai, preprocessing]
-
-まず結論
+## まず結論
 
 アノテーション（annotation）とは、データに意味を付けるための「正解ラベル」を付ける作業のことです。
 

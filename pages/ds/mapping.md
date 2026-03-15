@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: マッピング処理とは？データを対応づける基本操作【DS検定】 permalink: /ds/mapping/ tags: [ds, preprocessing]
+layout: page
+title: マッピング処理とは？データを対応づける基本操作【DS検定】
+permalink: /ds/mapping/
+tags: [ds, preprocessing]
+---
 
 まず結論
 

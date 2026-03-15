@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: カーネル（Kernel）とは？画像フィルタ処理の計算ルール【DS検定】 permalink: /ds/kernel/ tags: [ds, ai, preprocessing]
+layout: page
+title: カーネル（Kernel）とは？画像フィルタ処理の計算ルール【DS検定】
+permalink: /ds/kernel/
+tags: [ds, ai, preprocessing]
+---
 
 まず結論
 

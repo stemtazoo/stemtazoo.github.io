@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: クリティカルパスとは？プロジェクト遅延を左右する重要な経路【DS検定】 permalink: /ds/critical-path/ tags: [ds, business]
+layout: page
+title: クリティカルパスとは？プロジェクト遅延を左右する重要な経路【DS検定】
+permalink: /ds/critical-path/
+tags: [ds, business]
+---
 
 まず結論
 

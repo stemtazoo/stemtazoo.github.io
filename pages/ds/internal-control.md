@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: 内部統制とは？企業の不正やミスを防ぐ仕組み【DS検定】 permalink: /ds/internal-control/ tags: [ds, business]
+layout: page
+title: 内部統制とは？企業の不正やミスを防ぐ仕組み【DS検定】
+permalink: /ds/internal-control/
+tags: [ds, business]
+---
 
 まず結論
 

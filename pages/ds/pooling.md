@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: プーリング（Pooling）とは？CNNで重要な特徴抽出の圧縮処理【DS検定】 permalink: /ds/pooling/ tags: [ds, ai]
+layout: page
+title: プーリング（Pooling）とは？CNNで重要な特徴抽出の圧縮処理【DS検定】
+permalink: /ds/pooling/
+tags: [ds, ai]
+---
 
 まず結論
 

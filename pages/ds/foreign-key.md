@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: 外部キー（Foreign Key）とは？テーブルの関係を理解【DS検定】 permalink: /ds/foreign-key/ tags: [ds, preprocessing, business]
+layout: page
+title: 外部キー（Foreign Key）とは？テーブルの関係を理解【DS検定】
+permalink: /ds/foreign-key/
+tags: [ds, preprocessing, business]
+---
 
 まず結論
 

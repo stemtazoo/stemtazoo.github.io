@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: 主成分分析（PCA）とは？次元削減の基本をわかりやすく整理【DS検定】 permalink: /ds/pca/ tags: [ds, ai]
+layout: page
+title: 主成分分析（PCA）とは？次元削減の基本をわかりやすく整理【DS検定】
+permalink: /ds/pca/
+tags: [ds, ai]
+---
 
 まず結論
 

@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: YARNとは？Hadoopクラスタのリソース管理の仕組み【DS検定】 permalink: /ds/yarn/ tags: [ds, データエンジニアリング, ai]
+layout: page
+title: YARNとは？Hadoopクラスタのリソース管理の仕組み【DS検定】
+permalink: /ds/yarn/
+tags: [ds, データエンジニアリング, ai]
+---
 
 まず結論
 

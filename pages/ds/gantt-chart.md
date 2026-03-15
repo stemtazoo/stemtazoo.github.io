@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: ガントチャートとは？WBSとの違いとプロジェクト管理の基本【DS検定】 permalink: /ds/gantt-chart/ tags: [ds, business]
+layout: page
+title: ガントチャートとは？WBSとの違いとプロジェクト管理の基本【DS検定】
+permalink: /ds/gantt-chart/
+tags: [ds, business]
+---
 
 まず結論
 

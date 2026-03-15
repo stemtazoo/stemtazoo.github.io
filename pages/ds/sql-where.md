@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: WHERE句とは？条件抽出の基本を理解する【DS検定】 permalink: /ds/sql-where/ tags: [ds, dataengineering]
+layout: page
+title: WHERE句とは？条件抽出の基本を理解する【DS検定】
+permalink: /ds/sql-where/
+tags: [ds, dataengineering]
+---
 
 まず結論
 

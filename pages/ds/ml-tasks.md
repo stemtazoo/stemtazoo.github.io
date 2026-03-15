@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: 機械学習で解決する代表的なタスクとは？（分類・予測・クラスタリング・異常検知・時系列予測・レコメンド）【DS検定】 permalink: /ds/ml-tasks/ tags: [ds, ai]
+layout: page
+title: 機械学習で解決する代表的なタスクとは？（分類・予測・クラスタリング・異常検知・時系列予測・レコメンド）【DS検定】
+permalink: /ds/ml-tasks/
+tags: [ds, ai]
+---
 
 まず結論
 

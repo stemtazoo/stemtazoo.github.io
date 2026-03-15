@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: 画像のデジタル表現とは？（標本化と量子化の基本）【DS検定】 permalink: /ds/digital-image-representation/ tags: [ds, ai, preprocessing]
+layout: page
+title: 画像のデジタル表現とは？（標本化と量子化の基本）【DS検定】
+permalink: /ds/digital-image-representation/
+tags: [ds, ai, preprocessing]
+---
 
 まず結論
 

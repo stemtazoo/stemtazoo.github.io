@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: カテゴリ変数とは？数値データとの違いを整理【DS検定】 permalink: /ds/categorical-variable/ tags: [ds, preprocessing]
+layout: page
+title: カテゴリ変数とは？数値データとの違いを整理【DS検定】
+permalink: /ds/categorical-variable/
+tags: [ds, preprocessing]
+---
 
 まず結論
 

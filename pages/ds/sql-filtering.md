@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: SQLのフィルタリング処理とは？（WHERE句によるデータ抽出）【DS検定】 permalink: /ds/sql-filtering/ tags: [ds, preprocessing]
+layout: page
+title: SQLのフィルタリング処理とは？（WHERE句によるデータ抽出）【DS検定】
+permalink: /ds/sql-filtering/
+tags: [ds, preprocessing]
+---
 
 まず結論
 

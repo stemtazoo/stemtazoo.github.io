@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: データ抽出と集計の違いとは？（SQL・BIで混同しやすい操作）【DS検定】 permalink: /ds/data-extraction-vs-aggregation/ tags: [ds, preprocessing]
+layout: page
+title: データ抽出と集計の違いとは？（SQL・BIで混同しやすい操作）【DS検定】
+permalink: /ds/data-extraction-vs-aggregation/
+tags: [ds, preprocessing]
+---
 
 まず結論
 

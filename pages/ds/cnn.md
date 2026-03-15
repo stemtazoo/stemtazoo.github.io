@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: CNN（畳み込みニューラルネットワーク）とは？画像認識AIの基本【DS検定】 permalink: /ds/cnn/ tags: [ds, ai]
+layout: page
+title: CNN（畳み込みニューラルネットワーク）とは？画像認識AIの基本【DS検定】
+permalink: /ds/cnn/
+tags: [ds, ai]
+---
 
 まず結論
 
