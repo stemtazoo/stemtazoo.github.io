@@ -1,0 +1,13 @@
+{
+  "latest": "5.00",
+  "versions": [
+    {
+      "version": "5.00",
+      "source_url": "https://www.datascientist.or.jp/common/docs/skillcheck_ver5.00_simple.xlsx",
+      "raw_file": "data\\skillcheck\\raw\\skillcheck_ver5.00_simple.xlsx",
+      "sha256": "d0cd246938898f8b5ce9213a3beae4115a721fe7c9a89c1f372ce1508a636ddb",
+      "rows": 777,
+      "generated_at": "2026-03-16T15:05:06.452162+00:00"
+    }
+  ]
+}

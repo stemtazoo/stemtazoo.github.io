@@ -25,7 +25,7 @@
 ## 実行例
 
 ```bash
-python3 scripts/build_skillcheck_data.py
+python scripts/build_skillcheck_data.py
 ```
 
 ローカルファイルを使う場合:
