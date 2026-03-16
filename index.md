@@ -12,15 +12,53 @@ permalink: /
   </p>
 </section>
 
+<section style="border: 1px solid #ddd; padding: 1rem; border-radius: 6px; margin: 2rem 0;">
+  <h2>📘 G検定 学習まとめ</h2>
+  <p>
+    G検定の過去問・模擬試験で間違えた内容をもとに、<br>
+    用語・概念を体系的に整理しています。
+  </p>
+  <ul>
+    <li>✔ 用語ごとに1ページ完結</li>
+    <li>✔ ひっかけポイント重視</li>
+    <li>✔ 試験直前の確認にも対応</li>
+  </ul>
+  <p>
+    <a href="{{ '/gk/' | relative_url }}">
+      → G検定 学習まとめページへ
+    </a>
+  </p>
+</section>
+
+<section style="border: 1px solid #ddd; padding: 1rem; border-radius: 6px; margin: 2rem 0;">
+  <h2>📊 DS検定 リテラシー 学習まとめ</h2>
+  <p>
+    DS検定（リテラシーレベル）の出題範囲をもとに、<br>
+    統計・確率・データ活用の考え方を整理しています。
+  </p>
+  <ul>
+    <li>✔ 数式より「意味」と「使い分け」を重視</li>
+    <li>✔ よくある誤解・ひっかけポイントを整理</li>
+    <li>✔ 実務と試験の両方に役立つ構成</li>
+  </ul>
+  <p>
+    <a href="{{ '/ds/' | relative_url }}">
+      → DS検定 リテラシー 学習まとめページへ
+    </a>
+  </p>
+</section>
+
 <section>
   <h2>最新記事</h2>
   <div class="tag-filter">
     <p class="tag-filter__label">タグで絞り込む:</p>
     <div class="tag-filter__buttons">
       <button class="tag-button active" data-tag="all">すべて</button>
-      {% assign tag_keys = site.tags | map: "first" | sort %}
-      {% for tag in tag_keys %}
-        <button class="tag-button" data-tag="{{ tag }}">{{ tag }}</button>
+
+      {% assign tag_list = site.posts | map: "tags" | join: "," | split: "," | uniq | sort_natural %}
+      {% assign tag_list = tag_list | reject: "" %}
+      {% for tag_name in tag_list %}
+        <button class="tag-button" data-tag="{{ tag_name }}">{{ tag_name }}</button>
       {% endfor %}
     </div>
   </div>
