@@ -1,4 +1,19 @@
 # stemtazoo.github.io
+
+
+## Skillcheck data pipeline
+
+`/pages/ds` 向けのスキルチェック項目データは、`data/skillcheck` 配下でバージョン管理します。
+
+- 生成スクリプト: `scripts/build_skillcheck_data.py`
+- データ仕様: `data/skillcheck/README.md`
+
+### Quick start
+
+```bash
+python3 scripts/build_skillcheck_data.py
+```
+=======
 ## NotebookLM向け DS エクスポート
 
 `pages/ds/*.md` を NotebookLM に読み込ませやすい Markdown に変換するため、
@@ -35,3 +50,4 @@ python scripts/export_ds_notebooklm.py
 ```
 
 必要なら `scripts/lint_ds_frontmatter.py` で front matter の整合性確認も可能です。
+
