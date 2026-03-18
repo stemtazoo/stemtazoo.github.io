@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: Aprioriアルゴリズムとは？（アソシエーション分析の基本手法）【DS検定】 permalink: /ds/apriori-algorithm/ tags: [ds, statistics, business]
+layout: page
+title: Aprioriアルゴリズムとは？（アソシエーション分析の基本手法）【DS検定】
+permalink: /ds/apriori-algorithm/
+tags: [ds, statistics, business]
+---
 
 まず結論
 

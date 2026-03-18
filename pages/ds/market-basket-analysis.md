@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: マーケットバスケット分析とは？（購買パターン分析の基本）【DS検定】 permalink: /ds/market-basket-analysis/ tags: [ds, statistics, business]
+layout: page
+title: マーケットバスケット分析とは？（購買パターン分析の基本）【DS検定】
+permalink: /ds/market-basket-analysis/
+tags: [ds, statistics, business]
+---
 
 まず結論
 

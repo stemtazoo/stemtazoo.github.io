@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: INとEXISTSの違いとは？値比較と存在判定を整理【DS検定】 permalink: /ds/sql-in-exists/ tags: [ds, preprocessing, database]
+layout: page
+title: INとEXISTSの違いとは？値比較と存在判定を整理【DS検定】
+permalink: /ds/sql-in-exists/
+tags: [ds, preprocessing, database]
+---
 
 まず結論
 

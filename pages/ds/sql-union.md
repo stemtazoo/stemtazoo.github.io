@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: UNIONとUNION ALLの違いとは？重複の扱いを整理【DS検定】 permalink: /ds/sql-union/ tags: [ds, preprocessing, database]
+layout: page
+title: UNIONとUNION ALLの違いとは？重複の扱いを整理【DS検定】
+permalink: /ds/sql-union/
+tags: [ds, preprocessing, database]
+---
 
 まず結論
 

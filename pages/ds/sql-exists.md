@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: EXISTSとは？サブクエリの存在判定を理解する【DS検定】 permalink: /ds/sql-exists/ tags: [ds, preprocessing, database]
+layout: page
+title: EXISTSとは？サブクエリの存在判定を理解する【DS検定】
+permalink: /ds/sql-exists/
+tags: [ds, preprocessing, database]
+---
 
 まず結論
 
