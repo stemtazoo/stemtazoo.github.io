@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: DISTINCTとは？重複データを除去する基本操作【DS検定】 permalink: /ds/sql-distinct/ tags: [ds, preprocessing, database]
+layout: page
+title: DISTINCTとは？重複データを除去する基本操作【DS検定】
+permalink: /ds/sql-distinct/
+tags: [ds, preprocessing, database]
+---
 
 まず結論
 

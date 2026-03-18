@@ -1,7 +1,9 @@
-
 ---
-
-layout: page title: COUNT DISTINCTとは？ユニーク数を数える方法【DS検定】 permalink: /ds/sql-count-distinct/ tags: [ds, preprocessing, database]
+layout: page
+title: COUNT DISTINCTとは？ユニーク数を数える方法【DS検定】
+permalink: /ds/sql-count-distinct/
+tags: [ds, preprocessing, database]
+---
 
 まず結論
 
