@@ -206,8 +206,8 @@ ds_sections:
 
 <ul>
   {% for p in site.pages %}
-    {% if p.url contains '/ds/' %}
-      {% unless classified_urls contains p.url or p.url == page.url %}
+    {% if p.url contains '/ds/' and p.path contains 'pages/ds/' %}
+      {% unless p.path contains '/experts/' or classified_urls contains p.url or p.url == page.url %}
         <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a>（{{ p.url }}）</li>
       {% endunless %}
     {% endif %}
