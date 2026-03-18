@@ -5,7 +5,7 @@ permalink: /ds/reputation-risk/
 tags: [ds, business]
 ---
 
-まず結論
+## まず結論
 
 レピュテーションリスクとは、企業や組織の評判（信用）が低下することで発生するリスクのことです。
 

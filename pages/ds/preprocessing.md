@@ -5,7 +5,7 @@ permalink: /ds/preprocessing/
 tags: [ds, preprocessing]
 ---
 
-まず結論
+## まず結論
 
 データ前処理とは、分析や機械学習を行う前にデータを整える作業です。
 

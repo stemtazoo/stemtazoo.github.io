@@ -5,7 +5,7 @@ permalink: /ds/machine-learning-algorithms-cheatsheet/
 tags: [ds, ai, cheatsheet]
 ---
 
-まず結論
+## まず結論
 
 機械学習アルゴリズムは「教師あり学習・教師なし学習・強化学習」の3つに分類されます。
 

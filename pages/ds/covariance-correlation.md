@@ -5,7 +5,7 @@ permalink: /ds/covariance-correlation/
 tags: [ds, statistics]
 ---
 
-まず結論
+## まず結論
 
 共分散と相関係数は、2つのデータがどのような関係で動くかを表す指標です。
 

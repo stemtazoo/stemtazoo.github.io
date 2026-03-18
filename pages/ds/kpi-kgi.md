@@ -5,7 +5,7 @@ permalink: /ds/kpi-kgi/
 tags: [ds, business]
 ---
 
-まず結論
+## まず結論
 
 **KGI（Key Goal Indicator）**は最終的な目標を示す指標、**KPI（Key Performance Indicator）**はその目標達成のための途中の指標です。
 

@@ -5,7 +5,7 @@ permalink: /ds/revenue-equation/
 tags: [ds, business]
 ---
 
-まず結論
+## まず結論
 
 収益方程式とは、企業の売上がどの要素の掛け合わせで構成されているかを表した式です。
 

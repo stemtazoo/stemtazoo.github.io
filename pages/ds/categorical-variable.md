@@ -5,7 +5,7 @@ permalink: /ds/categorical-variable/
 tags: [ds, preprocessing]
 ---
 
-まず結論
+## まず結論
 
 カテゴリ変数とは、数値ではなく「分類（カテゴリー）」を表すデータです。
 

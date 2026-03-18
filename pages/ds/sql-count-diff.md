@@ -5,7 +5,7 @@ permalink: /ds/sql-count-diff/
 tags: [ds, preprocessing, database, cheatsheet]
 ---
 
-まず結論
+## まず結論
 
 COUNT(*)＝全行数（NULL含む）
 

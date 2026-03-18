@@ -5,7 +5,7 @@ permalink: /ds/five-forces-analysis/
 tags: [ds, business]
 ---
 
-まず結論
+## まず結論
 
 **5フォース分析（Five Forces Analysis）**とは、業界の競争環境を5つの要因から分析するフレームワークです。
 

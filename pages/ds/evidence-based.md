@@ -5,7 +5,7 @@ permalink: /ds/evidence-based/
 tags: [ds, statistics, business]
 ---
 
-まず結論
+## まず結論
 
 エビデンスベースド（Evidence-Based）とは、勘や思い込みではなく、データや根拠に基づいて判断する考え方です。
 

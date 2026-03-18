@@ -5,7 +5,7 @@ permalink: /ds/database-constraints/
 tags: [ds, preprocessing, business]
 ---
 
-まず結論
+## まず結論
 
 データベースの制約（constraint）とは、データの整合性や正しさを保つためにテーブルに設定するルールです。
 

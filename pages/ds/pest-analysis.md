@@ -5,7 +5,7 @@ permalink: /ds/pest-analysis/
 tags: [ds, business]
 ---
 
-まず結論
+## まず結論
 
 **PEST分析（PEST Analysis）**とは、企業を取り巻く外部環境を「政治・経済・社会・技術」の4つの視点から分析するフレームワークです。
 

@@ -5,7 +5,7 @@ permalink: /ds/interpret-statistics/
 tags: [ds, statistics, business]
 ---
 
-まず結論
+## まず結論
 
 数字やグラフの持つメッセージを理解するとは、統計データをそのまま受け取るのではなく、「何を意味しているのか」「比較は適切か」を考えて読み取ることです。
 

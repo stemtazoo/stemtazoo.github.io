@@ -5,7 +5,7 @@ permalink: /ds/sql-distinct/
 tags: [ds, preprocessing, database]
 ---
 
-まず結論
+## まず結論
 
 DISTINCTとは「重複している値を1つにまとめる（重複排除する）」SQLの機能
 

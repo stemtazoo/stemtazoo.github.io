@@ -5,7 +5,7 @@ permalink: /ds/correlation-vs-causation/
 tags: [ds, statistics, business]
 ---
 
-まず結論
+## まず結論
 
 相関とは「2つのデータが一緒に変化する関係」、因果とは「一方が原因となってもう一方が結果として変化する関係」です。
 

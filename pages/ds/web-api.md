@@ -5,7 +5,7 @@ permalink: /ds/web-api/
 tags: [ds, business]
 ---
 
-まず結論
+## まず結論
 
 Web APIとは、HTTP通信を使って外部のサービスやデータをプログラムから利用できる仕組みです。
 

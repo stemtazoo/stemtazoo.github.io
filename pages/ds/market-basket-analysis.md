@@ -5,7 +5,7 @@ permalink: /ds/market-basket-analysis/
 tags: [ds, statistics, business]
 ---
 
-まず結論
+## まず結論
 
 マーケットバスケット分析（Market Basket Analysis）は、「一緒に購入されやすい商品」を見つけるための分析手法です。
 

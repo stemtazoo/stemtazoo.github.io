@@ -5,7 +5,7 @@ permalink: /ds/internal-control/
 tags: [ds, business]
 ---
 
-まず結論
+## まず結論
 
 内部統制とは、企業の業務が適切に行われるように、不正やミスを防ぐための仕組みのことです。
 

@@ -5,7 +5,7 @@ permalink: /ds/sql-join/
 tags: [ds, dataengineering]
 ---
 
-まず結論
+## まず結論
 
 JOINとは、複数のテーブルを結合してデータを取得するSQLの仕組みです。
 

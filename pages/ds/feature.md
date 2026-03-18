@@ -7,7 +7,7 @@ tags: [ds, preprocessing, ai]
 
 特徴量（Feature）とは？
 
-まず結論
+## まず結論
 
 **特徴量（Feature）**とは、
 

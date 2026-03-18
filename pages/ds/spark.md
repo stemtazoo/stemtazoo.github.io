@@ -5,7 +5,7 @@ permalink: /ds/spark/
 tags: [ds, ai]
 ---
 
-まず結論
+## まず結論
 
 Spark（Apache Spark）とは、大量データを複数のコンピュータで並列処理するための高速な分散処理エンジンです。
 

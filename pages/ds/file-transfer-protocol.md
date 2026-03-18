@@ -5,7 +5,7 @@ permalink: /ds/file-transfer-protocol/
 tags: [ds, dataengineering, business]
 ---
 
-まず結論
+## まず結論
 
 ファイル転送プロトコルとは、ネットワーク上でファイルを送受信するための通信ルール（プロトコル）のことです。
 

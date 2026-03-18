@@ -5,7 +5,7 @@ permalink: /ds/statistics-overview/
 tags: [ds, statistics, cheatsheet]
 ---
 
-まず結論
+## まず結論
 
 統計とは「データのばらつき」と「データ同士の関係」を理解するための考え方です。
 

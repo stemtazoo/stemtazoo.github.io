@@ -5,7 +5,7 @@ permalink: /ds/primary-key/
 tags: [ds, preprocessing, business]
 ---
 
-まず結論
+## まず結論
 
 **主キー（Primary Key）とは、テーブルの中で1つのレコードを一意に識別するための列（または列の組み合わせ）**です。
 

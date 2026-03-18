@@ -5,7 +5,7 @@ permalink: /ds/data-augmentation/
 tags: [ds, ai, preprocessing]
 ---
 
-まず結論
+## まず結論
 
 データ拡張（Data Augmentation）とは、既存の画像データを変換して人工的に学習データを増やす手法です。
 

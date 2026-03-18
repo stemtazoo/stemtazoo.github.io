@@ -5,7 +5,7 @@ permalink: /ds/apriori-algorithm/
 tags: [ds, statistics, business]
 ---
 
-まず結論
+## まず結論
 
 Aprioriアルゴリズム（アプリオリ）は、アソシエーション分析で「よく一緒に起きる組み合わせ」を効率よく見つけるためのアルゴリズムです。
 

@@ -5,7 +5,7 @@ permalink: /ds/data-governance/
 tags: [ds, data_management, governance]
 ---
 
-まず結論
+## まず結論
 
 **データガバナンス（Data Governance）**とは、組織がデータを適切に管理・活用するためのルールや仕組みのことです。
 

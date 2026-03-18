@@ -5,7 +5,7 @@ permalink: /ds/pdca-cycle/
 tags: [ds, business]
 ---
 
-まず結論
+## まず結論
 
 **PDCAサイクル（PDCA Cycle）**とは、計画→実行→評価→改善の4つのステップを繰り返して業務や品質を改善していくフレームワークです。
 

@@ -5,7 +5,7 @@ permalink: /ds/critical-path/
 tags: [ds, business]
 ---
 
-まず結論
+## まず結論
 
 クリティカルパス（Critical Path）とは、プロジェクト全体の完了時間を決める最も長い作業経路のことです。
 
