@@ -5,7 +5,7 @@ permalink: /ds/sql-ddl-dml/
 tags: [ds, dataengineering]
 ---
 
-まず結論
+## まず結論
 
 **DDL文（Data Definition Language）**は「データベースの構造を定義するSQL」
 

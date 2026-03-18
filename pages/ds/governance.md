@@ -5,7 +5,7 @@ permalink: /ds/governance/
 tags: [ds, business]
 ---
 
-まず結論
+## まず結論
 
 ガバナンスとは、企業や組織が適切に運営されるように監督・管理する仕組みのことです。
 

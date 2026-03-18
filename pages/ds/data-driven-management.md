@@ -5,7 +5,7 @@ permalink: /ds/data-driven-management/
 tags: [ds, business]
 ---
 
-まず結論
+## まず結論
 
 **データドリブン経営（Data Driven Management）**とは、経験や勘だけではなく「データにもとづいて意思決定を行う経営手法」です。
 

@@ -5,7 +5,7 @@ permalink: /ds/gantt-chart/
 tags: [ds, business]
 ---
 
-まず結論
+## まず結論
 
 ガントチャートとは、タスクの開始日・終了日を時間軸で管理するスケジュール管理手法です。
 

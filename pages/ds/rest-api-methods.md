@@ -5,7 +5,7 @@ permalink: /ds/rest-api-methods/
 tags: [ds, business]
 ---
 
-まず結論
+## まず結論
 
 REST API のメソッドとは、API を通じてデータに対してどのような操作（取得・作成・更新・削除）を行うかを表す HTTP の命令です。
 DS検定では 「GET＝取得」「POST＝作成」「PUT/PATCH＝更新」「DELETE＝削除」 を正しく切り分けられるかがよく問われます。

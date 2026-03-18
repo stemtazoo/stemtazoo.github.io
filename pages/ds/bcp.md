@@ -5,7 +5,7 @@ permalink: /ds/bcp/
 tags: [ds, business]
 ---
 
-まず結論
+## まず結論
 
 BCP（Business Continuity Plan：事業継続計画）とは、災害・事故・システム障害などの非常事態が起きても、企業の重要な業務を継続または早期復旧させるための計画です。
 

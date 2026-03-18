@@ -5,7 +5,7 @@ permalink: /ds/sql-exists/
 tags: [ds, preprocessing, database]
 ---
 
-まず結論
+## まず結論
 
 EXISTSとは「条件を満たすデータが存在するかどうか」を判定するSQLの構文
 

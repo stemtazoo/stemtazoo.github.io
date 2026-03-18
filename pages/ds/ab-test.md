@@ -5,7 +5,7 @@ permalink: /ds/ab-test/
 tags: [ds, statistics, business]
 ---
 
-まず結論
+## まず結論
 
 **A/Bテスト（ABテスト）**とは、2つ以上の施策を同時に試し、どちらがより良い結果を出すかをデータで比較する実験手法です。
 

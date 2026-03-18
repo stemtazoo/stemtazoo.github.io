@@ -5,7 +5,7 @@ permalink: /ds/coefficient-of-determination-contribution/
 tags: [ds, statistics, evaluation]
 ---
 
-まず結論
+## まず結論
 
 決定係数（R²）と寄与率は、回帰モデルがどれくらいデータを説明できているかを表す指標です。
 

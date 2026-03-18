@@ -5,7 +5,7 @@ permalink: /ds/morphological-dependency-parsing/
 tags: [ds, ai]
 ---
 
-まず結論
+## まず結論
 
 形態素解析は文章を意味のある最小単位（形態素）に分解する処理、
 係り受け解析は文章中の単語や文節が「どこと関係しているか」を解析する処理です。

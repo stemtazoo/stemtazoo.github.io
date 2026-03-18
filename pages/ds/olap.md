@@ -5,7 +5,7 @@ permalink: /ds/olap/
 tags: [ds, visualization, business]
 ---
 
-まず結論
+## まず結論
 
 OLAP（Online Analytical Processing）とは、多次元データをさまざまな視点から分析するための技術です。
 

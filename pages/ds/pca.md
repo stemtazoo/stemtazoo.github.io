@@ -5,7 +5,7 @@ permalink: /ds/pca/
 tags: [ds, ai]
 ---
 
-まず結論
+## まず結論
 
 **主成分分析（PCA：Principal Component Analysis）**とは、
 多くの特徴量を、情報をできるだけ保ちながら少ない次元にまとめる「次元削減」の手法です。

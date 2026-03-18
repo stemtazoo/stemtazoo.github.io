@@ -5,7 +5,7 @@ permalink: /ds/encoding/
 tags: [ds, preprocessing]
 ---
 
-まず結論
+## まず結論
 
 エンコーディングとは、カテゴリデータを数値に変換する前処理です。
 

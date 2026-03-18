@@ -5,7 +5,7 @@ permalink: /ds/compliance-risk/
 tags: [ds, business]
 ---
 
-まず結論
+## まず結論
 
 コンプライアンスリスクとは、法律・規則・社内ルールを守らないことで発生するリスクのことです。
 
