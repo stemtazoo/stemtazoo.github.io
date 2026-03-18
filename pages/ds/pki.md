@@ -5,7 +5,7 @@ permalink: /ds/pki/
 tags: [ds, security, ai]
 ---
 
-まず結論
+## まず結論
 
 公開鍵認証基盤（PKI：Public Key Infrastructure）とは、「公開鍵が本当にその人のものか」を証明する仕組みです。
 

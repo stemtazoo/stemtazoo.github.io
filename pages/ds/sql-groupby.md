@@ -5,7 +5,7 @@ permalink: /ds/sql-groupby/
 tags: [ds, dataengineering]
 ---
 
-まず結論
+## まず結論
 
 GROUP BYとは、データを特定の列でグループ化して集計するSQLの仕組みです。
 

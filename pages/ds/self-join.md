@@ -5,7 +5,7 @@ permalink: /ds/self-join/
 tags: [ds, preprocessing, business]
 ---
 
-まず結論
+## まず結論
 
 自己結合（Self Join）とは、同じテーブルを2回使って結合するSQL処理です。
 

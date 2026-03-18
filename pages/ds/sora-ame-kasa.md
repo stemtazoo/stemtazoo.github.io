@@ -5,7 +5,7 @@ permalink: /ds/sora-ame-kasa/
 tags: [ds, business, ai]
 ---
 
-まず結論
+## まず結論
 
 空・雨・傘とは、「事実→解釈→行動」の順で考えるビジネス思考フレームです。
 

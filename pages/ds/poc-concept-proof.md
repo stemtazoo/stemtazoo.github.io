@@ -5,7 +5,7 @@ permalink: /ds/poc-concept-proof/
 tags: [ds, business, ai]
 ---
 
-まず結論
+## まず結論
 
 **PoC（Proof of Concept）**とは、新しい技術やアイデアが実際に実現可能かを検証するための試験的な取り組みです。
 

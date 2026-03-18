@@ -5,7 +5,7 @@ permalink: /ds/variance-standard-deviation/
 tags: [ds, statistics]
 ---
 
-まず結論
+## まず結論
 
 分散と標準偏差は、データが平均からどれくらい散らばっているか（ばらつき）を表す指標です。
 

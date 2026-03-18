@@ -5,7 +5,7 @@ permalink: /ds/foreign-key/
 tags: [ds, preprocessing, business]
 ---
 
-まず結論
+## まず結論
 
 外部キー（Foreign Key）とは、別のテーブルの主キーを参照することでテーブル同士の関係を表す列です。
 

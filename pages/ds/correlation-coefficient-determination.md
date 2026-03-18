@@ -5,7 +5,7 @@ permalink: /ds/correlation-coefficient-determination/
 tags: [ds, statistics, evaluation]
 ---
 
-まず結論
+## まず結論
 
 相関係数は「2つのデータの関係の強さ」を表し、決定係数は「その関係でどれくらい説明できるか」を表す指標です。
 

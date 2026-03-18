@@ -5,7 +5,7 @@ permalink: /ds/wbs/
 tags: [ds, business]
 ---
 
-まず結論
+## まず結論
 
 WBS（Work Breakdown Structure）とは、プロジェクトの作業を細かいタスクに分解して整理する管理手法です。
 

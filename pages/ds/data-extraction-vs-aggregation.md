@@ -5,7 +5,7 @@ permalink: /ds/data-extraction-vs-aggregation/
 tags: [ds, preprocessing]
 ---
 
-まず結論
+## まず結論
 
 データ抽出は「必要なデータを選ぶ操作」、集計は「データをまとめて数値を計算する操作」です。
 DS検定では、この2つの役割の違いを理解しているかがよく問われます。

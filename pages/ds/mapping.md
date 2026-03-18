@@ -5,7 +5,7 @@ permalink: /ds/mapping/
 tags: [ds, preprocessing]
 ---
 
-まず結論
+## まず結論
 
 マッピング処理とは、ある値を別の値に対応づけて変換する処理です。
 

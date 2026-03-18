@@ -5,7 +5,7 @@ permalink: /ds/referential-integrity/
 tags: [ds, preprocessing, business]
 ---
 
-まず結論
+## まず結論
 
 参照整合性（Referential Integrity）とは、外部キーが参照する値が必ず参照先テーブルに存在することを保証するルールです。
 

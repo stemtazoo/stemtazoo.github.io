@@ -5,7 +5,7 @@ permalink: /ds/data-literacy/
 tags: [ds, literacy, business]
 ---
 
-まず結論
+## まず結論
 
 **データリテラシー（Data Literacy）**とは、データを理解し、正しく読み取り、意思決定に活用する能力のことです。
 

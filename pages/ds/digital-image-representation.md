@@ -5,7 +5,7 @@ permalink: /ds/digital-image-representation/
 tags: [ds, ai, preprocessing]
 ---
 
-まず結論
+## まず結論
 
 画像のデジタル表現とは、画像を「標本化（サンプリング）」と「量子化」によって数値データとして表す仕組みです。
 

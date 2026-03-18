@@ -5,7 +5,7 @@ permalink: /ds/sql-in-exists/
 tags: [ds, preprocessing, database]
 ---
 
-まず結論
+## まず結論
 
 IN＝値がリストに含まれるかを判定
 

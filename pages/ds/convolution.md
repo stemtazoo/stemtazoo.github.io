@@ -5,7 +5,7 @@ permalink: /ds/convolution/
 tags: [ds, ai, preprocessing]
 ---
 
-まず結論
+## まず結論
 
 畳み込み（Convolution）とは、画像の周囲のピクセル値を使って新しいピクセル値を計算する処理で、画像フィルタ処理の基本となる計算方法です。
 

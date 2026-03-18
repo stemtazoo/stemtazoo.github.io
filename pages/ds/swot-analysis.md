@@ -5,7 +5,7 @@ permalink: /ds/swot-analysis/
 tags: [ds, business]
 ---
 
-まず結論
+## まず結論
 
 **SWOT分析（SWOT Analysis）**とは、企業や事業の状況を「強み・弱み・機会・脅威」の4つの視点で整理するフレームワークです。
 

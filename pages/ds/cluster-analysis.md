@@ -5,7 +5,7 @@ permalink: /ds/cluster-analysis/
 tags: [ds, ai]
 ---
 
-まず結論
+## まず結論
 
 **クラスタ分析（Cluster Analysis）**とは、似た特徴を持つデータ同士を自動的にグループ分けする分析手法です。
 

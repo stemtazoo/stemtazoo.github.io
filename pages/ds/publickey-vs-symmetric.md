@@ -5,7 +5,7 @@ permalink: /ds/publickey-vs-symmetric/
 tags: [ds, security]
 ---
 
-まず結論
+## まず結論
 
 共通鍵暗号方式は「同じ鍵で暗号化と復号を行う方式」
 

@@ -5,7 +5,7 @@ permalink: /ds/sql-where/
 tags: [ds, dataengineering]
 ---
 
-まず結論
+## まず結論
 
 WHERE句とは、SQLで特定の条件に一致するデータだけを取り出すための仕組みです。
 

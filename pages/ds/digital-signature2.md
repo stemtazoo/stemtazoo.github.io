@@ -5,7 +5,7 @@ permalink: /ds/digital-signature2/
 tags: [ds, ai, business]
 ---
 
-まず結論
+## まず結論
 
 電子署名とは「送信者本人が作成したこと」と「途中で改ざんされていないこと」を証明する仕組みです。
 

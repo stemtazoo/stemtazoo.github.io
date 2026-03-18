@@ -5,7 +5,7 @@ permalink: /ds/yarn/
 tags: [ds, データエンジニアリング, ai]
 ---
 
-まず結論
+## まず結論
 
 YARN（Yet Another Resource Negotiator）とは、Hadoopクラスタ全体の計算資源（CPUやメモリ）を管理し、どの処理をどのサーバーで動かすかを調整する仕組みです。
 

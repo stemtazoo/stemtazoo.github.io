@@ -5,7 +5,7 @@ permalink: /ds/pooling/
 tags: [ds, ai]
 ---
 
-まず結論
+## まず結論
 
 プーリング（Pooling）とは、CNNで特徴マップのサイズを小さくしながら重要な特徴を残す処理です。
 

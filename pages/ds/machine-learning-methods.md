@@ -5,7 +5,7 @@ permalink: /ds/machine-learning-methods/
 tags: [ds, ai]
 ---
 
-まず結論
+## まず結論
 
 機械学習の解析手法とは、データからパターンを学習し予測や分類を行うアルゴリズムのことです。
 

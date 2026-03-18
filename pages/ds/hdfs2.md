@@ -5,7 +5,7 @@ permalink: /ds/hdfs/
 tags: [ds, データエンジニアリング, ai]
 ---
 
-まず結論
+## まず結論
 
 HDFS（Hadoop Distributed File System）とは、大量のデータを複数のコンピュータに分散して保存するためのファイルシステムです。
 

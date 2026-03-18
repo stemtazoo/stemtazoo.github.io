@@ -5,7 +5,7 @@ permalink: /ds/customer-journey/
 tags: [ds, business, marketing]
 ---
 
-まず結論
+## まず結論
 
 **カスタマージャーニー（Customer Journey）**とは、顧客が商品やサービスを知ってから購入・利用するまでの一連の体験を時系列で整理したものです。
 

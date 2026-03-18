@@ -5,7 +5,7 @@ permalink: /ds/kernel/
 tags: [ds, ai, preprocessing]
 ---
 
-まず結論
+## まず結論
 
 カーネル（Kernel）とは、画像の畳み込み処理で使われる小さな行列で、画像をどのように変換するかを決める「計算ルール」です。
 

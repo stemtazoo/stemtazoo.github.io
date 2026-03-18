@@ -5,7 +5,7 @@ permalink: /ds/sql-union/
 tags: [ds, preprocessing, database]
 ---
 
-まず結論
+## まず結論
 
 UNION＝重複を除いて結合
 

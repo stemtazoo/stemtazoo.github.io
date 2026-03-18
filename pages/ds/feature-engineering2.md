@@ -5,7 +5,7 @@ permalink: /ds/feature-engineering2/
 tags: [ds, preprocessing]
 ---
 
-まず結論
+## まず結論
 
 特徴量エンジニアリングとは、機械学習モデルの性能を高めるためにデータの特徴量を作成・変換する工程です。
 

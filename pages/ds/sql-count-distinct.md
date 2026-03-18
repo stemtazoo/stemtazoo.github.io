@@ -5,7 +5,7 @@ permalink: /ds/sql-count-distinct/
 tags: [ds, preprocessing, database]
 ---
 
-まず結論
+## まず結論
 
 COUNT DISTINCTとは「重複を除いたユニークな件数を数える」SQLの機能
 
