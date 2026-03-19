@@ -1,8 +1,9 @@
----
+﻿---
 layout: page
 title: UNIONとUNION ALLの違いとは？重複の扱いを整理【DS検定】
 permalink: /ds/sql-union/
-tags: [ds, preprocessing, database]
+categories: [data-engineering]
+tags: [ds, sql]
 ---
 
 ## まず結論
@@ -15,7 +16,6 @@ DS検定では「重複が消えるかどうか」を判断できるかがポイ
 
 
 
----
 
 ## 直感的な説明
 
@@ -37,7 +37,6 @@ UNION ALL → A, B, B, C（そのまま）
 👉 「Bが1つになるか、そのまま2つか」の違い
 
 
----
 
 ## 定義・仕組み
 
@@ -71,7 +70,6 @@ SELECT 列 FROM テーブル2;
 
 
 
----
 
 ## どんな場面で使う？
 
@@ -90,7 +88,6 @@ UNION ALL
 
 
 
----
 
 ## よくある誤解・混同
 
@@ -101,14 +98,12 @@ UNION ALL
 👉 DS検定ではここが典型的なひっかけ
 
 
----
 
 ❌ 件数は同じになる
 
 → ⭕ UNIONは重複があると件数が減る
 
 
----
 
 ❌ UNIONは速い
 
@@ -117,14 +112,12 @@ UNION ALL
 👉 UNION ALLの方が基本的に高速
 
 
----
 
 ❌ 行の順番は保証される
 
 → ⭕ ORDER BYを使わないと順序は保証されない
 
 
----
 
 ## まとめ（試験直前用）
 
@@ -140,7 +133,6 @@ UNION ALLの方が高速
 
 
 
----
 
 【対応スキル項目（データエンジニアリング力シート）】
 

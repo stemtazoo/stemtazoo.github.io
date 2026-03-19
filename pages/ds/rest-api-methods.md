@@ -1,8 +1,9 @@
----
+﻿---
 layout: page
 title: REST API のメソッドとは？データ操作の役割を整理【DS検定】
 permalink: /ds/rest-api-methods/
-tags: [ds, business]
+categories: [data-engineering]
+tags: [ds, data-processing]
 ---
 
 ## まず結論
@@ -146,7 +147,6 @@ DS検定では特に次を押さえる
 試験では 「外部システムからデータ取得」→ GET と判断できれば正解できます。
 
 
----
 
 【対応スキル項目（データエンジニアリング力シート）】
 

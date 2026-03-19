@@ -1,8 +1,9 @@
----
+﻿---
 layout: page
 title: 行列の掛け算とは？（行列同士の掛け算）【DS検定リテラシー】
 permalink: /ds/matrix-multiplication/
-tags: [ds, statistics]
+categories: [data-science]
+tags: [ds, math]
 ---
 
 ## まず結論
@@ -82,7 +83,6 @@ DS検定では、次のように問われがちです。
 * AB と BA は基本的に別物（順番が大事）
 * “要素ごとの掛け算”と混同する選択肢に注意
 
----
 
 【対応スキル項目（データサイエンス力シート）】
 - 数学的理解

@@ -1,15 +1,15 @@
----
+﻿---
 layout: page
 title: 外れ値を見出すための適切な可視化手法とは？【DS検定】
 permalink: /ds/outlier-visualization/
-tags: [ds, visualization, statistics]
+categories: [data-science]
+tags: [ds, visualization]
 ---
 
 ## まず結論
 - 外れ値を見つけるには「分布を把握できる可視化（ヒストグラム・箱ひげ図など）」を使うことが重要  
 - DS検定では「外れ値を見るのに適したグラフを選べているか」がよく問われる
 
----
 
 ## 直感的な説明
 例えばテストの点数があったとします。
@@ -29,7 +29,6 @@ tags: [ds, visualization, statistics]
 
 👉「普通と違う位置にあるデータ」を見つけるのがポイント
 
----
 
 ## 定義・仕組み
 外れ値とは  
@@ -37,7 +36,6 @@ tags: [ds, visualization, statistics]
 
 これを見つける代表的な可視化手法が以下です。
 
----
 
 ### ヒストグラム
 - データの分布を棒で表す  
@@ -45,7 +43,6 @@ tags: [ds, visualization, statistics]
 
 👉全体の形を見るのに強い
 
----
 
 ### 箱ひげ図（ボックスプロット）
 - データの範囲とばらつきを表す  
@@ -53,7 +50,6 @@ tags: [ds, visualization, statistics]
 
 👉外れ値検出に最もよく使われる
 
----
 
 ### なぜこれらが重要？
 外れ値は
@@ -65,7 +61,6 @@ tags: [ds, visualization, statistics]
 
 👉分析結果を歪める原因になるため、必ずチェックが必要
 
----
 
 ## どんな場面で使う？
 ### 使うべき場面
@@ -75,7 +70,6 @@ tags: [ds, visualization, statistics]
 
 👉「このデータ、そのまま使って大丈夫？」を確認する場面
 
----
 
 ### 使うと誤解しやすい場面
 - 平均だけ見て判断する場合  
@@ -86,7 +80,6 @@ tags: [ds, visualization, statistics]
 
 👉外れ値は「分布」を見ないと分からない
 
----
 
 ## よくある誤解・混同
 ### ❌ 「外れ値＝削除すべき」
@@ -95,7 +88,6 @@ tags: [ds, visualization, statistics]
 - 本当に重要な異常データの可能性もある  
 👉理由を確認してから判断
 
----
 
 ### ❌ 「どのグラフでも外れ値は分かる」
 → 間違いです
@@ -104,14 +96,12 @@ tags: [ds, visualization, statistics]
 
 👉分布が見えるグラフが必要
 
----
 
 ### ❌ 「箱ひげ図は難しいから不要」
 → 間違いです
 
 👉DS検定では箱ひげ図の理解は重要
 
----
 
 ### DS検定のひっかけポイント
 - 「外れ値検出に円グラフ」→ 誤り  
@@ -120,7 +110,6 @@ tags: [ds, visualization, statistics]
 
 👉「分布が見えるか」が判断基準
 
----
 
 ## まとめ（試験直前用）
 - 外れ値は「他と大きく異なる値」  
@@ -129,7 +118,6 @@ tags: [ds, visualization, statistics]
 - 平均だけでは判断できない  
 - DS検定では「適切なグラフ選択」が問われる
 
----
 
 ## 対応スキル項目
 

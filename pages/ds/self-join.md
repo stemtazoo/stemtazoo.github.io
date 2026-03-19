@@ -1,8 +1,9 @@
----
+﻿---
 layout: page
 title: 自己結合とは？同じテーブルを結合する理由を理解する【DS検定】
 permalink: /ds/self-join/
-tags: [ds, preprocessing, business]
+categories: [data-engineering]
+tags: [ds, sql]
 ---
 
 ## まず結論
@@ -22,7 +23,6 @@ DS検定では
 という状況です。
 
 
----
 
 ## 直感的な説明
 
@@ -80,7 +80,6 @@ DS検定では
 社員テーブル（上司）
 
 
----
 
 自己結合の結果
 
@@ -102,7 +101,6 @@ DS検定では
 です。
 
 
----
 
 ## 定義・仕組み
 

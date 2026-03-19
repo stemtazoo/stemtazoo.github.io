@@ -1,8 +1,9 @@
----
+﻿---
 layout: page
 title: DS検定でよく出る統計まとめ（平均・分散・相関を一気に整理）
 permalink: /ds/statistics-summary/
-tags: [ds, statistics, cheatsheet]
+categories: [data-science]
+tags: [ds, statistics]
 ---
 
 ## まず結論
@@ -32,7 +33,6 @@ DS検定の統計問題は、次の流れで理解すると整理できます。
 DS検定では  
 **公式よりも「何を表す指標か」を理解しているか**が問われます。
 
----
 
 # ① データの中心
 
@@ -58,7 +58,6 @@ DS検定では
 
 の違いを理解しているかが問われます。
 
----
 
 # ② データのばらつき
 
@@ -87,7 +86,6 @@ DS検定では
 
 → **[分散と標準偏差とは](/ds/variance-standard-deviation/)**
 
----
 
 # ③ データ同士の関係
 
@@ -118,7 +116,6 @@ DS検定では
 
 → **[共分散と相関係数とは](/ds/covariance-correlation/)**
 
----
 
 # ④ モデルの説明力
 

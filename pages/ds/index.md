@@ -1,8 +1,9 @@
----
+﻿---
 layout: page
 title: DS検定 リテラシー 学習まとめ
 permalink: /ds/
-tags: [ds]
+categories: [business]
+tags: [ds, design]
 
 # 表示順はここで固定（/ds/〇〇/ ＝ pages/ds/〇〇.md）
 ds_sections:
@@ -93,7 +94,6 @@ ds_sections:
       - /ds/skillcheck/
       - /ds/engineering-skillcheck/
       - /ds/ai-utilization-skillcheck/
-
 ---
 
 {% comment %}
@@ -107,7 +107,6 @@ ds_sections:
 - 実務視点：**データ前処理 → 可視化 → 分析**
 - 試験直前：**チートシート → ひっかけ問題集**
 
----
 
 ## DS検定 公式リンク
 
@@ -125,7 +124,6 @@ ds_sections:
   </a>
 </div>
 
----
 
 ## 目次
 
@@ -138,42 +136,35 @@ ds_sections:
 - [モデルカリキュラム](#モデルカリキュラム)
 - [試験対策](#試験対策)
 
----
 
 ## 試験概要：スキルレベル定義
 {% assign sec = page.ds_sections | where: "title", "試験概要：スキルレベル定義" | first %}
 {% include ds_section.html sec=sec %}
 
----
 
 ## 試験概要：モデルカリキュラム
 {% assign sec = page.ds_sections | where: "title", "試験概要：モデルカリキュラム" | first %}
 {% include ds_section.html sec=sec %}
 
----
 ## ビジネス力
 {% assign sec = page.ds_sections | where: "title", "ビジネス力" | first %}
 {% include ds_section.html sec=sec %}
 
----
 
 ## データサイエンス力
 {% assign sec = page.ds_sections | where: "title", "データサイエンス力" | first %}
 {% include ds_section.html sec=sec %}
 
----
 
 ## データエンジニアリング力
 {% assign sec = page.ds_sections | where: "title", "データエンジニアリング力" | first %}
 {% include ds_section.html sec=sec %}
 
----
 
 ## モデルカリキュラム
 {% assign sec = page.ds_sections | where: "title", "モデルカリキュラム" | first %}
 {% include ds_section.html sec=sec %}
 
----
 
 ## 試験対策
 
@@ -181,7 +172,6 @@ ds_sections:
 {% assign sec = page.ds_sections | where: "title", "試験対策" | first %}
 {% include ds_section.html sec=sec %}
 
----
 
 ## 未分類（ds_sections未登録）
 

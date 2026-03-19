@@ -1,8 +1,9 @@
----
+﻿---
 layout: page
 title: AIOpsとは？MLOpsとの違いを整理【DS検定リテラシー】
 permalink: /ds/aiops/
-tags: [ds, ai, business]
+categories: [ai-utilization]
+tags: [ds, ai-use]
 ---
 
 ## まず結論
@@ -12,7 +13,6 @@ tags: [ds, ai, business]
 
 特に、**MLOpsと混同させる問題**が出やすいので注意が必要です。
 
----
 
 ## 直感的な説明
 
@@ -34,7 +34,6 @@ tags: [ds, ai, business]
 
 これが本質です。
 
----
 
 ## 定義・仕組み
 
@@ -62,7 +61,6 @@ AIOps（Artificial Intelligence for IT Operations）は、
 DS検定では、  
 **AIの活用領域を正しく理解しているか**を問われます。
 
----
 
 ## どんな場面で使う？
 
@@ -84,7 +82,6 @@ DS検定では、
 
 という切り分けです。
 
----
 
 ## よくある誤解・混同
 
@@ -93,7 +90,6 @@ DS検定では、
 → これは違います。  
 AIOpsは「AIを使う側」の仕組みです。
 
----
 
 ### ❌ AIOpsとMLOpsは同じ
 
@@ -118,7 +114,6 @@ DS検定では、
 
 と判断します。
 
----
 
 ## まとめ（試験直前用）
 
@@ -134,7 +129,6 @@ DS検定では、
 
 この基準で判断できます。
 
----
 
 【対応スキル項目（AI利活用スキルシート）】
 - AIの利活用

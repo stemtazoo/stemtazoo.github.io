@@ -1,8 +1,9 @@
----
+﻿---
 layout: page
 title: メールアドレスの正規表現とは？なぜ難しいのかを整理【DS検定】
 permalink: /ds/regular-expression-email/
-tags: [ds, preprocessing, cheatsheet]
+categories: [data-science]
+tags: [ds, preprocessing]
 ---
 
 ## まず結論
@@ -11,7 +12,6 @@ tags: [ds, preprocessing, cheatsheet]
 DS検定では、「正規表現で何が保証できて、何が保証できないか」を判断できるかが問われます。
 
 
----
 
 ## 直感的な説明
 
@@ -45,7 +45,6 @@ sample@example.com
 という理解です。
 
 
----
 
 ## 定義・仕組み
 
@@ -83,7 +82,6 @@ $ ：末尾
 という点です。
 
 
----
 
 ## どんな場面で使う？
 

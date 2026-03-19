@@ -1,8 +1,9 @@
----
+﻿---
 layout: page
 title: COUNTの違いとは？COUNT(*)・COUNT(列)・COUNT DISTINCTを整理【DS検定】
 permalink: /ds/sql-count-diff/
-tags: [ds, preprocessing, database, cheatsheet]
+categories: [data-engineering]
+tags: [ds, sql]
 ---
 
 ## まず結論
@@ -17,7 +18,6 @@ DS検定では「何を数えているか」を見抜く問題が頻出
 
 
 
----
 
 ## 直感的な説明
 
@@ -41,7 +41,6 @@ COUNT DISTINCT → 2（AとB）
 👉 「何をカウントしているか」で結果が変わる
 
 
----
 
 ## 定義・仕組み
 
@@ -69,7 +68,6 @@ SELECT COUNT(列名) FROM テーブル;
 SELECT COUNT(DISTINCT 列名) FROM テーブル;
 
 
----
 
 ## どんな場面で使う？
 
@@ -89,7 +87,6 @@ COUNT DISTINCT
 
 
 
----
 
 ## よくある誤解・混同
 
@@ -100,28 +97,24 @@ COUNT DISTINCT
 👉 DS検定では「NULLを含むか」でひっかける
 
 
----
 
 ❌ COUNT(*)とCOUNT(列)は同じ
 
 → ⭕ NULLがあると結果が変わる
 
 
----
 
 ❌ COUNT DISTINCTはCOUNTと同じ
 
 → ⭕ 重複を除くため結果は小さくなる
 
 
----
 
 ❌ DISTINCTは行全体にかかる
 
 → ⭕ 列単位（または組み合わせ）で判定
 
 
----
 
 ## まとめ（試験直前用）
 
@@ -137,7 +130,6 @@ NULLと重複の扱いが最大のポイント
 
 
 
----
 
 【対応スキル項目（データエンジニアリング力シート）】
 

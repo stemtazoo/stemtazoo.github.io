@@ -1,8 +1,9 @@
----
+﻿---
 layout: page
 title: INとEXISTSの違いとは？値比較と存在判定を整理【DS検定】
 permalink: /ds/sql-in-exists/
-tags: [ds, preprocessing, database]
+categories: [data-engineering]
+tags: [ds, sql]
 ---
 
 ## まず結論
@@ -15,7 +16,6 @@ DS検定では「値を見るのか・存在を見るのか」を見抜くこと
 
 
 
----
 
 ## 直感的な説明
 
@@ -32,7 +32,6 @@ EXISTS
 👉 結果は同じでも「考え方」が違う
 
 
----
 
 ## 定義・仕組み
 
@@ -48,7 +47,6 @@ WHERE 顧客ID IN (
 
 
 
----
 
 EXISTS
 
@@ -64,7 +62,6 @@ WHERE EXISTS (
 
 
 
----
 
 ## どんな場面で使う？
 
@@ -83,7 +80,6 @@ EXISTS
 
 
 
----
 
 ## よくある誤解・混同
 
@@ -94,21 +90,18 @@ EXISTS
 👉 DS検定ではここがひっかけ
 
 
----
 
 ❌ INは常に速い
 
 → ⭕ データ量が多いとEXISTSの方が有利
 
 
----
 
 ❌ EXISTSは値を比較している
 
 → ⭕ 存在だけを見ている
 
 
----
 
 ❌ INはNULLでも問題ない
 
@@ -117,7 +110,6 @@ EXISTS
 👉 DS検定では「NULLを含むIN」がよく出る
 
 
----
 
 ## まとめ（試験直前用）
 
@@ -133,7 +125,6 @@ EXISTSは1件見つかればOK
 
 
 
----
 
 【対応スキル項目（データエンジニアリング力シート）】
 

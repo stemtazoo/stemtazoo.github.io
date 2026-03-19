@@ -1,8 +1,9 @@
----
+﻿---
 layout: page
 title: 空・雨・傘とは？仮説思考の基本フレーム【DS検定】
 permalink: /ds/sora-ame-kasa/
-tags: [ds, business, ai]
+categories: [ai-utilization]
+tags: [ds, ai-use]
 ---
 
 ## まず結論
@@ -12,7 +13,6 @@ tags: [ds, business, ai]
 DS検定では、「データ（事実）と推測（解釈）を混同していないか」を判断させる問題として問われることが多いです。
 
 
----
 
 ## 直感的な説明
 
@@ -37,7 +37,6 @@ DS検定では、「データ（事実）と推測（解釈）を混同してい
 データ分析でもまったく同じ流れです。
 
 
----
 
 ## 定義・仕組み
 

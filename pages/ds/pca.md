@@ -1,8 +1,9 @@
----
+﻿---
 layout: page
 title: 主成分分析（PCA）とは？次元削減の基本をわかりやすく整理【DS検定】
 permalink: /ds/pca/
-tags: [ds, ai]
+categories: [data-science]
+tags: [ds, math]
 ---
 
 ## まず結論
@@ -20,7 +21,6 @@ DS検定では、
 という理解ができているかが問われます。
 
 
----
 
 ## 直感的な説明
 
@@ -65,7 +65,6 @@ DS検定では、
 これが 次元削減です。
 
 
----
 
 ## 定義・仕組み
 

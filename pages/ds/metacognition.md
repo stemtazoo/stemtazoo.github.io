@@ -1,8 +1,9 @@
----
+﻿---
 layout: page
 title: メタ認知思考とは？自分の思考を客観視する力【DS検定】
 permalink: /ds/metacognition/
-tags: [ds, thinking, problem-solving]
+categories: [business]
+tags: [ds, design]
 ---
 
 ## まず結論
@@ -11,7 +12,6 @@ tags: [ds, thinking, problem-solving]
 - DS検定では、分析結果をそのまま信じるのではなく  
   **「本当に正しいのか？」と自分の思考をチェックする姿勢**が重要になります。
 
----
 
 ## 直感的な説明
 
@@ -35,7 +35,6 @@ tags: [ds, thinking, problem-solving]
 
 データサイエンスでは、この姿勢が非常に重要です。
 
----
 
 ## 定義・仕組み
 
@@ -68,7 +67,6 @@ tags: [ds, thinking, problem-solving]
 
 のすべてで重要になります。
 
----
 
 ## どんな場面で使う？
 
@@ -81,7 +79,6 @@ tags: [ds, thinking, problem-solving]
 
 と考える。
 
----
 
 ### ② 仮説検証
 
@@ -92,7 +89,6 @@ tags: [ds, thinking, problem-solving]
 
 をチェックする。
 
----
 
 ### ③ ビジネス意思決定
 
@@ -103,7 +99,6 @@ tags: [ds, thinking, problem-solving]
 
 を防ぐためにメタ認知が重要になります。
 
----
 
 ## よくある誤解・混同
 
@@ -117,7 +112,6 @@ tags: [ds, thinking, problem-solving]
 
 です。
 
----
 
 ### ② データがあれば間違えない
 
@@ -137,7 +131,6 @@ tags: [ds, thinking, problem-solving]
 
 が重要になります。
 
----
 
 ### ③ AIや分析ツールがあれば不要
 
@@ -157,7 +150,6 @@ AIの結果も
 
 が必要です。
 
----
 
 ## まとめ（試験直前用）
 

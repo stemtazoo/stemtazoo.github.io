@@ -1,8 +1,9 @@
----
+﻿---
 layout: page
 title: 行列の固有値とは？意味を直感で整理【DS検定】
 permalink: /ds/eigenvalue/
-tags: [ds, statistics, cheatsheet]
+categories: [data-science]
+tags: [ds, math]
 ---
 
 ## まず結論
@@ -143,7 +144,6 @@ DS検定ではここを混同させてきます。
 PCAでは「固有値＝分散の大きさ」。  
 選択肢で「方向」とあれば固有ベクトル、「どれだけ大きいか」とあれば固有値を疑う。  
 
----
 
 【対応スキル項目（データサイエンス力シート）】
 - 数学的理解

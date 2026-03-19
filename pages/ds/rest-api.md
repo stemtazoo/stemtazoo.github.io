@@ -1,8 +1,9 @@
----
+﻿---
 layout: page
 title: REST APIとは？SOAPとの違いを整理【DS検定】
 permalink: /ds/rest-api/
-tags: [ds, engineering, business]
+categories: [data-engineering]
+tags: [ds, data-processing]
 ---
 
 ## まず結論
@@ -10,7 +11,6 @@ tags: [ds, engineering, business]
 REST APIとは、**HTTPメソッドを使ってリソースを操作するWebサービスの設計スタイル**です。  
 DS検定では「RESTとSOAPの違いを判断できるか」が問われます。
 
----
 
 ## 直感的な説明
 
@@ -38,7 +38,6 @@ REST APIは、
 なぜ重要かというと、  
 **多くのデータ連携はRESTで行われている**からです。
 
----
 
 ## 定義・仕組み
 
@@ -70,7 +69,6 @@ DS検定では
 **SOAP＝XMLベースで厳密な通信仕様**  
 という切り分けができるかがポイントです。
 
----
 
 ## どんな場面で使う？
 
@@ -90,7 +88,6 @@ DS検定では
 重要なのは  
 **設計思想がHTTP中心かどうか**です。
 
----
 
 ## よくある誤解・混同
 
@@ -120,7 +117,6 @@ DS検定ではよく
 
 これが切り分け基準です。
 
----
 
 ## まとめ（試験直前用）
 
@@ -130,7 +126,6 @@ DS検定ではよく
 - 「XML」と書いてあればSOAPの可能性が高い
 - 「CRUDをHTTPで実行」と書いてあればREST
 
----
 
 【対応スキル項目（データエンジニアリング力シート）】
 - データ収集・蓄積

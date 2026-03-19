@@ -1,8 +1,9 @@
----
+﻿---
 layout: page
 title: Dockerとは？再現性が出る理由を整理【DS検定】
 permalink: /ds/docker/
-tags: [ds, data_engineering, business]
+categories: [data-engineering]
+tags: [ds, data-processing]
 ---
 
 ## まず結論
@@ -69,7 +70,6 @@ Dockerの再現性は「イメージで環境を固定できる」から。
 「OSに依存しない」と断言していたら言い過ぎを疑う。  
 Dockerfileはソースではなく、環境構築の手順を固定するもの。
 
----
 
 【対応スキル項目（データエンジニアリング力シート）】
 - 環境構築

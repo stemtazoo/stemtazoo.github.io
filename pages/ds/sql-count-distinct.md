@@ -1,8 +1,9 @@
----
+﻿---
 layout: page
 title: COUNT DISTINCTとは？ユニーク数を数える方法【DS検定】
 permalink: /ds/sql-count-distinct/
-tags: [ds, preprocessing, database]
+categories: [data-engineering]
+tags: [ds, sql]
 ---
 
 ## まず結論
@@ -13,7 +14,6 @@ DS検定では「重複込みの件数か、ユニーク数か」を見抜ける
 
 
 
----
 
 ## 直感的な説明
 
@@ -34,7 +34,6 @@ COUNT DISTINCT → 2人（Aさん・Bさん）
 👉 「種類の数」を知りたいときに使うのがCOUNT DISTINCT
 
 
----
 
 ## 定義・仕組み
 
@@ -58,7 +57,6 @@ NULLはカウントされない
 
 
 
----
 
 ## どんな場面で使う？
 
@@ -79,7 +77,6 @@ NULLはカウントされない
 
 
 
----
 
 ## よくある誤解・混同
 
@@ -95,7 +92,6 @@ COUNT DISTINCT：種類数（重複なし）
 👉 DS検定ではここが典型的なひっかけ
 
 
----
 
 ❌ DISTINCTを使ってからCOUNTするのと同じ
 
@@ -110,7 +106,6 @@ SELECT COUNT(*) FROM (SELECT DISTINCT A ...)
 と同じ意味だが、 👉 「ユニーク数を数えている」と理解することが重要
 
 
----
 
 ❌ NULLも数える
 
@@ -119,7 +114,6 @@ SELECT COUNT(*) FROM (SELECT DISTINCT A ...)
 選択肢で 「NULLも含めて数える」 → ❌ 誤り
 
 
----
 
 ## まとめ（試験直前用）
 
@@ -135,7 +129,6 @@ NULLはカウントされない
 
 
 
----
 
 【対応スキル項目（データエンジニアリング力シート）】
 

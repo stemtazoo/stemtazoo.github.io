@@ -1,8 +1,9 @@
----
+﻿---
 layout: page
 title: ユーグリッドノルムとは？（ベクトルの長さの測り方）【DS検定】
 permalink: /ds/euclidean-norm/
-tags: [ds, linear_algebra]
+categories: [data-science]
+tags: [ds, math]
 ---
 
 ## まず結論
@@ -101,7 +102,6 @@ $$
 * ユーグリッド距離＝2点の差ベクトルのユーグリッドノルム
 * 単位が違う特徴量で距離を取るなら、標準化など前処理とセットで考える
 
----
 
 【対応スキル項目（データサイエンス力シート）】
 
