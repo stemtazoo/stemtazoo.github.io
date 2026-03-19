@@ -47,6 +47,17 @@ tags: [ds, index]
 
 ---
 
+## スキルチェック
+<ul>
+{% for p in site.pages %}
+  {% if p.tags contains "skillcheck" and p.url contains "/ds/" %}
+    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% endif %}
+{% endfor %}
+</ul>
+
+---
+
 ## ⭐ まず読む3記事
 
 <ul>
@@ -132,7 +143,7 @@ tags: [ds, index]
 
 <ul>
 {% for p in site.pages %}
-  {% if p.tags contains "skillcheck" and p.url contains "/ds/" %}
+  {% if p.tags contains "cheatsheet" and p.url contains "/ds/" %}
     <li><a href="{{ p.url }}">{{ p.title }}</a></li>
   {% endif %}
 {% endfor %}
