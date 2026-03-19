@@ -4,11 +4,11 @@
     {
       "version": "5.00",
       "source_url": "https://www.datascientist.or.jp/common/docs/skillcheck_ver5.00_simple.xlsx",
-      "raw_file": "data/skillcheck/raw/skillcheck_ver5.00_simple.xlsx",
+      "raw_file": "data\\skillcheck\\raw\\skillcheck_ver5.00_simple.xlsx",
       "sha256": "d0cd246938898f8b5ce9213a3beae4115a721fe7c9a89c1f372ce1508a636ddb",
       "rows": 719,
       "skilllevel_rows": 5,
-      "generated_at": "2026-03-19T04:25:57.174253+00:00"
+      "generated_at": "2026-03-19T04:47:19.255735+00:00"
     }
   ]
 }
