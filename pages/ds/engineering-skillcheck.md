@@ -360,3 +360,7 @@ next: /ds/skillcheck/
   {% endif %}
 {% endfor %}
 </ul>
+
+---
+
+[DS?? ???????????]({{ '/ds/' | relative_url }})
