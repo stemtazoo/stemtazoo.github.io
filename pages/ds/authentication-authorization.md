@@ -7,6 +7,10 @@ tags: [ds, design]
 prev: /ds/access-control-list/
 next: /ds/authentication-vs-authorization/
 ---
+<div style="font-size: 14px; margin-bottom: 12px;">
+  <a href="/ds/">DS検定トップ</a>
+  ＞ {{ page.title }}
+</div>
 
 ## まず結論
 
@@ -281,6 +285,20 @@ DS検定では次のような形で出題されます。
 {% endfor %}
 </ul>
 
----
+<hr>
 
-[DS検定 学習まとめトップに戻る]({{ '/ds/' | relative_url }})
+<div style="margin-top: 16px;">
+  🏠 <a href="/ds/">DS検定トップに戻る</a>
+</div>
+
+<div style="display:flex;justify-content:space-between;margin-top:12px;">
+
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
+  {% endif %}
+
+  {% if page.next.url %}
+    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
+  {% endif %}
+
+</div>

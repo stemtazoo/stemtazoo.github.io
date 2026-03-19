@@ -7,6 +7,10 @@ tags: [ds, visualization]
 prev: /ds/slice-dice/
 next: /ds/dendrogram/
 ---
+<div style="font-size: 14px; margin-bottom: 12px;">
+  <a href="/ds/">DS検定トップ</a>
+  ＞ {{ page.title }}
+</div>
 
 ## まず結論
 - データ可視化では「差・相関・分布・変化・構成」という基本視点で見ることで、意味のある気づきを得られる  
@@ -167,6 +171,20 @@ next: /ds/dendrogram/
 {% endfor %}
 </ul>
 
----
+<hr>
 
-[DS検定 学習まとめトップに戻る]({{ '/ds/' | relative_url }})
+<div style="margin-top: 16px;">
+  🏠 <a href="/ds/">DS検定トップに戻る</a>
+</div>
+
+<div style="display:flex;justify-content:space-between;margin-top:12px;">
+
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
+  {% endif %}
+
+  {% if page.next.url %}
+    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
+  {% endif %}
+
+</div>

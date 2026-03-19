@@ -7,6 +7,10 @@ tags: [ds, data-processing]
 prev: /ds/batch-vs-stream/
 next: /ds/hadoop/
 ---
+<div style="font-size: 14px; margin-bottom: 12px;">
+  <a href="/ds/">DS検定トップ</a>
+  ＞ {{ page.title }}
+</div>
 
 ## まず結論
 ETLとは、データを「抽出（Extract）→変換（Transform）→格納（Load）」する一連の処理のことです。  
@@ -158,6 +162,20 @@ ETLは加工プロセス。
 {% endfor %}
 </ul>
 
----
+<hr>
 
-[DS検定 学習まとめトップに戻る]({{ '/ds/' | relative_url }})
+<div style="margin-top: 16px;">
+  🏠 <a href="/ds/">DS検定トップに戻る</a>
+</div>
+
+<div style="display:flex;justify-content:space-between;margin-top:12px;">
+
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
+  {% endif %}
+
+  {% if page.next.url %}
+    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
+  {% endif %}
+
+</div>

@@ -7,6 +7,10 @@ tags: [ds, preprocessing]
 prev: /ds/data-extraction-vs-aggregation/
 next: /ds/mapping/
 ---
+<div style="font-size: 14px; margin-bottom: 12px;">
+  <a href="/ds/">DS検定トップ</a>
+  ＞ {{ page.title }}
+</div>
 
 ## まず結論
 - Jupyter NotebookやRは「データ分析・試行錯誤・可視化を効率的に行うための開発環境」であり、DS検定では**開発・実験・共有の役割を理解できるか**が問われる
@@ -147,6 +151,20 @@ DS検定ではここがよく出ます👇
 {% endfor %}
 </ul>
 
----
+<hr>
 
-[DS検定 学習まとめトップに戻る]({{ '/ds/' | relative_url }})
+<div style="margin-top: 16px;">
+  🏠 <a href="/ds/">DS検定トップに戻る</a>
+</div>
+
+<div style="display:flex;justify-content:space-between;margin-top:12px;">
+
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
+  {% endif %}
+
+  {% if page.next.url %}
+    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
+  {% endif %}
+
+</div>

@@ -7,6 +7,10 @@ tags: [ds, design]
 prev: /ds/primary-data/
 next: /ds/publickey-vs-symmetric/
 ---
+<div style="font-size: 14px; margin-bottom: 12px;">
+  <a href="/ds/">DS検定トップ</a>
+  ＞ {{ page.title }}
+</div>
 
 ## まず結論
 一次情報とは「自分たちが直接生成・取得したオリジナルデータ」、二次情報とは「他者が生成・加工した既存データ」です。  
@@ -152,6 +156,20 @@ DS検定ではここを混同させてきます。
 {% endfor %}
 </ul>
 
----
+<hr>
 
-[DS検定 学習まとめトップに戻る]({{ '/ds/' | relative_url }})
+<div style="margin-top: 16px;">
+  🏠 <a href="/ds/">DS検定トップに戻る</a>
+</div>
+
+<div style="display:flex;justify-content:space-between;margin-top:12px;">
+
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
+  {% endif %}
+
+  {% if page.next.url %}
+    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
+  {% endif %}
+
+</div>
