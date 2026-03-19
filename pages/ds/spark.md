@@ -290,4 +290,4 @@ DS検定では HDFS / YARN / Sparkの役割の違いが重要
 
 ---
 
-[DS?? ???????????]({{ '/ds/' | relative_url }})
+[DS検定 学習まとめトップに戻る]({{ '/ds/' | relative_url }})

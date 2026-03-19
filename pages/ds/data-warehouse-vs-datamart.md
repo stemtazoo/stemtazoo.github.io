@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: データウェアハウス（DWH）とは？データマートとの違いを理解する【DS検定】
 permalink: /ds/data-warehouse-vs-datamart/
@@ -211,4 +211,4 @@ DS検定では
 
 ---
 
-[DS?? ???????????]({{ '/ds/' | relative_url }})
+[DS検定 学習まとめトップに戻る]({{ '/ds/' | relative_url }})

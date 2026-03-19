@@ -168,4 +168,4 @@ EXISTSは1件見つかればOK
 
 ---
 
-[DS?? ???????????]({{ '/ds/' | relative_url }})
+[DS検定 学習まとめトップに戻る]({{ '/ds/' | relative_url }})

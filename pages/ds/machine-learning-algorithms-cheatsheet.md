@@ -3,7 +3,7 @@ layout: page
 title: 機械学習アルゴリズム一覧チートシート（教師あり・教師なし・強化学習）【DS検定】
 permalink: /ds/machine-learning-algorithms-cheatsheet/
 categories: [data-science]
-tags: [ds, cheatsheet]
+tags: [ds, modeling]
 prev: /ds/logistic-regression/
 next: /ds/machine-learning-methods/
 ---
@@ -263,4 +263,4 @@ GAN・YOLO・Transformerは ディープラーニング系
 
 ---
 
-[DS?? ???????????]({{ '/ds/' | relative_url }})
+[DS検定 学習まとめトップに戻る]({{ '/ds/' | relative_url }})

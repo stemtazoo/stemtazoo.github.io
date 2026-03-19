@@ -155,4 +155,4 @@ ON e1.manager_id = e2.employee_id;
 
 ---
 
-[DS?? ???????????]({{ '/ds/' | relative_url }})
+[DS検定 学習まとめトップに戻る]({{ '/ds/' | relative_url }})
