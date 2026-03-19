@@ -2,10 +2,13 @@
 """Build versioned skill-check datasets from the official XLSX source.
 
 Outputs:
-- data/skillcheck/versions/<version>/skillcheck.csv   (normalized canonical table)
-- data/skillcheck/versions/<version>/skillcheck.json  (same rows in JSON)
-- data/skillcheck/exports/latest.json                 (latest-version alias)
-- data/skillcheck/exports/index.json                  (version manifest)
+- data/skillcheck/versions/<version>/skillcheck.csv                     (normalized canonical table)
+- data/skillcheck/versions/<version>/skillcheck.json                    (same rows in JSON)
+- data/skillcheck/versions/<version>/skilllevel_definition_2023.csv     (raw skill-level table)
+- data/skillcheck/versions/<version>/skilllevel_definition_2023.json    (same rows in JSON)
+- data/skillcheck/exports/latest.json                                   (latest-version alias)
+- data/skillcheck/exports/skilllevel_definition_2023_latest.json        (latest skill-level alias)
+- data/skillcheck/exports/index.json                                    (version manifest)
 """
 
 from __future__ import annotations
@@ -15,7 +18,6 @@ import csv
 import hashlib
 import json
 import re
-import sys
 import urllib.request
 import xml.etree.ElementTree as ET
 from dataclasses import dataclass
@@ -29,6 +31,22 @@ DATA_ROOT = ROOT / "data" / "skillcheck"
 RAW_DIR = DATA_ROOT / "raw"
 VERSIONS_DIR = DATA_ROOT / "versions"
 EXPORTS_DIR = DATA_ROOT / "exports"
+TARGET_SKILLCHECK_SHEETS = [
+    "ビジネス力",
+    "データサイエンス力",
+    "データエンジニアリング力",
+    "AI利活用スキル",
+]
+SHEET_SLUGS = {
+    "ビジネス力": "business",
+    "データサイエンス力": "datascience",
+    "データエンジニアリング力": "dataengineering",
+    "AI利活用スキル": "ai",
+    "スキルレベル定義2023": "skilllevel-definition-2023",
+}
+SKILLLEVEL_SHEET = "スキルレベル定義2023"
+HEADER_ROW_INDEX = 2
+DATA_START_ROW_INDEX = 3
 
 N = {
     "main": "http://schemas.openxmlformats.org/spreadsheetml/2006/main",
@@ -205,56 +223,108 @@ def sheet_rows(zf: ZipFile, sheet_path: str, shared: list[str]) -> list[list[str
     return rows
 
 
-def enumerate_rows(xlsx_path: Path, version: str, source_url: str) -> list[Row]:
+def trim_trailing_empty(values: list[str]) -> list[str]:
+    trimmed = list(values)
+    while trimmed and not trimmed[-1]:
+        trimmed.pop()
+    return trimmed
+
+
+def normalize_headers(values: list[str]) -> list[str]:
+    headers: list[str] = []
+    for idx, value in enumerate(values, start=1):
+        header = normalize_text(value)
+        headers.append(header or f"column_{idx}")
+    return trim_trailing_empty(headers)
+
+
+def row_to_record(headers: list[str], values: list[str], *, version: str, source_url: str, sheet_name: str) -> dict[str, str]:
+    padded = list(values) + [""] * max(0, len(headers) - len(values))
+    record = {header: normalize_text(padded[idx]) for idx, header in enumerate(headers)}
+    record["version"] = version
+    record["sheet"] = sheet_name
+    record["source_url"] = source_url
+    return record
+
+
+def notes_from_record(record: dict[str, str], headers: list[str]) -> str:
+    parts = [f"{header}: {record[header]}" for header in headers if record.get(header)]
+    return " | ".join(parts)
+
+
+def extract_skillcheck_rows(rows: list[list[str]], sheet_name: str, version: str, source_url: str) -> list[Row]:
+    if len(rows) <= HEADER_ROW_INDEX:
+        return []
+
+    headers = normalize_headers(rows[HEADER_ROW_INDEX])
     out: list[Row] = []
-    with ZipFile(xlsx_path) as zf:
-        shared = parse_shared_strings(zf)
-        sheets = workbook_sheets(zf)
+    item_seq = 0
 
-        for sheet_name, sheet_path in sheets:
-            current_section = ""
-            current_category = ""
-            current_subcategory = ""
-            item_seq = 0
+    for cells in rows[DATA_START_ROW_INDEX:]:
+        values = trim_trailing_empty(cells)
+        if not any(values):
+            continue
 
-            for cells in sheet_rows(zf, sheet_path, shared):
-                non_empty = [c for c in cells if c]
-                if not non_empty:
-                    continue
+        record = row_to_record(headers, values, version=version, source_url=source_url, sheet_name=sheet_name)
+        item_text = record.get("チェック項目", "")
+        if not item_text:
+            continue
 
-                first = non_empty[0]
-                if len(non_empty) <= 2 and len(first) <= 30 and not re.search(r"[。.!?]", first):
-                    current_section = first
-                    continue
+        item_seq += 1
+        category = record.get("スキルカテゴリ", "")
+        if sheet_name == "データエンジニアリング力":
+            subcategory = record.get("サブカテゴリ", "")
+        elif sheet_name == "AI利活用スキル":
+            subcategory = record.get("AI区分 LLM、Diffusion、両方", "")
+        else:
+            subcategory = record.get("サブカテゴリ", "")
 
-                if len(cells) >= 1 and cells[0]:
-                    current_category = cells[0]
-                if len(cells) >= 2 and cells[1]:
-                    current_subcategory = cells[1]
-
-                item_text = max(non_empty, key=len)
-                if len(item_text) < 4:
-                    continue
-
-                item_seq += 1
-                item_id = f"{slugify(sheet_name)}-{item_seq:04d}"
-                notes = " | ".join(non_empty)
-
-                out.append(
-                    Row(
-                        version=version,
-                        sheet=sheet_name,
-                        section=current_section,
-                        category=current_category,
-                        subcategory=current_subcategory,
-                        item_id=item_id,
-                        item=item_text,
-                        notes=notes,
-                        source_url=source_url,
-                    )
-                )
+        out.append(
+            Row(
+                version=version,
+                sheet=sheet_name,
+                section="",
+                category=category,
+                subcategory=subcategory,
+                item_id=f"{SHEET_SLUGS.get(sheet_name, slugify(sheet_name))}-{item_seq:04d}",
+                item=item_text,
+                notes=notes_from_record(record, headers),
+                source_url=source_url,
+            )
+        )
 
     return out
+
+
+def extract_skilllevel_rows(rows: list[list[str]], sheet_name: str, version: str, source_url: str) -> list[dict[str, str]]:
+    if len(rows) <= HEADER_ROW_INDEX:
+        return []
+    headers = normalize_headers(rows[HEADER_ROW_INDEX])
+    out: list[dict[str, str]] = []
+    for cells in rows[DATA_START_ROW_INDEX:]:
+        values = trim_trailing_empty(cells)
+        if not any(values):
+            continue
+        out.append(row_to_record(headers, values, version=version, source_url=source_url, sheet_name=sheet_name))
+    return out
+
+
+def enumerate_workbook_data(xlsx_path: Path, version: str, source_url: str) -> tuple[list[Row], list[dict[str, str]]]:
+    skillcheck_rows: list[Row] = []
+    skilllevel_rows: list[dict[str, str]] = []
+
+    with ZipFile(xlsx_path) as zf:
+        shared = parse_shared_strings(zf)
+        for sheet_name, sheet_path in workbook_sheets(zf):
+            if sheet_name not in TARGET_SKILLCHECK_SHEETS and sheet_name != SKILLLEVEL_SHEET:
+                continue
+            rows = sheet_rows(zf, sheet_path, shared)
+            if sheet_name in TARGET_SKILLCHECK_SHEETS:
+                skillcheck_rows.extend(extract_skillcheck_rows(rows, sheet_name, version, source_url))
+            elif sheet_name == SKILLLEVEL_SHEET:
+                skilllevel_rows.extend(extract_skilllevel_rows(rows, sheet_name, version, source_url))
+
+    return skillcheck_rows, skilllevel_rows
 
 
 def write_csv(path: Path, rows: list[Row]) -> None:
@@ -272,7 +342,26 @@ def write_json(path: Path, rows: list[Row]) -> None:
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
-def update_manifest(version: str, source_url: str, raw_file: Path, row_count: int) -> None:
+def write_records_csv(path: Path, rows: list[dict[str, str]]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    fieldnames: list[str] = []
+    for row in rows:
+        for key in row:
+            if key not in fieldnames:
+                fieldnames.append(key)
+    with path.open("w", encoding="utf-8", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        for row in rows:
+            writer.writerow(row)
+
+
+def write_records_json(path: Path, rows: list[dict[str, str]]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(rows, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def update_manifest(version: str, source_url: str, raw_file: Path, row_count: int, skilllevel_row_count: int) -> None:
     EXPORTS_DIR.mkdir(parents=True, exist_ok=True)
     manifest_path = EXPORTS_DIR / "index.json"
     existing: dict[str, object] = {"versions": []}
@@ -289,6 +378,7 @@ def update_manifest(version: str, source_url: str, raw_file: Path, row_count: in
         "raw_file": str(raw_file.relative_to(ROOT)),
         "sha256": digest_file(raw_file),
         "rows": row_count,
+        "skilllevel_rows": skilllevel_row_count,
         "generated_at": datetime.now(timezone.utc).isoformat(),
     }
 
@@ -321,24 +411,34 @@ def main() -> int:
         source_url = args.source_url
         download_if_needed(source_url, xlsx_path)
 
-    rows = enumerate_rows(xlsx_path=xlsx_path, version=version, source_url=source_url)
+    rows, skilllevel_rows = enumerate_workbook_data(xlsx_path=xlsx_path, version=version, source_url=source_url)
     if len(rows) < args.min_rows:
         raise SystemExit(f"Parsed rows too small: {len(rows)} (min {args.min_rows})")
 
     version_dir = VERSIONS_DIR / version
     csv_path = version_dir / "skillcheck.csv"
     json_path = version_dir / "skillcheck.json"
+    skilllevel_csv_path = version_dir / "skilllevel_definition_2023.csv"
+    skilllevel_json_path = version_dir / "skilllevel_definition_2023.json"
     latest_path = EXPORTS_DIR / "latest.json"
+    skilllevel_latest_path = EXPORTS_DIR / "skilllevel_definition_2023_latest.json"
 
     write_csv(csv_path, rows)
     write_json(json_path, rows)
     write_json(latest_path, rows)
-    update_manifest(version, source_url, xlsx_path, len(rows))
+    write_records_csv(skilllevel_csv_path, skilllevel_rows)
+    write_records_json(skilllevel_json_path, skilllevel_rows)
+    write_records_json(skilllevel_latest_path, skilllevel_rows)
+    update_manifest(version, source_url, xlsx_path, len(rows), len(skilllevel_rows))
 
     print(f"Generated: {csv_path.relative_to(ROOT)}")
     print(f"Generated: {json_path.relative_to(ROOT)}")
+    print(f"Generated: {skilllevel_csv_path.relative_to(ROOT)}")
+    print(f"Generated: {skilllevel_json_path.relative_to(ROOT)}")
     print(f"Generated: {latest_path.relative_to(ROOT)}")
+    print(f"Generated: {skilllevel_latest_path.relative_to(ROOT)}")
     print(f"Rows: {len(rows)}")
+    print(f"Skill level rows: {len(skilllevel_rows)}")
     return 0
 
 
