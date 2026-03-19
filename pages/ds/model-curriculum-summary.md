@@ -3,13 +3,7 @@ layout: page
 title: "数理・データサイエンス・AIリテラシーモデルカリキュラム総まとめ【DS検定対応】"
 permalink: /ds/model-curriculum-summary/
 categories: [business]
-tags: [ds, design]
-  - ds
-  - literacy
-  - model-curriculum
-  - intro
-  - cheatsheet
-  - overview
+tags: [ds, skillcheck]
 ---
 
 # 数理・データサイエンス・AIリテラシーモデルカリキュラム総まとめ
