@@ -3,7 +3,7 @@ layout: page
 title: DS検定 リテラシー｜AI利活用スキル
 permalink: /ds/ai-utilization-skillcheck/
 categories: [business]
-tags: [ds, design]
+tags: [ds, skillcheck]
 ---
 
 ## このページについて
