@@ -123,3 +123,33 @@ DS検定では「復号できるかどうか」を判断させる問題がよく
 - セキュリティ・リスク理解  
 ★ AI・データ活用に伴うセキュリティリスクを理解している  
 ★ データの適切な管理・保護の重要性を理解している
+
+## 🔗 関連記事
+
+<ul style="padding-left: 20px;">
+{% assign current_tags = page.tags %}
+{% assign count = 0 %}
+
+{% for p in site.pages %}
+  {% if p.url != page.url and p.tags %}
+    {% assign matched = false %}
+
+    {% for tag in current_tags %}
+      {% if p.tags contains tag and tag != "ds" %}
+        {% assign matched = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if matched %}
+      <li style="margin-bottom: 6px;">
+        <a href="{{ p.url }}">{{ p.title }}</a>
+      </li>
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+
+    {% if count >= 5 %}
+      {% break %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>

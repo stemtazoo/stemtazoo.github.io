@@ -108,3 +108,33 @@ $$
 * 数学基礎
 * 線形代数
 * ★ 行列同士、および行列とベクトルの計算方法を正しく理解し、複数の線形式を行列の積で表現できる
+
+## 🔗 関連記事
+
+<ul style="padding-left: 20px;">
+{% assign current_tags = page.tags %}
+{% assign count = 0 %}
+
+{% for p in site.pages %}
+  {% if p.url != page.url and p.tags %}
+    {% assign matched = false %}
+
+    {% for tag in current_tags %}
+      {% if p.tags contains tag and tag != "ds" %}
+        {% assign matched = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if matched %}
+      <li style="margin-bottom: 6px;">
+        <a href="{{ p.url }}">{{ p.title }}</a>
+      </li>
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+
+    {% if count >= 5 %}
+      {% break %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>

@@ -220,3 +220,33 @@ GROUP BY → グループ化して集計
 
 
 ★ SQLの構文を一通り知っていて、記述・実行できる（DML・DDLの理解、各種JOINの使い分け、集計関数とGROUP BY、CASE文を使用した縦横変換、副問合せやEXISTSの活用など）
+
+## 🔗 関連記事
+
+<ul style="padding-left: 20px;">
+{% assign current_tags = page.tags %}
+{% assign count = 0 %}
+
+{% for p in site.pages %}
+  {% if p.url != page.url and p.tags %}
+    {% assign matched = false %}
+
+    {% for tag in current_tags %}
+      {% if p.tags contains tag and tag != "ds" %}
+        {% assign matched = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if matched %}
+      <li style="margin-bottom: 6px;">
+        <a href="{{ p.url }}">{{ p.title }}</a>
+      </li>
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+
+    {% if count >= 5 %}
+      {% break %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>

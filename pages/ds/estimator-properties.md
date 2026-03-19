@@ -259,3 +259,33 @@ DS検定では
 
 ★ 推定の考え方（点推定・区間推定）を理解している  
 ★ 推定量の性質（不偏性・一致性など）を理解している
+
+## 🔗 関連記事
+
+<ul style="padding-left: 20px;">
+{% assign current_tags = page.tags %}
+{% assign count = 0 %}
+
+{% for p in site.pages %}
+  {% if p.url != page.url and p.tags %}
+    {% assign matched = false %}
+
+    {% for tag in current_tags %}
+      {% if p.tags contains tag and tag != "ds" %}
+        {% assign matched = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if matched %}
+      <li style="margin-bottom: 6px;">
+        <a href="{{ p.url }}">{{ p.title }}</a>
+      </li>
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+
+    {% if count >= 5 %}
+      {% break %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>

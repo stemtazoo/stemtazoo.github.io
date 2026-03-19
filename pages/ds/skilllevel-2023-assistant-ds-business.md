@@ -142,3 +142,33 @@ DS検定では「正しい進め方・判断」を問う形で出やすいので
 **“分析手法”より“プロセスと判断基準”**を意識すると解きやすくなります。
 
 ---
+
+## 🔗 関連記事
+
+<ul style="padding-left: 20px;">
+{% assign current_tags = page.tags %}
+{% assign count = 0 %}
+
+{% for p in site.pages %}
+  {% if p.url != page.url and p.tags %}
+    {% assign matched = false %}
+
+    {% for tag in current_tags %}
+      {% if p.tags contains tag and tag != "ds" %}
+        {% assign matched = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if matched %}
+      <li style="margin-bottom: 6px;">
+        <a href="{{ p.url }}">{{ p.title }}</a>
+      </li>
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+
+    {% if count >= 5 %}
+      {% break %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>

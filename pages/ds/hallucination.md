@@ -128,3 +128,33 @@ DS検定では、
 - 生成AI活用
 - ★ 大規模言語モデルにおいては、事実と異なる内容がさも正しいかのように生成されることがあること（Hallucination）、これらが根本的に避けることができないことを踏まえ、利用に際しては出力を鵜呑みにしない等の注意が必要であることを知っている
 - ★ Hallucinationが起きていることに気づくための適切なアクションをとることができる（検索等によるリサーチ結果との比較や、他LLMの出力結果との比較、正確な追加情報を入力データに付与することによる出力結果の変化比較など）
+
+## 🔗 関連記事
+
+<ul style="padding-left: 20px;">
+{% assign current_tags = page.tags %}
+{% assign count = 0 %}
+
+{% for p in site.pages %}
+  {% if p.url != page.url and p.tags %}
+    {% assign matched = false %}
+
+    {% for tag in current_tags %}
+      {% if p.tags contains tag and tag != "ds" %}
+        {% assign matched = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if matched %}
+      <li style="margin-bottom: 6px;">
+        <a href="{{ p.url }}">{{ p.title }}</a>
+      </li>
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+
+    {% if count >= 5 %}
+      {% break %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>
