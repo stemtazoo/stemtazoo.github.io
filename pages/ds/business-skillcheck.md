@@ -3,7 +3,7 @@ layout: page
 title: DS検定 リテラシー｜ビジネス力
 permalink: /ds/business-skillcheck/
 categories: [business]
-tags: [ds, design]
+tags: [ds, skillcheck]
 ---
 
 ## このページについて
