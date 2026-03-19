@@ -3,7 +3,7 @@ layout: page
 title: DS検定 リテラシー 学習まとめ
 permalink: /ds/
 categories: [business]
-tags: [ds, design]
+tags: [ds, index]
 
 # 表示順はここで固定（/ds/〇〇/ ＝ pages/ds/〇〇.md）
 ds_sections:
