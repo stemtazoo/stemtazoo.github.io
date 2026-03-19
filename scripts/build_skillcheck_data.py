@@ -57,9 +57,19 @@ N = {
 CANONICAL_COLUMNS = [
     "version",
     "sheet",
+    "no",
+    "subno",
     "section",
     "category",
     "subcategory",
+    "skill_level",
+    "ds",
+    "de",
+    "bz",
+    "required_skill",
+    "ai_utilization",
+    "ai_utilization_type",
+    "ai_category",
     "item_id",
     "item",
     "notes",
@@ -71,9 +81,19 @@ CANONICAL_COLUMNS = [
 class Row:
     version: str
     sheet: str
+    no: str
+    subno: str
     section: str
     category: str
     subcategory: str
+    skill_level: str
+    ds: str
+    de: str
+    bz: str
+    required_skill: str
+    ai_utilization: str
+    ai_utilization_type: str
+    ai_category: str
     item_id: str
     item: str
     notes: str
@@ -83,9 +103,19 @@ class Row:
         return {
             "version": self.version,
             "sheet": self.sheet,
+            "no": self.no,
+            "subno": self.subno,
             "section": self.section,
             "category": self.category,
             "subcategory": self.subcategory,
+            "skill_level": self.skill_level,
+            "ds": self.ds,
+            "de": self.de,
+            "bz": self.bz,
+            "required_skill": self.required_skill,
+            "ai_utilization": self.ai_utilization,
+            "ai_utilization_type": self.ai_utilization_type,
+            "ai_category": self.ai_category,
             "item_id": self.item_id,
             "item": self.item,
             "notes": self.notes,
@@ -283,9 +313,19 @@ def extract_skillcheck_rows(rows: list[list[str]], sheet_name: str, version: str
             Row(
                 version=version,
                 sheet=sheet_name,
+                no=record.get("NO", "") or record.get("No", ""),
+                subno=record.get("SubNo", "") or record.get("SubN", "") or record.get("SubNo.", ""),
                 section="",
                 category=category,
                 subcategory=subcategory,
+                skill_level=record.get("スキルレベル", ""),
+                ds=record.get("DS", ""),
+                de=record.get("DE", ""),
+                bz=record.get("BZ", ""),
+                required_skill=record.get("必須スキル", ""),
+                ai_utilization=record.get("AI活用", ""),
+                ai_utilization_type=record.get("AI活用タイプ", ""),
+                ai_category=record.get("AI区分", "") or record.get("AI区分 LLM、Diffusion、両方", ""),
                 item_id=f"{SHEET_SLUGS.get(sheet_name, slugify(sheet_name))}-{item_seq:04d}",
                 item=item_text,
                 notes=notes_from_record(record, headers),
