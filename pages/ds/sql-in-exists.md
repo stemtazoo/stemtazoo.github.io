@@ -165,3 +165,7 @@ EXISTSは1件見つかればOK
   {% endif %}
 {% endfor %}
 </ul>
+
+---
+
+[DS?? ???????????]({{ '/ds/' | relative_url }})

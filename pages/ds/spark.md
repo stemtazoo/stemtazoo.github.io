@@ -287,3 +287,7 @@ DS検定では HDFS / YARN / Sparkの役割の違いが重要
   {% endif %}
 {% endfor %}
 </ul>
+
+---
+
+[DS?? ???????????]({{ '/ds/' | relative_url }})

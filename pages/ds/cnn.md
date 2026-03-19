@@ -289,3 +289,7 @@ CNN＝画像認識AIの代表モデル
   {% endif %}
 {% endfor %}
 </ul>
+
+---
+
+[DS?? ???????????]({{ '/ds/' | relative_url }})

@@ -252,3 +252,7 @@ GROUP BY → グループ化して集計
   {% endif %}
 {% endfor %}
 </ul>
+
+---
+
+[DS?? ???????????]({{ '/ds/' | relative_url }})

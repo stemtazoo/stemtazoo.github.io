@@ -166,3 +166,7 @@ next: /ds/dendrogram/
   {% endif %}
 {% endfor %}
 </ul>
+
+---
+
+[DS?? ???????????]({{ '/ds/' | relative_url }})

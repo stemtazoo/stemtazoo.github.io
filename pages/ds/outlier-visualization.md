@@ -157,3 +157,7 @@ next: /ds/pivot/
   {% endif %}
 {% endfor %}
 </ul>
+
+---
+
+[DS?? ???????????]({{ '/ds/' | relative_url }})

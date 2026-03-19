@@ -161,3 +161,7 @@ DS検定では、「Society5.0の本質は何か？」と聞かれたら
   {% endif %}
 {% endfor %}
 </ul>
+
+---
+
+[DS?? ???????????]({{ '/ds/' | relative_url }})

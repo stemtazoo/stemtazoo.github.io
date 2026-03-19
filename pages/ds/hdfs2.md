@@ -297,3 +297,7 @@ DS検定では RDBMSとの違いがよく問われる
   {% endif %}
 {% endfor %}
 </ul>
+
+---
+
+[DS?? ???????????]({{ '/ds/' | relative_url }})

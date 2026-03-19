@@ -287,3 +287,7 @@ Aprioriアルゴリズムとセットで出題される
   {% endif %}
 {% endfor %}
 </ul>
+
+---
+
+[DS?? ???????????]({{ '/ds/' | relative_url }})

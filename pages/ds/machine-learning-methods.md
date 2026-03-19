@@ -497,3 +497,7 @@ GAN・YOLO・Transformerなどは ディープラーニング手法
   {% endif %}
 {% endfor %}
 </ul>
+
+---
+
+[DS?? ???????????]({{ '/ds/' | relative_url }})

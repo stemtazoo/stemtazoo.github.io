@@ -260,3 +260,7 @@ GAN・YOLO・Transformerは ディープラーニング系
   {% endif %}
 {% endfor %}
 </ul>
+
+---
+
+[DS?? ???????????]({{ '/ds/' | relative_url }})

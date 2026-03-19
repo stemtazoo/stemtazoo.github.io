@@ -236,3 +236,7 @@ HAVING → 集計後の結果
   {% endif %}
 {% endfor %}
 </ul>
+
+---
+
+[DS?? ???????????]({{ '/ds/' | relative_url }})

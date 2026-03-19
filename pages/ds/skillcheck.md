@@ -372,3 +372,7 @@ next: /ds/skilllevel-2023-assistant-ds-business/
   {% endif %}
 {% endfor %}
 </ul>
+
+---
+
+[DS?? ???????????]({{ '/ds/' | relative_url }})
