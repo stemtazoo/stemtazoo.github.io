@@ -8,16 +8,55 @@ tags: [ds, index]
 
 ## 📚 学習の進め方
 
-### はじめての人
-- データサイエンスとは
-- 統計（平均・分散・相関）
+<div style="padding:16px;border-radius:12px;background:#f8fafc;margin-bottom:20px;">
+<b>はじめての人</b><br>
+→ データサイエンスとは → 統計の基礎
+<br><br>
+<b>実務を意識</b><br>
+→ 前処理 → 可視化 → 分析
+<br><br>
+<b>試験直前</b><br>
+→ チートシート → スキルチェック
+</div>
 
-### 実務を意識
-- 前処理 → 可視化 → 分析
+---
 
-### 試験直前
-- チートシート
-- スキルチェック
+## 🔗 公式リンク
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-bottom:24px;">
+
+  <a href="https://www.datascientist.or.jp/dscertification/what/#summary"
+     target="_blank"
+     style="display:block;padding:18px;border-radius:14px;
+     background:linear-gradient(135deg,#1e293b,#3b82f6);
+     color:#fff;text-decoration:none;">
+    <b>DS検定とは</b><br>
+    試験概要・出題範囲
+  </a>
+
+  <a href="https://www.datascientist.or.jp/news/n-pressrelease/post-1757/"
+     target="_blank"
+     style="display:block;padding:18px;border-radius:14px;
+     background:linear-gradient(135deg,#065f46,#14b8a6);
+     color:#fff;text-decoration:none;">
+    <b>スキルチェックリスト</b><br>
+    出題範囲の基準
+  </a>
+
+</div>
+
+---
+
+## ⭐ まず読む3記事
+
+<ul>
+{% assign rec = site.pages | where_exp: "p", "p.tags contains 'statistics'" %}
+{% for p in rec limit:3 %}
+  {% if p.url contains "/ds/" %}
+    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% endif %}
+{% endfor %}
+</ul>
 
 ---
 
@@ -27,24 +66,6 @@ tags: [ds, index]
 <ul>
 {% for p in site.pages %}
   {% if p.tags contains "statistics" and p.url contains "/ds/" %}
-    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
-  {% endif %}
-{% endfor %}
-</ul>
-
-### 🧮 数学
-<ul>
-{% for p in site.pages %}
-  {% if p.tags contains "math" and p.url contains "/ds/" %}
-    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
-  {% endif %}
-{% endfor %}
-</ul>
-
-### 🤖 機械学習
-<ul>
-{% for p in site.pages %}
-  {% if p.tags contains "machine-learning" and p.url contains "/ds/" %}
     <li><a href="{{ p.url }}">{{ p.title }}</a></li>
   {% endif %}
 {% endfor %}
@@ -63,15 +84,6 @@ tags: [ds, index]
 
 # 🛠 データエンジニアリング力
 
-### 🗄 データベース
-<ul>
-{% for p in site.pages %}
-  {% if p.tags contains "database" and p.url contains "/ds/" %}
-    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
-  {% endif %}
-{% endfor %}
-</ul>
-
 ### 🧾 SQL
 <ul>
 {% for p in site.pages %}
@@ -81,10 +93,10 @@ tags: [ds, index]
 {% endfor %}
 </ul>
 
-### 🔄 データ処理
+### 🗄 データベース
 <ul>
 {% for p in site.pages %}
-  {% if p.tags contains "data-processing" and p.url contains "/ds/" %}
+  {% if p.tags contains "database" and p.url contains "/ds/" %}
     <li><a href="{{ p.url }}">{{ p.title }}</a></li>
   {% endif %}
 {% endfor %}
@@ -94,19 +106,9 @@ tags: [ds, index]
 
 # 📊 ビジネス力
 
-### 🧠 思考・設計
 <ul>
 {% for p in site.pages %}
-  {% if p.tags contains "design" and p.url contains "/ds/" %}
-    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
-  {% endif %}
-{% endfor %}
-</ul>
-
-### 📈 分析
-<ul>
-{% for p in site.pages %}
-  {% if p.tags contains "analysis" and p.url contains "/ds/" %}
+  {% if p.categories contains "business" and p.url contains "/ds/" %}
     <li><a href="{{ p.url }}">{{ p.title }}</a></li>
   {% endif %}
 {% endfor %}
@@ -116,19 +118,9 @@ tags: [ds, index]
 
 # 🤖 AI利活用
 
-### ⚠️ 倫理・ガバナンス
 <ul>
 {% for p in site.pages %}
-  {% if p.tags contains "ethics" and p.url contains "/ds/" %}
-    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
-  {% endif %}
-{% endfor %}
-</ul>
-
-### 🚀 活用
-<ul>
-{% for p in site.pages %}
-  {% if p.tags contains "ai-use" and p.url contains "/ds/" %}
+  {% if p.categories contains "ai-utilization" and p.url contains "/ds/" %}
     <li><a href="{{ p.url }}">{{ p.title }}</a></li>
   {% endif %}
 {% endfor %}
@@ -138,19 +130,9 @@ tags: [ds, index]
 
 # 🧪 試験対策
 
-### 📝 スキルチェック
 <ul>
 {% for p in site.pages %}
   {% if p.tags contains "skillcheck" and p.url contains "/ds/" %}
-    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
-  {% endif %}
-{% endfor %}
-</ul>
-
-### 📄 チートシート
-<ul>
-{% for p in site.pages %}
-  {% if p.tags contains "cheatsheet" and p.url contains "/ds/" %}
     <li><a href="{{ p.url }}">{{ p.title }}</a></li>
   {% endif %}
 {% endfor %}
@@ -162,20 +144,12 @@ tags: [ds, index]
 
 <ul>
 {% for p in site.pages %}
-  {% if p.url contains "/ds/" and p.tags %}
+  {% if p.url contains "/ds/" %}
     {% unless p.tags contains "statistics"
-      or p.tags contains "math"
-      or p.tags contains "machine-learning"
       or p.tags contains "preprocessing"
       or p.tags contains "sql"
       or p.tags contains "database"
-      or p.tags contains "data-processing"
-      or p.tags contains "design"
-      or p.tags contains "analysis"
-      or p.tags contains "ethics"
-      or p.tags contains "ai-use"
-      or p.tags contains "skillcheck"
-      or p.tags contains "cheatsheet" %}
+      or p.tags contains "skillcheck" %}
         <li><a href="{{ p.url }}">{{ p.title }}</a></li>
     {% endunless %}
   {% endif %}
