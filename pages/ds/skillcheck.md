@@ -3,7 +3,7 @@ layout: page
 title: DS検定 リテラシー｜データサイエンス力シート
 permalink: /ds/skillcheck/
 categories: [business]
-tags: [ds, design]
+tags: [ds, skillcheck]
 ---
 
 ## このページについて
