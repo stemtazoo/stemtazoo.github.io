@@ -164,13 +164,37 @@ tags: [ds, index]
   {% endif %}
 {% endfor %}
 
+{% for p in site.pages %}
+  {% if p.tags contains "database" and p.url contains "/ds/" %}
+    {% assign shown_urls = shown_urls | push: p.url %}
+  {% endif %}
+{% endfor %}
+
+{% for p in site.pages %}
+  {% if p.categories contains "business" and p.url contains "/ds/" %}
+    {% assign shown_urls = shown_urls | push: p.url %}
+  {% endif %}
+{% endfor %}
+
+{% for p in site.pages %}
+  {% if p.categories contains "ai-utilization" and p.url contains "/ds/" %}
+    {% assign shown_urls = shown_urls | push: p.url %}
+  {% endif %}
+{% endfor %}
+
+{% for p in site.pages %}
+  {% if p.tags contains "skillcheck" and p.url contains "/ds/" %}
+    {% assign shown_urls = shown_urls | push: p.url %}
+  {% endif %}
+{% endfor %}
+
 ---
 
 # 🧩 未分類（あとで整理）
 
 <ul>
 {% for p in site.pages %}
-  {% if p.url contains "/ds/" %}
+  {% if p.url contains "/ds/" and p.url != "/ds/" %}
     {% unless shown_urls contains p.url %}
       <li><a href="{{ p.url }}">{{ p.title }}</a></li>
     {% endunless %}
