@@ -3,7 +3,7 @@ layout: page
 title: "スキルレベル定義2023 総まとめ【Assistant Data Scientist（見習い）】"
 permalink: /ds/skilllevel-2023-summary/
 categories: [business]
-tags: [ds, design]
+tags: [ds, skillcheck]
   - ds
   - skilllevel
   - overview
