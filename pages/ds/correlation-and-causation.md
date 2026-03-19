@@ -4,6 +4,8 @@ title: 相関と因果の違いを一発で整理【DS検定リテラシー】
 permalink: /ds/correlation-and-causation/
 categories: [data-science]
 tags: [ds, statistics]
+prev: /ds/chi-square-distribution/
+next: /ds/correlation-coefficient-determination/
 ---
 
 ## まず結論

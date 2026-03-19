@@ -3,15 +3,9 @@ layout: page
 title: "数理・アルゴリズム・データ活用基礎（オプション）【DS検定対応】"
 permalink: /ds/optional-math-algorithm/
 categories: [business]
-tags: [ds, design]
-  - ds
-  - literacy
-  - math
-  - algorithm
-  - programming
-  - timeseries
-  - nlp
-  - cheatsheet
+tags: [ds, design, literacy, math, algorithm, programming, timeseries, nlp, cheatsheet]
+prev: /ds/mece/
+next: /ds/why-structure/
 ---
 
 # 4. 数理・アルゴリズム・データ活用基礎（オプション）

@@ -4,6 +4,8 @@ title: 電子署名とは？公開鍵暗号との関係を整理【DS検定】
 permalink: /ds/digital-signature2/
 categories: [business]
 tags: [ds, design]
+prev: /ds/digital-signature/
+next: /ds/hash-function/
 ---
 
 ## まず結論

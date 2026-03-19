@@ -4,6 +4,8 @@ title: 予測的データ分析とは？将来を読む分析手法を整理【D
 permalink: /ds/predictive-analytics/
 categories: [data-science]
 tags: [ds, modeling]
+prev: /ds/hierarchical-distance-metrics/
+next: /ds/ab-test/
 ---
 
 ## まず結論

@@ -4,6 +4,8 @@ title: 実験計画法とは？少ない実験で原因を見つける方法【D
 permalink: /ds/design-of-experiments/
 categories: [business]
 tags: [ds, design]
+prev: /ds/dependency-parsing/
+next: /ds/digital-image-representation/
 ---
 
 ## まず結論

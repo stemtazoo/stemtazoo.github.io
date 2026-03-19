@@ -4,6 +4,8 @@ title: インダストリー4.0とは？第4次産業革命の本質とドイツ
 permalink: /ds/industry4-0/
 categories: [business]
 tags: [ds, design]
+prev: /ds/incremental-vs-differential-backup/
+next: /ds/inheritance/
 ---
 
 ## まず結論

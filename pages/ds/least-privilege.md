@@ -4,6 +4,8 @@ title: 最小権限の原則とは？ゼロトラストとの関係を整理【D
 permalink: /ds/least-privilege/
 categories: [business]
 tags: [ds, design]
+prev: /ds/iam-policy/
+next: /ds/malware/
 ---
 
 ## まず結論

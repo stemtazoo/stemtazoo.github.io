@@ -4,6 +4,8 @@ title: データキューブとは？OLAP分析の基本概念を理解する【
 permalink: /ds/data-cube/
 categories: [data-engineering]
 tags: [ds, database]
+prev: /ds/star-schema/
+next: /ds/data-lake/
 ---
 
 ## まず結論

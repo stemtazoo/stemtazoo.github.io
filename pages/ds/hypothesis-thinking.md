@@ -4,6 +4,8 @@ title: 仮説思考とは？データ分析の出発点【DS検定】
 permalink: /ds/hypothesis-thinking/
 categories: [business]
 tags: [ds, design]
+prev: /ds/evidence-based/
+next: /ds/mece/
 ---
 
 # 仮説思考とは？

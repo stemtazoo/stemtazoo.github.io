@@ -4,6 +4,8 @@ title: COUNT DISTINCTとは？ユニーク数を数える方法【DS検定】
 permalink: /ds/sql-count-distinct/
 categories: [data-engineering]
 tags: [ds, sql]
+prev: /ds/sql-count-diff/
+next: /ds/sql-ddl-dml/
 ---
 
 ## まず結論

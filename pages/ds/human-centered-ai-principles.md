@@ -4,6 +4,8 @@ title: 人間中心のAI社会原則とは？AIと社会のルールを理解す
 permalink: /ds/human-centered-ai-principles/
 categories: [ai-utilization]
 tags: [ds, ai-use]
+prev: /ds/governance/
+next: /ds/social-data-ai-utilization/
 ---
 
 ## まず結論

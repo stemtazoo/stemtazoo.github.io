@@ -4,6 +4,8 @@ title: VPNとSSHの違いとは？（安全な通信の仕組みを整理）【D
 permalink: /ds/vpn-ssh/
 categories: [business]
 tags: [ds, design]
+prev: /ds/ssl-tls/
+next: /ds/zero-trust/
 ---
 
 ## まず結論

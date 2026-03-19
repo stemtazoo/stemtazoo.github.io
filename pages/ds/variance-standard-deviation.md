@@ -4,6 +4,8 @@ title: 分散と標準偏差とは？ばらつきを理解する基本統計【D
 permalink: /ds/variance-standard-deviation/
 categories: [data-science]
 tags: [ds, statistics]
+prev: /ds/variance-and-standard-deviation/
+next: /ds/welch-t-test/
 ---
 
 ## まず結論

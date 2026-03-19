@@ -4,6 +4,8 @@ title: 階層クラスター分析における距離の測定方法の比較【D
 permalink: /ds/hierarchical-distance-metrics/
 categories: [data-science]
 tags: [ds, modeling]
+prev: /ds/feature-importance/
+next: /ds/predictive-analytics/
 ---
 
 ## まず結論

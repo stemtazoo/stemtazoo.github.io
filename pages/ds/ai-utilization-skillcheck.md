@@ -4,6 +4,8 @@ title: DS検定 リテラシー｜AI利活用スキル
 permalink: /ds/ai-utilization-skillcheck/
 categories: [business]
 tags: [ds, skillcheck]
+prev: /ds/model-curriculum-summary/
+next: /ds/business-skillcheck/
 ---
 
 ## このページについて

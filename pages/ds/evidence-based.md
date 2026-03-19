@@ -4,6 +4,8 @@ title: エビデンスベースドとは？（Evidence-Basedの考え方）【DS
 permalink: /ds/evidence-based/
 categories: [business]
 tags: [ds, design]
+prev: /ds/data-literacy-practice/
+next: /ds/hypothesis-thinking/
 ---
 
 ## まず結論

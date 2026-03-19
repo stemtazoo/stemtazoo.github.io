@@ -4,6 +4,8 @@ title: 行列の固有値とは？意味を直感で整理【DS検定】
 permalink: /ds/eigenvalue/
 categories: [data-science]
 tags: [ds, math]
+prev: /ds/e-calculus/
+next: /ds/euclidean-norm/
 ---
 
 ## まず結論

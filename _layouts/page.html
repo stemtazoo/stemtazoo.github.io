@@ -18,4 +18,25 @@ layout: default
   <div class="post-content">
     {{ content }}
   </div>
+
+  {% assign has_page_navigation = false %}
+  {% if page.url contains "/ds/" and page.url != "/ds/" %}
+    {% if page.prev or page.next %}
+      {% assign has_page_navigation = true %}
+    {% endif %}
+  {% endif %}
+
+  {% if has_page_navigation %}
+    <hr>
+
+    <div class="page-navigation">
+      {% if page.prev %}
+        <a class="prev" href="{{ page.prev | relative_url }}">← 前の記事</a>
+      {% endif %}
+
+      {% if page.next %}
+        <a class="next" href="{{ page.next | relative_url }}">次の記事 →</a>
+      {% endif %}
+    </div>
+  {% endif %}
 </article>

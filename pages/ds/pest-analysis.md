@@ -4,6 +4,8 @@ title: PEST分析とは？マクロ環境を分析するフレームワーク【
 permalink: /ds/pest-analysis/
 categories: [business]
 tags: [ds, design]
+prev: /ds/kpi-kgi/
+next: /ds/revenue-equation/
 ---
 
 ## まず結論

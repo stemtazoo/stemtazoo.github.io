@@ -4,6 +4,8 @@ title: LLMのTemperatureとは？出力のランダム性を理解する【DS検
 permalink: /ds/llm-temperature/
 categories: [ai-utilization]
 tags: [ds, ai-use]
+prev: /ds/hallucination/
+next: /ds/mlops/
 ---
 
 ## まず結論

@@ -4,6 +4,8 @@ title: CPS（サイバーフィジカルシステム）とは？Society5.0の中
 permalink: /ds/cps/
 categories: [business]
 tags: [ds, design]
+prev: /ds/confirmation-bias/
+next: /ds/cps-iot-digitaltwin-cheatsheet/
 ---
 
 ## まず結論

@@ -4,6 +4,8 @@ title: 特徴量重要度とは？不純度ベースとPermutationの違い【DS
 permalink: /ds/feature-importance/
 categories: [data-science]
 tags: [ds, modeling]
+prev: /ds/random-forest/
+next: /ds/hierarchical-distance-metrics/
 ---
 
 ## まず結論

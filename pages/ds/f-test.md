@@ -4,6 +4,8 @@ title: F検定とは？t検定との違いを整理【DS検定リテラシー】
 permalink: /ds/f-test/
 categories: [data-science]
 tags: [ds, statistics]
+prev: /ds/discrete-continuous-distribution/
+next: /ds/interpret-statistics/
 ---
 
 ## まず結論

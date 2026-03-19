@@ -4,6 +4,8 @@ title: デジタルツインとは？CPSとの違いを整理【DS検定】
 permalink: /ds/digital-twin/
 categories: [business]
 tags: [ds, design]
+prev: /ds/digital-image-representation/
+next: /ds/dunning-kruger-effect/
 ---
 
 ## まず結論

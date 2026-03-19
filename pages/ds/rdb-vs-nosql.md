@@ -4,6 +4,8 @@ title: RDBとNoSQLの違いを一発で整理【DS検定】
 permalink: /ds/rdb-vs-nosql/
 categories: [data-engineering]
 tags: [ds, database]
+prev: /ds/primary-key/
+next: /ds/referential-integrity/
 ---
 
 ## まず結論

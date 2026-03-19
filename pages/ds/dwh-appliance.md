@@ -4,6 +4,8 @@ title: DWHアプライアンスとは？OLTPとの違いを整理【DS検定】
 permalink: /ds/dwh-appliance/
 categories: [data-engineering]
 tags: [ds, database]
+prev: /ds/data-lake/
+next: /ds/er-diagram/
 ---
 
 ## まず結論

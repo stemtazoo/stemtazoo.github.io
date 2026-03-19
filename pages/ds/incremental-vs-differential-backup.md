@@ -4,6 +4,8 @@ title: 増分バックアップと差分バックアップの違いとは？【D
 permalink: /ds/incremental-vs-differential-backup/
 categories: [business]
 tags: [ds, design]
+prev: /ds/hot-cool-archive/
+next: /ds/industry4-0/
 ---
 
 ## まず結論

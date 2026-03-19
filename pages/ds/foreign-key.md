@@ -4,6 +4,8 @@ title: 外部キー（Foreign Key）とは？テーブルの関係を理解【DS
 permalink: /ds/foreign-key/
 categories: [data-engineering]
 tags: [ds, database]
+prev: /ds/datalake-vs-nosql/
+next: /ds/normalization-2nf-3nf/
 ---
 
 ## まず結論

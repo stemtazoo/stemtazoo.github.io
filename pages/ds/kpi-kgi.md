@@ -4,6 +4,8 @@ title: KPIとKGIの違いとは？目標管理の基本を整理【DS検定】
 permalink: /ds/kpi-kgi/
 categories: [business]
 tags: [ds, design]
+prev: /ds/five-forces-analysis/
+next: /ds/pest-analysis/
 ---
 
 ## まず結論

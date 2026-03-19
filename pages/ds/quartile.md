@@ -4,6 +4,8 @@ title: 四分位とは？値が複数の取り方になる理由まで整理【D
 permalink: /ds/quartile/
 categories: [data-science]
 tags: [ds, statistics]
+prev: /ds/population-sample-unbiased-variance/
+next: /ds/random-sampling-methods/
 ---
 
 ## まず結論

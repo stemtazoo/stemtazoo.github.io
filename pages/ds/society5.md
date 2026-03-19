@@ -4,6 +4,8 @@ title: Society5.0とは？超スマート社会の本質を整理【DS検定】
 permalink: /ds/society5/
 categories: [ai-utilization]
 tags: [ds, ai-use]
+prev: /ds/social-data-ai-utilization/
+next: /ds/aiops/
 ---
 
 ## まず結論

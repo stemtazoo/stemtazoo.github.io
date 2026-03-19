@@ -4,6 +4,8 @@ title: マッピング処理とは？データを対応づける基本操作【D
 permalink: /ds/mapping/
 categories: [data-science]
 tags: [ds, preprocessing]
+prev: /ds/jupyter-r-usage/
+next: /ds/web-crawling-scraping/
 ---
 
 ## まず結論

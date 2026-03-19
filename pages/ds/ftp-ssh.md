@@ -4,6 +4,7 @@ title: FTPとSSHの違いとは？（ファイル転送と安全な接続）【D
 permalink: /ds/ftp-ssh/
 categories: [data-engineering]
 tags: [ds, data-processing]
+prev: /ds/docker/
 ---
 
 ## まず結論

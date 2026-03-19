@@ -4,6 +4,8 @@ title: 特徴量（Feature）とは？機械学習で使う入力データを理
 permalink: /ds/feature/
 categories: [business]
 tags: [ds, design]
+prev: /ds/estimator-properties/
+next: /ds/feature-engineering2/
 ---
 
 特徴量（Feature）とは？

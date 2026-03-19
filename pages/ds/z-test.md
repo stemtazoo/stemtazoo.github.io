@@ -4,6 +4,8 @@ title: z検定とは？t検定との違いまで整理【DS検定リテラシー
 permalink: /ds/z-test/
 categories: [data-science]
 tags: [ds, statistics]
+prev: /ds/welch-t-test/
+next: /ds/causal-inference/
 ---
 
 ## まず結論

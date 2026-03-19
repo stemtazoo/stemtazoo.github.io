@@ -4,6 +4,8 @@ title: PDCAサイクルとは？継続的改善の基本フレームワーク【
 permalink: /ds/pdca-cycle/
 categories: [business]
 tags: [ds, design]
+prev: /ds/critical-path/
+next: /ds/poc-concept-proof/
 ---
 
 ## まず結論

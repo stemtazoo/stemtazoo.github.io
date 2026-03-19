@@ -4,6 +4,8 @@ title: INとEXISTSの違いとは？値比較と存在判定を整理【DS検定
 permalink: /ds/sql-in-exists/
 categories: [data-engineering]
 tags: [ds, sql]
+prev: /ds/sql-having/
+next: /ds/sql-join/
 ---
 
 ## まず結論

@@ -4,6 +4,8 @@ title: データドリブンとは？勘や経験に頼らない意思決定【D
 permalink: /ds/data-driven/
 categories: [business]
 tags: [ds, design]
+prev: /ds/cps-iot-digitaltwin-cheatsheet/
+next: /ds/data-driven-management/
 ---
 
 # データドリブンとは？

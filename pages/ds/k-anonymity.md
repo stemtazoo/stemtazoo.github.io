@@ -4,6 +4,8 @@ title: k匿名性とは？データ匿名化の基本をわかりやすく解説
 permalink: /ds/k-anonymity/
 categories: [ai-utilization]
 tags: [ds, ethics]
+prev: /ds/anonymized-information/
+next: /ds/pseudonymized-information/
 ---
 
 ## まず結論

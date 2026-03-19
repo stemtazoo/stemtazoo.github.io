@@ -4,6 +4,8 @@ title: 情報利得とは？分岐の良さを判断する基準【DS検定】
 permalink: /ds/information-gain/
 categories: [data-science]
 tags: [ds, evaluation]
+prev: /ds/impurity/
+next: /ds/overfitting-tree-depth/
 ---
 
 ## まず結論

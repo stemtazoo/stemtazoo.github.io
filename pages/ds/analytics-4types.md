@@ -4,6 +4,8 @@ title: 記述的・診断的・予測的・処方的分析の違いとは？4分
 permalink: /ds/analytics-4types/
 categories: [business]
 tags: [ds, design]
+prev: /ds/analysis-approach-selection/
+next: /ds/design-thinking/
 ---
 
 ## まず結論

@@ -4,6 +4,8 @@ title: CAP定理とは？分散システムの基本原則【DS検定】
 permalink: /ds/cap-theorem/
 categories: [business]
 tags: [ds, design]
+prev: /ds/business-logic-and-data-importance/
+next: /ds/categorical-variable/
 ---
 
 ## まず結論

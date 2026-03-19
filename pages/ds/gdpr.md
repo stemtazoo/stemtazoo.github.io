@@ -4,6 +4,8 @@ title: GDPRとは？個人データ保護の基本を整理【DS検定】
 permalink: /ds/gdpr/
 categories: [ai-utilization]
 tags: [ds, ethics]
+prev: /ds/ccpa/
+next: /ds/japan-personal-information-protection-act/
 ---
 
 ## まず結論

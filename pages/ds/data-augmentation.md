@@ -4,6 +4,8 @@ title: データ拡張（Data Augmentation）とは？画像AIの学習データ
 permalink: /ds/data-augmentation/
 categories: [data-science]
 tags: [ds, preprocessing]
+prev: /ds/annotation/
+next: /ds/data-transformation/
 ---
 
 ## まず結論

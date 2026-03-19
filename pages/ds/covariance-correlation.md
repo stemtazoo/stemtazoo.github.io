@@ -4,6 +4,8 @@ title: 共分散と相関係数の違いとは？2つのデータの関係を理
 permalink: /ds/covariance-correlation/
 categories: [data-science]
 tags: [ds, statistics]
+prev: /ds/covariance-and-correlation/
+next: /ds/deviation-score/
 ---
 
 ## まず結論

@@ -3,14 +3,8 @@ layout: page
 title: "データ・AI利活用における留意事項とは？【DS検定リテラシー】"
 permalink: /ds/data-ai-precautions/
 categories: [ai-utilization]
-tags: [ds, ai-use]
-  - ds
-  - literacy
-  - ethics
-  - security
-  - ai
-  - gdpr
-  - cheatsheet
+tags: [ds, ai-use, literacy, ethics, security, ai, gdpr, cheatsheet]
+prev: /ds/weak-strong-ai/
 ---
 
 # データ・AI利活用における留意事項とは？

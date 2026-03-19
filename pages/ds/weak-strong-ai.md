@@ -4,6 +4,8 @@ title: 弱いAIと強いAIの違いとは？【DS検定リテラシー】
 permalink: /ds/weak-strong-ai/
 categories: [ai-utilization]
 tags: [ds, ai-use]
+prev: /ds/sora-ame-kasa/
+next: /ds/data-ai-precautions/
 ---
 
 ## まず結論

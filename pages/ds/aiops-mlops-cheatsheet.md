@@ -4,6 +4,8 @@ title: AIOpsとMLOpsの違いを一発整理【DS検定チートシート】
 permalink: /ds/aiops-mlops-cheatsheet/
 categories: [ai-utilization]
 tags: [ds, ai-use]
+prev: /ds/aiops/
+next: /ds/hallucination/
 ---
 
 ## まず結論

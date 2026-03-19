@@ -4,6 +4,8 @@ title: SOAPとは？RESTとの違いを整理【DS検定】
 permalink: /ds/soap/
 categories: [data-engineering]
 tags: [ds, data-processing]
+prev: /ds/rest-api-methods/
+next: /ds/spark/
 ---
 
 ## まず結論

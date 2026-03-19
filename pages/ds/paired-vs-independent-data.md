@@ -4,6 +4,8 @@ title: 対応があるデータと対応がないデータの違いとは？【D
 permalink: /ds/paired-vs-independent-data/
 categories: [business]
 tags: [ds, design]
+prev: /ds/open-data/
+next: /ds/paper-structure/
 ---
 
 ## まず結論

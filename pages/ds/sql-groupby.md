@@ -4,6 +4,8 @@ title: GROUP BYとは？データ集計の基本を理解する【DS検定】
 permalink: /ds/sql-groupby/
 categories: [data-engineering]
 tags: [ds, sql]
+prev: /ds/sql-filtering/
+next: /ds/sql-having/
 ---
 
 ## まず結論

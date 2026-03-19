@@ -4,6 +4,8 @@ title: 中間層で使用される活性化関数とは？（ReLU・シグモイ
 permalink: /ds/activation-functions-hidden-layer/
 categories: [business]
 tags: [ds, design]
+prev: /ds/zero-trust/
+next: /ds/anchoring-effect/
 ---
 
 ## まず結論

@@ -4,6 +4,8 @@ title: ウェルチのt検定とは？等分散でない場合の平均比較【
 permalink: /ds/welch-t-test/
 categories: [data-science]
 tags: [ds, statistics]
+prev: /ds/variance-standard-deviation/
+next: /ds/z-test/
 ---
 
 ## まず結論

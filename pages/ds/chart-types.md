@@ -4,6 +4,8 @@ title: グラフの種類と使い分け（可視化の基本）【DS検定】
 permalink: /ds/chart-types/
 categories: [data-science]
 tags: [ds, visualization]
+prev: /ds/boxplot/
+next: /ds/drilldown-drillup/
 ---
 
 ## まず結論

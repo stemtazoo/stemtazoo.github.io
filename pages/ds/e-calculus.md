@@ -4,6 +4,7 @@ title: eの微分・積分を最短で整理【DS検定リテラシー】
 permalink: /ds/e-calculus/
 categories: [data-science]
 tags: [ds, math]
+next: /ds/eigenvalue/
 ---
 
 ## まず結論

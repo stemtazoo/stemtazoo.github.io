@@ -4,6 +4,8 @@ title: 画像データにおけるメタデータとは？意味と活用を整�
 permalink: /ds/image-metadata/
 categories: [data-science]
 tags: [ds, preprocessing]
+prev: /ds/image-filter-processing/
+next: /ds/imputation/
 ---
 
 ## まず結論

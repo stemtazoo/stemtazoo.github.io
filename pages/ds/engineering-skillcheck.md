@@ -4,6 +4,8 @@ title: DS検定 リテラシー｜データエンジニアリング力シート
 permalink: /ds/engineering-skillcheck/
 categories: [business]
 tags: [ds, skillcheck]
+prev: /ds/business-skillcheck/
+next: /ds/skillcheck/
 ---
 
 ## このページについて

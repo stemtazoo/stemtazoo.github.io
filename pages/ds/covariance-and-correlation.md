@@ -4,6 +4,8 @@ title: 共分散と相関係数の違いとは？【DS検定リテラシー】
 permalink: /ds/covariance-and-correlation/
 categories: [data-science]
 tags: [ds, statistics]
+prev: /ds/correlation-vs-causation/
+next: /ds/covariance-correlation/
 ---
 
 ## まず結論

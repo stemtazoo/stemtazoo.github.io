@@ -3,14 +3,9 @@ layout: page
 title: "データを読む・説明する・扱うとは？データリテラシー実践ガイド【DS検定】"
 permalink: /ds/data-literacy-practice/
 categories: [business]
-tags: [ds, design]
-  - ds
-  - literacy
-  - intro
-  - dataliteracy
-  - statistics
-  - visualization
-  - cheatsheet
+tags: [ds, design, literacy, intro, dataliteracy, statistics, visualization, cheatsheet]
+prev: /ds/data-literacy/
+next: /ds/evidence-based/
 ---
 
 # データリテラシーとは？

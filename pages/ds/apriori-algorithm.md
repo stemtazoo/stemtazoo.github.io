@@ -4,6 +4,8 @@ title: Aprioriアルゴリズムとは？（アソシエーション分析の基
 permalink: /ds/apriori-algorithm/
 categories: [data-science]
 tags: [ds, modeling]
+prev: /ds/dendrogram/
+next: /ds/association-analysis/
 ---
 
 ## まず結論

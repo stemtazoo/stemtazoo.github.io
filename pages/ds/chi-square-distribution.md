@@ -4,6 +4,8 @@ title: カイ二乗分布とは？（χ²分布の使いどころを整理）【
 permalink: /ds/chi-square-distribution/
 categories: [data-science]
 tags: [ds, statistics]
+prev: /ds/binomial-bernoulli/
+next: /ds/correlation-and-causation/
 ---
 
 ## まず結論

@@ -4,6 +4,8 @@ title: ピボットとは？クロス集計との違いを整理【DS検定】
 permalink: /ds/pivot/
 categories: [data-science]
 tags: [ds, visualization]
+prev: /ds/outlier-visualization/
+next: /ds/slice-dice/
 ---
 
 ## まず結論

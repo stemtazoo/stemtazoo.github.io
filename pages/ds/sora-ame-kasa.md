@@ -4,6 +4,8 @@ title: 空・雨・傘とは？仮説思考の基本フレーム【DS検定】
 permalink: /ds/sora-ame-kasa/
 categories: [ai-utilization]
 tags: [ds, ai-use]
+prev: /ds/mlops/
+next: /ds/weak-strong-ai/
 ---
 
 ## まず結論

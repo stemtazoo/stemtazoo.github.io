@@ -4,6 +4,8 @@ title: WHYの並び立てとは？ストーリー構築の基本【DS検定】
 permalink: /ds/why-structure/
 categories: [business]
 tags: [ds, design]
+prev: /ds/optional-math-algorithm/
+next: /ds/analysis-approach-design/
 ---
 
 ## まず結論

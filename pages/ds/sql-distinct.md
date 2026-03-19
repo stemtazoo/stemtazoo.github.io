@@ -4,6 +4,8 @@ title: DISTINCTとは？重複データを除去する基本操作【DS検定】
 permalink: /ds/sql-distinct/
 categories: [data-engineering]
 tags: [ds, sql]
+prev: /ds/sql-ddl-dml/
+next: /ds/sql-exists/
 ---
 
 ## まず結論

@@ -4,6 +4,8 @@ title: ピアソンの相関係数とは？関係の強さをどう読むか【D
 permalink: /ds/pearson-correlation/
 categories: [data-science]
 tags: [ds, statistics]
+prev: /ds/normal-and-standard-normal/
+next: /ds/point-interval-estimation/
 ---
 
 ## まず結論

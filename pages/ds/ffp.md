@@ -4,6 +4,8 @@ title: FFPとは？研究不正の3つの基本（Fabrication・Falsification・
 permalink: /ds/ffp/
 categories: [business]
 tags: [ds, design]
+prev: /ds/feature-engineering2/
+next: /ds/file-transfer-protocol/
 ---
 
 ## まず結論

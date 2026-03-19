@@ -4,6 +4,8 @@ title: ビジネスにおける「論理とデータの重要性」とは？【D
 permalink: /ds/business-logic-and-data-importance/
 categories: [business]
 tags: [ds, design]
+prev: /ds/bi-tool-functions/
+next: /ds/cap-theorem/
 ---
 
 ## まず結論

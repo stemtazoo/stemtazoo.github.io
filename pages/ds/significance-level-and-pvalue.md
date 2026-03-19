@@ -4,6 +4,8 @@ title: 有意水準とp値の違いとは？【DS検定リテラシー】
 permalink: /ds/significance-level-and-pvalue/
 categories: [data-science]
 tags: [ds, statistics]
+prev: /ds/sampling-methods-comparison/
+next: /ds/spearman-rank-correlation/
 ---
 
 ## まず結論

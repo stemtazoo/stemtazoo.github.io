@@ -5,7 +5,9 @@ title: 共起頻度・支持度・信頼度・リフト値の違いとは？【D
 permalink: /ds/association-metrics/
 categories: [data-science]
 tags: [ds, modeling]
---------------------------------
+prev: /ds/association-analysis/
+next: /ds/basket-analysis/
+---
 
 ## まず結論
 
@@ -23,6 +25,8 @@ DS検定では主に次の判断を問われます。
 **「一緒に起きる頻度」と「偶然ではない関係」を区別できるか**
 
 が重要になります。
+prev: /ds/association-analysis/
+next: /ds/basket-analysis/
 ---
 
 ## 直感的な説明

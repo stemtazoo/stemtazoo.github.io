@@ -4,6 +4,8 @@ title: DS検定 リテラシー｜データサイエンス力シート
 permalink: /ds/skillcheck/
 categories: [business]
 tags: [ds, skillcheck]
+prev: /ds/engineering-skillcheck/
+next: /ds/skilllevel-2023-assistant-ds-business/
 ---
 
 ## このページについて

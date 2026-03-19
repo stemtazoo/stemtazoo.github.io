@@ -4,6 +4,8 @@ title: HDFS（Hadoop分散ファイルシステム）とは？大規模データ
 permalink: /ds/hdfs/
 categories: [business]
 tags: [ds, design]
+prev: /ds/filter/
+next: /ds/hot-cool-archive/
 ---
 
 ## まず結論

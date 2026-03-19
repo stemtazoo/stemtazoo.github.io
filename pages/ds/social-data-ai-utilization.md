@@ -3,14 +3,9 @@ layout: page
 title: "社会におけるデータ・AI利活用とは？【DS検定リテラシー】"
 permalink: /ds/social-data-ai-utilization/
 categories: [ai-utilization]
-tags: [ds, ai-use]
-  - ds
-  - literacy
-  - intro
-  - ai
-  - data
-  - model-curriculum
-  - cheatsheet
+tags: [ds, ai-use, literacy, intro, ai, data, model-curriculum, cheatsheet]
+prev: /ds/human-centered-ai-principles/
+next: /ds/society5/
 ---
 
 # 社会におけるデータ・AI利活用とは？

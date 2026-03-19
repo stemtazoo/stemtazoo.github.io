@@ -1,8 +1,11 @@
 ---
 layout: page
 title: データウェアハウス（DWH）とは？データマートとの違いを理解する【DS検定】
-permalink: /ds/data-warehouse/
+permalink: /ds/data-warehouse-vs-datamart/
+categories: [data-engineering]
 tags: [ds, database]
+prev: /ds/data-warehouse/
+next: /ds/database-constraints/
 ---
 
 ## まず結論

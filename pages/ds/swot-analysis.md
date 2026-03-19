@@ -4,6 +4,8 @@ title: SWOT分析とは？企業の強みと外部環境を整理するフレー
 permalink: /ds/swot-analysis/
 categories: [business]
 tags: [ds, design]
+prev: /ds/rfm-analysis/
+next: /ds/bcp/
 ---
 
 ## まず結論

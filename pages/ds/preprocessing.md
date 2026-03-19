@@ -4,6 +4,8 @@ title: データ前処理（Preprocessing）とは？分析前に行う重要ス
 permalink: /ds/preprocessing/
 categories: [data-science]
 tags: [ds, preprocessing]
+prev: /ds/nlp-cleaning/
+next: /ds/regular-expression-basic/
 ---
 
 ## まず結論

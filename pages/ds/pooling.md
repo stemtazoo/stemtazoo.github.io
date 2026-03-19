@@ -4,6 +4,8 @@ title: プーリング（Pooling）とは？CNNで重要な特徴抽出の圧縮
 permalink: /ds/pooling/
 categories: [data-science]
 tags: [ds, modeling]
+prev: /ds/ml-tasks/
+next: /ds/random-forest/
 ---
 
 ## まず結論

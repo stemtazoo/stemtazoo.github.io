@@ -4,6 +4,8 @@ title: DS検定 リテラシー｜ビジネス力
 permalink: /ds/business-skillcheck/
 categories: [business]
 tags: [ds, skillcheck]
+prev: /ds/ai-utilization-skillcheck/
+next: /ds/engineering-skillcheck/
 ---
 
 ## このページについて

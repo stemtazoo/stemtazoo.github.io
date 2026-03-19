@@ -4,6 +4,8 @@ title: PoC（概念実証）とは？AIプロジェクトで重要な理由【DS
 permalink: /ds/poc-concept-proof/
 categories: [business]
 tags: [ds, design]
+prev: /ds/pdca-cycle/
+next: /ds/project-management/
 ---
 
 ## まず結論

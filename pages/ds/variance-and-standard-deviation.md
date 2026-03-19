@@ -4,6 +4,8 @@ title: 分散と標準偏差の違いとは？ばらつきをどう読むか【D
 permalink: /ds/variance-and-standard-deviation/
 categories: [data-science]
 tags: [ds, statistics]
+prev: /ds/student-t-test/
+next: /ds/variance-standard-deviation/
 ---
 
 ## まず結論

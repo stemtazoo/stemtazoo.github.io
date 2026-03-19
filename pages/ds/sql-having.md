@@ -4,6 +4,8 @@ title: HAVINGとは？WHEREとの違いを整理【DS検定】
 permalink: /ds/sql-having/
 categories: [data-engineering]
 tags: [ds, sql]
+prev: /ds/sql-groupby/
+next: /ds/sql-in-exists/
 ---
 
 ## まず結論

@@ -4,6 +4,8 @@ title: 5フォース分析とは？業界の競争環境を分析するフレー
 permalink: /ds/five-forces-analysis/
 categories: [business]
 tags: [ds, design]
+prev: /ds/customer-journey/
+next: /ds/kpi-kgi/
 ---
 
 ## まず結論

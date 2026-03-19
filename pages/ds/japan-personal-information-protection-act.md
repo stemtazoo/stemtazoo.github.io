@@ -4,6 +4,8 @@ title: 改正個人情報保護法とは？日本のデータ保護ルール【D
 permalink: /ds/japan-personal-information-protection-act/
 categories: [ai-utilization]
 tags: [ds, ethics]
+prev: /ds/gdpr/
+next: /ds/opt-out/
 ---
 
 ## まず結論

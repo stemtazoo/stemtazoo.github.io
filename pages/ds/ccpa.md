@@ -4,6 +4,8 @@ title: CCPAとは？GDPRとの違いとプライバシー保護の基本【DS検
 permalink: /ds/ccpa/
 categories: [ai-utilization]
 tags: [ds, ethics]
+prev: /ds/elsi/
+next: /ds/gdpr/
 ---
 
 ## まず結論

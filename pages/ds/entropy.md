@@ -4,6 +4,8 @@ title: エントロピーとは？不確実さを測る指標【DS検定】
 permalink: /ds/entropy/
 categories: [data-science]
 tags: [ds, statistics]
+prev: /ds/causal-inference/
+next: /ds/z-score-method/
 ---
 
 ## まず結論
