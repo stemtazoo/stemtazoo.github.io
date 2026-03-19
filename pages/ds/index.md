@@ -140,17 +140,39 @@ tags: [ds, index]
 
 ---
 
+{% assign shown_urls = "" | split: "" %}
+
+{%- comment -%}
+ここで「表示済み記事」を全部記録する
+{%- endcomment -%}
+
+{% for p in site.pages %}
+  {% if p.tags contains "statistics" and p.url contains "/ds/" %}
+    {% assign shown_urls = shown_urls | push: p.url %}
+  {% endif %}
+{% endfor %}
+
+{% for p in site.pages %}
+  {% if p.tags contains "preprocessing" and p.url contains "/ds/" %}
+    {% assign shown_urls = shown_urls | push: p.url %}
+  {% endif %}
+{% endfor %}
+
+{% for p in site.pages %}
+  {% if p.tags contains "sql" and p.url contains "/ds/" %}
+    {% assign shown_urls = shown_urls | push: p.url %}
+  {% endif %}
+{% endfor %}
+
+---
+
 # 🧩 未分類（あとで整理）
 
 <ul>
 {% for p in site.pages %}
   {% if p.url contains "/ds/" %}
-    {% unless p.tags contains "statistics"
-      or p.tags contains "preprocessing"
-      or p.tags contains "sql"
-      or p.tags contains "database"
-      or p.tags contains "skillcheck" %}
-        <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+    {% unless shown_urls contains p.url %}
+      <li><a href="{{ p.url }}">{{ p.title }}</a></li>
     {% endunless %}
   {% endif %}
 {% endfor %}
