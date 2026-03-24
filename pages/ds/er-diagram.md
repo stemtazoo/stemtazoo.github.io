@@ -3,7 +3,7 @@ layout: page
 title: ER図とは？エンティティとリレーションを整理する図【DS検定】
 permalink: /ds/er-diagram/
 categories: [data-engineering]
-tags: [ds, database]
+tags: [ds, data-structure, database]
 prev: /ds/dwh-appliance/
 next: /ds/sql-count-diff/
 ---

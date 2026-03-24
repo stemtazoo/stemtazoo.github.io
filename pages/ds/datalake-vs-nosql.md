@@ -3,7 +3,7 @@ layout: page
 title: データレイクとNoSQLの違いとは？役割の違いを整理【DS検定】
 permalink: /ds/datalake-vs-nosql/
 categories: [data-engineering]
-tags: [ds, database]
+tags: [ds, data-storage, database]
 prev: /ds/database-constraints/
 next: /ds/foreign-key/
 ---

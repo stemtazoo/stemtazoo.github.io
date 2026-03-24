@@ -3,7 +3,7 @@ layout: page
 title: Sparkとは？ビッグデータを高速処理する分散処理エンジン【DS検定】
 permalink: /ds/spark/
 categories: [data-engineering]
-tags: [ds, data-processing]
+tags: [ds, data-storage, data-processing]
 prev: /ds/soap/
 next: /ds/web-api/
 ---

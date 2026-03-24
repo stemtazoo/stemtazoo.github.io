@@ -3,7 +3,7 @@ layout: page
 title: REST APIとは？SOAPとの違いを整理【DS検定】
 permalink: /ds/rest-api/
 categories: [data-engineering]
-tags: [ds, data-processing]
+tags: [ds, data-collection, data-processing]
 prev: /ds/mapreduce/
 next: /ds/rest-api-methods/
 ---

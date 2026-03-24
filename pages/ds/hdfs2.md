@@ -3,7 +3,7 @@ layout: page
 title: HDFS（Hadoop分散ファイルシステム）とは？大規模データを保存する仕組み【DS検定】
 permalink: /ds/hdfs/
 categories: [business]
-tags: [ds, design]
+tags: [ds, data-storage, design]
 prev: /ds/filter/
 next: /ds/hot-cool-archive/
 ---

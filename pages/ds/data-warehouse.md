@@ -3,7 +3,7 @@ layout: page
 title: データウェアハウス（DWH）とは？（データレイクとの違いも整理）【DS検定リテラシー】
 permalink: /ds/data-warehouse/
 categories: [data-engineering]
-tags: [ds, database]
+tags: [ds, data-storage, data-structure, database]
 prev: /ds/data-mart/
 next: /ds/data-warehouse-vs-datamart/
 ---

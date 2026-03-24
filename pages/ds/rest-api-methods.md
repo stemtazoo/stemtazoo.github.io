@@ -3,7 +3,7 @@ layout: page
 title: REST API のメソッドとは？データ操作の役割を整理【DS検定】
 permalink: /ds/rest-api-methods/
 categories: [data-engineering]
-tags: [ds, data-processing]
+tags: [ds, data-collection, data-processing]
 prev: /ds/rest-api/
 next: /ds/soap/
 ---

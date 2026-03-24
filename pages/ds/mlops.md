@@ -3,7 +3,7 @@ layout: page
 title: MLOpsとは？AIOpsとの違いを一発整理【DS検定リテラシー】
 permalink: /ds/mlops/
 categories: [ai-utilization]
-tags: [ds, ai-use]
+tags: [ds, environment-setup, ai-use]
 prev: /ds/llm-temperature/
 next: /ds/sora-ame-kasa/
 ---

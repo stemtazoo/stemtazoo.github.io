@@ -3,7 +3,7 @@ layout: page
 title: スタースキーマとは？ファクトテーブルとディメンションテーブルを理解する【DS検定】
 permalink: /ds/star-schema/
 categories: [data-engineering]
-tags: [ds, database]
+tags: [ds, data-structure, database]
 prev: /ds/referential-integrity/
 next: /ds/data-cube/
 ---

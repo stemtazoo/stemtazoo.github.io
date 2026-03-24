@@ -3,7 +3,7 @@ layout: page
 title: マネージドサービスとは？クラウド環境構築の基本概念を整理【DS検定】
 permalink: /ds/managed-service/
 categories: [business]
-tags: [ds, design]
+tags: [ds, environment-setup, design]
 prev: /ds/key-stretching/
 next: /ds/metacognition/
 ---

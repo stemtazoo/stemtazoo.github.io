@@ -3,7 +3,7 @@ layout: page
 title: YARNとは？Hadoopクラスタのリソース管理の仕組み【DS検定】
 permalink: /ds/yarn/
 categories: [data-engineering]
-tags: [ds, data-processing]
+tags: [ds, data-storage, data-processing]
 prev: /ds/web-api/
 next: /ds/docker/
 ---

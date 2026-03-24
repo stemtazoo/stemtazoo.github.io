@@ -158,6 +158,42 @@ tags: [ds, index]
 
 # 🛠 データエンジニアリング力
 
+### 環境構築
+<ul>
+{% for p in site.pages %}
+  {% if p.tags contains "environment-setup" and p.url contains "/ds/" %}
+    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% endif %}
+{% endfor %}
+</ul>
+
+### データ収集
+<ul>
+{% for p in site.pages %}
+  {% if p.tags contains "data-collection" and p.url contains "/ds/" %}
+    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% endif %}
+{% endfor %}
+</ul>
+
+### データ構造
+<ul>
+{% for p in site.pages %}
+  {% if p.tags contains "data-structure" and p.url contains "/ds/" %}
+    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% endif %}
+{% endfor %}
+</ul>
+
+### データ蓄積
+<ul>
+{% for p in site.pages %}
+  {% if p.tags contains "data-storage" and p.url contains "/ds/" %}
+    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% endif %}
+{% endfor %}
+</ul>
+
 ### 🧾 SQL
 <ul>
 {% for p in site.pages %}
@@ -262,6 +298,30 @@ tags: [ds, index]
 
 {% for p in site.pages %}
   {% if p.tags contains "data-preparation" and p.url contains "/ds/" %}
+    {% assign shown_urls = shown_urls | push: p.url %}
+  {% endif %}
+{% endfor %}
+
+{% for p in site.pages %}
+  {% if p.tags contains "data-collection" and p.url contains "/ds/" %}
+    {% assign shown_urls = shown_urls | push: p.url %}
+  {% endif %}
+{% endfor %}
+
+{% for p in site.pages %}
+  {% if p.tags contains "data-structure" and p.url contains "/ds/" %}
+    {% assign shown_urls = shown_urls | push: p.url %}
+  {% endif %}
+{% endfor %}
+
+{% for p in site.pages %}
+  {% if p.tags contains "data-storage" and p.url contains "/ds/" %}
+    {% assign shown_urls = shown_urls | push: p.url %}
+  {% endif %}
+{% endfor %}
+
+{% for p in site.pages %}
+  {% if p.tags contains "environment-setup" and p.url contains "/ds/" %}
     {% assign shown_urls = shown_urls | push: p.url %}
   {% endif %}
 {% endfor %}

@@ -3,7 +3,7 @@ layout: page
 title: Dockerとは？再現性が出る理由を整理【DS検定】
 permalink: /ds/docker/
 categories: [data-engineering]
-tags: [ds, data-processing]
+tags: [ds, environment-setup, data-processing]
 prev: /ds/yarn/
 next: /ds/ftp-ssh/
 ---

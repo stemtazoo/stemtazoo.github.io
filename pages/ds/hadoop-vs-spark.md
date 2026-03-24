@@ -3,7 +3,7 @@ layout: page
 title: HadoopとSparkの違いとは？（分散処理基盤の比較）【DS検定リテラシー】
 permalink: /ds/hadoop-vs-spark/
 categories: [data-engineering]
-tags: [ds, data-processing]
+tags: [ds, data-storage, data-processing]
 prev: /ds/hadoop/
 next: /ds/hdfs/
 ---

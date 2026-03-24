@@ -3,7 +3,7 @@ layout: page
 title: HDFS（Hadoop分散ファイルシステム）とは？【DS検定リテラシー】
 permalink: /ds/hdfs/
 categories: [data-engineering]
-tags: [ds, data-processing]
+tags: [ds, data-storage, data-processing]
 prev: /ds/hadoop-vs-spark/
 next: /ds/mapreduce/
 ---

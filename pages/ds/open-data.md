@@ -3,7 +3,7 @@ layout: page
 title: オープンデータとは？公共データ活用の基本【DS検定】
 permalink: /ds/open-data/
 categories: [business]
-tags: [ds, design]
+tags: [ds, data-collection, environment-setup, design]
 prev: /ds/nltk/
 next: /ds/paired-vs-independent-data/
 ---

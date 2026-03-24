@@ -3,7 +3,7 @@ layout: page
 title: レプリケーションとバックアップの違いとは？【DS検定】
 permalink: /ds/replication-vs-backup/
 categories: [business]
-tags: [ds, design]
+tags: [ds, environment-setup, design]
 prev: /ds/rainbow-table-attack/
 next: /ds/sigmoid-function/
 ---

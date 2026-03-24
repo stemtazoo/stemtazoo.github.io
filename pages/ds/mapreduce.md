@@ -3,7 +3,7 @@ layout: page
 title: MapReduceとは？（分散処理の基本モデル）【DS検定リテラシー】
 permalink: /ds/mapreduce/
 categories: [data-engineering]
-tags: [ds, data-processing]
+tags: [ds, data-storage, data-processing]
 prev: /ds/hdfs/
 next: /ds/rest-api/
 ---

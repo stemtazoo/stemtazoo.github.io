@@ -3,7 +3,7 @@ layout: page
 title: 第2正規化と第3正規化の違いを整理（候補キーから考える）【DS検定】
 permalink: /ds/normalization-2nf-3nf/
 categories: [data-engineering]
-tags: [ds, database]
+tags: [ds, data-structure, database]
 prev: /ds/foreign-key/
 next: /ds/nosql/
 ---

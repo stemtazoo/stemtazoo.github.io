@@ -3,7 +3,7 @@ layout: page
 title: Web APIとは？HTTPでサービスとデータをやり取りする仕組み【DS検定】
 permalink: /ds/web-api/
 categories: [data-engineering]
-tags: [ds, data-processing]
+tags: [ds, data-collection, data-processing]
 prev: /ds/spark/
 next: /ds/yarn/
 ---

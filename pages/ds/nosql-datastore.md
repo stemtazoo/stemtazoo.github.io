@@ -3,7 +3,7 @@ layout: page
 title: NoSQLデータストアとは？RDBとの違いと使いどころを整理【DS検定】
 permalink: /ds/nosql-datastore/
 categories: [data-engineering]
-tags: [ds, database]
+tags: [ds, data-storage, database]
 prev: /ds/nosql/
 next: /ds/olap/
 ---

@@ -3,7 +3,7 @@ layout: page
 title: WebクローリングとWebスクレイピングの違いとは？【DS検定】
 permalink: /ds/web-crawling-scraping/
 categories: [data-science]
-tags: [ds, preprocessing]
+tags: [ds, data-collection, preprocessing]
 prev: /ds/mapping/
 next: /ds/boxplot/
 ---

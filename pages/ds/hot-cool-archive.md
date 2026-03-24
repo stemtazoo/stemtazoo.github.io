@@ -3,7 +3,7 @@ layout: page
 title: Hot・Cool・Archiveの違いとは？（クラウドストレージ階層の整理）【DS検定】
 permalink: /ds/hot-cool-archive/
 categories: [business]
-tags: [ds, design]
+tags: [ds, data-storage, environment-setup, design]
 prev: /ds/hdfs/
 next: /ds/incremental-vs-differential-backup/
 ---

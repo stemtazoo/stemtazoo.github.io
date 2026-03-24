@@ -3,7 +3,7 @@ layout: page
 title: データレイクとは？（DWHとの違いも整理）【DS検定リテラシー】
 permalink: /ds/data-lake/
 categories: [data-engineering]
-tags: [ds, database]
+tags: [ds, data-storage, data-structure, database]
 prev: /ds/data-cube/
 next: /ds/dwh-appliance/
 ---

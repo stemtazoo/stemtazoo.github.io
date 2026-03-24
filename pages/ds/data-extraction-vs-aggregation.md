@@ -3,7 +3,7 @@ layout: page
 title: データ抽出と集計の違いとは？（SQL・BIで混同しやすい操作）【DS検定】
 permalink: /ds/data-extraction-vs-aggregation/
 categories: [data-science]
-tags: [ds, preprocessing]
+tags: [ds, data-collection, preprocessing]
 prev: /ds/stemming-vs-lemmatization/
 next: /ds/jupyter-r-usage/
 ---

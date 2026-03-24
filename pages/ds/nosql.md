@@ -3,7 +3,7 @@ layout: page
 title: NoSQLとは？リレーショナルDBとの違いを整理【DS検定】
 permalink: /ds/nosql/
 categories: [data-engineering]
-tags: [ds, database]
+tags: [ds, data-storage, database]
 prev: /ds/normalization-2nf-3nf/
 next: /ds/nosql-datastore/
 ---

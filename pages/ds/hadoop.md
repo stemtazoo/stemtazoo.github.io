@@ -3,7 +3,7 @@ layout: page
 title: Hadoopとは？（ビッグデータ分散処理基盤）【DS検定リテラシー】
 permalink: /ds/hadoop/
 categories: [data-engineering]
-tags: [ds, data-processing]
+tags: [ds, data-storage, data-processing]
 prev: /ds/etl/
 next: /ds/hadoop-vs-spark/
 ---

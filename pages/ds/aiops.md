@@ -3,7 +3,7 @@ layout: page
 title: AIOpsとは？MLOpsとの違いを整理【DS検定リテラシー】
 permalink: /ds/aiops/
 categories: [ai-utilization]
-tags: [ds, ai-use]
+tags: [ds, environment-setup, ai-use]
 prev: /ds/society5/
 next: /ds/aiops-mlops-cheatsheet/
 ---

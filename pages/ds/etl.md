@@ -3,7 +3,7 @@ layout: page
 title: ETLとは？（データ統合の基本プロセス）【DS検定リテラシー】
 permalink: /ds/etl/
 categories: [data-engineering]
-tags: [ds, data-processing]
+tags: [ds, data-collection, data-processing]
 prev: /ds/batch-vs-stream/
 next: /ds/hadoop/
 ---
