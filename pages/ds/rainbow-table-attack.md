@@ -3,7 +3,7 @@ layout: page
 title: レインボーテーブル攻撃とは？（ソルトとの関係）【DS検定】
 permalink: /ds/rainbow-table-attack/
 categories: [business]
-tags: [ds, design]
+tags: [ds, security, design]
 prev: /ds/publickey-vs-symmetric/
 next: /ds/replication-vs-backup/
 ---

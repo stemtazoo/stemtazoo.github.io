@@ -3,7 +3,7 @@ layout: page
 title: 電子署名とは？仕組みと公開鍵・秘密鍵の違いを整理【DS検定】
 permalink: /ds/digital-signature/
 categories: [business]
-tags: [ds, design]
+tags: [ds, security, design]
 prev: /ds/contract-ukeoi-juninin/
 next: /ds/digital-signature2/
 ---

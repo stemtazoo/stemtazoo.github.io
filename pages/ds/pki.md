@@ -3,7 +3,7 @@ layout: page
 title: 公開鍵認証基盤（PKI）とは？電子署名の信頼を保証する仕組み【DS検定】
 permalink: /ds/pki/
 categories: [business]
-tags: [ds, design]
+tags: [ds, security, design]
 prev: /ds/oauth/
 next: /ds/rbac/
 ---

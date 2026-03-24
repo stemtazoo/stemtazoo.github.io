@@ -3,7 +3,7 @@ layout: page
 title: クラウドサービスのIAMポリシーとは？（アクセス制御の基本）【DS検定】
 permalink: /ds/iam-policy/
 categories: [business]
-tags: [ds, design]
+tags: [ds, security, design]
 prev: /ds/hash-vs-encryption/
 next: /ds/least-privilege/
 ---

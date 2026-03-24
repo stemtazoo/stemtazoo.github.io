@@ -3,7 +3,7 @@ layout: page
 title: SSL/TLSとは？公開鍵暗号と共通鍵暗号の役割を整理【DS検定】
 permalink: /ds/ssl-tls/
 categories: [business]
-tags: [ds, design]
+tags: [ds, security, design]
 prev: /ds/rbac/
 next: /ds/vpn-ssh/
 ---

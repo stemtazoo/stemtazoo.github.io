@@ -3,7 +3,7 @@ layout: page
 title: ゼロトラストとは？考え方と従来型セキュリティとの違い【DS検定リテラシー】
 permalink: /ds/zero-trust/
 categories: [business]
-tags: [ds, design]
+tags: [ds, security, design]
 prev: /ds/vpn-ssh/
 next: /ds/activation-functions-hidden-layer/
 ---

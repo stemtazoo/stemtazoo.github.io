@@ -3,7 +3,7 @@ layout: page
 title: 多要素認証（MFA）とは？仕組みと必要性を整理【DS検定リテラシー】
 permalink: /ds/mfa/
 categories: [business]
-tags: [ds, design]
+tags: [ds, security, design]
 prev: /ds/malware/
 next: /ds/oauth/
 ---

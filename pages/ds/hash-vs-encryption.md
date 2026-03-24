@@ -3,7 +3,7 @@ layout: page
 title: ハッシュと暗号化の違いとは？（復号できるかが分かれ目）【DS検定】
 permalink: /ds/hash-vs-encryption/
 categories: [business]
-tags: [ds, design]
+tags: [ds, security, design]
 prev: /ds/hash-function/
 next: /ds/iam-policy/
 ---

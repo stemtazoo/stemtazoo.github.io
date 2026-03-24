@@ -3,7 +3,7 @@ layout: page
 title: ハッシュ関数とは？（コリジョン・ソルトとの違い）【DS検定】
 permalink: /ds/hash-function/
 categories: [business]
-tags: [ds, design]
+tags: [ds, security, design]
 prev: /ds/digital-signature2/
 next: /ds/hash-vs-encryption/
 ---

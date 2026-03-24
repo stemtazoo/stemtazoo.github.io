@@ -3,7 +3,7 @@ layout: page
 title: ストレッチングとは？（ハッシュ強化の仕組み）【DS検定】
 permalink: /ds/key-stretching/
 categories: [business]
-tags: [ds, design]
+tags: [ds, security, design]
 prev: /ds/japanese-morphological-analysis-tools/
 next: /ds/managed-service/
 ---

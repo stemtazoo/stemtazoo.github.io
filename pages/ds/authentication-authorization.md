@@ -3,7 +3,7 @@ layout: page
 title: 認証と認可の違いとは？アクセス制御を一発で整理【DS検定】
 permalink: /ds/authentication-authorization/
 categories: [business]
-tags: [ds, design]
+tags: [ds, security, design]
 prev: /ds/access-control-list/
 next: /ds/authentication-vs-authorization/
 ---

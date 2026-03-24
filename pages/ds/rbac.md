@@ -3,7 +3,7 @@ layout: page
 title: RBAC（ロールベースアクセス制御）とは？【DS検定リテラシー】
 permalink: /ds/rbac/
 categories: [business]
-tags: [ds, design]
+tags: [ds, security, design]
 prev: /ds/pki/
 next: /ds/ssl-tls/
 ---

@@ -176,6 +176,16 @@ tags: [ds, index]
 {% endfor %}
 </ul>
 
+### 🗄 ITセキュリティ
+<ul>
+{% for p in site.pages %}
+  {% if p.tags contains "security" and p.url contains "/ds/" %}
+    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% endif %}
+{% endfor %}
+</ul>
+
+
 ---
 
 # 📊 ビジネス力
@@ -270,6 +280,12 @@ tags: [ds, index]
 
 {% for p in site.pages %}
   {% if p.tags contains "unstructured-data" and p.url contains "/ds/" %}
+    {% assign shown_urls = shown_urls | push: p.url %}
+  {% endif %}
+{% endfor %}
+
+{% for p in site.pages %}
+  {% if p.tags contains "security" and p.url contains "/ds/" %}
     {% assign shown_urls = shown_urls | push: p.url %}
   {% endif %}
 {% endfor %}

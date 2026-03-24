@@ -3,7 +3,7 @@ layout: page
 title: 公開鍵暗号方式と共通鍵暗号方式の違いとは？【DS検定】
 permalink: /ds/publickey-vs-symmetric/
 categories: [business]
-tags: [ds, design]
+tags: [ds, security, design]
 prev: /ds/primary-secondary-data/
 next: /ds/rainbow-table-attack/
 ---

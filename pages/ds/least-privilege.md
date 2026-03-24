@@ -3,7 +3,7 @@ layout: page
 title: 最小権限の原則とは？ゼロトラストとの関係を整理【DS検定リテラシー】
 permalink: /ds/least-privilege/
 categories: [business]
-tags: [ds, design]
+tags: [ds, security, design]
 prev: /ds/iam-policy/
 next: /ds/malware/
 ---

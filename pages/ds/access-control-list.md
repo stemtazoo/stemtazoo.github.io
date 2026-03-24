@@ -3,7 +3,7 @@ layout: page
 title: アクセス制御リスト（ACL）とは？ファイル権限の基本を整理【DS検定】
 permalink: /ds/access-control-list/
 categories: [business]
-tags: [ds, design]
+tags: [ds, security, design]
 prev: /ds/rpo-rto/
 next: /ds/authentication-authorization/
 ---

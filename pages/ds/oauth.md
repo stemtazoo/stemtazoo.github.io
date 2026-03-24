@@ -3,7 +3,7 @@ layout: page
 title: OAuthとは？仕組みとアクセストークンの流れを整理【DS検定リテラシー】
 permalink: /ds/oauth/
 categories: [business]
-tags: [ds, design]
+tags: [ds, security, design]
 prev: /ds/mfa/
 next: /ds/pki/
 ---
