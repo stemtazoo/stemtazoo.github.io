@@ -3,7 +3,7 @@ layout: page
 title: 日本語の形態素解析ツールとは？代表例と違いを整理【DS検定】
 permalink: /ds/japanese-morphological-analysis-tools/
 categories: [business]
-tags: [ds, design]
+tags: [ds, unstructured-data, design]
 prev: /ds/inheritance/
 next: /ds/key-stretching/
 ---

@@ -3,7 +3,7 @@ layout: page
 title: 画像のデジタル表現とは？（標本化と量子化の基本）【DS検定】
 permalink: /ds/digital-image-representation/
 categories: [business]
-tags: [ds, design]
+tags: [ds, unstructured-data, design]
 prev: /ds/design-of-experiments/
 next: /ds/digital-twin/
 ---

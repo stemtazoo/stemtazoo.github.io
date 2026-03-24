@@ -3,7 +3,7 @@ layout: page
 title: 形態素解析と係り受け解析とは？（自然言語処理の基本）【DS検定】
 permalink: /ds/morphological-dependency-parsing/
 categories: [business]
-tags: [ds, design]
+tags: [ds, unstructured-data, design]
 prev: /ds/metacognition/
 next: /ds/nltk/
 ---

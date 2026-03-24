@@ -3,7 +3,7 @@ layout: page
 title: 係り受け解析とは？形態素解析との違いを整理【DS検定】
 permalink: /ds/dependency-parsing/
 categories: [business]
-tags: [ds, design]
+tags: [ds, unstructured-data, design]
 prev: /ds/data-transformation/
 next: /ds/design-of-experiments/
 ---

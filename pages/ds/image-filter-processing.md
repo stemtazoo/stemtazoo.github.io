@@ -3,7 +3,7 @@ layout: page
 title: 画像のフィルタ処理とは？（ノイズ除去と特徴強調の基本）【DS検定】
 permalink: /ds/image-filter-processing/
 categories: [data-science]
-tags: [ds, preprocessing]
+tags: [ds, unstructured-data, preprocessing]
 prev: /ds/feature-engineering/
 next: /ds/image-metadata/
 ---

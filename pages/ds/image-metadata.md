@@ -3,7 +3,7 @@ layout: page
 title: 画像データにおけるメタデータとは？意味と活用を整理【DS検定リテラシー】
 permalink: /ds/image-metadata/
 categories: [data-science]
-tags: [ds, preprocessing]
+tags: [ds, unstructured-data, preprocessing]
 prev: /ds/image-filter-processing/
 next: /ds/imputation/
 ---

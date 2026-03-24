@@ -3,7 +3,7 @@ layout: page
 title: NLTKとは？自然言語処理ライブラリの役割を整理【DS検定】
 permalink: /ds/nltk/
 categories: [business]
-tags: [ds, design]
+tags: [ds, unstructured-data, design]
 prev: /ds/morphological-dependency-parsing/
 next: /ds/open-data/
 ---

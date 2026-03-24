@@ -145,6 +145,15 @@ tags: [ds, index]
 {% endfor %}
 </ul>
 
+### 非構造化データ処理
+<ul>
+{% for p in site.pages %}
+  {% if p.tags contains "unstructured-data" and p.url contains "/ds/" %}
+    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% endif %}
+{% endfor %}
+</ul>
+
 ---
 
 # 🛠 データエンジニアリング力

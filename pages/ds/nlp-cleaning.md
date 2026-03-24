@@ -3,7 +3,7 @@ layout: page
 title: 自然言語処理におけるクリーニングとは？（前処理の基本）【DS検定】
 permalink: /ds/nlp-cleaning/
 categories: [data-science]
-tags: [ds, preprocessing]
+tags: [ds, unstructured-data, preprocessing]
 prev: /ds/missing-value-handling/
 next: /ds/preprocessing/
 ---
