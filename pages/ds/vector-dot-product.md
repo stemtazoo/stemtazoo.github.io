@@ -3,7 +3,7 @@ layout: page
 title: ベクトルの内積とは？意味と使いどころを整理【DS検定】
 permalink: /ds/vector-dot-product/
 categories: [data-science]
-tags: [ds, math]
+tags: [ds, linear-algebra, math]
 prev: /ds/pca/
 next: /ds/bayes-theorem/
 ---

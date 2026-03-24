@@ -3,7 +3,7 @@ layout: page
 title: 逆行列とは何か？求め方と意味をやさしく整理【DS検定】
 permalink: /ds/inverse-matrix/
 categories: [data-science]
-tags: [ds, math]
+tags: [ds, linear-algebra, math]
 prev: /ds/euclidean-norm/
 next: /ds/matrix-multiplication/
 ---

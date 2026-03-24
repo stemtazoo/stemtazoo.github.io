@@ -3,7 +3,7 @@ layout: page
 title: 主成分分析（PCA）とは？次元削減の基本をわかりやすく整理【DS検定】
 permalink: /ds/pca/
 categories: [data-science]
-tags: [ds, math]
+tags: [ds, linear-algebra, math]
 prev: /ds/matrix-multiplication/
 next: /ds/vector-dot-product/
 ---

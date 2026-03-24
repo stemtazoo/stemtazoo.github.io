@@ -3,7 +3,7 @@ layout: page
 title: ユーグリッドノルムとは？（ベクトルの長さの測り方）【DS検定】
 permalink: /ds/euclidean-norm/
 categories: [data-science]
-tags: [ds, math]
+tags: [ds, linear-algebra, math]
 prev: /ds/eigenvalue/
 next: /ds/inverse-matrix/
 ---
