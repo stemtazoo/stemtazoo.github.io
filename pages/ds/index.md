@@ -73,6 +73,24 @@ tags: [ds, index]
 
 # 🧠 データサイエンス力
 
+### 線形代数
+<ul>
+{% for p in site.pages %}
+  {% if p.tags contains "linear-algebra" and p.url contains "/ds/" %}
+    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% endif %}
+{% endfor %}
+</ul>
+
+### 微分・積分
+<ul>
+{% for p in site.pages %}
+  {% if p.tags contains "calculus" and p.url contains "/ds/" %}
+    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% endif %}
+{% endfor %}
+</ul>
+
 ### 📊 統計
 <ul>
 {% for p in site.pages %}
