@@ -3,7 +3,7 @@ layout: page
 title: 一次情報と二次情報の違いとは？境界を整理【DS検定】
 permalink: /ds/primary-secondary-data/
 categories: [business]
-tags: [ds, design]
+tags: [ds, data-understanding, design]
 prev: /ds/primary-data/
 next: /ds/publickey-vs-symmetric/
 ---

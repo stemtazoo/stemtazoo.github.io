@@ -3,7 +3,7 @@ layout: page
 title: 一次情報とは？本当の意味を理解する【DS検定】
 permalink: /ds/primary-data/
 categories: [business]
-tags: [ds, design]
+tags: [ds, data-understanding, design]
 prev: /ds/power-law/
 next: /ds/primary-secondary-data/
 ---

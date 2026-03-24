@@ -3,7 +3,7 @@ layout: page
 title: メタ認知思考とは？自分の思考を客観視する力【DS検定】
 permalink: /ds/metacognition/
 categories: [business]
-tags: [ds, design]
+tags: [ds, data-understanding, design]
 prev: /ds/managed-service/
 next: /ds/morphological-dependency-parsing/
 ---

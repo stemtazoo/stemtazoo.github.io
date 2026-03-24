@@ -3,7 +3,7 @@ layout: page
 title: 統計の基本まとめ（平均・分散・相関・回帰の関係を整理）【DS検定】
 permalink: /ds/statistics-overview/
 categories: [data-science]
-tags: [ds, statistics]
+tags: [ds, data-understanding, statistics]
 prev: /ds/spearman-rank-correlation/
 next: /ds/statistics-summary/
 ---

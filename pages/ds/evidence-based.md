@@ -3,7 +3,7 @@ layout: page
 title: エビデンスベースドとは？（Evidence-Basedの考え方）【DS検定】
 permalink: /ds/evidence-based/
 categories: [business]
-tags: [ds, design]
+tags: [ds, data-understanding, design]
 prev: /ds/data-literacy-practice/
 next: /ds/hypothesis-thinking/
 ---

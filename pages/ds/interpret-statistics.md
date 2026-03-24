@@ -3,7 +3,7 @@ layout: page
 title: 数字やグラフの持つメッセージを理解するとは？（統計情報の正しい読み取り）【DS検定】
 permalink: /ds/interpret-statistics/
 categories: [data-science]
-tags: [ds, statistics]
+tags: [ds, data-understanding, statistics]
 prev: /ds/f-test/
 next: /ds/normal-and-standard-normal/
 ---

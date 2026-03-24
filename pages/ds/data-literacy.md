@@ -3,7 +3,7 @@ layout: page
 title: データリテラシーとは？データを読み解く力【DS検定】
 permalink: /ds/data-literacy/
 categories: [business]
-tags: [ds, design]
+tags: [ds, data-understanding, design]
 next: /ds/data-literacy-practice/
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
