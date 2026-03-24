@@ -332,7 +332,7 @@ tags: [ds, index]
 
 <ul>
 {% for p in site.pages %}
-  {% if p.url contains "/ds/" and p.url != "/ds/" %}
+  {% if p.url contains "/ds/" and p.url != "/ds/" and p.path contains "pages/ds/" %}
     {% unless shown_urls contains p.url %}
       <li><a href="{{ p.url }}">{{ p.title }}</a></li>
     {% endunless %}
