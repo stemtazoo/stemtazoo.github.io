@@ -221,13 +221,55 @@ tags: [ds, index]
 {%- endcomment -%}
 
 {% for p in site.pages %}
+  {% if p.tags contains "linear-algebra" and p.url contains "/ds/" %}
+    {% assign shown_urls = shown_urls | push: p.url %}
+  {% endif %}
+{% endfor %}
+
+{% for p in site.pages %}
+  {% if p.tags contains "calculus" and p.url contains "/ds/" %}
+    {% assign shown_urls = shown_urls | push: p.url %}
+  {% endif %}
+{% endfor %}
+
+{% for p in site.pages %}
+  {% if p.tags contains "set-theory" and p.url contains "/ds/" %}
+    {% assign shown_urls = shown_urls | push: p.url %}
+  {% endif %}
+{% endfor %}
+
+{% for p in site.pages %}
   {% if p.tags contains "statistics" and p.url contains "/ds/" %}
     {% assign shown_urls = shown_urls | push: p.url %}
   {% endif %}
 {% endfor %}
 
 {% for p in site.pages %}
-  {% if p.tags contains "preprocessing" and p.url contains "/ds/" %}
+  {% if p.tags contains "data-understanding" and p.url contains "/ds/" %}
+    {% assign shown_urls = shown_urls | push: p.url %}
+  {% endif %}
+{% endfor %}
+
+{% for p in site.pages %}
+  {% if p.tags contains "data-preparation" and p.url contains "/ds/" %}
+    {% assign shown_urls = shown_urls | push: p.url %}
+  {% endif %}
+{% endfor %}
+
+{% for p in site.pages %}
+  {% if p.tags contains "visualization" and p.url contains "/ds/" %}
+    {% assign shown_urls = shown_urls | push: p.url %}
+  {% endif %}
+{% endfor %}
+
+{% for p in site.pages %}
+  {% if p.tags contains "modeling" and p.url contains "/ds/" %}
+    {% assign shown_urls = shown_urls | push: p.url %}
+  {% endif %}
+{% endfor %}
+
+{% for p in site.pages %}
+  {% if p.tags contains "unstructured-data" and p.url contains "/ds/" %}
     {% assign shown_urls = shown_urls | push: p.url %}
   {% endif %}
 {% endfor %}
@@ -258,6 +300,12 @@ tags: [ds, index]
 
 {% for p in site.pages %}
   {% if p.tags contains "skillcheck" and p.url contains "/ds/" %}
+    {% assign shown_urls = shown_urls | push: p.url %}
+  {% endif %}
+{% endfor %}
+
+{% for p in site.pages %}
+  {% if p.tags contains "cheatsheet" and p.url contains "/ds/" %}
     {% assign shown_urls = shown_urls | push: p.url %}
   {% endif %}
 {% endfor %}
