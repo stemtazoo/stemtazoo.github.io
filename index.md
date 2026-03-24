@@ -48,6 +48,24 @@ permalink: /
   </p>
 </section>
 
+<section style="border: 1px solid #ddd; padding: 1rem; border-radius: 6px; margin: 2rem 0;">
+  <h2>情報セキュリティマネジメント試験 まとめ</h2>
+  <p>
+    情報セキュリティマネジメント試験の試験概要、出題内容、勉強の進め方を整理していくページです。<br>
+    セキュリティの基礎、管理、法務、運用などを試験対策の観点から見やすくまとめていきます。
+  </p>
+  <ul>
+    <li>試験概要と対象者像を最初に確認</li>
+    <li>科目A・科目Bの出題内容を整理</li>
+    <li>頻出テーマを分野ごとに学習</li>
+  </ul>
+  <p>
+    <a href="{{ '/sg/' | relative_url }}">
+      → 情報セキュリティマネジメント試験 まとめページへ
+    </a>
+  </p>
+</section>
+
 <section>
   <h2>最新記事</h2>
   <div class="tag-filter">
