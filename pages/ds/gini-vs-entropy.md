@@ -3,7 +3,7 @@ layout: page
 title: ジニ不純度とエントロピーの違いとは？分岐基準を整理【DS検定】
 permalink: /ds/gini-vs-entropy/
 categories: [data-science]
-tags: [ds, evaluation]
+tags: [ds, modeling, evaluation]
 prev: /ds/bias-variance-tradeoff/
 next: /ds/impurity/
 ---

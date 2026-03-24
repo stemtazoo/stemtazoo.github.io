@@ -3,7 +3,7 @@ layout: page
 title: 分類モデルの評価指標の比較とは？【DS検定リテラシー】
 permalink: /ds/evaluation-metrics-comparison/
 categories: [data-science]
-tags: [ds, evaluation]
+tags: [ds, modeling, evaluation]
 prev: /ds/coefficient-of-determination-contribution/
 next: /ds/r-squared-adjusted-r-squared/
 ---

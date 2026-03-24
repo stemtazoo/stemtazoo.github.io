@@ -3,7 +3,7 @@ layout: page
 title: 決定係数と寄与率とは？回帰モデルの説明力を理解する【DS検定】
 permalink: /ds/coefficient-of-determination-contribution/
 categories: [data-science]
-tags: [ds, evaluation]
+tags: [ds, modeling, evaluation]
 prev: /ds/overfitting-tree-depth/
 next: /ds/evaluation-metrics-comparison/
 ---

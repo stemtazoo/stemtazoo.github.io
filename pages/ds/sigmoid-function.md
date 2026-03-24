@@ -3,7 +3,7 @@ layout: page
 title: シグモイド関数とは？（確率に変換する関数）【DS検定】
 permalink: /ds/sigmoid-function/
 categories: [business]
-tags: [ds, design]
+tags: [ds, modeling, design]
 prev: /ds/replication-vs-backup/
 next: /ds/symmetric-difference/
 ---

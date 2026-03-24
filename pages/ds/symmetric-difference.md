@@ -3,7 +3,7 @@ layout: page
 title: 対称差集合とは？意味と考え方をやさしく整理【DS検定】
 permalink: /ds/symmetric-difference/
 categories: [business]
-tags: [ds, design]
+tags: [ds, set-theory, design]
 prev: /ds/sigmoid-function/
 next: /ds/type1-type2-error/
 ---

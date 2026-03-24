@@ -3,7 +3,7 @@ layout: page
 title: テンドログラム（階層クラスタリングの樹形図）とは？【DS検定】
 permalink: /ds/dendrogram/
 categories: [data-science]
-tags: [ds, visualization]
+tags: [ds, modeling, visualization]
 prev: /ds/visualization-basic-perspectives/
 next: /ds/apriori-algorithm/
 ---

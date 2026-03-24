@@ -3,7 +3,7 @@ layout: page
 title: バイアス・バリアンスのトレードオフとは？過学習との関係【DS検定】
 permalink: /ds/bias-variance-tradeoff/
 categories: [data-science]
-tags: [ds, evaluation]
+tags: [ds, modeling, evaluation]
 prev: /ds/ab-test/
 next: /ds/gini-vs-entropy/
 ---

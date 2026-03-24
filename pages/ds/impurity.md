@@ -3,7 +3,7 @@ layout: page
 title: 不純度とは？決定木での「混ざり具合」の意味【DS検定】
 permalink: /ds/impurity/
 categories: [data-science]
-tags: [ds, evaluation]
+tags: [ds, modeling, evaluation]
 prev: /ds/gini-vs-entropy/
 next: /ds/information-gain/
 ---

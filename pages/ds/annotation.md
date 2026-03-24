@@ -3,7 +3,7 @@ layout: page
 title: アノテーションとは？（AI学習データを作る重要な作業）【DS検定】
 permalink: /ds/annotation/
 categories: [data-science]
-tags: [ds, preprocessing]
+tags: [ds, modeling, preprocessing]
 prev: /ds/z-score-method/
 next: /ds/data-augmentation/
 ---

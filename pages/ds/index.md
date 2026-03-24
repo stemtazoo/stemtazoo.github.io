@@ -91,6 +91,15 @@ tags: [ds, index]
 {% endfor %}
 </ul>
 
+### 集合論
+<ul>
+{% for p in site.pages %}
+  {% if p.tags contains "set-theory" and p.url contains "/ds/" %}
+    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% endif %}
+{% endfor %}
+</ul>
+
 ### 📊 統計
 <ul>
 {% for p in site.pages %}
@@ -100,10 +109,10 @@ tags: [ds, index]
 {% endfor %}
 </ul>
 
-### ⚙️ 前処理
+### ⚙️ モデル化
 <ul>
 {% for p in site.pages %}
-  {% if p.tags contains "preprocessing" and p.url contains "/ds/" %}
+  {% if p.tags contains "modeling" and p.url contains "/ds/" %}
     <li><a href="{{ p.url }}">{{ p.title }}</a></li>
   {% endif %}
 {% endfor %}

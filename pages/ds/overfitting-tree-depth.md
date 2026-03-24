@@ -3,7 +3,7 @@ layout: page
 title: 過学習と分岐の深さの関係とは？決定木の注意点【DS検定】
 permalink: /ds/overfitting-tree-depth/
 categories: [data-science]
-tags: [ds, evaluation]
+tags: [ds, modeling, evaluation]
 prev: /ds/information-gain/
 next: /ds/coefficient-of-determination-contribution/
 ---

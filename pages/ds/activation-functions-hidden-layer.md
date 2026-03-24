@@ -3,7 +3,7 @@ layout: page
 title: 中間層で使用される活性化関数とは？（ReLU・シグモイド・ソフトマックスの違い）【DS検定】
 permalink: /ds/activation-functions-hidden-layer/
 categories: [business]
-tags: [ds, design]
+tags: [ds, modeling, design]
 prev: /ds/zero-trust/
 next: /ds/anchoring-effect/
 ---

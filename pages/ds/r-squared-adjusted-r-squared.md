@@ -3,7 +3,7 @@ layout: page
 title: 決定係数と自由度調整済決定係数の違いとは？【DS検定】
 permalink: /ds/r-squared-adjusted-r-squared/
 categories: [data-science]
-tags: [ds, evaluation]
+tags: [ds, modeling, evaluation]
 prev: /ds/evaluation-metrics-comparison/
 next: /ds/average-methods-comparison/
 ---
