@@ -3,7 +3,7 @@ layout: page
 title: 自己結合とは？同じテーブルを結合する理由を理解する【DS検定】
 permalink: /ds/self-join/
 categories: [data-engineering]
-tags: [ds, sql]
+tags: [ds, data-processing, sql]
 prev: /ds/left-join-where/
 next: /ds/batch-vs-stream/
 ---

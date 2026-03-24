@@ -3,7 +3,7 @@ layout: page
 title: フィルターとは？BIツールの基本操作をわかりやすく解説【DS検定】
 permalink: /ds/filter/
 categories: [business]
-tags: [ds, visualization, design]
+tags: [ds, data-processing, visualization, design]
 prev: /ds/file-transfer-protocol/
 next: /ds/hdfs/
 ---

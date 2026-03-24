@@ -194,6 +194,15 @@ tags: [ds, index]
 {% endfor %}
 </ul>
 
+### データ加工
+<ul>
+{% for p in site.pages %}
+  {% if p.tags contains "data-processing" and p.url contains "/ds/" %}
+    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% endif %}
+{% endfor %}
+</ul>
+
 ### 🧾 SQL
 <ul>
 {% for p in site.pages %}
@@ -316,6 +325,12 @@ tags: [ds, index]
 
 {% for p in site.pages %}
   {% if p.tags contains "data-storage" and p.url contains "/ds/" %}
+    {% assign shown_urls = shown_urls | push: p.url %}
+  {% endif %}
+{% endfor %}
+
+{% for p in site.pages %}
+  {% if p.tags contains "data-processing" and p.url contains "/ds/" %}
     {% assign shown_urls = shown_urls | push: p.url %}
   {% endif %}
 {% endfor %}

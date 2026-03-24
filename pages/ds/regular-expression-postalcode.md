@@ -3,7 +3,7 @@ layout: page
 title: 郵便番号の正規表現とは？電話番号との違いで理解する【DS検定】
 permalink: /ds/regular-expression-postalcode/
 categories: [data-science]
-tags: [ds, preprocessing]
+tags: [ds, data-processing, preprocessing]
 prev: /ds/regular-expression-email/
 next: /ds/regular-expression-summary/
 ---

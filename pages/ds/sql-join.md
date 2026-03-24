@@ -3,7 +3,7 @@ layout: page
 title: JOINとは？テーブル結合の基本を理解する【DS検定】
 permalink: /ds/sql-join/
 categories: [data-engineering]
-tags: [ds, sql]
+tags: [ds, data-processing, sql]
 prev: /ds/sql-in-exists/
 next: /ds/sql-union/
 ---

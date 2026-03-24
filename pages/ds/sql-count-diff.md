@@ -3,7 +3,7 @@ layout: page
 title: COUNTの違いとは？COUNT(*)・COUNT(列)・COUNT DISTINCTを整理【DS検定】
 permalink: /ds/sql-count-diff/
 categories: [data-engineering]
-tags: [ds, sql]
+tags: [ds, data-processing, sql]
 prev: /ds/er-diagram/
 next: /ds/sql-count-distinct/
 ---

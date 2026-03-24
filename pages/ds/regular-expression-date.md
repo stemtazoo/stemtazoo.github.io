@@ -3,7 +3,7 @@ layout: page
 title: 日付形式の正規表現とは？形式チェックと妥当性の違い【DS検定】
 permalink: /ds/regular-expression-date/
 categories: [data-science]
-tags: [ds, preprocessing]
+tags: [ds, data-processing, preprocessing]
 prev: /ds/regular-expression-basic/
 next: /ds/regular-expression-email/
 ---

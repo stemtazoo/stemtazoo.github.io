@@ -3,7 +3,7 @@ layout: page
 title: SQLのフィルタリング処理とは？（WHERE句によるデータ抽出）【DS検定】
 permalink: /ds/sql-filtering/
 categories: [data-engineering]
-tags: [ds, sql]
+tags: [ds, data-processing, sql]
 prev: /ds/sql-exists/
 next: /ds/sql-groupby/
 ---

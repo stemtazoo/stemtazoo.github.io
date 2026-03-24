@@ -3,7 +3,7 @@ layout: page
 title: データトランスフォーメーションとは？（非構造化データの変換）【DS検定】
 permalink: /ds/data-transformation/
 categories: [data-science]
-tags: [ds, unstructured-data, data-preparation, preprocessing]
+tags: [ds, data-processing, unstructured-data, data-preparation, preprocessing]
 prev: /ds/data-augmentation/
 next: /ds/encoding/
 ---

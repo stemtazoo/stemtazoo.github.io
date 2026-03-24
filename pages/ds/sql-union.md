@@ -3,7 +3,7 @@ layout: page
 title: UNIONとUNION ALLの違いとは？重複の扱いを整理【DS検定】
 permalink: /ds/sql-union/
 categories: [data-engineering]
-tags: [ds, sql]
+tags: [ds, data-processing, sql]
 prev: /ds/sql-join/
 next: /ds/sql-where/
 ---

@@ -3,7 +3,7 @@ layout: page
 title: データトランスフォーメーションとは？（非構造化データを分析可能にする前処理）【DS検定】
 permalink: /ds/data-transformation/
 categories: [business]
-tags: [ds, unstructured-data, data-preparation, design]
+tags: [ds, data-processing, unstructured-data, data-preparation, design]
 prev: /ds/data-driven-management/
 next: /ds/dependency-parsing/
 ---

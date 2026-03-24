@@ -3,7 +3,7 @@ layout: page
 title: LEFT JOINとWHEREの関係とは？（SQLのひっかけ問題）【DS検定】
 permalink: /ds/left-join-where/
 categories: [data-engineering]
-tags: [ds, sql]
+tags: [ds, data-processing, sql]
 prev: /ds/sql-where/
 next: /ds/self-join/
 ---

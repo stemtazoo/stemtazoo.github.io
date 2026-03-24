@@ -3,7 +3,7 @@ layout: page
 title: WHERE句とは？条件抽出の基本を理解する【DS検定】
 permalink: /ds/sql-where/
 categories: [data-engineering]
-tags: [ds, sql]
+tags: [ds, data-processing, sql]
 prev: /ds/sql-union/
 next: /ds/left-join-where/
 ---

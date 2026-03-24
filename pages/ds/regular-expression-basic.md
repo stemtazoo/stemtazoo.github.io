@@ -3,7 +3,7 @@ layout: page
 title: 正規表現とは？基本とひっかけポイント整理【DS検定】
 permalink: /ds/regular-expression-basic/
 categories: [data-science]
-tags: [ds, preprocessing]
+tags: [ds, data-processing, preprocessing]
 prev: /ds/preprocessing/
 next: /ds/regular-expression-date/
 ---

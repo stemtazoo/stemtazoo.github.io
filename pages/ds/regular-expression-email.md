@@ -3,7 +3,7 @@ layout: page
 title: メールアドレスの正規表現とは？なぜ難しいのかを整理【DS検定】
 permalink: /ds/regular-expression-email/
 categories: [data-science]
-tags: [ds, preprocessing]
+tags: [ds, data-processing, preprocessing]
 prev: /ds/regular-expression-date/
 next: /ds/regular-expression-postalcode/
 ---
