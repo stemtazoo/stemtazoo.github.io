@@ -3,7 +3,7 @@ layout: page
 title: データキューブとは？OLAP分析の基本概念を理解する【DS検定】
 permalink: /ds/data-cube/
 categories: [data-engineering]
-tags: [ds, database]
+tags: [ds, visualization, database]
 prev: /ds/star-schema/
 next: /ds/data-lake/
 ---

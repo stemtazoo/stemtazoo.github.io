@@ -3,7 +3,7 @@ layout: page
 title: OLAPとは？BIツール分析の基本概念をわかりやすく解説【DS検定】
 permalink: /ds/olap/
 categories: [data-engineering]
-tags: [ds, database]
+tags: [ds, visualization, database]
 prev: /ds/nosql-datastore/
 next: /ds/primary-key/
 ---

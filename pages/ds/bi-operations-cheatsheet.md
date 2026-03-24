@@ -3,7 +3,7 @@ layout: page
 title: BIツール操作チートシート｜スライス・ダイス・ドリルダウンの違い【DS検定】
 permalink: /ds/bi-operations-cheatsheet/
 categories: [business]
-tags: [ds, design]
+tags: [ds, visualization, design]
 prev: /ds/availability-heuristic/
 next: /ds/bi-tool-functions/
 ---

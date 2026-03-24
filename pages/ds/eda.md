@@ -3,7 +3,7 @@ layout: page
 title: EDA（探索的データ分析）とは？分析の第一歩を理解する【DS検定】
 permalink: /ds/eda/
 categories: [business]
-tags: [ds, design]
+tags: [ds, visualization, design]
 prev: /ds/design-thinking/
 next: /ds/agile-development/
 ---
