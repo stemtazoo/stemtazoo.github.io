@@ -9,8 +9,8 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
-title: STEMTAZOO Blog
-description: G検定対策｜AI・機械学習の用語をやさしく整理するブログ
+title: AI・データサイエンス・IT学習ノート
+description: AI・データサイエンス・ITの学びをやさしく整理するブログ
 lang: ja
 
 # 記事URLを安定させる
