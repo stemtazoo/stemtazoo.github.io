@@ -3,7 +3,7 @@ layout: page
 title: 無作為抽出法とは？種類と違いを整理【DS検定リテラシー】
 permalink: /ds/random-sampling-methods/
 categories: [data-science]
-tags: [ds, statistics]
+tags: [ds, data-preparation, statistics]
 prev: /ds/quartile/
 next: /ds/sample-variance-unbiased-variance/
 ---

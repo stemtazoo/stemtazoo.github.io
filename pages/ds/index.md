@@ -118,6 +118,15 @@ tags: [ds, index]
 {% endfor %}
 </ul>
 
+### データ準備
+<ul>
+{% for p in site.pages %}
+  {% if p.tags contains "data-preparation" and p.url contains "/ds/" %}
+    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% endif %}
+{% endfor %}
+</ul>
+
 ### データ可視化
 <ul>
 {% for p in site.pages %}

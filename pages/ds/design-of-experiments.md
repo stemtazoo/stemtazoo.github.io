@@ -3,7 +3,7 @@ layout: page
 title: 実験計画法とは？少ない実験で原因を見つける方法【DS検定】
 permalink: /ds/design-of-experiments/
 categories: [business]
-tags: [ds, design]
+tags: [ds, data-preparation, design]
 prev: /ds/dependency-parsing/
 next: /ds/digital-image-representation/
 ---

@@ -3,7 +3,7 @@ layout: page
 title: 欠損値の処理方法とは？代表的な手法と使い分け【DS検定】
 permalink: /ds/missing-value-handling/
 categories: [data-science]
-tags: [ds, preprocessing]
+tags: [ds, data-preparation, preprocessing]
 prev: /ds/imputation/
 next: /ds/nlp-cleaning/
 ---

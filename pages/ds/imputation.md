@@ -3,7 +3,7 @@ layout: page
 title: インプテーションとは？（欠損値補完の基本）【DS検定】
 permalink: /ds/imputation/
 categories: [data-science]
-tags: [ds, preprocessing]
+tags: [ds, data-preparation, preprocessing]
 prev: /ds/image-metadata/
 next: /ds/missing-value-handling/
 ---

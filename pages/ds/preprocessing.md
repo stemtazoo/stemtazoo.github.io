@@ -3,7 +3,7 @@ layout: page
 title: データ前処理（Preprocessing）とは？分析前に行う重要ステップ【DS検定】
 permalink: /ds/preprocessing/
 categories: [data-science]
-tags: [ds, preprocessing]
+tags: [ds, data-preparation, preprocessing]
 prev: /ds/nlp-cleaning/
 next: /ds/regular-expression-basic/
 ---

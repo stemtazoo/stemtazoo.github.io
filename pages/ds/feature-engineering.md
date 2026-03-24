@@ -3,7 +3,7 @@ layout: page
 title: 特徴量エンジニアリングとは？モデル性能を高めるデータ加工【DS検定】
 permalink: /ds/feature-engineering/
 categories: [data-science]
-tags: [ds, preprocessing]
+tags: [ds, data-preparation, preprocessing]
 prev: /ds/encoding/
 next: /ds/image-filter-processing/
 ---

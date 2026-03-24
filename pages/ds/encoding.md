@@ -3,7 +3,7 @@ layout: page
 title: エンコーディングとは？カテゴリ変数を数値化する理由【DS検定】
 permalink: /ds/encoding/
 categories: [data-science]
-tags: [ds, preprocessing]
+tags: [ds, data-preparation, preprocessing]
 prev: /ds/data-transformation/
 next: /ds/feature-engineering/
 ---

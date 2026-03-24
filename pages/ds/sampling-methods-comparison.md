@@ -3,7 +3,7 @@ layout: page
 title: 抽出方法の違いを整理（単純無作為・層化・集落・多段・系統）【DS検定】
 permalink: /ds/sampling-methods-comparison/
 categories: [data-science]
-tags: [ds, statistics]
+tags: [ds, data-preparation, statistics]
 prev: /ds/sample-variance-unbiased-variance/
 next: /ds/significance-level-and-pvalue/
 ---

@@ -3,7 +3,7 @@ layout: page
 title: zスコア法とは？異常値判定の基本を整理【DS検定リテラシー】
 permalink: /ds/z-score-method/
 categories: [data-science]
-tags: [ds, statistics]
+tags: [ds, data-preparation, statistics]
 prev: /ds/entropy/
 next: /ds/annotation/
 ---

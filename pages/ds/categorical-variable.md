@@ -3,7 +3,7 @@ layout: page
 title: カテゴリ変数とは？数値データとの違いを整理【DS検定】
 permalink: /ds/categorical-variable/
 categories: [business]
-tags: [ds, design]
+tags: [ds, data-preparation, design]
 prev: /ds/cap-theorem/
 next: /ds/cognitive-bias/
 ---
