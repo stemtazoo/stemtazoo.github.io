@@ -59,15 +59,15 @@ tags: [sg, index]
 ## ⭐ まず読む3記事
 
 {% assign sg_pages = site.pages | where_exp: "p", "p.url contains '/sg/'" %}
-{% assign sg_intro_count = 0 %}
+{% assign sg_latest_urls = "/sg/port-number/,/sg/dhcp/,/sg/client-server-system/" | split: "," %}
 <ul>
-{% for p in sg_pages %}
-  {% if p.tags and (p.tags contains 'sg-security-overview' or p.tags contains 'security_general' or p.tags contains 'security') %}
-    {% if sg_intro_count < 3 %}
+{% for latest_url in sg_latest_urls %}
+  {% for p in sg_pages %}
+    {% if p.url == latest_url %}
   <li><a href="{{ p.url }}">{{ p.title }}</a></li>
-      {% assign sg_intro_count = sg_intro_count | plus: 1 %}
+      {% break %}
     {% endif %}
-  {% endif %}
+  {% endfor %}
 {% endfor %}
 </ul>
 
