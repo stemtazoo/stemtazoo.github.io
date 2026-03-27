@@ -73,6 +73,17 @@ tags: [sg, index]
 
 ---
 
+## 📝 試験概要
+<ul>
+{% for p in sg_pages %}
+  {% if p.tags and (p.tags contains 'sg-exam-outline') %}
+  <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% endif %}
+{% endfor %}
+</ul>
+
+---
+
 # 🧩 出題分野別まとめ
 
 ### 情報セキュリティ全般
