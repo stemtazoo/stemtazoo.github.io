@@ -3,7 +3,7 @@ layout: page
 title: 情報セキュリティマネジメント試験とは？役割・対象者・試験の位置づけを整理
 permalink: /sg/information-security-management-exam/
 categories: [business]
-tags: [sg, security]
+tags: [sg, sg-exam-outline]
 prev: /sg/
 ---
 
