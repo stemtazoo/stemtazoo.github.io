@@ -56,13 +56,71 @@ tags: [sg, index]
 
 ---
 
-## これから追加していく予定
+## ⭐ まず読む3記事
 
+{% assign sg_intro = site.pages | where_exp: "p", "p.url contains '/sg/' and p.tags and (p.tags contains 'sg-security-overview' or p.tags contains 'security_general' or p.tags contains 'security')" %}
 <ul>
-  <li><a href="{{ '/sg/information-security-management-exam/' | relative_url }}">情報セキュリティマネジメント試験とは？役割・対象者・試験の位置づけを整理</a></li>
-  <li><a href="{{ '/sg/sg-exam-outline-study/' | relative_url }}">情報セキュリティマネジメント試験の出題内容とは？科目A・科目Bと勉強方法を整理</a></li>
-  <li>情報セキュリティの基本用語</li>
-  <li>リスク管理、認証、アクセス制御、暗号化</li>
-  <li>法務・ガイドライン・運用管理</li>
-  <li>試験対策向けの整理記事</li>
+{% for p in sg_intro limit:3 %}
+  <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+{% endfor %}
+</ul>
+
+---
+
+# 🧩 出題分野別まとめ
+
+### 情報セキュリティ全般
+{% assign sg_security_overview = site.pages | where_exp: "p", "p.url contains '/sg/' and p.tags and (p.tags contains 'sg-security-overview' or p.tags contains 'security_general' or p.tags contains 'security')" %}
+<ul>
+{% for p in sg_security_overview %}
+  <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+{% endfor %}
+</ul>
+
+### 情報セキュリティ管理
+{% assign sg_security_management = site.pages | where_exp: "p", "p.url contains '/sg/' and p.tags and (p.tags contains 'sg-security-management' or p.tags contains 'security_management')" %}
+<ul>
+{% for p in sg_security_management %}
+  <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+{% endfor %}
+</ul>
+
+### 情報セキュリティ対策
+{% assign sg_security_measures = site.pages | where_exp: "p", "p.url contains '/sg/' and p.tags and (p.tags contains 'sg-security-measures' or p.tags contains 'crypto_auth' or p.tags contains 'access_control' or p.tags contains 'unauthorized_access')" %}
+<ul>
+{% for p in sg_security_measures %}
+  <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+{% endfor %}
+</ul>
+
+### 情報セキュリティ関連法規
+{% assign sg_security_law = site.pages | where_exp: "p", "p.url contains '/sg/' and p.tags and (p.tags contains 'sg-security-law' or p.tags contains 'security_law')" %}
+<ul>
+{% for p in sg_security_law %}
+  <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+{% endfor %}
+</ul>
+
+### テクノロジ
+{% assign sg_technology = site.pages | where_exp: "p", "p.url contains '/sg/' and p.tags and (p.tags contains 'sg-technology' or p.tags contains 'technology' or p.tags contains 'network' or p.tags contains 'system_architecture')" %}
+<ul>
+{% for p in sg_technology %}
+  <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+{% endfor %}
+</ul>
+
+### マネジメント
+{% assign sg_management = site.pages | where_exp: "p", "p.url contains '/sg/' and p.tags and (p.tags contains 'sg-management' or p.tags contains 'risk_assessment' or p.tags contains 'incident_management' or p.tags contains 'isms')" %}
+<ul>
+{% for p in sg_management %}
+  <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+{% endfor %}
+</ul>
+
+### ストラテジ
+{% assign sg_strategy = site.pages | where_exp: "p", "p.url contains '/sg/' and p.tags and (p.tags contains 'sg-strategy' or p.tags contains 'strategy')" %}
+<ul>
+{% for p in sg_strategy %}
+  <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+{% endfor %}
 </ul>
