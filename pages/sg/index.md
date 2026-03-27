@@ -58,10 +58,16 @@ tags: [sg, index]
 
 ## ⭐ まず読む3記事
 
-{% assign sg_intro = site.pages | where_exp: "p", "p.url contains '/sg/' and p.tags and (p.tags contains 'sg-security-overview' or p.tags contains 'security_general' or p.tags contains 'security')" %}
+{% assign sg_pages = site.pages | where_exp: "p", "p.url contains '/sg/'" %}
+{% assign sg_intro_count = 0 %}
 <ul>
-{% for p in sg_intro limit:3 %}
+{% for p in sg_pages %}
+  {% if p.tags and (p.tags contains 'sg-security-overview' or p.tags contains 'security_general' or p.tags contains 'security') %}
+    {% if sg_intro_count < 3 %}
   <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+      {% assign sg_intro_count = sg_intro_count | plus: 1 %}
+    {% endif %}
+  {% endif %}
 {% endfor %}
 </ul>
 
@@ -70,57 +76,64 @@ tags: [sg, index]
 # 🧩 出題分野別まとめ
 
 ### 情報セキュリティ全般
-{% assign sg_security_overview = site.pages | where_exp: "p", "p.url contains '/sg/' and p.tags and (p.tags contains 'sg-security-overview' or p.tags contains 'security_general' or p.tags contains 'security')" %}
 <ul>
-{% for p in sg_security_overview %}
+{% for p in sg_pages %}
+  {% if p.tags and (p.tags contains 'sg-security-overview' or p.tags contains 'security_general' or p.tags contains 'security') %}
   <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% endif %}
 {% endfor %}
 </ul>
 
 ### 情報セキュリティ管理
-{% assign sg_security_management = site.pages | where_exp: "p", "p.url contains '/sg/' and p.tags and (p.tags contains 'sg-security-management' or p.tags contains 'security_management')" %}
 <ul>
-{% for p in sg_security_management %}
+{% for p in sg_pages %}
+  {% if p.tags and (p.tags contains 'sg-security-management' or p.tags contains 'security_management') %}
   <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% endif %}
 {% endfor %}
 </ul>
 
 ### 情報セキュリティ対策
-{% assign sg_security_measures = site.pages | where_exp: "p", "p.url contains '/sg/' and p.tags and (p.tags contains 'sg-security-measures' or p.tags contains 'crypto_auth' or p.tags contains 'access_control' or p.tags contains 'unauthorized_access')" %}
 <ul>
-{% for p in sg_security_measures %}
+{% for p in sg_pages %}
+  {% if p.tags and (p.tags contains 'sg-security-measures' or p.tags contains 'crypto_auth' or p.tags contains 'access_control' or p.tags contains 'unauthorized_access') %}
   <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% endif %}
 {% endfor %}
 </ul>
 
 ### 情報セキュリティ関連法規
-{% assign sg_security_law = site.pages | where_exp: "p", "p.url contains '/sg/' and p.tags and (p.tags contains 'sg-security-law' or p.tags contains 'security_law')" %}
 <ul>
-{% for p in sg_security_law %}
+{% for p in sg_pages %}
+  {% if p.tags and (p.tags contains 'sg-security-law' or p.tags contains 'security_law') %}
   <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% endif %}
 {% endfor %}
 </ul>
 
 ### テクノロジ
-{% assign sg_technology = site.pages | where_exp: "p", "p.url contains '/sg/' and p.tags and (p.tags contains 'sg-technology' or p.tags contains 'technology' or p.tags contains 'network' or p.tags contains 'system_architecture')" %}
 <ul>
-{% for p in sg_technology %}
+{% for p in sg_pages %}
+  {% if p.tags and (p.tags contains 'sg-technology' or p.tags contains 'technology' or p.tags contains 'network' or p.tags contains 'system_architecture') %}
   <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% endif %}
 {% endfor %}
 </ul>
 
 ### マネジメント
-{% assign sg_management = site.pages | where_exp: "p", "p.url contains '/sg/' and p.tags and (p.tags contains 'sg-management' or p.tags contains 'risk_assessment' or p.tags contains 'incident_management' or p.tags contains 'isms')" %}
 <ul>
-{% for p in sg_management %}
+{% for p in sg_pages %}
+  {% if p.tags and (p.tags contains 'sg-management' or p.tags contains 'risk_assessment' or p.tags contains 'incident_management' or p.tags contains 'isms') %}
   <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% endif %}
 {% endfor %}
 </ul>
 
 ### ストラテジ
-{% assign sg_strategy = site.pages | where_exp: "p", "p.url contains '/sg/' and p.tags and (p.tags contains 'sg-strategy' or p.tags contains 'strategy')" %}
 <ul>
-{% for p in sg_strategy %}
+{% for p in sg_pages %}
+  {% if p.tags and (p.tags contains 'sg-strategy' or p.tags contains 'strategy') %}
   <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% endif %}
 {% endfor %}
 </ul>
