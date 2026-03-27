@@ -3,7 +3,7 @@ layout: page
 title: 情報セキュリティマネジメント試験の出題内容とは？科目A・科目Bと勉強方法を整理
 permalink: /sg/sg-exam-outline-study/
 categories: [business]
-tags: [sg, security]
+tags: [sg, security, sg-exam-outline]
 prev: /sg/information-security-management-exam/
 ---
 
