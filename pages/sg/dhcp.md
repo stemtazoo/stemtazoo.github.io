@@ -2,7 +2,7 @@
 layout: page
 title: DHCPとは？IPアドレスを自動で割り当てる仕組み【情報セキュリティマネジメント】
 permalink: /sg/dhcp/
-tags: [sg, technology, network, it_security_operations]
+tags: [sg, sg-technology]
 ---
 
 ## まず結論

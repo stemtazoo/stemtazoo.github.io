@@ -2,7 +2,7 @@
 layout: page
 title: CSIRTとは？組織内インシデント対応の基本【情報セキュリティマネジメント】
 permalink: /sg/csirt/
-tags: [sg, security_management, incident_management, csirt]
+tags: [sg, sg-security-management]
 ---
 
 ## まず結論

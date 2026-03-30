@@ -2,7 +2,7 @@
 layout: page
 title: JPCERT/CCとは？役割とCSIRTとの違いを整理【情報セキュリティマネジメント】
 permalink: /sg/jpcert-cc/
-tags: [sg, security_management, incident_management, csirt]
+tags: [sg, sg-security-management]
 ---
 
 ## まず結論

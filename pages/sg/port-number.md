@@ -2,7 +2,7 @@
 layout: page
 title: ポート番号とは？通信先サービスの識別を理解する【情報セキュリティマネジメント】
 permalink: /sg/port-number/
-tags: [sg, technology, network, unauthorized_access]
+tags: [sg, sg-technology]
 ---
 
 ## まず結論

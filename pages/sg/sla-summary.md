@@ -2,7 +2,7 @@
 layout: page
 title: SLAの問題まとめ（稼働率の考え方と計算のコツ）【情報セキュリティマネジメント】
 permalink: /sg/sla-summary/
-tags: [sg, management, service_management, risk_assessment]
+tags: [sg, sg-management]
 ---
 
 ## まず結論

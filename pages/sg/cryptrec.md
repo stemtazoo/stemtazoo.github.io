@@ -2,7 +2,7 @@
 layout: page
 title: CRYPTRECとは？暗号の安全性評価の役割を理解する【情報セキュリティマネジメント】
 permalink: /sg/cryptrec/
-tags: [sg, security_general, crypto_auth, security_management]
+tags: [sg, sg-security-measures]
 ---
 
 ## まず結論

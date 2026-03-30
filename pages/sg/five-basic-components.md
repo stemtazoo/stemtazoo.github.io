@@ -2,7 +2,7 @@
 layout: page
 title: 五大装置とは？コンピュータの基本構成を理解する【情報セキュリティマネジメント】
 permalink: /sg/five-basic-components/
-tags: [sg, technology, system_architecture, it_security_operations]
+tags: [sg, sg-technology]
 ---
 
 ## まず結論
