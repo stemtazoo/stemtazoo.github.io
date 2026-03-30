@@ -148,3 +148,78 @@ tags: [sg, index]
   {% endif %}
 {% endfor %}
 </ul>
+
+---
+
+{% assign shown_urls = "" | split: "" %}
+
+{%- comment -%}
+ここで「表示済み記事」を全部記録する
+{%- endcomment -%}
+
+{% for latest_url in sg_latest_urls %}
+  {% assign shown_urls = shown_urls | push: latest_url %}
+{% endfor %}
+
+{% for p in sg_pages %}
+  {% if p.tags and (p.tags contains 'sg-exam-outline') %}
+    {% assign shown_urls = shown_urls | push: p.url %}
+  {% endif %}
+{% endfor %}
+
+{% for p in sg_pages %}
+  {% if p.tags and (p.tags contains 'sg-security-overview' or p.tags contains 'security_general' or p.tags contains 'security') %}
+    {% assign shown_urls = shown_urls | push: p.url %}
+  {% endif %}
+{% endfor %}
+
+{% for p in sg_pages %}
+  {% if p.tags and (p.tags contains 'sg-security-management' or p.tags contains 'security_management') %}
+    {% assign shown_urls = shown_urls | push: p.url %}
+  {% endif %}
+{% endfor %}
+
+{% for p in sg_pages %}
+  {% if p.tags and (p.tags contains 'sg-security-measures' or p.tags contains 'crypto_auth' or p.tags contains 'access_control' or p.tags contains 'unauthorized_access') %}
+    {% assign shown_urls = shown_urls | push: p.url %}
+  {% endif %}
+{% endfor %}
+
+{% for p in sg_pages %}
+  {% if p.tags and (p.tags contains 'sg-security-law' or p.tags contains 'security_law') %}
+    {% assign shown_urls = shown_urls | push: p.url %}
+  {% endif %}
+{% endfor %}
+
+{% for p in sg_pages %}
+  {% if p.tags and (p.tags contains 'sg-technology' or p.tags contains 'technology' or p.tags contains 'network' or p.tags contains 'system_architecture') %}
+    {% assign shown_urls = shown_urls | push: p.url %}
+  {% endif %}
+{% endfor %}
+
+{% for p in sg_pages %}
+  {% if p.tags and (p.tags contains 'sg-management' or p.tags contains 'risk_assessment' or p.tags contains 'incident_management' or p.tags contains 'isms') %}
+    {% assign shown_urls = shown_urls | push: p.url %}
+  {% endif %}
+{% endfor %}
+
+{% for p in sg_pages %}
+  {% if p.tags and (p.tags contains 'sg-strategy' or p.tags contains 'strategy') %}
+    {% assign shown_urls = shown_urls | push: p.url %}
+  {% endif %}
+{% endfor %}
+
+---
+
+# 🧩 未分類（あとで整理）
+
+<ul>
+{% for p in sg_pages %}
+  {% if p.url != "/sg/" and p.path contains "pages/sg/" %}
+    {% unless shown_urls contains p.url %}
+      <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+    {% endunless %}
+  {% endif %}
+{% endfor %}
+</ul>
+
