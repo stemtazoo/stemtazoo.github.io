@@ -2,7 +2,7 @@
 layout: page
 title: 稼働率とは？可用性の考え方とSLAでの判断基準【情報セキュリティマネジメント】
 permalink: /sg/availability/
-tags: [sg, security_general, cia, service_management]
+tags: [sg, sg-management]
 ---
 
 ## まず結論

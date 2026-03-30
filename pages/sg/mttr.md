@@ -2,7 +2,7 @@
 layout: page
 title: MTTRとは？平均復旧時間の意味と短縮の考え方【情報セキュリティマネジメント】
 permalink: /sg/mttr/
-tags: [sg, management, service_management, incident_management]
+tags: [sg, sg-management]
 ---
 
 ## まず結論

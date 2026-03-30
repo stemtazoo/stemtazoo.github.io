@@ -2,7 +2,7 @@
 layout: page
 title: MTBFとは？平均故障間隔の意味と稼働率との関係【情報セキュリティマネジメント】
 permalink: /sg/mtbf/
-tags: [sg, management, service_management, system_architecture]
+tags: [sg, sg-management]
 ---
 
 ## まず結論

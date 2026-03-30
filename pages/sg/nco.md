@@ -2,7 +2,7 @@
 layout: page
 title: NCOとは？政府のサイバー司令塔を理解する【情報セキュリティマネジメント】
 permalink: /sg/nco/
-tags: [sg, security_management, incident_management, security_general]
+tags: [sg, sg-security-management]
 ---
 
 ## まず結論

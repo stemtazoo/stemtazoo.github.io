@@ -2,7 +2,7 @@
 layout: page
 title: クライアントサーバーシステムとは？役割分担の考え方を理解する【情報セキュリティマネジメント】
 permalink: /sg/client-server-system/
-tags: [sg, technology, system_architecture, access_control]
+tags: [sg, sg-technology]
 ---
 
 ## まず結論

@@ -2,7 +2,7 @@
 layout: page
 title: 残留リスクとは？対応後にも残るリスクを理解する【情報セキュリティマネジメント】
 permalink: /sg/residual-risk/
-tags: [sg, security_management, risk_assessment, isms]
+tags: [sg, sg-security-management]
 ---
 
 ## まず結論
