@@ -2,7 +2,7 @@
 layout: page
 title: WPA2・WPA3・802.1Xとは？無線LAN認証の違いを整理【情報セキュリティマネジメント】
 permalink: /sg/wifi-auth-wpa2-wpa3-8021x/
-tags: [sg, security_measures, access_control, network]
+tags: [sg, security_measures, access_control, network, sg-security-measures]
 ---
 
 ## まず結論

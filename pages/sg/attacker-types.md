@@ -2,7 +2,7 @@
 layout: page
 title: 攻撃者の種類とは？目的と特徴で整理する【情報セキュリティマネジメント】
 permalink: /sg/attacker-types/
-tags: [sg, security_general, threat_vulnerability, security_awareness]
+tags: [sg, security_general, threat_vulnerability, security_awareness, sg-security-overview]
 ---
 
 ## まず結論

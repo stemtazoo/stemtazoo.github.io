@@ -2,7 +2,7 @@
 layout: page
 title: サンドボックスとは？安全にプログラムを実行する仕組み【情報セキュリティマネジメント】
 permalink: /sg/sandbox/
-tags: [sg, security_measures, unauthorized_access, system_architecture]
+tags: [sg, security_measures, unauthorized_access, system_architecture, sg-security-measures]
 ---
 
 ## まず結論

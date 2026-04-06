@@ -2,7 +2,7 @@
 layout: page
 title: SMTPのポート番号とは？パケットフィルタリングでの見方を整理【SG試験】
 permalink: /sg/smtp-port-packet-filtering/
-tags: [sg, technology, network, security_measures, unauthorized_access]
+tags: [sg, technology, network, security_measures, unauthorized_access, sg-security-measures]
 ---
 
 ## まず結論

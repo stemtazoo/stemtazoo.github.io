@@ -2,7 +2,7 @@
 layout: page
 title: 労働基準法と労働契約法の違いとは？試験での切り分け方【情報セキュリティマネジメント】
 permalink: /sg/labor-law-difference/
-tags: [sg, security_law, business_management, risk_assessment]
+tags: [sg, security_law, business_management, risk_assessment, sg-security-law]
 ---
 
 ## まず結論

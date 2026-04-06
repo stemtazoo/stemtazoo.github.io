@@ -2,7 +2,7 @@
 layout: page
 title: 情報セキュリティ実施手順とは？現場でのやり方を理解する【情報セキュリティマネジメント】
 permalink: /sg/security-policy-procedures/
-tags: [sg, security_management, isms, it_security_operations, security_training]
+tags: [sg, security_management, isms, it_security_operations, security_training, sg-security-management]
 ---
 
 ## まず結論

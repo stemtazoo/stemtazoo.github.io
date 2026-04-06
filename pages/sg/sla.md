@@ -2,7 +2,7 @@
 layout: page
 title: SLAとは？サービス品質の約束を理解する【情報セキュリティマネジメント】
 permalink: /sg/sla/
-tags: [sg, management, service_management, it_security_operations]
+tags: [sg, management, service_management, it_security_operations, sg-management]
 ---
 
 ## まず結論

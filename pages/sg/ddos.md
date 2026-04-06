@@ -2,7 +2,7 @@
 layout: page
 title: DDoS攻撃とは？サービス停止を狙う攻撃の仕組み【情報セキュリティマネジメント】
 permalink: /sg/ddos/
-tags: [sg, security_measures, unauthorized_access, it_security_operations]
+tags: [sg, security_measures, unauthorized_access, it_security_operations, sg-security-measures]
 ---
 
 ## まず結論

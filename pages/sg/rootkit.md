@@ -2,7 +2,7 @@
 layout: page
 title: ルートキットとは？管理者権限で隠蔽する仕組み【情報セキュリティマネジメント】
 permalink: /sg/rootkit/
-tags: [sg, security_measures, malware, unauthorized_access]
+tags: [sg, security_measures, malware, unauthorized_access, sg-security-measures]
 ---
 
 ## まず結論

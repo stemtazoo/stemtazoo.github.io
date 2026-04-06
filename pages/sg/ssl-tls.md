@@ -2,7 +2,7 @@
 layout: page
 title: SSL/TLSとは？通信を守る暗号化の仕組み【情報セキュリティマネジメント】
 permalink: /sg/ssl-tls/
-tags: [sg, security_general, crypto_auth, network]
+tags: [sg, security_general, crypto_auth, network, sg-security-overview]
 ---
 
 ## まず結論

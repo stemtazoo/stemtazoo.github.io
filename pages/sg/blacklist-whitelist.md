@@ -2,7 +2,7 @@
 layout: page
 title: ブラックリストとホワイトリストの違いとは？判断基準を整理【情報セキュリティマネジメント】
 permalink: /sg/blacklist-whitelist/
-tags: [sg, security_measures, unauthorized_access, network]
+tags: [sg, security_measures, unauthorized_access, network, sg-security-measures]
 ---
 
 ## まず結論

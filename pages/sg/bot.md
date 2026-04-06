@@ -2,7 +2,7 @@
 layout: page
 title: ボットとは？遠隔操作される仕組みを理解する【情報セキュリティマネジメント】
 permalink: /sg/bot/
-tags: [sg, security_measures, malware, unauthorized_access]
+tags: [sg, security_measures, malware, unauthorized_access, sg-security-measures]
 ---
 
 ## まず結論

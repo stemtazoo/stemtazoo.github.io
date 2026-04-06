@@ -2,7 +2,7 @@
 layout: page
 title: クラッカーとは？悪意ある攻撃者の特徴と見分け方【情報セキュリティマネジメント】
 permalink: /sg/cracker/
-tags: [sg, threat_vulnerability, unauthorized_access, risk_assessment]
+tags: [sg, threat_vulnerability, unauthorized_access, risk_assessment, sg-security-overview]
 ---
 
 ## まず結論

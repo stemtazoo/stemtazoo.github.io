@@ -2,7 +2,7 @@
 layout: page
 title: よく出るポート番号とは？試験での見分け方を整理【SG試験】
 permalink: /sg/common-port-numbers/
-tags: [sg, technology, network, security_measures, unauthorized_access]
+tags: [sg, technology, network, security_measures, unauthorized_access, sg-security-measures]
 ---
 
 ## まず結論

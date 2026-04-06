@@ -2,7 +2,7 @@
 layout: page
 title: 情報セキュリティ教育・訓練とは？人的対策の基本を整理【情報セキュリティマネジメント】
 permalink: /sg/security-training/
-tags: [sg, security_management, security_training, risk_assessment, security_awareness]
+tags: [sg, security_management, security_training, risk_assessment, security_awareness, sg-security-management]
 ---
 
 ## まず結論

@@ -2,7 +2,7 @@
 layout: page
 title: 請負契約と派遣契約の違いとは？指示系統で判断するポイント【SG試験】
 permalink: /sg/outsourcing-contract-difference/
-tags: [sg, management, vendor_management, it_security_operations]
+tags: [sg, management, vendor_management, it_security_operations, sg-management]
 ---
 
 ## まず結論

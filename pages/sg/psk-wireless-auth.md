@@ -2,7 +2,7 @@
 layout: page
 title: 事前共有鍵（PSK）とは？無線LANの接続制御の基本【情報セキュリティマネジメント】
 permalink: /sg/psk-wireless-auth/
-tags: [sg, security_measures, access_control, network]
+tags: [sg, security_measures, access_control, network, sg-security-measures]
 ---
 
 ## まず結論

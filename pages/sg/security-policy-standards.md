@@ -2,7 +2,7 @@
 layout: page
 title: 情報セキュリティ対策基準とは？ルールレベルの考え方【情報セキュリティマネジメント】
 permalink: /sg/security-policy-standards/
-tags: [sg, security_management, isms, access_control, it_security_operations]
+tags: [sg, security_management, isms, access_control, it_security_operations, sg-security-management]
 ---
 
 ## まず結論

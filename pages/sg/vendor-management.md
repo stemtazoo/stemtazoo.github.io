@@ -2,7 +2,7 @@
 layout: page
 title: 委託先管理とは？外部委託のリスク対策を整理【情報セキュリティマネジメント】
 permalink: /sg/vendor-management/
-tags: [sg, security_management, vendor_management, risk_assessment, it_security_operations]
+tags: [sg, security_management, vendor_management, risk_assessment, it_security_operations, sg-security-management]
 ---
 
 ## まず結論

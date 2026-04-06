@@ -2,7 +2,7 @@
 layout: page
 title: 著作権の帰属とは？委託開発との違いを理解する【情報セキュリティマネジメント】
 permalink: /sg/copyright-ownership/
-tags: [sg, 著作権, 委託開発, 法務]
+tags: [sg, 著作権, 委託開発, 法務, sg-security-law]
 ---
 
 ## まず結論

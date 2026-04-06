@@ -2,7 +2,7 @@
 layout: page
 title: 就業形態の違いを完全整理【SG試験で迷わない判断基準】
 permalink: /sg/employment-type-comparison/
-tags: [sg, management, business_management, vendor_management, risk_assessment]
+tags: [sg, management, business_management, vendor_management, risk_assessment, sg-management]
 ---
 
 ## まず結論

@@ -2,7 +2,7 @@
 layout: page
 title: タイムスタンプとは？存在証明と否認防止の役割を理解する【情報セキュリティマネジメント】
 permalink: /sg/timestamp/
-tags: [sg, security_general, crypto_auth, risk_assessment]
+tags: [sg, security_general, crypto_auth, risk_assessment, sg-security-overview]
 ---
 
 ## まず結論

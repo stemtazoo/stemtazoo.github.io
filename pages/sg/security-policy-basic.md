@@ -2,7 +2,7 @@
 layout: page
 title: 情報セキュリティ基本方針とは？経営者の宣言を理解する【情報セキュリティマネジメント】
 permalink: /sg/security-policy-basic/
-tags: [sg, security_management, isms, asset_management, it_security_operations]
+tags: [sg, security_management, isms, asset_management, it_security_operations, sg-security-management]
 ---
 
 ## まず結論

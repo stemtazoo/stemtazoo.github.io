@@ -2,7 +2,7 @@
 layout: page
 title: スパイウェアとは？情報を盗むマルウェアの特徴【情報セキュリティマネジメント】
 permalink: /sg/spyware/
-tags: [sg, security_measures, malware, data_leakage]
+tags: [sg, security_measures, malware, data_leakage, sg-security-measures]
 ---
 
 ## まず結論

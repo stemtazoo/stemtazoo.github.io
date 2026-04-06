@@ -2,7 +2,7 @@
 layout: page
 title: Telnetとは？安全でない遠隔操作の仕組み【情報セキュリティマネジメント】
 permalink: /sg/telnet/
-tags: [sg, technology, network, unauthorized_access]
+tags: [sg, technology, network, unauthorized_access, sg-technology]
 ---
 
 ## まず結論

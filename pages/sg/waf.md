@@ -2,7 +2,7 @@
 layout: page
 title: WAFとは？Webアプリを守る仕組みを理解する【情報セキュリティマネジメント】
 permalink: /sg/waf/
-tags: [sg, security_measures, unauthorized_access, network]
+tags: [sg, security_measures, unauthorized_access, network, sg-security-measures]
 ---
 
 ## まず結論
