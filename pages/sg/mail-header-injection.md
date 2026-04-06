@@ -2,7 +2,7 @@
 layout: page
 title: メールヘッダーインジェクションとは？改行を悪用する攻撃【情報セキュリティマネジメント】
 permalink: /sg/mail-header-injection/
-tags: [sg, threat_vulnerability, unauthorized_access, data_leakage]
+tags: [sg, threat_vulnerability, unauthorized_access, data_leakage, sg-security-overview]
 ---
 
 ## まず結論

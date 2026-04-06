@@ -2,7 +2,7 @@
 layout: page
 title: フィッシングとは？だましの手口と見抜き方【情報セキュリティマネジメント】
 permalink: /sg/phishing/
-tags: [sg, security_measures, unauthorized_access, data_leakage]
+tags: [sg, security_measures, unauthorized_access, data_leakage, sg-security-measures]
 ---
 
 ## まず結論

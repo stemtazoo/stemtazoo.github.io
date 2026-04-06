@@ -2,7 +2,7 @@
 layout: page
 title: 請負契約と準委任契約の違いとは？成果物か作業かで判断【情報セキュリティマネジメント】
 permalink: /sg/contract-types/
-tags: [sg, management, vendor_management, system_strategy]
+tags: [sg, management, vendor_management, system_strategy, sg-strategy]
 ---
 
 ## まず結論

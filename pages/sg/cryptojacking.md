@@ -2,7 +2,7 @@
 layout: page
 title: クリプトジャッキングとは？不正マイニングの仕組みを理解する【情報セキュリティマネジメント】
 permalink: /sg/cryptojacking/
-tags: [sg, security_measures, malware, it_security_operations]
+tags: [sg, security_measures, malware, it_security_operations, sg-security-measures]
 ---
 
 ## まず結論

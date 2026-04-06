@@ -2,7 +2,7 @@
 layout: page
 title: リスク対応とは？4つの対処方法を整理【情報セキュリティマネジメント】
 permalink: /sg/risk-treatment/
-tags: [sg, security_management, risk_assessment, it_security_operations]
+tags: [sg, security_management, risk_assessment, it_security_operations, sg-security-management]
 ---
 
 ## まず結論

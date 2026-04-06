@@ -2,7 +2,7 @@
 layout: page
 title: SG試験 ケース問題の解き方テンプレ【情報セキュリティマネジメント】
 permalink: /sg/case-solving-template/
-tags: [sg, risk_assessment, it_security_operations, security_management, security_training]
+tags: [sg, risk_assessment, it_security_operations, security_management, security_training, sg-security-management]
 ---
 
 ## まず結論

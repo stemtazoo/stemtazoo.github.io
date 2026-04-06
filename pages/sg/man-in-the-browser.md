@@ -2,7 +2,7 @@
 layout: page
 title: Man-in-the-Browserとは？ブラウザ内改ざん攻撃の仕組み【情報セキュリティマネジメント】
 permalink: /sg/man-in-the-browser/
-tags: [sg, security_measures, malware, unauthorized_access]
+tags: [sg, security_measures, malware, unauthorized_access, sg-security-measures]
 ---
 
 ## まず結論

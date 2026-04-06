@@ -2,7 +2,7 @@
 layout: page
 title: 安全管理措置とは？個人情報保護法の基本と実務対応【情報セキュリティマネジメント】
 permalink: /sg/safety-control-measures/
-tags: [sg, security_law, privacy_law, risk_assessment, it_security_operations]
+tags: [sg, security_law, privacy_law, risk_assessment, it_security_operations, sg-security-law]
 ---
 
 ## まず結論

@@ -2,7 +2,7 @@
 layout: page
 title: プライバシーセパレータとは？無線LANで端末同士を隔離する仕組み【情報セキュリティマネジメント】
 permalink: /sg/privacy-separator/
-tags: [sg, security_measures, access_control, network]
+tags: [sg, security_measures, access_control, network, sg-security-measures]
 ---
 
 ## まず結論

@@ -2,7 +2,7 @@
 layout: page
 title: ランサムウェアとは？身代金要求型攻撃の仕組み【情報セキュリティマネジメント】
 permalink: /sg/ransomware/
-tags: [sg, security_measures, malware, data_leakage]
+tags: [sg, security_measures, malware, data_leakage, sg-security-measures]
 ---
 
 ## まず結論

@@ -2,7 +2,7 @@
 layout: page
 title: CRLとは？失効証明書リストの役割【情報セキュリティマネジメント】
 permalink: /sg/crl/
-tags: [sg, security_general, crypto_auth, risk_assessment]
+tags: [sg, security_general, crypto_auth, risk_assessment, sg-security-overview]
 ---
 
 ## まず結論

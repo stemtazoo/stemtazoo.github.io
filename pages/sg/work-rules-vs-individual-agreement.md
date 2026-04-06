@@ -2,7 +2,7 @@
 layout: page
 title: 就業規則と個別合意の関係とは？優先順位を理解する【情報セキュリティマネジメント】
 permalink: /sg/work-rules-vs-individual-agreement/
-tags: [sg, security_law, business_management, risk_assessment]
+tags: [sg, security_law, business_management, risk_assessment, sg-security-law]
 ---
 
 ## まず結論

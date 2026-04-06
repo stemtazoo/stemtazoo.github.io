@@ -2,7 +2,7 @@
 layout: page
 title: プロジェクトライフサイクルの特性とは？頻出パターンを整理【情報セキュリティマネジメント】
 permalink: /sg/project-lifecycle-characteristics/
-tags: [sg, management, project_management, risk_assessment]
+tags: [sg, management, project_management, risk_assessment, sg-strategy]
 ---
 
 ## まず結論

@@ -2,7 +2,7 @@
 layout: page
 title: SG試験 よく出るNG選択肢まとめ【情報セキュリティマネジメント】
 permalink: /sg/ng-patterns/
-tags: [sg, risk_assessment, it_security_operations, security_management, security_training]
+tags: [sg, risk_assessment, it_security_operations, security_management, security_training, sg-security-management]
 ---
 
 ## まず結論

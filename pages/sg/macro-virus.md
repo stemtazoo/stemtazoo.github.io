@@ -2,7 +2,7 @@
 layout: page
 title: マクロウイルスとは？Officeファイル経由の感染を理解する【情報セキュリティマネジメント】
 permalink: /sg/macro-virus/
-tags: [sg, security_measures, malware, threat_vulnerability]
+tags: [sg, security_measures, malware, threat_vulnerability, sg-security-measures]
 ---
 
 ## まず結論

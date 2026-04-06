@@ -2,7 +2,7 @@
 layout: page
 title: 懲戒処分とは？有効となる条件とNG例を整理【情報セキュリティマネジメント】
 permalink: /sg/disciplinary-action/
-tags: [sg, security_law, business_management, risk_assessment]
+tags: [sg, security_law, business_management, risk_assessment, sg-security-law]
 ---
 
 ## まず結論

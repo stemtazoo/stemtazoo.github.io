@@ -2,7 +2,7 @@
 layout: page
 title: 契約不適合責任とは？瑕疵担保責任との違いも整理【情報セキュリティマネジメント】
 permalink: /sg/contract-nonconformity/
-tags: [sg, management, vendor_management, risk_assessment]
+tags: [sg, management, vendor_management, risk_assessment, sg-management]
 ---
 
 ## まず結論

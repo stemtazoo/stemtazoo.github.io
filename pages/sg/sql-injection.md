@@ -2,7 +2,7 @@
 layout: page
 title: SQLインジェクションとは？仕組みと対策をやさしく理解【情報セキュリティマネジメント】
 permalink: /sg/sql-injection/
-tags: [sg, threat_vulnerability, unauthorized_access, database]
+tags: [sg, threat_vulnerability, unauthorized_access, database, sg-security-overview]
 ---
 
 ## まず結論

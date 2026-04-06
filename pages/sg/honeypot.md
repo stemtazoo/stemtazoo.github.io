@@ -2,7 +2,7 @@
 layout: page
 title: ハニーポットとは？攻撃者をおびき寄せる仕組み【情報セキュリティマネジメント】
 permalink: /sg/honeypot/
-tags: [sg, security_measures, unauthorized_access, incident_management]
+tags: [sg, security_measures, unauthorized_access, incident_management, sg-security-measures]
 ---
 
 ## まず結論

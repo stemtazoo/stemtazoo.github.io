@@ -2,7 +2,7 @@
 layout: page
 title: ハッカーとは？本来の意味とホワイトハッカーとの違い【情報セキュリティマネジメント】
 permalink: /sg/hacker/
-tags: [sg, threat_vulnerability, security_awareness, risk_assessment]
+tags: [sg, threat_vulnerability, security_awareness, risk_assessment, sg-security-overview]
 ---
 
 ## まず結論

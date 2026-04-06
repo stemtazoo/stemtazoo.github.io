@@ -2,7 +2,7 @@
 layout: page
 title: 情報セキュリティポリシーとは？3階層で理解する基本ルール【情報セキュリティマネジメント】
 permalink: /sg/security-policy/
-tags: [sg, security_management, isms, asset_management, it_security_operations]
+tags: [sg, security_management, isms, asset_management, it_security_operations, sg-security-management]
 ---
 
 ## まず結論

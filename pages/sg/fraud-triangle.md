@@ -2,7 +2,7 @@
 layout: page
 title: 不正のトライアングルとは？内部不正が起こる3要素【情報セキュリティマネジメント】
 permalink: /sg/fraud-triangle/
-tags: [sg, security_management, risk_assessment, security_awareness]
+tags: [sg, security_management, risk_assessment, security_awareness, sg-security-management]
 ---
 
 ## まず結論

@@ -2,7 +2,7 @@
 layout: page
 title: HTTPとHTTPSの違いとは？安全な通信の判断ポイント【情報セキュリティマネジメント】
 permalink: /sg/http-https/
-tags: [sg, technology, network, data_leakage]
+tags: [sg, technology, network, data_leakage, sg-technology]
 ---
 
 ## まず結論

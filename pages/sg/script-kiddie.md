@@ -2,7 +2,7 @@
 layout: page
 title: スクリプトキディとは？初心者攻撃者の特徴と対策【情報セキュリティマネジメント】
 permalink: /sg/script-kiddie/
-tags: [sg, threat_vulnerability, security_awareness, security_measures]
+tags: [sg, threat_vulnerability, security_awareness, security_measures, sg-security-measures]
 ---
 
 ## まず結論

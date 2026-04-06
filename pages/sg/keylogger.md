@@ -2,7 +2,7 @@
 layout: page
 title: キーロガーとは？入力情報を盗む仕組みを理解する【情報セキュリティマネジメント】
 permalink: /sg/keylogger/
-tags: [sg, security_measures, malware, data_leakage]
+tags: [sg, security_measures, malware, data_leakage, sg-security-measures]
 ---
 
 ## まず結論

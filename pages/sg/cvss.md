@@ -2,7 +2,7 @@
 layout: page
 title: CVSSとは？脆弱性の深刻度を共通スコアで判断する【情報セキュリティマネジメント】
 permalink: /sg/cvss/
-tags: [sg, security_general, threat_vulnerability, risk_assessment]
+tags: [sg, security_general, threat_vulnerability, risk_assessment, sg-security-overview]
 ---
 
 ## まず結論

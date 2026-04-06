@@ -2,7 +2,7 @@
 layout: page
 title: 労働契約法（不利益変更）とは？就業規則との関係を整理【情報セキュリティマネジメント】
 permalink: /sg/labor-contract-disadvantageous-change/
-tags: [sg, security_law, business_management, risk_assessment]
+tags: [sg, security_law, business_management, risk_assessment, sg-security-law]
 ---
 
 ## まず結論

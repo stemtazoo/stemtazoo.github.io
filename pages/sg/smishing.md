@@ -2,7 +2,7 @@
 layout: page
 title: スミッシングとは？SMSを使った詐欺手口【情報セキュリティマネジメント】
 permalink: /sg/smishing/
-tags: [sg, security_measures, unauthorized_access, data_leakage]
+tags: [sg, security_measures, unauthorized_access, data_leakage, sg-security-measures]
 ---
 
 ## まず結論

@@ -2,7 +2,7 @@
 layout: page
 title: インシデント対応とは？初動対応の判断基準を整理【情報セキュリティマネジメント】
 permalink: /sg/incident-response/
-tags: [sg, security_management, incident_management, risk_assessment, it_security_operations]
+tags: [sg, security_management, incident_management, risk_assessment, it_security_operations, sg-security-management]
 ---
 
 ## まず結論

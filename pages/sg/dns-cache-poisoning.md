@@ -2,7 +2,7 @@
 layout: page
 title: DNSキャッシュポイズニングとは？偽サイトへ誘導する攻撃【情報セキュリティマネジメント】
 permalink: /sg/dns-cache-poisoning/
-tags: [sg, security_measures, unauthorized_access, network]
+tags: [sg, security_measures, unauthorized_access, network, sg-security-measures]
 ---
 
 ## まず結論
