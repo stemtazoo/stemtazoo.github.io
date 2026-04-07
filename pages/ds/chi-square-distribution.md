@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: カイ二乗分布とは？（χ²分布の使いどころを整理）【DS検定】
+description: カイ二乗分布は（χ²分布の使いどころを整理）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/chi-square-distribution/
 categories: [data-science]
 tags: [ds, statistics]

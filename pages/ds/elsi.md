@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: ELSIとは？AI時代に重要な倫理・法・社会問題を理解する【DS検定】
+description: ELSIはAI時代に重要な倫理・法・社会問題を理解するを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/elsi/
 categories: [ai-utilization]
 tags: [ds, ethics]

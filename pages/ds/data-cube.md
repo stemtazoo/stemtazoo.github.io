@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: データキューブとは？OLAP分析の基本概念を理解する【DS検定】
+description: データキューブはOLAP分析の基本概念を理解するを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/data-cube/
 categories: [data-engineering]
 tags: [ds, visualization, database]

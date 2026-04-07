@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 特徴量重要度とは？不純度ベースとPermutationの違い【DS検定】
+description: 特徴量重要度は不純度ベースとPermutationの違いを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/feature-importance/
 categories: [data-science]
 tags: [ds, modeling]

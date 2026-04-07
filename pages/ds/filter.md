@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: フィルターとは？BIツールの基本操作をわかりやすく解説【DS検定】
+description: フィルターはBIツールの基本操作をわかりやすく解説を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/filter/
 categories: [business]
 tags: [ds, data-processing, visualization, design]

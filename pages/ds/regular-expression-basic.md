@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 正規表現とは？基本とひっかけポイント整理【DS検定】
+description: 正規表現は基本とひっかけポイント整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/regular-expression-basic/
 categories: [data-science]
 tags: [ds, data-processing, preprocessing]

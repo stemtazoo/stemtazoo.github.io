@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 標本分散と不偏分散の違いとは？【DS検定リテラシー】
+description: 標本分散と不偏分散の違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/sample-variance-unbiased-variance/
 categories: [data-science]
 tags: [ds, statistics]

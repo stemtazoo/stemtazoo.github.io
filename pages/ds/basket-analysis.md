@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: バスケット分析とは？（リフト値まで整理）【DS検定】
+description: バスケット分析は（リフト値まで整理）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/basket-analysis/
 categories: [data-science]
 tags: [ds, modeling]

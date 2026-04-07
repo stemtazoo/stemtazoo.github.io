@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: エンコーディングとは？カテゴリ変数を数値化する理由【DS検定】
+description: エンコーディングはカテゴリ変数を数値化する理由を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/encoding/
 categories: [data-science]
 tags: [ds, data-preparation, preprocessing]

@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 画像データにおけるメタデータとは？意味と活用を整理【DS検定リテラシー】
+description: 画像データにおけるメタデータは意味と活用を整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/image-metadata/
 categories: [data-science]
 tags: [ds, unstructured-data, preprocessing]

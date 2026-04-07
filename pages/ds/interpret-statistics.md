@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 数字やグラフの持つメッセージを理解するとは？（統計情報の正しい読み取り）【DS検定】
+description: 数字やグラフの持つメッセージを理解するは（統計情報の正しい読み取り）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/interpret-statistics/
 categories: [data-science]
 tags: [ds, data-understanding, statistics]

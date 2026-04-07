@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 増分バックアップと差分バックアップの違いとは？【DS検定リテラシー】
+description: 増分バックアップと差分バックアップの違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/incremental-vs-differential-backup/
 categories: [business]
 tags: [ds, environment-setup, design]

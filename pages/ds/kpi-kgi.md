@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: KPIとKGIの違いとは？目標管理の基本を整理【DS検定】
+description: KPIとKGIの違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/kpi-kgi/
 categories: [business]
 tags: [ds, design]

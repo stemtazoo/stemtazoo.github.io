@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: ポリモーフィズムとは？（同じ呼び出しで動作が変わる仕組み）【DS検定】
+description: ポリモーフィズムは（同じ呼び出しで動作が変わる仕組み）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/polymorphism/
 categories: [business]
 tags: [ds, design]

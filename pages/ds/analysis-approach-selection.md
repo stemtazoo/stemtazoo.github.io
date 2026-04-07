@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 必要なデータ・分析手法・可視化を適切に選択する力とは？【DS検定】
+description: 必要なデータ・分析手法・可視化を適切に選択する力はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/analysis-approach-selection/
 categories: [business]
 tags: [ds, design]

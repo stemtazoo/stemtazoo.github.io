@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 主キー（Primary Key）とは？データベースの基本ルールを理解【DS検定】
+description: 主キー（Primary Key）はデータベースの基本ルールを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/primary-key/
 categories: [data-engineering]
 tags: [ds, database]

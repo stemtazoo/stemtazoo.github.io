@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: Dockerとは？再現性が出る理由を整理【DS検定】
+description: Dockerは再現性が出る理由を整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/docker/
 categories: [data-engineering]
 tags: [ds, environment-setup, data-processing]

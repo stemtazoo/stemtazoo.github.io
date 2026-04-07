@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: ガバナンスとは？企業統治とリスク管理の関係【DS検定】
+description: ガバナンスは企業統治とリスク管理の関係を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/governance/
 categories: [ai-utilization]
 tags: [ds, ai-use]

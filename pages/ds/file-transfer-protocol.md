@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: ファイル転送プロトコルとは？主要プロトコルの違いを整理【DS検定】
+description: ファイル転送プロトコルは主要プロトコルの違いを整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/file-transfer-protocol/
 categories: [business]
 tags: [ds, design]

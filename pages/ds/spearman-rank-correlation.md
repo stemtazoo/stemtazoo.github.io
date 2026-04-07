@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: スピアマンの順位相関とは？（Spearmanの順位相関係数）【DS検定】
+description: スピアマンの順位相関は（Spearmanの順位相関係数）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/spearman-rank-correlation/
 categories: [data-science]
 tags: [ds, statistics]

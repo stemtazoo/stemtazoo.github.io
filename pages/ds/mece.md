@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: MECEとは？モレなくダブりなく整理する思考法【DS検定リテラシー】
+description: MECEはモレなくダブりなく整理する思考法を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/mece/
 categories: [business]
 tags: [ds, design]

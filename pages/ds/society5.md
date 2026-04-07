@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: Society5.0とは？超スマート社会の本質を整理【DS検定】
+description: Society5.0は超スマート社会の本質を整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/society5/
 categories: [ai-utilization]
 tags: [ds, ai-use]

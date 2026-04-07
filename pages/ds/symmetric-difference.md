@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 対称差集合とは？意味と考え方をやさしく整理【DS検定】
+description: 対称差集合は意味と考え方をやさしく整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/symmetric-difference/
 categories: [business]
 tags: [ds, set-theory, design]

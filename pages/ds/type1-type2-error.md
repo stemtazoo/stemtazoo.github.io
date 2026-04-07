@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 第一種の過誤と第二種の過誤の違いとは？【DS検定リテラシー】
+description: 第一種の過誤と第二種の過誤の違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/type1-type2-error/
 categories: [business]
 tags: [ds, design]

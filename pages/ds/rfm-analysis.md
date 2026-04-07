@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: RFM分析とは？顧客価値を評価するマーケティング分析【DS検定】
+description: RFM分析は顧客価値を評価するマーケティング分析を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/rfm-analysis/
 categories: [business]
 tags: [ds, design]

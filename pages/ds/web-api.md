@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: Web APIとは？HTTPでサービスとデータをやり取りする仕組み【DS検定】
+description: Web APIはHTTPでサービスとデータをやり取りする仕組みを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/web-api/
 categories: [data-engineering]
 tags: [ds, data-collection, data-processing]

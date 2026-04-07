@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: アノテーションとは？（AI学習データを作る重要な作業）【DS検定】
+description: アノテーションは（AI学習データを作る重要な作業）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/annotation/
 categories: [data-science]
 tags: [ds, modeling, preprocessing]

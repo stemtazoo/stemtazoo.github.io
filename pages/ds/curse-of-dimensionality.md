@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 次元の呪いとは？（高次元データで起きる問題）【DS検定】
+description: 次元の呪いは（高次元データで起きる問題）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/curse-of-dimensionality/
 categories: [data-science]
 tags: [ds, modeling]

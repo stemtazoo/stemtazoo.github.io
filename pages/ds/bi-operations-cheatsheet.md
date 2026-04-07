@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: BIツール操作チートシート｜スライス・ダイス・ドリルダウンの違い【DS検定】
+description: BIツール操作チートシート｜スライス・ダイス・ドリルダウンの違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/bi-operations-cheatsheet/
 categories: [business]
 tags: [ds, visualization, design]

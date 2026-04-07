@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 障害・遅延の報告とレポートラインとは？（リスクマネジメントの基本）【DS検定】
+description: 障害・遅延の報告とレポートラインは（リスクマネジメントの基本）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/report-line-risk-management/
 categories: [business]
 tags: [ds, design]

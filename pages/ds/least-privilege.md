@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 最小権限の原則とは？ゼロトラストとの関係を整理【DS検定リテラシー】
+description: 最小権限の原則はゼロトラストとの関係を整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/least-privilege/
 categories: [business]
 tags: [ds, security, design]

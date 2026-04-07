@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: スチューデントの検定（t検定）とは？【DS検定リテラシー】
+description: スチューデントの検定（t検定）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/student-t-test/
 categories: [data-science]
 tags: [ds, statistics]

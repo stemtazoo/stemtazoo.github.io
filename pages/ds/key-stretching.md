@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: ストレッチングとは？（ハッシュ強化の仕組み）【DS検定】
+description: ストレッチングは（ハッシュ強化の仕組み）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/key-stretching/
 categories: [business]
 tags: [ds, security, design]

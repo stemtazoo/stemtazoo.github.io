@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 階層クラスター分析とは？手法の違いまで整理【DS検定】
+description: 階層クラスター分析は手法の違いまで整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/hierarchical-clustering/
 categories: [data-science]
 tags: [ds, modeling]

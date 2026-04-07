@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 第2正規化と第3正規化の違いを整理（候補キーから考える）【DS検定】
+description: 第2正規化と第3正規化の違いを整理（候補キーから考える）は関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/normalization-2nf-3nf/
 categories: [data-engineering]
 tags: [ds, data-structure, database]

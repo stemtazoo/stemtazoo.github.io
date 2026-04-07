@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 過学習と分岐の深さの関係とは？決定木の注意点【DS検定】
+description: 過学習と分岐の深さの関係は決定木の注意点を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/overfitting-tree-depth/
 categories: [data-science]
 tags: [ds, modeling, evaluation]

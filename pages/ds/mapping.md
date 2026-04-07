@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: マッピング処理とは？データを対応づける基本操作【DS検定】
+description: マッピング処理はデータを対応づける基本操作を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/mapping/
 categories: [data-science]
 tags: [ds, data-processing, preprocessing]

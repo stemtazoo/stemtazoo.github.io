@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: HDFS（Hadoop分散ファイルシステム）とは？大規模データを保存する仕組み【DS検定】
+description: HDFS（Hadoop分散ファイルシステム）は大規模データを保存する仕組みを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/hdfs/
 categories: [business]
 tags: [ds, data-storage, design]
