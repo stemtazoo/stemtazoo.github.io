@@ -1,6 +1,7 @@
 ---
 layout: page
 title: インクルージョン（包摂性）とは？AI開発で重視される社会的視点【G検定対策】
+description: インクルージョン（包摂性）はAI開発で重視される社会的視点を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/inclusion/
 tags: [gk, ethics]
 gk_section: AIの法律と倫理/AIの法律と倫理

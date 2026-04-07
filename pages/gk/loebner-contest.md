@@ -1,6 +1,7 @@
 ---
 layout: page
 title: ローブナーコンテスト（Loebner Contest）とは？【G検定対策】
+description: ローブナーコンテスト（Loebner Contest）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/loebner-contest/
 tags: [gk]
 gk_section: 人工知能（AI）とは/人工知能（AI）とは

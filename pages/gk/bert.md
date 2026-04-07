@@ -1,6 +1,7 @@
 ---
 layout: page
 title: BERT（双方向Transformer）とは？G検定対策
+description: BERT（双方向Transformer）はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/bert/
 tags: [gk, nlp, transformer, attention]
 gk_section: ディープラーニングの応用例/自然言語処理

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Pooling・Stride・Dilated Convolution の違い
+description: Pooling・Stride・Dilated Convolution の違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/pooling-stride-dilation/
 tags: [gk, neural_network, cnn, cheatsheet]
 gk_section: ディープラーニングの要素技術/ネットワークの構成要素

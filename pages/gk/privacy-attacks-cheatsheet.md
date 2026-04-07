@@ -1,6 +1,7 @@
 ---
 layout: page
 title: データ窃取・メンバーシップ推論・モデル窃取 攻撃まとめ【G検定チートシート】
+description: データ窃取・メンバーシップ推論・モデル窃取 攻撃まとめは頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/privacy-attacks-cheatsheet/
 tags: [gk, security, privacy, cheatsheet]
 gk_section: AIの法律と倫理/AIの法律と倫理

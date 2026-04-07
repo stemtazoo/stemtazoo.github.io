@@ -1,6 +1,7 @@
 ---
 layout: page
 title: GANの派生モデルまとめ
+description: GANの派生モデルまとめは頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/gan-variants/
 tags: [gk, neural_network, gan, cheatsheet]
 gk_section: ディープラーニングの応用例/データ生成

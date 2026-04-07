@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 学習データ・検証データ・テストデータの役割とは？【使い分け完全整理｜G検定対策】
+description: 学習データ・検証データ・テストデータの役割はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/train-validation-test/
 tags: [gk, machine_learning, evaluation]
 gk_section: 機械学習の概要/モデルの選択・評価

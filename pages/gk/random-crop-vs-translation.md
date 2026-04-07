@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Random CropとRandom Translationの違いとは？【画像データ拡張｜G検定対策】
+description: Random CropとRandom Translationの違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/random-crop-vs-translation/
 tags: [gk, cnn, neural_network]
 gk_section: ディープラーニングの応用例/画像認識/データ拡張

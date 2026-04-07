@@ -1,6 +1,7 @@
 ---
 layout: page
 title: MLOpsの手順とは？【G検定対策】
+description: MLOpsの手順はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/mlops-process/
 tags: [gk]
 gk_section: AIの社会実装に向けて/AIの社会実装に向けて

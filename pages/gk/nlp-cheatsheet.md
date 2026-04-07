@@ -1,6 +1,7 @@
 ---
 layout: page
 title: NLP完全チートシート（最終まとめ）【G検定対策】
+description: NLP完全チートシート（最終まとめ）は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/nlp-cheatsheet/
 tags: [gk, nlp, cheatsheet]
 gk_section: ディープラーニングの応用例/自然言語処理

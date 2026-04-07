@@ -1,6 +1,7 @@
 ---
 layout: page
 title: ジョルダンネットワーク（Jordan Network）とは？【RNNの基本構造｜G検定対策】
+description: ジョルダンネットワーク（Jordan Network）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/jordan-network/
 tags: [gk, neural_network, rnn]
 gk_section: ディープラーニングの要素技術/リカレントニューラルネットワーク (RNN)

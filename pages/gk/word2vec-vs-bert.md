@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Word2VecとBERTの決定的な違いとは？【意味と文脈の違い｜G検定対策】
+description: Word2VecとBERTの決定的な違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/word2vec-vs-bert/
 tags: [gk, nlp, transformer]
 gk_section: ディープラーニングの応用例/自然言語処理

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 単純パーセプトロン（Simple Perceptron）とは？G検定対策
+description: 単純パーセプトロン（Simple Perceptron）はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/simple-perceptron/
 tags: [gk, neural_network]
 gk_section: 人工知能をめぐる動向/人工知能をめぐる動向

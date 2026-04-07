@@ -1,6 +1,7 @@
 ---
 layout: page
 title: LeNetとは？【G検定対策】
+description: LeNetはを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/lenet/
 tags: [gk, neural_network, cnn]
 gk_section: ディープラーニングの応用例/画像認識/ネオコグニトロンとLeNet

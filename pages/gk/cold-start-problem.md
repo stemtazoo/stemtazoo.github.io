@@ -1,6 +1,7 @@
 ---
 layout: page
 title: コールドスタート問題とは？推薦システム最大の弱点【G検定対策】
+description: コールドスタート問題は推薦システム最大の弱点を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/cold-start-problem/
 tags: [gk, recommendation]
 gk_section: 機械学習の概要/代表的な手法/教師なし学習

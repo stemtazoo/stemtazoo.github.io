@@ -1,6 +1,7 @@
 ---
 layout: page
 title: BLIP（画像キャプション生成モデル）とは？CLIPとの違い【G検定対策】
+description: BLIP（画像キャプション生成モデル）はCLIPとの違いを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/blip/
 tags: [gk, neural_network, attention]
 gk_section: ディープラーニングの応用例/マルチモーダル

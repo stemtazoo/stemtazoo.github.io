@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 古典AI vs 機械学習（最終比較チートシート）
+description: 古典AI vs 機械学習（最終比較チートシート）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/classical-ai-vs-ml/
 tags: [gk, cheatsheet]
 gk_section: 人工知能をめぐる動向/人工知能をめぐる動向

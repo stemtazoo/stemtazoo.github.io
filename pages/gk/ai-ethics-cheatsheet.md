@@ -1,6 +1,7 @@
 ---
 layout: page
 title: AI倫理まとめ（XAI・公平性・プライバシー）
+description: AI倫理まとめ（XAI・公平性・プライバシー）は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/ai-ethics-cheatsheet/
 tags: [gk, cheatsheet]
 gk_section: チートシート（試験直前）/チートシート（試験直前）

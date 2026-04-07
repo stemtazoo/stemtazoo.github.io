@@ -1,6 +1,7 @@
 ---
 layout: page
 title: OpenAI Fiveとは？Dota2特化AIの正しい理解【G検定対策】
+description: OpenAI FiveはDota2特化AIの正しい理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/openai-five/
 tags: [gk, reinforcement_learning]
 gk_section: ディープラーニングの応用例/深層強化学習

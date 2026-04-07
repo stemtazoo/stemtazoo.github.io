@@ -1,6 +1,7 @@
 ---
 layout: page
 title: GANとConditional GANの違いとは？【1ページ比較・G検定対策】
+description: GANとConditional GANの違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/gan-vs-conditional-gan/
 tags: [gk, neural_network, cheatsheet]
 gk_section: ディープラーニングの応用例/データ生成

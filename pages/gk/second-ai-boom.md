@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 第二次AIブーム
+description: 第二次AIブームは重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/second-ai-boom/
 tags: [gk, cheatsheet]
 gk_section: 人工知能（AI）とは/人工知能（AI）とは

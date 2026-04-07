@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 強いAIと弱いAIの違いとは？【汎用AIと特化AI｜G検定対策】
+description: 強いAIと弱いAIの違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/strong-vs-weak-ai/
 tags: [gk, ai_history]
 gk_section: 人工知能（AI）とは/人工知能（AI）とは

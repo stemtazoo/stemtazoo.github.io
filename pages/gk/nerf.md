@@ -1,6 +1,7 @@
 ---
 layout: page
 title: NeRF（Neural Radiance Fields）とは？3D再構成のためのニューラルレンダリング【G検定対策】
+description: NeRF（Neural Radiance Fields）は3D再構成のためのニューラルレンダリングを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/nerf/
 tags: [gk, vision]
 gk_section: ディープラーニングの応用例/データ生成

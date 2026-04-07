@@ -1,6 +1,7 @@
 ---
 layout: page
 title: スキルの喪失（Skill Loss）とは？G検定対策
+description: スキルの喪失（Skill Loss）はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/skill-loss/
 tags: [gk, ethics]
 gk_section: AIの法律と倫理/AIの法律と倫理

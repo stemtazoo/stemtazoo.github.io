@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 探索と機械学習の違い（どっちを使う？）
+description: 探索と機械学習の違い（どっちを使う？）は関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/search-vs-ml-cheatsheet/
 tags: [gk, cheatsheet]
 gk_section: チートシート（試験直前）/チートシート（試験直前）

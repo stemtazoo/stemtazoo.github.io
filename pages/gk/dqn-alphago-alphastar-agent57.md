@@ -1,6 +1,7 @@
 ---
 layout: page
 title: DQN / AlphaGo / AlphaStar / Agent57【強化学習の系譜まとめ】
+description: DQN / AlphaGo / AlphaStar / Agent57は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/dqn-alphago-alphastar-agent57/
 tags: [gk, neural_network, cheatsheet]
 gk_section: ディープラーニングの応用例/深層強化学習

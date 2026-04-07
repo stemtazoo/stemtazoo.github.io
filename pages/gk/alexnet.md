@@ -1,6 +1,7 @@
 ---
 layout: page
 title: AlexNet（ディープラーニング革命の起点）とは？G検定対策
+description: AlexNet（ディープラーニング革命の起点）はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/alexnet/
 tags: [gk, cnn]
 gk_section: ディープラーニングの応用例/画像認識/物体認識タスク

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: RNN（再帰型ニューラルネットワーク）
+description: RNN（再帰型ニューラルネットワーク）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/rnn/
 tags: [gk, neural_network, rnn]
 gk_section: ディープラーニングの要素技術/リカレントニューラルネットワーク (RNN)

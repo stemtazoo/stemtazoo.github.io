@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 活性化関数まとめ
+description: 活性化関数まとめは頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/activation-functions/
 tags: [gk, neural_network, activation]
 gk_section: ディープラーニングの概要/活性化関数

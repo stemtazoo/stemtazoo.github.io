@@ -1,6 +1,7 @@
 ---
 layout: page
 title: AdaDelta（適応的学習率最適化）とは？【G検定対策】
+description: AdaDelta（適応的学習率最適化）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/adadelta/
 tags: [gk]
 gk_section: ディープラーニングの概要/最適化手法

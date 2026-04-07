@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 物体検出（Object Detection）とは？G検定対策
+description: 物体検出（Object Detection）はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/object-detection/
 tags: [gk, cnn]
 gk_section: ディープラーニングの応用例/画像認識/物体検出タスク

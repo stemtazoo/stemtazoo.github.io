@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 形態素解析（Morphological Analysis）とは？【G検定対策】
+description: 形態素解析（Morphological Analysis）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/morphological-analysis/
 tags: [gk, nlp]
 gk_section: ディープラーニングの応用例/自然言語処理

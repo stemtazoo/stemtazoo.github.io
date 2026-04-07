@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 割引率（γ）とは？将来報酬をどう評価するか【G検定対策】
+description: 割引率（γ）は将来報酬をどう評価するかを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/discount-factor/
 tags: [gk, reinforcement_learning]
 gk_section: 機械学習の概要/代表的な手法/強化学習

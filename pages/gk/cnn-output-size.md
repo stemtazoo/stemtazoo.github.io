@@ -1,6 +1,7 @@
 ---
 layout: page
 title: CNNの畳み込み層の出力サイズ
+description: CNNの畳み込み層の出力サイズは重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/cnn-output-size/
 tags: [gk, cnn, convolution]
 gk_section: ディープラーニングの応用例/画像認識/ネオコグニトロンとLeNet

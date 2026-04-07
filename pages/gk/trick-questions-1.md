@@ -1,6 +1,7 @@
 ---
 layout: page
 title: G検定 ひっかけ問題集（考え方付き）
+description: G検定 ひっかけ問題集（考え方付き）は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/trick-questions-1/
 tags: [gk, cheatsheet]
 gk_section: ひっかけ問題集/ひっかけ問題集

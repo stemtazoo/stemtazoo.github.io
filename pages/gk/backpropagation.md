@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 誤差逆伝播法（Backpropagation）
+description: 誤差逆伝播法（Backpropagation）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/backpropagation/
 tags: [gk, neural_network, backprop]
 gk_section: ディープラーニングの概要/誤差逆伝播法（Backpropagation）

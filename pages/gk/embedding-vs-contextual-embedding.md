@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Embedding と ELMo・BERT の違いとは？G検定対策
+description: Embedding と ELMo・BERT の違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/embedding-vs-contextual-embedding/
 tags: [gk, nlp, attention]
 gk_section: ディープラーニングの応用例/自然言語処理

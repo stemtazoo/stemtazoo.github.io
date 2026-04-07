@@ -1,6 +1,7 @@
 ---
 layout: page
 title: AI三大ブームまとめ（第一次〜第三次）
+description: AI三大ブームまとめ（第一次〜第三次）は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/ai-booms-cheatsheet/
 tags: [gk, cheatsheet]
 gk_section: 人工知能（AI）とは/人工知能（AI）とは

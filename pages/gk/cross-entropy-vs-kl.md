@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 交差エントロピーとKLダイバージェンスの違い【G検定頻出】
+description: 交差エントロピーとKLダイバージェンスの違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/cross-entropy-vs-kl/
 tags: [gk, metrics, neural_network]
 gk_section: ディープラーニングの概要/誤差関数

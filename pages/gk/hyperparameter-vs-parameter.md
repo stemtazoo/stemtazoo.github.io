@@ -1,6 +1,7 @@
 ---
 layout: page
 title: ハイパーパラメータとパラメータの違いとは？【G検定対策】
+description: ハイパーパラメータとパラメータの違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/hyperparameter-vs-parameter/
 tags: [gk]
 gk_section: ディープラーニングの概要/最適化手法

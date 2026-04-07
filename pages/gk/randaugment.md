@@ -1,6 +1,7 @@
 ---
 layout: page
 title: RandAugmentとは？AutoAugmentとの違い【画像データ拡張｜G検定対策】
+description: RandAugmentはAutoAugmentとの違いを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/randaugment/
 tags: [gk, cnn, neural_network]
 gk_section: ディープラーニングの応用例/画像認識/データ拡張

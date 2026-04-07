@@ -1,6 +1,7 @@
 ---
 layout: page
 title: エルマンネットワークとは？RNNの基本構造【G検定対策】
+description: エルマンネットワークはRNNの基本構造を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/elman-network/
 tags: [gk, rnn]
 gk_section: ディープラーニングの要素技術/リカレントニューラルネットワーク (RNN)

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: k-means法とは？教師なし学習とクラスタリングの基本【G検定対策】
+description: k-means法は教師なし学習とクラスタリングの基本を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/k-means/
 tags: [gk, clustering]
 gk_section: 機械学習の概要/代表的な手法/教師なし学習

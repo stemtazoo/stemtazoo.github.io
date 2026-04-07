@@ -1,6 +1,7 @@
 ---
 layout: page
 title: ポアソン回帰とは？（カウントデータ）G検定対策
+description: ポアソン回帰は（カウントデータ）G検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/poisson-regression/
 tags: [gk, metrics]
 gk_section: 機械学習の概要/代表的な手法/教師あり学習

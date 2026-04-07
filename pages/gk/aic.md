@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 赤池情報量基準（AIC）とは？G検定対策
+description: 赤池情報量基準（AIC）はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/aic/
 tags: [gk, metrics]
 gk_section: 機械学習の概要/モデルの選択・評価

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: バイアス・バリアンス トレードオフ
+description: バイアス・バリアンス トレードオフは重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/bias-variance-tradeoff/
 tags: [gk, machine_learning, evaluation]
 gk_section: 機械学習の概要/よくあるつまずき（過学習など）

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 勾配消失・勾配爆発（ひっかけ対策）
+description: 勾配消失・勾配爆発（ひっかけ対策）は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/gradient-vanishing-exploding/
 tags: [gk, neural_network, cheatsheet]
 gk_section: ディープラーニングの概要/ニューラルネットワークとディープラーニング

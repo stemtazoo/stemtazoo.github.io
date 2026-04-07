@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Diffusion Model（拡散モデル）
+description: Diffusion Model（拡散モデル）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/diffusion-model/
 tags: [gk, neural_network, generative_model]
 gk_section: ディープラーニングの応用例/データ生成

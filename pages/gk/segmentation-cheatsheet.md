@@ -1,6 +1,7 @@
 ---
 layout: page
 title: セマンティックセグメンテーション系まとめ（FCN / U-Net / SegNet）
+description: セマンティックセグメンテーション系まとめ（FCN / U-Net / SegNet）は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/segmentation-cheatsheet/
 tags: [gk, cheatsheet, cnn]
 gk_section: ディープラーニングの応用例/画像認識/セグメンテーションタスク

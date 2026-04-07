@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Bag of Words（BoW）とは？【文章の数値化手法｜G検定対策】
+description: Bag of Words（BoW）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/bag-of-words/
 tags: [gk, nlp, machine_learning]
 gk_section: ディープラーニングの応用例/自然言語処理

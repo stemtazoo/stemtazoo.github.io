@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Faster R-CNN
+description: Faster R-CNNは重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/faster-r-cnn/
 tags: [gk, 画像認識, 物体検出]
 gk_section: ディープラーニングの応用例/画像認識/物体検出タスク

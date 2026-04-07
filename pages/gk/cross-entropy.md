@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 交差エントロピー誤差（Cross Entropy）とは？【G検定対策】
+description: 交差エントロピー誤差（Cross Entropy）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/cross-entropy/
 tags: [gk, metrics, neural_network]
 gk_section: ディープラーニングの概要/誤差関数

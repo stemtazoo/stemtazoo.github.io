@@ -1,6 +1,7 @@
 ---
 layout: page
 title: シグモイド関数（Sigmoid Function）とは？【G検定対策】
+description: シグモイド関数（Sigmoid Function）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/sigmoid-function/
 tags: [gk, neural_network]
 gk_section: ディープラーニングの概要/活性化関数

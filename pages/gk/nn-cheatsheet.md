@@ -1,6 +1,7 @@
 ---
 layout: page
 title: ニューラルネットワーク総まとめ（チートシート）
+description: ニューラルネットワーク総まとめ（チートシート）は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/nn-cheatsheet/
 tags: [gk, neural_network, cheatsheet]
 gk_section: チートシート（試験直前）/チートシート（試験直前）

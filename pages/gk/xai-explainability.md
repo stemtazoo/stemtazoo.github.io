@@ -1,6 +1,7 @@
 ---
 layout: page
 title: AIモデルの説明可能性（XAIと性能のトレードオフ）
+description: AIモデルの説明可能性（XAIと性能のトレードオフ）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/xai-explainability/
 tags: [gk]
 gk_section: ディープラーニングの応用例/モデルの解釈性

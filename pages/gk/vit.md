@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Vision Transformer（ViT）とは？CNNとの違い【G検定対策】
+description: Vision Transformer（ViT）はCNNとの違いを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/vit/
 tags: [gk, transformer, attention]
 gk_section: ディープラーニングの応用例/画像認識/ネオコグニトロンとLeNet

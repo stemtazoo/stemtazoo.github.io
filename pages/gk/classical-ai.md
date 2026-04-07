@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 古典AIまとめ（探索・推論・知識表現）
+description: 古典AIまとめ（探索・推論・知識表現）は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/classical-ai/
 tags: [gk, cheatsheet]
 gk_section: 人工知能をめぐる動向/人工知能をめぐる動向

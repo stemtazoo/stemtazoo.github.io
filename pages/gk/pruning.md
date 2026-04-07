@@ -1,6 +1,7 @@
 ---
 layout: page
 title: プルーニング（Pruning）
+description: プルーニング（Pruning）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/pruning/
 tags: [gk, neural_network, model_compression]
 gk_section: ディープラーニングの概要/ニューラルネットワークとディープラーニング

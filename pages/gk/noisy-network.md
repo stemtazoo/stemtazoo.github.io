@@ -1,6 +1,7 @@
 ---
 layout: page
 title: ノイジーネットワークとは？（ε-greedyを使わない探索）【G検定対策】
+description: ノイジーネットワークは（ε-greedyを使わない探索）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/noisy-network/
 tags: [gk]
 gk_section: ディープラーニングの応用例/深層強化学習

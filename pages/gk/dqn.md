@@ -1,6 +1,7 @@
 ---
 layout: page
 title: DQN（Deep Q-Network）とは？Experience Replay【G検定対策】
+description: DQN（Deep Q-Network）はExperience Replayを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/dqn/
 tags: [gk]
 gk_section: ディープラーニングの応用例/深層強化学習

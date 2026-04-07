@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 学習率スケジューリング（Learning Rate Scheduling）
+description: 学習率スケジューリング（Learning Rate Scheduling）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/learning-rate-scheduling/
 tags: [gk, neural_network, cheatsheet]
 gk_section: ディープラーニングの概要/ニューラルネットワークとディープラーニング

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: G検定 概念系 最終チートシート
+description: G検定 概念系 最終チートシートは重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/concepts-final-cheatsheet/
 tags: [gk, cheatsheet]
 gk_section: 人工知能をめぐる動向/人工知能をめぐる動向

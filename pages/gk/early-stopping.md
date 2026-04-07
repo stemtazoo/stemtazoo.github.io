@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Early Stoppingとは？（暗黙的正則化）【G検定対策】
+description: Early Stoppingは（暗黙的正則化）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/early-stopping/
 tags: [gk, neural_network]
 gk_section: ディープラーニングの概要/正則化

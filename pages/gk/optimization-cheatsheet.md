@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 最適化手法まとめ（チートシート）
+description: 最適化手法まとめ（チートシート）は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/optimization-cheatsheet/
 tags: [gk, neural_network, optimization, cheatsheet]
 gk_section: ディープラーニングの概要/最適化手法

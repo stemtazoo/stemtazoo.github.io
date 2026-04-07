@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 第3次AIブームとは？（要因まとめ）
+description: 第3次AIブームは（要因まとめ）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/third-ai-boom/
 tags: [gk]
 gk_section: 人工知能（AI）とは/人工知能（AI）とは

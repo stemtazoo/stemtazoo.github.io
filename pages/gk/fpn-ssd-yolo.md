@@ -1,6 +1,7 @@
 ---
 layout: page
 title: FPN・SSD・YOLOの違いとは？【物体検出まとめ】G検定対策
+description: FPN・SSD・YOLOの違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/fpn-ssd-yolo/
 tags: [gk, cnn, cheatsheet]
 gk_section: ディープラーニングの応用例/画像認識/物体検出タスク

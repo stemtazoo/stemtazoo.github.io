@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 物体検出とセグメンテーションの違い【G検定体系図】
+description: 物体検出とセグメンテーションの違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/detection-segmentation-map/
 tags: [gk, cnn, cheatsheet]
 gk_section: ディープラーニングの応用例/画像認識/ネオコグニトロンとLeNet

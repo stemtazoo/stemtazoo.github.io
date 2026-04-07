@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Embedding層とは？【単語IDを意味ベクトルに変換｜G検定対策】
+description: Embedding層はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/embedding-layer/
 tags: [gk, nlp, neural_network]
 gk_section: ディープラーニングの応用例/自然言語処理

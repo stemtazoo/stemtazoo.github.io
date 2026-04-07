@@ -1,6 +1,7 @@
 ---
 layout: page
 title: モーメンタム（Momentum）
+description: モーメンタム（Momentum）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/momentum/
 tags: [gk, neural_network, optimization]
 gk_section: ディープラーニングの概要/最適化手法

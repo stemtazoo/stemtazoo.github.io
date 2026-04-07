@@ -1,6 +1,7 @@
 ---
 layout: page
 title: AI効果とは？（当たり前化するAI）【G検定対策】
+description: AI効果は（当たり前化するAI）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/ai-effect/
 tags: [gk]
 gk_section: 人工知能（AI）とは/人工知能（AI）とは

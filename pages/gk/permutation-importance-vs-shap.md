@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Permutation Importance vs SHAP【G検定頻出比較】
+description: Permutation Importance vs SHAPは重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/permutation-importance-vs-shap/
 tags: [gk, metrics, cheatsheet]
 gk_section: ディープラーニングの応用例/モデルの解釈性

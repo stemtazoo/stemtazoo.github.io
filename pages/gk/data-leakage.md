@@ -1,6 +1,7 @@
 ---
 layout: page
 title: データリーケージ（Data Leakage）とは？【原因と典型例｜G検定対策】
+description: データリーケージ（Data Leakage）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/data-leakage/
 tags: [gk, machine_learning, evaluation]
 gk_section: AIの社会実装に向けて/AIの社会実装に向けて

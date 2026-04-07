@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 宝くじ仮説（Lottery Ticket Hypothesis）とは？剪定と高性能サブネット【G検定対策】
+description: 宝くじ仮説（Lottery Ticket Hypothesis）は剪定と高性能サブネットを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/lottery-ticket-hypothesis/
 tags: [gk, neural_network]
 gk_section: ディープラーニングの応用例/モデルの軽量化

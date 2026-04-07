@@ -1,6 +1,7 @@
 ---
 layout: page
 title: バッチ学習・ミニバッチ・エポックまとめ
+description: バッチ学習・ミニバッチ・エポックまとめは頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/batch-epoch/
 tags: [gk, neural_network, training]
 gk_section: ディープラーニングの概要/ニューラルネットワークとディープラーニング

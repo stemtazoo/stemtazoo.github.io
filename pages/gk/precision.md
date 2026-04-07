@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Precision（適合率）
+description: Precision（適合率）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/precision/
 tags: [gk, 機械学習, 評価指標, 頻出]
 gk_section: 機械学習の概要/モデルの選択・評価

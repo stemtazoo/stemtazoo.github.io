@@ -1,6 +1,7 @@
 ---
 layout: page
 title: VAE・GAN・Pix2Pixの違い【最終チートシート｜G検定対策】
+description: VAE・GAN・Pix2Pixの違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/vae-vs-gan-vs-pix2pix/
 tags: [gk, neural_network, cheatsheet]
 gk_section: ディープラーニングの応用例/データ生成

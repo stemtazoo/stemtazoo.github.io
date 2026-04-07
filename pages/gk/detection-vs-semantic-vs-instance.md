@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 物体検出・セマンティック・インスタンスの違い【3点比較チート｜G検定対策】
+description: 物体検出・セマンティック・インスタンスの違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/detection-vs-semantic-vs-instance/
 tags: [gk, cnn, cheatsheet]
 gk_section: ディープラーニングの応用例/画像認識/ネオコグニトロンとLeNet
