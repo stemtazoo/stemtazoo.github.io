@@ -1,6 +1,7 @@
 ---
 layout: page
 title: AIの開発における倫理アセスメントとは？【G検定対策】
+description: AIの開発における倫理アセスメントはを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/ethical-assessment/
 tags: [gk]
 gk_section: AIの法律と倫理/AIの法律と倫理

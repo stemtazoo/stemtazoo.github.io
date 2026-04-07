@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: DS検定 リテラシー｜ビジネス力
+description: DS検定 リテラシー｜ビジネス力は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/business-skillcheck/
 categories: [business]
 tags: [ds, skillcheck]

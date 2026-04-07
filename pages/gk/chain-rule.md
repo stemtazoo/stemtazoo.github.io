@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 連鎖律（Chain Rule）とは？【G検定対策】
+description: 連鎖律（Chain Rule）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/chain-rule/
 tags: [gk, neural_network]
 gk_section: 機械学習の概要/モデルの選択・評価

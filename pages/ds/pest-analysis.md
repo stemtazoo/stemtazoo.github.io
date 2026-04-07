@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: PEST分析とは？マクロ環境を分析するフレームワーク【DS検定】
+description: PEST分析はマクロ環境を分析するフレームワークを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/pest-analysis/
 categories: [business]
 tags: [ds, design]

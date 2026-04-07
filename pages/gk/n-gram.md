@@ -1,6 +1,7 @@
 ---
 layout: page
 title: N-gramとは？文字・単語を分割する基本手法【NLP基礎｜G検定対策】
+description: N-gramは文字・単語を分割する基本手法を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/n-gram/
 tags: [gk, nlp]
 gk_section: ディープラーニングの応用例/自然言語処理

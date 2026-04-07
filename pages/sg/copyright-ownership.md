@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 著作権の帰属とは？委託開発との違いを理解する【情報セキュリティマネジメント】
+description: 著作権の帰属は委託開発との違いを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
 permalink: /sg/copyright-ownership/
 tags: [sg, 著作権, 委託開発, 法務, sg-security-law]
 ---

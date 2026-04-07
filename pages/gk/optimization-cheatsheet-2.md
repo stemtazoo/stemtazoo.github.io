@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 最適化手法まとめ（SGD / AdaGrad / RMSprop / Adam）
+description: 最適化手法まとめ（SGD / AdaGrad / RMSprop / Adam）は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/optimization-cheatsheet-2/
 tags: [gk, neural_network, cheatsheet]
 gk_section: ディープラーニングの概要/最適化手法

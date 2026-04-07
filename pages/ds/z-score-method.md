@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: zスコア法とは？異常値判定の基本を整理【DS検定リテラシー】
+description: zスコア法は異常値判定の基本を整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/z-score-method/
 categories: [data-science]
 tags: [ds, data-preparation, statistics]

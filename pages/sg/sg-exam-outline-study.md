@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 情報セキュリティマネジメント試験の出題内容とは？科目A・科目Bと勉強方法を整理
+description: 情報セキュリティマネジメント試験の出題内容は科目A・科目Bと勉強方法を整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
 permalink: /sg/sg-exam-outline-study/
 categories: [business]
 tags: [sg, sg-exam-outline]

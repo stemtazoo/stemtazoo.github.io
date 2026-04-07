@@ -1,6 +1,7 @@
 ---
 layout: page
 title: インシデント対応とは？初動対応の判断基準を整理【情報セキュリティマネジメント】
+description: インシデント対応は初動対応の判断基準を整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
 permalink: /sg/incident-response/
 tags: [sg, security_management, incident_management, risk_assessment, it_security_operations, sg-security-management]
 ---

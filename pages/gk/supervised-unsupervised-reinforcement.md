@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 教師あり・教師なし・強化学習の違い【最終比較まとめ｜G検定対策】
+description: 教師あり・教師なし・強化学習の違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/supervised-unsupervised-reinforcement/
 tags: [gk, machine_learning, cheatsheet]
 gk_section: 機械学習の概要/代表的な手法/学習の種類

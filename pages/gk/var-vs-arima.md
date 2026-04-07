@@ -1,6 +1,7 @@
 ---
 layout: page
 title: VARとARIMAの違い【多変量 vs 単変量の最終比較】
+description: VARとARIMAの違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/var-vs-arima/
 tags: [gk, time_series]
 gk_section: 機械学習の概要/代表的な手法/教師あり学習

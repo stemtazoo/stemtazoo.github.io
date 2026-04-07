@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Ellipse R-CNN（楕円物体検出）とは？G検定対策
+description: Ellipse R-CNN（楕円物体検出）はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/ellipse-r-cnn/
 tags: [gk, cnn, neural_network]
 gk_section: ディープラーニングの応用例/画像認識/マルチタスク学習

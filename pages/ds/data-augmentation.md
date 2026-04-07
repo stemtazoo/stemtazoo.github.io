@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: データ拡張（Data Augmentation）とは？画像AIの学習データを増やす方法【DS検定】
+description: データ拡張（Data Augmentation）は画像AIの学習データを増やす方法を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/data-augmentation/
 categories: [data-science]
 tags: [ds, unstructured-data, preprocessing]

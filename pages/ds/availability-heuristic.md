@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 利用可能性ヒューリスティックとは？思い出しやすい情報で判断してしまう心理【DS検定】
+description: 利用可能性ヒューリスティックは思い出しやすい情報で判断してしまう心理を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/availability-heuristic/
 categories: [business]
 tags: [ds, design]

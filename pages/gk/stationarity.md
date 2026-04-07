@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 定常性とは何か？なぜ差分するのか【G検定対策】
+description: 定常性は何か？なぜ差分するのかを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/stationarity/
 tags: [gk, time_series]
 gk_section: 機械学習の概要/代表的な手法/強化学習

@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: バッチ処理とストリーム処理の違いとは？【DS検定リテラシー】
+description: バッチ処理とストリーム処理の違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/batch-vs-stream/
 categories: [data-engineering]
 tags: [ds, data-processing]

@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 共分散と相関係数の違いとは？【DS検定リテラシー】
+description: 共分散と相関係数の違いは関連概念を切り分けるための考え方です。この記事では定義・尺度の差分と解釈の要点、DS検定で問われる判断ポイントを解説します。
 permalink: /ds/covariance-and-correlation/
 categories: [data-science]
 tags: [ds, statistics]

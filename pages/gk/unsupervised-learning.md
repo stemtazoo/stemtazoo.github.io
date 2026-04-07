@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 教師なし学習
+description: 教師なし学習は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/unsupervised-learning/
 tags: [gk, 機械学習, 頻出]
 gk_section: 機械学習の概要/代表的な手法/学習の種類

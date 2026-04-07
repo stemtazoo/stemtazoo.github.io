@@ -1,6 +1,7 @@
 ---
 layout: page
 title: スキップグラム（Skip-gram）とは？【G検定対策】
+description: スキップグラム（Skip-gram）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/skip-gram/
 tags: [gk, nlp]
 gk_section: ディープラーニングの応用例/自然言語処理

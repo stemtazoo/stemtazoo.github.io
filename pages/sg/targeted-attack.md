@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 標的型攻撃とは？狙われる組織の特徴と対策【情報セキュリティマネジメント】
+description: 標的型攻撃は狙われる組織の特徴と対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
 permalink: /sg/targeted-attack/
 tags: [sg, security_measures, unauthorized_access, risk_assessment, security_training]
 ---

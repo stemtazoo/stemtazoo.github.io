@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 自己教師あり学習（Self-Supervised Learning）とは？疑似ラベルで学ぶ仕組み【G検定対策】
+description: 自己教師あり学習（Self-Supervised Learning）は疑似ラベルで学ぶ仕組みを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/self-supervised-learning/
 tags: [gk, neural_network]
 gk_section: ディープラーニングの応用例/転移学習・ファインチューニング

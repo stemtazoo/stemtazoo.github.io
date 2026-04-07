@@ -2,6 +2,7 @@
 
 layout: page
 title: 個人情報の第三者提供とは？【G検定対策】
+description: 個人情報の第三者提供はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/third-party-provision/
 tags: [gk, ethics]
 gk_section: AIの法律と倫理/AIの法律と倫理

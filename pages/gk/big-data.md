@@ -1,6 +1,7 @@
 ---
 layout: page
 title: ビッグデータとは？G検定対策
+description: ビッグデータはG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/big-data/
 tags: [gk]
 gk_section: 人工知能（AI）とは/人工知能（AI）とは

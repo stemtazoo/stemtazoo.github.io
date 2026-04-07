@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: メールアドレスの正規表現とは？なぜ難しいのかを整理【DS検定】
+description: メールアドレスの正規表現はなぜ難しいのかを整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/regular-expression-email/
 categories: [data-science]
 tags: [ds, data-processing, preprocessing]

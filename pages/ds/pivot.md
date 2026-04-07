@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: ピボットとは？クロス集計との違いを整理【DS検定】
+description: ピボットはクロス集計との違いを整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/pivot/
 categories: [data-science]
 tags: [ds, visualization]

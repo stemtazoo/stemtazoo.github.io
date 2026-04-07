@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: ハルシネーションとは？生成AIの限界と正しい向き合い方【DS検定】
+description: ハルシネーションは生成AIの限界と正しい向き合い方を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/hallucination/
 categories: [ai-utilization]
 tags: [ds, ai-use]

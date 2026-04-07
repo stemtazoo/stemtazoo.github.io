@@ -1,6 +1,7 @@
 ---
 layout: page
 title: オッカムの剃刀とは？（Occam's Razor）【G検定対策】
+description: オッカムの剃刀は（Occam's Razor）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/occams-razor/
 tags: [gk]
 gk_section: 機械学習の概要/モデルの選択・評価

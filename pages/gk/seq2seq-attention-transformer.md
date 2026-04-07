@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Seq2SeqからTransformerへの進化【Attention登場の理由】
+description: Seq2SeqからTransformerへの進化は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/seq2seq-attention-transformer/
 tags: [gk, rnn, attention, transformer, nlp]
 gk_section: ディープラーニングの要素技術/リカレントニューラルネットワーク (RNN)

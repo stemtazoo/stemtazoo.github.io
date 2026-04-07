@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: アンカリング効果とは？最初の情報に判断が引きずられる心理【DS検定】
+description: アンカリング効果は最初の情報に判断が引きずられる心理を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/anchoring-effect/
 categories: [business]
 tags: [ds, design]

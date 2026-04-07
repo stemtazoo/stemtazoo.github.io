@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: ベクトルの内積とは？意味と使いどころを整理【DS検定】
+description: ベクトルの内積は意味と使いどころを整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/vector-dot-product/
 categories: [data-science]
 tags: [ds, linear-algebra, math]

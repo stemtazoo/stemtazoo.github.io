@@ -1,6 +1,7 @@
 ---
 layout: page
 title: KLダイバージェンス（Kullback-Leibler Divergence）とは？【G検定対策】
+description: KLダイバージェンス（Kullback-Leibler Divergence）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/kl-divergence/
 tags: [gk, metrics, probability]
 gk_section: ディープラーニングの概要/誤差関数

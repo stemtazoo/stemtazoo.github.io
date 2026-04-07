@@ -1,6 +1,7 @@
 ---
 layout: page
 title: クラッカーとは？悪意ある攻撃者の特徴と見分け方【情報セキュリティマネジメント】
+description: クラッカーは悪意ある攻撃者の特徴と見分け方を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
 permalink: /sg/cracker/
 tags: [sg, threat_vulnerability, unauthorized_access, risk_assessment, sg-security-overview]
 ---

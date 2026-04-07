@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 知識表現まとめ（フレーム・意味ネット・論理）
+description: 知識表現まとめ（フレーム・意味ネット・論理）は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/knowledge-representation/
 tags: [gk, cheatsheet]
 gk_section: 人工知能をめぐる動向/人工知能をめぐる動向

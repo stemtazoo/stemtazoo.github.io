@@ -1,6 +1,7 @@
 ---
 layout: page
 title: データ窃取攻撃（Data Extraction Attack）とは？【G検定対策】
+description: データ窃取攻撃（Data Extraction Attack）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/data-extraction-attack/
 tags: [gk, security, privacy]
 gk_section: AIの法律と倫理/AIの法律と倫理

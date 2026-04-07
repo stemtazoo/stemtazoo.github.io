@@ -1,6 +1,7 @@
 ---
 layout: page
 title: MTTRとは？平均復旧時間の意味と短縮の考え方【情報セキュリティマネジメント】
+description: MTTRは平均復旧時間の意味と短縮の考え方を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
 permalink: /sg/mttr/
 tags: [sg, sg-management]
 ---

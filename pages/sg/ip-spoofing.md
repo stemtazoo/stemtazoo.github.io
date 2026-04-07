@@ -1,6 +1,7 @@
 ---
 layout: page
 title: IPスプーフィングとは？送信元偽装の仕組みと対策【情報セキュリティマネジメント】
+description: IPスプーフィングは送信元偽装の仕組みと対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
 permalink: /sg/ip-spoofing/
 tags: [sg, security_measures, unauthorized_access, network, threat_vulnerability]
 ---

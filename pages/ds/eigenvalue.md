@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 行列の固有値とは？意味を直感で整理【DS検定】
+description: 行列の固有値は意味を直感で整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/eigenvalue/
 categories: [data-science]
 tags: [ds, linear-algebra, math]

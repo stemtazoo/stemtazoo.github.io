@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: オペレーショナルリスクとは？レピュテーションリスクとの違いを整理【DS検定】
+description: オペレーショナルリスクはレピュテーションリスクとの違いを整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/operational-risk/
 categories: [business]
 tags: [ds, design]

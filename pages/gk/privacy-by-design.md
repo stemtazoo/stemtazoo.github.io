@@ -1,6 +1,7 @@
 ---
 layout: page
 title: プライバシー・バイ・デザインとは？（考え方）【G検定対策】
+description: プライバシー・バイ・デザインは（考え方）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/privacy-by-design/
 tags: [gk]
 gk_section: AIの法律と倫理/AIの法律と倫理

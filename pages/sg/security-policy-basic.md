@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 情報セキュリティ基本方針とは？経営者の宣言を理解する【情報セキュリティマネジメント】
+description: 情報セキュリティ基本方針は経営者の宣言を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
 permalink: /sg/security-policy-basic/
 tags: [sg, security_management, isms, asset_management, it_security_operations, sg-security-management]
 ---

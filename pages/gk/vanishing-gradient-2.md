@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 勾配消失問題とは？原因と対策まとめ【RNN・深層学習｜G検定対策】
+description: 勾配消失問題は原因と対策まとめを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/vanishing-gradient-2/
 tags: [gk, neural_network]
 gk_section: ディープラーニングの要素技術/リカレントニューラルネットワーク (RNN)

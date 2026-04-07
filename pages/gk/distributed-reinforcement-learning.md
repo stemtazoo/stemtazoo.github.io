@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 分散型強化学習とは？【特徴とマルチエージェントとの違い｜G検定対策】
+description: 分散型強化学習はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/distributed-reinforcement-learning/
 tags: [gk, reinforcement_learning]
 gk_section: 機械学習の概要/代表的な手法/強化学習

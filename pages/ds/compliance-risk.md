@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: コンプライアンスリスクとは？オペレーショナルリスクとの違い【DS検定】
+description: コンプライアンスリスクはオペレーショナルリスクとの違いを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/compliance-risk/
 categories: [business]
 tags: [ds, design]

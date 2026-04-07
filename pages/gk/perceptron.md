@@ -1,6 +1,7 @@
 ---
 layout: page
 title: パーセプトロン（Perceptron）
+description: パーセプトロン（Perceptron）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/perceptron/
 tags: [gk, neural_network, perceptron]
 gk_section: ディープラーニングの概要/ニューラルネットワークとディープラーニング

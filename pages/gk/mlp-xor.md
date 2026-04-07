@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 多層パーセプトロン（MLP）でなぜXOR問題が解けるのか？G検定対策
+description: 多層パーセプトロン（MLP）でなぜXOR問題が解けるのか？G検定対策は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/mlp-xor/
 tags: [gk, neural_network]
 gk_section: 人工知能をめぐる動向/人工知能をめぐる動向

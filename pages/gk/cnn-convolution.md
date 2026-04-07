@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 畳み込みニューラルネットワーク（CNN）における畳み込み処理
+description: 畳み込みニューラルネットワーク（CNN）における畳み込み処理は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/cnn-convolution/
 tags: [gk, cnn, convolution]
 gk_section: ディープラーニングの応用例/画像認識/ネオコグニトロンとLeNet

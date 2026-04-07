@@ -1,6 +1,7 @@
 ---
 layout: page
 title: DQN改良手法まとめ（Double / Dueling / Noisy / Prioritized）【G検定対策】
+description: DQN改良手法まとめ（Double / Dueling / Noisy / Prioritized）は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/dqn-advanced/
 tags: [gk]
 gk_section: ディープラーニングの応用例/深層強化学習

@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: レピュテーションリスクとは？企業評価が下がる仕組みを理解する【DS検定】
+description: レピュテーションリスクは企業評価が下がる仕組みを理解するを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/reputation-risk/
 categories: [business]
 tags: [ds, design]

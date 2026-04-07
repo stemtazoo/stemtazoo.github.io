@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 仮名加工情報とは？匿名加工情報との違いを整理【DS検定】
+description: 仮名加工情報は匿名加工情報との違いを整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/pseudonymized-information/
 categories: [ai-utilization]
 tags: [ds, ethics]

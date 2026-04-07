@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 強化学習チートシート（完全版）【G検定対策まとめ】
+description: 強化学習チートシート（完全版）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/reinforcement-learning-cheatsheet/
 tags: [gk, reinforcement_learning, cheatsheet]
 gk_section: 機械学習の概要/代表的な手法/強化学習

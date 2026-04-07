@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 決定係数と自由度調整済決定係数の違いとは？【DS検定】
+description: 決定係数と自由度調整済決定係数の違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/r-squared-adjusted-r-squared/
 categories: [data-science]
 tags: [ds, modeling, evaluation]

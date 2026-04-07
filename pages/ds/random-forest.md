@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: ランダムフォレストとは？（特徴量重要度の考え方まで理解する）【DS検定】
+description: ランダムフォレストは（特徴量重要度の考え方まで理解する）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/random-forest/
 categories: [data-science]
 tags: [ds, modeling]

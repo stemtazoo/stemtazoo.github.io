@@ -1,6 +1,7 @@
 ---
 layout: page
 title: CBOWモデルとは？（Word2Vec）【G検定対策】
+description: CBOWモデルは（Word2Vec）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/cbow/
 tags: [gk, nlp, embedding]
 gk_section: ディープラーニングの応用例/自然言語処理

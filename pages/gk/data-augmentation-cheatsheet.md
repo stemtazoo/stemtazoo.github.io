@@ -1,6 +1,7 @@
 ---
 layout: page
 title: データ拡張まとめチートシート（色系 × 幾何系）【G検定対策】
+description: データ拡張まとめチートシート（色系 × 幾何系）は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/data-augmentation-cheatsheet/
 tags: [gk, cnn, cheatsheet]
 gk_section: ディープラーニングの応用例/画像認識/データ拡張

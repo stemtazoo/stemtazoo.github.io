@@ -1,6 +1,7 @@
 ---
 layout: page
 title: CRYPTRECとは？暗号の安全性評価の役割を理解する【情報セキュリティマネジメント】
+description: CRYPTRECは暗号の安全性評価の役割を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
 permalink: /sg/cryptrec/
 tags: [sg, sg-security-measures]
 ---

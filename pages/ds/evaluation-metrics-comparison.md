@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 分類モデルの評価指標の比較とは？【DS検定リテラシー】
+description: 分類モデルの評価指標の比較はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/evaluation-metrics-comparison/
 categories: [data-science]
 tags: [ds, modeling, evaluation]

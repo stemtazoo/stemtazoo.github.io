@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 継承とは？クラス設計の基本を整理【DS検定リテラシー】
+description: 継承はクラス設計の基本を整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/inheritance/
 categories: [business]
 tags: [ds, design]

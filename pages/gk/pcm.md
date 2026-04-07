@@ -1,6 +1,7 @@
 ---
 layout: page
 title: パルス符号変調（PCM）とは？【G検定対策】
+description: パルス符号変調（PCM）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/pcm/
 tags: [gk, signal_processing]
 gk_section: ディープラーニングの応用例/音声処理

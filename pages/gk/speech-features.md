@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 音声特徴量まとめ（フォルマント / MFCC / スペクトログラム）【G検定対策】
+description: 音声特徴量まとめ（フォルマント / MFCC / スペクトログラム）は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/speech-features/
 tags: [gk, speech, signal_processing]
 gk_section: ディープラーニングの応用例/音声処理

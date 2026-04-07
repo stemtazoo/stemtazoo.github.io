@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: DS検定 リテラシー 学習まとめ
+description: DS検定 リテラシー 学習まとめは頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/
 categories: [business]
 tags: [ds, index]

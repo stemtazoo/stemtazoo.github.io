@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 画像データ拡張 全操作チートシート【G検定1ページ総まとめ】
+description: 画像データ拡張 全操作チートシートは重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/image-augmentation-cheatsheet/
 tags: [gk, cnn, cheatsheet]
 gk_section: ディープラーニングの応用例/画像認識/データ拡張

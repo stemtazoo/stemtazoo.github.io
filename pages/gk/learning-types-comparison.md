@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 機械学習3手法の比較まとめ
+description: 機械学習3手法の比較まとめは頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/learning-types-comparison/
 tags: [gk, 機械学習, まとめ, 頻出]
 gk_section: 機械学習の概要/代表的な手法/学習の種類

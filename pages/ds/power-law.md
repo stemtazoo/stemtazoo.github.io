@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: べき乗則とは？両対数グラフが直線になる理由【DS検定リテラシー】
+description: べき乗則は両対数グラフが直線になる理由を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/power-law/
 categories: [business]
 tags: [ds, design]

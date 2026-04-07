@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: LLMのTemperatureとは？出力のランダム性を理解する【DS検定】
+description: LLMのTemperatureは出力のランダム性を理解するを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/llm-temperature/
 categories: [ai-utilization]
 tags: [ds, ai-use]

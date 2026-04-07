@@ -1,6 +1,7 @@
 ---
 layout: page
 title: バッチ勾配降下法とは？【G検定対策】
+description: バッチ勾配降下法はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/batch-gradient-descent/
 tags: [gk, neural_network]
 gk_section: ディープラーニングの概要/最適化手法

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: マルチモーダルモデル総まとめ【最終チートシート｜G検定対策】
+description: マルチモーダルモデル総まとめは頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/multimodal-cheatsheet/
 tags: [gk, cheatsheet, neural_network, attention]
 gk_section: ディープラーニングの応用例/マルチモーダル

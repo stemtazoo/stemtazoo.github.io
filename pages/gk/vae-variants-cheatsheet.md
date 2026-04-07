@@ -1,6 +1,7 @@
 ---
 layout: page
 title: β-VAE・infoVAE・VQ-VAEの違い【G検定頻出比較】
+description: β-VAE・infoVAE・VQ-VAEの違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/vae-variants-cheatsheet/
 tags: [gk, generative_model, neural_network, cheatsheet]
 gk_section: ディープラーニングの要素技術/オートエンコーダ

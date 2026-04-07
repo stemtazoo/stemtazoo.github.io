@@ -1,6 +1,7 @@
 ---
 layout: page
 title: SegNet vs U-Net 比較チートシート【G検定頻出】
+description: SegNet vs U-Net 比較チートシートは重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/segnet-vs-unet/
 tags: [gk, cnn, cheatsheet]
 gk_section: ディープラーニングの応用例/画像認識/セグメンテーションタスク

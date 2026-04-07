@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 交差検証（k-fold）と探索の組み合わせとは？【G検定対策】
+description: 交差検証（k-fold）と探索の組み合わせはを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/cross-validation-with-search/
 tags: [gk]
 gk_section: ディープラーニングの概要/最適化手法

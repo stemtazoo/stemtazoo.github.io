@@ -1,6 +1,7 @@
 ---
 layout: page
 title: GDPRと日本の個人情報保護法の違いとは？【G検定対策】
+description: GDPRと日本の個人情報保護法の違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/gdpr-vs-japan-pipa/
 tags: [gk]
 gk_section: AIの法律と倫理/AIの法律と倫理

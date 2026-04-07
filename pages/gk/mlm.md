@@ -1,6 +1,7 @@
 ---
 layout: page
 title: MLM（Masked Language Model）とは？【BERTの学習方法｜G検定対策】
+description: MLM（Masked Language Model）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/mlm/
 tags: [gk, nlp, transformer]
 gk_section: ディープラーニングの応用例/自然言語処理

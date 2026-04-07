@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 畳み込み（Convolution）とは？画像フィルタ処理の基本【DS検定】
+description: 畳み込み（Convolution）は画像フィルタ処理の基本を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/convolution/
 categories: [data-science]
 tags: [ds, modeling]

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 正則化・過学習対策まとめ
+description: 正則化・過学習対策まとめは頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/regularization/
 tags: [gk, neural_network, regularization]
 gk_section: ディープラーニングの概要/正則化

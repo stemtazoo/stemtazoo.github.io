@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 最適化手法まとめ（SGD / Adam / AdaGrad / RMSprop / AMSGrad / AdaBound / AMSBound / Adadelta）【G検定対策】
+description: 最適化手法まとめ（SGD / Adam / AdaGrad / RMSprop / AMSGrad / AdaBound / AMSBound / Adadelta）は頻出論点を整理して得点力につなげる学習テーマです。この記事では重要ポイントと使いどころ、G検定で問われる判断ポイントを解説します。
 permalink: /gk/optimizer-comparison/
 tags: [gk, cheatsheet, neural_network]
 gk_section: ディープラーニングの概要/最適化手法

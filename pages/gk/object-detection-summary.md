@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 物体検出モデル総まとめ（SSD / YOLO / R-CNN系）
+description: 物体検出モデル総まとめ（SSD / YOLO / R-CNN系）は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/object-detection-summary/
 tags: [gk, 画像認識, 物体検出, まとめ]
 gk_section: ディープラーニングの応用例/画像認識/物体検出タスク

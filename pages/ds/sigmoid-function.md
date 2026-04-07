@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: シグモイド関数とは？（確率に変換する関数）【DS検定】
+description: シグモイド関数は（確率に変換する関数）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/sigmoid-function/
 categories: [business]
 tags: [ds, modeling, design]

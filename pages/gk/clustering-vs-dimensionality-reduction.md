@@ -1,6 +1,7 @@
 ---
 layout: page
 title: クラスタリングと次元削減の違い【最終混同対策・G検定】
+description: クラスタリングと次元削減の違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/clustering-vs-dimensionality-reduction/
 tags: [gk, unsupervised_learning]
 gk_section: 機械学習の概要/代表的な手法/教師なし学習

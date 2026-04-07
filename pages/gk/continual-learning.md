@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 継続学習（Continual Learning）とは？破壊的忘却と対策まとめ【G検定対策】
+description: 継続学習（Continual Learning）は破壊的忘却と対策まとめを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/continual-learning/
 tags: [gk, neural_network]
 gk_section: ディープラーニングの応用例/転移学習・ファインチューニング

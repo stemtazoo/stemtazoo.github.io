@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: ジニ不純度とエントロピーの違いとは？分岐基準を整理【DS検定】
+description: ジニ不純度とエントロピーの違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/gini-vs-entropy/
 categories: [data-science]
 tags: [ds, modeling, evaluation]

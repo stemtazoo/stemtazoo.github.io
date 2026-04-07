@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 階層クラスター分析における距離の測定方法の比較【DS検定】
+description: 階層クラスター分析における距離の測定方法の比較は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/hierarchical-distance-metrics/
 categories: [data-science]
 tags: [ds, modeling]

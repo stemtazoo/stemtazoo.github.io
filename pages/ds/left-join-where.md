@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: LEFT JOINとWHEREの関係とは？（SQLのひっかけ問題）【DS検定】
+description: LEFT JOINとWHEREの関係は（SQLのひっかけ問題）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/left-join-where/
 categories: [data-engineering]
 tags: [ds, data-processing, sql]

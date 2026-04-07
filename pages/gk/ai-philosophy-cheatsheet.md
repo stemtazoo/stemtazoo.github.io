@@ -1,6 +1,7 @@
 ---
 layout: page
 title: AI哲学4兄弟まとめ（オッカム・ノーフリーランチ・アヒル・フレーム）【G検定対策】
+description: AI哲学4兄弟まとめ（オッカム・ノーフリーランチ・アヒル・フレーム）は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/ai-philosophy-cheatsheet/
 tags: [gk, cheatsheet]
 gk_section: 機械学習の概要/モデルの選択・評価

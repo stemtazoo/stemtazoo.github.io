@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: COUNTの違いとは？COUNT(*)・COUNT(列)・COUNT DISTINCTを整理【DS検定】
+description: COUNTの違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/sql-count-diff/
 categories: [data-engineering]
 tags: [ds, data-processing, sql]

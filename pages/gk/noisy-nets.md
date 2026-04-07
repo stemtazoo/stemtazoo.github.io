@@ -1,6 +1,7 @@
 ---
 layout: page
 title: ノイズネットワーク（Noisy Nets）とは？【G検定対策】
+description: ノイズネットワーク（Noisy Nets）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/noisy-nets/
 tags: [gk, reinforcement_learning]
 gk_section: ディープラーニングの応用例/深層強化学習

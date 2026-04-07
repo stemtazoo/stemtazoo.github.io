@@ -1,6 +1,7 @@
 ---
 layout: page
 title: CNN 計算ひっかけ問題集（出力サイズ・パラメータ数）
+description: CNN 計算ひっかけ問題集（出力サイズ・パラメータ数）は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/cnn-trick-calculations/
 tags: [gk, cnn, cheatsheet]
 gk_section: ディープラーニングの応用例/画像認識/ネオコグニトロンとLeNet

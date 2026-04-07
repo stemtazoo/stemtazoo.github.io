@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: CNN（畳み込みニューラルネットワーク）とは？画像認識AIの基本【DS検定】
+description: CNN（畳み込みニューラルネットワーク）は画像認識AIの基本を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/cnn/
 categories: [data-science]
 tags: [ds, modeling]

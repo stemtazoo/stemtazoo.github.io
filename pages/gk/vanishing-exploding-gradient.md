@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 勾配消失・勾配爆発
+description: 勾配消失・勾配爆発は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/vanishing-exploding-gradient/
 tags: [gk, neural_network, rnn, gradient]
 gk_section: ディープラーニングの要素技術/ネットワークの構成要素

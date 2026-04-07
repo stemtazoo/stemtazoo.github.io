@@ -1,6 +1,7 @@
 ---
 layout: page
 title: AIガバナンスと社会実装
+description: AIガバナンスと社会実装は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/ai-governance/
 tags: [gk]
 gk_section: AIの法律と倫理/AIの法律と倫理

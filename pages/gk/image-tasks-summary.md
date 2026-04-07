@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 画像タスク総まとめ（分類・検出・セグメンテーション）
+description: 画像タスク総まとめ（分類・検出・セグメンテーション）は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/image-tasks-summary/
 tags: [gk, cnn, computer_vision, cheatsheet]
 gk_section: ディープラーニングの応用例/画像認識/ネオコグニトロンとLeNet

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 音韻（phoneme）とは？【G検定対策】
+description: 音韻（phoneme）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/phoneme/
 tags: [gk, speech, nlp]
 gk_section: ディープラーニングの応用例/音声処理

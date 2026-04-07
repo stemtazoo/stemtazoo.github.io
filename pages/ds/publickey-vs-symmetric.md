@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 公開鍵暗号方式と共通鍵暗号方式の違いとは？【DS検定】
+description: 公開鍵暗号方式と共通鍵暗号方式の違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/publickey-vs-symmetric/
 categories: [business]
 tags: [ds, security, design]

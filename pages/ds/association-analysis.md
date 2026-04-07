@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: アソシエーション分析とは？購買データの関係性を見つける分析【DS検定】
+description: アソシエーション分析は購買データの関係性を見つける分析を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/association-analysis/
 categories: [data-science]
 tags: [ds, modeling]

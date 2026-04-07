@@ -1,6 +1,7 @@
 ---
 layout: page
 title: ResNet・DenseNet・EfficientNet 比較（G検定対策）
+description: ResNet・DenseNet・EfficientNet 比較（G検定対策）は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/cnn-architectures-comparison/
 tags: [gk, cnn, neural_network, cheatsheet]
 gk_section: ディープラーニングの応用例/画像認識/ネオコグニトロンとLeNet

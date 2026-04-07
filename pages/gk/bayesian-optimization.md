@@ -1,6 +1,7 @@
 ---
 layout: page
 title: ベイズ最適化とは？（グリッド・ランダムとの違い）【G検定対策】
+description: ベイズ最適化は（グリッド・ランダムとの違い）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/bayesian-optimization/
 tags: [gk]
 gk_section: ディープラーニングの概要/最適化手法

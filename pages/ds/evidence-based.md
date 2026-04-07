@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: エビデンスベースドとは？（Evidence-Basedの考え方）【DS検定】
+description: エビデンスベースドは（Evidence-Basedの考え方）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/evidence-based/
 categories: [business]
 tags: [ds, data-understanding, design]

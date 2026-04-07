@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Man-in-the-Browserとは？ブラウザ内改ざん攻撃の仕組み【情報セキュリティマネジメント】
+description: Man-in-the-Browserはブラウザ内改ざん攻撃の仕組みを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
 permalink: /sg/man-in-the-browser/
 tags: [sg, security_measures, malware, unauthorized_access, sg-security-measures]
 ---

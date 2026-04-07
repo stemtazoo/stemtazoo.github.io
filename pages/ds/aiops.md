@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: AIOpsとは？MLOpsとの違いを整理【DS検定リテラシー】
+description: AIOpsはMLOpsとの違いを整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/aiops/
 categories: [ai-utilization]
 tags: [ds, environment-setup, ai-use]

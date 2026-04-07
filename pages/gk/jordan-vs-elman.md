@@ -1,6 +1,7 @@
 ---
 layout: page
 title: ジョルダンネットワークとElmanネットワークの違いとは？【RNN比較｜G検定対策】
+description: ジョルダンネットワークとElmanネットワークの違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/jordan-vs-elman/
 tags: [gk, neural_network, rnn]
 gk_section: ディープラーニングの要素技術/リカレントニューラルネットワーク (RNN)

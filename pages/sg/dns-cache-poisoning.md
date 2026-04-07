@@ -1,6 +1,7 @@
 ---
 layout: page
 title: DNSキャッシュポイズニングとは？偽サイトへ誘導する攻撃【情報セキュリティマネジメント】
+description: DNSキャッシュポイズニングは偽サイトへ誘導する攻撃を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
 permalink: /sg/dns-cache-poisoning/
 tags: [sg, security_measures, unauthorized_access, network, sg-security-measures]
 ---

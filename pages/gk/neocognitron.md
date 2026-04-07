@@ -1,6 +1,7 @@
 ---
 layout: page
 title: ネオコグニトロンとは？【G検定対策】
+description: ネオコグニトロンはを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/neocognitron/
 tags: [gk, neural_network, cnn]
 gk_section: ディープラーニングの応用例/画像認識/ネオコグニトロンとLeNet

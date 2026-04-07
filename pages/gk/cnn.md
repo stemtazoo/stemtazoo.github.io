@@ -1,6 +1,7 @@
 ---
 layout: page
 title: CNN（畳み込みニューラルネットワーク）
+description: CNN（畳み込みニューラルネットワーク）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/cnn/
 tags: [gk, neural_network, cnn]
 gk_section: ディープラーニングの要素技術/ネットワークの構成要素

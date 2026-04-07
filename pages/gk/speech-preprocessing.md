@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 音声認識における前処理まとめ（PCMから特徴量まで）【G検定対策】
+description: 音声認識における前処理まとめ（PCMから特徴量まで）は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/speech-preprocessing/
 tags: [gk, signal_processing, nlp]
 gk_section: ディープラーニングの応用例/音声処理

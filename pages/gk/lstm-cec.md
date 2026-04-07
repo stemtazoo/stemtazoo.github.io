@@ -1,6 +1,7 @@
 ---
 layout: page
 title: LSTMの内部構造（CECと学習アルゴリズムの切り分け）
+description: LSTMの内部構造（CECと学習アルゴリズムの切り分け）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/lstm-cec/
 tags: [gk, neural_network, rnn, lstm]
 gk_section: ディープラーニングの要素技術/リカレントニューラルネットワーク (RNN)

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: JPCERT/CCとは？役割とCSIRTとの違いを整理【情報セキュリティマネジメント】
+description: JPCERT/CCは役割とCSIRTとの違いを整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
 permalink: /sg/jpcert-cc/
 tags: [sg, sg-security-management]
 ---

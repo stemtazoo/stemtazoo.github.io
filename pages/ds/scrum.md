@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: スクラムとは？アジャイル開発の代表的なフレームワーク【DS検定】
+description: スクラムはアジャイル開発の代表的なフレームワークを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/scrum/
 categories: [business]
 tags: [ds, design]

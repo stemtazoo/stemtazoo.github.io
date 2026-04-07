@@ -1,6 +1,7 @@
 ---
 layout: page
 title: AlphaGo・AlphaGo Zero・AlphaZero・OpenAI Five・AlphaStar 完全比較【G検定対策】
+description: AlphaGo・AlphaGo Zero・AlphaZero・OpenAI Five・AlphaStar 完全比較は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/ai-project-comparison/
 tags: [gk, reinforcement_learning, cheatsheet]
 gk_section: ディープラーニングの応用例/深層強化学習

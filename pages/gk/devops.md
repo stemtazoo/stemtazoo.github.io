@@ -1,6 +1,7 @@
 ---
 layout: page
 title: DevOps（開発と運用の連携）とは？MLOpsとの対比【G検定対策】
+description: DevOps（開発と運用の連携）はMLOpsとの対比を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/devops/
 tags: [gk, devops, mlops]
 gk_section: AIの社会実装に向けて/AIの社会実装に向けて

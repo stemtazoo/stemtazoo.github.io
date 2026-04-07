@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: "数理・アルゴリズム・データ活用基礎（オプション）【DS検定対応】"
+description: "数理・アルゴリズム・データ活用基礎（オプション）"は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/optional-math-algorithm/
 categories: [business]
 tags: [ds, design, literacy, math, algorithm, programming, timeseries, nlp, cheatsheet]

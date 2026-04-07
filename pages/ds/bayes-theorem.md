@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: ベイズの定理とは？（条件付き確率の逆算）【DS検定リテラシー】
+description: ベイズの定理は（条件付き確率の逆算）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/bayes-theorem/
 categories: [data-science]
 tags: [ds, statistics]

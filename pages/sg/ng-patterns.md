@@ -1,6 +1,7 @@
 ---
 layout: page
 title: SG試験 よく出るNG選択肢まとめ【情報セキュリティマネジメント】
+description: SG試験 よく出るNG選択肢まとめは頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
 permalink: /sg/ng-patterns/
 tags: [sg, risk_assessment, it_security_operations, security_management, security_training, sg-security-management]
 ---

@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: "数理・データサイエンス・AIリテラシーモデルカリキュラム総まとめ【DS検定対応】"
+description: "数理・データサイエンス・AIリテラシーモデルカリキュラム総まとめ"は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/model-curriculum-summary/
 categories: [business]
 tags: [ds, skillcheck]

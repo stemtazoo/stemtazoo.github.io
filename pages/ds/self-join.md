@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 自己結合とは？同じテーブルを結合する理由を理解する【DS検定】
+description: 自己結合は同じテーブルを結合する理由を理解するを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/self-join/
 categories: [data-engineering]
 tags: [ds, data-processing, sql]

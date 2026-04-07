@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 音色の違い（MFCC）
+description: 音色の違い（MFCC）は関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/timbre-mfcc/
 tags: [gk, audio, mfcc, signal_processing]
 gk_section: ディープラーニングの応用例/音声処理

@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 機械学習の解析手法とは？（代表的アルゴリズムを整理）【DS検定】
+description: 機械学習の解析手法は（代表的アルゴリズムを整理）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/machine-learning-methods/
 categories: [data-science]
 tags: [ds, modeling]

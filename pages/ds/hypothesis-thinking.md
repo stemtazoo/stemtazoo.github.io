@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 仮説思考とは？データ分析の出発点【DS検定】
+description: 仮説思考はデータ分析の出発点を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/hypothesis-thinking/
 categories: [business]
 tags: [ds, design]

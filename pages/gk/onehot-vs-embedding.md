@@ -1,6 +1,7 @@
 ---
 layout: page
 title: one-hot と Embedding の違いとは？G検定対策
+description: one-hot と Embedding の違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/onehot-vs-embedding/
 tags: [gk, nlp]
 gk_section: ディープラーニングの応用例/自然言語処理

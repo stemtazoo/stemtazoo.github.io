@@ -1,6 +1,7 @@
 ---
 layout: page
 title: XAI ひっかけ問題集①
+description: XAI ひっかけ問題集①は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/trick-questions-xai-1/
 tags: [gk, xai, cheatsheet]
 gk_section: ひっかけ問題集/ひっかけ問題集

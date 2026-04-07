@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: PoC（概念実証）とは？AIプロジェクトで重要な理由【DS検定】
+description: PoC（概念実証）はAIプロジェクトで重要な理由を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/poc-concept-proof/
 categories: [business]
 tags: [ds, design]

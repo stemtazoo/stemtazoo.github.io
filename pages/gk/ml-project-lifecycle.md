@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 機械学習プロジェクトの全体像（企画〜運用）【G検定対策】
+description: 機械学習プロジェクトの全体像（企画〜運用）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/ml-project-lifecycle/
 tags: [gk, mlops, cheatsheet]
 gk_section: AIの社会実装に向けて/AIの社会実装に向けて

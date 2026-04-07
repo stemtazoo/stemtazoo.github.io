@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 5フォース分析とは？業界の競争環境を分析するフレームワーク【DS検定】
+description: 5フォース分析は業界の競争環境を分析するフレームワークを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/five-forces-analysis/
 categories: [business]
 tags: [ds, design]

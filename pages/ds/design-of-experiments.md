@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 実験計画法とは？少ない実験で原因を見つける方法【DS検定】
+description: 実験計画法は少ない実験で原因を見つける方法を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/design-of-experiments/
 categories: [business]
 tags: [ds, data-preparation, design]

@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 予測的データ分析とは？将来を読む分析手法を整理【DS検定】
+description: 予測的データ分析は将来を読む分析手法を整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/predictive-analytics/
 categories: [data-science]
 tags: [ds, modeling]

@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 多要素認証（MFA）とは？仕組みと必要性を整理【DS検定リテラシー】
+description: 多要素認証（MFA）は仕組みと必要性を整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/mfa/
 categories: [business]
 tags: [ds, security, design]

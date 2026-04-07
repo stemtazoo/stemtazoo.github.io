@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 個人関連情報とは？個人情報との違いを整理【DS検定】
+description: 個人関連情報は個人情報との違いを整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/personally-related-information/
 categories: [business]
 tags: [ds, design]

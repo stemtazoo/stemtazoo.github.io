@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 人間中心のAI社会原則とは？7つの原則とG検定ひっかけ整理
+description: 人間中心のAI社会原則は7つの原則とG検定ひっかけ整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/human-centered-ai-principles/
 tags: [gk, ethics]
 gk_section: AIの法律と倫理/AIの法律と倫理

@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: MapReduceとは？（分散処理の基本モデル）【DS検定リテラシー】
+description: MapReduceは（分散処理の基本モデル）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/mapreduce/
 categories: [data-engineering]
 tags: [ds, data-storage, data-processing]

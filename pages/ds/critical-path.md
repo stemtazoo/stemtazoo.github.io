@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: クリティカルパスとは？プロジェクト遅延を左右する重要な経路【DS検定】
+description: クリティカルパスはプロジェクト遅延を左右する重要な経路を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/critical-path/
 categories: [business]
 tags: [ds, design]

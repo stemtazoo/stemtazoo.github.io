@@ -1,6 +1,7 @@
 ---
 layout: page
 title: データ拡張と正規化（BatchNormなど）の違いとは？【G検定頻出整理】
+description: データ拡張と正規化（BatchNormなど）の違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /gk/data-augmentation-vs-normalization/
 tags: [gk, cnn, neural_network]
 gk_section: ディープラーニングの応用例/画像認識/データ拡張
