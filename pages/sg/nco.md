@@ -1,6 +1,7 @@
 ---
 layout: page
 title: NCOとは？政府のサイバー司令塔を理解する【情報セキュリティマネジメント】
+description: NCOは政府のサイバー司令塔を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
 permalink: /sg/nco/
 tags: [sg, sg-security-management]
 ---

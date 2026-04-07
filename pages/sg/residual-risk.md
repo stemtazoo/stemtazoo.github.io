@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 残留リスクとは？対応後にも残るリスクを理解する【情報セキュリティマネジメント】
+description: 残留リスクは対応後にも残るリスクを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
 permalink: /sg/residual-risk/
 tags: [sg, sg-security-management]
 ---

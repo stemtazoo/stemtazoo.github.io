@@ -1,6 +1,7 @@
 ---
 layout: page
 title: CRLとは？失効証明書リストの役割【情報セキュリティマネジメント】
+description: CRLは失効した電子証明書を管理し不正利用を防ぐ仕組みです。この記事では有効期限との違い、証明書検証時の役割、SG試験で混同しやすいひっかけポイントと試験対策を解説します。
 permalink: /sg/crl/
 tags: [sg, security_general, crypto_auth, risk_assessment, sg-security-overview]
 ---

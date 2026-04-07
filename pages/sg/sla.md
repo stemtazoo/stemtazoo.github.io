@@ -1,6 +1,7 @@
 ---
 layout: page
 title: SLAとは？サービス品質の約束を理解する【情報セキュリティマネジメント】
+description: SLAはサービス品質の約束を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
 permalink: /sg/sla/
 tags: [sg, management, service_management, it_security_operations, sg-management]
 ---

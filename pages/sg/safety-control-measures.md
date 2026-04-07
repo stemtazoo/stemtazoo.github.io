@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 安全管理措置とは？個人情報保護法の基本と実務対応【情報セキュリティマネジメント】
+description: 安全管理措置は個人情報保護法の基本と実務対応を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
 permalink: /sg/safety-control-measures/
 tags: [sg, security_law, privacy_law, risk_assessment, it_security_operations, sg-security-law]
 ---

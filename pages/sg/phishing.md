@@ -1,6 +1,7 @@
 ---
 layout: page
 title: フィッシングとは？だましの手口と見抜き方【情報セキュリティマネジメント】
+description: フィッシングはだましの手口と見抜き方を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
 permalink: /sg/phishing/
 tags: [sg, security_measures, unauthorized_access, data_leakage, sg-security-measures]
 ---

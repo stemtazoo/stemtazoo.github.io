@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 攻撃者の種類とは？目的と特徴で整理する【情報セキュリティマネジメント】
+description: 攻撃者の種類はサイバー攻撃を目的別に整理する分類です。この記事では愉快犯・金銭目的・内部不正の違い、対策選定の要点、SG試験で狙われるひっかけポイントを解説します。
 permalink: /sg/attacker-types/
 tags: [sg, security_general, threat_vulnerability, security_awareness, sg-security-overview]
 ---

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 懲戒処分とは？有効となる条件とNG例を整理【情報セキュリティマネジメント】
+description: 懲戒処分は有効となる条件とNG例を整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
 permalink: /sg/disciplinary-action/
 tags: [sg, security_law, business_management, risk_assessment, sg-security-law]
 ---

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: SSHとは？安全な遠隔操作の仕組み【情報セキュリティマネジメント】
+description: SSHは安全な遠隔操作の仕組みを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
 permalink: /sg/ssh/
 tags: [sg, technology, network, unauthorized_access, sg-technology]
 ---

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: リバースブルートフォース攻撃とは？逆総当たりの仕組みと対策【情報セキュリティマネジメント】
+description: リバースブルートフォース攻撃は逆総当たりの仕組みと対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
 permalink: /sg/reverse-brute-force-attack/
 tags: [sg, security_measures, unauthorized_access, threat_vulnerability, access_control]
 ---
