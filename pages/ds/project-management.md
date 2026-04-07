@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: プロジェクトマネジメントとは？プロジェクトを成功させるための管理手法【DS検定】
+description: プロジェクトマネジメントはプロジェクトを成功させるための管理手法を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/project-management/
 categories: [business]
 tags: [ds, design]

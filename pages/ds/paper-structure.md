@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 一般的な論文構成とは？流れを理解する【DS検定リテラシー】
+description: 一般的な論文構成は流れを理解するを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/paper-structure/
 categories: [business]
 tags: [ds, design]

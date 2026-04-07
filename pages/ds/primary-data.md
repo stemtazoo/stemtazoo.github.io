@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 一次情報とは？本当の意味を理解する【DS検定】
+description: 一次情報は本当の意味を理解するを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/primary-data/
 categories: [business]
 tags: [ds, data-understanding, design]

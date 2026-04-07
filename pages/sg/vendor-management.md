@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 委託先管理とは？外部委託のリスク対策を整理【情報セキュリティマネジメント】
+description: 委託先管理は外部委託のリスク対策を整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
 permalink: /sg/vendor-management/
 tags: [sg, security_management, vendor_management, risk_assessment, it_security_operations, sg-security-management]
 ---

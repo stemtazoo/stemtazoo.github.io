@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: プーリング（Pooling）とは？CNNで重要な特徴抽出の圧縮処理【DS検定】
+description: プーリング（Pooling）はCNNで重要な特徴抽出の圧縮処理を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/pooling/
 categories: [data-science]
 tags: [ds, modeling]

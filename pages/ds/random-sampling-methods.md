@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 無作為抽出法とは？種類と違いを整理【DS検定リテラシー】
+description: 無作為抽出法は種類と違いを整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/random-sampling-methods/
 categories: [data-science]
 tags: [ds, data-preparation, statistics]

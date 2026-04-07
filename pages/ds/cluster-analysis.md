@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: クラスタ分析とは？似たデータをグループ分けする分析手法【DS検定】
+description: クラスタ分析は似たデータをグループ分けする分析手法を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/cluster-analysis/
 categories: [data-science]
 tags: [ds, modeling]

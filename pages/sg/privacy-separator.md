@@ -1,6 +1,7 @@
 ---
 layout: page
 title: プライバシーセパレータとは？無線LANで端末同士を隔離する仕組み【情報セキュリティマネジメント】
+description: プライバシーセパレータは無線LANで端末同士を隔離する仕組みを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
 permalink: /sg/privacy-separator/
 tags: [sg, security_measures, access_control, network, sg-security-measures]
 ---

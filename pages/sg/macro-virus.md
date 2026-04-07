@@ -1,6 +1,7 @@
 ---
 layout: page
 title: マクロウイルスとは？Officeファイル経由の感染を理解する【情報セキュリティマネジメント】
+description: マクロウイルスはOfficeファイル経由の感染を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
 permalink: /sg/macro-virus/
 tags: [sg, security_measures, malware, threat_vulnerability, sg-security-measures]
 ---

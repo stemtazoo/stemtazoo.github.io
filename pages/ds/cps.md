@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: CPS（サイバーフィジカルシステム）とは？Society5.0の中核技術を理解する【DS検定】
+description: CPS（サイバーフィジカルシステム）はSociety5.0の中核技術を理解するを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/cps/
 categories: [business]
 tags: [ds, design]

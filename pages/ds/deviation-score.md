@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 偏差値とは？標準偏差との関係と公式をやさしく整理【DS検定】
+description: 偏差値は標準偏差との関係と公式をやさしく整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/deviation-score/
 categories: [data-science]
 tags: [ds, statistics]

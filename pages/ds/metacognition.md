@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: メタ認知思考とは？自分の思考を客観視する力【DS検定】
+description: メタ認知思考は自分の思考を客観視する力を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/metacognition/
 categories: [business]
 tags: [ds, data-understanding, design]

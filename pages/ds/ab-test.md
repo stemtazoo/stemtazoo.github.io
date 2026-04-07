@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: A/Bテストとは？データで施策を比較する方法【DS検定】
+description: A/Bテストはデータで施策を比較する方法を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/ab-test/
 categories: [data-science]
 tags: [ds, evaluation]

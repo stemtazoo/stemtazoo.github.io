@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: インダストリー4.0とは？第4次産業革命の本質とドイツ戦略【DS検定】
+description: インダストリー4.0は第4次産業革命の本質とドイツ戦略を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/industry4-0/
 categories: [business]
 tags: [ds, design]

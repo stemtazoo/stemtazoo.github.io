@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 請負契約と準委任契約の違いとは？成果物か作業かで判断【情報セキュリティマネジメント】
+description: 請負契約と準委任契約の違いは関連概念を正しく切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
 permalink: /sg/contract-types/
 tags: [sg, management, vendor_management, system_strategy, sg-strategy]
 ---

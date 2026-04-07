@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 二項分布とベルヌーイ試行とは？（成功回数の確率の考え方）【DS検定】
+description: 二項分布とベルヌーイ試行は（成功回数の確率の考え方）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/binomial-bernoulli/
 categories: [data-science]
 tags: [ds, statistics]

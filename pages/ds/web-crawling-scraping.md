@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: WebクローリングとWebスクレイピングの違いとは？【DS検定】
+description: WebクローリングとWebスクレイピングの違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/web-crawling-scraping/
 categories: [data-science]
 tags: [ds, data-collection, preprocessing]

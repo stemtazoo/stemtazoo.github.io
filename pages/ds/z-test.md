@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: z検定とは？t検定との違いまで整理【DS検定リテラシー】
+description: z検定はt検定との違いまで整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/z-test/
 categories: [data-science]
 tags: [ds, statistics]

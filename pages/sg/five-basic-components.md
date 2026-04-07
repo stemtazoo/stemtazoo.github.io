@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 五大装置とは？コンピュータの基本構成を理解する【情報セキュリティマネジメント】
+description: 五大装置はコンピュータの基本構成を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
 permalink: /sg/five-basic-components/
 tags: [sg, sg-technology]
 ---

@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 認証と認可の違いとは？一発で整理【DS検定リテラシー】
+description: 認証と認可の違いはアクセス制御を正しく設計するための考え方です。この記事では定義・役割の差分と使い分け、DS検定で問われる判断ポイントを解説します。
 permalink: /ds/authentication-vs-authorization/
 categories: [business]
 tags: [ds, security, design]

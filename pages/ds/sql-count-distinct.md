@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: COUNT DISTINCTとは？ユニーク数を数える方法【DS検定】
+description: COUNT DISTINCTはユニーク数を数える方法を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/sql-count-distinct/
 categories: [data-engineering]
 tags: [ds, data-processing, sql]

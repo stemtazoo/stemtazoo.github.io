@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: デザイン思考とは？ユーザー中心で課題を解決する考え方【DS検定】
+description: デザイン思考はユーザー中心で課題を解決する考え方を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/design-thinking/
 categories: [business]
 tags: [ds, design]

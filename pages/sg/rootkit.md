@@ -1,6 +1,7 @@
 ---
 layout: page
 title: ルートキットとは？管理者権限で隠蔽する仕組み【情報セキュリティマネジメント】
+description: ルートキットは管理者権限で隠蔽する仕組みを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
 permalink: /sg/rootkit/
 tags: [sg, security_measures, malware, unauthorized_access, sg-security-measures]
 ---

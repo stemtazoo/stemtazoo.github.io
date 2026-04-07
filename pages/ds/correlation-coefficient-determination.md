@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 相関係数と決定係数の違いとは？回帰分析の基本を理解する【DS検定】
+description: 相関係数と決定係数の違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/correlation-coefficient-determination/
 categories: [data-science]
 tags: [ds, statistics]

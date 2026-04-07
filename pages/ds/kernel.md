@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: カーネル（Kernel）とは？画像フィルタ処理の計算ルール【DS検定】
+description: カーネル（Kernel）は画像フィルタ処理の計算ルールを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/kernel/
 categories: [data-science]
 tags: [ds, modeling]

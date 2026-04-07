@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: BIツールの基本機能とは？OLAP・データマイニングを整理【DS検定】
+description: BIツールの基本機能はOLAP・データマイニングを整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/bi-tool-functions/
 categories: [business]
 tags: [ds, design]

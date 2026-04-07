@@ -1,6 +1,7 @@
 ---
 layout: page
 title: DDoS攻撃とは？サービス停止を狙う攻撃の仕組み【情報セキュリティマネジメント】
+description: DDoS攻撃は多数端末から大量通信を送りサービス停止を狙う妨害攻撃です。この記事ではDoSとの違い、可用性への影響、防御策の要点、情報セキュリティマネジメント試験の頻出ポイントを解説します。
 permalink: /sg/ddos/
 tags: [sg, security_measures, unauthorized_access, it_security_operations, sg-security-measures]
 ---

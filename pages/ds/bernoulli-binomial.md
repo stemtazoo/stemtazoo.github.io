@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: ベルヌーイ試行と二項分布とは？【DS検定リテラシー】
+description: ベルヌーイ試行と二項分布はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/bernoulli-binomial/
 categories: [data-science]
 tags: [ds, statistics]

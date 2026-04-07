@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 電子署名とは？仕組みと公開鍵・秘密鍵の違いを整理【DS検定】
+description: 電子署名は仕組みと公開鍵・秘密鍵の違いを整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/digital-signature/
 categories: [business]
 tags: [ds, security, design]

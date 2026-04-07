@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: FFPとは？研究不正の3つの基本（Fabrication・Falsification・Plagiarism）【DS検定】
+description: FFPは研究不正の3つの基本（Fabrication・Falsification・Plagiarism）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/ffp/
 categories: [business]
 tags: [ds, design]

@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 相関と因果の違いを一発で整理【DS検定リテラシー】
+description: 相関と因果の違いを一発で整理は誤った結論を避けるための考え方です。この記事では見分け方と実務での使いどころ、DS検定で問われるひっかけポイントを解説します。
 permalink: /ds/correlation-vs-causation/
 categories: [data-science]
 tags: [ds, statistics]

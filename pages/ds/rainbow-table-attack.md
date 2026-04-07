@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: レインボーテーブル攻撃とは？（ソルトとの関係）【DS検定】
+description: レインボーテーブル攻撃は（ソルトとの関係）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/rainbow-table-attack/
 categories: [business]
 tags: [ds, security, design]

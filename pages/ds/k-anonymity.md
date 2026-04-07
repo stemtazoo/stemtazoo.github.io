@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: k匿名性とは？データ匿名化の基本をわかりやすく解説【DS検定】
+description: k匿名性はデータ匿名化の基本をわかりやすく解説を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/k-anonymity/
 categories: [ai-utilization]
 tags: [ds, ethics]

@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 推定量の性質の違いとは？（不偏性・一貫性・効率性・信頼性）【DS検定リテラシー】
+description: 推定量の性質の違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/estimator-properties/
 categories: [business]
 tags: [ds, design]

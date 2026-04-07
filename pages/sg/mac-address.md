@@ -1,6 +1,7 @@
 ---
 layout: page
 title: MACアドレスとは？機器を識別する番号の役割【情報セキュリティマネジメント】
+description: MACアドレスは機器を識別する番号の役割を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
 permalink: /sg/mac-address/
 tags: [sg, technology, network, access_control]
 ---

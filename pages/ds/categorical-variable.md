@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: カテゴリ変数とは？数値データとの違いを整理【DS検定】
+description: カテゴリ変数は数値データとの違いを整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/categorical-variable/
 categories: [business]
 tags: [ds, data-preparation, design]

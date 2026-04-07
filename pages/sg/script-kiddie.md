@@ -1,6 +1,7 @@
 ---
 layout: page
 title: スクリプトキディとは？初心者攻撃者の特徴と対策【情報セキュリティマネジメント】
+description: スクリプトキディは初心者攻撃者の特徴と対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
 permalink: /sg/script-kiddie/
 tags: [sg, threat_vulnerability, security_awareness, security_measures, sg-security-measures]
 ---

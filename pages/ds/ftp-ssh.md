@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: FTPとSSHの違いとは？（ファイル転送と安全な接続）【DS検定】
+description: FTPとSSHの違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/ftp-ssh/
 categories: [data-engineering]
 tags: [ds, data-collection, data-processing]

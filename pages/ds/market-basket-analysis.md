@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: マーケットバスケット分析とは？（購買パターン分析の基本）【DS検定】
+description: マーケットバスケット分析は（購買パターン分析の基本）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/market-basket-analysis/
 categories: [data-science]
 tags: [ds, modeling]

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: SMTPのポート番号とは？パケットフィルタリングでの見方を整理【SG試験】
+description: SMTPのポート番号はパケットフィルタリングでの見方を整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
 permalink: /sg/smtp-port-packet-filtering/
 tags: [sg, technology, network, security_measures, unauthorized_access, sg-security-measures]
 ---

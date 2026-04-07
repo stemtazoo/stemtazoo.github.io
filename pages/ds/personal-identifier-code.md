@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 個人識別符号とは？個人情報になる条件を整理【DS検定】
+description: 個人識別符号は個人情報になる条件を整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/personal-identifier-code/
 categories: [ai-utilization]
 tags: [ds, ethics]

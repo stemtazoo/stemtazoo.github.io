@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: オプトアウトとは？個人情報提供の仕組みを整理【DS検定】
+description: オプトアウトは個人情報提供の仕組みを整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/opt-out/
 categories: [ai-utilization]
 tags: [ds, ethics]

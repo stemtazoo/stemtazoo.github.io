@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 因果推論とは？相関との違いを整理【DS検定リテラシー】
+description: 因果推論は相関との違いを整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/causal-inference/
 categories: [data-science]
 tags: [ds, statistics]

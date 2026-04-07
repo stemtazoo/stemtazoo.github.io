@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: PDCAサイクルとは？継続的改善の基本フレームワーク【DS検定】
+description: PDCAサイクルは継続的改善の基本フレームワークを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/pdca-cycle/
 categories: [business]
 tags: [ds, design]

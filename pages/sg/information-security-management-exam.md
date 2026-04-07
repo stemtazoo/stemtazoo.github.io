@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 情報セキュリティマネジメント試験とは？役割・対象者・試験の位置づけを整理
+description: 情報セキュリティマネジメント試験は役割・対象者・試験の位置づけを整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
 permalink: /sg/information-security-management-exam/
 categories: [business]
 tags: [sg, sg-exam-outline]

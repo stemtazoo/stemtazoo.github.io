@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 内部統制とは？企業の不正やミスを防ぐ仕組み【DS検定】
+description: 内部統制は企業の不正やミスを防ぐ仕組みを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/internal-control/
 categories: [business]
 tags: [ds, design]

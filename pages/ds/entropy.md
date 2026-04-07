@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: エントロピーとは？不確実さを測る指標【DS検定】
+description: エントロピーは不確実さを測る指標を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/entropy/
 categories: [data-science]
 tags: [ds, statistics]

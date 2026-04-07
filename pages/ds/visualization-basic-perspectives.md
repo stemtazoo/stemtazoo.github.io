@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: データ可視化における基本的な視点とは？（差・相関・分布・変化・構成）【DS検定】
+description: データ可視化における基本的な視点は（差・相関・分布・変化・構成）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/visualization-basic-perspectives/
 categories: [data-science]
 tags: [ds, visualization]

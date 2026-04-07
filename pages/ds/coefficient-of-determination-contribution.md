@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 決定係数と寄与率とは？回帰モデルの説明力を理解する【DS検定】
+description: 決定係数と寄与率は回帰モデルの説明力を理解するを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/coefficient-of-determination-contribution/
 categories: [data-science]
 tags: [ds, modeling, evaluation]

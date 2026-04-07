@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 逆行列とは何か？求め方と意味をやさしく整理【DS検定】
+description: 逆行列は何か？求め方と意味をやさしく整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/inverse-matrix/
 categories: [data-science]
 tags: [ds, linear-algebra, math]

@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: AIOpsとMLOpsの違いを一発整理【DS検定チートシート】
+description: AIOpsとMLOpsの違いを一発整理は関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/aiops-mlops-cheatsheet/
 categories: [ai-utilization]
 tags: [ds, environment-setup, ai-use]

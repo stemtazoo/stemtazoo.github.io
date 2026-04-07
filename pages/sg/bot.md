@@ -1,6 +1,7 @@
 ---
 layout: page
 title: ボットとは？遠隔操作される仕組みを理解する【情報セキュリティマネジメント】
+description: ボットは外部指令で端末を不正操作し攻撃に悪用するマルウェアです。この記事では感染から遠隔操作までの仕組み、ボットネットの役割、情報セキュリティマネジメント試験対策の要点を解説します。
 permalink: /sg/bot/
 tags: [sg, security_measures, malware, unauthorized_access, sg-security-measures]
 ---

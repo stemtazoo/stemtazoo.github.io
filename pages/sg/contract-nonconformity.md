@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 契約不適合責任とは？瑕疵担保責任との違いも整理【情報セキュリティマネジメント】
+description: 契約不適合責任は瑕疵担保責任との違いも整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
 permalink: /sg/contract-nonconformity/
 tags: [sg, management, vendor_management, risk_assessment, sg-management]
 ---

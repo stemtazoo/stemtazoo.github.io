@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: ドリルダウンとドリルアップの違いとは？BIツールの基本操作【DS検定】
+description: ドリルダウンとドリルアップの違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/drilldown-drillup/
 categories: [data-science]
 tags: [ds, visualization]

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 情報セキュリティ対策基準とは？ルールレベルの考え方【情報セキュリティマネジメント】
+description: 情報セキュリティ対策基準はルールレベルの考え方を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
 permalink: /sg/security-policy-standards/
 tags: [sg, security_management, isms, access_control, it_security_operations, sg-security-management]
 ---

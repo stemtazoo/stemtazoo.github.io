@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: グラフの種類と使い分け（可視化の基本）【DS検定】
+description: グラフの種類と使い分け（可視化の基本）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/chart-types/
 categories: [data-science]
 tags: [ds, visualization]

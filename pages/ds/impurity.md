@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 不純度とは？決定木での「混ざり具合」の意味【DS検定】
+description: 不純度は決定木での「混ざり具合」の意味を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/impurity/
 categories: [data-science]
 tags: [ds, modeling, evaluation]

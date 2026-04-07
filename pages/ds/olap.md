@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: OLAPとは？BIツール分析の基本概念をわかりやすく解説【DS検定】
+description: OLAPはBIツール分析の基本概念をわかりやすく解説を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/olap/
 categories: [data-engineering]
 tags: [ds, visualization, database]

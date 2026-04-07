@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 行列の掛け算とは？（行列同士の掛け算）【DS検定リテラシー】
+description: 行列の掛け算は（行列同士の掛け算）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/matrix-multiplication/
 categories: [data-science]
 tags: [ds, linear-algebra, math]

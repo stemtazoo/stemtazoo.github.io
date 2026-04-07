@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: RBAC（ロールベースアクセス制御）とは？【DS検定リテラシー】
+description: RBAC（ロールベースアクセス制御）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/rbac/
 categories: [business]
 tags: [ds, security, design]

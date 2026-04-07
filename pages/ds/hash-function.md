@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: ハッシュ関数とは？（コリジョン・ソルトとの違い）【DS検定】
+description: ハッシュ関数は（コリジョン・ソルトとの違い）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/hash-function/
 categories: [business]
 tags: [ds, security, design]

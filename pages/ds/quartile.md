@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: 四分位とは？値が複数の取り方になる理由まで整理【DS検定】
+description: 四分位は値が複数の取り方になる理由まで整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/quartile/
 categories: [data-science]
 tags: [ds, statistics]

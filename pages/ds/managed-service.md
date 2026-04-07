@@ -1,6 +1,7 @@
 ﻿---
 layout: page
 title: マネージドサービスとは？クラウド環境構築の基本概念を整理【DS検定】
+description: マネージドサービスはクラウド環境構築の基本概念を整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
 permalink: /ds/managed-service/
 categories: [business]
 tags: [ds, environment-setup, design]
