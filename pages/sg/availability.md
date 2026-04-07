@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 稼働率とは？可用性の考え方とSLAでの判断基準【情報セキュリティマネジメント】
+description: 稼働率はサービスが利用可能だった時間割合を示す指標です。この記事では計算式、停止時間の扱い、SLAでの使いどころ、情報セキュリティマネジメント試験で問われる判断ポイントを解説します。
 permalink: /sg/availability/
 tags: [sg, sg-management]
 ---
