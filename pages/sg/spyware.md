@@ -1,6 +1,7 @@
 ---
 layout: page
 title: スパイウェアとは？情報を盗むマルウェアの特徴【情報セキュリティマネジメント】
+description: スパイウェアは情報を盗むマルウェアの特徴を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
 permalink: /sg/spyware/
 tags: [sg, security_measures, malware, data_leakage, sg-security-measures]
 ---

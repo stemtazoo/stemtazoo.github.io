@@ -1,6 +1,7 @@
 ---
 layout: page
 title: DHCPとは？IPアドレスを自動で割り当てる仕組み【情報セキュリティマネジメント】
+description: DHCPはIPアドレスを自動で割り当てる仕組みを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
 permalink: /sg/dhcp/
 tags: [sg, sg-technology]
 ---

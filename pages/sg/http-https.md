@@ -1,6 +1,7 @@
 ---
 layout: page
 title: HTTPとHTTPSの違いとは？安全な通信の判断ポイント【情報セキュリティマネジメント】
+description: HTTPとHTTPSの違いは関連概念を正しく切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
 permalink: /sg/http-https/
 tags: [sg, technology, network, data_leakage, sg-technology]
 ---

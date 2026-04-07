@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 労働基準法と労働契約法の違いとは？試験での切り分け方【情報セキュリティマネジメント】
+description: 労働基準法と労働契約法の違いは関連概念を正しく切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
 permalink: /sg/labor-law-difference/
 tags: [sg, security_law, business_management, risk_assessment, sg-security-law]
 ---

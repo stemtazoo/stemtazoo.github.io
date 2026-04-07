@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 労働契約法（不利益変更）とは？就業規則との関係を整理【情報セキュリティマネジメント】
+description: 労働契約法（不利益変更）は就業規則との関係を整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
 permalink: /sg/labor-contract-disadvantageous-change/
 tags: [sg, security_law, business_management, risk_assessment, sg-security-law]
 ---

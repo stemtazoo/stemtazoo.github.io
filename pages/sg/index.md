@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 情報セキュリティマネジメント試験 学習まとめ
+description: 情報セキュリティマネジメント試験 学習まとめは頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
 permalink: /sg/
 categories: [business]
 tags: [sg, index]
@@ -222,4 +223,3 @@ tags: [sg, index]
   {% endif %}
 {% endfor %}
 </ul>
-

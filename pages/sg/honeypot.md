@@ -1,6 +1,7 @@
 ---
 layout: page
 title: ハニーポットとは？攻撃者をおびき寄せる仕組み【情報セキュリティマネジメント】
+description: ハニーポットは攻撃者をおびき寄せる仕組みを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
 permalink: /sg/honeypot/
 tags: [sg, security_measures, unauthorized_access, incident_management, sg-security-measures]
 ---
