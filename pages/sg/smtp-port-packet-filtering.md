@@ -4,6 +4,8 @@ title: SMTPのポート番号とは？パケットフィルタリングでの見
 description: SMTPのポート番号はパケットフィルタリングでの見方を整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
 permalink: /sg/smtp-port-packet-filtering/
 tags: [sg, technology, network, security_measures, unauthorized_access, sg-security-measures]
+prev: /sg/smishing/
+next: /sg/spyware/
 ---
 
 ## まず結論
@@ -124,6 +126,9 @@ SG試験では、図や表を見て、どの通信が妥当かを判断させる
 SG試験では、こうした表の見方を問われることが多いので、**通信の流れで判断する** ことが大切です。
 
 ## まとめ（試験直前用）
+
+{% include sg_article_footer.html %}
+
 
 SMTPのポート番号は、**メール送信で使う25番**です。  
 ただし試験では、番号の丸暗記だけでなく、**PC側は1024以上の動的ポートを使う**と理解しているかが問われます。  

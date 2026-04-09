@@ -4,6 +4,8 @@ title: MTBFとは？平均故障間隔の意味と稼働率との関係【情報
 description: MTBFは平均故障間隔の意味と稼働率との関係を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
 permalink: /sg/mtbf/
 tags: [sg, sg-management]
+prev: /sg/man-in-the-middle-attack/
+next: /sg/mttr/
 ---
 
 ## まず結論
@@ -124,6 +126,9 @@ MTBF（Mean Time Between Failures）は、
 ---
 
 ## まとめ（試験直前用）
+
+{% include sg_article_footer.html %}
+
 - MTBF＝故障と故障の間の時間（稼働時間）
 - 長いほど「壊れにくい」
 - MTTRとセットで覚える
