@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: "MnasNetとは？AutoML時代のモバイル向けCNN【G検定対策】"
-description: "MnasNetはAutoML時代のモバイル向けCNN"を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "\"MnasNetはAutoML時代のモバイル向けCNN\"を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。"
 permalink: /gk/mnasnet/
 tags: [gk, cnn, neural_network]
 gk_section: ディープラーニングの応用例/画像認識/物体認識タスク

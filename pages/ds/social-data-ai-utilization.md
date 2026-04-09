@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: "社会におけるデータ・AI利活用とは？【DS検定リテラシー】"
-description: "社会におけるデータ・AI利活用は"を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "\"社会におけるデータ・AI利活用は\"を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。"
 permalink: /ds/social-data-ai-utilization/
 categories: [ai-utilization]
 tags: [ds, ai-use, literacy, intro, ai, data, model-curriculum, cheatsheet]
