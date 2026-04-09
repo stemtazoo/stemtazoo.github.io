@@ -223,3 +223,9 @@ tags: [sg, index]
   {% endif %}
 {% endfor %}
 </ul>
+
+---
+
+<footer style="margin-top:24px; text-align:right;">
+  <a href="{{ '/' | relative_url }}">🏠 ルートの index へ戻る</a>
+</footer>
