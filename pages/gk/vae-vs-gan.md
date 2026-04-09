@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: VAEとGANの違い【生成モデル 比較チートシート｜G検定対策】
 description: VAEとGANの違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -101,3 +101,5 @@ gk_order: 6
 - VAEは安定、GANは高品質
 - 「分布」か「対戦」かで判断
 - **VAE ≠ GAN**
+
+{% include gk_article_footer.html %}

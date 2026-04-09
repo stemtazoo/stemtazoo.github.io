@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: 感情分析（Sentiment Analysis）とは？【NLP基本タスク｜G検定対策】
 description: 感情分析（Sentiment Analysis）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -79,3 +79,5 @@ G検定では、次のタスクと混同させてきます。
 - 分類問題であり生成ではない
 - 要約・固有表現抽出と混同しない
 - 「感情を推定」→ 感情分析
+
+{% include gk_article_footer.html %}

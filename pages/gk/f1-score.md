@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: F1-score
 description: F1-scoreは重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -97,3 +97,5 @@ F1-score は
 - どちらかが低いと値は上がらない
 - クラス不均衡データで有効
 - Accuracy と **役割が違う**
+
+{% include gk_article_footer.html %}

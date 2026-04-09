@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: 最適化手法まとめ（SGD / AdaGrad / RMSprop / Adam）
 description: 最適化手法まとめ（SGD / AdaGrad / RMSprop / Adam）は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -81,3 +81,5 @@ G検定では、次の混同を狙われます。
 * RMSprop：忘れる
 * Adam：勢い＋忘却
 * **Adamは最終形として覚える**
+
+{% include gk_article_footer.html %}

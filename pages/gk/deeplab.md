@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: DeepLab（セマンティックセグメンテーション）とは？G検定対策
 description: DeepLab（セマンティックセグメンテーション）はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -67,4 +67,6 @@ gk_order: 10
 * Atrous Convolution と ASPP が特徴
 * 医療・自動運転・衛星画像で活用
 * 数千億パラメータ級モデルではない
-* 
+*
+
+{% include gk_article_footer.html %}

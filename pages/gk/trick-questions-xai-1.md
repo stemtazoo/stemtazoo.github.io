@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: XAI ひっかけ問題集①
 description: XAI ひっかけ問題集①は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -124,3 +124,5 @@ gk_order: 2
 * CAM / Grad-CAM：CNNの可視化
 
 👉 **単語と役割を結びつけて即切り**
+
+{% include gk_article_footer.html %}

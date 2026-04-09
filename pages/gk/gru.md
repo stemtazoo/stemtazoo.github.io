@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: GRU（Gated Recurrent Unit）
 description: GRU（Gated Recurrent Unit）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -99,3 +99,5 @@ GRUには次の **2つのゲート** があります。
 * 勾配消失を緩和
 
 👉 これで **RNN系ブロックは完成** です。
+
+{% include gk_article_footer.html %}

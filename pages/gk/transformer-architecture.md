@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: Transformerの全体構造（Encoder / Decoder）とは？【BERT・GPTとの関係｜G検定対策】
 description: Transformerの全体構造（Encoder / Decoder）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -94,3 +94,5 @@ Transformerは、文章処理を
 - BERT＝Encoderのみ
 - GPT＝Decoderのみ
 - 「理解か生成か」で切る
+
+{% include gk_article_footer.html %}

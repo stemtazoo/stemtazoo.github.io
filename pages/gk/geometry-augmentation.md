@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: Rotation / Flip / Crop とは？（幾何変換系データ拡張）【G検定対策】
 description: Rotation / Flip / Cropは（幾何変換系データ拡張）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -83,3 +83,5 @@ gk_order: 12
 - Crop＝**一部切り出し**
 - 色系拡張とは別カテゴリ
 - **「形が変わる」＝幾何変換系**
+
+{% include gk_article_footer.html %}

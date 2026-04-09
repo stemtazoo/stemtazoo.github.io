@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: BERTはなぜRNNではなくTransformerなのか？G検定対策
 description: BERTはなぜRNNではなくTransformerなのか？G検定対策は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -84,3 +84,5 @@ gk_order: 18
 * TransformerはAttentionで一括処理
 * BERTはTransformerエンコーダ
 * 長文・文脈重視ならTransformer
+
+{% include gk_article_footer.html %}

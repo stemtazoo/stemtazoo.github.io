@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: YOLO（You Only Look Once）
 description: YOLO（You Only Look Once）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -120,3 +120,5 @@ YOLOは、
 > **「YOLO＝Once＝1段階・高速」**
 
 これで切れます。
+
+{% include gk_article_footer.html %}

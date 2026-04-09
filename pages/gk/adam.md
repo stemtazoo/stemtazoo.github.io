@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: Adam（Adaptive Moment Estimation）とは？G検定対策
 description: Adam（Adaptive Moment Estimation）はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -82,3 +82,5 @@ G検定では、次の混同が頻出です。
 * 1次モーメント：勢い
 * 2次モーメント：学習率調整
 * G検定頻出
+
+{% include gk_article_footer.html %}

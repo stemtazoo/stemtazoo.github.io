@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: 誤差逆伝播法（Backpropagation）
 description: 誤差逆伝播法（Backpropagation）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -117,3 +117,5 @@ w := w - \eta \frac{\partial L}{\partial w}
 * 勾配問題への対策が重要
 
 👉 次は **最適化手法（SGD / Adam など）** を理解すると学習の全体像が完成します。
+
+{% include gk_article_footer.html %}

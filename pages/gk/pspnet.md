@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: PSPNet（ピラミッドシーンパースネットワーク）とは？G検定対策
 description: PSPNet（ピラミッドシーンパースネットワーク）はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -73,4 +73,6 @@ gk_order: 8
 * Pyramid Pooling Moduleで全体文脈を取り込む
 * インスタンスセグメンテーションではない
 * 「PSPNet × セマンティック × PPM」のセットで覚える
-* 
+*
+
+{% include gk_article_footer.html %}

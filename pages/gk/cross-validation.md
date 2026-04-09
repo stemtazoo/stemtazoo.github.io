@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: 交差検証（Cross Validation）とは？【k分割の考え方｜G検定対策】
 description: 交差検証（Cross Validation）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -68,3 +68,5 @@ gk_order: 13
 - 検証データを入れ替えて使う
 - テストデータは使わない
 - 時系列では注意
+
+{% include gk_article_footer.html %}

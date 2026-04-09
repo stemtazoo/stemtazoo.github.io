@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: 最適化手法まとめ（SGD / Adam など）
 description: 最適化手法まとめ（SGD / Adam など）は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -147,3 +147,5 @@ w := w - \eta \frac{\partial L}{\partial w}
 * Backprop と役割を混同しない
 
 👉 次は **正則化・過学習対策** をまとめると理解が完成します。
+
+{% include gk_article_footer.html %}

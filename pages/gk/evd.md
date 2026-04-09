@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: 固有値分解（EVD, Eigenvalue Decomposition）とは？G検定対策
 description: 固有値分解（EVD, Eigenvalue Decomposition）はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -77,3 +77,5 @@ gk_order: 13
 * PCA理論の基礎
 * 任意行列には使えない
 * SVDとの適用条件の違いが重要
+
+{% include gk_article_footer.html %}

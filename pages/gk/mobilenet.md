@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: MobileNet（軽量CNN）とは？G検定対策
 description: MobileNet（軽量CNN）はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -77,3 +77,5 @@ gk_order: 8
 * Depthwise Separable Convolutionが鍵
 * ResNetよりパラメータは少ない
 * 「大きくなる」は誤り
+
+{% include gk_article_footer.html %}

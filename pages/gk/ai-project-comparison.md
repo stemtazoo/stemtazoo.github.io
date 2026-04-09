@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: AlphaGo・AlphaGo Zero・AlphaZero・OpenAI Five・AlphaStar 完全比較【G検定対策】
 description: AlphaGo・AlphaGo Zero・AlphaZero・OpenAI Five・AlphaStar 完全比較は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -77,3 +77,5 @@ gk_order: 16
 - 汎用なのは AlphaZero だけ
 - eスポーツ系は専用AI
 - ゲーム名で即切る
+
+{% include gk_article_footer.html %}

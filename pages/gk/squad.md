@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: SQuAD（Stanford Question Answering Dataset）
 description: SQuAD（Stanford Question Answering Dataset）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -136,3 +136,5 @@ SQuADは一言で言うと、
 👉 次は  
 **NLPデータセットまとめ（GLUE / SQuAD / IMDB）**  
 に進むと、分野横断のひっかけに強くなります。
+
+{% include gk_article_footer.html %}

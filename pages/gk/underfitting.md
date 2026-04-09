@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: 未学習（Underfitting）
 description: 未学習（Underfitting）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -122,3 +122,5 @@ gk_order: 2
   **モデル強化 / 学習回数増加 / 正則化を弱める**
 
 👉 次は **過学習とのセット問題** を意識して覚える。
+
+{% include gk_article_footer.html %}

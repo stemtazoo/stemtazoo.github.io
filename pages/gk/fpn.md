@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: FPN（Feature Pyramid Network）とは？G検定対策
 description: FPN（Feature Pyramid Network）はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -69,4 +69,6 @@ gk_order: 7
 * 小さな物体検出に強い
 * 注意機構や単なるCNNではない
 * 「ピラミッド構造」が最重要キーワード
-* 
+*
+
+{% include gk_article_footer.html %}

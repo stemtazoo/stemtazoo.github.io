@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: モデル圧縮まとめ（Pruning・Quantization・Distillation）
 description: モデル圧縮まとめ（Pruning・Quantization・Distillation）は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -116,3 +116,5 @@ gk_order: 9
 * Distillation：教師モデルから学ぶ
 
 👉 次は **エッジAIとモデル圧縮の関係** を見ると理解が深まります。
+
+{% include gk_article_footer.html %}

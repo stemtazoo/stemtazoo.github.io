@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: プーリング（Pooling）
 description: プーリング（Pooling）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -106,3 +106,5 @@ gk_order: 3
 * 情報を捨てる点に注意
 
 👉 次は **CNN代表モデルまとめ（LeNet / AlexNet / VGG / ResNet）** です。
+
+{% include gk_article_footer.html %}

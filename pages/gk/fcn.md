@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: FCN（Fully Convolutional Network）
 description: FCN（Fully Convolutional Network）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -126,3 +126,5 @@ G検定はここを狙ってきます。
 * 罠：FCN を Fully Connected と勘違いしない
 
 👉 **「FCN = 全部畳み込み」**
+
+{% include gk_article_footer.html %}

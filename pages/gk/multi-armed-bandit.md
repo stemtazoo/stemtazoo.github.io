@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: パンディットアルゴリズム（Multi-Armed Bandit）とは？【探索と活用｜G検定対策】
 description: パンディットアルゴリズム（Multi-Armed Bandit）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -85,3 +85,5 @@ gk_order: 9
 - 状態遷移はない
 - 即時報酬のみ
 - Web推薦で頻出
+
+{% include gk_article_footer.html %}

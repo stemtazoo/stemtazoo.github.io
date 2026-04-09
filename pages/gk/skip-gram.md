@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: スキップグラム（Skip-gram）とは？【G検定対策】
 description: スキップグラム（Skip-gram）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -61,3 +61,5 @@ gk_order: 13
 - RNNでも教師強制でもない
 - NLPの前処理（単語埋め込み）
 - 「RNN学習法」と書いてあったら×
+
+{% include gk_article_footer.html %}

@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: 正規化（Normalization）とは？G検定対策
 description: 正規化（Normalization）はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -70,3 +70,5 @@ gk_order: 16
 * 平均0・分散1とは限らない
 * 正則化とは目的が違う
 * 範囲指定の表現を見たら正規化
+
+{% include gk_article_footer.html %}

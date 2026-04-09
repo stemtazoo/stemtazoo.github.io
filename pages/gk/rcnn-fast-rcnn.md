@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: R-CNN / Fast R-CNN
 description: R-CNN / Fast R-CNNは重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -134,3 +134,5 @@ gk_order: 6
 > **Fast＝特徴共有、Faster＝候補領域も内製（RPN）**
 
 これで切れます。
+
+{% include gk_article_footer.html %}

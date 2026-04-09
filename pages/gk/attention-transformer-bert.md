@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: Attention・Transformer・BERTの関係とは？【仕組みで整理｜G検定対策】
 description: Attention・Transformer・BERTの関係はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -103,3 +103,5 @@ G検定では、次の混同を狙ってきます。
 - BERT：Transformerベースの言語モデル
 - 親子関係で理解する
 - 「仕組み・構造・モデル」で切る
+
+{% include gk_article_footer.html %}

@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: オートエンコーダまとめ（AE / CAE / DAE / VAE）とは？G検定対策
 description: オートエンコーダまとめ（AE / CAE / DAE / VAE）はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -80,3 +80,5 @@ gk_order: 10
 * DAE：ノイズ除去
 * VAE：確率的生成
 * CAMとは役割が別
+
+{% include gk_article_footer.html %}

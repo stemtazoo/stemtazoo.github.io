@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: 位置エンコーディング（Positional Encoding）とは？【Transformerの弱点補完｜G検定対策】
 description: 位置エンコーディング（Positional Encoding）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -82,3 +82,5 @@ Transformerは、RNNやCNNと違って
 - その役割が位置エンコーディング
 - sin/cos or 学習可能ベクトル
 - 「順序を補う」が判断基準
+
+{% include gk_article_footer.html %}

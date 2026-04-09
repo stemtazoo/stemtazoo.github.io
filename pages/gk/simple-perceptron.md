@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: 単純パーセプトロン（Simple Perceptron）とは？G検定対策
 description: 単純パーセプトロン（Simple Perceptron）はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -76,4 +76,6 @@ gk_order: 6
 * 提案時期：1950年代
 * 線形分離のみ可能、XORは解けない
 * 他のモデルと年代で区別する
-* 
+*
+
+{% include gk_article_footer.html %}

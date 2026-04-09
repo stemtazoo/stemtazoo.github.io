@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: ローブナーコンテスト（Loebner Contest）とは？【G検定対策】
 description: ローブナーコンテスト（Loebner Contest）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -102,3 +102,5 @@ gk_order: 10
 * 知性そのものは測らない
 * 「知性・知覚を測る」とあれば罠
 * 人間っぽさ重視と覚える
+
+{% include gk_article_footer.html %}

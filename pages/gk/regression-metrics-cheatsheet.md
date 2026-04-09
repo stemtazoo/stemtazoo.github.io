@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: 回帰評価指標まとめ（MSE / RMSE / MAE / R²）
 description: 回帰評価指標まとめ（MSE / RMSE / MAE / R²）は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -123,3 +123,5 @@ gk_order: 10
 > **平方根？ → RMSE**
 > **絶対値？ → MAE**
 > **説明力？ → R²**
+
+{% include gk_article_footer.html %}

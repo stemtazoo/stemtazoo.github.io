@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: Dropoutとは？（暗黙的正則化）【G検定対策】
 description: Dropoutは（暗黙的正則化）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -84,3 +84,5 @@ G検定では、**DropoutをL1/L2正則化と同列に扱わせる**選択肢が
 * 暗黙的正則化の代表例
 * 推論時にはDropoutしない
 * G検定ではL1/L2との違いを確認
+
+{% include gk_article_footer.html %}

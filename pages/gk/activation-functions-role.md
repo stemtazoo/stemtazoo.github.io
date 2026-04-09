@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: 活性化関数（ReLU / Sigmoid / tanh）の役割とは？G検定対策
 description: 活性化関数（ReLU / Sigmoid / tanh）の役割はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -80,4 +80,6 @@ XORのような複雑な問題を解けるようになります。
 * Sigmoid / tanh は勾配消失しやすい
 * ReLUは現在の主流
 * G検定では「なぜ必要か」を答えられることが重要
-* 
+*
+
+{% include gk_article_footer.html %}

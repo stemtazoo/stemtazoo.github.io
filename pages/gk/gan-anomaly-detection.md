@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: GANは異常検知に使える？【超ひっかけ整理｜G検定対策】
 description: GANは異常検知に使える？は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -83,3 +83,5 @@ GAN（Generative Adversarial Network）は、
 - ただしG検定では主役ではない
 - AE / VAE の方が頻出
 - 「生成」→ GAN、「異常検知」→ AE / VAE
+
+{% include gk_article_footer.html %}

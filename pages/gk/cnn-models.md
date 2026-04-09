@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: CNN代表モデルまとめ（LeNet / AlexNet / VGG / ResNet）
 description: CNN代表モデルまとめ（LeNet / AlexNet / VGG / ResNet）は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -114,3 +114,5 @@ CNNの代表モデルは、
 * ResNetは深層化の決定打
 
 👉 次は **RNN（再帰型ニューラルネットワーク）** に進めます。
+
+{% include gk_article_footer.html %}

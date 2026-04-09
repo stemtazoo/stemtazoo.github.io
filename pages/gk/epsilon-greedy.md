@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: ε-greedy方策（epsilon-greedy policy）とは？【G検定対策】
 description: ε-greedy方策（epsilon-greedy policy）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -104,3 +104,5 @@ gk_order: 15
 - UCBとの違いは「探索の仕方」  
 
 👉 **「ランダム＋最良」なら ε-greedy**
+
+{% include gk_article_footer.html %}

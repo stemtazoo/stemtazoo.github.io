@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: ノイズネットワーク（Noisy Nets）とは？【G検定対策】
 description: ノイズネットワーク（Noisy Nets）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -55,3 +55,5 @@ gk_order: 21
 * ε-greedyの代替手法
 * DQN系（Rainbow）で利用
 * データ拡張とは別物
+
+{% include gk_article_footer.html %}

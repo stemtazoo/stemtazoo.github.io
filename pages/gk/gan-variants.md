@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: GANの派生モデルまとめ
 description: GANの派生モデルまとめは頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -127,3 +127,5 @@ GAN派生は一言で覚える👇
 * DCGAN：CNN導入
 * cGAN：条件付き
 * C*
+
+{% include gk_article_footer.html %}

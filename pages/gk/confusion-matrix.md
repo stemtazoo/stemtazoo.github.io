@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: 混同行列（Confusion Matrix）
 description: 混同行列（Confusion Matrix）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -84,3 +84,5 @@ gk_order: 1
 - TP / TN / FP / FN の4つが基本
 - **FPは誤検知、FNは見逃し**
 - 評価指標は **すべてここから作られる**
+
+{% include gk_article_footer.html %}

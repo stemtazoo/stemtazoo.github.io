@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: トピックモデル（Topic Model）とは？G検定対策
 description: トピックモデル（Topic Model）はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -82,3 +82,5 @@ gk_order: 14
 * ラベルは不要
 * NLP分野の手法
 * 代表例はLDA
+
+{% include gk_article_footer.html %}

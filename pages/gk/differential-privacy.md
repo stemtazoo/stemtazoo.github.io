@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: 差分プライバシー（Differential Privacy）とは？【G検定対策】
 description: 差分プライバシー（Differential Privacy）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -95,3 +95,5 @@ G検定では
 - メンバーシップ推論・データ窃取への対策
 - 精度とのトレードオフがある
 - 「入っていても分からない」→ 差分プライバシー
+
+{% include gk_article_footer.html %}

@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: REINFORCEとActor-Criticの違いとは？G検定対策
 description: REINFORCEとActor-Criticの違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -65,3 +65,5 @@ gk_order: 5
 * Actor-Critic：Actor＋Criticの二役
 * 安定性重視ならActor-Critic
 * 「価値関数を使うか」が最短判断軸
+
+{% include gk_article_footer.html %}

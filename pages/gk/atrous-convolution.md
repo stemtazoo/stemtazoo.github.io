@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: Atrous Convolution（拡張畳み込み）とは？【DeepLabで使われる理由｜G検定対策】
 description: Atrous Convolution（拡張畳み込み）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -82,3 +82,5 @@ gk_order: 12
 - 解像度は落とさない
 - セグメンテーション向き
 - DeepLabの中核技術
+
+{% include gk_article_footer.html %}

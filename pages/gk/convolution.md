@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: 畳み込み（Convolution）
 description: 畳み込み（Convolution）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -117,3 +117,5 @@ gk_order: 2
 * ストライド・パディングで出力サイズが決まる
 
 👉 次は **プーリング（Pooling）** を見ていきます。
+
+{% include gk_article_footer.html %}

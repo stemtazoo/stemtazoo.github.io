@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: マルチタスク学習（Multi-task Learning）とは？【G検定対策】
 description: マルチタスク学習（Multi-task Learning）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -93,3 +93,5 @@ AIでも同じで、
 ---
 
 ### 正解の
+
+{% include gk_article_footer.html %}

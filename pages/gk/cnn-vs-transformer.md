@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: CNN vs Transformer（G検定対策）
 description: CNN vs Transformer（G検定対策）は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -101,3 +101,5 @@ gk_order: 9
 * CNNとTransformerは役割が違う
 * G検定では **使い分け理解** が最重要
 * 計算問題が出るかどうかで即切り
+
+{% include gk_article_footer.html %}

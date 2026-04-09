@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: GPGPUとは？（GPU汎用計算）G検定対策
 description: GPGPUは（GPU汎用計算）G検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -74,4 +74,6 @@ gk_order: 12
 * 画像処理以外の計算に使う
 * ハードウェア名ではない
 * TPUやGANとは役割が別
-* 
+*
+
+{% include gk_article_footer.html %}

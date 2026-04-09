@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: Embedding と ELMo・BERT の違いとは？G検定対策
 description: Embedding と ELMo・BERT の違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -86,3 +86,5 @@ gk_order: 17
 * ELMo / BERT：文脈依存ベクトル
 * 多義語を扱えるのは文脈依存型
 * 文脈という言葉が出たら要注意
+
+{% include gk_article_footer.html %}

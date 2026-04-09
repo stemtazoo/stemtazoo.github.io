@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: Embedding / Word2Vec
 description: Embedding / Word2Vecは重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -124,3 +124,5 @@ Word2Vecは、
 * CBOWとSkip-gramの違いを押さえる
 
 👉 これで **NLP系トピックは完成** です。
+
+{% include gk_article_footer.html %}

@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: RMSEとMAEの違い（回帰評価指標）
 description: RMSEとMAEの違い（回帰評価指標）は関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -112,3 +112,5 @@ G検定では、
 
 > **二乗？ → RMSE**
 > **絶対値？ → MAE**
+
+{% include gk_article_footer.html %}

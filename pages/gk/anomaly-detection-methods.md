@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: 異常検知手法まとめ（AE / VAE / Isolation Forest / One-Class SVM）【G検定対策】
 description: 異常検知手法まとめ（AE / VAE / Isolation Forest / One-Class SVM）は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -83,3 +83,5 @@ G検定では、次の言葉で判断させにきます。
 - **Isolation Forest**：すぐ孤立 → 異常
 - **One-Class SVM**：境界の外 → 異常
 - 迷ったら「何を基準に異常か」を見る
+
+{% include gk_article_footer.html %}

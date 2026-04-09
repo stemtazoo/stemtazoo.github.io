@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: Brightness（明るさ調整）とは？【データ拡張｜G検定対策】
 description: Brightness（明るさ調整）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -62,3 +62,5 @@ gk_order: 1
 - 照明条件の違いに強くする
 - 回転・サイズ変更とは別物
 - **「照明対策」＝ Brightness**
+
+{% include gk_article_footer.html %}

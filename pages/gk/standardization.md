@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: 標準化（Standardization）とは？G検定対策
 description: 標準化（Standardization）はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -70,3 +70,5 @@ gk_order: 15
 * 白色化との違いを必ず意識
 * 正則化とは目的が全く違う
 * G検定では文章表現の違いで判断する
+
+{% include gk_article_footer.html %}

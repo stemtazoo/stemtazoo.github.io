@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: 学習率スケジューリング（Learning Rate Scheduling）
 description: 学習率スケジューリング（Learning Rate Scheduling）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -130,3 +130,5 @@ gk_order: 7
 * Warmup は Transformer で頻出
 
 👉 次は **誤差逆伝播（Backpropagation）まとめ** に進むと理解が一気につながります。
+
+{% include gk_article_footer.html %}

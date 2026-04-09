@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: BERT（双方向Transformer）とは？G検定対策
 description: BERT（双方向Transformer）はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -79,3 +79,5 @@ G検定では、次のような混同を狙ってくる。
 - 事前学習は **MLM と NSP**
 - **一方向処理と書いてあったらBERTではない**
 - 「意味理解特化」＝BERT と覚える
+
+{% include gk_article_footer.html %}

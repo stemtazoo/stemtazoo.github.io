@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: OpenPoseとは？（姿勢推定アルゴリズム）【G検定対策】
 description: OpenPoseは（姿勢推定アルゴリズム）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -115,3 +115,5 @@ OpenPoseは、
 * 複数人・リアルタイム対応
 * 翻訳や開発環境ではない
 * 「関節・姿勢」が出たら即 OpenPose
+
+{% include gk_article_footer.html %}

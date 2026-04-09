@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: 連鎖律（Chain Rule）とは？【G検定対策】
 description: 連鎖律（Chain Rule）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -113,3 +113,5 @@ gk_order: 23
 - **「関数が重なっているか？」で判断**
 
 👉 **合成されていたら連鎖律**
+
+{% include gk_article_footer.html %}

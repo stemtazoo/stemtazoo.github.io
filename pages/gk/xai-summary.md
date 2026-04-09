@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: XAIまとめ（LIME・SHAP・CAM・Grad-CAM）
 description: XAIまとめ（LIME・SHAP・CAM・Grad-CAM）は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -151,3 +151,5 @@ G検定では特に、
 👉 次は  
 **AI倫理（公平性・透明性・説明責任）**  
 とセットで完成します。
+
+{% include gk_article_footer.html %}

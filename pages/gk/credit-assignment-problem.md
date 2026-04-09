@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: 信用割当問題（Credit Assignment Problem）とは？G検定対策
 description: 信用割当問題（Credit Assignment Problem）はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -72,3 +72,5 @@ gk_order: 3
 * 解決策の代表例が誤差逆伝播法
 * G検定では**他分野の用語と混同させる選択肢に注意**
 * 「誤差を逆に伝えて責任配分」まで言えればOK
+
+{% include gk_article_footer.html %}

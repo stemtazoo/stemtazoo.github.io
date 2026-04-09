@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: SGD / Momentum / Adam 系の系譜まとめ【1枚理解｜G検定対策】
 description: SGD / Momentum / Adam 系の系譜まとめは頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -87,3 +87,5 @@ gk_order: 20
 * RMSProp＝勾配スケール調整
 * Adam＝両取り
 * AdaBound＝Adamを安定化
+
+{% include gk_article_footer.html %}

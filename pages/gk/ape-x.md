@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: APE-X（Distributed Prioritized Experience Replay）とは？【G検定対策】
 description: APE-X（Distributed Prioritized Experience Replay）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -67,3 +67,5 @@ gk_order: 12
 - オフポリシーで Q関数を学習
 - Attention・教師あり・時系列ではない
 - **「分散 × Replay × 強化学習」＝ APE-X**
+
+{% include gk_article_footer.html %}

@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: LIME と SHAP の違い（XAI 深掘り）
 description: LIME と SHAP の違い（XAI 深掘り）は関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -131,3 +131,5 @@ gk_order: 3
 👉 次は  
 **XAI × AI倫理（説明責任・公平性）**  
 を押さえると完成です。
+
+{% include gk_article_footer.html %}

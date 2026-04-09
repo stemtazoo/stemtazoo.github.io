@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: ReLU / Leaky ReLU / PReLU（比較チートシート）
 description: ReLU / Leaky ReLU / PReLU（比較チートシート）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -100,3 +100,5 @@ ReLUには次の問題があります。
 👉 迷ったら
 
 > **Leaky = 漏れる / P = Parameter**
+
+{% include gk_article_footer.html %}

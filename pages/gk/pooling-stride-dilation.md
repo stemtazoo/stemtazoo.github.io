@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: Pooling・Stride・Dilated Convolution の違い
 description: Pooling・Stride・Dilated Convolution の違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -130,3 +130,5 @@ gk_order: 6
 * 学習速度UPではない
 
 👉 次は **ASPP（Atrous Spatial Pyramid Pooling）** に進むと理解が完成します。
+
+{% include gk_article_footer.html %}

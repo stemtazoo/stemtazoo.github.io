@@ -1,0 +1,68 @@
+## 🔗 関連記事
+
+<ul style="padding-left: 20px;">
+{% assign current_tags = page.tags %}
+{% assign count = 0 %}
+
+{% for p in site.pages %}
+  {% if p.url != page.url and p.tags %}
+    {% assign matched = false %}
+
+    {% for tag in current_tags %}
+      {% if p.tags contains tag and tag != "gk" %}
+        {% assign matched = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if matched %}
+      <li style="margin-bottom: 6px;">
+        <a href="{{ p.url }}">{{ p.title }}</a>
+      </li>
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+
+    {% if count >= 5 %}
+      {% break %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>
+
+<hr>
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/gk/">G検トップに戻る</a>
+</div>
+
+{% assign prev_url = page.prev %}
+{% assign next_url = page.next %}
+
+{% if prev_url == nil or next_url == nil %}
+  {% assign section_pages = site.pages | where_exp: "p", "p.tags contains 'gk' and p.gk_section == page.gk_section and p.gk_order" | sort: "gk_order" %}
+  {% for section_page in section_pages %}
+    {% if section_page.url == page.url %}
+      {% assign index = forloop.index0 %}
+      {% assign prev_index = index | minus: 1 %}
+      {% assign next_index = index | plus: 1 %}
+      {% if prev_url == nil and prev_index >= 0 %}
+        {% assign prev_url = section_pages[prev_index].url %}
+      {% endif %}
+      {% if next_url == nil and next_index < section_pages.size %}
+        {% assign next_url = section_pages[next_index].url %}
+      {% endif %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+<div class="page-navigation" style="margin-top:12px;">
+  {% if prev_url %}
+    {% assign prev_page = site.pages | where: "url", prev_url | first %}
+    <a class="prev" href="{{ prev_url }}">← {% if prev_page %}{{ prev_page.title }}{% else %}前の記事{% endif %}</a>
+  {% endif %}
+
+  {% if next_url %}
+    {% assign next_page = site.pages | where: "url", next_url | first %}
+    <a class="next" href="{{ next_url }}">{% if next_page %}{{ next_page.title }}{% else %}次の記事{% endif %} →</a>
+  {% endif %}
+</div>
