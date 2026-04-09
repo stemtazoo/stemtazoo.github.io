@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: モデル窃取攻撃（Model Extraction Attack）とは？【G検定対策】
 description: モデル窃取攻撃（Model Extraction Attack）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -94,3 +94,5 @@ G検定では
 - 学習データは直接狙わない
 - データ窃取・メンバーシップ推論と必ず対比
 - 「同等性能のモデル構築」→ モデル窃取攻撃
+
+{% include gk_article_footer.html %}

@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: エッジAI（Edge AI）
 description: エッジAI（Edge AI）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -128,3 +128,5 @@ gk_order: 1
 👉 迷ったら
 
 > **命に関わる即時判断 → エッジAI**
+
+{% include gk_article_footer.html %}

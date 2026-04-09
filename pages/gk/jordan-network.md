@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: ジョルダンネットワーク（Jordan Network）とは？【RNNの基本構造｜G検定対策】
 description: ジョルダンネットワーク（Jordan Network）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -79,3 +79,5 @@ gk_order: 10
 - 時系列データを扱う
 - CNN・Transformer・AEではない
 - 「出力を戻す」→ Jordan
+
+{% include gk_article_footer.html %}

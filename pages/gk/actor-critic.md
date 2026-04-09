@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: Actor–Critic とは？（オン／オフポリシーの位置づけ）【G検定対策】
 description: Actor–Criticは（オン／オフポリシーの位置づけ）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -74,3 +74,5 @@ gk_order: 7
 - 安定性と効率を両立
 - オン／オフはアルゴリズム次第
 - **A2C/A3C＝オン、DDPG/SAC＝オフ**
+
+{% include gk_article_footer.html %}

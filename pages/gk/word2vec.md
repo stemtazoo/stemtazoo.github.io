@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: Word2Vec（CBOW / Skip-gram）とは？【分散表現の基本｜G検定対策】
 description: Word2Vec（CBOW / Skip-gram）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -101,3 +101,5 @@ Word2Vecは、
 - CBOW：文脈 → 単語
 - Skip-gram：単語 → 文脈
 - 文脈理解はしない
+
+{% include gk_article_footer.html %}

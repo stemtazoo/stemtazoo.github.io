@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: 次元の呪い（Curse of Dimensionality）とは？G検定対策
 description: 次元の呪い（Curse of Dimensionality）はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -85,4 +85,6 @@ gk_order: 13
 * データが疎になり距離が不安定
 * 距離ベース手法で特に問題
 * 次元削減・特徴選択が代表的対策
-* 
+*
+
+{% include gk_article_footer.html %}

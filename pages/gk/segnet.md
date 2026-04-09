@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: SegNet（セマンティックセグメンテーション）
 description: SegNet（セマンティックセグメンテーション）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -122,3 +122,5 @@ G検定では
 * 注意機構（SENet）や分類モデル（AlexNet, GoogLeNet）とは別物
 
 👉 **「プーリング位置を覚えて戻す」＝ SegNet**
+
+{% include gk_article_footer.html %}

@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: 音声認識まとめ（WaveNet・CTC・RNN）
 description: 音声認識まとめ（WaveNet・CTC・RNN）は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -107,3 +107,5 @@ G検定では、
 👉 迷ったら
 
 > **音声 = 時系列**
+
+{% include gk_article_footer.html %}

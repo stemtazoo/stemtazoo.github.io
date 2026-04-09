@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: AR / MA / ARMA / ARIMAの違いまとめ【G検定対策】
 description: AR / MA / ARMA / ARIMAの違いまとめは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -88,3 +88,5 @@ gk_order: 6
 - ARMA：値＋誤差
 - ARIMA：差分＋ARMA
 - 何を使うかで即判断
+
+{% include gk_article_footer.html %}

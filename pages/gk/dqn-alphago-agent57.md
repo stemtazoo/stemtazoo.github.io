@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: DQN / AlphaGo / Agent57【強化学習の系譜まとめ】
 description: DQN / AlphaGo / Agent57は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -81,3 +81,5 @@ gk_order: 22
 - Agent57：**複数タスクで人間超え**
 - 進化の軸は **汎用性**
 - 「Atari 57種」＝ Agent57
+
+{% include gk_article_footer.html %}

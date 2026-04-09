@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: OpenAI Fiveとは？Dota2特化AIの正しい理解【G検定対策】
 description: OpenAI FiveはDota2特化AIの正しい理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -76,3 +76,5 @@ OpenAI Fiveの特徴は以下の通りです。
 - チーム戦・不完全情報に対応
 - 将棋・囲碁では使われていない
 - 「Dota 2ならOpenAI Five」
+
+{% include gk_article_footer.html %}

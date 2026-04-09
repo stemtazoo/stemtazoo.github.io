@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: ResNet・DenseNet・EfficientNet 比較（G検定対策）
 description: ResNet・DenseNet・EfficientNet 比較（G検定対策）は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -103,3 +103,5 @@ gk_order: 10
 * EfficientNet → 効率よく強くする
 
 👉 次は **画像タスク総まとめ（分類・検出・セグメンテーション）** に進むと全体像が完成
+
+{% include gk_article_footer.html %}

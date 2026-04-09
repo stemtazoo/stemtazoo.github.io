@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: 強いAIと弱いAIの違いとは？【汎用AIと特化AI｜G検定対策】
 description: 強いAIと弱いAIの違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -85,3 +85,5 @@ gk_order: 3
 - AlphaGo / AlphaStar → 弱いAI
 - 東ロボくん → 弱いAI
 - **「人間並み」「汎用的」＝強いAI**
+
+{% include gk_article_footer.html %}

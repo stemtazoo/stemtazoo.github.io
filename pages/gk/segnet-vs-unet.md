@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: SegNet vs U-Net 比較チートシート【G検定頻出】
 description: SegNet vs U-Net 比較チートシートは重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -70,4 +70,6 @@ gk_order: 4
 - 精度重視 → U-Net
 - メモリ重視 → SegNet
 - この二択は **G検定の定番ひっかけ**
-- 
+-
+
+{% include gk_article_footer.html %}

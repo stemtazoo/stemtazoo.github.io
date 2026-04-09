@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: 二重降下現象とは？（Double Descent）【G検定対策】
 description: 二重降下現象は（Double Descent）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -105,3 +105,5 @@ G検定では、
 * モデルが大きくなる途中で一度悪化
 * CNN・Transformer・ResNetでも起きうる
 * 単純パーセプトロンでは起きない
+
+{% include gk_article_footer.html %}

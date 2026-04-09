@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: 状態価値関数（State Value Function）とは？G検定対策
 description: 状態価値関数（State Value Function）はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -73,3 +73,5 @@ gk_order: 11
 * 即時報酬だけではない
 * 行動は含まない
 * 「状態か？行動か？」で切る
+
+{% include gk_article_footer.html %}

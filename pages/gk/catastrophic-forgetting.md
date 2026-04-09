@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: 破壊的忘却（Catastrophic Forgetting）とは？【連続学習の落とし穴｜G検定対策】
 description: 破壊的忘却（Catastrophic Forgetting）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -73,3 +73,5 @@ G検定では、次の混同を狙ってきます。
 - ノイズや性能向上とは無関係
 - マルチタスク同時学習とは対照的
 - 「上書きされる」イメージで覚える
+
+{% include gk_article_footer.html %}

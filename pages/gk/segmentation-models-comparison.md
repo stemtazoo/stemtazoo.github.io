@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: DeepLab vs U-Net vs Mask R-CNN（役割比較）G検定対策
 description: DeepLab vs U-Net vs Mask R-CNN（役割比較）G検定対策は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -75,3 +75,5 @@ gk_order: 7
 * 個体を区別するかが判断基準
 * 医療画像＝U-Net、一般画像＝DeepLab が頻出
 * 個体検出＋マスク＝Mask R-CNN
+
+{% include gk_article_footer.html %}

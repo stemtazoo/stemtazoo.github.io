@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: Precision–Recall曲線
 description: Precision–Recall曲線は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -107,3 +107,5 @@ PR曲線では、**Average Precision（AP）** という指標がよく使われ
 * クラス不均衡データで強い
 * APはPR曲線の面積
 * ROC/AUCと**使い分ける**
+
+{% include gk_article_footer.html %}

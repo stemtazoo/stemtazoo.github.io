@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: one-hot と Embedding の違いとは？G検定対策
 description: one-hot と Embedding の違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -72,3 +72,5 @@ gk_order: 15
 * Embedding：分散表現、実数ベクトル、類似度あり
 * Embeddingは学習が必要
 * 類似度・意味を扱えたらEmbedding
+
+{% include gk_article_footer.html %}

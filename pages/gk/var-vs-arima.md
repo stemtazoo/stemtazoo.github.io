@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: VARとARIMAの違い【多変量 vs 単変量の最終比較】
 description: VARとARIMAの違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -73,3 +73,5 @@ gk_order: 7
 - 最大の違いは変数の数
 - 用途と前提が異なる
 - 迷ったら変数数を見る
+
+{% include gk_article_footer.html %}

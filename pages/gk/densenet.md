@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: DenseNet（高密度接続CNN）とは？G検定対策
 description: DenseNet（高密度接続CNN）はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -74,3 +74,5 @@ gk_order: 6
 * 勾配消失に強い
 * パラメータ効率が良い
 * ResNetとの違いは「加算 vs 結合」
+
+{% include gk_article_footer.html %}

@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: A2C / A3C とは？（Actor–Critic の実装差）【G検定対策】
 description: A2C / A3Cは（Actor–Critic の実装差）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -81,3 +81,5 @@ gk_order: 8
 - A3C：非同期・探索多様
 - A2C：同期・実装安定
 - **違いは同期方式**
+
+{% include gk_article_footer.html %}

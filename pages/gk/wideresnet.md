@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: WideResNet（幅を広げたResNet）とは？G検定対策
 description: WideResNet（幅を広げたResNet）はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -75,3 +75,5 @@ gk_order: 5
 * 深さではなくチャネル数で勝負
 * 学習が安定しやすい
 * 「Wide」がキーワード
+
+{% include gk_article_footer.html %}

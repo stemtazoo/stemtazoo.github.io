@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: Multi-Head Attentionとは？複数視点で関係性を学ぶ仕組み【G検定対策】
 description: Multi-Head Attentionは複数視点で関係性を学ぶ仕組みを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -68,3 +68,5 @@ Multi-Head Attentionは一言で言うと、
 
 問題文に  
 「異なる
+
+{% include gk_article_footer.html %}

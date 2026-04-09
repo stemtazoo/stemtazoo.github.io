@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: AMSBound（AMSGrad＋SGDの最適化手法）とは？【G検定対策】
 description: AMSBound（AMSGrad＋SGDの最適化手法）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -78,3 +78,5 @@ AMSBoundは、**AMSGrad をベース**にした最適化手法です。
 - 初期は速く、終盤は安定
 - Adamではない
 - 「AMSGrad → SGD」ならAMSBound
+
+{% include gk_article_footer.html %}

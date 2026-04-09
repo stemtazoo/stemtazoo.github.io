@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: UCB方策（Upper-Confidence Bound）とは？【G検定対策】
 description: UCB方策（Upper-Confidence Bound）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -53,3 +53,5 @@ gk_order: 16
 * 探索と活用を数式的に両立
 * 試行回数が少ないだけでは選ばれない
 * バンディット問題の代表的手法
+
+{% include gk_article_footer.html %}

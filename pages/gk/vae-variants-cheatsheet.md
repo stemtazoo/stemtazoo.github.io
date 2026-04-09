@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: β-VAE・infoVAE・VQ-VAEの違い【G検定頻出比較】
 description: β-VAE・infoVAE・VQ-VAEの違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -103,3 +103,5 @@ G検定では
 - infoVAE＝学習安定性重視
 - VQ-VAE＝潜在空間の離散化
 - 「何を改善した？」で即切り
+
+{% include gk_article_footer.html %}

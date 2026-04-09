@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: CBOWモデルとは？（Word2Vec）【G検定対策】
 description: CBOWモデルは（Word2Vec）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -87,3 +87,5 @@ CBOWは、
 - Bag-of-Wordsの考え方 → **順序は無視**
 - 文脈は使うが、並び順は使わない
 - **「周囲 → 中央」＝CBOW**
+
+{% include gk_article_footer.html %}

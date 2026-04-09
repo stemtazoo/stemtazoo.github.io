@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: AIの安全性とロバスト性（Safety / Robustness）
 description: AIの安全性とロバスト性（Safety / Robustness）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -122,3 +122,5 @@ AIは、
 > **AIは安全に使えてこそ価値がある**
 
 と覚えておく
+
+{% include gk_article_footer.html %}

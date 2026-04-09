@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: G検定ひっかけ最適化問題10連発【SGD / Adam / RMSprop ほか｜解説付き】
 description: G検定ひっかけ最適化問題10連発は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -173,3 +173,5 @@ D. AdaGrad
 - 「Adam系」「Bound系」を見分ける
 - TF-IDFは最適化ではない
 - この10問が解ければ十分
+
+{% include gk_article_footer.html %}

@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: 強化学習の代表的手法まとめ（DQN・Policy Gradient・Actor-Critic）【G検定対策】
 description: 強化学習の代表的手法まとめ（DQN・Policy Gradient・Actor-Critic）は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -100,3 +100,5 @@ gk_order: 5
 - Actor-Critic：**価値＋方策**
 - 連続行動 → DQNは不利
 - 迷ったら「何を学習しているか」を見る
+
+{% include gk_article_footer.html %}

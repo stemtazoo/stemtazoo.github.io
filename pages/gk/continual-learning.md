@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: 継続学習（Continual Learning）とは？破壊的忘却と対策まとめ【G検定対策】
 description: 継続学習（Continual Learning）は破壊的忘却と対策まとめを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -86,3 +86,5 @@ gk_order: 6
 - EWC：重みを固定
 - リプレイ：過去データで復習
 - 「順番・忘却・対策」でセット理解
+
+{% include gk_article_footer.html %}

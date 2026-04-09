@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: DCGAN（Deep Convolutional GAN）
 description: DCGAN（Deep Convolutional GAN）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -149,3 +149,5 @@ DCGANでは
 👉 次は  
 **Conditional GAN / CycleGAN / StyleGAN**  
 を押さえると、GAN系は盤石です。
+
+{% include gk_article_footer.html %}

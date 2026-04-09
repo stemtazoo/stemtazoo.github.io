@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: CBOW と Skip-gram の違いとは？G検定対策
 description: CBOW と Skip-gram の違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -79,3 +79,5 @@ gk_order: 16
 * Skip-gram：中心語 → 文脈、低頻度語に強い
 * どちらも Word2Vec の学習方法
 * 予測方向を見れば切れる
+
+{% include gk_article_footer.html %}

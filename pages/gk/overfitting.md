@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: 過学習（Overfitting）
 description: 過学習（Overfitting）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -107,3 +107,5 @@ gk_order: 1
   **正則化 / 早期終了 / ドロップアウト / データ増加**
 
 👉 次は **未学習（Underfitting）** と比較すると理解が深まります。
+
+{% include gk_article_footer.html %}

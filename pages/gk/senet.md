@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: SENet（Squeeze-and-Excitation Network）とは？G検定対策
 description: SENet（Squeeze-and-Excitation Network）はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -76,3 +76,5 @@ gk_order: 7
 * Squeeze & Excitation が名前の由来
 * ResNetなどに組み込める
 * 空間Attentionではない
+
+{% include gk_article_footer.html %}

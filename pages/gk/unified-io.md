@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: Unified-IO（統一入出力マルチモーダルモデル）とは？G検定対策
 description: Unified-IO（統一入出力マルチモーダルモデル）はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -78,3 +78,5 @@ G検定では次のような誤解を狙ってきます。
 - Transformerベース
 - 特化型ではなく汎用型
 - 「Unified＝全部同じ形式」がキーワード
+
+{% include gk_article_footer.html %}

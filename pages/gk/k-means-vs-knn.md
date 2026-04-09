@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: k-means法とk-NNの違いとは？名前ひっかけ完全対策【G検定頻出】
 description: k-means法とk-NNの違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -98,3 +98,5 @@ gk_order: 7
 - kの意味が違う
 - 名前に惑わされない
 - 「ラベルある？」で即判断
+
+{% include gk_article_footer.html %}

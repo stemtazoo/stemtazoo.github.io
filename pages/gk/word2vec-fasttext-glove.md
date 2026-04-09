@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: Word2Vec・FastText・GloVeの違いとは？単語分散表現の整理【G検定対策】
 description: Word2Vec・FastText・GloVeの違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -97,3 +97,5 @@ gk_order: 24
 - FastText：文字情報も使う
 - GloVe：全体の共起統計
 - 見る範囲で切り分ける
+
+{% include gk_article_footer.html %}

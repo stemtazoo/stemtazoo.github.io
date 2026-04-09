@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: VQ-VAE（Vector Quantized Variational AutoEncoder）とは？【G検定対策】
 description: VQ-VAE（Vector Quantized Variational AutoEncoder）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -107,3 +107,5 @@ G検定では
 - 生成の安定性と表現力が向上
 - β-VAE / infoVAE / CVAE と混同注意
 - 「連続ではなく離散」→ VQ-VAE
+
+{% include gk_article_footer.html %}

@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: MLM（Masked Language Model）とは？【BERTの学習方法｜G検定対策】
 description: MLM（Masked Language Model）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -75,3 +75,5 @@ MLMは、
 - 双方向文脈を利用
 - 次単語予測とは別物
 - 「穴埋め」＝MLM
+
+{% include gk_article_footer.html %}

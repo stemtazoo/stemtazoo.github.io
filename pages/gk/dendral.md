@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: DENDRAL（初期の専門家システム）とは？【G検定対策】
 description: DENDRAL（初期の専門家システム）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -68,3 +68,5 @@ gk_order: 14
 - ルールベース・推論型AI
 - 深層学習ではない
 - **「1960年代 × 化学 × ルール」＝ DENDRAL**
+
+{% include gk_article_footer.html %}

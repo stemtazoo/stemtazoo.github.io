@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: ILSVRC（ImageNet Large Scale Visual Recognition Challenge）とは？G検定対策
 description: ILSVRC（ImageNet Large Scale Visual Recognition Challenge）はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -94,3 +94,5 @@ gk_order: 12
 * 2012年AlexNetがブレイクスルー
 * CNN普及のきっかけ
 * モデル名ではない
+
+{% include gk_article_footer.html %}

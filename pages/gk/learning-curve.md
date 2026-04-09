@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: 学習曲線（Learning Curve）
 description: 学習曲線（Learning Curve）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -121,3 +121,5 @@ gk_order: 3
 * 汎化性能の確認に必須
 
 👉 次は **バイアス・バリアンス トレードオフ** に進むと理解が一気に深まる。
+
+{% include gk_article_footer.html %}

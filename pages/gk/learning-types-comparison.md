@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: 機械学習3手法の比較まとめ
 description: 機械学習3手法の比較まとめは頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -83,3 +83,5 @@ gk_order: 4
 - [教師あり学習](/gk/supervised-learning/)
 - [教師なし学習](/gk/unsupervised-learning/)
 - [強化学習](/gk/reinforcement-learning/)
+
+{% include gk_article_footer.html %}

@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: REINFORCEとは？（方策勾配法）G検定対策
 description: REINFORCEは（方策勾配法）G検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -69,3 +69,5 @@ gk_order: 4
 * 価値関数を使わない
 * ポリシーを直接更新
 * 「価値関数を最適化する」は誤り
+
+{% include gk_article_footer.html %}

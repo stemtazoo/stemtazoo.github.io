@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: 主成分分析（PCA：Principal Component Analysis）とは？G検定対策
 description: 主成分分析（PCA：Principal Component Analysis）はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -73,3 +73,5 @@ gk_order: 16
 * 主成分は直交・無相関
 * 前処理・可視化でよく使う
 * ラベルは使わない
+
+{% include gk_article_footer.html %}

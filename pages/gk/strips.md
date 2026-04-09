@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: STRIPS（計画問題）とは？G検定対策
 description: STRIPS（計画問題）はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -79,4 +79,6 @@ gk_order: 11
 * 学習は行わない
 * ロボットの行動計画で使用
 * LAWSや勾配消失とは分野が違う
-* 
+*
+
+{% include gk_article_footer.html %}

@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: Permutation Importance（置換重要度）とは？【G検定対策】
 description: Permutation Importance（置換重要度）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -63,3 +63,5 @@ gk_order: 4
 - 公平性評価ではない
 - PCA・変数選択と混同しない
 - **「並び替え × 性能低下」がキーワード**
+
+{% include gk_article_footer.html %}

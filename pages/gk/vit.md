@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: Vision Transformer（ViT）とは？CNNとの違い【G検定対策】
 description: Vision Transformer（ViT）はCNNとの違いを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -100,3 +100,5 @@ G検定では「**ViTは大規模事前学習で強くなる**」が頻出。
 * ViTは**大規模事前学習**があると強い（JFT-300M など）
 * キーワード：patch / token / self-attention / encoder
 * 「パッチを単語扱い」が出たらViTを疑う
+
+{% include gk_article_footer.html %}

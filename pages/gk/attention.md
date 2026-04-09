@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: Attention（注意機構）
 description: Attention（注意機構）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -99,3 +99,5 @@ Attentionは、次の3つで説明されます。
 * 長期依存に強い
 
 👉 次は **Transformer（概要）** に進むと全体像が完成します。
+
+{% include gk_article_footer.html %}

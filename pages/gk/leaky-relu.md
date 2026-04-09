@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: Leaky ReLU（リーキーReLU）
 description: Leaky ReLU（リーキーReLU）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -133,3 +133,5 @@ Leaky ReLU関数は次のように定義されます。
 👉 迷ったら
 
 > **Leaky = 漏れる → 0にならない**
+
+{% include gk_article_footer.html %}

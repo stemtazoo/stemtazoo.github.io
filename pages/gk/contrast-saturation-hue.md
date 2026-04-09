@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: Contrast / Saturation / Hue とは？（色系データ拡張の違い）【G検定対策】
 description: Contrast / Saturation / Hueは（色系データ拡張の違い）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -88,3 +88,5 @@ gk_order: 2
 - Hue＝**色の種類**
 - Brightness とは別物
 - **「何が変わる？」で即断**
+
+{% include gk_article_footer.html %}

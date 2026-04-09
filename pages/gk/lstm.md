@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: LSTM（長短期記憶）
 description: LSTM（長短期記憶）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -119,3 +119,5 @@ LSTMには次の3つのゲートがあります。
 * 勾配消失を緩和
 
 👉 次は **GRU（Gated Recurrent Unit）** を見ていきます。
+
+{% include gk_article_footer.html %}

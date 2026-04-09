@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: RNNエンコーダ・デコーダ（Seq2Seq）とは？【G検定対策】
 description: RNNエンコーダ・デコーダ（Seq2Seq）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -66,3 +66,5 @@ gk_order: 5
 - 機械翻訳が代表例
 - Attentionは必須ではない
 - Transformerとは別物
+
+{% include gk_article_footer.html %}

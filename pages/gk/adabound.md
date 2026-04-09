@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: AdaBoundとは？（学習率に上下限を持つ最適化手法）【G検定対策】
 description: AdaBoundは（学習率に上下限を持つ最適化手法）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -90,3 +90,5 @@ G検定では、**Adam・RMSProp・AdaDeltaとの違い**が狙われます。
 * 学習が進むとSGD的挙動になる
 * 学習率の上下限がキーワード
 * G検定ではAdamとの違いに注意
+
+{% include gk_article_footer.html %}

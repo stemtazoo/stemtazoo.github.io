@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: "MnasNetとは？AutoML時代のモバイル向けCNN【G検定対策】"
 description: "MnasNetはAutoML時代のモバイル向けCNN"を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -56,4 +56,6 @@ gk_order: 9
 * 精度＋実機速度を同時に最適化
 * Inception（GoogLeNet）とは別物
 * 「速度を報酬に含める」が最重要キーワード
-* 
+*
+
+{% include gk_article_footer.html %}

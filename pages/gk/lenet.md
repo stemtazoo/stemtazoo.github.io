@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: LeNetとは？【G検定対策】
 description: LeNetはを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -55,3 +55,5 @@ gk_order: 2
 * 手書き数字認識で成功
 * プーリング層を含む構造
 * AlexNetよりはるか以前のモデル
+
+{% include gk_article_footer.html %}

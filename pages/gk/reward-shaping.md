@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: 報酬成形（Reward Shaping）とは？【G検定対策】
 description: 報酬成形（Reward Shaping）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -55,3 +55,5 @@ gk_order: 20
 * スパース報酬問題で有効
 * 設計ミスに注意
 * G検定では定義の切り分けが重要
+
+{% include gk_article_footer.html %}

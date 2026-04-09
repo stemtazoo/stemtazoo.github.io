@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: Seq2SeqからTransformerへの進化【Attention登場の理由】
 description: Seq2SeqからTransformerへの進化は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -73,3 +73,5 @@ gk_order: 7
 - Attention：必要部分を参照
 - Transformer：RNNを捨てて完全並列
 - 「何を解決したか」を見る
+
+{% include gk_article_footer.html %}

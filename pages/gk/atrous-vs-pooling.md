@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: Atrous ConvolutionとPoolingの違いとは？【受容野と解像度の観点で整理｜G検定対策】
 description: Atrous ConvolutionとPoolingの違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -91,3 +91,5 @@ gk_order: 13
 - 解像度が分岐点
 - 分類かセグメンテーションかで選ぶ
 - DeepLabならAtrous
+
+{% include gk_article_footer.html %}

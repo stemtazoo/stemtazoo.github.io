@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: CRISP-DM
 description: CRISP-DMは重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -116,3 +116,4 @@ CRISP-DMは次の **6段階** で構成されます。
 * **契約は含まれない**
 * 展開（Deployment）が最終段階
 
+{% include gk_article_footer.html %}

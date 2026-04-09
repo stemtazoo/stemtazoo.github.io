@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: 勾配降下法（Gradient Descent）とは？【訓練誤差との関係｜G検定対策】
 description: 勾配降下法（Gradient Descent）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -75,3 +75,5 @@ gk_order: 2
 - 測定誤差・偶然誤差・系統誤差は無関係
 - 勾配（微分）を使って更新
 - 「学習」「更新」と書いてあったら訓練誤差
+
+{% include gk_article_footer.html %}

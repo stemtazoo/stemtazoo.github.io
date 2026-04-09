@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: Adam / RMSProp / AdaDelta / AdaBound の違い【4点比較｜G検定対策】
 description: Adam / RMSProp / AdaDelta / AdaBound の違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -81,3 +81,5 @@ G検定では、**AdamとAdaBoundの混同**が最頻出です。
 * Adam：1次＋2次
 * AdaBound：Adam＋学習率境界
 * 境界が出たら即AdaBound
+
+{% include gk_article_footer.html %}

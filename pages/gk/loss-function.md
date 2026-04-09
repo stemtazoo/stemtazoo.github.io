@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: 損失関数（Loss / Cost / Objective）とは？【違いと使い分け｜G検定対策】
 description: 損失関数（Loss / Cost / Objective）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -77,3 +77,5 @@ gk_order: 10
 - Loss / Cost / Objective はほぼ同義
 - 測定誤差・偶然誤差とは別概念
 - 「学習で最小化」→ 損失関数
+
+{% include gk_article_footer.html %}

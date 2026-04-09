@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: Stable Diffusion（拡散モデルの代表例）
 description: Stable Diffusion（拡散モデルの代表例）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -125,3 +125,5 @@ Stable Diffusion では、
 👉 次は  
 **生成モデルひっかけ問題集（GAN / VAE / Diffusion）**  
 に進むと、ここまでが完全に固まります。
+
+{% include gk_article_footer.html %}

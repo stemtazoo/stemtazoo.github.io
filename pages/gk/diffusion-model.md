@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: Diffusion Model（拡散モデル）
 description: Diffusion Model（拡散モデル）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -124,3 +124,5 @@ Diffusion Model は一言でいうと、
 👉 次は  
 **生成モデルひっかけ問題集**  
 に進むと、GAN / VAE / Diffusion を完全に切り分けられます。
+
+{% include gk_article_footer.html %}

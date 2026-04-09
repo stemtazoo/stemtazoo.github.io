@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: Contrastive LossとTriplet Lossの違い【G検定対策】
 description: Contrastive LossとTriplet Lossの違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -73,3 +73,5 @@ gk_order: 2
 - どちらも埋め込み学習
 - 分類損失ではない
 - 「Anchor」が出たらTriplet
+
+{% include gk_article_footer.html %}

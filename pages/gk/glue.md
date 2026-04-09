@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: GLUE（General Language Understanding Evaluation）とは？【G検定対策】
 description: GLUE（General Language Understanding Evaluation）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -109,3 +109,5 @@ GLUE（General Language Understanding Evaluation）は、
 - **「評価」「タスク集合」がキーワード**
 
 👉 **GLUE＝NLPの共通テスト**
+
+{% include gk_article_footer.html %}

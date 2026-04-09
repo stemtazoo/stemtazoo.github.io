@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: GANとConditional GANの違いとは？【1ページ比較・G検定対策】
 description: GANとConditional GANの違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
@@ -95,3 +95,5 @@ G検定では、**「GAN＝全部同じ」だと思わせる選択肢**が出ま
 * 条件はラベル・属性・画像など
 * Pix2PixはConditional GANの一種
 * G検定では「条件の有無」で即判断
+
+{% include gk_article_footer.html %}
