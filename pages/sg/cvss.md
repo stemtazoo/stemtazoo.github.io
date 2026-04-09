@@ -4,6 +4,8 @@ title: CVSSとは？脆弱性の深刻度を共通スコアで判断する【情
 description: CVSSは脆弱性の深刻度を共通スコアで判断するを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
 permalink: /sg/cvss/
 tags: [sg, security_general, threat_vulnerability, risk_assessment, sg-security-overview]
+prev: /sg/csrf/
+next: /sg/cyber-attack-cia/
 ---
 
 ## まず結論
@@ -120,6 +122,9 @@ SG試験では
 ---
 
 ## まとめ（試験直前用）
+
+{% include sg_article_footer.html %}
+
 - CVSS＝脆弱性を **0.0〜10.0で数値化する指標**
 - 評価基準は **基本・現状・環境の3つ**
 - スコアが高いほど危険（優先対応）

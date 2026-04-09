@@ -4,6 +4,8 @@ title: よく出るポート番号とは？試験での見分け方を整理【S
 description: よく出るポート番号は主要サービス識別に使うSG試験頻出の番号群です。この記事ではHTTP・HTTPS・SMTPなどの役割、暗記のコツ、選択肢で狙われるひっかけポイントを整理します。
 permalink: /sg/common-port-numbers/
 tags: [sg, technology, network, security_measures, unauthorized_access, sg-security-measures]
+prev: /sg/common-mistakes/
+next: /sg/contract-nonconformity/
 ---
 
 ## まず結論
@@ -128,6 +130,9 @@ SG試験では細かいプロトコルよりも、
 この区別ができないと、選択肢を正しく切れません。
 
 ## まとめ（試験直前用）
+
+{% include sg_article_footer.html %}
+
 
 よく出るポート番号は、**サービスごとに決まった通信の入口**です。  
 SG試験では、HTTP（80）、HTTPS（443）、SMTP（25）、POP3（110）、DNS（53）を押さえることが重要です。  
