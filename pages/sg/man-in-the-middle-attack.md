@@ -109,7 +109,6 @@ next: /sg/mtbf/
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 - 中間者攻撃＝「通信の間に割り込んで盗聴・改ざん」
 - 特徴は  
@@ -118,3 +117,5 @@ next: /sg/mtbf/
   👉 暗号化＋相手認証
 - 試験では  
   👉 「盗聴か妨害か」をまず切り分ける
+
+{% include sg_article_footer.html %}

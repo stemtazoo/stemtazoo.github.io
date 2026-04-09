@@ -117,7 +117,6 @@ next: /sg/copyright-ownership/
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 
 - 請負 → 成果物の完成責任あり  
@@ -128,3 +127,5 @@ next: /sg/copyright-ownership/
 👉 NO → 準委任  
 
 ---
+
+{% include sg_article_footer.html %}

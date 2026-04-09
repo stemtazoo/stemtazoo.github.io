@@ -88,9 +88,10 @@ next: /sg/vulnerability/
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 - ビッシング＝電話でだまして情報を聞き出す  
 - 「口頭で答えさせる」が最大の特徴  
 - フィッシング（メール）・スミッシング（SMS）と手段で区別  
 - 電話で暗証番号を聞く時点で不正と判断
+
+{% include sg_article_footer.html %}

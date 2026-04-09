@@ -111,7 +111,6 @@ next: /sg/fraud-triangle/
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 
 - 五大装置＝入力・出力・記憶・演算・制御  
@@ -123,3 +122,5 @@ next: /sg/fraud-triangle/
   - 指示する → 制御  
   - 表示する → 出力  
 - SG試験では「役割の切り分け」が最重要
+
+{% include sg_article_footer.html %}

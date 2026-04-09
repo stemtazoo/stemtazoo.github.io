@@ -104,10 +104,11 @@ next: /sg/crl/
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 - クラッカー＝悪意を持つ攻撃者
 - 判断基準は「技術力」ではなく「目的」
 - ハッカー（中立）との違いが頻出
 - スクリプトキディより対策レベルは高く必要
 - SG試験では「悪意かどうか」で切り分ける
+
+{% include sg_article_footer.html %}

@@ -107,7 +107,6 @@ next: /sg/sg-exam-outline-study/
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 - セッションハイジャック＝「ログイン状態の乗っ取り」
 - パスワード不要で侵入できるのが特徴
@@ -115,3 +114,5 @@ next: /sg/sg-exam-outline-study/
   👉 HTTPS＋セッション管理
 - 試験では  
   👉 「認証前か認証後か」で切り分ける
+
+{% include sg_article_footer.html %}

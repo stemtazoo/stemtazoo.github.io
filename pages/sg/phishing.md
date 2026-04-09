@@ -87,9 +87,10 @@ next: /sg/port-number/
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 - フィッシング＝偽サイトに誘導して入力させる攻撃  
 - 「ユーザーが自分で入力する」が最大の特徴  
 - DDoS（停止）・マルウェア（感染）と区別する  
 - メール＋リンク＋入力フォーム → フィッシングと判断
+
+{% include sg_article_footer.html %}

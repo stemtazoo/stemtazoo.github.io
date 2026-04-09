@@ -110,7 +110,6 @@ next: /sg/case-solving-template/
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 - ブルートフォース攻撃＝「総当たりでパスワードを試す」
 - シンプルだが確実な攻撃
@@ -118,3 +117,5 @@ next: /sg/case-solving-template/
   👉 試行回数制限＋多要素認証
 - 試験では  
   👉 「推測型か漏えい型か」で切り分ける
+
+{% include sg_article_footer.html %}

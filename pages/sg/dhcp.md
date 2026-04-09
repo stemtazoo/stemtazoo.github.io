@@ -96,10 +96,11 @@ SG試験ではここがよく狙われます。
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 - DHCPは「IPアドレスを自動で割り当てる仕組み」
 - 手動設定を不要にし、管理を効率化する
 - サーバや重要機器は固定IPにするのが基本
 - DHCPとDNS・NAT・ARPの違いは頻出
 - 選択肢では「自動付与」かどうかで判断する
+
+{% include sg_article_footer.html %}

@@ -113,10 +113,11 @@ next: /sg/vishing/
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 - 委託先管理＝外部委託のリスク管理  
 - 3段階（委託前・中・後）で考える  
 - 責任は委託元に残る  
 - 契約だけでなく監督が必要  
 - 「丸投げしていないか」で判断する
+
+{% include sg_article_footer.html %}

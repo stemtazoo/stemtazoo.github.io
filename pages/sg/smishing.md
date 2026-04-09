@@ -91,9 +91,10 @@ next: /sg/smtp-port-packet-filtering/
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 - スミッシング＝SMS版フィッシング  
 - SMS＋URL＋入力 → 典型パターン  
 - フィッシング（メール）と手段で区別  
 - ビッシング（電話）との違いも押さえる
+
+{% include sg_article_footer.html %}

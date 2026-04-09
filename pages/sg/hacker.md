@@ -101,10 +101,11 @@ next: /sg/honeypot/
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 - ハッカー＝高い技術力を持つ人（中立）
 - 悪意がある場合はクラッカーと呼ぶ
 - ホワイトハッカーは防御側の専門家
 - SG試験では「ハッカー＝悪意」は誤り
 - 判断基準は「技術」ではなく「目的」
+
+{% include sg_article_footer.html %}

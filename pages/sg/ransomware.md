@@ -99,10 +99,11 @@ next: /sg/residual-risk/
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 - ランサムウェア＝データを暗号化して身代金要求  
 - 可用性の侵害が中心  
 - 二重脅迫で機密性も侵害  
 - 感染経路はメール・Webなど  
 - 判断基準は「使えなくする＋金銭要求」
+
+{% include sg_article_footer.html %}

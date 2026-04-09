@@ -76,7 +76,6 @@ next: /sg/client-server-system/
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 - クリックジャッキング＝透明画面でクリック操作をだます攻撃  
 - 利用者の操作を利用する（マルウェア不要）  
@@ -85,3 +84,5 @@ next: /sg/client-server-system/
 
 👉 判断基準：  
 **見えている画面と、実際の操作がズレているか？**
+
+{% include sg_article_footer.html %}

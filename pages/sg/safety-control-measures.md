@@ -128,10 +128,11 @@ next: /sg/sandbox/
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 - 安全管理措置＝個人情報を守る対策  
 - 4分類（組織・人的・物理・技術）を覚える  
 - 問題は「どの分類か」で判断  
 - 技術だけでなく人・ルールも重要  
 - 「対策の種類ズレ」に注意
+
+{% include sg_article_footer.html %}

@@ -88,10 +88,11 @@ SG試験では「**攻撃元が1つか複数か**」で切り分けます。
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 - DoS＝**単一攻撃元**
 - DDoS＝**複数攻撃元（分散）**
 - 「ボットネット」が出たらDDoS
 - 手法（SYNなど）ではなく構成で判断
 - SG試験では「誰が攻撃しているか」で切る
+
+{% include sg_article_footer.html %}

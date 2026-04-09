@@ -103,10 +103,11 @@ SG試験では、
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 - スパイウェア＝情報を盗むマルウェア  
 - ID・パスワードなどを収集・送信  
 - 気づかれにくいのが特徴  
 - キーロガーはその一種  
 - 判断基準は「目的が情報収集かどうか」
+
+{% include sg_article_footer.html %}

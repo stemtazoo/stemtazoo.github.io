@@ -108,7 +108,6 @@ SG試験では
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 - JPCERT/CC＝**日本のインシデント対応支援組織（CSIRT）**
 - 政府ではなく**中立・独立の組織**
@@ -119,3 +118,5 @@ SG試験では
   - 「インシデント対応支援」→○  
 
 👉 **「誰の組織か」ではなく「何をするか」で切る**
+
+{% include sg_article_footer.html %}

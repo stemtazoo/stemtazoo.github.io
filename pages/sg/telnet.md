@@ -119,10 +119,11 @@ SG試験では、
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 - Telnet＝遠隔操作（TCP23番ポート）
 - 通信は暗号化されない（平文）
 - 初期パスワードと組み合わさると危険
 - IoT機器の乗っ取り（ボット化）の原因になる
 - SSHとの違い（暗号化あり／なし）で判断する
+
+{% include sg_article_footer.html %}

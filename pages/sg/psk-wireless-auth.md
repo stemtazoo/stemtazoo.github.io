@@ -124,9 +124,10 @@ SG試験ではこう問われます：
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 - PSKは「無線LANに接続できるか」を決める認証方式  
 - セミナーなどでは「鍵を毎回変更」が基本対策  
 - DHCPやURLフィルタは「接続後」の制御なので不正解  
 - SG試験では「接続前か・接続後か」で選択肢を切る
+
+{% include sg_article_footer.html %}

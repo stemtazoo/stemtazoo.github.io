@@ -101,10 +101,11 @@ next: /sg/disciplinary-action/
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 - 「../」などで上位ディレクトリへ移動 → ファイル不正取得  
 - DB操作ならSQLインジェクション、ファイル参照なら本攻撃  
 - 原因は入力値チェック不足（設計ミス）  
 - 認証や権限管理とは別の問題  
 - 選択肢では「ファイルパス操作かどうか」で判断する
+
+{% include sg_article_footer.html %}

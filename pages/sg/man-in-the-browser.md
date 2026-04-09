@@ -90,10 +90,11 @@ SG試験では
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 - MITB＝**ブラウザ内で通信内容を改ざんする攻撃**
 - ポイントは「通信途中ではなくPC内部」
 - フィッシング：偽サイトに誘導  
 - MITM：通信途中で盗聴・改ざん  
 - 選択肢で「マルウェアがブラウザ内で改ざん」とあれば正解
+
+{% include sg_article_footer.html %}

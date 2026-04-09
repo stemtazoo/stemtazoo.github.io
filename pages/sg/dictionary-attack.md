@@ -118,7 +118,6 @@ next: /sg/directory-traversal/
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 - 辞書攻撃＝「よく使われるパスワードを優先して試す」
 - 総当たりより効率が良い
@@ -126,3 +125,5 @@ next: /sg/directory-traversal/
   👉 複雑なパスワード＋MFA
 - 試験では  
   👉 「総当たりか効率型か」で切り分ける
+
+{% include sg_article_footer.html %}

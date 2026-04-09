@@ -113,7 +113,6 @@ next: /sg/risk-response-cia/
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 - リバースブルートフォース＝「パスワード固定で複数IDを試す」
 - 特徴は  
@@ -122,3 +121,5 @@ next: /sg/risk-response-cia/
   👉 MFA＋使い回し防止＋異常検知
 - 試験では  
   👉 「ID固定かパスワード固定か」で切り分ける
+
+{% include sg_article_footer.html %}

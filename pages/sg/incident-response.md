@@ -116,10 +116,11 @@ next: /sg/information-security-management-exam/
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 - インシデント対応＝事故時の対応  
 - 最優先は拡大防止  
 - 流れは「検知→拡大防止→調査→復旧→再発防止」  
 - 原因調査や復旧は後  
 - 「最初に何をするか」で選択肢を切る
+
+{% include sg_article_footer.html %}

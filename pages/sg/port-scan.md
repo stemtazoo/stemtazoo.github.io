@@ -111,7 +111,6 @@ next: /sg/privacy-separator/
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 - ポートスキャン＝「開いているポートを調べる行為」
 - 攻撃では  
@@ -120,3 +119,5 @@ next: /sg/privacy-separator/
   👉 不要サービスの確認
 - 試験では  
   👉 「目的が攻撃か対策か」で判断する
+
+{% include sg_article_footer.html %}

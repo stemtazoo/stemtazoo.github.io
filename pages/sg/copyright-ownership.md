@@ -128,7 +128,6 @@ next: /sg/cracker/
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 
 - 外注 → **著作権は委託先**
@@ -148,3 +147,5 @@ next: /sg/cracker/
 - NDAが出てきたら → **ひっかけを疑う**
 
 ---
+
+{% include sg_article_footer.html %}

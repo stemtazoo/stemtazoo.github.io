@@ -120,10 +120,11 @@ HTTPが選択肢にあれば「危険」と判断することが多いです。
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 - HTTP＝平文通信（危険）
 - HTTPS＝暗号化通信（安全）
 - ポート：80（HTTP）／443（HTTPS）
 - SG試験では「暗号化されているか」で判断
 - HTTPSでもサイト自体の安全性は別問題
+
+{% include sg_article_footer.html %}

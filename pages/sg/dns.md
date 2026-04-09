@@ -101,7 +101,6 @@ DNS（Domain Name System）は、
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 - DNS＝「名前→IPアドレス」の変換
 - 通信の前に必ず使われる仕組み
@@ -109,3 +108,5 @@ DNS（Domain Name System）は、
   👉 偽サイトに誘導される
 - 試験では  
   👉 「名前解決か通信か」を切り分ける
+
+{% include sg_article_footer.html %}
