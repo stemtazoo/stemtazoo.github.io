@@ -1,10 +1,10 @@
 ## 🔗 関連記事
 
-{% assign current_tags = page.tags | default: empty %}
+{% assign current_tags = page.tags %}
 {% assign count = 0 %}
 
 <ul style="padding-left: 20px;">
-{% if current_tags != empty %}
+{% if current_tags and current_tags.size > 0 %}
   {% for p in site.pages %}
     {% if p.url != page.url and p.tags %}
       {% assign matched = false %}
@@ -40,17 +40,14 @@
   🏠 <a href="{{ '/sg/' | relative_url }}">情報セキュリティマネジメントトップに戻る</a>
 </div>
 
-{% assign prev_url = page.prev %}
-{% assign next_url = page.next %}
-
 <div class="page-navigation" style="margin-top:12px;">
-  {% if prev_url %}
-    {% assign prev_page = site.pages | where: "url", prev_url | first %}
-    <a class="prev" href="{{ prev_url | relative_url }}">← {% if prev_page %}{{ prev_page.title }}{% else %}前の記事{% endif %}</a>
+  {% if page.prev %}
+    {% assign prev_page = site.pages | where: "url", page.prev | first %}
+    <a class="prev" href="{{ page.prev | relative_url }}">← {% if prev_page %}{{ prev_page.title }}{% else %}前の記事{% endif %}</a>
   {% endif %}
 
-  {% if next_url %}
-    {% assign next_page = site.pages | where: "url", next_url | first %}
-    <a class="next" href="{{ next_url | relative_url }}">{% if next_page %}{{ next_page.title }}{% else %}次の記事{% endif %} →</a>
+  {% if page.next %}
+    {% assign next_page = site.pages | where: "url", page.next | first %}
+    <a class="next" href="{{ page.next | relative_url }}">{% if next_page %}{{ next_page.title }}{% else %}次の記事{% endif %} →</a>
   {% endif %}
 </div>
