@@ -93,10 +93,11 @@ SG試験では次のように混同させてきます。
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 - WAF＝**Webアプリへの攻撃を検知・遮断する仕組み**  
 - 通信の「中身」を見て判断するのが特徴  
 - SQLインジェクション・XSS対策に使う  
 - SG試験では  
   → サンドボックス・ハニーポットとの違いで出題されやすい
+
+{% include sg_article_footer.html %}

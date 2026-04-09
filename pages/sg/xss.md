@@ -97,9 +97,10 @@ SG試験では「スクリプトが実行されるかどうか」で見分ける
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 - XSS＝スクリプトを利用者のブラウザで実行させる攻撃
 - 被害はCookie盗取やセッション乗っ取り
 - CSRFは「リクエスト悪用」、XSSは「スクリプト実行」
 - 選択肢で「スクリプト」「ブラウザ実行」があればXSSを疑う
+
+{% include sg_article_footer.html %}

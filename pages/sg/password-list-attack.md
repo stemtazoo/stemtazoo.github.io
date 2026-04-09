@@ -107,7 +107,6 @@ next: /sg/phishing/
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 - パスワードリスト攻撃＝「流出情報の使い回し攻撃」
 - 特徴は  
@@ -116,3 +115,5 @@ next: /sg/phishing/
   👉 使い回し禁止＋MFA
 - 試験では  
   👉 「推測か流出か」で切り分ける
+
+{% include sg_article_footer.html %}

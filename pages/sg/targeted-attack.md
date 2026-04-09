@@ -121,7 +121,6 @@ next: /sg/telnet/
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 - 標的型攻撃＝「特定の相手を狙った攻撃」
 - 特徴は  
@@ -131,3 +130,5 @@ next: /sg/telnet/
   👉 防止＋検知＋被害抑止の組み合わせ
 - 選択肢では  
   👉 「人・運用・技術のどれが不足しているか」で判断する
+
+{% include sg_article_footer.html %}

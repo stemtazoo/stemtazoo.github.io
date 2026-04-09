@@ -112,7 +112,6 @@ next: /sg/dos-attack-difference/
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 - ドメイン名ハイジャック＝「DNSを書き換えて偽サイトへ誘導」
 - 特徴は  
@@ -121,3 +120,5 @@ next: /sg/dos-attack-difference/
   👉 DNSの正当性確認＋証明書確認
 - 試験では  
   👉 「通信途中か／接続先か」で切り分ける
+
+{% include sg_article_footer.html %}

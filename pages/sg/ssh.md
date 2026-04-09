@@ -104,10 +104,11 @@ SG試験ではこの対比が頻出です。
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 - SSH＝安全な遠隔操作（TCP22番ポート）
 - 通信は暗号化される
 - Telnetの代替として使われる
 - SG試験では「安全な選択肢」として出る
 - Telnetとの違い（暗号化の有無）で判断する
+
+{% include sg_article_footer.html %}

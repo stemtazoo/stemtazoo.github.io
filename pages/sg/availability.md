@@ -127,7 +127,6 @@ next: /sg/blacklist-whitelist/
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 - 稼働率＝使えた時間 ÷ 提供時間
 - 分母は「サービス提供時間」
@@ -135,3 +134,5 @@ next: /sg/blacklist-whitelist/
 - 回数ではなく「時間」で考える
 - SG試験は  
   👉 「何を分母にしたか」で正誤が決まる
+
+{% include sg_article_footer.html %}

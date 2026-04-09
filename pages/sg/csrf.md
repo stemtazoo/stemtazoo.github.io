@@ -97,9 +97,10 @@ SG試験では「本人の操作に見せかける攻撃かどうか」を見抜
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 - CSRF＝ログイン状態を悪用したなりすまし操作
 - サーバは正規ユーザの操作と区別できない
 - XSSは「スクリプト実行」、CSRFは「リクエスト悪用」
 - 選択肢で「本人の意思でない操作」があればCSRFを疑う
+
+{% include sg_article_footer.html %}

@@ -99,10 +99,11 @@ next: /sg/security-measures-cia/
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 - スクリプトキディ＝ツール頼みの初心者攻撃者
 - 技術力は低いが数が多く無差別攻撃をする
 - 既知の脆弱性を狙うのが特徴
 - 基本的なセキュリティ対策で防げる
 - SG試験では「高度攻撃との違い」で判断する
+
+{% include sg_article_footer.html %}

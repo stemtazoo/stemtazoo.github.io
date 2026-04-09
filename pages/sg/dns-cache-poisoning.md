@@ -94,7 +94,6 @@ SG試験では
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 - DNSポイズニング＝**行き先（IPアドレス）を書き換える攻撃**
 - 正しいURLでも偽サイトに誘導される
@@ -102,3 +101,5 @@ SG試験では
 - MITB：ブラウザ内改ざん  
 - MITM：通信途中で改ざん  
 - 「DNSキャッシュを書き換える」とあれば正解
+
+{% include sg_article_footer.html %}

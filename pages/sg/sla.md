@@ -115,7 +115,6 @@ next: /sg/smishing/
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 
 - SLA → サービス品質の数値化  
@@ -126,3 +125,5 @@ next: /sg/smishing/
 👉 曖昧表現 → NG  
 
 ---
+
+{% include sg_article_footer.html %}

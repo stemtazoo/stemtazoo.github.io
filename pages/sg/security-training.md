@@ -106,10 +106,11 @@ next: /sg/session-hijacking/
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 - 教育・訓練＝人的リスク対策  
 - 教育（知識）＋訓練（実践）がセット  
 - 人のミスは技術だけでは防げない  
 - 問題は「原因が人か」で判断  
 - 「対策の種類ズレ」に注意
+
+{% include sg_article_footer.html %}

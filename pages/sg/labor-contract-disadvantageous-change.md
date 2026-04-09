@@ -113,10 +113,11 @@ next: /sg/labor-law-difference/
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 - 不利益変更は原則NG  
 - 例外は「合理性あり」の場合のみ  
 - 就業規則＋意見聴取＋周知がセット  
 - 個別合意で不利にするのはNG  
 - 「強化＝OK」ではなく「合理性」で判断する
+
+{% include sg_article_footer.html %}

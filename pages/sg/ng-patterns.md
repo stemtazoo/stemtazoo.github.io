@@ -135,10 +135,11 @@ SG試験のひっかけはパターン化されています👇
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 - SGは「ズレ」を見抜く試験  
 - 原因と対策が一致しているかを見る  
 - インシデントは順番に注意  
 - 委託は丸投げNG  
 - 手続き違反は即NG
+
+{% include sg_article_footer.html %}

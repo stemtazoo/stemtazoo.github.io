@@ -100,10 +100,11 @@ SG試験ではここを見ます👇
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 - 懲戒処分は就業規則が前提  
 - 就業規則にない処分はNG  
 - 重すぎる処分もNG（合理性必要）  
 - 個別合意で重くするのはNG  
 - 「ルール＋バランス」で判断する
+
+{% include sg_article_footer.html %}

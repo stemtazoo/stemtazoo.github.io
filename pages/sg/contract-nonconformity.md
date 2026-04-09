@@ -119,7 +119,6 @@ next: /sg/contract-types/
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 
 - 契約不適合責任 → 契約と違えば発生  
@@ -130,3 +129,5 @@ next: /sg/contract-types/
 👉 NO → 責任発生  
 
 ---
+
+{% include sg_article_footer.html %}

@@ -121,10 +121,11 @@ SG試験ではこう出ます：
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 - WPA2/WPA3（PSK）は共通パスワードで接続する方式  
 - 802.1Xは利用者ごとに認証する方式  
 - セミナーや来客用 → PSK  
 - 社内ネットワーク → 802.1X  
 - SG試験では「共通か個別か」で切り分ける
+
+{% include sg_article_footer.html %}

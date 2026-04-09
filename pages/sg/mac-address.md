@@ -85,7 +85,6 @@ MACアドレス（Media Access Controlアドレス）は、
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 - MACアドレス＝機器ごとの固有番号（物理アドレス）
 - LAN内通信で相手を特定するために使う
@@ -93,3 +92,5 @@ MACアドレス（Media Access Controlアドレス）は、
 - MACアドレス制御はあるが、なりすまし可能で万能ではない
 
 👉 **「LAN内＝MAC」「ネットワーク全体＝IP」この切り分けが最重要**
+
+{% include sg_article_footer.html %}

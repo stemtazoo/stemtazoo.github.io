@@ -105,10 +105,11 @@ SG試験では、
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 - ボット＝遠隔操作されるマルウェア  
 - C&Cサーバが命令を出す  
 - ボットネット＝感染端末の集合  
 - 主な用途はDDoS・スパム・踏み台  
 - 判断基準は「遠隔操作・複数端末・指令サーバ」
+
+{% include sg_article_footer.html %}

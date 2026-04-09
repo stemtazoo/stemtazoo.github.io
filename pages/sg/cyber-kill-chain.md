@@ -119,7 +119,6 @@ next: /sg/ddos-attack-summary/
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 - サイバーキルチェーン＝攻撃を7段階に分解した考え方
 - 重要なのは  
@@ -128,3 +127,5 @@ next: /sg/ddos-attack-summary/
   👉 防止・検知・被害抑止を組み合わせる
 - 試験では  
   👉 「この対策はどのフェーズか」で判断する
+
+{% include sg_article_footer.html %}

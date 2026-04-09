@@ -127,7 +127,6 @@ MTBF（Mean Time Between Failures）は、
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 - MTBF＝故障と故障の間の時間（稼働時間）
 - 長いほど「壊れにくい」
@@ -135,3 +134,5 @@ MTBF（Mean Time Between Failures）は、
 - 稼働率はMTBFとMTTRで決まる
 - SG試験は  
   👉 「壊れている時間か？動いている時間か？」で切る
+
+{% include sg_article_footer.html %}

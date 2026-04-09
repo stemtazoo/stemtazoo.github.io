@@ -99,10 +99,11 @@ next: /sg/unauthorized-access-techniques/
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 - タイムスタンプ＝**存在証明（いつあったか）**
 - コピー防止ではない
 - 改ざん防止ではない（検知のみ）
 - キーワードは**否認防止**
 - 選択肢で「防止」と書かれていたら疑う
+
+{% include sg_article_footer.html %}

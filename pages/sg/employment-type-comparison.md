@@ -137,7 +137,6 @@ next: /sg/five-basic-components/
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 
 - 判断基準はこの2つだけ  
@@ -153,3 +152,5 @@ next: /sg/five-basic-components/
 
 👉 迷ったらこれ  
 **「派遣だけ別物」**
+
+{% include sg_article_footer.html %}

@@ -79,10 +79,11 @@ SG試験では「**増幅か／接続枯渇か**」で切り分けます。
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 - リフレクター攻撃＝**増幅型DDoS**
 - SYNフラッド＝**接続枯渇型DoS**
 - DNSが出たらリフレクターを疑う
 - SYNが出たら即SYNフラッド
 - 「通信量か接続か」で判断
+
+{% include sg_article_footer.html %}

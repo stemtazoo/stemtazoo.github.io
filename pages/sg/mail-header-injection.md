@@ -80,9 +80,10 @@ next: /sg/malware/
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 - メールヘッダーインジェクション＝改行でメール構造を改ざん  
 - 入力値をそのまま使う設計ミスが原因  
 - フィッシングは人、インジェクションはシステムを狙う  
 - 「改行コード」「ヘッダー追加」が出たら即判断
+
+{% include sg_article_footer.html %}

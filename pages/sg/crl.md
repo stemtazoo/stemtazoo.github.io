@@ -102,10 +102,11 @@ CRLは
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 - CRLは「失効した証明書の一覧」
 - 有効期限内でも失効は起こる
 - 「期限内＝安全」は誤り
 - CRLは“ブラックリスト”と覚える
 - SG試験では「期限」と「失効の違い」を見抜く
+
+{% include sg_article_footer.html %}

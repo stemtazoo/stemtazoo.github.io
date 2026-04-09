@@ -132,7 +132,6 @@ MTTR（Mean Time To Repair / Recovery）は、
 
 ## まとめ（試験直前用）
 
-{% include sg_article_footer.html %}
 
 - MTTR＝復旧までの時間
 - 短いほど良い（影響が小さい）
@@ -140,3 +139,5 @@ MTTR（Mean Time To Repair / Recovery）は、
 - 稼働率に直接影響する
 - SG試験は  
   👉 「復旧の速さの話か？」で判断する
+
+{% include sg_article_footer.html %}
