@@ -16,7 +16,7 @@
 
     {% if matched %}
       <li style="margin-bottom: 6px;">
-        <a href="{{ p.url }}">{{ p.title }}</a>
+        <a href="{{ p.url | relative_url }}">{{ p.title }}</a>
       </li>
       {% assign count = count | plus: 1 %}
     {% endif %}
@@ -31,17 +31,20 @@
 <hr>
 
 <div style="margin-top: 16px;">
-  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+  🏠 <a href="{{ '/sg/' | relative_url }}">情報セキュリティマネジメントトップに戻る</a>
 </div>
 
+{% assign prev_url = page.prev %}
+{% assign next_url = page.next %}
+
 <div class="page-navigation" style="margin-top:12px;">
-  {% if page.prev %}
-    {% assign prev_page = site.pages | where: "url", page.prev | first %}
-    <a class="prev" href="{{ page.prev }}">← {% if prev_page %}{{ prev_page.title }}{% else %}前の記事{% endif %}</a>
+  {% if prev_url %}
+    {% assign prev_page = site.pages | where: "url", prev_url | first %}
+    <a class="prev" href="{{ prev_url | relative_url }}">← {% if prev_page %}{{ prev_page.title }}{% else %}前の記事{% endif %}</a>
   {% endif %}
 
-  {% if page.next %}
-    {% assign next_page = site.pages | where: "url", page.next | first %}
-    <a class="next" href="{{ page.next }}">{% if next_page %}{{ next_page.title }}{% else %}次の記事{% endif %} →</a>
+  {% if next_url %}
+    {% assign next_page = site.pages | where: "url", next_url | first %}
+    <a class="next" href="{{ next_url | relative_url }}">{% if next_page %}{{ next_page.title }}{% else %}次の記事{% endif %} →</a>
   {% endif %}
 </div>
