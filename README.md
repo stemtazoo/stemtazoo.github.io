@@ -51,6 +51,8 @@
   - `pages/ds` のスキルチェック表示に使う JSON / CSV を生成します
 - `scripts/export_ds_notebooklm.py`
   - `pages/ds` の記事を NotebookLM 用 Markdown に書き出します
+- `scripts/export_sg_notebooklm.py`
+  - `pages/sg` の記事を NotebookLM 用 Markdown に書き出します
 - `scripts/lint_ds_frontmatter.py`
   - `pages/ds` の front matter の整合性確認に使えます
 - `scripts/submit_indexnow.py`
@@ -101,6 +103,80 @@ python scripts/export_ds_notebooklm.py --groups-file exports/notebooklm/ds/group
 3. `python scripts/export_ds_notebooklm.py` を実行する
 
 必要に応じて `scripts/lint_ds_frontmatter.py` で front matter の揺れも確認できます。
+
+### NotebookLM 向け SG エクスポート
+
+`pages/sg/*.md` を、NotebookLM に読み込ませやすい Markdown として書き出すために `scripts/export_sg_notebooklm.py` を使います。
+
+#### これはいつ実行するか
+
+`pages/sg/` に記事を追加したあと、次のどれかに当てはまるときは実行します。
+
+- 新しい SG 記事を追加した
+- 既存の記事本文を大きく更新した
+- `pages/sg/index.md` の「まず読む3記事」やカテゴリ一覧を更新した
+
+このスクリプトを実行すると、SG 記事をまとめた NotebookLM 用 Markdown が最新状態になります。
+
+#### 基本実行
+
+```bash
+python scripts/export_sg_notebooklm.py
+```
+
+`python` コマンドが使えない環境では、`py scripts/export_sg_notebooklm.py` や、インストール済みの Python 実行ファイルを指定して実行します。
+
+#### 何をもとにグループ化しているか
+
+デフォルトでは `pages/sg/index.md` を読み、次のまとまりごとに出力します。
+
+- 「まず読む3記事」
+- 「試験概要」
+- 各カテゴリ見出し
+  - 情報セキュリティ全般
+  - 情報セキュリティ管理
+  - 情報セキュリティ対策
+  - 情報セキュリティ関連法規
+  - テクノロジ
+  - マネジメント
+  - ストラテジ
+
+つまり、記事だけでなく `pages/sg/index.md` の見出し名や掲載場所を変えた場合も、再実行して出力を更新します。
+
+#### 出力先
+
+- `exports/notebooklm/sg/sections/*.md`: セクションごとのファイル
+- `exports/notebooklm/sg/all.md`: 全セクションを結合したファイル
+
+#### 記事を追加した後のおすすめ手順
+
+1. `pages/sg/` に記事を追加する
+2. 追加した記事の `title` `permalink` `tags` を確認する
+3. 必要なら `pages/sg/index.md` の掲載カテゴリや「まず読む3記事」を更新する
+4. `python scripts/export_sg_notebooklm.py` を実行する
+5. `exports/notebooklm/sg/all.md` または `exports/notebooklm/sg/sections/` を開いて内容を確認する
+
+#### グループ定義を手動で指定したい場合
+
+`pages/sg/index.md` ではなく、外部 JSON を使って書き出したい場合は `--groups-file` を指定します。
+
+```bash
+python scripts/export_sg_notebooklm.py --groups-file path/to/sg-groups.json
+```
+
+JSON の例:
+
+```json
+{
+  "groups": [
+    {
+      "id": "network",
+      "title": "ネットワーク",
+      "items": ["/sg/dns/", "/sg/dhcp/"]
+    }
+  ]
+}
+```
 
 ## デプロイ関連
 
