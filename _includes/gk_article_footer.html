@@ -38,19 +38,23 @@
 {% assign next_url = page.next %}
 
 {% if prev_url == nil or next_url == nil %}
-  {% assign section_pages = site.pages | where_exp: "p", "p.tags contains 'gk' and p.gk_section == page.gk_section and p.gk_order" | sort: "gk_order" %}
-  {% for section_page in section_pages %}
-    {% if section_page.url == page.url %}
-      {% assign index = forloop.index0 %}
-      {% assign prev_index = index | minus: 1 %}
-      {% assign next_index = index | plus: 1 %}
-      {% if prev_url == nil and prev_index >= 0 %}
-        {% assign prev_url = section_pages[prev_index].url %}
+  {% assign current_order = page.gk_order | plus: 0 %}
+  {% assign prev_order = -1 %}
+  {% assign next_order = 999999 %}
+
+  {% for section_page in site.pages %}
+    {% if section_page.url != page.url and section_page.tags and section_page.tags contains 'gk' and section_page.gk_section == page.gk_section and section_page.gk_order %}
+      {% assign candidate_order = section_page.gk_order | plus: 0 %}
+
+      {% if prev_url == nil and candidate_order < current_order and candidate_order > prev_order %}
+        {% assign prev_url = section_page.url %}
+        {% assign prev_order = candidate_order %}
       {% endif %}
-      {% if next_url == nil and next_index < section_pages.size %}
-        {% assign next_url = section_pages[next_index].url %}
+
+      {% if next_url == nil and candidate_order > current_order and candidate_order < next_order %}
+        {% assign next_url = section_page.url %}
+        {% assign next_order = candidate_order %}
       {% endif %}
-      {% break %}
     {% endif %}
   {% endfor %}
 {% endif %}
