@@ -1,0 +1,208 @@
+﻿---
+layout: page
+title: 共分散と相関係数の違いとは？【DS検定リテラシー】
+description: 共分散と相関係数の違いは関連概念を切り分けるための考え方です。この記事では定義・尺度の差分と解釈の要点、DS検定で問われる判断ポイントを解説します。
+permalink: /ds/covariance-and-correlation/
+categories: [data-science]
+tags: [ds, statistics]
+prev: /ds/correlation-vs-causation/
+next: /ds/covariance-correlation/
+---
+<div style="font-size: 14px; margin-bottom: 12px;">
+  <a href="/ds/">DS検定トップ</a>
+  ＞ {{ page.title }}
+</div>
+
+## まず結論
+
+共分散は「2つの変数が一緒にどう動くか」を表す指標で、相関係数はそれを「−1〜1に正規化したもの」です。
+
+DS検定では、「共分散と相関係数の違い」を理解しているか、特に“単位の影響”を区別できるかが問われます。
+
+
+## 直感的な説明
+
+たとえば、
+
+- 勉強時間とテストの点数  
+- 気温とアイスの売上  
+
+このように「一方が増えるともう一方も増える」関係があります。
+
+### 共分散は何を見る？
+
+「同じ方向に動いているかどうか」を見ます。
+
+- プラス → 同じ方向に動く  
+- マイナス → 逆方向に動く  
+
+ただし、値の大きさは単位に左右されます。
+
+
+### 相関係数は何を見る？
+
+共分散を“ばらつき”で割って、  
+**単位の影響を取り除いたもの**が相関係数です。
+
+その結果、
+
+- 値は −1〜1 の範囲  
+- 強さを比較できる  
+
+という性質を持ちます。
+
+
+## 定義・仕組み
+
+### 共分散の式
+
+$$
+\mathrm{Cov}(X, Y) = \frac{1}{n} \sum (x_i - \bar{x})(y_i - \bar{y})
+$$
+
+意味は、
+
+> 「Xが平均より大きいとき、Yも平均より大きいか？」
+
+を全体で見ている、ということです。
+
+
+### 相関係数の式
+
+$$
+r = \frac{\mathrm{Cov}(X, Y)}{\sigma_X \sigma_Y}
+$$
+
+つまり、
+
+> 共分散 ÷（それぞれの標準偏差）
+
+です。
+
+標準偏差で割ることで、
+
+- 単位の影響を除く  
+- 値を −1〜1 に収める  
+
+という効果があります。
+
+DS検定では、
+
+「相関係数は共分散を正規化したもの」
+
+と理解していれば十分です。
+
+
+## どんな場面で使う？
+
+### 共分散を使う場面
+
+- 数学的な理論展開  
+- 分散共分散行列の計算  
+- 多変量解析の内部処理  
+
+ビジネス現場では、共分散単体で解釈することはあまり多くありません。
+
+
+### 相関係数を使う場面
+
+- 変数間の関係の強さを比較したいとき  
+- 特徴量の関係を確認したいとき  
+- 多重共線性をチェックするとき  
+
+実務では、ほとんどの場合「相関係数」を使います。
+
+
+## よくある誤解・混同
+
+### ① 共分散の値の大きさ＝関係が強い？
+
+これは誤りです。
+
+共分散は単位に依存します。
+
+売上（円）と気温（℃）の共分散と、
+売上（万円）と気温（℃）の共分散は値が変わります。
+
+DS検定では、
+
+> 「共分散が大きいほど関係が強い」
+
+という選択肢は注意が必要です。
+
+
+### ② 相関係数は単位に依存する？
+
+誤りです。
+
+相関係数は正規化されているため、単位の影響を受けません。
+
+
+### ③ 共分散と相関係数の符号の違い
+
+符号（プラス・マイナス）は一致します。
+
+方向性は同じです。
+
+
+## まとめ（試験直前用）
+
+- 共分散：一緒に動く方向を見る指標（単位に依存）  
+- 相関係数：共分散を正規化したもの（−1〜1）  
+- 実務で解釈するのは基本的に相関係数  
+- 共分散の大きさは比較に使えない  
+- 符号は一致する  
+
+
+## 対応スキル項目（データサイエンス力シート）
+- データ理解
+- データの関係性把握
+- ★ 共分散と相関係数の違いを理解している
+
+## 🔗 関連記事
+
+<ul style="padding-left: 20px;">
+{% assign current_tags = page.tags %}
+{% assign count = 0 %}
+
+{% for p in site.pages %}
+  {% if p.url != page.url and p.tags %}
+    {% assign matched = false %}
+
+    {% for tag in current_tags %}
+      {% if p.tags contains tag and tag != "ds" %}
+        {% assign matched = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if matched %}
+      <li style="margin-bottom: 6px;">
+        <a href="{{ p.url }}">{{ p.title }}</a>
+      </li>
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+
+    {% if count >= 5 %}
+      {% break %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>
+
+<hr>
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/ds/">DS検定トップに戻る</a>
+</div>
+
+<div style="display:flex;justify-content:space-between;margin-top:12px;">
+
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
+  {% endif %}
+
+  {% if page.next.url %}
+    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
+  {% endif %}
+
+</div>

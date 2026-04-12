@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>フィッシングとは？だましの手口と見抜き方【情報セキュリティマネジメント】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="フィッシングとは？だましの手口と見抜き方【情報セキュリティマネジメント】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="フィッシングはだましの手口と見抜き方を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:description" content="フィッシングはだましの手口と見抜き方を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="フィッシングとは？だましの手口と見抜き方【情報セキュリティマネジメント】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"フィッシングはだましの手口と見抜き方を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。","headline":"フィッシングとは？だましの手口と見抜き方【情報セキュリティマネジメント】","url":"/sg/phishing/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">フィッシングとは？だましの手口と見抜き方【情報セキュリティマネジメント】</h1>
+      <h2 class="project-tagline">フィッシングはだましの手口と見抜き方を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">フィッシングはだましの手口と見抜き方を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">security_measures</span>
+        
+          <span class="post-tag">unauthorized_access</span>
+        
+          <span class="post-tag">data_leakage</span>
+        
+          <span class="post-tag">sg-security-measures</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+<ul>
+  <li>フィッシングとは、偽のメールやWebサイトで利用者をだまし、認証情報などを入力させて盗み取る攻撃です。</li>
+  <li>SG試験では「だまして入力させる攻撃かどうか」を見抜けるかが問われます。</li>
+</ul>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>銀行から「不正アクセスがありました。今すぐ確認してください」というメールが届き、リンクをクリックすると本物そっくりの画面が出てきてID・パスワードを入力してしまう…。</p>
+
+<p>これがフィッシングです。</p>
+
+<p>👉 <strong>「本物に見せかけて入力させる」</strong>のがポイントです。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>フィッシング（phishing）は、実在する企業やサービスを装い、利用者を偽サイトに誘導して情報を盗む攻撃です。</p>
+
+<p>基本の流れは次の通りです。</p>
+
+<ol>
+  <li>攻撃者が偽のWebサイトを用意</li>
+  <li>メールなどでURLを送りつける</li>
+  <li>利用者がリンクをクリック</li>
+  <li>偽サイトでID・パスワードなどを入力</li>
+  <li>情報が攻撃者に送られる</li>
+</ol>
+
+<p>重要なのは<br />
+👉 <strong>「ユーザー自身に入力させる」点</strong>です。</p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="よく使われる場面">よく使われる場面</h3>
+<ul>
+  <li>銀行・クレジットカードのログイン情報の盗取</li>
+  <li>ECサイトのアカウント乗っ取り</li>
+  <li>社内システムの認証情報の奪取</li>
+</ul>
+
+<h3 id="業務でのポイント">業務でのポイント</h3>
+<ul>
+  <li>社員教育（不審メールの見分け）</li>
+  <li>URL確認の習慣化</li>
+  <li>多要素認証の導入</li>
+</ul>
+
+<p>👉 <strong>人の判断ミスを狙う攻撃なので、教育が重要</strong></p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+<h3 id="-ddos攻撃との混同">❌ DDoS攻撃との混同</h3>
+<ul>
+  <li>DDoS：サーバを止める攻撃</li>
+  <li>フィッシング：情報をだまし取る攻撃</li>
+</ul>
+
+<p>👉 <strong>目的が全く違う（停止 vs 盗取）</strong></p>
+
+<hr />
+
+<h3 id="-マルウェア感染との混同">❌ マルウェア感染との混同</h3>
+<ul>
+  <li>マルウェア：プログラムを感染させる</li>
+  <li>フィッシング：入力させて盗む</li>
+</ul>
+
+<p>👉 <strong>「入力させるかどうか」で見分ける</strong></p>
+
+<hr />
+
+<h3 id="-ボットとの混同">❌ ボットとの混同</h3>
+<ul>
+  <li>ボット：遠隔操作するためのプログラム</li>
+  <li>フィッシング：だまして情報を取得する手口</li>
+</ul>
+
+<p>👉 ボットは手段、フィッシングは攻撃手法</p>
+
+<hr />
+
+<h3 id="sg試験でのひっかけ">SG試験でのひっかけ</h3>
+<ul>
+  <li>「メールで誘導」＋「偽サイト」＋「入力させる」<br />
+→ この組み合わせならフィッシングと判断</li>
+</ul>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>フィッシング＝偽サイトに誘導して入力させる攻撃</li>
+  <li>「ユーザーが自分で入力する」が最大の特徴</li>
+  <li>DDoS（停止）・マルウェア（感染）と区別する</li>
+  <li>メール＋リンク＋入力フォーム → フィッシングと判断</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/blacklist-whitelist/">ブラックリストとホワイトリストの違いとは？判断基準を整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/bot/">ボットとは？遠隔操作される仕組みを理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/botnet/">ボットネットとは？踏み台化とDDoSの関係を理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/brute-force-attack/">ブルートフォース攻撃とは？総当たり攻撃の仕組みと対策【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/clickjacking/">クリックジャッキングとは？見えない操作誘導の仕組み【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/password-list-attack/">← パスワードリスト攻撃とは？使い回しを狙う不正ログイン【情報セキュリティマネジメント】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/port-number/">ポート番号とは？通信先サービスの識別を理解する【情報セキュリティマネジメント】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>DNSキャッシュポイズニングとは？偽サイトへ誘導する攻撃【情報セキュリティマネジメント】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="DNSキャッシュポイズニングとは？偽サイトへ誘導する攻撃【情報セキュリティマネジメント】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="DNSキャッシュポイズニングは偽サイトへ誘導する攻撃を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:description" content="DNSキャッシュポイズニングは偽サイトへ誘導する攻撃を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="DNSキャッシュポイズニングとは？偽サイトへ誘導する攻撃【情報セキュリティマネジメント】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"DNSキャッシュポイズニングは偽サイトへ誘導する攻撃を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。","headline":"DNSキャッシュポイズニングとは？偽サイトへ誘導する攻撃【情報セキュリティマネジメント】","url":"/sg/dns-cache-poisoning/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">DNSキャッシュポイズニングとは？偽サイトへ誘導する攻撃【情報セキュリティマネジメント】</h1>
+      <h2 class="project-tagline">DNSキャッシュポイズニングは偽サイトへ誘導する攻撃を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">DNSキャッシュポイズニングは偽サイトへ誘導する攻撃を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">security_measures</span>
+        
+          <span class="post-tag">unauthorized_access</span>
+        
+          <span class="post-tag">network</span>
+        
+          <span class="post-tag">sg-security-measures</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+<ul>
+  <li>DNSキャッシュポイズニングは、<strong>DNSサーバの情報を書き換えて正規サイトの代わりに偽サイトへ誘導する攻撃</strong></li>
+  <li>SG試験では「通信前の行き先を書き換える攻撃」として判断できるかが問われる</li>
+</ul>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>普段は「銀行のURL」を入力すると、正しい銀行サイトに接続されます。</p>
+
+<p>しかしこの攻撃では、</p>
+
+<ul>
+  <li>見た目は同じURLなのに</li>
+  <li><strong>裏側の案内（住所）が書き換えられていて、偽サイトに連れていかれる</strong></li>
+</ul>
+
+<p>イメージとしては、<br />
+「正しい住所を書いたのに、案内板が勝手に書き換えられて別の場所に誘導される」感じです。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>DNSキャッシュポイズニングは、DNSサーバのキャッシュ情報を不正に書き換える攻撃です。</p>
+
+<p>流れはシンプルです。</p>
+
+<ol>
+  <li>DNSサーバに不正な情報を登録させる</li>
+  <li>正規サイトのドメインに対して</li>
+  <li><strong>攻撃者のサーバのIPアドレスを返すようにする</strong></li>
+  <li>利用者は気づかず偽サイトへ接続する</li>
+</ol>
+
+<p>ポイントはここです：</p>
+
+<ul>
+  <li>ユーザのPCではなく</li>
+  <li><strong>DNSサーバ側がだまされている</strong></li>
+</ul>
+
+<p>そのため、利用者は正しいURLを入力しても被害に遭います。</p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+
+<h3 id="使われる場面">使われる場面</h3>
+<ul>
+  <li>インターネットバンキング</li>
+  <li>ECサイト</li>
+  <li>ログインページ全般</li>
+</ul>
+
+<p>→ <strong>ID・パスワードを入力させたい場面で使われる</strong></p>
+
+<hr />
+
+<h3 id="注意すべき場面誤解しやすい">注意すべき場面（誤解しやすい）</h3>
+<ul>
+  <li>ブラウザ内で改ざんするわけではない</li>
+  <li>メールで誘導するわけでもない</li>
+</ul>
+
+<p>SG試験では<br />
+「どこで操作が行われているか（DNSか、ブラウザか）」が重要</p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="フィッシングとの違い">フィッシングとの違い</h3>
+<ul>
+  <li>フィッシング：メールなどで偽サイトに誘導</li>
+  <li>DNSポイズニング：<strong>正しいURLでも偽サイトに行く</strong></li>
+</ul>
+
+<p>👉 「メール」「URLリンク」が出てきたらフィッシング</p>
+
+<hr />
+
+<h3 id="man-in-the-browserとの違い">Man-in-the-Browserとの違い</h3>
+<ul>
+  <li>MITB：ブラウザ内で改ざん</li>
+  <li>DNS：<strong>接続先そのものを変える</strong></li>
+</ul>
+
+<p>👉 「マルウェアがブラウザ内で改ざん」はMITB</p>
+
+<hr />
+
+<h3 id="man-in-the-middleとの違い">Man-in-the-Middleとの違い</h3>
+<ul>
+  <li>MITM：通信途中で盗聴・改ざん</li>
+  <li>DNS：<strong>接続前に行き先を変える</strong></li>
+</ul>
+
+<p>👉 「中継」「盗聴」があればMITM</p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>DNSポイズニング＝<strong>行き先（IPアドレス）を書き換える攻撃</strong></li>
+  <li>正しいURLでも偽サイトに誘導される</li>
+  <li>フィッシング：メール誘導</li>
+  <li>MITB：ブラウザ内改ざん</li>
+  <li>MITM：通信途中で改ざん</li>
+  <li>「DNSキャッシュを書き換える」とあれば正解</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/blacklist-whitelist/">ブラックリストとホワイトリストの違いとは？判断基準を整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/bot/">ボットとは？遠隔操作される仕組みを理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/botnet/">ボットネットとは？踏み台化とDDoSの関係を理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/brute-force-attack/">ブルートフォース攻撃とは？総当たり攻撃の仕組みと対策【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/clickjacking/">クリックジャッキングとは？見えない操作誘導の仕組み【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/dns-attack-difference/">← DNSリフレクター攻撃とDNSキャッシュポイズニングの違いを整理【SG試験】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/dns-poisoning-vs-pharming/">DNSキャッシュポイズニングとファーミングの違いを整理【SG試験】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

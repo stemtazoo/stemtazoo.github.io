@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>残留リスクとは？対応後にも残るリスクを理解する【情報セキュリティマネジメント】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="残留リスクとは？対応後にも残るリスクを理解する【情報セキュリティマネジメント】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="残留リスクは対応後にも残るリスクを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:description" content="残留リスクは対応後にも残るリスクを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="残留リスクとは？対応後にも残るリスクを理解する【情報セキュリティマネジメント】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"残留リスクは対応後にも残るリスクを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。","headline":"残留リスクとは？対応後にも残るリスクを理解する【情報セキュリティマネジメント】","url":"/sg/residual-risk/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">残留リスクとは？対応後にも残るリスクを理解する【情報セキュリティマネジメント】</h1>
+      <h2 class="project-tagline">残留リスクは対応後にも残るリスクを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">残留リスクは対応後にも残るリスクを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-management</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+<ul>
+  <li><strong>残留リスクとは「リスク対応を行った後でも残るリスク」</strong></li>
+  <li>SG試験では「対応してもゼロにならない」という前提を理解できているかが問われる</li>
+</ul>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>例えば「鍵をかける」対策をしても、泥棒が絶対に入れないわけではありません。</p>
+
+<ul>
+  <li>鍵をかける → リスクは下がる</li>
+  <li>でも「ゼロにはならない」</li>
+</ul>
+
+<p>この「対策してもまだ残っているリスク」が残留リスクです。</p>
+
+<p>👉 <strong>対策＝リスク消滅ではない、というのがポイント</strong></p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>残留リスクは、リスクマネジメントの流れの中で次のように位置づけられます。</p>
+
+<ol>
+  <li>リスクを特定する</li>
+  <li>リスクを評価する</li>
+  <li>リスク対応（回避・低減・移転・受容）を行う</li>
+  <li><strong>それでも残るリスクが「残留リスク」</strong></li>
+</ol>
+
+<p>つまり、</p>
+
+<ul>
+  <li>対策後の状態で</li>
+  <li>「まだ許容するか？」を判断する対象</li>
+</ul>
+
+<p>になります。</p>
+
+<p>ISMSでも、最終的に<strong>「残留リスクを受容できるか」</strong>が重要な判断になります。</p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="よく使う場面">よく使う場面</h3>
+<ul>
+  <li>セキュリティ対策を実施した後の最終判断</li>
+  <li>管理者が「これ以上対策するか？」を決める場面</li>
+  <li>コストとリスクのバランスを取る場面</li>
+</ul>
+
+<p>👉 実務では<br />
+「コストをかけすぎず、どこまで許容するか」が重要</p>
+
+<hr />
+
+<h3 id="誤解しやすい場面">誤解しやすい場面</h3>
+<ul>
+  <li>「対策したから安全」と考える</li>
+  <li>「リスクはゼロにできる」と思う</li>
+</ul>
+
+<p>👉 SG試験ではこの考えは<strong>明確に誤り</strong></p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="-よくある誤解">❌ よくある誤解</h3>
+<ul>
+  <li>残留リスク＝対策が不十分な状態</li>
+  <li>残留リスク＝対応前のリスク</li>
+</ul>
+
+<h3 id="-正しい理解">⭕ 正しい理解</h3>
+<ul>
+  <li>残留リスク＝<strong>対応後でも残るリスク（正常な状態）</strong></li>
+</ul>
+
+<hr />
+
+<h3 id="混同しやすい用語">混同しやすい用語</h3>
+
+<ul>
+  <li><strong>固有リスク（Inherent Risk）</strong>
+    <ul>
+      <li>対策前のリスク</li>
+      <li>まだ何もしていない状態</li>
+    </ul>
+  </li>
+  <li><strong>残留リスク（Residual Risk）</strong>
+    <ul>
+      <li>対策後のリスク</li>
+      <li>それでも残るもの</li>
+    </ul>
+  </li>
+</ul>
+
+<p>👉 SG試験では<br />
+<strong>「対策前か、対策後か」で切り分ける</strong></p>
+
+<hr />
+
+<h3 id="典型的なひっかけ">典型的なひっかけ</h3>
+<ul>
+  <li>「対策したらリスクはなくなる」→ ❌</li>
+  <li>「残留リスクはゼロにするべき」→ ❌</li>
+  <li>「残留リスクは受容するか判断する対象」→ ⭕</li>
+</ul>
+
+<p>👉 選択肢では<br />
+<strong>「残る」「許容」「判断」などのキーワードが出たら正解に近い</strong></p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>残留リスク＝<strong>対策後にも残るリスク</strong></li>
+  <li>リスクはゼロにならないのが前提</li>
+  <li>最終的に「受容するか」を判断する対象</li>
+  <li>固有リスク（対策前）との違いが頻出</li>
+  <li>SG試験では「ゼロになる」と書いてあれば誤りと判断する</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/case-solving-template/">SG試験 ケース問題の解き方テンプレ【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/csirt/">CSIRTとは？組織内インシデント対応の基本【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/fraud-triangle/">不正のトライアングルとは？内部不正が起こる3要素【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/incident-response/">インシデント対応とは？初動対応の判断基準を整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/jpcert-cc/">JPCERT/CCとは？役割とCSIRTとの違いを整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/ransomware/">← ランサムウェアとは？身代金要求型攻撃の仕組み【情報セキュリティマネジメント】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/reverse-brute-force-attack/">リバースブルートフォース攻撃とは？逆総当たりの仕組みと対策【情報セキュリティマネジメント】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

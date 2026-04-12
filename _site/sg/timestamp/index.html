@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>タイムスタンプとは？存在証明と否認防止の役割を理解する【情報セキュリティマネジメント】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="タイムスタンプとは？存在証明と否認防止の役割を理解する【情報セキュリティマネジメント】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="タイムスタンプは存在証明と否認防止の役割を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:description" content="タイムスタンプは存在証明と否認防止の役割を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="タイムスタンプとは？存在証明と否認防止の役割を理解する【情報セキュリティマネジメント】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"タイムスタンプは存在証明と否認防止の役割を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。","headline":"タイムスタンプとは？存在証明と否認防止の役割を理解する【情報セキュリティマネジメント】","url":"/sg/timestamp/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">タイムスタンプとは？存在証明と否認防止の役割を理解する【情報セキュリティマネジメント】</h1>
+      <h2 class="project-tagline">タイムスタンプは存在証明と否認防止の役割を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">タイムスタンプは存在証明と否認防止の役割を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">security_general</span>
+        
+          <span class="post-tag">crypto_auth</span>
+        
+          <span class="post-tag">risk_assessment</span>
+        
+          <span class="post-tag">sg-security-overview</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+<ul>
+  <li>タイムスタンプとは、<strong>「その時刻にその電子文書が存在していたこと」を証明する仕組み</strong></li>
+  <li>SG試験では「改ざん防止」ではなく<strong>存在証明・否認防止であるかを見抜く問題</strong>として出題される</li>
+</ul>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>タイムスタンプは「日付入りの証明書」のようなものです。</p>
+
+<p>たとえば契約書に「この日付で存在していました」と公的に証明されると、あとから<br />
+「そんな文書は作っていない」と言い逃れできません。</p>
+
+<p>ただし、</p>
+<ul>
+  <li>コピーはできる</li>
+  <li>改ざんもできる</li>
+</ul>
+
+<p>👉 でも<br />
+<strong>「あとから変えたかどうか」はバレる</strong></p>
+
+<p>この「防ぐのではなく、証明する」という感覚がとても重要です。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>タイムスタンプは、信頼できる第三者機関（TSA：時刻認証局）が発行します。</p>
+
+<p>役割は大きく2つです。</p>
+
+<h3 id="-存在証明">① 存在証明</h3>
+<ul>
+  <li>「この時刻までに、この電子文書は存在していた」</li>
+</ul>
+
+<h3 id="-完全性の証明非改ざん証明">② 完全性の証明（非改ざん証明）</h3>
+<ul>
+  <li>タイムスタンプ付与後に変更されていないことを確認できる</li>
+</ul>
+
+<p>ここで重要なのは👇</p>
+
+<p>👉 <strong>改ざんを防ぐのではなく、改ざんを検知できるだけ</strong></p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="使う場面">使う場面</h3>
+<ul>
+  <li>契約書・申請書などの電子文書の証拠性確保</li>
+  <li>電子帳簿保存法などの記録保存</li>
+  <li>「いつ作られたか」が重要な文書</li>
+</ul>
+
+<p>👉 業務では<br />
+<strong>後からのトラブル（言った・言わない）を防ぐために使う</strong></p>
+
+<hr />
+
+<h3 id="使わない誤解しやすい場面">使わない（誤解しやすい）場面</h3>
+<ul>
+  <li>コピーを防ぎたい → ❌</li>
+  <li>改ざんそのものを防ぎたい → ❌</li>
+</ul>
+
+<p>👉 これらは別の対策（アクセス制御・暗号など）</p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="-タイムスタンプ改ざん防止">❌ タイムスタンプ＝改ざん防止</h3>
+<p>👉 実際は<br />
+<strong>改ざんを防ぐのではなく、改ざんを検知する</strong></p>
+
+<hr />
+
+<h3 id="-タイムスタンプコピー防止">❌ タイムスタンプ＝コピー防止</h3>
+<p>👉 コピーは普通にできる<br />
+（選択肢でよく出るひっかけ）</p>
+
+<hr />
+
+<h3 id="-電子署名との違い">⚠ 電子署名との違い</h3>
+<p>| 用語 | 役割 |
+|——|——|
+| 電子署名 | 作成者の証明・改ざん検知 |
+| タイムスタンプ | 存在時刻の証明 |</p>
+
+<p>👉 SG試験ではこの違いをよく問われる</p>
+
+<hr />
+
+<h3 id="sg試験の典型ひっかけ">SG試験の典型ひっかけ</h3>
+<ul>
+  <li>「防止」という言葉が出たら要注意</li>
+  <li>正解はだいたい「証明」「検知」</li>
+</ul>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>タイムスタンプ＝<strong>存在証明（いつあったか）</strong></li>
+  <li>コピー防止ではない</li>
+  <li>改ざん防止ではない（検知のみ）</li>
+  <li>キーワードは<strong>否認防止</strong></li>
+  <li>選択肢で「防止」と書かれていたら疑う</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/attacker-types/">攻撃者の種類とは？目的と特徴で整理する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/case-solving-template/">SG試験 ケース問題の解き方テンプレ【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/case-study-approach/">ケース問題の解き方！CIAとリスク対応で考える実践手順【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/common-mistakes/">よくある誤答パターンまとめ！SG試験で選択肢を切るコツ【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/contract-nonconformity/">契約不適合責任とは？瑕疵担保責任との違いも整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/telnet/">← Telnetとは？安全でない遠隔操作の仕組み【情報セキュリティマネジメント】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/unauthorized-access-techniques/">不正アクセスの手法とは？攻撃パターンを整理して対策につなげる【情報セキュリティマネジメント】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

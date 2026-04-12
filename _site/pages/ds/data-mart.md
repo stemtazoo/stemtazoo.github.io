@@ -1,0 +1,169 @@
+﻿---
+layout: page
+title: データマートとは？（DWHとの違いを整理）【DS検定リテラシー】
+description: データマートは（DWHとの違いを整理）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+permalink: /ds/data-mart/
+categories: [data-engineering]
+tags: [ds, database]
+next: /ds/data-warehouse/
+---
+<div style="font-size: 14px; margin-bottom: 12px;">
+  <a href="/ds/">DS検定トップ</a>
+  ＞ {{ page.title }}
+</div>
+
+## まず結論
+データマートとは、特定の部門や目的に特化した小規模な分析用データベースです。  
+DS検定では「DWHとの違い」や「部門別分析に適しているのはどれか」といった形で問われます。
+
+
+## 直感的な説明
+
+### データウェアハウス（DWH）
+会社全体のデータを集めた「大きな倉庫」。
+
+
+### データマート
+その中から、営業部だけが使う「営業専用コーナー」。
+
+つまり、
+
+**全社向けがDWH**  
+**部門向けがデータマート**
+
+この関係がポイントです。
+
+
+## 定義・仕組み
+
+データマートは、
+
+- DWHの一部を切り出したもの  
+または  
+- 特定部門向けに設計された分析用データ基盤
+
+です。
+
+### 特徴
+
+- 対象を限定（例：営業部、マーケ部）
+- データ量はDWHより小さい
+- 利用目的が明確
+
+多くの場合、DWHから必要なデータを抽出して作られます。
+
+
+## どんな場面で使う？
+
+### 使う場面
+
+- 営業部の売上分析
+- マーケ部の広告効果分析
+- 人事部の採用分析
+
+「部門特化」がキーワードです。
+
+
+### 向かない場面
+
+- 全社横断分析
+- 経営レベルの統合指標管理
+
+その場合はDWHが適しています。
+
+
+## よくある誤解・混同
+
+### ① DWHと同じ？
+
+違います。
+
+| 項目 | DWH | データマート |
+|------|-----|--------------|
+| 対象 | 全社 | 部門単位 |
+| データ量 | 大規模 | 比較的小規模 |
+| 目的 | 統合分析 | 部門特化分析 |
+
+DS検定では  
+「全社統合」「横断分析」と書いてあればDWH。  
+「営業部専用」などと書いてあればデータマートです。
+
+
+### ② RDBとの混同
+
+RDBは業務処理中心。  
+データマートは分析専用。
+
+トランザクション処理ではありません。
+
+
+### ③ データレイクとの混同
+
+データレイクは生データ保存。  
+データマートは整理済み分析データ。
+
+ここも役割が違います。
+
+
+## まとめ（試験直前用）
+
+- データマート＝部門特化の分析基盤  
+- DWHより小規模  
+- 営業・人事など用途限定  
+- 全社統合はDWH  
+- 「部門専用」→ データマート
+
+
+## 対応スキル項目（データエンジニアリング力シート）
+- データ基盤
+- データ管理
+- ★ データ基盤の代表的なアーキテクチャを理解している
+- ★ データウェアハウスとデータマートの違いを理解している
+
+## 🔗 関連記事
+
+<ul style="padding-left: 20px;">
+{% assign current_tags = page.tags %}
+{% assign count = 0 %}
+
+{% for p in site.pages %}
+  {% if p.url != page.url and p.tags %}
+    {% assign matched = false %}
+
+    {% for tag in current_tags %}
+      {% if p.tags contains tag and tag != "ds" %}
+        {% assign matched = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if matched %}
+      <li style="margin-bottom: 6px;">
+        <a href="{{ p.url }}">{{ p.title }}</a>
+      </li>
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+
+    {% if count >= 5 %}
+      {% break %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>
+
+<hr>
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/ds/">DS検定トップに戻る</a>
+</div>
+
+<div style="display:flex;justify-content:space-between;margin-top:12px;">
+
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
+  {% endif %}
+
+  {% if page.next.url %}
+    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
+  {% endif %}
+
+</div>

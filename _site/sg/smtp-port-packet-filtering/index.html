@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>SMTPのポート番号とは？パケットフィルタリングでの見方を整理【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="SMTPのポート番号とは？パケットフィルタリングでの見方を整理【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="SMTPのポート番号はパケットフィルタリングでの見方を整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:description" content="SMTPのポート番号はパケットフィルタリングでの見方を整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="SMTPのポート番号とは？パケットフィルタリングでの見方を整理【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"SMTPのポート番号はパケットフィルタリングでの見方を整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。","headline":"SMTPのポート番号とは？パケットフィルタリングでの見方を整理【SG試験】","url":"/sg/smtp-port-packet-filtering/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">SMTPのポート番号とは？パケットフィルタリングでの見方を整理【SG試験】</h1>
+      <h2 class="project-tagline">SMTPのポート番号はパケットフィルタリングでの見方を整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">SMTPのポート番号はパケットフィルタリングでの見方を整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">technology</span>
+        
+          <span class="post-tag">network</span>
+        
+          <span class="post-tag">security_measures</span>
+        
+          <span class="post-tag">unauthorized_access</span>
+        
+          <span class="post-tag">sg-security-measures</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+
+<p>SMTPのポート番号とは、<strong>メール送信で使う通信先の番号で、通常は25番を指すもの</strong>です。<br />
+SG試験では、SMTPそのものの暗記だけでなく、<strong>パケットフィルタリング型ファイアウォールでどの通信を通すべきかを判断できるか</strong>と問われることが多いです。</p>
+
+<p>この種の問題では、<strong>SMTPサーバのあて先ポートは25番、PC側の送信元ポートは1024以上、応答では向きが逆になる</strong>と整理できれば、選択肢を切りやすくなります。</p>
+
+<h2 id="直感的な説明">直感的な説明</h2>
+
+<p>ポート番号は、ネットワークの世界でいう「部屋番号」のようなものです。<br />
+同じサーバでも、どのサービスに話しかけたいかで入口が違います。</p>
+
+<p>たとえば、社内PCからインターネット上のSMTPサーバへメールを送るときは、<br />
+「SMTPというメール送信用の入口」に向かって通信します。<br />
+その入口が <strong>25番ポート</strong> です。</p>
+
+<p>一方で、PC側は毎回同じ番号を使うわけではありません。<br />
+PCは通信のたびに空いている番号を一時的に使うので、<strong>送信元ポートは1024以上の動的な番号</strong>になります。</p>
+
+<p>つまり感覚としては、次のように考えるとわかりやすいです。</p>
+
+<ul>
+  <li>PCはその都度、空いている番号から出発する</li>
+  <li>サーバはサービスごとに決まった番号で待っている</li>
+  <li>返事は行きと逆向きに戻る</li>
+</ul>
+
+<p>SG試験ではこの流れを理解しているかを、表や構成図で問われることが多いです。</p>
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+
+<p>SMTPは、<strong>電子メールを送信するためのプロトコル</strong>です。<br />
+正式には Simple Mail Transfer Protocol といいますが、SG試験では英語の正式名称よりも、<strong>メール送信で使う</strong>という役割を押さえることが大切です。</p>
+
+<p>パケットフィルタリング型ファイアウォールは、通信を通すか止めるかを、主に次の情報で判断します。</p>
+
+<ul>
+  <li>送信元IPアドレス</li>
+  <li>あて先IPアドレス</li>
+  <li>プロトコル</li>
+  <li>送信元ポート番号</li>
+  <li>あて先ポート番号</li>
+</ul>
+
+<p>ここで、社内PCからSMTPサーバへメール送信する通信を考えると、基本は次の形になります。</p>
+
+<ul>
+  <li>送信元：PC</li>
+  <li>あて先：SMTPサーバ</li>
+  <li>送信元ポート番号：1024以上</li>
+  <li>あて先ポート番号：25</li>
+</ul>
+
+<p>そして、その応答は次のように逆になります。</p>
+
+<ul>
+  <li>送信元：SMTPサーバ</li>
+  <li>あて先：PC</li>
+  <li>送信元ポート番号：25</li>
+  <li>あて先ポート番号：1024以上</li>
+</ul>
+
+<p>このため、選択肢では <strong>「SMTPなのに110番になっていないか」</strong>、<strong>「PC側が25番になっていないか」</strong>、<strong>「応答の向きが逆になっているか」</strong> を見ると判断しやすくなります。</p>
+
+<p>なお、SG試験ではポート番号そのものを細かく暗記するより、<strong>サーバ側は固定の代表的なポート、クライアント側は動的なポート</strong>という考え方を押さえておく方が得点につながります。</p>
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+
+<p>SMTPのポート番号の考え方は、主に次のような場面で使います。</p>
+
+<h3 id="ファイアウォール設定を考える場面">ファイアウォール設定を考える場面</h3>
+
+<p>社内ネットワークとインターネットの間にファイアウォールを置くとき、必要な通信だけを許可する必要があります。<br />
+そのとき、メール送信を許可したいなら、SMTPに対応した通信を正しく通す必要があります。</p>
+
+<p>業務では、<br />
+「社内PCから外部のメールサーバへ送信できるようにする」<br />
+「不要な通信は遮断する」<br />
+という判断につながります。</p>
+
+<h3 id="ネットワーク構成図や通信表を読む場面">ネットワーク構成図や通信表を読む場面</h3>
+
+<p>SG試験では、図や表を見て、どの通信が妥当かを判断させる問題がよく出ます。<br />
+このとき、SMTPの役割とポート番号がわかっていると、通信の正誤を見分けやすくなります。</p>
+
+<h3 id="使うと誤解しやすい場面">使うと誤解しやすい場面</h3>
+
+<p>ただし、単に「25番を覚える」だけでは不十分です。<br />
+選択肢では <strong>送信元ポート番号とあて先ポート番号を入れ替えてひっかける</strong> ことがあります。</p>
+
+<p>また、SG試験では SMTP と POP3 を混同させてくることがあります。<br />
+メール送信は SMTP、メール受信は POP3 や IMAP という切り分けが大切です。</p>
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="smtpとpop3の混同">SMTPとPOP3の混同</h3>
+
+<p>よくあるのが、<strong>SMTPは送信、POP3は受信</strong> という区別があいまいになることです。<br />
+選択肢では、SMTPの通信なのに110番ポートが書かれていたら注意です。</p>
+
+<ul>
+  <li>SMTP：メール送信、25番</li>
+  <li>POP3：メール受信、110番</li>
+</ul>
+
+<p>この区別ができれば、かなり切りやすくなります。</p>
+
+<h3 id="pc側も固定ポートを使うという誤解">PC側も固定ポートを使うという誤解</h3>
+
+<p>初心者が混同しやすいのが、<br />
+「SMTPならPC側も25番を使うのではないか」<br />
+という考え方です。</p>
+
+<p>しかし実際には、通常の通信では<strong>サーバ側がサービス用の固定ポートで待ち受け</strong>、PC側は<strong>一時的な動的ポート</strong>を使います。<br />
+したがって、PCの送信元ポートが25番になっている選択肢は不自然です。</p>
+
+<h3 id="応答でも同じ並びになるという誤解">応答でも同じ並びになるという誤解</h3>
+
+<p>行きの通信と返りの通信で、送信元とあて先がそのままだと思ってしまうことがあります。<br />
+しかし応答では、<strong>送信元とあて先が逆</strong> になります。</p>
+
+<p>選択肢ではこの点をずらしてくることがあり、<br />
+「SMTPサーバからPCへの応答なのに、あて先ポートが25番になっている」<br />
+などの形でひっかけてきます。</p>
+
+<p>SG試験では、こうした表の見方を問われることが多いので、<strong>通信の流れで判断する</strong> ことが大切です。</p>
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<p>SMTPのポート番号は、<strong>メール送信で使う25番</strong>です。<br />
+ただし試験では、番号の丸暗記だけでなく、<strong>PC側は1024以上の動的ポートを使う</strong>と理解しているかが問われます。<br />
+選択肢では <strong>SMTPとPOP3の混同</strong>、<strong>送信元ポートとあて先ポートの入れ替え</strong>、<strong>応答方向の逆転ミス</strong> に注意です。<br />
+迷ったら、<strong>サーバ側が固定ポート、PC側が動的ポート、応答は逆向き</strong> で判断すると切りやすくなります。</p>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/blacklist-whitelist/">ブラックリストとホワイトリストの違いとは？判断基準を整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/bot/">ボットとは？遠隔操作される仕組みを理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/botnet/">ボットネットとは？踏み台化とDDoSの関係を理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/brute-force-attack/">ブルートフォース攻撃とは？総当たり攻撃の仕組みと対策【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/clickjacking/">クリックジャッキングとは？見えない操作誘導の仕組み【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/smishing/">← スミッシングとは？SMSを使った詐欺手口【情報セキュリティマネジメント】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/spyware/">スパイウェアとは？情報を盗むマルウェアの特徴【情報セキュリティマネジメント】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

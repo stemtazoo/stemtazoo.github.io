@@ -1,0 +1,171 @@
+﻿---
+layout: page
+title: デジタルツインとは？CPSとの違いを整理【DS検定】
+description: デジタルツインはCPSとの違いを整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+permalink: /ds/digital-twin/
+categories: [business]
+tags: [ds, design]
+prev: /ds/digital-image-representation/
+next: /ds/dunning-kruger-effect/
+---
+<div style="font-size: 14px; margin-bottom: 12px;">
+  <a href="/ds/">DS検定トップ</a>
+  ＞ {{ page.title }}
+</div>
+
+## まず結論
+
+**デジタルツインとは、「現実世界の状態をサイバー空間にリアルタイムで再現する技術」です。**
+
+DS検定では、CPSとの違いを理解しているかが問われます。  
+**デジタルツインは“再現”が中心、CPSは“制御まで含む仕組み”**という違いが判断ポイントです。
+
+
+## 直感的な説明
+
+たとえば工場の設備を考えてみましょう。
+
+- 現実の機械の状態をセンサーで取得
+- その状態を仮想空間にそっくり再現
+- 仮想空間でシミュレーションを行う
+
+これがデジタルツインです。
+
+いわば、  
+**「現実の分身をデジタル上に作る」** 技術です。
+
+現実で試せないことを、仮想空間で安全に試せるのが強みです。
+
+
+## 定義・仕組み
+
+デジタルツイン（Digital Twin）は、
+
+> 現実空間のモノやシステムを、サイバー空間上にリアルタイムで再現する技術
+
+と定義されます。
+
+### 仕組みの流れ
+
+① センサーで現実データを取得  
+② サイバー空間にリアルタイム反映  
+③ シミュレーション・予測分析  
+
+重要なのは、**「再現」と「予測」**です。
+
+デジタルツインは、現実をコピーして終わりではありません。  
+未来予測や最適化に活用されます。
+
+
+## どんな場面で使う？
+
+### 主な活用例
+
+- スマート工場（故障予測）
+- 都市計画（交通流シミュレーション）
+- エネルギー管理
+- 医療機器の監視
+
+### DS検定での出題文脈
+
+- CPSとの違い
+- Society5.0の技術基盤
+- 予測保全（故障予測）
+
+
+## よくある誤解・混同
+
+### ① CPSとの違い
+
+| 項目 | デジタルツイン | CPS |
+|------|----------------|------|
+| 本質 | 再現・シミュレーション | 再現＋制御 |
+| 役割 | 分身を作る | 現実を最適化する仕組み |
+| 範囲 | 主にサイバー空間側 | サイバーとフィジカルの循環 |
+
+DS検定では、  
+「デジタルツインは現実世界を制御する仕組みである」  
+という選択肢が出たら注意です。
+
+**制御まで含めた全体構造はCPSです。**
+
+
+### ② シミュレーションとの違い
+
+通常のシミュレーションは静的データでも可能です。
+
+デジタルツインは  
+**リアルタイム性が重要**です。
+
+
+### ③ IoTとの違い
+
+IoTはデータ取得の仕組み。  
+デジタルツインは取得したデータを使って仮想再現する技術。
+
+
+## まとめ（試験直前用）
+
+- デジタルツイン＝現実の分身をデジタル空間に作る  
+- 再現と予測が中心  
+- 制御まで含めるのはCPS  
+- リアルタイム性が重要  
+- 「再現か？制御か？」で判断する  
+
+DS検定では、  
+**CPSとの違いを説明できるかが最大のポイント**です。
+
+
+## 対応スキル項目（AI利活用スキルシート）
+
+- AIの社会実装
+- AIの活用と社会的影響
+- ★ AIの活用により社会やビジネスがどのように変化するかを理解している
+
+## 🔗 関連記事
+
+<ul style="padding-left: 20px;">
+{% assign current_tags = page.tags %}
+{% assign count = 0 %}
+
+{% for p in site.pages %}
+  {% if p.url != page.url and p.tags %}
+    {% assign matched = false %}
+
+    {% for tag in current_tags %}
+      {% if p.tags contains tag and tag != "ds" %}
+        {% assign matched = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if matched %}
+      <li style="margin-bottom: 6px;">
+        <a href="{{ p.url }}">{{ p.title }}</a>
+      </li>
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+
+    {% if count >= 5 %}
+      {% break %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>
+
+<hr>
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/ds/">DS検定トップに戻る</a>
+</div>
+
+<div style="display:flex;justify-content:space-between;margin-top:12px;">
+
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
+  {% endif %}
+
+  {% if page.next.url %}
+    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
+  {% endif %}
+
+</div>

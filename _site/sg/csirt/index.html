@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>CSIRTとは？組織内インシデント対応の基本【情報セキュリティマネジメント】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="CSIRTとは？組織内インシデント対応の基本【情報セキュリティマネジメント】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="CSIRTは組織内のセキュリティ事故を検知・分析・対応する専門チームです。この記事ではSOCとの違い、初動対応の役割、外部連携の流れ、情報セキュリティマネジメント試験の判断ポイントを解説します。" />
+<meta property="og:description" content="CSIRTは組織内のセキュリティ事故を検知・分析・対応する専門チームです。この記事ではSOCとの違い、初動対応の役割、外部連携の流れ、情報セキュリティマネジメント試験の判断ポイントを解説します。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="CSIRTとは？組織内インシデント対応の基本【情報セキュリティマネジメント】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"CSIRTは組織内のセキュリティ事故を検知・分析・対応する専門チームです。この記事ではSOCとの違い、初動対応の役割、外部連携の流れ、情報セキュリティマネジメント試験の判断ポイントを解説します。","headline":"CSIRTとは？組織内インシデント対応の基本【情報セキュリティマネジメント】","url":"/sg/csirt/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">CSIRTとは？組織内インシデント対応の基本【情報セキュリティマネジメント】</h1>
+      <h2 class="project-tagline">CSIRTは組織内のセキュリティ事故を検知・分析・対応する専門チームです。この記事ではSOCとの違い、初動対応の役割、外部連携の流れ、情報セキュリティマネジメント試験の判断ポイントを解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">CSIRTは組織内のセキュリティ事故を検知・分析・対応する専門チームです。この記事ではSOCとの違い、初動対応の役割、外部連携の流れ、情報セキュリティマネジメント試験の判断ポイントを解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-management</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+<ul>
+  <li><strong>CSIRTは、組織内で発生したセキュリティインシデントに対応する専門チームである。</strong></li>
+  <li>SG試験では「社内対応か、外部支援か（JPCERT/CC）」を見分ける問題が多い。</li>
+</ul>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>会社でトラブルが起きたとき、<br />
+現場で対応する「社内の専門チーム」が必要ですよね。</p>
+
+<p>CSIRTはまさにそれで、<br />
+<strong>会社の中でセキュリティ事故に対応する“専任チーム”</strong>です。</p>
+
+<p>例えば：</p>
+
+<ul>
+  <li>ウイルス感染したPCの対応</li>
+  <li>不正アクセスの調査</li>
+  <li>情報漏えいの原因分析</li>
+</ul>
+
+<p>などを担当します。</p>
+
+<p>👉 イメージ：<br />
+<strong>CSIRT＝社内の消防隊（火事が起きたらすぐ出動）</strong></p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>CSIRT（Computer Security Incident Response Team）は、</p>
+
+<ul>
+  <li>セキュリティインシデントの
+    <ul>
+      <li>検知</li>
+      <li>分析</li>
+      <li>対応</li>
+      <li>復旧<br />
+を行う組織内のチームです。</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="基本の役割">基本の役割</h3>
+<ol>
+  <li>インシデントの検知（異常の発見）</li>
+  <li>影響範囲の調査</li>
+  <li>被害拡大の防止</li>
+  <li>原因分析と再発防止</li>
+</ol>
+
+<h3 id="ポイント">ポイント</h3>
+<ul>
+  <li><strong>組織内に設置される</strong></li>
+  <li><strong>実際に手を動かして対応する</strong></li>
+  <li>必要に応じて外部（JPCERT/CCなど）と連携する</li>
+</ul>
+
+<p>SG試験では<br />
+「インシデントに対処する実働部隊」として理解すればOKです。</p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="使う場面正しい理解">使う場面（正しい理解）</h3>
+<ul>
+  <li>自社でセキュリティ事故が発生したとき</li>
+  <li>社内ネットワークで異常が検知されたとき</li>
+  <li>被害の拡大を防ぐための初動対応</li>
+</ul>
+
+<h3 id="使うと誤解しやすい場面">使うと誤解しやすい場面</h3>
+<ul>
+  <li>❌ 外部の相談窓口（それはJPCERT/CC）</li>
+  <li>❌ 経営判断を行う組織（それは経営層やISMS）</li>
+</ul>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="-jpcertccとの違い">① JPCERT/CCとの違い</h3>
+<ul>
+  <li>CSIRT：<strong>組織内の対応チーム（自社で動く）</strong></li>
+  <li>JPCERT/CC：外部から支援する組織</li>
+</ul>
+
+<p>👉 SG試験ではここをよく入れ替えてくる</p>
+
+<hr />
+
+<h3 id="-socとの違い">② SOCとの違い</h3>
+<ul>
+  <li>SOC：監視・検知が中心</li>
+  <li>CSIRT：<strong>実際の対応・復旧まで行う</strong></li>
+</ul>
+
+<p>👉 「対応までやるか？」で切る</p>
+
+<hr />
+
+<h3 id="-ismsとの違い">③ ISMSとの違い</h3>
+<ul>
+  <li>ISMS：管理の仕組み（ルール・体制）</li>
+  <li>CSIRT：<strong>実務の対応チーム</strong></li>
+</ul>
+
+<p>👉 「仕組み」か「実働」かで判断</p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>CSIRT＝<strong>組織内のインシデント対応チーム</strong></li>
+  <li>実際に対応・復旧まで行う「現場部隊」</li>
+  <li>選択肢では
+    <ul>
+      <li>「外部機関」→×</li>
+      <li>「監視だけ」→×</li>
+      <li>「対応・復旧を行う」→○</li>
+    </ul>
+  </li>
+</ul>
+
+<p>👉 <strong>「社内で実際に動くかどうか」で切る</strong></p>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/case-solving-template/">SG試験 ケース問題の解き方テンプレ【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/fraud-triangle/">不正のトライアングルとは？内部不正が起こる3要素【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/incident-response/">インシデント対応とは？初動対応の判断基準を整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/jpcert-cc/">JPCERT/CCとは？役割とCSIRTとの違いを整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/nco/">NCOとは？政府のサイバー司令塔を理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/cryptrec/">← CRYPTRECとは？暗号の安全性評価の役割を理解する【情報セキュリティマネジメント】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/csrf/">クロスサイトリクエストフォージェリとは？なりすまし操作の仕組み【情報セキュリティマネジメント】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

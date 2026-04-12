@@ -1,0 +1,176 @@
+﻿---
+layout: page
+title: アクセス制御リスト（ACL）とは？ファイル権限の基本を整理【DS検定】
+description: アクセス制御リスト（ACL）はファイル権限の基本を整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+permalink: /ds/access-control-list/
+categories: [business]
+tags: [ds, security, design]
+prev: /ds/rpo-rto/
+next: /ds/authentication-authorization/
+---
+<div style="font-size: 14px; margin-bottom: 12px;">
+  <a href="/ds/">DS検定トップ</a>
+  ＞ {{ page.title }}
+</div>
+
+## まず結論
+
+- **アクセス制御リスト（ACL）とは、ファイルやプログラムごとに「誰が何をしてよいか」を定めた一覧表のこと。**
+- DS検定では「OSレベルでのアクセス管理の仕組み」を正しく理解できているかを問われる。
+
+
+## 直感的な説明
+
+ACLは、いわば**ファイルごとの入室名簿**です。
+
+あるフォルダに対して、
+
+- Aさん → 読み取りOK
+- Bさん → 読み取り・書き込みOK
+- Cさん → アクセス不可
+
+といったように、  
+**対象ごとに細かく許可を設定する仕組み**です。
+
+企業では、
+
+- 顧客データは営業部のみ閲覧可能
+- 給与データは人事部のみ編集可能
+
+といった管理が必要です。  
+このような制御を実現する基本技術がACLです。
+
+
+## 定義・仕組み
+
+アクセス制御リスト（Access Control List, ACL）とは、
+
+> **特定のリソース（ファイル・フォルダ・プログラムなど）に対して、  
+> どのユーザーやグループが、どの操作を許可されているかを記録した一覧**
+
+のことです。
+
+一般的に、次のような情報を持ちます。
+
+- 対象ユーザー／グループ
+- 許可内容（読み取り・書き込み・実行など）
+
+ポイントは、
+
+- **「リソース単位」で管理すること**
+- ネットワークではなく「OS内部の権限管理」であること
+
+DS検定では、「アクセス制御」という言葉だけで  
+ファイアウォールを選ばせる問題が出やすいので注意です。
+
+
+## どんな場面で使う？
+
+### 使う場面
+
+- 社内サーバーのフォルダ権限管理
+- データベースのテーブルアクセス管理
+- OS上のファイル権限設定
+
+### 使わない（誤解しやすい）場面
+
+- ネットワーク通信の遮断 → これは**ファイアウォール**
+- 不正侵入の検知 → これは**IDS（侵入検知システム）**
+- ウイルスの検出 → これは**アンチウイルスソフト**
+
+「アクセス制御」という言葉が広いため、  
+**どのレイヤーの話かを判断することが重要**です。
+
+
+## よくある誤解・混同
+
+### ① ファイアウォールとの混同
+
+- ファイアウォール → ネットワークの出入りを制御
+- ACL → ファイルやプログラムの操作権限を制御
+
+DS検定では、
+
+> 「OSレベル」「個々のファイルへのアクセス」
+
+と書いてあれば、ACLが正解です。
+
+
+### ② IDSとの混同
+
+- IDS → 不正アクセスを「検知」する仕組み
+- ACL → あらかじめ「許可・拒否を設定」する仕組み
+
+検知と制御は別物です。
+
+
+### ③ RBACとの違い
+
+- ACL → リソース単位で細かく設定
+- RBAC（役割ベースアクセス制御） → 役割単位でまとめて管理
+
+DS検定では「リソース単位」という言葉がヒントになります。
+
+
+## まとめ（試験直前用）
+
+- ACLは「誰が何をできるか」を**リソース単位で管理する仕組み**
+- OS内部のファイル・プログラム権限の話
+- ネットワーク制御ならファイアウォール
+- 検知ならIDS
+- 問題文に「OSレベル」「ファイル単位」とあればACLを疑う
+
+
+## 対応スキル項目（データエンジニアリング力シート）
+
+- IT・データ基盤理解
+- セキュリティ
+- ★ 情報セキュリティの基本的な概念（認証・認可・アクセス制御など）を理解している
+
+## 🔗 関連記事
+
+<ul style="padding-left: 20px;">
+{% assign current_tags = page.tags %}
+{% assign count = 0 %}
+
+{% for p in site.pages %}
+  {% if p.url != page.url and p.tags %}
+    {% assign matched = false %}
+
+    {% for tag in current_tags %}
+      {% if p.tags contains tag and tag != "ds" %}
+        {% assign matched = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if matched %}
+      <li style="margin-bottom: 6px;">
+        <a href="{{ p.url }}">{{ p.title }}</a>
+      </li>
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+
+    {% if count >= 5 %}
+      {% break %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>
+
+<hr>
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/ds/">DS検定トップに戻る</a>
+</div>
+
+<div style="display:flex;justify-content:space-between;margin-top:12px;">
+
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
+  {% endif %}
+
+  {% if page.next.url %}
+    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
+  {% endif %}
+
+</div>

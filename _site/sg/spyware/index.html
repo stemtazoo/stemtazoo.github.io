@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>スパイウェアとは？情報を盗むマルウェアの特徴【情報セキュリティマネジメント】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="スパイウェアとは？情報を盗むマルウェアの特徴【情報セキュリティマネジメント】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="スパイウェアは情報を盗むマルウェアの特徴を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:description" content="スパイウェアは情報を盗むマルウェアの特徴を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="スパイウェアとは？情報を盗むマルウェアの特徴【情報セキュリティマネジメント】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"スパイウェアは情報を盗むマルウェアの特徴を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。","headline":"スパイウェアとは？情報を盗むマルウェアの特徴【情報セキュリティマネジメント】","url":"/sg/spyware/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">スパイウェアとは？情報を盗むマルウェアの特徴【情報セキュリティマネジメント】</h1>
+      <h2 class="project-tagline">スパイウェアは情報を盗むマルウェアの特徴を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">スパイウェアは情報を盗むマルウェアの特徴を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">security_measures</span>
+        
+          <span class="post-tag">malware</span>
+        
+          <span class="post-tag">data_leakage</span>
+        
+          <span class="post-tag">sg-security-measures</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+<p>スパイウェアとは、<strong>利用者に気づかれずに個人情報や操作情報を収集・外部へ送信するマルウェア</strong>であり、SG試験では「情報を盗む目的かどうか」を見抜くことが重要です。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>スパイウェアは「こっそり見張るソフト」です。</p>
+
+<p>たとえば</p>
+<ul>
+  <li>入力したID・パスワードが盗まれる</li>
+  <li>閲覧履歴や操作履歴が送信される</li>
+</ul>
+
+<p>といったように、<strong>気づかないうちに情報が抜き取られる</strong>のが特徴です。</p>
+
+<p>業務でも</p>
+<ul>
+  <li>個人情報の漏えい</li>
+  <li>認証情報の流出<br />
+につながるため、被害が大きくなりやすいです。</li>
+</ul>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>スパイウェアは、ユーザーの行動や情報を収集し、外部に送信します。</p>
+
+<h3 id="主な収集対象">主な収集対象</h3>
+<ul>
+  <li>ID・パスワード</li>
+  <li>クレジットカード情報</li>
+  <li>キーボード入力（キーロガー）</li>
+  <li>閲覧履歴・操作履歴</li>
+</ul>
+
+<hr />
+
+<h3 id="感染経路">感染経路</h3>
+<ul>
+  <li>フリーソフトのインストール</li>
+  <li>不正なWebサイト</li>
+  <li>メールのリンク・添付ファイル</li>
+</ul>
+
+<p>👉 「便利そうなソフト」に紛れて入ることが多い</p>
+
+<hr />
+
+<h3 id="特徴">特徴</h3>
+<ul>
+  <li>表面上は目立たない（潜伏型）</li>
+  <li>ユーザーに気づかれにくい</li>
+  <li>情報を外部に送信する</li>
+</ul>
+
+<p>SG試験では、<br />
+<strong>「破壊ではなく情報収集が目的」</strong>という点が重要です。</p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="使うべき場面試験実務">使うべき場面（試験・実務）</h3>
+<ul>
+  <li>情報漏えいリスクの分析</li>
+  <li>個人情報保護対策の検討</li>
+  <li>不正ログインの原因調査</li>
+</ul>
+
+<h3 id="間違えやすい場面">間違えやすい場面</h3>
+<ul>
+  <li>ランサムウェアと混同する<br />
+→ スパイウェアは「盗む」、ランサムウェアは「身代金要求」</li>
+</ul>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+<h3 id="-ランサムウェアとの違い">① ランサムウェアとの違い</h3>
+<ul>
+  <li>❌ 情報を盗む＝ランサムウェア</li>
+  <li>⭕ <strong>スパイウェアは盗む、ランサムウェアは人質にする</strong></li>
+</ul>
+
+<hr />
+
+<h3 id="-ウイルスとの混同">② ウイルスとの混同</h3>
+<ul>
+  <li>❌ すべてのマルウェアは増殖する</li>
+  <li>⭕ <strong>スパイウェアは増殖より情報収集が目的</strong></li>
+</ul>
+
+<hr />
+
+<h3 id="-キーロガーとの関係">③ キーロガーとの関係</h3>
+<ul>
+  <li>❌ キーロガー＝別物</li>
+  <li>⭕ <strong>キーロガーはスパイウェアの一種</strong></li>
+</ul>
+
+<hr />
+
+<h3 id="sg試験での典型パターン">SG試験での典型パターン</h3>
+<ul>
+  <li>「利用者に気づかれずに情報を収集」</li>
+  <li>「認証情報を外部送信」</li>
+  <li>「不正ログインの原因」</li>
+</ul>
+
+<p>選択肢で<br />
+「データを暗号化して身代金要求」とあれば<br />
+→ ランサムウェアであり誤り</p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>スパイウェア＝情報を盗むマルウェア</li>
+  <li>ID・パスワードなどを収集・送信</li>
+  <li>気づかれにくいのが特徴</li>
+  <li>キーロガーはその一種</li>
+  <li>判断基準は「目的が情報収集かどうか」</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/blacklist-whitelist/">ブラックリストとホワイトリストの違いとは？判断基準を整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/bot/">ボットとは？遠隔操作される仕組みを理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/botnet/">ボットネットとは？踏み台化とDDoSの関係を理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/brute-force-attack/">ブルートフォース攻撃とは？総当たり攻撃の仕組みと対策【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/command-and-control/">C&amp;Cサーバとは？ボットネットを操る指令の仕組み【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/smtp-port-packet-filtering/">← SMTPのポート番号とは？パケットフィルタリングでの見方を整理【SG試験】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/sql-injection/">SQLインジェクションとは？仕組みと対策をやさしく理解【情報セキュリティマネジメント】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

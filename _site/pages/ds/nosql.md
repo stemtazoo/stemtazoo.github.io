@@ -1,0 +1,209 @@
+﻿---
+layout: page
+title: NoSQLとは？リレーショナルDBとの違いを整理【DS検定】
+description: NoSQLはリレーショナルDBとの違いを整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+permalink: /ds/nosql/
+categories: [data-engineering]
+tags: [ds, data-storage, database]
+prev: /ds/normalization-2nf-3nf/
+next: /ds/nosql-datastore/
+---
+<div style="font-size: 14px; margin-bottom: 12px;">
+  <a href="/ds/">DS検定トップ</a>
+  ＞ {{ page.title }}
+</div>
+
+## まず結論
+
+NoSQLとは、**表（テーブル）形式に縛られずにデータを保存できるデータベースの総称**です。  
+
+DS検定では、  
+「リレーショナルデータベース（RDB）との違いを判断できるか」  
+「ビッグデータや分散環境に適している理由を説明できるか」  
+が問われることが多いです。
+
+
+## 直感的な説明
+
+リレーショナルDBは、  
+「きっちり整理されたエクセルの表」のようなものです。
+
+一方、NoSQLは、  
+「形式がバラバラでも、とにかく大量に保存できる倉庫」のようなものです。
+
+例えば：
+
+- SNSの投稿データ
+- ECサイトの閲覧履歴
+- IoTセンサーのログ
+
+こうしたデータは、
+・項目が毎回同じとは限らない  
+・とにかく量が多い  
+という特徴があります。
+
+こういうときに強いのが NoSQL です。
+
+
+## 定義・仕組み
+
+NoSQL（Not Only SQL）は、
+
+- テーブル構造に固定されない
+- スキーマ（項目構造）を厳密に決めなくても保存できる
+- 分散環境での処理を前提に設計されている
+
+という特徴を持つデータベースの総称です。
+
+代表例：
+
+- キー・バリュー型
+- ドキュメント型（例：MongoDB）
+- カラム型（例：HBase）
+- グラフ型
+
+### なぜ必要になったのか？
+
+従来のRDBは、
+
+- 厳密な整合性
+- トランザクション管理
+
+に強い反面、
+
+- データ量が爆発的に増える
+- サーバを横に増やして処理する（スケールアウト）
+
+という用途には不向きでした。
+
+そこで、
+「多少の整合性よりも、処理速度と拡張性を優先する」  
+という思想で生まれたのが NoSQL です。
+
+
+## どんな場面で使う？
+
+### 使うべき場面
+
+- ビッグデータ処理
+- SNS・ログ・IoTデータ
+- 項目が頻繁に変わるデータ
+- クラウド分散環境
+
+DS検定では、  
+「分散技術」「クラウド」「API経由でのデータ登録」  
+とセットで出題されることが多いです。
+
+### 使うと誤解しやすい場面
+
+- 会計システム
+- 銀行取引管理
+
+のような、
+**絶対に整合性が崩れてはいけない場面**では  
+RDBの方が適しています。
+
+
+## よくある誤解・混同
+
+### ❌ NoSQLはSQLが使えない
+
+→ 「Not Only SQL」の意味です。  
+SQLが使えないわけではありません。
+
+
+### ❌ NoSQLは上位互換
+
+→ 目的が違います。  
+RDBとNoSQLは「得意分野が違う」だけです。
+
+
+### ❌ NoSQLは整合性がない
+
+→ 「最終的整合性（Eventually Consistent）」を採用する設計が多い、という意味です。  
+完全に無秩序というわけではありません。
+
+
+### DS検定でのひっかけ
+
+選択肢で：
+
+- 「ACID特性を強く保証する」
+- 「テーブル正規化を前提とする」
+
+と書かれていたら、それはRDBの特徴です。
+
+NoSQLは
+
+- 分散処理
+- スケールアウト
+- 柔軟なスキーマ
+
+がキーワードです。
+
+
+## まとめ（試験直前用）
+
+- NoSQL＝テーブルに縛られないDB
+- ビッグデータ・分散処理向け
+- 整合性より拡張性を優先する設計が多い
+- RDBとの「役割の違い」を理解することが最重要
+- 「ACID・正規化」はRDB側
+
+DS検定では  
+「どちらが適切か」を判断できるかが問われます。
+
+
+## 対応スキル項目（データエンジニアリング力シート）
+
+- データ蓄積
+- 分散技術
+- ★ NoSQLデータストア（HBase、Cassandra、Mongo DB、CouchDB、Amazon DynamoDB、Azure Cosmos DB、Google Cloud Firestoreなど）にAPIを介してアクセスし、新規データを登録できる
+
+## 🔗 関連記事
+
+<ul style="padding-left: 20px;">
+{% assign current_tags = page.tags %}
+{% assign count = 0 %}
+
+{% for p in site.pages %}
+  {% if p.url != page.url and p.tags %}
+    {% assign matched = false %}
+
+    {% for tag in current_tags %}
+      {% if p.tags contains tag and tag != "ds" %}
+        {% assign matched = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if matched %}
+      <li style="margin-bottom: 6px;">
+        <a href="{{ p.url }}">{{ p.title }}</a>
+      </li>
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+
+    {% if count >= 5 %}
+      {% break %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>
+
+<hr>
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/ds/">DS検定トップに戻る</a>
+</div>
+
+<div style="display:flex;justify-content:space-between;margin-top:12px;">
+
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
+  {% endif %}
+
+  {% if page.next.url %}
+    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
+  {% endif %}
+
+</div>

@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Skillcheck row schema",
+  "type": "object",
+  "required": [
+    "version",
+    "sheet",
+    "section",
+    "category",
+    "subcategory",
+    "item_id",
+    "item",
+    "notes",
+    "source_url"
+  ],
+  "properties": {
+    "version": { "type": "string" },
+    "sheet": { "type": "string" },
+    "section": { "type": "string" },
+    "category": { "type": "string" },
+    "subcategory": { "type": "string" },
+    "item_id": { "type": "string" },
+    "item": { "type": "string" },
+    "notes": { "type": "string" },
+    "source_url": { "type": "string", "format": "uri" }
+  }
+}

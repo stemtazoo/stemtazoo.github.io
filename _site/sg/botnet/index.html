@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>ボットネットとは？踏み台化とDDoSの関係を理解する【情報セキュリティマネジメント】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="ボットネットとは？踏み台化とDDoSの関係を理解する【情報セキュリティマネジメント】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="ボットネットはマルウェア感染した端末を遠隔操作し攻撃に利用する仕組みです。DDoSとの関係や踏み台リスクを整理し、SG試験の判断ポイントを解説します。" />
+<meta property="og:description" content="ボットネットはマルウェア感染した端末を遠隔操作し攻撃に利用する仕組みです。DDoSとの関係や踏み台リスクを整理し、SG試験の判断ポイントを解説します。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="ボットネットとは？踏み台化とDDoSの関係を理解する【情報セキュリティマネジメント】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"ボットネットはマルウェア感染した端末を遠隔操作し攻撃に利用する仕組みです。DDoSとの関係や踏み台リスクを整理し、SG試験の判断ポイントを解説します。","headline":"ボットネットとは？踏み台化とDDoSの関係を理解する【情報セキュリティマネジメント】","url":"/sg/botnet/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">ボットネットとは？踏み台化とDDoSの関係を理解する【情報セキュリティマネジメント】</h1>
+      <h2 class="project-tagline">ボットネットはマルウェア感染した端末を遠隔操作し攻撃に利用する仕組みです。DDoSとの関係や踏み台リスクを整理し、SG試験の判断ポイントを解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">ボットネットはマルウェア感染した端末を遠隔操作し攻撃に利用する仕組みです。DDoSとの関係や踏み台リスクを整理し、SG試験の判断ポイントを解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">threat_vulnerability</span>
+        
+          <span class="post-tag">malware</span>
+        
+          <span class="post-tag">unauthorized_access</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+<p>ボットネットとは、<strong>マルウェアに感染した多数の端末を遠隔操作し、攻撃に利用する仕組み</strong>です。<br />
+SG試験では「<strong>DDoSの攻撃元になる仕組み</strong>」として理解できているかが問われます。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>知らないうちに、自分のPCが「操られる兵隊」になるイメージです。</p>
+
+<ul>
+  <li>利用者のPCがマルウェアに感染</li>
+  <li>攻撃者が遠隔操作できる状態になる</li>
+  <li>多数のPCをまとめて操作</li>
+  <li>一斉に攻撃を実行</li>
+</ul>
+
+<p>👉 <strong>自分が被害者であり加害者にもなる</strong>のがポイントです。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+
+<h3 id="ボットネットの構成">ボットネットの構成</h3>
+<ul>
+  <li>ボット（Bot）：感染した端末</li>
+  <li>攻撃者：ボットを操作する</li>
+  <li>C&amp;Cサーバ（指令サーバ）：命令を配信</li>
+</ul>
+
+<h3 id="基本の流れ">基本の流れ</h3>
+<ol>
+  <li>マルウェア感染</li>
+  <li>ボット化（遠隔操作可能）</li>
+  <li>指令サーバから命令受信</li>
+  <li>一斉攻撃（DDoSなど）</li>
+</ol>
+
+<p>👉 <strong>複数端末をまとめて動かす仕組み</strong></p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+
+<h3 id="主な用途">主な用途</h3>
+<ul>
+  <li>DDoS攻撃</li>
+  <li>スパムメール送信</li>
+  <li>不正アクセスの踏み台</li>
+</ul>
+
+<hr />
+
+<h3 id="実務での重要ポイント">実務での重要ポイント</h3>
+<ul>
+  <li>自社端末がボット化すると
+→ <strong>知らないうちに攻撃に加担</strong></li>
+  <li>社会的信用の低下につながる</li>
+</ul>
+
+<p>👉 「防御」だけでなく「加害防止」も重要</p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="-ボットネットマルウェアそのもの">❌ ボットネット＝マルウェアそのもの</h3>
+<p>→ ⭕ マルウェアによって構成される「ネットワーク」</p>
+
+<hr />
+
+<h3 id="-ddos攻撃と同じもの">❌ DDoS攻撃と同じもの</h3>
+<p>→ ⭕ ボットネットは「攻撃の手段（仕組み）」</p>
+
+<hr />
+
+<h3 id="-感染するとすぐ被害が出る">❌ 感染するとすぐ被害が出る</h3>
+<p>→ ⭕ 気づかないまま利用されることが多い</p>
+
+<hr />
+
+<h3 id="sg試験のひっかけ">SG試験のひっかけ</h3>
+<ul>
+  <li>「複数端末」「遠隔操作」 → ボットネット</li>
+  <li>「一斉攻撃」 → DDoS（結果）</li>
+</ul>
+
+<p>👉 手段と結果を切り分ける</p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>ボットネット＝<strong>感染端末を遠隔操作する仕組み</strong></li>
+  <li>DDoSの攻撃元として使われる</li>
+  <li>自分が「踏み台」になるリスクあり</li>
+  <li>マルウェアとは別概念（構造）</li>
+  <li>SG試験では「攻撃の構成」で判断</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/attacker-types/">攻撃者の種類とは？目的と特徴で整理する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/blacklist-whitelist/">ブラックリストとホワイトリストの違いとは？判断基準を整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/bot/">ボットとは？遠隔操作される仕組みを理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/brute-force-attack/">ブルートフォース攻撃とは？総当たり攻撃の仕組みと対策【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/clickjacking/">クリックジャッキングとは？見えない操作誘導の仕組み【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/bot/">← ボットとは？遠隔操作される仕組みを理解する【情報セキュリティマネジメント】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/brute-force-attack/">ブルートフォース攻撃とは？総当たり攻撃の仕組みと対策【情報セキュリティマネジメント】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

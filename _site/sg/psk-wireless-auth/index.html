@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>事前共有鍵（PSK）とは？無線LANの接続制御の基本【情報セキュリティマネジメント】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="事前共有鍵（PSK）とは？無線LANの接続制御の基本【情報セキュリティマネジメント】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="事前共有鍵（PSK）は無線LANの接続制御の基本を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:description" content="事前共有鍵（PSK）は無線LANの接続制御の基本を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="事前共有鍵（PSK）とは？無線LANの接続制御の基本【情報セキュリティマネジメント】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"事前共有鍵（PSK）は無線LANの接続制御の基本を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。","headline":"事前共有鍵（PSK）とは？無線LANの接続制御の基本【情報セキュリティマネジメント】","url":"/sg/psk-wireless-auth/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">事前共有鍵（PSK）とは？無線LANの接続制御の基本【情報セキュリティマネジメント】</h1>
+      <h2 class="project-tagline">事前共有鍵（PSK）は無線LANの接続制御の基本を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">事前共有鍵（PSK）は無線LANの接続制御の基本を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">security_measures</span>
+        
+          <span class="post-tag">access_control</span>
+        
+          <span class="post-tag">network</span>
+        
+          <span class="post-tag">sg-security-measures</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+<p>事前共有鍵（PSK）は、無線LANに接続できる端末を制限するための「共通パスワード」であり、SG試験では「接続そのものを制御する仕組みかどうか」を判断させる問題でよく問われます。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>セミナー会場のWi-Fiをイメージしてください。</p>
+
+<ul>
+  <li>参加者には「今日のパスワード」を配る</li>
+  <li>そのパスワードを知っている人だけ接続できる</li>
+</ul>
+
+<p>これがPSKです。</p>
+
+<p>もしパスワードを毎回変えなければ、
+過去の参加者もずっと使えてしまいます。</p>
+
+<p>だから、
+<strong>「イベントごとに鍵を変える」＝不正利用を防ぐ基本対策</strong>
+になります。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>事前共有鍵（PSK：Pre-Shared Key）とは、</p>
+
+<ul>
+  <li>無線LANのアクセスポイントと端末で</li>
+  <li>あらかじめ同じ鍵（パスワード）を共有して</li>
+  <li>認証を行う方式</li>
+</ul>
+
+<p>です。</p>
+
+<p>仕組みとしてはシンプルで、</p>
+
+<ol>
+  <li>端末がWi-Fiに接続しようとする</li>
+  <li>正しい鍵（パスワード）を入力</li>
+  <li>一致すれば接続許可</li>
+</ol>
+
+<p>という流れになります。</p>
+
+<p>SG試験ではここが重要です：</p>
+
+<p>👉 <strong>PSKは「接続前の認証」を担当する</strong></p>
+
+<p>つまり、
+<strong>接続できるかどうかを決める仕組み</strong>です。</p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="使うべき場面">使うべき場面</h3>
+<ul>
+  <li>セミナーやイベントの来場者Wi-Fi</li>
+  <li>小規模オフィスの無線LAN</li>
+  <li>来客用ネットワーク（ゲストWi-Fi）</li>
+</ul>
+
+<p>特に重要なのが、</p>
+
+<p>👉 <strong>参加者が毎回変わる環境</strong></p>
+
+<p>この場合は、
+<strong>PSKを定期的に変更することで不正接続を防ぐ</strong>
+という運用になります。</p>
+
+<hr />
+
+<h3 id="使うと誤解しやすい場面">使うと誤解しやすい場面</h3>
+<ul>
+  <li>接続後の通信制御（URL制限など）</li>
+  <li>IPアドレスの割当（DHCP）</li>
+</ul>
+
+<p>これらはすべて
+<strong>接続した後の話</strong>です。</p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="-dhcpで制御できる">❌ DHCPで制御できる</h3>
+<p>→ できない</p>
+
+<p>DHCPはIPアドレスを配るだけです。<br />
+<strong>接続の可否は制御できません。</strong></p>
+
+<hr />
+
+<h3 id="-urlフィルタで防げる">❌ URLフィルタで防げる</h3>
+<p>→ 防げない</p>
+
+<p>URLフィルタは<br />
+<strong>接続後にどのサイトへ行けるかを制御する機能</strong>です。</p>
+
+<hr />
+
+<h3 id="-プライバシーセパレータで防げる">❌ プライバシーセパレータで防げる</h3>
+<p>→ 防げない</p>
+
+<p>これは<br />
+<strong>端末同士の通信を防ぐ機能</strong>です。<br />
+アクセスポイントへの接続自体は止められません。</p>
+
+<hr />
+
+<h3 id="sg試験のひっかけ">SG試験のひっかけ</h3>
+<p>SG試験ではこう問われます：</p>
+
+<blockquote>
+  <p>「接続を防ぐ対策はどれか？」</p>
+</blockquote>
+
+<p>このとき、</p>
+
+<ul>
+  <li>接続前 → 認証（PSKなど）</li>
+  <li>接続後 → フィルタ・制限</li>
+</ul>
+
+<p>この切り分けができるかがポイントです。</p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>PSKは「無線LANに接続できるか」を決める認証方式</li>
+  <li>セミナーなどでは「鍵を毎回変更」が基本対策</li>
+  <li>DHCPやURLフィルタは「接続後」の制御なので不正解</li>
+  <li>SG試験では「接続前か・接続後か」で選択肢を切る</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/blacklist-whitelist/">ブラックリストとホワイトリストの違いとは？判断基準を整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/bot/">ボットとは？遠隔操作される仕組みを理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/brute-force-attack/">ブルートフォース攻撃とは？総当たり攻撃の仕組みと対策【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/common-port-numbers/">よく出るポート番号とは？試験での見分け方を整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/cryptojacking/">クリプトジャッキングとは？不正マイニングの仕組みを理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/project-lifecycle-characteristics/">← プロジェクトライフサイクルの特性とは？頻出パターンを整理【情報セキュリティマネジメント】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/ransomware/">ランサムウェアとは？身代金要求型攻撃の仕組み【情報セキュリティマネジメント】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

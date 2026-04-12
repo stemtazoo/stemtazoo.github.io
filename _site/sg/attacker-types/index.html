@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>攻撃者の種類とは？目的と特徴で整理する【情報セキュリティマネジメント】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="攻撃者の種類とは？目的と特徴で整理する【情報セキュリティマネジメント】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="攻撃者の種類はサイバー攻撃を目的別に整理する分類です。この記事では愉快犯・金銭目的・内部不正の違い、対策選定の要点、SG試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:description" content="攻撃者の種類はサイバー攻撃を目的別に整理する分類です。この記事では愉快犯・金銭目的・内部不正の違い、対策選定の要点、SG試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="攻撃者の種類とは？目的と特徴で整理する【情報セキュリティマネジメント】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"攻撃者の種類はサイバー攻撃を目的別に整理する分類です。この記事では愉快犯・金銭目的・内部不正の違い、対策選定の要点、SG試験で狙われるひっかけポイントを解説します。","headline":"攻撃者の種類とは？目的と特徴で整理する【情報セキュリティマネジメント】","url":"/sg/attacker-types/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">攻撃者の種類とは？目的と特徴で整理する【情報セキュリティマネジメント】</h1>
+      <h2 class="project-tagline">攻撃者の種類はサイバー攻撃を目的別に整理する分類です。この記事では愉快犯・金銭目的・内部不正の違い、対策選定の要点、SG試験で狙われるひっかけポイントを解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">攻撃者の種類はサイバー攻撃を目的別に整理する分類です。この記事では愉快犯・金銭目的・内部不正の違い、対策選定の要点、SG試験で狙われるひっかけポイントを解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">security_general</span>
+        
+          <span class="post-tag">threat_vulnerability</span>
+        
+          <span class="post-tag">security_awareness</span>
+        
+          <span class="post-tag">sg-security-overview</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+<p>攻撃者の種類とは、「どんな目的・動機で攻撃するか」によって分類したものであり、SG試験では<strong>攻撃者の意図を見抜いて適切な対策を選べるか</strong>が問われます。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>攻撃者といっても、全員が同じ目的ではありません。</p>
+
+<ul>
+  <li>お金目的の人</li>
+  <li>技術力を試したい人</li>
+  <li>楽しみでやる人</li>
+  <li>思想的な主張をしたい人</li>
+</ul>
+
+<p>👉 <strong>「誰が何のために攻撃しているか」で対策は変わる</strong><br />
+これが理解できると、問題が一気に解きやすくなります。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>代表的な攻撃者の種類を整理します。</p>
+
+<h3 id="スクリプトキディscript-kiddie">スクリプトキディ（Script Kiddie）</h3>
+<ul>
+  <li>他人が作ったツールを使うだけ</li>
+  <li>技術力は低いが数は多い<br />
+👉 <strong>無差別攻撃が多い</strong></li>
+</ul>
+
+<hr />
+
+<h3 id="ハッカーhacker">ハッカー（Hacker）</h3>
+<ul>
+  <li>本来は「高い技術力を持つ人」という中立的な意味</li>
+  <li>善悪どちらにも使われる<br />
+👉 セキュリティ向上に貢献する場合もある</li>
+</ul>
+
+<hr />
+
+<h3 id="クラッカーcracker">クラッカー（Cracker）</h3>
+<ul>
+  <li>悪意を持って攻撃する人</li>
+  <li>不正侵入・情報窃取などを行う<br />
+👉 SG試験では「悪意の攻撃者」は基本これ</li>
+</ul>
+
+<hr />
+
+<h3 id="詐欺犯故意犯">詐欺犯・故意犯</h3>
+<ul>
+  <li>明確な目的（主に金銭）を持つ</li>
+  <li>フィッシングや不正送金など<br />
+👉 <strong>ビジネス被害に直結</strong></li>
+</ul>
+
+<hr />
+
+<h3 id="愉快犯">愉快犯</h3>
+<ul>
+  <li>目的は楽しみ・自己満足</li>
+  <li>Webサイト改ざんなど<br />
+👉 直接の金銭被害がなくても影響大</li>
+</ul>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="リスク分析対策選定">リスク分析・対策選定</h3>
+<p>SG試験では、次のように問われます。</p>
+
+<ul>
+  <li>「この攻撃はどのタイプか？」</li>
+  <li>「どの対策が有効か？」</li>
+</ul>
+
+<p>例：</p>
+<ul>
+  <li>無差別攻撃 → スクリプトキディ → 基本的なセキュリティ対策</li>
+  <li>標的型攻撃 → 詐欺犯・クラッカー → 教育＋監視＋多層防御</li>
+</ul>
+
+<p>👉 <strong>攻撃者の種類から対策を逆算するのがポイント</strong></p>
+
+<hr />
+
+<h3 id="セキュリティ教育現場運用">セキュリティ教育（現場運用）</h3>
+<ul>
+  <li>フィッシング対策 → 詐欺犯を想定</li>
+  <li>内部不正対策 → 故意犯・不満社員を想定</li>
+</ul>
+
+<p>👉 <strong>誰を想定しているかで教育内容が変わる</strong></p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+<h3 id="-ハッカー悪い人">❌ ハッカー＝悪い人</h3>
+<p>→ ⭕ 本来は中立（技術者）</p>
+
+<p>👉 SG試験では<br />
+「ハッカー＝悪意」と書かれていたら誤りの可能性が高い</p>
+
+<hr />
+
+<h3 id="-技術力が高い危険">❌ 技術力が高い＝危険</h3>
+<p>→ ⭕ 危険かどうかは「目的」で決まる</p>
+
+<p>👉 クラッカーは悪意あり<br />
+👉 ハッカーは善悪どちらもあり</p>
+
+<hr />
+
+<h3 id="-攻撃者は外部だけ">❌ 攻撃者は外部だけ</h3>
+<p>→ ⭕ 内部の人も攻撃者になる</p>
+
+<p>👉 不正のトライアングルとセットで出題されやすい</p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>攻撃者は「目的・動機」で分類する</li>
+  <li>スクリプトキディ＝低技術・無差別攻撃</li>
+  <li>クラッカー＝悪意ある攻撃者（試験で重要）</li>
+  <li>ハッカーは中立なので混同注意</li>
+  <li>SG試験では「誰が・何の目的で」を見て対策を判断する</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/botnet/">ボットネットとは？踏み台化とDDoSの関係を理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/brute-force-attack/">ブルートフォース攻撃とは？総当たり攻撃の仕組みと対策【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/clickjacking/">クリックジャッキングとは？見えない操作誘導の仕組み【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/command-and-control/">C&amp;Cサーバとは？ボットネットを操る指令の仕組み【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/cracker/">クラッカーとは？悪意ある攻撃者の特徴と見分け方【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/">← 情報セキュリティマネジメント試験 学習まとめ</a>
+  
+
+  
+    
+    <a class="next" href="/sg/availability/">稼働率とは？可用性の考え方とSLAでの判断基準【情報セキュリティマネジメント】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

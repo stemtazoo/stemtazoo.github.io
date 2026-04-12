@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>IPスプーフィングとは？送信元偽装の仕組みと対策【情報セキュリティマネジメント】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="IPスプーフィングとは？送信元偽装の仕組みと対策【情報セキュリティマネジメント】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="IPスプーフィングは送信元偽装の仕組みと対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:description" content="IPスプーフィングは送信元偽装の仕組みと対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="IPスプーフィングとは？送信元偽装の仕組みと対策【情報セキュリティマネジメント】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"IPスプーフィングは送信元偽装の仕組みと対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。","headline":"IPスプーフィングとは？送信元偽装の仕組みと対策【情報セキュリティマネジメント】","url":"/sg/ip-spoofing/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">IPスプーフィングとは？送信元偽装の仕組みと対策【情報セキュリティマネジメント】</h1>
+      <h2 class="project-tagline">IPスプーフィングは送信元偽装の仕組みと対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">IPスプーフィングは送信元偽装の仕組みと対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">security_measures</span>
+        
+          <span class="post-tag">unauthorized_access</span>
+        
+          <span class="post-tag">network</span>
+        
+          <span class="post-tag">threat_vulnerability</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+<ul>
+  <li>IPスプーフィングとは、<strong>送信元のIPアドレスを偽装して通信する攻撃</strong>であり、SG試験では「なりすましの種類」と「防御できる仕組み」を判断させる問題として出題される。</li>
+</ul>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>IPアドレスは「通信の送り主の住所」です。</p>
+
+<p>IPスプーフィングは、
+👉「差出人の住所を偽る」攻撃です。</p>
+
+<p>例えば、</p>
+<ul>
+  <li>本当は攻撃者なのに<br />
+👉 正規サーバや信頼できる機器になりすます</li>
+</ul>
+
+<p>👉 受け取る側は「信頼できる相手」と勘違いします。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>IPスプーフィングは、IPパケットの送信元アドレスを書き換えることで成立します。</p>
+
+<hr />
+
+<h3 id="攻撃の流れ">攻撃の流れ</h3>
+<ol>
+  <li>攻撃者が送信元IPを偽装</li>
+  <li>サーバに通信を送る</li>
+  <li>サーバは正規の相手と誤認</li>
+  <li>不正な通信が成立する</li>
+</ol>
+
+<hr />
+
+<h3 id="主な利用目的">主な利用目的</h3>
+<ul>
+  <li>アクセス制御の回避（IP制限の突破）</li>
+  <li>DDoS攻撃の隠蔽（発信元の特定を困難にする）</li>
+  <li>他の攻撃（中間者攻撃など）の補助</li>
+</ul>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="攻撃される場面">攻撃される場面</h3>
+<ul>
+  <li>IPアドレスだけで認証しているシステム</li>
+  <li>ネットワーク内部を信頼しすぎている環境</li>
+</ul>
+
+<hr />
+
+<h3 id="防ぐ場面対策">防ぐ場面（対策）</h3>
+<ul>
+  <li>パケットフィルタリング（不正なIPの遮断）</li>
+  <li>認証の強化（IPだけに依存しない）</li>
+  <li>侵入検知システム（IDS/IPS）</li>
+</ul>
+
+<hr />
+
+<h3 id="sg試験での考え方">SG試験での考え方</h3>
+<p>👉 「IPアドレス＝本人確認ではない」</p>
+
+<ul>
+  <li>IPは簡単に偽装できる<br />
+👉 認証としては不十分</li>
+</ul>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+<h3 id="-誤解通信内容を盗む攻撃">❌ 誤解①：通信内容を盗む攻撃</h3>
+<p>👉 ⭕ 違う</p>
+<ul>
+  <li>IPスプーフィングは「なりすまし」</li>
+</ul>
+
+<p>（盗聴は中間者攻撃）</p>
+
+<hr />
+
+<h3 id="-誤解dnsの問題">❌ 誤解②：DNSの問題</h3>
+<p>👉 ⭕ 違う</p>
+<ul>
+  <li>DNS：名前→IP変換</li>
+  <li>IPスプーフィング：送信元の偽装</li>
+</ul>
+
+<hr />
+
+<h3 id="-誤解これだけで侵入できる">❌ 誤解③：これだけで侵入できる</h3>
+<p>👉 ⭕ 単独では難しい</p>
+<ul>
+  <li>他の攻撃と組み合わせて使われることが多い</li>
+</ul>
+
+<hr />
+
+<h3 id="sg試験のひっかけポイント">SG試験のひっかけポイント</h3>
+<ul>
+  <li>「IP制限をしていれば安全」とする選択肢<br />
+→ ❌ 不十分</li>
+</ul>
+
+<p>👉 正しくは</p>
+<ul>
+  <li><strong>IPだけに依存しない認証が必要</strong></li>
+</ul>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>IPスプーフィング＝「送信元IPの偽装」</li>
+  <li>目的は<br />
+👉 なりすまし・追跡回避</li>
+  <li>IPは認証として弱い</li>
+  <li>試験では<br />
+👉 「なりすましか盗聴か」で切り分ける</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/attacker-types/">攻撃者の種類とは？目的と特徴で整理する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/blacklist-whitelist/">ブラックリストとホワイトリストの違いとは？判断基準を整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/bot/">ボットとは？遠隔操作される仕組みを理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/botnet/">ボットネットとは？踏み台化とDDoSの関係を理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/brute-force-attack/">ブルートフォース攻撃とは？総当たり攻撃の仕組みと対策【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/information-security-management-exam/">← 情報セキュリティマネジメント試験とは？役割・対象者・試験の位置づけを整理</a>
+  
+
+  
+    
+    <a class="next" href="/sg/jpcert-cc/">JPCERT/CCとは？役割とCSIRTとの違いを整理【情報セキュリティマネジメント】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

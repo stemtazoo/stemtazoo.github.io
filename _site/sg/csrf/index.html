@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>クロスサイトリクエストフォージェリとは？なりすまし操作の仕組み【情報セキュリティマネジメント】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="クロスサイトリクエストフォージェリとは？なりすまし操作の仕組み【情報セキュリティマネジメント】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="クロスサイトリクエストフォージェリは利用者のログイン状態を悪用して意図しない操作を実行させる攻撃です。CSRFとXSSの違いや試験での判断ポイントを整理します。" />
+<meta property="og:description" content="クロスサイトリクエストフォージェリは利用者のログイン状態を悪用して意図しない操作を実行させる攻撃です。CSRFとXSSの違いや試験での判断ポイントを整理します。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="クロスサイトリクエストフォージェリとは？なりすまし操作の仕組み【情報セキュリティマネジメント】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"クロスサイトリクエストフォージェリは利用者のログイン状態を悪用して意図しない操作を実行させる攻撃です。CSRFとXSSの違いや試験での判断ポイントを整理します。","headline":"クロスサイトリクエストフォージェリとは？なりすまし操作の仕組み【情報セキュリティマネジメント】","url":"/sg/csrf/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">クロスサイトリクエストフォージェリとは？なりすまし操作の仕組み【情報セキュリティマネジメント】</h1>
+      <h2 class="project-tagline">クロスサイトリクエストフォージェリは利用者のログイン状態を悪用して意図しない操作を実行させる攻撃です。CSRFとXSSの違いや試験での判断ポイントを整理します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">クロスサイトリクエストフォージェリは利用者のログイン状態を悪用して意図しない操作を実行させる攻撃です。CSRFとXSSの違いや試験での判断ポイントを整理します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">security_general</span>
+        
+          <span class="post-tag">threat_vulnerability</span>
+        
+          <span class="post-tag">unauthorized_access</span>
+        
+          <span class="post-tag">data_leakage</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+<p>クロスサイトリクエストフォージェリ（CSRF）は、ログイン済みの利用者になりすまして、意図しないリクエストを送らせる攻撃です。<br />
+SG試験では「本人の操作に見せかける攻撃かどうか」を見抜けるかがポイントになります。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>イメージとしては、</p>
+
+<ul>
+  <li>銀行にログインしたまま別のサイトを見る</li>
+  <li>そのサイトに「見えない送金ボタン」が仕込まれている</li>
+  <li>気づかないうちに送金リクエストが実行される</li>
+</ul>
+
+<p>という状態です。</p>
+
+<p>ポイントは<br />
+👉 <strong>自分は何もしていないのに、勝手に操作が行われること</strong></p>
+
+<p>です。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>クロスサイトリクエストフォージェリ（CSRF）は、</p>
+
+<ul>
+  <li>利用者がログイン済みの状態を利用して</li>
+  <li>攻撃者が用意したページやリンクを踏ませ</li>
+  <li>正規のWebサイトに対して不正なリクエストを送らせる</li>
+</ul>
+
+<p>攻撃です。</p>
+
+<h3 id="仕組みの流れ">仕組みの流れ</h3>
+<ol>
+  <li>利用者が正規サイトにログイン（Cookie保持）</li>
+  <li>攻撃者のページを閲覧</li>
+  <li>見えない形でリクエスト送信（例：送金・設定変更）</li>
+  <li>サーバは「ログイン済みユーザの操作」と誤認</li>
+</ol>
+
+<h3 id="重要ポイント">重要ポイント</h3>
+<ul>
+  <li>サーバ側は「正規ユーザの通信」と区別できない</li>
+  <li>攻撃の成立条件は「ログイン状態」</li>
+</ul>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="起きやすい場面">起きやすい場面</h3>
+<ul>
+  <li>ログイン状態を保持するWebサービス
+    <ul>
+      <li>銀行</li>
+      <li>ECサイト</li>
+      <li>SNS</li>
+    </ul>
+  </li>
+  <li>ワンクリックで実行される処理
+    <ul>
+      <li>送金</li>
+      <li>パスワード変更</li>
+      <li>メール変更</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="現場での対策の考え方">現場での対策の考え方</h3>
+<ul>
+  <li>トークン（CSRFトークン）の付与</li>
+  <li>再認証（重要操作時）</li>
+  <li>Refererチェック</li>
+</ul>
+
+<p>👉 「その操作、本当にユーザ本人が意図した？」を確認する仕組みが重要</p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+<h3 id="-xssと混同する">❌ XSSと混同する</h3>
+<ul>
+  <li>XSS：スクリプトを実行させる攻撃</li>
+  <li>CSRF：ユーザの操作を悪用する攻撃</li>
+</ul>
+
+<p>👉 SG試験ではここをよく狙われます</p>
+
+<hr />
+
+<h3 id="-不正アクセスだと考える">❌ 「不正アクセス」だと考える</h3>
+<ul>
+  <li>CSRFはログイン済みユーザを利用する</li>
+  <li>ID・パスワードを破るわけではない</li>
+</ul>
+
+<p>👉 「なりすまし操作」がキーワード</p>
+
+<hr />
+
+<h3 id="-ユーザが怪しい操作をしたと思う">❌ 「ユーザが怪しい操作をした」と思う</h3>
+<ul>
+  <li>実際はユーザは気づいていない</li>
+</ul>
+
+<p>👉 「本人の意思ではない」が重要</p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>CSRF＝ログイン状態を悪用したなりすまし操作</li>
+  <li>サーバは正規ユーザの操作と区別できない</li>
+  <li>XSSは「スクリプト実行」、CSRFは「リクエスト悪用」</li>
+  <li>選択肢で「本人の意思でない操作」があればCSRFを疑う</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/attacker-types/">攻撃者の種類とは？目的と特徴で整理する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/blacklist-whitelist/">ブラックリストとホワイトリストの違いとは？判断基準を整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/bot/">ボットとは？遠隔操作される仕組みを理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/botnet/">ボットネットとは？踏み台化とDDoSの関係を理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/brute-force-attack/">ブルートフォース攻撃とは？総当たり攻撃の仕組みと対策【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/csirt/">← CSIRTとは？組織内インシデント対応の基本【情報セキュリティマネジメント】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/cvss/">CVSSとは？脆弱性の深刻度を共通スコアで判断する【情報セキュリティマネジメント】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

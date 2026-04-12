@@ -1,0 +1,168 @@
+﻿---
+layout: page
+title: バッチ処理とストリーム処理の違いとは？【DS検定リテラシー】
+description: バッチ処理とストリーム処理の違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+permalink: /ds/batch-vs-stream/
+categories: [data-engineering]
+tags: [ds, data-processing]
+prev: /ds/self-join/
+next: /ds/etl/
+---
+<div style="font-size: 14px; margin-bottom: 12px;">
+  <a href="/ds/">DS検定トップ</a>
+  ＞ {{ page.title }}
+</div>
+
+## まず結論
+バッチ処理は「まとめて後で処理する方式」、ストリーム処理は「発生と同時に処理する方式」です。  
+DS検定では「リアルタイム性が必要かどうか」で判断させる問題が出ます。
+
+
+## 直感的な説明
+
+### バッチ処理
+1日分の売上を夜にまとめて集計する。
+
+→ 遅れてもいい。まとめて処理。
+
+
+### ストリーム処理
+クレジットカードの不正検知をその場で判断する。
+
+→ 今すぐ判定が必要。
+
+この「今すぐか、後でいいか」が最大の違いです。
+
+
+## 定義・仕組み
+
+### バッチ処理
+
+- 一定期間データを蓄積
+- まとめて処理
+- 定期実行（例：毎日深夜）
+
+特徴：
+- 安定
+- 大量処理に向く
+- 即時性は低い
+
+
+### ストリーム処理
+
+- データが発生するたびに処理
+- リアルタイム処理
+- 連続的に実行
+
+特徴：
+- 即時性が高い
+- 不正検知やアラートに向く
+- システム設計が複雑になりやすい
+
+
+## どんな場面で使う？
+
+### バッチ処理が向く場面
+
+- 売上集計
+- 月次レポート
+- ログ分析
+
+「今すぐでなくてよい」処理。
+
+
+### ストリーム処理が向く場面
+
+- 不正検知
+- IoT異常検知
+- リアルタイム広告配信
+- 株価監視
+
+「遅れると意味がない」処理。
+
+DS検定では  
+「リアルタイム性」「即時検知」と書いてあればストリーム処理です。
+
+
+## よくある誤解・混同
+
+### ① ストリーム処理＝高速処理？
+
+高速というより「即時性」がポイントです。  
+大量一括処理ならバッチのほうが効率的な場合もあります。
+
+
+### ② バッチ処理＝古い？
+
+現在も広く使われています。  
+用途が違うだけです。
+
+
+### ③ Sparkはストリーム専用？
+
+Sparkはバッチもストリームも対応できます。  
+ここもDS検定で混同させやすいポイントです。
+
+
+## まとめ（試験直前用）
+
+- バッチ＝まとめて後で処理  
+- ストリーム＝発生と同時に処理  
+- 即時性が必要 → ストリーム  
+- 大量一括処理 → バッチ  
+- 「リアルタイム」「不正検知」→ ストリーム
+
+
+## 対応スキル項目（データエンジニアリング力シート）
+- データ基盤
+- データ処理方式
+- ★ データ処理方式（バッチ処理・ストリーム処理）の違いを理解している
+- ★ リアルタイム処理の必要性を判断できる
+
+## 🔗 関連記事
+
+<ul style="padding-left: 20px;">
+{% assign current_tags = page.tags %}
+{% assign count = 0 %}
+
+{% for p in site.pages %}
+  {% if p.url != page.url and p.tags %}
+    {% assign matched = false %}
+
+    {% for tag in current_tags %}
+      {% if p.tags contains tag and tag != "ds" %}
+        {% assign matched = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if matched %}
+      <li style="margin-bottom: 6px;">
+        <a href="{{ p.url }}">{{ p.title }}</a>
+      </li>
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+
+    {% if count >= 5 %}
+      {% break %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>
+
+<hr>
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/ds/">DS検定トップに戻る</a>
+</div>
+
+<div style="display:flex;justify-content:space-between;margin-top:12px;">
+
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
+  {% endif %}
+
+  {% if page.next.url %}
+    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
+  {% endif %}
+
+</div>

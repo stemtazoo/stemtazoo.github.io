@@ -1,0 +1,192 @@
+﻿---
+layout: page
+title: AIOpsとは？MLOpsとの違いを整理【DS検定リテラシー】
+description: AIOpsはMLOpsとの違いを整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+permalink: /ds/aiops/
+categories: [ai-utilization]
+tags: [ds, environment-setup, ai-use]
+prev: /ds/society5/
+next: /ds/aiops-mlops-cheatsheet/
+---
+<div style="font-size: 14px; margin-bottom: 12px;">
+  <a href="/ds/">DS検定トップ</a>
+  ＞ {{ page.title }}
+</div>
+
+## まず結論
+
+- **AIOpsとは、AIを使ってIT運用（システム監視・障害対応など）を効率化・自動化する考え方**です。  
+- DS検定では「AIをどこに使っているのか」を判断できるかが問われます。
+
+特に、**MLOpsと混同させる問題**が出やすいので注意が必要です。
+
+
+## 直感的な説明
+
+会社のシステムには、サーバー、ネットワーク、ログ、アプリなど大量の監視データがあります。
+
+人間がすべてのログを目視で確認するのは不可能です。
+
+そこで、
+
+- 異常なログパターンをAIが検知する  
+- 障害の原因を自動推定する  
+- アラートの優先順位をつける  
+
+といった仕組みを作るのが **AIOps** です。
+
+つまり、
+
+> 「AIを使ってシステム運用を賢くする」
+
+これが本質です。
+
+
+## 定義・仕組み
+
+AIOps（Artificial Intelligence for IT Operations）は、
+
+- ITインフラやアプリケーションの運用データ
+- ログ、メトリクス、イベント情報
+
+などをAIで分析し、
+
+- 異常検知
+- 根本原因分析（Root Cause Analysis）
+- 障害予測
+- 自動復旧
+
+を行う運用手法です。
+
+ポイントは、
+
+- 対象は「IT運用」
+- AIは「運用改善のための手段」
+
+であることです。
+
+DS検定では、  
+**AIの活用領域を正しく理解しているか**を問われます。
+
+
+## どんな場面で使う？
+
+### 使う場面
+
+- 大規模クラウド環境の監視
+- 24時間稼働システムの障害予測
+- ログが膨大で人手対応が限界な環境
+
+### 使わない場面
+
+- モデルの学習管理そのもの
+- データサイエンスプロジェクトの実験管理
+
+ここで重要なのが、
+
+> AIOpsは「システム運用」の話  
+> MLOpsは「機械学習モデル運用」の話  
+
+という切り分けです。
+
+
+## よくある誤解・混同
+
+### ❌ AIOps＝AIを開発する仕組み
+
+→ これは違います。  
+AIOpsは「AIを使う側」の仕組みです。
+
+
+### ❌ AIOpsとMLOpsは同じ
+
+ここが最大のひっかけです。
+
+| 用語 | 何を運用する？ |
+|------|----------------|
+| AIOps | ITシステム運用 |
+| MLOps | 機械学習モデル運用 |
+
+DS検定では、
+
+- 「モデルの継続的デプロイ」  
+- 「学習データのバージョン管理」  
+
+と書かれていたら → **MLOps**
+
+- 「ログの異常検知」  
+- 「障害予測」  
+
+と書かれていたら → **AIOps**
+
+と判断します。
+
+
+## まとめ（試験直前用）
+
+- AIOpsは「AI × IT運用」
+- 目的は障害予測・自動化・効率化
+- モデル管理はMLOps
+- DS検定では「何を運用しているか」で切る
+
+迷ったら、
+
+> 運用対象が「IT基盤」ならAIOps  
+> 運用対象が「機械学習モデル」ならMLOps  
+
+この基準で判断できます。
+
+
+## 対応スキル項目（AI利活用スキルシート）
+- AIの利活用
+- AI導入・運用
+- ★ AIを活用した業務改善・効率化の事例を理解している
+- ★ AI導入における運用上の課題を理解している
+
+## 🔗 関連記事
+
+<ul style="padding-left: 20px;">
+{% assign current_tags = page.tags %}
+{% assign count = 0 %}
+
+{% for p in site.pages %}
+  {% if p.url != page.url and p.tags %}
+    {% assign matched = false %}
+
+    {% for tag in current_tags %}
+      {% if p.tags contains tag and tag != "ds" %}
+        {% assign matched = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if matched %}
+      <li style="margin-bottom: 6px;">
+        <a href="{{ p.url }}">{{ p.title }}</a>
+      </li>
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+
+    {% if count >= 5 %}
+      {% break %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>
+
+<hr>
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/ds/">DS検定トップに戻る</a>
+</div>
+
+<div style="display:flex;justify-content:space-between;margin-top:12px;">
+
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
+  {% endif %}
+
+  {% if page.next.url %}
+    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
+  {% endif %}
+
+</div>

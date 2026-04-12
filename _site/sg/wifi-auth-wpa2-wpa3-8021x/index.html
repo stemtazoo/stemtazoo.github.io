@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>WPA2・WPA3・802.1Xとは？無線LAN認証の違いを整理【情報セキュリティマネジメント】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="WPA2・WPA3・802.1Xとは？無線LAN認証の違いを整理【情報セキュリティマネジメント】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="WPA2・WPA3・802.1Xは無線LAN認証の違いを整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:description" content="WPA2・WPA3・802.1Xは無線LAN認証の違いを整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="WPA2・WPA3・802.1Xとは？無線LAN認証の違いを整理【情報セキュリティマネジメント】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"WPA2・WPA3・802.1Xは無線LAN認証の違いを整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。","headline":"WPA2・WPA3・802.1Xとは？無線LAN認証の違いを整理【情報セキュリティマネジメント】","url":"/sg/wifi-auth-wpa2-wpa3-8021x/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">WPA2・WPA3・802.1Xとは？無線LAN認証の違いを整理【情報セキュリティマネジメント】</h1>
+      <h2 class="project-tagline">WPA2・WPA3・802.1Xは無線LAN認証の違いを整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">WPA2・WPA3・802.1Xは無線LAN認証の違いを整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">security_measures</span>
+        
+          <span class="post-tag">access_control</span>
+        
+          <span class="post-tag">network</span>
+        
+          <span class="post-tag">sg-security-measures</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+<p>WPA2・WPA3・802.1Xは無線LANの認証方式であり、SG試験では「共通パスワード型（PSK）か、個人認証型（802.1X）か」を見分けることが重要です。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>Wi-Fiの使い方は大きく2パターンあります。</p>
+
+<h3 id="-パターンpsk">■ パターン①（PSK）</h3>
+<ul>
+  <li>全員同じパスワードで入る</li>
+  <li>セミナー会場や家庭用Wi-Fi</li>
+</ul>
+
+<p>👉 鍵を知っていれば誰でも入れる</p>
+
+<hr />
+
+<h3 id="-パターン8021x">■ パターン②（802.1X）</h3>
+<ul>
+  <li>一人ひとりIDとパスワードでログイン</li>
+  <li>会社のWi-Fi</li>
+</ul>
+
+<p>👉 個人ごとに管理できる</p>
+
+<hr />
+
+<p>この違いがそのまま試験ポイントです。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+
+<h3 id="-wpa2--wpa3psk方式">■ WPA2 / WPA3（PSK方式）</h3>
+<ul>
+  <li>事前共有鍵（PSK）を使う方式</li>
+  <li>全員同じパスワードで接続</li>
+</ul>
+
+<h4 id="特徴">特徴</h4>
+<ul>
+  <li>設定が簡単</li>
+  <li>小規模環境向け</li>
+  <li>鍵が漏れると全員影響</li>
+</ul>
+
+<p>👉 SG試験では<br />
+<strong>「接続のための共通パスワード」＝PSK</strong></p>
+
+<hr />
+
+<h3 id="-8021xエンタープライズ方式">■ 802.1X（エンタープライズ方式）</h3>
+<ul>
+  <li>認証サーバ（RADIUSなど）を使う</li>
+  <li>利用者ごとに認証</li>
+</ul>
+
+<h4 id="特徴-1">特徴</h4>
+<ul>
+  <li>個人単位で管理できる</li>
+  <li>不正利用者だけ止められる</li>
+  <li>大規模・企業向け</li>
+</ul>
+
+<p>👉 SG試験では<br />
+<strong>「利用者単位で認証する仕組み」</strong></p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+
+<h3 id="-wpa2--wpa3psk">■ WPA2 / WPA3（PSK）</h3>
+<ul>
+  <li>セミナー会場</li>
+  <li>カフェのWi-Fi</li>
+  <li>家庭用ネットワーク</li>
+</ul>
+
+<p>👉 「一時利用・多数参加者」に向いている</p>
+
+<hr />
+
+<h3 id="-8021x">■ 802.1X</h3>
+<ul>
+  <li>社内ネットワーク</li>
+  <li>学校・企業Wi-Fi</li>
+</ul>
+
+<p>👉 「利用者を管理したい環境」に向いている</p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="-wpa2--安全ではない">❌ WPA2 = 安全ではない</h3>
+<p>→ 誤解</p>
+
+<p>WPA2自体は広く使われている方式で、<br />
+問題は「運用（鍵の使い回し）」です。</p>
+
+<hr />
+
+<h3 id="-pskでも利用者管理できる">❌ PSKでも利用者管理できる</h3>
+<p>→ できない</p>
+
+<p>👉 全員同じ鍵なので、誰が使っているか分からない</p>
+
+<hr />
+
+<h3 id="-8021xは暗号方式">❌ 802.1Xは暗号方式</h3>
+<p>→ 違う</p>
+
+<p>👉 <strong>認証の仕組み</strong>です（ここ重要）</p>
+
+<hr />
+
+<h3 id="sg試験のひっかけ">SG試験のひっかけ</h3>
+<p>SG試験ではこう出ます：</p>
+
+<ul>
+  <li>「セミナー会場」 → PSK</li>
+  <li>「利用者ごとに管理」 → 802.1X</li>
+</ul>
+
+<p>👉 <strong>環境で判断するのがコツ</strong></p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>WPA2/WPA3（PSK）は共通パスワードで接続する方式</li>
+  <li>802.1Xは利用者ごとに認証する方式</li>
+  <li>セミナーや来客用 → PSK</li>
+  <li>社内ネットワーク → 802.1X</li>
+  <li>SG試験では「共通か個別か」で切り分ける</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/blacklist-whitelist/">ブラックリストとホワイトリストの違いとは？判断基準を整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/bot/">ボットとは？遠隔操作される仕組みを理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/brute-force-attack/">ブルートフォース攻撃とは？総当たり攻撃の仕組みと対策【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/common-port-numbers/">よく出るポート番号とは？試験での見分け方を整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/cryptojacking/">クリプトジャッキングとは？不正マイニングの仕組みを理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/waf/">← WAFとは？Webアプリを守る仕組みを理解する【情報セキュリティマネジメント】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/work-rules-vs-individual-agreement/">就業規則と個別合意の関係とは？優先順位を理解する【情報セキュリティマネジメント】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

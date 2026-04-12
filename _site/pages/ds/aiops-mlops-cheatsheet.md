@@ -1,0 +1,168 @@
+﻿---
+layout: page
+title: AIOpsとMLOpsの違いを一発整理【DS検定チートシート】
+description: AIOpsとMLOpsの違いを一発整理は関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+permalink: /ds/aiops-mlops-cheatsheet/
+categories: [ai-utilization]
+tags: [ds, environment-setup, ai-use]
+prev: /ds/aiops/
+next: /ds/hallucination/
+---
+<div style="font-size: 14px; margin-bottom: 12px;">
+  <a href="/ds/">DS検定トップ</a>
+  ＞ {{ page.title }}
+</div>
+
+## まず結論
+
+- **AIOpsは「IT運用にAIを使う」概念**
+- **MLOpsは「機械学習モデルを運用する」仕組み**
+
+DS検定では、この2つを混同させる問題が非常に出やすいです。  
+判断基準は「何を運用しているか」です。
+
+
+## 直感的な説明
+
+同じ「〜Ops」でも、対象がまったく違います。
+
+- AIOps → システムやインフラを賢く運用する  
+- MLOps → 機械学習モデルを安定して回し続ける  
+
+たとえると、
+
+- AIOpsは「病院の設備管理をAIで効率化」
+- MLOpsは「診断AIモデルを安全に使い続ける仕組み」
+
+のような違いです。
+
+
+## 定義・仕組み
+
+### AIOps
+
+- ログ・メトリクス・イベントをAIで分析
+- 異常検知
+- 障害予測
+- 根本原因分析
+- 自動復旧
+
+対象：ITインフラ・システム
+
+
+### MLOps
+
+- データ管理
+- モデル学習
+- モデル評価
+- デプロイ
+- モデル監視
+- 再学習
+
+対象：機械学習モデル
+
+
+## どんな場面で使う？
+
+| 状況 | どちら？ |
+|------|----------|
+| サーバーログの異常検知 | AIOps |
+| モデルの再学習自動化 | MLOps |
+| システム障害の原因分析 | AIOps |
+| モデルのバージョン管理 | MLOps |
+| 精度劣化の監視 | MLOps |
+
+DS検定では、  
+「ログ」「インフラ」「障害」ならAIOps  
+「モデル」「再学習」「デプロイ」ならMLOps  
+
+と判断できます。
+
+
+## よくある誤解・混同
+
+### ❌ どちらもAIを使うから同じ
+
+→ 違います。  
+AIを「使う対象」が違います。
+
+
+### ❌ モデル監視＝AIOps
+
+→ モデルの精度監視はMLOpsです。
+
+
+### ❌ AIOpsはAIを開発する仕組み
+
+→ AIOpsはAIを使って「運用を改善する」考え方です。
+
+
+## まとめ（試験直前用）
+
+- AIOps＝AI × IT運用
+- MLOps＝モデルの継続運用
+- 運用対象が「IT基盤」ならAIOps
+- 運用対象が「機械学習モデル」ならMLOps
+- DS検定では「何を運用しているか」で切る
+
+迷ったら、
+
+> インフラか？  
+> モデルか？
+
+この2択で考えれば正解に近づけます。
+
+
+## 対応スキル項目（AI利活用スキルシート）
+- AIの利活用
+- AI導入・運用
+- ★ AIを活用した業務改善・効率化の事例を理解している
+- ★ AI導入における運用上の課題を理解している
+
+## 🔗 関連記事
+
+<ul style="padding-left: 20px;">
+{% assign current_tags = page.tags %}
+{% assign count = 0 %}
+
+{% for p in site.pages %}
+  {% if p.url != page.url and p.tags %}
+    {% assign matched = false %}
+
+    {% for tag in current_tags %}
+      {% if p.tags contains tag and tag != "ds" %}
+        {% assign matched = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if matched %}
+      <li style="margin-bottom: 6px;">
+        <a href="{{ p.url }}">{{ p.title }}</a>
+      </li>
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+
+    {% if count >= 5 %}
+      {% break %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>
+
+<hr>
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/ds/">DS検定トップに戻る</a>
+</div>
+
+<div style="display:flex;justify-content:space-between;margin-top:12px;">
+
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
+  {% endif %}
+
+  {% if page.next.url %}
+    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
+  {% endif %}
+
+</div>

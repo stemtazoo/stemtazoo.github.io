@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>DHCPとは？IPアドレスを自動で割り当てる仕組み【情報セキュリティマネジメント】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="DHCPとは？IPアドレスを自動で割り当てる仕組み【情報セキュリティマネジメント】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="DHCPはIPアドレスを自動で割り当てる仕組みを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:description" content="DHCPはIPアドレスを自動で割り当てる仕組みを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="DHCPとは？IPアドレスを自動で割り当てる仕組み【情報セキュリティマネジメント】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"DHCPはIPアドレスを自動で割り当てる仕組みを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。","headline":"DHCPとは？IPアドレスを自動で割り当てる仕組み【情報セキュリティマネジメント】","url":"/sg/dhcp/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">DHCPとは？IPアドレスを自動で割り当てる仕組み【情報セキュリティマネジメント】</h1>
+      <h2 class="project-tagline">DHCPはIPアドレスを自動で割り当てる仕組みを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">DHCPはIPアドレスを自動で割り当てる仕組みを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-technology</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+<p>DHCPは、ネットワークに接続した機器に対してIPアドレスを自動的に割り当てる仕組みであり、SG試験では「どの役割の仕組みか」を見極める問題としてよく出ます。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>Wi-Fiにつなぐと、スマホやPCがすぐにインターネットを使えるようになりますよね。</p>
+
+<p>これは裏で<br />
+👉「あなたはこのIPアドレスを使ってください」<br />
+と自動で割り当てられているからです。</p>
+
+<p>もしDHCPがなければ、</p>
+<ul>
+  <li>IPアドレス</li>
+  <li>サブネットマスク</li>
+  <li>デフォルトゲートウェイ</li>
+</ul>
+
+<p>を全部手入力する必要があります。</p>
+
+<p>つまりDHCPは<br />
+👉「ネットワーク接続の初期設定を自動化してくれる仕組み」<br />
+です。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>DHCP（Dynamic Host Configuration Protocol）は、ネットワークに接続する端末に対して、IPアドレスなどの設定情報を自動配布するプロトコルです。</p>
+
+<p>基本の流れはシンプルです。</p>
+
+<ol>
+  <li>端末が「IPください」と要求（DHCP Discover）</li>
+  <li>サーバが「このIP使っていいよ」と提案（Offer）</li>
+  <li>端末が「それ使います」と返答（Request）</li>
+  <li>サーバが「OK」と確定（ACK）</li>
+</ol>
+
+<p>この仕組みによって、</p>
+<ul>
+  <li>IPアドレスの重複防止</li>
+  <li>設定ミスの削減</li>
+  <li>管理の効率化</li>
+</ul>
+
+<p>が実現されます。</p>
+
+<p>SG試験では「自動設定」「IP配布」というキーワードが重要です。</p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="使う場面">使う場面</h3>
+<ul>
+  <li>社内ネットワークで多数のPCを管理するとき</li>
+  <li>Wi-Fi環境（家庭・オフィス・カフェなど）</li>
+  <li>一時的に接続される端末が多い環境</li>
+</ul>
+
+<p>👉「手動設定が現実的でない環境」で使われる</p>
+
+<h3 id="使わないまたは注意する場面">使わない（または注意する）場面</h3>
+<ul>
+  <li>サーバやネットワーク機器（固定IPが必要）</li>
+  <li>セキュリティ上、IPを固定管理したい場合</li>
+</ul>
+
+<p>👉「重要機器は固定IP」が基本</p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+<p>SG試験ではここがよく狙われます。</p>
+
+<h3 id="-ドメイン名とipの対応を管理する仕組み">❌ ドメイン名とIPの対応を管理する仕組み</h3>
+<p>→ これは <strong>DNS</strong></p>
+
+<h3 id="-異なるネットワーク間でipアドレスを変換する仕組み">❌ 異なるネットワーク間でIPアドレスを変換する仕組み</h3>
+<p>→ これは <strong>NAT</strong></p>
+
+<h3 id="-ipアドレスとmacアドレスを対応付ける仕組み">❌ IPアドレスとMACアドレスを対応付ける仕組み</h3>
+<p>→ これは <strong>ARP</strong></p>
+
+<hr />
+
+<h3 id="ひっかけポイント">ひっかけポイント</h3>
+<ul>
+  <li>DHCP = 「IPを配る」</li>
+  <li>DNS = 「名前を解決する」</li>
+  <li>NAT = 「アドレスを変換する」</li>
+  <li>ARP = 「IPとMACを結びつける」</li>
+</ul>
+
+<p>👉 SG試験では「役割の違い」で切ることが重要</p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>DHCPは「IPアドレスを自動で割り当てる仕組み」</li>
+  <li>手動設定を不要にし、管理を効率化する</li>
+  <li>サーバや重要機器は固定IPにするのが基本</li>
+  <li>DHCPとDNS・NAT・ARPの違いは頻出</li>
+  <li>選択肢では「自動付与」かどうかで判断する</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/client-server-system/">クライアントサーバーシステムとは？役割分担の考え方を理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/five-basic-components/">五大装置とは？コンピュータの基本構成を理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/http-https/">HTTPとHTTPSの違いとは？安全な通信の判断ポイント【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/port-number/">ポート番号とは？通信先サービスの識別を理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/ssh/">SSHとは？安全な遠隔操作の仕組み【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/ddos/">← DDoS攻撃とは？サービス停止を狙う攻撃の仕組み【情報セキュリティマネジメント】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/dictionary-attack/">辞書攻撃とは？効率的なパスワード破解の仕組み【情報セキュリティマネジメント】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

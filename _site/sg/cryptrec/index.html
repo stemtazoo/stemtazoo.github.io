@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>CRYPTRECとは？暗号の安全性評価の役割を理解する【情報セキュリティマネジメント】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="CRYPTRECとは？暗号の安全性評価の役割を理解する【情報セキュリティマネジメント】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="CRYPTRECは暗号の安全性評価の役割を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:description" content="CRYPTRECは暗号の安全性評価の役割を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="CRYPTRECとは？暗号の安全性評価の役割を理解する【情報セキュリティマネジメント】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"CRYPTRECは暗号の安全性評価の役割を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。","headline":"CRYPTRECとは？暗号の安全性評価の役割を理解する【情報セキュリティマネジメント】","url":"/sg/cryptrec/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">CRYPTRECとは？暗号の安全性評価の役割を理解する【情報セキュリティマネジメント】</h1>
+      <h2 class="project-tagline">CRYPTRECは暗号の安全性評価の役割を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">CRYPTRECは暗号の安全性評価の役割を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-measures</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+<ul>
+  <li><strong>CRYPTRECは、安全な暗号技術を評価・推奨する日本のプロジェクトである。</strong></li>
+  <li>SG試験では「暗号の評価」か「インシデント対応（JPCERT/CC）」かを見分ける問題が多い。</li>
+</ul>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>会社でシステムを作るとき、</p>
+
+<ul>
+  <li>どの暗号を使えば安全か？</li>
+  <li>古い暗号は危険じゃないか？</li>
+</ul>
+
+<p>と迷いますよね。</p>
+
+<p>CRYPTRECは、<br />
+<strong>「この暗号は安全に使えるよ」とお墨付きを出す専門チーム</strong>です。</p>
+
+<p>👉 イメージ</p>
+<ul>
+  <li>CRYPTREC：暗号の品質チェック担当</li>
+  <li>JPCERT/CC：事故対応担当</li>
+</ul>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>CRYPTREC（Cryptography Research and Evaluation Committees）は、</p>
+
+<ul>
+  <li>電子政府などで利用する暗号の
+    <ul>
+      <li>安全性評価</li>
+      <li>推奨リストの作成<br />
+を行うプロジェクトです。</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="主な役割">主な役割</h3>
+<ul>
+  <li>暗号アルゴリズムの安全性評価</li>
+  <li>推奨暗号リストの作成・公開</li>
+  <li>暗号技術の運用指針の検討</li>
+</ul>
+
+<h3 id="運営">運営</h3>
+<ul>
+  <li>総務省・経済産業省が中心となって運営</li>
+</ul>
+
+<h3 id="ポイント">ポイント</h3>
+<ul>
+  <li><strong>暗号の安全性を評価するのが役割</strong></li>
+  <li><strong>実際のインシデント対応はしない</strong></li>
+  <li><strong>電子政府で使う暗号の基準になる</strong></li>
+</ul>
+
+<p>SG試験では<br />
+「暗号の評価」＝CRYPTREC<br />
+と覚えると判断しやすくなります。</p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="使う場面正しい理解">使う場面（正しい理解）</h3>
+<ul>
+  <li>システムで使用する暗号方式を選定するとき</li>
+  <li>安全な暗号を採用する基準を決めるとき</li>
+  <li>電子政府や重要システムの設計</li>
+</ul>
+
+<h3 id="使うと誤解しやすい場面">使うと誤解しやすい場面</h3>
+<ul>
+  <li>❌ インシデント対応（それはJPCERT/CC）</li>
+  <li>❌ 社内のセキュリティ運用（それはCSIRTやISMS）</li>
+</ul>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="-jpcertccとの違い">① JPCERT/CCとの違い</h3>
+<ul>
+  <li>JPCERT/CC：インシデント対応支援</li>
+  <li>CRYPTREC：<strong>暗号の安全性評価</strong></li>
+</ul>
+
+<p>👉 SG試験ではここをよく混同させてくる</p>
+
+<hr />
+
+<h3 id="-csirtとの違い">② CSIRTとの違い</h3>
+<ul>
+  <li>CSIRT：組織内での対応チーム</li>
+  <li>CRYPTREC：<strong>技術評価（暗号）</strong></li>
+</ul>
+
+<p>👉 「対応するか？評価するか？」で切る</p>
+
+<hr />
+
+<h3 id="-sg試験のひっかけ">③ SG試験のひっかけ</h3>
+<p>SG試験では次のような表現に注意：</p>
+
+<ul>
+  <li>「インシデント対応」「報告受付」→×</li>
+  <li>「暗号技術の評価・推奨」→○</li>
+</ul>
+
+<p>👉 選択肢では<br />
+<strong>“暗号”というキーワードがあるか</strong>をチェック</p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>CRYPTREC＝<strong>暗号の安全性評価・推奨プロジェクト</strong></li>
+  <li>総務省・経産省が中心</li>
+  <li>選択肢では
+    <ul>
+      <li>「インシデント対応」→×</li>
+      <li>「組織内対応」→×</li>
+      <li>「暗号の評価・推奨」→○</li>
+    </ul>
+  </li>
+</ul>
+
+<p>👉 <strong>「暗号か？インシデントか？」で切る</strong></p>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/blacklist-whitelist/">ブラックリストとホワイトリストの違いとは？判断基準を整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/bot/">ボットとは？遠隔操作される仕組みを理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/common-port-numbers/">よく出るポート番号とは？試験での見分け方を整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/cryptojacking/">クリプトジャッキングとは？不正マイニングの仕組みを理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/ddos/">DDoS攻撃とは？サービス停止を狙う攻撃の仕組み【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/cryptojacking/">← クリプトジャッキングとは？不正マイニングの仕組みを理解する【情報セキュリティマネジメント】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/csirt/">CSIRTとは？組織内インシデント対応の基本【情報セキュリティマネジメント】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

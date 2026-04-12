@@ -1,0 +1,174 @@
+﻿---
+layout: page
+title: SSL/TLSとは？公開鍵暗号と共通鍵暗号の役割を整理【DS検定】
+description: SSL/TLSは公開鍵暗号と共通鍵暗号の役割を整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+permalink: /ds/ssl-tls/
+categories: [business]
+tags: [ds, security, design]
+prev: /ds/rbac/
+next: /ds/vpn-ssh/
+---
+<div style="font-size: 14px; margin-bottom: 12px;">
+  <a href="/ds/">DS検定トップ</a>
+  ＞ {{ page.title }}
+</div>
+
+## まず結論
+
+SSL/TLSとは、**通信の最初に公開鍵暗号で安全に鍵を共有し、その後は共通鍵暗号で高速にデータを守る仕組み**です。
+
+DS検定では、「どの場面でどの暗号方式が使われるか」を判断できるかが問われます。
+
+
+## 直感的な説明
+
+SSL/TLSは、ネット上で安全に会話するための「二段構えの防犯システム」です。
+
+① 最初に“合言葉（鍵）”を安全に決める  
+② その合言葉を使って、実際の会話を暗号化する  
+
+ここで大事なのは、
+
+- 合言葉を決めるとき → **安全性重視**
+- 会話を続けるとき → **スピード重視**
+
+という役割の違いです。
+
+この違いが、「公開鍵暗号」と「共通鍵暗号」の使い分けにつながります。
+
+
+## 定義・仕組み
+
+SSL（現在はTLSが主流）は、Webサイトとブラウザの間の通信を暗号化するプロトコルです。
+
+### 仕組みは次の通りです
+
+① 最初の鍵交換  
+- 公開鍵暗号（非対称鍵暗号）を使う  
+- サーバーの公開鍵を使って安全に通信を始める  
+- 共通鍵（セッション鍵）を安全に生成・共有する  
+
+② その後の通信  
+- 共通鍵暗号（対称鍵暗号）を使う  
+- 同じ鍵でデータを暗号化・復号する  
+- 高速で大量のデータを処理できる  
+
+DS検定では  
+「SSLは公開鍵暗号で通信する」と書かれていたら注意です。
+
+正しくは、
+
+- 鍵交換は公開鍵暗号  
+- データ通信は共通鍵暗号  
+
+という役割分担です。
+
+
+## どんな場面で使う？
+
+- WebサイトのHTTPS通信
+- クレジットカード情報の送信
+- ログイン情報の送信
+- API通信
+
+ビジネス現場では、
+「顧客情報を送信しているのに暗号化していない」
+という状況は重大なリスクです。
+
+DS検定では、
+
+- 暗号化の目的は「盗聴防止」
+- 認証の目的は「相手が本物か確認」
+
+という観点も問われます。
+
+
+## よくある誤解・混同
+
+### ❌ SSLは公開鍵暗号で通信する  
+→ それは一部だけ。実際の通信は共通鍵暗号。
+
+### ❌ 共通鍵暗号は古くて危険  
+→ 鍵共有が安全なら、むしろ高速で強力。
+
+### ❌ 暗号化＝認証  
+→ 暗号化は「内容を守る」  
+→ 認証は「相手を確認する」
+
+DS検定では  
+「公開鍵暗号＝安全」「共通鍵暗号＝弱い」と思い込ませる選択肢が出やすいです。
+
+判断基準は、
+
+- 鍵をどうやって安全に共有するか？
+- 通信速度はどう確保するか？
+
+この2つで整理してください。
+
+
+## まとめ（試験直前用）
+
+- SSL/TLSは二段構え
+- 鍵交換は公開鍵暗号
+- 通信は共通鍵暗号
+- 公開鍵＝安全に鍵を渡す役割
+- 共通鍵＝高速に通信する役割
+
+「最初は公開鍵、その後は共通鍵」
+
+これだけ思い出せれば、選択肢は切れます。
+
+
+## 対応スキル項目（AI利活用スキルシート）
+
+- AIの社会実装
+- セキュリティ・リスク管理
+- ★ AIを活用する際のセキュリティリスクを理解している
+
+## 🔗 関連記事
+
+<ul style="padding-left: 20px;">
+{% assign current_tags = page.tags %}
+{% assign count = 0 %}
+
+{% for p in site.pages %}
+  {% if p.url != page.url and p.tags %}
+    {% assign matched = false %}
+
+    {% for tag in current_tags %}
+      {% if p.tags contains tag and tag != "ds" %}
+        {% assign matched = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if matched %}
+      <li style="margin-bottom: 6px;">
+        <a href="{{ p.url }}">{{ p.title }}</a>
+      </li>
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+
+    {% if count >= 5 %}
+      {% break %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>
+
+<hr>
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/ds/">DS検定トップに戻る</a>
+</div>
+
+<div style="display:flex;justify-content:space-between;margin-top:12px;">
+
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
+  {% endif %}
+
+  {% if page.next.url %}
+    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
+  {% endif %}
+
+</div>

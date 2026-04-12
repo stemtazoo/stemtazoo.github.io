@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>攻撃の目的をCIAで整理！試験で迷わない判断軸【情報セキュリティマネジメント】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="攻撃の目的をCIAで整理！試験で迷わない判断軸【情報セキュリティマネジメント】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="情報セキュリティの攻撃は機密性・完全性・可用性（CIA）で整理できます。本記事では代表的な攻撃を目的別に分類し、SG試験で迷わない判断基準を解説します。" />
+<meta property="og:description" content="情報セキュリティの攻撃は機密性・完全性・可用性（CIA）で整理できます。本記事では代表的な攻撃を目的別に分類し、SG試験で迷わない判断基準を解説します。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="攻撃の目的をCIAで整理！試験で迷わない判断軸【情報セキュリティマネジメント】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"情報セキュリティの攻撃は機密性・完全性・可用性（CIA）で整理できます。本記事では代表的な攻撃を目的別に分類し、SG試験で迷わない判断基準を解説します。","headline":"攻撃の目的をCIAで整理！試験で迷わない判断軸【情報セキュリティマネジメント】","url":"/sg/cyber-attack-cia/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">攻撃の目的をCIAで整理！試験で迷わない判断軸【情報セキュリティマネジメント】</h1>
+      <h2 class="project-tagline">情報セキュリティの攻撃は機密性・完全性・可用性（CIA）で整理できます。本記事では代表的な攻撃を目的別に分類し、SG試験で迷わない判断基準を解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">情報セキュリティの攻撃は機密性・完全性・可用性（CIA）で整理できます。本記事では代表的な攻撃を目的別に分類し、SG試験で迷わない判断基準を解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">security_general</span>
+        
+          <span class="post-tag">cia</span>
+        
+          <span class="post-tag">risk_assessment</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+<p>攻撃は「<strong>機密性・完全性・可用性（CIA）のどれを壊すか</strong>」で整理できます。<br />
+SG試験では「<strong>何が壊されているか</strong>」で攻撃を切り分けます。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>攻撃の目的は大きく3つしかありません。</p>
+
+<ul>
+  <li>情報を盗む</li>
+  <li>情報を書き換える</li>
+  <li>システムを止める</li>
+</ul>
+
+<p>👉 この3つがCIAです。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+
+<h3 id="機密性confidentiality">機密性（Confidentiality）</h3>
+<ul>
+  <li>情報が漏れないこと</li>
+</ul>
+
+<h4 id="主な攻撃">主な攻撃</h4>
+<ul>
+  <li>フィッシング</li>
+  <li>スパイウェア</li>
+  <li>キーロガー</li>
+</ul>
+
+<p>👉 <strong>情報を盗む攻撃</strong></p>
+
+<hr />
+
+<h3 id="完全性integrity">完全性（Integrity）</h3>
+<ul>
+  <li>情報が正しいこと</li>
+</ul>
+
+<h4 id="主な攻撃-1">主な攻撃</h4>
+<ul>
+  <li>DNSキャッシュポイズニング</li>
+  <li>改ざん攻撃</li>
+</ul>
+
+<p>👉 <strong>情報を書き換える攻撃</strong></p>
+
+<hr />
+
+<h3 id="可用性availability">可用性（Availability）</h3>
+<ul>
+  <li>使い続けられること</li>
+</ul>
+
+<h4 id="主な攻撃-2">主な攻撃</h4>
+<ul>
+  <li>DoS / DDoS攻撃</li>
+  <li>DNSリフレクター攻撃</li>
+</ul>
+
+<p>👉 <strong>サービスを止める攻撃</strong></p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+
+<h3 id="sg試験での使い方">SG試験での使い方</h3>
+<p>問題文にこう書かれていたら👇</p>
+
+<ul>
+  <li>「情報が漏えい」 → 機密性</li>
+  <li>「誤った情報に誘導」 → 完全性</li>
+  <li>「サービス停止」 → 可用性</li>
+</ul>
+
+<p>👉 <strong>まずCIAに当てはめる</strong></p>
+
+<hr />
+
+<h3 id="科目bでの重要ポイント">科目Bでの重要ポイント</h3>
+<ul>
+  <li>対策もCIAで変わる</li>
+</ul>
+
+<p>例：</p>
+<ul>
+  <li>機密性 → アクセス制御</li>
+  <li>完全性 → 改ざん検知</li>
+  <li>可用性 → 冗長化</li>
+</ul>
+
+<p>👉 「目的→対策」がつながる</p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="-攻撃名で覚える">❌ 攻撃名で覚える</h3>
+<p>→ ⭕ 攻撃の目的で整理する</p>
+
+<hr />
+
+<h3 id="-dns攻撃は全部同じ">❌ DNS攻撃は全部同じ</h3>
+<p>→ ⭕</p>
+<ul>
+  <li>ポイズニング → 完全性</li>
+  <li>リフレクター → 可用性</li>
+</ul>
+
+<hr />
+
+<h3 id="-ddosは情報漏えいにつながる">❌ DDoSは情報漏えいにつながる</h3>
+<p>→ ⭕ 可用性の問題</p>
+
+<hr />
+
+<h3 id="sg試験のひっかけ">SG試験のひっかけ</h3>
+<ul>
+  <li>「盗む」「漏えい」 → 機密性</li>
+  <li>「改ざん」「偽情報」 → 完全性</li>
+  <li>「停止」「過負荷」 → 可用性</li>
+</ul>
+
+<p>👉 キーワードで即判断</p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>攻撃はCIAで分類する</li>
+  <li>機密性＝盗む</li>
+  <li>完全性＝書き換える</li>
+  <li>可用性＝止める</li>
+  <li>SG試験では「何が壊れたか」で切る</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/attacker-types/">攻撃者の種類とは？目的と特徴で整理する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/case-solving-template/">SG試験 ケース問題の解き方テンプレ【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/case-study-approach/">ケース問題の解き方！CIAとリスク対応で考える実践手順【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/common-mistakes/">よくある誤答パターンまとめ！SG試験で選択肢を切るコツ【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/contract-nonconformity/">契約不適合責任とは？瑕疵担保責任との違いも整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/cvss/">← CVSSとは？脆弱性の深刻度を共通スコアで判断する【情報セキュリティマネジメント】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/cyber-kill-chain/">サイバーキルチェーンとは？攻撃の流れから対策を考える【情報セキュリティマネジメント】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

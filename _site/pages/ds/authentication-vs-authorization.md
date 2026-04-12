@@ -1,0 +1,183 @@
+﻿---
+layout: page
+title: 認証と認可の違いとは？一発で整理【DS検定リテラシー】
+description: 認証と認可の違いはアクセス制御を正しく設計するための考え方です。この記事では定義・役割の差分と使い分け、DS検定で問われる判断ポイントを解説します。
+permalink: /ds/authentication-vs-authorization/
+categories: [business]
+tags: [ds, security, design]
+prev: /ds/authentication-authorization/
+next: /ds/constructor/
+---
+<div style="font-size: 14px; margin-bottom: 12px;">
+  <a href="/ds/">DS検定トップ</a>
+  ＞ {{ page.title }}
+</div>
+
+## まず結論
+
+認証（Authentication）は「あなたは誰かを確認すること」、  
+認可（Authorization）は「あなたに何を許可するかを決めること」です。
+
+DS検定では、この2つを**明確に切り分けられるか**がよく問われます。
+
+
+## 直感的な説明
+
+会社のオフィスをイメージしてください。
+
+- 受付で社員証を見せて本人確認 → **認証**
+- 会議室に入れるかどうかを判断 → **認可**
+
+つまり、
+
+> 認証＝本人確認  
+> 認可＝アクセス権の判断  
+
+順番も重要で、  
+**認証 → 認可** の流れになります。
+
+
+## 定義・仕組み
+
+### 認証（Authentication）
+
+- ID・パスワード
+- 生体認証
+- ワンタイムパスワード
+
+などを使い、
+
+> 「その人が本人かどうか」を確認する仕組み。
+
+
+### 認可（Authorization）
+
+本人確認ができたあと、
+
+> 「どのデータ・機能にアクセスできるか」を決める仕組み。
+
+例：
+- 一般社員は閲覧のみ
+- 管理者は編集可能
+
+OAuthはこの「認可」の仕組みです。
+
+
+## どんな場面で使う？
+
+### ビジネス現場での例
+
+- 社内システムのアクセス制御
+- クラウドサービスの権限設定
+- API利用制御
+
+### データ活用の文脈
+
+データサイエンス業務では、
+
+- 誰がデータを見られるのか
+- 誰が編集できるのか
+
+を明確に分けることが重要です。
+
+セキュリティ設計やガバナンスの基礎知識として出題されやすいポイントです。
+
+
+## よくある誤解・混同
+
+### ① OAuth＝認証だと思ってしまう
+
+DS検定では  
+「OAuthは認証の仕組みである」という選択肢が出やすいです。
+
+→ 正しくは「認可の仕組み」です。
+
+
+### ② ログイン＝認可と考えてしまう
+
+ログインは基本的に**認証**です。
+
+その後に、
+「この人はどの画面を見られるか」
+が決まるのが認可です。
+
+
+### ③ セキュリティ全般をごちゃ混ぜにする
+
+- 暗号化
+- 公開鍵
+- セッション管理
+
+これらは技術要素であり、  
+認証・認可そのものではありません。
+
+
+## まとめ（試験直前用）
+
+- 認証＝本人確認
+- 認可＝アクセス許可
+- 順番は「認証 → 認可」
+- OAuthは認可の仕組み
+
+迷ったら、
+
+> 「これは“誰か”を確認しているのか？」  
+> 「それとも“何ができるか”を決めているのか？」
+
+と考えると切り分けられます。
+
+
+## 対応スキル項目（AI利活用スキルシート）
+
+- AI利活用基礎
+- AIを活用するための技術理解
+- ★ AIを活用したサービスの仕組みやリスクを理解している
+- ★ データの取り扱いに関するセキュリティや倫理的配慮の重要性を理解している
+
+## 🔗 関連記事
+
+<ul style="padding-left: 20px;">
+{% assign current_tags = page.tags %}
+{% assign count = 0 %}
+
+{% for p in site.pages %}
+  {% if p.url != page.url and p.tags %}
+    {% assign matched = false %}
+
+    {% for tag in current_tags %}
+      {% if p.tags contains tag and tag != "ds" %}
+        {% assign matched = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if matched %}
+      <li style="margin-bottom: 6px;">
+        <a href="{{ p.url }}">{{ p.title }}</a>
+      </li>
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+
+    {% if count >= 5 %}
+      {% break %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>
+
+<hr>
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/ds/">DS検定トップに戻る</a>
+</div>
+
+<div style="display:flex;justify-content:space-between;margin-top:12px;">
+
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
+  {% endif %}
+
+  {% if page.next.url %}
+    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
+  {% endif %}
+
+</div>

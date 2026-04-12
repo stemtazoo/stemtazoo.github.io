@@ -1,0 +1,314 @@
+﻿---
+layout: page
+title: CNN（畳み込みニューラルネットワーク）とは？画像認識AIの基本【DS検定】
+description: CNN（畳み込みニューラルネットワーク）は画像認識AIの基本を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+permalink: /ds/cnn/
+categories: [data-science]
+tags: [ds, modeling]
+prev: /ds/cluster-analysis/
+next: /ds/convolution/
+---
+<div style="font-size: 14px; margin-bottom: 12px;">
+  <a href="/ds/">DS検定トップ</a>
+  ＞ {{ page.title }}
+</div>
+
+## まず結論
+
+CNN（畳み込みニューラルネットワーク）とは、画像の特徴を自動で抽出して認識するために使われるAIモデルです。
+
+DS検定では
+
+CNNは画像認識に強い
+
+畳み込みによって特徴を抽出する
+
+
+というポイントが理解できているかが問われます。
+
+
+
+## 直感的な説明
+
+人間が画像を見るとき、次のような順番で認識します。
+
+1. 輪郭を見る
+
+
+2. 形を見る
+
+
+3. 物体を判断する
+
+
+
+例えば「猫の写真」を見たとき
+
+耳の形
+
+目
+
+体の輪郭
+
+
+などの特徴から「猫だ」と判断します。
+
+CNNも同じように
+
+画像の特徴を段階的に抽出して 最終的に物体を識別します。
+
+
+
+## 定義・仕組み
+
+CNN（Convolutional Neural Network）は
+
+畳み込み処理を使って画像の特徴を抽出するニューラルネットワーク
+
+です。
+
+主に次の3つの処理で構成されています。
+
+① 畳み込み（Convolution）
+
+カーネルを使って
+
+エッジ
+
+模様
+
+形
+
+
+などの特徴を抽出します。
+
+
+
+② プーリング（Pooling）
+
+画像サイズを小さくして
+
+重要な特徴だけを残す処理です。
+
+これにより
+
+計算量が減る
+
+ノイズの影響が減る
+
+
+というメリットがあります。
+
+
+
+③ 全結合層（Fully Connected）
+
+最後に
+
+抽出された特徴を使って
+
+「何の画像か」を分類します。
+
+例えば
+
+猫
+
+犬
+
+車
+
+
+といった分類です。
+
+
+
+## どんな場面で使う？
+
+CNNは
+
+画像認識AIの代表的なモデルです。
+
+例えば次のような場面で使われます。
+
+自動運転
+
+カメラ画像から
+
+車
+
+歩行者
+
+信号
+
+
+などを認識します。
+
+
+
+医療画像解析
+
+MRIやCT画像から
+
+腫瘍
+
+病変
+
+
+を検出する研究が進んでいます。
+
+
+
+顔認識
+
+スマートフォンの
+
+顔認証
+
+
+などにもCNNが使われています。
+
+
+
+## よくある誤解・混同
+
+誤解①
+
+ニューラルネットワークはすべて同じ
+
+実際には
+
+通常のニューラルネット
+
+CNN
+
+RNN
+
+
+など用途によって構造が違います。
+
+CNNは
+
+画像データに特化した構造です。
+
+
+
+誤解②
+
+CNNは画像だけに使われる
+
+主に画像認識で使われますが
+
+音声
+
+時系列データ
+
+
+などにも応用されています。
+
+
+
+DS検定のひっかけ
+
+DS検定では
+
+CNNは画像認識でよく使われる
+
+畳み込みで特徴を抽出する
+
+
+という理解が重要です。
+
+選択肢で
+
+「CNNは画像のピクセルをそのまま分類する」
+
+と書かれていたら誤りです。
+
+CNNは
+
+畳み込みで特徴を抽出してから分類します。
+
+
+
+## まとめ（試験直前用）
+
+CNNは 画像認識に強いAIモデル
+
+畳み込みによって画像の特徴を抽出する
+
+主な構造
+
+畳み込み
+
+プーリング
+
+全結合
+
+
+自動運転・医療画像・顔認識などで利用される
+
+
+DS検定では
+
+CNN＝画像認識AIの代表モデル
+
+と覚えておくと判断しやすくなります。
+
+
+
+## 対応スキル項目（AI利活用スキルシート）
+
+スキルカテゴリ名 AIの技術理解
+
+サブカテゴリ名 機械学習
+
+
+★ 代表的な機械学習手法の概要を理解している
+
+## 🔗 関連記事
+
+<ul style="padding-left: 20px;">
+{% assign current_tags = page.tags %}
+{% assign count = 0 %}
+
+{% for p in site.pages %}
+  {% if p.url != page.url and p.tags %}
+    {% assign matched = false %}
+
+    {% for tag in current_tags %}
+      {% if p.tags contains tag and tag != "ds" %}
+        {% assign matched = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if matched %}
+      <li style="margin-bottom: 6px;">
+        <a href="{{ p.url }}">{{ p.title }}</a>
+      </li>
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+
+    {% if count >= 5 %}
+      {% break %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>
+
+<hr>
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/ds/">DS検定トップに戻る</a>
+</div>
+
+<div style="display:flex;justify-content:space-between;margin-top:12px;">
+
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
+  {% endif %}
+
+  {% if page.next.url %}
+    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
+  {% endif %}
+
+</div>

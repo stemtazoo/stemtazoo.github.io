@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>情報セキュリティ実施手順とは？現場でのやり方を理解する【情報セキュリティマネジメント】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="情報セキュリティ実施手順とは？現場でのやり方を理解する【情報セキュリティマネジメント】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="情報セキュリティ実施手順は現場でのやり方を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:description" content="情報セキュリティ実施手順は現場でのやり方を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="情報セキュリティ実施手順とは？現場でのやり方を理解する【情報セキュリティマネジメント】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"情報セキュリティ実施手順は現場でのやり方を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。","headline":"情報セキュリティ実施手順とは？現場でのやり方を理解する【情報セキュリティマネジメント】","url":"/sg/security-policy-procedures/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">情報セキュリティ実施手順とは？現場でのやり方を理解する【情報セキュリティマネジメント】</h1>
+      <h2 class="project-tagline">情報セキュリティ実施手順は現場でのやり方を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">情報セキュリティ実施手順は現場でのやり方を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">security_management</span>
+        
+          <span class="post-tag">isms</span>
+        
+          <span class="post-tag">it_security_operations</span>
+        
+          <span class="post-tag">security_training</span>
+        
+          <span class="post-tag">sg-security-management</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+<ul>
+  <li>情報セキュリティ実施手順とは、<strong>対策基準で決めたルールを「どうやって実行するか」を具体的な手順として示した文書</strong></li>
+  <li>SG試験では「ルールではなく作業レベルかどうか」を見極める問題がよく出る</li>
+</ul>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>対策基準が「何を守るか（ルール）」なら、<br />
+実施手順は<br />
+👉「どうやってやるの？」をまとめたものです</p>
+
+<p>たとえば：</p>
+
+<ul>
+  <li>バックアップの取り方（どの時間に・どの手順で）</li>
+  <li>ログの確認方法（どこを見るか・どの順番で）</li>
+  <li>インシデント発生時の対応手順</li>
+</ul>
+
+<p>👉 現場で使う<strong>マニュアル・作業手順書</strong>のイメージです</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>情報セキュリティ実施手順は、ポリシーの最下位レイヤーです。</p>
+
+<p>役割：</p>
+
+<ul>
+  <li>対策基準を現場で実行できる形にする</li>
+  <li>作業のばらつきを防ぐ</li>
+  <li>誰でも同じ対応ができるようにする</li>
+</ul>
+
+<p>主な内容：</p>
+
+<ul>
+  <li>作業手順（ステップごとの操作）</li>
+  <li>使用ツール・操作方法</li>
+  <li>異常時の対応フロー</li>
+  <li>記録・報告方法</li>
+</ul>
+
+<p>👉 ポイント<br />
+<strong>「具体的な操作レベルまで書く」こと</strong></p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="使う場面">使う場面</h3>
+<ul>
+  <li>日常運用（バックアップ、ログ確認など）</li>
+  <li>インシデント対応</li>
+  <li>新人教育・引き継ぎ</li>
+</ul>
+
+<p>👉 現場では<br />
+「人によってやり方が違う」問題を防ぐために重要です</p>
+
+<hr />
+
+<h3 id="注意が必要な場面">注意が必要な場面</h3>
+<ul>
+  <li>ルールだけを書いて具体性がない</li>
+  <li>経営方針のような抽象的な内容を書く</li>
+</ul>
+
+<p>👉 それは</p>
+<ul>
+  <li>ルール → 対策基準</li>
+  <li>抽象 → 基本方針<br />
+の役割です</li>
+</ul>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+<h3 id="-誤解1">❌ 誤解1</h3>
+<ul>
+  <li>実施手順＝ルール</li>
+</ul>
+
+<p>👉 ⭕ 正しくは<br />
+<strong>ルールを実行するためのやり方</strong></p>
+
+<hr />
+
+<h3 id="-誤解2">❌ 誤解2</h3>
+<ul>
+  <li>抽象的な内容でもOK</li>
+</ul>
+
+<p>👉 ⭕ 正しくは<br />
+<strong>誰でも同じように実行できる具体性が必要</strong></p>
+
+<hr />
+
+<h3 id="-誤解3">❌ 誤解3</h3>
+<ul>
+  <li>組織全体の方針を書く</li>
+</ul>
+
+<p>👉 ⭕ 正しくは<br />
+<strong>現場の作業内容を書く</strong></p>
+
+<hr />
+
+<p>SG試験では<br />
+👉「これは作業レベルか？」<br />
+👉「具体的すぎる＝手順」<br />
+と判断できるかが重要です</p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>実施手順＝<strong>どうやるか（作業レベル）</strong></li>
+  <li>対策基準を実行するための具体手順</li>
+  <li>最も具体的な文書</li>
+  <li>マニュアル・手順書に相当</li>
+  <li>「抽象的な内容」→手順ではないので誤り</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/case-solving-template/">SG試験 ケース問題の解き方テンプレ【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/case-study-approach/">ケース問題の解き方！CIAとリスク対応で考える実践手順【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/common-mistakes/">よくある誤答パターンまとめ！SG試験で選択肢を切るコツ【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/cryptojacking/">クリプトジャッキングとは？不正マイニングの仕組みを理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/csirt/">CSIRTとは？組織内インシデント対応の基本【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/security-policy-basic/">← 情報セキュリティ基本方針とは？経営者の宣言を理解する【情報セキュリティマネジメント】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/security-policy-standards/">情報セキュリティ対策基準とは？ルールレベルの考え方【情報セキュリティマネジメント】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

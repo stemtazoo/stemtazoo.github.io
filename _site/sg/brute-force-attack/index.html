@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>ブルートフォース攻撃とは？総当たり攻撃の仕組みと対策【情報セキュリティマネジメント】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="ブルートフォース攻撃とは？総当たり攻撃の仕組みと対策【情報セキュリティマネジメント】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="ブルートフォース攻撃は認証情報を総当たりで試して突破を狙う手口です。この記事では辞書攻撃との違い、有効な防御策、SG試験で問われるひっかけポイントと試験対策を解説します。" />
+<meta property="og:description" content="ブルートフォース攻撃は認証情報を総当たりで試して突破を狙う手口です。この記事では辞書攻撃との違い、有効な防御策、SG試験で問われるひっかけポイントと試験対策を解説します。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="ブルートフォース攻撃とは？総当たり攻撃の仕組みと対策【情報セキュリティマネジメント】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"ブルートフォース攻撃は認証情報を総当たりで試して突破を狙う手口です。この記事では辞書攻撃との違い、有効な防御策、SG試験で問われるひっかけポイントと試験対策を解説します。","headline":"ブルートフォース攻撃とは？総当たり攻撃の仕組みと対策【情報セキュリティマネジメント】","url":"/sg/brute-force-attack/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">ブルートフォース攻撃とは？総当たり攻撃の仕組みと対策【情報セキュリティマネジメント】</h1>
+      <h2 class="project-tagline">ブルートフォース攻撃は認証情報を総当たりで試して突破を狙う手口です。この記事では辞書攻撃との違い、有効な防御策、SG試験で問われるひっかけポイントと試験対策を解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">ブルートフォース攻撃は認証情報を総当たりで試して突破を狙う手口です。この記事では辞書攻撃との違い、有効な防御策、SG試験で問われるひっかけポイントと試験対策を解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">security_measures</span>
+        
+          <span class="post-tag">unauthorized_access</span>
+        
+          <span class="post-tag">threat_vulnerability</span>
+        
+          <span class="post-tag">access_control</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+<ul>
+  <li>ブルートフォース攻撃とは、<strong>IDとパスワードの組み合わせを総当たりで試して認証を突破する攻撃</strong>であり、SG試験では「どの認証対策が有効か」を判断させる問題として出題される。</li>
+</ul>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>ブルートフォース攻撃は、</p>
+
+<p>👉「鍵を1つずつ試して開ける」</p>
+
+<p>イメージです。</p>
+
+<p>例えば、</p>
+<ul>
+  <li>0000 → 0001 → 0002 … と順番に試す<br />
+👉 いつか正解に当たる</li>
+</ul>
+
+<p>👉 シンプルだけど確実な攻撃です。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>ブルートフォース攻撃（総当たり攻撃）は、</p>
+
+<p>👉 考えられるすべてのパスワードを試すことで<br />
+👉 正しい認証情報を見つける攻撃です。</p>
+
+<hr />
+
+<h3 id="攻撃の特徴">攻撃の特徴</h3>
+<ul>
+  <li>技術的に高度ではない</li>
+  <li>時間をかければ成功する可能性がある</li>
+  <li>パスワードが短い・単純だと危険</li>
+</ul>
+
+<hr />
+
+<h3 id="関連する攻撃">関連する攻撃</h3>
+<ul>
+  <li>
+    <p><strong>リバースブルートフォース攻撃</strong><br />
+→ パスワードを固定してIDを総当たり</p>
+  </li>
+  <li>
+    <p><strong>辞書攻撃</strong><br />
+→ よく使われるパスワードを試す</p>
+  </li>
+</ul>
+
+<p>👉 SG試験ではこれらの違いを問われる</p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="攻撃される場面">攻撃される場面</h3>
+<ul>
+  <li>ログイン認証（ID・パスワード）</li>
+  <li>Webサービス</li>
+  <li>社内システム</li>
+</ul>
+
+<hr />
+
+<h3 id="防ぐ場面対策">防ぐ場面（対策）</h3>
+<ul>
+  <li>アカウントロック（一定回数失敗で停止）</li>
+  <li>多要素認証（MFA）</li>
+  <li>パスワードの複雑化・長文化</li>
+  <li>ログイン試行の制限（レート制限）</li>
+</ul>
+
+<hr />
+
+<h3 id="sg試験での考え方">SG試験での考え方</h3>
+<p>👉 「試行回数を制限できているか？」</p>
+
+<ul>
+  <li>無制限 → 危険</li>
+  <li>制限あり → 有効な対策</li>
+</ul>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+<h3 id="-誤解特殊な技術攻撃">❌ 誤解①：特殊な技術攻撃</h3>
+<p>👉 ⭕ 実際は</p>
+<ul>
+  <li>単純な試行の繰り返し</li>
+</ul>
+
+<hr />
+
+<h3 id="-誤解パスワードが漏れている攻撃">❌ 誤解②：パスワードが漏れている攻撃</h3>
+<p>👉 ⭕ 違う</p>
+<ul>
+  <li>推測して当てる攻撃</li>
+</ul>
+
+<p>（漏えいはリスト型攻撃）</p>
+
+<hr />
+
+<h3 id="-誤解1回で成功する攻撃">❌ 誤解③：1回で成功する攻撃</h3>
+<p>👉 ⭕ 違う</p>
+<ul>
+  <li>何度も試すことが前提</li>
+</ul>
+
+<hr />
+
+<h3 id="sg試験のひっかけポイント">SG試験のひっかけポイント</h3>
+<ul>
+  <li>「パスワードの暗号化」で防げるとする選択肢<br />
+→ ❌ 不十分</li>
+</ul>
+
+<p>👉 正しくは</p>
+<ul>
+  <li><strong>試行回数の制限や多要素認証</strong></li>
+</ul>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>ブルートフォース攻撃＝「総当たりでパスワードを試す」</li>
+  <li>シンプルだが確実な攻撃</li>
+  <li>対策は<br />
+👉 試行回数制限＋多要素認証</li>
+  <li>試験では<br />
+👉 「推測型か漏えい型か」で切り分ける</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/attacker-types/">攻撃者の種類とは？目的と特徴で整理する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/blacklist-whitelist/">ブラックリストとホワイトリストの違いとは？判断基準を整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/bot/">ボットとは？遠隔操作される仕組みを理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/botnet/">ボットネットとは？踏み台化とDDoSの関係を理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/clickjacking/">クリックジャッキングとは？見えない操作誘導の仕組み【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/botnet/">← ボットネットとは？踏み台化とDDoSの関係を理解する【情報セキュリティマネジメント】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/case-solving-template/">SG試験 ケース問題の解き方テンプレ【情報セキュリティマネジメント】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

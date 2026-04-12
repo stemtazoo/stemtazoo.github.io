@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>MTBFとは？平均故障間隔の意味と稼働率との関係【情報セキュリティマネジメント】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="MTBFとは？平均故障間隔の意味と稼働率との関係【情報セキュリティマネジメント】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="MTBFは平均故障間隔の意味と稼働率との関係を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:description" content="MTBFは平均故障間隔の意味と稼働率との関係を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="MTBFとは？平均故障間隔の意味と稼働率との関係【情報セキュリティマネジメント】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"MTBFは平均故障間隔の意味と稼働率との関係を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。","headline":"MTBFとは？平均故障間隔の意味と稼働率との関係【情報セキュリティマネジメント】","url":"/sg/mtbf/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">MTBFとは？平均故障間隔の意味と稼働率との関係【情報セキュリティマネジメント】</h1>
+      <h2 class="project-tagline">MTBFは平均故障間隔の意味と稼働率との関係を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">MTBFは平均故障間隔の意味と稼働率との関係を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-management</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+<ul>
+  <li>MTBFとは「故障してから次に故障するまでの平均時間（どれくらい長く動き続けるか）」を表す指標</li>
+  <li>SG試験では「MTTRとの違い」と「稼働率との関係」を正しく切り分けられるかが問われる</li>
+</ul>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>MTBFはシンプルに言うと、</p>
+
+<p>👉 <strong>「どれくらい壊れにくいか」</strong></p>
+
+<p>です。</p>
+
+<p>例えば、</p>
+
+<ul>
+  <li>MTBFが長い → なかなか壊れない（安定）</li>
+  <li>MTBFが短い → すぐ壊れる（不安定）</li>
+</ul>
+
+<p>👉 「連続して動ける時間の長さ」と考えると分かりやすいです。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>MTBF（Mean Time Between Failures）は、</p>
+
+<p>👉 <strong>1回の故障から次の故障までの平均稼働時間</strong></p>
+
+<p>を表します。</p>
+
+<hr />
+
+<h3 id="イメージ">イメージ</h3>
+<p>システムの状態は次のように繰り返します。</p>
+
+<ul>
+  <li>稼働 → 故障 → 修理 → 稼働 → 故障 → 修理</li>
+</ul>
+
+<p>👉 このうち<br />
+<strong>「稼働している時間の平均」がMTBF</strong></p>
+
+<hr />
+
+<h3 id="mttrとの関係">MTTRとの関係</h3>
+<ul>
+  <li>MTBF：どれだけ長く動くか（稼働時間）</li>
+  <li>MTTR：どれだけ早く直るか（停止時間）</li>
+</ul>
+
+<p>👉 セットで出題されることが多い</p>
+
+<hr />
+
+<h3 id="稼働率との関係">稼働率との関係</h3>
+<p>稼働率は次の関係で表されます。</p>
+
+<p>👉 稼働率 ＝ MTBF ÷（MTBF ＋ MTTR）</p>
+
+<hr />
+
+<h3 id="sg試験でのポイント">SG試験でのポイント</h3>
+<ul>
+  <li>MTBFが長い → 故障しにくい → 可用性が高い</li>
+  <li>MTBFが短い → 故障しやすい → 可用性が低い</li>
+</ul>
+
+<p>👉 <strong>可用性（稼働率）とセットで考える</strong></p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="使う場面">使う場面</h3>
+<ul>
+  <li>システムの信頼性評価</li>
+  <li>サーバやネットワーク機器の選定</li>
+  <li>SLAの設計（どの程度安定させるか）</li>
+</ul>
+
+<p>👉 科目Bでは<br />
+<strong>「この構成は安定か？」を判断する材料になる</strong></p>
+
+<hr />
+
+<h3 id="注意が必要な場面">注意が必要な場面</h3>
+<ul>
+  <li>MTTRと混同する</li>
+  <li>「復旧時間」と勘違いする</li>
+  <li>稼働率そのものと勘違いする</li>
+</ul>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+<h3 id="-誤解">❌ 誤解①</h3>
+<p>「MTBFは復旧時間」</p>
+
+<p>👉 ⭕ MTBFは<br />
+<strong>“壊れていない時間”</strong></p>
+
+<hr />
+
+<h3 id="-誤解-1">❌ 誤解②</h3>
+<p>「MTBFが長ければ復旧も早い」</p>
+
+<p>👉 ⭕ 無関係<br />
+復旧の速さはMTTR</p>
+
+<hr />
+
+<h3 id="-誤解-2">❌ 誤解③</h3>
+<p>「MTBF＝稼働率」</p>
+
+<p>👉 ⭕ 違う<br />
+稼働率はMTTRとセットで決まる</p>
+
+<hr />
+
+<h3 id="sg試験のひっかけ">SG試験のひっかけ</h3>
+<ul>
+  <li>MTBFとMTTRを入れ替えて出す</li>
+  <li>「平均復旧時間」と書いてMTBFを選ばせる</li>
+  <li>稼働率と混同させる</li>
+</ul>
+
+<p>👉 選択肢では<br />
+<strong>“壊れていない時間か？”を確認する</strong></p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>MTBF＝故障と故障の間の時間（稼働時間）</li>
+  <li>長いほど「壊れにくい」</li>
+  <li>MTTRとセットで覚える</li>
+  <li>稼働率はMTBFとMTTRで決まる</li>
+  <li>SG試験は<br />
+👉 「壊れている時間か？動いている時間か？」で切る</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/availability/">稼働率とは？可用性の考え方とSLAでの判断基準【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/contract-nonconformity/">契約不適合責任とは？瑕疵担保責任との違いも整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/employment-type-comparison/">就業形態の違いを完全整理【SG試験で迷わない判断基準】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/mttr/">MTTRとは？平均復旧時間の意味と短縮の考え方【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/outsourcing-contract-difference/">請負契約と派遣契約の違いとは？指示系統で判断するポイント【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/man-in-the-middle-attack/">← 中間者攻撃とは？通信を盗み見る仕組みと対策【情報セキュリティマネジメント】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/mttr/">MTTRとは？平均復旧時間の意味と短縮の考え方【情報セキュリティマネジメント】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

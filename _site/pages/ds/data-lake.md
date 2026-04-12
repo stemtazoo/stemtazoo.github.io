@@ -1,0 +1,172 @@
+﻿---
+layout: page
+title: データレイクとは？（DWHとの違いも整理）【DS検定リテラシー】
+description: データレイクは（DWHとの違いも整理）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+permalink: /ds/data-lake/
+categories: [data-engineering]
+tags: [ds, data-storage, data-structure, database]
+prev: /ds/data-cube/
+next: /ds/dwh-appliance/
+---
+<div style="font-size: 14px; margin-bottom: 12px;">
+  <a href="/ds/">DS検定トップ</a>
+  ＞ {{ page.title }}
+</div>
+
+## まず結論
+データレイクとは、形式を問わず生データをそのまま大量に保存するための仕組み（考え方）です。  
+DS検定では「データウェアハウス（DWH）との違い」を判断させる問題がよく出ます。
+
+
+## 直感的な説明
+
+### データレイク
+とにかく全部そのまま貯める「大きな湖」。
+
+- Excel
+- ログ
+- 画像
+- 音声
+- センサーデータ
+
+形式をそろえず、そのまま保存します。
+
+
+### データウェアハウス（DWH）
+整理して棚に並べた「倉庫」。
+
+- きれいに構造化
+- 分析しやすい形に整形済み
+
+この違いが最大のポイントです。
+
+
+## 定義・仕組み
+
+### データレイクの特徴
+
+- 構造化・非構造化データをそのまま保存
+- 保存時に整形しない（Schema on Read）
+- 後から用途に応じて加工する
+
+よくHDFSやクラウドストレージと組み合わせて構築されます。
+
+重要なのは、
+
+データレイクは「保存の考え方」であって  
+特定の製品名ではない、という点です。
+
+
+## どんな場面で使う？
+
+### 使う場面
+
+- 将来何に使うか未確定のデータ保存
+- AI・機械学習用データの蓄積
+- IoTやログなど大量データの保管
+
+とりあえず全部ためる、が基本思想です。
+
+
+### 向かない場面
+
+- 即座に集計・レポートしたい場合
+- 経営指標の定型分析
+
+その場合はDWHが向いています。
+
+
+## よくある誤解・混同
+
+### ① データレイク＝HDFS？
+
+違います。
+
+HDFSは保存技術。  
+データレイクは保存の考え方。
+
+DS検定ではここを混同させます。
+
+
+### ② データレイクは整理されている？
+
+いいえ。
+
+保存時は整理しません。  
+読み出すときに構造を定義します。
+
+
+### ③ DWHとの違い
+
+| 項目 | データレイク | DWH |
+|------|--------------|-----|
+| 保存時 | 整形しない | 整形する |
+| データ形式 | 何でも可 | 主に構造化 |
+| 用途 | AI・将来分析 | 定型分析 |
+
+DS検定では  
+「構造化済み」「経営分析用」と書いてあればDWH寄りです。
+
+
+## まとめ（試験直前用）
+
+- データレイク＝生データをそのまま保存  
+- 形式を問わない  
+- 保存時に整形しない（Schema on Read）  
+- DWHは整形済みデータ  
+- 「全部ためる」思想 → データレイク
+
+
+## 対応スキル項目（データエンジニアリング力シート）
+- データ基盤
+- データ管理
+- ★ データ基盤の代表的なアーキテクチャを理解している
+- ★ データレイクとデータウェアハウスの違いを理解している
+
+## 🔗 関連記事
+
+<ul style="padding-left: 20px;">
+{% assign current_tags = page.tags %}
+{% assign count = 0 %}
+
+{% for p in site.pages %}
+  {% if p.url != page.url and p.tags %}
+    {% assign matched = false %}
+
+    {% for tag in current_tags %}
+      {% if p.tags contains tag and tag != "ds" %}
+        {% assign matched = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if matched %}
+      <li style="margin-bottom: 6px;">
+        <a href="{{ p.url }}">{{ p.title }}</a>
+      </li>
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+
+    {% if count >= 5 %}
+      {% break %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>
+
+<hr>
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/ds/">DS検定トップに戻る</a>
+</div>
+
+<div style="display:flex;justify-content:space-between;margin-top:12px;">
+
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
+  {% endif %}
+
+  {% if page.next.url %}
+    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
+  {% endif %}
+
+</div>

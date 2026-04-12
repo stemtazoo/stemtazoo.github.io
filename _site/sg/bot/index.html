@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>ボットとは？遠隔操作される仕組みを理解する【情報セキュリティマネジメント】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="ボットとは？遠隔操作される仕組みを理解する【情報セキュリティマネジメント】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="ボットは外部指令で端末を不正操作し攻撃に悪用するマルウェアです。この記事では感染から遠隔操作までの仕組み、ボットネットの役割、情報セキュリティマネジメント試験対策の要点を解説します。" />
+<meta property="og:description" content="ボットは外部指令で端末を不正操作し攻撃に悪用するマルウェアです。この記事では感染から遠隔操作までの仕組み、ボットネットの役割、情報セキュリティマネジメント試験対策の要点を解説します。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="ボットとは？遠隔操作される仕組みを理解する【情報セキュリティマネジメント】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"ボットは外部指令で端末を不正操作し攻撃に悪用するマルウェアです。この記事では感染から遠隔操作までの仕組み、ボットネットの役割、情報セキュリティマネジメント試験対策の要点を解説します。","headline":"ボットとは？遠隔操作される仕組みを理解する【情報セキュリティマネジメント】","url":"/sg/bot/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">ボットとは？遠隔操作される仕組みを理解する【情報セキュリティマネジメント】</h1>
+      <h2 class="project-tagline">ボットは外部指令で端末を不正操作し攻撃に悪用するマルウェアです。この記事では感染から遠隔操作までの仕組み、ボットネットの役割、情報セキュリティマネジメント試験対策の要点を解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">ボットは外部指令で端末を不正操作し攻撃に悪用するマルウェアです。この記事では感染から遠隔操作までの仕組み、ボットネットの役割、情報セキュリティマネジメント試験対策の要点を解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">security_measures</span>
+        
+          <span class="post-tag">malware</span>
+        
+          <span class="post-tag">unauthorized_access</span>
+        
+          <span class="post-tag">sg-security-measures</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+<p>ボットとは、<strong>外部から遠隔操作されるマルウェアであり、感染端末を攻撃に利用する仕組み</strong>で、SG試験では「誰が操作しているか」「何に使われるか」を見抜くことが重要です。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>ボットは「知らないうちに操られるパソコン」です。</p>
+
+<p>たとえば</p>
+<ul>
+  <li>自分のPCが勝手に大量の通信を送る</li>
+  <li>気づかないうちに攻撃の加害者になる</li>
+</ul>
+
+<p>といった状態になります。</p>
+
+<p>イメージとしては、<br />
+<strong>操作者（攻撃者）→指示を出すサーバ→乗っ取られたPC群→攻撃対象</strong><br />
+という流れです。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>ボットは、感染すると外部からの命令で動くようになります。</p>
+
+<h3 id="基本構成試験でよく出る">基本構成（試験でよく出る）</h3>
+<ul>
+  <li><strong>ボットハーダー（攻撃者）</strong>
+    <ul>
+      <li>ボットを操作する人</li>
+    </ul>
+  </li>
+  <li><strong>C&amp;Cサーバ（Command and Control）</strong>
+    <ul>
+      <li>ボットに命令を送るサーバ</li>
+    </ul>
+  </li>
+  <li><strong>ボット（感染端末）</strong>
+    <ul>
+      <li>指示に従って動くコンピュータ</li>
+    </ul>
+  </li>
+  <li><strong>ボットネット</strong>
+    <ul>
+      <li>複数のボットが連携したネットワーク</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="何をするのか">何をするのか</h3>
+<ul>
+  <li>DDoS攻撃（大量アクセス）</li>
+  <li>スパムメール送信</li>
+  <li>情報収集（個人情報など）</li>
+  <li>不正アクセスの踏み台</li>
+</ul>
+
+<p>SG試験では、<br />
+<strong>「1台ではなく多数で攻撃する」点が重要な特徴</strong>です。</p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="使うべき場面試験実務">使うべき場面（試験・実務）</h3>
+<ul>
+  <li>DDoS攻撃の原因を考えるとき</li>
+  <li>不審な大量通信の原因分析</li>
+  <li>セキュリティ対策（EDR・監視など）</li>
+</ul>
+
+<h3 id="間違えやすい場面">間違えやすい場面</h3>
+<ul>
+  <li>単体のウイルスと混同する<br />
+→ ボットは「遠隔操作＋ネットワーク連携」がポイント</li>
+</ul>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+<h3 id="-ボットとウイルスの混同">① ボットとウイルスの混同</h3>
+<ul>
+  <li>❌ ボット＝ウイルスの一種</li>
+  <li>⭕ <strong>ボットは遠隔操作される仕組みが本質</strong></li>
+</ul>
+
+<p>👉 増殖より「操作される」が重要</p>
+
+<hr />
+
+<h3 id="-ボットネットの誤解">② ボットネットの誤解</h3>
+<ul>
+  <li>❌ ボットネット＝サーバ</li>
+  <li>⭕ <strong>ボットネット＝感染した端末の集まり</strong></li>
+</ul>
+
+<p>👉 C&amp;Cサーバとは別物</p>
+
+<hr />
+
+<h3 id="-攻撃者との関係">③ 攻撃者との関係</h3>
+<ul>
+  <li>❌ ボットが自動で攻撃する</li>
+  <li>⭕ <strong>攻撃者がC&amp;Cサーバ経由で指示する</strong></li>
+</ul>
+
+<p>👉 「誰が操作しているか」を意識</p>
+
+<hr />
+
+<h3 id="sg試験での典型パターン">SG試験での典型パターン</h3>
+<ul>
+  <li>「遠隔操作される」かどうか</li>
+  <li>「複数端末で攻撃する」かどうか</li>
+  <li>「C&amp;Cサーバの存在」</li>
+</ul>
+
+<p>選択肢で<br />
+「自己増殖」や「ファイル感染」と書いてあれば<br />
+→ ボットではない可能性が高い</p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>ボット＝遠隔操作されるマルウェア</li>
+  <li>C&amp;Cサーバが命令を出す</li>
+  <li>ボットネット＝感染端末の集合</li>
+  <li>主な用途はDDoS・スパム・踏み台</li>
+  <li>判断基準は「遠隔操作・複数端末・指令サーバ」</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/blacklist-whitelist/">ブラックリストとホワイトリストの違いとは？判断基準を整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/botnet/">ボットネットとは？踏み台化とDDoSの関係を理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/brute-force-attack/">ブルートフォース攻撃とは？総当たり攻撃の仕組みと対策【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/clickjacking/">クリックジャッキングとは？見えない操作誘導の仕組み【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/command-and-control/">C&amp;Cサーバとは？ボットネットを操る指令の仕組み【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/blacklist-whitelist/">← ブラックリストとホワイトリストの違いとは？判断基準を整理【情報セキュリティマネジメント】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/botnet/">ボットネットとは？踏み台化とDDoSの関係を理解する【情報セキュリティマネジメント】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

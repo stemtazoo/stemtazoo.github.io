@@ -1,0 +1,200 @@
+﻿---
+layout: page
+title: NLTKとは？自然言語処理ライブラリの役割を整理【DS検定】
+description: NLTKは自然言語処理ライブラリの役割を整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+permalink: /ds/nltk/
+categories: [business]
+tags: [ds, unstructured-data, design]
+prev: /ds/morphological-dependency-parsing/
+next: /ds/open-data/
+---
+<div style="font-size: 14px; margin-bottom: 12px;">
+  <a href="/ds/">DS検定トップ</a>
+  ＞ {{ page.title }}
+</div>
+
+## まず結論
+
+NLTKとは、自然言語処理（NLP）を学習・実装するためのPythonライブラリです。
+
+DS検定では、「NLTKは日本語の形態素解析ツールではない」という切り分けができるかが問われます。
+
+
+## 直感的な説明
+
+NLTKは、
+
+> 文章をコンピュータで扱うための道具箱
+
+のようなものです。
+
+例えば英語の文章であれば、
+
+- 単語に分ける
+- 品詞を判定する
+- 頻出単語を調べる
+- 文の構造を分析する
+
+といった処理を行えます。
+
+ただし重要なのは、
+
+> 主に英語向けの学習用ライブラリ
+
+という点です。
+
+DS検定では、  
+「日本語の形態素解析ができるか？」という問いに対して、  
+NLTKを選んでしまうミスがよくあります。
+
+
+## 定義・仕組み
+
+### ■ 定義
+
+NLTK（Natural Language Toolkit）は、
+
+> 自然言語処理を学習・研究するためのPythonライブラリ
+
+です。
+
+大学の授業や教材でよく使われます。
+
+### ■ できること
+
+- トークン化（単語分割）
+- 品詞タグ付け
+- 構文解析
+- 単語頻度分析
+- コーパスの利用
+
+### ■ 位置づけ
+
+自然言語処理の流れでいうと、
+
+1. 前処理（単語分割など）
+2. 特徴量作成
+3. モデル学習
+
+の「前処理〜分析」部分をサポートするツールです。
+
+ただし、
+
+- 日本語特化ではない
+- 産業用途より教育用途が中心
+
+という特徴があります。
+
+
+## どんな場面で使う？
+
+### ■ 使う場面
+
+- 自然言語処理の学習
+- 英語テキストの分析
+- 研究用途
+
+例えば、英語レビューの頻出単語分析などで使われます。
+
+### ■ 使うと誤解しやすい場面
+
+NLTKを「日本語形態素解析ツール」と思うのは誤りです。
+
+日本語で単語分割を行うなら、
+
+- MeCab
+- Sudachi
+- Janome
+
+などが代表的です。
+
+
+## よくある誤解・混同
+
+### ❌ NLTKは日本語の形態素解析ツールである  
+→ 主に英語向けライブラリ
+
+### ❌ NLTKは機械学習フレームワークである  
+→ それはTensorFlowやPyTorch
+
+### ❌ NLTKは係り受け解析専用ツールである  
+→ それはCaboChaなど
+
+DS検定では、
+
+> 「日本語の形態素解析を行うことができるものはどれか」
+
+と問われることが多いです。
+
+選択肢にNLTKがあった場合、
+
+> 日本語特化か？英語中心か？
+
+で判断します。
+
+
+## まとめ（試験直前用）
+
+- NLTKは自然言語処理用Pythonライブラリ
+- 主に英語向け
+- 日本語形態素解析ツールではない
+- 機械学習フレームワークでもない
+- 「対象言語は何か？」で切り分ける
+
+DS検定では  
+**ツールの役割と対象を区別できるか** が重要です。
+
+
+## 対応スキル項目（AI利活用スキルシート）
+- AIの基礎理解
+- 自然言語処理の基礎
+- ★ 自然言語処理の基本的な流れを理解している
+- ★ テキストデータの前処理の概要を理解している
+
+## 🔗 関連記事
+
+<ul style="padding-left: 20px;">
+{% assign current_tags = page.tags %}
+{% assign count = 0 %}
+
+{% for p in site.pages %}
+  {% if p.url != page.url and p.tags %}
+    {% assign matched = false %}
+
+    {% for tag in current_tags %}
+      {% if p.tags contains tag and tag != "ds" %}
+        {% assign matched = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if matched %}
+      <li style="margin-bottom: 6px;">
+        <a href="{{ p.url }}">{{ p.title }}</a>
+      </li>
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+
+    {% if count >= 5 %}
+      {% break %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>
+
+<hr>
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/ds/">DS検定トップに戻る</a>
+</div>
+
+<div style="display:flex;justify-content:space-between;margin-top:12px;">
+
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
+  {% endif %}
+
+  {% if page.next.url %}
+    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
+  {% endif %}
+
+</div>

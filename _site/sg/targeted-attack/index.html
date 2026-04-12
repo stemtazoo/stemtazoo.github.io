@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>標的型攻撃とは？狙われる組織の特徴と対策【情報セキュリティマネジメント】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="標的型攻撃とは？狙われる組織の特徴と対策【情報セキュリティマネジメント】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="標的型攻撃は狙われる組織の特徴と対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:description" content="標的型攻撃は狙われる組織の特徴と対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="標的型攻撃とは？狙われる組織の特徴と対策【情報セキュリティマネジメント】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"標的型攻撃は狙われる組織の特徴と対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。","headline":"標的型攻撃とは？狙われる組織の特徴と対策【情報セキュリティマネジメント】","url":"/sg/targeted-attack/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">標的型攻撃とは？狙われる組織の特徴と対策【情報セキュリティマネジメント】</h1>
+      <h2 class="project-tagline">標的型攻撃は狙われる組織の特徴と対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">標的型攻撃は狙われる組織の特徴と対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">security_measures</span>
+        
+          <span class="post-tag">unauthorized_access</span>
+        
+          <span class="post-tag">risk_assessment</span>
+        
+          <span class="post-tag">security_training</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+<ul>
+  <li>標的型攻撃とは、<strong>特定の組織や個人を狙って、計画的・継続的に行われる不正アクセス攻撃</strong>であり、SG試験では「なぜ防ぎにくいか」と「どの対策が有効か」を判断させる問題として出題される。</li>
+</ul>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>通常の攻撃は「とりあえず誰かに当たればいい」ですが、</p>
+
+<p>標的型攻撃は
+👉「この会社・この人を狙う」と決めてから攻撃します。</p>
+
+<p>たとえば、</p>
+<ul>
+  <li>会社の社員を調べる</li>
+  <li>本物っぽいメールを送る</li>
+  <li>だまされるのを待つ</li>
+</ul>
+
+<p>というように、<strong>相手に合わせて作られる攻撃</strong>です。</p>
+
+<p>👉 だから「気づきにくく、防ぎにくい」のが特徴です。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>標的型攻撃は、次のような流れで行われます。</p>
+
+<ol>
+  <li><strong>情報収集</strong>
+    <ul>
+      <li>SNSや公開情報から組織・社員の情報を集める</li>
+    </ul>
+  </li>
+  <li><strong>侵入手段の準備</strong>
+    <ul>
+      <li>標的に合わせたメールやサイトを作成</li>
+    </ul>
+  </li>
+  <li><strong>侵入（初期感染）</strong>
+    <ul>
+      <li>添付ファイルやURLを使ってマルウェア感染</li>
+    </ul>
+  </li>
+  <li><strong>内部活動</strong>
+    <ul>
+      <li>権限取得、情報収集、横展開</li>
+    </ul>
+  </li>
+  <li><strong>目的達成</strong>
+    <ul>
+      <li>情報窃取、不正送金など</li>
+    </ul>
+  </li>
+</ol>
+
+<hr />
+
+<h3 id="代表的な関連攻撃">代表的な関連攻撃</h3>
+<ul>
+  <li>
+    <p><strong>水飲み場型攻撃</strong><br />
+→ 標的がよくアクセスするサイトを改ざんして感染させる</p>
+  </li>
+  <li>
+    <p><strong>APT（Advanced Persistent Threat）</strong><br />
+→ 長期間にわたって潜伏しながら攻撃を続ける</p>
+  </li>
+  <li>
+    <p><strong>BEC（ビジネスメール詐欺）</strong><br />
+→ 経営者や取引先を装って送金を指示する</p>
+  </li>
+</ul>
+
+<p>👉 これらはすべて「標的型攻撃の一種」として整理できます。</p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="使う場面対策を考える場面">使う場面（対策を考える場面）</h3>
+<ul>
+  <li>社員へのセキュリティ教育</li>
+  <li>メール対策（添付・URLチェック）</li>
+  <li>権限管理（最小権限）</li>
+  <li>ログ監視・早期検知</li>
+</ul>
+
+<hr />
+
+<h3 id="特に重要な考え方sg試験">特に重要な考え方（SG試験）</h3>
+<ul>
+  <li>完全に防ぐのは難しい<br />
+👉 <strong>侵入を前提に被害を抑える設計が必要</strong></li>
+</ul>
+
+<p>（例）</p>
+<ul>
+  <li>多要素認証</li>
+  <li>権限分離</li>
+  <li>ログ監視</li>
+</ul>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+<h3 id="-誤解特別な技術攻撃だけが標的型攻撃">❌ 誤解①：特別な技術攻撃だけが標的型攻撃</h3>
+<p>👉 ⭕ 実際は</p>
+<ul>
+  <li>メール</li>
+  <li>人の心理<br />
+を使う「だまし」が中心</li>
+</ul>
+
+<hr />
+
+<h3 id="-誤解ウイルス対策ソフトで防げる">❌ 誤解②：ウイルス対策ソフトで防げる</h3>
+<p>👉 ⭕ 標的型は</p>
+<ul>
+  <li>新種の攻撃</li>
+  <li>個別に作られた手口<br />
+が多く、検知しにくい</li>
+</ul>
+
+<hr />
+
+<h3 id="-誤解侵入されなければ問題ない">❌ 誤解③：侵入されなければ問題ない</h3>
+<p>👉 ⭕ SG試験では</p>
+<ul>
+  <li><strong>侵入後の対応（検知・封じ込め）</strong>が重要</li>
+</ul>
+
+<hr />
+
+<h3 id="sg試験のひっかけポイント">SG試験のひっかけポイント</h3>
+<ul>
+  <li>「防止策だけ」で解決しようとする選択肢<br />
+→ ❌ 不十分</li>
+</ul>
+
+<p>👉 正解は</p>
+<ul>
+  <li>教育</li>
+  <li>検知</li>
+  <li>権限制御<br />
+を組み合わせた対策</li>
+</ul>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>標的型攻撃＝「特定の相手を狙った攻撃」</li>
+  <li>特徴は<br />
+👉 個別最適・長期・気づきにくい</li>
+  <li>水飲み場型・APT・BECは仲間</li>
+  <li>対策は<br />
+👉 防止＋検知＋被害抑止の組み合わせ</li>
+  <li>選択肢では<br />
+👉 「人・運用・技術のどれが不足しているか」で判断する</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/blacklist-whitelist/">ブラックリストとホワイトリストの違いとは？判断基準を整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/bot/">ボットとは？遠隔操作される仕組みを理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/botnet/">ボットネットとは？踏み台化とDDoSの関係を理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/brute-force-attack/">ブルートフォース攻撃とは？総当たり攻撃の仕組みと対策【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/case-solving-template/">SG試験 ケース問題の解き方テンプレ【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/stepping-stone-attack/">← 踏み台攻撃とは？加害者にならないための重要ポイント【情報セキュリティマネジメント】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/telnet/">Telnetとは？安全でない遠隔操作の仕組み【情報セキュリティマネジメント】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

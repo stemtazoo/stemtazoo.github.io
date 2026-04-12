@@ -1,0 +1,212 @@
+﻿---
+layout: page
+title: 日付形式の正規表現とは？形式チェックと妥当性の違い【DS検定】
+description: 日付形式の正規表現は形式チェックと妥当性の違いを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+permalink: /ds/regular-expression-date/
+categories: [data-science]
+tags: [ds, data-processing, preprocessing]
+prev: /ds/regular-expression-basic/
+next: /ds/regular-expression-email/
+---
+<div style="font-size: 14px; margin-bottom: 12px;">
+  <a href="/ds/">DS検定トップ</a>
+  ＞ {{ page.title }}
+</div>
+
+## まず結論
+
+日付の正規表現は「日付の形式」を確認するためのパターンです。
+DS検定では、「形式チェック」と「正しい日付かどうか（妥当性）」の違いを判断できるかが問われます。
+
+
+
+## 直感的な説明
+
+たとえば、
+
+2025-04-01
+
+これは見た目として「年-月-日」の形式になっています。
+
+正規表現は、この「見た目の形」が正しいかどうかを確認する道具です。
+
+しかし、
+
+2025-99-99
+
+も、形だけ見れば「4桁-2桁-2桁」です。
+
+ここが重要です。
+
+正規表現は「それが実在する日付かどうか」までは判断しません。
+
+DS検定ではこの違いを理解しているかどうかが問われます。
+
+
+
+## 定義・仕組み
+
+代表的な日付形式（YYYY-MM-DD）の正規表現は次の形です。
+
+^\d{4}-\d{2}-\d{2}$
+
+意味は次の通りです。
+
+^ ：先頭
+
+\d{4} ：数字4桁（年）
+
+：ハイフン
+
+
+\d{2} ：数字2桁（月）
+
+：ハイフン
+
+
+\d{2} ：数字2桁（日）
+
+$ ：末尾
+
+
+つまり、
+
+「4桁-2桁-2桁の形式で構成された文字列全体」
+
+を表しています。
+
+ここでのポイントは、
+
+月が13でも一致する
+
+日が40でも一致する
+
+
+ということです。
+
+正規表現は“範囲の妥当性”までは保証しません。
+
+
+
+## どんな場面で使う？
+
+使う場面
+
+CSVデータの前処理
+
+入力フォームの形式チェック
+
+ログデータから日付を抽出
+
+
+使うと誤解しやすい場面
+
+「正しい日付だけを抽出できる」と思い込む
+
+月や日の上限までチェックしていると誤解する
+
+
+DS検定では、
+「この正規表現は妥当な日付のみを保証する」と書かれていたら誤りです。
+
+形式チェックと意味チェックは別物です。
+
+
+
+## よくある誤解・混同
+
+① 形式チェック＝妥当性チェックだと思う
+
+選択肢で
+「この正規表現に一致すれば正しい日付である」
+と書かれていたら誤りです。
+
+
+
+② 範囲指定をしていると誤解する
+
+\d{2} は「2桁」であって「01〜12」を意味しません。
+
+ここはDS検定でよく狙われます。
+
+
+
+③ 完全一致か部分一致かを見落とす
+
+^ と $ がないと、文字列の途中に含まれていても一致します。
+
+「完全一致」と書かれていたら、必ず ^ と $ を確認します。
+
+
+
+## まとめ（試験直前用）
+
+日付の正規表現は「形式」だけを確認する
+
+\d{2} は「2桁」であり、範囲チェックではない
+
+形式チェックと妥当性チェックは別物
+
+^ と $ があるかで完全一致かどうかが決まる
+
+
+DS検定では、
+「その正規表現は何を保証していないか？」を考えることが重要です。
+
+
+
+## 対応スキル項目（データエンジニアリング力シート）
+
+データ収集・加工
+
+データ前処理
+
+★ データの前処理（クレンジング・加工）ができる
+
+## 🔗 関連記事
+
+<ul style="padding-left: 20px;">
+{% assign current_tags = page.tags %}
+{% assign count = 0 %}
+
+{% for p in site.pages %}
+  {% if p.url != page.url and p.tags %}
+    {% assign matched = false %}
+
+    {% for tag in current_tags %}
+      {% if p.tags contains tag and tag != "ds" %}
+        {% assign matched = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if matched %}
+      <li style="margin-bottom: 6px;">
+        <a href="{{ p.url }}">{{ p.title }}</a>
+      </li>
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+
+    {% if count >= 5 %}
+      {% break %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>
+
+<hr>
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/ds/">DS検定トップに戻る</a>
+</div>
+
+<div style="display:flex;justify-content:space-between;margin-top:12px;">
+
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
+  {% endif %}
+
+  {% if page.next.url %}
+    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
+  {% endif %}
+
+</div>

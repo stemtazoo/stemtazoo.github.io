@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>NCOとは？政府のサイバー司令塔を理解する【情報セキュリティマネジメント】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="NCOとは？政府のサイバー司令塔を理解する【情報セキュリティマネジメント】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="NCOは政府のサイバー司令塔を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:description" content="NCOは政府のサイバー司令塔を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="NCOとは？政府のサイバー司令塔を理解する【情報セキュリティマネジメント】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"NCOは政府のサイバー司令塔を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。","headline":"NCOとは？政府のサイバー司令塔を理解する【情報セキュリティマネジメント】","url":"/sg/nco/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">NCOとは？政府のサイバー司令塔を理解する【情報セキュリティマネジメント】</h1>
+      <h2 class="project-tagline">NCOは政府のサイバー司令塔を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">NCOは政府のサイバー司令塔を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-management</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+<ul>
+  <li><strong>NCOは、内閣官房に設置された日本のサイバーセキュリティ対策の司令塔となる組織である。</strong></li>
+  <li>SG試験では「政府の司令塔」か「現場対応組織（CSIRTやJPCERT/CC）」かを見分ける問題が多い。</li>
+</ul>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>会社でいうと、</p>
+
+<ul>
+  <li>現場で対応するチーム（CSIRT）</li>
+  <li>外部から支援する専門家（JPCERT/CC）</li>
+  <li>全体方針を決める経営層</li>
+</ul>
+
+<p>がありますよね。</p>
+
+<p>NCOはこの中で、<br />
+<strong>国レベルの“経営層・司令塔”の役割</strong>です。</p>
+
+<p>👉 イメージ</p>
+<ul>
+  <li>CSIRT：現場</li>
+  <li>JPCERT/CC：外部支援</li>
+  <li><strong>NCO：全体を指揮するトップ</strong></li>
+</ul>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>NCO（国家サイバー統括室）は、</p>
+
+<ul>
+  <li>内閣官房に設置された組織で</li>
+  <li>日本全体のサイバーセキュリティ対策を統括する</li>
+</ul>
+
+<p>役割を持ちます。</p>
+
+<h3 id="主な役割">主な役割</h3>
+<ul>
+  <li>政府全体のセキュリティ方針の策定</li>
+  <li>サイバー攻撃への対応方針の決定</li>
+  <li>関係省庁・機関の連携・調整</li>
+  <li>重要インフラの保護に関する指示</li>
+</ul>
+
+<h3 id="ポイント">ポイント</h3>
+<ul>
+  <li><strong>政府の組織である（内閣官房）</strong></li>
+  <li><strong>現場で対応するのではなく、方針を決める</strong></li>
+  <li><strong>全体の統括・指揮が役割</strong></li>
+</ul>
+
+<p>SG試験では<br />
+「司令塔」＝NCO<br />
+と押さえると判断しやすくなります。</p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="使う場面正しい理解">使う場面（正しい理解）</h3>
+<ul>
+  <li>国家レベルのサイバー攻撃対応</li>
+  <li>政府全体のセキュリティ方針の決定</li>
+  <li>重要インフラ防護の指揮</li>
+</ul>
+
+<h3 id="使うと誤解しやすい場面">使うと誤解しやすい場面</h3>
+<ul>
+  <li>❌ 個別企業のインシデント対応（それはCSIRT）</li>
+  <li>❌ 技術的な支援・助言（それはJPCERT/CC）</li>
+</ul>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="-csirtとの違い">① CSIRTとの違い</h3>
+<ul>
+  <li>CSIRT：組織内の実務対応</li>
+  <li>NCO：<strong>全体方針を決める司令塔</strong></li>
+</ul>
+
+<p>👉 「実際に対応するか？」で切る</p>
+
+<hr />
+
+<h3 id="-jpcertccとの違い">② JPCERT/CCとの違い</h3>
+<ul>
+  <li>JPCERT/CC：中立な外部支援機関</li>
+  <li>NCO：<strong>政府の組織（内閣官房）</strong></li>
+</ul>
+
+<p>👉 「政府かどうか」で判断</p>
+
+<hr />
+
+<h3 id="-sg試験のひっかけ">③ SG試験のひっかけ</h3>
+<p>SG試験では次のように混同させてきます：</p>
+
+<ul>
+  <li>「インシデント対応を行う」→CSIRTやJPCERT/CC</li>
+  <li>「統括・指揮する」→NCO</li>
+</ul>
+
+<p>👉 選択肢では<br />
+<strong>“対応する”か“指揮する”か</strong>に注目</p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>NCO＝<strong>政府のサイバーセキュリティ司令塔（内閣官房）</strong></li>
+  <li>現場対応ではなく<strong>方針決定・統括が役割</strong></li>
+  <li>選択肢では
+    <ul>
+      <li>「インシデント対応を行う」→×</li>
+      <li>「中立組織」→×</li>
+      <li>「政府の司令塔」→○</li>
+    </ul>
+  </li>
+</ul>
+
+<p>👉 <strong>「政府か？現場か？」で切る</strong></p>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/case-solving-template/">SG試験 ケース問題の解き方テンプレ【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/csirt/">CSIRTとは？組織内インシデント対応の基本【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/fraud-triangle/">不正のトライアングルとは？内部不正が起こる3要素【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/incident-response/">インシデント対応とは？初動対応の判断基準を整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/jpcert-cc/">JPCERT/CCとは？役割とCSIRTとの違いを整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/mttr/">← MTTRとは？平均復旧時間の意味と短縮の考え方【情報セキュリティマネジメント】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/ng-patterns/">SG試験 よく出るNG選択肢まとめ【情報セキュリティマネジメント】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

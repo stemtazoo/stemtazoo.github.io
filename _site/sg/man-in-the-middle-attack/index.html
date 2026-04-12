@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>中間者攻撃とは？通信を盗み見る仕組みと対策【情報セキュリティマネジメント】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="中間者攻撃とは？通信を盗み見る仕組みと対策【情報セキュリティマネジメント】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="中間者攻撃は通信を盗み見る仕組みと対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:description" content="中間者攻撃は通信を盗み見る仕組みと対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="中間者攻撃とは？通信を盗み見る仕組みと対策【情報セキュリティマネジメント】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"中間者攻撃は通信を盗み見る仕組みと対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。","headline":"中間者攻撃とは？通信を盗み見る仕組みと対策【情報セキュリティマネジメント】","url":"/sg/man-in-the-middle-attack/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">中間者攻撃とは？通信を盗み見る仕組みと対策【情報セキュリティマネジメント】</h1>
+      <h2 class="project-tagline">中間者攻撃は通信を盗み見る仕組みと対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">中間者攻撃は通信を盗み見る仕組みと対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">security_measures</span>
+        
+          <span class="post-tag">unauthorized_access</span>
+        
+          <span class="post-tag">network</span>
+        
+          <span class="post-tag">crypto_auth</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+<ul>
+  <li>中間者攻撃とは、<strong>通信を行う2者の間に割り込んで、内容を盗聴・改ざんする攻撃</strong>であり、SG試験では「暗号化・認証で防げるか」を判断させる問題として出題される。</li>
+</ul>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>中間者攻撃は、</p>
+
+<p>👉「2人の会話の間にこっそり入り込む盗み聞き」</p>
+
+<p>のイメージです。</p>
+
+<p>例えば、</p>
+<ul>
+  <li>AさんとBさんが通信しているつもりでも</li>
+  <li>実際は攻撃者を経由して通信している</li>
+</ul>
+
+<p>👉 つまり<br />
+「気づかないまま盗まれる」のが特徴です。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>中間者攻撃（MITM：Man In The Middle）は、</p>
+
+<ol>
+  <li>攻撃者が通信経路に入り込む</li>
+  <li>通信内容を盗聴する</li>
+  <li>必要に応じて改ざんする</li>
+</ol>
+
+<p>という流れで行われます。</p>
+
+<hr />
+
+<h3 id="代表的な手口">代表的な手口</h3>
+<ul>
+  <li><strong>Wi-Fiのなりすまし（偽アクセスポイント）</strong></li>
+  <li><strong>ARPスプーフィング</strong></li>
+  <li><strong>DNSスプーフィング</strong></li>
+</ul>
+
+<p>👉 共通点は<br />
+「正しい相手と通信していると錯覚させる」こと</p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="使われる場面攻撃">使われる場面（攻撃）</h3>
+<ul>
+  <li>公衆Wi-Fiでの通信</li>
+  <li>暗号化されていない通信（HTTPなど）</li>
+  <li>認証が不十分な通信</li>
+</ul>
+
+<hr />
+
+<h3 id="防ぐ場面対策">防ぐ場面（対策）</h3>
+<ul>
+  <li>HTTPS（通信の暗号化）</li>
+  <li>証明書の検証（正しい相手か確認）</li>
+  <li>VPNの利用</li>
+</ul>
+
+<hr />
+
+<h3 id="sg試験での考え方">SG試験での考え方</h3>
+<p>👉 「盗聴・改ざん」を防ぐには何か？</p>
+
+<ul>
+  <li>暗号化 → 内容を読めなくする</li>
+  <li>認証 → 相手が正しいか確認する</li>
+</ul>
+
+<p>👉 この2つをセットで考える</p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+<h3 id="-誤解通信を止める攻撃">❌ 誤解①：通信を止める攻撃</h3>
+<p>👉 ⭕ 違う</p>
+<ul>
+  <li>中間者攻撃は「盗む・改ざんする」攻撃</li>
+</ul>
+
+<p>（通信停止はDoS攻撃）</p>
+
+<hr />
+
+<h3 id="-誤解ウイルス感染の話">❌ 誤解②：ウイルス感染の話</h3>
+<p>👉 ⭕ 違う</p>
+<ul>
+  <li>通信経路の攻撃</li>
+</ul>
+
+<hr />
+
+<h3 id="-誤解暗号化だけで完全防御">❌ 誤解③：暗号化だけで完全防御</h3>
+<p>👉 ⭕ 不十分な場合あり</p>
+<ul>
+  <li>偽物のサイトに誘導されると意味がない</li>
+</ul>
+
+<p>👉 <strong>認証（証明書確認）も必要</strong></p>
+
+<hr />
+
+<h3 id="sg試験のひっかけポイント">SG試験のひっかけポイント</h3>
+<ul>
+  <li>「暗号化だけで防げる」とする選択肢<br />
+→ ❌ 不十分</li>
+</ul>
+
+<p>👉 正しくは</p>
+<ul>
+  <li><strong>暗号化＋認証の組み合わせ</strong></li>
+</ul>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>中間者攻撃＝「通信の間に割り込んで盗聴・改ざん」</li>
+  <li>特徴は<br />
+👉 気づかれにくい</li>
+  <li>対策は<br />
+👉 暗号化＋相手認証</li>
+  <li>試験では<br />
+👉 「盗聴か妨害か」をまず切り分ける</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/blacklist-whitelist/">ブラックリストとホワイトリストの違いとは？判断基準を整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/bot/">ボットとは？遠隔操作される仕組みを理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/botnet/">ボットネットとは？踏み台化とDDoSの関係を理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/brute-force-attack/">ブルートフォース攻撃とは？総当たり攻撃の仕組みと対策【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/clickjacking/">クリックジャッキングとは？見えない操作誘導の仕組み【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/man-in-the-browser/">← Man-in-the-Browserとは？ブラウザ内改ざん攻撃の仕組み【情報セキュリティマネジメント】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/mtbf/">MTBFとは？平均故障間隔の意味と稼働率との関係【情報セキュリティマネジメント】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

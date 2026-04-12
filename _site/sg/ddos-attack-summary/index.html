@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>DDoS攻撃の種類を整理！試験での見分け方まとめ【情報セキュリティマネジメント】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="DDoS攻撃の種類を整理！試験での見分け方まとめ【情報セキュリティマネジメント】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="DDoS攻撃は通信量型・増幅型・接続枯渇型に分類できます。本記事では代表的な攻撃手法と違いを整理し、SG試験で迷わない判断基準をまとめます。" />
+<meta property="og:description" content="DDoS攻撃は通信量型・増幅型・接続枯渇型に分類できます。本記事では代表的な攻撃手法と違いを整理し、SG試験で迷わない判断基準をまとめます。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="DDoS攻撃の種類を整理！試験での見分け方まとめ【情報セキュリティマネジメント】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"DDoS攻撃は通信量型・増幅型・接続枯渇型に分類できます。本記事では代表的な攻撃手法と違いを整理し、SG試験で迷わない判断基準をまとめます。","headline":"DDoS攻撃の種類を整理！試験での見分け方まとめ【情報セキュリティマネジメント】","url":"/sg/ddos-attack-summary/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">DDoS攻撃の種類を整理！試験での見分け方まとめ【情報セキュリティマネジメント】</h1>
+      <h2 class="project-tagline">DDoS攻撃は通信量型・増幅型・接続枯渇型に分類できます。本記事では代表的な攻撃手法と違いを整理し、SG試験で迷わない判断基準をまとめます。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">DDoS攻撃は通信量型・増幅型・接続枯渇型に分類できます。本記事では代表的な攻撃手法と違いを整理し、SG試験で迷わない判断基準をまとめます。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">threat_vulnerability</span>
+        
+          <span class="post-tag">unauthorized_access</span>
+        
+          <span class="post-tag">network</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+<p>DDoS攻撃は「<strong>通信量で圧迫するか／接続を詰まらせるか／増幅するか</strong>」で分類できます。<br />
+SG試験では「<strong>攻撃の仕組み（どう止めているか）</strong>」で切り分けます。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>DDoS攻撃は「相手を使えなくする」攻撃ですが、やり方が違います。</p>
+
+<ul>
+  <li>とにかく大量に送る → 通信でパンク</li>
+  <li>サーバに仕事だけさせて放置 → 処理が詰まる</li>
+  <li>他のサーバを使う → 攻撃を増幅</li>
+</ul>
+
+<p>👉 <strong>止め方の違い＝分類のポイント</strong></p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+
+<h3 id="-通信量型フラッド型">① 通信量型（フラッド型）</h3>
+<ul>
+  <li>大量のパケットを送りつける</li>
+  <li>回線やサーバの処理能力を超えさせる</li>
+</ul>
+
+<p>例：</p>
+<ul>
+  <li>UDPフラッド</li>
+  <li>ICMPフラッド</li>
+</ul>
+
+<p>👉 <strong>力技で押しつぶす</strong></p>
+
+<hr />
+
+<h3 id="-接続枯渇型">② 接続枯渇型</h3>
+<ul>
+  <li>接続処理を占有して、新しい接続を受けられなくする</li>
+</ul>
+
+<p>例：</p>
+<ul>
+  <li>SYNフラッド攻撃</li>
+</ul>
+
+<p>👉 <strong>サーバの受付を詰まらせる</strong></p>
+
+<hr />
+
+<h3 id="-増幅型リフレクション型">③ 増幅型（リフレクション型）</h3>
+<ul>
+  <li>他のサーバを利用して攻撃トラフィックを増やす</li>
+</ul>
+
+<p>例：</p>
+<ul>
+  <li>DNSリフレクター攻撃</li>
+  <li>NTPリフレクション攻撃</li>
+</ul>
+
+<p>👉 <strong>少ない力で大きな攻撃</strong></p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+
+<h3 id="実務での視点">実務での視点</h3>
+<ul>
+  <li>Webサービス停止を狙う攻撃</li>
+  <li>企業・公共機関への妨害</li>
+</ul>
+
+<h3 id="重要ポイント">重要ポイント</h3>
+<ul>
+  <li>自社が攻撃対象になるだけでなく<br />
+<strong>踏み台になるリスクもある</strong></li>
+</ul>
+
+<p>👉 DNSやNTPの設定不備が原因になることがある</p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="-ddosは全部同じ攻撃">❌ DDoSは全部同じ攻撃</h3>
+<p>→ ⭕ 仕組みごとに分類できる</p>
+
+<hr />
+
+<h3 id="-通信量が多ければすべてフラッド攻撃">❌ 通信量が多ければすべてフラッド攻撃</h3>
+<p>→ ⭕ 増幅型の可能性もある</p>
+
+<hr />
+
+<h3 id="-synフラッドは通信量攻撃">❌ SYNフラッドは通信量攻撃</h3>
+<p>→ ⭕ 接続処理を詰まらせる攻撃</p>
+
+<hr />
+
+<h3 id="sg試験のひっかけ">SG試験のひっかけ</h3>
+<ul>
+  <li>「DNS」「応答」「増幅」 → 増幅型（リフレクター）</li>
+  <li>「SYN」「接続待ち」 → 接続枯渇型</li>
+  <li>「大量パケット」 → 通信量型</li>
+</ul>
+
+<p>👉 キーワードで分類する</p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>DDoSは3分類で考える<br />
+→ 通信量型／接続枯渇型／増幅型</li>
+  <li>DNSが出たら増幅型を疑う</li>
+  <li>SYNが出たら接続枯渇型</li>
+  <li>「通信か接続か増幅か」で判断</li>
+  <li>SG試験では仕組みベースで切る</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/attacker-types/">攻撃者の種類とは？目的と特徴で整理する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/blacklist-whitelist/">ブラックリストとホワイトリストの違いとは？判断基準を整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/bot/">ボットとは？遠隔操作される仕組みを理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/botnet/">ボットネットとは？踏み台化とDDoSの関係を理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/brute-force-attack/">ブルートフォース攻撃とは？総当たり攻撃の仕組みと対策【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/cyber-kill-chain/">← サイバーキルチェーンとは？攻撃の流れから対策を考える【情報セキュリティマネジメント】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/ddos/">DDoS攻撃とは？サービス停止を狙う攻撃の仕組み【情報セキュリティマネジメント】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

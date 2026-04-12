@@ -1,0 +1,288 @@
+﻿---
+layout: page
+title: 特徴量エンジニアリングとは？モデル性能を高めるデータ加工【DS検定】
+description: 特徴量エンジニアリングはモデル性能を高めるデータ加工を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+permalink: /ds/feature-engineering/
+categories: [data-science]
+tags: [ds, data-preparation, preprocessing]
+prev: /ds/encoding/
+next: /ds/image-filter-processing/
+---
+<div style="font-size: 14px; margin-bottom: 12px;">
+  <a href="/ds/">DS検定トップ</a>
+  ＞ {{ page.title }}
+</div>
+
+特徴量エンジニアリングとは？
+
+## まず結論
+
+**特徴量エンジニアリング（Feature Engineering）**とは
+
+機械学習モデルの性能を高めるために特徴量を作成・加工することです。
+
+DS検定では
+
+どのデータを使うか
+
+どのように加工するか
+
+
+によって モデルの精度が大きく変わる ことを理解しているかが問われます。
+
+
+
+## 直感的な説明
+
+例えば売上予測AIを作るとします。
+
+元データ
+
+日付
+
+気温
+
+売上
+
+
+このまま使うこともできますが、
+
+日付から
+
+曜日
+
+月
+
+祝日
+
+
+などを作ると
+
+モデルがパターンを見つけやすくなります。
+
+このように
+
+データを
+
+作る
+
+加工する
+
+変換する
+
+
+ことを
+
+特徴量エンジニアリング
+
+と呼びます。
+
+
+
+## 定義・仕組み
+
+特徴量エンジニアリングとは
+
+機械学習モデルの入力データ（特徴量）を作成・変換・選択する作業です。
+
+主な目的
+
+モデル性能の向上
+
+学習の安定化
+
+ノイズの削減
+
+
+代表的な手法
+
+① 新しい特徴量の作成
+
+例
+
+日付 → 曜日
+
+生年月日 → 年齢
+
+
+② スケーリング
+
+数値の範囲を揃える
+
+例
+
+正規化
+
+標準化
+
+
+③ カテゴリ変数の変換
+
+文字データを数値に変換
+
+例
+
+One-hot encoding
+
+Label encoding
+
+
+④ 特徴量選択
+
+不要な特徴量を削除する
+
+
+
+## どんな場面で使う？
+
+機械学習モデルの精度向上
+
+同じアルゴリズムでも
+
+特徴量によって性能が大きく変わります。
+
+そのため実務では
+
+アルゴリズムより
+
+特徴量設計が重要
+
+と言われることもあります。
+
+データ前処理
+
+特徴量エンジニアリングは
+
+機械学習の
+
+前処理（Preprocessing）
+
+として行われます。
+
+
+
+## よくある誤解・混同
+
+モデルを変えれば精度は上がる？
+
+必ずしもそうではありません。
+
+多くの場合
+
+特徴量設計の方が性能に影響します。
+
+データをそのまま使う
+
+機械学習では
+
+生データをそのまま使うことは少ないです。
+
+多くの場合
+
+特徴量エンジニアリングによって
+
+加工
+
+変換
+
+選択
+
+
+が行われます。
+
+DS検定のポイント
+
+DS検定では
+
+「特徴量を加工してモデル性能を向上させる」
+
+という説明があれば
+
+特徴量エンジニアリング
+
+と判断できます。
+
+
+
+## まとめ（試験直前用）
+
+特徴量エンジニアリングとは
+
+特徴量を作成・加工してモデル性能を高めることです。
+
+ポイント
+
+特徴量の作成
+
+特徴量の変換
+
+特徴量の選択
+
+
+DS検定では
+
+「モデル性能を高めるための特徴量加工」
+
+と書かれていたら
+
+特徴量エンジニアリング
+
+と判断するのがポイントです。
+
+
+
+## 対応スキル項目（データサイエンス力シート）
+
+機械学習
+
+データ前処理
+
+★ 特徴量エンジニアリングの役割を理解している
+
+## 🔗 関連記事
+
+<ul style="padding-left: 20px;">
+{% assign current_tags = page.tags %}
+{% assign count = 0 %}
+
+{% for p in site.pages %}
+  {% if p.url != page.url and p.tags %}
+    {% assign matched = false %}
+
+    {% for tag in current_tags %}
+      {% if p.tags contains tag and tag != "ds" %}
+        {% assign matched = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if matched %}
+      <li style="margin-bottom: 6px;">
+        <a href="{{ p.url }}">{{ p.title }}</a>
+      </li>
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+
+    {% if count >= 5 %}
+      {% break %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>
+
+<hr>
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/ds/">DS検定トップに戻る</a>
+</div>
+
+<div style="display:flex;justify-content:space-between;margin-top:12px;">
+
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
+  {% endif %}
+
+  {% if page.next.url %}
+    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
+  {% endif %}
+
+</div>

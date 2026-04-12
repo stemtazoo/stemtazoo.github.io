@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>C&amp;Cサーバとは？ボットネットを操る指令の仕組み【情報セキュリティマネジメント】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="C&amp;Cサーバとは？ボットネットを操る指令の仕組み【情報セキュリティマネジメント】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="C&amp;Cサーバはボットネットに命令を送る指令サーバです。ボットとの関係や攻撃の流れを整理し、SG試験で問われる役割の違いを分かりやすく解説します。" />
+<meta property="og:description" content="C&amp;Cサーバはボットネットに命令を送る指令サーバです。ボットとの関係や攻撃の流れを整理し、SG試験で問われる役割の違いを分かりやすく解説します。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="C&amp;Cサーバとは？ボットネットを操る指令の仕組み【情報セキュリティマネジメント】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"C&amp;Cサーバはボットネットに命令を送る指令サーバです。ボットとの関係や攻撃の流れを整理し、SG試験で問われる役割の違いを分かりやすく解説します。","headline":"C&amp;Cサーバとは？ボットネットを操る指令の仕組み【情報セキュリティマネジメント】","url":"/sg/command-and-control/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">C&Cサーバとは？ボットネットを操る指令の仕組み【情報セキュリティマネジメント】</h1>
+      <h2 class="project-tagline">C&Cサーバはボットネットに命令を送る指令サーバです。ボットとの関係や攻撃の流れを整理し、SG試験で問われる役割の違いを分かりやすく解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">C&Cサーバはボットネットに命令を送る指令サーバです。ボットとの関係や攻撃の流れを整理し、SG試験で問われる役割の違いを分かりやすく解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">threat_vulnerability</span>
+        
+          <span class="post-tag">malware</span>
+        
+          <span class="post-tag">unauthorized_access</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+<p>C&amp;Cサーバ（Command and Controlサーバ）とは、<strong>ボットネットに対して攻撃命令を送る指令サーバ</strong>です。<br />
+SG試験では「<strong>ボットを動かす中心の存在</strong>」として理解できているかが問われます。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>ボットネットは「軍隊」、C&amp;Cサーバは「司令塔」です。</p>
+
+<ul>
+  <li>ボット：命令を受けて動く兵隊</li>
+  <li>C&amp;Cサーバ：命令を出す司令塔</li>
+</ul>
+
+<p>👉 <strong>司令塔があるから一斉攻撃できる</strong></p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+
+<h3 id="基本構成">基本構成</h3>
+<ul>
+  <li>ボット（感染端末）</li>
+  <li>C&amp;Cサーバ（指令サーバ）</li>
+  <li>攻撃者（操作する人）</li>
+</ul>
+
+<hr />
+
+<h3 id="動作の流れ">動作の流れ</h3>
+<ol>
+  <li>端末がマルウェアに感染</li>
+  <li>ボットがC&amp;Cサーバに接続</li>
+  <li>C&amp;Cサーバから命令を受信</li>
+  <li>ボットが攻撃を実行</li>
+</ol>
+
+<hr />
+
+<h3 id="ポイント">ポイント</h3>
+<ul>
+  <li>攻撃者は直接ボットを操作しない<br />
+→ <strong>C&amp;Cサーバ経由で一括制御</strong></li>
+</ul>
+
+<p>👉 効率的に大規模攻撃が可能になる</p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+
+<h3 id="主な用途">主な用途</h3>
+<ul>
+  <li>DDoS攻撃の指令</li>
+  <li>スパム送信</li>
+  <li>情報収集（キーログなど）</li>
+</ul>
+
+<hr />
+
+<h3 id="実務での重要ポイント">実務での重要ポイント</h3>
+<ul>
+  <li>感染端末がC&amp;Cサーバと通信していると<br />
+→ <strong>外部から操作されている可能性</strong></li>
+</ul>
+
+<p>👉 不審な通信の検知が重要</p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="-ccサーバ攻撃対象">❌ C&amp;Cサーバ＝攻撃対象</h3>
+<p>→ ⭕ 攻撃を指示する側（攻撃インフラ）</p>
+
+<hr />
+
+<h3 id="-ボットネットと同じもの">❌ ボットネットと同じもの</h3>
+<p>→ ⭕ ボットネットの一部（役割が違う）</p>
+
+<hr />
+
+<h3 id="-マルウェアと同じ意味">❌ マルウェアと同じ意味</h3>
+<p>→ ⭕ マルウェアは感染手段、C&amp;Cは制御機構</p>
+
+<hr />
+
+<h3 id="sg試験のひっかけ">SG試験のひっかけ</h3>
+<ul>
+  <li>「遠隔操作」「命令を送る」 → C&amp;Cサーバ</li>
+  <li>「感染端末」 → ボット</li>
+</ul>
+
+<p>👉 役割で切り分ける</p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>C&amp;Cサーバ＝<strong>ボットへの指令役</strong></li>
+  <li>ボットネットの中心的存在</li>
+  <li>攻撃はC&amp;C経由で制御される</li>
+  <li>ボット＝実行、C&amp;C＝指示</li>
+  <li>SG試験では「役割」で判断</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/attacker-types/">攻撃者の種類とは？目的と特徴で整理する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/blacklist-whitelist/">ブラックリストとホワイトリストの違いとは？判断基準を整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/bot/">ボットとは？遠隔操作される仕組みを理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/botnet/">ボットネットとは？踏み台化とDDoSの関係を理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/brute-force-attack/">ブルートフォース攻撃とは？総当たり攻撃の仕組みと対策【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/client-server-system/">← クライアントサーバーシステムとは？役割分担の考え方を理解する【情報セキュリティマネジメント】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/common-mistakes/">よくある誤答パターンまとめ！SG試験で選択肢を切るコツ【情報セキュリティマネジメント】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

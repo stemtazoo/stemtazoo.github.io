@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>DNSリフレクター攻撃とDNSキャッシュポイズニングの違いを整理【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="DNSリフレクター攻撃とDNSキャッシュポイズニングの違いを整理【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="DNSリフレクター攻撃とDNSキャッシュポイズニングは混同しやすいDNS関連攻撃です。攻撃目的と仕組みの違いを整理し、SG試験での切り分けポイントを明確にします。" />
+<meta property="og:description" content="DNSリフレクター攻撃とDNSキャッシュポイズニングは混同しやすいDNS関連攻撃です。攻撃目的と仕組みの違いを整理し、SG試験での切り分けポイントを明確にします。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="DNSリフレクター攻撃とDNSキャッシュポイズニングの違いを整理【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"DNSリフレクター攻撃とDNSキャッシュポイズニングは混同しやすいDNS関連攻撃です。攻撃目的と仕組みの違いを整理し、SG試験での切り分けポイントを明確にします。","headline":"DNSリフレクター攻撃とDNSキャッシュポイズニングの違いを整理【SG試験】","url":"/sg/dns-attack-difference/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">DNSリフレクター攻撃とDNSキャッシュポイズニングの違いを整理【SG試験】</h1>
+      <h2 class="project-tagline">DNSリフレクター攻撃とDNSキャッシュポイズニングは混同しやすいDNS関連攻撃です。攻撃目的と仕組みの違いを整理し、SG試験での切り分けポイントを明確にします。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">DNSリフレクター攻撃とDNSキャッシュポイズニングは混同しやすいDNS関連攻撃です。攻撃目的と仕組みの違いを整理し、SG試験での切り分けポイントを明確にします。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">threat_vulnerability</span>
+        
+          <span class="post-tag">network</span>
+        
+          <span class="post-tag">unauthorized_access</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+<p>DNSリフレクター攻撃は「<strong>通信を集中させて止める攻撃（可用性の破壊）</strong>」、DNSキャッシュポイズニングは「<strong>名前解決を改ざんする攻撃（完全性の破壊）</strong>」です。<br />
+SG試験では「<strong>止めるのか／だますのか</strong>」で切り分けます。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>この2つは目的がまったく違います。</p>
+
+<ul>
+  <li>
+    <p>DNSリフレクター攻撃<br />
+→ 荷物を大量に送りつけて「<strong>相手をパンクさせる</strong>」</p>
+  </li>
+  <li>
+    <p>DNSキャッシュポイズニング<br />
+→ 住所録を書き換えて「<strong>間違った場所に誘導する</strong>」</p>
+  </li>
+</ul>
+
+<p>👉 <strong>攻撃の目的が違う</strong>と覚えるのが一番シンプルです。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+
+<h3 id="dnsリフレクター攻撃">DNSリフレクター攻撃</h3>
+<ul>
+  <li>IPアドレスを偽装</li>
+  <li>DNSサーバに問い合わせを送る</li>
+  <li>応答をターゲットに送りつける</li>
+  <li><strong>結果：通信量でサービス停止（DoS/DDoS）</strong></li>
+</ul>
+
+<p>👉 特徴：<strong>なりすまし＋増幅</strong></p>
+
+<hr />
+
+<h3 id="dnsキャッシュポイズニング">DNSキャッシュポイズニング</h3>
+<ul>
+  <li>DNSサーバのキャッシュ情報を改ざん</li>
+  <li>正しいドメイン名 → 偽のIPに変える</li>
+  <li>利用者を偽サイトへ誘導</li>
+  <li><strong>結果：フィッシングや情報漏えい</strong></li>
+</ul>
+
+<p>👉 特徴：<strong>名前解決の改ざん</strong></p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+
+<h3 id="dnsリフレクター攻撃-1">DNSリフレクター攻撃</h3>
+<ul>
+  <li>サービス停止を狙う攻撃</li>
+  <li>DDoSの一種として使われる</li>
+</ul>
+
+<p>👉 可用性（Availability）を狙う</p>
+
+<hr />
+
+<h3 id="dnsキャッシュポイズニング-1">DNSキャッシュポイズニング</h3>
+<ul>
+  <li>偽サイトへ誘導</li>
+  <li>認証情報の盗み取り</li>
+</ul>
+
+<p>👉 完全性（Integrity）を狙う</p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="-dnsに関係する攻撃は全部同じ">❌ DNSに関係する攻撃は全部同じ</h3>
+<p>→ ⭕ <strong>目的が違う（止める vs だます）</strong></p>
+
+<hr />
+
+<h3 id="-どちらも通信量を増やす攻撃">❌ どちらも通信量を増やす攻撃</h3>
+<p>→ ⭕ 増やすのはリフレクター攻撃だけ</p>
+
+<hr />
+
+<h3 id="-キャッシュポイズニングはdos攻撃">❌ キャッシュポイズニングはDoS攻撃</h3>
+<p>→ ⭕ 情報改ざん攻撃（フィッシングにつながる）</p>
+
+<hr />
+
+<h3 id="sg試験のひっかけ">SG試験のひっかけ</h3>
+<ul>
+  <li>「大量通信」「トラフィック増大」 → リフレクター攻撃</li>
+  <li>「誤ったIPアドレスを返す」 → キャッシュポイズニング</li>
+</ul>
+
+<p>👉 このキーワードで即判断できるようにする</p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>リフレクター攻撃＝<strong>通信を集中させて止める（可用性）</strong></li>
+  <li>キャッシュポイズニング＝<strong>名前解決を改ざん（完全性）</strong></li>
+  <li>「なりすまし＋増幅」ならリフレクター攻撃</li>
+  <li>「偽のIPを返す」ならキャッシュポイズニング</li>
+  <li>SG試験では「攻撃の目的」で切り分ける</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/attacker-types/">攻撃者の種類とは？目的と特徴で整理する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/blacklist-whitelist/">ブラックリストとホワイトリストの違いとは？判断基準を整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/bot/">ボットとは？遠隔操作される仕組みを理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/botnet/">ボットネットとは？踏み台化とDDoSの関係を理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/brute-force-attack/">ブルートフォース攻撃とは？総当たり攻撃の仕組みと対策【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/disciplinary-action/">← 懲戒処分とは？有効となる条件とNG例を整理【情報セキュリティマネジメント】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/dns-cache-poisoning/">DNSキャッシュポイズニングとは？偽サイトへ誘導する攻撃【情報セキュリティマネジメント】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

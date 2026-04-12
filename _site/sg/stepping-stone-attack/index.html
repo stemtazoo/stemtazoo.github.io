@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>踏み台攻撃とは？加害者にならないための重要ポイント【情報セキュリティマネジメント】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="踏み台攻撃とは？加害者にならないための重要ポイント【情報セキュリティマネジメント】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="踏み台攻撃は第三者の機器を乗っ取り攻撃に利用する手法です。ボットネットやDDoSとの関係、実務での対策やSG試験の判断ポイントを整理します。" />
+<meta property="og:description" content="踏み台攻撃は第三者の機器を乗っ取り攻撃に利用する手法です。ボットネットやDDoSとの関係、実務での対策やSG試験の判断ポイントを整理します。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="踏み台攻撃とは？加害者にならないための重要ポイント【情報セキュリティマネジメント】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"踏み台攻撃は第三者の機器を乗っ取り攻撃に利用する手法です。ボットネットやDDoSとの関係、実務での対策やSG試験の判断ポイントを整理します。","headline":"踏み台攻撃とは？加害者にならないための重要ポイント【情報セキュリティマネジメント】","url":"/sg/stepping-stone-attack/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">踏み台攻撃とは？加害者にならないための重要ポイント【情報セキュリティマネジメント】</h1>
+      <h2 class="project-tagline">踏み台攻撃は第三者の機器を乗っ取り攻撃に利用する手法です。ボットネットやDDoSとの関係、実務での対策やSG試験の判断ポイントを整理します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">踏み台攻撃は第三者の機器を乗っ取り攻撃に利用する手法です。ボットネットやDDoSとの関係、実務での対策やSG試験の判断ポイントを整理します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">threat_vulnerability</span>
+        
+          <span class="post-tag">unauthorized_access</span>
+        
+          <span class="post-tag">it_security_operations</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+<p>踏み台攻撃とは、<strong>第三者の機器を乗っ取って攻撃に利用する手法</strong>です。<br />
+SG試験では「<strong>攻撃元を隠す／他人を使う攻撃</strong>」として理解できているかが問われます。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>「自分では攻撃せず、他人のPCを使って攻撃する」イメージです。</p>
+
+<ul>
+  <li>攻撃者：直接攻撃しない</li>
+  <li>被害者のPC：知らないうちに攻撃に使われる</li>
+  <li>本来の標的：攻撃を受ける</li>
+</ul>
+
+<p>👉 <strong>被害者が加害者になる構造</strong></p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+
+<h3 id="基本の流れ">基本の流れ</h3>
+<ol>
+  <li>機器がマルウェアなどで侵害される</li>
+  <li>攻撃者がその機器を遠隔操作</li>
+  <li>他のシステムへ攻撃を実行</li>
+</ol>
+
+<hr />
+
+<h3 id="主な具体例">主な具体例</h3>
+<ul>
+  <li>ボットネットによるDDoS攻撃</li>
+  <li>DNSリフレクター攻撃（サーバを利用）</li>
+  <li>不正アクセスの中継</li>
+</ul>
+
+<hr />
+
+<h3 id="ポイント">ポイント</h3>
+<ul>
+  <li>攻撃元の特定が難しくなる</li>
+  <li>攻撃者の匿名性が高まる</li>
+</ul>
+
+<p>👉 <strong>責任の所在が分かりにくい</strong></p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+
+<h3 id="攻撃者の目的">攻撃者の目的</h3>
+<ul>
+  <li>身元を隠す</li>
+  <li>攻撃の規模を拡大</li>
+</ul>
+
+<hr />
+
+<h3 id="実務での重要ポイント">実務での重要ポイント</h3>
+<ul>
+  <li>
+    <p>自社の機器が踏み台になると
+→ <strong>加害者として扱われるリスク</strong></p>
+  </li>
+  <li>
+    <p>例：</p>
+    <ul>
+      <li>自社サーバから攻撃通信が発生</li>
+      <li>外部からの信用低下</li>
+      <li>法的・契約上の問題</li>
+    </ul>
+  </li>
+</ul>
+
+<p>👉 「守る」だけでなく「使われない」ことが重要</p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="-踏み台攻撃特定の攻撃手法">❌ 踏み台攻撃＝特定の攻撃手法</h3>
+<p>→ ⭕ 攻撃の“やり方（構造）”の概念</p>
+
+<hr />
+
+<h3 id="-ddos攻撃と同じ">❌ DDoS攻撃と同じ</h3>
+<p>→ ⭕ DDoSは踏み台攻撃の一例</p>
+
+<hr />
+
+<h3 id="-自分が攻撃対象にならなければ問題ない">❌ 自分が攻撃対象にならなければ問題ない</h3>
+<p>→ ⭕ 踏み台になるリスクがある</p>
+
+<hr />
+
+<h3 id="sg試験のひっかけ">SG試験のひっかけ</h3>
+<ul>
+  <li>「他の端末を利用して攻撃」 → 踏み台攻撃</li>
+  <li>「ボットネット」 → 踏み台の仕組み</li>
+  <li>「攻撃元の偽装」 → 踏み台の目的</li>
+</ul>
+
+<p>👉 「誰が攻撃しているように見えるか」で判断</p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>踏み台攻撃＝<strong>他人の機器を使う攻撃</strong></li>
+  <li>ボットネット・リフレクターは代表例</li>
+  <li>目的は「匿名化」と「拡大」</li>
+  <li>被害者が加害者になる構造</li>
+  <li>SG試験では「攻撃の構成」で切る</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/attacker-types/">攻撃者の種類とは？目的と特徴で整理する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/blacklist-whitelist/">ブラックリストとホワイトリストの違いとは？判断基準を整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/bot/">ボットとは？遠隔操作される仕組みを理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/botnet/">ボットネットとは？踏み台化とDDoSの関係を理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/brute-force-attack/">ブルートフォース攻撃とは？総当たり攻撃の仕組みと対策【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/ssl-tls/">← SSL/TLSとは？通信を守る暗号化の仕組み【情報セキュリティマネジメント】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/targeted-attack/">標的型攻撃とは？狙われる組織の特徴と対策【情報セキュリティマネジメント】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

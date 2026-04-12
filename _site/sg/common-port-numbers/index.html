@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>よく出るポート番号とは？試験での見分け方を整理【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="よく出るポート番号とは？試験での見分け方を整理【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="よく出るポート番号は主要サービス識別に使うSG試験頻出の番号群です。この記事ではHTTP・HTTPS・SMTPなどの役割、暗記のコツ、選択肢で狙われるひっかけポイントを整理します。" />
+<meta property="og:description" content="よく出るポート番号は主要サービス識別に使うSG試験頻出の番号群です。この記事ではHTTP・HTTPS・SMTPなどの役割、暗記のコツ、選択肢で狙われるひっかけポイントを整理します。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="よく出るポート番号とは？試験での見分け方を整理【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"よく出るポート番号は主要サービス識別に使うSG試験頻出の番号群です。この記事ではHTTP・HTTPS・SMTPなどの役割、暗記のコツ、選択肢で狙われるひっかけポイントを整理します。","headline":"よく出るポート番号とは？試験での見分け方を整理【SG試験】","url":"/sg/common-port-numbers/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">よく出るポート番号とは？試験での見分け方を整理【SG試験】</h1>
+      <h2 class="project-tagline">よく出るポート番号は主要サービス識別に使うSG試験頻出の番号群です。この記事ではHTTP・HTTPS・SMTPなどの役割、暗記のコツ、選択肢で狙われるひっかけポイントを整理します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">よく出るポート番号は主要サービス識別に使うSG試験頻出の番号群です。この記事ではHTTP・HTTPS・SMTPなどの役割、暗記のコツ、選択肢で狙われるひっかけポイントを整理します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">technology</span>
+        
+          <span class="post-tag">network</span>
+        
+          <span class="post-tag">security_measures</span>
+        
+          <span class="post-tag">unauthorized_access</span>
+        
+          <span class="post-tag">sg-security-measures</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+
+<p>よく出るポート番号とは、<strong>ネットワーク通信でサービスごとに決まっている番号のうち、SG試験で頻出のもの（HTTPやSMTPなど）</strong>です。<br />
+SG試験では、単なる暗記ではなく、<strong>どのサービスの通信かを見抜いて選択肢を切れるか</strong>が問われます。</p>
+
+<h2 id="直感的な説明">直感的な説明</h2>
+
+<p>ポート番号は、サーバの中にある「受付窓口」の番号のようなものです。<br />
+同じサーバでも、Webを見るのか、メールを送るのかで、入る場所が違います。</p>
+
+<p>たとえば、</p>
+
+<ul>
+  <li>Webページを見る → HTTP（80番）</li>
+  <li>メールを送る → SMTP（25番）</li>
+</ul>
+
+<p>というように、「何をしたいか」で入口が決まっています。</p>
+
+<p>SG試験では、この入口を見て<br />
+「この通信は正しいか？」<br />
+「違うサービスと混ざっていないか？」<br />
+を判断させてきます。</p>
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+
+<p>ポート番号とは、<strong>TCPやUDP通信で、どのアプリケーションにデータを渡すかを識別する番号</strong>です。</p>
+
+<p>代表的なポート番号は次のとおりです。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>プロトコル</th>
+      <th>役割</th>
+      <th>ポート番号</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HTTP</td>
+      <td>Web通信</td>
+      <td>80</td>
+    </tr>
+    <tr>
+      <td>HTTPS</td>
+      <td>暗号化されたWeb通信</td>
+      <td>443</td>
+    </tr>
+    <tr>
+      <td>SMTP</td>
+      <td>メール送信</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <td>POP3</td>
+      <td>メール受信</td>
+      <td>110</td>
+    </tr>
+    <tr>
+      <td>IMAP</td>
+      <td>メール受信</td>
+      <td>143</td>
+    </tr>
+    <tr>
+      <td>DNS</td>
+      <td>名前解決</td>
+      <td>53</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>SG試験ではすべてを覚える必要はありませんが、<br />
+<strong>HTTP・HTTPS・SMTP・POP3・DNSあたりは特に頻出</strong>です。</p>
+
+<p>また、通信の基本ルールも重要です。</p>
+
+<ul>
+  <li>サーバ側：固定のポート番号（上の表）</li>
+  <li>クライアント側：1024以上の動的ポート</li>
+</ul>
+
+<p>この仕組みを理解していると、選択肢の正誤を判断しやすくなります。</p>
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+
+<h3 id="ファイアウォール設定の判断">ファイアウォール設定の判断</h3>
+
+<p>業務では、必要な通信だけを通すために、ポート番号を指定して制御します。<br />
+たとえば、</p>
+
+<ul>
+  <li>Web閲覧を許可 → 80番・443番を許可</li>
+  <li>メール送信を許可 → 25番を許可</li>
+</ul>
+
+<p>というように使います。</p>
+
+<p>SG試験では、<br />
+「どのポートを許可すべきか」<br />
+という形で問われることが多いです。</p>
+
+<h3 id="通信の正誤判断">通信の正誤判断</h3>
+
+<p>試験では、通信の表や図が出てきて、<br />
+「この通信は正しいか？」<br />
+と問われることがあります。</p>
+
+<p>そのとき、ポート番号を見て、</p>
+
+<ul>
+  <li>HTTPなのに25番 → おかしい</li>
+  <li>SMTPなのに110番 → おかしい</li>
+</ul>
+
+<p>と判断できることが重要です。</p>
+
+<h3 id="使うと誤解しやすい場面">使うと誤解しやすい場面</h3>
+
+<p>ポート番号だけを暗記していると、<br />
+送信元とあて先の区別がつかなくなることがあります。</p>
+
+<p>SG試験では、<br />
+<strong>送信元ポートとあて先ポートを入れ替えたひっかけ</strong><br />
+がよく出るので注意が必要です。</p>
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="smtpとpop3の混同">SMTPとPOP3の混同</h3>
+
+<p>メール関連で最も多いひっかけです。</p>
+
+<ul>
+  <li>SMTP：送信（25）</li>
+  <li>POP3：受信（110）</li>
+</ul>
+
+<p>選択肢では、SMTPなのに110番が書かれていたら誤りです。</p>
+
+<h3 id="httpとhttpsの混同">HTTPとHTTPSの混同</h3>
+
+<ul>
+  <li>HTTP：80</li>
+  <li>HTTPS：443</li>
+</ul>
+
+<p>「暗号化されている」と書かれていたらHTTPS（443）です。<br />
+ここもSG試験ではよく問われます。</p>
+
+<h3 id="dnsの扱いの誤解">DNSの扱いの誤解</h3>
+
+<p>DNSは53番ですが、<br />
+TCPとUDPの両方で使われることがあります。</p>
+
+<p>SG試験では細かいプロトコルよりも、<br />
+<strong>名前解決＝53番</strong> と覚えておけば十分です。</p>
+
+<h3 id="クライアントも固定ポートを使うという誤解">クライアントも固定ポートを使うという誤解</h3>
+
+<p>初心者がよく混同するポイントです。</p>
+
+<ul>
+  <li>サーバ：固定ポート（80や25など）</li>
+  <li>クライアント：1024以上の動的ポート</li>
+</ul>
+
+<p>この区別ができないと、選択肢を正しく切れません。</p>
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<p>よく出るポート番号は、<strong>サービスごとに決まった通信の入口</strong>です。<br />
+SG試験では、HTTP（80）、HTTPS（443）、SMTP（25）、POP3（110）、DNS（53）を押さえることが重要です。<br />
+選択肢では、<strong>サービスとポート番号の不一致</strong>、<strong>送信元とあて先の入れ替え</strong>、<strong>SMTPとPOP3の混同</strong>に注意します。<br />
+迷ったら、<strong>サーバは固定ポート、PCは1024以上</strong>というルールで判断すると切りやすくなります。</p>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/blacklist-whitelist/">ブラックリストとホワイトリストの違いとは？判断基準を整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/bot/">ボットとは？遠隔操作される仕組みを理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/botnet/">ボットネットとは？踏み台化とDDoSの関係を理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/brute-force-attack/">ブルートフォース攻撃とは？総当たり攻撃の仕組みと対策【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/clickjacking/">クリックジャッキングとは？見えない操作誘導の仕組み【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/common-mistakes/">← よくある誤答パターンまとめ！SG試験で選択肢を切るコツ【情報セキュリティマネジメント】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/contract-nonconformity/">契約不適合責任とは？瑕疵担保責任との違いも整理【情報セキュリティマネジメント】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

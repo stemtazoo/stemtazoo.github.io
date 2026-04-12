@@ -1,0 +1,185 @@
+﻿---
+layout: page
+title: OAuthとは？仕組みとアクセストークンの流れを整理【DS検定リテラシー】
+description: OAuthは仕組みとアクセストークンの流れを整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+permalink: /ds/oauth/
+categories: [business]
+tags: [ds, security, design]
+prev: /ds/mfa/
+next: /ds/pki/
+---
+<div style="font-size: 14px; margin-bottom: 12px;">
+  <a href="/ds/">DS検定トップ</a>
+  ＞ {{ page.title }}
+</div>
+
+## まず結論
+
+OAuth（オーオース）は、**パスワードを渡さずに、外部サービスへアクセス権を安全に委任する仕組み**です。  
+DS検定では「認証」と「認可」の違い、そして「アクセストークンの役割」を判断できるかが問われます。
+
+
+## 直感的な説明
+
+たとえば、あるWebサービスで「Googleアカウントでログイン」というボタンを押した経験はありませんか？
+
+このとき、
+
+- あなたのパスワードは相手サービスに渡っていません
+- Googleが「この人は本人です」と保証し
+- その証明として「アクセストークン」が発行されます
+
+OAuthは、
+
+> 🔑 パスワードを渡すのではなく  
+> 🎫 “入場券（トークン）” を使ってアクセスする仕組み
+
+と考えると理解しやすいです。
+
+
+## 定義・仕組み
+
+OAuthは「認可（Authorization）」のための仕組みです。
+
+### 登場人物
+
+- ユーザー
+- サービスプロバイダー（認可サーバー）
+- リソースサーバー（データを持つ側）
+- クライアントアプリ
+
+### 基本的な流れ（認可コードフロー）
+
+1. ユーザーがログイン・同意
+2. **認証コード**を取得
+3. 認証コードを使って**アクセストークン**を取得
+4. アクセストークンでAPIにアクセス
+
+重要なのは：
+
+- データ取得に使うのは「アクセストークン」
+- 認証コードは「引き換え券」
+
+DS検定では  
+「最初に取得するのは何か？」  
+「APIアクセスに使うのは何か？」  
+を問われることが多いです。
+
+
+## どんな場面で使う？
+
+### 使う場面
+
+- SNSアカウント連携
+- 外部API利用
+- クラウドサービス連携
+- 業務システムのシングルサインオン
+
+### ビジネス文脈で重要な理由
+
+- パスワード漏えいリスクを減らせる
+- アクセス権限を細かく制御できる
+- API連携を安全に実現できる
+
+企業のデータ連携やクラウド活用ではほぼ必須の仕組みです。
+
+
+## よくある誤解・混同
+
+### ① 認証と認可の混同
+
+- 認証（Authentication）＝本人確認
+- 認可（Authorization）＝アクセス許可
+
+OAuthは「認可」の仕組みです。
+
+DS検定では  
+「OAuthは認証の仕組みである」と書かれていたら注意です。
+
+
+### ② 認証コードとアクセストークンの混同
+
+- 認証コード → 引き換え用
+- アクセストークン → データ取得用
+
+選択肢で
+「リソース取得に使うのは認証コード」と書いてあれば誤りです。
+
+
+### ③ 暗号鍵との混同
+
+OAuthは公開鍵暗号を利用することはありますが、
+
+- 公開鍵そのもの＝OAuth
+ではありません。
+
+鍵の仕組みと混同させる問題も出やすいです。
+
+
+## まとめ（試験直前用）
+
+- OAuth＝**アクセス権を安全に委任する仕組み**
+- データ取得に使うのは**アクセストークン**
+- 最初に取得するのは**認証コード**
+- 認証と認可を混同しない
+
+迷ったら、
+
+> 「APIを叩けるのはどれ？」  
+と自分に問い直してください。
+
+
+## 対応スキル項目（AI利活用スキルシート）
+
+- AI利活用基礎
+- AIを活用するための技術理解
+- ★ AIを活用したサービスの仕組みやリスクを理解している
+- ★ データの取り扱いに関するセキュリティや倫理的配慮の重要性を理解している
+
+## 🔗 関連記事
+
+<ul style="padding-left: 20px;">
+{% assign current_tags = page.tags %}
+{% assign count = 0 %}
+
+{% for p in site.pages %}
+  {% if p.url != page.url and p.tags %}
+    {% assign matched = false %}
+
+    {% for tag in current_tags %}
+      {% if p.tags contains tag and tag != "ds" %}
+        {% assign matched = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if matched %}
+      <li style="margin-bottom: 6px;">
+        <a href="{{ p.url }}">{{ p.title }}</a>
+      </li>
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+
+    {% if count >= 5 %}
+      {% break %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>
+
+<hr>
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/ds/">DS検定トップに戻る</a>
+</div>
+
+<div style="display:flex;justify-content:space-between;margin-top:12px;">
+
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
+  {% endif %}
+
+  {% if page.next.url %}
+    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
+  {% endif %}
+
+</div>

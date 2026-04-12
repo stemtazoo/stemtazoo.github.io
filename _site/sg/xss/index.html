@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>クロスサイトスクリプティングとは？スクリプト実行の仕組み【情報セキュリティマネジメント】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="クロスサイトスクリプティングとは？スクリプト実行の仕組み【情報セキュリティマネジメント】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="クロスサイトスクリプティングはWebサイトに不正なスクリプトを埋め込み利用者のブラウザで実行させる攻撃です。CSRFとの違いや情報漏えいの仕組みを試験対策として整理します。" />
+<meta property="og:description" content="クロスサイトスクリプティングはWebサイトに不正なスクリプトを埋め込み利用者のブラウザで実行させる攻撃です。CSRFとの違いや情報漏えいの仕組みを試験対策として整理します。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="クロスサイトスクリプティングとは？スクリプト実行の仕組み【情報セキュリティマネジメント】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"クロスサイトスクリプティングはWebサイトに不正なスクリプトを埋め込み利用者のブラウザで実行させる攻撃です。CSRFとの違いや情報漏えいの仕組みを試験対策として整理します。","headline":"クロスサイトスクリプティングとは？スクリプト実行の仕組み【情報セキュリティマネジメント】","url":"/sg/xss/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">クロスサイトスクリプティングとは？スクリプト実行の仕組み【情報セキュリティマネジメント】</h1>
+      <h2 class="project-tagline">クロスサイトスクリプティングはWebサイトに不正なスクリプトを埋め込み利用者のブラウザで実行させる攻撃です。CSRFとの違いや情報漏えいの仕組みを試験対策として整理します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">クロスサイトスクリプティングはWebサイトに不正なスクリプトを埋め込み利用者のブラウザで実行させる攻撃です。CSRFとの違いや情報漏えいの仕組みを試験対策として整理します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">security_general</span>
+        
+          <span class="post-tag">threat_vulnerability</span>
+        
+          <span class="post-tag">unauthorized_access</span>
+        
+          <span class="post-tag">data_leakage</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+<p>クロスサイトスクリプティング（XSS）は、Webサイトに不正なスクリプトを埋め込み、利用者のブラウザで実行させる攻撃です。<br />
+SG試験では「スクリプトが実行されるかどうか」で見分けるのが重要です。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>イメージとしては、</p>
+
+<ul>
+  <li>普通のWebページに見える</li>
+  <li>しかし裏で「仕込まれたプログラム」が動く</li>
+  <li>利用者の情報が盗まれる</li>
+</ul>
+
+<p>という状態です。</p>
+
+<p>例：</p>
+<ul>
+  <li>コメント欄に悪意あるコードが書かれる</li>
+  <li>それを見た人のブラウザで自動実行</li>
+  <li>Cookieなどが盗まれる</li>
+</ul>
+
+<p>👉 <strong>ページを開いただけで被害が起きるのが特徴</strong>です</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>クロスサイトスクリプティング（XSS）は、</p>
+
+<ul>
+  <li>Webアプリの入力チェック不備などを利用して</li>
+  <li>悪意あるスクリプトをページに埋め込み</li>
+  <li>他の利用者のブラウザで実行させる攻撃</li>
+</ul>
+
+<p>です。</p>
+
+<h3 id="仕組みの流れ">仕組みの流れ</h3>
+<ol>
+  <li>攻撃者がスクリプトを仕込む（入力フォームなど）</li>
+  <li>サーバがそのまま表示してしまう</li>
+  <li>利用者がページを閲覧</li>
+  <li>ブラウザでスクリプトが実行</li>
+  <li>Cookieや入力情報が送信される</li>
+</ol>
+
+<h3 id="主な被害">主な被害</h3>
+<ul>
+  <li>Cookieの盗取（セッション乗っ取り）</li>
+  <li>偽画面の表示（フィッシング誘導）</li>
+  <li>不正な操作の実行</li>
+</ul>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="起きやすい場面">起きやすい場面</h3>
+<ul>
+  <li>入力内容をそのまま表示する機能
+    <ul>
+      <li>掲示板</li>
+      <li>コメント欄</li>
+      <li>検索結果表示</li>
+    </ul>
+  </li>
+  <li>HTMLエスケープが不十分なWebアプリ</li>
+</ul>
+
+<h3 id="現場での対策の考え方">現場での対策の考え方</h3>
+<ul>
+  <li>入力値の無害化（エスケープ処理）</li>
+  <li>出力時のサニタイズ</li>
+  <li>Content Security Policy（CSP）の導入</li>
+</ul>
+
+<p>👉 「スクリプトを実行させない」ことが本質</p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+<h3 id="-csrfと混同する">❌ CSRFと混同する</h3>
+<ul>
+  <li>XSS：スクリプトを実行させる</li>
+  <li>CSRF：リクエストを送らせる</li>
+</ul>
+
+<p>👉 SG試験では<br />
+「不正なスクリプト実行」と書かれていたらXSS</p>
+
+<hr />
+
+<h3 id="-サーバが直接攻撃されると思う">❌ サーバが直接攻撃されると思う</h3>
+<ul>
+  <li>実際は「利用者のブラウザ」が攻撃対象</li>
+</ul>
+
+<p>👉 攻撃対象はクライアント側</p>
+
+<hr />
+
+<h3 id="-クリックしないと起きないと思う">❌ クリックしないと起きないと思う</h3>
+<ul>
+  <li>ページ表示だけで実行される場合もある</li>
+</ul>
+
+<p>👉 「閲覧だけで発動」が重要</p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>XSS＝スクリプトを利用者のブラウザで実行させる攻撃</li>
+  <li>被害はCookie盗取やセッション乗っ取り</li>
+  <li>CSRFは「リクエスト悪用」、XSSは「スクリプト実行」</li>
+  <li>選択肢で「スクリプト」「ブラウザ実行」があればXSSを疑う</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/attacker-types/">攻撃者の種類とは？目的と特徴で整理する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/blacklist-whitelist/">ブラックリストとホワイトリストの違いとは？判断基準を整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/bot/">ボットとは？遠隔操作される仕組みを理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/botnet/">ボットネットとは？踏み台化とDDoSの関係を理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/brute-force-attack/">ブルートフォース攻撃とは？総当たり攻撃の仕組みと対策【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/work-rules-vs-individual-agreement/">← 就業規則と個別合意の関係とは？優先順位を理解する【情報セキュリティマネジメント】</a>
+  
+
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

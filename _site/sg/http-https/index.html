@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>HTTPとHTTPSの違いとは？安全な通信の判断ポイント【情報セキュリティマネジメント】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="HTTPとHTTPSの違いとは？安全な通信の判断ポイント【情報セキュリティマネジメント】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="HTTPとHTTPSの違いは関連概念を正しく切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:description" content="HTTPとHTTPSの違いは関連概念を正しく切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="HTTPとHTTPSの違いとは？安全な通信の判断ポイント【情報セキュリティマネジメント】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"HTTPとHTTPSの違いは関連概念を正しく切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。","headline":"HTTPとHTTPSの違いとは？安全な通信の判断ポイント【情報セキュリティマネジメント】","url":"/sg/http-https/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">HTTPとHTTPSの違いとは？安全な通信の判断ポイント【情報セキュリティマネジメント】</h1>
+      <h2 class="project-tagline">HTTPとHTTPSの違いは関連概念を正しく切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">HTTPとHTTPSの違いは関連概念を正しく切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">technology</span>
+        
+          <span class="post-tag">network</span>
+        
+          <span class="post-tag">data_leakage</span>
+        
+          <span class="post-tag">sg-technology</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+<p>HTTPは暗号化されない通信、HTTPSは暗号化された安全な通信であり、SG試験では「情報が保護されるかどうか」を判断する問題として出題される。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>HTTPとHTTPSの違いは「中身が見えるかどうか」です。</p>
+
+<p>イメージとしては、</p>
+
+<ul>
+  <li>HTTP：はがき（誰でも読める）</li>
+  <li>HTTPS：封筒（中身が見えない）</li>
+</ul>
+
+<p>という違いです。</p>
+
+<p>つまり、</p>
+<ul>
+  <li>HTTP → 通信内容が見える</li>
+  <li>HTTPS → 通信内容が見えない</li>
+</ul>
+
+<p>この差がそのまま「安全性の差」になります。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<h3 id="httpとは">HTTPとは</h3>
+<p>Webページを見るための通信プロトコルで、<br />
+TCPの80番ポートを使用します。</p>
+
+<p>特徴：</p>
+<ul>
+  <li>通信は暗号化されない（平文）</li>
+  <li>IDやパスワードが盗まれる可能性がある</li>
+</ul>
+
+<hr />
+
+<h3 id="httpsとは">HTTPSとは</h3>
+<p>HTTPに暗号化（SSL/TLS）を追加したものです。<br />
+TCPの443番ポートを使用します。</p>
+
+<p>特徴：</p>
+<ul>
+  <li>通信が暗号化される</li>
+  <li>盗聴や改ざんを防ぐ</li>
+</ul>
+
+<hr />
+
+<h3 id="sg試験での重要ポイント">SG試験での重要ポイント</h3>
+<ul>
+  <li>HTTP → 危険（情報がそのまま流れる）</li>
+  <li>HTTPS → 安全（暗号化される）</li>
+</ul>
+
+<p>この「暗号化の有無」で判断します。</p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="使うべき場面">使うべき場面</h3>
+<ul>
+  <li>ログイン画面</li>
+  <li>個人情報入力</li>
+  <li>決済処理</li>
+</ul>
+
+<p>→ HTTPSが必須</p>
+
+<hr />
+
+<h3 id="sg試験でよくある出題">SG試験でよくある出題</h3>
+<ul>
+  <li>
+    <p>「安全な通信はどれか」
+→ HTTPSを選ぶ</p>
+  </li>
+  <li>
+    <p>「情報漏えいのリスクがあるのはどれか」
+→ HTTPを選ぶ</p>
+  </li>
+</ul>
+
+<hr />
+
+<h3 id="現場運用での意味">現場運用での意味</h3>
+<ul>
+  <li>HTTPのまま運用 → 情報漏えいリスク</li>
+  <li>HTTPSへ移行 → 基本的なセキュリティ対策</li>
+</ul>
+
+<p>つまり、
+<strong>HTTPSを使うこと自体が情報漏えい対策</strong>です。</p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+<h3 id="-httpsなら完全に安全">❌ HTTPSなら完全に安全</h3>
+<p>→ ⭕ 暗号化されるが、サイト自体が安全とは限らない</p>
+
+<p>HTTPSは通信を守るだけで、</p>
+<ul>
+  <li>フィッシングサイト</li>
+  <li>偽サイト</li>
+</ul>
+
+<p>は防げません。</p>
+
+<hr />
+
+<h3 id="-httpでも問題ない場合がある">❌ HTTPでも問題ない場合がある</h3>
+<p>→ ⭕ 基本的にはHTTPSを使うべき</p>
+
+<p>SG試験では、
+HTTPが選択肢にあれば「危険」と判断することが多いです。</p>
+
+<hr />
+
+<h3 id="-urlの違いだけの話">❌ URLの違いだけの話</h3>
+<p>→ ⭕ セキュリティの本質的な違い</p>
+
+<ul>
+  <li>http:// → 平文</li>
+  <li>https:// → 暗号化</li>
+</ul>
+
+<p>見た目だけでなく、<strong>仕組みが違う</strong>ことが重要です。</p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>HTTP＝平文通信（危険）</li>
+  <li>HTTPS＝暗号化通信（安全）</li>
+  <li>ポート：80（HTTP）／443（HTTPS）</li>
+  <li>SG試験では「暗号化されているか」で判断</li>
+  <li>HTTPSでもサイト自体の安全性は別問題</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/blacklist-whitelist/">ブラックリストとホワイトリストの違いとは？判断基準を整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/client-server-system/">クライアントサーバーシステムとは？役割分担の考え方を理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/common-port-numbers/">よく出るポート番号とは？試験での見分け方を整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/csrf/">クロスサイトリクエストフォージェリとは？なりすまし操作の仕組み【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/ddos-attack-summary/">DDoS攻撃の種類を整理！試験での見分け方まとめ【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/honeypot/">← ハニーポットとは？攻撃者をおびき寄せる仕組み【情報セキュリティマネジメント】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/incident-response/">インシデント対応とは？初動対応の判断基準を整理【情報セキュリティマネジメント】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

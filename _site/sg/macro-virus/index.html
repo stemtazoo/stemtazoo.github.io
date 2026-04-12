@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>マクロウイルスとは？Officeファイル経由の感染を理解する【情報セキュリティマネジメント】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="マクロウイルスとは？Officeファイル経由の感染を理解する【情報セキュリティマネジメント】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="マクロウイルスはOfficeファイル経由の感染を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:description" content="マクロウイルスはOfficeファイル経由の感染を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="マクロウイルスとは？Officeファイル経由の感染を理解する【情報セキュリティマネジメント】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"マクロウイルスはOfficeファイル経由の感染を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。","headline":"マクロウイルスとは？Officeファイル経由の感染を理解する【情報セキュリティマネジメント】","url":"/sg/macro-virus/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">マクロウイルスとは？Officeファイル経由の感染を理解する【情報セキュリティマネジメント】</h1>
+      <h2 class="project-tagline">マクロウイルスはOfficeファイル経由の感染を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">マクロウイルスはOfficeファイル経由の感染を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">security_measures</span>
+        
+          <span class="post-tag">malware</span>
+        
+          <span class="post-tag">threat_vulnerability</span>
+        
+          <span class="post-tag">sg-security-measures</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+<p>マクロウイルスとは、<strong>WordやExcelなどのマクロ機能を悪用して感染・拡散するウイルス</strong>であり、SG試験では「ファイルを開くことで感染する点」を見抜くことが重要です。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>マクロウイルスは「便利機能に見せかけた危険な仕組み」です。</p>
+
+<p>たとえば</p>
+<ul>
+  <li>「このExcelを開いてください」とメールで送られる</li>
+  <li>開いた瞬間にマクロが動いて感染</li>
+</ul>
+
+<p>というように、<strong>ユーザーの操作（開く）をきっかけに感染する</strong>のが特徴です。</p>
+
+<p>業務でもよく使うOfficeファイルが入口になるため、<br />
+<strong>気づきにくく、広がりやすい</strong>のがポイントです。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>マクロウイルスは、アプリケーションのマクロ機能を利用して動作します。</p>
+
+<h3 id="マクロとは">マクロとは</h3>
+<ul>
+  <li>WordやExcelにある自動処理機能（VBAなど）</li>
+  <li>作業を効率化するための仕組み</li>
+</ul>
+
+<p>👉 これを悪用したのがマクロウイルス</p>
+
+<hr />
+
+<h3 id="感染の流れ">感染の流れ</h3>
+<ol>
+  <li>メールやダウンロードでファイルを受け取る</li>
+  <li>ファイルを開く</li>
+  <li>マクロが実行される</li>
+  <li>ウイルスが動作・感染拡大</li>
+</ol>
+
+<hr />
+
+<h3 id="特徴">特徴</h3>
+<ul>
+  <li>ファイルに埋め込まれる（宿主あり）</li>
+  <li>自己増殖する場合がある</li>
+  <li>Officeファイル経由で広がる</li>
+</ul>
+
+<p>SG試験では、<br />
+<strong>「マクロを実行させること」が感染のトリガー</strong>になる点が重要です。</p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="使うべき場面試験実務">使うべき場面（試験・実務）</h3>
+<ul>
+  <li>メールの添付ファイル対策</li>
+  <li>社内でのセキュリティ教育（マクロ無効化など）</li>
+  <li>Officeファイルの安全確認</li>
+</ul>
+
+<h3 id="間違えやすい場面">間違えやすい場面</h3>
+<ul>
+  <li>すべてのウイルスが自動感染すると思う<br />
+→ マクロウイルスは「開く＋実行」が必要</li>
+</ul>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+<h3 id="-通常のウイルスとの違い">① 通常のウイルスとの違い</h3>
+<ul>
+  <li>❌ すべてのウイルスは同じ感染方法</li>
+  <li>⭕ <strong>マクロウイルスは「ファイル＋マクロ実行」が条件</strong></li>
+</ul>
+
+<hr />
+
+<h3 id="-ワームとの混同">② ワームとの混同</h3>
+<ul>
+  <li>❌ マクロウイルスもネットワークで勝手に広がる</li>
+  <li>⭕ <strong>ユーザー操作が必要（開く・許可する）</strong></li>
+</ul>
+
+<hr />
+
+<h3 id="-マクロ危険という誤解">③ マクロ＝危険という誤解</h3>
+<ul>
+  <li>❌ マクロは全部危険</li>
+  <li>⭕ <strong>マクロ自体は便利な機能で、悪用されると危険</strong></li>
+</ul>
+
+<hr />
+
+<h3 id="sg試験での典型パターン">SG試験での典型パターン</h3>
+<ul>
+  <li>「メール添付のOfficeファイル」</li>
+  <li>「マクロを有効にする操作」</li>
+  <li>「開いたことで感染」</li>
+</ul>
+
+<p>選択肢で<br />
+「ネットワーク経由で自動増殖」とあれば<br />
+→ ワームの可能性が高い</p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>マクロウイルス＝マクロ機能を悪用したウイルス</li>
+  <li>Officeファイルに埋め込まれる</li>
+  <li>感染には「開く＋マクロ実行」が必要</li>
+  <li>ワームとの違いは「自動拡散しない」点</li>
+  <li>判断基準は「マクロ実行がトリガーかどうか」</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/attacker-types/">攻撃者の種類とは？目的と特徴で整理する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/blacklist-whitelist/">ブラックリストとホワイトリストの違いとは？判断基準を整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/bot/">ボットとは？遠隔操作される仕組みを理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/botnet/">ボットネットとは？踏み台化とDDoSの関係を理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/brute-force-attack/">ブルートフォース攻撃とは？総当たり攻撃の仕組みと対策【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/mac-address/">← MACアドレスとは？機器を識別する番号の役割【情報セキュリティマネジメント】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/mail-header-injection/">メールヘッダーインジェクションとは？改行を悪用する攻撃【情報セキュリティマネジメント】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

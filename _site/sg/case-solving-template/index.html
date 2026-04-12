@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>SG試験 ケース問題の解き方テンプレ【情報セキュリティマネジメント】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="SG試験 ケース問題の解き方テンプレ【情報セキュリティマネジメント】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="SG試験 ケース問題の解き方テンプレは頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:description" content="SG試験 ケース問題の解き方テンプレは頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="SG試験 ケース問題の解き方テンプレ【情報セキュリティマネジメント】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"SG試験 ケース問題の解き方テンプレは頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。","headline":"SG試験 ケース問題の解き方テンプレ【情報セキュリティマネジメント】","url":"/sg/case-solving-template/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">SG試験 ケース問題の解き方テンプレ【情報セキュリティマネジメント】</h1>
+      <h2 class="project-tagline">SG試験 ケース問題の解き方テンプレは頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">SG試験 ケース問題の解き方テンプレは頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">risk_assessment</span>
+        
+          <span class="post-tag">it_security_operations</span>
+        
+          <span class="post-tag">security_management</span>
+        
+          <span class="post-tag">security_training</span>
+        
+          <span class="post-tag">sg-security-management</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+<ul>
+  <li><strong>SGのケース問題は「原因 → 対策の種類 → 順番」で解く</strong></li>
+  <li>迷ったら「人・ルール・技術・委託・インシデント」のどれかで切る</li>
+</ul>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>SGの問題は一見むずかしく見えますが、やっていることはシンプルです👇</p>
+
+<p>👉 「何が原因？」<br />
+👉 「どの対策が合う？」</p>
+
+<p>この2つだけ</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+
+<h3 id="解き方テンプレこれだけ覚える">解き方テンプレ（これだけ覚える）</h3>
+
+<p>① 原因を特定する<br />
+👉 人？ルール？技術？外部？事故？</p>
+
+<p>② 対策の種類を決める<br />
+👉 教育？安全管理？委託管理？インシデント対応？</p>
+
+<p>③ 順番を確認する<br />
+👉 いまやるべきことか？</p>
+
+<hr />
+
+<h3 id="対策の分類超重要">対策の分類（超重要）</h3>
+<p>問題を見たらまずこれ👇</p>
+
+<ul>
+  <li>人の問題 → 教育・訓練</li>
+  <li>ルール不足 → 組織的対策</li>
+  <li>システム問題 → 技術的対策</li>
+  <li>外部委託 → 委託先管理</li>
+  <li>事故発生後 → インシデント対応</li>
+</ul>
+
+<p>👉 ここで8割決まる</p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+
+<h3 id="ケース問題の典型パターン">ケース問題の典型パターン</h3>
+
+<h4 id="パターン人的ミス">パターン①：人的ミス</h4>
+<p>例👇</p>
+<ul>
+  <li>誤送信</li>
+  <li>フィッシング</li>
+</ul>
+
+<p>👉 教育・訓練</p>
+
+<hr />
+
+<h4 id="パターン管理不足">パターン②：管理不足</h4>
+<p>例👇</p>
+<ul>
+  <li>ルール未整備</li>
+  <li>責任不明</li>
+</ul>
+
+<p>👉 組織的対策</p>
+
+<hr />
+
+<h4 id="パターン技術不足">パターン③：技術不足</h4>
+<p>例👇</p>
+<ul>
+  <li>アクセス制御なし</li>
+  <li>ログなし</li>
+</ul>
+
+<p>👉 技術的対策</p>
+
+<hr />
+
+<h4 id="パターン委託問題">パターン④：委託問題</h4>
+<p>例👇</p>
+<ul>
+  <li>外部業者のミス</li>
+</ul>
+
+<p>👉 委託先管理</p>
+
+<hr />
+
+<h4 id="パターン事故発生後">パターン⑤：事故発生後</h4>
+<p>例👇</p>
+<ul>
+  <li>ウイルス感染</li>
+</ul>
+
+<p>👉 インシデント対応（拡大防止）</p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="-よくある誤解">❌ よくある誤解</h3>
+<ul>
+  <li>とりあえず技術対策を選ぶ</li>
+  <li>強そうな対策を選ぶ</li>
+</ul>
+
+<h3 id="-正しい理解">⭕ 正しい理解</h3>
+<ul>
+  <li>原因に合った対策を選ぶ</li>
+  <li>順番を守る</li>
+</ul>
+
+<hr />
+
+<h3 id="sg試験のひっかけ">SG試験のひっかけ</h3>
+<p>典型パターン👇</p>
+
+<ul>
+  <li>人の問題なのに技術対策 → ❌</li>
+  <li>初動対応なのに原因調査 → ❌</li>
+  <li>委託なのに自社対策 → ❌</li>
+</ul>
+
+<p>👉 <strong>原因とズレた選択肢を切る</strong></p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>「原因 → 対策 → 順番」で考える</li>
+  <li>人・ルール・技術・委託・事故で分類</li>
+  <li>強そうな対策ではなく適切な対策</li>
+  <li>インシデントはまず拡大防止</li>
+  <li>「ズレている選択肢」を消す</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/case-study-approach/">ケース問題の解き方！CIAとリスク対応で考える実践手順【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/common-mistakes/">よくある誤答パターンまとめ！SG試験で選択肢を切るコツ【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/contract-nonconformity/">契約不適合責任とは？瑕疵担保責任との違いも整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/cracker/">クラッカーとは？悪意ある攻撃者の特徴と見分け方【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/crl/">CRLとは？失効証明書リストの役割【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/brute-force-attack/">← ブルートフォース攻撃とは？総当たり攻撃の仕組みと対策【情報セキュリティマネジメント】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/case-study-approach/">ケース問題の解き方！CIAとリスク対応で考える実践手順【SG試験】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

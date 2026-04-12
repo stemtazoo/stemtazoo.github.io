@@ -1,0 +1,206 @@
+﻿---
+layout: page
+title: 行列の固有値とは？意味を直感で整理【DS検定】
+description: 行列の固有値は意味を直感で整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+permalink: /ds/eigenvalue/
+categories: [data-science]
+tags: [ds, linear-algebra, math]
+prev: /ds/e-calculus/
+next: /ds/euclidean-norm/
+---
+<div style="font-size: 14px; margin-bottom: 12px;">
+  <a href="/ds/">DS検定トップ</a>
+  ＞ {{ page.title }}
+</div>
+
+## まず結論
+固有値は「その行列が、ある特別な向きのベクトルをどれだけ伸ばす／縮めるか」を表す倍率です。  
+DS検定では「固有値＝何の大きさか？」を、主成分分析や“向きと広がり”の文脈で判断させる問題が出ます。
+
+## 直感的な説明
+行列は「空間をどう変形するか」を表すルールです。
+
+例えば、丸いゴム板を引き伸ばすと、だ円になります。
+
+- いちばん伸びる向きがある  
+- ほとんど伸びない向きもある  
+
+その「向き」が固有ベクトル、  
+その「伸びる倍率」が固有値です。
+
+つまり固有値は、  
+**変形の強さを表す数**です。
+
+## 定義・仕組み
+固有値は、次の状況で出てくる数です。
+
+- 行列をかけても「向きが変わらない」ベクトルがある
+- そのとき、大きさだけが倍率で変わる
+
+この倍率が固有値です。
+
+### 2×2行列での求め方（イメージ用）
+
+次の行列を考えます。
+
+$$
+A =
+\begin{pmatrix}
+a & b \\
+c & d
+\end{pmatrix}
+$$
+
+固有値 λ は次の式から求めます。
+
+$$
+\det(A - \lambda I) = 0
+$$
+
+ここで I は単位行列です。
+
+実際に式を書くと、
+
+$$
+(a - \lambda)(d - \lambda) - bc = 0
+$$
+
+展開すると、
+
+$$
+\lambda^2 - (a+d)\lambda + (ad - bc) = 0
+$$
+
+これは2次方程式です。
+
+つまり固有値は、
+
+- 対角成分の合計（a+d）
+- 行列式（ad-bc）
+
+で決まります。
+
+DS検定では、  
+この式を暗記するよりも、
+
+「固有値は変形の倍率」  
+「トレースと行列式で決まる」
+
+と理解しているかが重要です。
+
+### 数値例で直感確認
+
+$$
+A =
+\begin{pmatrix}
+2 & 0 \\
+0 & 1
+\end{pmatrix}
+$$
+
+この行列は、
+
+- x方向を2倍
+- y方向を1倍
+
+にします。
+
+固有値は 2 と 1 です。
+
+つまり、  
+「その方向にどれだけ伸びるか」がそのまま固有値です。
+
+## どんな場面で使う？
+### 使う場面
+- 主成分分析（PCA）
+  - 固有ベクトル：主成分の向き
+  - 固有値：その向きの分散の大きさ
+- データのばらつきの方向を理解したいとき
+
+DS検定では  
+「どの主成分が情報量が大きいか？」と問われることがあります。  
+その判断基準が固有値です。
+
+### 注意すべき場面
+- 固有値が大きい＝常に良い、ではない  
+  目的次第で意味が変わります。
+- 計算できるかどうかより、解釈が重要です。
+
+## よくある誤解・混同
+DS検定ではここを混同させてきます。
+
+### 固有値と固有ベクトル
+- 固有値：倍率
+- 固有ベクトル：向き
+
+選択肢で「軸」「方向」と書いてあれば固有ベクトルです。
+
+### 固有値と特異値
+- PCA文脈 → 固有値
+- SVD文脈 → 特異値
+
+選択肢では「特異値分解」という言葉が出たら注意です。
+
+### 固有値は必ず正？
+一般の行列では負になることもあります。  
+ただし、共分散行列の文脈では負にならない前提で出題されます。
+
+## まとめ（試験直前用）
+固有値は「行列がベクトルを伸ばす倍率」。  
+固有ベクトルは「向きが変わらない方向」。  
+PCAでは「固有値＝分散の大きさ」。  
+選択肢で「方向」とあれば固有ベクトル、「どれだけ大きいか」とあれば固有値を疑う。  
+
+
+## 対応スキル項目（データサイエンス力シート）
+- 数学的理解
+- 線形代数基礎
+- ★ 固有ベクトルおよび固有値の意味を理解している
+
+## 🔗 関連記事
+
+<ul style="padding-left: 20px;">
+{% assign current_tags = page.tags %}
+{% assign count = 0 %}
+
+{% for p in site.pages %}
+  {% if p.url != page.url and p.tags %}
+    {% assign matched = false %}
+
+    {% for tag in current_tags %}
+      {% if p.tags contains tag and tag != "ds" %}
+        {% assign matched = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if matched %}
+      <li style="margin-bottom: 6px;">
+        <a href="{{ p.url }}">{{ p.title }}</a>
+      </li>
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+
+    {% if count >= 5 %}
+      {% break %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>
+
+<hr>
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/ds/">DS検定トップに戻る</a>
+</div>
+
+<div style="display:flex;justify-content:space-between;margin-top:12px;">
+
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
+  {% endif %}
+
+  {% if page.next.url %}
+    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
+  {% endif %}
+
+</div>

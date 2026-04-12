@@ -1,0 +1,256 @@
+﻿---
+layout: page
+title: CAP定理とは？分散システムの基本原則【DS検定】
+description: CAP定理は分散システムの基本原則を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+permalink: /ds/cap-theorem/
+categories: [business]
+tags: [ds, design]
+prev: /ds/business-logic-and-data-importance/
+next: /ds/categorical-variable/
+---
+<div style="font-size: 14px; margin-bottom: 12px;">
+  <a href="/ds/">DS検定トップ</a>
+  ＞ {{ page.title }}
+</div>
+
+## まず結論
+
+**CAP定理とは、分散システムでは「一貫性（Consistency）」「可用性（Availability）」「分断耐性（Partition tolerance）」の3つを同時に完全には満たせないという原則**です。
+
+DS検定では  
+**分散データベース（特にNoSQL）の設計思想を理解しているか**を問う問題として出題されます。
+
+試験では  
+**「3つすべてを同時に満たせる」とする選択肢**が典型的な誤りです。
+
+
+## 直感的な説明
+
+CAP定理を理解するには  
+**分散システム**をイメージすると分かりやすいです。
+
+例えば
+
+- 世界中にサーバーがあるSNS  
+- 大規模ECサイト  
+- クラウドサービス  
+
+このようなシステムでは
+
+複数のサーバーに  
+**同じデータを分散して保存**しています。
+
+しかし問題があります。
+
+サーバー間の通信が途切れると
+
+- データの整合性を優先するか
+- サービスを止めないことを優先するか
+
+の **どちらかを選ばなければならない** 場面が出てきます。
+
+このトレードオフを説明したものが  
+**CAP定理**です。
+
+
+## 定義・仕組み
+
+CAP定理の3要素は次の通りです。
+
+| 要素 | 意味 |
+|---|---|
+| Consistency（一貫性） | どのサーバーからデータを読んでも同じ結果になる |
+| Availability（可用性） | システムが常にリクエストに応答できる |
+| Partition tolerance（分断耐性） | サーバー間通信が分断されてもシステムが動作する |
+
+重要なポイントは
+
+**この3つを同時に完全には満たせない**
+
+ということです。
+
+そのため分散システムでは
+
+次のどれかの設計になります。
+
+| タイプ | 特徴 |
+|---|---|
+| CP | 一貫性と分断耐性を優先 |
+| AP | 可用性と分断耐性を優先 |
+| CA | 一貫性と可用性を優先（分断がない前提） |
+
+特にNoSQLでは
+
+**AP型やCP型の設計**
+
+がよく使われます。
+
+
+## どんな場面で使う？
+
+CAP定理は  
+**分散データベース設計の考え方**として使われます。
+
+例えば
+
+### 金融システム
+
+優先
+
+**Consistency**
+
+理由
+
+銀行残高がズレると重大な問題になるため
+
+
+### SNS
+
+優先
+
+**Availability**
+
+理由
+
+多少データのズレがあっても  
+サービス停止の方が問題になるため
+
+
+### ビッグデータシステム
+
+優先
+
+**Partition tolerance**
+
+理由
+
+大規模分散環境では  
+ネットワーク分断が避けられないため
+
+
+## よくある誤解・混同
+
+### 誤解①  
+CAP定理は3つを選べる
+
+誤りです。
+
+正しくは
+
+**3つを同時に完全には満たせない**
+
+という意味です。
+
+
+### 誤解②  
+CAP定理はNoSQL専用の理論
+
+これも誤りです。
+
+CAP定理は
+
+**分散システム全体の原則**
+
+です。
+
+
+### 誤解③  
+CA型のシステムは存在しない
+
+厳密には
+
+**ネットワーク分断が起きない前提なら可能**
+
+ですが
+
+大規模分散システムでは  
+Partition toleranceが必要になるため
+
+実際は
+
+- CP  
+- AP  
+
+の設計が多くなります。
+
+
+### DS検定の典型ひっかけ
+
+DS検定では次のような選択肢が出やすいです。
+
+❌ CAP定理では3つの特性を同時に満たせる  
+
+❌ CAP定理はNoSQLだけの理論  
+
+正しくは
+
+✔ 3つを同時に完全には満たせない  
+✔ 分散システムの設計原則  
+
+
+## まとめ（試験直前用）
+
+- CAP定理は **分散システムの基本原則**
+- Consistency / Availability / Partition tolerance の3要素
+- **3つを同時に完全には満たせない**
+- 分散DBは **CP型かAP型を選択する**
+- DS検定では **CAPの意味とトレードオフ**が重要
+
+
+## 対応スキル項目（データエンジニアリング力シート）
+
+- スキルカテゴリ名  
+データ蓄積
+
+- サブカテゴリ名  
+分散技術
+
+- ★ 分散処理の基本概念（CAP定理など）を理解し、データベースや分散システムの設計におけるトレードオフを説明できる
+
+## 🔗 関連記事
+
+<ul style="padding-left: 20px;">
+{% assign current_tags = page.tags %}
+{% assign count = 0 %}
+
+{% for p in site.pages %}
+  {% if p.url != page.url and p.tags %}
+    {% assign matched = false %}
+
+    {% for tag in current_tags %}
+      {% if p.tags contains tag and tag != "ds" %}
+        {% assign matched = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if matched %}
+      <li style="margin-bottom: 6px;">
+        <a href="{{ p.url }}">{{ p.title }}</a>
+      </li>
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+
+    {% if count >= 5 %}
+      {% break %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>
+
+<hr>
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/ds/">DS検定トップに戻る</a>
+</div>
+
+<div style="display:flex;justify-content:space-between;margin-top:12px;">
+
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
+  {% endif %}
+
+  {% if page.next.url %}
+    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
+  {% endif %}
+
+</div>

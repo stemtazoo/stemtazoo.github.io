@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>JPCERT/CCとは？役割とCSIRTとの違いを整理【情報セキュリティマネジメント】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="JPCERT/CCとは？役割とCSIRTとの違いを整理【情報セキュリティマネジメント】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="JPCERT/CCは役割とCSIRTとの違いを整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:description" content="JPCERT/CCは役割とCSIRTとの違いを整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="JPCERT/CCとは？役割とCSIRTとの違いを整理【情報セキュリティマネジメント】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"JPCERT/CCは役割とCSIRTとの違いを整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。","headline":"JPCERT/CCとは？役割とCSIRTとの違いを整理【情報セキュリティマネジメント】","url":"/sg/jpcert-cc/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">JPCERT/CCとは？役割とCSIRTとの違いを整理【情報セキュリティマネジメント】</h1>
+      <h2 class="project-tagline">JPCERT/CCは役割とCSIRTとの違いを整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">JPCERT/CCは役割とCSIRTとの違いを整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-management</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+<ul>
+  <li><strong>JPCERT/CCは、日本国内のセキュリティインシデント対応を支援する中立的な組織（CSIRT）である。</strong></li>
+  <li>SG試験では「政府機関ではない独立組織」という点を判断させる問題が多い。</li>
+</ul>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>会社でトラブルが起きたときに、<br />
+「専門家に相談して対処を手伝ってもらう」ことがありますよね。</p>
+
+<p>JPCERT/CCは、<br />
+<strong>日本全体のセキュリティ相談窓口＋専門支援チーム</strong>のような存在です。</p>
+
+<ul>
+  <li>不正アクセスがあった</li>
+  <li>マルウェアに感染した</li>
+  <li>情報漏えいの可能性がある</li>
+</ul>
+
+<p>こういったときに、<br />
+<strong>企業や組織をまたいで対応をサポートする役割</strong>を担っています。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>JPCERT/CC（JPCERT Coordination Center）は、</p>
+
+<ul>
+  <li>コンピュータセキュリティインシデントに関する
+    <ul>
+      <li>報告の受付</li>
+      <li>対応支援</li>
+      <li>情報共有</li>
+      <li>再発防止の助言<br />
+を行う組織です。</li>
+    </ul>
+  </li>
+</ul>
+
+<p>ポイントは次の3つです。</p>
+
+<h3 id="-中立独立の組織">① 中立・独立の組織</h3>
+<ul>
+  <li>特定の政府機関や企業に属さない</li>
+  <li>公平な立場で対応できる</li>
+</ul>
+
+<h3 id="-日本版csirt">② 日本版CSIRT</h3>
+<ul>
+  <li>CSIRT（Computer Security Incident Response Team）の一種</li>
+  <li>国内全体を対象にした「調整役」</li>
+</ul>
+
+<h3 id="-情報共有のハブ">③ 情報共有のハブ</h3>
+<ul>
+  <li>攻撃手法や脆弱性情報を収集・共有</li>
+  <li>被害の拡大を防ぐ役割</li>
+</ul>
+
+<p>SG試験では<br />
+<strong>「インシデント対応を支援する組織」＝JPCERT/CC</strong><br />
+と押さえておけばOKです。</p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="使う場面正しい理解">使う場面（正しい理解）</h3>
+<ul>
+  <li>インシデントが発生したときの相談・支援</li>
+  <li>複数組織にまたがる攻撃への対応</li>
+  <li>攻撃情報の共有・注意喚起</li>
+</ul>
+
+<h3 id="使うと誤解しやすい場面">使うと誤解しやすい場面</h3>
+<ul>
+  <li>❌ 社内対応チーム（それはCSIRT）</li>
+  <li>❌ 政府の司令塔（それはNCOなど）</li>
+</ul>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="-csirtとの違い">① CSIRTとの違い</h3>
+<ul>
+  <li>CSIRT：組織内の対応チーム</li>
+  <li>JPCERT/CC：<strong>外部の支援・調整機関</strong></li>
+</ul>
+
+<p>👉 SG試験ではここを混同させてきます</p>
+
+<hr />
+
+<h3 id="-nco国家サイバー統括室との違い">② NCO（国家サイバー統括室）との違い</h3>
+<ul>
+  <li>NCO：政府の司令塔（内閣官房）</li>
+  <li>JPCERT/CC：<strong>独立した民間組織</strong></li>
+</ul>
+
+<p>👉 「政府かどうか」で切るのがポイント</p>
+
+<hr />
+
+<h3 id="-cryptrecとの違い">③ CRYPTRECとの違い</h3>
+<ul>
+  <li>CRYPTREC：暗号の評価・推奨</li>
+  <li>JPCERT/CC：<strong>インシデント対応</strong></li>
+</ul>
+
+<p>👉 「暗号か？インシデントか？」で判断</p>
+
+<hr />
+
+<h3 id="-jiscとの違い">④ JISCとの違い</h3>
+<ul>
+  <li>JISC：標準化（JIS）</li>
+  <li>JPCERT/CC：<strong>セキュリティ対応支援</strong></li>
+</ul>
+
+<p>👉 分野が全く違う</p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>JPCERT/CC＝<strong>日本のインシデント対応支援組織（CSIRT）</strong></li>
+  <li>政府ではなく<strong>中立・独立の組織</strong></li>
+  <li>役割は「報告受付・対応支援・情報共有」</li>
+  <li>選択肢では
+    <ul>
+      <li>「政府機関」→×</li>
+      <li>「暗号評価」→×</li>
+      <li>「インシデント対応支援」→○</li>
+    </ul>
+  </li>
+</ul>
+
+<p>👉 <strong>「誰の組織か」ではなく「何をするか」で切る</strong></p>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/case-solving-template/">SG試験 ケース問題の解き方テンプレ【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/csirt/">CSIRTとは？組織内インシデント対応の基本【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/fraud-triangle/">不正のトライアングルとは？内部不正が起こる3要素【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/incident-response/">インシデント対応とは？初動対応の判断基準を整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/nco/">NCOとは？政府のサイバー司令塔を理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/ip-spoofing/">← IPスプーフィングとは？送信元偽装の仕組みと対策【情報セキュリティマネジメント】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/keylogger/">キーロガーとは？入力情報を盗む仕組みを理解する【情報セキュリティマネジメント】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

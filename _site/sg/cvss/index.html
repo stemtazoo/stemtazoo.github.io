@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>CVSSとは？脆弱性の深刻度を共通スコアで判断する【情報セキュリティマネジメント】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="CVSSとは？脆弱性の深刻度を共通スコアで判断する【情報セキュリティマネジメント】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="CVSSは脆弱性の深刻度を共通スコアで判断するを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:description" content="CVSSは脆弱性の深刻度を共通スコアで判断するを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="CVSSとは？脆弱性の深刻度を共通スコアで判断する【情報セキュリティマネジメント】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"CVSSは脆弱性の深刻度を共通スコアで判断するを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。","headline":"CVSSとは？脆弱性の深刻度を共通スコアで判断する【情報セキュリティマネジメント】","url":"/sg/cvss/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">CVSSとは？脆弱性の深刻度を共通スコアで判断する【情報セキュリティマネジメント】</h1>
+      <h2 class="project-tagline">CVSSは脆弱性の深刻度を共通スコアで判断するを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">CVSSは脆弱性の深刻度を共通スコアで判断するを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">security_general</span>
+        
+          <span class="post-tag">threat_vulnerability</span>
+        
+          <span class="post-tag">risk_assessment</span>
+        
+          <span class="post-tag">sg-security-overview</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+<ul>
+  <li><strong>CVSS（共通脆弱性評価システム）は、脆弱性の危険度を0.0〜10.0のスコアで評価する指標</strong></li>
+  <li>SG試験では「どの基準で評価するか」「スコアの意味」を判断させる問題がよく出ます</li>
+</ul>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>脆弱性は「危ない」と言っても、人によって感じ方が違います。</p>
+
+<p>そこでCVSSは、<br />
+👉 <strong>全員が同じ基準で危険度を判断できるようにした“点数表”</strong> です</p>
+
+<p>たとえば：</p>
+
+<ul>
+  <li>誰でも攻撃できる → 点数が高い</li>
+  <li>条件が厳しい → 点数が低い</li>
+</ul>
+
+<p>こうすることで、<br />
+👉 <strong>「どれを優先して対策するか」を決めやすくする</strong> のが目的です</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>CVSSは、脆弱性の深刻度を <strong>3つの観点（評価基準）</strong> で評価します。</p>
+
+<h3 id="-基本評価基準base-metrics">① 基本評価基準（Base Metrics）</h3>
+<ul>
+  <li>脆弱性そのものの危険度</li>
+  <li>時間や環境に関係なく固定</li>
+</ul>
+
+<p>例：</p>
+<ul>
+  <li>攻撃のしやすさ</li>
+  <li>認証の必要性</li>
+  <li>機密性・完全性・可用性への影響</li>
+</ul>
+
+<p>👉 <strong>「本質的にどれくらい危険か」</strong></p>
+
+<hr />
+
+<h3 id="-現状評価基準temporal-metrics">② 現状評価基準（Temporal Metrics）</h3>
+<ul>
+  <li>現時点での危険度</li>
+</ul>
+
+<p>例：</p>
+<ul>
+  <li>攻撃コードが公開されているか</li>
+  <li>対策（パッチ）があるか</li>
+</ul>
+
+<p>👉 <strong>「今どれくらい危ないか」</strong></p>
+
+<hr />
+
+<h3 id="-環境評価基準environmental-metrics">③ 環境評価基準（Environmental Metrics）</h3>
+<ul>
+  <li>利用環境を考慮した危険度</li>
+</ul>
+
+<p>例：</p>
+<ul>
+  <li>重要システムかどうか</li>
+  <li>影響範囲の大きさ</li>
+</ul>
+
+<p>👉 <strong>「自分の環境ではどれくらい影響があるか」</strong></p>
+
+<hr />
+
+<p>最終的に、<br />
+👉 <strong>0.0〜10.0のスコアで表現される（高いほど危険）</strong></p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="-使う場面">✔ 使う場面</h3>
+<ul>
+  <li>脆弱性情報（CVE）を評価するとき</li>
+  <li>パッチ適用の優先順位を決めるとき</li>
+  <li>リスクアセスメントの判断材料</li>
+</ul>
+
+<p>👉 <strong>「どれから対応すべきか」を決めるために使う</strong></p>
+
+<hr />
+
+<h3 id="-注意すべき場面">✔ 注意すべき場面</h3>
+<ul>
+  <li>スコアだけで判断してしまう場合</li>
+</ul>
+
+<p>👉 同じCVSSでも</p>
+<ul>
+  <li>社内システム → 影響大</li>
+  <li>テスト環境 → 影響小</li>
+</ul>
+
+<p>になることがある</p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+<h3 id="-cvssは0100で評価する">❌ 「CVSSは0〜100で評価する」</h3>
+<p>→ ⭕ <strong>0.0〜10.0で評価する</strong></p>
+
+<hr />
+
+<h3 id="-評価基準は2つ現状と環境">❌ 「評価基準は2つ（現状と環境）」</h3>
+<p>→ ⭕ <strong>3つ（基本・現状・環境）</strong></p>
+
+<hr />
+
+<h3 id="-cvssは環境に依存しない">❌ 「CVSSは環境に依存しない」</h3>
+<p>→ ⭕ <strong>環境評価で結果は変わる</strong></p>
+
+<hr />
+
+<h3 id="-cvssv2とv3は同じスコアになる">❌ 「CVSSv2とv3は同じスコアになる」</h3>
+<p>→ ⭕ <strong>評価方法が違うのでスコアが変わることがある</strong></p>
+
+<hr />
+
+<p>SG試験では<br />
+👉 <strong>「評価基準の数」「スコア範囲」「環境で変わるか」</strong><br />
+を狙ってきます</p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>CVSS＝脆弱性を <strong>0.0〜10.0で数値化する指標</strong></li>
+  <li>評価基準は <strong>基本・現状・環境の3つ</strong></li>
+  <li>スコアが高いほど危険（優先対応）</li>
+  <li>環境によって最終評価は変わる</li>
+  <li><strong>「共通指標だが最終判断は現場依存」</strong> が重要ポイント</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/attacker-types/">攻撃者の種類とは？目的と特徴で整理する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/botnet/">ボットネットとは？踏み台化とDDoSの関係を理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/brute-force-attack/">ブルートフォース攻撃とは？総当たり攻撃の仕組みと対策【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/case-solving-template/">SG試験 ケース問題の解き方テンプレ【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/case-study-approach/">ケース問題の解き方！CIAとリスク対応で考える実践手順【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/csrf/">← クロスサイトリクエストフォージェリとは？なりすまし操作の仕組み【情報セキュリティマネジメント】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/cyber-attack-cia/">攻撃の目的をCIAで整理！試験で迷わない判断軸【情報セキュリティマネジメント】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

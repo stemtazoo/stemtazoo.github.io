@@ -1,0 +1,168 @@
+﻿---
+layout: page
+title: FTPとSSHの違いとは？（ファイル転送と安全な接続）【DS検定】
+description: FTPとSSHの違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+permalink: /ds/ftp-ssh/
+categories: [data-engineering]
+tags: [ds, data-collection, data-processing]
+prev: /ds/docker/
+---
+<div style="font-size: 14px; margin-bottom: 12px;">
+  <a href="/ds/">DS検定トップ</a>
+  ＞ {{ page.title }}
+</div>
+
+## まず結論
+
+- **FTPは「ファイルを転送するための仕組み」**、  
+- **SSHは「安全にサーバへ接続・操作するための仕組み」**です。  
+
+DS検定では、「安全性」「暗号化の有無」「用途の違い」を切り分けられるかが問われます。
+
+
+## 直感的な説明
+
+会社のサーバにデータをアップロードする場面を考えてみます。
+
+- FTPは「荷物を送る宅配便」のようなもの  
+- SSHは「鍵付きのドアから安全に中へ入る」イメージ  
+
+FTPは“データを送ること”が目的です。  
+SSHは“安全にログインして操作すること”が目的です。
+
+DS検定では、  
+「安全な通信かどうか？」  
+「ログインして操作できるか？」  
+この視点で判断させてきます。
+
+
+## 定義・仕組み
+
+### FTP（File Transfer Protocol）
+
+- ファイルをサーバとやり取りするための通信規約
+- 標準のFTPは**暗号化されない**
+- IDやパスワードも平文で送られる
+
+そのため、セキュリティ面に弱点があります。
+
+
+### SSH（Secure Shell）
+
+- サーバに安全に接続するための通信規約
+- 通信内容は**暗号化される**
+- コマンド操作やファイル転送も可能（SCPなど）
+
+SSHは「安全な遠隔操作」を目的としています。
+
+
+## どんな場面で使う？
+
+### FTPを使う場面
+
+- Webサイトのファイルをアップロードする
+- データをまとめて転送する
+
+ただし、現在はセキュリティの観点から  
+**FTPSやSFTPが使われることが多い**です。
+
+
+### SSHを使う場面
+
+- サーバにログインして設定を変更する
+- クラウド上の環境を操作する
+- 安全にファイル転送する
+
+DS検定では、  
+「クラウド環境に安全に接続する方法はどれか？」  
+といった問い方をされることがあります。
+
+
+## よくある誤解・混同
+
+### ❌ FTPは安全な通信方式である  
+→ 標準FTPは暗号化されません。
+
+### ❌ SSHはファイル転送専用のプロトコルである  
+→ SSHは「安全な接続」が目的。ファイル転送もできる、が正解。
+
+
+### DS検定の典型ひっかけ
+
+- 「暗号化される通信方式はどれか？」
+- 「安全にリモート接続する技術はどれか？」
+- 「ファイル転送プロトコルはどれか？」
+
+ここで
+
+- FTP ＝ 転送
+- SSH ＝ 安全な接続
+
+と切り分けられれば迷いません。
+
+
+## まとめ（試験直前用）
+
+- FTPはファイル転送用
+- 標準FTPは暗号化されない
+- SSHは安全な接続（暗号化あり）
+- DS検定では「安全性」と「用途」を切る
+
+「安全に接続」と書いてあればSSH。  
+「ファイル転送」とだけ書いてあればFTPを疑う。
+
+
+## 対応スキル項目（データエンジニアリング力シート）
+
+- ITシステム基盤
+- セキュリティ
+- ★ 情報セキュリティの基本的な考え方を理解している
+- ★ ネットワークおよび通信の基礎を理解している
+
+## 🔗 関連記事
+
+<ul style="padding-left: 20px;">
+{% assign current_tags = page.tags %}
+{% assign count = 0 %}
+
+{% for p in site.pages %}
+  {% if p.url != page.url and p.tags %}
+    {% assign matched = false %}
+
+    {% for tag in current_tags %}
+      {% if p.tags contains tag and tag != "ds" %}
+        {% assign matched = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if matched %}
+      <li style="margin-bottom: 6px;">
+        <a href="{{ p.url }}">{{ p.title }}</a>
+      </li>
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+
+    {% if count >= 5 %}
+      {% break %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>
+
+<hr>
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/ds/">DS検定トップに戻る</a>
+</div>
+
+<div style="display:flex;justify-content:space-between;margin-top:12px;">
+
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
+  {% endif %}
+
+  {% if page.next.url %}
+    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
+  {% endif %}
+
+</div>

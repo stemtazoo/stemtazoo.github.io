@@ -1,0 +1,195 @@
+﻿---
+layout: page
+title: 過学習と分岐の深さの関係とは？決定木の注意点【DS検定】
+description: 過学習と分岐の深さの関係は決定木の注意点を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+permalink: /ds/overfitting-tree-depth/
+categories: [data-science]
+tags: [ds, modeling, evaluation]
+prev: /ds/information-gain/
+next: /ds/coefficient-of-determination-contribution/
+---
+<div style="font-size: 14px; margin-bottom: 12px;">
+  <a href="/ds/">DS検定トップ</a>
+  ＞ {{ page.title }}
+</div>
+
+## まず結論
+決定木では、**分岐を深くしすぎると過学習が起きやすくなります。**  
+DS検定では、「木の深さと汎化性能の関係」を正しく理解できているかが問われます。
+
+
+## 直感的な説明
+
+決定木は、
+
+> 条件をどんどん細かくしていくモデル
+
+です。
+
+分岐を増やしていくと、
+
+- 学習データにはぴったり合う
+- しかし未知データには弱くなる
+
+という状態が起きます。
+
+たとえば、
+
+- 「価格が1000円以上」
+- 「レビューが★4以上」
+- 「発売日が○月○日」
+
+と細かく分けすぎると、
+そのデータ専用のルールになってしまいます。
+
+これが過学習です。
+
+
+## 定義・仕組み
+
+### 過学習とは？
+
+> 学習データに適合しすぎて、未知データで性能が落ちる状態
+
+
+### 分岐の深さ（木の深さ）とは？
+
+決定木では、
+
+- 分岐の回数が増える
+- ノードが増える
+- 条件が細かくなる
+
+これを「木が深い」といいます。
+
+
+### なぜ深いと過学習するのか？
+
+深くなるほど、
+
+- ノード内のデータ数が少なくなる
+- たまたまのノイズにも適合してしまう
+
+つまり、
+
+> 本質ではなく偶然に合わせてしまう
+
+のが原因です。
+
+DS検定では
+
+「木を深くすると常に良い性能になる」
+
+という選択肢は誤りです。
+
+
+## どんな場面で使う？
+
+### ① ハイパーパラメータ調整
+
+決定木やランダムフォレストには、
+
+- max_depth（最大深さ）
+- min_samples_split
+- min_samples_leaf
+
+といった制御パラメータがあります。
+
+過学習を防ぐために、
+
+> 深さを制限する
+
+ことが重要です。
+
+
+### ② バイアス・バリアンスの理解
+
+- 浅すぎる → 表現力不足（アンダーフィット）
+- 深すぎる → 過学習（オーバーフィット）
+
+このバランスを問う問題が出ます。
+
+
+## よくある誤解・混同
+
+### ❌ 木は深いほど精度が高い
+→ 学習データでは高くなりますが、汎化性能は保証されません。
+
+
+### ❌ 過学習は決定木だけの問題
+→ どのモデルでも起こります。
+
+ただし、決定木は特に起きやすいモデルです。
+
+
+### ❌ ランダムフォレストは過学習しない
+→ 単独の木よりは抑えられますが、
+理論的に「絶対しない」わけではありません。
+
+
+### ❌ 分岐を増やすと必ず不純度は下がるから問題ない
+→ 学習データでは下がります。
+しかし、それが良いとは限りません。
+
+
+## まとめ（試験直前用）
+
+- 木を深くしすぎると過学習しやすい
+- 過学習 = 学習データに合わせすぎ
+- 深さはハイパーパラメータで制御する
+- 浅すぎるとアンダーフィット
+- 「深いほど良い」は誤り
+
+
+## 対応スキル項目（AI利活用スキルシート）
+- AIの理解
+- 機械学習の基本理解
+- ★ 機械学習モデルの基本的な仕組みを理解している
+
+## 🔗 関連記事
+
+<ul style="padding-left: 20px;">
+{% assign current_tags = page.tags %}
+{% assign count = 0 %}
+
+{% for p in site.pages %}
+  {% if p.url != page.url and p.tags %}
+    {% assign matched = false %}
+
+    {% for tag in current_tags %}
+      {% if p.tags contains tag and tag != "ds" %}
+        {% assign matched = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if matched %}
+      <li style="margin-bottom: 6px;">
+        <a href="{{ p.url }}">{{ p.title }}</a>
+      </li>
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+
+    {% if count >= 5 %}
+      {% break %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>
+
+<hr>
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/ds/">DS検定トップに戻る</a>
+</div>
+
+<div style="display:flex;justify-content:space-between;margin-top:12px;">
+
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
+  {% endif %}
+
+  {% if page.next.url %}
+    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
+  {% endif %}
+
+</div>

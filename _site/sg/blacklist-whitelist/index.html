@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>ブラックリストとホワイトリストの違いとは？判断基準を整理【情報セキュリティマネジメント】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="ブラックリストとホワイトリストの違いとは？判断基準を整理【情報セキュリティマネジメント】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="ブラックリストとホワイトリストの違いは許可・拒否の基準設定です。この記事では運用上の役割、誤設定リスク、使い分け、SG試験で混同しやすいひっかけポイントを整理します。" />
+<meta property="og:description" content="ブラックリストとホワイトリストの違いは許可・拒否の基準設定です。この記事では運用上の役割、誤設定リスク、使い分け、SG試験で混同しやすいひっかけポイントを整理します。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="ブラックリストとホワイトリストの違いとは？判断基準を整理【情報セキュリティマネジメント】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"ブラックリストとホワイトリストの違いは許可・拒否の基準設定です。この記事では運用上の役割、誤設定リスク、使い分け、SG試験で混同しやすいひっかけポイントを整理します。","headline":"ブラックリストとホワイトリストの違いとは？判断基準を整理【情報セキュリティマネジメント】","url":"/sg/blacklist-whitelist/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">ブラックリストとホワイトリストの違いとは？判断基準を整理【情報セキュリティマネジメント】</h1>
+      <h2 class="project-tagline">ブラックリストとホワイトリストの違いは許可・拒否の基準設定です。この記事では運用上の役割、誤設定リスク、使い分け、SG試験で混同しやすいひっかけポイントを整理します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">ブラックリストとホワイトリストの違いは許可・拒否の基準設定です。この記事では運用上の役割、誤設定リスク、使い分け、SG試験で混同しやすいひっかけポイントを整理します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">security_measures</span>
+        
+          <span class="post-tag">unauthorized_access</span>
+        
+          <span class="post-tag">network</span>
+        
+          <span class="post-tag">sg-security-measures</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+<p>ブラックリストとホワイトリストは「通信を許可・拒否するルールの考え方」であり、SG試験では<strong>「何を基準に許可・拒否しているか」を見抜く問題として出題される</strong>。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>イメージで考えるとシンプルです。</p>
+
+<ul>
+  <li>
+    <p>ブラックリスト<br />
+→ <strong>ダメな人だけ入れない（基本OK）</strong></p>
+  </li>
+  <li>
+    <p>ホワイトリスト<br />
+→ <strong>許可された人だけ入れる（基本NG）</strong></p>
+  </li>
+</ul>
+
+<p>例えば会社の入館管理で考えると、</p>
+
+<ul>
+  <li>ブラックリスト：問題を起こした人だけ入館禁止</li>
+  <li>ホワイトリスト：社員証を持っている人だけ入館OK</li>
+</ul>
+
+<p>この「どちらを基準にするか」がポイントです。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>ブラックリストとホワイトリストは、ファイアウォールやWAFなどで使われる<strong>アクセス制御の方式</strong>です。</p>
+
+<h3 id="ブラックリスト方式">ブラックリスト方式</h3>
+<ul>
+  <li>初期状態：すべて許可</li>
+  <li>「禁止したい対象」を登録</li>
+  <li>該当するものを遮断</li>
+</ul>
+
+<p>👉 例：</p>
+<ul>
+  <li>特定のIPアドレス</li>
+  <li>攻撃パターン（WAFの場合）</li>
+</ul>
+
+<hr />
+
+<h3 id="ホワイトリスト方式">ホワイトリスト方式</h3>
+<ul>
+  <li>初期状態：すべて拒否</li>
+  <li>「許可する対象」を登録</li>
+  <li>登録されたものだけ通す</li>
+</ul>
+
+<p>👉 例：</p>
+<ul>
+  <li>特定のIPアドレスのみ許可</li>
+  <li>特定のURLのみアクセス可能</li>
+</ul>
+
+<hr />
+
+<p>SG試験ではここが重要です👇</p>
+
+<p>👉 <strong>ブラックリスト＝禁止ベース</strong><br />
+👉 <strong>ホワイトリスト＝許可ベース</strong></p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="ブラックリストが使われる場面">ブラックリストが使われる場面</h3>
+<ul>
+  <li>既知の攻撃を防ぐ（WAF）</li>
+  <li>スパムメール対策</li>
+  <li>不正IPの遮断</li>
+</ul>
+
+<p>👉 「とりあえず全部通すが、危険なものだけ止める」</p>
+
+<hr />
+
+<h3 id="ホワイトリストが使われる場面">ホワイトリストが使われる場面</h3>
+<ul>
+  <li>社内システムへのアクセス制限</li>
+  <li>重要システムの通信制御</li>
+  <li>委託先アクセスの限定</li>
+</ul>
+
+<p>👉 「安全が確認できたものだけ通す」</p>
+
+<hr />
+
+<h3 id="業務での判断ポイント">業務での判断ポイント</h3>
+<ul>
+  <li>セキュリティ重視 → ホワイトリスト</li>
+  <li>利便性重視 → ブラックリスト</li>
+</ul>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+<h3 id="-ブラックリストurlやipのリスト">❌ 「ブラックリスト＝URLやIPのリスト」</h3>
+<p>→ ⭕ <strong>状況によって対象は変わる</strong></p>
+
+<ul>
+  <li>ファイアウォール → IPアドレス</li>
+  <li>WAF → 通信データ（攻撃パターン）</li>
+</ul>
+
+<hr />
+
+<h3 id="-wafはurlをブロックするもの">❌ 「WAFはURLをブロックするもの」</h3>
+<p>→ ⭕ <strong>通信の中身を見て判断する</strong></p>
+
+<p>SG試験では、</p>
+
+<p>👉 「IPやURLの話になっている選択肢」はミスリードの可能性あり</p>
+
+<hr />
+
+<h3 id="-ブラックリストとホワイトリストは同じようなもの">❌ 「ブラックリストとホワイトリストは同じようなもの」</h3>
+<p>→ ⭕ <strong>初期状態が逆</strong></p>
+
+<ul>
+  <li>ブラックリスト：基本OK → 一部NG</li>
+  <li>ホワイトリスト：基本NG → 一部OK</li>
+</ul>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>ブラックリスト＝禁止対象を登録して遮断（基本OK）</li>
+  <li>ホワイトリスト＝許可対象のみ通す（基本NG）</li>
+  <li>何を登録するかは機器によって異なる（IP・URL・パターンなど）</li>
+  <li>SG試験では「何を基準に制御しているか」を見抜くのが重要</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/bot/">ボットとは？遠隔操作される仕組みを理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/botnet/">ボットネットとは？踏み台化とDDoSの関係を理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/brute-force-attack/">ブルートフォース攻撃とは？総当たり攻撃の仕組みと対策【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/clickjacking/">クリックジャッキングとは？見えない操作誘導の仕組み【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/command-and-control/">C&amp;Cサーバとは？ボットネットを操る指令の仕組み【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/availability/">← 稼働率とは？可用性の考え方とSLAでの判断基準【情報セキュリティマネジメント】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/bot/">ボットとは？遠隔操作される仕組みを理解する【情報セキュリティマネジメント】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,185 @@
+﻿---
+layout: page
+title: EXISTSとは？サブクエリの存在判定を理解する【DS検定】
+description: EXISTSはサブクエリの存在判定を理解するを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+permalink: /ds/sql-exists/
+categories: [data-engineering]
+tags: [ds, sql]
+prev: /ds/sql-distinct/
+next: /ds/sql-filtering/
+---
+<div style="font-size: 14px; margin-bottom: 12px;">
+  <a href="/ds/">DS検定トップ</a>
+  ＞ {{ page.title }}
+</div>
+
+## まず結論
+
+EXISTSとは「条件を満たすデータが存在するかどうか」を判定するSQLの構文
+
+DS検定では「値比較ではなく存在チェック」であることを見抜けるかが重要
+
+
+
+
+## 直感的な説明
+
+「その条件に合うデータが1件でもある？」をチェックするイメージです。
+
+例えば
+
+注文したことがある顧客だけ抽出したい
+
+
+👉 「注文データが存在するか？」で判断する
+
+👉 1件でもあればOK（中身は関係ない）
+
+
+
+## 定義・仕組み
+
+EXISTSは、サブクエリの結果が1件でもあればTRUEになる条件式です。
+
+基本形：
+
+SELECT *
+FROM 顧客テーブル A
+WHERE EXISTS (
+    SELECT 1
+    FROM 注文テーブル B
+    WHERE A.顧客ID = B.顧客ID
+);
+
+ポイント：
+
+サブクエリの中身（SELECT 1）は重要ではない
+
+1件でも見つかればTRUE
+
+
+
+
+## どんな場面で使う？
+
+よく使う場面
+
+関連データが存在するかの判定 （例：注文がある顧客）
+
+データの有無チェック
+
+
+注意が必要な場面
+
+値の比較をしたいとき → EXISTSではなくINや=を使う
+
+
+
+
+## よくある誤解・混同
+
+❌ INと同じ
+
+→ ⭕ 似ているが役割が違う
+
+EXISTS：存在するか
+
+IN：値が含まれるか
+
+
+👉 DS検定ではここを混同させる
+
+
+
+❌ サブクエリの値が重要
+
+→ ⭕ 件数（存在）が重要
+
+SELECT 1でもSELECT *でも結果は同じ
+
+
+
+❌ 全件チェックする
+
+→ ⭕ 1件見つかった時点で終了
+
+👉 EXISTSは効率的な判定
+
+
+
+❌ NOT EXISTSは逆に全部必要
+
+→ ⭕ 1件も存在しないことを確認する
+
+
+
+## まとめ（試験直前用）
+
+EXISTS＝存在するかの判定
+
+1件でもあればTRUE
+
+中身の値は関係ない
+
+INとは「存在 vs 値」で違う
+
+「あるかどうか？」で考えるのがコツ
+
+
+
+
+## 対応スキル項目（データエンジニアリング力シート）
+
+データ基盤
+
+データ操作
+
+★ SQLを用いた基本的なデータ操作（検索・集計・結合等）ができる
+
+## 🔗 関連記事
+
+<ul style="padding-left: 20px;">
+{% assign current_tags = page.tags %}
+{% assign count = 0 %}
+
+{% for p in site.pages %}
+  {% if p.url != page.url and p.tags %}
+    {% assign matched = false %}
+
+    {% for tag in current_tags %}
+      {% if p.tags contains tag and tag != "ds" %}
+        {% assign matched = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if matched %}
+      <li style="margin-bottom: 6px;">
+        <a href="{{ p.url }}">{{ p.title }}</a>
+      </li>
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+
+    {% if count >= 5 %}
+      {% break %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>
+
+<hr>
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/ds/">DS検定トップに戻る</a>
+</div>
+
+<div style="display:flex;justify-content:space-between;margin-top:12px;">
+
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
+  {% endif %}
+
+  {% if page.next.url %}
+    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
+  {% endif %}
+
+</div>

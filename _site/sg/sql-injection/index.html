@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>SQLインジェクションとは？仕組みと対策をやさしく理解【情報セキュリティマネジメント】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="SQLインジェクションとは？仕組みと対策をやさしく理解【情報セキュリティマネジメント】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="SQLインジェクションは仕組みと対策をやさしく理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:description" content="SQLインジェクションは仕組みと対策をやさしく理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="SQLインジェクションとは？仕組みと対策をやさしく理解【情報セキュリティマネジメント】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"SQLインジェクションは仕組みと対策をやさしく理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。","headline":"SQLインジェクションとは？仕組みと対策をやさしく理解【情報セキュリティマネジメント】","url":"/sg/sql-injection/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">SQLインジェクションとは？仕組みと対策をやさしく理解【情報セキュリティマネジメント】</h1>
+      <h2 class="project-tagline">SQLインジェクションは仕組みと対策をやさしく理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">SQLインジェクションは仕組みと対策をやさしく理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">threat_vulnerability</span>
+        
+          <span class="post-tag">unauthorized_access</span>
+        
+          <span class="post-tag">database</span>
+        
+          <span class="post-tag">sg-security-overview</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+<ul>
+  <li>SQLインジェクションとは、<strong>入力値にSQL文を混入させてデータベースを不正操作する攻撃</strong>です。</li>
+  <li>SG試験では「<strong>入力値をそのまま使っているかどうか</strong>」を見抜けるかがポイントです。</li>
+</ul>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>SQLインジェクションは「注文にこっそり命令を混ぜる」イメージです。</p>
+
+<p>たとえば、ログイン画面で<br />
+「ユーザー名」を入力するはずなのに、</p>
+
+<p>’’’
+‘OR ‘1’=’1
+‘’’</p>
+
+<p>のような不正な文字列を入れると、<br />
+システムがそれをSQL文として解釈してしまい、<br />
+本来ありえない動き（認証突破など）が起きます。</p>
+
+<p>👉 本来は「値」なのに「命令」として扱われてしまうのが問題です。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>SQLインジェクションとは、</p>
+
+<blockquote>
+  <p>入力フォームなどにSQL文の一部を埋め込み、<br />
+データベースに対して意図しない操作を実行させる攻撃</p>
+</blockquote>
+
+<p>です。</p>
+
+<p>典型的な原因：</p>
+
+<ul>
+  <li>入力値をそのままSQLに連結している</li>
+  <li>入力チェック（バリデーション）が不十分</li>
+</ul>
+
+<p>基本的な流れ：</p>
+
+<ol>
+  <li>ユーザーが入力欄に悪意ある文字列を入力</li>
+  <li>そのままSQL文に組み込まれる</li>
+  <li>データベースがそれを実行してしまう</li>
+</ol>
+
+<p>結果として：</p>
+
+<ul>
+  <li>認証回避</li>
+  <li>データの漏えい</li>
+  <li>データの改ざん</li>
+</ul>
+
+<p>などが発生します。</p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="攻撃されやすい場面">攻撃されやすい場面</h3>
+<ul>
+  <li>ログイン画面</li>
+  <li>検索フォーム</li>
+  <li>問い合わせフォーム</li>
+</ul>
+
+<p>👉 「ユーザー入力をDBに渡す処理」はすべて対象です。</p>
+
+<hr />
+
+<h3 id="対策が必要な場面">対策が必要な場面</h3>
+<ul>
+  <li>Webアプリケーション全般</li>
+  <li>外部入力を扱うシステム</li>
+</ul>
+
+<p>👉 SG試験では<br />
+「入力値の扱い」が問われることが多いです。</p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+<h3 id="-よくある誤解">❌ よくある誤解</h3>
+<ul>
+  <li>「通信を盗み見る攻撃」</li>
+  <li>「プログラムを制限する仕組み」</li>
+</ul>
+
+<h3 id="-正しい理解">⭕ 正しい理解</h3>
+<ul>
+  <li><strong>入力値を悪用してデータベースを操作する攻撃</strong></li>
+</ul>
+
+<hr />
+
+<h3 id="sg試験でのひっかけ">SG試験でのひっかけ</h3>
+<p>SG試験では次のように混同させてきます。</p>
+
+<ul>
+  <li>「通信内容を検知して遮断」<br />
+　→ WAF</li>
+  <li>「実行環境を制限する」<br />
+　→ サンドボックス</li>
+  <li>「入力値を悪用してDB操作」<br />
+　→ <strong>SQLインジェクション（これが正解）</strong></li>
+</ul>
+
+<p>👉 選択肢では<br />
+「<strong>SQL文の中に不正な入力を埋め込む</strong>」と書かれていたらSQLインジェクションです。</p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>SQLインジェクション＝<strong>入力値を使ったDB不正操作攻撃</strong></li>
+  <li>原因は「入力値をそのままSQLに使うこと」</li>
+  <li>対策は<br />
+→ プレースホルダ（バインド変数）<br />
+→ 入力チェック</li>
+  <li>SG試験では<br />
+→ 「入力値の扱い」に注目して判断する</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/attacker-types/">攻撃者の種類とは？目的と特徴で整理する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/blacklist-whitelist/">ブラックリストとホワイトリストの違いとは？判断基準を整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/bot/">ボットとは？遠隔操作される仕組みを理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/botnet/">ボットネットとは？踏み台化とDDoSの関係を理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/brute-force-attack/">ブルートフォース攻撃とは？総当たり攻撃の仕組みと対策【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/spyware/">← スパイウェアとは？情報を盗むマルウェアの特徴【情報セキュリティマネジメント】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/ssh/">SSHとは？安全な遠隔操作の仕組み【情報セキュリティマネジメント】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

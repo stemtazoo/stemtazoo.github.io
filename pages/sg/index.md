@@ -77,8 +77,10 @@ tags: [sg, index]
 ## 📝 試験概要
 <ul>
 {% for p in sg_pages %}
-  {% if p.tags and (p.tags contains 'sg-exam-outline') %}
+  {% if p.tags %}
+    {% if p.tags contains 'sg-exam-outline' %}
   <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+    {% endif %}
   {% endif %}
 {% endfor %}
 </ul>
@@ -90,8 +92,10 @@ tags: [sg, index]
 ### 情報セキュリティ全般
 <ul>
 {% for p in sg_pages %}
-  {% if p.tags and (p.tags contains 'sg-security-overview') %}
+  {% if p.tags %}
+    {% if p.tags contains 'sg-security-overview' %}
   <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+    {% endif %}
   {% endif %}
 {% endfor %}
 </ul>
@@ -99,8 +103,10 @@ tags: [sg, index]
 ### 情報セキュリティ管理
 <ul>
 {% for p in sg_pages %}
-  {% if p.tags and (p.tags contains 'sg-security-management') %}
+  {% if p.tags %}
+    {% if p.tags contains 'sg-security-management' %}
   <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+    {% endif %}
   {% endif %}
 {% endfor %}
 </ul>
@@ -108,8 +114,10 @@ tags: [sg, index]
 ### 情報セキュリティ対策
 <ul>
 {% for p in sg_pages %}
-  {% if p.tags and (p.tags contains 'sg-security-measures') %}
+  {% if p.tags %}
+    {% if p.tags contains 'sg-security-measures' %}
   <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+    {% endif %}
   {% endif %}
 {% endfor %}
 </ul>
@@ -117,8 +125,10 @@ tags: [sg, index]
 ### 情報セキュリティ関連法規
 <ul>
 {% for p in sg_pages %}
-  {% if p.tags and (p.tags contains 'sg-security-law') %}
+  {% if p.tags %}
+    {% if p.tags contains 'sg-security-law' %}
   <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+    {% endif %}
   {% endif %}
 {% endfor %}
 </ul>
@@ -126,8 +136,10 @@ tags: [sg, index]
 ### テクノロジ
 <ul>
 {% for p in sg_pages %}
-  {% if p.tags and (p.tags contains 'sg-technology') %}
+  {% if p.tags %}
+    {% if p.tags contains 'sg-technology' %}
   <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+    {% endif %}
   {% endif %}
 {% endfor %}
 </ul>
@@ -135,8 +147,10 @@ tags: [sg, index]
 ### マネジメント
 <ul>
 {% for p in sg_pages %}
-  {% if p.tags and (p.tags contains 'sg-management') %}
+  {% if p.tags %}
+    {% if p.tags contains 'sg-management' %}
   <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+    {% endif %}
   {% endif %}
 {% endfor %}
 </ul>
@@ -144,8 +158,10 @@ tags: [sg, index]
 ### ストラテジ
 <ul>
 {% for p in sg_pages %}
-  {% if p.tags and (p.tags contains 'sg-strategy') %}
+  {% if p.tags %}
+    {% if p.tags contains 'sg-strategy' %}
   <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+    {% endif %}
   {% endif %}
 {% endfor %}
 </ul>
@@ -163,50 +179,66 @@ tags: [sg, index]
 {% endfor %}
 
 {% for p in sg_pages %}
-  {% if p.tags and (p.tags contains 'sg-exam-outline') %}
+  {% if p.tags %}
+    {% if p.tags contains 'sg-exam-outline' %}
     {% assign shown_urls = shown_urls | push: p.url %}
+    {% endif %}
   {% endif %}
 {% endfor %}
 
 {% for p in sg_pages %}
-  {% if p.tags and (p.tags contains 'sg-security-overview') %}
+  {% if p.tags %}
+    {% if p.tags contains 'sg-security-overview' %}
     {% assign shown_urls = shown_urls | push: p.url %}
+    {% endif %}
   {% endif %}
 {% endfor %}
 
 {% for p in sg_pages %}
-  {% if p.tags and (p.tags contains 'sg-security-management') %}
+  {% if p.tags %}
+    {% if p.tags contains 'sg-security-management' %}
     {% assign shown_urls = shown_urls | push: p.url %}
+    {% endif %}
   {% endif %}
 {% endfor %}
 
 {% for p in sg_pages %}
-  {% if p.tags and (p.tags contains 'sg-security-measures') %}
+  {% if p.tags %}
+    {% if p.tags contains 'sg-security-measures' %}
     {% assign shown_urls = shown_urls | push: p.url %}
+    {% endif %}
   {% endif %}
 {% endfor %}
 
 {% for p in sg_pages %}
-  {% if p.tags and (p.tags contains 'sg-security-law') %}
+  {% if p.tags %}
+    {% if p.tags contains 'sg-security-law' %}
     {% assign shown_urls = shown_urls | push: p.url %}
+    {% endif %}
   {% endif %}
 {% endfor %}
 
 {% for p in sg_pages %}
-  {% if p.tags and (p.tags contains 'sg-technology') %}
+  {% if p.tags %}
+    {% if p.tags contains 'sg-technology' %}
     {% assign shown_urls = shown_urls | push: p.url %}
+    {% endif %}
   {% endif %}
 {% endfor %}
 
 {% for p in sg_pages %}
-  {% if p.tags and (p.tags contains 'sg-management') %}
+  {% if p.tags %}
+    {% if p.tags contains 'sg-management' %}
     {% assign shown_urls = shown_urls | push: p.url %}
+    {% endif %}
   {% endif %}
 {% endfor %}
 
 {% for p in sg_pages %}
-  {% if p.tags and (p.tags contains 'sg-strategy') %}
+  {% if p.tags %}
+    {% if p.tags contains 'sg-strategy' %}
     {% assign shown_urls = shown_urls | push: p.url %}
+    {% endif %}
   {% endif %}
 {% endfor %}
 

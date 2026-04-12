@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>DDoS攻撃とは？サービス停止を狙う攻撃の仕組み【情報セキュリティマネジメント】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="DDoS攻撃とは？サービス停止を狙う攻撃の仕組み【情報セキュリティマネジメント】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="DDoS攻撃は多数端末から大量通信を送りサービス停止を狙う妨害攻撃です。この記事ではDoSとの違い、可用性への影響、防御策の要点、情報セキュリティマネジメント試験の頻出ポイントを解説します。" />
+<meta property="og:description" content="DDoS攻撃は多数端末から大量通信を送りサービス停止を狙う妨害攻撃です。この記事ではDoSとの違い、可用性への影響、防御策の要点、情報セキュリティマネジメント試験の頻出ポイントを解説します。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="DDoS攻撃とは？サービス停止を狙う攻撃の仕組み【情報セキュリティマネジメント】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"DDoS攻撃は多数端末から大量通信を送りサービス停止を狙う妨害攻撃です。この記事ではDoSとの違い、可用性への影響、防御策の要点、情報セキュリティマネジメント試験の頻出ポイントを解説します。","headline":"DDoS攻撃とは？サービス停止を狙う攻撃の仕組み【情報セキュリティマネジメント】","url":"/sg/ddos/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">DDoS攻撃とは？サービス停止を狙う攻撃の仕組み【情報セキュリティマネジメント】</h1>
+      <h2 class="project-tagline">DDoS攻撃は多数端末から大量通信を送りサービス停止を狙う妨害攻撃です。この記事ではDoSとの違い、可用性への影響、防御策の要点、情報セキュリティマネジメント試験の頻出ポイントを解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">DDoS攻撃は多数端末から大量通信を送りサービス停止を狙う妨害攻撃です。この記事ではDoSとの違い、可用性への影響、防御策の要点、情報セキュリティマネジメント試験の頻出ポイントを解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">security_measures</span>
+        
+          <span class="post-tag">unauthorized_access</span>
+        
+          <span class="post-tag">it_security_operations</span>
+        
+          <span class="post-tag">sg-security-measures</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+<ul>
+  <li>DDoS攻撃とは、多数の端末から大量の通信を送りつけてサーバを過負荷にし、サービスを停止させる攻撃です。</li>
+  <li>SG試験では「情報を盗むのではなく、使えなくする攻撃かどうか」を見抜けるかが問われます。</li>
+</ul>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>人気サイトに一気に何万人もアクセスしたら、サーバが重くなって落ちますよね。</p>
+
+<p>それを<strong>わざと大量のアクセスで起こす</strong>のがDDoS攻撃です。</p>
+
+<p>👉 <strong>「壊す」のではなく「使えなくする」攻撃</strong></p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>DDoS（Distributed Denial of Service）攻撃は、複数の端末（ボットなど）から標的サーバに大量の通信を送りつけ、サービス提供を妨害する攻撃です。</p>
+
+<h3 id="基本の流れ">基本の流れ</h3>
+<ol>
+  <li>攻撃者が多数の端末（ボット）を用意</li>
+  <li>一斉に標的サーバへリクエスト送信</li>
+  <li>サーバが処理しきれなくなる</li>
+  <li>正常ユーザーが利用できなくなる</li>
+</ol>
+
+<p>👉 <strong>分散（Distributed）しているのがポイント</strong></p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="よくある目的">よくある目的</h3>
+<ul>
+  <li>Webサイトの停止（ECサイト、企業サイトなど）</li>
+  <li>サービス妨害による信用低下</li>
+  <li>他の攻撃の目くらまし</li>
+</ul>
+
+<h3 id="業務でのポイント">業務でのポイント</h3>
+<ul>
+  <li>可用性（Availability）への影響が大きい</li>
+  <li>負荷分散やWAFなどの対策が重要</li>
+  <li>監視と迅速な対応体制が必要</li>
+</ul>
+
+<p>👉 <strong>CIAの「A（可用性）」を狙う攻撃</strong></p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+<h3 id="-フィッシングとの違い">❌ フィッシングとの違い</h3>
+<ul>
+  <li>フィッシング：情報を盗む</li>
+  <li>DDoS：サービスを止める</li>
+</ul>
+
+<p>👉 <strong>盗取か停止かで判断</strong></p>
+
+<hr />
+
+<h3 id="-dos攻撃との違い">❌ DoS攻撃との違い</h3>
+<ul>
+  <li>DoS：1つの端末から攻撃</li>
+  <li>DDoS：複数の端末から分散攻撃</li>
+</ul>
+
+<p>👉 <strong>規模と分散性が違う</strong></p>
+
+<hr />
+
+<h3 id="-マルウェアとの関係">❌ マルウェアとの関係</h3>
+<ul>
+  <li>マルウェア：端末を感染させる</li>
+  <li>DDoS：その端末を使って攻撃することがある</li>
+</ul>
+
+<p>👉 ボットネットとして利用される点に注意</p>
+
+<hr />
+
+<h3 id="sg試験でのひっかけ">SG試験でのひっかけ</h3>
+<ul>
+  <li>
+    <p>「大量アクセス」「サーバ過負荷」「サービス停止」<br />
+→ DDoS攻撃</p>
+  </li>
+  <li>
+    <p>「情報を盗む」なら別の攻撃（フィッシングなど）</p>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>DDoS＝大量通信でサービス停止</li>
+  <li>情報漏えいではなく可用性低下が目的</li>
+  <li>DoSとの違いは「分散」</li>
+  <li>「大量アクセス」「停止」がキーワードなら即判断</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/blacklist-whitelist/">ブラックリストとホワイトリストの違いとは？判断基準を整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/bot/">ボットとは？遠隔操作される仕組みを理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/botnet/">ボットネットとは？踏み台化とDDoSの関係を理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/brute-force-attack/">ブルートフォース攻撃とは？総当たり攻撃の仕組みと対策【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/case-solving-template/">SG試験 ケース問題の解き方テンプレ【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/ddos-attack-summary/">← DDoS攻撃の種類を整理！試験での見分け方まとめ【情報セキュリティマネジメント】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/dhcp/">DHCPとは？IPアドレスを自動で割り当てる仕組み【情報セキュリティマネジメント】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

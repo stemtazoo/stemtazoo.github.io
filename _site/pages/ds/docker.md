@@ -1,0 +1,133 @@
+﻿---
+layout: page
+title: Dockerとは？再現性が出る理由を整理【DS検定】
+description: Dockerは再現性が出る理由を整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+permalink: /ds/docker/
+categories: [data-engineering]
+tags: [ds, environment-setup, data-processing]
+prev: /ds/yarn/
+next: /ds/ftp-ssh/
+---
+<div style="font-size: 14px; margin-bottom: 12px;">
+  <a href="/ds/">DS検定トップ</a>
+  ＞ {{ page.title }}
+</div>
+
+## まず結論
+Dockerは「アプリが動く環境」をイメージとして固めて配れる仕組みです。  
+DS検定では「再現性＝なぜ同じように動くのか」を説明できるかが問われることが多いです。
+
+## 直感的な説明
+Dockerは、引っ越し用の「完成した部屋セット」みたいなものです。  
+机やイスだけでなく、照明やコンセント位置までセットになっていて、別の場所に持っていっても同じ暮らしができます。
+
+分析の現場でも同じで、PCが変わったりメンバーが増えたりすると、
+「動くはずなのに動かない」が起きがちです。  
+Dockerはこの事故を減らすための道具です。
+
+## 定義・仕組み
+Dockerは大きく次の考え方で理解すると混乱しにくいです。
+
+- イメージ  
+  アプリ実行に必要なものをまとめた設計図兼パッケージです。  
+  OSの土台、ライブラリ、設定などを「この通りに用意する」と決められます。
+
+- コンテナ  
+  イメージから起動した実行環境です。  
+  同じイメージから作れば、基本的に同じ環境になります。
+
+- Dockerfile  
+  イメージを作るための手順書です。  
+  「何を入れて、どう設定するか」を文章で固定します。
+
+このため、再現性の中心は「イメージが環境を固定できること」です。  
+選択肢で「一貫した環境を提供する」と書かれていたら、再現性の本筋です。
+
+## どんな場面で使う？
+使うべき場面
+- チームで分析環境を揃えたい  
+- 本番と開発で環境差を減らしたい  
+- 何か月後でも同じ条件で再実行したい  
+- 配布用の分析環境を用意したい
+
+使うと誤解しやすい場面
+- 「どのOSでも同じに動く」と思い込むと危険です  
+  Dockerはホスト側の仕組みの影響を受けることがあり、完全に独立ではありません。  
+  なので、OSの違いだけで再現性を説明するのは弱いです。
+
+## よくある誤解・混同
+DS検定では、ここを混同させてくることが多いです。
+
+- 誤解１：再現性の理由は「ホストOSに依存しない」  
+  注意：言い切りが強すぎます。  
+  選択肢では「依存しない」「完全に同じ」はひっかけになりやすいです。  
+  正しくは「イメージで環境を固定できるので再現しやすい」です。
+
+- 誤解２：Dockerfileにはソースコードだけが入る  
+  Dockerfileは手順書です。  
+  ソースだけでなく、ライブラリ導入や設定も含めて「環境の作り方」を固定します。
+
+- 誤解３：再現性＝性能が最大化される  
+  再現性は「同じ条件で動くこと」です。  
+  性能やリソース最大化とは別の話です。
+
+## まとめ（試験直前用）
+Dockerの再現性は「イメージで環境を固定できる」から。  
+選択肢で「一貫した環境」「同じイメージ」は本筋。  
+「OSに依存しない」と断言していたら言い過ぎを疑う。  
+Dockerfileはソースではなく、環境構築の手順を固定するもの。
+
+
+## 対応スキル項目（データエンジニアリング力シート）
+- 環境構築
+- アーキテクチャ設計
+- ★ コンテナ技術の概要を理解しており、既存のDockerイメージを活用して効率的に分析環境を構築できる
+- ★ Dockerコンテナ技術を用いてデータの蓄積環境・分析環境を構築し、再利用できる形でDockerイメージを管理できる
+
+## 🔗 関連記事
+
+<ul style="padding-left: 20px;">
+{% assign current_tags = page.tags %}
+{% assign count = 0 %}
+
+{% for p in site.pages %}
+  {% if p.url != page.url and p.tags %}
+    {% assign matched = false %}
+
+    {% for tag in current_tags %}
+      {% if p.tags contains tag and tag != "ds" %}
+        {% assign matched = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if matched %}
+      <li style="margin-bottom: 6px;">
+        <a href="{{ p.url }}">{{ p.title }}</a>
+      </li>
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+
+    {% if count >= 5 %}
+      {% break %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>
+
+<hr>
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/ds/">DS検定トップに戻る</a>
+</div>
+
+<div style="display:flex;justify-content:space-between;margin-top:12px;">
+
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
+  {% endif %}
+
+  {% if page.next.url %}
+    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
+  {% endif %}
+
+</div>

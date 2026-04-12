@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>SSHとは？安全な遠隔操作の仕組み【情報セキュリティマネジメント】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="SSHとは？安全な遠隔操作の仕組み【情報セキュリティマネジメント】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="SSHは安全な遠隔操作の仕組みを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:description" content="SSHは安全な遠隔操作の仕組みを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="SSHとは？安全な遠隔操作の仕組み【情報セキュリティマネジメント】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"SSHは安全な遠隔操作の仕組みを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。","headline":"SSHとは？安全な遠隔操作の仕組み【情報セキュリティマネジメント】","url":"/sg/ssh/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">SSHとは？安全な遠隔操作の仕組み【情報セキュリティマネジメント】</h1>
+      <h2 class="project-tagline">SSHは安全な遠隔操作の仕組みを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">SSHは安全な遠隔操作の仕組みを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">technology</span>
+        
+          <span class="post-tag">network</span>
+        
+          <span class="post-tag">unauthorized_access</span>
+        
+          <span class="post-tag">sg-technology</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+<p>SSHとは、ネットワーク越しに機器を遠隔操作するためのプロトコルで、通信を暗号化することで安全にログイン・操作ができる技術である。</p>
+
+<p>SG試験では「Telnetとの違い（暗号化の有無）」を判断させる問題としてよく出ます。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>SSHは「安全なリモコン操作」です。</p>
+
+<p>Telnetと同じように、</p>
+<ul>
+  <li>離れた場所から機器を操作できる</li>
+</ul>
+
+<p>という点は同じですが、</p>
+
+<p>違いは、
+<strong>通信内容が暗号化されていること</strong>です。</p>
+
+<p>つまり、</p>
+<ul>
+  <li>パスワードを入力しても盗まれにくい</li>
+  <li>操作内容も第三者に見られない</li>
+</ul>
+
+<p>という安全な仕組みになっています。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>SSH（Secure Shell）は、遠隔操作のためのプロトコルで、
+TCPの22番ポートを使用します。</p>
+
+<p>基本の流れは、</p>
+<ol>
+  <li>クライアントが接続</li>
+  <li>認証（パスワード or 公開鍵）</li>
+  <li>暗号化された通信で操作</li>
+</ol>
+
+<p>という形です。</p>
+
+<p>重要なポイントは次の2つです。</p>
+
+<ul>
+  <li>通信が暗号化される</li>
+  <li>認証方法に公開鍵認証が使える</li>
+</ul>
+
+<p>これにより、
+<strong>盗聴やなりすましのリスクを大幅に低減</strong>できます。</p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="使う場面">使う場面</h3>
+<ul>
+  <li>サーバやネットワーク機器の遠隔操作</li>
+  <li>クラウド環境の管理</li>
+  <li>セキュリティが求められる運用</li>
+</ul>
+
+<h3 id="sg試験で問われる重要ポイント">SG試験で問われる重要ポイント</h3>
+<ul>
+  <li>
+    <p>「安全に遠隔操作する方法はどれか」
+→ SSHを選ぶ</p>
+  </li>
+  <li>
+    <p>「平文通信で危険なのはどれか」
+→ Telnetを除外する</p>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+<h3 id="-telnetと同じもの">❌ Telnetと同じもの</h3>
+<p>→ ⭕ 役割は同じだが安全性が違う</p>
+
+<ul>
+  <li>Telnet：暗号化なし（危険）</li>
+  <li>SSH：暗号化あり（安全）</li>
+</ul>
+
+<p>SG試験ではこの対比が頻出です。</p>
+
+<hr />
+
+<h3 id="-sshなら完全に安全">❌ SSHなら完全に安全</h3>
+<p>→ ⭕ 設定や運用によってはリスクあり</p>
+
+<p>例えば、</p>
+<ul>
+  <li>弱いパスワード</li>
+  <li>不適切な公開鍵管理</li>
+</ul>
+
+<p>があると、不正アクセスされる可能性があります。</p>
+
+<hr />
+
+<h3 id="-ポート番号の暗記問題">❌ ポート番号の暗記問題</h3>
+<p>→ ⭕ 「用途＋安全性」で判断</p>
+
+<ul>
+  <li>22番ポート → SSH（安全）</li>
+  <li>23番ポート → Telnet（危険）</li>
+</ul>
+
+<p>とセットで覚えるのがポイントです。</p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>SSH＝安全な遠隔操作（TCP22番ポート）</li>
+  <li>通信は暗号化される</li>
+  <li>Telnetの代替として使われる</li>
+  <li>SG試験では「安全な選択肢」として出る</li>
+  <li>Telnetとの違い（暗号化の有無）で判断する</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/blacklist-whitelist/">ブラックリストとホワイトリストの違いとは？判断基準を整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/bot/">ボットとは？遠隔操作される仕組みを理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/botnet/">ボットネットとは？踏み台化とDDoSの関係を理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/brute-force-attack/">ブルートフォース攻撃とは？総当たり攻撃の仕組みと対策【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/clickjacking/">クリックジャッキングとは？見えない操作誘導の仕組み【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/sql-injection/">← SQLインジェクションとは？仕組みと対策をやさしく理解【情報セキュリティマネジメント】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/ssl-tls/">SSL/TLSとは？通信を守る暗号化の仕組み【情報セキュリティマネジメント】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

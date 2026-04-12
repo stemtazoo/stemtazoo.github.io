@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>DNSキャッシュポイズニングとファーミングの違いを整理【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="DNSキャッシュポイズニングとファーミングの違いを整理【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="DNSキャッシュポイズニングとファーミングはどちらも偽サイト誘導の攻撃です。DNS改ざんか利用者環境かの違いを整理し、SG試験での見分け方を解説します。" />
+<meta property="og:description" content="DNSキャッシュポイズニングとファーミングはどちらも偽サイト誘導の攻撃です。DNS改ざんか利用者環境かの違いを整理し、SG試験での見分け方を解説します。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="DNSキャッシュポイズニングとファーミングの違いを整理【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"DNSキャッシュポイズニングとファーミングはどちらも偽サイト誘導の攻撃です。DNS改ざんか利用者環境かの違いを整理し、SG試験での見分け方を解説します。","headline":"DNSキャッシュポイズニングとファーミングの違いを整理【SG試験】","url":"/sg/dns-poisoning-vs-pharming/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">DNSキャッシュポイズニングとファーミングの違いを整理【SG試験】</h1>
+      <h2 class="project-tagline">DNSキャッシュポイズニングとファーミングはどちらも偽サイト誘導の攻撃です。DNS改ざんか利用者環境かの違いを整理し、SG試験での見分け方を解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">DNSキャッシュポイズニングとファーミングはどちらも偽サイト誘導の攻撃です。DNS改ざんか利用者環境かの違いを整理し、SG試験での見分け方を解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">threat_vulnerability</span>
+        
+          <span class="post-tag">network</span>
+        
+          <span class="post-tag">data_leakage</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+<p>DNSキャッシュポイズニングは「<strong>DNSサーバを改ざんする攻撃</strong>」、ファーミングは「<strong>利用者を偽サイトに誘導する攻撃（手段は複数）</strong>」です。<br />
+SG試験では「<strong>どこが改ざんされているか</strong>」で切り分けます。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>同じ「偽サイトに誘導」でも原因が違います。</p>
+
+<ul>
+  <li>
+    <p>DNSキャッシュポイズニング<br />
+→ 住所録（DNSサーバ）を書き換える</p>
+  </li>
+  <li>
+    <p>ファーミング<br />
+→ どこかを細工して、とにかく偽サイトに連れていく</p>
+  </li>
+</ul>
+
+<p>👉 ファーミングは“結果”、キャッシュポイズニングは“手段”です。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+
+<h3 id="dnsキャッシュポイズニング">DNSキャッシュポイズニング</h3>
+<ul>
+  <li>DNSサーバのキャッシュを改ざん</li>
+  <li>正しいドメイン → 偽のIPへ変更</li>
+  <li>利用者は気づかず偽サイトへ</li>
+</ul>
+
+<p>👉 <strong>DNSサーバが原因</strong></p>
+
+<hr />
+
+<h3 id="ファーミングpharming">ファーミング（Pharming）</h3>
+<ul>
+  <li>利用者を偽サイトへ誘導する攻撃全体</li>
+  <li>手段は複数
+    <ul>
+      <li>DNS改ざん（←キャッシュポイズニング）</li>
+      <li>hostsファイル改ざん</li>
+      <li>マルウェア</li>
+    </ul>
+  </li>
+</ul>
+
+<p>👉 <strong>原因は複数あり得る</strong></p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+
+<h3 id="dnsキャッシュポイズニング-1">DNSキャッシュポイズニング</h3>
+<ul>
+  <li>DNSサーバが攻撃対象</li>
+  <li>組織単位で影響が広がる</li>
+</ul>
+
+<hr />
+
+<h3 id="ファーミング">ファーミング</h3>
+<ul>
+  <li>個人PC・ネットワーク・DNSなど幅広い</li>
+  <li>フィッシングより気づきにくい</li>
+</ul>
+
+<p>👉 URLが正しくても偽サイトになるのが特徴</p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="-ファーミングdns攻撃">❌ ファーミング＝DNS攻撃</h3>
+<p>→ ⭕ DNSは手段の1つにすぎない</p>
+
+<hr />
+
+<h3 id="-dnsキャッシュポイズニングファーミング">❌ DNSキャッシュポイズニング＝ファーミング</h3>
+<p>→ ⭕ ファーミングの一種（手段の一つ）</p>
+
+<hr />
+
+<h3 id="sg試験のひっかけ">SG試験のひっかけ</h3>
+<ul>
+  <li>「DNSサーバのキャッシュ改ざん」 → DNSキャッシュポイズニング</li>
+  <li>「利用者を偽サイトへ誘導」 → ファーミング</li>
+</ul>
+
+<p>👉 手段か結果かで切る</p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>キャッシュポイズニング＝<strong>DNSサーバ改ざん</strong></li>
+  <li>ファーミング＝<strong>偽サイト誘導（広い概念）</strong></li>
+  <li>ファーミングは複数手段あり</li>
+  <li>DNSと明記されていればキャッシュポイズニング</li>
+  <li>「どこが改ざんされたか」で判断</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/attacker-types/">攻撃者の種類とは？目的と特徴で整理する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/blacklist-whitelist/">ブラックリストとホワイトリストの違いとは？判断基準を整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/botnet/">ボットネットとは？踏み台化とDDoSの関係を理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/brute-force-attack/">ブルートフォース攻撃とは？総当たり攻撃の仕組みと対策【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/clickjacking/">クリックジャッキングとは？見えない操作誘導の仕組み【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/dns-cache-poisoning/">← DNSキャッシュポイズニングとは？偽サイトへ誘導する攻撃【情報セキュリティマネジメント】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/dns-reflector-attack/">DNSリフレクター攻撃とは？仕組みと対策の考え方【情報セキュリティマネジメント】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

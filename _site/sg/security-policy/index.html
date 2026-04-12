@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>情報セキュリティポリシーとは？3階層で理解する基本ルール【情報セキュリティマネジメント】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="情報セキュリティポリシーとは？3階層で理解する基本ルール【情報セキュリティマネジメント】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="情報セキュリティポリシーは3階層で理解する基本ルールを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:description" content="情報セキュリティポリシーは3階層で理解する基本ルールを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="情報セキュリティポリシーとは？3階層で理解する基本ルール【情報セキュリティマネジメント】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"情報セキュリティポリシーは3階層で理解する基本ルールを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。","headline":"情報セキュリティポリシーとは？3階層で理解する基本ルール【情報セキュリティマネジメント】","url":"/sg/security-policy/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">情報セキュリティポリシーとは？3階層で理解する基本ルール【情報セキュリティマネジメント】</h1>
+      <h2 class="project-tagline">情報セキュリティポリシーは3階層で理解する基本ルールを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">情報セキュリティポリシーは3階層で理解する基本ルールを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">security_management</span>
+        
+          <span class="post-tag">isms</span>
+        
+          <span class="post-tag">asset_management</span>
+        
+          <span class="post-tag">it_security_operations</span>
+        
+          <span class="post-tag">sg-security-management</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+<ul>
+  <li>情報セキュリティポリシーとは、<strong>組織が情報を守るためのルールを3階層（基本方針・対策基準・実施手順）で整理したもの</strong></li>
+  <li>SG試験では「どのレベルの文書か」を判断させる問題がよく出る</li>
+</ul>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>会社で「セキュリティちゃんとやろう！」と言っても、それだけでは何も動きません。</p>
+
+<p>そこで次のように分けて考えます：</p>
+
+<ul>
+  <li>方針（どういう考えで守るか）</li>
+  <li>ルール（何を守るか）</li>
+  <li>手順（どうやってやるか）</li>
+</ul>
+
+<p>👉 この3つをまとめたものが「情報セキュリティポリシー」です</p>
+
+<p>現場でいうと<br />
+<strong>「社長の宣言 → 社内ルール → 作業マニュアル」</strong>のイメージです</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>情報セキュリティポリシーは、通常3階層で構成されます。</p>
+
+<h3 id="-情報セキュリティ基本方針">① 情報セキュリティ基本方針</h3>
+<ul>
+  <li>経営者が示す「セキュリティの考え方」</li>
+  <li>例：情報を守る目的、取り組む姿勢</li>
+  <li>社外公開されることも多い</li>
+</ul>
+
+<p>👉 ポイント：<strong>方向性・宣言レベル</strong></p>
+
+<hr />
+
+<h3 id="-情報セキュリティ対策基準">② 情報セキュリティ対策基準</h3>
+<ul>
+  <li>方針を実現するためのルール</li>
+  <li>例：パスワードの長さ、アクセス制御のルール</li>
+</ul>
+
+<p>👉 ポイント：<strong>守るべきルール</strong></p>
+
+<hr />
+
+<h3 id="-情報セキュリティ実施手順">③ 情報セキュリティ実施手順</h3>
+<ul>
+  <li>実際の作業手順</li>
+  <li>例：バックアップの手順、ログ確認方法</li>
+</ul>
+
+<p>👉 ポイント：<strong>現場のやり方</strong></p>
+
+<hr />
+
+<p>SG試験ではこの3つをまとめて<br />
+<strong>「情報セキュリティポリシー」</strong>と呼びます</p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="使う場面">使う場面</h3>
+<ul>
+  <li>ISMS（情報セキュリティマネジメントシステム）の構築</li>
+  <li>社内ルール整備</li>
+  <li>委託先管理や監査対応</li>
+</ul>
+
+<p>👉 現場では<br />
+「ルールが曖昧で属人化している」状態を防ぐために使います</p>
+
+<hr />
+
+<h3 id="注意が必要な場面">注意が必要な場面</h3>
+<ul>
+  <li>「基本方針に具体的な手順を書く」</li>
+  <li>「手順書に経営方針を書く」</li>
+</ul>
+
+<p>👉 レベルが混ざるとNG（試験でもよく出る）</p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+<h3 id="-よくある誤解1">❌ よくある誤解1</h3>
+<ul>
+  <li>基本方針は機密文書で外部に出さない</li>
+</ul>
+
+<p>👉 ⭕ 正しくは<br />
+<strong>基本方針は社外にも公開されることがある</strong></p>
+
+<hr />
+
+<h3 id="-よくある誤解2">❌ よくある誤解2</h3>
+<ul>
+  <li>基本方針は一度決めたら変えない</li>
+</ul>
+
+<p>👉 ⭕ 正しくは<br />
+<strong>環境変化（法改正・技術）に応じて見直す</strong></p>
+
+<hr />
+
+<h3 id="-よくある誤解3">❌ よくある誤解3</h3>
+<ul>
+  <li>基本方針に具体的な対策を書く</li>
+</ul>
+
+<p>👉 ⭕ 正しくは<br />
+<strong>具体策は対策基準・手順に書く</strong></p>
+
+<hr />
+
+<p>SG試験では<br />
+👉「それはどの階層の話？」<br />
+と切り分けるのが最重要ポイントです</p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>情報セキュリティポリシー＝<strong>基本方針＋対策基準＋実施手順</strong></li>
+  <li>基本方針＝方向性（経営者の宣言）</li>
+  <li>対策基準＝ルール、実施手順＝やり方</li>
+  <li>「具体的すぎる」→基本方針ではない</li>
+  <li>「変更しない」→誤り（環境に応じて見直す）</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/case-solving-template/">SG試験 ケース問題の解き方テンプレ【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/case-study-approach/">ケース問題の解き方！CIAとリスク対応で考える実践手順【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/common-mistakes/">よくある誤答パターンまとめ！SG試験で選択肢を切るコツ【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/cryptojacking/">クリプトジャッキングとは？不正マイニングの仕組みを理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/csirt/">CSIRTとは？組織内インシデント対応の基本【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/security-policy-standards/">← 情報セキュリティ対策基準とは？ルールレベルの考え方【情報セキュリティマネジメント】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/security-training/">情報セキュリティ教育・訓練とは？人的対策の基本を整理【情報セキュリティマネジメント】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

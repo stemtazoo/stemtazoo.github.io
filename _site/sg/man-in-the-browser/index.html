@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Man-in-the-Browserとは？ブラウザ内改ざん攻撃の仕組み【情報セキュリティマネジメント】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Man-in-the-Browserとは？ブラウザ内改ざん攻撃の仕組み【情報セキュリティマネジメント】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="Man-in-the-Browserはブラウザ内改ざん攻撃の仕組みを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:description" content="Man-in-the-Browserはブラウザ内改ざん攻撃の仕組みを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Man-in-the-Browserとは？ブラウザ内改ざん攻撃の仕組み【情報セキュリティマネジメント】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Man-in-the-Browserはブラウザ内改ざん攻撃の仕組みを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。","headline":"Man-in-the-Browserとは？ブラウザ内改ざん攻撃の仕組み【情報セキュリティマネジメント】","url":"/sg/man-in-the-browser/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">Man-in-the-Browserとは？ブラウザ内改ざん攻撃の仕組み【情報セキュリティマネジメント】</h1>
+      <h2 class="project-tagline">Man-in-the-Browserはブラウザ内改ざん攻撃の仕組みを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">Man-in-the-Browserはブラウザ内改ざん攻撃の仕組みを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">security_measures</span>
+        
+          <span class="post-tag">malware</span>
+        
+          <span class="post-tag">unauthorized_access</span>
+        
+          <span class="post-tag">sg-security-measures</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+<ul>
+  <li>Man-in-the-Browser（MITB）は、<strong>PC内のマルウェアがブラウザの通信内容を改ざんする攻撃</strong></li>
+  <li>SG試験では「通信途中ではなく、ブラウザ内で改ざんしているか」を見抜く問題としてよく出る</li>
+</ul>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>銀行サイトで振込をしたとき、</p>
+
+<ul>
+  <li>自分は「Aさんに1万円」と入力したつもりなのに</li>
+  <li>実際には「攻撃者の口座に50万円」に書き換えられて送信される</li>
+</ul>
+
+<p>というようなイメージです。</p>
+
+<p>しかも画面上は正常に見えるため、<strong>利用者は気づきにくい</strong>のがポイントです。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>Man-in-the-Browser攻撃は、次の流れで行われます。</p>
+
+<ol>
+  <li>PCにマルウェアが感染する</li>
+  <li>Webブラウザに入り込む（拡張機能のように動く）</li>
+  <li>利用者がログインや振込操作を行う</li>
+  <li><strong>送信直前のデータを改ざんする（振込先など）</strong></li>
+</ol>
+
+<p>重要なのはここです：</p>
+
+<ul>
+  <li>通信経路ではなく</li>
+  <li><strong>ブラウザの中で書き換える</strong></li>
+</ul>
+
+<p>そのため、HTTPS通信であっても防げない場合があります。</p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="使われる場面">使われる場面</h3>
+<ul>
+  <li>インターネットバンキング</li>
+  <li>クレジットカード決済</li>
+  <li>個人情報の入力フォーム</li>
+</ul>
+
+<p>→ <strong>「入力→送信」する場面が狙われる</strong></p>
+
+<hr />
+
+<h3 id="注意すべき場面誤解しやすい">注意すべき場面（誤解しやすい）</h3>
+<ul>
+  <li>偽サイトに誘導する攻撃ではない</li>
+  <li>通信途中で盗聴する攻撃でもない</li>
+</ul>
+
+<p>SG試験では<br />
+「どこで攻撃しているか（ブラウザ内か通信途中か）」を問われることが多い</p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="man-in-the-middleとの違い">Man-in-the-Middleとの違い</h3>
+<ul>
+  <li>MITM：通信の途中で盗聴・改ざん</li>
+  <li>MITB：<strong>ブラウザ内で改ざん</strong></li>
+</ul>
+
+<p>👉 選択肢では「中継サイト」「通信経路」などの表現があればMITM</p>
+
+<hr />
+
+<h3 id="フィッシングとの違い">フィッシングとの違い</h3>
+<ul>
+  <li>フィッシング：偽サイトに入力させる</li>
+  <li>MITB：<strong>正規サイト上で改ざんする</strong></li>
+</ul>
+
+<p>👉 「偽サイトに誘導」はフィッシング</p>
+
+<hr />
+
+<h3 id="dnsキャッシュポイズニングとの違い">DNSキャッシュポイズニングとの違い</h3>
+<ul>
+  <li>DNS：接続先そのものを偽サイトに変える</li>
+  <li>MITB：接続先は正しいが<strong>中身が改ざんされる</strong></li>
+</ul>
+
+<p>👉 「DNSを書き換える」は別物</p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>MITB＝<strong>ブラウザ内で通信内容を改ざんする攻撃</strong></li>
+  <li>ポイントは「通信途中ではなくPC内部」</li>
+  <li>フィッシング：偽サイトに誘導</li>
+  <li>MITM：通信途中で盗聴・改ざん</li>
+  <li>選択肢で「マルウェアがブラウザ内で改ざん」とあれば正解</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/blacklist-whitelist/">ブラックリストとホワイトリストの違いとは？判断基準を整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/bot/">ボットとは？遠隔操作される仕組みを理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/botnet/">ボットネットとは？踏み台化とDDoSの関係を理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/brute-force-attack/">ブルートフォース攻撃とは？総当たり攻撃の仕組みと対策【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/clickjacking/">クリックジャッキングとは？見えない操作誘導の仕組み【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/malware/">← マルウェアとは？種類と見分け方を整理【情報セキュリティマネジメント】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/man-in-the-middle-attack/">中間者攻撃とは？通信を盗み見る仕組みと対策【情報セキュリティマネジメント】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

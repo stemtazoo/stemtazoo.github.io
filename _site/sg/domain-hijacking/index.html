@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>ドメイン名ハイジャックとは？DNSを悪用したなりすましの仕組み【情報セキュリティマネジメント】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="ドメイン名ハイジャックとは？DNSを悪用したなりすましの仕組み【情報セキュリティマネジメント】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="ドメイン名ハイジャックはDNSを悪用したなりすましの仕組みを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:description" content="ドメイン名ハイジャックはDNSを悪用したなりすましの仕組みを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="ドメイン名ハイジャックとは？DNSを悪用したなりすましの仕組み【情報セキュリティマネジメント】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"ドメイン名ハイジャックはDNSを悪用したなりすましの仕組みを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。","headline":"ドメイン名ハイジャックとは？DNSを悪用したなりすましの仕組み【情報セキュリティマネジメント】","url":"/sg/domain-hijacking/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">ドメイン名ハイジャックとは？DNSを悪用したなりすましの仕組み【情報セキュリティマネジメント】</h1>
+      <h2 class="project-tagline">ドメイン名ハイジャックはDNSを悪用したなりすましの仕組みを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">ドメイン名ハイジャックはDNSを悪用したなりすましの仕組みを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">security_measures</span>
+        
+          <span class="post-tag">unauthorized_access</span>
+        
+          <span class="post-tag">network</span>
+        
+          <span class="post-tag">threat_vulnerability</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+<ul>
+  <li>ドメイン名ハイジャックとは、<strong>DNS情報を書き換えて正規のWebサイトを偽サイトにすり替える攻撃</strong>であり、SG試験では「DNSの改ざんによるなりすまし」と「どの対策が有効か」を判断させる問題として出題される。</li>
+</ul>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>ドメイン名ハイジャックは、</p>
+
+<p>👉「住所録を書き換えて、別の場所に案内する」</p>
+
+<p>攻撃です。</p>
+
+<p>例えば、</p>
+<ul>
+  <li>「銀行のサイトにアクセスしたつもり」でも<br />
+👉 実際は攻撃者の偽サイトに接続される</li>
+</ul>
+
+<p>👉 見た目が同じなので気づきにくいのが特徴です。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>ドメイン名ハイジャックは、DNSの仕組みを悪用します。</p>
+
+<p>通常：</p>
+<ul>
+  <li>google.com → 正しいIPアドレス</li>
+</ul>
+
+<p>攻撃時：</p>
+<ul>
+  <li>google.com → 攻撃者のIPアドレス</li>
+</ul>
+
+<hr />
+
+<h3 id="攻撃の流れ">攻撃の流れ</h3>
+<ol>
+  <li>DNSサーバの情報を書き換える</li>
+  <li>ユーザが通常通りURLを入力</li>
+  <li>偽のIPアドレスが返る</li>
+  <li>偽サイトに誘導される</li>
+</ol>
+
+<p>👉 ユーザは気づかず情報を入力してしまう</p>
+
+<hr />
+
+<h3 id="関連する攻撃">関連する攻撃</h3>
+<ul>
+  <li><strong>DNSキャッシュポイズニング</strong></li>
+  <li><strong>フィッシング（誘導後の詐取）</strong></li>
+</ul>
+
+<p>👉 「誘導」と「だまし」を組み合わせた攻撃</p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="攻撃される場面">攻撃される場面</h3>
+<ul>
+  <li>DNSサーバの設定が弱い場合</li>
+  <li>キャッシュの管理が不十分な場合</li>
+  <li>ドメイン管理が不適切な場合</li>
+</ul>
+
+<hr />
+
+<h3 id="防ぐ場面対策">防ぐ場面（対策）</h3>
+<ul>
+  <li>DNSSEC（DNSの正当性確認）</li>
+  <li>ドメイン管理の厳格化</li>
+  <li>HTTPS証明書の確認</li>
+</ul>
+
+<hr />
+
+<h3 id="sg試験での考え方">SG試験での考え方</h3>
+<p>👉 「どこが改ざんされているか」</p>
+
+<ul>
+  <li>通信内容 → 変わっていない</li>
+  <li>接続先 → 変わっている（ここがポイント）</li>
+</ul>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+<h3 id="-誤解中間者攻撃と同じ">❌ 誤解①：中間者攻撃と同じ</h3>
+<p>👉 ⭕ 似ているが違う</p>
+<ul>
+  <li>中間者攻撃：通信の途中に割り込む</li>
+  <li>ドメイン名ハイジャック：最初から偽サイトに誘導</li>
+</ul>
+
+<hr />
+
+<h3 id="-誤解ipスプーフィングと同じ">❌ 誤解②：IPスプーフィングと同じ</h3>
+<p>👉 ⭕ 違う</p>
+<ul>
+  <li>IPスプーフィング：送信元を偽装</li>
+  <li>ドメイン名ハイジャック：行き先を偽装</li>
+</ul>
+
+<hr />
+
+<h3 id="-誤解ウイルス感染が必要">❌ 誤解③：ウイルス感染が必要</h3>
+<p>👉 ⭕ 不要</p>
+<ul>
+  <li>DNSを書き換えるだけで成立</li>
+</ul>
+
+<hr />
+
+<h3 id="sg試験のひっかけポイント">SG試験のひっかけポイント</h3>
+<ul>
+  <li>「通信を盗聴する攻撃」とする選択肢<br />
+→ ❌ 不正確</li>
+</ul>
+
+<p>👉 正しくは</p>
+<ul>
+  <li><strong>接続先を偽装する攻撃</strong></li>
+</ul>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>ドメイン名ハイジャック＝「DNSを書き換えて偽サイトへ誘導」</li>
+  <li>特徴は<br />
+👉 見た目では気づきにくい</li>
+  <li>対策は<br />
+👉 DNSの正当性確認＋証明書確認</li>
+  <li>試験では<br />
+👉 「通信途中か／接続先か」で切り分ける</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/attacker-types/">攻撃者の種類とは？目的と特徴で整理する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/blacklist-whitelist/">ブラックリストとホワイトリストの違いとは？判断基準を整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/bot/">ボットとは？遠隔操作される仕組みを理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/botnet/">ボットネットとは？踏み台化とDDoSの関係を理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/brute-force-attack/">ブルートフォース攻撃とは？総当たり攻撃の仕組みと対策【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/dns/">← DNSとは？名前解決の仕組みとセキュリティのポイント【情報セキュリティマネジメント】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/dos-attack-difference/">DNSリフレクター攻撃とSYNフラッド攻撃の違いを整理【SG試験】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

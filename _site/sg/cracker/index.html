@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>クラッカーとは？悪意ある攻撃者の特徴と見分け方【情報セキュリティマネジメント】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="クラッカーとは？悪意ある攻撃者の特徴と見分け方【情報セキュリティマネジメント】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="クラッカーは悪意ある攻撃者の特徴と見分け方を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:description" content="クラッカーは悪意ある攻撃者の特徴と見分け方を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="クラッカーとは？悪意ある攻撃者の特徴と見分け方【情報セキュリティマネジメント】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"クラッカーは悪意ある攻撃者の特徴と見分け方を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。","headline":"クラッカーとは？悪意ある攻撃者の特徴と見分け方【情報セキュリティマネジメント】","url":"/sg/cracker/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">クラッカーとは？悪意ある攻撃者の特徴と見分け方【情報セキュリティマネジメント】</h1>
+      <h2 class="project-tagline">クラッカーは悪意ある攻撃者の特徴と見分け方を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">クラッカーは悪意ある攻撃者の特徴と見分け方を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">threat_vulnerability</span>
+        
+          <span class="post-tag">unauthorized_access</span>
+        
+          <span class="post-tag">risk_assessment</span>
+        
+          <span class="post-tag">sg-security-overview</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+<p>クラッカーとは、<strong>悪意を持って不正侵入や情報窃取などを行う攻撃者</strong>であり、SG試験では「目的が悪意かどうか」「どのレベルの対策が必要か」を判断させる問題として出題されます。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>イメージとしては、</p>
+
+<ul>
+  <li>技術を「悪いこと」に使う人</li>
+  <li>システムに侵入して情報を盗む・壊す人</li>
+</ul>
+
+<p>です。</p>
+
+<p>👉 同じ技術を持っていても、<br />
+<strong>目的が悪意ならクラッカーになる</strong>のがポイントです。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>クラッカーの特徴を整理します。</p>
+
+<h3 id="悪意を持って攻撃する">悪意を持って攻撃する</h3>
+<ul>
+  <li>情報の盗取（個人情報・機密情報）</li>
+  <li>システム破壊・改ざん</li>
+  <li>不正送金や詐欺</li>
+</ul>
+
+<hr />
+
+<h3 id="技術力はさまざま">技術力はさまざま</h3>
+<ul>
+  <li>高度な攻撃（ゼロデイ、標的型攻撃）</li>
+  <li>既知の脆弱性攻撃</li>
+</ul>
+
+<p>👉 スクリプトキディとの違いは「目的と理解度」</p>
+
+<hr />
+
+<h3 id="目的が明確">目的が明確</h3>
+<ul>
+  <li>金銭目的（最も多い）</li>
+  <li>ハクティビズム（思想的攻撃）</li>
+  <li>サイバーテロ</li>
+</ul>
+
+<p>👉 <strong>動機とセットで出題されやすい</strong></p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="sg試験での典型パターン">SG試験での典型パターン</h3>
+
+<h4 id="パターン攻撃者の分類">パターン①：攻撃者の分類</h4>
+<ul>
+  <li>悪意あり → クラッカー</li>
+  <li>技術者（中立） → ハッカー</li>
+</ul>
+
+<p>👉 「悪意があるか」が最重要ポイント</p>
+
+<hr />
+
+<h4 id="パターン対策のレベル判断">パターン②：対策のレベル判断</h4>
+<ul>
+  <li>スクリプトキディ → 基本対策で防げる</li>
+  <li>クラッカー → 多層防御・監視が必要</li>
+</ul>
+
+<p>👉 <strong>対策の強さを判断させる問題が出やすい</strong></p>
+
+<hr />
+
+<h3 id="現場での意味">現場での意味</h3>
+<ul>
+  <li>企業の情報漏えい事件の多くはクラッカーによるもの</li>
+  <li>標的型攻撃やランサムウェアも該当</li>
+</ul>
+
+<p>👉 <strong>「被害を出す主体」＝クラッカーと考えると理解しやすい</strong></p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+<h3 id="-ハッカークラッカー">❌ ハッカー＝クラッカー</h3>
+<p>→ ⭕ ハッカーは中立、クラッカーは悪意あり</p>
+
+<p>👉 SG試験ではこの違いがよく問われる</p>
+
+<hr />
+
+<h3 id="-技術力が高い人クラッカー">❌ 技術力が高い人＝クラッカー</h3>
+<p>→ ⭕ 判断基準は「悪意」</p>
+
+<p>👉 技術ではなく目的で分類する</p>
+
+<hr />
+
+<h3 id="-外部の人だけがクラッカー">❌ 外部の人だけがクラッカー</h3>
+<p>→ ⭕ 内部不正でも「悪意」があれば該当</p>
+
+<p>👉 不正のトライアングルと関連づけて出題されることあり</p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>クラッカー＝悪意を持つ攻撃者</li>
+  <li>判断基準は「技術力」ではなく「目的」</li>
+  <li>ハッカー（中立）との違いが頻出</li>
+  <li>スクリプトキディより対策レベルは高く必要</li>
+  <li>SG試験では「悪意かどうか」で切り分ける</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/attacker-types/">攻撃者の種類とは？目的と特徴で整理する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/blacklist-whitelist/">ブラックリストとホワイトリストの違いとは？判断基準を整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/bot/">ボットとは？遠隔操作される仕組みを理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/botnet/">ボットネットとは？踏み台化とDDoSの関係を理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/brute-force-attack/">ブルートフォース攻撃とは？総当たり攻撃の仕組みと対策【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/copyright-ownership/">← 著作権の帰属とは？委託開発との違いを理解する【情報セキュリティマネジメント】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/crl/">CRLとは？失効証明書リストの役割【情報セキュリティマネジメント】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

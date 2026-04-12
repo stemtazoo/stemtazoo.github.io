@@ -1,0 +1,302 @@
+﻿---
+layout: page
+title: プーリング（Pooling）とは？CNNで重要な特徴抽出の圧縮処理【DS検定】
+description: プーリング（Pooling）はCNNで重要な特徴抽出の圧縮処理を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+permalink: /ds/pooling/
+categories: [data-science]
+tags: [ds, modeling]
+prev: /ds/ml-tasks/
+next: /ds/random-forest/
+---
+<div style="font-size: 14px; margin-bottom: 12px;">
+  <a href="/ds/">DS検定トップ</a>
+  ＞ {{ page.title }}
+</div>
+
+## まず結論
+
+プーリング（Pooling）とは、CNNで特徴マップのサイズを小さくしながら重要な特徴を残す処理です。
+
+DS検定では
+
+CNNの構成要素
+
+畳み込みとの役割の違い
+
+
+を理解しているかが問われることがあります。
+
+
+
+## 直感的な説明
+
+画像を見るとき、人は細かい情報すべてを使って判断しているわけではありません。
+
+例えば猫の写真を見たとき
+
+耳の形
+
+目の位置
+
+体の輪郭
+
+
+などの 重要な特徴 を見て判断しています。
+
+細かいピクセル情報すべてを覚えているわけではありません。
+
+CNNでも同じで
+
+重要な特徴だけを残して情報を圧縮する処理
+
+が必要になります。
+
+この処理が プーリング です。
+
+
+
+## 定義・仕組み
+
+プーリングとは
+
+特徴マップのサイズを小さくしながら特徴を残す処理
+
+です。
+
+CNNでは
+
+1. 畳み込み
+
+
+2. プーリング
+
+
+
+を繰り返して
+
+画像の特徴を抽出していきます。
+
+
+
+代表的なプーリング
+
+Max Pooling
+
+最もよく使われる方法です。
+
+例
+
+2 3
+5 1
+
+この領域の最大値
+
+5
+
+を代表値として使います。
+
+つまり
+
+一番強い特徴を残す方法です。
+
+
+
+Average Pooling
+
+領域の平均値を取る方法です。
+
+2 3
+5 1
+
+平均
+
+(2+3+5+1)/4
+
+平均値を使うことで
+
+特徴を滑らかにまとめます。
+
+
+
+## どんな場面で使う？
+
+プーリングは
+
+CNNの中で特徴マップを整理する役割を持ちます。
+
+主な目的は次の3つです。
+
+計算量を減らす
+
+画像サイズを小さくすることで
+
+AIの計算量を減らします。
+
+
+
+ノイズの影響を減らす
+
+小さな変化に影響されにくくなります。
+
+例えば
+
+少し位置がずれた
+
+少し明るさが変わった
+
+
+といった変化に強くなります。
+
+
+
+重要な特徴を残す
+
+最大値などを使うことで
+
+特徴の強い部分を残します。
+
+
+
+## よくある誤解・混同
+
+誤解①
+
+プーリング＝畳み込み
+
+これは誤りです。
+
+畳み込み
+
+→ 特徴を抽出する
+
+プーリング
+
+→ 特徴を圧縮する
+
+という違いがあります。
+
+
+
+誤解②
+
+プーリングは必ず平均を使う
+
+現在のCNNでは
+
+Max Pooling
+
+が最もよく使われます。
+
+
+
+DS検定のひっかけ
+
+DS検定では
+
+畳み込み
+
+プーリング
+
+
+の役割の違いを問う問題が出ることがあります。
+
+整理すると
+
+畳み込み
+
+→ 特徴抽出
+
+プーリング
+
+→ 情報圧縮
+
+です。
+
+
+
+## まとめ（試験直前用）
+
+プーリングは CNNで特徴マップを小さくする処理
+
+主な目的
+
+計算量削減
+
+ノイズ耐性
+
+重要特徴の保持
+
+
+代表例
+
+Max Pooling
+
+Average Pooling
+
+
+
+DS検定では
+
+畳み込み＝特徴抽出
+プーリング＝情報圧縮
+
+と覚えると判断しやすくなります。
+
+
+
+## 対応スキル項目（AI利活用スキルシート）
+
+スキルカテゴリ名 AIの技術理解
+
+サブカテゴリ名 機械学習
+
+
+★ 代表的な機械学習手法の概要を理解している
+
+## 🔗 関連記事
+
+<ul style="padding-left: 20px;">
+{% assign current_tags = page.tags %}
+{% assign count = 0 %}
+
+{% for p in site.pages %}
+  {% if p.url != page.url and p.tags %}
+    {% assign matched = false %}
+
+    {% for tag in current_tags %}
+      {% if p.tags contains tag and tag != "ds" %}
+        {% assign matched = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if matched %}
+      <li style="margin-bottom: 6px;">
+        <a href="{{ p.url }}">{{ p.title }}</a>
+      </li>
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+
+    {% if count >= 5 %}
+      {% break %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>
+
+<hr>
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/ds/">DS検定トップに戻る</a>
+</div>
+
+<div style="display:flex;justify-content:space-between;margin-top:12px;">
+
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
+  {% endif %}
+
+  {% if page.next.url %}
+    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
+  {% endif %}
+
+</div>

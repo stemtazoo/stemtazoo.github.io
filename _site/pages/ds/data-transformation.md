@@ -1,0 +1,159 @@
+﻿---
+layout: page
+title: データトランスフォーメーションとは？（非構造化データの変換）【DS検定】
+description: データトランスフォーメーションは（非構造化データの変換）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+permalink: /ds/data-transformation/
+categories: [data-science]
+tags: [ds, data-processing, unstructured-data, data-preparation, preprocessing]
+prev: /ds/data-augmentation/
+next: /ds/encoding/
+---
+<div style="font-size: 14px; margin-bottom: 12px;">
+  <a href="/ds/">DS検定トップ</a>
+  ＞ {{ page.title }}
+</div>
+
+## まず結論
+データトランスフォーメーションとは、**データを分析可能な形式に変換する処理**のことです。  
+DS検定では「前処理の中でも“変換”を指しているかどうか」を判断させる問題がよく出ます。
+
+
+## 直感的な説明
+ぐちゃっとした材料を、そのままでは料理できない状態だとします。
+
+- 文章データ → 単語数やベクトルに変える  
+- 画像データ → 数値特徴に変える  
+- 日付データ → 年・月・曜日に分解する  
+
+つまり、
+
+> 「扱いにくいデータを、分析しやすい形に変える」
+
+これがデータトランスフォーメーションです。
+
+実務では「変換処理」「前処理」「特徴量変換」と呼ばれることが多く、  
+カタカナのまま使うことはそれほど多くありません。
+
+
+## 定義・仕組み
+データトランスフォーメーション（Data Transformation）は、  
+**データの形式・構造・値の表現を変える処理**を指します。
+
+具体例：
+
+- テキスト → 数値ベクトル化
+- カテゴリ → ダミー変数化
+- 単位変換（円 → 千円）
+- 日付 → 曜日や四半期に変換
+
+重要なのは、
+
+> 「分析のために形式を変えている」
+
+という点です。
+
+DS検定では  
+「非構造化データを分析可能な形式に変換する」と書かれていたら  
+まずこの用語を疑います。
+
+
+## どんな場面で使う？
+### 使う場面
+- 機械学習モデルに入力する前
+- データ基盤（ETL処理）の途中
+- 特徴量を作る工程
+
+### 誤解しやすい場面
+- 単なるコピー（レプリケーション）  
+- 値のスケールを揃えるだけ（ノーマライゼーション）  
+
+「変換」なのか「調整」なのかを区別することが大事です。
+
+
+## よくある誤解・混同
+
+### ① ノーマライゼーションとの違い
+- ノーマライゼーション → 数値の範囲を揃える
+- トランスフォーメーション → 形式そのものを変える
+
+DS検定ではここを混同させてきます。
+
+
+### ② データモデリングとの違い
+- モデリング → データ構造を設計すること
+- トランスフォーメーション → 実際に変換すること
+
+「設計」なのか「処理」なのかが判断基準です。
+
+
+### ③ レプリケーションとの違い
+- レプリケーション → 複製
+- トランスフォーメーション → 変換
+
+「コピー」か「変換」かで切れます。
+
+
+## まとめ（試験直前用）
+
+- 分析可能な形式への**変換処理**
+- 非構造化データが出てきたら疑う
+- 「設計」＝モデリング
+- 「スケール調整」＝ノーマライゼーション
+- 「複製」＝レプリケーション
+
+DS検定では英語カタカナの意味勝負になることが多いです。  
+選択肢では「変換」と書いてあればまずこの用語を考えます。
+
+
+## 対応スキル項目（データエンジニアリング力シート）
+- データ収集・加工
+- データ前処理
+- ★ データの前処理（整形・加工・変換など）を行うことができる
+
+## 🔗 関連記事
+
+<ul style="padding-left: 20px;">
+{% assign current_tags = page.tags %}
+{% assign count = 0 %}
+
+{% for p in site.pages %}
+  {% if p.url != page.url and p.tags %}
+    {% assign matched = false %}
+
+    {% for tag in current_tags %}
+      {% if p.tags contains tag and tag != "ds" %}
+        {% assign matched = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if matched %}
+      <li style="margin-bottom: 6px;">
+        <a href="{{ p.url }}">{{ p.title }}</a>
+      </li>
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+
+    {% if count >= 5 %}
+      {% break %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>
+
+<hr>
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/ds/">DS検定トップに戻る</a>
+</div>
+
+<div style="display:flex;justify-content:space-between;margin-top:12px;">
+
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
+  {% endif %}
+
+  {% if page.next.url %}
+    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
+  {% endif %}
+
+</div>

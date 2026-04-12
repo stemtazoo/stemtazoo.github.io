@@ -1,0 +1,315 @@
+﻿---
+layout: page
+title: OLAPとは？BIツール分析の基本概念をわかりやすく解説【DS検定】
+description: OLAPはBIツール分析の基本概念をわかりやすく解説を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+permalink: /ds/olap/
+categories: [data-engineering]
+tags: [ds, visualization, database]
+prev: /ds/nosql-datastore/
+next: /ds/primary-key/
+---
+<div style="font-size: 14px; margin-bottom: 12px;">
+  <a href="/ds/">DS検定トップ</a>
+  ＞ {{ page.title }}
+</div>
+
+## まず結論
+
+OLAP（Online Analytical Processing）とは、多次元データをさまざまな視点から分析するための技術です。
+
+DS検定では、BIツールの操作として出てくる
+
+スライス
+
+ダイス
+
+ドリルダウン
+
+ドリルアップ
+
+
+などが OLAP操作として理解されます。
+
+つまり
+
+BIツール分析の基本概念
+
+が OLAP です。
+
+
+
+## 直感的な説明
+
+ビジネスでは、売上データなどを
+
+年
+
+地域
+
+商品
+
+
+といった **複数の視点（次元）**で分析します。
+
+例えば売上データ
+
+年	地域	商品	売上
+
+2024	東京	A	100
+2024	大阪	B	120
+2023	東京	B	90
+
+
+このデータを
+
+年別売上
+
+地域別売上
+
+商品別売上
+
+
+のように 自由な視点で分析する仕組みが OLAP です。
+
+BIツールでは
+
+Power BI
+
+Tableau
+
+Looker
+
+
+などが OLAP 的な分析を行います。
+
+
+
+## 定義・仕組み
+
+OLAPとは
+
+多次元データを高速に分析するための技術
+
+です。
+
+ここで重要なのが
+
+多次元データ（データキューブ）
+
+という考え方です。
+
+例えば売上データは
+
+年
+
+地域
+
+商品
+
+
+の3つの軸を持っています。
+
+これを立体的に表すと
+
+データキューブ
+
+になります。
+
+商品
+         ↑
+         |
+地域 ← データ → 年
+
+OLAPでは、この多次元データに対して
+
+スライス
+
+ダイス
+
+ドリルダウン
+
+ドリルアップ
+
+
+などの操作を行います。
+
+
+
+## どんな場面で使う？
+
+OLAPは主に
+
+BIツールによるデータ分析
+
+で使われます。
+
+例えば
+
+売上分析
+
+地域別売上 ↓ 店舗別売上
+
+
+
+マーケティング分析
+
+商品カテゴリ別売上 ↓ 商品別売上
+
+
+
+経営ダッシュボード
+
+年別売上 ↓ 月別売上
+
+このような
+
+ビジネスデータの多角的分析
+
+で使われます。
+
+
+
+## よくある誤解・混同
+
+DS検定では次の用語と混同されることがあります。
+
+
+
+OLAP vs OLTP
+
+用語	意味
+
+OLAP	分析処理
+OLTP	業務処理
+
+
+例
+
+OLTP
+
+商品購入
+
+顧客登録
+
+在庫更新
+
+
+
+
+OLAP
+
+売上分析
+
+顧客分析
+
+経営レポート
+
+
+つまり
+
+OLTP：日常業務 OLAP：データ分析
+
+です。
+
+
+
+OLAPとBIツールの関係
+
+BIツールは
+
+OLAP分析を行うためのツール
+
+です。
+
+つまり
+
+OLAP（分析技術）
+      ↓
+BIツール（分析ツール）
+
+という関係になります。
+
+
+
+## まとめ（試験直前用）
+
+OLAP：多次元データ分析の技術
+
+BIツール分析の基本概念
+
+
+OLAP操作
+
+スライス：1条件で切る
+
+ダイス：複数条件で切る
+
+ドリルダウン：詳細へ
+
+ドリルアップ：集計へ
+
+
+DS検定では
+
+OLTP（業務処理）とOLAP（分析処理）の違い
+
+がよく問われます。
+
+
+
+## 対応スキル項目（データサイエンス力シート）
+
+データ理解・可視化
+
+データ可視化
+
+
+★ データの特徴を理解し、適切な可視化手法を選択できる
+
+## 🔗 関連記事
+
+<ul style="padding-left: 20px;">
+{% assign current_tags = page.tags %}
+{% assign count = 0 %}
+
+{% for p in site.pages %}
+  {% if p.url != page.url and p.tags %}
+    {% assign matched = false %}
+
+    {% for tag in current_tags %}
+      {% if p.tags contains tag and tag != "ds" %}
+        {% assign matched = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if matched %}
+      <li style="margin-bottom: 6px;">
+        <a href="{{ p.url }}">{{ p.title }}</a>
+      </li>
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+
+    {% if count >= 5 %}
+      {% break %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>
+
+<hr>
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/ds/">DS検定トップに戻る</a>
+</div>
+
+<div style="display:flex;justify-content:space-between;margin-top:12px;">
+
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
+  {% endif %}
+
+  {% if page.next.url %}
+    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
+  {% endif %}
+
+</div>

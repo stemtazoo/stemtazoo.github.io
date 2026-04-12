@@ -1,0 +1,184 @@
+﻿---
+layout: page
+title: SOAPとは？RESTとの違いを整理【DS検定】
+description: SOAPはRESTとの違いを整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+permalink: /ds/soap/
+categories: [data-engineering]
+tags: [ds, data-processing]
+prev: /ds/rest-api-methods/
+next: /ds/spark/
+---
+<div style="font-size: 14px; margin-bottom: 12px;">
+  <a href="/ds/">DS検定トップ</a>
+  ＞ {{ page.title }}
+</div>
+
+## まず結論
+
+SOAPとは、**XML形式のメッセージを使って通信するWebサービスのプロトコル（通信仕様）**です。  
+DS検定では「RESTとの違いを正しく切り分けられるか」が問われます。
+
+
+## 直感的な説明
+
+SOAPは、  
+**「厳密なルールに従ってやり取りする通信方式」**です。
+
+イメージとしては、
+
+- 決まったフォーマットの書類（XML）
+- 決まった封筒の形式
+- 決まった書き方
+
+でやり取りするようなものです。
+
+自由度は低いですが、  
+**大企業の基幹システムのような、厳密さが求められる場面**で使われてきました。
+
+なぜ重要かというと、  
+DS検定では「RESTとSOAPの対比問題」が頻出だからです。
+
+
+## 定義・仕組み
+
+SOAP（Simple Object Access Protocol）は、
+
+- XMLベースのメッセージ形式
+- 通信ルールが厳密に定義されている
+- エラー処理やセキュリティ仕様も含む
+
+という特徴を持つ**通信プロトコル**です。
+
+ここが重要です。
+
+RESTは「設計思想」ですが、  
+SOAPは「通信プロトコル（規格）」です。
+
+DS検定では、
+
+- 「XMLベースのメッセージ通信」
+- 「厳密な仕様を持つプロトコル」
+
+と書かれていたらSOAPを疑います。
+
+
+## どんな場面で使う？
+
+### 使う場面
+
+- 銀行や保険などの基幹システム
+- 厳密なトランザクション管理が必要な場面
+- エラー処理やセキュリティを強く求められる通信
+
+RESTよりも重厚な仕組みです。
+
+### 誤解しやすい場面
+
+- 「Webサービス＝REST」と思い込むこと
+
+実際には、
+
+- REST型API
+- SOAP型Webサービス
+
+の両方があります。
+
+DS検定では  
+「Webサービス＝REST」と決めつける選択肢が誤りになります。
+
+
+## よくある誤解・混同
+
+### ① SOAPとRESTの混同
+
+DS検定では次のように入れ替えて出されます。
+
+- HTTPメソッドでCRUD操作 → REST
+- XMLベースのメッセージ通信 → SOAP
+
+判断基準はシンプルです。
+
+| 観点 | REST | SOAP |
+|------|------|------|
+| 立ち位置 | 設計思想 | 通信プロトコル |
+| データ形式 | 自由（JSONなど） | XML固定 |
+| 重さ | 軽量 | 重厚 |
+
+### ② XML＝SOAPという誤解
+
+RESTでもXMLを使うことはあります。
+
+ただし、
+
+「XMLベースの通信プロトコル」  
+と書かれていたらSOAPです。
+
+DS検定では  
+**「XMLを使う」ではなく「XMLベースの通信仕様」かどうかが判断基準**です。
+
+
+## まとめ（試験直前用）
+
+- SOAPはXMLベースの通信プロトコル
+- RESTはHTTP中心の設計思想
+- SOAPは厳密、RESTは軽量
+- 「XMLベースの通信仕様」とあればSOAP
+- 「HTTPメソッドでCRUD」とあればREST
+
+RESTとの対比で整理して覚えることが、  
+DS検定の最短ルートです。
+
+
+## 対応スキル項目（データエンジニアリング力シート）
+- データ収集・蓄積
+- API・外部データ連携
+- ★ 外部APIを活用してデータを取得・連携できる
+- ★ Webサービス間のデータ連携の仕組みを理解している
+
+## 🔗 関連記事
+
+<ul style="padding-left: 20px;">
+{% assign current_tags = page.tags %}
+{% assign count = 0 %}
+
+{% for p in site.pages %}
+  {% if p.url != page.url and p.tags %}
+    {% assign matched = false %}
+
+    {% for tag in current_tags %}
+      {% if p.tags contains tag and tag != "ds" %}
+        {% assign matched = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if matched %}
+      <li style="margin-bottom: 6px;">
+        <a href="{{ p.url }}">{{ p.title }}</a>
+      </li>
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+
+    {% if count >= 5 %}
+      {% break %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>
+
+<hr>
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/ds/">DS検定トップに戻る</a>
+</div>
+
+<div style="display:flex;justify-content:space-between;margin-top:12px;">
+
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
+  {% endif %}
+
+  {% if page.next.url %}
+    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
+  {% endif %}
+
+</div>

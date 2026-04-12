@@ -1,0 +1,207 @@
+﻿---
+layout: page
+title: ステミングとレンマ化の違いとは？（テキスト前処理の基本）【DS検定】
+description: ステミングとレンマ化の違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+permalink: /ds/stemming-vs-lemmatization/
+categories: [data-science]
+tags: [ds, preprocessing]
+prev: /ds/regular-expression-summary/
+next: /ds/data-extraction-vs-aggregation/
+---
+<div style="font-size: 14px; margin-bottom: 12px;">
+  <a href="/ds/">DS検定トップ</a>
+  ＞ {{ page.title }}
+</div>
+
+## まず結論
+
+**ステミングとレンマ化は、単語を「基本形にそろえる」前処理だが、精度と方法が異なる。**
+
+DS検定では「どちらがより正確か」「意味を考慮するのはどちらか」といった判断を問われることが多いです。
+
+
+## 直感的な説明
+
+文章データを扱うとき、  
+「run」「running」「ran」が全部バラバラに扱われたら困ります。
+
+検索や分析では、  
+「同じ意味の単語は同じ形にそろえたい」  
+という場面がよくあります。
+
+そこで使われるのが、
+
+- ステミング → とりあえず語尾を機械的に削る  
+- レンマ化 → 辞書を使って正しい基本形に直す  
+
+という方法です。
+
+ざっくり言えば、
+
+- **速いけど荒いのがステミング**
+- **遅いけど正確なのがレンマ化**
+
+というイメージです。
+
+
+## 定義・仕組み
+
+### ステミング（Stemming）
+
+単語の語尾などを機械的に削って「語幹」にする方法です。
+
+例：
+- running → runn
+- studies → studi
+
+特徴：
+- 文法や意味を考えない
+- ルールベースで単純
+- 処理が速い
+
+つまり、「意味が正しいか」よりも「形が似ていればOK」という発想です。
+
+
+### レンマ化（Lemmatization）
+
+辞書や品詞情報を使って、**正しい原形（lemma）に変換する方法**です。
+
+例：
+- running → run
+- better → good
+
+特徴：
+- 品詞を考慮する
+- 意味を保つ
+- 精度が高い
+
+つまり、「言語として正しい形」に戻すのがレンマ化です。
+
+
+## どんな場面で使う？
+
+### ステミングを使う場面
+
+- 大量テキストを高速処理したい
+- おおまかな検索
+- 意味の厳密性が不要な分析
+
+### レンマ化を使う場面
+
+- 感情分析
+- 文書分類
+- 意味を正確に扱う必要があるAIモデル
+
+DS検定では  
+「意味の保存が重要な場合はどちらか？」  
+と問われることがあります。
+
+答えはレンマ化です。
+
+
+## よくある誤解・混同
+
+### ① 同じものだと思ってしまう
+
+両方とも「単語をそろえる処理」ですが、
+
+- ステミング → 機械的
+- レンマ化 → 意味を考慮
+
+という違いがあります。
+
+
+### ② レンマ化の方が常に良いと思ってしまう
+
+精度は高いですが、
+
+- 処理が重い
+- 言語リソースが必要
+
+というデメリットもあります。
+
+用途によって使い分けることが重要です。
+
+
+### ③ DS検定のひっかけポイント
+
+選択肢で
+
+- 「辞書を用いる」
+- 「品詞を考慮する」
+- 「文法的に正しい原形に戻す」
+
+と書いてあればレンマ化です。
+
+一方で、
+
+- 「語尾を削除する」
+- 「単純なルール処理」
+- 「高速だが粗い」
+
+と書いてあればステミングです。
+
+
+## まとめ（試験直前用）
+
+- 両者はテキストの前処理
+- ステミングは機械的に語尾を削る
+- レンマ化は辞書・品詞を考慮する
+- 意味を保ちたいならレンマ化
+- 高速処理重視ならステミング
+
+「意味を考慮するかどうか」が判断基準。
+
+
+## 対応スキル項目（AI利活用スキルシート）
+- AI活用基礎
+- 自然言語処理の基礎理解
+- ★ テキストデータの前処理手法（形態素解析・ステミングなど）を理解している
+
+## 🔗 関連記事
+
+<ul style="padding-left: 20px;">
+{% assign current_tags = page.tags %}
+{% assign count = 0 %}
+
+{% for p in site.pages %}
+  {% if p.url != page.url and p.tags %}
+    {% assign matched = false %}
+
+    {% for tag in current_tags %}
+      {% if p.tags contains tag and tag != "ds" %}
+        {% assign matched = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if matched %}
+      <li style="margin-bottom: 6px;">
+        <a href="{{ p.url }}">{{ p.title }}</a>
+      </li>
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+
+    {% if count >= 5 %}
+      {% break %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>
+
+<hr>
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/ds/">DS検定トップに戻る</a>
+</div>
+
+<div style="display:flex;justify-content:space-between;margin-top:12px;">
+
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
+  {% endif %}
+
+  {% if page.next.url %}
+    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
+  {% endif %}
+
+</div>

@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>委託先管理とは？外部委託のリスク対策を整理【情報セキュリティマネジメント】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="委託先管理とは？外部委託のリスク対策を整理【情報セキュリティマネジメント】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="委託先管理は外部委託のリスク対策を整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:description" content="委託先管理は外部委託のリスク対策を整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="委託先管理とは？外部委託のリスク対策を整理【情報セキュリティマネジメント】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"委託先管理は外部委託のリスク対策を整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。","headline":"委託先管理とは？外部委託のリスク対策を整理【情報セキュリティマネジメント】","url":"/sg/vendor-management/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">委託先管理とは？外部委託のリスク対策を整理【情報セキュリティマネジメント】</h1>
+      <h2 class="project-tagline">委託先管理は外部委託のリスク対策を整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">委託先管理は外部委託のリスク対策を整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">security_management</span>
+        
+          <span class="post-tag">vendor_management</span>
+        
+          <span class="post-tag">risk_assessment</span>
+        
+          <span class="post-tag">it_security_operations</span>
+        
+          <span class="post-tag">sg-security-management</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+<ul>
+  <li><strong>委託先管理とは「外部委託による情報漏えいリスクを管理すること」</strong></li>
+  <li>SG試験では「委託前・委託中・委託後のどの対策か」を判断させる問題がよく出る</li>
+</ul>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>会社が仕事を外部に任せるとき👇</p>
+
+<p>👉 「自分の会社の情報」を外に出すことになる</p>
+
+<p>つまり👇<br />
+👉 <strong>委託先が事故を起こしたら、自社の責任になる</strong></p>
+
+<p>だから👇<br />
+👉 「任せる前・任せている間・終わった後」すべて管理が必要</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+
+<p>委託先管理は3段階で考えると理解しやすい👇</p>
+
+<hr />
+
+<h3 id="-委託前選定契約">① 委託前（選定・契約）</h3>
+<ul>
+  <li>信頼できる会社か確認</li>
+</ul>
+
+<p>例👇</p>
+<ul>
+  <li>セキュリティ体制の確認</li>
+  <li>実績の確認</li>
+  <li>契約で義務を明確化</li>
+</ul>
+
+<p>👉 ここでミスると全部アウト</p>
+
+<hr />
+
+<h3 id="-委託中監督管理">② 委託中（監督・管理）</h3>
+<ul>
+  <li>任せっぱなしにしない</li>
+</ul>
+
+<p>例👇</p>
+<ul>
+  <li>定期的な監査</li>
+  <li>作業状況の確認</li>
+  <li>アクセス権の制御</li>
+</ul>
+
+<p>👉 「丸投げ」が一番危険</p>
+
+<hr />
+
+<h3 id="-委託後終了時">③ 委託後（終了時）</h3>
+<ul>
+  <li>情報を残させない</li>
+</ul>
+
+<p>例👇</p>
+<ul>
+  <li>データの返却・削除</li>
+  <li>アカウントの停止</li>
+</ul>
+
+<p>👉 ここ忘れる問題よく出る</p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+
+<h3 id="科目bの典型パターン">科目Bの典型パターン</h3>
+<ul>
+  <li>システム開発の外注</li>
+  <li>データ処理の委託</li>
+  <li>クラウドサービス利用</li>
+</ul>
+
+<hr />
+
+<h3 id="正しい判断の流れ">正しい判断の流れ</h3>
+<p>問題ではこう見ます👇</p>
+
+<ol>
+  <li>委託前の話？</li>
+  <li>委託中の話？</li>
+  <li>委託後の話？</li>
+</ol>
+
+<p>👉 フェーズで切る</p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="-よくある誤解">❌ よくある誤解</h3>
+<ul>
+  <li>委託したら責任も移る</li>
+  <li>契約書があればOK</li>
+</ul>
+
+<h3 id="-正しい理解">⭕ 正しい理解</h3>
+<ul>
+  <li><strong>責任は委託元に残る</strong></li>
+  <li>契約＋監督が必要</li>
+</ul>
+
+<hr />
+
+<h3 id="sg試験のひっかけ">SG試験のひっかけ</h3>
+<p>典型パターン👇</p>
+
+<ul>
+  <li>「委託したので責任なし」→ ❌</li>
+  <li>「契約しただけで監督なし」→ ❌</li>
+  <li>「終了時のデータ削除なし」→ ❌</li>
+</ul>
+
+<p>👉 <strong>丸投げは全部NG</strong></p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>委託先管理＝外部委託のリスク管理</li>
+  <li>3段階（委託前・中・後）で考える</li>
+  <li>責任は委託元に残る</li>
+  <li>契約だけでなく監督が必要</li>
+  <li>「丸投げしていないか」で判断する</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/case-solving-template/">SG試験 ケース問題の解き方テンプレ【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/case-study-approach/">ケース問題の解き方！CIAとリスク対応で考える実践手順【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/common-mistakes/">よくある誤答パターンまとめ！SG試験で選択肢を切るコツ【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/contract-nonconformity/">契約不適合責任とは？瑕疵担保責任との違いも整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/contract-types/">請負契約と準委任契約の違いとは？成果物か作業かで判断【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/unauthorized-access/">← 不正アクセスとは？攻撃の流れと対策の考え方【情報セキュリティマネジメント】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/vishing/">ビッシングとは？電話でだます詐欺手口【情報セキュリティマネジメント】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

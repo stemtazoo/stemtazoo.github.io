@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>ケース問題の解き方！CIAとリスク対応で考える実践手順【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="ケース問題の解き方！CIAとリスク対応で考える実践手順【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="SG試験のケース問題はCIAとリスク対応で解くと安定します。本記事では具体的な解き方の手順と判断基準を整理し、迷わない思考フローを身につけます。" />
+<meta property="og:description" content="SG試験のケース問題はCIAとリスク対応で解くと安定します。本記事では具体的な解き方の手順と判断基準を整理し、迷わない思考フローを身につけます。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="ケース問題の解き方！CIAとリスク対応で考える実践手順【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"SG試験のケース問題はCIAとリスク対応で解くと安定します。本記事では具体的な解き方の手順と判断基準を整理し、迷わない思考フローを身につけます。","headline":"ケース問題の解き方！CIAとリスク対応で考える実践手順【SG試験】","url":"/sg/case-study-approach/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">ケース問題の解き方！CIAとリスク対応で考える実践手順【SG試験】</h1>
+      <h2 class="project-tagline">SG試験のケース問題はCIAとリスク対応で解くと安定します。本記事では具体的な解き方の手順と判断基準を整理し、迷わない思考フローを身につけます。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">SG試験のケース問題はCIAとリスク対応で解くと安定します。本記事では具体的な解き方の手順と判断基準を整理し、迷わない思考フローを身につけます。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">risk_assessment</span>
+        
+          <span class="post-tag">it_security_operations</span>
+        
+          <span class="post-tag">security_management</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+<p>ケース問題は「<strong>CIA → 対策 → リスク対応</strong>」の順で考えると安定して解けます。<br />
+SG試験では「<strong>何が起きているか → どう対応するか</strong>」の判断力が問われます。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>問題文は長いですが、やることはシンプルです👇</p>
+
+<ol>
+  <li>何が起きているか見る</li>
+  <li>何が困るか考える</li>
+  <li>どうすればいいか選ぶ</li>
+</ol>
+
+<p>👉 <strong>順番を守るだけで解ける</strong></p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+
+<h3 id="解く手順最重要">解く手順（最重要）</h3>
+<h4 id="-事象の把握">① 事象の把握</h4>
+<ul>
+  <li>どんな攻撃・問題かを確認</li>
+</ul>
+
+<p>例：</p>
+<ul>
+  <li>DDoS → サービス停止</li>
+</ul>
+
+<hr />
+
+<h4 id="-ciaで分類">② CIAで分類</h4>
+<ul>
+  <li>何が壊れているか</li>
+</ul>
+
+<p>例：</p>
+<ul>
+  <li>サービス停止 → 可用性</li>
+</ul>
+
+<hr />
+
+<h4 id="-対策を考える">③ 対策を考える</h4>
+<ul>
+  <li>どの対策が適切か</li>
+</ul>
+
+<p>例：</p>
+<ul>
+  <li>冗長化・負荷分散</li>
+</ul>
+
+<hr />
+
+<h4 id="-リスク対応を判断">④ リスク対応を判断</h4>
+<ul>
+  <li>実施するかどうか</li>
+</ul>
+
+<p>例：</p>
+<ul>
+  <li>コストを考えて低減を選択</li>
+</ul>
+
+<hr />
+
+<p>👉 <strong>この4ステップで解く</strong></p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+
+<h3 id="典型問題パターン">典型問題パターン</h3>
+<ul>
+  <li>「最も適切な対応はどれか」</li>
+  <li>「優先すべき対策はどれか」</li>
+</ul>
+
+<hr />
+
+<h3 id="解き方のコツ">解き方のコツ</h3>
+<ul>
+  <li>いきなり選択肢を見ない</li>
+  <li>まずCIAを決める</li>
+</ul>
+
+<p>👉 これだけで正答率が上がる</p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="-知っている用語で選ぶ">❌ 知っている用語で選ぶ</h3>
+<p>→ ⭕ 問題に合っているかで選ぶ</p>
+
+<hr />
+
+<h3 id="-強そうな対策を選ぶ">❌ 強そうな対策を選ぶ</h3>
+<p>→ ⭕ 目的に合った対策を選ぶ</p>
+
+<hr />
+
+<h3 id="-完璧な対策を選ぶ">❌ 完璧な対策を選ぶ</h3>
+<p>→ ⭕ 現実的な対応を選ぶ</p>
+
+<hr />
+
+<h3 id="sg試験のひっかけ">SG試験のひっかけ</h3>
+<ul>
+  <li>「暗号化」など万能そうな選択肢に注意</li>
+  <li>「目的とズレている対策」は不正解</li>
+</ul>
+
+<p>例：</p>
+<ul>
+  <li>DDoS対策 → 暗号化 ❌</li>
+  <li>改ざん対策 → バックアップ ❌（直接ではない）</li>
+</ul>
+
+<p>👉 <strong>CIAと一致しているかで切る</strong></p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>手順は4ステップ<br />
+→ 事象 → CIA → 対策 → リスク対応</li>
+  <li>まずCIAを決める</li>
+  <li>対策は目的と一致させる</li>
+  <li>最後は現実的な判断</li>
+  <li>SG試験は「流れ」で解く</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/case-solving-template/">SG試験 ケース問題の解き方テンプレ【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/common-mistakes/">よくある誤答パターンまとめ！SG試験で選択肢を切るコツ【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/contract-nonconformity/">契約不適合責任とは？瑕疵担保責任との違いも整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/cracker/">クラッカーとは？悪意ある攻撃者の特徴と見分け方【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/crl/">CRLとは？失効証明書リストの役割【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/case-solving-template/">← SG試験 ケース問題の解き方テンプレ【情報セキュリティマネジメント】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/clickjacking/">クリックジャッキングとは？見えない操作誘導の仕組み【情報セキュリティマネジメント】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

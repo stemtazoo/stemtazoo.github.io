@@ -1,0 +1,180 @@
+﻿---
+layout: page
+title: ハッシュと暗号化の違いとは？（復号できるかが分かれ目）【DS検定】
+description: ハッシュと暗号化の違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+permalink: /ds/hash-vs-encryption/
+categories: [business]
+tags: [ds, security, design]
+prev: /ds/hash-function/
+next: /ds/iam-policy/
+---
+<div style="font-size: 14px; margin-bottom: 12px;">
+  <a href="/ds/">DS検定トップ</a>
+  ＞ {{ page.title }}
+</div>
+
+## まず結論
+
+ハッシュは**復元できない不可逆な変換**、  
+暗号化は**鍵を使えば元に戻せる可逆な変換**です。
+
+DS検定では「復号できるかどうか」を判断させる問題がよく出ます。
+
+
+## 直感的な説明
+
+イメージで整理します。
+
+- ハッシュ → データの「指紋」
+- 暗号化 → データを「金庫に入れる」
+
+### ハッシュ
+
+- 同じ入力 → 同じ出力
+- 元に戻せない
+- 整合性確認が目的
+
+### 暗号化
+
+- 鍵を使って読めなくする
+- 正しい鍵があれば元に戻せる
+- 秘密を守るのが目的
+
+ここが決定的な違いです。
+
+
+## 定義・仕組み
+
+### ハッシュ関数
+
+- 任意の長さの入力 → 固定長の出力
+- 不可逆
+- コリジョンは理論上あり得る
+
+用途：
+- パスワード保存
+- 改ざん検知
+- データ同一性確認
+
+
+### 暗号化
+
+- 平文 → 暗号文に変換
+- 鍵があれば復号可能
+- 可逆
+
+用途：
+- 通信の秘匿
+- 個人情報の保護
+- データ送信時の安全確保
+
+
+## どんな場面で使う？
+
+### ハッシュを使う場面
+
+- パスワードを保存するとき
+- ファイルが改ざんされていないか確認するとき
+
+👉 「復元しない」ことが前提
+
+
+### 暗号化を使う場面
+
+- データを送信するとき
+- データベースに機密情報を保存するとき
+
+👉 「後で元に戻す」ことが前提
+
+
+## よくある誤解・混同
+
+### ① ハッシュは暗号化の一種
+
+❌ ハッシュは暗号化  
+⭕ 目的がまったく違う
+
+ハッシュは復号できません。
+
+
+### ② 暗号化は安全だからハッシュより優れている
+
+用途が違います。
+
+- パスワード保存に暗号化を使うのは危険  
+  → 鍵が漏れたら全復元される
+
+
+### ③ 不可逆なら絶対安全
+
+不可逆でも、
+
+- レインボーテーブル攻撃
+- 総当たり攻撃
+
+があるため、ソルトやストレッチングが必要です。
+
+
+## まとめ（試験直前用）
+
+- ハッシュ＝不可逆
+- 暗号化＝鍵で復号できる
+- パスワード保存はハッシュ
+- 秘密通信は暗号化
+- 「復号できる」と書いてあれば暗号
+
+
+## 対応スキル項目（AI利活用スキルシート）
+
+- AIを支えるデータと技術の理解
+- セキュリティ・リスク理解  
+★ AI・データ活用に伴うセキュリティリスクを理解している  
+★ データの適切な管理・保護の重要性を理解している
+
+## 🔗 関連記事
+
+<ul style="padding-left: 20px;">
+{% assign current_tags = page.tags %}
+{% assign count = 0 %}
+
+{% for p in site.pages %}
+  {% if p.url != page.url and p.tags %}
+    {% assign matched = false %}
+
+    {% for tag in current_tags %}
+      {% if p.tags contains tag and tag != "ds" %}
+        {% assign matched = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if matched %}
+      <li style="margin-bottom: 6px;">
+        <a href="{{ p.url }}">{{ p.title }}</a>
+      </li>
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+
+    {% if count >= 5 %}
+      {% break %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>
+
+<hr>
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/ds/">DS検定トップに戻る</a>
+</div>
+
+<div style="display:flex;justify-content:space-between;margin-top:12px;">
+
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
+  {% endif %}
+
+  {% if page.next.url %}
+    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
+  {% endif %}
+
+</div>

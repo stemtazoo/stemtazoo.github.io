@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>辞書攻撃とは？効率的なパスワード破解の仕組み【情報セキュリティマネジメント】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="辞書攻撃とは？効率的なパスワード破解の仕組み【情報セキュリティマネジメント】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="辞書攻撃は単語リストを使って認証突破を狙う手口です。この記事では総当たり攻撃との違い、破られやすい条件、多要素認証の効果、SG試験で狙われるひっかけポイントと試験対策を解説します。" />
+<meta property="og:description" content="辞書攻撃は単語リストを使って認証突破を狙う手口です。この記事では総当たり攻撃との違い、破られやすい条件、多要素認証の効果、SG試験で狙われるひっかけポイントと試験対策を解説します。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="辞書攻撃とは？効率的なパスワード破解の仕組み【情報セキュリティマネジメント】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"辞書攻撃は単語リストを使って認証突破を狙う手口です。この記事では総当たり攻撃との違い、破られやすい条件、多要素認証の効果、SG試験で狙われるひっかけポイントと試験対策を解説します。","headline":"辞書攻撃とは？効率的なパスワード破解の仕組み【情報セキュリティマネジメント】","url":"/sg/dictionary-attack/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">辞書攻撃とは？効率的なパスワード破解の仕組み【情報セキュリティマネジメント】</h1>
+      <h2 class="project-tagline">辞書攻撃は単語リストを使って認証突破を狙う手口です。この記事では総当たり攻撃との違い、破られやすい条件、多要素認証の効果、SG試験で狙われるひっかけポイントと試験対策を解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">辞書攻撃は単語リストを使って認証突破を狙う手口です。この記事では総当たり攻撃との違い、破られやすい条件、多要素認証の効果、SG試験で狙われるひっかけポイントと試験対策を解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">security_measures</span>
+        
+          <span class="post-tag">unauthorized_access</span>
+        
+          <span class="post-tag">threat_vulnerability</span>
+        
+          <span class="post-tag">access_control</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+<ul>
+  <li>辞書攻撃とは、<strong>よく使われる単語やパスワードをまとめたリスト（辞書）を使って認証を突破する攻撃</strong>であり、SG試験では「ブルートフォースとの違い」と「なぜ効率が良いか」を判断させる問題として出題される。</li>
+</ul>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>ブルートフォース攻撃は「全部試す」ですが、</p>
+
+<p>辞書攻撃は
+👉「当たりそうなものだけ試す」攻撃です。</p>
+
+<p>例えば、</p>
+<ul>
+  <li>password</li>
+  <li>123456</li>
+  <li>qwerty</li>
+</ul>
+
+<p>👉 よく使われるパスワードを優先的に試します。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>辞書攻撃は、</p>
+
+<p>👉 あらかじめ用意された「パスワードリスト（辞書）」を使って<br />
+👉 順番に試行することで認証突破を狙う攻撃です。</p>
+
+<hr />
+
+<h3 id="なぜ効率が良いか">なぜ効率が良いか</h3>
+<ul>
+  <li>多くのユーザが似たようなパスワードを使う</li>
+  <li>総当たりより試行回数が少ない</li>
+</ul>
+
+<p>👉 短時間で成功する可能性が高い</p>
+
+<hr />
+
+<h3 id="ブルートフォースとの違い">ブルートフォースとの違い</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>攻撃</th>
+      <th>特徴</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ブルートフォース</td>
+      <td>すべての組み合わせを試す</td>
+    </tr>
+    <tr>
+      <td>辞書攻撃</td>
+      <td>よく使われるものだけ試す</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h3 id="関連する攻撃">関連する攻撃</h3>
+<ul>
+  <li><strong>リスト型攻撃（パスワードリスト攻撃）</strong><br />
+→ 流出したID・パスワードをそのまま使う</li>
+</ul>
+
+<p>👉 SG試験ではこの違いが重要</p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="攻撃される場面">攻撃される場面</h3>
+<ul>
+  <li>Webサービスのログイン</li>
+  <li>社内システム</li>
+  <li>パスワードが単純な環境</li>
+</ul>
+
+<hr />
+
+<h3 id="防ぐ場面対策">防ぐ場面（対策）</h3>
+<ul>
+  <li>パスワードの複雑化（長さ・記号）</li>
+  <li>多要素認証（MFA）</li>
+  <li>パスワードの使い回し禁止</li>
+  <li>ログイン試行の制限</li>
+</ul>
+
+<hr />
+
+<h3 id="sg試験での考え方">SG試験での考え方</h3>
+<p>👉 「なぜ効率が良いのか？」</p>
+
+<ul>
+  <li>人は単純なパスワードを使いがち<br />
+👉 そこを狙っている</li>
+</ul>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+<h3 id="-誤解ブルートフォースと同じ">❌ 誤解①：ブルートフォースと同じ</h3>
+<p>👉 ⭕ 違う</p>
+<ul>
+  <li>総当たりか</li>
+  <li>優先的試行か</li>
+</ul>
+
+<hr />
+
+<h3 id="-誤解パスワードが漏えいしている">❌ 誤解②：パスワードが漏えいしている</h3>
+<p>👉 ⭕ 違う</p>
+<ul>
+  <li>推測して試す攻撃</li>
+</ul>
+
+<p>（漏えいはリスト型攻撃）</p>
+
+<hr />
+
+<h3 id="-誤解時間がかかる攻撃">❌ 誤解③：時間がかかる攻撃</h3>
+<p>👉 ⭕ むしろ効率的</p>
+<ul>
+  <li>少ない試行で成功しやすい</li>
+</ul>
+
+<hr />
+
+<h3 id="sg試験のひっかけポイント">SG試験のひっかけポイント</h3>
+<ul>
+  <li>「辞書攻撃＝総当たり」とする選択肢<br />
+→ ❌ 誤り</li>
+</ul>
+
+<p>👉 正しくは</p>
+<ul>
+  <li><strong>優先順位をつけて試す攻撃</strong></li>
+</ul>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>辞書攻撃＝「よく使われるパスワードを優先して試す」</li>
+  <li>総当たりより効率が良い</li>
+  <li>対策は<br />
+👉 複雑なパスワード＋MFA</li>
+  <li>試験では<br />
+👉 「総当たりか効率型か」で切り分ける</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/attacker-types/">攻撃者の種類とは？目的と特徴で整理する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/blacklist-whitelist/">ブラックリストとホワイトリストの違いとは？判断基準を整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/bot/">ボットとは？遠隔操作される仕組みを理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/botnet/">ボットネットとは？踏み台化とDDoSの関係を理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/brute-force-attack/">ブルートフォース攻撃とは？総当たり攻撃の仕組みと対策【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/dhcp/">← DHCPとは？IPアドレスを自動で割り当てる仕組み【情報セキュリティマネジメント】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/directory-traversal/">ディレクトリトラバーサルとは？不正ファイルアクセスの仕組みと対策【情報セキュリティマネジメント】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

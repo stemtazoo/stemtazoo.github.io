@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>セッションハイジャックとは？ログイン乗っ取りの仕組みと対策【情報セキュリティマネジメント】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="セッションハイジャックとは？ログイン乗っ取りの仕組みと対策【情報セキュリティマネジメント】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="セッションハイジャックはログイン乗っ取りの仕組みと対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:description" content="セッションハイジャックはログイン乗っ取りの仕組みと対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="セッションハイジャックとは？ログイン乗っ取りの仕組みと対策【情報セキュリティマネジメント】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"セッションハイジャックはログイン乗っ取りの仕組みと対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。","headline":"セッションハイジャックとは？ログイン乗っ取りの仕組みと対策【情報セキュリティマネジメント】","url":"/sg/session-hijacking/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">セッションハイジャックとは？ログイン乗っ取りの仕組みと対策【情報セキュリティマネジメント】</h1>
+      <h2 class="project-tagline">セッションハイジャックはログイン乗っ取りの仕組みと対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">セッションハイジャックはログイン乗っ取りの仕組みと対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">security_measures</span>
+        
+          <span class="post-tag">unauthorized_access</span>
+        
+          <span class="post-tag">network</span>
+        
+          <span class="post-tag">access_control</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+<ul>
+  <li>セッションハイジャックとは、<strong>ユーザのセッション情報（ログイン状態）を盗んで、本人になりすまして不正アクセスする攻撃</strong>であり、SG試験では「認証後の対策ができているか」を判断させる問題として出題される。</li>
+</ul>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>ログインすると、</p>
+
+<p>👉「この人は本人です」という状態（セッション）が作られます。</p>
+
+<p>セッションハイジャックは、
+👉 この「ログイン済みの状態」を盗む攻撃です。</p>
+
+<p>イメージとしては、</p>
+<ul>
+  <li>本人が入館証を持って入ったあと</li>
+  <li>その入館証を盗んで別人が使う</li>
+</ul>
+
+<p>👉 パスワードを知らなくても侵入できるのがポイントです。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>セッションハイジャックは、次の流れで行われます。</p>
+
+<ol>
+  <li>ユーザがWebサイトにログイン</li>
+  <li>サーバがセッションIDを発行</li>
+  <li>攻撃者がそのセッションIDを取得</li>
+  <li>そのIDを使って本人になりすます</li>
+</ol>
+
+<hr />
+
+<h3 id="セッションidの取得方法代表例">セッションIDの取得方法（代表例）</h3>
+<ul>
+  <li><strong>スニッフィング（通信盗聴）</strong></li>
+  <li><strong>クロスサイトスクリプティング（XSS）</strong></li>
+  <li><strong>マルウェア感染</strong></li>
+</ul>
+
+<p>👉 共通点は<br />
+「セッションIDを盗むこと」</p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="攻撃されやすい場面">攻撃されやすい場面</h3>
+<ul>
+  <li>公衆Wi-Fi利用時</li>
+  <li>暗号化されていない通信（HTTP）</li>
+  <li>セッション管理が弱いWebサイト</li>
+</ul>
+
+<hr />
+
+<h3 id="防ぐ場面対策">防ぐ場面（対策）</h3>
+<ul>
+  <li>HTTPS（通信の暗号化）</li>
+  <li>セッションIDの定期変更</li>
+  <li>ログイン後の再認証（重要操作時）</li>
+  <li>Cookieの適切な設定（Secure属性など）</li>
+</ul>
+
+<hr />
+
+<h3 id="sg試験での考え方">SG試験での考え方</h3>
+<p>👉 「認証後も安全か？」がポイント</p>
+
+<ul>
+  <li>認証（ID・パスワード）だけでは不十分</li>
+  <li>セッション管理まで含めて考える</li>
+</ul>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+<h3 id="-誤解パスワードを盗む攻撃">❌ 誤解①：パスワードを盗む攻撃</h3>
+<p>👉 ⭕ 違う</p>
+<ul>
+  <li>セッションハイジャックは<br />
+👉 「ログイン後の状態」を盗む</li>
+</ul>
+
+<hr />
+
+<h3 id="-誤解中間者攻撃と同じ">❌ 誤解②：中間者攻撃と同じ</h3>
+<p>👉 ⭕ 関係はあるが別物</p>
+<ul>
+  <li>中間者攻撃：通信を盗聴</li>
+  <li>セッションハイジャック：セッションを乗っ取る</li>
+</ul>
+
+<p>（中間者攻撃が原因になることはある）</p>
+
+<hr />
+
+<h3 id="-誤解ログインすれば安全">❌ 誤解③：ログインすれば安全</h3>
+<p>👉 ⭕ SG試験ではここが重要</p>
+<ul>
+  <li>ログイン後の管理が不十分だと不正利用される</li>
+</ul>
+
+<hr />
+
+<h3 id="sg試験のひっかけポイント">SG試験のひっかけポイント</h3>
+<ul>
+  <li>「認証強化（パスワード）」だけで防げるとする選択肢<br />
+→ ❌ 不十分</li>
+</ul>
+
+<p>👉 正しくは</p>
+<ul>
+  <li><strong>セッション管理の対策が必要</strong></li>
+</ul>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>セッションハイジャック＝「ログイン状態の乗っ取り」</li>
+  <li>パスワード不要で侵入できるのが特徴</li>
+  <li>対策は<br />
+👉 HTTPS＋セッション管理</li>
+  <li>試験では<br />
+👉 「認証前か認証後か」で切り分ける</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/blacklist-whitelist/">ブラックリストとホワイトリストの違いとは？判断基準を整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/bot/">ボットとは？遠隔操作される仕組みを理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/botnet/">ボットネットとは？踏み台化とDDoSの関係を理解する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/brute-force-attack/">ブルートフォース攻撃とは？総当たり攻撃の仕組みと対策【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/clickjacking/">クリックジャッキングとは？見えない操作誘導の仕組み【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/security-training/">← 情報セキュリティ教育・訓練とは？人的対策の基本を整理【情報セキュリティマネジメント】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/sg-exam-outline-study/">情報セキュリティマネジメント試験の出題内容とは？科目A・科目Bと勉強方法を整理 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

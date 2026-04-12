@@ -1,0 +1,180 @@
+﻿---
+layout: page
+title: LLMのTemperatureとは？出力のランダム性を理解する【DS検定】
+description: LLMのTemperatureは出力のランダム性を理解するを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+permalink: /ds/llm-temperature/
+categories: [ai-utilization]
+tags: [ds, ai-use]
+prev: /ds/hallucination/
+next: /ds/mlops/
+---
+<div style="font-size: 14px; margin-bottom: 12px;">
+  <a href="/ds/">DS検定トップ</a>
+  ＞ {{ page.title }}
+</div>
+
+## まず結論
+
+Temperature（テンペラチャー）とは、**大規模言語モデル（LLM）の出力のランダム性を調整するパラメータ**です。  
+DS検定では、「生成AIの出力が安定する／創造的になる理由を理解しているか」を判断させる問題として問われます。
+
+
+## 直感的な説明
+
+Temperatureは、  
+**「AIの回答のブレ具合をどれくらい許すか」** を決めるダイヤルのようなものです。
+
+- 低い値（例：0.2）  
+  → 毎回ほぼ同じ、安定した回答になる  
+- 高い値（例：0.8）  
+  → 表現が多様になり、創造的になるが、ブレやすい  
+
+たとえば、
+
+- マニュアル回答をさせたいとき  
+  → 低Temperature  
+- アイデア出しやコピー作成  
+  → 高Temperature  
+
+という使い分けになります。
+
+**「なぜAIの出力が毎回違うのか？」という疑問の正体が、このTemperatureです。**
+
+
+## 定義・仕組み
+
+大規模言語モデルは、  
+「次に来る単語の確率」を計算して文章を生成しています。
+
+Temperatureは、その**確率の偏りをどれくらい強調するか**を調整する仕組みです。
+
+- 低Temperature  
+  → 確率の高い単語をほぼ必ず選ぶ  
+  → 出力が安定する  
+
+- 高Temperature  
+  → 確率の低い単語も選ばれやすくなる  
+  → 出力が多様になる  
+
+重要なのは、
+
+> Temperatureは「正確さ」を直接調整するものではない
+
+という点です。
+
+DS検定では、「Temperatureを下げると正解率が上がる」といった表現があれば注意が必要です。
+
+
+## どんな場面で使う？
+
+### 使うべき場面
+
+- FAQ自動応答（安定性重視）
+- レポート要約
+- コード生成
+- マニュアル回答
+
+→ 低Temperatureが適する
+
+
+- キャッチコピー作成
+- アイデア出し
+- 物語生成
+
+→ 高Temperatureが適する
+
+
+### 使うと誤解しやすい場面
+
+- ハルシネーション対策としてTemperatureを下げる  
+  → 一部は安定するが、**根本解決ではない**
+
+DS検定では、「ハルシネーション＝Temperatureが高いから起きる」と書かれていたら誤りです。
+
+
+## よくある誤解・混同
+
+### ① Temperature ＝ 正確性の調整
+
+❌ 低くすると必ず正確になる  
+⭕ 出力が安定するだけ
+
+
+### ② Temperature ＝ 学習の強さ
+
+❌ モデルを再学習している  
+⭕ 推論時の出力制御パラメータ
+
+
+### ③ RAGとの混同
+
+RAGは外部データを検索して回答する仕組み。  
+Temperatureは「出力の揺らぎ」の調整。
+
+DS検定では、  
+**「検索強化」と「出力制御」を混同させる問題が出やすい**です。
+
+
+## まとめ（試験直前用）
+
+- Temperatureは「出力のランダム性」の調整  
+- 低い → 安定、高い → 多様  
+- 正確性そのものを保証するものではない  
+- RAGや学習方法とは別の概念  
+
+**「出力のブレを制御する仕組み」かどうかで判断する**
+
+
+## 対応スキル項目（AI利活用スキルシート）
+- AIを活用した業務遂行
+- 生成AIの活用
+- ★ 生成AIの特性（出力の不確実性やばらつき）を理解し、適切に活用できる
+- ★ 生成AIの出力を過信せず、人間が適切に確認・判断できる
+
+## 🔗 関連記事
+
+<ul style="padding-left: 20px;">
+{% assign current_tags = page.tags %}
+{% assign count = 0 %}
+
+{% for p in site.pages %}
+  {% if p.url != page.url and p.tags %}
+    {% assign matched = false %}
+
+    {% for tag in current_tags %}
+      {% if p.tags contains tag and tag != "ds" %}
+        {% assign matched = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if matched %}
+      <li style="margin-bottom: 6px;">
+        <a href="{{ p.url }}">{{ p.title }}</a>
+      </li>
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+
+    {% if count >= 5 %}
+      {% break %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>
+
+<hr>
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/ds/">DS検定トップに戻る</a>
+</div>
+
+<div style="display:flex;justify-content:space-between;margin-top:12px;">
+
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
+  {% endif %}
+
+  {% if page.next.url %}
+    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
+  {% endif %}
+
+</div>

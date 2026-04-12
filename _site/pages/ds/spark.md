@@ -1,0 +1,312 @@
+﻿---
+layout: page
+title: Sparkとは？ビッグデータを高速処理する分散処理エンジン【DS検定】
+description: Sparkはビッグデータを高速処理する分散処理エンジンを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+permalink: /ds/spark/
+categories: [data-engineering]
+tags: [ds, data-storage, data-processing]
+prev: /ds/soap/
+next: /ds/web-api/
+---
+<div style="font-size: 14px; margin-bottom: 12px;">
+  <a href="/ds/">DS検定トップ</a>
+  ＞ {{ page.title }}
+</div>
+
+## まず結論
+
+Spark（Apache Spark）とは、大量データを複数のコンピュータで並列処理するための高速な分散処理エンジンです。
+
+DS検定では
+
+HDFS＝保存 / YARN＝リソース管理 / Spark＝データ処理
+
+という役割の違いを理解できているかがよく問われます。
+
+
+
+## 直感的な説明
+
+ビッグデータの分析では、1台のコンピュータだけでは処理が終わりません。
+
+例えば
+
+数十TBのログデータ
+
+IoTセンサーデータ
+
+Webアクセスデータ
+
+
+などを分析する場合です。
+
+そこで使われるのが 分散処理 です。
+
+イメージとしては
+
+> 1人で計算するのではなく 100人で同時に計算する
+
+
+
+ような仕組みです。
+
+Sparkは
+
+多くのサーバーを同時に使ってデータ処理を行う仕組み
+
+です。
+
+
+
+## 定義・仕組み
+
+Sparkは
+
+大規模データを高速に処理するための分散処理フレームワークです。
+
+特徴は次の3つです。
+
+① メモリ上で処理する
+
+従来のHadoop MapReduceは
+
+ディスクに書き込みながら処理
+
+していました。
+
+Sparkは
+
+メモリ上で処理する
+
+ため、処理速度が大幅に向上します。
+
+そのため
+
+機械学習
+
+データ分析
+
+
+などの処理でよく利用されます。
+
+
+
+② 分散処理を行う
+
+Sparkは
+
+複数のコンピュータ（クラスタ）で
+
+並列に処理
+
+を実行します。
+
+例えば
+
+データ
+↓
+サーバーAで処理
+サーバーBで処理
+サーバーCで処理
+
+という形で処理を分散します。
+
+
+
+③ さまざまな処理に対応
+
+Sparkには
+
+次のような機能があります。
+
+機能	内容
+
+Spark SQL	SQLでデータ分析
+Spark Streaming	ストリーム処理
+MLlib	機械学習
+GraphX	グラフ処理
+
+
+そのため
+
+データ分析基盤として幅広く使われています。
+
+
+
+## どんな場面で使う？
+
+Sparkは
+
+ビッグデータ分析基盤で使われます。
+
+代表的な用途は次の通りです。
+
+ログ分析
+
+Webアクセスログ
+
+アプリログ
+
+
+などを高速に分析できます。
+
+
+
+機械学習
+
+Sparkには
+
+MLlib
+
+という機械学習ライブラリがあります。
+
+そのため
+
+レコメンド
+
+予測モデル
+
+
+などの処理にも利用されます。
+
+
+
+リアルタイム分析
+
+Spark Streamingを使うと
+
+IoTデータ
+
+センサーデータ
+
+
+などを リアルタイムに分析できます。
+
+
+
+## よくある誤解・混同
+
+Sparkはデータ保存システムと思う
+
+これは誤りです。
+
+Sparkは
+
+データ処理エンジンです。
+
+データ保存は
+
+HDFS
+
+S3
+
+
+などのストレージが担当します。
+
+
+
+SparkとHadoopは別物と思う
+
+完全に別というわけではありません。
+
+Sparkは
+
+HDFS
+
+YARN
+
+
+と組み合わせて使われることが多いです。
+
+DS検定では
+
+Hadoopエコシステムの一部
+
+として理解しておくと判断しやすくなります。
+
+
+
+MapReduceと同じと思う
+
+MapReduceも分散処理ですが
+
+Sparkは
+
+メモリ処理により高速
+
+という特徴があります。
+
+
+
+## まとめ（試験直前用）
+
+Sparkは 分散データ処理エンジン
+
+多くのサーバーで 並列処理 を行う
+
+メモリ処理で高速
+
+データ保存は HDFSなどのストレージ
+
+DS検定では HDFS / YARN / Sparkの役割の違いが重要
+
+
+
+
+## 対応スキル項目（データエンジニアリング力シート）
+
+スキルカテゴリ名
+データ蓄積
+
+サブカテゴリ名
+分散技術
+
+★ Hadoop・Sparkの分散技術の基本的な仕組みと構成を理解している
+
+## 🔗 関連記事
+
+<ul style="padding-left: 20px;">
+{% assign current_tags = page.tags %}
+{% assign count = 0 %}
+
+{% for p in site.pages %}
+  {% if p.url != page.url and p.tags %}
+    {% assign matched = false %}
+
+    {% for tag in current_tags %}
+      {% if p.tags contains tag and tag != "ds" %}
+        {% assign matched = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if matched %}
+      <li style="margin-bottom: 6px;">
+        <a href="{{ p.url }}">{{ p.title }}</a>
+      </li>
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+
+    {% if count >= 5 %}
+      {% break %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>
+
+<hr>
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/ds/">DS検定トップに戻る</a>
+</div>
+
+<div style="display:flex;justify-content:space-between;margin-top:12px;">
+
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
+  {% endif %}
+
+  {% if page.next.url %}
+    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
+  {% endif %}
+
+</div>

@@ -1,0 +1,282 @@
+﻿---
+layout: page
+title: YARNとは？Hadoopクラスタのリソース管理の仕組み【DS検定】
+description: YARNはHadoopクラスタのリソース管理の仕組みを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+permalink: /ds/yarn/
+categories: [data-engineering]
+tags: [ds, data-storage, data-processing]
+prev: /ds/web-api/
+next: /ds/docker/
+---
+<div style="font-size: 14px; margin-bottom: 12px;">
+  <a href="/ds/">DS検定トップ</a>
+  ＞ {{ page.title }}
+</div>
+
+## まず結論
+
+YARN（Yet Another Resource Negotiator）とは、Hadoopクラスタ全体の計算資源（CPUやメモリ）を管理し、どの処理をどのサーバーで動かすかを調整する仕組みです。
+
+DS検定では
+
+「HDFS＝保存」「YARN＝リソース管理」「Spark / MapReduce＝処理」
+
+という役割の違いを理解できているかがよく問われます。
+
+
+
+## 直感的な説明
+
+ビッグデータの処理では、1台のコンピュータではなく
+
+複数のサーバー（クラスタ）
+
+を使って計算します。
+
+しかし、そのままでは次の問題が起きます。
+
+どのサーバーが空いているか分からない
+
+どこで処理を実行すればいいか決められない
+
+同時に複数の処理が走ると衝突する
+
+
+そこで必要になるのが
+
+クラスタの交通整理役です。
+
+この役割を担うのが YARN です。
+
+イメージとしては
+
+> 多くのサーバーを管理する クラスタの司令塔
+
+
+
+のような存在です。
+
+
+
+## 定義・仕組み
+
+YARNは
+
+Hadoopクラスタの計算リソースを管理するシステムです。
+
+主に次の役割があります。
+
+① リソース管理
+
+クラスタにある
+
+CPU
+
+メモリ
+
+
+などの 計算資源を管理します。
+
+例えば
+
+Sparkの処理
+
+MapReduceの処理
+
+
+などが同時に動く場合でも
+
+どの処理にどれだけのリソースを割り当てるか
+
+を調整します。
+
+
+
+② ジョブのスケジューリング
+
+データ処理は
+
+ジョブ（処理単位）
+
+としてクラスタに送られます。
+
+YARNは
+
+空いているサーバーを探す
+
+処理を割り当てる
+
+
+という
+
+ジョブの実行管理を行います。
+
+
+
+③ クラスタ管理
+
+YARNはクラスタ内の
+
+ノードの状態
+
+実行中の処理
+
+
+を監視します。
+
+そのため
+
+サーバー障害
+
+リソース不足
+
+
+が発生しても処理を継続できるよう管理します。
+
+
+
+## どんな場面で使う？
+
+YARNは
+
+ビッグデータ処理の計算基盤として使われます。
+
+代表的な処理エンジンは
+
+MapReduce
+
+Spark
+
+
+です。
+
+これらの処理は
+
+YARNの上で動作することが多いです。
+
+つまり
+
+HDFS → データ保存
+YARN → リソース管理
+Spark / MapReduce → データ処理
+
+という役割分担になります。
+
+
+
+## よくある誤解・混同
+
+HDFSと役割が同じと思う
+
+これはDS検定で非常に多い混同です。
+
+技術	役割
+
+HDFS	データ保存
+YARN	リソース管理
+Spark	データ処理
+
+
+YARNはデータを保存しません。
+
+ここが重要なポイントです。
+
+
+
+YARNがデータ処理をすると思う
+
+これも誤解です。
+
+YARNは
+
+処理を実行する場所を管理するだけです。
+
+実際に計算するのは
+
+MapReduce
+
+Spark
+
+
+などの処理エンジンです。
+
+
+
+## まとめ（試験直前用）
+
+YARNは Hadoopクラスタのリソース管理システム
+
+CPUやメモリなどの 計算資源を管理する
+
+ジョブの実行場所を決定する
+
+データ保存は HDFS
+
+データ処理は Spark / MapReduce
+
+
+DS検定では
+
+「保存・管理・処理の役割の違い」
+
+を理解しておくことが重要です。
+
+
+
+## 対応スキル項目（データエンジニアリング力シート）
+
+スキルカテゴリ名
+データ蓄積
+
+サブカテゴリ名
+分散技術
+
+★ Hadoop・Sparkの分散技術の基本的な仕組みと構成を理解している
+
+## 🔗 関連記事
+
+<ul style="padding-left: 20px;">
+{% assign current_tags = page.tags %}
+{% assign count = 0 %}
+
+{% for p in site.pages %}
+  {% if p.url != page.url and p.tags %}
+    {% assign matched = false %}
+
+    {% for tag in current_tags %}
+      {% if p.tags contains tag and tag != "ds" %}
+        {% assign matched = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if matched %}
+      <li style="margin-bottom: 6px;">
+        <a href="{{ p.url }}">{{ p.title }}</a>
+      </li>
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+
+    {% if count >= 5 %}
+      {% break %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>
+
+<hr>
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/ds/">DS検定トップに戻る</a>
+</div>
+
+<div style="display:flex;justify-content:space-between;margin-top:12px;">
+
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
+  {% endif %}
+
+  {% if page.next.url %}
+    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
+  {% endif %}
+
+</div>

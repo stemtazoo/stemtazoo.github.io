@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>SLAとは？サービス品質の約束を理解する【情報セキュリティマネジメント】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="SLAとは？サービス品質の約束を理解する【情報セキュリティマネジメント】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="SLAはサービス品質の約束を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:description" content="SLAはサービス品質の約束を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="SLAとは？サービス品質の約束を理解する【情報セキュリティマネジメント】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"SLAはサービス品質の約束を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。","headline":"SLAとは？サービス品質の約束を理解する【情報セキュリティマネジメント】","url":"/sg/sla/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">SLAとは？サービス品質の約束を理解する【情報セキュリティマネジメント】</h1>
+      <h2 class="project-tagline">SLAはサービス品質の約束を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">SLAはサービス品質の約束を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">management</span>
+        
+          <span class="post-tag">service_management</span>
+        
+          <span class="post-tag">it_security_operations</span>
+        
+          <span class="post-tag">sg-management</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+<ul>
+  <li>SLAとは「サービスの品質を数値で約束する取り決め」</li>
+  <li>SG試験では「サービスの品質管理」と「責任範囲」を判断させる問題で出る</li>
+</ul>
+
+<p>👉 <strong>どこまで保証しているかを数値で確認する</strong></p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+
+<p>イメージで考えると👇</p>
+
+<ul>
+  <li>「だいたい動く」 → NG</li>
+  <li>「99.9％動く」 → OK</li>
+</ul>
+
+<p>例えば…</p>
+
+<ul>
+  <li>システムの稼働率 99.9％</li>
+  <li>障害対応時間 1時間以内</li>
+</ul>
+
+<p>👉 <strong>サービスのレベルを見える化したもの</strong></p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+
+<h3 id="-slaservice-level-agreement">■ SLA（Service Level Agreement）</h3>
+
+<ul>
+  <li>サービス提供者と利用者の間の合意</li>
+  <li>品質を数値で定義する</li>
+</ul>
+
+<p>👉 <strong>曖昧さをなくすための契約</strong></p>
+
+<hr />
+
+<h3 id="-主な項目">■ 主な項目</h3>
+
+<ul>
+  <li>稼働率（可用性）</li>
+  <li>応答時間</li>
+  <li>障害対応時間</li>
+  <li>サポート時間</li>
+</ul>
+
+<p>👉 <strong>測れるものを決めるのがポイント</strong></p>
+
+<hr />
+
+<h3 id="-なぜ重要か">■ なぜ重要か</h3>
+
+<ul>
+  <li>トラブル時の判断基準になる</li>
+  <li>「できているかどうか」を客観的に判断できる</li>
+</ul>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+
+<h3 id="-クラウドサービス">■ クラウドサービス</h3>
+
+<ul>
+  <li>SaaS / IaaS</li>
+  <li>外部サービス利用</li>
+</ul>
+
+<p>👉 SLAで品質を確認する</p>
+
+<hr />
+
+<h3 id="-委託先管理科目b">■ 委託先管理（科目B）</h3>
+
+<ul>
+  <li>運用・保守の外注</li>
+  <li>ベンダー管理</li>
+</ul>
+
+<p>👉 「どこまでやるか」を明確にする</p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="-slaがあれば絶対に障害は起きない">❌ SLAがあれば絶対に障害は起きない</h3>
+<p>→ <strong>誤り</strong></p>
+
+<p>👉 あくまで「保証レベル」であってゼロにはならない</p>
+
+<hr />
+
+<h3 id="-slaは努力目標">❌ SLAは努力目標</h3>
+<p>→ <strong>誤り</strong></p>
+
+<p>👉 合意事項なので守るべき基準</p>
+
+<hr />
+
+<h3 id="-slaと契約は別物">❌ SLAと契約は別物</h3>
+<p>→ <strong>誤り（重要）</strong></p>
+
+<p>👉 契約の一部として扱われることが多い</p>
+
+<hr />
+
+<h3 id="sg試験のひっかけ">SG試験のひっかけ</h3>
+
+<ul>
+  <li>「高品質」など曖昧な表現 → NG</li>
+  <li>「99.9％」など数値 → SLA</li>
+</ul>
+
+<p>👉 <strong>数値かどうかで見分ける</strong></p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>SLA → サービス品質の数値化</li>
+  <li>判断基準 → 「数値で定義されているか」</li>
+  <li>委託先管理で重要</li>
+</ul>
+
+<p>👉 数値あり → SLA<br />
+👉 曖昧表現 → NG</p>
+
+<hr />
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/availability/">稼働率とは？可用性の考え方とSLAでの判断基準【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/case-solving-template/">SG試験 ケース問題の解き方テンプレ【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/case-study-approach/">ケース問題の解き方！CIAとリスク対応で考える実践手順【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/common-mistakes/">よくある誤答パターンまとめ！SG試験で選択肢を切るコツ【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/contract-nonconformity/">契約不適合責任とは？瑕疵担保責任との違いも整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/sla-summary/">← SLAの問題まとめ（稼働率の考え方と計算のコツ）【情報セキュリティマネジメント】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/smishing/">スミッシングとは？SMSを使った詐欺手口【情報セキュリティマネジメント】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

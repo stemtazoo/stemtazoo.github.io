@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>SSL/TLSとは？通信を守る暗号化の仕組み【情報セキュリティマネジメント】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="SSL/TLSとは？通信を守る暗号化の仕組み【情報セキュリティマネジメント】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="SSL/TLSは通信を守る暗号化の仕組みを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:description" content="SSL/TLSは通信を守る暗号化の仕組みを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="SSL/TLSとは？通信を守る暗号化の仕組み【情報セキュリティマネジメント】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"SSL/TLSは通信を守る暗号化の仕組みを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。","headline":"SSL/TLSとは？通信を守る暗号化の仕組み【情報セキュリティマネジメント】","url":"/sg/ssl-tls/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">SSL/TLSとは？通信を守る暗号化の仕組み【情報セキュリティマネジメント】</h1>
+      <h2 class="project-tagline">SSL/TLSは通信を守る暗号化の仕組みを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">SSL/TLSは通信を守る暗号化の仕組みを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">security_general</span>
+        
+          <span class="post-tag">crypto_auth</span>
+        
+          <span class="post-tag">network</span>
+        
+          <span class="post-tag">sg-security-overview</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+<p>SSL/TLSとは、インターネット通信を暗号化し、盗聴や改ざんを防ぐための仕組みであり、HTTPSなどの安全な通信の基盤となる技術である。</p>
+
+<p>SG試験では「なぜ安全なのか（暗号化＋認証）」を判断させる問題として出題されます。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>SSL/TLSは「通信に鍵をかける仕組み」です。</p>
+
+<p>イメージとしては、</p>
+
+<ul>
+  <li>HTTP：はがき（誰でも読める）</li>
+  <li>HTTPS：鍵付きの箱（中身が見えない＋改ざんされない）</li>
+</ul>
+
+<p>という違いです。</p>
+
+<p>つまりSSL/TLSは、
+<strong>通信の中身を守るための“カギと封印”の役割</strong>を持っています。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>SSL/TLSは、通信を安全にするために次の3つを実現します。</p>
+
+<h3 id="-暗号化機密性">① 暗号化（機密性）</h3>
+<p>通信内容を暗号化することで、第三者に内容を読まれないようにします。</p>
+
+<hr />
+
+<h3 id="-改ざん防止完全性">② 改ざん防止（完全性）</h3>
+<p>通信途中で内容が書き換えられていないかを検知します。</p>
+
+<hr />
+
+<h3 id="-サーバ認証正当性の確認">③ サーバ認証（正当性の確認）</h3>
+<p>接続先が本物のサーバかどうかを確認します。</p>
+
+<p>→ これに使われるのが「デジタル証明書」です。</p>
+
+<hr />
+
+<h3 id="sg試験での重要ポイント">SG試験での重要ポイント</h3>
+<ul>
+  <li>SSL/TLS＝暗号化＋認証</li>
+  <li>HTTPSは「HTTP＋SSL/TLS」</li>
+</ul>
+
+<p>この関係を理解しておくことが重要です。</p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="使う場面">使う場面</h3>
+<ul>
+  <li>Webサイト（HTTPS）</li>
+  <li>オンライン決済</li>
+  <li>ログイン処理</li>
+</ul>
+
+<hr />
+
+<h3 id="sg試験でよくある出題">SG試験でよくある出題</h3>
+<ul>
+  <li>
+    <p>「通信を暗号化する仕組みはどれか」
+→ SSL/TLS</p>
+  </li>
+  <li>
+    <p>「HTTPSで使われている技術はどれか」
+→ SSL/TLS</p>
+  </li>
+</ul>
+
+<hr />
+
+<h3 id="現場運用での意味">現場運用での意味</h3>
+<ul>
+  <li>SSL/TLSなし → 情報漏えいリスク</li>
+  <li>SSL/TLSあり → 基本的なセキュリティ確保</li>
+</ul>
+
+<p>つまり、
+<strong>SSL/TLSは最低限のセキュリティ対策</strong>です。</p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+<h3 id="-sslとtlsは別物">❌ SSLとTLSは別物</h3>
+<p>→ ⭕ TLSはSSLの後継（実質同じ用途）</p>
+
+<p>SG試験ではまとめて「SSL/TLS」として扱われます。</p>
+
+<hr />
+
+<h3 id="-暗号化だけの仕組み">❌ 暗号化だけの仕組み</h3>
+<p>→ ⭕ 認証と改ざん防止も含まれる</p>
+
+<p>「暗号化だけ」と思っていると選択肢を誤ります。</p>
+
+<hr />
+
+<h3 id="-httpsが安全なのはurlの違い">❌ HTTPSが安全なのはURLの違い</h3>
+<p>→ ⭕ SSL/TLSが裏で動いているから安全</p>
+
+<p>本質は「暗号化の仕組み」です。</p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>SSL/TLS＝通信の暗号化＋認証＋改ざん防止</li>
+  <li>HTTPSの中身の技術</li>
+  <li>デジタル証明書で正当性を確認</li>
+  <li>SG試験では「なぜ安全か」で問われる</li>
+  <li>HTTPとの違いは「SSL/TLSの有無」</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/attacker-types/">攻撃者の種類とは？目的と特徴で整理する【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/blacklist-whitelist/">ブラックリストとホワイトリストの違いとは？判断基準を整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/common-port-numbers/">よく出るポート番号とは？試験での見分け方を整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/cracker/">クラッカーとは？悪意ある攻撃者の特徴と見分け方【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/crl/">CRLとは？失効証明書リストの役割【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/ssh/">← SSHとは？安全な遠隔操作の仕組み【情報セキュリティマネジメント】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/stepping-stone-attack/">踏み台攻撃とは？加害者にならないための重要ポイント【情報セキュリティマネジメント】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

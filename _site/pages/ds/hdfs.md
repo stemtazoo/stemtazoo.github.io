@@ -1,0 +1,179 @@
+﻿---
+layout: page
+title: HDFS（Hadoop分散ファイルシステム）とは？【DS検定リテラシー】
+description: HDFS（Hadoop分散ファイルシステム）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+permalink: /ds/hdfs/
+categories: [data-engineering]
+tags: [ds, data-storage, data-processing]
+prev: /ds/hadoop-vs-spark/
+next: /ds/mapreduce/
+---
+<div style="font-size: 14px; margin-bottom: 12px;">
+  <a href="/ds/">DS検定トップ</a>
+  ＞ {{ page.title }}
+</div>
+
+## まず結論
+HDFSとは、大量データを複数のサーバに分散して保存する仕組みです。  
+DS検定では「なぜビッグデータを安全に扱えるのか」を判断させる問題で問われます。
+
+
+## 直感的な説明
+
+1台のパソコンに全部のデータを保存していたら、  
+壊れた瞬間にすべて失われます。
+
+HDFSは違います。
+
+データを**小さなブロックに分割し、複数のサーバに分けて保存**します。  
+さらに同じデータを複数コピーして持たせます。
+
+つまり、
+
+- 分散して持つ  
+- コピーして守る  
+
+この2つで「壊れても大丈夫」にしている仕組みです。
+
+DS検定では  
+「耐障害性を高める仕組みはどれか？」と問われることが多いです。
+
+
+## 定義・仕組み
+
+HDFS（Hadoop Distributed File System）は、  
+Hadoopで使われる**分散ファイルシステム**です。
+
+### 仕組みのポイント
+
+① データをブロック単位に分割する  
+② 複数のデータノードに保存する  
+③ 同じブロックを複数台にコピー（レプリケーション）する  
+
+例えば、レプリケーション係数が3なら、  
+同じデータを3台に保存します。
+
+1台が故障しても、  
+残りの2台から読み出せるため、耐障害性が高まります。
+
+ここがDS検定の重要ポイントです。
+
+
+## どんな場面で使う？
+
+### 使う場面
+
+- ビッグデータの保存
+- ログデータの大量蓄積
+- 分散処理（MapReduceなど）と組み合わせる場合
+
+企業での活用例：
+
+- Webアクセスログの分析
+- IoTデータの蓄積
+- ECサイトの行動履歴分析
+
+### 使うと誤解しやすい場面
+
+- 高速な検索が目的の場合 → インデックス技術の話
+- トランザクション管理が必要な場合 → RDBの話
+
+HDFSは「高速検索の仕組み」ではありません。  
+あくまで「大量データを分散して保存する仕組み」です。
+
+
+## よくある誤解・混同
+
+### ① データレイクとの混同
+
+データレイクは「考え方・保存方針」。  
+HDFSは「実際の保存技術」。
+
+選択肢では  
+「データレイクが耐障害性を高める」と書かれていたら注意です。
+
+
+### ② レプリケーション以外を選ばせる問題
+
+DS検定ではよく、
+
+- インデックス作成
+- トランザクションログ
+- キャッシュ機構
+
+などを混ぜてきます。
+
+耐障害性を高める直接的な仕組みは  
+**データレプリケーション**です。
+
+
+### ③ RDBとの混同
+
+RDBは整合性やトランザクション管理が強み。  
+HDFSは大量データの分散保存が強み。
+
+「整合性」「ACID」と出てきたらRDB寄りです。
+
+
+## まとめ（試験直前用）
+
+- HDFSは分散ファイルシステム  
+- 大量データを複数サーバに分けて保存する  
+- 耐障害性の仕組みはレプリケーション  
+- データレイクは概念、HDFSは技術  
+- 「壊れても残る仕組みは？」→ レプリケーション
+
+
+## 対応スキル項目（データエンジニアリング力シート）
+- データ基盤
+- 分散処理基盤
+- ★ 分散処理基盤の基本的な仕組みを理解している
+- ★ データの分散保存と冗長化の考え方を理解している
+
+## 🔗 関連記事
+
+<ul style="padding-left: 20px;">
+{% assign current_tags = page.tags %}
+{% assign count = 0 %}
+
+{% for p in site.pages %}
+  {% if p.url != page.url and p.tags %}
+    {% assign matched = false %}
+
+    {% for tag in current_tags %}
+      {% if p.tags contains tag and tag != "ds" %}
+        {% assign matched = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if matched %}
+      <li style="margin-bottom: 6px;">
+        <a href="{{ p.url }}">{{ p.title }}</a>
+      </li>
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+
+    {% if count >= 5 %}
+      {% break %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>
+
+<hr>
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/ds/">DS検定トップに戻る</a>
+</div>
+
+<div style="display:flex;justify-content:space-between;margin-top:12px;">
+
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
+  {% endif %}
+
+  {% if page.next.url %}
+    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
+  {% endif %}
+
+</div>

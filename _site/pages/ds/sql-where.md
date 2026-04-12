@@ -1,0 +1,288 @@
+﻿---
+layout: page
+title: WHERE句とは？条件抽出の基本を理解する【DS検定】
+description: WHERE句は条件抽出の基本を理解するを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+permalink: /ds/sql-where/
+categories: [data-engineering]
+tags: [ds, data-processing, sql]
+prev: /ds/sql-union/
+next: /ds/left-join-where/
+---
+<div style="font-size: 14px; margin-bottom: 12px;">
+  <a href="/ds/">DS検定トップ</a>
+  ＞ {{ page.title }}
+</div>
+
+## まず結論
+
+WHERE句とは、SQLで特定の条件に一致するデータだけを取り出すための仕組みです。
+
+DS検定では、JOIN（テーブル結合）とWHERE（条件抽出）の役割の違いを理解しているかがよく問われます。
+
+
+つまり
+
+JOIN → テーブルを結合する
+WHERE → 条件でデータを絞る
+
+と整理できるかが重要です。
+
+
+
+## 直感的な説明
+
+例えば、次のような売上データがあるとします。
+
+顧客	商品	価格
+
+田中	ノートPC	120000
+佐藤	マウス	3000
+鈴木	キーボード	8000
+
+
+この中から
+
+「1万円以上の商品だけ知りたい」
+
+場合があります。
+
+そのときに使うのが WHERE句 です。
+
+SELECT *
+FROM sales
+WHERE price >= 10000
+
+すると
+
+顧客	商品	価格
+
+田中	ノートPC	120000
+
+
+のように
+
+条件に合うデータだけ取得できます。
+
+
+
+## 定義・仕組み
+
+WHERE句とは
+
+データを取得する際に条件を指定するSQLの構文です。
+
+基本構文
+
+SELECT 列
+FROM テーブル
+WHERE 条件
+
+例えば
+
+SELECT name
+FROM customers
+WHERE city = 'Tokyo'
+
+このSQLは
+
+「Tokyoの顧客だけ取得する」
+
+という意味になります。
+
+よく使う条件演算子
+
+演算子	意味
+
+=	等しい
+>	より大きい
+<	より小さい
+>=	以上
+<=	以下
+<>	等しくない
+
+
+また、複数条件を組み合わせることもできます。
+
+WHERE price > 1000 AND price < 10000
+
+
+
+## どんな場面で使う？
+
+WHERE句は、データ分析では必ず使う基本機能です。
+
+例えば
+
+売上分析
+
+高額商品の抽出
+
+特定商品の売上確認
+
+
+
+
+顧客分析
+
+特定地域の顧客
+
+年齢条件の顧客
+
+
+
+
+ログ分析
+
+特定日時のログ
+
+エラーの発生データ
+
+
+このように
+
+必要なデータだけ取り出すためのフィルターとして使います。
+
+
+
+## よくある誤解・混同
+
+① JOINとWHEREを混同する
+
+DS検定ではここがよく出題されます。
+
+SQL	役割
+
+JOIN	テーブルを結合
+WHERE	条件抽出
+
+
+JOINは
+
+テーブルをつなぐ操作
+
+WHEREは
+
+データを絞る操作
+
+です。
+
+
+
+② WHEREはデータを変更すると思う
+
+WHEREは
+
+データを変更する機能ではありません。
+
+データを変更するSQLは
+
+UPDATE
+
+DELETE
+
+
+などです。
+
+WHEREは
+
+「どのデータを対象にするか」
+
+を指定する役割です。
+
+
+
+③ WHEREはSELECTでしか使わない
+
+WHEREは
+
+SELECT
+
+UPDATE
+
+DELETE
+
+
+などでも使われます。
+
+つまり
+
+対象データを指定する条件として使われます。
+
+
+
+## まとめ（試験直前用）
+
+WHERE句 = 条件に一致するデータを抽出するSQL
+
+データを絞るフィルターの役割
+
+JOINはテーブル結合、WHEREは条件抽出
+
+DS検定では JOINとWHEREの違いを問う問題が多い
+
+
+迷ったら
+
+JOIN → テーブル結合
+WHERE → 条件抽出
+
+と覚えると判断しやすくなります。
+
+
+
+## 対応スキル項目（データエンジニアリング力シート）
+
+スキルカテゴリ：プログラミング
+
+サブカテゴリ：SQL
+
+
+★ SQLの構文を一通り知っていて、記述・実行できる（DML・DDLの理解、各種JOINの使い分け、集計関数とGROUP BY、CASE文を使用した縦横変換、副問合せやEXISTSの活用など）
+
+## 🔗 関連記事
+
+<ul style="padding-left: 20px;">
+{% assign current_tags = page.tags %}
+{% assign count = 0 %}
+
+{% for p in site.pages %}
+  {% if p.url != page.url and p.tags %}
+    {% assign matched = false %}
+
+    {% for tag in current_tags %}
+      {% if p.tags contains tag and tag != "ds" %}
+        {% assign matched = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if matched %}
+      <li style="margin-bottom: 6px;">
+        <a href="{{ p.url }}">{{ p.title }}</a>
+      </li>
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+
+    {% if count >= 5 %}
+      {% break %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>
+
+<hr>
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/ds/">DS検定トップに戻る</a>
+</div>
+
+<div style="display:flex;justify-content:space-between;margin-top:12px;">
+
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
+  {% endif %}
+
+  {% if page.next.url %}
+    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
+  {% endif %}
+
+</div>

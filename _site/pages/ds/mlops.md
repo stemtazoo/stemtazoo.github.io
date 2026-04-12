@@ -1,0 +1,189 @@
+﻿---
+layout: page
+title: MLOpsとは？AIOpsとの違いを一発整理【DS検定リテラシー】
+description: MLOpsはAIOpsとの違いを一発整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+permalink: /ds/mlops/
+categories: [ai-utilization]
+tags: [ds, environment-setup, ai-use]
+prev: /ds/llm-temperature/
+next: /ds/sora-ame-kasa/
+---
+<div style="font-size: 14px; margin-bottom: 12px;">
+  <a href="/ds/">DS検定トップ</a>
+  ＞ {{ page.title }}
+</div>
+
+## まず結論
+
+- **MLOpsとは、機械学習モデルを継続的に運用・改善するための仕組み**です。  
+- DS検定では「何を運用しているのか」を判断できるかが問われます。
+
+特に、**AIOpsと混同させる問題が出やすい**ので注意が必要です。
+
+
+## 直感的な説明
+
+機械学習は「モデルを作って終わり」ではありません。
+
+- データが変わる  
+- 精度が下がる  
+- 再学習が必要になる  
+- 本番環境に安全に反映する必要がある  
+
+これらを仕組みとして回すのが **MLOps** です。
+
+たとえるなら、
+
+> 「モデルを育て続けるための運用ルール」
+
+がMLOpsです。
+
+
+## 定義・仕組み
+
+MLOps（Machine Learning Operations）は、
+
+- データの管理
+- モデルの学習
+- モデルの評価
+- 本番環境へのデプロイ
+- モデルの監視
+- 再学習
+
+といった一連の流れを継続的に管理する仕組みです。
+
+ポイントは、
+
+- 対象は「機械学習モデル」
+- 目的は「安定運用と継続改善」
+
+であることです。
+
+DS検定では、
+
+- 継続的インテグレーション（CI）
+- 継続的デリバリー（CD）
+- モデルのバージョン管理
+
+といったキーワードが出たら、**MLOpsの文脈**である可能性が高いです。
+
+
+## どんな場面で使う？
+
+### 使う場面
+
+- AIを本番サービスに組み込む場合
+- モデルを定期的に再学習する場合
+- 精度劣化を監視する必要がある場合
+
+### 使わない場面
+
+- 単発の分析レポート作成
+- 実験的なモデル検証だけ
+
+ここが重要です。
+
+> MLOpsは「継続運用」が前提  
+> 単発分析はMLOpsではない
+
+この違いを覚えておくと、選択肢が切れます。
+
+
+## よくある誤解・混同
+
+### ❌ MLOps＝AIを使った運用自動化
+
+これはAIOpsです。
+
+| 用語 | 何を運用する？ |
+|------|----------------|
+| MLOps | 機械学習モデル |
+| AIOps | ITシステム |
+
+DS検定では、
+
+- 「ログの異常検知」  
+→ AIOps
+
+- 「モデルの再学習パイプライン」  
+→ MLOps
+
+といった形で出題されます。
+
+
+### ❌ モデル監視＝AIOps
+
+モデルの精度低下監視はMLOpsです。
+
+AIOpsは「システムの異常監視」です。
+
+ここを混同させる選択肢は非常に典型的です。
+
+
+## まとめ（試験直前用）
+
+- MLOpsは「モデルの運用管理」
+- 継続的改善・再学習がキーワード
+- 運用対象がモデルならMLOps
+- 運用対象がIT基盤ならAIOps
+
+迷ったら、
+
+> 「何を運用しているのか」で判断する
+
+これがDS検定での切り分け基準です。
+
+
+## 対応スキル項目（AI利活用スキルシート）
+- AIの利活用
+- AI導入・運用
+- ★ AIを活用した業務改善・効率化の事例を理解している
+- ★ AI導入における運用上の課題を理解している
+
+## 🔗 関連記事
+
+<ul style="padding-left: 20px;">
+{% assign current_tags = page.tags %}
+{% assign count = 0 %}
+
+{% for p in site.pages %}
+  {% if p.url != page.url and p.tags %}
+    {% assign matched = false %}
+
+    {% for tag in current_tags %}
+      {% if p.tags contains tag and tag != "ds" %}
+        {% assign matched = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if matched %}
+      <li style="margin-bottom: 6px;">
+        <a href="{{ p.url }}">{{ p.title }}</a>
+      </li>
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+
+    {% if count >= 5 %}
+      {% break %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>
+
+<hr>
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/ds/">DS検定トップに戻る</a>
+</div>
+
+<div style="display:flex;justify-content:space-between;margin-top:12px;">
+
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
+  {% endif %}
+
+  {% if page.next.url %}
+    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
+  {% endif %}
+
+</div>

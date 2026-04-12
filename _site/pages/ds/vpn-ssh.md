@@ -1,0 +1,164 @@
+﻿---
+layout: page
+title: VPNとSSHの違いとは？（安全な通信の仕組みを整理）【DS検定】
+description: VPNとSSHの違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+permalink: /ds/vpn-ssh/
+categories: [business]
+tags: [ds, security, design]
+prev: /ds/ssl-tls/
+next: /ds/zero-trust/
+---
+<div style="font-size: 14px; margin-bottom: 12px;">
+  <a href="/ds/">DS検定トップ</a>
+  ＞ {{ page.title }}
+</div>
+
+## まず結論
+
+- **VPNは「ネットワーク全体を安全につなぐ仕組み」**  
+- **SSHは「1台のサーバに安全に接続する仕組み」**  
+
+DS検定では、「守っている範囲の違い」を切り分けられるかがポイントです。
+
+
+## 直感的な説明
+
+会社の社内ネットワークに自宅から接続する場面を考えてみます。
+
+- VPNは「会社の中にいるのと同じ状態をつくるトンネル」
+- SSHは「特定のサーバの部屋に入る鍵」
+
+VPNは“ネットワーク全体”を安全に使えるようにします。  
+SSHは“特定の1台”に安全にログインします。
+
+DS検定では、  
+「社内システム全体へ安全に接続する方法はどれか？」  
+のような問いで出ます。
+
+
+## 定義・仕組み
+
+### VPN（Virtual Private Network）
+
+- インターネット上に**暗号化された専用回線のような経路**をつくる仕組み
+- 社内ネットワークへ安全にアクセスできる
+- 接続すると、社内LANの一部として扱われる
+
+つまり、VPNは「安全なネットワーク環境を作る」技術です。
+
+
+### SSH（Secure Shell）
+
+- 特定のサーバへ**暗号化された通信でログインする**仕組み
+- コマンド操作やファイル転送が可能
+- 接続対象は基本的に1台
+
+SSHは「安全な遠隔操作」のための技術です。
+
+
+## どんな場面で使う？
+
+### VPNを使う場面
+
+- 在宅勤務で社内システムを使う
+- 社内サーバ群へまとめてアクセスする
+- 社内専用のデータベースに接続する
+
+VPNは「会社の中に入る」イメージです。
+
+
+### SSHを使う場面
+
+- クラウド上のLinuxサーバにログインする
+- サーバ設定を変更する
+- ログを確認する
+
+SSHは「1台を操作する」イメージです。
+
+
+## よくある誤解・混同
+
+### ❌ VPNはサーバ操作専用の技術である  
+→ VPNはネットワーク接続の仕組みです。
+
+### ❌ SSHを使えば社内ネットワーク全体に入れる  
+→ SSHは基本的に特定サーバへの接続です。
+
+
+### DS検定の典型ひっかけ
+
+- 「社内ネットワークに安全に接続する方法はどれか？」
+  → VPN
+
+- 「リモートでサーバを安全に操作する方法はどれか？」
+  → SSH
+
+ここで“守る範囲”を意識できるかが勝負です。
+
+
+## まとめ（試験直前用）
+
+- VPN＝ネットワーク全体を安全に接続
+- SSH＝特定サーバへ安全にログイン
+- VPNは「中に入る」
+- SSHは「1台を操作する」
+
+選択肢では  
+「社内ネットワーク」「在宅勤務」「LAN接続」ならVPN。  
+「サーバ操作」「コマンド実行」ならSSH。
+
+
+## 対応スキル項目（データエンジニアリング力シート）
+
+- ITシステム基盤
+- セキュリティ
+- ★ 情報セキュリティの基本的な考え方を理解している
+- ★ ネットワークおよび通信の基礎を理解している
+
+## 🔗 関連記事
+
+<ul style="padding-left: 20px;">
+{% assign current_tags = page.tags %}
+{% assign count = 0 %}
+
+{% for p in site.pages %}
+  {% if p.url != page.url and p.tags %}
+    {% assign matched = false %}
+
+    {% for tag in current_tags %}
+      {% if p.tags contains tag and tag != "ds" %}
+        {% assign matched = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if matched %}
+      <li style="margin-bottom: 6px;">
+        <a href="{{ p.url }}">{{ p.title }}</a>
+      </li>
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+
+    {% if count >= 5 %}
+      {% break %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>
+
+<hr>
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/ds/">DS検定トップに戻る</a>
+</div>
+
+<div style="display:flex;justify-content:space-between;margin-top:12px;">
+
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
+  {% endif %}
+
+  {% if page.next.url %}
+    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
+  {% endif %}
+
+</div>

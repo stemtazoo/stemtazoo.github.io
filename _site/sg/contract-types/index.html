@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>請負契約と準委任契約の違いとは？成果物か作業かで判断【情報セキュリティマネジメント】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="請負契約と準委任契約の違いとは？成果物か作業かで判断【情報セキュリティマネジメント】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="請負契約と準委任契約の違いは関連概念を正しく切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:description" content="請負契約と準委任契約の違いは関連概念を正しく切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="請負契約と準委任契約の違いとは？成果物か作業かで判断【情報セキュリティマネジメント】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"請負契約と準委任契約の違いは関連概念を正しく切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。","headline":"請負契約と準委任契約の違いとは？成果物か作業かで判断【情報セキュリティマネジメント】","url":"/sg/contract-types/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">請負契約と準委任契約の違いとは？成果物か作業かで判断【情報セキュリティマネジメント】</h1>
+      <h2 class="project-tagline">請負契約と準委任契約の違いは関連概念を正しく切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">請負契約と準委任契約の違いは関連概念を正しく切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">management</span>
+        
+          <span class="post-tag">vendor_management</span>
+        
+          <span class="post-tag">system_strategy</span>
+        
+          <span class="post-tag">sg-strategy</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+<ul>
+  <li>請負契約：<strong>成果物を完成させる責任がある契約</strong></li>
+  <li>準委任契約：<strong>作業を行うことが目的の契約</strong></li>
+</ul>
+
+<p>👉 SG試験では<br />
+<strong>「成果物の完成責任があるか」で判断する</strong></p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+
+<p>イメージで整理👇</p>
+
+<ul>
+  <li>請負 → 「完成させるまでが仕事」</li>
+  <li>準委任 → 「作業することが仕事」</li>
+</ul>
+
+<p>例えば…</p>
+
+<ul>
+  <li>システムを完成させる契約 → 請負</li>
+  <li>運用や保守を行う契約 → 準委任</li>
+</ul>
+
+<p>👉 「ゴールがあるかどうか」で見る</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+
+<h3 id="-請負契約">■ 請負契約</h3>
+
+<ul>
+  <li>成果物の完成が目的</li>
+  <li>完成させる義務あり</li>
+</ul>
+
+<p>👉 <strong>完成できなければ責任が発生</strong></p>
+
+<hr />
+
+<h3 id="-準委任契約">■ 準委任契約</h3>
+
+<ul>
+  <li>作業の実施が目的</li>
+  <li>完成義務はない</li>
+</ul>
+
+<p>👉 <strong>適切に作業していればOK</strong></p>
+
+<hr />
+
+<h3 id="-責任の違い重要">■ 責任の違い（重要）</h3>
+
+<ul>
+  <li>請負 → 成果物の品質・完成に責任</li>
+  <li>準委任 → 作業の過程に責任</li>
+</ul>
+
+<p>👉 ここが最大の違い</p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+
+<h3 id="-請負契約-1">■ 請負契約</h3>
+
+<ul>
+  <li>システム開発</li>
+  <li>ソフトウェア納品</li>
+</ul>
+
+<p>👉 完成物がある仕事</p>
+
+<hr />
+
+<h3 id="-準委任契約-1">■ 準委任契約</h3>
+
+<ul>
+  <li>運用・保守</li>
+  <li>監視業務</li>
+  <li>コンサル</li>
+</ul>
+
+<p>👉 継続的な作業</p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="-作業していれば請負でもok">❌ 作業していれば請負でもOK</h3>
+<p>→ <strong>誤り</strong></p>
+
+<p>👉 請負は完成しないとダメ</p>
+
+<hr />
+
+<h3 id="-準委任でも完成責任がある">❌ 準委任でも完成責任がある</h3>
+<p>→ <strong>誤り</strong></p>
+
+<p>👉 完成義務はない</p>
+
+<hr />
+
+<h3 id="-委託全部同じ契約">❌ 委託＝全部同じ契約</h3>
+<p>→ <strong>誤り（頻出）</strong></p>
+
+<p>👉 請負と準委任は別物</p>
+
+<hr />
+
+<h3 id="sg試験のひっかけ">SG試験のひっかけ</h3>
+
+<ul>
+  <li>「完成させる」→ 請負</li>
+  <li>「支援する」「運用する」→ 準委任</li>
+</ul>
+
+<p>👉 <strong>動詞に注目すると切れる</strong></p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>請負 → 成果物の完成責任あり</li>
+  <li>準委任 → 作業の実施のみ</li>
+  <li>判断基準 → 「完成が必要か？」</li>
+</ul>
+
+<p>👉 YES → 請負<br />
+👉 NO → 準委任</p>
+
+<hr />
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/contract-nonconformity/">契約不適合責任とは？瑕疵担保責任との違いも整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/copyright-transfer/">著作権譲渡契約とは？ライセンス契約との違いを整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/employment-type-comparison/">就業形態の違いを完全整理【SG試験で迷わない判断基準】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/outsourcing-contract-difference/">請負契約と派遣契約の違いとは？指示系統で判断するポイント【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/project-lifecycle-characteristics/">プロジェクトライフサイクルの特性とは？頻出パターンを整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/contract-nonconformity/">← 契約不適合責任とは？瑕疵担保責任との違いも整理【情報セキュリティマネジメント】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/copyright-ownership/">著作権の帰属とは？委託開発との違いを理解する【情報セキュリティマネジメント】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

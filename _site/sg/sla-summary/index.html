@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>SLAの問題まとめ（稼働率の考え方と計算のコツ）【情報セキュリティマネジメント】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="SLAの問題まとめ（稼働率の考え方と計算のコツ）【情報セキュリティマネジメント】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="SLAの問題まとめ（稼働率の考え方と計算のコツ）は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:description" content="SLAの問題まとめ（稼働率の考え方と計算のコツ）は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="SLAの問題まとめ（稼働率の考え方と計算のコツ）【情報セキュリティマネジメント】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"SLAの問題まとめ（稼働率の考え方と計算のコツ）は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。","headline":"SLAの問題まとめ（稼働率の考え方と計算のコツ）【情報セキュリティマネジメント】","url":"/sg/sla-summary/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">SLAの問題まとめ（稼働率の考え方と計算のコツ）【情報セキュリティマネジメント】</h1>
+      <h2 class="project-tagline">SLAの問題まとめ（稼働率の考え方と計算のコツ）は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">SLAの問題まとめ（稼働率の考え方と計算のコツ）は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-management</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    <h2 id="まず結論">まず結論</h2>
+<ul>
+  <li>SLA（サービスレベル合意）の問題は「サービス提供時間」と「停止時間」を正しく切り分けて、稼働率を判断する問題</li>
+  <li>SG試験では「どの時間を分母にするか」「どの停止を含めるか」を見極めさせる</li>
+</ul>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>SLAは「どれくらいちゃんとサービスを動かすか」という約束です。</p>
+
+<p>例えば会社のシステムでいうと、</p>
+
+<ul>
+  <li>営業時間中は止まると困る</li>
+  <li>夜間のメンテナンスはOK</li>
+</ul>
+
+<p>というように、「止まっていい時間」と「ダメな時間」があります。</p>
+
+<p>👉 つまり<br />
+<strong>“全部の時間”ではなく“約束した時間だけ”で考える</strong>のがポイントです。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>SLA（Service Level Agreement）は、サービス提供者と利用者の間で決める「品質の約束」です。</p>
+
+<p>SG試験では特に「可用性（稼働率）」がよく問われます。</p>
+
+<h3 id="基本の考え方">基本の考え方</h3>
+<p>稼働率 ＝ （サービス提供時間 − 停止時間） ÷ サービス提供時間</p>
+
+<p>ここで重要なのは次の3点です。</p>
+
+<h3 id="-分母サービス提供時間">① 分母（サービス提供時間）</h3>
+<ul>
+  <li>24時間ではなく「サービス提供時間帯」を使う</li>
+  <li>例：営業日9時〜19時 → 1日10時間</li>
+</ul>
+
+<p>👉 SG試験では<br />
+<strong>「提供時間を読み取れるか」が最重要ポイント</strong></p>
+
+<hr />
+
+<h3 id="-停止時間に含めるもの">② 停止時間に含めるもの</h3>
+<ul>
+  <li>障害停止 → 含める</li>
+  <li>計画停止 → 条件による</li>
+</ul>
+
+<p>👉 「サービス提供時間帯に行わない」と書いてあれば<br />
+<strong>計画停止は含めない</strong></p>
+
+<hr />
+
+<h3 id="-複数条件の扱い">③ 複数条件の扱い</h3>
+<p>例：</p>
+<ul>
+  <li>停止回数：2回以下</li>
+  <li>停止時間：合計1時間以内</li>
+</ul>
+
+<p>👉 稼働率に使うのは<br />
+<strong>「合計時間」だけ</strong></p>
+
+<p>回数は品質管理の条件であり、計算には使わない</p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="使う場面">使う場面</h3>
+<ul>
+  <li>委託先との契約（クラウド・システム運用）</li>
+  <li>社内システムの運用ルール決定</li>
+  <li>サービス品質の評価</li>
+</ul>
+
+<p>👉 科目Bでは<br />
+<strong>「この条件で妥当か？」を判断させる問題が出る</strong></p>
+
+<hr />
+
+<h3 id="注意が必要な場面">注意が必要な場面</h3>
+<ul>
+  <li>24時間サービスと勘違いする</li>
+  <li>計画停止を全部含めてしまう</li>
+  <li>回数制限を時間に換算してしまう</li>
+</ul>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+<h3 id="-よくある誤解">❌ よくある誤解①</h3>
+<p>「1週間＝24時間×7日で計算する」</p>
+
+<p>👉 ⭕ 正しくは<br />
+<strong>サービス提供時間だけ使う</strong></p>
+
+<hr />
+
+<h3 id="-よくある誤解-1">❌ よくある誤解②</h3>
+<p>「停止2回だから2時間止まると考える」</p>
+
+<p>👉 ⭕ 正しくは<br />
+<strong>“合計時間”が上限</strong></p>
+
+<hr />
+
+<h3 id="-よくある誤解-2">❌ よくある誤解③</h3>
+<p>「計画停止も全部ダウン時間に入れる」</p>
+
+<p>👉 ⭕ 条件文を確認<br />
+<strong>提供時間外ならカウントしない</strong></p>
+
+<hr />
+
+<h3 id="sg試験のひっかけ">SG試験のひっかけ</h3>
+<ul>
+  <li>「営業日」「提供時間帯」を読み飛ばさせる</li>
+  <li>「回数」と「時間」を混同させる</li>
+  <li>「計画停止」を入れるか迷わせる</li>
+</ul>
+
+<p>👉 選択肢では<br />
+<strong>“24時間で計算しているもの”はほぼ誤り</strong></p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>稼働率は「サービス提供時間」を分母にする</li>
+  <li>停止時間は「合計時間」で判断（回数は使わない）</li>
+  <li>計画停止は条件を確認（時間外なら含めない）</li>
+  <li>SG試験では<br />
+👉 「何を分母にするか」でほぼ決まる</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/availability/">稼働率とは？可用性の考え方とSLAでの判断基準【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/contract-nonconformity/">契約不適合責任とは？瑕疵担保責任との違いも整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/employment-type-comparison/">就業形態の違いを完全整理【SG試験で迷わない判断基準】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/mtbf/">MTBFとは？平均故障間隔の意味と稼働率との関係【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/mttr/">MTTRとは？平均復旧時間の意味と短縮の考え方【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/sg-exam-outline-study/">← 情報セキュリティマネジメント試験の出題内容とは？科目A・科目Bと勉強方法を整理</a>
+  
+
+  
+    
+    <a class="next" href="/sg/sla/">SLAとは？サービス品質の約束を理解する【情報セキュリティマネジメント】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

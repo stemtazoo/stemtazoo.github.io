@@ -1,0 +1,176 @@
+﻿---
+layout: page
+title: データウェアハウス（DWH）とは？（データレイクとの違いも整理）【DS検定リテラシー】
+description: データウェアハウス（DWH）は（データレイクとの違いも整理）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+permalink: /ds/data-warehouse/
+categories: [data-engineering]
+tags: [ds, data-storage, data-structure, database]
+prev: /ds/data-mart/
+next: /ds/data-warehouse-vs-datamart/
+---
+<div style="font-size: 14px; margin-bottom: 12px;">
+  <a href="/ds/">DS検定トップ</a>
+  ＞ {{ page.title }}
+</div>
+
+## まず結論
+データウェアハウス（DWH）とは、分析しやすい形に整理・統合されたデータを蓄積する仕組みです。  
+DS検定では「データレイクとの違い」や「経営分析に向くのはどれか」といった形で問われます。
+
+
+## 直感的な説明
+
+### データレイク
+とりあえず全部ためる「大きな湖」。
+
+
+### データウェアハウス（DWH）
+きれいに整理された「分析専用の倉庫」。
+
+- データの形式をそろえる  
+- 不要なデータを除く  
+- 分析しやすい構造に整える  
+
+つまり、
+
+**そのまま保存するのがデータレイク**  
+**整理して保存するのがDWH**
+
+ここが最大の違いです。
+
+
+## 定義・仕組み
+
+データウェアハウスは、
+
+- 複数システムからデータを集め
+- 整形・統合し
+- 分析用に保存する基盤
+
+です。
+
+### 特徴
+
+- 構造化データ中心
+- 集計・分析向け
+- 履歴データを保持
+- 一貫性を重視
+
+保存前に形式を決める方式（Schema on Write）を採用します。
+
+これはデータレイクの  
+「Schema on Read」と対比される重要ポイントです。
+
+
+## どんな場面で使う？
+
+### 使う場面
+
+- 売上分析
+- 経営ダッシュボード
+- KPI管理
+- 月次レポート
+
+「正確で整理されたデータが必要」な場面です。
+
+
+### 向かない場面
+
+- 画像・音声など非構造データ中心
+- 将来用途が未確定なデータ保存
+
+その場合はデータレイクが向いています。
+
+
+## よくある誤解・混同
+
+### ① DWH＝大量保存用？
+
+違います。
+
+大量保存が目的ではなく  
+**分析しやすい状態で保存すること**が目的です。
+
+
+### ② データレイクとの違いがあいまい
+
+| 項目 | DWH | データレイク |
+|------|-----|--------------|
+| 保存時 | 整形する | 整形しない |
+| データ形式 | 主に構造化 | 何でも可 |
+| 主目的 | 経営分析 | 将来分析・AI活用 |
+
+DS検定では  
+「構造化済み」「KPI分析」と書かれていればDWHです。
+
+
+### ③ RDBと同じ？
+
+RDBは業務処理向け。  
+DWHは分析向け。
+
+トランザクション処理ではなく、分析処理が目的です。
+
+
+## まとめ（試験直前用）
+
+- DWHは分析専用データ基盤  
+- 保存前に整形（Schema on Write）  
+- 構造化データ中心  
+- 経営分析・KPI管理向き  
+- 「整理済み」「分析用」→ DWH
+
+
+## 対応スキル項目（データエンジニアリング力シート）
+- データ基盤
+- データ管理
+- ★ データ基盤の代表的なアーキテクチャを理解している
+- ★ データウェアハウスとデータレイクの違いを理解している
+
+## 🔗 関連記事
+
+<ul style="padding-left: 20px;">
+{% assign current_tags = page.tags %}
+{% assign count = 0 %}
+
+{% for p in site.pages %}
+  {% if p.url != page.url and p.tags %}
+    {% assign matched = false %}
+
+    {% for tag in current_tags %}
+      {% if p.tags contains tag and tag != "ds" %}
+        {% assign matched = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if matched %}
+      <li style="margin-bottom: 6px;">
+        <a href="{{ p.url }}">{{ p.title }}</a>
+      </li>
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+
+    {% if count >= 5 %}
+      {% break %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>
+
+<hr>
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/ds/">DS検定トップに戻る</a>
+</div>
+
+<div style="display:flex;justify-content:space-between;margin-top:12px;">
+
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
+  {% endif %}
+
+  {% if page.next.url %}
+    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
+  {% endif %}
+
+</div>

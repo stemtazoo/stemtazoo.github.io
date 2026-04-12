@@ -1,0 +1,168 @@
+﻿---
+layout: page
+title: クラウドサービスのIAMポリシーとは？（アクセス制御の基本）【DS検定】
+description: クラウドサービスのIAMポリシーは（アクセス制御の基本）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+permalink: /ds/iam-policy/
+categories: [business]
+tags: [ds, security, design]
+prev: /ds/hash-vs-encryption/
+next: /ds/least-privilege/
+---
+<div style="font-size: 14px; margin-bottom: 12px;">
+  <a href="/ds/">DS検定トップ</a>
+  ＞ {{ page.title }}
+</div>
+
+## まず結論
+IAMポリシーとは、**「誰が」「どのリソースに」「何をしてよいか」を定義するアクセス権限ルール**です。  
+DS検定では「認証」と「認可」の違いを理解できているかが問われます。
+
+
+## 直感的な説明
+
+会社のオフィスを想像してみてください。
+
+- 社員証を持っている → **その人が誰かを確認する（認証）**
+- 会議室に入れる人を決める → **入ってよいかを決める（認可）**
+
+IAMポリシーは、  
+「営業部の人は売上データを閲覧できる」  
+「管理者だけが削除できる」  
+といった**ルールブック**のようなものです。
+
+クラウドでは、このルールを細かく設定しないと、
+誤って重要データを削除してしまうリスクがあります。
+
+
+## 定義・仕組み
+
+IAM（Identity and Access Management）は  
+**ユーザーやグループに対してアクセス権限を管理する仕組み**です。
+
+IAMポリシーでは主に次の3つを定義します。
+
+- 誰に（ユーザー・グループ・ロール）
+- どのリソースに（ストレージ・データベースなど）
+- 何を許可するか（読み取り・書き込み・削除など）
+
+ポイントはここです。
+
+IAMポリシーは「ログインさせる仕組み」ではありません。  
+**ログイン後に何ができるかを決める仕組み**です。
+
+DS検定ではここを区別させてきます。
+
+
+## どんな場面で使う？
+
+### 使う場面
+
+- クラウドストレージのアクセス管理
+- チームごとのデータ閲覧制御
+- 本番環境と開発環境の権限分離
+- 最小権限の原則を守る設計
+
+### 誤解しやすい場面
+
+- 「アクセスキーを発行すれば安全」→ それは認証情報
+- 「暗号化しているから安全」→ それはデータ保護
+
+IAMポリシーは**利用権限の管理**です。
+
+
+## よくある誤解・混同
+
+### ① 認証との混同
+
+- 認証（Authentication）  
+  → 本人確認
+- 認可（Authorization）  
+  → 何をしてよいかの許可
+
+IAMポリシーは「認可」に該当します。
+
+DS検定では  
+「アクセスキー」「多要素認証」「IAMポリシー」を並べて出題し、  
+区別できるかを問われることが多いです。
+
+
+### ② 暗号化との混同
+
+- 暗号化 → データを読めなくする
+- IAMポリシー → 操作できる人を制限する
+
+役割がまったく違います。
+
+
+### ③ ネットワーク制御との混同
+
+- ファイアウォール → 通信経路の制御
+- IAMポリシー → ユーザー権限の制御
+
+DS検定では  
+「ネットワークポリシー」と混ぜて出すことがあります。
+
+
+## まとめ（試験直前用）
+
+- IAMポリシー＝「何をしてよいか」を決めるルール  
+- 認証ではなく「認可」の仕組み  
+- ユーザーやグループ単位で権限を設定する  
+- 暗号化やネットワーク制御とは役割が違う  
+
+選択肢で「本人確認」「暗号化」と書かれていたら誤り。  
+「特定のユーザーやグループに対するアクセス制御」とあれば正解方向です。
+
+
+## 対応スキル項目（AI利活用スキルシート）
+- AIを活用するための基盤理解
+- セキュリティ・リスク管理
+- ★ AIシステムの利用における情報セキュリティ及びリスク管理の重要性を理解している
+
+## 🔗 関連記事
+
+<ul style="padding-left: 20px;">
+{% assign current_tags = page.tags %}
+{% assign count = 0 %}
+
+{% for p in site.pages %}
+  {% if p.url != page.url and p.tags %}
+    {% assign matched = false %}
+
+    {% for tag in current_tags %}
+      {% if p.tags contains tag and tag != "ds" %}
+        {% assign matched = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if matched %}
+      <li style="margin-bottom: 6px;">
+        <a href="{{ p.url }}">{{ p.title }}</a>
+      </li>
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+
+    {% if count >= 5 %}
+      {% break %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>
+
+<hr>
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/ds/">DS検定トップに戻る</a>
+</div>
+
+<div style="display:flex;justify-content:space-between;margin-top:12px;">
+
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
+  {% endif %}
+
+  {% if page.next.url %}
+    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
+  {% endif %}
+
+</div>
