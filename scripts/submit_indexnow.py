@@ -257,10 +257,15 @@ def submit_to_indexnow(site_root: str, key: str, key_location: str, urls: list[s
             print(f"IndexNow response: {response.status}")
             return 0 if 200 <= response.status < 300 else 1
     except error.HTTPError as exc:
-        print(f"IndexNow HTTP error: {exc.code} {exc.reason}", file=sys.stderr)
         detail = exc.read().decode("utf-8", errors="replace")
+        print(f"IndexNow HTTP error: {exc.code} {exc.reason}", file=sys.stderr)
         if detail:
             print(detail, file=sys.stderr)
+            if exc.code == 403 and "SiteVerificationNotCompleted" in detail:
+                print(
+                    "IndexNow site verification is still pending. Treating this run as a non-fatal retryable state."
+                )
+                return 0
         return 1
     except error.URLError as exc:
         print(f"IndexNow request failed: {exc}", file=sys.stderr)
