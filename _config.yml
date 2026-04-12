@@ -9,6 +9,10 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
+exclude:
+  - AGENTS.md
+  - ACTIONS_TROUBLESHOOTING.md
+
 title: AI・データサイエンス・IT学習ノート
 description: AI・データサイエンス・ITの学びをやさしく整理するブログ
 lang: ja
