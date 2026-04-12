@@ -1,0 +1,36 @@
+name: Submit IndexNow URLs
+
+on:
+  deployment_status:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  submit-indexnow:
+    if: >
+      github.event_name == 'workflow_dispatch' ||
+      (
+        github.event_name == 'deployment_status' &&
+        github.event.deployment_status.state == 'success' &&
+        github.event.deployment.environment == 'github-pages'
+      )
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Submit changed URLs to IndexNow
+        env:
+          INDEXNOW_KEY_FILE: f0977966c6644641ae35df01652658c4.txt
+        run: |
+          python scripts/submit_indexnow.py --all-known --key-file "$INDEXNOW_KEY_FILE"
