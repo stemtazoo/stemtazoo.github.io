@@ -3,7 +3,7 @@ layout: page
 title: 不正アクセスとは？攻撃の流れと対策の考え方【情報セキュリティマネジメント】
 description: 不正アクセスは攻撃の流れと対策の考え方を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
 permalink: /sg/unauthorized-access/
-tags: [sg, security_measures, unauthorized_access, risk_assessment, access_control]
+tags: [sg, security_measures, unauthorized_access, risk_assessment, access_control, sg-security-measures]
 prev: /sg/unauthorized-access-techniques/
 next: /sg/vendor-management/
 ---

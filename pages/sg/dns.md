@@ -3,7 +3,7 @@ layout: page
 title: DNSとは？名前解決の仕組みとセキュリティのポイント【情報セキュリティマネジメント】
 description: DNSは名前解決の仕組みとセキュリティのポイントを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
 permalink: /sg/dns/
-tags: [sg, technology, network, security_measures, unauthorized_access]
+tags: [sg, technology, network, security_measures, unauthorized_access, sg-technology]
 prev: /sg/dns-reflector-attack/
 next: /sg/domain-hijacking/
 ---

@@ -3,7 +3,7 @@ layout: page
 title: セッションハイジャックとは？ログイン乗っ取りの仕組みと対策【情報セキュリティマネジメント】
 description: セッションハイジャックはログイン乗っ取りの仕組みと対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
 permalink: /sg/session-hijacking/
-tags: [sg, security_measures, unauthorized_access, network, access_control]
+tags: [sg, security_measures, unauthorized_access, network, access_control, sg-security-measures]
 prev: /sg/security-training/
 next: /sg/sg-exam-outline-study/
 ---

@@ -2,7 +2,7 @@
 layout: page
 title: 著作権譲渡契約とは？ライセンス契約との違いを整理【情報セキュリティマネジメント】
 permalink: /sg/copyright-transfer/
-tags: [sg, security_law, vendor_management, system_strategy]
+tags: [sg, security_law, vendor_management, system_strategy, sg-security-law]
 ---
 
 ## まず結論

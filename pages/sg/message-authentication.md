@@ -2,7 +2,7 @@
 layout: page
 title: メッセージ認証とは？改ざん検知と送信者確認の仕組み【情報セキュリティマネジメント】
 permalink: /sg/message-authentication/
-tags: [sg, security_general, crypto_auth, access_control]
+tags: [sg, security_general, crypto_auth, access_control, sg-security-overview]
 ---
 
 ## まず結論

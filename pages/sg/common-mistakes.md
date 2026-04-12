@@ -3,7 +3,7 @@ layout: page
 title: よくある誤答パターンまとめ！SG試験で選択肢を切るコツ【情報セキュリティマネジメント】
 description: SG試験でよくある誤答パターンを整理し、選択肢の切り方を解説します。CIAやリスク対応の観点から間違えやすいポイントを押さえ、得点力を高めます。
 permalink: /sg/common-mistakes/
-tags: [sg, risk_assessment, security_management, it_security_operations]
+tags: [sg, risk_assessment, security_management, it_security_operations, sg-security-management]
 prev: /sg/command-and-control/
 next: /sg/common-port-numbers/
 ---

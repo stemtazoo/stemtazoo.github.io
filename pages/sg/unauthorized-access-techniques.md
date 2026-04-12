@@ -3,7 +3,7 @@ layout: page
 title: 不正アクセスの手法とは？攻撃パターンを整理して対策につなげる【情報セキュリティマネジメント】
 description: 不正アクセスの手法は攻撃パターンを整理して対策につなげるを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
 permalink: /sg/unauthorized-access-techniques/
-tags: [sg, security_measures, unauthorized_access, threat_vulnerability, risk_assessment]
+tags: [sg, security_measures, unauthorized_access, threat_vulnerability, risk_assessment, sg-security-measures]
 prev: /sg/timestamp/
 next: /sg/unauthorized-access/
 ---

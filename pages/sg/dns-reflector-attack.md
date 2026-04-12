@@ -3,7 +3,7 @@ layout: page
 title: DNSリフレクター攻撃とは？仕組みと対策の考え方【情報セキュリティマネジメント】
 description: DNSリフレクター攻撃は、送信元IPを偽装してDNSサーバから大量の応答を標的に送りつけるDoS攻撃です。仕組みと増幅の考え方、SG試験でのひっかけポイントを整理します。
 permalink: /sg/dns-reflector-attack/
-tags: [sg, threat_vulnerability, unauthorized_access, network]
+tags: [sg, threat_vulnerability, unauthorized_access, network, sg-security-overview]
 prev: /sg/dns-poisoning-vs-pharming/
 next: /sg/dns/
 ---

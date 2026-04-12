@@ -3,7 +3,7 @@ layout: page
 title: C&Cサーバとは？ボットネットを操る指令の仕組み【情報セキュリティマネジメント】
 description: C&Cサーバはボットネットに命令を送る指令サーバです。ボットとの関係や攻撃の流れを整理し、SG試験で問われる役割の違いを分かりやすく解説します。
 permalink: /sg/command-and-control/
-tags: [sg, threat_vulnerability, malware, unauthorized_access]
+tags: [sg, threat_vulnerability, malware, unauthorized_access, sg-security-overview]
 prev: /sg/client-server-system/
 next: /sg/common-mistakes/
 ---

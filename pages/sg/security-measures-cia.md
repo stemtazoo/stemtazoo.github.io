@@ -3,7 +3,7 @@ layout: page
 title: 情報セキュリティ対策をCIAで整理！実務と試験の判断軸【SG試験】
 description: 情報セキュリティ対策は機密性・完全性・可用性（CIA）で整理できます。本記事では代表的な対策と対応関係を整理し、SG試験で迷わない判断基準を解説します。
 permalink: /sg/security-measures-cia/
-tags: [sg, security_measures, cia, it_security_operations]
+tags: [sg, security_measures, cia, it_security_operations, sg-security-measures]
 prev: /sg/script-kiddie/
 next: /sg/security-policy-basic/
 ---

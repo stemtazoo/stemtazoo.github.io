@@ -3,7 +3,7 @@ layout: page
 title: サイバーキルチェーンとは？攻撃の流れから対策を考える【情報セキュリティマネジメント】
 description: サイバーキルチェーンは攻撃の流れから対策を考えるを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
 permalink: /sg/cyber-kill-chain/
-tags: [sg, security_measures, unauthorized_access, risk_assessment, incident_management]
+tags: [sg, security_measures, unauthorized_access, risk_assessment, incident_management, sg-security-measures]
 prev: /sg/cyber-attack-cia/
 next: /sg/ddos-attack-summary/
 ---

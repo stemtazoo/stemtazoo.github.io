@@ -3,7 +3,7 @@ layout: page
 title: DDoS攻撃の種類を整理！試験での見分け方まとめ【情報セキュリティマネジメント】
 description: DDoS攻撃は通信量型・増幅型・接続枯渇型に分類できます。本記事では代表的な攻撃手法と違いを整理し、SG試験で迷わない判断基準をまとめます。
 permalink: /sg/ddos-attack-summary/
-tags: [sg, threat_vulnerability, unauthorized_access, network]
+tags: [sg, threat_vulnerability, unauthorized_access, network, sg-security-overview]
 prev: /sg/cyber-kill-chain/
 next: /sg/ddos/
 ---

@@ -3,7 +3,7 @@ layout: page
 title: ボットネットとは？踏み台化とDDoSの関係を理解する【情報セキュリティマネジメント】
 description: ボットネットはマルウェア感染した端末を遠隔操作し攻撃に利用する仕組みです。DDoSとの関係や踏み台リスクを整理し、SG試験の判断ポイントを解説します。
 permalink: /sg/botnet/
-tags: [sg, threat_vulnerability, malware, unauthorized_access]
+tags: [sg, threat_vulnerability, malware, unauthorized_access, sg-security-overview]
 prev: /sg/bot/
 next: /sg/brute-force-attack/
 ---

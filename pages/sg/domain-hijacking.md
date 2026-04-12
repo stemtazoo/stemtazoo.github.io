@@ -3,7 +3,7 @@ layout: page
 title: ドメイン名ハイジャックとは？DNSを悪用したなりすましの仕組み【情報セキュリティマネジメント】
 description: ドメイン名ハイジャックはDNSを悪用したなりすましの仕組みを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
 permalink: /sg/domain-hijacking/
-tags: [sg, security_measures, unauthorized_access, network, threat_vulnerability]
+tags: [sg, security_measures, unauthorized_access, network, threat_vulnerability, sg-security-measures]
 prev: /sg/dns/
 next: /sg/dos-attack-difference/
 ---

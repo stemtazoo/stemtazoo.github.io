@@ -3,7 +3,7 @@ layout: page
 title: 中間者攻撃とは？通信を盗み見る仕組みと対策【情報セキュリティマネジメント】
 description: 中間者攻撃は通信を盗み見る仕組みと対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
 permalink: /sg/man-in-the-middle-attack/
-tags: [sg, security_measures, unauthorized_access, network, crypto_auth]
+tags: [sg, security_measures, unauthorized_access, network, crypto_auth, sg-security-measures]
 prev: /sg/man-in-the-browser/
 next: /sg/mtbf/
 ---
