@@ -2,7 +2,7 @@
 layout: page
 title: CRYPTOREC暗号リストとは？電子政府で使う暗号の基準【SG試験】
 description: CRYPTOREC暗号リストは電子政府で安全に使う暗号方式を示した指針です。危殆化との関係や実務での判断基準を整理し、SG試験のひっかけポイントを分かりやすく解説します。
-permalink: /sg/cryptrec/
+permalink: /sg/cryptrec1/
 tags: [sg, sg-security-overview, crypto_auth, risk_assessment]
 ---
 
