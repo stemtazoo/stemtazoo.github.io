@@ -16,6 +16,18 @@ layout: default
     {% include mathjax.html %}
   </header>
   <div class="post-content">
+    {% if page.url contains "/gk/" and page.url != "/gk/" %}
+      <div style="font-size: 14px; margin-bottom: 12px;">
+        <a href="{{ '/gk/' | relative_url }}">G検定トップ</a>
+        ＞ {{ page.title }}
+      </div>
+    {% endif %}
+    {% if page.url contains "/sg/" and page.url != "/sg/" %}
+      <div style="font-size: 14px; margin-bottom: 12px;">
+        <a href="{{ '/sg/' | relative_url }}">SGトップ</a>
+        ＞ {{ page.title }}
+      </div>
+    {% endif %}
     {{ content }}
   </div>
 
