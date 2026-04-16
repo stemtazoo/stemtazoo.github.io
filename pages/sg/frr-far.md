@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 本人拒否率と他人受入率とは？生体認証の重要指標を整理【情報セキュリティマネジメント】
-description: 本人拒否率と他人受入率は生体認証の精度を表す指標です。それぞれの意味とトレードオフの関係、SG試験でのひっかけポイントをわかりやすく整理します。
+description: "FRR/FARの計算・解釈を明確にするため、本人拒否率と他人受入率のトレードオフ、しきい値調整の影響、EERとの関係を整理し、生体認証の設問で正しく評価できるようになります。"
 permalink: /sg/frr-far/
 tags: [sg, sg-security-measures, access_control, crypto_auth]
 ---

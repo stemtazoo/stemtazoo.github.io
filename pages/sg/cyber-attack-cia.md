@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 攻撃の目的をCIAで整理！試験で迷わない判断軸【情報セキュリティマネジメント】
-description: 情報セキュリティの攻撃は機密性・完全性・可用性（CIA）で整理できます。本記事では代表的な攻撃を目的別に分類し、SG試験で迷わない判断基準を解説します。
+description: "CIA分類で攻撃を整理したい人向けに、機密性・完全性・可用性への代表攻撃と被害像を対応付け、設問文のキーワードから狙われた要素を即判定する方法を解説します。"
 permalink: /sg/cyber-attack-cia/
 tags: [sg, security_general, cia, risk_assessment, sg-security-overview]
 prev: /sg/cvss/

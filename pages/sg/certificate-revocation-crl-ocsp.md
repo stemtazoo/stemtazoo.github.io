@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 証明書失効（CRL / OCSP）とは？無効な証明書の見分け方【情報セキュリティマネジメント】
-description: 証明書失効は有効期限内でも無効化された証明書を識別する仕組みです。CRLとOCSPの違いや確認方法、SG試験のひっかけポイントを整理します。
+description: "CRL/OCSPの違いを軸に、証明書失効の確認フロー・有効期限との関係・オンライン照会の利点を整理し、失効確認に関するSGのひっかけ選択肢を確実に判定できるようになります。"
 permalink: /sg/certificate-revocation-crl-ocsp/
 tags: [sg, crypto_auth, sg-security-overview, network]
 ---

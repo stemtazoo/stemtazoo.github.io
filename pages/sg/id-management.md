@@ -1,7 +1,7 @@
 ---
 layout: page
 title: ID管理（アカウント管理）とは？運用の基本を整理【SG試験】
-description: ID管理はユーザアカウントの作成・変更・削除を適切に行う運用です。ライフサイクル管理や不正防止の観点から、SG試験での判断基準を分かりやすく解説します。
+description: "ID管理の試験対策として、アカウントの作成・変更・削除と棚卸しの運用、休眠ID対策、権限剥奪の重要性を整理し、ライフサイクル管理の設問に対応できるようにします。"
 permalink: /sg/id-management/
 tags: [sg, sg-security-management, access_control, it_security_operations]
 ---

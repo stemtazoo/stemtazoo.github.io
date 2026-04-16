@@ -1,7 +1,7 @@
 ---
 layout: page
 title: CAPTCHAとは？ボット対策の仕組みをやさしく理解【情報セキュリティマネジメント】
-description: CAPTCHAはアクセス元が人間かボットかを判別する仕組みです。認証との違いや利用場面、SG試験でのひっかけポイントを整理します。
+description: "CAPTCHAの出題意図に合わせ、人間判定の仕組み・bot対策の限界・認証との役割差を具体例で整理し、SG試験で混同しやすい選択肢を切り分ける力が身につきます。"
 permalink: /sg/captcha/
 tags: [sg, sg-security-measures, unauthorized_access, access_control]
 ---

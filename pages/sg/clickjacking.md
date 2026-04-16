@@ -1,7 +1,7 @@
 ---
 layout: page
 title: クリックジャッキングとは？見えない操作誘導の仕組み【情報セキュリティマネジメント】
-description: クリックジャッキングは透明なページを重ねて利用者に意図しない操作をさせる攻撃です。仕組みと対策、SG試験でのひっかけポイントを整理します。
+description: "クリックジャッキング対策を理解するため、透明iframe悪用の攻撃手順、X-Frame-Optionsなど防御策、XSSとの違いを整理し、SGで狙われる操作誘導型攻撃を見分けられます。"
 permalink: /sg/clickjacking/
 tags: [sg, threat_vulnerability, unauthorized_access, web_security, sg-security-overview]
 prev: /sg/case-study-approach/

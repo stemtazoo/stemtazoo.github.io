@@ -1,7 +1,7 @@
 ---
 layout: page
 title: ルート証明書とは？信頼の起点をやさしく理解【SG試験】
-description: ルート証明書は電子証明書の信頼の起点となる証明書です。なぜ信頼できるのか、証明書の連鎖の仕組みとSG試験でのひっかけポイントを整理します。
+description: "ルート証明書の役割を短時間で把握できるよう、信頼の起点・証明書チェーン・OSストア管理を具体的に整理し、なぜ通信相手を正当と判断できるかを説明できるようになります。"
 permalink: /sg/root-certificate/
 tags: [sg, sg-security-overview, crypto_auth, it_security_operations]
 ---

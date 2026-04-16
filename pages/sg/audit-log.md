@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 監査ログとは？不正検知と追跡の基本【SG試験】
-description: 監査ログは操作履歴を記録し不正や事故を追跡するための仕組みです。なぜ必要かと適切な管理方法を整理し、SG試験の判断基準を分かりやすく解説します。
+description: "監査ログ管理の要点として、取得対象・保全要件・改ざん防止・追跡可能性を具体的に整理し、事故後の証跡確保で何を優先すべきかをSGのケース問題で判断できるようになります。"
 permalink: /sg/audit-log/
 tags: [sg, sg-security-management, incident_management, it_security_operations]
 ---

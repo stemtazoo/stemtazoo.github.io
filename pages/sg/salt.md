@@ -1,7 +1,7 @@
 ---
 layout: page
 title: ソルトとは？パスワードハッシュ強化の仕組み【SG試験】
-description: ソルトはパスワードハッシュにランダム値を加えて安全性を高める手法です。レインボーテーブル対策との関係やSG試験の判断基準を分かりやすく解説します。
+description: "ソルトの目的を明確にするため、同一パスワードのハッシュ重複回避、レインボーテーブル耐性、ストレッチングとの違いを整理し、認証データ保護の設問に強くなれます。"
 permalink: /sg/salt/
 tags: [sg, sg-security-overview, crypto_auth, risk_assessment]
 ---

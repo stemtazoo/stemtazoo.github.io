@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 踏み台攻撃とは？加害者にならないための重要ポイント【情報セキュリティマネジメント】
-description: 踏み台攻撃は第三者の機器を乗っ取り攻撃に利用する手法です。ボットネットやDDoSとの関係、実務での対策やSG試験の判断ポイントを整理します。
+description: "踏み台攻撃の出題に備え、侵害端末の悪用経路・ボットネットとの関係・送信元追跡を難しくする要因を整理し、実務対策とSG試験の判断ポイントをまとめて理解できます。"
 permalink: /sg/stepping-stone-attack/
 tags: [sg, threat_vulnerability, unauthorized_access, it_security_operations, sg-security-overview]
 prev: /sg/ssl-tls/

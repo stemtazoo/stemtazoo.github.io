@@ -1,7 +1,7 @@
 ---
 layout: page
 title: ケース問題の解き方！CIAとリスク対応で考える実践手順【SG試験】
-description: SG試験のケース問題はCIAとリスク対応で解くと安定します。本記事では具体的な解き方の手順と判断基準を整理し、迷わない思考フローを身につけます。
+description: "ケース問題攻略を目的に、CIA観点での読み取り手順、リスク対応4分類への落とし込み、選択肢消去の順序を示し、SG本試験で再現できる解法フローを身につけられます。"
 permalink: /sg/case-study-approach/
 tags: [sg, risk_assessment, it_security_operations, security_management, sg-security-management]
 prev: /sg/case-solving-template/

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 最小権限の原則とは？権限管理の基本を理解【SG試験】
-description: 最小権限の原則は必要最小限の権限のみを与える考え方です。なぜ重要かとリスク低減の効果、SG試験でのひっかけポイントと判断基準を分かりやすく解説します。
+description: "最小権限の原則を実務と試験で使える形にするため、権限付与の最小化・職務分離・定期棚卸しの観点を整理し、内部不正や被害拡大を抑える理由を理解できます。"
 permalink: /sg/least-privilege/
 tags: [sg, sg-security-measures, access_control, risk_assessment]
 ---

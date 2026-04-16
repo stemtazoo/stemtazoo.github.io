@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 認証局（CA）の役割とは？デジタル証明書の信頼の仕組み【情報セキュリティマネジメント】
-description: 認証局（CA）はデジタル証明書を発行し、通信相手の正当性を保証する機関です。証明書の仕組みや信頼の成り立ち、SG試験でのひっかけポイントを整理します。
+description: "認証局（CA）の役割を押さえるため、証明書発行審査・失効管理・信頼連鎖の仕組みを整理し、自己署名証明書やルート証明書との違いをSG試験で説明できるようになります。"
 permalink: /sg/certificate-authority-role/
 tags: [sg, crypto_auth, sg-security-overview, access_control]
 ---
