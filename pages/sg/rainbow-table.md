@@ -1,7 +1,7 @@
 ---
 layout: page
 title: レインボーテーブルとは？パスワード解析の仕組みを理解【SG試験】
-description: レインボーテーブルはハッシュ値から元のパスワードを高速に推測する攻撃手法です。仕組みとソルトによる対策を整理し、SG試験の判断基準を解説します。
+description: "レインボーテーブル対策を理解するため、事前計算攻撃の仕組み、ソルト付与で防げる理由、ハッシュ化との役割分担を整理し、パスワード保護に関するSG頻出論点を押さえられます。"
 permalink: /sg/rainbow-table/
 tags: [sg, sg-security-overview, threat_vulnerability, risk_assessment]
 ---

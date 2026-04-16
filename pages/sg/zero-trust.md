@@ -1,7 +1,7 @@
 ---
 layout: page
 title: ゼロトラストとは？境界防御との違いを整理【SG試験】
-description: ゼロトラストはすべてのアクセスを信用せず常に検証する考え方です。境界防御との違いや最小権限との関係を整理し、SG試験の判断基準を分かりやすく解説します。
+description: "ゼロトラストの要点を理解するため、境界防御との違い、継続的検証・最小権限・端末状態確認の実装観点を整理し、SG試験で問われる設計思想を説明できるようにします。"
 permalink: /sg/zero-trust/
 tags: [sg, sg-security-measures, access_control, it_security_operations]
 ---

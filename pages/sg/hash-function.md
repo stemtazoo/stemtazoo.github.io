@@ -1,7 +1,7 @@
 ---
 layout: page
 title: ハッシュ化とは？改ざん検知の基本をやさしく理解【SG試験】
-description: ハッシュ化はデータから一定長の値を生成する仕組みです。改ざん検知との関係やMAC・電子署名との違いを整理し、SG試験での判断基準を分かりやすく解説します。
+description: "ハッシュ関数の本質を押さえるため、一方向性・改ざん検知・電子署名との連携、暗号化との違いを整理し、メッセージ保護に関するSG問題の判断精度を高められます。"
 permalink: /sg/hash-function/
 tags: [sg, sg-security-overview, crypto_auth, it_security_operations]
 ---

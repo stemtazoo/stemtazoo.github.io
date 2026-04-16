@@ -1,7 +1,7 @@
 ---
 layout: page
 title: シングルサインオン（SSO）とは？利便性とリスクを整理【SG試験】
-description: シングルサインオンは一度の認証で複数システムにアクセスできる仕組みです。メリットとリスク、多要素認証との関係を整理し、SG試験の判断基準を解説します。
+description: "SSO導入判断に役立つよう、利便性向上と障害時リスク、認証基盤集中の注意点、多要素認証との併用パターンを整理し、SGで問われるメリット・デメリットを比較できます。"
 permalink: /sg/sso/
 tags: [sg, sg-security-measures, access_control, it_security_operations]
 ---

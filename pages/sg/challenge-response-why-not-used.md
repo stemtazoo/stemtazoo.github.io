@@ -1,7 +1,7 @@
 ---
 layout: page
 title: チャレンジレスポンス認証はなぜ使われない？現代の認証方式との違い【情報セキュリティマネジメント】
-description: チャレンジレスポンス認証は盗聴対策に有効ですが普及が限定的です。TLSや多要素認証との違い、実務で採用されにくい理由とSG試験の判断ポイントを整理します。
+description: "チャレンジレスポンスが普及しにくい理由として、運用コスト・ユーザ体験・TLS普及後の相対的優位低下を整理し、実務採用判断とSGの理由説明問題に対応できるようにします。"
 permalink: /sg/challenge-response-why-not-used/
 tags: [sg, sg-security-measures, access_control, risk_assessment]
 ---

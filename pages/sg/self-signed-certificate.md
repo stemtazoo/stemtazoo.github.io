@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 自己署名証明書とは？なぜ危険なのかを整理【情報セキュリティマネジメント】
-description: 自己署名証明書は第三者の認証局を介さずに自分で発行する証明書です。なぜ信頼できないのか、SG試験でのひっかけポイントと判断基準を整理します。
+description: "自己署名証明書の理解を深めるため、CA署名証明書との信頼モデル差、警告表示の理由、社内利用時の注意点を整理し、設問で問われる「信頼できない理由」を説明できます。"
 permalink: /sg/self-signed-certificate/
 tags: [sg, crypto_auth, sg-security-overview, network]
 ---
