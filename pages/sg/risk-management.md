@@ -98,3 +98,5 @@ tags: [sg, sg-security-management, risk_assessment, isms]
 - PDCAで継続的に回すのが本質  
 - 「一回で終わる」は誤り  
 - 判断に迷ったら「運用・改善まで含むか」で切る
+
+{% include sg_article_footer.html %}

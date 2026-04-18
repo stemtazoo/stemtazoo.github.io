@@ -103,3 +103,5 @@ tags: [sg, crypto_auth, sg-security-overview, network]
 - CRL＝一覧で確認（遅延あり）  
 - OCSP＝リアルタイム確認  
 - 「有効期限＋失効確認」で判断する
+
+{% include sg_article_footer.html %}

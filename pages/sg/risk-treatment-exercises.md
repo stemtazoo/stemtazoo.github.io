@@ -160,3 +160,5 @@ tags: [sg, sg-security-management, risk_assessment, isms]
 - 移転＝他者に任せる  
 - 受容＝許容する  
 - 迷ったら「何をしたか」で切る
+
+{% include sg_article_footer.html %}

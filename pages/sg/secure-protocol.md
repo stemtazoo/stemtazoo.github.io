@@ -88,3 +88,5 @@ SG試験では
 - SSL/TLSは暗号化の仕組み（HTTPSの中身）
 - VPNは経路、HTTPSは内容 → 役割が違う
 - 「用途で切る」と迷わない
+
+{% include sg_article_footer.html %}

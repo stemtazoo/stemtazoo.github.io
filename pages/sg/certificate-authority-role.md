@@ -91,3 +91,5 @@ tags: [sg, crypto_auth, sg-security-overview, access_control]
 - 暗号化ではなく「正当性の証明」が役割  
 - CRLや有効期限で証明書の状態を確認  
 - 「誰が保証しているか」を見ると選択肢を切れる
+
+{% include sg_article_footer.html %}

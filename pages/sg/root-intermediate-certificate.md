@@ -118,3 +118,5 @@ tags: [sg, crypto_auth, sg-security-overview, network]
 - 証明書はチェーンで検証される  
 - 分離の目的は「ルート保護」と「リスク分散」  
 - 「誰が発行しているか」と「どこまで信頼がつながるか」で判断する
+
+{% include sg_article_footer.html %}

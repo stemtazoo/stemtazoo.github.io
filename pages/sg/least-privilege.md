@@ -104,3 +104,5 @@ SG試験でよく出ます。
 👉 判断基準  
 **権限が多すぎる → NG  
 必要最小限 → OK**
+
+{% include sg_article_footer.html %}

@@ -128,3 +128,5 @@ tags: [sg, security_law, vendor_management, system_strategy, sg-security-law]
 → NO：ライセンス  
 
 ---
+
+{% include sg_article_footer.html %}

@@ -105,3 +105,5 @@ SSOは主に**認証の仕組み**
 **利便性向上 → SSO  
 認証強化 → MFA  
 リスク集中 → 注意**
+
+{% include sg_article_footer.html %}

@@ -113,3 +113,5 @@ SG試験ではここがよく狙われます。
 👉 判断基準  
 **改ざんチェック → MAC  
 本人証明 → 電子署名**
+
+{% include sg_article_footer.html %}

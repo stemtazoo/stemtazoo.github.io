@@ -188,3 +188,5 @@ tags: [sg, sg-security-management, risk_assessment, isms]
 - 基準超え → 対応（低減など）  
 - 過剰対応・過小対応に注意  
 - 迷ったら「基準との関係」で切る
+
+{% include sg_article_footer.html %}

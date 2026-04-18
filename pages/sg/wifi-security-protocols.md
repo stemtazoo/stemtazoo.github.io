@@ -76,3 +76,5 @@ SG試験では
 - WPA2以上を選ぶのが基本
 - WPA3が最新・最も安全
 - 「方式の強さ」で選択肢を切る
+
+{% include sg_article_footer.html %}

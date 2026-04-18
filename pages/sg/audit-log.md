@@ -105,3 +105,5 @@ SG試験でよく狙われます。
 **ログなし → NG  
 ログあり＋分析 → OK  
 特権操作は必ず記録**
+
+{% include sg_article_footer.html %}

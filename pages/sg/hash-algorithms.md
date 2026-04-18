@@ -111,3 +111,5 @@ SG試験でよく出ます。
 **MD5 / SHA-1 → NG  
 SHA-256以上 → OK  
 危殆化 → 見直し**
+
+{% include sg_article_footer.html %}

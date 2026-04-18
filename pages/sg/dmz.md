@@ -83,3 +83,5 @@ SG試験では
 - 目的は「侵入されても被害を限定する」
 - 防御そのものではない（FWやIPSとセット）
 - 「内部に置くかDMZに置くか」で判断する
+
+{% include sg_article_footer.html %}
