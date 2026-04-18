@@ -115,3 +115,5 @@ SG試験ではここがよく狙われます。
 **信頼の起点 → ルート証明書  
 改ざん確認 → MAC  
 本人証明 → 電子署名**
+
+{% include sg_article_footer.html %}

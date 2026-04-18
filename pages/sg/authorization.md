@@ -120,3 +120,5 @@ SG試験の最重要ポイントです。
 👉 判断基準  
 **本人確認 → 認証  
 権限の決定 → 認可**
+
+{% include sg_article_footer.html %}

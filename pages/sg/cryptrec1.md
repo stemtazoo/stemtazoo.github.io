@@ -132,3 +132,5 @@ SG試験ではここがよく狙われます。
 **暗号の選定基準 → CRYPTOREC  
 暗号の劣化 → 危殆化  
 仕組み → PKI**
+
+{% include sg_article_footer.html %}

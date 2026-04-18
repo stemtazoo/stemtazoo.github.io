@@ -120,3 +120,5 @@ SG試験でよく狙われます。
 👉 判断基準  
 **内部だから安全 → NG  
 毎回検証 → ゼロトラスト**
+
+{% include sg_article_footer.html %}

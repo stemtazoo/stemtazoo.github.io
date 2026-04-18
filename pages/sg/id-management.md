@@ -105,3 +105,5 @@ SG試験の超頻出ポイントです。
 **共有 → NG  
 放置 → NG  
 最小権限＋見直し → OK**
+
+{% include sg_article_footer.html %}

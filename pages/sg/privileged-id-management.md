@@ -115,3 +115,5 @@ SG試験でよく出ます。
 **特権IDを常用 → NG  
 共有 → NG  
 限定利用＋記録 → OK**
+
+{% include sg_article_footer.html %}

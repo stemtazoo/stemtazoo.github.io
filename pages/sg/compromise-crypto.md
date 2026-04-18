@@ -103,3 +103,5 @@ SG試験ではここが重要です。
 👉 判断基準  
 **危殆化 → 使い続けない（見直し）  
 安全な暗号 → CRYPTORECで確認**
+
+{% include sg_article_footer.html %}

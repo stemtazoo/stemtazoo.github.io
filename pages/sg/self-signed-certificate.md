@@ -95,3 +95,5 @@ tags: [sg, crypto_auth, sg-security-overview, network]
 - 外部公開サービスでは使用すべきでない  
 - 「誰が証明しているか」が最重要  
 - 「自己証明＝NG」で選択肢を切れる
+
+{% include sg_article_footer.html %}

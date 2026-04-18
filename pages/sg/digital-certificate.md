@@ -124,3 +124,5 @@ SG試験でよく出ます。
 信頼の起点 → ルート証明書  
 仕組み全体 → PKI  
 本人証明 → 電子署名**
+
+{% include sg_article_footer.html %}
