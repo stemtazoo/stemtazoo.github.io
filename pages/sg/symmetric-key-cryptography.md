@@ -3,6 +3,8 @@ layout: page
 title: 共通鍵暗号方式とは？高速だが鍵管理が課題の仕組み【情報セキュリティマネジメント】
 description: 共通鍵暗号方式は暗号化と復号に同じ鍵を使う暗号方式です。高速処理が強みですが鍵の受け渡しに課題があります。公開鍵暗号との違いとSG試験の判断ポイントを整理します。
 permalink: /sg/symmetric-key-cryptography/
+prev: /sg/frr-far/
+next: /sg/public-key-cryptography/
 tags: [sg, crypto_auth, sg-security-overview, network]
 ---
 

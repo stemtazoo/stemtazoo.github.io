@@ -3,6 +3,8 @@ layout: page
 title: パケットフィルタリングとは？通信を制御する基本技術【情報セキュリティマネジメント】
 description: パケットフィルタリングは通信データを条件で選別し、許可・拒否を行う仕組みです。ファイアウォールの基本機能としての役割や、SG試験でのブラックリスト・ホワイトリストの判断ポイントを整理します。
 permalink: /sg/packet-filtering/
+prev: /sg/firewall/
+next: /sg/dmz/
 tags: [sg, sg-technology, network, unauthorized_access]
 ---
 

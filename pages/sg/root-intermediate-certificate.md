@@ -3,6 +3,8 @@ layout: page
 title: ルート証明書と中間証明書の関係とは？信頼のつながりを理解する【情報セキュリティマネジメント】
 description: ルート証明書と中間証明書はデジタル証明書の信頼を階層的に担保する仕組みです。認証局の役割や証明書チェーン、中間証明書が必要な理由をSG試験向けに整理します。
 permalink: /sg/root-intermediate-certificate/
+prev: /sg/root-certificate/
+next: /sg/self-signed-certificate/
 tags: [sg, crypto_auth, sg-security-overview, network]
 ---
 

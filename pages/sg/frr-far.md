@@ -3,6 +3,8 @@ layout: page
 title: 本人拒否率と他人受入率とは？生体認証の重要指標を整理【情報セキュリティマネジメント】
 description: "FRR/FARの計算・解釈を明確にするため、本人拒否率と他人受入率のトレードオフ、しきい値調整の影響、EERとの関係を整理し、生体認証の設問で正しく評価できるようになります。"
 permalink: /sg/frr-far/
+prev: /sg/challenge-response-why-not-used/
+next: /sg/symmetric-key-cryptography/
 tags: [sg, sg-security-measures, access_control, crypto_auth]
 ---
 

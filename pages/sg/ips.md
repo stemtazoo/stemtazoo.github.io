@@ -3,6 +3,8 @@ layout: page
 title: IPSとは？不正侵入を検知して遮断する仕組み【情報セキュリティマネジメント】
 description: IPSは通信内容を監視し、不正なアクセスや攻撃を検知して自動的に遮断する仕組みです。IDSとの違いやファイアーウォールとの役割分担を、SG試験の判断ポイントとともに整理します。
 permalink: /sg/ips/
+prev: /sg/vpn/
+next: /sg/captcha/
 tags: [sg, sg-security-measures, unauthorized_access, network]
 ---
 

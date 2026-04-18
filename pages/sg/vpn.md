@@ -3,6 +3,8 @@ layout: page
 title: VPNとは？安全な通信を実現する仕組み【情報セキュリティマネジメント】
 description: VPNはインターネット上に仮想的な専用回線を作り、安全に通信する仕組みです。暗号化の役割や利用場面、専用線との違いをSG試験の判断ポイントとともに整理します。
 permalink: /sg/vpn/
+prev: /sg/dmz/
+next: /sg/ips/
 tags: [sg, sg-technology, network, unauthorized_access]
 ---
 

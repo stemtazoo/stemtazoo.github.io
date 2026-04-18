@@ -3,6 +3,8 @@ layout: page
 title: XML署名とは？改ざん検知と真正性確認の仕組み【情報セキュリティマネジメント】
 description: XML署名はXMLデータの改ざん検知と送信者の正当性を確認するための仕組みです。デジタル署名との違いや業務での使いどころ、SG試験でのひっかけポイントを整理します。
 permalink: /sg/xml-signature/
+prev: /sg/digital-signature/
+next: /sg/pki/
 tags: [sg, sg-security-overview, crypto_auth, it_security_operations]
 ---
 

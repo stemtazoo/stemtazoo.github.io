@@ -3,6 +3,8 @@ layout: page
 title: ルート証明書とは？信頼の起点をやさしく理解【SG試験】
 description: "ルート証明書の役割を短時間で把握できるよう、信頼の起点・証明書チェーン・OSストア管理を具体的に整理し、なぜ通信相手を正当と判断できるかを説明できるようになります。"
 permalink: /sg/root-certificate/
+prev: /sg/certificate-authority-role/
+next: /sg/root-intermediate-certificate/
 tags: [sg, sg-security-overview, crypto_auth, it_security_operations]
 ---
 

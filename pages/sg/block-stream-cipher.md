@@ -3,6 +3,8 @@ layout: page
 title: ブロック暗号とストリーム暗号の違いとは？暗号方式を整理【SG試験】
 description: ブロック暗号とストリーム暗号はデータの暗号化方法の違いです。処理単位の違いと使い分けを整理し、SG試験でのひっかけポイントと判断基準を分かりやすく解説します。
 permalink: /sg/block-stream-cipher/
+prev: /sg/rsa/
+next: /sg/hybrid-cryptography/
 tags: [sg, sg-security-overview, crypto_auth, it_security_operations]
 ---
 

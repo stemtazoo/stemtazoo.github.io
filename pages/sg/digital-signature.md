@@ -3,6 +3,8 @@ layout: page
 title: 電子署名とは？本人証明と改ざん検知を整理【SG試験】
 description: 電子署名は公開鍵暗号を使って送信者の本人証明と改ざん検知を行う仕組みです。ハッシュやRSAとの関係を整理し、SG試験のひっかけポイントと判断基準を分かりやすく解説します。
 permalink: /sg/digital-signature/
+prev: /sg/message-authentication-code/
+next: /sg/xml-signature/
 tags: [sg, sg-security-overview, crypto_auth, it_security_operations]
 ---
 

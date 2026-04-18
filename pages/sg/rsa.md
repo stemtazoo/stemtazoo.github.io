@@ -3,6 +3,8 @@ layout: page
 title: RSA暗号とは？公開鍵暗号の基本をやさしく理解【SG試験】
 description: RSA暗号は公開鍵と秘密鍵を使って安全に通信する公開鍵暗号方式です。仕組みと役割、PKIや電子署名との違いを整理し、SG試験でのひっかけポイントを分かりやすく解説します。
 permalink: /sg/rsa/
+prev: /sg/public-key-cryptography/
+next: /sg/block-stream-cipher/
 tags: [sg, sg-security-overview, crypto_auth, it_security_operations]
 ---
 

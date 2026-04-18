@@ -3,6 +3,8 @@ layout: page
 title: アクセス制御（認可）とは？認証との違いを整理【SG試験】
 description: "認可（Authorization）を確実に区別するため、認証との責務分離、RBAC/ABACの基本、アクセス権判定の流れを整理し、権限制御の設問で誤答しない判断軸を作れます。"
 permalink: /sg/authorization/
+prev: /sg/id-management/
+next: /sg/least-privilege/
 tags: [sg, sg-security-measures, access_control, it_security_operations]
 ---
 

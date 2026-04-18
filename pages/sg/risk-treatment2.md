@@ -3,6 +3,8 @@ layout: page
 title: リスク対応とは？4つの対処方法を整理【情報セキュリティマネジメント】
 description: リスク対応はリスクに対してどのように対処するかを決める工程です。回避・低減・移転・受容の違いと判断基準、SG試験でのひっかけポイントを整理します。
 permalink: /sg/risk-treatment2/
+prev: /sg/risk-criteria/
+next: /sg/risk-treatment-exercises/
 tags: [sg, sg-security-management, risk_assessment, isms]
 ---
 
