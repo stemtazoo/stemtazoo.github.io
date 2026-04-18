@@ -3,6 +3,8 @@ layout: page
 title: DMZとは？外部公開サーバを安全に配置する仕組み【情報セキュリティマネジメント】
 description: DMZはインターネットと社内ネットワークの間に設ける中間領域です。公開サーバを安全に配置する目的や、ファイアーウォールとの関係、SG試験でのひっかけポイントを整理します。
 permalink: /sg/dmz/
+prev: /sg/packet-filtering/
+next: /sg/vpn/
 tags: [sg, sg-technology, network, system_architecture]
 ---
 

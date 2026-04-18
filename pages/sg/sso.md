@@ -3,6 +3,8 @@ layout: page
 title: シングルサインオン（SSO）とは？利便性とリスクを整理【SG試験】
 description: "SSO導入判断に役立つよう、利便性向上と障害時リスク、認証基盤集中の注意点、多要素認証との併用パターンを整理し、SGで問われるメリット・デメリットを比較できます。"
 permalink: /sg/sso/
+prev: /sg/mfa-vs-step-auth/
+next: /sg/risk-based-authentication/
 tags: [sg, sg-security-measures, access_control, it_security_operations]
 ---
 

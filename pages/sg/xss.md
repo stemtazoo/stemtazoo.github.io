@@ -3,8 +3,9 @@ layout: page
 title: クロスサイトスクリプティングとは？スクリプト実行の仕組み【情報セキュリティマネジメント】
 description: クロスサイトスクリプティングはWebサイトに不正なスクリプトを埋め込み利用者のブラウザで実行させる攻撃です。CSRFとの違いや情報漏えいの仕組みを試験対策として整理します。
 permalink: /sg/xss/
-tags: [sg, security_general, threat_vulnerability, unauthorized_access, data_leakage, sg-security-overview]
 prev: /sg/work-rules-vs-individual-agreement/
+next: /sg/zero-trust/
+tags: [sg, security_general, threat_vulnerability, unauthorized_access, data_leakage, sg-security-overview]
 ---
 
 ## まず結論

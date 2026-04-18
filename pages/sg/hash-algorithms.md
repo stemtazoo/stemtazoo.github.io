@@ -3,6 +3,8 @@ layout: page
 title: ハッシュ関数の種類とは？SHAとMD5の違いを整理【SG試験】
 description: "SHA-2/SHA-3/MD5などハッシュアルゴリズムの差を理解するため、衝突耐性・用途・非推奨理由を比較し、設問で安全な選択肢を技術根拠付きで選べるようにします。"
 permalink: /sg/hash-algorithms/
+prev: /sg/hash-function/
+next: /sg/hash-collision-resistance/
 tags: [sg, sg-security-overview, crypto_auth, risk_assessment]
 ---
 

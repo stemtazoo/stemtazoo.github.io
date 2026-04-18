@@ -3,6 +3,8 @@ layout: page
 title: 危殆化とは？暗号が使えなくなる状態を理解【SG試験】
 description: 危殆化は暗号の安全性が保てなくなる状態を指します。なぜ危険なのか、CRYPTORECとの関係や対応の考え方を整理し、SG試験での判断基準を分かりやすく解説します。
 permalink: /sg/compromise-crypto/
+prev: /sg/wifi-security-protocols/
+next: /sg/cryptrec1/
 tags: [sg, sg-security-overview, crypto_auth, risk_assessment]
 ---
 

@@ -3,6 +3,8 @@ layout: page
 title: 公開鍵暗号方式とは？鍵の受け渡し問題を解決する仕組み【情報セキュリティマネジメント】
 description: 公開鍵暗号方式は暗号化と復号で異なる鍵を使う暗号方式です。鍵配布のリスクをどう解決するかという視点で、共通鍵暗号との違いやSG試験の判断ポイントを整理します。
 permalink: /sg/public-key-cryptography/
+prev: /sg/symmetric-key-cryptography/
+next: /sg/rsa/
 tags: [sg, crypto_auth, sg-security-overview, network]
 ---
 

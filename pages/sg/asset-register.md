@@ -3,6 +3,8 @@ layout: page
 title: 情報資産台帳とは？リスク管理の出発点を整理【情報セキュリティマネジメント】
 description: 情報資産台帳は組織の情報資産を一覧で管理するための台帳です。リスクアセスメントとの関係やJISの考え方、SG試験のひっかけポイントを整理します。
 permalink: /sg/asset-register/
+prev: /sg/rainbow-table/
+next: /sg/risk-management/
 tags: [sg, sg-security-management, asset_management, risk_assessment]
 ---
 

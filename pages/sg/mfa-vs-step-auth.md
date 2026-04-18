@@ -3,6 +3,8 @@ layout: page
 title: 多要素認証と多段階認証の違いとは？混同しやすい認証方式を整理【情報セキュリティマネジメント】
 description: "多要素認証と多段階認証の違いを得点化するため、要素数と認証回数の判定基準、具体サービス例、誤解されやすい選択肢を整理し、設問で迷わない識別力を養えます。"
 permalink: /sg/mfa-vs-step-auth/
+prev: /sg/authentication-methods/
+next: /sg/sso/
 tags: [sg, sg-security-measures, access_control, it_security_operations]
 ---
 

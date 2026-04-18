@@ -3,6 +3,8 @@ layout: page
 title: ファイアーウォールとは？通信を制御する基本対策【情報セキュリティマネジメント】
 description: ファイアーウォールはネットワークの境界で通信を制御し、不正アクセスを防ぐ仕組みです。パケットフィルタリングとの関係やWAF・IPSとの違いを、SG試験のひっかけポイントを交えて整理します。
 permalink: /sg/firewall/
+prev: /sg/zero-trust/
+next: /sg/packet-filtering/
 tags: [sg, sg-security-measures, unauthorized_access, network]
 ---
 

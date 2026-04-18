@@ -3,6 +3,8 @@ layout: page
 title: メッセージ認証符号とは？改ざん検知の仕組みを整理【SG試験】
 description: メッセージ認証符号は通信内容が改ざんされていないか確認するための仕組みです。生成と照合の流れを整理し、SG試験でのひっかけポイントと判断基準を分かりやすく解説します。
 permalink: /sg/message-authentication-code/
+prev: /sg/message-authentication/
+next: /sg/digital-signature/
 tags: [sg, sg-security-overview, crypto_auth, it_security_operations]
 ---
 

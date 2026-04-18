@@ -3,6 +3,8 @@ layout: page
 title: PKIとは？公開鍵基盤の役割をやさしく整理【SG試験】
 description: PKIは公開鍵暗号と電子証明書を使って通信相手の正当性を保証する仕組みです。証明書の役割やルート証明書との関係、SG試験でのひっかけポイントを整理します。
 permalink: /sg/pki/
+prev: /sg/xml-signature/
+next: /sg/digital-certificate/
 tags: [sg, sg-security-overview, crypto_auth, it_security_operations]
 ---
 

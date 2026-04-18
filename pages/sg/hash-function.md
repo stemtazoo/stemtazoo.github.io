@@ -3,6 +3,8 @@ layout: page
 title: ハッシュ化とは？改ざん検知の基本をやさしく理解【SG試験】
 description: "ハッシュ関数の本質を押さえるため、一方向性・改ざん検知・電子署名との連携、暗号化との違いを整理し、メッセージ保護に関するSG問題の判断精度を高められます。"
 permalink: /sg/hash-function/
+prev: /sg/hybrid-cryptography/
+next: /sg/hash-algorithms/
 tags: [sg, sg-security-overview, crypto_auth, it_security_operations]
 ---
 

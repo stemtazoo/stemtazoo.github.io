@@ -3,6 +3,8 @@ layout: page
 title: 自己署名証明書とは？なぜ危険なのかを整理【情報セキュリティマネジメント】
 description: "自己署名証明書の理解を深めるため、CA署名証明書との信頼モデル差、警告表示の理由、社内利用時の注意点を整理し、設問で問われる「信頼できない理由」を説明できます。"
 permalink: /sg/self-signed-certificate/
+prev: /sg/root-intermediate-certificate/
+next: /sg/certificate-revocation-crl-ocsp/
 tags: [sg, crypto_auth, sg-security-overview, network]
 ---
 

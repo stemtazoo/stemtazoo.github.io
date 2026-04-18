@@ -3,6 +3,8 @@ layout: page
 title: リスク基準（受容基準）とは？判断の軸をやさしく整理【情報セキュリティマネジメント】
 description: リスク基準（受容基準）はどのリスクを許容するかを判断するための基準です。リスクアセスメントとの関係やJISの考え方、SG試験のひっかけポイントを整理します。
 permalink: /sg/risk-criteria/
+prev: /sg/risk-assessment/
+next: /sg/risk-treatment2/
 tags: [sg, sg-security-management, risk_assessment, isms]
 ---
 

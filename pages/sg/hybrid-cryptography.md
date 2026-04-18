@@ -3,6 +3,8 @@ layout: page
 title: ハイブリッド暗号方式とは？速度と安全性を両立する仕組み【情報セキュリティマネジメント】
 description: ハイブリッド暗号方式は公開鍵暗号と共通鍵暗号を組み合わせる方式です。鍵配布の安全性と高速処理を両立する仕組みを、SG試験での判断ポイントとともに整理します。
 permalink: /sg/hybrid-cryptography/
+prev: /sg/block-stream-cipher/
+next: /sg/hash-function/
 tags: [sg, crypto_auth, sg-security-overview, network]
 ---
 

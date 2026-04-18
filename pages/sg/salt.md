@@ -3,6 +3,8 @@ layout: page
 title: ソルトとは？パスワードハッシュ強化の仕組み【SG試験】
 description: "ソルトの目的を明確にするため、同一パスワードのハッシュ重複回避、レインボーテーブル耐性、ストレッチングとの違いを整理し、認証データ保護の設問に強くなれます。"
 permalink: /sg/salt/
+prev: /sg/cryptrec1/
+next: /sg/rainbow-table/
 tags: [sg, sg-security-overview, crypto_auth, risk_assessment]
 ---
 
