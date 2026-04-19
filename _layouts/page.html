@@ -22,7 +22,11 @@ layout: default
         ＞ {{ page.title }}
       </div>
     {% endif %}
-    {% if page.url contains "/sg/" and page.url != "/sg/" %}
+    {% assign is_sg_page = false %}
+    {% if page.dir == "/pages/sg/" %}
+      {% assign is_sg_page = true %}
+    {% endif %}
+    {% if is_sg_page and page.name != "index.md" %}
       <div style="font-size: 14px; margin-bottom: 12px;">
         <a href="{{ '/sg/' | relative_url }}">SGトップ</a>
         ＞ {{ page.title }}
