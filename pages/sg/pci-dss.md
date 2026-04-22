@@ -3,6 +3,8 @@ layout: page
 title: PCI DSSとは？クレジットカード情報を守る国際基準【情報セキュリティマネジメント】
 description: PCI DSSはクレジットカード情報を保護するための国際セキュリティ基準です。対象範囲や目的を整理し、SG試験で問われる適用対象や誤解ポイントを分かりやすく解説します。
 permalink: /sg/pci-dss/
+prev: /sg/copyright-transfer/
+next: /sg/security-management-overview/
 tags: [sg, sg-security-law, it_security_operations, vendor_management]
 ---
 

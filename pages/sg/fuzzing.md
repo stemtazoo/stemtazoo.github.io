@@ -3,6 +3,8 @@ layout: page
 title: ファジングとは？脆弱性を見つけるテスト手法を整理【情報セキュリティマネジメント】
 description: ファジングは異常な入力データを大量に与えて脆弱性を検出するテスト手法です。脆弱性検査やペネトレーションテストとの違いを整理し、SG試験での判断ポイントを解説します。
 permalink: /sg/fuzzing/
+prev: /sg/vulnerability-scan/
+next: /sg/vulnerability-case-practice/
 tags: [sg, sg-security-measures, threat_vulnerability, it_security_operations]
 ---
 

@@ -3,6 +3,8 @@ layout: page
 title: 情報セキュリティ管理とは？組織で守る仕組みの基本【情報セキュリティマネジメント】
 description: 情報セキュリティ管理は、組織全体で情報を守るための体系的な取り組みです。場当たり対応との違いや、SG試験で問われる管理の考え方を整理します。
 permalink: /sg/security-management-overview/
+prev: /sg/pci-dss/
+next: /sg/isms/
 tags: [sg, sg-security-management, isms, risk_assessment, it_security_operations]
 ---
 
