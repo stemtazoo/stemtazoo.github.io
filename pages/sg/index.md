@@ -262,3 +262,5 @@ tags: [sg, index]
 <footer style="margin-top:24px; text-align:right;">
   <a href="{{ '/' | relative_url }}">🏠 ルートの index へ戻る</a>
 </footer>
+
+{% include sg_article_footer.html %}

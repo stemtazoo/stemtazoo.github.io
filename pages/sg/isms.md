@@ -135,3 +135,5 @@ ISMSの本質はここです。
 
 👉 SG試験では  
 「PDCAが回っているか」「組織全体で運用しているか」で判断する
+
+{% include sg_article_footer.html %}
