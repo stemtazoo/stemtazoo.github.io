@@ -92,3 +92,5 @@ SG試験では「事象との違い（影響の有無）」を判断させる問
 
 👉 SG試験では  
 「被害が出ているか？」で判断
+
+{% include sg_article_footer.html %}

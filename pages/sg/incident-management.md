@@ -128,3 +128,5 @@ SG試験はここを覚えるだけでかなり解けます。
 
 👉 SG試験では  
 「この順番は正しいか？」で判断する
+
+{% include sg_article_footer.html %}

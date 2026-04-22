@@ -107,3 +107,5 @@ next: /sg/csrf/
 - 「外部と連携する」→JPCERT/CC  
 
 👉 **「誰が動くか」で判断する**
+
+{% include sg_article_footer.html %}
