@@ -404,3 +404,5 @@ D. ログの保存期間を延長する
 **最も直接的に穴を埋める対策を選ぶ**
 
 </details>
+
+{% include sg_article_footer.html %}

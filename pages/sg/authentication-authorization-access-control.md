@@ -133,3 +133,5 @@ tags: [sg, sg-security-measures, access_control, crypto_auth]
 - アクセス制御＝実行
 - 順番で覚える（認証→認可→制御）
 - SGでは「どの段階か」で選択肢を切る
+
+{% include sg_article_footer.html %}

@@ -111,3 +111,5 @@ tags: [sg, sg-security-management, it_security_operations, security_training]
 - 対策は「仕組みで防ぐ」が基本
 - SGでは「原因と対策の対応関係」を問われる
 - 選択肢は「どの要素に効くか」で判断する
+
+{% include sg_article_footer.html %}

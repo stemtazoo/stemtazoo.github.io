@@ -125,3 +125,5 @@ tags: [sg, sg-security-measures, it_security_operations, system_audit]
 - 防止ではなく「検知・証明」の対策
 - アクセス管理と役割が違う（事前 vs 事後）
 - SGでは「ログの有無と運用」で選択肢を切る
+
+{% include sg_article_footer.html %}

@@ -130,3 +130,5 @@ tags: [sg, sg-security-measures, access_control, it_security_operations]
 - 特権IDは特に厳重管理
 - need-to-knowと最小権限をセットで理解
 - SGでは「権限が過剰かどうか」で選択肢を切る
+
+{% include sg_article_footer.html %}

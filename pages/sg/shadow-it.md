@@ -109,3 +109,5 @@ tags: [sg, sg-security-measures, it_security_operations, security_training]
 - 情報漏えい・監査不可が主なリスク
 - 内部不正とは違うが結果は同じく危険
 - SGでは「管理されているか」で判断する
+
+{% include sg_article_footer.html %}

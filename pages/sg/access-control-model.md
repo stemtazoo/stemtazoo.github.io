@@ -148,3 +148,5 @@ tags: [sg, sg-security-measures, access_control, system_architecture]
 - 実務はRBACが中心
 - SGでは「制御の基準」で見分ける
 - キーワードで即判断できるようにする
+
+{% include sg_article_footer.html %}

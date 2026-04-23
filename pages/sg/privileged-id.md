@@ -135,3 +135,5 @@ tags: [sg, sg-security-measures, access_control, it_security_operations]
 - 個人単位で管理する
 - ログ取得＋確認が必須
 - SGでは「追跡できるか」で選択肢を切る
+
+{% include sg_article_footer.html %}

@@ -117,3 +117,5 @@ tags: [sg, sg-security-measures, access_control, it_security_operations]
 - ロックアウトは攻撃対策だが過剰はNG
 - 「厳しすぎてもダメ」がSGのポイント
 - 選択肢は「現実的に運用できるか」で判断
+
+{% include sg_article_footer.html %}

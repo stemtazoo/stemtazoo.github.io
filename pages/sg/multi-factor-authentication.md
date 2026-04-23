@@ -120,3 +120,5 @@ tags: [sg, sg-security-measures, crypto_auth, access_control]
 - 同じ種類を2つ使ってもMFAではない
 - SGでは「種類の違い」で判断する
 - 迷ったら要素の分類を見る
+
+{% include sg_article_footer.html %}

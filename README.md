@@ -55,6 +55,10 @@
   - `pages/sg` の記事を NotebookLM 用 Markdown に書き出します
 - `scripts/lint_ds_frontmatter.py`
   - `pages/ds` の front matter の整合性確認に使えます
+- `scripts/fix_page_metadata.py`
+  - 指定フォルダ直下の Markdown を走査し、テーマごとの不足設定を検出します
+  - `sg` / `ds` では `prev` / `next` と footer include を確認し、既存リンクから一意に推定できるものだけ補完できます
+  - `gk` では `gk_section` / `gk_order` / footer include を確認し、footer include の安全な補完を行えます
 - `scripts/submit_indexnow.py`
   - GitHub Pages 公開後に IndexNow へ URL を送信します
 
@@ -103,6 +107,41 @@ python scripts/export_ds_notebooklm.py --groups-file exports/notebooklm/ds/group
 3. `python scripts/export_ds_notebooklm.py` を実行する
 
 必要に応じて `scripts/lint_ds_frontmatter.py` で front matter の揺れも確認できます。
+
+### 記事の不足設定を点検・補完する
+
+スマートフォンから記事を追加したときに、前後ページや footer include が抜けることがあります。  
+その場合は `scripts/fix_page_metadata.py` を使うと、指定フォルダ直下だけを対象に不足を検出できます。
+
+まずは report モードで確認します。
+
+```bash
+python scripts/fix_page_metadata.py pages/sg
+```
+
+安全に一意に決められるものだけ書き戻すときは `--apply` を付けます。
+
+```bash
+python scripts/fix_page_metadata.py pages/sg --apply
+```
+
+テーマごとの判定ルールは次の通りです。
+
+- `pages/sg`
+  - `prev` / `next`
+  - `{% include sg_article_footer.html %}`
+- `pages/gk`
+  - `gk_section` / `gk_order`
+  - `{% include gk_article_footer.html %}`
+- `pages/ds`
+  - `prev` / `next`
+
+補完方針は保守的です。
+
+- 対象は指定フォルダ直下の `*.md` のみ
+- パンくずは既存レイアウト側で自動表示されるテーマでは、記事本文を触らずに不足設定のみ確認
+- `prev` / `next` は既存記事の front matter から一意に逆算できる場合だけ自動補完
+- 曖昧なものは未修正のままレポートに出します
 
 ### NotebookLM 向け SG エクスポート
 
