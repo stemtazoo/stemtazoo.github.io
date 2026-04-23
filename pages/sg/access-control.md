@@ -133,4 +133,11 @@ next: /sg/access-control-model/
 - need-to-knowと最小権限をセットで理解
 - SGでは「権限が過剰かどうか」で選択肢を切る
 
+---
+
+## 関連記事
+- [認可とは](/sg/authorization/): アクセス制御がどの段階で行われるのかを認可の観点から確認できます。
+- [認証・認可・アクセス制御の違い](/sg/authentication-authorization-access-control/): 3つの概念の役割分担をまとめて整理できます。
+- [アクセス制御モデルとは](/sg/access-control-model/): RBAC、ABAC、DAC、MAC の違いを比較しながら学べます。
+
 {% include sg_article_footer.html %}

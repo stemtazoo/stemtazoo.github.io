@@ -127,4 +127,11 @@ SG試験でよく出ます。
 仕組み全体 → PKI  
 本人証明 → 電子署名**
 
+---
+
+## 関連記事
+- [PKIとは](/sg/pki/): 電子証明書が公開鍵基盤の中でどう使われるかを全体像で確認できます。
+- [認証局（CA）の役割とは](/sg/certificate-authority-role/): 証明書を発行して信頼を支える主体を続けて学べます。
+- [証明書失効方式（CRL / OCSP）とは](/sg/certificate-revocation-crl-ocsp/): 発行後に証明書が無効になるケースと確認方法までつなげて理解できます。
+
 {% include sg_article_footer.html %}

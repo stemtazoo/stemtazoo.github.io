@@ -118,4 +118,11 @@ SG試験ではここがよく狙われます。
 改ざん確認 → MAC  
 本人証明 → 電子署名**
 
+---
+
+## 関連記事
+- [認証局（CA）の役割とは](/sg/certificate-authority-role/): ルート証明書を発行・運用する CA 側の役割を合わせて確認できます。
+- [ルート証明書と中間証明書の違い](/sg/root-intermediate-certificate/): 証明書チェーンの構造を比較しながら整理できます。
+- [自己署名証明書とは](/sg/self-signed-certificate/): ルート証明書と自己署名証明書の共通点と違いを区別できます。
+
 {% include sg_article_footer.html %}
