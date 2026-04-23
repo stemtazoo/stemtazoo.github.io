@@ -4,6 +4,8 @@ title: シャドーITとは？管理外ITが生むリスクと対策を整理【
 description: シャドーITは組織の許可なく利用されるITサービスや機器です。利便性とリスクの関係を踏まえ、SG試験で問われる管理外利用の問題点と対策の考え方を整理します。
 permalink: /sg/shadow-it/
 tags: [sg, sg-security-measures, it_security_operations, security_training]
+prev: /sg/insider-guideline/
+next: /sg/session-hijacking/
 ---
 
 ## まず結論

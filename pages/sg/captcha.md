@@ -4,7 +4,7 @@ title: CAPTCHAとは？ボット対策の仕組みをやさしく理解【情報
 description: "CAPTCHAの出題意図に合わせ、人間判定の仕組み・bot対策の限界・認証との役割差を具体例で整理し、SG試験で混同しやすい選択肢を切り分ける力が身につきます。"
 permalink: /sg/captcha/
 prev: /sg/ips/
-next: /sg/id-management/
+next: /sg/authentication-authorization-access-control/
 tags: [sg, sg-security-measures, unauthorized_access, access_control]
 ---
 
