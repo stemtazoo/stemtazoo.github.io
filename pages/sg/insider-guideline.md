@@ -32,6 +32,9 @@ tags: [sg, sg-security-management, it_security_operations, security_training]
 内部不正防止ガイドラインは、IPAが公表している  
 **組織として内部不正を防止するための実践的な対策集**です。
 
+参考：
+- [内部不正防止ガイドライン（IPA公式）](https://www.ipa.go.jp/security/guide/insider.html)
+
 ---
 
 ### ■ 基本の考え方（重要）
