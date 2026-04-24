@@ -3,6 +3,8 @@ layout: page
 title: IdP（認証サーバ）とは？SSOの中核とリスクを整理【情報セキュリティマネジメント】
 description: IdP（認証サーバ）はSSOの中核となる認証基盤です。認証の一元化による利便性と障害時の影響範囲を整理し、SG試験で問われるリスク判断のポイントを解説します。
 permalink: /sg/idp/
+prev: /sg/token-authentication/
+next: /sg/sso/
 tags: [sg, sg-security-measures, access_control, it_security_operations]
 ---
 
@@ -121,3 +123,5 @@ IdP（Identity Provider）は、ユーザの認証を行い、その結果を他
 - 停止するとログイン不可
 - 利便性とリスクが集中
 - SGでは「影響範囲」で判断する
+
+{% include sg_article_footer.html %}

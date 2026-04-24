@@ -3,6 +3,8 @@ layout: page
 title: 電子透かしとは？著作権保護のための埋め込み技術【情報セキュリティマネジメント】
 description: 電子透かしはデータに情報を埋め込んで著作権や所有者を示す技術です。ステガノグラフィとの違いや目的を整理し、SG試験での判断ポイントを解説します。
 permalink: /sg/digital-watermark/
+prev: /sg/steganography/
+next: /sg/copyright-transfer/
 tags: [sg, sg-security-measures, data_leakage, it_security_operations]
 ---
 
@@ -108,3 +110,5 @@ SG試験では「隠すためか、権利を示すためか」を判断できる
 - 情報隠ぺいではない  
 - ステガノグラフィとの違いが最重要  
 - 「隠すか／証明するか」で判断する
+
+{% include sg_article_footer.html %}
