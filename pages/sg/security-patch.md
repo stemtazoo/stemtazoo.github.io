@@ -3,6 +3,8 @@ layout: page
 title: セキュリティパッチとは？脆弱性対策の基本【情報セキュリティマネジメント】
 description: セキュリティパッチはソフトウェアの脆弱性を修正する更新プログラムです。適用の目的と運用上の注意点を整理し、SG試験で問われるパッチ管理の判断基準を解説します。
 permalink: /sg/security-patch/
+prev: /sg/perimeter-security/
+next: /sg/egress-control/
 tags: [sg, sg-security-measures, malware, it_security_operations]
 ---
 
@@ -97,3 +99,5 @@ SG試験では「侵入を防ぐ対策か、侵入後の対策か」を判断さ
 - 役割は「侵入防止」であり、検知や対応ではない  
 - 未適用は攻撃されやすい状態  
 - 即時適用か検証後適用かは状況で判断する
+
+{% include sg_article_footer.html %}

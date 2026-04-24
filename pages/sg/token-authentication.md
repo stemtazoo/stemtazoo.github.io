@@ -3,6 +3,8 @@ layout: page
 title: トークン認証とは？SAML・OAuth・OIDCの違いを整理【情報セキュリティマネジメント】
 description: トークン認証は認証結果を使い回す仕組みです。SAML・OAuth・OIDCの役割の違いを整理し、SG試験で問われるSSOやIdPとの関係を分かりやすく解説します。
 permalink: /sg/token-authentication/
+prev: /sg/auth-access-summary/
+next: /sg/idp/
 tags: [sg, sg-security-measures, crypto_auth, system_architecture]
 ---
 
@@ -144,3 +146,5 @@ SSOでは、毎回パスワードを入力する代わりに👇
 - OAuth＝認可（権限委譲）
 - OIDC＝認証＋認可
 - SGでは「目的」で見分ける
+
+{% include sg_article_footer.html %}
