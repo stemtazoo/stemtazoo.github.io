@@ -66,7 +66,7 @@ tags: [sg, sg-security-management, risk_assessment, isms]
 ---
 
 <details>
-<summary>▶ クリックして答えと解説を見る（ここを開く）</summary>
+<summary>答えと解説を見る</summary>
 
 **誤り**
 
@@ -91,7 +91,7 @@ tags: [sg, sg-security-management, risk_assessment, isms]
 ---
 
 <details>
-<summary>▶ クリックして答えと解説を見る（ここを開く）</summary>
+<summary>答えと解説を見る</summary>
 
 **不適切（本来は受容）**
 
@@ -116,7 +116,7 @@ tags: [sg, sg-security-management, risk_assessment, isms]
 ---
 
 <details>
-<summary>▶ クリックして答えと解説を見る（ここを開く）</summary>
+<summary>答えと解説を見る</summary>
 
 **不適切**
 
@@ -138,7 +138,7 @@ tags: [sg, sg-security-management, risk_assessment, isms]
 ---
 
 <details>
-<summary>▶ クリックして答えと解説を見る（ここを開く）</summary>
+<summary>答えと解説を見る</summary>
 
 **低減（適切）**
 
@@ -165,7 +165,7 @@ tags: [sg, sg-security-management, risk_assessment, isms]
 ---
 
 <details>
-<summary>▶ クリックして答えと解説を見る（ここを開く）</summary>
+<summary>答えと解説を見る</summary>
 
 **適切**
 
