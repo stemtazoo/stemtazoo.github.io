@@ -68,7 +68,7 @@ tags: [sg, sg-security-management, risk_assessment, isms]
 ---
 
 <details>
-<summary>答えと解説を見る</summary>
+<summary>▶ クリックして答えと解説を見る（ここを開く）</summary>
 
 - 多要素認証 → **低減**  
 - サイバー保険 → **移転**
@@ -92,7 +92,7 @@ tags: [sg, sg-security-management, risk_assessment, isms]
 ---
 
 <details>
-<summary>答えと解説を見る</summary>
+<summary>▶ クリックして答えと解説を見る（ここを開く）</summary>
 
 **移転**
 
@@ -114,7 +114,7 @@ tags: [sg, sg-security-management, risk_assessment, isms]
 ---
 
 <details>
-<summary>答えと解説を見る</summary>
+<summary>▶ クリックして答えと解説を見る（ここを開く）</summary>
 
 **回避**
 
@@ -138,7 +138,7 @@ tags: [sg, sg-security-management, risk_assessment, isms]
 ---
 
 <details>
-<summary>答えと解説を見る</summary>
+<summary>▶ クリックして答えと解説を見る（ここを開く）</summary>
 
 **受容**
 
@@ -160,7 +160,7 @@ tags: [sg, sg-security-management, risk_assessment, isms]
 ---
 
 <details>
-<summary>答えと解説を見る</summary>
+<summary>▶ クリックして答えと解説を見る（ここを開く）</summary>
 
 **低減**
 
