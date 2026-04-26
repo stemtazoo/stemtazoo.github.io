@@ -1,266 +1,61 @@
 ---
 layout: page
 title: 情報セキュリティマネジメント試験 学習まとめ
-description: 情報セキュリティマネジメント試験 学習まとめは頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
+description: 情報セキュリティマネジメント試験の頻出テーマを、学習ルート・分野別まとめ・試験直前対策から整理して学べるまとめページです。
 permalink: /sg/
-next: /sg/attacker-types/
 categories: [business]
 tags: [sg, index]
 ---
 
-## 📚 学習の進め方
+情報セキュリティマネジメント試験（SG）の学習入口をまとめています。まずは試験像をつかみ、その後に分野別で整理し、最後に試験直前の見直しへ進んでください。
 
-<div style="padding:16px;border-radius:12px;background:#f8fafc;margin-bottom:20px;">
-<b>はじめての人</b><br>
-→ 試験概要 → 出題範囲 → 基本用語
-<br><br>
-<b>全体像をつかむ</b><br>
-→ セキュリティの基礎 → 管理 → 技術
-<br><br>
-<b>試験直前</b><br>
-→ 頻出用語 → 重要テーマの見直し
-</div>
+## まず読む
 
----
+- [情報セキュリティマネジメント試験とは？](/sg/ipa/)
+- [情報セキュリティマネジメント試験の出題内容とは？](/sg/case-study-approach/)
+- [SG試験 ケース問題の解き方テンプレ](/sg/case-solving-template/)
 
-## 🔗 公式リンク
+## 学習ルートで選ぶ
 
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-bottom:24px;">
+### はじめて学ぶ人
+試験の全体像と基本用語から学びます。
 
-  <a href="https://www.ipa.go.jp/shiken/kubun/sg/index.html"
-     target="_blank"
-     style="display:block;padding:18px;border-radius:14px;
-     background:linear-gradient(135deg,#1e293b,#2563eb);
-     color:#fff;text-decoration:none;">
-    <b>情報セキュリティマネジメント試験</b><br>
-    IPA 公式トップ
-  </a>
+- [情報セキュリティマネジメント試験とは？](/sg/ipa/)
+- [情報セキュリティマネジメント試験の出題内容とは？](/sg/case-study-approach/)
+- [ポート番号とは？](/sg/port-number/)
 
-  <a href="https://www.ipa.go.jp/shiken/kubun/sg/about.html"
-     target="_blank"
-     style="display:block;padding:18px;border-radius:14px;
-     background:linear-gradient(135deg,#0f766e,#14b8a6);
-     color:#fff;text-decoration:none;">
-    <b>試験の対象者像</b><br>
-    求められる役割とレベル
-  </a>
+### 攻撃と対策を整理したい人
+マルウェア、不正アクセス、認証、ネットワーク対策を整理します。
 
-  <a href="https://www.ipa.go.jp/shiken/kubun/sg/outline.html"
-     target="_blank"
-     style="display:block;padding:18px;border-radius:14px;
-     background:linear-gradient(135deg,#7c2d12,#f97316);
-     color:#fff;text-decoration:none;">
-    <b>試験概要・出題範囲</b><br>
-    形式と学習の入口
-  </a>
+- [DDoS攻撃とは？](/sg/ddos-attack-summary/)
+- [ランサムウェアとは？](/sg/ransomware/)
+- [多要素認証（MFA）とは？](/sg/mfa-vs-step-auth/)
+- [VPNとは？](/sg/vpn/)
 
-</div>
+### 科目B・ケース問題を強化したい人
+文章問題で選択肢を切る練習をします。
 
----
+- [SG試験 ケース問題の解き方テンプレ](/sg/case-solving-template/)
+- [リスク対応とは？4つの対処方法を整理](/sg/risk-response-cia/)
+- [リスク対応の総合問題](/sg/risk-management-final-exercise/)
 
-## ⭐ まず読む3記事
+## 分野別に探す
 
-{% assign sg_pages = site.pages | where_exp: "p", "p.url contains '/sg/'" %}
-{% assign sg_latest_urls = "/sg/port-number/,/sg/dhcp/,/sg/client-server-system/" | split: "," %}
-<ul>
-{% for latest_url in sg_latest_urls %}
-  {% for p in sg_pages %}
-    {% if p.url == latest_url %}
-  <li><a href="{{ p.url }}">{{ p.title }}</a></li>
-      {% break %}
-    {% endif %}
-  {% endfor %}
-{% endfor %}
-</ul>
+- [情報セキュリティ全般](/sg/category/security-overview/)
+- [情報セキュリティ管理](/sg/category/security-management/)
+- [情報セキュリティ対策](/sg/category/security-measures/)
+- [情報セキュリティ関連法規](/sg/category/law/)
+- [テクノロジ](/sg/category/technology/)
+- [マネジメント](/sg/category/management/)
+- [ストラテジ](/sg/category/strategy/)
 
----
+## 試験直前に見る
 
-## 📝 試験概要
-<ul>
-{% for p in sg_pages %}
-  {% if p.tags %}
-    {% if p.tags contains 'sg-exam-outline' %}
-  <li><a href="{{ p.url }}">{{ p.title }}</a></li>
-    {% endif %}
-  {% endif %}
-{% endfor %}
-</ul>
+- [よくあるNG選択肢まとめ](/sg/ng-patterns/)
+- [ケース問題の解き方テンプレ](/sg/case-solving-template/)
+- [リスク対応の総合問題](/sg/risk-management-final-exercise/)
+- [セキュリティ対策の違いまとめ](/sg/security-measures-comparison/)
 
----
+## すべての記事を見る
 
-# 🧩 出題分野別まとめ
-
-### 情報セキュリティ全般
-<ul>
-{% for p in sg_pages %}
-  {% if p.tags %}
-    {% if p.tags contains 'sg-security-overview' %}
-  <li><a href="{{ p.url }}">{{ p.title }}</a></li>
-    {% endif %}
-  {% endif %}
-{% endfor %}
-</ul>
-
-### 情報セキュリティ管理
-<ul>
-{% for p in sg_pages %}
-  {% if p.tags %}
-    {% if p.tags contains 'sg-security-management' %}
-  <li><a href="{{ p.url }}">{{ p.title }}</a></li>
-    {% endif %}
-  {% endif %}
-{% endfor %}
-</ul>
-
-### 情報セキュリティ対策
-<ul>
-{% for p in sg_pages %}
-  {% if p.tags %}
-    {% if p.tags contains 'sg-security-measures' %}
-  <li><a href="{{ p.url }}">{{ p.title }}</a></li>
-    {% endif %}
-  {% endif %}
-{% endfor %}
-</ul>
-
-### 情報セキュリティ関連法規
-<ul>
-{% for p in sg_pages %}
-  {% if p.tags %}
-    {% if p.tags contains 'sg-security-law' %}
-  <li><a href="{{ p.url }}">{{ p.title }}</a></li>
-    {% endif %}
-  {% endif %}
-{% endfor %}
-</ul>
-
-### テクノロジ
-<ul>
-{% for p in sg_pages %}
-  {% if p.tags %}
-    {% if p.tags contains 'sg-technology' %}
-  <li><a href="{{ p.url }}">{{ p.title }}</a></li>
-    {% endif %}
-  {% endif %}
-{% endfor %}
-</ul>
-
-### マネジメント
-<ul>
-{% for p in sg_pages %}
-  {% if p.tags %}
-    {% if p.tags contains 'sg-management' %}
-  <li><a href="{{ p.url }}">{{ p.title }}</a></li>
-    {% endif %}
-  {% endif %}
-{% endfor %}
-</ul>
-
-### ストラテジ
-<ul>
-{% for p in sg_pages %}
-  {% if p.tags %}
-    {% if p.tags contains 'sg-strategy' %}
-  <li><a href="{{ p.url }}">{{ p.title }}</a></li>
-    {% endif %}
-  {% endif %}
-{% endfor %}
-</ul>
-
----
-
-{% assign shown_urls = "" | split: "" %}
-
-{%- comment -%}
-ここで「表示済み記事」を全部記録する
-{%- endcomment -%}
-
-{% for latest_url in sg_latest_urls %}
-  {% assign shown_urls = shown_urls | push: latest_url %}
-{% endfor %}
-
-{% for p in sg_pages %}
-  {% if p.tags %}
-    {% if p.tags contains 'sg-exam-outline' %}
-    {% assign shown_urls = shown_urls | push: p.url %}
-    {% endif %}
-  {% endif %}
-{% endfor %}
-
-{% for p in sg_pages %}
-  {% if p.tags %}
-    {% if p.tags contains 'sg-security-overview' %}
-    {% assign shown_urls = shown_urls | push: p.url %}
-    {% endif %}
-  {% endif %}
-{% endfor %}
-
-{% for p in sg_pages %}
-  {% if p.tags %}
-    {% if p.tags contains 'sg-security-management' %}
-    {% assign shown_urls = shown_urls | push: p.url %}
-    {% endif %}
-  {% endif %}
-{% endfor %}
-
-{% for p in sg_pages %}
-  {% if p.tags %}
-    {% if p.tags contains 'sg-security-measures' %}
-    {% assign shown_urls = shown_urls | push: p.url %}
-    {% endif %}
-  {% endif %}
-{% endfor %}
-
-{% for p in sg_pages %}
-  {% if p.tags %}
-    {% if p.tags contains 'sg-security-law' %}
-    {% assign shown_urls = shown_urls | push: p.url %}
-    {% endif %}
-  {% endif %}
-{% endfor %}
-
-{% for p in sg_pages %}
-  {% if p.tags %}
-    {% if p.tags contains 'sg-technology' %}
-    {% assign shown_urls = shown_urls | push: p.url %}
-    {% endif %}
-  {% endif %}
-{% endfor %}
-
-{% for p in sg_pages %}
-  {% if p.tags %}
-    {% if p.tags contains 'sg-management' %}
-    {% assign shown_urls = shown_urls | push: p.url %}
-    {% endif %}
-  {% endif %}
-{% endfor %}
-
-{% for p in sg_pages %}
-  {% if p.tags %}
-    {% if p.tags contains 'sg-strategy' %}
-    {% assign shown_urls = shown_urls | push: p.url %}
-    {% endif %}
-  {% endif %}
-{% endfor %}
-
----
-
-# 🧩 未分類（あとで整理）
-
-<ul>
-{% for p in sg_pages %}
-  {% if p.url != "/sg/" and p.path contains "pages/sg/" %}
-    {% unless shown_urls contains p.url %}
-      <li><a href="{{ p.url }}">{{ p.title }}</a></li>
-    {% endunless %}
-  {% endif %}
-{% endfor %}
-</ul>
-
----
-
-<footer style="margin-top:24px; text-align:right;">
-  <a href="{{ '/' | relative_url }}">🏠 ルートの index へ戻る</a>
-</footer>
-
-{% include sg_article_footer.html %}
+- [全記事一覧](/sg/all/)
