@@ -17,7 +17,7 @@ categories: [business]
 
 - [情報セキュリティマネジメント試験とは？](/sg/information-security-management-exam/)
 - [情報セキュリティマネジメント試験の出題内容とは？](/sg/exam-scope/)
-- [SG試験 ケース問題の解き方テンプレ](/sg/case-solving-template/)
+- [情報セキュリティマネジメント試験の勉強方法](/sg/study-method/)
 
 ## 学習ルートで選ぶ
 
