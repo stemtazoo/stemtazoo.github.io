@@ -11,7 +11,7 @@ categories: [business]
 このページは、SG関連の記事を探すための索引です。  
 学習順に進めたい場合は、[SGトップ](/sg/) または分野別まとめページから読むのがおすすめです。
 
-## 分野別ナビゲーション（学習導線）
+## 分野別ナビゲーション
 
 - [情報セキュリティ全般](/sg/category/security-overview/)
 - [情報セキュリティ管理](/sg/category/security-management/)
