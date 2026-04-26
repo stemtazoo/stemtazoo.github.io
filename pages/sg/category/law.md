@@ -7,16 +7,11 @@ permalink: /sg/category/law/
 
 [SGトップへ戻る](/sg/)
 
-## このページで学ぶこと
-
-このページでは、情報セキュリティ関連法規に関する記事をまとめています。  
-SG試験では、単なる用語暗記ではなく、どの場面で使う考え方か、どの選択肢を切れるかを意識して整理します。
-
 ## SG試験での見方
 
-- 用語の定義だけでなく、役割で判断する
-- 似た用語との違いを押さえる
-- 実務上の目的とセットで理解する
+- 法令名だけでなく、何を守る法律かで判断する
+- 似た制度の適用対象を切り分ける
+- 実務上の責任範囲とセットで理解する
 
 ## 関連記事一覧
 
@@ -28,7 +23,7 @@ SG試験では、単なる用語暗記ではなく、どの場面で使う考え
     {% unless p.path contains "pages/sg/category/" %}
       {% if p.url != "/sg/" and p.url != "/sg/all/" %}
         {% if p.tags %}
-          {% if p.tags contains 'law' or p.tags contains 'security_law' or p.tags contains 'sg-security-law' or p.tags contains 'compliance' or p.tags contains 'personal_information' or p.tags contains 'privacy_law' or p.tags contains 'corporate_legal' or p.tags contains '法務' %}
+          {% if p.tags contains 'law' or p.tags contains 'security_law' or p.tags contains 'sg-security-law' or p.tags contains 'compliance' or p.tags contains 'personal_information' or p.tags contains 'privacy_law' or p.tags contains '法務' %}
             {% assign has_items = true %}
   <li><a href="{{ p.url }}">{{ p.title }}</a></li>
           {% endif %}

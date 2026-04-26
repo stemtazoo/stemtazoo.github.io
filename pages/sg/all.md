@@ -8,98 +8,20 @@ categories: [business]
 
 {% assign sg_pages = site.pages | sort: "title" %}
 
-## 試験概要
+このページは、SG関連の記事を探すための索引です。  
+学習順に進めたい場合は、[SGトップ](/sg/) または分野別まとめページから読むのがおすすめです。
 
-<ul>
-{% for p in sg_pages %}
-  {% if p.path contains "pages/sg/" and p.url != "/sg/" and p.url != "/sg/all/" %}
-    {% if p.tags and p.tags contains 'sg-exam-outline' %}
-  <li><a href="{{ p.url }}">{{ p.title }}</a></li>
-    {% endif %}
-  {% endif %}
-{% endfor %}
-</ul>
+## 分野別ナビゲーション（学習導線）
 
-## 出題分野別まとめ
+- [情報セキュリティ全般](/sg/category/security-overview/)
+- [情報セキュリティ管理](/sg/category/security-management/)
+- [情報セキュリティ対策](/sg/category/security-measures/)
+- [情報セキュリティ関連法規](/sg/category/law/)
+- [テクノロジ系](/sg/category/technology/)
+- [マネジメント系](/sg/category/management/)
+- [ストラテジ系](/sg/category/strategy/)
 
-### 情報セキュリティ全般
-<ul>
-{% for p in sg_pages %}
-  {% if p.path contains "pages/sg/" and p.url != "/sg/" and p.url != "/sg/all/" %}
-    {% if p.tags and p.tags contains 'sg-security-overview' %}
-  <li><a href="{{ p.url }}">{{ p.title }}</a></li>
-    {% endif %}
-  {% endif %}
-{% endfor %}
-</ul>
-
-### 情報セキュリティ管理
-<ul>
-{% for p in sg_pages %}
-  {% if p.path contains "pages/sg/" and p.url != "/sg/" and p.url != "/sg/all/" %}
-    {% if p.tags and p.tags contains 'sg-security-management' %}
-  <li><a href="{{ p.url }}">{{ p.title }}</a></li>
-    {% endif %}
-  {% endif %}
-{% endfor %}
-</ul>
-
-### 情報セキュリティ対策
-<ul>
-{% for p in sg_pages %}
-  {% if p.path contains "pages/sg/" and p.url != "/sg/" and p.url != "/sg/all/" %}
-    {% if p.tags and p.tags contains 'sg-security-measures' %}
-  <li><a href="{{ p.url }}">{{ p.title }}</a></li>
-    {% endif %}
-  {% endif %}
-{% endfor %}
-</ul>
-
-### 情報セキュリティ関連法規
-<ul>
-{% for p in sg_pages %}
-  {% if p.path contains "pages/sg/" and p.url != "/sg/" and p.url != "/sg/all/" %}
-    {% if p.tags and p.tags contains 'sg-security-law' %}
-  <li><a href="{{ p.url }}">{{ p.title }}</a></li>
-    {% endif %}
-  {% endif %}
-{% endfor %}
-</ul>
-
-### テクノロジ
-<ul>
-{% for p in sg_pages %}
-  {% if p.path contains "pages/sg/" and p.url != "/sg/" and p.url != "/sg/all/" %}
-    {% if p.tags and p.tags contains 'sg-technology' %}
-  <li><a href="{{ p.url }}">{{ p.title }}</a></li>
-    {% endif %}
-  {% endif %}
-{% endfor %}
-</ul>
-
-### マネジメント
-<ul>
-{% for p in sg_pages %}
-  {% if p.path contains "pages/sg/" and p.url != "/sg/" and p.url != "/sg/all/" %}
-    {% if p.tags and p.tags contains 'sg-management' %}
-  <li><a href="{{ p.url }}">{{ p.title }}</a></li>
-    {% endif %}
-  {% endif %}
-{% endfor %}
-</ul>
-
-### ストラテジ
-<ul>
-{% for p in sg_pages %}
-  {% if p.path contains "pages/sg/" and p.url != "/sg/" and p.url != "/sg/all/" %}
-    {% if p.tags and p.tags contains 'sg-strategy' %}
-  <li><a href="{{ p.url }}">{{ p.title }}</a></li>
-    {% endif %}
-  {% endif %}
-{% endfor %}
-</ul>
-
-## 全記事一覧（タグ分類に関係なく表示）
+## 全記事一覧（索引）
 
 <ul>
 {% for p in sg_pages %}

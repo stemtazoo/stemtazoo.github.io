@@ -7,16 +7,11 @@ permalink: /sg/category/strategy/
 
 [SGトップへ戻る](/sg/)
 
-## このページで学ぶこと
-
-このページでは、ストラテジ分野に関する記事をまとめています。  
-SG試験では、単なる用語暗記ではなく、どの場面で使う考え方か、どの選択肢を切れるかを意識して整理します。
-
 ## SG試験での見方
 
-- 用語の定義だけでなく、役割で判断する
-- 似た用語との違いを押さえる
-- 実務上の目的とセットで理解する
+- 経営視点での意思決定と責任範囲で判断する
+- 組織・制度・業務設計の違いを切り分ける
+- 法務・契約は実務の場面とセットで理解する
 
 ## 関連記事一覧
 
@@ -28,7 +23,7 @@ SG試験では、単なる用語暗記ではなく、どの場面で使う考え
     {% unless p.path contains "pages/sg/category/" %}
       {% if p.url != "/sg/" and p.url != "/sg/all/" %}
         {% if p.tags %}
-          {% if p.tags contains 'strategy' or p.tags contains 'sg-strategy' or p.tags contains 'business' or p.tags contains 'business_management' or p.tags contains 'corporate_legal' or p.tags contains 'organization' or p.tags contains 'system_strategy' %}
+          {% if p.tags contains 'strategy' or p.tags contains 'sg-strategy' or p.tags contains 'business' or p.tags contains 'business_management' or p.tags contains 'organization' or p.tags contains 'corporate_legal' or p.tags contains 'system_strategy' %}
             {% assign has_items = true %}
   <li><a href="{{ p.url }}">{{ p.title }}</a></li>
           {% endif %}
