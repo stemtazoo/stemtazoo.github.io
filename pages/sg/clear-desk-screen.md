@@ -3,6 +3,8 @@ layout: page
 title: クリアデスク・クリアスクリーンとは？情報漏えい防止の基本ルール【情報セキュリティマネジメント】
 description: クリアデスク・クリアスクリーンは机や画面に情報を残さないことで漏えいを防ぐ対策です。物理対策と人的対策の違いやSG試験での判断ポイントを整理します。
 permalink: /sg/clear-desk-screen/
+prev: /sg/anti-passback/
+next: /sg/surveillance-camera/
 tags: [sg, sg-security-measures, data_leakage, security_training]
 ---
 

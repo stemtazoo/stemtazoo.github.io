@@ -3,6 +3,8 @@ layout: page
 title: 遠隔バックアップとは？災害時のデータ保護の基本【情報セキュリティマネジメント】
 description: 遠隔バックアップはデータを別の場所に保存して災害や障害に備える仕組みです。RAIDとの違いやSG試験でのひっかけポイントを整理します。
 permalink: /sg/remote-backup/
+prev: /sg/raid/
+next: /sg/ups/
 tags: [sg, sg-security-measures, data_leakage, it_security_operations]
 ---
 

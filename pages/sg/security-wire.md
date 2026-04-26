@@ -3,6 +3,8 @@ layout: page
 title: セキュリティワイヤとは？機器盗難を防ぐ基本対策【情報セキュリティマネジメント】
 description: セキュリティワイヤはPCなどの機器を固定して盗難を防ぐ物理的対策です。入退室管理や暗号化との違い、SG試験での判断ポイントを整理します。
 permalink: /sg/security-wire/
+prev: /sg/surveillance-camera/
+next: /sg/raid/
 tags: [sg, sg-security-measures, asset_management, data_leakage]
 ---
 

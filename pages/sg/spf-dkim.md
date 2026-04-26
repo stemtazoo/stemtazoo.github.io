@@ -3,7 +3,7 @@ layout: page
 title: SPF・DKIMとは？なりすましメール対策の仕組み【情報セキュリティマネジメント】
 description: SPFとDKIMはなりすましメールを防ぐために受信側で送信元を検証する技術です。SMTP-AUTHとの違いや役割を整理し、SG試験の判断ポイントを解説します。
 permalink: /sg/spf-dkim/
-prev: /sg/smtp-auth/
+prev: /sg/spf/
 next: /sg/smime/
 tags: [sg, sg-security-measures, unauthorized_access, network]
 ---

@@ -3,6 +3,8 @@ layout: page
 title: UPSとは？停電時の業務継続を支える仕組み【情報セキュリティマネジメント】
 description: UPSは停電時に短時間だけ電力を供給する装置です。発電機との違いや役割、SG試験でのひっかけポイントを整理し、正しく判断できるようにします。
 permalink: /sg/ups/
+prev: /sg/remote-backup/
+next: /sg/physical-security-summary/
 tags: [sg, sg-security-measures, it_security_operations, system_architecture]
 ---
 

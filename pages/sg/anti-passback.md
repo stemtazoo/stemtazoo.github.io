@@ -3,6 +3,8 @@ layout: page
 title: アンチパスバックとは？不正な入退室を防ぐ仕組み【情報セキュリティマネジメント】
 description: アンチパスバックは同じ認証情報の使い回しを防ぐ入退室管理の仕組みです。共連れや貸し借りとの違いを整理し、SG試験での判断基準を解説します。
 permalink: /sg/anti-passback/
+prev: /sg/access-control-physical/
+next: /sg/clear-desk-screen/
 tags: [sg, sg-security-measures, access_control, it_security_operations]
 ---
 
