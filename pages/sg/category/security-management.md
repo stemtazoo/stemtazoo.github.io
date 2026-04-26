@@ -7,37 +7,60 @@ permalink: /sg/category/security-management/
 
 [SGトップへ戻る](/sg/)
 
-## このページで学ぶこと
+## まず読むまとめ記事
 
-このページでは、情報セキュリティ管理に関する記事をまとめています。  
-SG試験では、単なる用語暗記ではなく、どの場面で使う考え方か、どの選択肢を切れるかを意識して整理します。
+- [情報セキュリティポリシーとは？](/sg/security-policy/)
+- [ISMSとは？](/sg/isms/)
+- [リスクマネジメントとは？](/sg/risk-management/)
+- [インシデント管理とは？](/sg/incident-management/)
+- [ログ管理とは？](/sg/log-management/)
 
-## SG試験での見方
+## 組織・体制
 
-- 用語の定義だけでなく、役割で判断する
-- 似た用語との違いを押さえる
-- 実務上の目的とセットで理解する
+- [情報セキュリティ委員会とは？](/sg/security-committee/)
+- [CSIRTとは？](/sg/csirt/)
+- [NISCとは？](/sg/nisc/)
+- [IPAとは？](/sg/ipa/)
+- [NISC・IPA・JPCERT/CC・CSIRTの違いまとめ](/sg/security-org-cheatsheet/)
+- [SOC・CSIRT・JPCERT/CCの違い](/sg/soc-csirt-jpcert/)
 
-## 関連記事一覧
+## ポリシー・規程
 
-{% assign sg_pages = site.pages | sort: "title" %}
-{% assign has_items = false %}
-<ul>
-{% for p in sg_pages %}
-  {% if p.path contains "pages/sg/" %}
-    {% unless p.path contains "pages/sg/category/" %}
-      {% if p.url != "/sg/" and p.url != "/sg/all/" %}
-        {% if p.tags %}
-          {% if p.tags contains 'security_management' or p.tags contains 'sg-security-management' or p.tags contains 'risk_assessment' or p.tags contains 'isms' or p.tags contains 'system_audit' or p.tags contains 'it_security_operations' or p.tags contains 'asset_management' %}
-            {% assign has_items = true %}
-  <li><a href="{{ p.url }}">{{ p.title }}</a></li>
-          {% endif %}
-        {% endif %}
-      {% endif %}
-    {% endunless %}
-  {% endif %}
-{% endfor %}
-</ul>
-{% if has_items == false %}
-該当記事は今後追加予定です。
-{% endif %}
+- [情報セキュリティポリシーとは？](/sg/security-policy/)
+- [情報セキュリティ基本方針とは？](/sg/security-policy-basic/)
+- [情報セキュリティ対策基準とは？](/sg/security-policy-standards/)
+- [情報セキュリティ実施手順とは？](/sg/security-policy-procedures/)
+- [クリアデスク・クリアスクリーンとは？](/sg/clear-desk-screen/)
+
+## リスク管理
+
+- [リスクマネジメントとは？](/sg/risk-management/)
+- [リスクアセスメントとは？](/sg/risk-assessment/)
+- [リスク基準とは？](/sg/risk-criteria/)
+- [リスク対応とは？4つの対処方法を整理](/sg/risk-treatment/)
+- [情報資産台帳とは？](/sg/asset-register/)
+- [リスク対応の総合問題](/sg/risk-management-final-exercise/)
+
+## インシデント管理
+
+- [情報セキュリティ事象とは？](/sg/security-event/)
+- [情報セキュリティインシデントとは？](/sg/security-incident/)
+- [インシデント対応とは？](/sg/incident-response/)
+- [インシデント管理とは？](/sg/incident-management/)
+- [デジタルフォレンジックとは？](/sg/digital-forensics/)
+
+## 運用管理
+
+- [ログ管理とは？](/sg/log-management/)
+- [監査ログとは？](/sg/audit-log/)
+- [ID管理とは？](/sg/id-management/)
+- [アクセス管理とは？](/sg/access-control/)
+- [特権ID管理とは？](/sg/privileged-id-management/)
+- [シャドーITとは？](/sg/shadow-it/)
+- [セキュリティパッチとは？](/sg/security-patch/)
+
+## 監査・評価
+
+- [脆弱性検査とペネトレーションテストの違いとは？](/sg/vulnerability-scan/)
+- [CVSSとは？](/sg/cvss/)
+- [JVNとは？](/sg/jvn/)
