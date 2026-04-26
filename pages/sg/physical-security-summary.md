@@ -145,3 +145,7 @@ SG試験では
 - ワイヤ＝盗難防止  
 
 👉 **「何を守るか × どう守るか」で切る**
+
+---
+
+{% include sg_article_footer.html %}

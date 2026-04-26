@@ -119,3 +119,7 @@ SG試験では
 - バックアップ＝復旧、UPS＝停止補助  
 
 👉 **「時間の長さ」で切ると迷わない**
+
+---
+
+{% include sg_article_footer.html %}
