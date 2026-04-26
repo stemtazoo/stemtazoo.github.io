@@ -15,7 +15,7 @@ categories: [business]
 
 ## まず読む
 
-- [情報セキュリティマネジメント試験とは？](/sg/ipa/)
+- [情報セキュリティマネジメント試験とは？](/sg/information-security-management-exam/)
 - [情報セキュリティマネジメント試験の出題内容とは？](/sg/case-study-approach/)
 - [SG試験 ケース問題の解き方テンプレ](/sg/case-solving-template/)
 
@@ -24,7 +24,7 @@ categories: [business]
 ### はじめて学ぶ人
 試験の全体像と基本用語から学びます。
 
-- [情報セキュリティマネジメント試験とは？](/sg/ipa/)
+- [情報セキュリティマネジメント試験とは？](/sg/information-security-management-exam/)
 - [情報セキュリティマネジメント試験の出題内容とは？](/sg/case-study-approach/)
 - [ポート番号とは？](/sg/port-number/)
 
