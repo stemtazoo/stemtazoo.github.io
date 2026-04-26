@@ -3,6 +3,8 @@ layout: page
 title: SPFとは？送信元IPでなりすましを防ぐ仕組み【情報セキュリティマネジメント】
 description: SPFは送信元IPアドレスをもとにメールの正当性を確認する仕組みです。DNSに登録された許可サーバと照合する流れと、DKIMとの違いなどSG試験での判断ポイントを整理します。
 permalink: /sg/spf/
+prev: /sg/smtp-auth/
+next: /sg/spf-dkim/
 tags: [sg, sg-security-measures, unauthorized_access, network]
 ---
 

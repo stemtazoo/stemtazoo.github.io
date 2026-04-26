@@ -3,6 +3,8 @@ layout: page
 title: 入退室管理とは？物理アクセス制御の基本【情報セキュリティマネジメント】
 description: 入退室管理は施設への出入りを制御し不正侵入を防ぐ物理的セキュリティ対策です。認証との違いやSG試験でのひっかけポイントを整理します。
 permalink: /sg/access-control-physical/
+prev: /sg/physical-security/
+next: /sg/anti-passback/
 tags: [sg, sg-security-measures, access_control, it_security_operations]
 ---
 

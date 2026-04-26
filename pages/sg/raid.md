@@ -3,6 +3,8 @@ layout: page
 title: RAIDとは？冗長化による信頼性向上の仕組み【情報セキュリティマネジメント】
 description: RAIDは複数の記憶装置を組み合わせて信頼性や処理性能を高める仕組みです。RAID0・1・5・6・10の違いと、SG試験で混同しやすいバックアップとの違いを整理します。
 permalink: /sg/raid/
+prev: /sg/security-wire/
+next: /sg/remote-backup/
 tags: [sg, sg-security-measures, system_architecture, it_security_operations]
 ---
 
