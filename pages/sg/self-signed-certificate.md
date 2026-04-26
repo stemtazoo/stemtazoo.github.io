@@ -100,9 +100,4 @@ tags: [sg, crypto_auth, sg-security-overview, network]
 
 ---
 
-## 関連記事
-- [電子証明書とは](/sg/digital-certificate/): 自己署名証明書も含めた証明書の基本を先に整理できます。
-- [認証局（CA）の役割とは](/sg/certificate-authority-role/): なぜ CA 署名付き証明書の方が信頼されるのかが分かります。
-- [ルート証明書とは](/sg/root-certificate/): 自己署名でありながら信頼の起点になる特別な証明書との違いを確認できます。
-
 {% include sg_article_footer.html %}

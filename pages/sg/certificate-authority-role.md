@@ -96,9 +96,4 @@ tags: [sg, crypto_auth, sg-security-overview, access_control]
 
 ---
 
-## 関連記事
-- [電子証明書とは](/sg/digital-certificate/): CA が保証する対象である電子証明書の基本から確認できます。
-- [ルート証明書とは](/sg/root-certificate/): CA の信頼の起点になる証明書を続けて整理できます。
-- [証明書失効方式（CRL / OCSP）とは](/sg/certificate-revocation-crl-ocsp/): CA が公開する失効情報の扱いまで理解を広げられます。
-
 {% include sg_article_footer.html %}
