@@ -51,9 +51,9 @@ tags: [sg, index]
 - [情報セキュリティ管理](/sg/category/security-management/)
 - [情報セキュリティ対策](/sg/category/security-measures/)
 - [情報セキュリティ関連法規](/sg/category/law/)
-- [テクノロジ](/sg/category/technology/)
-- [マネジメント](/sg/category/management/)
-- [ストラテジ](/sg/category/strategy/)
+- [テクノロジ系](/sg/category/technology/)
+- [マネジメント系](/sg/category/management/)
+- [ストラテジ系](/sg/category/strategy/)
 
 ## 試験直前に見る
 
