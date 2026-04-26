@@ -7,8 +7,25 @@ permalink: /sg/category/security-management/
 
 [SGトップへ戻る](/sg/)
 
+## このページで学ぶこと
+
+- 情報セキュリティ管理を、組織・規程・リスク・運用・監査の軸で整理する
+- SG試験で混同しやすい管理系用語を、役割と手順で切り分ける
+- 科目Bのケース問題で使える判断ポイントをまとめて確認する
+
+## SG試験での見方
+
+- 「技術そのもの」よりも「誰が・何を・どの手順で管理するか」で判断する
+- 似た用語は、組織内の体制か、外部の支援機関かで切り分ける
+- 運用管理とインシデント対応はつながっているが、目的の違いで整理する
+
+## 関連記事一覧
+
+> この記事一覧では、原則として各記事を最も関連が強い章に配置しています。まとめ記事や複数分野にまたがる記事は、学習しやすさを優先して重複掲載する場合があります。
+
 ## まず読むまとめ記事
 
+- [情報セキュリティ管理とは？](/sg/security-management-overview/)
 - [情報セキュリティポリシーとは？](/sg/security-policy/)
 - [ISMSとは？](/sg/isms/)
 - [リスクマネジメントとは？](/sg/risk-management/)
@@ -17,31 +34,44 @@ permalink: /sg/category/security-management/
 
 ## 組織・体制
 
+試験では、「組織内で対応する体制」か「外部の支援・調整機関」かで切り分けます。
+
 - [情報セキュリティ委員会とは？](/sg/security-committee/)
 - [CSIRTとは？](/sg/csirt/)
-- [NISCとは？](/sg/nisc/)
-- [IPAとは？](/sg/ipa/)
-- [NISC・IPA・JPCERT/CC・CSIRTの違いまとめ](/sg/security-org-cheatsheet/)
 - [SOC・CSIRT・JPCERT/CCの違い](/sg/soc-csirt-jpcert/)
+- [NISCとは？](/sg/nisc/)
+- [NCOとは？](/sg/nco/)
+- [IPAとは？](/sg/ipa/)
+- [JPCERT/CCとは？](/sg/jpcert-cc/)
+- [NISC・IPA・JPCERT/CC・CSIRTの違いまとめ](/sg/security-org-cheatsheet/)
 
 ## ポリシー・規程
+
+試験では、「方針」か「基準」か「現場手順」かで切り分けます。
 
 - [情報セキュリティポリシーとは？](/sg/security-policy/)
 - [情報セキュリティ基本方針とは？](/sg/security-policy-basic/)
 - [情報セキュリティ対策基準とは？](/sg/security-policy-standards/)
 - [情報セキュリティ実施手順とは？](/sg/security-policy-procedures/)
+- [情報セキュリティ教育・訓練とは？](/sg/security-training/)
 - [クリアデスク・クリアスクリーンとは？](/sg/clear-desk-screen/)
 
 ## リスク管理
 
+試験では、「リスクを見つける」か「対応方針を決める」かで切り分けます。
+
 - [リスクマネジメントとは？](/sg/risk-management/)
 - [リスクアセスメントとは？](/sg/risk-assessment/)
-- [リスク基準とは？](/sg/risk-criteria/)
+- [リスク基準（受容基準）とは？](/sg/risk-criteria/)
 - [リスク対応とは？4つの対処方法を整理](/sg/risk-treatment/)
+- [残留リスクとは？](/sg/residual-risk/)
 - [情報資産台帳とは？](/sg/asset-register/)
-- [リスク対応の総合問題](/sg/risk-management-final-exercise/)
+- [リスク対応とCIAの関係を整理](/sg/risk-response-cia/)
+- [リスク管理の総合問題](/sg/risk-management-final-exercise/)
 
 ## インシデント管理
+
+試験では、「発生した事象」か「対応が必要なインシデント」かで切り分けます。
 
 - [情報セキュリティ事象とは？](/sg/security-event/)
 - [情報セキュリティインシデントとは？](/sg/security-incident/)
@@ -51,16 +81,22 @@ permalink: /sg/category/security-management/
 
 ## 運用管理
 
+試験では、「日常運用で防ぐ」か「記録して追跡する」かで切り分けます。
+
 - [ログ管理とは？](/sg/log-management/)
 - [監査ログとは？](/sg/audit-log/)
-- [ID管理とは？](/sg/id-management/)
+- [ID管理（アカウント管理）とは？](/sg/id-management/)
 - [アクセス管理とは？](/sg/access-control/)
 - [特権ID管理とは？](/sg/privileged-id-management/)
 - [シャドーITとは？](/sg/shadow-it/)
 - [セキュリティパッチとは？](/sg/security-patch/)
+- [委託先管理とは？](/sg/vendor-management/)
 
 ## 監査・評価
 
+試験では、「弱点を見つける検査」か「運用が適切か確認する監査」かで切り分けます。
+
 - [脆弱性検査とペネトレーションテストの違いとは？](/sg/vulnerability-scan/)
+- [ファジングとは？](/sg/fuzzing/)
 - [CVSSとは？](/sg/cvss/)
 - [JVNとは？](/sg/jvn/)
