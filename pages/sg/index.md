@@ -9,6 +9,12 @@ tags: [sg, index]
 
 情報セキュリティマネジメント試験（SG）の学習入口をまとめています。まずは試験像をつかみ、その後に分野別で整理し、最後に試験直前の見直しへ進んでください。
 
+## 公式リンク
+
+- [情報セキュリティマネジメント試験（IPA公式トップ）](https://www.ipa.go.jp/shiken/kubun/sg/index.html)
+- [試験の対象者像（IPA）](https://www.ipa.go.jp/shiken/kubun/sg/about.html)
+- [試験概要・出題範囲（IPA）](https://www.ipa.go.jp/shiken/kubun/sg/outline.html)
+
 ## まず読む
 
 - [情報セキュリティマネジメント試験とは？](/sg/ipa/)
