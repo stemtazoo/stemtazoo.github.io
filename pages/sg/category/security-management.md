@@ -5,6 +5,8 @@ description: 情報セキュリティポリシー、ISMS、リスクマネジメ
 permalink: /sg/category/security-management/
 ---
 
+[SGトップへ戻る](/sg/)
+
 ## このページで学ぶこと
 
 このページでは、情報セキュリティ管理に関する記事をまとめています。  
