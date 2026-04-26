@@ -135,9 +135,4 @@ D. 失効確認は秘密鍵が漏えいした場合だけ不要になる。
 
 ---
 
-## 関連記事
-- [電子証明書とは](/sg/digital-certificate/): CRL/OCSP が確認対象にする証明書そのものの基礎を整理できます。
-- [認証局（CA）の役割とは](/sg/certificate-authority-role/): 失効情報を誰が管理・公開するのかを CA の役割から押さえられます。
-- [PKIとは](/sg/pki/): 証明書、CA、失効確認を含む公開鍵基盤全体の流れをまとめて確認できます。
-
 {% include sg_article_footer.html %}
