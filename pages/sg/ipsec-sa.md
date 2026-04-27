@@ -3,6 +3,8 @@ layout: page
 title: SAとは？IPsec通信のルールを管理する仕組み【情報セキュリティマネジメント】
 description: SAはIPsec通信で使う暗号方式や鍵、有効期間などのルールをまとめた情報です。IKE・AH・ESPとの違いをSG試験向けに整理します。
 permalink: /sg/ipsec-sa/
+prev: /sg/ipsec-ike/
+next: /sg/ssl-tls/
 tags: [sg, sg-security-overview, crypto_auth, network, sg-technology]
 ---
 
@@ -219,3 +221,5 @@ IKEは、鍵や暗号方式を交渉してSAを作る
 ESPやAHは、SAの設定に従って通信を保護する
 
 選択肢で「暗号方式・鍵・ライフタイム・管理テーブル」が出たらSAを候補にする
+
+{% include sg_article_footer.html %}
