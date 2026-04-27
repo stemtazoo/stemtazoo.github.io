@@ -3,6 +3,8 @@ layout: page
 title: IKEとは？IPsecで鍵を交換する仕組み【情報セキュリティマネジメント】
 description: IKEはIPsec通信で使う暗号方式や鍵を決めるための鍵交換の仕組みです。AH・ESP・SAとの違いをSG試験向けに整理します。
 permalink: /sg/ipsec-ike/
+prev: /sg/ipsec-esp/
+next: /sg/ipsec-sa/
 tags: [sg, sg-security-overview, crypto_auth, network, sg-technology]
 ---
 
@@ -195,3 +197,5 @@ ESPは、通信データを暗号化できる仕組み
 AHは、暗号化せず、認証・完全性確認を行う仕組み
 
 選択肢で「鍵交換」「暗号化鍵を動的に生成」と出たらIKEを候補にする
+
+{% include sg_article_footer.html %}

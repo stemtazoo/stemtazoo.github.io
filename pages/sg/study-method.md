@@ -3,6 +3,8 @@ layout: page
 title: 情報セキュリティマネジメント試験の勉強法をやさしく整理【SG試験】
 description: 情報セキュリティマネジメント試験の勉強法は、科目Aで知識を固め、科目Bでケース判断に慣れる流れが基本です。出題傾向、問題の特徴、学習期間の目安を整理します。
 permalink: /sg/study-method/
+prev: /sg/exam-scope/
+next: /sg/case-solving-template/
 tags: [sg, sg-security-overview, sg-security-management, it_security_operations]
 ---
 
@@ -406,3 +408,5 @@ SG試験は、暗記だけでなく、業務現場で安全な判断を選ぶ試
 科目Bは、本文から根拠を探し、場面に合わない選択肢を切る練習が重要。
 
 学習期間は、基礎がある人で1〜2か月、初学者なら3〜5か月を目安にする。
+
+{% include sg_article_footer.html %}
