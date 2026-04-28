@@ -258,3 +258,5 @@ SG試験では、次の順番で読むと判断しやすくなります。
 ## 参考
 - e-Gov法令検索「不正アクセス行為の禁止等に関する法律」
   - https://laws.e-gov.go.jp/law/411AC0000000128
+
+{% include sg_article_footer.html %}
