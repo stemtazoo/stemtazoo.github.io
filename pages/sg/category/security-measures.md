@@ -28,12 +28,17 @@ permalink: /sg/category/security-measures/
 試験では、「本人確認」なのか「操作権限の制御」なのかで切り分けます。
 
 - [認証方式とは？3要素と多要素認証を整理](/sg/authentication-methods/)
+- [本人拒否率と他人受入率とは？生体認証の重要指標を整理](/sg/frr-far/)
+- [識別符号とは？ID・パスワードとの関係を整理](/sg/identification-code/)
 - [アクセス制御（認可）とは？認証との違いを整理](/sg/authorization/)
 - [アクセス管理とは？特権IDとneed-to-knowで権限を適切に制御](/sg/access-control/)
+- [アクセス制御モデルとは？RBAC・ABAC・DAC・MACの違いを整理](/sg/access-control-model/)
+- [認証・認可・アクセス制御の違いとは？役割の切り分けを整理](/sg/authentication-authorization-access-control/)
 - [多要素認証（MFA）とは？認証強化の仕組みと判断ポイント](/sg/multi-factor-authentication/)
 - [多要素認証と多段階認証の違いとは？混同しやすい認証方式を整理](/sg/mfa-vs-step-auth/)
 - [シングルサインオン（SSO）とは？利便性とリスクを整理](/sg/sso/)
 - [IdP（認証サーバ）とは？SSOの中核とリスクを整理](/sg/idp/)
+- [トークン認証とは？SAML・OAuth・OIDCの違いを整理](/sg/token-authentication/)
 - [リスクベース認証とは？状況に応じて強化する認証の仕組み](/sg/risk-based-authentication/)
 - [チャレンジレスポンス認証とは？パスワードを送らない認証の仕組み](/sg/challenge-response-authentication/)
 - [特権ID管理とは？管理者権限のリスクと対策を整理](/sg/privileged-id/)

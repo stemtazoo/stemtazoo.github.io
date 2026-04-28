@@ -92,6 +92,15 @@ permalink: /sg/category/security-management/
 - [セキュリティパッチとは？](/sg/security-patch/)
 - [委託先管理とは？](/sg/vendor-management/)
 
+
+## 法令・不正アクセス関連
+
+試験では、「不正アクセスそのもの」か「不正アクセスを助長する行為」かで切り分けます。
+
+- [不正アクセス禁止法とは？禁止される行為を整理](/sg/unauthorized-access-law/)
+- [識別符号とは？ID・パスワードとの関係を整理](/sg/identification-code/)
+- [不正取得・不正保管・助長行為の違い](/sg/unauthorized-access-related-actions/)
+
 ## 監査・評価
 
 試験では、「弱点を見つける検査」か「運用が適切か確認する監査」かで切り分けます。
