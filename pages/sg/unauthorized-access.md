@@ -256,3 +256,5 @@ ID・パスワードを使っていなくても、脆弱性を突いて制限を
 ## 参考
 - e-Gov法令検索「不正アクセス行為の禁止等に関する法律」
   - https://laws.e-gov.go.jp/law/411AC0000000128
+
+{% include sg_article_footer.html %}
