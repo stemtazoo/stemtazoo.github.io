@@ -3,6 +3,18 @@ name: Submit IndexNow URLs
 on:
   deployment_status:
   workflow_dispatch:
+    inputs:
+      mode:
+        description: "IndexNow submission mode"
+        required: false
+        default: "auto"
+        type: choice
+        options:
+          - auto
+          - all-known
+  schedule:
+    # Weekly full refresh (UTC): every Monday 03:17
+    - cron: "17 3 * * 1"
 
 permissions:
   contents: read
@@ -12,6 +24,7 @@ jobs:
   submit-indexnow:
     if: >
       github.event_name == 'workflow_dispatch' ||
+      github.event_name == 'schedule' ||
       (
         github.event_name == 'deployment_status' &&
         github.event.deployment_status.state == 'success' &&
@@ -30,12 +43,13 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Resolve deployment range
+      - name: Resolve submission mode and deployment range
         id: range
         env:
           GITHUB_TOKEN: ${{ github.token }}
           GITHUB_REPOSITORY: ${{ github.repository }}
           GITHUB_EVENT_NAME: ${{ github.event_name }}
+          WORKFLOW_MODE: ${{ github.event.inputs.mode || 'auto' }}
           CURRENT_DEPLOYMENT_ID: ${{ github.event.deployment.id || '' }}
           CURRENT_DEPLOYMENT_SHA: ${{ github.event.deployment.sha || '' }}
         run: |
@@ -45,6 +59,7 @@ jobs:
           import urllib.request
 
           event_name = os.environ.get("GITHUB_EVENT_NAME", "")
+          workflow_mode = os.environ.get("WORKFLOW_MODE", "auto")
           token = os.environ.get("GITHUB_TOKEN", "")
           repo = os.environ.get("GITHUB_REPOSITORY", "")
           current_id = os.environ.get("CURRENT_DEPLOYMENT_ID", "")
@@ -54,14 +69,25 @@ jobs:
               with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as fh:
                   fh.write(f"{name}={value}\n")
 
-          if event_name != "deployment_status":
-              print("workflow_dispatch: fallback to --all-known")
+          if workflow_mode == "all-known":
               write_output("mode", "all-known")
               write_output("before", "")
               write_output("after", "")
               raise SystemExit(0)
 
-          print(f"AFTER (current deployment sha): {after}")
+          if event_name == "schedule":
+              print("Scheduled run: forcing --all-known")
+              write_output("mode", "all-known")
+              write_output("before", "")
+              write_output("after", "")
+              raise SystemExit(0)
+
+          if event_name != "deployment_status":
+              print("workflow_dispatch auto mode: fallback to --all-known")
+              write_output("mode", "all-known")
+              write_output("before", "")
+              write_output("after", "")
+              raise SystemExit(0)
 
           headers = {
               "Authorization": f"Bearer {token}",
@@ -95,19 +121,19 @@ jobs:
                       before = candidate_sha
                       break
 
-          if before:
-              print(f"BEFORE (previous successful deployment sha): {before}")
+          if before and after:
+              print(f"Using git diff range: {before}..{after}")
               write_output("mode", "git-diff")
               write_output("before", before)
               write_output("after", after)
           else:
-              print("No previous successful github-pages deployment found. Falling back to --all-known")
+              print("No previous successful deployment range found. Falling back to --all-known")
               write_output("mode", "all-known")
               write_output("before", "")
               write_output("after", after)
           PY
 
-      - name: Submit changed URLs to IndexNow
+      - name: Submit URLs to IndexNow
         env:
           INDEXNOW_KEY_FILE: f0977966c6644641ae35df01652658c4.txt
           INDEXNOW_MODE: ${{ steps.range.outputs.mode }}
@@ -116,11 +142,9 @@ jobs:
         run: |
           echo "IndexNow mode: $INDEXNOW_MODE"
           if [ "$INDEXNOW_MODE" = "git-diff" ]; then
-            echo "IndexNow diff range: BEFORE=$INDEXNOW_BEFORE AFTER=$INDEXNOW_AFTER"
             python scripts/submit_indexnow.py \
               --from-git-diff "$INDEXNOW_BEFORE" "$INDEXNOW_AFTER" \
               --key-file "$INDEXNOW_KEY_FILE"
           else
-            echo "IndexNow fallback mode: --all-known"
             python scripts/submit_indexnow.py --all-known --key-file "$INDEXNOW_KEY_FILE"
           fi
