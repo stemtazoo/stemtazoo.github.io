@@ -1,6 +1,7 @@
 ---
 layout: default
 title: 記事一覧
+description: 学習記録・更新情報の一覧ページです。G検定・DS検定・SG試験対策の新着記事を時系列で確認できます。
 permalink: /posts/
 ---
 

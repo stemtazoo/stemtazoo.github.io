@@ -1,6 +1,7 @@
 ---
 layout: default
 title: HOME
+description: AI・データサイエンス・IT学習ノートのトップページです。G検定・DS検定・SG試験対策の記事一覧と学習導線をまとめています。
 permalink: /
 ---
 
