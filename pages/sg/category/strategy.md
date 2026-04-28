@@ -1,7 +1,7 @@
 ---
 layout: page
 title: ストラテジ系まとめ
-description: 経営戦略、業務改善、法務、組織管理など、SG試験に関係するストラテジ分野を整理するまとめページです。
+description: 経営戦略、業務改善、法務、組織管理など、SG試験に関係するストラテジ分野を意思決定と責任範囲の観点で整理するまとめページです。
 permalink: /sg/category/strategy/
 ---
 

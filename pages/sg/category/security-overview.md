@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 情報セキュリティ全般まとめ
-description: 情報セキュリティの基本概念、脅威、脆弱性、暗号、攻撃の全体像を整理するSG試験向けまとめページです。
+description: 情報セキュリティの基本概念、脅威、脆弱性、暗号、攻撃手法の全体像を、用語の役割と出題パターンの観点で整理するSG試験向けまとめページです。
 permalink: /sg/category/security-overview/
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 情報セキュリティ管理まとめ
-description: 情報セキュリティポリシー、ISMS、リスクマネジメント、監査、ログ管理などを整理するSG試験向けまとめページです。
+description: 情報セキュリティポリシー、ISMS、リスクマネジメント、監査、ログ管理などの管理分野を、役割と手順の違いで整理するSG試験向けまとめページです。
 permalink: /sg/category/security-management/
 ---
 

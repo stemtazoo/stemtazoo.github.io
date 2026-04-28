@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 情報セキュリティ対策まとめ
-description: 認証、アクセス制御、マルウェア対策、ネットワーク対策、物理的対策などを整理するSG試験向けまとめページです。
+description: 認証、アクセス制御、マルウェア対策、ネットワーク対策、物理的対策などの技術的対策を、目的と適用場面の違いで整理するSG試験向けまとめページです。
 permalink: /sg/category/security-measures/
 ---
 
