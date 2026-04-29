@@ -1,4 +1,4 @@
-﻿---
+---
 layout: page
 title: "④ Assistant Data Scientist（見習い）に求められるデータエンジニアリング力"
 description: "\"④ Assistant Data Scientist（見習い）に求められるデータエンジニアリング力\"は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。"
@@ -12,10 +12,6 @@ next: /ds/skilllevel-2023-assistant-ds-datascience/
   <a href="/ds/">DS検定トップ</a>
   ＞ {{ page.title }}
 </div>
-
-# ④ Assistant Data Scientist（見習いレベル）に求められるデータエンジニアリング力
-（スキルレベル定義2023 まとめ）
-
 
 ## まず結論
 
