@@ -39,6 +39,8 @@ tags: [sg, sg-security-measures, threat_vulnerability, it_security_operations]
 
 ## 定義・仕組み
 
+> 公式: JVN iPedia（脆弱性対策情報）：[公式: JVN iPedia（脆弱性対策情報）](https://jvndb.jvn.jp/)
+
 ファジング（Fuzzing）は、
 
 - ランダムまたは異常な入力データを大量に与え  

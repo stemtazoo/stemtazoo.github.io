@@ -27,6 +27,8 @@ next: /sg/crl/
 ---
 
 ## 定義・仕組み
+
+> 公式: JVN iPedia（脆弱性対策情報）：[公式: JVN iPedia（脆弱性対策情報）](https://jvndb.jvn.jp/)
 クラッカーの特徴を整理します。
 
 ### 悪意を持って攻撃する

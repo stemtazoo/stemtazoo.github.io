@@ -32,6 +32,8 @@ tags: [sg, sg-security-management, risk_assessment, isms]
 ---
 
 ## 定義・仕組み
+
+> 公式: JVN iPedia（脆弱性対策情報）：[公式: JVN iPedia（脆弱性対策情報）](https://jvndb.jvn.jp/)
 リスクアセスメントは、JISでも次の流れで整理されています。
 
 ### ① 準備（前提条件の設定）

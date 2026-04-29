@@ -27,6 +27,8 @@ next: /sg/unauthorized-access/
 ---
 
 ## 定義・仕組み
+
+> 公式: JVN iPedia（脆弱性対策情報）：[公式: JVN iPedia（脆弱性対策情報）](https://jvndb.jvn.jp/)
 代表的な不正アクセス手法を整理します。
 
 ### ① 調査・情報収集系

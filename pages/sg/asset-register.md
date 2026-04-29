@@ -35,6 +35,8 @@ tags: [sg, sg-security-management, asset_management, risk_assessment]
 ---
 
 ## 定義・仕組み
+
+> 公式: JVN iPedia（脆弱性対策情報）：[公式: JVN iPedia（脆弱性対策情報）](https://jvndb.jvn.jp/)
 情報資産台帳は、リスクアセスメントの「準備工程」で作成されます。
 
 ### ① 登録する内容

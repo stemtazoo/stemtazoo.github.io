@@ -32,6 +32,8 @@ next: /sg/cvss/
 
 ## 定義・仕組み
 
+> 公式: JVN 脆弱性対策情報データベース：[公式: JVN 脆弱性対策情報データベース](https://jvndb.jvn.jp/)
+
 JVN（Japan Vulnerability Notes）は、
 
 - 脆弱性に関する  

@@ -35,6 +35,8 @@ next: /sg/keylogger/
 ---
 
 ## 定義・仕組み
+
+> 公式: JPCERT/CC：[公式: JPCERT/CC](https://www.jpcert.or.jp/)
 JPCERT/CC（JPCERT Coordination Center）は、
 
 - インシデントの  

@@ -73,6 +73,8 @@ CRYPTREC暗号リストの3分類で見ると、次のようになります。
 
 ## 定義・仕組み
 
+> 公式: CRYPTREC 暗号リスト：[公式: CRYPTREC 暗号リスト](https://www.cryptrec.go.jp/list.html)
+
 この節では、定義と仕組みを観点ごとに比較して整理します。
 
 運用監視暗号リストは、CRYPTREC暗号リストの分類の一つです。

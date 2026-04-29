@@ -25,6 +25,8 @@ next: /sg/honeypot/
 ---
 
 ## 定義・仕組み
+
+> 公式: JVN iPedia（脆弱性対策情報）：[公式: JVN iPedia（脆弱性対策情報）](https://jvndb.jvn.jp/)
 ハッカーは本来、以下のような人を指します。
 
 ### 高い技術力を持つ人

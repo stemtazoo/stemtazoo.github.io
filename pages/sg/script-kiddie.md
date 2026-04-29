@@ -26,6 +26,8 @@ next: /sg/security-measures-cia/
 ---
 
 ## 定義・仕組み
+
+> 公式: JVN iPedia（脆弱性対策情報）：[公式: JVN iPedia（脆弱性対策情報）](https://jvndb.jvn.jp/)
 スクリプトキディの特徴は以下の通りです。
 
 ### 他人のツールを使う
