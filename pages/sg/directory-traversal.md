@@ -29,6 +29,8 @@ next: /sg/disciplinary-action/
 ---
 
 ## 定義・仕組み
+
+> 公式: JVN iPedia（脆弱性対策情報）：[公式: JVN iPedia（脆弱性対策情報）](https://jvndb.jvn.jp/)
 ディレクトリトラバーサルは、Webアプリのファイル参照処理の不備を突く攻撃です。
 
 ### 基本の仕組み

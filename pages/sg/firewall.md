@@ -22,6 +22,8 @@ tags: [sg, sg-security-measures, unauthorized_access, network]
 といった形で、通していい通信だけを選びます。
 
 ## 定義・仕組み
+
+> 公式: JVN iPedia（脆弱性対策情報）：[公式: JVN iPedia（脆弱性対策情報）](https://jvndb.jvn.jp/)
 ファイアーウォールは、ネットワークの内側（LAN）と外側（インターネット）の間に設置し、通信を制御する仕組みです。
 
 ### 主な役割

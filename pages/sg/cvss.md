@@ -31,6 +31,8 @@ next: /sg/vulnerability-scan/
 ---
 
 ## 定義・仕組み
+
+> 公式: JVN iPedia（脆弱性対策情報）：[公式: JVN iPedia（脆弱性対策情報）](https://jvndb.jvn.jp/)
 CVSSは、脆弱性の深刻度を **3つの観点** で評価します。
 
 ---

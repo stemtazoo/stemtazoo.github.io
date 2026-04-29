@@ -33,6 +33,8 @@ next: /sg/ddos-attack-summary/
 ---
 
 ## 定義・仕組み
+
+> 公式: JVN iPedia（脆弱性対策情報）：[公式: JVN iPedia（脆弱性対策情報）](https://jvndb.jvn.jp/)
 サイバーキルチェーンは、標的型攻撃の流れを次の7段階で表します。
 
 1. **偵察（Reconnaissance）**  

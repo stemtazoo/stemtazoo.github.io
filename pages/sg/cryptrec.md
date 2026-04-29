@@ -32,6 +32,8 @@ CRYPTRECは、
 ---
 
 ## 定義・仕組み
+
+> 公式: CRYPTREC 暗号リスト（電子政府推奨暗号）：[公式: CRYPTREC 暗号リスト（電子政府推奨暗号）](https://www.cryptrec.go.jp/list.html)
 CRYPTREC（Cryptography Research and Evaluation Committees）は、
 
 - 電子政府などで利用する暗号の  

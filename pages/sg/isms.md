@@ -33,6 +33,8 @@ ISMSはその**“型（テンプレ）”**です。
 ---
 
 ## 定義・仕組み
+
+> 公式: ISMS適合性評価制度（ISMS-AC）：[公式: ISMS適合性評価制度（ISMS-AC）](https://isms.jp/)
 ISMS（Information Security Management System）は
 
 > 情報セキュリティを組織的・継続的に管理するための仕組み（JIS Q 27001 などで規定）

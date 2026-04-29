@@ -30,6 +30,8 @@ next: /sg/privacy-separator/
 ---
 
 ## 定義・仕組み
+
+> 公式: JVN iPedia（脆弱性対策情報）：[公式: JVN iPedia（脆弱性対策情報）](https://jvndb.jvn.jp/)
 ポートスキャンは、対象サーバに対して通信を行い、
 
 - 開いているポート（Open）

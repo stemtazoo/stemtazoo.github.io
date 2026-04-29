@@ -34,6 +34,8 @@ NCOはこの中で、
 ---
 
 ## 定義・仕組み
+
+> 公式: JPCERT/CC：[公式: JPCERT/CC](https://www.jpcert.or.jp/)
 NCO（国家サイバー統括室）は、
 
 - 内閣官房に設置された組織で

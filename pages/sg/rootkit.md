@@ -28,6 +28,8 @@ next: /sg/safety-control-measures/
 ---
 
 ## 定義・仕組み
+
+> 公式: JVN iPedia（脆弱性対策情報）：[公式: JVN iPedia（脆弱性対策情報）](https://jvndb.jvn.jp/)
 ルートキットは、管理者権限を利用してシステムの深い部分に介入します。
 
 ### なぜ「ルート」なのか（重要）
