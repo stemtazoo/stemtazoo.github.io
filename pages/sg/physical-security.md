@@ -1,7 +1,7 @@
 ---
 layout: page
-title: 物理的セキュリティ対策とは？論理的対策との違いを整理【情報セキュリティマネジメント】
-description: 物理的セキュリティ対策は設備や人の行動を通じて情報資産を守る対策です。論理的対策との違いやSG試験でのひっかけポイント、判断基準を整理します。
+title: "物理的セキュリティ対策とは？論理的対策との違いを整理【SG試験】"
+description: "物理的セキュリティ対策は設備や人の行動を通じて情報資産を守る対策です。論理的対策との違いやSG試験・情報セキュリティマネジメント試験でのひっかけポイント、判断基準を整理します。"
 permalink: /sg/physical-security/
 prev: /sg/physical-security-summary/
 next: /sg/access-control-physical/

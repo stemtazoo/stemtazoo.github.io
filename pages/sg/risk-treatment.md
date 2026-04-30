@@ -1,7 +1,7 @@
 ---
 layout: page
-title: リスク対応とは？4つの対処方法を整理【情報セキュリティマネジメント】
-description: リスク対応は4つの対処方法を整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
+title: "リスク対応とは？4つの対処方法を整理【SG試験】"
+description: "リスク対応は4つの対処方法を整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験・情報セキュリティマネジメント試験とで狙われるひっかけポイントを解説します。"
 permalink: /sg/risk-treatment/
 tags: [sg, security_management, risk_assessment, it_security_operations, sg-security-management]
 prev: /sg/risk-response-cia/

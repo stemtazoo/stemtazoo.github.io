@@ -1,7 +1,7 @@
 ---
 layout: page
-title: デジタルフォレンジックとは？証拠としてのデータ活用【情報セキュリティマネジメント】
-description: デジタルフォレンジックはインシデント発生時に証拠としてデータを収集・分析する技術です。ログ分析との違いやSG試験での判断ポイントを整理します。
+title: "デジタルフォレンジックとは？証拠としてのデータ活用【SG試験】"
+description: "デジタルフォレンジックはインシデント発生時に証拠としてデータを収集・分析する技術です。ログ分析との違いやSG試験・情報セキュリティマネジメント試験での判断ポイントを整理します。"
 permalink: /sg/digital-forensics/
 prev: /sg/malware-analysis/
 next: /sg/vulnerability-scan/

@@ -1,7 +1,7 @@
 ---
 layout: page
-title: SAとは？IPsec通信のルールを管理する仕組み【情報セキュリティマネジメント】
-description: SAはIPsec通信で使う暗号方式や鍵、有効期間などのルールをまとめた情報です。IKE・AH・ESPとの違いをSG試験向けに整理します。
+title: "SAとは？IPsec通信のルールを管理する仕組み【SG試験】"
+description: "SAはIPsec通信で使う暗号方式や鍵、有効期間などのルールをまとめた情報です。IKE・AH・ESPとの違いをSG試験・情報セキュリティマネジメント試験向けに整理します。"
 permalink: /sg/ipsec-sa/
 prev: /sg/ipsec-ike/
 next: /sg/ssl-tls/

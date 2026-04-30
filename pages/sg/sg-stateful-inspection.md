@@ -1,7 +1,7 @@
 ---
 layout: page
 title: ステートフルインスペクションとは？通信状態を見て通過可否を判断する仕組み【SG試験】
-description: ステートフルインスペクションは、通信の状態を管理しながらパケットの通過可否を判断するファイアウォール機能です。パケットフィルタリングとの違い、戻り通信の扱い、SG試験での判断ポイントを整理します。
+description: "ステートフルインスペクションは、通信の状態を管理しながらパケットの通過可否を判断するファイアウォール機能です。パケットフィルタリングとの違い、戻り通信の扱い、SG試験・情報セキュリティマネジメント試験での判断ポイントを整理します。"
 permalink: /sg/stateful-inspection/
 tags: [sg, sg-security-measures, network_security, firewall, access_control]
 ---

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: DNSリフレクター攻撃とSYNフラッド攻撃の違いを整理【SG試験】
-description: DNSリフレクター攻撃とSYNフラッド攻撃はどちらもDoS攻撃ですが、仕組みが異なります。増幅型か接続枯渇型かの違いを整理し、SG試験の判断基準を解説します。
+description: "DNSリフレクター攻撃とSYNフラッド攻撃はどちらもDoS攻撃ですが、仕組みが異なります。増幅型か接続枯渇型かの違いを整理し、SG試験・情報セキュリティマネジメント試験の判断基準を解説します。"
 permalink: /sg/dos-attack-difference/
 tags: [sg, threat_vulnerability, network, unauthorized_access, sg-security-overview]
 prev: /sg/domain-hijacking/

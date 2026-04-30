@@ -1,7 +1,7 @@
 ---
 layout: page
-title: JPCERT/CCとは？役割とCSIRTとの違いを整理【情報セキュリティマネジメント】
-description: JPCERT/CCは日本のインシデント対応を調整・支援するコーディネーション型CSIRTです。CSIRT・NISC・IPAとの違いを整理し、SG試験での判断ポイントを解説します。
+title: "JPCERT/CCとは？役割とCSIRTとの違いを整理【SG試験】"
+description: "JPCERT/CCは日本のインシデント対応を調整・支援するコーディネーション型CSIRTです。CSIRT・NISC・IPAとの違いを整理し、SG試験・情報セキュリティマネジメント試験での判断ポイントを解説します。"
 permalink: /sg/jpcert-cc/
 tags: [sg, sg-security-management]
 prev: /sg/ip-spoofing/

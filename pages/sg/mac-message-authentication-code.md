@@ -1,7 +1,7 @@
 ---
 layout: page
 title: MACとは？メッセージ認証コードで改ざんを検出する仕組み【SG試験】
-description: MAC（Message Authentication Code）は、共通鍵を使ってメッセージの改ざんを検出し、送信者が正当であることを確認する仕組みです。SG試験で混同しやすいデジタル署名、ハッシュ、暗号化、ステガノグラフィとの違いを整理します。
+description: "MAC（Message Authentication Code）は、共通鍵を使ってメッセージの改ざんを検出し、送信者が正当であることを確認する仕組みです。SG試験・情報セキュリティマネジメント試験で混同しやすいデジタル署名、ハッシュ、暗号化、ステガノグラフィとの違いを整理します。"
 permalink: /sg/mac-message-authentication-code/
 tags: [sg, cryptography, authentication, integrity, security_measures]
 ---

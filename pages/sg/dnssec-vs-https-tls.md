@@ -1,7 +1,7 @@
 ---
 layout: page
 title: DNSSECとHTTPS/TLSの違い【SG試験】
-description: DNSSECとHTTPS/TLSは、どちらもインターネットの安全性に関係する技術ですが、守る対象が異なります。DNSSECはDNS応答の正当性と完全性を確認し、HTTPS/TLSはWeb通信の暗号化と通信相手の確認を行います。SG試験で混同しやすい判断ポイントを整理します。
+description: "DNSSECとHTTPS/TLSは、どちらもインターネットの安全性に関係する技術ですが、守る対象が異なります。DNSSECはDNS応答の正当性と完全性を確認し、HTTPS/TLSはWeb通信の暗号化と通信相手の確認を行います。SG試験・情報セキュリティマネジメント試験で混同しやすい判断ポイントを整理します。"
 permalink: /sg/dnssec-vs-https-tls/
 tags: [sg, sg-security-measures, network_security, dns, tls, cryptography]
 prev: /sg/open-resolver/

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 知的財産権とは？特許権・著作権・商標権を整理【SG試験】
-description: 知的財産権は、発明・著作物・ブランド名などの知的な成果を保護する権利です。SG試験で混同しやすい特許権・著作権・商標権・意匠権・営業秘密の違いを、保護対象と判断ポイントで整理します。
+description: "知的財産権は、発明・著作物・ブランド名などの知的な成果を保護する権利です。SG試験・情報セキュリティマネジメント試験で混同しやすい特許権・著作権・商標権・意匠権・営業秘密の違いを、保護対象と判断ポイントで整理します。"
 permalink: /sg/intellectual-property-rights/
 tags: [sg, law, intellectual_property, copyright, patent, trademark, trade_secret]
 ---

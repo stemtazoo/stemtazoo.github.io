@@ -1,7 +1,7 @@
 ---
 layout: page
-title: ランサムウェアとは？身代金要求型攻撃の仕組み【情報セキュリティマネジメント】
-description: ランサムウェアは身代金要求型攻撃の仕組みを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
+title: "ランサムウェアとは？身代金要求型攻撃の仕組み【SG試験】"
+description: "ランサムウェアは身代金要求型攻撃の仕組みを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験・情報セキュリティマネジメント試験とで狙われるひっかけポイントを解説します。"
 permalink: /sg/ransomware/
 tags: [sg, security_measures, malware, data_leakage, sg-security-measures]
 prev: /sg/psk-wireless-auth/

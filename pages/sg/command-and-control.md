@@ -1,6 +1,6 @@
 ---
 layout: page
-title: C&Cサーバとは？ボットネットを操る指令の仕組み【情報セキュリティマネジメント】
+title: "C&Cサーバとは？ボットネットを操る指令の仕組み【SG試験】"
 description: "C&Cサーバの理解を深めるため、感染端末への命令配信、ボットネット運用の流れ、遮断時の監視ポイントを整理し、攻撃基盤に関するSG設問の読み違いを防げるようにします。"
 permalink: /sg/command-and-control/
 tags: [sg, threat_vulnerability, malware, unauthorized_access, sg-security-overview]

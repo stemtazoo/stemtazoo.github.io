@@ -1,7 +1,7 @@
 ---
 layout: page
 title: DMZとファイアウォールの関係とは？公開サーバを守るネットワーク構成【SG試験】
-description: DMZは、インターネットに公開するサーバを内部ネットワークから分離して配置するためのネットワーク領域です。ファイアウォールとの関係、公開サーバをDMZに置く理由、SG試験で問われる判断ポイントを整理します。
+description: "DMZは、インターネットに公開するサーバを内部ネットワークから分離して配置するためのネットワーク領域です。ファイアウォールとの関係、公開サーバをDMZに置く理由、SG試験・情報セキュリティマネジメント試験で問われる判断ポイントを整理します。"
 permalink: /sg/dmz-firewall/
 tags: [sg, sg-security-measures, network_security, firewall, access_control]
 ---

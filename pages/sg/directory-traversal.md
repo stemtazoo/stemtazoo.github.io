@@ -1,7 +1,7 @@
 ---
 layout: page
-title: ディレクトリトラバーサルとは？不正ファイルアクセスの仕組みと対策【情報セキュリティマネジメント】
-description: ディレクトリトラバーサルは本来アクセスできないファイルへ不正に到達する攻撃です。仕組みとSQLインジェクションとの違い、SG試験での判断ポイントを整理します。
+title: "ディレクトリトラバーサルとは？不正ファイルアクセスの仕組みと対策【SG試験】"
+description: "ディレクトリトラバーサルは本来アクセスできないファイルへ不正に到達する攻撃です。仕組みとSQLインジェクションとの違い、SG試験・情報セキュリティマネジメント試験での判断ポイントを整理します。"
 permalink: /sg/directory-traversal/
 tags: [sg, security_general, threat_vulnerability, unauthorized_access, it_security_operations, sg-security-overview]
 prev: /sg/dictionary-attack/

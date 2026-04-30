@@ -1,7 +1,7 @@
 ---
 layout: page
-title: クリプトジャッキングとは？不正マイニングの仕組みを理解する【情報セキュリティマネジメント】
-description: クリプトジャッキングは不正マイニングの仕組みを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
+title: "クリプトジャッキングとは？不正マイニングの仕組みを理解する【SG試験】"
+description: "クリプトジャッキングは不正マイニングの仕組みを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験・情報セキュリティマネジメント試験とで狙われるひっかけポイントを解説します。"
 permalink: /sg/cryptojacking/
 tags: [sg, security_measures, malware, it_security_operations, sg-security-measures]
 prev: /sg/crl/

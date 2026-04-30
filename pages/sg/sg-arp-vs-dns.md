@@ -1,7 +1,7 @@
 ---
 layout: page
-title: ARPとDNSの違いとは？名前解決とMACアドレス解決を整理【情報セキュリティマネジメント】
-description: ARPとDNSはどちらも通信先を調べる仕組みですが、DNSはドメイン名からIPアドレスを調べ、ARPはIPアドレスからMACアドレスを調べます。SG試験で混同しやすい名前解決、ARPテーブル、DNSキャッシュ、DNSキャッシュポイズニングとの違いを整理します。
+title: "ARPとDNSの違いとは？名前解決とMACアドレス解決を整理【SG試験】"
+description: "ARPとDNSはどちらも通信先を調べる仕組みですが、DNSはドメイン名からIPアドレスを調べ、ARPはIPアドレスからMACアドレスを調べます。SG試験・情報セキュリティマネジメント試験で混同しやすい名前解決、ARPテーブル、DNSキャッシュ、DNSキャッシュポイズニングとの違いを整理します。"
 permalink: /sg/arp-vs-dns/
 tags: [sg, sg-security-measures, network_security, threat_vulnerability]
 prev: /sg/arp/

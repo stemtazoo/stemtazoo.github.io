@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 権威DNSサーバとキャッシュDNSサーバの違い【SG試験】
-description: 権威DNSサーバとキャッシュDNSサーバは、DNSの名前解決で役割が異なるサーバです。正式なDNS情報を管理するサーバと、利用者の問い合わせを代理して結果を一時保存するサーバの違いを、SG試験で問われる判断ポイントとして整理します。
+description: "権威DNSサーバとキャッシュDNSサーバは、DNSの名前解決で役割が異なるサーバです。正式なDNS情報を管理するサーバと、利用者の問い合わせを代理して結果を一時保存するサーバの違いを、SG試験・情報セキュリティマネジメント試験で問われる判断ポイントとして整理します。"
 permalink: /sg/authoritative-dns-vs-cache-dns/
 tags: [sg, sg-security-measures, network_security, dns]
 prev: /sg/dns-cache-poisoning/

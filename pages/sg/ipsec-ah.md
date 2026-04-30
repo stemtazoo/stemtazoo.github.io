@@ -1,7 +1,7 @@
 ---
 layout: page
-title: IPsecのAHとは？暗号化しない認証ヘッダー【情報セキュリティマネジメント】
-description: IPsecのAHは通信データの認証と改ざん検知を行う仕組みです。ESPやIKEとの違い、SG試験で迷いやすいひっかけポイントを整理します。
+title: "IPsecのAHとは？暗号化しない認証ヘッダー【SG試験】"
+description: "IPsecのAHは通信データの認証と改ざん検知を行う仕組みです。ESPやIKEとの違い、SG試験・情報セキュリティマネジメント試験で迷いやすいひっかけポイントを整理します。"
 permalink: /sg/ipsec-ah/
 prev: /sg/ipsec/
 next: /sg/ipsec-esp/

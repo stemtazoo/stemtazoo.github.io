@@ -1,7 +1,7 @@
 ---
 layout: page
 title: パケットフィルタリングとは？ヘッダー情報で通信を通すか判断する仕組み【SG試験】
-description: パケットフィルタリングは、IPアドレスやポート番号などのヘッダー情報をもとに通信の通過可否を判断する仕組みです。SG試験で迷いやすいファイアウォール、改ざん検知、NAPTとの違いを整理します。
+description: "パケットフィルタリングは、IPアドレスやポート番号などのヘッダー情報をもとに通信の通過可否を判断する仕組みです。SG試験・情報セキュリティマネジメント試験で迷いやすいファイアウォール、改ざん検知、NAPTとの違いを整理します。"
 permalink: /sg/packet-filtering/
 tags: [sg, sg-security-measures, network_security, firewall, access_control]
 ---

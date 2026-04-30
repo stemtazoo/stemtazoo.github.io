@@ -1,7 +1,7 @@
 ---
 layout: page
-title: SSL/TLSとは？通信を守る暗号化の仕組み【情報セキュリティマネジメント】
-description: SSL/TLSは通信を守る暗号化の仕組みを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
+title: "SSL/TLSとは？通信を守る暗号化の仕組み【SG試験】"
+description: "SSL/TLSは通信を守る暗号化の仕組みを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験・情報セキュリティマネジメント試験とで狙われるひっかけポイントを解説します。"
 permalink: /sg/ssl-tls/
 tags: [sg, security_general, crypto_auth, network, sg-security-overview]
 prev: /sg/ssh/

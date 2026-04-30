@@ -1,7 +1,7 @@
 ---
 layout: page
-title: ポートスキャンとは？攻撃と対策の両面から理解する【情報セキュリティマネジメント】
-description: ポートスキャンは攻撃と対策の両面から理解するを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
+title: "ポートスキャンとは？攻撃と対策の両面から理解する【SG試験】"
+description: "ポートスキャンは攻撃と対策の両面から理解するを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験・情報セキュリティマネジメント試験とで狙われるひっかけポイントを解説します。"
 permalink: /sg/port-scan/
 tags: [sg, security_measures, unauthorized_access, threat_vulnerability, network, sg-security-measures]
 prev: /sg/port-number/

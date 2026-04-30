@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 職務分掌とは？権限を分けて不正を防ぐ考え方【SG試験】
-description: 職務分掌は、申請・承認・実行・確認などの役割を分け、一人に権限を集中させないことで不正や誤操作を防ぐ考え方です。SG試験で問われやすい内部不正対策、特権ID管理、相互けん制との関係を整理します。
+description: "職務分掌は、申請・承認・実行・確認などの役割を分け、一人に権限を集中させないことで不正や誤操作を防ぐ考え方です。SG試験・情報セキュリティマネジメント試験で問われやすい内部不正対策、特権ID管理、相互けん制との関係を整理します。"
 permalink: /sg/segregation-of-duties/
 tags: [sg, sg-security-management, access_control, internal_control, system_operations]
 ---

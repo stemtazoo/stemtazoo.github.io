@@ -1,7 +1,7 @@
 ---
 layout: page
-title: リスクマネジメントとは？全体像と実務の流れを整理【情報セキュリティマネジメント】
-description: リスクマネジメントは組織のリスクに対して継続的に対策を行う仕組みです。リスクアセスメントとの違いやPDCAの流れ、SG試験でのひっかけポイントを整理します。
+title: "リスクマネジメントとは？全体像と実務の流れを整理【SG試験】"
+description: "リスクマネジメントは組織のリスクに対して継続的に対策を行う仕組みです。リスクアセスメントとの違いやPDCAの流れ、SG試験・情報セキュリティマネジメント試験でのひっかけポイントを整理します。"
 permalink: /sg/risk-management/
 prev: /sg/asset-register/
 next: /sg/risk-assessment/

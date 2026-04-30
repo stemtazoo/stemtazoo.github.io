@@ -1,7 +1,7 @@
 ---
 layout: page
-title: ARPスプーフィングとは？偽の対応表で通信をだます攻撃【情報セキュリティマネジメント】
-description: ARPスプーフィングは、偽のARP情報を送ってIPアドレスとMACアドレスの対応関係をだます攻撃です。SG試験で問われやすいARPの正常な仕組み、中間者攻撃との関係、IPスプーフィングとの違い、対策の考え方を整理します。
+title: "ARPスプーフィングとは？偽の対応表で通信をだます攻撃【SG試験】"
+description: "ARPスプーフィングは、偽のARP情報を送ってIPアドレスとMACアドレスの対応関係をだます攻撃です。SG試験・情報セキュリティマネジメント試験で問われやすいARPの正常な仕組み、中間者攻撃との関係、IPスプーフィングとの違い、対策の考え方を整理します。"
 permalink: /sg/arp-spoofing/
 tags: [sg, sg-security-measures, network_security, threat_vulnerability, access_control]
 prev: /sg/arp/

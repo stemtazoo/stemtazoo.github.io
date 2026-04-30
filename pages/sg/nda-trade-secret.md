@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 秘密保持契約（NDA）とは？営業秘密を守る契約【SG試験】
-description: 秘密保持契約（NDA）は、取引や委託などで共有する秘密情報を第三者へ漏らさないようにする契約です。SG試験で問われやすい営業秘密との関係、秘密情報の範囲、利用目的の制限、委託先管理とのつながりを整理します。
+description: "秘密保持契約（NDA）は、取引や委託などで共有する秘密情報を第三者へ漏らさないようにする契約です。SG試験・情報セキュリティマネジメント試験で問われやすい営業秘密との関係、秘密情報の範囲、利用目的の制限、委託先管理とのつながりを整理します。"
 permalink: /sg/nda-trade-secret/
 tags: [sg, law, security_management, information_management, trade_secret, contract]
 ---

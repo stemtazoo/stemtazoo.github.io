@@ -1,8 +1,8 @@
 ---
 
 layout: page
-title: ISO/IEC 15408とは？IT製品のセキュリティ評価基準を整理【情報セキュリティマネジメント】
-description: ISO/IEC 15408はIT製品やシステムのセキュリティ機能を評価する国際規格です。SG試験で迷いやすい評価対象と運用管理との違いを整理します。
+title: "ISO/IEC 15408とは？IT製品のセキュリティ評価基準を整理【SG試験】"
+description: "ISO/IEC 15408はIT製品やシステムのセキュリティ機能を評価する国際規格です。SG試験・情報セキュリティマネジメント試験で迷いやすい評価対象と運用管理との違いを整理します。"
 permalink: /sg/iso-iec-15408/
 tags: [sg, sg-security-overview, crypto_auth, sg-technology, it_security_operations]
 prev: /sg/security-management-overview/

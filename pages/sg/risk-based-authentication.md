@@ -1,7 +1,7 @@
 ---
 layout: page
-title: リスクベース認証とは？状況に応じて強化する認証の仕組み【情報セキュリティマネジメント】
-description: リスクベース認証はログイン時の状況からリスクを判断し認証強度を変える仕組みです。多要素認証との違いやSSO・IdPとの関係を整理し、SG試験の判断ポイントを解説します。
+title: "リスクベース認証とは？状況に応じて強化する認証の仕組み【SG試験】"
+description: "リスクベース認証はログイン時の状況からリスクを判断し認証強度を変える仕組みです。多要素認証との違いやSSO・IdPとの関係を整理し、SG試験・情報セキュリティマネジメント試験の判断ポイントを解説します。"
 permalink: /sg/risk-based-authentication/
 prev: /sg/sso/
 next: /sg/challenge-response-authentication/

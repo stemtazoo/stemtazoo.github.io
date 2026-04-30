@@ -1,7 +1,7 @@
 ---
 layout: page
 title: ダイナミックDNSとは？IPアドレス変更に対応する仕組み【SG試験】
-description: ダイナミックDNSは、IPアドレスが変わる環境でも同じドメイン名でアクセスできるように、DNS情報を自動的に更新する仕組みです。DNSSECやDNSキャッシュ、固定IPアドレスとの違いを、SG試験で問われる判断ポイントとして整理します。
+description: "ダイナミックDNSは、IPアドレスが変わる環境でも同じドメイン名でアクセスできるように、DNS情報を自動的に更新する仕組みです。DNSSECやDNSキャッシュ、固定IPアドレスとの違いを、SG試験・情報セキュリティマネジメント試験で問われる判断ポイントとして整理します。"
 permalink: /sg/dynamic-dns/
 tags: [sg, sg-security-measures, network_security, dns]
 prev: /sg/dnssec-vs-https-tls/

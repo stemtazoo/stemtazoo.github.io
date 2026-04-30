@@ -1,7 +1,7 @@
 ---
 layout: page
-title: パスワードリスト攻撃とは？使い回しを狙う不正ログイン【情報セキュリティマネジメント】
-description: パスワードリスト攻撃は使い回しを狙う不正ログインを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
+title: "パスワードリスト攻撃とは？使い回しを狙う不正ログイン【SG試験】"
+description: "パスワードリスト攻撃は使い回しを狙う不正ログインを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験・情報セキュリティマネジメント試験とで狙われるひっかけポイントを解説します。"
 permalink: /sg/password-list-attack/
 tags: [sg, security_measures, unauthorized_access, threat_vulnerability, access_control, sg-security-measures]
 prev: /sg/outsourcing-contract-difference/

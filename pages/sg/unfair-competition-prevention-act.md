@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 不正競争防止法とは？営業秘密の3要件を整理【SG試験】
-description: 不正競争防止法は、公正な競争を守るために営業秘密の不正取得・使用・開示などを規制する法律です。SG試験で問われやすい営業秘密の3要件、特許法との違い、非公知性・秘密管理性のひっかけポイントを整理します。
+description: "不正競争防止法は、公正な競争を守るために営業秘密の不正取得・使用・開示などを規制する法律です。SG試験・情報セキュリティマネジメント試験で問われやすい営業秘密の3要件、特許法との違い、非公知性・秘密管理性のひっかけポイントを整理します。"
 permalink: /sg/unfair-competition-prevention-act/
 tags: [sg, law, security_management, information_management, trade_secret]
 ---

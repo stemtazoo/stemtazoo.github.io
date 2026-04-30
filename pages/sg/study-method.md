@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 情報セキュリティマネジメント試験の勉強法をやさしく整理【SG試験】
-description: 情報セキュリティマネジメント試験の勉強法は、科目Aで知識を固め、科目Bでケース判断に慣れる流れが基本です。出題傾向、問題の特徴、学習期間の目安を整理します。
+description: "SG試験・情報セキュリティマネジメント試験の勉強法は、科目Aで知識を固め、科目Bでケース判断に慣れる流れが基本です。出題傾向、問題の特徴、学習期間の目安を整理します。"
 permalink: /sg/study-method/
 prev: /sg/exam-scope/
 next: /sg/case-solving-template/

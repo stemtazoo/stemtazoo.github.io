@@ -1,7 +1,7 @@
 ---
 layout: page
-title: 認証局（CA）の役割とは？デジタル証明書の信頼の仕組み【情報セキュリティマネジメント】
-description: "認証局（CA）の役割を押さえるため、証明書発行審査・失効管理・信頼連鎖の仕組みを整理し、自己署名証明書やルート証明書との違いをSG試験で説明できるようになります。"
+title: "認証局（CA）の役割とは？デジタル証明書の信頼の仕組み【SG試験】"
+description: "認証局（CA）の役割を押さえるため、証明書発行審査・失効管理・信頼連鎖の仕組みを整理し、自己署名証明書やルート証明書との違いをSG試験・情報セキュリティマネジメント試験で説明できるようになります。"
 permalink: /sg/certificate-authority-role/
 prev: /sg/digital-certificate/
 next: /sg/root-certificate/

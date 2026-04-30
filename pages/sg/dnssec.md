@@ -1,7 +1,7 @@
 ---
 layout: page
 title: DNSSECとは？DNS応答の正当性と完全性を確認する仕組み【SG試験】
-description: DNSSECはDNS応答にデジタル署名を付け、応答データの正当性と完全性を検証する仕組みです。DNSキャッシュポイズニング対策や暗号化との違いなど、SG試験で問われる判断ポイントを整理します。
+description: "DNSSECはDNS応答にデジタル署名を付け、応答データの正当性と完全性を検証する仕組みです。DNSキャッシュポイズニング対策や暗号化との違いなど、SG試験・情報セキュリティマネジメント試験で問われる判断ポイントを整理します。"
 permalink: /sg/dnssec/
 tags: [sg, sg-security-measures, network_security, dns, cryptography]
 prev: /sg/dns/

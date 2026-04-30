@@ -1,7 +1,7 @@
 ---
 layout: page
 title: オープンリゾルバとは？DNSの再帰問い合わせと悪用リスク【SG試験】
-description: オープンリゾルバは、不特定多数からのDNS再帰問い合わせを受け付けてしまうDNSキャッシュサーバの状態です。DNSリフレクター攻撃の踏み台として悪用されるリスクと、SG試験で問われる判断ポイントを整理します。
+description: "オープンリゾルバは、不特定多数からのDNS再帰問い合わせを受け付けてしまうDNSキャッシュサーバの状態です。DNSリフレクター攻撃の踏み台として悪用されるリスクと、SG試験・情報セキュリティマネジメント試験で問われる判断ポイントを整理します。"
 permalink: /sg/open-resolver/
 tags: [sg, sg-security-measures, network_security, dns, ddos]
 prev: /sg/authoritative-dns-vs-cache-dns/

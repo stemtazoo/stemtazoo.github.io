@@ -1,7 +1,7 @@
 ---
 layout: page
-title: ARPとは？IPアドレスからMACアドレスを調べる仕組み【情報セキュリティマネジメント】
-description: ARPはIPアドレスから対応するMACアドレスを調べるためのプロトコルです。SG試験で問われやすいIPアドレスとMACアドレスの役割、ARPテーブル、MACアドレスフィルタリング、ARPスプーフィングとの違いを整理します。
+title: "ARPとは？IPアドレスからMACアドレスを調べる仕組み【SG試験】"
+description: "ARPはIPアドレスから対応するMACアドレスを調べるためのプロトコルです。SG試験・情報セキュリティマネジメント試験で問われやすいIPアドレスとMACアドレスの役割、ARPテーブル、MACアドレスフィルタリング、ARPスプーフィングとの違いを整理します。"
 permalink: /sg/arp/
 tags: [sg, sg-security-measures, network_security, access_control, threat_vulnerability]
 prev: /sg/mac-address/

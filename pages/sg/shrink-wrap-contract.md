@@ -1,7 +1,7 @@
 ---
 layout: page
 title: シュリンクラップ契約とは？開封で同意とみなす契約方式【SG試験】
-description: シュリンクラップ契約は、ソフトウェアの包装を開封した時点で使用許諾契約に同意したとみなす方式です。SG試験で迷いやすい成立時点と、クリックラップ契約との違いを整理します。
+description: "シュリンクラップ契約は、ソフトウェアの包装を開封した時点で使用許諾契約に同意したとみなす方式です。SG試験・情報セキュリティマネジメント試験で迷いやすい成立時点と、クリックラップ契約との違いを整理します。"
 permalink: /sg/shrink-wrap-contract/
 tags: [sg, sg-strategy, business_management, it_security_operations]
 ---

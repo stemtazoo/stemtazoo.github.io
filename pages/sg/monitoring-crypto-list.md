@@ -2,7 +2,7 @@
 
 layout: page
 title: 運用監視暗号リストとは？互換性維持と新規採用の違い【SG試験】
-description: 運用監視暗号リストは、推奨すべき状態ではない暗号技術を互換性維持のために継続利用するリストです。SG試験で問われる推奨との違いを整理します。
+description: "運用監視暗号リストは、推奨すべき状態ではない暗号技術を互換性維持のために継続利用するリストです。SG試験・情報セキュリティマネジメント試験で問われる推奨との違いを整理します。"
 permalink: /sg/monitoring-crypto-list/
 tags: [sg, sg-security-overview, crypto_auth, sg-security-measures]
 prev: /sg/recommended-candidate-crypto-list/

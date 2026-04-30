@@ -1,7 +1,7 @@
 ---
 layout: page
-title: タイムスタンプとは？存在証明と否認防止の役割を理解する【情報セキュリティマネジメント】
-description: タイムスタンプは存在証明と否認防止の役割を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
+title: "タイムスタンプとは？存在証明と否認防止の役割を理解する【SG試験】"
+description: "タイムスタンプは存在証明と否認防止の役割を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験・情報セキュリティマネジメント試験とで狙われるひっかけポイントを解説します。"
 permalink: /sg/timestamp/
 tags: [sg, security_general, crypto_auth, risk_assessment, sg-security-overview]
 prev: /sg/telnet/
