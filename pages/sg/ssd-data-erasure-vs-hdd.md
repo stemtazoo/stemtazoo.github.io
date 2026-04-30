@@ -1,7 +1,7 @@
 ---
 layout: page
 title: SSDのデータ消去とは？HDDとの違いを整理【SG試験】
-description: SSDのデータ消去では、HDDと同じように単純な上書きや消磁で対応できるとは限りません。SSDとHDDの記録方式の違いを押さえ、SG試験で問われる情報漏えい対策と選択肢の切り分けポイントを解説します。
+description: "SSDのデータ消去では、HDDと同じように単純な上書きや消磁で対応できるとは限りません。SSDとHDDの記録方式の違いを押さえ、SG試験・情報セキュリティマネジメント試験で問われる情報漏えい対策と選択肢の切り分けポイントを解説します。"
 permalink: /sg/ssd-data-erasure-vs-hdd/
 tags: [sg, sg-security-measures, asset_management, physical_security, information_leakage]
 ---

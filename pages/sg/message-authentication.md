@@ -1,6 +1,6 @@
 ---
 layout: page
-title: メッセージ認証とは？改ざん検知と送信者確認の仕組み【情報セキュリティマネジメント】
+title: "メッセージ認証とは？改ざん検知と送信者確認の仕組み【SG試験】"
 description: "メッセージ認証の要点を押さえるため、改ざん検知・送信者確認・否認防止の違いを比較し、MACや電子署名を設問文から正しく選ぶ判断軸を身につけられます。"
 permalink: /sg/message-authentication/
 prev: /sg/hash-collision-resistance/

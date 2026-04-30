@@ -1,7 +1,7 @@
 ---
 layout: page  
-title: CSIRTとは？組織内インシデント対応の基本【情報セキュリティマネジメント】  
-description: CSIRTは組織内のセキュリティ事故を検知・分析・対応する専門チームです。この記事ではSOCとの違い、CSIRTの種類、外部連携（JPCERT/CC）の役割、試験での判断ポイントを解説します。  
+title: "CSIRTとは？組織内インシデント対応の基本【SG試験】"
+description: "CSIRTは組織内のセキュリティ事故を検知・分析・対応する専門チームです。この記事ではSOCとの違い、CSIRTの種類、外部連携（JPCERT/CC）の役割、試験での判断ポイントを解説します。"
 permalink: /sg/csirt/  
 tags: [sg, sg-security-management]  
 prev: /sg/cryptrec/  

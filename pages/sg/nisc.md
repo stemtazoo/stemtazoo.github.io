@@ -1,7 +1,7 @@
 ---
 layout: page  
-title: NISCとは？政府の司令塔の役割を整理【情報セキュリティマネジメント】  
-description: NISC（内閣サイバーセキュリティセンター）は日本のサイバーセキュリティ政策を統括する政府機関です。CSIRT・JPCERT/CC・IPAとの違いを整理し、SG試験の判断ポイントを解説します。  
+title: "NISCとは？政府の司令塔の役割を整理【SG試験】"
+description: "NISC（内閣サイバーセキュリティセンター）は日本のサイバーセキュリティ政策を統括する政府機関です。CSIRT・JPCERT/CC・IPAとの違いを整理し、SG試験・情報セキュリティマネジメント試験の判断ポイントを解説します。"
 permalink: /sg/nisc/  
 tags: [sg, sg-security-management]  
 prev: /sg/csirt/  

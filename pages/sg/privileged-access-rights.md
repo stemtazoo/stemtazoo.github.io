@@ -1,7 +1,7 @@
 ---
 layout: page
-title: 特権的アクセス権とは？機密情報へのアクセス権との違いを整理【情報セキュリティマネジメント】
-description: 特権的アクセス権は、システム管理や設定変更など強い操作ができる権限です。SG試験で混同しやすい機密情報へのアクセス権との違いを、過去問のひっかけをもとに整理します。
+title: "特権的アクセス権とは？機密情報へのアクセス権との違いを整理【SG試験】"
+description: "特権的アクセス権は、システム管理や設定変更など強い操作ができる権限です。SG試験・情報セキュリティマネジメント試験で混同しやすい機密情報へのアクセス権との違いを、過去問のひっかけをもとに整理します。"
 permalink: /sg/privileged-access-rights/
 tags: [sg, sg-security-management, access_control, id_management, system_operations]
 ---

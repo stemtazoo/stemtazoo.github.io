@@ -1,7 +1,7 @@
 ---
 layout: page
-title: 情報セキュリティ事象とは？インシデントとの違いを整理【情報セキュリティマネジメント】
-description: 情報セキュリティ事象は、異常や兆候を含むセキュリティ関連の出来事です。インシデントとの違いや判断基準をSG試験対策として整理します。
+title: "情報セキュリティ事象とは？インシデントとの違いを整理【SG試験】"
+description: "情報セキュリティ事象は、異常や兆候を含むセキュリティ関連の出来事です。インシデントとの違いや判断基準をSG試験・情報セキュリティマネジメント試験対策として整理します。"
 permalink: /sg/security-event/
 prev: /sg/security-committee/
 next: /sg/security-incident/

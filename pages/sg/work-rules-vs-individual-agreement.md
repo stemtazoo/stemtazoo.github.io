@@ -1,7 +1,7 @@
 ---
 layout: page
-title: 就業規則と個別合意の関係とは？優先順位を理解する【情報セキュリティマネジメント】
-description: 就業規則と個別合意の関係は優先順位を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
+title: "就業規則と個別合意の関係とは？優先順位を理解する【SG試験】"
+description: "就業規則と個別合意の関係は優先順位を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験・情報セキュリティマネジメント試験とで狙われるひっかけポイントを解説します。"
 permalink: /sg/work-rules-vs-individual-agreement/
 tags: [sg, security_law, business_management, risk_assessment, sg-security-law]
 prev: /sg/wifi-auth-wpa2-wpa3-8021x/

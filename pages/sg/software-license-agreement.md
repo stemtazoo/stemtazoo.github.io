@@ -1,7 +1,7 @@
 ---
 layout: page
 title: ソフトウェア使用許諾契約とは？購入と利用許可の違い【SG試験】
-description: ソフトウェア使用許諾契約は、ソフトウェアの所有権を売買する契約ではなく、決められた条件で利用を許可する契約です。SG試験で迷いやすい購入・所有・利用許可の違いを整理します。
+description: "ソフトウェア使用許諾契約は、ソフトウェアの所有権を売買する契約ではなく、決められた条件で利用を許可する契約です。SG試験・情報セキュリティマネジメント試験で迷いやすい購入・所有・利用許可の違いを整理します。"
 permalink: /sg/software-license-agreement/
 tags: [sg, sg-strategy, business_management, it_security_operations]
 prev: /sg/click-wrap-contract/

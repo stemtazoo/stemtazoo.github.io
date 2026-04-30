@@ -1,7 +1,7 @@
 ---
 layout: page
-title: 識別符号とは？ID・パスワードとの関係を整理【情報セキュリティマネジメント】
-description: 識別符号は、アクセス制御されたシステムで利用者を識別するために使われる情報です。SG試験で不正アクセス禁止法を理解するために、ID・パスワード、認証情報、認証・認可との関係をやさしく整理します。
+title: "識別符号とは？ID・パスワードとの関係を整理【SG試験】"
+description: "識別符号は、アクセス制御されたシステムで利用者を識別するために使われる情報です。SG試験・情報セキュリティマネジメント試験で不正アクセス禁止法を理解するために、ID・パスワード、認証情報、認証・認可との関係をやさしく整理します。"
 permalink: /sg/identification-code/
 tags: [sg, sg-security-management, law, access_control, authentication]
 prev: /sg/unauthorized-access-related-actions/

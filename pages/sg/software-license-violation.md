@@ -1,7 +1,7 @@
 ---
 layout: page
 title: ソフトウェアライセンス違反とは？複製・使い回しのリスク【SG試験】
-description: ソフトウェアライセンス違反は、使用許諾契約で認められた範囲を超えてソフトウェアを利用することです。SG試験で問われやすい不正コピー、契約数超過、個人向けライセンスの業務利用などを整理します。
+description: "ソフトウェアライセンス違反は、使用許諾契約で認められた範囲を超えてソフトウェアを利用することです。SG試験・情報セキュリティマネジメント試験で問われやすい不正コピー、契約数超過、個人向けライセンスの業務利用などを整理します。"
 permalink: /sg/software-license-violation/
 tags: [sg, sg-strategy, business_management, it_security_operations]
 prev: /sg/site-license-contract/

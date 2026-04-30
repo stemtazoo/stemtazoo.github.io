@@ -1,6 +1,6 @@
 ---
 layout: page
-title: ボットネットとは？踏み台化とDDoSの関係を理解する【情報セキュリティマネジメント】
+title: "ボットネットとは？踏み台化とDDoSの関係を理解する【SG試験】"
 description: "ボットネットの全体像を学ぶため、感染拡大から遠隔操作、DDoS悪用までの流れを具体キーワードで整理し、踏み台攻撃やC&Cとの関係を設問で正確に判別できるようになります。"
 permalink: /sg/botnet/
 tags: [sg, threat_vulnerability, malware, unauthorized_access, sg-security-overview]

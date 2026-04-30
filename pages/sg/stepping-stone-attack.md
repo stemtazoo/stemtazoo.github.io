@@ -1,7 +1,7 @@
 ---
 layout: page
-title: 踏み台攻撃とは？加害者にならないための重要ポイント【情報セキュリティマネジメント】
-description: "踏み台攻撃の出題に備え、侵害端末の悪用経路・ボットネットとの関係・送信元追跡を難しくする要因を整理し、実務対策とSG試験の判断ポイントをまとめて理解できます。"
+title: "踏み台攻撃とは？加害者にならないための重要ポイント【SG試験】"
+description: "踏み台攻撃の出題に備え、侵害端末の悪用経路・ボットネットとの関係・送信元追跡を難しくする要因を整理し、実務対策とSG試験・情報セキュリティマネジメント試験の判断ポイントをまとめて理解できます。"
 permalink: /sg/stepping-stone-attack/
 tags: [sg, threat_vulnerability, unauthorized_access, it_security_operations, sg-security-overview]
 prev: /sg/ssl-tls/

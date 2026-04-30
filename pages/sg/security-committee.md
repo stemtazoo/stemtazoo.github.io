@@ -1,7 +1,7 @@
 ---
 layout: page
-title: 情報セキュリティ委員会とは？組織で統制する仕組み【情報セキュリティマネジメント】
-description: 情報セキュリティ委員会は、組織全体のセキュリティ対策を統括する会議体です。CISOとの関係や役割、SG試験で問われる統制の考え方を整理します。
+title: "情報セキュリティ委員会とは？組織で統制する仕組み【SG試験】"
+description: "情報セキュリティ委員会は、組織全体のセキュリティ対策を統括する会議体です。CISOとの関係や役割、SG試験・情報セキュリティマネジメント試験で問われる統制の考え方を整理します。"
 permalink: /sg/security-committee/
 prev: /sg/isms/
 next: /sg/security-event/

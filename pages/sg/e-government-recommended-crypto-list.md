@@ -2,7 +2,7 @@
 
 layout: page
 title: 電子政府推奨暗号リストとは？利用を推奨される暗号技術の考え方【SG試験】
-description: 電子政府推奨暗号リストは、安全性や実装性能が確認され、利用を推奨される暗号技術のリストです。SG試験で混同しやすい候補・運用監視との違いを整理します。
+description: "電子政府推奨暗号リストは、安全性や実装性能が確認され、利用を推奨される暗号技術のリストです。SG試験・情報セキュリティマネジメント試験で混同しやすい候補・運用監視との違いを整理します。"
 permalink: /sg/e-government-recommended-crypto-list/
 tags: [sg, sg-security-overview, crypto_auth, sg-security-measures]
 prev: /sg/cryptrec-list/

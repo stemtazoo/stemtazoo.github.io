@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 情報セキュリティマネジメント試験の出題内容をやさしく整理【SG試験】
-description: 情報セキュリティマネジメント試験の出題内容は、情報セキュリティの基礎知識と業務現場での判断力を問うものです。科目A・科目Bの違いと学習の進め方を整理します。
+description: "SG試験・情報セキュリティマネジメント試験の出題内容は、情報セキュリティの基礎知識と業務現場での判断力を問うものです。科目A・科目Bの違いと学習の進め方を整理します。"
 permalink: /sg/exam-scope/
 prev: /sg/information-security-management-exam/
 next: /sg/study-method/

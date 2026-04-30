@@ -2,7 +2,7 @@
 
 layout: page
 title: EALとは？セキュリティ評価保証レベルをやさしく整理【SG試験】
-description: EALはIT製品やシステムのセキュリティ機能がどの程度厳しく評価されたかを示す保証レベルです。SG試験で混同しやすい安全性そのものとの違いを整理します。
+description: "EALはIT製品やシステムのセキュリティ機能がどの程度厳しく評価されたかを示す保証レベルです。SG試験・情報セキュリティマネジメント試験で混同しやすい安全性そのものとの違いを整理します。"
 permalink: /sg/eal/
 tags: [sg, sg-security-overview, crypto_auth, sg-technology, it_security_operations]
 prev: /sg/iso-iec-15408/

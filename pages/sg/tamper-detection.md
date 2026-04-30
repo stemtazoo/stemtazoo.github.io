@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 改ざん検知とは？ハッシュ・MAC・デジタル署名の違いを整理【SG試験】
-description: 改ざん検知は、データが途中で書き換えられていないかを確認する考え方です。SG試験で混同しやすいハッシュ、MAC、HMAC、デジタル署名、暗号化の違いを、選択肢を切る判断基準で整理します。
+description: "改ざん検知は、データが途中で書き換えられていないかを確認する考え方です。SG試験・情報セキュリティマネジメント試験で混同しやすいハッシュ、MAC、HMAC、デジタル署名、暗号化の違いを、選択肢を切る判断基準で整理します。"
 permalink: /sg/tamper-detection/
 tags: [sg, cryptography, integrity, hash, authentication, non_repudiation, security_measures]
 ---

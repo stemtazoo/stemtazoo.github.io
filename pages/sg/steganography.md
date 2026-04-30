@@ -1,7 +1,7 @@
 ---
 layout: page
-title: ステガノグラフィとは？情報を隠す技術の仕組み【情報セキュリティマネジメント】
-description: ステガノグラフィはデータの中に別の情報を隠す技術です。電子透かしとの違いや目的を整理し、SG試験でのひっかけポイントと判断基準を解説します。
+title: "ステガノグラフィとは？情報を隠す技術の仕組み【SG試験】"
+description: "ステガノグラフィはデータの中に別の情報を隠す技術です。電子透かしとの違いや目的を整理し、SG試験・情報セキュリティマネジメント試験でのひっかけポイントと判断基準を解説します。"
 permalink: /sg/steganography/
 prev: /sg/security-measures-comparison/
 next: /sg/digital-watermark/

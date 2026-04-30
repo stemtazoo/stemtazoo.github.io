@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 攻撃の目的をCIAで整理！試験で迷わない判断軸【情報セキュリティマネジメント】
+title: "攻撃の目的をCIAで整理！試験で迷わない判断軸【SG試験】"
 description: "CIA分類で攻撃を整理したい人向けに、機密性・完全性・可用性への代表攻撃と被害像を対応付け、設問文のキーワードから狙われた要素を即判定する方法を解説します。"
 permalink: /sg/cyber-attack-cia/
 prev: /sg/vulnerability-case-practice/

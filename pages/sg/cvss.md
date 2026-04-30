@@ -1,7 +1,7 @@
 ---
 layout: page
-title: CVSSとは？脆弱性の深刻度を共通スコアで判断する【情報セキュリティマネジメント】
-description: CVSSは脆弱性の深刻度を共通スコアで判断する指標です。仕組み・役割・使いどころを整理し、JVNや脆弱性検査との違いを含めてSG試験の判断ポイントを解説します。
+title: "CVSSとは？脆弱性の深刻度を共通スコアで判断する【SG試験】"
+description: "CVSSは脆弱性の深刻度を共通スコアで判断する指標です。仕組み・役割・使いどころを整理し、JVNや脆弱性検査との違いを含めてSG試験・情報セキュリティマネジメント試験の判断ポイントを解説します。"
 permalink: /sg/cvss/
 tags: [sg, security_general, threat_vulnerability, risk_assessment, sg-security-overview]
 prev: /sg/jvn/

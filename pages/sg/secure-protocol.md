@@ -1,7 +1,7 @@
 ---
 layout: page
-title: セキュアプロトコルとは？代表例と使い分けを整理【情報セキュリティマネジメント】
-description: セキュアプロトコルは通信を暗号化して安全にする仕組みです。IPSec・SSL/TLS・SSH・HTTPS・WPA3などの代表例と用途の違いを、SG試験の判断ポイントとともに整理します。
+title: "セキュアプロトコルとは？代表例と使い分けを整理【SG試験】"
+description: "セキュアプロトコルは通信を暗号化して安全にする仕組みです。IPSec・SSL/TLS・SSH・HTTPS・WPA3などの代表例と用途の違いを、SG試験・情報セキュリティマネジメント試験の判断ポイントとともに整理します。"
 permalink: /sg/secure-protocol/
 prev: /sg/certificate-revocation-crl-ocsp/
 next: /sg/wifi-security-protocols/

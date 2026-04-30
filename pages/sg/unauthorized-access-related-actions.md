@@ -1,7 +1,7 @@
 ---
 layout: page
-title: 不正取得・不正保管・助長行為の違い【SG試験のひっかけ対策】
-description: 不正アクセス禁止法で混同しやすい不正取得・不正保管・助長行為・不正要求の違いを整理します。SG試験で選択肢を切るために、取得する・提供する・保管する・入力させるという動詞に注目して判断できるようにします。
+title: "不正取得・不正保管・助長行為の違い【SG試験】"
+description: "不正アクセス禁止法で混同しやすい不正取得・不正保管・助長行為・不正要求の違いを整理します。SG試験・情報セキュリティマネジメント試験で選択肢を切るために、取得する・提供する・保管する・入力させるという動詞に注目して判断できるようにします。"
 permalink: /sg/unauthorized-access-related-actions/
 tags: [sg, sg-security-management, law, access_control, cybercrime]
 prev: /sg/unauthorized-access-law/

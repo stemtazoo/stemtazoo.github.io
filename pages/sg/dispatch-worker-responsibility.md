@@ -1,8 +1,8 @@
 ---
 
 layout: page
-title: 派遣労働者に対する法令上の責任とは？派遣元と派遣先の違いを整理【情報セキュリティマネジメント】
-description: 派遣労働者に対する法令上の責任は、雇用する派遣元と指揮命令する派遣先で分担されます。労働者派遣法の目的、契約内容の周知、教育訓練、雇用安定をSG試験向けに整理します。
+title: "派遣労働者に対する法令上の責任とは？派遣元と派遣先の違いを整理【SG試験】"
+description: "派遣労働者に対する法令上の責任は、雇用する派遣元と指揮命令する派遣先で分担されます。労働者派遣法の目的、契約内容の周知、教育訓練、雇用安定をSG試験・情報セキュリティマネジメント試験向けに整理します。"
 permalink: /sg/dispatch-worker-responsibility/
 tags: [sg, sg-strategy, business_management, vendor_management, security_training]
 prev: /sg/vendor-management/

@@ -2,7 +2,7 @@
 
 layout: page
 title: CRYPTREC暗号リストとは？電子政府推奨・推奨候補・運用監視の違い【SG試験】
-description: CRYPTREC暗号リストは、電子政府で利用する暗号技術を安全性や利用状況に応じて整理したリストです。3分類の違いとSG試験のひっかけポイントを整理します。
+description: "CRYPTREC暗号リストは、電子政府で利用する暗号技術を安全性や利用状況に応じて整理したリストです。3分類の違いとSG試験・情報セキュリティマネジメント試験のひっかけポイントを整理します。"
 permalink: /sg/cryptrec-list/
 tags: [sg, sg-security-overview, crypto_auth, sg-security-measures]
 prev: /sg/cryptrec/

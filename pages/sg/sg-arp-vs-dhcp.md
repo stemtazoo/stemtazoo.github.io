@@ -1,7 +1,7 @@
 ---
 layout: page
-title: ARPとDHCPの違いとは？MACアドレス解決とIPアドレス配布を整理【情報セキュリティマネジメント】
-description: ARPとDHCPはどちらもネットワーク接続で使われる仕組みですが、ARPはIPアドレスからMACアドレスを調べ、DHCPはIPアドレスなどの設定情報を自動で配布します。SG試験で混同しやすい役割、使われる場面、ARPスプーフィングとの違いを整理します。
+title: "ARPとDHCPの違いとは？MACアドレス解決とIPアドレス配布を整理【SG試験】"
+description: "ARPとDHCPはどちらもネットワーク接続で使われる仕組みですが、ARPはIPアドレスからMACアドレスを調べ、DHCPはIPアドレスなどの設定情報を自動で配布します。SG試験・情報セキュリティマネジメント試験で混同しやすい役割、使われる場面、ARPスプーフィングとの違いを整理します。"
 permalink: /sg/arp-vs-dhcp/
 tags: [sg, sg-security-measures, network_security, access_control, it_security_operations]
 prev: /sg/arp-vs-dns/

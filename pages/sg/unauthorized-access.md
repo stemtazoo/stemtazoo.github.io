@@ -1,7 +1,7 @@
 ---
 layout: page
-title: 不正アクセス行為とは？不正ログインとアクセス制御突破を整理【情報セキュリティマネジメント】
-description: 不正アクセス行為は、他人のID・パスワードを使った不正ログインや、脆弱性を突いてアクセス制御を突破する行為です。SG試験で混同しやすい不正アクセス禁止法上の不正アクセス行為と、関連する不正取得・助長行為との違いを整理します。
+title: "不正アクセス行為とは？不正ログインとアクセス制御突破を整理【SG試験】"
+description: "不正アクセス行為は、他人のID・パスワードを使った不正ログインや、脆弱性を突いてアクセス制御を突破する行為です。SG試験・情報セキュリティマネジメント試験で混同しやすい不正アクセス禁止法上の不正アクセス行為と、関連する不正取得・助長行為との違いを整理します。"
 permalink: /sg/unauthorized-access/
 tags: [sg, sg-security-management, law, access_control, cybercrime]
 prev: /sg/identification-code/

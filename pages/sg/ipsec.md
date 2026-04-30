@@ -1,7 +1,7 @@
 ---
 layout: page
-title: IPsecとは？IP通信を保護する仕組み【情報セキュリティマネジメント】
-description: IPsecはIP通信を暗号化や認証によって保護する仕組みです。AH・ESP・IKEの役割と、SG試験で混同しやすい判断ポイントを整理します。
+title: "IPsecとは？IP通信を保護する仕組み【SG試験】"
+description: "IPsecはIP通信を暗号化や認証によって保護する仕組みです。AH・ESP・IKEの役割と、SG試験・情報セキュリティマネジメント試験で混同しやすい判断ポイントを整理します。"
 permalink: /sg/ipsec/
 prev: /sg/vpn/
 next: /sg/ipsec-ah/

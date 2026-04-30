@@ -1,7 +1,7 @@
 ---
 layout: page  
-title: IPAとは？セキュリティ支援機関の役割を整理【情報セキュリティマネジメント】  
-description: IPA（情報処理推進機構）はセキュリティ啓発や企業支援を行う独立行政法人です。NISC・JPCERT/CC・CSIRTとの違いや、J-CSIP・J-CRATの役割を整理し、SG試験の判断ポイントを解説します。  
+title: "IPAとは？セキュリティ支援機関の役割を整理【SG試験】"
+description: "IPA（情報処理推進機構）はセキュリティ啓発や企業支援を行う独立行政法人です。NISC・JPCERT/CC・CSIRTとの違いや、J-CSIP・J-CRATの役割を整理し、SG試験・情報セキュリティマネジメント試験の判断ポイントを解説します。"
 permalink: /sg/ipa/  
 tags: [sg, sg-security-management]  
 prev: /sg/nisc/  

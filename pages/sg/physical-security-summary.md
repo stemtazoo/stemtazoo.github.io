@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 物理的セキュリティ対策まとめ｜出題パターンと切り分け一覧【SG試験】
-description: 物理的セキュリティ対策をUPS・RAID・バックアップ・入退室管理などで比較整理します。SG試験で迷いやすい選択肢を切る判断基準をまとめた対策ページです。
+description: "物理的セキュリティ対策をUPS・RAID・バックアップ・入退室管理などで比較整理します。SG試験・情報セキュリティマネジメント試験で迷いやすい選択肢を切る判断基準をまとめた対策ページです。"
 permalink: /sg/physical-security-summary/
 prev: /sg/ups/
 next: /sg/physical-security/

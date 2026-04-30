@@ -1,7 +1,7 @@
 ---
 layout: page
-title: 情報セキュリティ実施手順とは？現場でのやり方を理解する【情報セキュリティマネジメント】
-description: 情報セキュリティ実施手順は現場でのやり方を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
+title: "情報セキュリティ実施手順とは？現場でのやり方を理解する【SG試験】"
+description: "情報セキュリティ実施手順は現場でのやり方を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験・情報セキュリティマネジメント試験とで狙われるひっかけポイントを解説します。"
 permalink: /sg/security-policy-procedures/
 tags: [sg, security_management, isms, it_security_operations, security_training, sg-security-management]
 prev: /sg/security-policy-basic/

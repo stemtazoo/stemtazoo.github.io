@@ -1,7 +1,7 @@
 ---
 layout: page
 title: NAPTとは？IPアドレスとポート番号を変換する仕組み【SG試験】
-description: NAPTは、プライベートIPアドレスとポート番号を変換し、複数の端末が一つのグローバルIPアドレスを共有して通信できるようにする仕組みです。NATとの違い、ファイアウォールやパケットフィルタリングとの混同ポイントをSG試験向けに整理します。
+description: "NAPTは、プライベートIPアドレスとポート番号を変換し、複数の端末が一つのグローバルIPアドレスを共有して通信できるようにする仕組みです。NATとの違い、ファイアウォールやパケットフィルタリングとの混同ポイントをSG試験・情報セキュリティマネジメント試験向けに整理します。"
 permalink: /sg/napt/
 tags: [sg, sg-security-measures, network_security, firewall, access_control]
 ---

@@ -1,7 +1,7 @@
 ---
 layout: page
-title: 内部不正防止ガイドラインとは？組織での対策の考え方を整理【情報セキュリティマネジメント】
-description: 内部不正防止ガイドラインは組織内部の不正行為を防ぐための指針です。IPAのガイドラインをもとに、SG試験で問われる原因別対策と運用の判断ポイントを整理します。
+title: "内部不正防止ガイドラインとは？組織での対策の考え方を整理【SG試験】"
+description: "内部不正防止ガイドラインは組織内部の不正行為を防ぐための指針です。IPAのガイドラインをもとに、SG試験・情報セキュリティマネジメント試験で問われる原因別対策と運用の判断ポイントを整理します。"
 permalink: /sg/insider-guideline/
 tags: [sg, sg-security-management, it_security_operations, security_training]
 prev: /sg/insider-threat/

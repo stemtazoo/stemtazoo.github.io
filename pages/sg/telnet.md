@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Telnetとは？安全でない遠隔操作の仕組み【情報セキュリティマネジメント】
-description: Telnetは安全でない遠隔操作の仕組みを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
+title: "Telnetとは？安全でない遠隔操作の仕組み【SG試験】"
+description: "Telnetは安全でない遠隔操作の仕組みを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験・情報セキュリティマネジメント試験とで狙われるひっかけポイントを解説します。"
 permalink: /sg/telnet/
 tags: [sg, technology, network, unauthorized_access, sg-technology]
 prev: /sg/targeted-attack/

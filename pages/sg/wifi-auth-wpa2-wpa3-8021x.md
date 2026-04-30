@@ -1,7 +1,7 @@
 ---
 layout: page
-title: WPA2・WPA3・802.1Xとは？無線LAN認証の違いを整理【情報セキュリティマネジメント】
-description: WPA2・WPA3・802.1Xは無線LAN認証の違いを整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
+title: "WPA2・WPA3・802.1Xとは？無線LAN認証の違いを整理【SG試験】"
+description: "WPA2・WPA3・802.1Xは無線LAN認証の違いを整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験・情報セキュリティマネジメント試験とで狙われるひっかけポイントを解説します。"
 permalink: /sg/wifi-auth-wpa2-wpa3-8021x/
 tags: [sg, security_measures, access_control, network, sg-security-measures]
 prev: /sg/waf/

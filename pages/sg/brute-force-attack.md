@@ -1,7 +1,7 @@
 ---
 layout: page
-title: ブルートフォース攻撃とは？総当たり攻撃の仕組みと対策【情報セキュリティマネジメント】
-description: ブルートフォース攻撃は認証情報を総当たりで試して突破を狙う手口です。この記事では辞書攻撃との違い、有効な防御策、SG試験で問われるひっかけポイントと試験対策を解説します。
+title: "ブルートフォース攻撃とは？総当たり攻撃の仕組みと対策【SG試験】"
+description: "ブルートフォース攻撃は認証情報を総当たりで試して突破を狙う手口です。この記事では辞書攻撃との違い、有効な防御策、SG試験・情報セキュリティマネジメント試験で問われるひっかけポイントと試験対策を解説します。"
 permalink: /sg/brute-force-attack/
 tags: [sg, security_measures, unauthorized_access, threat_vulnerability, access_control, sg-security-measures]
 prev: /sg/botnet/

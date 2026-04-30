@@ -1,6 +1,6 @@
 ---
 layout: page
-title: チャレンジレスポンス認証はなぜ使われない？現代の認証方式との違い【情報セキュリティマネジメント】
+title: "チャレンジレスポンス認証はなぜ使われない？現代の認証方式との違い【SG試験】"
 description: "チャレンジレスポンスが普及しにくい理由として、運用コスト・ユーザ体験・TLS普及後の相対的優位低下を整理し、実務採用判断とSGの理由説明問題に対応できるようにします。"
 permalink: /sg/challenge-response-why-not-used/
 prev: /sg/challenge-response-authentication/

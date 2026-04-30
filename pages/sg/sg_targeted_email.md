@@ -1,7 +1,7 @@
 ---
 layout: page
-title: 標的型メールとは？特定の相手をだまして侵入する攻撃を整理【情報セキュリティマネジメント】
-description: 標的型メールは、特定の組織や個人をねらって送られる不正なメールです。SG試験で問われるばらまき型メール、フィッシング、APT攻撃との違い、入口対策と検知の判断ポイントを整理します。
+title: "標的型メールとは？特定の相手をだまして侵入する攻撃を整理【SG試験】"
+description: "標的型メールは、特定の組織や個人をねらって送られる不正なメールです。SG試験・情報セキュリティマネジメント試験で問われるばらまき型メール、フィッシング、APT攻撃との違い、入口対策と検知の判断ポイントを整理します。"
 permalink: /sg/targeted-email/
 tags: [sg, sg-security-overview, threat_vulnerability, cyber_attack, targeted_attack]
 ---

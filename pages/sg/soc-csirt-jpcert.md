@@ -1,7 +1,7 @@
 ---
 layout: page  
-title: SOC・CSIRT・JPCERT/CCの違いとは？役割と関係を図で整理【情報セキュリティマネジメント】  
-description: SOC・CSIRT・JPCERT/CCの違いと関係を整理。監視・対応・外部連携の役割分担を理解し、SG試験でのひっかけポイントを解説します。  
+title: "SOC・CSIRT・JPCERT/CCの違いとは？役割と関係を図で整理【SG試験】"
+description: "SOC・CSIRT・JPCERT/CCの違いと関係を整理。監視・対応・外部連携の役割分担を理解し、SG試験・情報セキュリティマネジメント試験でのひっかけポイントを解説します。"
 permalink: /sg/soc-csirt-jpcert/  
 tags: [sg, sg-security-management]  
 prev: /sg/security-org-practice/  

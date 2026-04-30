@@ -1,7 +1,7 @@
 ---
 layout: page
-title: 就業形態の違いを完全整理【SG試験で迷わない判断基準】
-description: 就業形態の違いを完全整理は関連概念を正しく切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、SG試験と情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。
+title: "就業形態の違いを完全整理【SG試験】"
+description: "就業形態の違いを完全整理は関連概念を正しく切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、SG試験・情報セキュリティマネジメント試験とで狙われるひっかけポイントを解説します。"
 permalink: /sg/employment-type-comparison/
 tags: [sg, management, business_management, vendor_management, risk_assessment, sg-management]
 prev: /sg/dos-vs-ddos/
