@@ -220,3 +220,5 @@ SG試験では、次の3点を押さえておきましょう。
 - [e-Gov法令検索：不正競争防止法](https://laws.e-gov.go.jp/law/405AC0000000047)
 - [経済産業省：営業秘密～営業秘密を守り活用する](https://www.meti.go.jp/policy/economy/chizai/chiteki/trade-secret.html)
 - [経済産業省：営業秘密管理指針](https://www.meti.go.jp/policy/economy/chizai/chiteki/guideline/r7ts.pdf)
+
+{% include sg_article_footer.html %}
