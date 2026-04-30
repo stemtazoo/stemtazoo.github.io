@@ -317,9 +317,6 @@ SG試験では、次の3点を押さえておきましょう。
 
 ## 参考リンク
 
-- 特許庁：知的財産権について  
-  https://www.jpo.go.jp/system/basic/index.html
-- 文化庁：著作権制度の概要  
-  https://www.bunka.go.jp/seisaku/chosakuken/seidokaisetsu/gaiyo/
-- 経済産業省：営業秘密～営業秘密を守り活用する  
-  https://www.meti.go.jp/policy/economy/chizai/chiteki/trade-secret.html
+- [特許庁：知的財産権について](https://www.jpo.go.jp/system/basic/index.html)
+- [文化庁：著作権制度の概要](https://www.bunka.go.jp/seisaku/chosakuken/seidokaisetsu/gaiyo/)
+- [経済産業省：営業秘密～営業秘密を守り活用する](https://www.meti.go.jp/policy/economy/chizai/chiteki/trade-secret.html)
