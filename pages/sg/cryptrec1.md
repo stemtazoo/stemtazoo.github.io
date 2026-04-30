@@ -61,8 +61,7 @@ CRYPTOREC（クリプトレック）は、
 ---
 
 ### 参照資料（公式）
-「電子政府における調達のために参照すべき暗号のリスト」  
-https://www.cryptrec.go.jp/list/cryptrec-ls-0001-2012r5.pdf
+- [電子政府における調達のために参照すべき暗号のリスト](https://www.cryptrec.go.jp/list/cryptrec-ls-0001-2012r5.pdf)
 
 ---
 

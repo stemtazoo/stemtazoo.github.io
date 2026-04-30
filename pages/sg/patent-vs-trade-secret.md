@@ -242,9 +242,6 @@ SG試験では、次の3点を押さえておきましょう。
 
 ## 参考リンク
 
-- 特許庁：初めてだったらここを読む～特許出願のいろは～  
-  https://www.jpo.go.jp/system/basic/patent/index.html
-- 経済産業省：営業秘密～営業秘密を守り活用する  
-  https://www.meti.go.jp/policy/economy/chizai/chiteki/trade-secret.html
-- 経済産業省：営業秘密管理指針  
-  https://www.meti.go.jp/policy/economy/chizai/chiteki/guideline/r7ts.pdf
+- [特許庁：初めてだったらここを読む～特許出願のいろは～](https://www.jpo.go.jp/system/basic/patent/index.html)
+- [経済産業省：営業秘密～営業秘密を守り活用する](https://www.meti.go.jp/policy/economy/chizai/chiteki/trade-secret.html)
+- [経済産業省：営業秘密管理指針](https://www.meti.go.jp/policy/economy/chizai/chiteki/guideline/r7ts.pdf)
