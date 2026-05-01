@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>アンチパスバックとは？不正な入退室を防ぐ仕組み【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="アンチパスバックとは？不正な入退室を防ぐ仕組み【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="アンチパスバックは同じ認証情報の使い回しを防ぐ入退室管理の仕組みです。共連れや貸し借りとの違いを整理し、SG試験・情報セキュリティマネジメント試験での判断基準を解説します。" />
+<meta property="og:description" content="アンチパスバックは同じ認証情報の使い回しを防ぐ入退室管理の仕組みです。共連れや貸し借りとの違いを整理し、SG試験・情報セキュリティマネジメント試験での判断基準を解説します。" />
+<link rel="canonical" href="http://localhost:4000/sg/anti-passback/" />
+<meta property="og:url" content="http://localhost:4000/sg/anti-passback/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="アンチパスバックとは？不正な入退室を防ぐ仕組み【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"アンチパスバックは同じ認証情報の使い回しを防ぐ入退室管理の仕組みです。共連れや貸し借りとの違いを整理し、SG試験・情報セキュリティマネジメント試験での判断基準を解説します。","headline":"アンチパスバックとは？不正な入退室を防ぐ仕組み【SG試験】","url":"http://localhost:4000/sg/anti-passback/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">アンチパスバックとは？不正な入退室を防ぐ仕組み【SG試験】</h1>
+      <h2 class="project-tagline">アンチパスバックは同じ認証情報の使い回しを防ぐ入退室管理の仕組みです。共連れや貸し借りとの違いを整理し、SG試験・情報セキュリティマネジメント試験での判断基準を解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">アンチパスバックは同じ認証情報の使い回しを防ぐ入退室管理の仕組みです。共連れや貸し借りとの違いを整理し、SG試験・情報セキュリティマネジメント試験での判断基準を解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-measures</span>
+        
+          <span class="post-tag">access_control</span>
+        
+          <span class="post-tag">it_security_operations</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+<p>アンチパスバックとは、<strong>一度入室した人が正しく退室しない限り、同じ認証情報で再入室できないようにする仕組み</strong>です。<br />
+SG試験では「カードの使い回し防止」と判断できるかがポイントです。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>イメージはこれです👇</p>
+
+<ul>
+  <li>AさんがICカードで入室</li>
+  <li>AさんがカードをBさんに渡す</li>
+  <li>Bさんも入ろうとする</li>
+</ul>
+
+<p>👉 通常 → 入れてしまう（不正）<br />
+👉 アンチパスバックあり → 入れない</p>
+
+<p>つまり、<br />
+👉 <strong>「1人1回しか使えないようにする仕組み」</strong></p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>アンチパスバックは、入退室の状態を記録して制御する仕組みです。</p>
+
+<hr />
+
+<h3 id="基本の動き">基本の動き</h3>
+<ul>
+  <li>入室 → 「中にいる」と記録</li>
+  <li>退室 → 「外に出た」と記録</li>
+</ul>
+
+<p>👉 「外にいる状態」でないと再入室できない</p>
+
+<hr />
+
+<h3 id="防げる不正">防げる不正</h3>
+<ul>
+  <li>カードの貸し借り</li>
+  <li>共連れ（後ろからついて入る）</li>
+  <li>不正な使い回し</li>
+</ul>
+
+<hr />
+
+<p>👉 ポイントは<br />
+<strong>「状態（中か外か）を管理する」こと</strong></p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+
+<h3 id="使うべき場面">使うべき場面</h3>
+<ul>
+  <li>サーバ室</li>
+  <li>データセンター</li>
+  <li>高セキュリティエリア</li>
+</ul>
+
+<p>👉 <strong>厳密に人数を管理したい場所</strong></p>
+
+<hr />
+
+<h3 id="誤解しやすい場面">誤解しやすい場面</h3>
+<ul>
+  <li>単なる入退室管理 → 状態管理まではしない</li>
+  <li>監視カメラ → 記録のみで制御はしない</li>
+  <li>認証 → 本人確認のみ</li>
+</ul>
+
+<hr />
+
+<p>SG試験では<br />
+👉 <strong>「制御しているか」「記録だけか」</strong>を見分ける問題が出ます。</p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="-アンチパスバック認証">❌ アンチパスバック＝認証</h3>
+<p>→ ⭕ 認証ではなく入退室の制御ルール</p>
+
+<hr />
+
+<h3 id="-カメラがあれば防げる">❌ カメラがあれば防げる</h3>
+<p>→ ⭕ カメラは記録のみ（防止ではない）</p>
+
+<hr />
+
+<h3 id="-共連れは完全に防げる">❌ 共連れは完全に防げる</h3>
+<p>→ ⭕ 技術だけでは難しく、運用も必要</p>
+
+<hr />
+
+<h3 id="-入退室管理と同じ">❌ 入退室管理と同じ</h3>
+<p>→ ⭕ 入退室管理の“強化版”</p>
+
+<hr />
+
+<p>SG試験では<br />
+👉 <strong>「どの不正を防ぐ仕組みか」を問う問題</strong>が多いです。</p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>アンチパスバック＝使い回し防止</li>
+  <li>「入室→退室しないと再入室できない」</li>
+  <li>状態（中/外）を管理する仕組み</li>
+  <li>認証とは別物（制御ルール）</li>
+  <li>カメラは記録、アンチパスバックは制御</li>
+</ul>
+
+<p>👉 <strong>「状態管理しているか」で切る</strong></p>
+
+<hr />
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-model/">アクセス制御モデルとは？RBAC・ABAC・DAC・MACの違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-physical/">入退室管理とは？物理アクセス制御の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control/">アクセス管理とは？特権IDとneed-to-knowで権限を適切に制御【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-rights-management/">アクセス権限管理とは？付与・変更・削除の流れを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/administrator-privileges/">管理者権限とは？特権的アクセス権との違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/access-control-physical/">← 入退室管理とは？物理アクセス制御の基本【SG試験】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/clear-desk-screen/">クリアデスク・クリアスクリーンとは？情報漏えい防止の基本ルール【SG試験】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

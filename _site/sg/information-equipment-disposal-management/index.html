@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>情報機器の廃棄管理とは？委託先管理と消去証明書【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="情報機器の廃棄管理とは？委託先管理と消去証明書【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="情報機器の廃棄管理では、PCや記憶媒体を廃棄するときに、データ消去だけでなく委託先管理、廃棄記録、消去証明書の確認が重要です。SG試験・情報セキュリティマネジメント試験で問われる情報漏えい対策と運用面の判断ポイントを整理します。" />
+<meta property="og:description" content="情報機器の廃棄管理では、PCや記憶媒体を廃棄するときに、データ消去だけでなく委託先管理、廃棄記録、消去証明書の確認が重要です。SG試験・情報セキュリティマネジメント試験で問われる情報漏えい対策と運用面の判断ポイントを整理します。" />
+<link rel="canonical" href="http://localhost:4000/sg/information-equipment-disposal-management/" />
+<meta property="og:url" content="http://localhost:4000/sg/information-equipment-disposal-management/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="情報機器の廃棄管理とは？委託先管理と消去証明書【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"情報機器の廃棄管理では、PCや記憶媒体を廃棄するときに、データ消去だけでなく委託先管理、廃棄記録、消去証明書の確認が重要です。SG試験・情報セキュリティマネジメント試験で問われる情報漏えい対策と運用面の判断ポイントを整理します。","headline":"情報機器の廃棄管理とは？委託先管理と消去証明書【SG試験】","url":"http://localhost:4000/sg/information-equipment-disposal-management/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">情報機器の廃棄管理とは？委託先管理と消去証明書【SG試験】</h1>
+      <h2 class="project-tagline">情報機器の廃棄管理では、PCや記憶媒体を廃棄するときに、データ消去だけでなく委託先管理、廃棄記録、消去証明書の確認が重要です。SG試験・情報セキュリティマネジメント試験で問われる情報漏えい対策と運用面の判断ポイントを整理します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">情報機器の廃棄管理では、PCや記憶媒体を廃棄するときに、データ消去だけでなく委託先管理、廃棄記録、消去証明書の確認が重要です。SG試験・情報セキュリティマネジメント試験で問われる情報漏えい対策と運用面の判断ポイントを整理します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-measures</span>
+        
+          <span class="post-tag">asset_management</span>
+        
+          <span class="post-tag">physical_security</span>
+        
+          <span class="post-tag">outsourcing</span>
+        
+          <span class="post-tag">information_leakage</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+
+<p>情報機器の廃棄管理とは、<strong>PCや記憶媒体を廃棄・返却・譲渡するときに、情報漏えいが起きないように管理すること</strong>です。</p>
+
+<p>SG試験では、次のように整理すると判断しやすくなります。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>観点</th>
+      <th>内容</th>
+      <th>判断ポイント</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>データ消去</td>
+      <td>機器内のデータを復元できない状態にする</td>
+      <td>削除や初期化だけでは不十分な場合がある</td>
+    </tr>
+    <tr>
+      <td>委託先管理</td>
+      <td>廃棄業者に任せきりにしない</td>
+      <td>契約・手順・管理体制を確認する</td>
+    </tr>
+    <tr>
+      <td>消去証明書</td>
+      <td>消去や破壊の実施記録を残す</td>
+      <td>後から説明できる証跡になる</td>
+    </tr>
+    <tr>
+      <td>廃棄記録</td>
+      <td>いつ、何を、どう処理したかを記録する</td>
+      <td>情報資産管理とつなげる</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>ポイントは、<strong>廃棄したつもり</strong>ではなく、<strong>安全に処理したことを確認・記録すること</strong>です。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+
+<p>情報機器の廃棄は、重要書類を処分する場面に似ています。</p>
+
+<p>重要書類を捨てるときに、ただごみ箱に入れるだけでは不安です。</p>
+
+<p>シュレッダーにかけたか、誰が処理したか、処理が終わったかを確認します。</p>
+
+<p>PCや記憶媒体も同じです。</p>
+
+<p>ファイルを削除してから業者に渡すだけでは、データが復元される可能性があります。</p>
+
+<p>そのため、廃棄では、<strong>消去方法・委託先・記録</strong>をセットで管理することが大切です。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+
+<p>情報機器の廃棄管理とは、不要になった情報機器を処分するときに、内部に残った情報が漏えいしないように、手順や記録を管理することです。</p>
+
+<p>対象になる情報機器には、次のようなものがあります。</p>
+
+<ul>
+  <li>PC</li>
+  <li>サーバ</li>
+  <li>スマートフォン</li>
+  <li>タブレット</li>
+  <li>HDD</li>
+  <li>SSD</li>
+  <li>USBメモリ</li>
+  <li>SDカード</li>
+  <li>複合機</li>
+  <li>バックアップ媒体</li>
+</ul>
+
+<p>SG試験では、機器そのものよりも、<strong>その機器に情報が残っているか</strong>、<strong>廃棄の過程で情報漏えいしないか</strong>が問われます。</p>
+
+<h3 id="廃棄管理で確認すること">廃棄管理で確認すること</h3>
+
+<p>情報機器を廃棄するときは、次の流れで確認すると整理しやすいです。</p>
+
+<ol>
+  <li>廃棄対象を確認する</li>
+  <li>保存されている情報を確認する</li>
+  <li>消去方法や破壊方法を決める</li>
+  <li>社内ルールに従って処理する</li>
+  <li>外部業者に委託する場合は契約や手順を確認する</li>
+  <li>消去証明書や廃棄証明書を取得する</li>
+  <li>廃棄記録を残す</li>
+</ol>
+
+<p>大切なのは、<strong>作業したことを証跡として残す</strong>ことです。</p>
+
+<p>「消しました」「廃棄しました」だけでは、後から確認できません。</p>
+
+<hr />
+
+<h2 id="委託先管理とは">委託先管理とは</h2>
+
+<p>委託先管理とは、外部業者に業務を任せるときに、適切に管理することです。</p>
+
+<p>情報機器の廃棄では、廃棄業者やリース会社に機器を渡すことがあります。</p>
+
+<p>このとき、業者に渡した後に情報漏えいが起きても、自社の責任が問われる場合があります。</p>
+
+<p>そのため、次のような確認が重要です。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>確認項目</th>
+      <th>内容</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>契約</td>
+      <td>廃棄・消去・秘密保持の条件を明確にする</td>
+    </tr>
+    <tr>
+      <td>作業手順</td>
+      <td>どの方法で消去・破壊するか確認する</td>
+    </tr>
+    <tr>
+      <td>管理体制</td>
+      <td>作業場所、担当者、保管方法を確認する</td>
+    </tr>
+    <tr>
+      <td>記録</td>
+      <td>作業結果を証明できる書類を受け取る</td>
+    </tr>
+    <tr>
+      <td>再委託</td>
+      <td>別業者へ再委託される場合の管理を確認する</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>SG試験では、<strong>外部業者に渡す＝終わり</strong>ではなく、<strong>委託先を管理する必要がある</strong>と判断しましょう。</p>
+
+<hr />
+
+<h2 id="消去証明書とは">消去証明書とは</h2>
+
+<p>消去証明書とは、記憶媒体のデータ消去や物理破壊を実施したことを示す証明書です。</p>
+
+<p>証明書には、一般的に次のような情報が記載されます。</p>
+
+<ul>
+  <li>対象機器</li>
+  <li>記憶媒体の識別情報</li>
+  <li>消去または破壊の方法</li>
+  <li>実施日</li>
+  <li>実施業者</li>
+  <li>作業結果</li>
+</ul>
+
+<p>消去証明書は、情報漏えいを完全に防ぐ魔法の書類ではありません。</p>
+
+<p>しかし、<strong>決められた手順で処理したことを後から確認するための証跡</strong>になります。</p>
+
+<p>SG試験では、消去証明書は、技術対策ではなく、<strong>管理策・証跡管理</strong>として押さえると分かりやすいです。</p>
+
+<hr />
+
+<h2 id="廃棄記録とは">廃棄記録とは</h2>
+
+<p>廃棄記録とは、どの情報機器を、いつ、どの方法で処理したかを残す記録です。</p>
+
+<p>たとえば、次のような内容を記録します。</p>
+
+<ul>
+  <li>機器名</li>
+  <li>管理番号</li>
+  <li>所有部署</li>
+  <li>廃棄日</li>
+  <li>廃棄理由</li>
+  <li>データ消去方法</li>
+  <li>物理破壊の有無</li>
+  <li>委託先</li>
+  <li>証明書の有無</li>
+</ul>
+
+<p>廃棄記録は、情報資産管理とつながります。</p>
+
+<p>情報資産台帳に登録されている機器が、廃棄時にきちんと処理されたかを確認できるようにするためです。</p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+
+<h3 id="pcを廃棄するとき">PCを廃棄するとき</h3>
+
+<p>PCには、業務ファイル、顧客情報、メール、認証情報などが残っている可能性があります。</p>
+
+<p>廃棄前には、ディスクのデータ消去や物理破壊を行い、処理記録を残します。</p>
+
+<h3 id="リースpcを返却するとき">リースPCを返却するとき</h3>
+
+<p>リースPCを返却するときも、データが残ったまま返却すると情報漏えいにつながります。</p>
+
+<p>返却先が信頼できる場合でも、自社の責任として、消去方法や証明書を確認することが重要です。</p>
+
+<h3 id="複合機を入れ替えるとき">複合機を入れ替えるとき</h3>
+
+<p>複合機には、印刷・スキャン・FAXなどのデータが内部ストレージに残る場合があります。</p>
+
+<p>PCだけでなく、複合機やネットワーク機器にも情報が残る可能性がある点に注意します。</p>
+
+<h3 id="故障機器を処分するとき">故障機器を処分するとき</h3>
+
+<p>故障して起動しない機器でも、記憶媒体からデータを取り出せる可能性があります。</p>
+
+<p>「故障しているから安全」と判断せず、記憶媒体の破壊や専門業者による処理を検討します。</p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="誤解1廃棄業者に渡せば安全である">誤解1：廃棄業者に渡せば安全である</h3>
+
+<p>これは危険です。</p>
+
+<p>外部業者に渡す場合でも、委託先の管理や契約、作業記録の確認が必要です。</p>
+
+<p>業者任せにせず、処理方法と証跡を確認します。</p>
+
+<h3 id="誤解2消去証明書があれば絶対に安全である">誤解2：消去証明書があれば絶対に安全である</h3>
+
+<p>消去証明書は、処理を実施したことを示す証跡です。</p>
+
+<p>ただし、証明書があるだけで安全が保証されるわけではありません。</p>
+
+<p>消去方法が適切か、対象機器が正しいかも確認する必要があります。</p>
+
+<h3 id="誤解3ファイル削除だけで廃棄してよい">誤解3：ファイル削除だけで廃棄してよい</h3>
+
+<p>ファイル削除だけでは、実データが残る可能性があります。</p>
+
+<p>廃棄時には、全領域の上書き、専用消去、物理破壊など、復元できない状態にする処理が必要です。</p>
+
+<h3 id="誤解4壊れた機器なら情報漏えいしない">誤解4：壊れた機器なら情報漏えいしない</h3>
+
+<p>故障して起動しない機器でも、記憶媒体からデータを取り出される可能性があります。</p>
+
+<p>故障機器も情報資産として扱い、適切に処理します。</p>
+
+<h3 id="誤解5廃棄記録は不要である">誤解5：廃棄記録は不要である</h3>
+
+<p>廃棄記録がないと、後から「どの機器をどう処理したか」を確認できません。</p>
+
+<p>情報漏えいが疑われたときにも、説明や確認が難しくなります。</p>
+
+<hr />
+
+<h2 id="sg試験での判断ポイント">SG試験での判断ポイント</h2>
+
+<p>情報機器の廃棄管理では、次の観点で選択肢を切り分けると判断しやすくなります。</p>
+
+<h3 id="正解に近い表現">正解に近い表現</h3>
+
+<ul>
+  <li>廃棄前にデータを復元できない状態にする</li>
+  <li>委託先の管理体制を確認する</li>
+  <li>秘密保持や処理方法を契約で明確にする</li>
+  <li>消去証明書を取得する</li>
+  <li>廃棄記録を残す</li>
+  <li>情報資産台帳と照合する</li>
+  <li>再委託の有無や管理方法を確認する</li>
+</ul>
+
+<p>特に、<strong>処理方法を確認し、証跡を残す</strong>という表現は正解に近いです。</p>
+
+<h3 id="誤りを切る表現">誤りを切る表現</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>表現</th>
+      <th>切り分け</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>業者に渡せばよい</td>
+      <td>委託先管理が不足している</td>
+    </tr>
+    <tr>
+      <td>ファイルを削除して廃棄する</td>
+      <td>実データが残る可能性がある</td>
+    </tr>
+    <tr>
+      <td>フォーマットだけで返却する</td>
+      <td>復元できる場合がある</td>
+    </tr>
+    <tr>
+      <td>記録は残さない</td>
+      <td>後から確認できない</td>
+    </tr>
+    <tr>
+      <td>故障しているのでそのまま廃棄する</td>
+      <td>データを取り出される可能性がある</td>
+    </tr>
+    <tr>
+      <td>証明書だけ確認すればよい</td>
+      <td>消去方法や対象機器の確認も必要</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>SG試験では、<strong>廃棄処理そのもの</strong>と<strong>廃棄を管理する仕組み</strong>をセットで考えましょう。</p>
+
+<hr />
+
+<h2 id="ミニ問題">ミニ問題</h2>
+
+<p>機密情報を保存していたPCを外部業者に委託して廃棄する場合の対応として、最も適切なものはどれか。</p>
+
+<div class="sg-question">
+  <p><strong>ア</strong> PCを外部業者に引き渡した時点で、自社での管理は終了する。</p>
+  <p><strong>イ</strong> ファイルをごみ箱から削除してから、廃棄業者に引き渡す。</p>
+  <p><strong>ウ</strong> 消去・破壊方法を確認し、処理結果を示す証明書や廃棄記録を残す。</p>
+  <p><strong>エ</strong> 故障して起動しないPCは、データを読めないためそのまま廃棄する。</p>
+</div>
+
+<details>
+<summary>回答と解説</summary>
+
+正解は、<strong>ウ</strong>です。
+
+情報機器を外部業者に委託して廃棄する場合は、業者に任せきりにせず、消去方法や破壊方法を確認し、証明書や廃棄記録を残すことが重要です。
+
+- ア：外部業者に渡しても、委託先管理は必要です。
+- イ：ファイル削除だけでは、実データが残る可能性があります。
+- エ：故障して起動しないPCでも、記憶媒体からデータを取り出される可能性があります。
+
+SG試験では、**廃棄管理＝データ消去＋委託先管理＋証跡**と考えると判断しやすくなります。
+
+</details>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<p>情報機器の廃棄管理では、<strong>情報機器を安全に処理し、その処理を確認・記録すること</strong>が重要です。</p>
+
+<p>試験直前には、次の3点を押さえておきましょう。</p>
+
+<ul>
+  <li>廃棄前に、データを復元できない状態にする</li>
+  <li>外部業者に委託する場合は、契約・手順・管理体制を確認する</li>
+  <li>消去証明書や廃棄記録を残し、後から確認できるようにする</li>
+</ul>
+
+<p>SG試験では、<strong>業者に渡したか</strong>ではなく、<strong>安全に処理したことを確認できるか</strong>を見ます。</p>
+
+<p><strong>情報機器の廃棄管理＝消去・委託先管理・証跡管理のセット</strong>と覚えると、選択肢を切り分けやすくなります。</p>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-model/">アクセス制御モデルとは？RBAC・ABAC・DAC・MACの違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-physical/">入退室管理とは？物理アクセス制御の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control/">アクセス管理とは？特権IDとneed-to-knowで権限を適切に制御【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/anti-passback/">アンチパスバックとは？不正な入退室を防ぐ仕組み【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/asset-register/">情報資産台帳とは？リスク管理の出発点を整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+
+  
+</div>
+<h2 id="-関連記事-1">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-model/">アクセス制御モデルとは？RBAC・ABAC・DAC・MACの違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-physical/">入退室管理とは？物理アクセス制御の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control/">アクセス管理とは？特権IDとneed-to-knowで権限を適切に制御【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/anti-passback/">アンチパスバックとは？不正な入退室を防ぐ仕組み【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/asset-register/">情報資産台帳とは？リスク管理の出発点を整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

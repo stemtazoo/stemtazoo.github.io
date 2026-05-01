@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>ARPスプーフィングとは？偽の対応表で通信をだます攻撃【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="ARPスプーフィングとは？偽の対応表で通信をだます攻撃【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="ARPスプーフィングは、偽のARP情報を送ってIPアドレスとMACアドレスの対応関係をだます攻撃です。SG試験・情報セキュリティマネジメント試験で問われやすいARPの正常な仕組み、中間者攻撃との関係、IPスプーフィングとの違い、対策の考え方を整理します。" />
+<meta property="og:description" content="ARPスプーフィングは、偽のARP情報を送ってIPアドレスとMACアドレスの対応関係をだます攻撃です。SG試験・情報セキュリティマネジメント試験で問われやすいARPの正常な仕組み、中間者攻撃との関係、IPスプーフィングとの違い、対策の考え方を整理します。" />
+<link rel="canonical" href="http://localhost:4000/sg/arp-spoofing/" />
+<meta property="og:url" content="http://localhost:4000/sg/arp-spoofing/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="ARPスプーフィングとは？偽の対応表で通信をだます攻撃【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"ARPスプーフィングは、偽のARP情報を送ってIPアドレスとMACアドレスの対応関係をだます攻撃です。SG試験・情報セキュリティマネジメント試験で問われやすいARPの正常な仕組み、中間者攻撃との関係、IPスプーフィングとの違い、対策の考え方を整理します。","headline":"ARPスプーフィングとは？偽の対応表で通信をだます攻撃【SG試験】","url":"http://localhost:4000/sg/arp-spoofing/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">ARPスプーフィングとは？偽の対応表で通信をだます攻撃【SG試験】</h1>
+      <h2 class="project-tagline">ARPスプーフィングは、偽のARP情報を送ってIPアドレスとMACアドレスの対応関係をだます攻撃です。SG試験・情報セキュリティマネジメント試験で問われやすいARPの正常な仕組み、中間者攻撃との関係、IPスプーフィングとの違い、対策の考え方を整理します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">ARPスプーフィングは、偽のARP情報を送ってIPアドレスとMACアドレスの対応関係をだます攻撃です。SG試験・情報セキュリティマネジメント試験で問われやすいARPの正常な仕組み、中間者攻撃との関係、IPスプーフィングとの違い、対策の考え方を整理します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-measures</span>
+        
+          <span class="post-tag">network_security</span>
+        
+          <span class="post-tag">threat_vulnerability</span>
+        
+          <span class="post-tag">access_control</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+<p>ARPスプーフィングは、<strong>偽のARP情報を送って、IPアドレスとMACアドレスの対応関係をだます攻撃</strong>です。</p>
+
+<p>SG試験では、細かい攻撃手順よりも、<strong>ARPの正常な役割</strong>と、<strong>中間者攻撃につながる理由</strong>を押さえることが大切です。</p>
+
+<p>特に、次のように切り分けます。</p>
+
+<ul>
+  <li><strong>ARP</strong>：IPアドレスからMACアドレスを調べる正常な仕組み</li>
+  <li><strong>ARPスプーフィング</strong>：偽のARP情報で通信先をだます攻撃</li>
+  <li><strong>IPスプーフィング</strong>：送信元IPアドレスを偽る攻撃</li>
+</ul>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>ARPは、LAN内で通信するときに、</p>
+
+<blockquote>
+  <p>このIPアドレスの機器は、どのMACアドレスですか？</p>
+</blockquote>
+
+<p>と確認する仕組みです。</p>
+
+<p>ARPスプーフィングでは、攻撃者がこの確認に対して、うその情報を返します。</p>
+
+<p>たとえば、本当はルータのMACアドレスではないのに、</p>
+
+<blockquote>
+  <p>ルータのIPアドレスは、私のMACアドレスです</p>
+</blockquote>
+
+<p>と偽って知らせます。</p>
+
+<p>すると、PCは攻撃者の端末をルータだと思い込み、通信を攻撃者へ送ってしまいます。</p>
+
+<p>つまりARPスプーフィングは、<strong>LAN内の住所録をこっそり書き換えるような攻撃</strong>です。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>ARPスプーフィングは、ARPの性質を悪用して、<strong>IPアドレスとMACアドレスの対応関係を偽装する攻撃</strong>です。</p>
+
+<p>ARPでは、取得したIPアドレスとMACアドレスの対応関係を、ARPテーブルに一時的に保存します。</p>
+
+<p>攻撃者が偽のARP応答を送ると、被害者のPCはARPテーブルに誤った対応関係を登録してしまうことがあります。</p>
+
+<h3 id="正常なarpの流れ">正常なARPの流れ</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>流れ</th>
+      <th>内容</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>PCが通信先のIPアドレスを確認する</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>対応するMACアドレスが分からない場合、ARPで問い合わせる</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>正しい機器がMACアドレスを応答する</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>PCはそのMACアドレスへ通信する</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="arpスプーフィングの流れ">ARPスプーフィングの流れ</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>流れ</th>
+      <th>内容</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>攻撃者が偽のARP情報を送る</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>PCが誤ったIPアドレスとMACアドレスの対応を覚える</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>本来ルータへ送る通信を攻撃者へ送ってしまう</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>攻撃者が通信を盗聴・改ざんできる可能性がある</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>ここで重要なのは、ARPスプーフィングは<strong>同じLAN内で成立しやすい攻撃</strong>だという点です。</p>
+
+<hr />
+
+<h2 id="どんな場面で問題になる">どんな場面で問題になる？</h2>
+<p>ARPスプーフィングは、主にLAN内の通信で問題になります。</p>
+
+<p>たとえば、社内LANや公衆無線LANなどで、攻撃者が同じネットワーク内にいる場合です。</p>
+
+<p>攻撃が成功すると、次のような被害につながるおそれがあります。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>被害</th>
+      <th>内容</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>盗聴</td>
+      <td>通信内容を見られる</td>
+    </tr>
+    <tr>
+      <td>改ざん</td>
+      <td>通信内容を書き換えられる</td>
+    </tr>
+    <tr>
+      <td>なりすまし</td>
+      <td>正規の機器に見せかける</td>
+    </tr>
+    <tr>
+      <td>中間者攻撃</td>
+      <td>通信の間に攻撃者が入る</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>ただし、HTTPSなどで通信内容が暗号化されていれば、通信の中身をそのまま読まれにくくなります。</p>
+
+<p>そのため、ARPスプーフィングの対策は、ネットワーク側の対策だけでなく、通信内容の暗号化とも組み合わせて考えます。</p>
+
+<hr />
+
+<h2 id="中間者攻撃との関係">中間者攻撃との関係</h2>
+<p>ARPスプーフィングは、<strong>中間者攻撃のきっかけ</strong>になることがあります。</p>
+
+<p>中間者攻撃とは、利用者と通信先の間に攻撃者が入り込み、通信を盗聴・改ざんする攻撃です。</p>
+
+<p>ARPスプーフィングでは、攻撃者が偽のARP情報を使って、被害者の通信を自分の端末へ向けさせます。</p>
+
+<p>その結果、次のような状態になります。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>本来の通信</th>
+      <th>攻撃後の通信</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>PC → ルータ → インターネット</td>
+      <td>PC → 攻撃者 → ルータ → インターネット</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>このように、攻撃者が通信経路の途中に入るため、中間者攻撃につながります。</p>
+
+<p>SG試験では、<strong>ARPスプーフィング＝中間者攻撃を成立させる手段の一つ</strong>と考えると整理しやすいです。</p>
+
+<hr />
+
+<h2 id="ipスプーフィングとの違い">IPスプーフィングとの違い</h2>
+<p>ARPスプーフィングとIPスプーフィングは名前が似ていますが、だましている対象が違います。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>用語</th>
+      <th>だますもの</th>
+      <th>ポイント</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ARPスプーフィング</td>
+      <td>IPアドレスとMACアドレスの対応関係</td>
+      <td>LAN内の通信先をだます</td>
+    </tr>
+    <tr>
+      <td>IPスプーフィング</td>
+      <td>送信元IPアドレス</td>
+      <td>送信者を別のIPアドレスに見せかける</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>判断基準は、次のとおりです。</p>
+
+<ul>
+  <li><strong>IPからMACの対応を偽る</strong> → ARPスプーフィング</li>
+  <li><strong>送信元IPアドレスを偽る</strong> → IPスプーフィング</li>
+</ul>
+
+<p>問題文に「MACアドレス」「ARPテーブル」「LAN内」「中間者攻撃」などが出てきたら、ARPスプーフィングを疑います。</p>
+
+<hr />
+
+<h2 id="対策の考え方">対策の考え方</h2>
+<p>ARPスプーフィングへの対策は、<strong>偽のARP情報を信じにくくすること</strong>と、<strong>通信内容を守ること</strong>です。</p>
+
+<p>代表的な対策は次のとおりです。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>対策</th>
+      <th>考え方</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>静的ARPエントリ</td>
+      <td>重要な機器のIPとMACの対応を固定する</td>
+    </tr>
+    <tr>
+      <td>スイッチのセキュリティ機能</td>
+      <td>不正なARP通信を検知・制御する</td>
+    </tr>
+    <tr>
+      <td>ネットワーク分離</td>
+      <td>攻撃者が同じLANに入りにくくする</td>
+    </tr>
+    <tr>
+      <td>HTTPSやVPNの利用</td>
+      <td>通信内容を暗号化する</td>
+    </tr>
+    <tr>
+      <td>不審なARPテーブルの確認</td>
+      <td>通信トラブルや攻撃の兆候を調べる</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>SG試験では、製品機能名を細かく覚えるよりも、</p>
+
+<blockquote>
+  <p>ARPスプーフィングはLAN内の対応表をだます攻撃なので、ネットワーク内への侵入防止・ARP情報の検証・通信の暗号化が有効</p>
+</blockquote>
+
+<p>と理解しておくと十分です。</p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="誤解1arpスプーフィングはipアドレスを偽る攻撃">誤解1：ARPスプーフィングはIPアドレスを偽る攻撃</h3>
+<p>ARPスプーフィングは、IPアドレスそのものを偽るというより、<strong>IPアドレスとMACアドレスの対応関係を偽る攻撃</strong>です。</p>
+
+<p>送信元IPアドレスを偽る攻撃は、IPスプーフィングです。</p>
+
+<hr />
+
+<h3 id="誤解2arpスプーフィングはインターネット全体で起きる攻撃">誤解2：ARPスプーフィングはインターネット全体で起きる攻撃</h3>
+<p>ARPは基本的に同じLAN内で使われる仕組みです。</p>
+
+<p>そのため、ARPスプーフィングも、主に同じLAN内に攻撃者がいる場面で問題になります。</p>
+
+<hr />
+
+<h3 id="誤解3httpsならarpスプーフィングは関係ない">誤解3：HTTPSならARPスプーフィングは関係ない</h3>
+<p>HTTPSを使うと、通信内容を読まれにくくできます。</p>
+
+<p>しかし、ARPスプーフィング自体はネットワーク内の通信経路をだます攻撃なので、HTTPSだけで攻撃そのものがなくなるわけではありません。</p>
+
+<p>通信経路の対策と、通信内容の暗号化は分けて考えます。</p>
+
+<hr />
+
+<h3 id="誤解4macアドレスフィルタリングだけで防げる">誤解4：MACアドレスフィルタリングだけで防げる</h3>
+<p>MACアドレスフィルタリングは、登録されたMACアドレスの機器だけを接続許可する補助的な対策です。</p>
+
+<p>ただし、MACアドレスは偽装される可能性があるため、ARPスプーフィング対策として過信してはいけません。</p>
+
+<hr />
+
+<h2 id="sg試験での判断ポイント">SG試験での判断ポイント</h2>
+<p>SG試験では、次のキーワードで切り分けると判断しやすくなります。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>キーワード</th>
+      <th>選びやすい用語</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>IPアドレスからMACアドレスを取得</td>
+      <td>ARP</td>
+    </tr>
+    <tr>
+      <td>偽のARP応答</td>
+      <td>ARPスプーフィング</td>
+    </tr>
+    <tr>
+      <td>ARPテーブルを書き換える</td>
+      <td>ARPスプーフィング</td>
+    </tr>
+    <tr>
+      <td>通信の間に攻撃者が入る</td>
+      <td>中間者攻撃</td>
+    </tr>
+    <tr>
+      <td>送信元IPアドレスを偽る</td>
+      <td>IPスプーフィング</td>
+    </tr>
+    <tr>
+      <td>登録済みMACアドレスだけ許可</td>
+      <td>MACアドレスフィルタリング</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>特に、</p>
+
+<blockquote>
+  <p>偽のARP情報で、通信を攻撃者の端末へ向ける</p>
+</blockquote>
+
+<p>という説明があれば、ARPスプーフィングを選びます。</p>
+
+<hr />
+
+<h2 id="確認問題">確認問題</h2>
+<p>社内LANに接続した攻撃者が、偽のARP応答を送信し、利用者PCのARPテーブルに誤ったIPアドレスとMACアドレスの対応関係を登録させた。その結果、本来ルータへ送られる通信が攻撃者の端末を経由するようになった。この攻撃として最も適切なものはどれか。</p>
+
+<ul>
+  <li>ア　IPスプーフィング</li>
+  <li>イ　ARPスプーフィング</li>
+  <li>ウ　DNSキャッシュポイズニング</li>
+  <li>エ　ブルートフォース攻撃</li>
+</ul>
+
+<details>
+<summary>回答と解説</summary>
+
+正解は、**イ　ARPスプーフィング**です。
+
+ARPスプーフィングは、偽のARP情報を送って、IPアドレスとMACアドレスの対応関係をだます攻撃です。  
+問題文の「ARPテーブル」「IPアドレスとMACアドレスの対応関係」「通信が攻撃者の端末を経由する」が決め手です。
+
+アのIPスプーフィングは、送信元IPアドレスを偽る攻撃です。  
+ウのDNSキャッシュポイズニングは、DNSの名前解決情報を偽る攻撃です。  
+エのブルートフォース攻撃は、パスワードなどを総当たりで試す攻撃です。
+
+</details>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+<p>ARPスプーフィングは、<strong>偽のARP情報でIPアドレスとMACアドレスの対応関係をだます攻撃</strong>です。</p>
+
+<p>試験直前には、次の3点で整理しましょう。</p>
+
+<ul>
+  <li><strong>IPからMACを調べる正常な仕組みはARP</strong></li>
+  <li><strong>偽のARP情報で通信先をだますのがARPスプーフィング</strong></li>
+  <li><strong>通信の間に入ると中間者攻撃につながる</strong></li>
+</ul>
+
+<p>ARPスプーフィングは、単独の用語として覚えるよりも、ARP、MACアドレス、ARPテーブル、中間者攻撃、IPスプーフィングとの違いで整理すると、問題文から判断しやすくなります。</p>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-model/">アクセス制御モデルとは？RBAC・ABAC・DAC・MACの違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-physical/">入退室管理とは？物理アクセス制御の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control/">アクセス管理とは？特権IDとneed-to-knowで権限を適切に制御【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-rights-management/">アクセス権限管理とは？付与・変更・削除の流れを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/administrator-privileges/">管理者権限とは？特権的アクセス権との違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/arp/">← ARPとは？IPアドレスからMACアドレスを調べる仕組み【SG試験】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/ip-spoofing/">IPスプーフィングとは？送信元偽装の仕組みと対策【SG試験】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

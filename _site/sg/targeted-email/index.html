@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>標的型メールとは？特定の相手をだまして侵入する攻撃を整理【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="標的型メールとは？特定の相手をだまして侵入する攻撃を整理【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="標的型メールは、特定の組織や個人をねらって送られる不正なメールです。SG試験・情報セキュリティマネジメント試験で問われるばらまき型メール、フィッシング、APT攻撃との違い、入口対策と検知の判断ポイントを整理します。" />
+<meta property="og:description" content="標的型メールは、特定の組織や個人をねらって送られる不正なメールです。SG試験・情報セキュリティマネジメント試験で問われるばらまき型メール、フィッシング、APT攻撃との違い、入口対策と検知の判断ポイントを整理します。" />
+<link rel="canonical" href="http://localhost:4000/sg/targeted-email/" />
+<meta property="og:url" content="http://localhost:4000/sg/targeted-email/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="標的型メールとは？特定の相手をだまして侵入する攻撃を整理【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"標的型メールは、特定の組織や個人をねらって送られる不正なメールです。SG試験・情報セキュリティマネジメント試験で問われるばらまき型メール、フィッシング、APT攻撃との違い、入口対策と検知の判断ポイントを整理します。","headline":"標的型メールとは？特定の相手をだまして侵入する攻撃を整理【SG試験】","url":"http://localhost:4000/sg/targeted-email/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">標的型メールとは？特定の相手をだまして侵入する攻撃を整理【SG試験】</h1>
+      <h2 class="project-tagline">標的型メールは、特定の組織や個人をねらって送られる不正なメールです。SG試験・情報セキュリティマネジメント試験で問われるばらまき型メール、フィッシング、APT攻撃との違い、入口対策と検知の判断ポイントを整理します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">標的型メールは、特定の組織や個人をねらって送られる不正なメールです。SG試験・情報セキュリティマネジメント試験で問われるばらまき型メール、フィッシング、APT攻撃との違い、入口対策と検知の判断ポイントを整理します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-overview</span>
+        
+          <span class="post-tag">threat_vulnerability</span>
+        
+          <span class="post-tag">cyber_attack</span>
+        
+          <span class="post-tag">targeted_attack</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+<p>標的型メールとは、<strong>特定の組織や個人をねらい、業務連絡などを装って送られる不正なメール</strong>です。</p>
+
+<p>SG試験では、細かいメール文面の暗記よりも、<strong>「不特定多数ではなく、特定の相手に合わせて作られている」</strong>と判断できることが大切です。</p>
+
+<p>添付ファイルを開かせたり、URLをクリックさせたりして、マルウェア感染や認証情報の窃取につなげます。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>標的型メールは、普通の迷惑メールよりも<strong>それらしく見える</strong>のが特徴です。</p>
+
+<p>たとえば、次のようなメールです。</p>
+
+<ul>
+  <li>取引先を装った請求書メール</li>
+  <li>上司や社内部署を装った依頼メール</li>
+  <li>採用応募や問い合わせを装った添付ファイル付きメール</li>
+  <li>業務で使いそうなクラウドサービスのログイン画面へ誘導するメール</li>
+</ul>
+
+<p>ポイントは、攻撃者が相手の業務や関係者を調べて、<strong>受信者が信じやすい内容にしてくる</strong>ことです。</p>
+
+<p>そのため、単に「怪しい日本語だから見抜ける」とは限りません。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>標的型メールは、標的型攻撃の入口として使われることが多い攻撃手法です。</p>
+
+<p>代表的な流れは次のとおりです。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>段階</th>
+      <th>内容</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>事前調査</td>
+      <td>組織、部署、担当者、取引先などを調べる</td>
+    </tr>
+    <tr>
+      <td>メール送信</td>
+      <td>業務連絡や取引先を装ったメールを送る</td>
+    </tr>
+    <tr>
+      <td>誘導</td>
+      <td>添付ファイルを開かせる、URLをクリックさせる</td>
+    </tr>
+    <tr>
+      <td>侵入</td>
+      <td>マルウェア感染や認証情報の窃取につなげる</td>
+    </tr>
+    <tr>
+      <td>展開</td>
+      <td>内部調査、権限拡大、情報窃取へ進むことがある</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>標的型メールは、<strong>メールそのものが目的ではなく、侵入のきっかけ</strong>として使われます。</p>
+
+<p>APT攻撃では、この標的型メールが入口になることがあります。</p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<p>標的型メールは、次のような場面で問われやすいです。</p>
+
+<ul>
+  <li>特定の会社や部署をねらったメールが送られる</li>
+  <li>取引先や社内関係者を装う</li>
+  <li>添付ファイルやURLを開かせる</li>
+  <li>マルウェア感染や認証情報の窃取につながる</li>
+  <li>その後、内部ネットワークへの侵入や情報窃取が行われる</li>
+</ul>
+
+<p>SG試験では、<strong>「誰にでも送る迷惑メール」ではなく、「相手に合わせて作られたメール」</strong>という点が判断材料になります。</p>
+
+<hr />
+
+<h2 id="標的型メールへの対策">標的型メールへの対策</h2>
+<p>標的型メールへの対策は、<strong>利用者の注意だけに頼らない</strong>ことが大切です。</p>
+
+<p>教育や訓練は重要ですが、それだけでは見落とす可能性があります。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>観点</th>
+      <th>対策例</th>
+      <th>判断ポイント</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>教育・訓練</td>
+      <td>標的型メール訓練、注意喚起</td>
+      <td>利用者が気付きやすくする</td>
+    </tr>
+    <tr>
+      <td>技術的対策</td>
+      <td>添付ファイル検査、URLフィルタリング、迷惑メール対策</td>
+      <td>危険なメールを届きにくくする</td>
+    </tr>
+    <tr>
+      <td>認証対策</td>
+      <td>多要素認証、パスワード使い回し防止</td>
+      <td>認証情報を盗まれても悪用されにくくする</td>
+    </tr>
+    <tr>
+      <td>検知・対応</td>
+      <td>ログ監視、EDR、インシデント対応</td>
+      <td>開封後の不審な動きに気付く</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>SG試験では、<strong>「メールを開かないよう注意する」だけでは不十分</strong>と考えます。</p>
+
+<p>入口対策に加えて、開いてしまった場合の検知や被害拡大防止まで含めると整理しやすいです。</p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="標的型メールとばらまき型メールの違い">標的型メールとばらまき型メールの違い</h3>
+<p>ばらまき型メールは、不特定多数に広く送られるメールです。</p>
+
+<p>一方、標的型メールは、特定の組織や人に合わせて作られます。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>用語</th>
+      <th>見分け方</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ばらまき型メール</td>
+      <td>不特定多数へ大量に送る</td>
+    </tr>
+    <tr>
+      <td>標的型メール</td>
+      <td>特定の相手に合わせて送る</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>試験では、<strong>「特定の組織」「取引先を装う」「業務内容に合わせる」</strong>といった表現があれば、標的型メールを疑います。</p>
+
+<h3 id="標的型メールとフィッシングの違い">標的型メールとフィッシングの違い</h3>
+<p>フィッシングは、偽サイトなどへ誘導し、IDやパスワードなどを入力させる攻撃です。</p>
+
+<p>標的型メールでも、フィッシングの手口が使われることがあります。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>用語</th>
+      <th>見分け方</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>フィッシング</td>
+      <td>認証情報や個人情報をだまし取ることが中心</td>
+    </tr>
+    <tr>
+      <td>標的型メール</td>
+      <td>特定の相手に合わせたメールで侵入のきっかけを作る</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>フィッシング＝情報を入力させてだまし取る手口、標的型メール＝特定相手向けのメール攻撃</strong>と整理すると混同しにくいです。</p>
+
+<h3 id="標的型メールとapt攻撃の違い">標的型メールとAPT攻撃の違い</h3>
+<p>APT攻撃は、特定の相手を長期間ねらう高度で持続的な攻撃活動です。</p>
+
+<p>標的型メールは、その入口として使われることがあります。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>用語</th>
+      <th>位置づけ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>標的型メール</td>
+      <td>侵入のきっかけになるメール攻撃</td>
+    </tr>
+    <tr>
+      <td>APT攻撃</td>
+      <td>長期間にわたる攻撃活動全体</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>標的型メール＝入口、APT攻撃＝作戦全体</strong>と考えると分かりやすいです。</p>
+
+<hr />
+
+<h2 id="sg試験でのひっかけポイント">SG試験でのひっかけポイント</h2>
+
+<h3 id="-ひっかけ不特定多数への大量送信を選ぶ">❌ ひっかけ：不特定多数への大量送信を選ぶ</h3>
+<p>標的型メールは、特定の相手に合わせて作られる点が特徴です。</p>
+
+<p>不特定多数へ大量に送るだけなら、ばらまき型メールや迷惑メールとして考えます。</p>
+
+<h3 id="-ひっかけ日本語が不自然なら必ず見抜けると考える">❌ ひっかけ：日本語が不自然なら必ず見抜けると考える</h3>
+<p>標的型メールは、取引先や社内連絡を装い、自然な文面で送られることがあります。</p>
+
+<p>そのため、利用者の注意だけに頼らず、技術的対策や検知も必要です。</p>
+
+<h3 id="-ひっかけメール対策だけで終わる">❌ ひっかけ：メール対策だけで終わる</h3>
+<p>標的型メールは、侵入の入口です。</p>
+
+<p>開封後にマルウェア感染や不審な通信が起きる可能性があるため、EDR、ログ監視、インシデント対応も関係します。</p>
+
+<hr />
+
+<h2 id="確認問題">確認問題</h2>
+
+<p>標的型メールの説明として、最も適切なものはどれか。</p>
+
+<p>ア. 不特定多数に大量のメールを送り、広告を表示させるメール<br />
+イ. 特定の組織や個人をねらい、業務連絡などを装って送られる不正なメール<br />
+ウ. 大量の通信を送信して、Webサービスを停止させる攻撃<br />
+エ. 無線LANの暗号化方式を弱くして通信内容を盗聴する攻撃</p>
+
+<details>
+<summary>回答と解説</summary>
+
+正解は、**イ**です。
+
+標的型メールは、特定の組織や個人をねらい、取引先や社内連絡などを装って送られる不正なメールです。
+
+アは不特定多数への迷惑メール、ウはDDoS攻撃、エは無線LANの設定や暗号化に関する問題です。
+
+SG試験では、**「特定の相手」「業務に関係しそうな内容」「添付ファイルやURL」**が出てきたら、標的型メールを疑います。
+
+</details>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+<p>標的型メールは、<strong>特定の相手に合わせて作られる不正なメール</strong>です。</p>
+
+<p>試験では、次の3点で判断します。</p>
+
+<ul>
+  <li><strong>特定の組織や個人をねらう</strong></li>
+  <li><strong>取引先や社内連絡を装う</strong></li>
+  <li><strong>添付ファイルやURLから侵入につなげる</strong></li>
+</ul>
+
+<p>迷ったときは、<strong>「不特定多数へのばらまきか、相手に合わせたメールか」</strong>で切り分けると判断しやすくなります。</p>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/attacker-types/">攻撃者の種類とは？目的と特徴で整理する【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/authentication-methods/">認証方式とは？3要素と多要素認証を整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/block-stream-cipher/">ブロック暗号とストリーム暗号の違いとは？暗号方式を整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/botnet/">ボットネットとは？踏み台化とDDoSの関係を理解する【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/brute-force-attack/">ブルートフォース攻撃とは？総当たり攻撃の仕組みと対策【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

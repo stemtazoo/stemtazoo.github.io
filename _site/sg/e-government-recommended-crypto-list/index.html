@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>電子政府推奨暗号リストとは？利用を推奨される暗号技術の考え方【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="電子政府推奨暗号リストとは？利用を推奨される暗号技術の考え方【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="電子政府推奨暗号リストは、安全性や実装性能が確認され、利用を推奨される暗号技術のリストです。SG試験・情報セキュリティマネジメント試験で混同しやすい候補・運用監視との違いを整理します。" />
+<meta property="og:description" content="電子政府推奨暗号リストは、安全性や実装性能が確認され、利用を推奨される暗号技術のリストです。SG試験・情報セキュリティマネジメント試験で混同しやすい候補・運用監視との違いを整理します。" />
+<link rel="canonical" href="http://localhost:4000/sg/e-government-recommended-crypto-list/" />
+<meta property="og:url" content="http://localhost:4000/sg/e-government-recommended-crypto-list/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="電子政府推奨暗号リストとは？利用を推奨される暗号技術の考え方【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"電子政府推奨暗号リストは、安全性や実装性能が確認され、利用を推奨される暗号技術のリストです。SG試験・情報セキュリティマネジメント試験で混同しやすい候補・運用監視との違いを整理します。","headline":"電子政府推奨暗号リストとは？利用を推奨される暗号技術の考え方【SG試験】","url":"http://localhost:4000/sg/e-government-recommended-crypto-list/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">電子政府推奨暗号リストとは？利用を推奨される暗号技術の考え方【SG試験】</h1>
+      <h2 class="project-tagline">電子政府推奨暗号リストは、安全性や実装性能が確認され、利用を推奨される暗号技術のリストです。SG試験・情報セキュリティマネジメント試験で混同しやすい候補・運用監視との違いを整理します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">電子政府推奨暗号リストは、安全性や実装性能が確認され、利用を推奨される暗号技術のリストです。SG試験・情報セキュリティマネジメント試験で混同しやすい候補・運用監視との違いを整理します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-overview</span>
+        
+          <span class="post-tag">crypto_auth</span>
+        
+          <span class="post-tag">sg-security-measures</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+
+<p>この節では、結論として何をどう比較して判断するかを先に示します。</p>
+
+<p>電子政府推奨暗号リストは、安全性および実装性能が確認され、利用実績が十分であるか、今後の普及が見込まれる暗号技術のリストです。</p>
+
+<p>SG試験では、暗号技術の細かい計算方法よりも、「どの暗号技術を使うことが推奨されているのか」 を判断する視点が大切です。</p>
+
+<p>特に、次の3つを混同しないことが重要です。</p>
+
+<p>電子政府推奨暗号リスト</p>
+
+<p>推奨候補暗号リスト</p>
+
+<p>運用監視暗号リスト</p>
+
+<p>選択肢で、</p>
+
+<blockquote>
+  <p>利用実績が十分である、または今後の普及が見込まれるため、利用を推奨する</p>
+</blockquote>
+
+<p>と書かれていたら、電子政府推奨暗号リスト を考えます。</p>
+
+<p>一方で、</p>
+
+<blockquote>
+  <p>今後、電子政府推奨暗号リストに掲載される可能性がある</p>
+</blockquote>
+
+<p>なら 推奨候補暗号リスト、</p>
+
+<blockquote>
+  <p>互換性維持のために継続利用を容認する</p>
+</blockquote>
+
+<p>なら 運用監視暗号リスト です。</p>
+
+<h2 id="直感的な説明">直感的な説明</h2>
+
+<p>この節では、関連用語の違いを直感的に比較して整理します。</p>
+
+<p>電子政府推奨暗号リストは、暗号技術の中でも 「今、安心して採用しやすい本命リスト」 のようなものです。</p>
+
+<p>情報システムでは、通信や保存データを守るために暗号技術を使います。</p>
+
+<p>しかし、暗号技術はどれでも同じではありません。</p>
+
+<p>すでに広く使われているもの</p>
+
+<p>今後の普及が期待されるもの</p>
+
+<p>古くなって注意が必要なもの</p>
+
+<p>将来の候補として評価されているもの</p>
+
+<p>このように、暗号技術には位置づけの違いがあります。</p>
+
+<p>その中で、電子政府推奨暗号リストは、電子政府で利用する暗号技術として推奨されるもの を整理したリストです。</p>
+
+<p>ざっくり言うと、次のように考えます。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>分類</th>
+      <th>直感的な意味</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>電子政府推奨暗号リスト</td>
+      <td>今、利用を推奨する暗号</td>
+    </tr>
+    <tr>
+      <td>推奨候補暗号リスト</td>
+      <td>将来、推奨に入る可能性がある暗号</td>
+    </tr>
+    <tr>
+      <td>運用監視暗号リスト</td>
+      <td>古くなったが互換性維持のため残す暗号</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>試験では、「推奨」と書かれているから正しい」ではなく、どのリストの説明か を確認することが大切です。</p>
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+
+<blockquote>
+  <p>公式: CRYPTREC 暗号リスト：<a href="https://www.cryptrec.go.jp/list.html">公式: CRYPTREC 暗号リスト</a></p>
+</blockquote>
+
+<p>この節では、定義と仕組みを観点ごとに比較して整理します。</p>
+
+<p>電子政府推奨暗号リストは、CRYPTREC暗号リストの分類の一つです。</p>
+
+<p>公式情報は、次のページで確認できます。</p>
+
+<p>CRYPTREC暗号リスト（電子政府における調達のために参照すべき暗号のリスト）</p>
+
+<p>電子政府推奨暗号リストは、かんたんに言うと、安全性や実装性能が確認され、利用実績や普及見込みの面から、利用を推奨できる暗号技術 をまとめたものです。</p>
+
+<p>ポイントは、単に「暗号である」だけではなく、次の観点で確認されていることです。</p>
+
+<p>安全性が確認されている</p>
+
+<p>実装性能が確認されている</p>
+
+<p>利用実績が十分である</p>
+
+<p>今後の普及が見込まれる</p>
+
+<p>ここでいう実装性能とは、実際のシステムで使うときに、現実的に利用できる性能や実装のしやすさも考えるという意味です。</p>
+
+<p>情報セキュリティでは、理論上安全そうに見えるだけでなく、実際のシステムで安全に使えることが重要です。</p>
+
+<p>代表的な暗号技術との関係</p>
+
+<p>電子政府推奨暗号リストは、特定の1種類の暗号だけを扱うものではありません。</p>
+
+<p>暗号技術には、次のような種類があります。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>種類</th>
+      <th>役割のイメージ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>共通鍵暗号</td>
+      <td>データを暗号化する</td>
+    </tr>
+    <tr>
+      <td>公開鍵暗号</td>
+      <td>鍵交換や電子署名などで使う</td>
+    </tr>
+    <tr>
+      <td>ハッシュ関数</td>
+      <td>改ざん検知に使う</td>
+    </tr>
+    <tr>
+      <td>電子署名</td>
+      <td>本人性や改ざんされていないことを確認する</td>
+    </tr>
+    <tr>
+      <td>メッセージ認証コード</td>
+      <td>メッセージの改ざん検知と認証に使う</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>SG試験では、個別の暗号方式名を細かく覚えるよりも、まずは 「安全性が確認され、利用を推奨される暗号技術を選ぶ」 という考え方を押さえることが大切です。</p>
+
+<p>推奨候補暗号リストとの違い</p>
+
+<p>推奨候補暗号リストは、今後、電子政府推奨暗号リストに掲載される可能性がある暗号技術 のリストです。</p>
+
+<p>つまり、電子政府推奨暗号リストそのものではありません。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>比較</th>
+      <th>電子政府推奨暗号リスト</th>
+      <th>推奨候補暗号リスト</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>位置づけ</td>
+      <td>今、利用を推奨</td>
+      <td>将来の推奨候補</td>
+    </tr>
+    <tr>
+      <td>キーワード</td>
+      <td>利用実績、普及見込み、利用を推奨</td>
+      <td>今後掲載される可能性</td>
+    </tr>
+    <tr>
+      <td>試験での注意点</td>
+      <td>本命の推奨リスト</td>
+      <td>名前に「推奨」があるので紛らわしい</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>運用監視暗号リストとの違い</p>
+
+<p>運用監視暗号リストは、推奨すべき状態ではないが、互換性維持のために継続利用を容認する暗号技術 のリストです。</p>
+
+<p>電子政府推奨暗号リストとは、位置づけが大きく違います。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>比較</th>
+      <th>電子政府推奨暗号リスト</th>
+      <th>運用監視暗号リスト</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>位置づけ</td>
+      <td>利用を推奨</td>
+      <td>継続利用を容認</td>
+    </tr>
+    <tr>
+      <td>主な意味</td>
+      <td>今使う暗号の候補</td>
+      <td>古いが互換性のため残す暗号</td>
+    </tr>
+    <tr>
+      <td>新規採用</td>
+      <td>候補になりやすい</td>
+      <td>積極的には選ばない</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>SG試験では、推奨・候補・監視 の言葉を手がかりに切り分けます。</p>
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+
+<p>この節では、実務や試験での使い分け場面を比較して整理します。</p>
+
+<p>電子政府推奨暗号リストは、情報システムで使う暗号技術を選ぶ場面で参照されます。</p>
+
+<p>たとえば、次のような場面です。</p>
+
+<p>電子政府システムで暗号技術を選ぶ</p>
+
+<p>調達仕様書で採用する暗号方式を確認する</p>
+
+<p>通信の暗号化方式を確認する</p>
+
+<p>電子署名や認証の方式を確認する</p>
+
+<p>委託先が使う暗号技術が適切か確認する</p>
+
+<p>古い暗号方式から新しい方式へ移行する</p>
+
+<p>実務では、単に「暗号化しています」と言われても、それだけで十分とは限りません。</p>
+
+<p>どの暗号技術を使っているか、その暗号技術が現在の基準で推奨されるものかを確認する必要があります。</p>
+
+<p>SG試験では、次のような選択肢に注意します。</p>
+
+<blockquote>
+  <p>暗号化しているため、どの暗号方式を使っていても安全である。</p>
+</blockquote>
+
+<p>これは誤りです。</p>
+
+<p>暗号化しているかどうかだけでなく、適切な暗号技術を選んでいるか が重要です。</p>
+
+<p>また、委託先管理の文脈では、委託先が古い暗号技術を使っていないか確認することも、情報セキュリティ管理の一部になります。</p>
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<p>この節では、混同しやすい選択肢の違いを比較して整理します。</p>
+
+<p>誤解1：推奨候補暗号リストも、利用を推奨するリストである</p>
+
+<p>これは誤りです。</p>
+
+<p>推奨候補暗号リストは、将来、電子政府推奨暗号リストに掲載される可能性がある暗号技術のリストです。</p>
+
+<p>「利用を推奨する」と書かれていたら、電子政府推奨暗号リストを考えます。</p>
+
+<p>SG試験では、説明文は電子政府推奨暗号リストなのに、リスト名だけを推奨候補暗号リストにしてくることがあります。</p>
+
+<p>誤解2：運用監視暗号リストも、推奨されている暗号である</p>
+
+<p>これも誤りです。</p>
+
+<p>運用監視暗号リストは、互換性維持のために継続利用を容認するリストです。</p>
+
+<p>新しく採用する暗号技術として、積極的に選ぶものではありません。</p>
+
+<p>選択肢で 互換性維持 や 継続利用を容認 と書かれていたら、電子政府推奨暗号リストではなく、運用監視暗号リストを考えます。</p>
+
+<p>誤解3：安全性が確認されていれば、必ず電子政府推奨暗号リストである</p>
+
+<p>これも注意が必要です。</p>
+
+<p>安全性や実装性能が確認されていても、分類は一つではありません。</p>
+
+<p>利用実績が十分、または今後の普及が見込まれる → 電子政府推奨暗号リスト</p>
+
+<p>今後、推奨に掲載される可能性がある → 推奨候補暗号リスト</p>
+
+<p>「安全性が確認された」という部分だけで選ぶと、ひっかけに弱くなります。</p>
+
+<p>誤解4：暗号技術の名称を全部覚えないと解けない</p>
+
+<p>SG試験では、暗号技術の名称を覚えることも役立ちますが、それ以上に 説明文から分類を判断する力 が重要です。</p>
+
+<p>まずは次のキーワードで切り分けましょう。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>選択肢のキーワード</th>
+      <th>判断するリスト</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>利用を推奨する</td>
+      <td>電子政府推奨暗号リスト</td>
+    </tr>
+    <tr>
+      <td>今後、推奨に掲載される可能性</td>
+      <td>推奨候補暗号リスト</td>
+    </tr>
+    <tr>
+      <td>互換性維持のため継続利用</td>
+      <td>運用監視暗号リスト</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>この3つを見分けられるだけでも、選択肢をかなり切りやすくなります。</p>
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<p>この節では、直前確認用に比較ポイントを短く整理します。</p>
+
+<p>電子政府推奨暗号リストは、安全性や実装性能が確認され、利用実績や普及見込みの面から、利用を推奨される暗号技術のリストです。</p>
+
+<p>試験では、次のように切り分けます。</p>
+
+<p>利用を推奨する → 電子政府推奨暗号リスト</p>
+
+<p>今後、推奨に掲載される可能性 → 推奨候補暗号リスト</p>
+
+<p>互換性維持のため継続利用を容認 → 運用監視暗号リスト</p>
+
+<p>選択肢では、説明文だけでなく、リスト名と説明が一致しているか を確認します。</p>
+
+<p>最後は、次の一言で覚えます。</p>
+
+<p>電子政府推奨暗号リストは「今、利用を推奨する暗号」です。</p>
+
+<hr />
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-model/">アクセス制御モデルとは？RBAC・ABAC・DAC・MACの違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-physical/">入退室管理とは？物理アクセス制御の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control/">アクセス管理とは？特権IDとneed-to-knowで権限を適切に制御【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/anti-passback/">アンチパスバックとは？不正な入退室を防ぐ仕組み【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/attacker-types/">攻撃者の種類とは？目的と特徴で整理する【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/cryptrec-list/">← CRYPTREC暗号リストとは？電子政府推奨・推奨候補・運用監視の違い【SG試験】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/recommended-candidate-crypto-list/">推奨候補暗号リストとは？電子政府推奨暗号リストとの違い【SG試験】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

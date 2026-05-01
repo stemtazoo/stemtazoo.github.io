@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>シングルサインオン（SSO）とは？利便性とリスクを整理【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="シングルサインオン（SSO）とは？利便性とリスクを整理【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="シングルサインオン（SSO）は一度の認証で複数システムにアクセスできる仕組みです。認証基盤の集中によるリスクやMFAとの関係を整理し、SG試験・情報セキュリティマネジメント試験で問われる判断ポイントを解説します。" />
+<meta property="og:description" content="シングルサインオン（SSO）は一度の認証で複数システムにアクセスできる仕組みです。認証基盤の集中によるリスクやMFAとの関係を整理し、SG試験・情報セキュリティマネジメント試験で問われる判断ポイントを解説します。" />
+<link rel="canonical" href="http://localhost:4000/sg/sso/" />
+<meta property="og:url" content="http://localhost:4000/sg/sso/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="シングルサインオン（SSO）とは？利便性とリスクを整理【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"シングルサインオン（SSO）は一度の認証で複数システムにアクセスできる仕組みです。認証基盤の集中によるリスクやMFAとの関係を整理し、SG試験・情報セキュリティマネジメント試験で問われる判断ポイントを解説します。","headline":"シングルサインオン（SSO）とは？利便性とリスクを整理【SG試験】","url":"http://localhost:4000/sg/sso/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">シングルサインオン（SSO）とは？利便性とリスクを整理【SG試験】</h1>
+      <h2 class="project-tagline">シングルサインオン（SSO）は一度の認証で複数システムにアクセスできる仕組みです。認証基盤の集中によるリスクやMFAとの関係を整理し、SG試験・情報セキュリティマネジメント試験で問われる判断ポイントを解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">シングルサインオン（SSO）は一度の認証で複数システムにアクセスできる仕組みです。認証基盤の集中によるリスクやMFAとの関係を整理し、SG試験・情報セキュリティマネジメント試験で問われる判断ポイントを解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-measures</span>
+        
+          <span class="post-tag">access_control</span>
+        
+          <span class="post-tag">it_security_operations</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+<p>シングルサインオン（SSO）は、<strong>一度の認証で複数のシステムにログインできる仕組み</strong>であり、SG試験では「利便性と認証基盤の集中リスク」を判断させる問題が多いです。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>「1回の入館チェックで全部の部屋に入れる」イメージです。</p>
+
+<p>通常：</p>
+<ul>
+  <li>システムごとにログインが必要</li>
+</ul>
+
+<p>SSO：</p>
+<ul>
+  <li>1回ログインすればすべて使える</li>
+</ul>
+
+<p>👉<br />
+<strong>ログインの手間が減る仕組み</strong></p>
+
+<hr />
+
+<p>ただし👇<br />
+<strong>入口が1つに集中する＝突破されると全部に影響</strong></p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>SSOは、</p>
+
+<ul>
+  <li>認証を一元化し（認証サーバ）</li>
+  <li>認証結果を複数のシステムで共有する</li>
+</ul>
+
+<p>ことで実現されます。</p>
+
+<hr />
+
+<h3 id="基本の流れ">基本の流れ</h3>
+<ol>
+  <li>ユーザが認証（ID・パスワードなど）</li>
+  <li>認証サーバ（IdP）が認証成功</li>
+  <li>他システム（SP）がその結果を信頼してアクセス許可</li>
+</ol>
+
+<p>👉<br />
+<strong>認証結果を使い回す仕組み</strong></p>
+
+<hr />
+
+<h3 id="-重要なポイントsg頻出">■ 重要なポイント（SG頻出）</h3>
+<ul>
+  <li>SSOは「認証」の仕組み</li>
+  <li>認可（権限管理）は別で管理する</li>
+</ul>
+
+<p>👉<br />
+<strong>認証と認可を混同しないことが重要</strong></p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="-使う場面">■ 使う場面</h3>
+<ul>
+  <li>社内システム統合</li>
+  <li>クラウドサービス連携（SaaS）</li>
+  <li>テレワーク環境</li>
+</ul>
+
+<hr />
+
+<p>👉 現場では<br />
+<strong>利便性向上＋パスワード管理の簡略化</strong></p>
+
+<hr />
+
+<h3 id="-使うと誤解しやすい場面">■ 使うと誤解しやすい場面</h3>
+<ul>
+  <li>セキュリティが強くなる<br />
+→ 単体ではむしろリスクもある</li>
+</ul>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="-ssoは安全性を高める仕組み">❌ SSOは安全性を高める仕組み</h3>
+<p>→ ⭕<br />
+<strong>利便性向上が主目的</strong></p>
+
+<hr />
+
+<h3 id="-1つ突破されても他は安全">❌ 1つ突破されても他は安全</h3>
+<p>→ ⭕<br />
+<strong>1つ破られると全システムに影響</strong></p>
+
+<hr />
+
+<h3 id="-多要素認証は不要になる">❌ 多要素認証は不要になる</h3>
+<p>→ ⭕<br />
+<strong>SSOこそMFAと併用する</strong></p>
+
+<hr />
+
+<h3 id="-認可もまとめて管理する仕組み">❌ 認可もまとめて管理する仕組み</h3>
+<p>→ ⭕<br />
+SSOは<strong>認証の仕組み</strong></p>
+
+<hr />
+
+<h3 id="-sg試験でのひっかけ重要">■ SG試験でのひっかけ（重要）</h3>
+
+<ul>
+  <li>「SSOによりセキュリティが向上する」<br />
+→ 誤り（利便性の話）</li>
+</ul>
+
+<hr />
+
+<ul>
+  <li>「認証サーバが停止しても各システムは利用可能」<br />
+→ 誤り（ログインできない）</li>
+</ul>
+
+<hr />
+
+<ul>
+  <li>「SSO導入によりパスワード管理が不要になる」<br />
+→ 誤り（むしろ重要になる）</li>
+</ul>
+
+<hr />
+
+<p>👉<br />
+<strong>“認証が集中することによるリスク”を意識する</strong></p>
+
+<hr />
+
+<h2 id="確認問題sg試験対策">確認問題（SG試験対策）</h2>
+
+<p>次のうち、最も適切なものはどれか。</p>
+
+<p>A. SSOは、1回の認証で複数システムを利用可能にする仕組みであり、利便性向上と認証管理の集約に役立つ。<br />
+B. SSOは、1つのIDを複数人で共有して運用することで管理を簡素化する仕組みである。<br />
+C. SSOを導入すると、多要素認証は不要になる。<br />
+D. SSOは、通信経路を暗号化して盗聴を防ぐための技術である。</p>
+
+<details>
+  <summary>答えと解説を見る</summary>
+
+  <p><strong>正解：A</strong></p>
+
+  <h3 id="section">解説</h3>
+  <ul>
+    <li>A：正しい。SSOは認証の一元化により、利用者利便性と管理効率を高める仕組みです。</li>
+    <li>B：誤り。ID共有は責任追跡を困難にし、セキュリティ上不適切です。</li>
+    <li>C：誤り。SSOと多要素認証は併用可能であり、SSO導入でMFAが不要になるわけではありません。</li>
+    <li>D：誤り。これはTLS/VPN等の役割で、SSOの本質（認証連携）とは異なります。</li>
+  </ul>
+
+  <p>👉 判断ポイント<br />
+「認証を連携して使い回す仕組み」かどうかでSSOを見分ける。</p>
+
+</details>
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+<ul>
+  <li>SSO＝1回の認証で複数システム利用</li>
+  <li>認証を一元化する仕組み</li>
+  <li>利便性が高いがリスクも集中</li>
+  <li>MFAとの併用が前提</li>
+  <li>SGでは「利便性 vs リスク」で判断する</li>
+</ul>
+
+<p>👉 判断基準</p>
+<ul>
+  <li>利便性向上 → SSO</li>
+  <li>認証強化 → MFA</li>
+  <li>リスク集中 → SSOの弱点</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-model/">アクセス制御モデルとは？RBAC・ABAC・DAC・MACの違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-physical/">入退室管理とは？物理アクセス制御の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control/">アクセス管理とは？特権IDとneed-to-knowで権限を適切に制御【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-rights-management/">アクセス権限管理とは？付与・変更・削除の流れを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/administrator-privileges/">管理者権限とは？特権的アクセス権との違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/mfa-vs-step-auth/">← 多要素認証と多段階認証の違いとは？混同しやすい認証方式を整理【SG試験】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/risk-based-authentication/">リスクベース認証とは？状況に応じて強化する認証の仕組み【SG試験】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

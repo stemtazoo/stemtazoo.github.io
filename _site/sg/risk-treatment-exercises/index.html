@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>リスク対応の具体例問題で理解を深める【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="リスク対応の具体例問題で理解を深める【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="リスク対応（回避・低減・移転・受容）の違いを具体例で判断できるように整理します。SG試験・情報セキュリティマネジメント試験での選択肢の切り方とひっかけポイントを演習形式で解説します。" />
+<meta property="og:description" content="リスク対応（回避・低減・移転・受容）の違いを具体例で判断できるように整理します。SG試験・情報セキュリティマネジメント試験での選択肢の切り方とひっかけポイントを演習形式で解説します。" />
+<link rel="canonical" href="http://localhost:4000/sg/risk-treatment-exercises/" />
+<meta property="og:url" content="http://localhost:4000/sg/risk-treatment-exercises/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="リスク対応の具体例問題で理解を深める【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"リスク対応（回避・低減・移転・受容）の違いを具体例で判断できるように整理します。SG試験・情報セキュリティマネジメント試験での選択肢の切り方とひっかけポイントを演習形式で解説します。","headline":"リスク対応の具体例問題で理解を深める【SG試験】","url":"http://localhost:4000/sg/risk-treatment-exercises/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">リスク対応の具体例問題で理解を深める【SG試験】</h1>
+      <h2 class="project-tagline">リスク対応（回避・低減・移転・受容）の違いを具体例で判断できるように整理します。SG試験・情報セキュリティマネジメント試験での選択肢の切り方とひっかけポイントを演習形式で解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">リスク対応（回避・低減・移転・受容）の違いを具体例で判断できるように整理します。SG試験・情報セキュリティマネジメント試験での選択肢の切り方とひっかけポイントを演習形式で解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-management</span>
+        
+          <span class="post-tag">risk_assessment</span>
+        
+          <span class="post-tag">isms</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+<ul>
+  <li>リスク対応は「行動内容」で分類する</li>
+  <li>SG試験では「何をしたか」を見れば、回避・低減・移転・受容を判断できます</li>
+</ul>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>ポイントはシンプルです👇</p>
+
+<ul>
+  <li>やめた → 回避</li>
+  <li>対策した → 低減</li>
+  <li>任せた → 移転</li>
+  <li>そのまま → 受容</li>
+</ul>
+
+<p>👉<br />
+<strong>文章を読んで“行動”だけ抜き出すのがコツです</strong></p>
+
+<hr />
+
+<h2 id="定義仕組み判断ルール">定義・仕組み（判断ルール）</h2>
+<p>問題を解くときはこの順番で考えます</p>
+
+<p>① 何をしたかを抜き出す<br />
+② 4つに当てはめる</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>行動</th>
+      <th>分類</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>業務をやめる</td>
+      <td>回避</td>
+    </tr>
+    <tr>
+      <td>セキュリティ強化</td>
+      <td>低減</td>
+    </tr>
+    <tr>
+      <td>保険・委託</td>
+      <td>移転</td>
+    </tr>
+    <tr>
+      <td>何もしない（判断済）</td>
+      <td>受容</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="どんな場面で使う試験での出方">どんな場面で使う？（試験での出方）</h2>
+<ul>
+  <li>選択肢から正しい対応を選ばせる問題</li>
+  <li>「この対策はどの分類か？」を問う問題</li>
+  <li>間違った対応を選ばせる問題</li>
+</ul>
+
+<p>👉<br />
+<strong>文章の意味を理解できるかが勝負</strong></p>
+
+<hr />
+
+<h2 id="よくある誤解混同演習で克服">よくある誤解・混同（演習で克服）</h2>
+<ul>
+  <li>委託＝低減と勘違い</li>
+  <li>受容＝放置と勘違い</li>
+  <li>対策しているのに回避と誤認</li>
+</ul>
+
+<p>👉<br />
+ここを演習で潰します👇</p>
+
+<hr />
+
+<h2 id="演習問題sg試験レベル">演習問題（SG試験レベル）</h2>
+
+<h3 id="問題">問題①</h3>
+<p>機密情報を扱うシステムについて、リスクが高いため運用自体を中止した。</p>
+
+<p>→ この対応はどれか？</p>
+
+<details>
+<summary>答えを見る</summary>
+
+**回避**
+
+👉 システム自体をやめている＝リスクの原因を消している  
+</details>
+
+<hr />
+
+<h3 id="問題-1">問題②</h3>
+<p>不正アクセスのリスクを減らすために、多要素認証を導入した。</p>
+
+<p>→ この対応はどれか？</p>
+
+<details>
+<summary>答えを見る</summary>
+
+**低減**
+
+👉 セキュリティ強化＝リスクを小さくしている  
+</details>
+
+<hr />
+
+<h3 id="問題-2">問題③</h3>
+<p>情報漏えいリスクに備えて、サイバー保険に加入した。</p>
+
+<p>→ この対応はどれか？</p>
+
+<details>
+<summary>答えを見る</summary>
+
+**移転**
+
+👉 損失の負担を他者（保険会社）に移している  
+</details>
+
+<hr />
+
+<h3 id="問題-3">問題④</h3>
+<p>影響が小さいため、特に対策を行わず現状のまま運用することにした。</p>
+
+<p>→ この対応はどれか？</p>
+
+<details>
+<summary>答えを見る</summary>
+
+**受容**
+
+👉 判断した上で許容している  
+</details>
+
+<hr />
+
+<h3 id="問題ひっかけ">問題⑤（ひっかけ）</h3>
+<p>クラウドサービスに移行して、セキュリティ対策をベンダーに任せた。</p>
+
+<p>→ この対応はどれか？</p>
+
+<details>
+<summary>答えを見る</summary>
+
+**移転**
+
+👉 「任せた」がポイント  
+※ただし責任は残る（ここが試験で狙われる）  
+</details>
+
+<hr />
+
+<h3 id="問題ひっかけ-1">問題⑥（ひっかけ）</h3>
+<p>システムの脆弱性対策として、パッチを適用した。</p>
+
+<p>→ この対応はどれか？</p>
+
+<details>
+<summary>答えを見る</summary>
+
+**低減**
+
+👉 対策している＝リスクを小さくしている  
+</details>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+<ul>
+  <li>行動で判断する（やめる・対策・任せる・そのまま）</li>
+  <li>回避＝やめる</li>
+  <li>低減＝対策する</li>
+  <li>移転＝他者に任せる</li>
+  <li>受容＝許容する</li>
+  <li>迷ったら「何をしたか」で切る</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-rights-management/">アクセス権限管理とは？付与・変更・削除の流れを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/administrator-privileges/">管理者権限とは？特権的アクセス権との違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/asset-register/">情報資産台帳とは？リスク管理の出発点を整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/audit-log/">監査ログとは？不正検知と追跡の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/case-solving-template/">SG試験 ケース問題の解き方テンプレ【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/risk-treatment2/">← リスク対応とは？4つの対処方法を整理【SG試験】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/risk-treatment-case-study/">リスク対応のケース問題（応用）で判断力を鍛える【SG試験】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

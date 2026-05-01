@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: Diffusion Model（拡散モデル）
-description: Diffusion Model（拡散モデル）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: Diffusion Model（拡散モデル）の基本をG検定向けに整理します。ノイズを加える過程と除去して生成する過程、画像生成AIでの使われ方、GANやVAEとの違いを確認できます。本文では、用語の定義、代表例、似た概念との違い、G検定で迷いやすい選択肢の見分け方まで、短時間で復習できるようにまとめています。
 permalink: /gk/diffusion-model/
 tags: [gk, neural_network, generative_model]
 gk_section: ディープラーニングの応用例/データ生成

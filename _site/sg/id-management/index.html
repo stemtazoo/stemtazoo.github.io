@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>ID管理（アカウント管理）とは？運用の基本を整理【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="ID管理（アカウント管理）とは？運用の基本を整理【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="ID管理の試験対策として、アカウントの作成・変更・削除と棚卸しの運用、休眠ID対策、権限剥奪の重要性を整理し、ライフサイクル管理の設問に対応できるようにします。" />
+<meta property="og:description" content="ID管理の試験対策として、アカウントの作成・変更・削除と棚卸しの運用、休眠ID対策、権限剥奪の重要性を整理し、ライフサイクル管理の設問に対応できるようにします。" />
+<link rel="canonical" href="http://localhost:4000/sg/id-management/" />
+<meta property="og:url" content="http://localhost:4000/sg/id-management/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="ID管理（アカウント管理）とは？運用の基本を整理【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"ID管理の試験対策として、アカウントの作成・変更・削除と棚卸しの運用、休眠ID対策、権限剥奪の重要性を整理し、ライフサイクル管理の設問に対応できるようにします。","headline":"ID管理（アカウント管理）とは？運用の基本を整理【SG試験】","url":"http://localhost:4000/sg/id-management/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">ID管理（アカウント管理）とは？運用の基本を整理【SG試験】</h1>
+      <h2 class="project-tagline">ID管理の試験対策として、アカウントの作成・変更・削除と棚卸しの運用、休眠ID対策、権限剥奪の重要性を整理し、ライフサイクル管理の設問に対応できるようにします。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">ID管理の試験対策として、アカウントの作成・変更・削除と棚卸しの運用、休眠ID対策、権限剥奪の重要性を整理し、ライフサイクル管理の設問に対応できるようにします。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-management</span>
+        
+          <span class="post-tag">access_control</span>
+        
+          <span class="post-tag">it_security_operations</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+<p>ID管理（アカウント管理）は、<strong>ユーザのアカウントを適切に作成・変更・削除し、正しく管理する運用</strong>です。<br />
+SG試験では「アカウント運用が適切か」を判断させる問題で問われます。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>「社員の入社〜退職の管理」です。</p>
+
+<ul>
+  <li>入社 → アカウント作成</li>
+  <li>異動 → 権限変更</li>
+  <li>退職 → アカウント削除</li>
+</ul>
+
+<p>👉<br />
+<strong>人のライフサイクルに合わせて管理するのがID管理</strong>です。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>ID管理は、ユーザアカウントのライフサイクル全体を管理します。</p>
+
+<h3 id="ライフサイクル管理">ライフサイクル管理</h3>
+<ol>
+  <li>作成（入社・登録）</li>
+  <li>変更（異動・役割変更）</li>
+  <li>停止・削除（退職・不要化）</li>
+</ol>
+
+<hr />
+
+<h3 id="管理の基本">管理の基本</h3>
+<ul>
+  <li>個人ごとにIDを付与（共有禁止）</li>
+  <li>権限は最小限に設定</li>
+  <li>不要なアカウントは削除</li>
+  <li>定期的に棚卸し（見直し）</li>
+</ul>
+
+<p>👉<br />
+<strong>「誰が」「何をできるか」を常に正しく保つ</strong></p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="使う場面">使う場面</h3>
+<ul>
+  <li>社内システムのアカウント管理</li>
+  <li>クラウドサービスのユーザ管理</li>
+  <li>委託先アカウント管理</li>
+</ul>
+
+<p>👉 現場では<br />
+<strong>不正アクセスや内部不正の防止の基本対策</strong></p>
+
+<hr />
+
+<h3 id="使うと誤解しやすい場面">使うと誤解しやすい場面</h3>
+<ul>
+  <li>一度作ったらそのまま放置<br />
+→ セキュリティ的にはNG</li>
+</ul>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+<p>SG試験の超頻出ポイントです。</p>
+
+<h3 id="-アカウントの共有">❌ アカウントの共有</h3>
+<p>→ ⭕<br />
+<strong>誰が操作したか分からないためNG</strong></p>
+
+<hr />
+
+<h3 id="-退職後もアカウントを残す">❌ 退職後もアカウントを残す</h3>
+<p>→ ⭕<br />
+<strong>不正利用のリスクがあるため削除必須</strong></p>
+
+<hr />
+
+<h3 id="-異動しても権限そのまま">❌ 異動しても権限そのまま</h3>
+<p>→ ⭕<br />
+<strong>過剰権限になるため見直し必要</strong></p>
+
+<hr />
+
+<h3 id="-id管理は認証だけの話">❌ ID管理は認証だけの話</h3>
+<p>→ ⭕<br />
+<strong>運用管理（ライフサイクル）が本質</strong></p>
+
+<hr />
+
+<p>👉 SG試験では<br />
+<strong>「アカウント放置・共有・過剰権限 → NG」</strong><br />
+と判断できるかが重要です。</p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+<ul>
+  <li>ID管理は<strong>アカウントのライフサイクル管理</strong></li>
+  <li>作成・変更・削除を適切に行う</li>
+  <li>共有禁止・最小権限が基本</li>
+  <li>定期的な見直しが必要</li>
+</ul>
+
+<p>👉 判断基準<br />
+<strong>共有 → NG<br />
+放置 → NG<br />
+最小権限＋見直し → OK</strong></p>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-model/">アクセス制御モデルとは？RBAC・ABAC・DAC・MACの違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-physical/">入退室管理とは？物理アクセス制御の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control/">アクセス管理とは？特権IDとneed-to-knowで権限を適切に制御【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-rights-management/">アクセス権限管理とは？付与・変更・削除の流れを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/administrator-privileges/">管理者権限とは？特権的アクセス権との違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/authentication-authorization-access-control/">← 認証・認可・アクセス制御の違いとは？役割の切り分けを整理【SG試験】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/authorization/">アクセス制御（認可）とは？認証との違いを整理【SG試験】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

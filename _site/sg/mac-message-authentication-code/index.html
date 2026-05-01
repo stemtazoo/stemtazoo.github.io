@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>MACとは？メッセージ認証コードで改ざんを検出する仕組み【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="MACとは？メッセージ認証コードで改ざんを検出する仕組み【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="MAC（Message Authentication Code）は、共通鍵を使ってメッセージの改ざんを検出し、送信者が正当であることを確認する仕組みです。SG試験・情報セキュリティマネジメント試験で混同しやすいデジタル署名、ハッシュ、暗号化、ステガノグラフィとの違いを整理します。" />
+<meta property="og:description" content="MAC（Message Authentication Code）は、共通鍵を使ってメッセージの改ざんを検出し、送信者が正当であることを確認する仕組みです。SG試験・情報セキュリティマネジメント試験で混同しやすいデジタル署名、ハッシュ、暗号化、ステガノグラフィとの違いを整理します。" />
+<link rel="canonical" href="http://localhost:4000/sg/mac-message-authentication-code/" />
+<meta property="og:url" content="http://localhost:4000/sg/mac-message-authentication-code/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="MACとは？メッセージ認証コードで改ざんを検出する仕組み【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"MAC（Message Authentication Code）は、共通鍵を使ってメッセージの改ざんを検出し、送信者が正当であることを確認する仕組みです。SG試験・情報セキュリティマネジメント試験で混同しやすいデジタル署名、ハッシュ、暗号化、ステガノグラフィとの違いを整理します。","headline":"MACとは？メッセージ認証コードで改ざんを検出する仕組み【SG試験】","url":"http://localhost:4000/sg/mac-message-authentication-code/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">MACとは？メッセージ認証コードで改ざんを検出する仕組み【SG試験】</h1>
+      <h2 class="project-tagline">MAC（Message Authentication Code）は、共通鍵を使ってメッセージの改ざんを検出し、送信者が正当であることを確認する仕組みです。SG試験・情報セキュリティマネジメント試験で混同しやすいデジタル署名、ハッシュ、暗号化、ステガノグラフィとの違いを整理します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">MAC（Message Authentication Code）は、共通鍵を使ってメッセージの改ざんを検出し、送信者が正当であることを確認する仕組みです。SG試験・情報セキュリティマネジメント試験で混同しやすいデジタル署名、ハッシュ、暗号化、ステガノグラフィとの違いを整理します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">cryptography</span>
+        
+          <span class="post-tag">authentication</span>
+        
+          <span class="post-tag">integrity</span>
+        
+          <span class="post-tag">security_measures</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+
+<p>MAC（Message Authentication Code：メッセージ認証コード）とは、<strong>共通鍵を使ってメッセージが改ざんされていないかを確認するための仕組み</strong>です。</p>
+
+<p>SG試験では、次のように押さえると判断しやすくなります。</p>
+
+<ul>
+  <li><strong>MAC</strong>：共通鍵で、改ざん検知と送信者の確認を行う</li>
+  <li><strong>デジタル署名</strong>：公開鍵暗号で、改ざん検知となりすまし防止・否認防止を行う</li>
+  <li><strong>暗号化</strong>：内容を読めないようにする</li>
+  <li><strong>ステガノグラフィ</strong>：情報の存在そのものを隠す</li>
+</ul>
+
+<p>特に、MACは「暗号化して秘密にする技術」ではなく、<strong>改ざんされていないことを確認する技術</strong>として理解するのがポイントです。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+
+<p>MACは、メッセージに付ける<strong>封印シール</strong>のようなものです。</p>
+
+<p>送信者は、メッセージと秘密の鍵を使ってMAC値を作ります。<br />
+受信者も同じ秘密の鍵を使ってMAC値を計算し、送られてきたMAC値と一致するか確認します。</p>
+
+<p>一致すれば、</p>
+
+<ul>
+  <li>メッセージが途中で書き換えられていない</li>
+  <li>同じ鍵を持つ正当な相手が作成した可能性が高い</li>
+</ul>
+
+<p>と判断できます。</p>
+
+<p>逆に、途中でメッセージが1文字でも変わると、計算されるMAC値が変わるため、改ざんに気づけます。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+
+<p>MACは、<strong>メッセージと共通鍵から生成される短い認証用データ</strong>です。</p>
+
+<p>基本的な流れは次のとおりです。</p>
+
+<ol>
+  <li>送信者が、メッセージと共通鍵からMAC値を作る</li>
+  <li>メッセージとMAC値を一緒に送る</li>
+  <li>受信者が、受け取ったメッセージと同じ共通鍵からMAC値を再計算する</li>
+  <li>送られてきたMAC値と一致するか確認する</li>
+  <li>一致すれば改ざんなし、不一致なら改ざんの可能性ありと判断する</li>
+</ol>
+
+<p>ここで重要なのは、<strong>送信者と受信者が同じ共通鍵を持っている</strong>という点です。</p>
+
+<p>そのためMACは、公開鍵暗号を使うデジタル署名とは仕組みが異なります。</p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+
+<p>MACは、通信やデータのやり取りで、<strong>内容が途中で変えられていないか確認したい場面</strong>で使われます。</p>
+
+<p>たとえば、次のような場面です。</p>
+
+<ul>
+  <li>API通信で、リクエストが改ざんされていないか確認する</li>
+  <li>メッセージが正当な相手から送られたものか確認する</li>
+  <li>通信データの完全性を確認する</li>
+  <li>共有鍵を使うシステムで、送信元の正当性を確認する</li>
+</ul>
+
+<p>SG試験では、MACを「データを隠す技術」としてではなく、<strong>認証と完全性確認のための技術</strong>として見ると選択肢を切りやすくなります。</p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="macと暗号化の違い">MACと暗号化の違い</h3>
+
+<p>MACは、メッセージの内容を読めなくする仕組みではありません。</p>
+
+<ul>
+  <li><strong>MAC</strong>：改ざんされていないか確認する</li>
+  <li><strong>暗号化</strong>：第三者に内容を読まれないようにする</li>
+</ul>
+
+<p>問題文に「盗聴を防ぐ」「内容を秘匿する」とあれば、MACではなく暗号化の話です。</p>
+
+<hr />
+
+<h3 id="macとハッシュの違い">MACとハッシュの違い</h3>
+
+<p>ハッシュは、データから固定長の値を作る仕組みです。</p>
+
+<p>ただし、通常のハッシュだけでは、誰でも同じハッシュ値を計算できます。<br />
+そのため、攻撃者がメッセージを書き換えて、新しいハッシュ値を付け直すこともできてしまいます。</p>
+
+<p>一方、MACは<strong>共通鍵を使う</strong>ため、鍵を知らない人は正しいMAC値を作れません。</p>
+
+<ul>
+  <li><strong>ハッシュ</strong>：データの要約値を作る</li>
+  <li><strong>MAC</strong>：鍵を使って、改ざん検知と送信者確認を行う</li>
+</ul>
+
+<hr />
+
+<h3 id="macとデジタル署名の違い">MACとデジタル署名の違い</h3>
+
+<p>MACとデジタル署名は、どちらも改ざん検知に使われます。<br />
+ただし、鍵の使い方と目的が違います。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>項目</th>
+      <th>MAC</th>
+      <th>デジタル署名</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>鍵</td>
+      <td>共通鍵</td>
+      <td>秘密鍵・公開鍵</td>
+    </tr>
+    <tr>
+      <td>主な目的</td>
+      <td>改ざん検知、送信者確認</td>
+      <td>改ざん検知、本人確認、否認防止</td>
+    </tr>
+    <tr>
+      <td>否認防止</td>
+      <td>弱い</td>
+      <td>強い</td>
+    </tr>
+    <tr>
+      <td>ポイント</td>
+      <td>同じ鍵を共有する</td>
+      <td>秘密鍵で署名し、公開鍵で検証する</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>MACでは、送信者と受信者が同じ鍵を持っています。<br />
+そのため、あとから「どちらがMAC値を作ったか」を第三者に証明しにくく、<strong>否認防止には向きません</strong>。</p>
+
+<p>否認防止が問われたら、デジタル署名を選ぶのが基本です。</p>
+
+<hr />
+
+<h3 id="macとステガノグラフィの違い">MACとステガノグラフィの違い</h3>
+
+<p>ステガノグラフィは、画像や音声などの中に別のデータを埋め込み、<strong>情報の存在そのものを隠す</strong>技術です。</p>
+
+<p>一方、MACは、メッセージの存在を隠すのではなく、<strong>メッセージが改ざんされていないかを確認する</strong>技術です。</p>
+
+<ul>
+  <li><strong>MAC</strong>：改ざん検知、認証</li>
+  <li><strong>ステガノグラフィ</strong>：情報を隠して存在を気づかれにくくする</li>
+</ul>
+
+<p>問題文に「画像データにメッセージを埋め込む」「存在を隠す」とあれば、MACではなくステガノグラフィです。</p>
+
+<hr />
+
+<h3 id="macアドレスとの違い">MACアドレスとの違い</h3>
+
+<p>同じ「MAC」でも、ネットワークで出てくるMACアドレスとは別物です。</p>
+
+<ul>
+  <li><strong>MAC（Message Authentication Code）</strong>：メッセージ認証コード</li>
+  <li><strong>MACアドレス</strong>：ネットワーク機器の識別番号</li>
+</ul>
+
+<p>SG試験では、文脈で判断します。</p>
+
+<p>「改ざん」「認証」「メッセージ」「共通鍵」が出てきたら、メッセージ認証コードのMACです。<br />
+「LAN」「NIC」「物理アドレス」「機器識別」が出てきたら、MACアドレスです。</p>
+
+<hr />
+
+<h2 id="sg試験での判断ポイント">SG試験での判断ポイント</h2>
+
+<p>MACが選択肢に出たら、次の観点で判断します。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>キーワード</th>
+      <th>選ぶべき技術</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>改ざん検知、共通鍵、メッセージ認証</td>
+      <td>MAC</td>
+    </tr>
+    <tr>
+      <td>否認防止、秘密鍵で署名、公開鍵で検証</td>
+      <td>デジタル署名</td>
+    </tr>
+    <tr>
+      <td>内容を読めなくする、盗聴対策</td>
+      <td>暗号化</td>
+    </tr>
+    <tr>
+      <td>画像や音声に埋め込む、存在を隠す</td>
+      <td>ステガノグラフィ</td>
+    </tr>
+    <tr>
+      <td>固定長の要約値、メッセージダイジェスト</td>
+      <td>ハッシュ</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>特に、MACは<strong>完全性確認</strong>と<strong>メッセージ認証</strong>の文脈で出やすいです。</p>
+
+<hr />
+
+<h2 id="確認問題">確認問題</h2>
+
+<details>
+<summary>確認問題：MACの説明として最も適切なものはどれか</summary>
+
+次のうち、MAC（Message Authentication Code）の説明として最も適切なものはどれか。
+
+- ア：画像データなどにメッセージを埋め込み、メッセージの存在そのものを隠す。
+- イ：メッセージの改ざんを検出し、送信者が同じ共通鍵を持つ相手であることを確認する。
+- ウ：メッセージを暗号化して、通信途中で第三者に読まれないようにする。
+- エ：公開鍵を使って署名を検証し、否認防止を実現する。
+
+**正解：イ**
+
+MACは、共通鍵を使ってメッセージ認証コードを生成し、受信側で再計算した値と比較することで、改ざんの有無を確認します。
+
+アはステガノグラフィ、ウは暗号化、エはデジタル署名の説明です。
+
+</details>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>MACは、<strong>共通鍵を使ってメッセージの改ざんを検出する仕組み</strong></li>
+  <li>「内容を隠す」なら暗号化、「存在を隠す」ならステガノグラフィ</li>
+  <li>否認防止まで問われたら、MACではなくデジタル署名を選ぶ</li>
+</ul>
+
+<p>MACは、暗号技術の細かい計算方法よりも、<strong>何を守る技術なのか</strong>を押さえることが大切です。<br />
+SG試験では「改ざん検知」「共通鍵」「メッセージ認証」という言葉を手がかりに判断しましょう。</p>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/blacklist-whitelist/">ブラックリストとホワイトリストの違いとは？判断基準を整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/bot/">ボットとは？遠隔操作される仕組みを理解する【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/brute-force-attack/">ブルートフォース攻撃とは？総当たり攻撃の仕組みと対策【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/common-port-numbers/">よく出るポート番号とは？試験での見分け方を整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/cryptojacking/">クリプトジャッキングとは？不正マイニングの仕組みを理解する【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

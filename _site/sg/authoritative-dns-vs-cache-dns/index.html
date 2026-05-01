@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>権威DNSサーバとキャッシュDNSサーバの違い【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="権威DNSサーバとキャッシュDNSサーバの違い【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="権威DNSサーバとキャッシュDNSサーバは、DNSの名前解決で役割が異なるサーバです。正式なDNS情報を管理するサーバと、利用者の問い合わせを代理して結果を一時保存するサーバの違いを、SG試験・情報セキュリティマネジメント試験で問われる判断ポイントとして整理します。" />
+<meta property="og:description" content="権威DNSサーバとキャッシュDNSサーバは、DNSの名前解決で役割が異なるサーバです。正式なDNS情報を管理するサーバと、利用者の問い合わせを代理して結果を一時保存するサーバの違いを、SG試験・情報セキュリティマネジメント試験で問われる判断ポイントとして整理します。" />
+<link rel="canonical" href="http://localhost:4000/sg/authoritative-dns-vs-cache-dns/" />
+<meta property="og:url" content="http://localhost:4000/sg/authoritative-dns-vs-cache-dns/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="権威DNSサーバとキャッシュDNSサーバの違い【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"権威DNSサーバとキャッシュDNSサーバは、DNSの名前解決で役割が異なるサーバです。正式なDNS情報を管理するサーバと、利用者の問い合わせを代理して結果を一時保存するサーバの違いを、SG試験・情報セキュリティマネジメント試験で問われる判断ポイントとして整理します。","headline":"権威DNSサーバとキャッシュDNSサーバの違い【SG試験】","url":"http://localhost:4000/sg/authoritative-dns-vs-cache-dns/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">権威DNSサーバとキャッシュDNSサーバの違い【SG試験】</h1>
+      <h2 class="project-tagline">権威DNSサーバとキャッシュDNSサーバは、DNSの名前解決で役割が異なるサーバです。正式なDNS情報を管理するサーバと、利用者の問い合わせを代理して結果を一時保存するサーバの違いを、SG試験・情報セキュリティマネジメント試験で問われる判断ポイントとして整理します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">権威DNSサーバとキャッシュDNSサーバは、DNSの名前解決で役割が異なるサーバです。正式なDNS情報を管理するサーバと、利用者の問い合わせを代理して結果を一時保存するサーバの違いを、SG試験・情報セキュリティマネジメント試験で問われる判断ポイントとして整理します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-measures</span>
+        
+          <span class="post-tag">network_security</span>
+        
+          <span class="post-tag">dns</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+
+<p>権威DNSサーバとキャッシュDNSサーバの違いは、<strong>正式なDNS情報を持っているサーバか、利用者の問い合わせを代理して調べるサーバか</strong>です。</p>
+
+<p>SG試験では、次のように整理すると判断しやすくなります。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>種類</th>
+      <th>役割</th>
+      <th>たとえるなら</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>権威DNSサーバ</td>
+      <td>ドメインの正式なDNS情報を管理する</td>
+      <td>公式の住所台帳</td>
+    </tr>
+    <tr>
+      <td>キャッシュDNSサーバ</td>
+      <td>利用者の代わりにDNSを問い合わせ、結果を一時保存する</td>
+      <td>住所を調べてくれる案内係</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>たとえば、<code class="language-plaintext highlighter-rouge">example.com</code> の正式なIPアドレス情報を管理しているのが権威DNSサーバです。</p>
+
+<p>一方、利用者のPCやスマートフォンからの問い合わせを受け取り、必要に応じて他のDNSサーバへ問い合わせ、結果を一時的に保存するのがキャッシュDNSサーバです。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+
+<p>DNSは、ドメイン名からIPアドレスを調べる仕組みです。</p>
+
+<p>たとえば、利用者がブラウザでWebサイトを開くとき、コンピュータは次のような確認をします。</p>
+
+<blockquote>
+  <p>このドメイン名は、どのIPアドレスに対応しているのか？</p>
+</blockquote>
+
+<p>このとき、利用者が直接すべてのDNSサーバに問い合わせるわけではありません。</p>
+
+<p>通常は、まずキャッシュDNSサーバに問い合わせます。</p>
+
+<p>キャッシュDNSサーバは、利用者の代わりに必要な情報を探しに行きます。そして、すでに同じ問い合わせ結果を覚えていれば、その情報をすぐ返します。</p>
+
+<p>一方、権威DNSサーバは、そのドメインについての正式な情報を持っているサーバです。</p>
+
+<p>イメージとしては、次のようになります。</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>利用者
+  ↓ 問い合わせ
+キャッシュDNSサーバ
+  ↓ 必要に応じて問い合わせ
+権威DNSサーバ
+  ↓ 正式なDNS情報を返す
+キャッシュDNSサーバ
+  ↓ 結果を利用者へ返す
+利用者
+</code></pre></div></div>
+
+<p>つまり、キャッシュDNSサーバは「調べる役」、権威DNSサーバは「正式な答えを持っている役」です。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+
+<h3 id="権威dnsサーバとは">権威DNSサーバとは</h3>
+
+<p>権威DNSサーバとは、特定のドメインについて、正式なDNS情報を管理しているDNSサーバです。</p>
+
+<p>たとえば、ある企業が <code class="language-plaintext highlighter-rouge">example.co.jp</code> というドメインを持っている場合、そのドメインに関する情報を管理するDNSサーバが権威DNSサーバです。</p>
+
+<p>権威DNSサーバには、次のような情報が登録されます。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>レコード</th>
+      <th>内容</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Aレコード</td>
+      <td>ドメイン名に対応するIPv4アドレス</td>
+    </tr>
+    <tr>
+      <td>AAAAレコード</td>
+      <td>ドメイン名に対応するIPv6アドレス</td>
+    </tr>
+    <tr>
+      <td>MXレコード</td>
+      <td>メール配送先のメールサーバ</td>
+    </tr>
+    <tr>
+      <td>NSレコード</td>
+      <td>そのドメインを管理するDNSサーバ</td>
+    </tr>
+    <tr>
+      <td>TXTレコード</td>
+      <td>SPFなどの文字列情報</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>権威DNSサーバは、ドメインの「公式な情報源」と考えるとわかりやすいです。</p>
+
+<h3 id="キャッシュdnsサーバとは">キャッシュDNSサーバとは</h3>
+
+<p>キャッシュDNSサーバとは、利用者からの名前解決の問い合わせを受け取り、必要に応じて他のDNSサーバへ問い合わせ、結果を一時的に保存するDNSサーバです。</p>
+
+<p>キャッシュDNSサーバは、リゾルバ、フルリゾルバ、DNSキャッシュサーバと呼ばれることもあります。</p>
+
+<p>キャッシュDNSサーバの主な役割は、次の2つです。</p>
+
+<ul>
+  <li>利用者の代わりにDNS問い合わせを行う</li>
+  <li>一度調べた結果を一時保存し、次回以降の問い合わせを速くする</li>
+</ul>
+
+<p>この一時保存の仕組みを、キャッシュといいます。</p>
+
+<h3 id="キャッシュの有効期限">キャッシュの有効期限</h3>
+
+<p>DNSのキャッシュには、有効期限があります。この有効期限をTTL（Time To Live）といいます。</p>
+
+<p>TTLが残っている間は、キャッシュDNSサーバは保存済みの結果を返すことができます。</p>
+
+<p>TTLが切れると、キャッシュDNSサーバは改めて問い合わせを行います。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>用語</th>
+      <th>内容</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>キャッシュ</td>
+      <td>過去の問い合わせ結果を一時的に保存すること</td>
+    </tr>
+    <tr>
+      <td>TTL</td>
+      <td>キャッシュを保持してよい時間</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>キャッシュによって名前解決は速くなりますが、古い情報が一時的に残ることもあります。</p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+
+<h3 id="webサイトにアクセスするとき">Webサイトにアクセスするとき</h3>
+
+<p>利用者がWebサイトにアクセスするとき、まずドメイン名からIPアドレスを調べます。</p>
+
+<p>このとき、利用者の端末は通常、契約しているISPや社内ネットワークで指定されたキャッシュDNSサーバに問い合わせます。</p>
+
+<p>キャッシュDNSサーバは、必要に応じて権威DNSサーバなどへ問い合わせ、最終的な結果を利用者へ返します。</p>
+
+<h3 id="企業が自社ドメインを運用するとき">企業が自社ドメインを運用するとき</h3>
+
+<p>企業が自社のWebサイトやメールを運用する場合、自社ドメインに関するDNS情報を正しく管理する必要があります。</p>
+
+<p>このDNS情報を管理するのが権威DNSサーバです。</p>
+
+<p>たとえば、WebサイトのIPアドレスを変更した場合は、権威DNSサーバ上のAレコードなどを更新します。</p>
+
+<h3 id="社内ネットワークで名前解決を管理するとき">社内ネットワークで名前解決を管理するとき</h3>
+
+<p>社内ネットワークでは、社内向けの名前解決を行うためにDNSサーバを運用することがあります。</p>
+
+<p>この場合も、正式な情報を持つサーバと、利用者からの問い合わせを受けるサーバの役割を分けて考えることが重要です。</p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="誤解1dnsサーバは全部同じ役割である">誤解1：DNSサーバは全部同じ役割である</h3>
+
+<p>これは誤りです。</p>
+
+<p>DNSサーバには、正式な情報を持つ権威DNSサーバと、利用者の問い合わせを代理するキャッシュDNSサーバがあります。</p>
+
+<p>SG試験では、単に「DNSサーバ」と書かれていても、文脈からどちらの役割を指しているかを判断することが大切です。</p>
+
+<h3 id="誤解2キャッシュdnsサーバが正式な情報を管理している">誤解2：キャッシュDNSサーバが正式な情報を管理している</h3>
+
+<p>これも誤りです。</p>
+
+<p>キャッシュDNSサーバは、問い合わせ結果を一時的に保存しますが、ドメインの正式な管理者ではありません。</p>
+
+<p>正式なDNS情報を管理するのは、権威DNSサーバです。</p>
+
+<h3 id="誤解3権威dnsサーバは利用者からのすべての問い合わせを直接受ける">誤解3：権威DNSサーバは利用者からのすべての問い合わせを直接受ける</h3>
+
+<p>通常、利用者の端末はまずキャッシュDNSサーバに問い合わせます。</p>
+
+<p>キャッシュDNSサーバが必要に応じて権威DNSサーバへ問い合わせる流れになります。</p>
+
+<p>そのため、権威DNSサーバは「正式な答えを持つサーバ」、キャッシュDNSサーバは「利用者の代わりに調べるサーバ」と分けて理解しましょう。</p>
+
+<h3 id="誤解4dnssecはキャッシュdnsサーバと権威dnsサーバの二重化である">誤解4：DNSSECはキャッシュDNSサーバと権威DNSサーバの二重化である</h3>
+
+<p>これも誤りです。</p>
+
+<p>DNSSECは、DNS応答の正当性と完全性を確認するための仕組みです。</p>
+
+<p>一方、権威DNSサーバとキャッシュDNSサーバの違いは、DNSにおける役割の違いです。</p>
+
+<p>DNSSECは「署名検証」、キャッシュDNSサーバは「問い合わせ代理と一時保存」、権威DNSサーバは「正式情報の管理」と切り分けましょう。</p>
+
+<hr />
+
+<h2 id="sg試験での判断ポイント">SG試験での判断ポイント</h2>
+
+<p>SG試験では、DNS関連の選択肢で次のような言葉が出ることがあります。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>キーワード</th>
+      <th>関連する内容</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>権威DNSサーバ</td>
+      <td>ドメインの正式なDNS情報を管理する</td>
+    </tr>
+    <tr>
+      <td>コンテンツDNSサーバ</td>
+      <td>権威DNSサーバとほぼ同じ意味で使われることがある</td>
+    </tr>
+    <tr>
+      <td>キャッシュDNSサーバ</td>
+      <td>利用者の問い合わせを代理し、結果を一時保存する</td>
+    </tr>
+    <tr>
+      <td>リゾルバ</td>
+      <td>名前解決を行う仕組み。文脈により端末側やキャッシュDNSサーバ側を指す</td>
+    </tr>
+    <tr>
+      <td>再帰問い合わせ</td>
+      <td>キャッシュDNSサーバが利用者の代わりに最終結果まで調べる問い合わせ</td>
+    </tr>
+    <tr>
+      <td>オープンリゾルバ</td>
+      <td>不特定多数からの再帰問い合わせを受け付ける危険な状態</td>
+    </tr>
+    <tr>
+      <td>TTL</td>
+      <td>DNSキャッシュの有効期限</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>特に、次の切り分けが重要です。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>問われている内容</th>
+      <th>関連する用語</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>正式なDNS情報を持つ</td>
+      <td>権威DNSサーバ</td>
+    </tr>
+    <tr>
+      <td>利用者の代わりに名前解決する</td>
+      <td>キャッシュDNSサーバ</td>
+    </tr>
+    <tr>
+      <td>結果を一時保存する</td>
+      <td>キャッシュDNSサーバ</td>
+    </tr>
+    <tr>
+      <td>DNS応答の正当性と完全性を検証する</td>
+      <td>DNSSEC</td>
+    </tr>
+    <tr>
+      <td>DNSの可用性を高めるために複数台構成にする</td>
+      <td>セカンダリDNSサーバなど</td>
+    </tr>
+    <tr>
+      <td>不特定多数からの再帰問い合わせを受ける</td>
+      <td>オープンリゾルバ</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="ミニ問題">ミニ問題</h2>
+
+<p>DNSにおける権威DNSサーバとキャッシュDNSサーバの説明として、最も適切なものはどれか。</p>
+
+<div class="sg-question">
+  <p><strong>ア</strong> 権威DNSサーバは利用者の問い合わせ結果を一時保存し、キャッシュDNSサーバはドメインの正式なDNS情報を管理する。</p>
+  <p><strong>イ</strong> 権威DNSサーバはドメインの正式なDNS情報を管理し、キャッシュDNSサーバは利用者の代わりに名前解決を行って結果を一時保存する。</p>
+  <p><strong>ウ</strong> 権威DNSサーバはDNS通信を暗号化し、キャッシュDNSサーバはWeb通信を暗号化する。</p>
+  <p><strong>エ</strong> 権威DNSサーバとキャッシュDNSサーバはどちらも同じ役割であり、名称だけが異なる。</p>
+</div>
+
+<details>
+<summary>回答と解説</summary>
+
+正解は、<strong>イ</strong>です。
+
+権威DNSサーバは、そのドメインに関する正式なDNS情報を管理するサーバです。
+
+キャッシュDNSサーバは、利用者からの問い合わせを受け取り、必要に応じて他のDNSサーバへ問い合わせ、結果を一時的に保存するサーバです。
+
+- ア：役割が逆です。
+- ウ：DNS通信やWeb通信の暗号化の説明ではありません。
+- エ：同じDNSサーバでも役割が異なります。
+
+SG試験では、権威DNSサーバを「正式情報の管理」、キャッシュDNSサーバを「問い合わせ代理と一時保存」と覚えると判断しやすくなります。
+
+</details>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<p>権威DNSサーバとキャッシュDNSサーバは、DNSの名前解決で役割が異なります。</p>
+
+<p>試験直前には、次の3点を押さえておきましょう。</p>
+
+<ul>
+  <li>権威DNSサーバは、ドメインの正式なDNS情報を管理する</li>
+  <li>キャッシュDNSサーバは、利用者の代わりに名前解決し、結果を一時保存する</li>
+  <li>DNSSEC、セカンダリDNS、オープンリゾルバとは別の観点で切り分ける</li>
+</ul>
+
+<p>SG試験では、「DNSサーバ」という言葉だけで判断せず、<strong>正式な情報を持つ話なのか、利用者の問い合わせを代理する話なのか</strong>を確認することが大切です。</p>
+
+<p><strong>権威DNSサーバ＝公式情報、キャッシュDNSサーバ＝代理問い合わせと一時保存</strong>と覚えておきましょう。</p>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-model/">アクセス制御モデルとは？RBAC・ABAC・DAC・MACの違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-physical/">入退室管理とは？物理アクセス制御の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control/">アクセス管理とは？特権IDとneed-to-knowで権限を適切に制御【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/anti-passback/">アンチパスバックとは？不正な入退室を防ぐ仕組み【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/auth-access-summary/">認証・アクセス制御まとめ｜SSO・MFA・ゼロトラストを体系整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/dns-cache-poisoning/">← DNSキャッシュポイズニングとは？偽サイトへ誘導する攻撃【SG試験】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/open-resolver/">オープンリゾルバとは？DNSの再帰問い合わせと悪用リスク【SG試験】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

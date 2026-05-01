@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>ARPとDHCPの違いとは？MACアドレス解決とIPアドレス配布を整理【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="ARPとDHCPの違いとは？MACアドレス解決とIPアドレス配布を整理【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="ARPとDHCPはどちらもネットワーク接続で使われる仕組みですが、ARPはIPアドレスからMACアドレスを調べ、DHCPはIPアドレスなどの設定情報を自動で配布します。SG試験・情報セキュリティマネジメント試験で混同しやすい役割、使われる場面、ARPスプーフィングとの違いを整理します。" />
+<meta property="og:description" content="ARPとDHCPはどちらもネットワーク接続で使われる仕組みですが、ARPはIPアドレスからMACアドレスを調べ、DHCPはIPアドレスなどの設定情報を自動で配布します。SG試験・情報セキュリティマネジメント試験で混同しやすい役割、使われる場面、ARPスプーフィングとの違いを整理します。" />
+<link rel="canonical" href="http://localhost:4000/sg/arp-vs-dhcp/" />
+<meta property="og:url" content="http://localhost:4000/sg/arp-vs-dhcp/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="ARPとDHCPの違いとは？MACアドレス解決とIPアドレス配布を整理【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"ARPとDHCPはどちらもネットワーク接続で使われる仕組みですが、ARPはIPアドレスからMACアドレスを調べ、DHCPはIPアドレスなどの設定情報を自動で配布します。SG試験・情報セキュリティマネジメント試験で混同しやすい役割、使われる場面、ARPスプーフィングとの違いを整理します。","headline":"ARPとDHCPの違いとは？MACアドレス解決とIPアドレス配布を整理【SG試験】","url":"http://localhost:4000/sg/arp-vs-dhcp/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">ARPとDHCPの違いとは？MACアドレス解決とIPアドレス配布を整理【SG試験】</h1>
+      <h2 class="project-tagline">ARPとDHCPはどちらもネットワーク接続で使われる仕組みですが、ARPはIPアドレスからMACアドレスを調べ、DHCPはIPアドレスなどの設定情報を自動で配布します。SG試験・情報セキュリティマネジメント試験で混同しやすい役割、使われる場面、ARPスプーフィングとの違いを整理します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">ARPとDHCPはどちらもネットワーク接続で使われる仕組みですが、ARPはIPアドレスからMACアドレスを調べ、DHCPはIPアドレスなどの設定情報を自動で配布します。SG試験・情報セキュリティマネジメント試験で混同しやすい役割、使われる場面、ARPスプーフィングとの違いを整理します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-measures</span>
+        
+          <span class="post-tag">network_security</span>
+        
+          <span class="post-tag">access_control</span>
+        
+          <span class="post-tag">it_security_operations</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+<p>ARPとDHCPは、どちらもネットワーク接続で使われる仕組みですが、役割が違います。</p>
+
+<ul>
+  <li><strong>ARP</strong>：IPアドレスからMACアドレスを調べる</li>
+  <li><strong>DHCP</strong>：PCなどにIPアドレスなどの設定情報を自動で配る</li>
+</ul>
+
+<p>SG試験では、次の一文で切り分けると判断しやすくなります。</p>
+
+<blockquote>
+  <p>IPからMACを調べるならARP、IPアドレスを配るならDHCP</p>
+</blockquote>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>PCがネットワークを使うには、まず自分のIPアドレスなどの設定が必要です。</p>
+
+<p>この設定を自動で配ってくれるのがDHCPです。</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PC：ネットワークに参加したいです。IPアドレスをください。
+DHCP：では、このIPアドレスを使ってください。
+</code></pre></div></div>
+
+<p>一方、ARPは、通信するときに相手へ実際に届けるための確認です。</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PC：このIPアドレスの機器のMACアドレスは何ですか？
+ARP：そのIPアドレスのMACアドレスはこれです。
+</code></pre></div></div>
+
+<p>つまり、DHCPは<strong>通信を始めるための設定を配る仕組み</strong>、ARPは<strong>通信を届ける相手を確認する仕組み</strong>です。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>ARPとDHCPの違いを表で整理すると、次のようになります。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>項目</th>
+      <th>ARP</th>
+      <th>DHCP</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>正式名称</td>
+      <td>Address Resolution Protocol</td>
+      <td>Dynamic Host Configuration Protocol</td>
+    </tr>
+    <tr>
+      <td>主な役割</td>
+      <td>IPアドレスからMACアドレスを調べる</td>
+      <td>IPアドレスなどを自動で割り当てる</td>
+    </tr>
+    <tr>
+      <td>使われる場面</td>
+      <td>LAN内で通信先を確認するとき</td>
+      <td>ネットワーク接続時に設定を受け取るとき</td>
+    </tr>
+    <tr>
+      <td>関係する情報</td>
+      <td>IPアドレス、MACアドレス</td>
+      <td>IPアドレス、サブネットマスク、デフォルトゲートウェイ、DNSサーバなど</td>
+    </tr>
+    <tr>
+      <td>保存される情報</td>
+      <td>ARPテーブル</td>
+      <td>DHCPリース情報</td>
+    </tr>
+    <tr>
+      <td>関連する攻撃</td>
+      <td>ARPスプーフィング</td>
+      <td>不正DHCPサーバ、DHCPスプーフィングなど</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>ポイントは、どちらもネットワークの基本ですが、<strong>配る仕組み</strong>と<strong>調べる仕組み</strong>で役割が違うことです。</p>
+
+<hr />
+
+<h2 id="通信の流れで見る違い">通信の流れで見る違い</h2>
+<p>PCがネットワークに接続してWebサイトを見るまでの流れで考えると、DHCPとARPの位置づけが分かりやすくなります。</p>
+
+<h3 id="1-dhcpでipアドレスをもらう">1. DHCPでIPアドレスをもらう</h3>
+<p>PCがネットワークに接続すると、まず自分が使うIPアドレスなどの設定が必要です。</p>
+
+<p>DHCPを使うと、手動で設定しなくても、DHCPサーバから必要な情報を受け取れます。</p>
+
+<p>受け取る代表的な情報は次のとおりです。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>情報</th>
+      <th>役割</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>IPアドレス</td>
+      <td>PC自身のネットワーク上の住所</td>
+    </tr>
+    <tr>
+      <td>サブネットマスク</td>
+      <td>同じネットワークの範囲を判断する情報</td>
+    </tr>
+    <tr>
+      <td>デフォルトゲートウェイ</td>
+      <td>外部ネットワークへ出るためのルータ</td>
+    </tr>
+    <tr>
+      <td>DNSサーバ</td>
+      <td>ドメイン名をIPアドレスに変換するためのサーバ</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>DHCPは、PCに<strong>通信するための初期設定を渡す役割</strong>です。</p>
+
+<hr />
+
+<h3 id="2-arpでmacアドレスを調べる">2. ARPでMACアドレスを調べる</h3>
+<p>IPアドレスなどの設定を受け取ったあと、PCは実際に通信を行います。</p>
+
+<p>このとき、同じLAN内で通信を届けるには、相手のMACアドレスが必要です。</p>
+
+<p>そこでARPを使って、IPアドレスに対応するMACアドレスを調べます。</p>
+
+<p>外部のWebサイトへ通信する場合は、通常、PCはWebサーバのMACアドレスではなく、まず<strong>デフォルトゲートウェイのMACアドレス</strong>をARPで調べます。</p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<p>ARPとDHCPは、使われるタイミングが違います。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>場面</th>
+      <th>使われる仕組み</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>PCをネットワークに接続した</td>
+      <td>DHCP</td>
+    </tr>
+    <tr>
+      <td>IPアドレスを自動取得したい</td>
+      <td>DHCP</td>
+    </tr>
+    <tr>
+      <td>DNSサーバやゲートウェイ情報を自動設定したい</td>
+      <td>DHCP</td>
+    </tr>
+    <tr>
+      <td>IPアドレスからMACアドレスを知りたい</td>
+      <td>ARP</td>
+    </tr>
+    <tr>
+      <td>LAN内で通信を届けたい</td>
+      <td>ARP</td>
+    </tr>
+    <tr>
+      <td>ARPテーブルを確認したい</td>
+      <td>ARP</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>SG試験では、問題文に「自動割当て」「IPアドレスを配布」「ネットワーク設定情報」とあればDHCPを考えます。</p>
+
+<p>一方で、「MACアドレス」「ARPテーブル」「IPアドレスからMACアドレス」とあればARPを考えます。</p>
+
+<hr />
+
+<h2 id="dhcpで配られる情報">DHCPで配られる情報</h2>
+<p>DHCPは、IPアドレスだけを配る仕組みではありません。</p>
+
+<p>多くの場合、ネットワーク接続に必要な複数の設定情報をまとめて配ります。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>DHCPで配られる情報</th>
+      <th>意味</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>IPアドレス</td>
+      <td>端末自身に割り当てる住所</td>
+    </tr>
+    <tr>
+      <td>サブネットマスク</td>
+      <td>同じネットワークかどうかを判断する情報</td>
+    </tr>
+    <tr>
+      <td>デフォルトゲートウェイ</td>
+      <td>外部ネットワークへ出る出口</td>
+    </tr>
+    <tr>
+      <td>DNSサーバ</td>
+      <td>名前解決に使うサーバ</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>ここは試験でも大事です。</p>
+
+<p>DHCPは、単に「IPアドレスを配る」だけでなく、<strong>ネットワーク設定を自動化する仕組み</strong>として理解しておきましょう。</p>
+
+<hr />
+
+<h2 id="arpテーブルとdhcpリースの違い">ARPテーブルとDHCPリースの違い</h2>
+<p>ARPとDHCPは、どちらも一時的に情報を保持します。</p>
+
+<p>ただし、保持する内容が違います。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>用語</th>
+      <th>保存する内容</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ARPテーブル</td>
+      <td>IPアドレスとMACアドレスの対応</td>
+    </tr>
+    <tr>
+      <td>DHCPリース</td>
+      <td>端末に割り当てたIPアドレスと利用期間</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>ARPテーブルは、通信を効率よく行うための対応表です。</p>
+
+<p>DHCPリースは、IPアドレスの重複を避けながら、一定期間その端末にIPアドレスを貸し出すための管理情報です。</p>
+
+<hr />
+
+<h2 id="攻撃との関係">攻撃との関係</h2>
+<p>ARPとDHCPは、どちらもネットワークの基本機能なので、悪用されると通信に大きな影響が出ます。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>攻撃</th>
+      <th>悪用される仕組み</th>
+      <th>起こること</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ARPスプーフィング</td>
+      <td>ARP</td>
+      <td>偽のIPとMACの対応を信じ込ませる</td>
+    </tr>
+    <tr>
+      <td>不正DHCPサーバ</td>
+      <td>DHCP</td>
+      <td>不正なIP設定を配布する</td>
+    </tr>
+    <tr>
+      <td>DHCPスプーフィング</td>
+      <td>DHCP</td>
+      <td>攻撃者のサーバから偽の設定情報を配る</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>たとえば、不正DHCPサーバがネットワーク内にあると、利用者PCに攻撃者の用意したDNSサーバやゲートウェイを設定させる可能性があります。</p>
+
+<p>その結果、通信が攻撃者の意図した経路を通ったり、偽サイトへ誘導されたりするおそれがあります。</p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="誤解1arpはipアドレスを配る仕組み">誤解1：ARPはIPアドレスを配る仕組み</h3>
+<p>ARPはIPアドレスを配る仕組みではありません。</p>
+
+<p>ARPは、<strong>IPアドレスからMACアドレスを調べる仕組み</strong>です。</p>
+
+<p>IPアドレスなどを自動で配るのはDHCPです。</p>
+
+<hr />
+
+<h3 id="誤解2dhcpはmacアドレスを調べる仕組み">誤解2：DHCPはMACアドレスを調べる仕組み</h3>
+<p>DHCPはMACアドレスを調べる仕組みではありません。</p>
+
+<p>DHCPは、PCなどの端末にIPアドレスやゲートウェイ、DNSサーバなどの設定情報を自動で割り当てます。</p>
+
+<hr />
+
+<h3 id="誤解3dhcpがあればarpは不要">誤解3：DHCPがあればARPは不要</h3>
+<p>DHCPでIPアドレスを取得しても、LAN内で実際に通信を届けるにはMACアドレスが必要です。</p>
+
+<p>そのため、DHCPで設定を受け取ったあとでも、通信時にはARPが使われます。</p>
+
+<hr />
+
+<h3 id="誤解4arpとdhcpはどちらもセキュリティ対策の仕組み">誤解4：ARPとDHCPはどちらもセキュリティ対策の仕組み</h3>
+<p>ARPとDHCPは、どちらも本来はネットワークを動かすための基本的な仕組みです。</p>
+
+<p>セキュリティ対策そのものではありません。</p>
+
+<p>ただし、悪用されるとARPスプーフィングや不正DHCPサーバのような攻撃につながるため、管理・監視が重要になります。</p>
+
+<hr />
+
+<h2 id="sg試験での判断ポイント">SG試験での判断ポイント</h2>
+<p>SG試験では、問題文のキーワードを見ればかなり切り分けられます。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>キーワード</th>
+      <th>判断する用語</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>IPアドレスを自動割当て</td>
+      <td>DHCP</td>
+    </tr>
+    <tr>
+      <td>ネットワーク設定を自動配布</td>
+      <td>DHCP</td>
+    </tr>
+    <tr>
+      <td>デフォルトゲートウェイやDNSサーバを配る</td>
+      <td>DHCP</td>
+    </tr>
+    <tr>
+      <td>IPアドレスからMACアドレスを取得</td>
+      <td>ARP</td>
+    </tr>
+    <tr>
+      <td>ARPテーブル</td>
+      <td>ARP</td>
+    </tr>
+    <tr>
+      <td>偽のARP応答</td>
+      <td>ARPスプーフィング</td>
+    </tr>
+    <tr>
+      <td>不正なDHCPサーバ</td>
+      <td>DHCP関連の攻撃</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>特に、次の2つを混同しないようにしましょう。</p>
+
+<ul>
+  <li><strong>DHCP</strong>：端末にIPアドレスなどを配る</li>
+  <li><strong>ARP</strong>：通信先のMACアドレスを調べる</li>
+</ul>
+
+<hr />
+
+<h2 id="確認問題">確認問題</h2>
+<p>PCを社内LANに接続したところ、IPアドレス、サブネットマスク、デフォルトゲートウェイ、DNSサーバの情報が自動的に設定された。その後、PCはLAN内で通信するために、通信先IPアドレスに対応するMACアドレスを調べた。この2つの処理で使われる仕組みの組合せとして、最も適切なものはどれか。</p>
+
+<ul>
+  <li>ア　DHCP、ARP</li>
+  <li>イ　ARP、DHCP</li>
+  <li>ウ　DNS、DHCP</li>
+  <li>エ　SMTP、ARP</li>
+</ul>
+
+<details>
+<summary>回答と解説</summary>
+
+正解は、**ア　DHCP、ARP**です。
+
+IPアドレス、サブネットマスク、デフォルトゲートウェイ、DNSサーバなどの設定情報を自動で配布する仕組みはDHCPです。
+
+IPアドレスからMACアドレスを調べる仕組みはARPです。
+
+この問題では、
+
+- IPアドレスなどを自動設定：DHCP
+- IPアドレスからMACアドレスを取得：ARP
+
+という対応関係が決め手になります。
+
+</details>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+<p>ARPとDHCPは、どちらもネットワーク接続で使われる基本的な仕組みですが、役割が違います。</p>
+
+<p>試験直前には、次の3点で整理しましょう。</p>
+
+<ul>
+  <li><strong>IPアドレスを配るならDHCP</strong></li>
+  <li><strong>IPからMACを調べるならARP</strong></li>
+  <li><strong>DHCPで設定を受け取ったあと、通信時にARPが使われる</strong></li>
+</ul>
+
+<p>問題文で「自動割当て」「設定情報の配布」が出てきたらDHCP、「MACアドレス」「ARPテーブル」が出てきたらARPを考えると、選択肢を切りやすくなります。</p>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-model/">アクセス制御モデルとは？RBAC・ABAC・DAC・MACの違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-physical/">入退室管理とは？物理アクセス制御の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control/">アクセス管理とは？特権IDとneed-to-knowで権限を適切に制御【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-rights-management/">アクセス権限管理とは？付与・変更・削除の流れを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/administrator-privileges/">管理者権限とは？特権的アクセス権との違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/arp-vs-dns/">← ARPとDNSの違いとは？名前解決とMACアドレス解決を整理【SG試験】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/arp-spoofing/">ARPスプーフィングとは？偽の対応表で通信をだます攻撃【SG試験】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

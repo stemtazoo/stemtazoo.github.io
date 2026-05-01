@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>CAPTCHAとは？ボット対策の仕組みをやさしく理解【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="CAPTCHAとは？ボット対策の仕組みをやさしく理解【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="CAPTCHAの出題意図に合わせ、人間判定の仕組み・bot対策の限界・認証との役割差を具体例で整理し、SG試験・情報セキュリティマネジメント試験で混同しやすい選択肢を切り分ける力が身につきます。" />
+<meta property="og:description" content="CAPTCHAの出題意図に合わせ、人間判定の仕組み・bot対策の限界・認証との役割差を具体例で整理し、SG試験・情報セキュリティマネジメント試験で混同しやすい選択肢を切り分ける力が身につきます。" />
+<link rel="canonical" href="http://localhost:4000/sg/captcha/" />
+<meta property="og:url" content="http://localhost:4000/sg/captcha/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="CAPTCHAとは？ボット対策の仕組みをやさしく理解【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"CAPTCHAの出題意図に合わせ、人間判定の仕組み・bot対策の限界・認証との役割差を具体例で整理し、SG試験・情報セキュリティマネジメント試験で混同しやすい選択肢を切り分ける力が身につきます。","headline":"CAPTCHAとは？ボット対策の仕組みをやさしく理解【SG試験】","url":"http://localhost:4000/sg/captcha/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">CAPTCHAとは？ボット対策の仕組みをやさしく理解【SG試験】</h1>
+      <h2 class="project-tagline">CAPTCHAの出題意図に合わせ、人間判定の仕組み・bot対策の限界・認証との役割差を具体例で整理し、SG試験・情報セキュリティマネジメント試験で混同しやすい選択肢を切り分ける力が身につきます。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">CAPTCHAの出題意図に合わせ、人間判定の仕組み・bot対策の限界・認証との役割差を具体例で整理し、SG試験・情報セキュリティマネジメント試験で混同しやすい選択肢を切り分ける力が身につきます。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-measures</span>
+        
+          <span class="post-tag">unauthorized_access</span>
+        
+          <span class="post-tag">access_control</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+<p>CAPTCHAは、アクセスしている相手が人間かプログラム（ボット）かを判別する仕組みです。<br />
+SG試験では「本人確認ではなくボット対策」である点を見極める問題がよく出ます。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>「人にしかできない問題を出すチェック」です。</p>
+
+<p>例えば：</p>
+<ul>
+  <li>ゆがんだ文字を読む</li>
+  <li>画像から信号機を選ぶ</li>
+  <li>「私はロボットではありません」にチェック</li>
+</ul>
+
+<p>👉 人間ならできるが、プログラムには難しい</p>
+
+<p>つまり、
+<strong>「ログインの前に人間かどうかをチェックする関門」</strong>です。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>CAPTCHA（キャプチャ）は、ボットによる自動操作を防ぐために、人間とプログラムを区別する仕組みです。</p>
+
+<h3 id="基本の流れ">基本の流れ</h3>
+<ol>
+  <li>ユーザがアクセス・入力を行う</li>
+  <li>システムがCAPTCHAを表示</li>
+  <li>ユーザが問題を解く</li>
+  <li>正しければ処理を許可</li>
+</ol>
+
+<h3 id="主な種類">主な種類</h3>
+<ul>
+  <li>文字認識型（ゆがんだ文字）</li>
+  <li>画像選択型（信号機・横断歩道など）</li>
+  <li>チェックボックス型（reCAPTCHA）</li>
+</ul>
+
+<p>👉 最近は操作履歴から自動判定するタイプもある</p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+
+<h3 id="よくある利用例">よくある利用例</h3>
+<ul>
+  <li>ログイン画面（ブルートフォース攻撃対策）</li>
+  <li>会員登録（スパム防止）</li>
+  <li>問い合わせフォーム（自動送信防止）</li>
+</ul>
+
+<hr />
+
+<h3 id="使うべき場面">使うべき場面</h3>
+<ul>
+  <li>自動化された大量アクセスを防ぎたい</li>
+  <li>ボットによる不正操作を防ぎたい</li>
+</ul>
+
+<hr />
+
+<h3 id="注意が必要な場面">注意が必要な場面</h3>
+<ul>
+  <li>本人確認が必要な場面<br />
+→ CAPTCHAだけでは不十分（認証とは別物）</li>
+</ul>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="-誤解1認証方式の一種">❌ 誤解1：認証方式の一種</h3>
+<p>→ <strong>違う</strong></p>
+
+<ul>
+  <li>CAPTCHA：人間かどうかの判定</li>
+  <li>認証：本人確認（ID・パスワードなど）</li>
+</ul>
+
+<p>👉 目的が違う</p>
+
+<hr />
+
+<h3 id="-誤解2セキュリティを完全に守る">❌ 誤解2：セキュリティを完全に守る</h3>
+<p>→ <strong>違う</strong></p>
+
+<ul>
+  <li>ボット対策には有効</li>
+  <li>なりすまし対策には不十分</li>
+</ul>
+
+<p>👉 多要素認証などと組み合わせる必要あり</p>
+
+<hr />
+
+<h3 id="-誤解3ユーザ認証を強化する仕組み">❌ 誤解3：ユーザ認証を強化する仕組み</h3>
+<p>→ <strong>違う</strong></p>
+
+<ul>
+  <li>CAPTCHAは「前段のフィルター」</li>
+  <li>認証そのものではない</li>
+</ul>
+
+<hr />
+
+<h3 id="sg試験のひっかけパターン">SG試験のひっかけパターン</h3>
+<ul>
+  <li>「本人確認を行う仕組み」→ ❌</li>
+  <li>「ボットによる不正アクセス防止」→ ⭕</li>
+  <li>「認証強化の方法」→ ❌</li>
+  <li>「入力制限や自動化対策」→ ⭕</li>
+</ul>
+
+<hr />
+
+<h2 id="確認問題sg試験対策">確認問題（SG試験対策）</h2>
+
+<p>次のうち、最も適切なものはどれか。</p>
+
+<p>A. CAPTCHAは、利用者が本人であることを確認する認証方式であり、なりすまし防止の中心対策である。<br />
+B. CAPTCHAは、アクセス元が人間かボットかを判別し、自動化された不正試行を抑えるための仕組みである。<br />
+C. CAPTCHAは、通信内容を暗号化して盗聴を防ぐための技術である。<br />
+D. CAPTCHAは、マルウェア感染端末を検知して自動隔離するための仕組みである。</p>
+
+<details>
+  <summary>答えと解説を見る</summary>
+
+  <p><strong>正解：B</strong></p>
+
+  <h3 id="section">解説</h3>
+  <ul>
+    <li>A：誤り。CAPTCHAは本人確認（認証）ではなく、人間か自動化プログラムかの判別が目的です。</li>
+    <li>B：正しい。ボットによる自動登録・自動ログイン試行などの抑止に有効です。</li>
+    <li>C：誤り。通信暗号化はTLSなどの役割で、CAPTCHAの機能ではありません。</li>
+    <li>D：誤り。端末隔離はEDR等の領域であり、CAPTCHAの説明とは異なります。</li>
+  </ul>
+
+  <p>👉 判断ポイント<br />
+「本人確認」ではなく「自動化された試行を抑える前段対策」として捉える。</p>
+
+</details>
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+<ul>
+  <li>CAPTCHA＝人間かボットかを判別</li>
+  <li>認証ではなく「前段の対策」</li>
+  <li>ボットによる自動攻撃を防ぐ</li>
+  <li>なりすまし対策にはならない</li>
+  <li>「本人確認かボット対策か」で選択肢を切る</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-model/">アクセス制御モデルとは？RBAC・ABAC・DAC・MACの違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-physical/">入退室管理とは？物理アクセス制御の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control/">アクセス管理とは？特権IDとneed-to-knowで権限を適切に制御【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-rights-management/">アクセス権限管理とは？付与・変更・削除の流れを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/administrator-privileges/">管理者権限とは？特権的アクセス権との違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/ips/">← IPSとは？不正侵入を検知して遮断する仕組み【SG試験】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/authentication-authorization-access-control/">認証・認可・アクセス制御の違いとは？役割の切り分けを整理【SG試験】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

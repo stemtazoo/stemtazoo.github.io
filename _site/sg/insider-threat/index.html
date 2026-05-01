@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>内部不正とは？不正のトライアングルで原因と対策を理解【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="内部不正とは？不正のトライアングルで原因と対策を理解【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="内部不正は組織内部の人によって行われる不正行為です。不正のトライアングル（動機・機会・正当化）を軸に、SG試験・情報セキュリティマネジメント試験で問われる原因分析と対策の考え方を整理します。" />
+<meta property="og:description" content="内部不正は組織内部の人によって行われる不正行為です。不正のトライアングル（動機・機会・正当化）を軸に、SG試験・情報セキュリティマネジメント試験で問われる原因分析と対策の考え方を整理します。" />
+<link rel="canonical" href="http://localhost:4000/sg/insider-threat/" />
+<meta property="og:url" content="http://localhost:4000/sg/insider-threat/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="内部不正とは？不正のトライアングルで原因と対策を理解【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"内部不正は組織内部の人によって行われる不正行為です。不正のトライアングル（動機・機会・正当化）を軸に、SG試験・情報セキュリティマネジメント試験で問われる原因分析と対策の考え方を整理します。","headline":"内部不正とは？不正のトライアングルで原因と対策を理解【SG試験】","url":"http://localhost:4000/sg/insider-threat/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">内部不正とは？不正のトライアングルで原因と対策を理解【SG試験】</h1>
+      <h2 class="project-tagline">内部不正は組織内部の人によって行われる不正行為です。不正のトライアングル（動機・機会・正当化）を軸に、SG試験・情報セキュリティマネジメント試験で問われる原因分析と対策の考え方を整理します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">内部不正は組織内部の人によって行われる不正行為です。不正のトライアングル（動機・機会・正当化）を軸に、SG試験・情報セキュリティマネジメント試験で問われる原因分析と対策の考え方を整理します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-management</span>
+        
+          <span class="post-tag">it_security_operations</span>
+        
+          <span class="post-tag">security_training</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+<p>内部不正とは、組織内部の人が権限を悪用して行う不正行為であり、SG試験では「なぜ起きるか（動機・機会・正当化）」と「どう防ぐか」を判断させる問題が多いです。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>社内の人は「中にいる」ので、もともとシステムや情報にアクセスできます。</p>
+
+<p>たとえば、</p>
+<ul>
+  <li>経理担当が自分の都合でデータを書き換える</li>
+  <li>退職予定の社員が顧客情報を持ち出す</li>
+</ul>
+
+<p>外部攻撃よりも防ぎにくいのは、「信頼されている人がやる」からです。</p>
+
+<p>👉 つまり<br />
+<strong>内部不正は「人の問題」と「仕組みの問題」が重なって起きる</strong>と考えると理解しやすいです。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>内部不正は、主に「不正のトライアングル」で説明されます。</p>
+
+<h3 id="-不正のトライアングル">■ 不正のトライアングル</h3>
+<ul>
+  <li>
+    <p>動機（Motivation）<br />
+→ お金に困っている、不満がある など</p>
+  </li>
+  <li>
+    <p>機会（Opportunity）<br />
+→ 1人で処理できる、チェックが甘い</p>
+  </li>
+  <li>
+    <p>正当化（Rationalization）<br />
+→ 「これくらい問題ない」と思い込む</p>
+  </li>
+</ul>
+
+<p>👉 この3つが揃うと、不正が起きやすくなります。</p>
+
+<hr />
+
+<h3 id="-対策の基本状況的犯罪予防">■ 対策の基本（状況的犯罪予防）</h3>
+<p>対策は「人を信じる」ではなく、<strong>仕組みで防ぐ</strong>ことが重要です。</p>
+
+<ul>
+  <li>
+    <p>機会を減らす<br />
+→ 権限分離、アクセス制御</p>
+  </li>
+  <li>
+    <p>発覚しやすくする<br />
+→ ログ管理、監査</p>
+  </li>
+  <li>
+    <p>抑止力を高める<br />
+→ 教育・規程整備（内部不正防止ガイドライン）</p>
+  </li>
+</ul>
+
+<p>👉 SG試験では<br />
+<strong>「どの要素（動機・機会・正当化）に効く対策か」を判断できるかが重要です。</strong></p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="-使う場面">■ 使う場面</h3>
+<ul>
+  <li>内部不正の原因分析</li>
+  <li>再発防止策の検討</li>
+  <li>監査やリスク評価</li>
+</ul>
+
+<p>👉 特にケース問題で<br />
+「なぜこの不正が起きたか」を問われる場面で使います。</p>
+
+<hr />
+
+<h3 id="-使うと誤解しやすい場面">■ 使うと誤解しやすい場面</h3>
+<ul>
+  <li>
+    <p>外部攻撃と混同する<br />
+→ 内部不正は「内部の人」が前提</p>
+  </li>
+  <li>
+    <p>技術対策だけで防げると思う<br />
+→ 人の心理（動機・正当化）も重要</p>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+<h3 id="-アクセス権を制限すれば防げる">❌ 「アクセス権を制限すれば防げる」</h3>
+<p>→ ⭕ 機会は減らせるが、動機や正当化は残る</p>
+
+<hr />
+
+<h3 id="-ログを取れば防げる">❌ 「ログを取れば防げる」</h3>
+<p>→ ⭕ 事後検知はできるが、予防にはならない</p>
+
+<hr />
+
+<h3 id="-内部不正悪意のある攻撃者">❌ 「内部不正＝悪意のある攻撃者」</h3>
+<p>→ ⭕ 不満やミスから発生するケースも多い</p>
+
+<hr />
+
+<h3 id="-sg試験でのひっかけ">■ SG試験でのひっかけ</h3>
+<ul>
+  <li>「対策の対象」がズレている選択肢
+    <ul>
+      <li>機会の問題なのに教育を強化している</li>
+      <li>動機の問題なのにアクセス制御だけしている</li>
+    </ul>
+  </li>
+</ul>
+
+<p>👉<br />
+<strong>どの要素に効く対策か？を基準に選択肢を切るのがポイントです。</strong></p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+<ul>
+  <li>内部不正は「内部の人による不正」</li>
+  <li>原因は「動機・機会・正当化」の3つ</li>
+  <li>対策は「仕組みで防ぐ」が基本</li>
+  <li>SGでは「原因と対策の対応関係」を問われる</li>
+  <li>選択肢は「どの要素に効くか」で判断する</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-physical/">入退室管理とは？物理アクセス制御の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control/">アクセス管理とは？特権IDとneed-to-knowで権限を適切に制御【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-rights-management/">アクセス権限管理とは？付与・変更・削除の流れを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/administrator-privileges/">管理者権限とは？特権的アクセス権との違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/anti-passback/">アンチパスバックとは？不正な入退室を防ぐ仕組み【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/security-training/">← 情報セキュリティ教育・訓練とは？人的対策の基本を整理【SG試験】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/insider-guideline/">内部不正防止ガイドラインとは？組織での対策の考え方を整理【SG試験】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

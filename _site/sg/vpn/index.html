@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>VPNとは？安全な通信を実現する仕組み【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="VPNとは？安全な通信を実現する仕組み【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="VPNはインターネット上に仮想的な専用回線を作り、安全に通信する仕組みです。暗号化の役割や利用場面、専用線との違いをSG試験・情報セキュリティマネジメント試験の判断ポイントとともに整理します。" />
+<meta property="og:description" content="VPNはインターネット上に仮想的な専用回線を作り、安全に通信する仕組みです。暗号化の役割や利用場面、専用線との違いをSG試験・情報セキュリティマネジメント試験の判断ポイントとともに整理します。" />
+<link rel="canonical" href="http://localhost:4000/sg/vpn/" />
+<meta property="og:url" content="http://localhost:4000/sg/vpn/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="VPNとは？安全な通信を実現する仕組み【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"VPNはインターネット上に仮想的な専用回線を作り、安全に通信する仕組みです。暗号化の役割や利用場面、専用線との違いをSG試験・情報セキュリティマネジメント試験の判断ポイントとともに整理します。","headline":"VPNとは？安全な通信を実現する仕組み【SG試験】","url":"http://localhost:4000/sg/vpn/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">VPNとは？安全な通信を実現する仕組み【SG試験】</h1>
+      <h2 class="project-tagline">VPNはインターネット上に仮想的な専用回線を作り、安全に通信する仕組みです。暗号化の役割や利用場面、専用線との違いをSG試験・情報セキュリティマネジメント試験の判断ポイントとともに整理します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">VPNはインターネット上に仮想的な専用回線を作り、安全に通信する仕組みです。暗号化の役割や利用場面、専用線との違いをSG試験・情報セキュリティマネジメント試験の判断ポイントとともに整理します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-technology</span>
+        
+          <span class="post-tag">network</span>
+        
+          <span class="post-tag">unauthorized_access</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+<ul>
+  <li>VPNとは、インターネット上に仮想的な専用回線を構築し、安全に通信できるようにする仕組みであり、SG試験では「安全性の確保方法」を問われる。</li>
+</ul>
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<ul>
+  <li>公共の道路（インターネット）の中に、「自分だけのトンネル」を作るイメージです。</li>
+  <li>外からは見えないトンネルを通ることで、安全にデータをやり取りできます。</li>
+</ul>
+
+<p>例えば：</p>
+<ul>
+  <li>自宅から会社のネットワークに接続する</li>
+  <li>外出先から社内システムにアクセスする</li>
+</ul>
+
+<p>といった場面で使われます。</p>
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>VPN（Virtual Private Network）は、インターネット上に仮想的な専用回線を構築し、安全な通信を実現する技術です。</p>
+
+<h3 id="主な仕組み">主な仕組み</h3>
+<p>VPNは主に以下で安全性を確保します：</p>
+
+<ul>
+  <li>
+    <p>暗号化<br />
+→ 通信内容を第三者に読まれないようにする</p>
+  </li>
+  <li>
+    <p>トンネリング<br />
+→ データをカプセル化して送る</p>
+  </li>
+  <li>
+    <p>認証<br />
+→ 正しい相手だけ接続できるようにする</p>
+  </li>
+</ul>
+
+<h3 id="種類sg試験でよく出る">種類（SG試験でよく出る）</h3>
+<ul>
+  <li>
+    <p>リモートアクセスVPN<br />
+→ 個人PCなどから社内ネットワークへ接続</p>
+  </li>
+  <li>
+    <p>拠点間VPN（サイト間VPN）<br />
+→ 支店と本社などをネットワークで接続</p>
+  </li>
+</ul>
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="使うべき場面">使うべき場面</h3>
+<ul>
+  <li>テレワークで社内ネットワークに安全に接続する</li>
+  <li>拠点間を安全に接続する</li>
+  <li>公衆回線（インターネット）を使いつつ安全性を確保したい場合</li>
+</ul>
+
+<h3 id="使うと誤解しやすい場面">使うと誤解しやすい場面</h3>
+<ul>
+  <li>完全に安全だと考える場合</li>
+</ul>
+
+<p>理由：</p>
+<ul>
+  <li>設定ミスや認証の弱さがあると不正アクセスのリスクがある</li>
+  <li>VPN自体は「安全な通信経路」であって、内部のセキュリティは別問題</li>
+</ul>
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+<h3 id="-よくある誤解">❌ よくある誤解</h3>
+<ul>
+  <li>VPNは専用線と同じ</li>
+  <li>VPNを使えばすべてのセキュリティ問題が解決する</li>
+</ul>
+
+<h3 id="-正しい理解">⭕ 正しい理解</h3>
+<ul>
+  <li>VPNは「インターネットを使った仮想専用線」</li>
+  <li>専用線は物理的に分離された回線（より高コスト）</li>
+</ul>
+
+<h3 id="sg試験でのひっかけポイント">SG試験でのひっかけポイント</h3>
+<ul>
+  <li>
+    <p>「インターネットを使わない専用回線」<br />
+→ 専用線（VPNではない）</p>
+  </li>
+  <li>
+    <p>「暗号化された通信で安全に接続」<br />
+→ VPN</p>
+  </li>
+  <li>
+    <p>「通信の内容を制御する」<br />
+→ ファイアーウォール</p>
+  </li>
+</ul>
+
+<p>SG試験では<br />
+「通信経路を安全にする技術か」<br />
+を見極めることが重要です。</p>
+
+<h2 id="確認問題sg試験対策">確認問題（SG試験対策）</h2>
+
+<p>次のうち、最も適切なものはどれか。</p>
+
+<p>A. VPNは、インターネット上で暗号化や認証を用いて安全な通信路を作る仕組みである。<br />
+B. VPNは、公開Webサーバを社内ネットワークから分離配置するための中間領域である。<br />
+C. VPNは、不正通信を検知すると自動遮断まで行う侵入防止装置である。<br />
+D. VPNは、利用者認証を省略して接続を簡略化するための技術である。</p>
+
+<details>
+  <summary>答えと解説を見る</summary>
+
+  <p><strong>正解：A</strong></p>
+
+  <h3 id="section">解説</h3>
+  <ul>
+    <li>A：正しい。VPNは暗号化・トンネリング・認証によって安全な通信を実現します。</li>
+    <li>B：誤り。これはDMZの説明で、VPNの説明ではありません。</li>
+    <li>C：誤り。これはIPSに近い説明で、VPNの主目的（通信経路の安全化）とは異なります。</li>
+    <li>D：誤り。VPNでも認証は重要であり、省略する技術ではありません。</li>
+  </ul>
+
+  <p>👉 判断ポイント<br />
+「通信経路を安全化する技術か、別目的の対策か」で切り分ける。</p>
+
+</details>
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+<ul>
+  <li>VPN＝インターネット上の仮想専用回線</li>
+  <li>暗号化・トンネリング・認証で安全性を確保</li>
+  <li>テレワークや拠点間接続で利用</li>
+  <li>専用線との違いに注意（物理か仮想か）</li>
+  <li>「通信経路の安全化」がキーワード</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/blacklist-whitelist/">ブラックリストとホワイトリストの違いとは？判断基準を整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/bot/">ボットとは？遠隔操作される仕組みを理解する【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/botnet/">ボットネットとは？踏み台化とDDoSの関係を理解する【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/brute-force-attack/">ブルートフォース攻撃とは？総当たり攻撃の仕組みと対策【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/captcha/">CAPTCHAとは？ボット対策の仕組みをやさしく理解【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/dmz/">← DMZとは？外部公開サーバを安全に配置する仕組み【SG試験】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/ips/">IPSとは？不正侵入を検知して遮断する仕組み【SG試験】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

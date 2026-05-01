@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>JVNとは？脆弱性情報の見方とJVN iPediaとの違い【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="JVNとは？脆弱性情報の見方とJVN iPediaとの違い【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="JVNは脆弱性対策情報を提供するポータルサイトです。JVN iPediaとの違いやIPA・JPCERT/CCとの関係を整理し、SG試験・情報セキュリティマネジメント試験での判断ポイントを解説します。" />
+<meta property="og:description" content="JVNは脆弱性対策情報を提供するポータルサイトです。JVN iPediaとの違いやIPA・JPCERT/CCとの関係を整理し、SG試験・情報セキュリティマネジメント試験での判断ポイントを解説します。" />
+<link rel="canonical" href="http://localhost:4000/sg/jvn/" />
+<meta property="og:url" content="http://localhost:4000/sg/jvn/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="JVNとは？脆弱性情報の見方とJVN iPediaとの違い【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"JVNは脆弱性対策情報を提供するポータルサイトです。JVN iPediaとの違いやIPA・JPCERT/CCとの関係を整理し、SG試験・情報セキュリティマネジメント試験での判断ポイントを解説します。","headline":"JVNとは？脆弱性情報の見方とJVN iPediaとの違い【SG試験】","url":"http://localhost:4000/sg/jvn/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">JVNとは？脆弱性情報の見方とJVN iPediaとの違い【SG試験】</h1>
+      <h2 class="project-tagline">JVNは脆弱性対策情報を提供するポータルサイトです。JVN iPediaとの違いやIPA・JPCERT/CCとの関係を整理し、SG試験・情報セキュリティマネジメント試験での判断ポイントを解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">JVNは脆弱性対策情報を提供するポータルサイトです。JVN iPediaとの違いやIPA・JPCERT/CCとの関係を整理し、SG試験・情報セキュリティマネジメント試験での判断ポイントを解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-management</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+<ul>
+  <li><strong>JVNは、脆弱性に関する対策情報を提供するポータルサイトである。</strong></li>
+  <li><strong>JVN iPediaは、そのデータベース版である。</strong></li>
+  <li>SG試験では「サイトかデータベースか」で切る。</li>
+</ul>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+
+<p>脆弱性情報は、バラバラに公開されると使いにくいです。</p>
+
+<p>そこで、それらをまとめて見られるようにしたのがJVNです。</p>
+
+<p>👉 イメージ</p>
+
+<ul>
+  <li>JVN：ニュースサイト</li>
+  <li>JVN iPedia：検索できるデータベース</li>
+</ul>
+
+<p>👉 <strong>「見る場所」と「調べる場所」</strong></p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+
+<blockquote>
+  <p>公式: JVN 脆弱性対策情報データベース：<a href="https://jvndb.jvn.jp/">公式: JVN 脆弱性対策情報データベース</a></p>
+</blockquote>
+
+<p>JVN（Japan Vulnerability Notes）は、</p>
+
+<ul>
+  <li>脆弱性に関する
+    <ul>
+      <li>対策情報</li>
+      <li>注意喚起<br />
+を提供するポータルサイトです。</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h3 id="運営主体重要">運営主体（重要）</h3>
+<ul>
+  <li>IPA（情報処理推進機構）</li>
+  <li>JPCERT/CC</li>
+</ul>
+
+<p>👉 <strong>共同で運営している</strong></p>
+
+<hr />
+
+<h3 id="提供内容">提供内容</h3>
+<ul>
+  <li>脆弱性情報の公開</li>
+  <li>対策情報の提示</li>
+  <li>注意喚起</li>
+</ul>
+
+<hr />
+
+<h2 id="jvn-ipediaとの違い最重要">JVN iPediaとの違い（最重要）</h2>
+
+<h3 id="jvn">JVN</h3>
+<ul>
+  <li>最新情報を掲載</li>
+  <li>ニュース的な役割</li>
+</ul>
+
+<hr />
+
+<h3 id="jvn-ipedia">JVN iPedia</h3>
+<ul>
+  <li>脆弱性情報のデータベース</li>
+  <li>検索・蓄積ができる</li>
+</ul>
+
+<hr />
+
+<h3 id="一発で切るポイント">一発で切るポイント</h3>
+
+<p>👉 <strong>「検索する」→ JVN iPedia</strong><br />
+👉 <strong>「情報を見る」→ JVN</strong></p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+
+<h3 id="正しい使い方">正しい使い方</h3>
+<ul>
+  <li>最新の脆弱性を確認 → JVN</li>
+  <li>過去の情報を調べる → JVN iPedia</li>
+</ul>
+
+<hr />
+
+<h3 id="よくある誤解">よくある誤解</h3>
+<ul>
+  <li>❌ JVNが検査を行う</li>
+  <li>❌ JVNが脆弱性を修正する</li>
+</ul>
+
+<p>👉 <strong>情報提供だけ</strong></p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="-ipaとの違い">① IPAとの違い</h3>
+<ul>
+  <li>IPA：支援・啓発を行う組織</li>
+  <li>JVN：情報を提供するサイト</li>
+</ul>
+
+<p>👉 <strong>組織 vs サイト</strong></p>
+
+<hr />
+
+<h3 id="-jpcertccとの違い">② JPCERT/CCとの違い</h3>
+<ul>
+  <li>JPCERT/CC：インシデント対応の調整</li>
+  <li>JVN：脆弱性情報の公開</li>
+</ul>
+
+<p>👉 <strong>対応か情報か</strong></p>
+
+<hr />
+
+<h3 id="-cvssとの違い">③ CVSSとの違い</h3>
+<ul>
+  <li>CVSS：評価指標</li>
+  <li>JVN：情報源</li>
+</ul>
+
+<p>👉 <strong>評価か情報か</strong></p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>JVN＝<strong>脆弱性情報のポータルサイト</strong></li>
+  <li>JVN iPedia＝<strong>データベース</strong></li>
+  <li>IPAとJPCERT/CCが運営</li>
+</ul>
+
+<hr />
+
+<h3 id="切り分けルール">切り分けルール</h3>
+
+<ul>
+  <li>「情報を見る」→ JVN</li>
+  <li>「検索する」→ JVN iPedia</li>
+  <li>「評価する」→ CVSS</li>
+</ul>
+
+<p>👉 <strong>「サイトかDBか」で切る</strong></p>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-rights-management/">アクセス権限管理とは？付与・変更・削除の流れを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/administrator-privileges/">管理者権限とは？特権的アクセス権との違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/asset-register/">情報資産台帳とは？リスク管理の出発点を整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/audit-log/">監査ログとは？不正検知と追跡の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/case-solving-template/">SG試験 ケース問題の解き方テンプレ【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/vulnerability-overview/">← 脆弱性情報とは？収集・評価・対策の全体像を整理【SG試験】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/cvss/">CVSSとは？脆弱性の深刻度を共通スコアで判断する【SG試験】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

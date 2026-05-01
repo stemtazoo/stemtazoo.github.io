@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>アクセス制御モデルとは？RBAC・ABAC・DAC・MACの違いを整理【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="アクセス制御モデルとは？RBAC・ABAC・DAC・MACの違いを整理【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="アクセス制御モデルは権限をどのように管理するかの方式です。RBACやABACなどの違いを整理し、SG試験・情報セキュリティマネジメント試験で問われるアクセス管理の判断ポイントを分かりやすく解説します。" />
+<meta property="og:description" content="アクセス制御モデルは権限をどのように管理するかの方式です。RBACやABACなどの違いを整理し、SG試験・情報セキュリティマネジメント試験で問われるアクセス管理の判断ポイントを分かりやすく解説します。" />
+<link rel="canonical" href="http://localhost:4000/sg/access-control-model/" />
+<meta property="og:url" content="http://localhost:4000/sg/access-control-model/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="アクセス制御モデルとは？RBAC・ABAC・DAC・MACの違いを整理【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"アクセス制御モデルは権限をどのように管理するかの方式です。RBACやABACなどの違いを整理し、SG試験・情報セキュリティマネジメント試験で問われるアクセス管理の判断ポイントを分かりやすく解説します。","headline":"アクセス制御モデルとは？RBAC・ABAC・DAC・MACの違いを整理【SG試験】","url":"http://localhost:4000/sg/access-control-model/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">アクセス制御モデルとは？RBAC・ABAC・DAC・MACの違いを整理【SG試験】</h1>
+      <h2 class="project-tagline">アクセス制御モデルは権限をどのように管理するかの方式です。RBACやABACなどの違いを整理し、SG試験・情報セキュリティマネジメント試験で問われるアクセス管理の判断ポイントを分かりやすく解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">アクセス制御モデルは権限をどのように管理するかの方式です。RBACやABACなどの違いを整理し、SG試験・情報セキュリティマネジメント試験で問われるアクセス管理の判断ポイントを分かりやすく解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-measures</span>
+        
+          <span class="post-tag">access_control</span>
+        
+          <span class="post-tag">system_architecture</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+<p>アクセス制御モデルとは、誰にどの権限を与えるかを決める方式であり、SG試験では「どの考え方で権限を管理しているか」を見抜くことが重要です。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>アクセス管理では、「誰に何をさせるか」を決めますが、やり方はいくつかあります。</p>
+
+<p>たとえば👇</p>
+
+<ul>
+  <li>人ごとに設定する</li>
+  <li>役職ごとにまとめて設定する</li>
+  <li>条件によって変える</li>
+</ul>
+
+<p>👉<br />
+この「決め方のルール」がアクセス制御モデルです。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>アクセス制御モデルは、アクセス権限の割り当て方法を体系化したものです。</p>
+
+<p>代表的なモデルは次の4つです。</p>
+
+<hr />
+
+<h3 id="-dac任意アクセス制御">■ DAC（任意アクセス制御）</h3>
+<ul>
+  <li>所有者が自由に権限を設定する方式</li>
+</ul>
+
+<p>👉 例<br />
+ファイルの持ち主が「この人に見せる」と決める</p>
+
+<hr />
+
+<p>特徴：</p>
+<ul>
+  <li>柔軟だが管理がばらつく</li>
+  <li>権限が広がりやすい</li>
+</ul>
+
+<hr />
+
+<h3 id="-mac強制アクセス制御">■ MAC（強制アクセス制御）</h3>
+<ul>
+  <li>組織のルールに基づいて強制的に制御する方式</li>
+</ul>
+
+<p>👉 例<br />
+機密レベル（極秘・秘・公開）でアクセス制御</p>
+
+<hr />
+
+<p>特徴：</p>
+<ul>
+  <li>厳格で安全性が高い</li>
+  <li>柔軟性が低い</li>
+</ul>
+
+<hr />
+
+<h3 id="-rbac役割ベースアクセス制御">■ RBAC（役割ベースアクセス制御）</h3>
+<ul>
+  <li>役割（ロール）ごとに権限をまとめて管理する方式</li>
+</ul>
+
+<p>👉 例<br />
+「営業」「経理」などの役割ごとに権限を設定</p>
+
+<hr />
+
+<p>特徴：</p>
+<ul>
+  <li>管理しやすい</li>
+  <li>実務で最もよく使われる</li>
+</ul>
+
+<hr />
+
+<h3 id="-abac属性ベースアクセス制御">■ ABAC（属性ベースアクセス制御）</h3>
+<ul>
+  <li>利用者や状況の属性でアクセスを制御する方式</li>
+</ul>
+
+<p>👉 例<br />
+「平日・社内・上長承認あり」のときだけアクセス可能</p>
+
+<hr />
+
+<p>特徴：</p>
+<ul>
+  <li>柔軟で細かい制御が可能</li>
+  <li>設計が複雑</li>
+</ul>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="-使う場面">■ 使う場面</h3>
+<ul>
+  <li>アクセス管理の設計</li>
+  <li>システム導入時の権限設計</li>
+</ul>
+
+<hr />
+
+<p>👉 SG試験では<br />
+「どの方式が適しているか」を問われることがあります。</p>
+
+<hr />
+
+<h3 id="-使うと誤解しやすい場面">■ 使うと誤解しやすい場面</h3>
+<ul>
+  <li>
+    <p>RBACならすべて解決<br />
+→ 状況によってはABACが必要</p>
+  </li>
+  <li>
+    <p>厳しければ安全<br />
+→ 運用できなければ意味がない</p>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+<h3 id="-rbacとabacは同じ">❌ 「RBACとABACは同じ」</h3>
+<p>→ ⭕</p>
+<ul>
+  <li>RBAC → 役割ベース</li>
+  <li>ABAC → 条件ベース</li>
+</ul>
+
+<hr />
+
+<h3 id="-dacが一番安全">❌ 「DACが一番安全」</h3>
+<p>→ ⭕ 自由すぎてリスクがある</p>
+
+<hr />
+
+<h3 id="-macはどこでも使える">❌ 「MACはどこでも使える」</h3>
+<p>→ ⭕ 厳しすぎて一般業務には不向き</p>
+
+<hr />
+
+<h3 id="-sg試験でのひっかけ">■ SG試験でのひっかけ</h3>
+<ul>
+  <li>
+    <p>「役職ごとに権限を設定」<br />
+→ RBAC</p>
+  </li>
+  <li>
+    <p>「条件によってアクセスを変える」<br />
+→ ABAC</p>
+  </li>
+  <li>
+    <p>「利用者が自由に共有」<br />
+→ DAC</p>
+  </li>
+</ul>
+
+<p>👉<br />
+<strong>“何を基準に制御しているか”で判断する</strong></p>
+
+<hr />
+
+<h2 id="確認問題sg試験対策">確認問題（SG試験対策）</h2>
+
+<p>次のうち、RBAC（役割ベースアクセス制御）の説明として最も適切なものはどれか。</p>
+
+<p>A. ファイルの所有者が、利用者ごとにアクセス権を自由に設定する方式<br />
+B. 利用者の役職や担当業務などの役割ごとに、権限をまとめて割り当てる方式<br />
+C. 機密レベルなど、組織が定めたルールに従って強制的にアクセスを制御する方式<br />
+D. 利用者の属性、端末、場所、時間などの条件を組み合わせてアクセスを制御する方式</p>
+
+<details>
+  <summary>▶ クリックして答えと解説を見る（ここを開く）</summary>
+
+  <p><strong>正解：B</strong></p>
+
+  <h3 id="section">解説</h3>
+  <ul>
+    <li>A：DACの説明です。所有者が任意に権限を設定する点が特徴です。</li>
+    <li>B：正解です。RBACは「役割（ロール）」を基準に権限を管理します。</li>
+    <li>C：MACの説明です。組織のルールで強制的に制御します。</li>
+    <li>D：ABACの説明です。属性や状況などの条件を基準にします。</li>
+  </ul>
+
+  <p>👉 判断ポイント<br />
+「役職・担当・ロール」で権限をまとめるならRBACです。</p>
+
+</details>
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+<ul>
+  <li>アクセス制御モデル＝権限の決め方</li>
+  <li>RBAC（役割）・ABAC（条件）・DAC（任意）・MAC（強制）</li>
+  <li>実務はRBACが中心</li>
+  <li>SGでは「制御の基準」で見分ける</li>
+  <li>キーワードで即判断できるようにする</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-physical/">入退室管理とは？物理アクセス制御の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control/">アクセス管理とは？特権IDとneed-to-knowで権限を適切に制御【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-rights-management/">アクセス権限管理とは？付与・変更・削除の流れを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/administrator-privileges/">管理者権限とは？特権的アクセス権との違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/anti-passback/">アンチパスバックとは？不正な入退室を防ぐ仕組み【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/access-control/">← アクセス管理とは？特権IDとneed-to-knowで権限を適切に制御【SG試験】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/least-privilege/">最小権限の原則とは？権限管理の基本を理解【SG試験】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

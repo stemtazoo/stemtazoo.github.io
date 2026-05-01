@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>SOARとは？インシデント対応を自動化する仕組み【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="SOARとは？インシデント対応を自動化する仕組み【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="SOARは、セキュリティ監視で検知したアラートに対して、調査や対応手順を自動化・効率化する仕組みです。SG試験・情報セキュリティマネジメント試験で混同しやすいSIEM、SOC、CSIRTとの違いを判断基準で整理します。" />
+<meta property="og:description" content="SOARは、セキュリティ監視で検知したアラートに対して、調査や対応手順を自動化・効率化する仕組みです。SG試験・情報セキュリティマネジメント試験で混同しやすいSIEM、SOC、CSIRTとの違いを判断基準で整理します。" />
+<link rel="canonical" href="http://localhost:4000/sg/soar/" />
+<meta property="og:url" content="http://localhost:4000/sg/soar/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="SOARとは？インシデント対応を自動化する仕組み【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"SOARは、セキュリティ監視で検知したアラートに対して、調査や対応手順を自動化・効率化する仕組みです。SG試験・情報セキュリティマネジメント試験で混同しやすいSIEM、SOC、CSIRTとの違いを判断基準で整理します。","headline":"SOARとは？インシデント対応を自動化する仕組み【SG試験】","url":"http://localhost:4000/sg/soar/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">SOARとは？インシデント対応を自動化する仕組み【SG試験】</h1>
+      <h2 class="project-tagline">SOARは、セキュリティ監視で検知したアラートに対して、調査や対応手順を自動化・効率化する仕組みです。SG試験・情報セキュリティマネジメント試験で混同しやすいSIEM、SOC、CSIRTとの違いを判断基準で整理します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">SOARは、セキュリティ監視で検知したアラートに対して、調査や対応手順を自動化・効率化する仕組みです。SG試験・情報セキュリティマネジメント試験で混同しやすいSIEM、SOC、CSIRTとの違いを判断基準で整理します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-measures</span>
+        
+          <span class="post-tag">incident_response</span>
+        
+          <span class="post-tag">monitoring</span>
+        
+          <span class="post-tag">log_management</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+
+<p>SOAR（Security Orchestration, Automation and Response）は、<strong>セキュリティ監視で検知したアラートに対して、調査や対応の手順を自動化・効率化する仕組み</strong>です。</p>
+
+<p>SG試験では、SOARを <strong>「インシデント対応を自動化・標準化する仕組み」</strong> として押さえると分かりやすいです。</p>
+
+<p>ポイントは、次の3つです。</p>
+
+<ul>
+  <li>SIEMなどが検知したアラートを受け取る</li>
+  <li>決められた手順に沿って調査・対応を進める</li>
+  <li>対応の一部を自動化し、対応時間を短くする</li>
+</ul>
+
+<p>特に、SIEMとの違いが重要です。</p>
+
+<p><strong>SIEMは異常を見つける仕組み、SOARは見つけた後の対応を効率化する仕組み</strong>です。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+
+<p>SOARは、セキュリティ対応の「手順書を動かす自動実行係」のようなものです。</p>
+
+<p>たとえば、SIEMが「不審なログイン」を検知したとします。</p>
+
+<p>その後、人が毎回、次のような確認をするのは大変です。</p>
+
+<ul>
+  <li>どの利用者のアカウントか</li>
+  <li>どの端末からログインしたか</li>
+  <li>過去にも同じ動きがあったか</li>
+  <li>アカウントを一時停止するべきか</li>
+  <li>担当者へ連絡するべきか</li>
+</ul>
+
+<p>SOARを使うと、こうした確認や対応の流れを、あらかじめ決めた手順に沿って自動化できます。</p>
+
+<p>つまりSOARは、<strong>アラートが出た後の対応を、早く・漏れなく・同じ手順で進めるための仕組み</strong>です。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+
+<p>SOARは、Security Orchestration, Automation and Response の略です。</p>
+
+<p>大きく分けると、次の3つの考え方で構成されます。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>要素</th>
+      <th>内容</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Orchestration</td>
+      <td>複数のセキュリティ製品やシステムを連携させる</td>
+    </tr>
+    <tr>
+      <td>Automation</td>
+      <td>調査や通知などの作業を自動化する</td>
+    </tr>
+    <tr>
+      <td>Response</td>
+      <td>インシデント対応を手順に沿って実行する</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>SOARの主な流れは、次のように整理できます。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>流れ</th>
+      <th>内容</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>アラート受信</td>
+      <td>SIEM、EDR、IDSなどからアラートを受け取る</td>
+    </tr>
+    <tr>
+      <td>情報収集</td>
+      <td>端末情報、利用者情報、過去ログなどを集める</td>
+    </tr>
+    <tr>
+      <td>判断支援</td>
+      <td>危険度や対応優先度を整理する</td>
+    </tr>
+    <tr>
+      <td>自動対応</td>
+      <td>アカウント停止、端末隔離、通知などを実行する</td>
+    </tr>
+    <tr>
+      <td>記録</td>
+      <td>対応履歴を残し、後から確認できるようにする</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>ここで大切なのは、SOARは単独で異常を見つけるというより、<strong>検知後の対応を支援する仕組み</strong>だという点です。</p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+
+<p>SOARは、セキュリティアラートが多く、対応を効率化したい場面で使われます。</p>
+
+<h3 id="アラートが多すぎる場面">アラートが多すぎる場面</h3>
+
+<p>SOCでは、SIEMやEDRなどから大量のアラートが出ることがあります。</p>
+
+<p>すべてを人が手作業で確認すると、重要なアラートを見落とすおそれがあります。</p>
+
+<p>SOARを使うと、アラートの内容に応じて情報収集や分類を自動化し、対応の優先順位をつけやすくなります。</p>
+
+<hr />
+
+<h3 id="対応手順を標準化したい場面">対応手順を標準化したい場面</h3>
+
+<p>インシデント対応では、人によって判断や作業の流れがばらつくと、対応漏れが起きやすくなります。</p>
+
+<p>SOARでは、あらかじめ決めた対応手順に沿って処理を進めます。</p>
+
+<p>そのため、誰が対応しても一定の品質を保ちやすくなります。</p>
+
+<hr />
+
+<h3 id="初動対応を早くしたい場面">初動対応を早くしたい場面</h3>
+
+<p>不正アクセスやマルウェア感染では、初動対応の速さが重要です。</p>
+
+<p>SOARを使うと、条件に応じて次のような対応を自動化できます。</p>
+
+<ul>
+  <li>担当者へ通知する</li>
+  <li>関連ログを収集する</li>
+  <li>不審なアカウントを一時停止する</li>
+  <li>感染が疑われる端末を隔離する</li>
+  <li>チケットを作成する</li>
+</ul>
+
+<p>SOARは、被害を小さくするための初動対応を助けます。</p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="誤解1soarとsiemは同じである">誤解1：SOARとSIEMは同じである</h3>
+
+<p>SOARとSIEMは、どちらもセキュリティ運用に関係しますが、役割が違います。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>用語</th>
+      <th>見分け方</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>SIEM</td>
+      <td>ログを集約・分析し、異常を検知する</td>
+    </tr>
+    <tr>
+      <td>SOAR</td>
+      <td>検知後の調査・対応を自動化する</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>SIEMは、主に「見つける」仕組みです。</p>
+
+<p>SOARは、主に「見つけた後に動く」仕組みです。</p>
+
+<p>SG試験では、<strong>検知ならSIEM、対応自動化ならSOAR</strong>と切り分けると判断しやすくなります。</p>
+
+<hr />
+
+<h3 id="誤解2soarがあれば人は不要である">誤解2：SOARがあれば人は不要である</h3>
+
+<p>SOARは対応を自動化しますが、人の判断が不要になるわけではありません。</p>
+
+<p>特に、影響が大きい対応では、人による確認や承認が必要になることがあります。</p>
+
+<p>たとえば、アカウント停止や端末隔離は、業務への影響が出る可能性があります。</p>
+
+<p>そのためSOARは、すべてを勝手に判断する仕組みではなく、<strong>決められた範囲の作業を自動化し、人の判断を支援する仕組み</strong>として理解します。</p>
+
+<hr />
+
+<h3 id="誤解3soarは攻撃を検知するための仕組みである">誤解3：SOARは攻撃を検知するための仕組みである</h3>
+
+<p>SOARは、主に検知後の対応を扱います。</p>
+
+<p>攻撃や異常の検知は、SIEM、IDS、IPS、EDRなどが担当することが多いです。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>用語</th>
+      <th>主な役割</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>IDS</td>
+      <td>不正通信を検知する</td>
+    </tr>
+    <tr>
+      <td>IPS</td>
+      <td>不正通信を検知して遮断する</td>
+    </tr>
+    <tr>
+      <td>SIEM</td>
+      <td>ログを集約・分析して異常を検知する</td>
+    </tr>
+    <tr>
+      <td>EDR</td>
+      <td>端末上の不審な動きを検知・対応する</td>
+    </tr>
+    <tr>
+      <td>SOAR</td>
+      <td>検知後の調査・対応を自動化する</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>SOARは、検知した後の流れを効率化する点が特徴です。</p>
+
+<hr />
+
+<h3 id="誤解4soarとcsirtは同じである">誤解4：SOARとCSIRTは同じである</h3>
+
+<p>SOARは仕組み・ツールであり、CSIRTはインシデント対応を行う組織です。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>用語</th>
+      <th>見分け方</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>SOAR</td>
+      <td>対応手順を自動化・効率化する仕組み</td>
+    </tr>
+    <tr>
+      <td>CSIRT</td>
+      <td>インシデント対応を調整する組織・チーム</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>CSIRTが対応を進めるときに、SOARを使って作業を効率化することがあります。</p>
+
+<p>試験では、<strong>SOAR＝仕組み、CSIRT＝組織</strong>と切り分けると迷いにくくなります。</p>
+
+<hr />
+
+<h2 id="sg試験での判断ポイント">SG試験での判断ポイント</h2>
+
+<p>SOARが出てきたら、次の言葉に注目します。</p>
+
+<ul>
+  <li>インシデント対応の自動化</li>
+  <li>対応手順の標準化</li>
+  <li>複数ツールの連携</li>
+  <li>アラート後の調査支援</li>
+  <li>初動対応の効率化</li>
+  <li>チケット作成や通知の自動化</li>
+</ul>
+
+<p>これらがあれば、SOARの説明として判断しやすいです。</p>
+
+<p>一方で、次のような説明は別の用語の可能性があります。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>説明</th>
+      <th>関係しやすい用語</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ログを集約・分析して異常を検知する</td>
+      <td>SIEM</td>
+    </tr>
+    <tr>
+      <td>セキュリティ監視を行う組織</td>
+      <td>SOC</td>
+    </tr>
+    <tr>
+      <td>インシデント対応を調整する組織</td>
+      <td>CSIRT</td>
+    </tr>
+    <tr>
+      <td>不正通信を検知して遮断する</td>
+      <td>IPS</td>
+    </tr>
+    <tr>
+      <td>端末上の不審な動きを検知・対応する</td>
+      <td>EDR</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>SOARは、<strong>検知後の対応を自動化する</strong>という軸で判断します。</p>
+
+<hr />
+
+<h2 id="関連用語との切り分け">関連用語との切り分け</h2>
+
+<p>SOARは、SIEM、SOC、CSIRTとセットで整理すると分かりやすくなります。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>用語</th>
+      <th>見分け方</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>SIEM</td>
+      <td>ログを集約・分析して異常を検知する仕組み</td>
+    </tr>
+    <tr>
+      <td>SOC</td>
+      <td>SIEMなどを使って監視する組織</td>
+    </tr>
+    <tr>
+      <td>SOAR</td>
+      <td>アラート後の調査・対応を自動化する仕組み</td>
+    </tr>
+    <tr>
+      <td>CSIRT</td>
+      <td>インシデント対応を調整する組織</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>流れで見ると、次のようになります。</p>
+
+<ol>
+  <li><strong>SIEM</strong>がログを分析して異常を検知する</li>
+  <li><strong>SOC</strong>がアラートを監視・分析する</li>
+  <li><strong>SOAR</strong>が調査や初動対応を自動化する</li>
+  <li><strong>CSIRT</strong>が対応方針や関係者調整を行う</li>
+</ol>
+
+<p>この流れで覚えると、試験で用語を切り分けやすくなります。</p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<p>試験直前は、次の3点だけ押さえておきましょう。</p>
+
+<ul>
+  <li>SOARは、<strong>インシデント対応の調査・通知・初動対応を自動化する仕組み</strong></li>
+  <li>SIEMは、<strong>ログを分析して異常を検知する仕組み</strong></li>
+  <li>判断に迷ったら、<strong>検知ならSIEM、対応自動化ならSOAR</strong></li>
+</ul>
+
+<p>SOARは「見つける」よりも、<strong>見つけた後に動く</strong>仕組みです。</p>
+
+<p>この違いを押さえると、SIEMやSOC、CSIRTとの混同を避けやすくなります。</p>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-model/">アクセス制御モデルとは？RBAC・ABAC・DAC・MACの違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-physical/">入退室管理とは？物理アクセス制御の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control/">アクセス管理とは？特権IDとneed-to-knowで権限を適切に制御【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/anti-passback/">アンチパスバックとは？不正な入退室を防ぐ仕組み【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/auth-access-summary/">認証・アクセス制御まとめ｜SSO・MFA・ゼロトラストを体系整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

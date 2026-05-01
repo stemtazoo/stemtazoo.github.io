@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>SOC・CSIRT・JPCERT/CCの違いとは？役割と関係を図で整理【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="SOC・CSIRT・JPCERT/CCの違いとは？役割と関係を図で整理【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="SOC・CSIRT・JPCERT/CCの違いと関係を整理。監視・対応・外部連携の役割分担を理解し、SG試験・情報セキュリティマネジメント試験でのひっかけポイントを解説します。" />
+<meta property="og:description" content="SOC・CSIRT・JPCERT/CCの違いと関係を整理。監視・対応・外部連携の役割分担を理解し、SG試験・情報セキュリティマネジメント試験でのひっかけポイントを解説します。" />
+<link rel="canonical" href="http://localhost:4000/sg/soc-csirt-jpcert/" />
+<meta property="og:url" content="http://localhost:4000/sg/soc-csirt-jpcert/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="SOC・CSIRT・JPCERT/CCの違いとは？役割と関係を図で整理【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"SOC・CSIRT・JPCERT/CCの違いと関係を整理。監視・対応・外部連携の役割分担を理解し、SG試験・情報セキュリティマネジメント試験でのひっかけポイントを解説します。","headline":"SOC・CSIRT・JPCERT/CCの違いとは？役割と関係を図で整理【SG試験】","url":"http://localhost:4000/sg/soc-csirt-jpcert/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">SOC・CSIRT・JPCERT/CCの違いとは？役割と関係を図で整理【SG試験】</h1>
+      <h2 class="project-tagline">SOC・CSIRT・JPCERT/CCの違いと関係を整理。監視・対応・外部連携の役割分担を理解し、SG試験・情報セキュリティマネジメント試験でのひっかけポイントを解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">SOC・CSIRT・JPCERT/CCの違いと関係を整理。監視・対応・外部連携の役割分担を理解し、SG試験・情報セキュリティマネジメント試験でのひっかけポイントを解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-management</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+<ul>
+  <li><strong>SOC＝監視・検知</strong></li>
+  <li><strong>CSIRT＝対応・復旧</strong></li>
+  <li><strong>JPCERT/CC＝外部連携・調整</strong></li>
+</ul>
+
+<p>👉 SG試験は<br />
+<strong>「誰が何をやるか」で切る問題が中心</strong></p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+
+<p>セキュリティ対応は、1つの組織で全部やるわけではありません。</p>
+
+<p>役割ごとに分かれています👇</p>
+
+<ul>
+  <li>SOC：異常を見つける</li>
+  <li>CSIRT：実際に対応する</li>
+  <li>JPCERT/CC：外部とつなぐ</li>
+</ul>
+
+<p>👉 イメージ</p>
+
+<ul>
+  <li>SOC＝監視カメラ</li>
+  <li>CSIRT＝現場の対応班</li>
+  <li>JPCERT/CC＝警察や他組織との連絡役</li>
+</ul>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+
+<h3 id="全体の流れ超重要">全体の流れ（超重要）</h3>
+
+<ol>
+  <li>SOCが異常を検知</li>
+  <li>CSIRTが対応・調査</li>
+  <li>必要に応じてJPCERT/CCと連携</li>
+</ol>
+
+<p>👉 <strong>この流れを覚えるだけでかなり解ける</strong></p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+
+<h3 id="正しい流れ">正しい流れ</h3>
+<ul>
+  <li>SOCがアラートを検知</li>
+  <li>CSIRTが原因調査・封じ込め</li>
+  <li>外部影響があればJPCERT/CCと連携</li>
+</ul>
+
+<hr />
+
+<h3 id="間違いやすい流れ">間違いやすい流れ</h3>
+<ul>
+  <li>❌ SOCが対応までやる</li>
+  <li>❌ JPCERT/CCが現場対応する</li>
+  <li>❌ CSIRTが監視専門</li>
+</ul>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="-socとcsirtの違い">① SOCとCSIRTの違い</h3>
+<ul>
+  <li>SOC：監視・検知</li>
+  <li>CSIRT：<strong>対応・復旧</strong></li>
+</ul>
+
+<p>👉 判断基準<br />
+<strong>「実際に対処するか？」</strong></p>
+
+<hr />
+
+<h3 id="-csirtとjpcertccの違い">② CSIRTとJPCERT/CCの違い</h3>
+<ul>
+  <li>CSIRT：自社対応</li>
+  <li>JPCERT/CC：<strong>外部調整・支援</strong></li>
+</ul>
+
+<p>👉 判断基準<br />
+<strong>「自社のためか、社会全体か？」</strong></p>
+
+<hr />
+
+<h3 id="-jpcertccの役割の誤解">③ JPCERT/CCの役割の誤解</h3>
+<ul>
+  <li>❌ 現場で復旧作業する</li>
+  <li>⭕ 情報共有・調整・支援</li>
+</ul>
+
+<p>👉 <strong>直接対応しないのがポイント</strong></p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>SOC＝監視・検知</li>
+  <li>CSIRT＝対応・復旧</li>
+  <li>JPCERT/CC＝外部連携</li>
+</ul>
+
+<hr />
+
+<h3 id="切り分けルールこれだけ覚える">切り分けルール（これだけ覚える）</h3>
+
+<ul>
+  <li>「異常を見つける」→SOC</li>
+  <li>「対応・復旧する」→CSIRT</li>
+  <li>「外部と連携する」→JPCERT/CC</li>
+</ul>
+
+<p>👉 <strong>「誰が動くか」で判断する</strong></p>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-rights-management/">アクセス権限管理とは？付与・変更・削除の流れを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/administrator-privileges/">管理者権限とは？特権的アクセス権との違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/asset-register/">情報資産台帳とは？リスク管理の出発点を整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/audit-log/">監査ログとは？不正検知と追跡の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/case-solving-template/">SG試験 ケース問題の解き方テンプレ【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/security-org-practice/">← SOC・CSIRT・JPCERT/CC・NISC・IPAのひっかけ問題【SG試験】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/csrf/">クロスサイトリクエストフォージェリとは？なりすまし操作の仕組み【SG試験】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

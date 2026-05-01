@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>電子証明書とは？公開鍵の正当性を証明する仕組み【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="電子証明書とは？公開鍵の正当性を証明する仕組み【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="電子証明書は公開鍵が正しい所有者のものであることを証明する仕組みです。PKIやルート証明書との関係を整理し、SG試験・情報セキュリティマネジメント試験のひっかけポイントと判断基準を分かりやすく解説します。" />
+<meta property="og:description" content="電子証明書は公開鍵が正しい所有者のものであることを証明する仕組みです。PKIやルート証明書との関係を整理し、SG試験・情報セキュリティマネジメント試験のひっかけポイントと判断基準を分かりやすく解説します。" />
+<link rel="canonical" href="http://localhost:4000/sg/digital-certificate/" />
+<meta property="og:url" content="http://localhost:4000/sg/digital-certificate/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="電子証明書とは？公開鍵の正当性を証明する仕組み【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"電子証明書は公開鍵が正しい所有者のものであることを証明する仕組みです。PKIやルート証明書との関係を整理し、SG試験・情報セキュリティマネジメント試験のひっかけポイントと判断基準を分かりやすく解説します。","headline":"電子証明書とは？公開鍵の正当性を証明する仕組み【SG試験】","url":"http://localhost:4000/sg/digital-certificate/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">電子証明書とは？公開鍵の正当性を証明する仕組み【SG試験】</h1>
+      <h2 class="project-tagline">電子証明書は公開鍵が正しい所有者のものであることを証明する仕組みです。PKIやルート証明書との関係を整理し、SG試験・情報セキュリティマネジメント試験のひっかけポイントと判断基準を分かりやすく解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">電子証明書は公開鍵が正しい所有者のものであることを証明する仕組みです。PKIやルート証明書との関係を整理し、SG試験・情報セキュリティマネジメント試験のひっかけポイントと判断基準を分かりやすく解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-overview</span>
+        
+          <span class="post-tag">crypto_auth</span>
+        
+          <span class="post-tag">it_security_operations</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+<p>電子証明書は、<strong>公開鍵が特定の人物やサーバのものであることを証明するデータ</strong>です。<br />
+SG試験では「公開鍵をどう信頼するか」を判断させる問題で問われます。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>「身分証明書」と同じです。</p>
+
+<ul>
+  <li>公開鍵 → 本人</li>
+  <li>電子証明書 → 身分証</li>
+  <li>認証局 → 発行元（信頼できる機関）</li>
+</ul>
+
+<p>👉<br />
+<strong>この鍵は本当にこの人のものか？を証明する仕組み</strong>です。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>電子証明書は、認証局（CA）が発行するデータで、</p>
+
+<ul>
+  <li>公開鍵</li>
+  <li>所有者情報（ドメイン名など）</li>
+  <li>有効期限</li>
+  <li>発行者情報</li>
+</ul>
+
+<p>などが含まれています。</p>
+
+<p>そして重要なのが「電子署名」です。</p>
+
+<p>👉<br />
+認証局が証明書に電子署名を付与することで<br />
+<strong>その内容が正しいことを保証</strong>します。</p>
+
+<hr />
+
+<h3 id="信頼の流れ証明書の連鎖">信頼の流れ（証明書の連鎖）</h3>
+<ol>
+  <li>サーバ証明書を受け取る</li>
+  <li>発行者（中間CA）を確認</li>
+  <li>最終的にルート証明書までたどる</li>
+</ol>
+
+<p>👉<br />
+<strong>ルート証明書を信頼することで全体を信頼する</strong></p>
+
+<hr />
+
+<p>SG試験では<br />
+<strong>「公開鍵の信頼性を担保するもの」＝電子証明書</strong><br />
+と理解するのが重要です。</p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="使う場面">使う場面</h3>
+<ul>
+  <li>HTTPS通信（Webサイトの正当性確認）</li>
+  <li>電子署名の検証</li>
+  <li>VPN・メールの認証</li>
+</ul>
+
+<p>👉 現場では<br />
+<strong>「この相手、本物？」を判断するために使う</strong></p>
+
+<hr />
+
+<h3 id="使うと誤解しやすい場面">使うと誤解しやすい場面</h3>
+<ul>
+  <li>データの暗号化そのもの<br />
+→ 暗号化はRSAなどの役割</li>
+</ul>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+<p>SG試験でよく出ます。</p>
+
+<h3 id="-電子証明書公開鍵">❌ 電子証明書＝公開鍵</h3>
+<p>→ ⭕</p>
+<ul>
+  <li>公開鍵：データ</li>
+  <li>電子証明書：<strong>その公開鍵を証明するもの</strong></li>
+</ul>
+
+<hr />
+
+<h3 id="-電子証明書pki">❌ 電子証明書＝PKI</h3>
+<p>→ ⭕</p>
+<ul>
+  <li>PKI：仕組み全体</li>
+  <li>電子証明書：その一部</li>
+</ul>
+
+<hr />
+
+<h3 id="-電子証明書ルート証明書">❌ 電子証明書＝ルート証明書</h3>
+<p>→ ⭕</p>
+<ul>
+  <li>電子証明書：一般の証明書</li>
+  <li>ルート証明書：<strong>信頼の起点</strong></li>
+</ul>
+
+<hr />
+
+<h3 id="-電子証明書電子署名">❌ 電子証明書＝電子署名</h3>
+<p>→ ⭕</p>
+<ul>
+  <li>電子証明書：公開鍵の証明</li>
+  <li>電子署名：データの改ざん検知＋本人証明</li>
+</ul>
+
+<hr />
+
+<p>👉 SG試験では<br />
+<strong>「鍵を信頼する仕組み → 電子証明書」</strong><br />
+と切り分けます。</p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+<ul>
+  <li>電子証明書は<strong>公開鍵の正当性を証明するもの</strong></li>
+  <li>認証局（CA）が発行する</li>
+  <li>電子署名によって保証される</li>
+  <li>ルート証明書までの連鎖で信頼する</li>
+  <li>暗号そのものではない</li>
+</ul>
+
+<p>👉 判断基準<br />
+<strong>公開鍵の信頼 → 電子証明書<br />
+信頼の起点 → ルート証明書<br />
+仕組み全体 → PKI<br />
+本人証明 → 電子署名</strong></p>
+
+<hr />
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-physical/">入退室管理とは？物理アクセス制御の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control/">アクセス管理とは？特権IDとneed-to-knowで権限を適切に制御【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/anti-passback/">アンチパスバックとは？不正な入退室を防ぐ仕組み【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/attacker-types/">攻撃者の種類とは？目的と特徴で整理する【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/audit-log/">監査ログとは？不正検知と追跡の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/pki/">← PKIとは？公開鍵基盤の役割をやさしく整理【SG試験】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/certificate-authority-role/">認証局（CA）の役割とは？デジタル証明書の信頼の仕組み【SG試験】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

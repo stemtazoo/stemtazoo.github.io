@@ -10,12 +10,14 @@
 <meta property="og:locale" content="ja" />
 <meta name="description" content="AI・データサイエンス・ITの学びをやさしく整理するブログ" />
 <meta property="og:description" content="AI・データサイエンス・ITの学びをやさしく整理するブログ" />
+<link rel="canonical" href="http://localhost:4000/gk/palm/" />
+<meta property="og:url" content="http://localhost:4000/gk/palm/" />
 <meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="PaLM（大規模言語モデル）とは？G検定対策" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"AI・データサイエンス・ITの学びをやさしく整理するブログ","headline":"PaLM（大規模言語モデル）とは？G検定対策","url":"/gk/palm/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"AI・データサイエンス・ITの学びをやさしく整理するブログ","headline":"PaLM（大規模言語モデル）とは？G検定対策","url":"http://localhost:4000/gk/palm/"}</script>
 <!-- End Jekyll SEO tag -->
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -24,16 +26,13 @@
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="/assets/css/style.css?v=">
-    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
-
-<!-- Setup Google Analytics -->
-
-
-
-<!-- You can set your favicon here -->
-<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
-
-<!-- end custom head snippets -->
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
 
   </head>
   <body>
@@ -73,6 +72,15 @@
 
   </header>
   <div class="post-content">
+    
+      <div style="font-size: 14px; margin-bottom: 12px;">
+        <a href="/gk/">G検定トップ</a>
+        ＞ PaLM（大規模言語モデル）とは？G検定対策
+      </div>
+    
+    
+    
+    
     ## まず結論
 - **PaLM（Pathways Language Model）**とは、**大規模データと大規模計算資源を用いて学習された高性能な大規模言語モデル（LLM）**である。
 - G検定では「**純粋な言語モデルか？マルチモーダルか？**」を問われることが多い。

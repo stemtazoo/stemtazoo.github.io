@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>物理的セキュリティ対策まとめ｜出題パターンと切り分け一覧【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="物理的セキュリティ対策まとめ｜出題パターンと切り分け一覧【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="物理的セキュリティ対策をUPS・RAID・バックアップ・入退室管理などで比較整理します。SG試験・情報セキュリティマネジメント試験で迷いやすい選択肢を切る判断基準をまとめた対策ページです。" />
+<meta property="og:description" content="物理的セキュリティ対策をUPS・RAID・バックアップ・入退室管理などで比較整理します。SG試験・情報セキュリティマネジメント試験で迷いやすい選択肢を切る判断基準をまとめた対策ページです。" />
+<link rel="canonical" href="http://localhost:4000/sg/physical-security-summary/" />
+<meta property="og:url" content="http://localhost:4000/sg/physical-security-summary/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="物理的セキュリティ対策まとめ｜出題パターンと切り分け一覧【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"物理的セキュリティ対策をUPS・RAID・バックアップ・入退室管理などで比較整理します。SG試験・情報セキュリティマネジメント試験で迷いやすい選択肢を切る判断基準をまとめた対策ページです。","headline":"物理的セキュリティ対策まとめ｜出題パターンと切り分け一覧【SG試験】","url":"http://localhost:4000/sg/physical-security-summary/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">物理的セキュリティ対策まとめ｜出題パターンと切り分け一覧【SG試験】</h1>
+      <h2 class="project-tagline">物理的セキュリティ対策をUPS・RAID・バックアップ・入退室管理などで比較整理します。SG試験・情報セキュリティマネジメント試験で迷いやすい選択肢を切る判断基準をまとめた対策ページです。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">物理的セキュリティ対策をUPS・RAID・バックアップ・入退室管理などで比較整理します。SG試験・情報セキュリティマネジメント試験で迷いやすい選択肢を切る判断基準をまとめた対策ページです。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-measures</span>
+        
+          <span class="post-tag">risk_assessment</span>
+        
+          <span class="post-tag">it_security_operations</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+<p>物理的セキュリティ対策は、<strong>「何を守るか」「どう守るか」で切り分けると迷わなくなります。</strong><br />
+SG試験では、似た用語の「役割の違い」を見抜けるかが問われます。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>試験で迷う原因はシンプルです。</p>
+
+<p>👉 <strong>どれも“セキュリティっぽい”から</strong></p>
+
+<p>そこで、こう考えます👇</p>
+
+<ul>
+  <li>何を守る？（機器・データ・人・場所）</li>
+  <li>どう守る？（制御・記録・復旧・時間稼ぎ）</li>
+</ul>
+
+<p>👉 この2つでほぼ全部切れます</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>物理的セキュリティ対策を「役割」で整理するとこうなります。</p>
+
+<hr />
+
+<h3 id="--時間を稼ぐ停止対策">■ ① 時間を稼ぐ（停止対策）</h3>
+<ul>
+  <li>UPS<br />
+👉 停電時に安全に止める</li>
+</ul>
+
+<hr />
+
+<h3 id="--故障に備える継続運用">■ ② 故障に備える（継続運用）</h3>
+<ul>
+  <li>RAID<br />
+👉 ディスク故障でも止まらない</li>
+</ul>
+
+<hr />
+
+<h3 id="--復旧する災害対策">■ ③ 復旧する（災害対策）</h3>
+<ul>
+  <li>遠隔バックアップ<br />
+👉 別の場所から復元</li>
+</ul>
+
+<hr />
+
+<h3 id="--入れない制御">■ ④ 入れない（制御）</h3>
+<ul>
+  <li>入退室管理<br />
+👉 そもそも侵入させない</li>
+</ul>
+
+<hr />
+
+<h3 id="--不正利用を防ぐ状態管理">■ ⑤ 不正利用を防ぐ（状態管理）</h3>
+<ul>
+  <li>アンチパスバック<br />
+👉 カードの使い回し防止</li>
+</ul>
+
+<hr />
+
+<h3 id="--記録する証跡">■ ⑥ 記録する（証跡）</h3>
+<ul>
+  <li>監視カメラ<br />
+👉 抑止＋後から確認</li>
+</ul>
+
+<hr />
+
+<h3 id="--人の行動で守る運用">■ ⑦ 人の行動で守る（運用）</h3>
+<ul>
+  <li>クリアデスク・クリアスクリーン<br />
+👉 のぞき見・置き忘れ防止</li>
+</ul>
+
+<hr />
+
+<h3 id="--持ち出しを防ぐ盗難対策">■ ⑧ 持ち出しを防ぐ（盗難対策）</h3>
+<ul>
+  <li>セキュリティワイヤ<br />
+👉 機器を固定</li>
+</ul>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+
+<h3 id="-試験での考え方最重要">■ 試験での考え方（最重要）</h3>
+
+<p>問題文を見たら👇</p>
+
+<p>① 何を守る？</p>
+<ul>
+  <li>機器 → ワイヤ</li>
+  <li>データ → バックアップ</li>
+  <li>場所 → 入退室</li>
+</ul>
+
+<p>② どう守る？</p>
+<ul>
+  <li>制御 → 入退室</li>
+  <li>記録 → カメラ</li>
+  <li>復旧 → バックアップ</li>
+  <li>継続 → RAID</li>
+</ul>
+
+<p>👉 この2ステップでほぼ正解できます</p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="-raidバックアップ">❌ RAID＝バックアップ</h3>
+<p>→ ⭕ RAIDは継続、バックアップは復旧</p>
+
+<hr />
+
+<h3 id="-upsで業務継続できる">❌ UPSで業務継続できる</h3>
+<p>→ ⭕ UPSは短時間のみ</p>
+
+<hr />
+
+<h3 id="-カメラは防止対策">❌ カメラは防止対策</h3>
+<p>→ ⭕ 抑止・記録</p>
+
+<hr />
+
+<h3 id="-入退室管理認証">❌ 入退室管理＝認証</h3>
+<p>→ ⭕ 入退室は物理、認証は論理</p>
+
+<hr />
+
+<h3 id="-クリアデスクは重要でない">❌ クリアデスクは重要でない</h3>
+<p>→ ⭕ 内部不正対策として重要</p>
+
+<hr />
+
+<p>SG試験では<br />
+👉 <strong>「目的をズラした選択肢」</strong>が頻出です</p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>UPS＝時間を稼ぐ</li>
+  <li>RAID＝故障対策</li>
+  <li>バックアップ＝復旧</li>
+  <li>入退室＝制御</li>
+  <li>アンチパスバック＝状態管理</li>
+  <li>カメラ＝記録</li>
+  <li>クリアデスク＝運用</li>
+  <li>ワイヤ＝盗難防止</li>
+</ul>
+
+<p>👉 <strong>「何を守るか × どう守るか」で切る</strong></p>
+
+<hr />
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-model/">アクセス制御モデルとは？RBAC・ABAC・DAC・MACの違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-physical/">入退室管理とは？物理アクセス制御の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control/">アクセス管理とは？特権IDとneed-to-knowで権限を適切に制御【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/anti-passback/">アンチパスバックとは？不正な入退室を防ぐ仕組み【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/asset-register/">情報資産台帳とは？リスク管理の出発点を整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/ups/">← UPSとは？停電時の業務継続を支える仕組み【SG試験】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/physical-security/">物理的セキュリティ対策とは？論理的対策との違いを整理【SG試験】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 形態素解析と係り受け解析とは？（自然言語処理の基本）【DS検定】
-description: 形態素解析と係り受け解析は（自然言語処理の基本）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: 形態素解析と係り受け解析の違いを自然言語処理の基本として整理します。単語分割、品詞推定、文節間の関係把握の役割を押さえ、DS検定での用語の切り分けを確認できます。本文では、用語の定義、具体例、似た概念との違い、試験で迷いやすい選択肢の見分け方まで、短時間で復習できるようにまとめています。
 permalink: /ds/morphological-dependency-parsing/
 categories: [business]
 tags: [ds, unstructured-data, design]

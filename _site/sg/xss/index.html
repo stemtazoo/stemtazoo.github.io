@@ -4,18 +4,20 @@
     <meta charset="UTF-8">
 
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>クロスサイトスクリプティングとは？スクリプト実行の仕組み【情報セキュリティマネジメント】 | AI・データサイエンス・IT学習ノート</title>
+<title>クロスサイトスクリプティングとは？スクリプト実行の仕組み【SG試験】 | AI・データサイエンス・IT学習ノート</title>
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="クロスサイトスクリプティングとは？スクリプト実行の仕組み【情報セキュリティマネジメント】" />
+<meta property="og:title" content="クロスサイトスクリプティングとは？スクリプト実行の仕組み【SG試験】" />
 <meta property="og:locale" content="ja" />
 <meta name="description" content="クロスサイトスクリプティングはWebサイトに不正なスクリプトを埋め込み利用者のブラウザで実行させる攻撃です。CSRFとの違いや情報漏えいの仕組みを試験対策として整理します。" />
 <meta property="og:description" content="クロスサイトスクリプティングはWebサイトに不正なスクリプトを埋め込み利用者のブラウザで実行させる攻撃です。CSRFとの違いや情報漏えいの仕組みを試験対策として整理します。" />
+<link rel="canonical" href="http://localhost:4000/sg/xss/" />
+<meta property="og:url" content="http://localhost:4000/sg/xss/" />
 <meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="クロスサイトスクリプティングとは？スクリプト実行の仕組み【情報セキュリティマネジメント】" />
+<meta property="twitter:title" content="クロスサイトスクリプティングとは？スクリプト実行の仕組み【SG試験】" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"クロスサイトスクリプティングはWebサイトに不正なスクリプトを埋め込み利用者のブラウザで実行させる攻撃です。CSRFとの違いや情報漏えいの仕組みを試験対策として整理します。","headline":"クロスサイトスクリプティングとは？スクリプト実行の仕組み【情報セキュリティマネジメント】","url":"/sg/xss/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"クロスサイトスクリプティングはWebサイトに不正なスクリプトを埋め込み利用者のブラウザで実行させる攻撃です。CSRFとの違いや情報漏えいの仕組みを試験対策として整理します。","headline":"クロスサイトスクリプティングとは？スクリプト実行の仕組み【SG試験】","url":"http://localhost:4000/sg/xss/"}</script>
 <!-- End Jekyll SEO tag -->
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -24,23 +26,20 @@
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="/assets/css/style.css?v=">
-    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
-
-<!-- Setup Google Analytics -->
-
-
-
-<!-- You can set your favicon here -->
-<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
-
-<!-- end custom head snippets -->
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
 
   </head>
   <body>
     <a id="skip-to-content" href="#content">Skip to the content.</a>
 
     <header class="page-header" role="banner">
-      <h1 class="project-name">クロスサイトスクリプティングとは？スクリプト実行の仕組み【情報セキュリティマネジメント】</h1>
+      <h1 class="project-name">クロスサイトスクリプティングとは？スクリプト実行の仕組み【SG試験】</h1>
       <h2 class="project-tagline">クロスサイトスクリプティングはWebサイトに不正なスクリプトを埋め込み利用者のブラウザで実行させる攻撃です。CSRFとの違いや情報漏えいの仕組みを試験対策として整理します。</h2>
       
       
@@ -65,6 +64,8 @@
         
           <span class="post-tag">data_leakage</span>
         
+          <span class="post-tag">sg-security-overview</span>
+        
       </p>
     
     <script>
@@ -79,6 +80,10 @@
 
   </header>
   <div class="post-content">
+    
+    
+    
+    
     <h2 id="まず結論">まず結論</h2>
 <p>クロスサイトスクリプティング（XSS）は、Webサイトに不正なスクリプトを埋め込み、利用者のブラウザで実行させる攻撃です。<br />
 SG試験では「スクリプトが実行されるかどうか」で見分けるのが重要です。</p>
@@ -190,6 +195,33 @@ SG試験では「スクリプトが実行されるかどうか」で見分ける
 
 <hr />
 
+<h2 id="確認問題sg試験対策">確認問題（SG試験対策）</h2>
+
+<p>次のうち、最も適切なものはどれか。</p>
+
+<p>A. XSSは、利用者のブラウザで不正スクリプトを実行させ、情報を盗むなどの被害を生じさせる攻撃である。<br />
+B. XSSは、ログイン済み利用者になりすまして正規サイトへ不正リクエストを送らせる攻撃である。<br />
+C. XSS対策は、CSRFトークンを埋め込めば十分である。<br />
+D. XSSは、送信元IPアドレスの偽装を防止すれば根本的に解決できる。</p>
+
+<details>
+  <summary>答えと解説を見る</summary>
+
+  <p><strong>正解：A</strong></p>
+
+  <h3 id="section">解説</h3>
+  <ul>
+    <li>A：正しい。XSSはブラウザ上で悪意あるスクリプトを実行させる攻撃です。</li>
+    <li>B：誤り。これはCSRFの説明で、XSSとは攻撃の仕組みが異なります。</li>
+    <li>C：誤り。CSRFトークンはCSRF対策であり、XSSには出力時エスケープや入力値の適切な扱いが必要です。</li>
+    <li>D：誤り。IP偽装対策は別論点で、XSSの直接対策にはなりません。</li>
+  </ul>
+
+  <p>👉 判断ポイント<br />
+「ブラウザでスクリプトが実行されるかどうか」でXSSを見抜く。</p>
+
+</details>
+
 <h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
 
 <ul>
@@ -220,8 +252,100 @@ SG試験では「スクリプトが実行されるかどうか」で見分ける
       
 
       
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
         <li style="margin-bottom: 6px;">
-          <a href="/sg/attacker-types/">攻撃者の種類とは？目的と特徴で整理する【情報セキュリティマネジメント】</a>
+          <a href="/sg/attacker-types/">攻撃者の種類とは？目的と特徴で整理する【SG試験】</a>
         </li>
         
       
@@ -245,8 +369,73 @@ SG試験では「スクリプトが実行されるかどうか」で見分ける
       
 
       
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
         <li style="margin-bottom: 6px;">
-          <a href="/sg/blacklist-whitelist/">ブラックリストとホワイトリストの違いとは？判断基準を整理【情報セキュリティマネジメント】</a>
+          <a href="/sg/authentication-methods/">認証方式とは？3要素と多要素認証を整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/blacklist-whitelist/">ブラックリストとホワイトリストの違いとは？判断基準を整理【SG試験】</a>
         </li>
         
       
@@ -261,7 +450,7 @@ SG試験では「スクリプトが実行されるかどうか」で見分ける
 
       
         <li style="margin-bottom: 6px;">
-          <a href="/sg/bot/">ボットとは？遠隔操作される仕組みを理解する【情報セキュリティマネジメント】</a>
+          <a href="/sg/block-stream-cipher/">ブロック暗号とストリーム暗号の違いとは？暗号方式を整理【SG試験】</a>
         </li>
         
       
@@ -276,22 +465,7 @@ SG試験では「スクリプトが実行されるかどうか」で見分ける
 
       
         <li style="margin-bottom: 6px;">
-          <a href="/sg/botnet/">ボットネットとは？踏み台化とDDoSの関係を理解する【情報セキュリティマネジメント】</a>
-        </li>
-        
-      
-
-      
-    
-  
-    
-      
-
-      
-
-      
-        <li style="margin-bottom: 6px;">
-          <a href="/sg/brute-force-attack/">ブルートフォース攻撃とは？総当たり攻撃の仕組みと対策【情報セキュリティマネジメント】</a>
+          <a href="/sg/bot/">ボットとは？遠隔操作される仕組みを理解する【SG試験】</a>
         </li>
         
       
@@ -312,9 +486,12 @@ SG試験では「スクリプトが実行されるかどうか」で見分ける
 <div class="page-navigation" style="margin-top:12px;">
   
     
-    <a class="prev" href="/sg/work-rules-vs-individual-agreement/">← 就業規則と個別合意の関係とは？優先順位を理解する【情報セキュリティマネジメント】</a>
+    <a class="prev" href="/sg/work-rules-vs-individual-agreement/">← 就業規則と個別合意の関係とは？優先順位を理解する【SG試験】</a>
   
 
+  
+    
+    <a class="next" href="/sg/zero-trust/">ゼロトラストとは？境界防御との違いを整理【SG試験】 →</a>
   
 </div>
 

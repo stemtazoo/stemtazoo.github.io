@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>ステートフルインスペクションとは？通信状態を見て通過可否を判断する仕組み【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="ステートフルインスペクションとは？通信状態を見て通過可否を判断する仕組み【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="ステートフルインスペクションは、通信の状態を管理しながらパケットの通過可否を判断するファイアウォール機能です。パケットフィルタリングとの違い、戻り通信の扱い、SG試験・情報セキュリティマネジメント試験での判断ポイントを整理します。" />
+<meta property="og:description" content="ステートフルインスペクションは、通信の状態を管理しながらパケットの通過可否を判断するファイアウォール機能です。パケットフィルタリングとの違い、戻り通信の扱い、SG試験・情報セキュリティマネジメント試験での判断ポイントを整理します。" />
+<link rel="canonical" href="http://localhost:4000/sg/stateful-inspection/" />
+<meta property="og:url" content="http://localhost:4000/sg/stateful-inspection/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="ステートフルインスペクションとは？通信状態を見て通過可否を判断する仕組み【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"ステートフルインスペクションは、通信の状態を管理しながらパケットの通過可否を判断するファイアウォール機能です。パケットフィルタリングとの違い、戻り通信の扱い、SG試験・情報セキュリティマネジメント試験での判断ポイントを整理します。","headline":"ステートフルインスペクションとは？通信状態を見て通過可否を判断する仕組み【SG試験】","url":"http://localhost:4000/sg/stateful-inspection/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">ステートフルインスペクションとは？通信状態を見て通過可否を判断する仕組み【SG試験】</h1>
+      <h2 class="project-tagline">ステートフルインスペクションは、通信の状態を管理しながらパケットの通過可否を判断するファイアウォール機能です。パケットフィルタリングとの違い、戻り通信の扱い、SG試験・情報セキュリティマネジメント試験での判断ポイントを整理します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">ステートフルインスペクションは、通信の状態を管理しながらパケットの通過可否を判断するファイアウォール機能です。パケットフィルタリングとの違い、戻り通信の扱い、SG試験・情報セキュリティマネジメント試験での判断ポイントを整理します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-measures</span>
+        
+          <span class="post-tag">network_security</span>
+        
+          <span class="post-tag">firewall</span>
+        
+          <span class="post-tag">access_control</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+
+<p>ステートフルインスペクションとは、<strong>通信の状態を記録しながら、パケットを通すか止めるかを判断する仕組み</strong>です。</p>
+
+<p>SG試験では、パケットフィルタリングとの違いが重要です。<br />
+パケットフィルタリングが主にヘッダー情報を見るのに対して、ステートフルインスペクションは<strong>その通信が正しい流れの中にあるか</strong>も確認します。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+
+<p>ステートフルインスペクションは、受付係が<strong>入館記録も見ながら判断する</strong>イメージです。</p>
+
+<p>単純なパケットフィルタリングでは、次のような情報を見ます。</p>
+
+<ul>
+  <li>どこから来たか</li>
+  <li>どこへ行くのか</li>
+  <li>どのポート番号を使うのか</li>
+  <li>どのプロトコルか</li>
+</ul>
+
+<p>一方で、ステートフルインスペクションでは、それに加えて次のように考えます。</p>
+
+<blockquote>
+  <p>この通信は、さっき内側から始まった通信の返事なのか？</p>
+</blockquote>
+
+<p>たとえば、社内PCからWebサイトへアクセスした場合、Webサーバから社内PCへ戻りの通信が返ってきます。<br />
+この戻り通信は、外部から内部への通信に見えますが、実際には社内PCが開始した通信への返事です。</p>
+
+<p>ステートフルインスペクションは、このような<strong>通信の流れ</strong>を見て、必要な戻り通信を許可できます。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+
+<p>ステートフルインスペクションでは、通信の状態を管理するために、通信ごとの情報を一時的に記録します。</p>
+
+<p>この記録は、一般に<strong>状態テーブル</strong>のようなものとして考えると分かりやすいです。</p>
+
+<p>状態テーブルには、たとえば次のような情報が記録されます。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>記録する情報</th>
+      <th>内容</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>送信元IPアドレス</td>
+      <td>通信を始めた端末</td>
+    </tr>
+    <tr>
+      <td>宛先IPアドレス</td>
+      <td>通信先のサーバ</td>
+    </tr>
+    <tr>
+      <td>送信元ポート番号</td>
+      <td>送信側のポート番号</td>
+    </tr>
+    <tr>
+      <td>宛先ポート番号</td>
+      <td>サービスのポート番号</td>
+    </tr>
+    <tr>
+      <td>プロトコル</td>
+      <td>TCP、UDPなど</td>
+    </tr>
+    <tr>
+      <td>通信の状態</td>
+      <td>通信開始中、確立済みなど</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>そして、戻ってきたパケットがこの状態テーブルに合っていれば、正しい通信の返事として許可します。</p>
+
+<p>つまり、ステートフルインスペクションは、単に1個のパケットだけを見るのではなく、<strong>前後の流れをふまえて判断する</strong>仕組みです。</p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+
+<p>ステートフルインスペクションは、ファイアウォールでよく使われる通信制御の方式です。</p>
+
+<h3 id="内部から開始した通信の戻りを許可する">内部から開始した通信の戻りを許可する</h3>
+
+<p>社内PCから外部のWebサイトにアクセスした場合、外部から社内PCへ返事の通信が戻ってきます。</p>
+
+<p>この戻り通信まで毎回細かくルール設定するのは大変です。<br />
+ステートフルインスペクションを使うと、<strong>内部から始まった通信の返事</strong>として判断し、必要な戻り通信を許可できます。</p>
+
+<hr />
+
+<h3 id="不自然な外部からの通信を遮断する">不自然な外部からの通信を遮断する</h3>
+
+<p>外部から突然、社内PCへ通信が来た場合、それが正しい通信の返事なのか、不審な通信なのかを判断する必要があります。</p>
+
+<p>状態テーブルにない通信であれば、正しい流れにない通信として遮断しやすくなります。</p>
+
+<hr />
+
+<h3 id="ルールを管理しやすくする">ルールを管理しやすくする</h3>
+
+<p>単純なパケットフィルタリングだけで戻り通信まで管理しようとすると、許可ルールが複雑になりやすいです。</p>
+
+<p>ステートフルインスペクションでは、通信状態を見て判断できるため、通信制御をより実用的に行いやすくなります。</p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="誤解1パケットフィルタリングと同じ意味である">誤解1：パケットフィルタリングと同じ意味である</h3>
+
+<p>完全に同じではありません。</p>
+
+<p>どちらもパケットを通すか止めるかを判断する仕組みですが、見る範囲が違います。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>用語</th>
+      <th>判断の中心</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>パケットフィルタリング</td>
+      <td>IPアドレス、ポート番号などのヘッダー情報</td>
+    </tr>
+    <tr>
+      <td>ステートフルインスペクション</td>
+      <td>ヘッダー情報に加えて、通信の状態や流れ</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>SG試験では、<strong>通信状態を管理する</strong>という説明があれば、ステートフルインスペクションを疑います。</p>
+
+<hr />
+
+<h3 id="誤解2通信内容の本文まで詳しく検査する">誤解2：通信内容の本文まで詳しく検査する</h3>
+
+<p>これは少し注意が必要です。</p>
+
+<p>ステートフルインスペクションは、通信の状態を見ますが、通信内容の本文を深く解析する仕組みではありません。</p>
+
+<p>通信内容をアプリケーション層まで詳しく見る仕組みは、アプリケーションゲートウェイ、WAF、IDS/IPSなどと関連します。</p>
+
+<p>ステートフルインスペクションは、あくまで<strong>通信の流れが自然かどうかを見る</strong>と押さえるとよいです。</p>
+
+<hr />
+
+<h3 id="誤解3暗号化して通信を守る仕組みである">誤解3：暗号化して通信を守る仕組みである</h3>
+
+<p>これも誤りです。</p>
+
+<p>ステートフルインスペクションは、通信を暗号化する仕組みではありません。<br />
+通信を暗号化する代表例は、TLSやVPNなどです。</p>
+
+<p>ステートフルインスペクションの役割は、暗号化ではなく、<strong>通信状態をもとに通過可否を判断すること</strong>です。</p>
+
+<hr />
+
+<h3 id="誤解4不正な通信を必ず検知できる">誤解4：不正な通信を必ず検知できる</h3>
+
+<p>ステートフルインスペクションは便利ですが、万能ではありません。</p>
+
+<p>正しい通信の流れに見える攻撃や、許可された通信の中に含まれる不正な内容までは、これだけで十分に検出できないことがあります。</p>
+
+<p>そのため、必要に応じてIDS、IPS、WAF、ログ監視などと組み合わせて対策します。</p>
+
+<hr />
+
+<h2 id="パケットフィルタリングとの違い">パケットフィルタリングとの違い</h2>
+
+<p>試験では、ここが一番大切です。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>比較項目</th>
+      <th>パケットフィルタリング</th>
+      <th>ステートフルインスペクション</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>見る情報</td>
+      <td>ヘッダー情報中心</td>
+      <td>ヘッダー情報＋通信状態</td>
+    </tr>
+    <tr>
+      <td>判断方法</td>
+      <td>ルールに一致するか</td>
+      <td>通信の流れとして自然かも見る</td>
+    </tr>
+    <tr>
+      <td>戻り通信</td>
+      <td>ルール設定が必要になりやすい</td>
+      <td>通信状態から判断しやすい</td>
+    </tr>
+    <tr>
+      <td>代表的な表現</td>
+      <td>IPアドレス、ポート番号で制御</td>
+      <td>状態を管理、セッションを追跡</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>ざっくり言うと、次のように整理できます。</p>
+
+<blockquote>
+  <p>パケットフィルタリング ＝ 1個のパケットの情報を見る<br />
+ステートフルインスペクション ＝ 通信の流れも見て判断する</p>
+</blockquote>
+
+<p>この違いを押さえておくと、選択肢を切りやすくなります。</p>
+
+<hr />
+
+<h2 id="試験での判断ポイント">試験での判断ポイント</h2>
+
+<p>SG試験では、次のような表現が出たらステートフルインスペクションを疑います。</p>
+
+<ul>
+  <li>通信状態を管理する</li>
+  <li>セッションの状態を確認する</li>
+  <li>内部から開始した通信の戻りを許可する</li>
+  <li>状態テーブルを使って判断する</li>
+  <li>通信の流れに合っているか確認する</li>
+</ul>
+
+<p>反対に、次の表現は別の用語と切り分けます。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>説明</th>
+      <th>該当しやすい用語</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>IPアドレスやポート番号だけで通過可否を判断</td>
+      <td>パケットフィルタリング</td>
+    </tr>
+    <tr>
+      <td>IPアドレスやポート番号を変換する</td>
+      <td>NAT、NAPT</td>
+    </tr>
+    <tr>
+      <td>Webアプリへの攻撃を検知・遮断する</td>
+      <td>WAF</td>
+    </tr>
+    <tr>
+      <td>不正な通信を検知する</td>
+      <td>IDS</td>
+    </tr>
+    <tr>
+      <td>不正な通信を検知して遮断する</td>
+      <td>IPS</td>
+    </tr>
+    <tr>
+      <td>通信を暗号化する</td>
+      <td>TLS、VPN</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<p>ステートフルインスペクションは、<strong>通信の状態を管理しながら、パケットの通過可否を判断する仕組み</strong>です。</p>
+
+<p>試験直前は、次の3点で整理しておきましょう。</p>
+
+<ul>
+  <li>
+    <p><strong>通信状態を見る</strong><br />
+1個のパケットだけでなく、通信の流れやセッション状態を確認する。</p>
+  </li>
+  <li>
+    <p><strong>戻り通信を判断しやすい</strong><br />
+内部から開始した通信への返事かどうかを状態テーブルで確認できる。</p>
+  </li>
+  <li>
+    <p><strong>本文の深い検査や暗号化ではない</strong><br />
+通信内容を詳しく解析する仕組みでも、通信を暗号化する仕組みでもない。</p>
+  </li>
+</ul>
+
+<p>SG試験では、<strong>「状態を管理する」「通信の流れを見る」「戻り通信を判断する」</strong>という表現を手がかりにすると、パケットフィルタリングとの違いを切り分けやすくなります。</p>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-model/">アクセス制御モデルとは？RBAC・ABAC・DAC・MACの違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-physical/">入退室管理とは？物理アクセス制御の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control/">アクセス管理とは？特権IDとneed-to-knowで権限を適切に制御【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-rights-management/">アクセス権限管理とは？付与・変更・削除の流れを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/administrator-privileges/">管理者権限とは？特権的アクセス権との違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+
+  
+</div>
+<h2 id="-関連記事-1">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-model/">アクセス制御モデルとは？RBAC・ABAC・DAC・MACの違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-physical/">入退室管理とは？物理アクセス制御の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control/">アクセス管理とは？特権IDとneed-to-knowで権限を適切に制御【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-rights-management/">アクセス権限管理とは？付与・変更・削除の流れを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/administrator-privileges/">管理者権限とは？特権的アクセス権との違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

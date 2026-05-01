@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>RAIDとは？冗長化による信頼性向上の仕組み【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="RAIDとは？冗長化による信頼性向上の仕組み【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="RAIDは複数の記憶装置を組み合わせて信頼性や処理性能を高める仕組みです。RAID0・1・5・6・10の違いと、SG試験・情報セキュリティマネジメント試験で混同しやすいバックアップとの違いを整理します。" />
+<meta property="og:description" content="RAIDは複数の記憶装置を組み合わせて信頼性や処理性能を高める仕組みです。RAID0・1・5・6・10の違いと、SG試験・情報セキュリティマネジメント試験で混同しやすいバックアップとの違いを整理します。" />
+<link rel="canonical" href="http://localhost:4000/sg/raid/" />
+<meta property="og:url" content="http://localhost:4000/sg/raid/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="RAIDとは？冗長化による信頼性向上の仕組み【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"RAIDは複数の記憶装置を組み合わせて信頼性や処理性能を高める仕組みです。RAID0・1・5・6・10の違いと、SG試験・情報セキュリティマネジメント試験で混同しやすいバックアップとの違いを整理します。","headline":"RAIDとは？冗長化による信頼性向上の仕組み【SG試験】","url":"http://localhost:4000/sg/raid/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">RAIDとは？冗長化による信頼性向上の仕組み【SG試験】</h1>
+      <h2 class="project-tagline">RAIDは複数の記憶装置を組み合わせて信頼性や処理性能を高める仕組みです。RAID0・1・5・6・10の違いと、SG試験・情報セキュリティマネジメント試験で混同しやすいバックアップとの違いを整理します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">RAIDは複数の記憶装置を組み合わせて信頼性や処理性能を高める仕組みです。RAID0・1・5・6・10の違いと、SG試験・情報セキュリティマネジメント試験で混同しやすいバックアップとの違いを整理します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-measures</span>
+        
+          <span class="post-tag">system_architecture</span>
+        
+          <span class="post-tag">it_security_operations</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+<p>RAIDとは、<strong>複数のHDDやSSDを組み合わせて、信頼性の向上や高速化を図る仕組み</strong>です。<br />
+SG試験では、特に <strong>RAIDはバックアップではない</strong> と判断できるかが重要です。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>RAIDは、1台のディスクだけにデータを保存するのではなく、複数のディスクを組み合わせて使う考え方です。</p>
+
+<p>たとえば、1台だけで保存していると、そのディスクが壊れたときにデータを失う可能性があります。<br />
+そこで、複数台に分散したり、同じ内容を複製したりして、障害に強くします。</p>
+
+<p>イメージとしては、</p>
+
+<ul>
+  <li>RAID0 → 分けて速くする</li>
+  <li>RAID1 → 同じものを2つ作る</li>
+  <li>RAID5/6 → 分けつつ、復元用の情報も持つ</li>
+  <li>RAID10 → 速さと冗長化を組み合わせる</li>
+</ul>
+
+<p>という感じです。</p>
+
+<p>ただし、RAIDはあくまで <strong>ディスク故障に備える仕組み</strong> です。<br />
+誤って削除したデータや、ランサムウェアで暗号化されたデータを元に戻す仕組みではありません。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>RAIDは、複数の記憶装置を1つの保存領域のように扱う技術です。<br />
+目的は主に次の2つです。</p>
+
+<ul>
+  <li>処理速度を上げる</li>
+  <li>ディスク故障に強くする</li>
+</ul>
+
+<p>RAIDにはいくつかの方式があり、代表的なものを整理すると次のようになります。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>RAID</th>
+      <th>主な特徴</th>
+      <th style="text-align: right">耐障害性</th>
+      <th style="text-align: right">速さ</th>
+      <th>試験での見方</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>RAID0</td>
+      <td>データを分散して書き込む</td>
+      <td style="text-align: right">なし</td>
+      <td style="text-align: right">高い</td>
+      <td>速いが壊れやすい</td>
+    </tr>
+    <tr>
+      <td>RAID1</td>
+      <td>同じデータを複製する</td>
+      <td style="text-align: right">あり</td>
+      <td style="text-align: right">普通</td>
+      <td>ミラーリング</td>
+    </tr>
+    <tr>
+      <td>RAID5</td>
+      <td>分散＋復元情報を持つ</td>
+      <td style="text-align: right">1台故障まで</td>
+      <td style="text-align: right">高め</td>
+      <td>容量効率と信頼性のバランス</td>
+    </tr>
+    <tr>
+      <td>RAID6</td>
+      <td>RAID5より復元情報を増やす</td>
+      <td style="text-align: right">2台故障まで</td>
+      <td style="text-align: right">RAID5より低め</td>
+      <td>RAID5より安全</td>
+    </tr>
+    <tr>
+      <td>RAID10</td>
+      <td>RAID1とRAID0の組合せ</td>
+      <td style="text-align: right">あり</td>
+      <td style="text-align: right">高い</td>
+      <td>速さと信頼性の両立</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h3 id="raid0ストライピング">RAID0：ストライピング</h3>
+<p>RAID0は、データを複数のディスクに分散して書き込む方式です。<br />
+これを <strong>ストライピング</strong> といいます。</p>
+
+<p>たとえば、1つのデータをAディスク、Bディスクに分けて書き込むことで、読み書きを速くできます。</p>
+
+<p>ただし、RAID0には冗長性がありません。<br />
+どれか1台のディスクが壊れると、全体のデータが使えなくなる可能性があります。</p>
+
+<ul>
+  <li>⭕ 高速化できる</li>
+  <li>❌ 信頼性は上がらない</li>
+  <li>❌ 障害対策にはならない</li>
+</ul>
+
+<p>SG試験では、<br />
+<strong>「RAID0は冗長化で信頼性を高める」と書かれていたら注意</strong>です。</p>
+
+<hr />
+
+<h3 id="raid1ミラーリング">RAID1：ミラーリング</h3>
+<p>RAID1は、同じデータを複数のディスクに書き込む方式です。<br />
+これを <strong>ミラーリング</strong> といいます。</p>
+
+<p>片方のディスクが壊れても、もう片方に同じデータが残っているため、運用を続けやすくなります。</p>
+
+<ul>
+  <li>⭕ ディスク故障に強い</li>
+  <li>⭕ 仕組みが分かりやすい</li>
+  <li>❌ 同じデータを保存するため、使える容量は少なくなる</li>
+</ul>
+
+<p>SG試験では、<br />
+<strong>「同じデータを複製して保存」＝RAID1</strong><br />
+と判断できればOKです。</p>
+
+<hr />
+
+<h3 id="raid5分散パリティ">RAID5：分散＋パリティ</h3>
+<p>RAID5は、データを複数のディスクに分散しつつ、復元用の情報も一緒に保存する方式です。<br />
+この復元用の情報を <strong>パリティ</strong> といいます。</p>
+
+<p>1台のディスクが壊れても、残りのデータとパリティから復元できます。</p>
+
+<ul>
+  <li>⭕ 1台の故障に耐えられる</li>
+  <li>⭕ RAID1より容量効率がよい</li>
+  <li>❌ 2台同時に壊れると復旧できない</li>
+</ul>
+
+<p>SG試験では、<br />
+<strong>「1台の故障に耐えられる」「パリティを使う」＝RAID5</strong><br />
+と押さえると切り分けやすいです。</p>
+
+<hr />
+
+<h3 id="raid6raid5より強いパリティ">RAID6：RAID5より強いパリティ</h3>
+<p>RAID6は、RAID5よりも復元用の情報を増やした方式です。<br />
+そのため、2台のディスクが故障しても復旧できる可能性があります。</p>
+
+<ul>
+  <li>⭕ 2台の故障に耐えられる</li>
+  <li>⭕ RAID5より信頼性が高い</li>
+  <li>❌ パリティ計算が増えるため、書き込み性能は下がりやすい</li>
+</ul>
+
+<p>SG試験では、<br />
+<strong>「2台故障まで耐えられる」＝RAID6</strong><br />
+と覚えると判断しやすいです。</p>
+
+<hr />
+
+<h3 id="raid10raid1raid0">RAID10：RAID1＋RAID0</h3>
+<p>RAID10は、RAID1のミラーリングとRAID0のストライピングを組み合わせた方式です。<br />
+つまり、<strong>複製して守りながら、分散して速くする</strong> 仕組みです。</p>
+
+<ul>
+  <li>⭕ 速度と信頼性を両立しやすい</li>
+  <li>⭕ 障害に強い</li>
+  <li>❌ 必要なディスク数が多い</li>
+  <li>❌ 容量効率は低め</li>
+</ul>
+
+<p>SG試験では、<br />
+<strong>「RAID1とRAID0の組合せ」＝RAID10</strong><br />
+と判断します。</p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<p>RAIDは、ディスク故障によるシステム停止やデータ消失を防ぎたい場面で使われます。</p>
+
+<p>たとえば、</p>
+
+<ul>
+  <li>サーバ</li>
+  <li>NAS</li>
+  <li>データベース</li>
+  <li>業務システムの保存領域</li>
+</ul>
+
+<p>などです。</p>
+
+<p>特に、業務を止めにくいシステムでは、1台のディスク故障だけでサービス停止しないようにRAIDを使います。</p>
+
+<p>ただし、RAIDは万能ではありません。</p>
+
+<ul>
+  <li>誤ってファイルを削除した</li>
+  <li>ウイルスに感染した</li>
+  <li>ランサムウェアで暗号化された</li>
+  <li>火災や災害で装置ごと壊れた</li>
+</ul>
+
+<p>このような場合、RAIDだけでは対応できません。<br />
+この場合に必要なのが <strong>バックアップ</strong> です。</p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="-raidはバックアップである">❌ RAIDはバックアップである</h3>
+<p>→ ⭕ RAIDはディスク故障に備える冗長化です。バックアップは別の場所・別の時点にデータを残す復旧手段です。</p>
+
+<hr />
+
+<h3 id="-raid0は信頼性を高める">❌ RAID0は信頼性を高める</h3>
+<p>→ ⭕ RAID0は高速化が目的です。冗長性はなく、1台壊れると全体に影響します。</p>
+
+<hr />
+
+<h3 id="-raid1は容量を効率よく使える">❌ RAID1は容量を効率よく使える</h3>
+<p>→ ⭕ RAID1は同じデータを複製するため、使える容量は少なくなります。</p>
+
+<hr />
+
+<h3 id="-raid5なら何台壊れても大丈夫">❌ RAID5なら何台壊れても大丈夫</h3>
+<p>→ ⭕ RAID5が耐えられるのは基本的に1台故障までです。</p>
+
+<hr />
+
+<h3 id="-raidがあればバックアップ不要">❌ RAIDがあればバックアップ不要</h3>
+<p>→ ⭕ RAIDでは誤削除・暗号化・災害には弱いので、バックアップは必要です。</p>
+
+<hr />
+
+<p>SG試験では、<br />
+<strong>「ディスク故障への備え」なのか、<br />
+「データを過去の状態に戻す備え」なのか</strong><br />
+を切り分けることが大切です。</p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>RAID＝複数ディスクを組み合わせる仕組み</li>
+  <li>RAID0＝速いが冗長性なし</li>
+  <li>RAID1＝同じデータを複製する</li>
+  <li>RAID5＝1台故障まで、パリティあり</li>
+  <li>RAID6＝2台故障まで、RAID5より安全</li>
+  <li>RAID10＝RAID1＋RAID0</li>
+  <li>RAIDはバックアップではない</li>
+</ul>
+
+<p>👉 <strong>RAIDは「ディスク故障への備え」、バックアップは「復旧のための備え」と切る</strong></p>
+
+<hr />
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-model/">アクセス制御モデルとは？RBAC・ABAC・DAC・MACの違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-physical/">入退室管理とは？物理アクセス制御の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control/">アクセス管理とは？特権IDとneed-to-knowで権限を適切に制御【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/anti-passback/">アンチパスバックとは？不正な入退室を防ぐ仕組み【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/audit-log/">監査ログとは？不正検知と追跡の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/security-wire/">← セキュリティワイヤとは？機器盗難を防ぐ基本対策【SG試験】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/remote-backup/">遠隔バックアップとは？災害時のデータ保護の基本【SG試験】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

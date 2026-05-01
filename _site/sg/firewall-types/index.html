@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>ファイアウォールの種類とは？パケットフィルタ型・アプリケーションゲートウェイ型を整理【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="ファイアウォールの種類とは？パケットフィルタ型・アプリケーションゲートウェイ型を整理【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="ファイアウォールの種類として、パケットフィルタ型、ステートフルインスペクション型、アプリケーションゲートウェイ型などを整理します。SG試験・情報セキュリティマネジメント試験で問われやすい見る情報の違い、通信制御の考え方、ひっかけポイントを解説します。" />
+<meta property="og:description" content="ファイアウォールの種類として、パケットフィルタ型、ステートフルインスペクション型、アプリケーションゲートウェイ型などを整理します。SG試験・情報セキュリティマネジメント試験で問われやすい見る情報の違い、通信制御の考え方、ひっかけポイントを解説します。" />
+<link rel="canonical" href="http://localhost:4000/sg/firewall-types/" />
+<meta property="og:url" content="http://localhost:4000/sg/firewall-types/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="ファイアウォールの種類とは？パケットフィルタ型・アプリケーションゲートウェイ型を整理【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"ファイアウォールの種類として、パケットフィルタ型、ステートフルインスペクション型、アプリケーションゲートウェイ型などを整理します。SG試験・情報セキュリティマネジメント試験で問われやすい見る情報の違い、通信制御の考え方、ひっかけポイントを解説します。","headline":"ファイアウォールの種類とは？パケットフィルタ型・アプリケーションゲートウェイ型を整理【SG試験】","url":"http://localhost:4000/sg/firewall-types/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">ファイアウォールの種類とは？パケットフィルタ型・アプリケーションゲートウェイ型を整理【SG試験】</h1>
+      <h2 class="project-tagline">ファイアウォールの種類として、パケットフィルタ型、ステートフルインスペクション型、アプリケーションゲートウェイ型などを整理します。SG試験・情報セキュリティマネジメント試験で問われやすい見る情報の違い、通信制御の考え方、ひっかけポイントを解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">ファイアウォールの種類として、パケットフィルタ型、ステートフルインスペクション型、アプリケーションゲートウェイ型などを整理します。SG試験・情報セキュリティマネジメント試験で問われやすい見る情報の違い、通信制御の考え方、ひっかけポイントを解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-measures</span>
+        
+          <span class="post-tag">network_security</span>
+        
+          <span class="post-tag">firewall</span>
+        
+          <span class="post-tag">access_control</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+
+<p>ファイアウォールの種類は、<strong>通信のどこまで見て、通すか止めるかを判断するか</strong>で整理できます。</p>
+
+<p>SG試験では、特に次の切り分けが重要です。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>種類</th>
+      <th>判断の中心</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>パケットフィルタ型</td>
+      <td>IPアドレス、ポート番号などのヘッダー情報</td>
+    </tr>
+    <tr>
+      <td>ステートフルインスペクション型</td>
+      <td>通信の状態や流れ</td>
+    </tr>
+    <tr>
+      <td>アプリケーションゲートウェイ型</td>
+      <td>アプリケーション層の内容</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>ざっくり言うと、<strong>下位の情報だけを見るほど軽く、上位の内容まで見るほど細かく制御できる</strong>と考えると分かりやすいです。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+
+<p>ファイアウォールは、ネットワークの入口にある<strong>関所</strong>のようなものです。</p>
+
+<p>ただし、関所にも種類があります。</p>
+
+<ul>
+  <li>名札だけを見る関所</li>
+  <li>入退場の記録も見る関所</li>
+  <li>持ち物や目的まで詳しく確認する関所</li>
+</ul>
+
+<p>これをネットワークに置き換えると、次のようになります。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>たとえ</th>
+      <th>ファイアウォールの種類</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>名札だけを見る</td>
+      <td>パケットフィルタ型</td>
+    </tr>
+    <tr>
+      <td>入退場の流れも見る</td>
+      <td>ステートフルインスペクション型</td>
+    </tr>
+    <tr>
+      <td>目的や中身まで見る</td>
+      <td>アプリケーションゲートウェイ型</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>つまり、ファイアウォールの種類は、<strong>確認する深さの違い</strong>として理解すると整理しやすいです。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+
+<p>ファイアウォールは、内部ネットワークと外部ネットワークの境界などに置かれ、通信を許可・拒否する仕組みです。</p>
+
+<p>ただし、すべてのファイアウォールが同じ見方をするわけではありません。</p>
+
+<p>通信を制御するときに見る情報の範囲によって、いくつかの種類に分けられます。</p>
+
+<hr />
+
+<h2 id="パケットフィルタ型">パケットフィルタ型</h2>
+
+<p>パケットフィルタ型は、<strong>パケットのヘッダー情報を見て、通過可否を判断する方式</strong>です。</p>
+
+<p>主に次の情報を見ます。</p>
+
+<ul>
+  <li>送信元IPアドレス</li>
+  <li>宛先IPアドレス</li>
+  <li>送信元ポート番号</li>
+  <li>宛先ポート番号</li>
+  <li>プロトコル</li>
+  <li>通信の方向</li>
+</ul>
+
+<p>たとえば、次のようなルールで制御します。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>ルール例</th>
+      <th>意味</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>宛先ポート443番を許可</td>
+      <td>HTTPS通信を許可する</td>
+    </tr>
+    <tr>
+      <td>特定IPアドレスからの通信を拒否</td>
+      <td>怪しい通信元を遮断する</td>
+    </tr>
+    <tr>
+      <td>外部から内部への不要な通信を拒否</td>
+      <td>不正アクセスの入口を減らす</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="試験でのポイント">試験でのポイント</h3>
+
+<p>パケットフィルタ型は、<strong>通信内容の本文までは詳しく見ない</strong>点が重要です。</p>
+
+<p>SG試験で、IPアドレスやポート番号をもとに通信を制御する説明が出たら、パケットフィルタ型を考えます。</p>
+
+<hr />
+
+<h2 id="ステートフルインスペクション型">ステートフルインスペクション型</h2>
+
+<p>ステートフルインスペクション型は、<strong>通信の状態を管理しながら、通過可否を判断する方式</strong>です。</p>
+
+<p>単に1個のパケットだけを見るのではなく、通信の流れを確認します。</p>
+
+<p>たとえば、社内PCから外部Webサイトへアクセスした場合、外部から戻り通信が返ってきます。<br />
+この戻り通信は外部から内部への通信に見えますが、実際には社内PCが開始した通信への返事です。</p>
+
+<p>ステートフルインスペクション型では、状態テーブルを使って、<strong>正しい通信の返事かどうか</strong>を判断できます。</p>
+
+<h3 id="試験でのポイント-1">試験でのポイント</h3>
+
+<p>次の表現が出たら、ステートフルインスペクション型を疑います。</p>
+
+<ul>
+  <li>通信状態を管理する</li>
+  <li>セッションの状態を確認する</li>
+  <li>内部から開始した通信の戻りを許可する</li>
+  <li>状態テーブルを使う</li>
+</ul>
+
+<hr />
+
+<h2 id="アプリケーションゲートウェイ型">アプリケーションゲートウェイ型</h2>
+
+<p>アプリケーションゲートウェイ型は、<strong>アプリケーション層の内容まで確認して通信を制御する方式</strong>です。</p>
+
+<p>パケットフィルタ型がIPアドレスやポート番号を見るのに対して、アプリケーションゲートウェイ型は、通信内容をより細かく確認します。</p>
+
+<p>たとえば、次のような制御が考えられます。</p>
+
+<ul>
+  <li>HTTPの内容を確認する</li>
+  <li>利用するアプリケーションごとに制御する</li>
+  <li>不適切な通信内容を遮断する</li>
+  <li>代理サーバとして通信を中継する</li>
+</ul>
+
+<p>アプリケーションゲートウェイ型は、<strong>通信の中身を見て細かく判断できる</strong>一方で、処理が重くなりやすい点があります。</p>
+
+<h3 id="試験でのポイント-2">試験でのポイント</h3>
+
+<p>SG試験では、<strong>アプリケーション層の内容まで見る</strong>という表現が手がかりになります。</p>
+
+<p>「IPアドレスやポート番号だけで判断する」ならパケットフィルタ型、<br />
+「アプリケーションの内容まで確認する」ならアプリケーションゲートウェイ型、と切り分けます。</p>
+
+<hr />
+
+<h2 id="サーキットレベルゲートウェイ型">サーキットレベルゲートウェイ型</h2>
+
+<p>サーキットレベルゲートウェイ型は、<strong>通信経路やセッションの確立を確認して制御する方式</strong>です。</p>
+
+<p>アプリケーションの内容を細かく確認するというより、通信の接続関係が正しいかを確認します。</p>
+
+<p>SG試験では、パケットフィルタ型やアプリケーションゲートウェイ型ほど頻出ではありませんが、比較として出ることがあります。</p>
+
+<h3 id="試験でのポイント-3">試験でのポイント</h3>
+
+<p>サーキットレベルゲートウェイ型は、次のように押さえておくと十分です。</p>
+
+<ul>
+  <li>通信の接続状態を確認する</li>
+  <li>アプリケーション内容の詳細な検査ではない</li>
+  <li>パケットフィルタ型とアプリケーションゲートウェイ型の中間的な位置づけ</li>
+</ul>
+
+<hr />
+
+<h2 id="種類ごとの比較">種類ごとの比較</h2>
+
+<p>試験では、種類を個別に覚えるより、<strong>何を見て判断するか</strong>で並べると切り分けやすいです。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>種類</th>
+      <th>見る情報</th>
+      <th>特徴</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>パケットフィルタ型</td>
+      <td>IPアドレス、ポート番号など</td>
+      <td>基本的な通信制御。中身は詳しく見ない</td>
+    </tr>
+    <tr>
+      <td>ステートフルインスペクション型</td>
+      <td>通信状態、セッション状態</td>
+      <td>戻り通信を判断しやすい</td>
+    </tr>
+    <tr>
+      <td>サーキットレベルゲートウェイ型</td>
+      <td>接続状態</td>
+      <td>通信経路やセッション確立を確認する</td>
+    </tr>
+    <tr>
+      <td>アプリケーションゲートウェイ型</td>
+      <td>アプリケーション層の内容</td>
+      <td>細かく制御できるが処理は重くなりやすい</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="誤解1ファイアウォールはすべて通信内容まで見る">誤解1：ファイアウォールはすべて通信内容まで見る</h3>
+
+<p>これは誤りです。</p>
+
+<p>パケットフィルタ型は、主にヘッダー情報を見て判断します。<br />
+通信内容の本文まで詳しく確認するとは限りません。</p>
+
+<p><strong>ファイアウォール＝通信内容を全部見る</strong>と覚えると、試験で迷いやすくなります。</p>
+
+<hr />
+
+<h3 id="誤解2パケットフィルタ型とステートフルインスペクション型は同じ">誤解2：パケットフィルタ型とステートフルインスペクション型は同じ</h3>
+
+<p>似ていますが、同じではありません。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>用語</th>
+      <th>違い</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>パケットフィルタ型</td>
+      <td>ルールに基づき、主にヘッダー情報で判断</td>
+    </tr>
+    <tr>
+      <td>ステートフルインスペクション型</td>
+      <td>通信状態や流れも見て判断</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>「状態を管理する」「セッションを追跡する」という表現があれば、ステートフルインスペクション型を選びます。</p>
+
+<hr />
+
+<h3 id="誤解3アプリケーションゲートウェイ型は暗号化の方式である">誤解3：アプリケーションゲートウェイ型は暗号化の方式である</h3>
+
+<p>これも誤りです。</p>
+
+<p>アプリケーションゲートウェイ型は、通信内容を確認して制御する方式です。<br />
+通信を暗号化する仕組みではありません。</p>
+
+<p>暗号化の代表例は、TLSやVPNなどです。</p>
+
+<hr />
+
+<h3 id="誤解4naptはファイアウォールの種類である">誤解4：NAPTはファイアウォールの種類である</h3>
+
+<p>NAPTは、IPアドレスやポート番号を変換する仕組みです。</p>
+
+<p>ファイアウォールと一緒に使われることはありますが、ファイアウォールの種類そのものとして覚えると混乱します。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>用語</th>
+      <th>役割</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ファイアウォール</td>
+      <td>通信を許可・拒否する</td>
+    </tr>
+    <tr>
+      <td>NAPT</td>
+      <td>IPアドレスやポート番号を変換する</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="試験での判断ポイント">試験での判断ポイント</h2>
+
+<p>SG試験では、次のようにキーワードで判断すると選択肢を切りやすいです。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>キーワード</th>
+      <th>選びやすい用語</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>IPアドレス、ポート番号、プロトコル</td>
+      <td>パケットフィルタ型</td>
+    </tr>
+    <tr>
+      <td>通信状態、セッション、状態テーブル</td>
+      <td>ステートフルインスペクション型</td>
+    </tr>
+    <tr>
+      <td>接続状態、通信経路</td>
+      <td>サーキットレベルゲートウェイ型</td>
+    </tr>
+    <tr>
+      <td>アプリケーション層、HTTPの内容、代理サーバ</td>
+      <td>アプリケーションゲートウェイ型</td>
+    </tr>
+    <tr>
+      <td>IPアドレス変換、ポート番号変換</td>
+      <td>NAPT</td>
+    </tr>
+    <tr>
+      <td>不正通信を検知</td>
+      <td>IDS</td>
+    </tr>
+    <tr>
+      <td>不正通信を検知して遮断</td>
+      <td>IPS</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>特に、<strong>ポート番号を見る</strong>と<strong>ポート番号を変換する</strong>は混同しやすいです。</p>
+
+<ul>
+  <li>ポート番号を見る → パケットフィルタ型</li>
+  <li>ポート番号を変換する → NAPT</li>
+</ul>
+
+<p>この違いを押さえておくと、ひっかけ問題に強くなります。</p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<p>ファイアウォールの種類は、<strong>通信のどこまで見て判断するか</strong>で整理します。</p>
+
+<p>試験直前は、次の3点を押さえておきましょう。</p>
+
+<ul>
+  <li>
+    <p><strong>パケットフィルタ型はヘッダー情報を見る</strong><br />
+IPアドレス、ポート番号、プロトコルなどで通過可否を判断する。</p>
+  </li>
+  <li>
+    <p><strong>ステートフルインスペクション型は通信状態も見る</strong><br />
+セッションや戻り通信を状態テーブルで確認する。</p>
+  </li>
+  <li>
+    <p><strong>アプリケーションゲートウェイ型はアプリケーション層を見る</strong><br />
+通信内容をより細かく確認して制御する。</p>
+  </li>
+</ul>
+
+<p>SG試験では、<strong>「何を見て判断しているか」</strong>に注目すると、ファイアウォールの種類を切り分けやすくなります。</p>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-model/">アクセス制御モデルとは？RBAC・ABAC・DAC・MACの違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-physical/">入退室管理とは？物理アクセス制御の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control/">アクセス管理とは？特権IDとneed-to-knowで権限を適切に制御【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-rights-management/">アクセス権限管理とは？付与・変更・削除の流れを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/administrator-privileges/">管理者権限とは？特権的アクセス権との違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+
+  
+</div>
+<h2 id="-関連記事-1">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-model/">アクセス制御モデルとは？RBAC・ABAC・DAC・MACの違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-physical/">入退室管理とは？物理アクセス制御の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control/">アクセス管理とは？特権IDとneed-to-knowで権限を適切に制御【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-rights-management/">アクセス権限管理とは？付与・変更・削除の流れを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/administrator-privileges/">管理者権限とは？特権的アクセス権との違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

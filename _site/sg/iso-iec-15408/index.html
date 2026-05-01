@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>ISO/IEC 15408とは？IT製品のセキュリティ評価基準を整理【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="ISO/IEC 15408とは？IT製品のセキュリティ評価基準を整理【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="ISO/IEC 15408はIT製品やシステムのセキュリティ機能を評価する国際規格です。SG試験・情報セキュリティマネジメント試験で迷いやすい評価対象と運用管理との違いを整理します。" />
+<meta property="og:description" content="ISO/IEC 15408はIT製品やシステムのセキュリティ機能を評価する国際規格です。SG試験・情報セキュリティマネジメント試験で迷いやすい評価対象と運用管理との違いを整理します。" />
+<link rel="canonical" href="http://localhost:4000/sg/iso-iec-15408/" />
+<meta property="og:url" content="http://localhost:4000/sg/iso-iec-15408/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="ISO/IEC 15408とは？IT製品のセキュリティ評価基準を整理【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"ISO/IEC 15408はIT製品やシステムのセキュリティ機能を評価する国際規格です。SG試験・情報セキュリティマネジメント試験で迷いやすい評価対象と運用管理との違いを整理します。","headline":"ISO/IEC 15408とは？IT製品のセキュリティ評価基準を整理【SG試験】","url":"http://localhost:4000/sg/iso-iec-15408/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">ISO/IEC 15408とは？IT製品のセキュリティ評価基準を整理【SG試験】</h1>
+      <h2 class="project-tagline">ISO/IEC 15408はIT製品やシステムのセキュリティ機能を評価する国際規格です。SG試験・情報セキュリティマネジメント試験で迷いやすい評価対象と運用管理との違いを整理します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">ISO/IEC 15408はIT製品やシステムのセキュリティ機能を評価する国際規格です。SG試験・情報セキュリティマネジメント試験で迷いやすい評価対象と運用管理との違いを整理します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-overview</span>
+        
+          <span class="post-tag">crypto_auth</span>
+        
+          <span class="post-tag">sg-technology</span>
+        
+          <span class="post-tag">it_security_operations</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+
+<p>ISO/IEC 15408は、IT製品やITシステムのセキュリティ機能を評価するための国際規格です。</p>
+
+<p>SG試験では、細かい規格番号を暗記するよりも、<strong>「何を評価する規格なのか」</strong>を判断できることが大切です。</p>
+
+<p>特に、選択肢では次のような形で迷わせてくることがあります。</p>
+
+<p>暗号アルゴリズムそのものの品質</p>
+
+<p>サービス運用の管理手順</p>
+
+<p>ファイアウォールなどのセキュリティ製品</p>
+
+<p>電磁波漏えいなどの物理的対策</p>
+
+<p>この中でISO/IEC 15408の評価対象として考えやすいのは、セキュリティ機能をもつIT製品やシステムです。</p>
+
+<p>たとえば、パケットフィルタリング機能をもつファイアウォール用ソフトウェアは、ISO/IEC 15408の評価対象になり得ます。</p>
+
+<h2 id="直感的な説明">直感的な説明</h2>
+
+<p>ISO/IEC 15408は、簡単にいうと、<strong>セキュリティ製品の「安全性の説明書と検査基準」</strong>のようなものです。</p>
+
+<p>たとえば、会社でファイアウォールを導入するとき、製品の説明だけを見ても、次のような不安が残ります。</p>
+
+<p>本当に通信を適切に制御できるのか</p>
+
+<p>セキュリティ機能は設計どおりに動くのか</p>
+
+<p>第三者の評価を受けているのか</p>
+
+<p>調達先として信頼できる製品なのか</p>
+
+<p>そこで、製品のセキュリティ機能について、一定の基準に基づいて評価する考え方が必要になります。</p>
+
+<p>ISO/IEC 15408は、<strong>「この製品は、どのようなセキュリティ機能をもち、それがどの程度きちんと評価されているか」</strong>を確認するための枠組みです。</p>
+
+<p>SG試験では、製品そのものを技術的に深く解析するというより、製品評価の規格なのか、運用管理の規格なのかを切り分ける視点が問われます。</p>
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+
+<blockquote>
+  <p>公式: JISEC（ITセキュリティ評価及び認証制度）：<a href="https://www.ipa.go.jp/security/jisec/">公式: JISEC（ITセキュリティ評価及び認証制度）</a></p>
+</blockquote>
+
+<p>ISO/IEC 15408は、情報技術に関する製品やシステムのセキュリティ機能を評価するための国際規格です。</p>
+
+<p>日本では、対応するJISとして JIS X 5070 があります。</p>
+
+<p>評価対象は、ソフトウェアだけに限られません。</p>
+
+<p>ソフトウェア</p>
+
+<p>ハードウェア</p>
+
+<p>ファームウェア</p>
+
+<p>それらを組み合わせたシステム</p>
+
+<p>などが対象になり得ます。</p>
+
+<p>ここで大事なのは、ISO/IEC 15408が見るのは、組織の運用ルールそのものではなく、製品やシステムに備わるセキュリティ機能だという点です。</p>
+
+<p>たとえば、次のようなものは評価対象としてイメージしやすいです。</p>
+
+<p>例	評価対象として考えやすい理由</p>
+
+<p>ファイアウォール	通信を制御するセキュリティ機能をもつ
+ICカード	認証や暗号処理などの機能をもつ
+セキュリティ機能付きOS	アクセス制御などの機能をもつ
+データベース製品	権限管理や監査ログなどの機能をもつ</p>
+
+<p>一方で、単なる運用手順や組織の管理ルールは、ISO/IEC 15408の中心的な評価対象とは考えません。</p>
+
+<p>また、日本ではISO/IEC 15408に基づく評価・認証の制度として、<strong>ITセキュリティ評価及び認証制度（JISEC）</strong>があります。</p>
+
+<p>JISECでは、IT製品やシステムについて、セキュリティ機能の適切性や確実性を第三者が評価し、その結果を認証する枠組みが整備されています。</p>
+
+<p>さらに、評価の深さや保証の程度を示す考え方として、<strong>評価保証レベル（EAL：Evaluation Assurance Level）</strong>があります。</p>
+
+<p>EALは、ざっくりいうと、どの程度の厳しさで評価されたかを示す目安です。</p>
+
+<p>ただし、SG試験ではEALの細かい段階を暗記するより、まずは次のように押さえると十分です。</p>
+
+<blockquote>
+  <p>ISO/IEC 15408は、IT製品やシステムのセキュリティ機能を評価するための規格である。</p>
+</blockquote>
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+
+<p>ISO/IEC 15408は、主にセキュリティ製品やシステムを調達・導入するときに関係します。</p>
+
+<p>たとえば、組織がセキュリティ製品を選ぶ場面では、価格や機能一覧だけで判断すると危険です。</p>
+
+<p>セキュリティ機能が明確に定義されているか</p>
+
+<p>第三者の評価を受けているか</p>
+
+<p>調達条件として十分な保証があるか</p>
+
+<p>重要な情報資産を守る目的に合っているか</p>
+
+<p>このような判断材料として、ISO/IEC 15408に基づく評価や認証が使われることがあります。</p>
+
+<p>SG試験では、特に調達・委託・情報資産保護の文脈で考えると理解しやすくなります。</p>
+
+<p>たとえば、重要な情報を扱うシステムにファイアウォールや認証製品を導入する場合、単に「有名な製品だから安全」と考えるのではなく、客観的な評価を受けているかを確認する視点が大切です。</p>
+
+<p>一方で、ISO/IEC 15408を使う場面と誤解しやすいものもあります。</p>
+
+<p>場面	ISO/IEC 15408として考えるか</p>
+
+<p>ファイアウォール製品のセキュリティ機能を評価する	考えやすい
+認証サービスの運用手順を管理する	中心ではない
+社員教育の実施状況を確認する	中心ではない
+電磁波漏えい対策の方法を定める	中心ではない</p>
+
+<p>選択肢では、「製品・システムのセキュリティ機能」か「組織の運用・管理・物理対策」かを切り分けると判断しやすくなります。</p>
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<p>誤解1：暗号アルゴリズムそのものを評価する規格だと思う</p>
+
+<p>ISO/IEC 15408は、暗号アルゴリズム単体の品質を評価するための規格ではありません。</p>
+
+<p>暗号機能をもつ製品は評価対象になり得ますが、試験では<strong>「暗号アルゴリズムそのもの」なのか「暗号機能をもつIT製品」なのか</strong>を分けて考える必要があります。</p>
+
+<p>選択肢で「暗号アルゴリズムの品質」と書かれていたら、ISO/IEC 15408の評価対象としては少しずれています。</p>
+
+<p>誤解2：サービス運用の管理手順を評価する規格だと思う</p>
+
+<p>認証業務の運用受託サービスの管理手順などは、サービス運用や委託先管理の話です。</p>
+
+<p>もちろん、SG試験では委託先管理も重要ですが、ISO/IEC 15408の中心はIT製品やシステムのセキュリティ機能の評価です。</p>
+
+<p>そのため、選択肢で「運用手順」「管理手順」「業務プロセス」と書かれていたら、ISO/IEC 15408とは別の管理・監査の話ではないかと疑うとよいです。</p>
+
+<p>誤解3：物理的な漏えい対策の規格だと思う</p>
+
+<p>表示装置からの電磁波放射による情報漏えいの防止方法は、物理的・環境的なセキュリティ対策の話です。</p>
+
+<p>ISO/IEC 15408は、こうした物理的対策そのものを定める規格として覚えるものではありません。</p>
+
+<p>選択肢では、「製品評価」ではなく「対策方法」になっていないかを見ると切り分けやすくなります。</p>
+
+<p>誤解4：ソフトウェアだけが対象だと思う</p>
+
+<p>ISO/IEC 15408の評価対象は、ソフトウェアだけではありません。</p>
+
+<p>ハードウェア、ファームウェア、システム全体も対象になり得ます。</p>
+
+<p>ただし、SG試験の選択肢では、ファイアウォール用ソフトウェアのように分かりやすいセキュリティ製品が出されることがあります。</p>
+
+<p>この場合は、セキュリティ機能をもつIT製品だから評価対象になると考えます。</p>
+
+<p>SG試験でのひっかけポイント</p>
+
+<p>SG試験では、ISO/IEC 15408について、次のように問われることが多いです。</p>
+
+<blockquote>
+  <p>ISO/IEC 15408の評価対象になるものはどれか。</p>
+</blockquote>
+
+<p>このときは、次の判断基準で選択肢を切ります。</p>
+
+<p>IT製品・システムの話か</p>
+
+<p>セキュリティ機能の評価の話か</p>
+
+<p>運用手順や管理手順の話にすり替わっていないか</p>
+
+<p>物理的対策や暗号単体の品質評価にずれていないか</p>
+
+<p>今回のように、選択肢に「パケットフィルタリング機能をもつファイアウォール用ソフトウェア」があれば、ISO/IEC 15408の評価対象として最も適切です。</p>
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<p>ISO/IEC 15408は、IT製品やITシステムのセキュリティ機能を評価する国際規格です。</p>
+
+<p>日本の対応JISは JIS X 5070 です。</p>
+
+<p>SG試験では、製品・システムの評価なのか、運用手順・物理対策・暗号単体の話なのかを切り分けます。</p>
+
+<p>ファイアウォールのように、セキュリティ機能をもつIT製品は評価対象として考えやすいです。</p>
+
+<p>選択肢では、<strong>「セキュリティ機能をもつIT製品か？」</strong>を最初に確認しましょう。</p>
+
+<hr />
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-physical/">入退室管理とは？物理アクセス制御の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control/">アクセス管理とは？特権IDとneed-to-knowで権限を適切に制御【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/anti-passback/">アンチパスバックとは？不正な入退室を防ぐ仕組み【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/attacker-types/">攻撃者の種類とは？目的と特徴で整理する【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/audit-log/">監査ログとは？不正検知と追跡の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/security-management-overview/">← 情報セキュリティ管理とは？組織で守る仕組みの基本【SG試験】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/eal/">EALとは？セキュリティ評価保証レベルをやさしく整理【SG試験】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

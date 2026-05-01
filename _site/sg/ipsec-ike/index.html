@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>IKEとは？IPsecで鍵を交換する仕組み【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="IKEとは？IPsecで鍵を交換する仕組み【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="IKEはIPsec通信で使う暗号方式や鍵を決めるための鍵交換の仕組みです。AH・ESP・SAとの違いをSG試験・情報セキュリティマネジメント試験向けに整理します。" />
+<meta property="og:description" content="IKEはIPsec通信で使う暗号方式や鍵を決めるための鍵交換の仕組みです。AH・ESP・SAとの違いをSG試験・情報セキュリティマネジメント試験向けに整理します。" />
+<link rel="canonical" href="http://localhost:4000/sg/ipsec-ike/" />
+<meta property="og:url" content="http://localhost:4000/sg/ipsec-ike/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="IKEとは？IPsecで鍵を交換する仕組み【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"IKEはIPsec通信で使う暗号方式や鍵を決めるための鍵交換の仕組みです。AH・ESP・SAとの違いをSG試験・情報セキュリティマネジメント試験向けに整理します。","headline":"IKEとは？IPsecで鍵を交換する仕組み【SG試験】","url":"http://localhost:4000/sg/ipsec-ike/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">IKEとは？IPsecで鍵を交換する仕組み【SG試験】</h1>
+      <h2 class="project-tagline">IKEはIPsec通信で使う暗号方式や鍵を決めるための鍵交換の仕組みです。AH・ESP・SAとの違いをSG試験・情報セキュリティマネジメント試験向けに整理します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">IKEはIPsec通信で使う暗号方式や鍵を決めるための鍵交換の仕組みです。AH・ESP・SAとの違いをSG試験・情報セキュリティマネジメント試験向けに整理します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-overview</span>
+        
+          <span class="post-tag">crypto_auth</span>
+        
+          <span class="post-tag">network</span>
+        
+          <span class="post-tag">sg-technology</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+
+<p>IKE（Internet Key Exchange）は、IPsecで安全に通信するために、暗号方式や鍵を決める鍵交換の仕組みです。</p>
+
+<p>SG試験では、IKEを「通信データを暗号化するもの」と覚えるより、ESPなどが暗号化通信を行う前に、必要な条件や鍵を決める仕組みとして理解することが大切です。</p>
+
+<p>特に、次の切り分けが重要です。</p>
+
+<p>IPsec：IP通信を保護する仕組み全体</p>
+
+<p>AH：認証・改ざん検知を行うが、暗号化はしない</p>
+
+<p>ESP：通信データを暗号化できる</p>
+
+<p>IKE：暗号方式や鍵を決める</p>
+
+<p>SA：IPsec通信で使うルールや設定のまとまり</p>
+
+<p>選択肢で「鍵交換」「暗号化アルゴリズムを決定」「暗号化鍵を動的に生成」と出てきたら、IKEを候補にします。</p>
+
+<h2 id="直感的な説明">直感的な説明</h2>
+
+<p>IKEは、通信を始める前の合鍵の打ち合わせのようなものです。</p>
+
+<p>たとえば、2人で秘密のメッセージをやり取りする場合、いきなり暗号化して送ることはできません。
+先に、</p>
+
+<p>どの暗号方式を使うか</p>
+
+<p>どの鍵を使うか</p>
+
+<p>どれくらいの期間、その鍵を使うか</p>
+
+<p>相手は本当に正しい相手か</p>
+
+<p>を決める必要があります。</p>
+
+<p>この「通信を守るための事前準備」を行うのがIKEです。</p>
+
+<p>ESPが実際に通信内容を暗号化する担当だとすると、IKEは暗号化に必要な約束を決める担当です。</p>
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+
+<p>IKEは、IPsecで使う暗号方式や鍵などを安全に決めるためのプロトコルです。</p>
+
+<p>IPsecで安全な通信をするには、通信する相手同士が同じルールを共有している必要があります。
+たとえば、片方がある暗号方式を使い、もう片方が別の方式を使っていたら、通信内容を正しく復号できません。</p>
+
+<p>そこでIKEは、通信を始める前に次のような内容を決めます。</p>
+
+<p>項目	内容</p>
+
+<p>暗号方式	どの暗号化アルゴリズムを使うか
+認証方式	相手をどのように確認するか
+鍵	通信を保護するための鍵
+有効期間	その鍵や設定をいつまで使うか
+SA	IPsec通信で使うルールや設定</p>
+
+<p>IKEとSAの関係</p>
+
+<p>SA（Security Association）は、IPsec通信で使うルールや設定のまとまりです。</p>
+
+<p>IKEは、このSAを作るための交渉を行います。
+つまり、IKEは「ルールを決める会議」、SAは「決まったルール表」と考えると分かりやすいです。</p>
+
+<p>用語	役割</p>
+
+<p>IKE	鍵や暗号方式を交渉して決める
+SA	決まった通信ルールや設定のまとまり</p>
+
+<p>SG試験では、SAそのものを細かく覚えるより、IKEがSAを作るために鍵や条件を決めると理解しておくと十分です。</p>
+
+<p>IKEとESPの関係</p>
+
+<p>ESPは、IPsecで通信データを暗号化できる仕組みです。
+ただし、ESPが暗号化を行うには、どの鍵や暗号方式を使うかが決まっている必要があります。</p>
+
+<p>その事前準備を行うのがIKEです。</p>
+
+<p>用語	役割</p>
+
+<p>IKE	暗号方式や鍵を決める
+ESP	決められた鍵や方式で通信データを保護する</p>
+
+<p>選択肢で「通信データを暗号化する」とあればESPを疑います。
+一方、「鍵を交換する」「暗号方式を決める」とあればIKEを疑います。</p>
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+
+<p>IKEは、IPsecを使って安全な通信を行う場面で使われます。</p>
+
+<p>代表的なのは、VPNです。</p>
+
+<p>たとえば、</p>
+
+<p>本社と支社をIPsec VPNで接続する</p>
+
+<p>外出先から社内ネットワークに安全に接続する</p>
+
+<p>通信を始める前に、暗号方式や鍵を安全に決める</p>
+
+<p>といった場面で関係します。</p>
+
+<p>実務では、VPN機器やルータなどでIPsec VPNを設定するときに、IKEの設定が出てくることがあります。
+ただし、SG試験では設定値の細かい暗記よりも、IKEは鍵交換と条件の合意を行う仕組みと押さえることが大切です。</p>
+
+<p>また、IKEは通信前の準備を行う仕組みなので、通信データそのものを暗号化しているわけではありません。
+実際のデータ保護は、主にESPなどが担当します。</p>
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<p>IKEとESPの混同</p>
+
+<p>IKEとESPは、どちらもIPsecで出てくるため混同しやすいです。</p>
+
+<p>用語	主な役割	試験での見分け方</p>
+
+<p>IKE	鍵交換、暗号方式の決定	鍵・交渉・動的生成が出る
+ESP	通信データの暗号化	データ暗号化が出る</p>
+
+<p>選択肢では、<strong>「暗号化鍵を動的に生成する鍵交換プロトコル」</strong>のように書かれていたら、ESPではなくIKEです。</p>
+
+<p>ESPは暗号化を行う側、IKEはそのための鍵や条件を決める側です。</p>
+
+<p>IKEとAHの混同</p>
+
+<p>AHは、認証や完全性確認を行うIPsecの仕組みです。
+ただし、AHは暗号化を行わず、鍵交換を行う仕組みでもありません。</p>
+
+<p>用語	主な役割</p>
+
+<p>AH	認証、完全性確認、リプレイ攻撃対策
+IKE	鍵交換、暗号方式の決定</p>
+
+<p>選択肢で「認証データ」「シーケンス番号」「暗号化は行わない」といった内容が出ればAHを疑います。
+一方、「鍵交換」「暗号化アルゴリズムを決める」と出ればIKEを疑います。</p>
+
+<p>IKEとSAの混同</p>
+
+<p>SAは、IPsec通信で使うルールや設定のまとまりです。
+IKEは、そのSAを作るために交渉する仕組みです。</p>
+
+<p>過去問では、</p>
+
+<blockquote>
+  <p>暗号化アルゴリズムや暗号化鍵のライフタイムが設定される管理テーブル</p>
+</blockquote>
+
+<p>のような説明が出ることがあります。
+これはIKEそのものというより、SAに関する説明として考えます。</p>
+
+<p>IKEは「交渉する仕組み」、SAは「決まった内容」と切り分けます。</p>
+
+<p>IKEを暗号化そのものと考える誤解</p>
+
+<p>IKEは、暗号化通信を行うために重要な仕組みです。
+しかし、IKE自体が通信データを暗号化して運ぶ中心ではありません。</p>
+
+<p>通信データを暗号化する中心はESPです。
+IKEは、そのESPなどが使う鍵や方式を決める準備役です。</p>
+
+<p>SG試験では、準備役か、実行役かで切り分けると分かりやすいです。</p>
+
+<p>IKE：準備役。鍵や方式を決める</p>
+
+<p>ESP：実行役。通信データを暗号化する</p>
+
+<p>AH：確認役。認証と改ざん検知を行う</p>
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<p>IKEは、IPsecで使う鍵や暗号方式を決める仕組み</p>
+
+<p>IKEは、通信データそのものを暗号化する中心ではない</p>
+
+<p>ESPは、通信データを暗号化できる仕組み</p>
+
+<p>AHは、暗号化せず、認証・完全性確認を行う仕組み</p>
+
+<p>選択肢で「鍵交換」「暗号化鍵を動的に生成」と出たらIKEを候補にする</p>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/attacker-types/">攻撃者の種類とは？目的と特徴で整理する【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/authentication-authorization-access-control/">認証・認可・アクセス制御の違いとは？役割の切り分けを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/authentication-methods/">認証方式とは？3要素と多要素認証を整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/blacklist-whitelist/">ブラックリストとホワイトリストの違いとは？判断基準を整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/block-stream-cipher/">ブロック暗号とストリーム暗号の違いとは？暗号方式を整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/ipsec-esp/">← IPsecのESPとは？暗号化できるセキュリティ機能【SG試験】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/ipsec-sa/">SAとは？IPsec通信のルールを管理する仕組み【SG試験】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

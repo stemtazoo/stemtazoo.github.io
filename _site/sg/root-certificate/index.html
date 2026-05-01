@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>ルート証明書とは？信頼の起点をやさしく理解【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="ルート証明書とは？信頼の起点をやさしく理解【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="ルート証明書の役割を短時間で把握できるよう、信頼の起点・証明書チェーン・OSストア管理を具体的に整理し、なぜ通信相手を正当と判断できるかを説明できるようになります。" />
+<meta property="og:description" content="ルート証明書の役割を短時間で把握できるよう、信頼の起点・証明書チェーン・OSストア管理を具体的に整理し、なぜ通信相手を正当と判断できるかを説明できるようになります。" />
+<link rel="canonical" href="http://localhost:4000/sg/root-certificate/" />
+<meta property="og:url" content="http://localhost:4000/sg/root-certificate/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="ルート証明書とは？信頼の起点をやさしく理解【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"ルート証明書の役割を短時間で把握できるよう、信頼の起点・証明書チェーン・OSストア管理を具体的に整理し、なぜ通信相手を正当と判断できるかを説明できるようになります。","headline":"ルート証明書とは？信頼の起点をやさしく理解【SG試験】","url":"http://localhost:4000/sg/root-certificate/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">ルート証明書とは？信頼の起点をやさしく理解【SG試験】</h1>
+      <h2 class="project-tagline">ルート証明書の役割を短時間で把握できるよう、信頼の起点・証明書チェーン・OSストア管理を具体的に整理し、なぜ通信相手を正当と判断できるかを説明できるようになります。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">ルート証明書の役割を短時間で把握できるよう、信頼の起点・証明書チェーン・OSストア管理を具体的に整理し、なぜ通信相手を正当と判断できるかを説明できるようになります。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-overview</span>
+        
+          <span class="post-tag">crypto_auth</span>
+        
+          <span class="post-tag">it_security_operations</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+<p>ルート証明書は、<strong>電子証明書の信頼の起点となる特別な証明書</strong>です。<br />
+SG試験では「なぜ通信相手を信頼できるか」を判断させる問題で問われます。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>「信頼できる身分証の発行元」をイメージすると分かりやすいです。</p>
+
+<ul>
+  <li>社員証 → 会社が発行</li>
+  <li>その会社が信頼できるか → 国や大企業などが裏で保証</li>
+</ul>
+
+<p>この「一番上の信頼できる存在」がルート証明書です。</p>
+
+<p>👉 <strong>すべての証明書の“親分”のような存在</strong>です。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>ルート証明書は、認証局（CA）が発行する証明書の中でも<br />
+<strong>最上位に位置する自己署名証明書</strong>です。</p>
+
+<p>基本の仕組みは「証明書の連鎖（チェーン）」です。</p>
+
+<ol>
+  <li>サーバ証明書（Webサイトなど）</li>
+  <li>中間証明書（中間CA）</li>
+  <li>ルート証明書（最上位CA）</li>
+</ol>
+
+<p>通信時は次のように確認します。</p>
+
+<ul>
+  <li>サーバ証明書が正しいか<br />
+→ 上位の証明書で検証<br />
+→ 最後にルート証明書までたどる</li>
+</ul>
+
+<p>そして<br />
+👉 <strong>端末にあらかじめ登録されているルート証明書を信頼することで、全体を信頼する</strong></p>
+
+<p>SG試験では<br />
+<strong>「どこを信頼の基準にしているか」＝ルート証明書</strong><br />
+がポイントです。</p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="使う場面">使う場面</h3>
+<ul>
+  <li>HTTPS通信（Webサイトの証明書確認）</li>
+  <li>社内システムでの証明書ベース認証</li>
+  <li>VPNやメールの暗号化通信</li>
+</ul>
+
+<p>👉 現場では<br />
+<strong>「この証明書、本当に信頼できる？」を判断するための基準</strong>として使います。</p>
+
+<hr />
+
+<h3 id="使うと誤解しやすい場面">使うと誤解しやすい場面</h3>
+<ul>
+  <li>データの改ざんチェック<br />
+→ これはMACや電子署名の役割</li>
+</ul>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+<p>SG試験ではここがよく狙われます。</p>
+
+<h3 id="-ルート証明書は通信データを守る仕組み">❌ ルート証明書は通信データを守る仕組み</h3>
+<p>→ ⭕ <strong>信頼できる相手かを判断するための仕組み</strong></p>
+
+<hr />
+
+<h3 id="-ルート証明書サーバ証明書">❌ ルート証明書＝サーバ証明書</h3>
+<p>→ ⭕</p>
+<ul>
+  <li>サーバ証明書：通信相手の証明</li>
+  <li>ルート証明書：<strong>信頼の起点</strong></li>
+</ul>
+
+<hr />
+
+<h3 id="-pkiと同じ">❌ PKIと同じ</h3>
+<p>→ ⭕</p>
+<ul>
+  <li>PKI：公開鍵基盤（仕組み全体）</li>
+  <li>ルート証明書：<strong>その中の構成要素</strong></li>
+</ul>
+
+<hr />
+
+<h3 id="-macや電子署名と同じ">❌ MACや電子署名と同じ</h3>
+<p>→ ⭕</p>
+<ul>
+  <li>MAC：改ざん検知</li>
+  <li>電子署名：本人証明＋改ざん検知</li>
+  <li>ルート証明書：<strong>信頼の基準</strong></li>
+</ul>
+
+<hr />
+
+<p>👉 SG試験では<br />
+<strong>「信頼の起点 → ルート証明書」<br />
+「改ざん検知 → MAC」<br />
+「本人証明 → 電子署名」</strong><br />
+で切り分けます。</p>
+
+<hr />
+
+<h2 id="確認問題sg試験対策">確認問題（SG試験対策）</h2>
+
+<p>ルート証明書の説明として最も適切なものはどれか。</p>
+
+<p>A. 必ず中間CAが発行する証明書であり、自己署名はありえない。<br />
+B. 信頼の起点となる証明書で、OSやブラウザの信頼ストアに登録される。<br />
+C. サーバ証明書と同じ用途で、利用者端末には不要である。<br />
+D. 有効期限が切れても信頼性に影響しない。</p>
+
+<details>
+  <summary>▶ クリックして答えと解説を見る（ここを開く）</summary>
+
+  <p><strong>正解：B</strong></p>
+
+  <h3 id="section">解説</h3>
+  <ul>
+    <li>A：ルートCA証明書は自己署名が一般的です。</li>
+    <li>B：信頼連鎖の起点として扱われます。</li>
+    <li>C：用途が異なり、端末側の信頼設定が重要です。</li>
+    <li>D：有効期限切れは検証失敗の要因になります。</li>
+  </ul>
+
+  <p>👉 判断ポイント<br />
+ルート証明書は「信頼の土台」。ここを信頼するから連鎖を信頼できる。</p>
+
+</details>
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+<ul>
+  <li>ルート証明書は<strong>証明書の信頼の起点</strong></li>
+  <li>証明書の連鎖の一番上にある</li>
+  <li>端末に登録されているものを信頼する</li>
+  <li>通信データを守る仕組みではない</li>
+  <li>「信頼の基準」と書かれたらルート証明書</li>
+</ul>
+
+<p>👉 判断基準<br />
+<strong>信頼の起点 → ルート証明書<br />
+改ざん確認 → MAC<br />
+本人証明 → 電子署名</strong></p>
+
+<hr />
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-physical/">入退室管理とは？物理アクセス制御の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control/">アクセス管理とは？特権IDとneed-to-knowで権限を適切に制御【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/anti-passback/">アンチパスバックとは？不正な入退室を防ぐ仕組み【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/attacker-types/">攻撃者の種類とは？目的と特徴で整理する【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/audit-log/">監査ログとは？不正検知と追跡の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/certificate-authority-role/">← 認証局（CA）の役割とは？デジタル証明書の信頼の仕組み【SG試験】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/root-intermediate-certificate/">ルート証明書と中間証明書の関係とは？信頼のつながりを理解する【SG試験】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

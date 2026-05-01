@@ -8,14 +8,16 @@
 <meta name="generator" content="Jekyll v4.3.4" />
 <meta property="og:title" content="DDoS攻撃の種類を整理！試験での見分け方まとめ【情報セキュリティマネジメント】" />
 <meta property="og:locale" content="ja" />
-<meta name="description" content="DDoS攻撃は通信量型・増幅型・接続枯渇型に分類できます。本記事では代表的な攻撃手法と違いを整理し、SG試験で迷わない判断基準をまとめます。" />
-<meta property="og:description" content="DDoS攻撃は通信量型・増幅型・接続枯渇型に分類できます。本記事では代表的な攻撃手法と違いを整理し、SG試験で迷わない判断基準をまとめます。" />
+<meta name="description" content="DDoS攻撃の全体像をつかむため、通信量型・増幅型・接続枯渇型の特徴と防御策を比較し、どの可用性リスクに該当するかをSG試験・情報セキュリティマネジメント試験の文脈で素早く判断できるようにします。" />
+<meta property="og:description" content="DDoS攻撃の全体像をつかむため、通信量型・増幅型・接続枯渇型の特徴と防御策を比較し、どの可用性リスクに該当するかをSG試験・情報セキュリティマネジメント試験の文脈で素早く判断できるようにします。" />
+<link rel="canonical" href="http://localhost:4000/sg/ddos-attack-summary/" />
+<meta property="og:url" content="http://localhost:4000/sg/ddos-attack-summary/" />
 <meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="DDoS攻撃の種類を整理！試験での見分け方まとめ【情報セキュリティマネジメント】" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"DDoS攻撃は通信量型・増幅型・接続枯渇型に分類できます。本記事では代表的な攻撃手法と違いを整理し、SG試験で迷わない判断基準をまとめます。","headline":"DDoS攻撃の種類を整理！試験での見分け方まとめ【情報セキュリティマネジメント】","url":"/sg/ddos-attack-summary/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"DDoS攻撃の全体像をつかむため、通信量型・増幅型・接続枯渇型の特徴と防御策を比較し、どの可用性リスクに該当するかをSG試験・情報セキュリティマネジメント試験の文脈で素早く判断できるようにします。","headline":"DDoS攻撃の種類を整理！試験での見分け方まとめ【情報セキュリティマネジメント】","url":"http://localhost:4000/sg/ddos-attack-summary/"}</script>
 <!-- End Jekyll SEO tag -->
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -24,16 +26,13 @@
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="/assets/css/style.css?v=">
-    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
-
-<!-- Setup Google Analytics -->
-
-
-
-<!-- You can set your favicon here -->
-<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
-
-<!-- end custom head snippets -->
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
 
   </head>
   <body>
@@ -41,7 +40,7 @@
 
     <header class="page-header" role="banner">
       <h1 class="project-name">DDoS攻撃の種類を整理！試験での見分け方まとめ【情報セキュリティマネジメント】</h1>
-      <h2 class="project-tagline">DDoS攻撃は通信量型・増幅型・接続枯渇型に分類できます。本記事では代表的な攻撃手法と違いを整理し、SG試験で迷わない判断基準をまとめます。</h2>
+      <h2 class="project-tagline">DDoS攻撃の全体像をつかむため、通信量型・増幅型・接続枯渇型の特徴と防御策を比較し、どの可用性リスクに該当するかをSG試験・情報セキュリティマネジメント試験の文脈で素早く判断できるようにします。</h2>
       
       
     </header>
@@ -50,7 +49,7 @@
       <article class="post">
   <header class="post-header">
     
-      <p class="post-meta">DDoS攻撃は通信量型・増幅型・接続枯渇型に分類できます。本記事では代表的な攻撃手法と違いを整理し、SG試験で迷わない判断基準をまとめます。</p>
+      <p class="post-meta">DDoS攻撃の全体像をつかむため、通信量型・増幅型・接続枯渇型の特徴と防御策を比較し、どの可用性リスクに該当するかをSG試験・情報セキュリティマネジメント試験の文脈で素早く判断できるようにします。</p>
     
     
       <p class="post-categories">
@@ -62,6 +61,8 @@
           <span class="post-tag">unauthorized_access</span>
         
           <span class="post-tag">network</span>
+        
+          <span class="post-tag">sg-security-overview</span>
         
       </p>
     
@@ -77,6 +78,10 @@
 
   </header>
   <div class="post-content">
+    
+    
+    
+    
     <h2 id="まず結論">まず結論</h2>
 <p>DDoS攻撃は「<strong>通信量で圧迫するか／接続を詰まらせるか／増幅するか</strong>」で分類できます。<br />
 SG試験では「<strong>攻撃の仕組み（どう止めているか）</strong>」で切り分けます。</p>
@@ -221,8 +226,100 @@ SG試験では「<strong>攻撃の仕組み（どう止めているか）</stron
       
 
       
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
         <li style="margin-bottom: 6px;">
-          <a href="/sg/attacker-types/">攻撃者の種類とは？目的と特徴で整理する【情報セキュリティマネジメント】</a>
+          <a href="/sg/attacker-types/">攻撃者の種類とは？目的と特徴で整理する【SG試験】</a>
         </li>
         
       
@@ -246,8 +343,73 @@ SG試験では「<strong>攻撃の仕組み（どう止めているか）</stron
       
 
       
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
         <li style="margin-bottom: 6px;">
-          <a href="/sg/blacklist-whitelist/">ブラックリストとホワイトリストの違いとは？判断基準を整理【情報セキュリティマネジメント】</a>
+          <a href="/sg/authentication-methods/">認証方式とは？3要素と多要素認証を整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/blacklist-whitelist/">ブラックリストとホワイトリストの違いとは？判断基準を整理【SG試験】</a>
         </li>
         
       
@@ -262,7 +424,7 @@ SG試験では「<strong>攻撃の仕組み（どう止めているか）</stron
 
       
         <li style="margin-bottom: 6px;">
-          <a href="/sg/bot/">ボットとは？遠隔操作される仕組みを理解する【情報セキュリティマネジメント】</a>
+          <a href="/sg/block-stream-cipher/">ブロック暗号とストリーム暗号の違いとは？暗号方式を整理【SG試験】</a>
         </li>
         
       
@@ -277,22 +439,7 @@ SG試験では「<strong>攻撃の仕組み（どう止めているか）</stron
 
       
         <li style="margin-bottom: 6px;">
-          <a href="/sg/botnet/">ボットネットとは？踏み台化とDDoSの関係を理解する【情報セキュリティマネジメント】</a>
-        </li>
-        
-      
-
-      
-    
-  
-    
-      
-
-      
-
-      
-        <li style="margin-bottom: 6px;">
-          <a href="/sg/brute-force-attack/">ブルートフォース攻撃とは？総当たり攻撃の仕組みと対策【情報セキュリティマネジメント】</a>
+          <a href="/sg/bot/">ボットとは？遠隔操作される仕組みを理解する【SG試験】</a>
         </li>
         
       
@@ -313,12 +460,12 @@ SG試験では「<strong>攻撃の仕組み（どう止めているか）</stron
 <div class="page-navigation" style="margin-top:12px;">
   
     
-    <a class="prev" href="/sg/cyber-kill-chain/">← サイバーキルチェーンとは？攻撃の流れから対策を考える【情報セキュリティマネジメント】</a>
+    <a class="prev" href="/sg/cyber-kill-chain/">← サイバーキルチェーンとは？攻撃の流れから対策を考える【SG試験】</a>
   
 
   
     
-    <a class="next" href="/sg/ddos/">DDoS攻撃とは？サービス停止を狙う攻撃の仕組み【情報セキュリティマネジメント】 →</a>
+    <a class="next" href="/sg/ddos/">DDoS攻撃とは？サービス停止を狙う攻撃の仕組み【SG試験】 →</a>
   
 </div>
 

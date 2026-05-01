@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>SPFとは？送信元IPでなりすましを防ぐ仕組み【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="SPFとは？送信元IPでなりすましを防ぐ仕組み【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="SPFは送信元IPアドレスをもとにメールの正当性を確認する仕組みです。DNSに登録された許可サーバと照合する流れと、DKIMとの違いなどSG試験・情報セキュリティマネジメント試験での判断ポイントを整理します。" />
+<meta property="og:description" content="SPFは送信元IPアドレスをもとにメールの正当性を確認する仕組みです。DNSに登録された許可サーバと照合する流れと、DKIMとの違いなどSG試験・情報セキュリティマネジメント試験での判断ポイントを整理します。" />
+<link rel="canonical" href="http://localhost:4000/sg/spf/" />
+<meta property="og:url" content="http://localhost:4000/sg/spf/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="SPFとは？送信元IPでなりすましを防ぐ仕組み【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"SPFは送信元IPアドレスをもとにメールの正当性を確認する仕組みです。DNSに登録された許可サーバと照合する流れと、DKIMとの違いなどSG試験・情報セキュリティマネジメント試験での判断ポイントを整理します。","headline":"SPFとは？送信元IPでなりすましを防ぐ仕組み【SG試験】","url":"http://localhost:4000/sg/spf/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">SPFとは？送信元IPでなりすましを防ぐ仕組み【SG試験】</h1>
+      <h2 class="project-tagline">SPFは送信元IPアドレスをもとにメールの正当性を確認する仕組みです。DNSに登録された許可サーバと照合する流れと、DKIMとの違いなどSG試験・情報セキュリティマネジメント試験での判断ポイントを整理します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">SPFは送信元IPアドレスをもとにメールの正当性を確認する仕組みです。DNSに登録された許可サーバと照合する流れと、DKIMとの違いなどSG試験・情報セキュリティマネジメント試験での判断ポイントを整理します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-measures</span>
+        
+          <span class="post-tag">unauthorized_access</span>
+        
+          <span class="post-tag">network</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+<p>SPFは、<strong>送信元ドメインが許可したメールサーバ（IPアドレス）から送信されたかを確認する仕組み</strong>です。<br />
+SG試験では「IPアドレスで確認する認証方式かどうか」を見抜けるかが問われます。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>「この会社のメールは、このサーバからしか送らない」と<strong>事前に公開しておくイメージ</strong>です。</p>
+
+<p>受信側は、</p>
+<ul>
+  <li>送信元のドメインを見て</li>
+  <li>「このドメインはどのサーバから送るはずか？」を確認し</li>
+  <li>実際の送信元IPと一致するかをチェックします</li>
+</ul>
+
+<p>つまり、<strong>送信元の“住所（IP）”が正しいかを見る仕組み</strong>です。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>SPF（Sender Policy Framework）は、次の流れで動きます。</p>
+
+<ol>
+  <li>送信側ドメインがDNSに<br />
+→ 「このIPアドレスから送信OK」という情報を登録</li>
+  <li>受信側サーバがメールを受信</li>
+  <li>送信元ドメインのDNSを参照</li>
+  <li>実際の送信元IPと照合</li>
+  <li>一致すれば正当と判断、不一致ならなりすましの可能性</li>
+</ol>
+
+<p>ポイントは、<br />
+<strong>「DNSに登録された送信元IPと一致するか」を確認しているだけ</strong>というシンプルな仕組みです。</p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="使う場面">使う場面</h3>
+<ul>
+  <li>なりすましメール（詐称メール）の対策</li>
+  <li>組織のメールドメインを守る</li>
+  <li>メールサーバの正当性チェック</li>
+</ul>
+
+<h3 id="注意が必要な場面">注意が必要な場面</h3>
+<ul>
+  <li>メール転送がある場合<br />
+→ 送信元IPが変わるため、SPFが失敗することがある</li>
+  <li>本文の改ざん検知はできない<br />
+→ あくまで「送信元の正当性」だけ</li>
+</ul>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+<p>SG試験でかなり狙われるポイントです。</p>
+
+<h3 id="-dkimとの混同">❌ DKIMとの混同</h3>
+<ul>
+  <li>「電子署名で確認する」 → <strong>DKIM</strong></li>
+  <li>「IPアドレスで確認する」 → <strong>SPF（これ）</strong></li>
+</ul>
+
+<p>👉 選択肢で<br />
+「デジタル署名」「改ざん検知」と書かれていたらSPFではない</p>
+
+<hr />
+
+<h3 id="-spfは内容の安全性も保証する">❌ SPFは内容の安全性も保証する？</h3>
+<p>→ <strong>しない</strong></p>
+
+<p>SPFは</p>
+<ul>
+  <li>送信元が正しいか → ✔</li>
+  <li>内容が改ざんされていないか → ✖</li>
+</ul>
+
+<p>👉 内容の保証はDKIMの役割</p>
+
+<hr />
+
+<h3 id="-送信側がチェックする">❌ 送信側がチェックする？</h3>
+<p>→ <strong>受信側がチェックする</strong></p>
+
+<p>👉 SG試験では<br />
+「送信サーバが確認する」と書かれていたら誤り</p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+<ul>
+  <li>SPF = <strong>送信元IPアドレスで正当性を確認</strong></li>
+  <li>DNSに「送信してよいサーバ」を登録して照合する</li>
+  <li><strong>改ざん検知はできない（DKIMとの違い）</strong></li>
+  <li><strong>受信側サーバがチェックする</strong></li>
+  <li>「デジタル署名」と出たらSPFではないと判断する</li>
+</ul>
+
+<hr />
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-model/">アクセス制御モデルとは？RBAC・ABAC・DAC・MACの違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-physical/">入退室管理とは？物理アクセス制御の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control/">アクセス管理とは？特権IDとneed-to-knowで権限を適切に制御【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/anti-passback/">アンチパスバックとは？不正な入退室を防ぐ仕組み【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/auth-access-summary/">認証・アクセス制御まとめ｜SSO・MFA・ゼロトラストを体系整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/smtp-auth/">← SMTP-AUTHとは？メール送信時の認証方式【SG試験】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/spf-dkim/">SPF・DKIMとは？なりすましメール対策の仕組み【SG試験】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>内部不正防止ガイドラインとは？組織での対策の考え方を整理【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="内部不正防止ガイドラインとは？組織での対策の考え方を整理【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="内部不正防止ガイドラインは組織内部の不正行為を防ぐための指針です。IPAのガイドラインをもとに、SG試験・情報セキュリティマネジメント試験で問われる原因別対策と運用の判断ポイントを整理します。" />
+<meta property="og:description" content="内部不正防止ガイドラインは組織内部の不正行為を防ぐための指針です。IPAのガイドラインをもとに、SG試験・情報セキュリティマネジメント試験で問われる原因別対策と運用の判断ポイントを整理します。" />
+<link rel="canonical" href="http://localhost:4000/sg/insider-guideline/" />
+<meta property="og:url" content="http://localhost:4000/sg/insider-guideline/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="内部不正防止ガイドラインとは？組織での対策の考え方を整理【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"内部不正防止ガイドラインは組織内部の不正行為を防ぐための指針です。IPAのガイドラインをもとに、SG試験・情報セキュリティマネジメント試験で問われる原因別対策と運用の判断ポイントを整理します。","headline":"内部不正防止ガイドラインとは？組織での対策の考え方を整理【SG試験】","url":"http://localhost:4000/sg/insider-guideline/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">内部不正防止ガイドラインとは？組織での対策の考え方を整理【SG試験】</h1>
+      <h2 class="project-tagline">内部不正防止ガイドラインは組織内部の不正行為を防ぐための指針です。IPAのガイドラインをもとに、SG試験・情報セキュリティマネジメント試験で問われる原因別対策と運用の判断ポイントを整理します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">内部不正防止ガイドラインは組織内部の不正行為を防ぐための指針です。IPAのガイドラインをもとに、SG試験・情報セキュリティマネジメント試験で問われる原因別対策と運用の判断ポイントを整理します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-management</span>
+        
+          <span class="post-tag">it_security_operations</span>
+        
+          <span class="post-tag">security_training</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+<p>内部不正防止ガイドラインとは、組織内部の不正を防ぐための対策を体系的に整理した指針であり、SG試験では「原因（動機・機会・正当化）に対して適切な対策か」を判断させる問題が多いです。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>内部不正は「人の問題」だけではなく、「仕組みの問題」でもあります。</p>
+
+<p>たとえば、</p>
+<ul>
+  <li>権限が広すぎる → できてしまう（機会）</li>
+  <li>不満がある → やる気になる（動機）</li>
+  <li>バレないと思う → 正当化する</li>
+</ul>
+
+<p>👉<br />
+こうした状況を放置すると、不正が起きやすくなります。</p>
+
+<p>そこで<br />
+<strong>「人・組織・仕組み」すべてから対策するための指針</strong>が<br />
+内部不正防止ガイドラインです。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>内部不正防止ガイドラインは、IPAが公表している<br />
+<strong>組織として内部不正を防止するための実践的な対策集</strong>です。</p>
+
+<p>参考：</p>
+<ul>
+  <li><a href="https://www.ipa.go.jp/security/guide/insider.html">内部不正防止ガイドライン（IPA公式）</a></li>
+</ul>
+
+<hr />
+
+<h3 id="-ガイドライン本文とチェックシート重要">■ ガイドライン本文とチェックシート（重要）</h3>
+<p>ガイドラインは大きく次の2つで構成されています。</p>
+
+<h4 id="-ガイドライン本文">① ガイドライン本文</h4>
+<ul>
+  <li>内部不正対策の考え方や具体的な対策例を解説</li>
+  <li>組織として何をすべきかを体系的に整理</li>
+</ul>
+
+<p>👉<br />
+「どういう対策が必要か」を理解するための資料</p>
+
+<hr />
+
+<h4 id="-チェックシート">② チェックシート</h4>
+<ul>
+  <li>対策が実施できているかを確認するための一覧</li>
+</ul>
+
+<p>👉<br />
+「自分の組織でできているか」を確認するためのツール</p>
+
+<hr />
+
+<p>👉 重要ポイント<br />
+<strong>本文＝考え方 / チェックシート＝実施状況の確認</strong></p>
+
+<hr />
+
+<h3 id="-基本の考え方重要">■ 基本の考え方（重要）</h3>
+<p>対策は単発ではなく、<strong>組織全体で継続的に実施する</strong>ことが前提です。</p>
+
+<p>主な観点は次のとおりです。</p>
+
+<hr />
+
+<h3 id="-主な対策の分類">■ 主な対策の分類</h3>
+<h4 id="-組織ルール">① 組織・ルール</h4>
+<ul>
+  <li>セキュリティポリシーの策定</li>
+  <li>就業規則・懲戒規定の整備</li>
+</ul>
+
+<p>👉 正当化を防ぐ（ルールを明確にする）</p>
+
+<hr />
+
+<h4 id="-人教育意識">② 人（教育・意識）</h4>
+<ul>
+  <li>セキュリティ教育・訓練</li>
+  <li>誓約書の取得</li>
+</ul>
+
+<p>👉 正当化・動機を抑制する</p>
+
+<hr />
+
+<h4 id="-技術仕組み">③ 技術・仕組み</h4>
+<ul>
+  <li>アクセス管理（最小権限）</li>
+  <li>ログ管理（証跡の確保）</li>
+  <li>持ち出し制御</li>
+</ul>
+
+<p>👉 機会を減らす・発覚しやすくする</p>
+
+<hr />
+
+<h4 id="-運用監査">④ 運用・監査</h4>
+<ul>
+  <li>定期的な点検</li>
+  <li>監査・レビュー</li>
+</ul>
+
+<p>👉 継続的に改善する</p>
+
+<hr />
+
+<h3 id="-内部不正との関係重要">■ 内部不正との関係（重要）</h3>
+<p>このガイドラインは、不正のトライアングルに対応しています。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>要因</th>
+      <th>対策</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>動機</td>
+      <td>教育・職場環境</td>
+    </tr>
+    <tr>
+      <td>機会</td>
+      <td>アクセス管理・監視</td>
+    </tr>
+    <tr>
+      <td>正当化</td>
+      <td>規程・倫理教育</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>👉<br />
+<strong>どの要因に効く対策かを意識することがSGでは重要です。</strong></p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="-使う場面">■ 使う場面</h3>
+<ul>
+  <li>内部不正対策の全体設計</li>
+  <li>ISMS運用</li>
+  <li>監査・リスクアセスメント</li>
+</ul>
+
+<p>👉 SG試験では<br />
+「どの対策を取るべきか」を判断させる問題で使います。</p>
+
+<hr />
+
+<h3 id="-使うと誤解しやすい場面">■ 使うと誤解しやすい場面</h3>
+<ul>
+  <li>
+    <p>技術対策だけで十分<br />
+→ 教育やルールも必要</p>
+  </li>
+  <li>
+    <p>教育だけで防げる<br />
+→ 機会があれば不正は起きる</p>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+<h3 id="-アクセス管理だけすればよい">❌ 「アクセス管理だけすればよい」</h3>
+<p>→ ⭕ それだけでは動機や正当化は防げない</p>
+
+<hr />
+
+<h3 id="-教育を強化すればよい">❌ 「教育を強化すればよい」</h3>
+<p>→ ⭕ 機会を減らさないと意味がない</p>
+
+<hr />
+
+<h3 id="-一度対策すれば終わり">❌ 「一度対策すれば終わり」</h3>
+<p>→ ⭕ 継続的な見直しが必要</p>
+
+<hr />
+
+<h3 id="-sg試験でのひっかけ">■ SG試験でのひっかけ</h3>
+<ul>
+  <li>「対策の対象がズレている」
+    <ul>
+      <li>動機の問題なのに技術対策のみ</li>
+      <li>機会の問題なのに教育のみ</li>
+    </ul>
+  </li>
+</ul>
+
+<p>👉<br />
+<strong>「原因と対策が対応しているか」で判断する</strong></p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+<ul>
+  <li>内部不正防止ガイドライン＝組織的な対策の指針</li>
+  <li>対策は「人・ルール・技術・運用」の組み合わせ</li>
+  <li>不正のトライアングルと対応している</li>
+  <li>単発ではなく継続的な運用が前提</li>
+  <li>SGでは「原因と対策の対応関係」で選択肢を切る</li>
+</ul>
+
+<hr />
+
+<h2 id="ケース問題内部不正防止ガイドライン">ケース問題（内部不正防止ガイドライン）</h2>
+
+<p>ある企業では、営業担当者が顧客情報を私用のクラウドストレージに保存し、退職時にそのデータを持ち出してしまった。</p>
+
+<p>調査の結果、以下の状況が確認された。</p>
+
+<ul>
+  <li>顧客データへのアクセス権が広く設定されていた</li>
+  <li>外部サービスの利用ルールが明確に定められていなかった</li>
+  <li>ログは取得していたが、定期的な確認は行っていなかった</li>
+  <li>セキュリティ教育は入社時のみで、その後は実施されていなかった</li>
+</ul>
+
+<hr />
+
+<h3 id="問題">問題</h3>
+<p>この企業の対策として <strong>最も適切なものはどれか。</strong></p>
+
+<hr />
+
+<h3 id="選択肢">選択肢</h3>
+<p>A. パスワードの複雑性を高める<br />
+B. アクセス権を業務に必要な範囲に限定する<br />
+C. ログの保存期間を延長する<br />
+D. 社員に対して注意喚起メールを送信する</p>
+
+<hr />
+
+<details>
+<summary>▶ 答えを見る</summary>
+
+**正解：B**
+
+</details>
+
+<hr />
+
+<details>
+<summary>▶ 解説を見る</summary>
+
+### ■ 起きた原因
+- アクセス権が広い → 機会の問題  
+- ルールがない → 正当化の問題  
+- 教育不足 → 正当化・動機  
+- ログ未確認 → 検知不足  
+
+---
+
+## ケース問題②（内部不正防止ガイドライン）
+
+ある企業では、経理担当者が長時間労働と評価への不満を抱えており、会計データを不正に書き換えていたことが発覚した。
+
+調査の結果、以下の状況が確認された。
+
+- 経理処理が特定の担当者に集中していた  
+- 上司による業務状況の把握が不十分だった  
+- 就業規則や懲戒規定はあったが、周知が十分ではなかった  
+- セキュリティ教育は形式的で、内部不正の事例共有も行われていなかった  
+
+---
+
+### 問題
+この企業の対策として **最も適切なものはどれか。**
+
+---
+
+### 選択肢
+A. 会計システムのパスワード桁数を増やす  
+B. 内部不正の事例を含めた教育と周知を継続的に行う  
+C. ログの保存期間を5年に延長する  
+D. 外部からの不正アクセス対策としてファイアウォールを強化する  
+
+---
+
+<details>
+<summary>▶ タップして答えを見る（SG頻出）</summary>
+
+**正解：B**
+
+</details>
+
+---
+
+<details>
+<summary>▶ タップして解説を見る</summary>
+
+### ■ 起きた原因
+- 評価への不満や長時間労働 → 動機の問題  
+- 規程の周知不足 → 正当化の問題  
+- 教育が形式的 → 正当化を弱められていない  
+- 業務集中 → 機会の問題もある  
+
+---
+
+### ■ 各選択肢の判断
+- A：パスワード桁数の増加  
+  → 認証強化であり、今回の主因である動機・正当化への対策としては弱い（✕）
+
+- B：教育と周知の継続実施  
+  → 不正を正当化しにくくし、内部不正への意識を高める対策として適切（◎）
+
+- C：ログ保存期間の延長  
+  → 記録の保持には役立つが、発生要因への直接対策ではない（△）
+
+- D：ファイアウォール強化  
+  → 外部攻撃対策であり、内部不正の主因とはずれている（✕）
+
+---
+
+### ■ この問題のポイント
+今回の軸は  
+**「不満・規程周知不足・教育不足」＝動機・正当化**です。
+
+したがって、最も直接効く対策は  
+**教育・周知・組織的な働きかけ**になります。
+
+---
+
+### ■ SG試験のコツ
+- 原因が「機会」なのか「動機・正当化」なのかを先に分ける  
+- 外部攻撃対策が出てきたら、内部不正の問題とずれていないか確認する  
+- ログや保存期間のような“もっともらしい事後対策”に引っ張られない  
+
+</details>
+### ■ 各選択肢の判断
+- A：パスワード強化  
+  → 認証の話であり、今回の原因ではない（✕）
+
+- B：アクセス権の見直し  
+  → 機会を直接減らす（◎）
+
+- C：ログ保存期間  
+  → 事後対応であり、発生防止ではない（△）
+
+- D：注意喚起メール  
+  → 効果が弱く、仕組みとして不十分（△）
+
+---
+
+### ■ SG試験のコツ
+- 原因を「動機・機会・正当化」に分解する  
+- 対策がどこに効くかを見る  
+- 最も直接効く対策を選ぶ  
+
+</details>
+
+<hr />
+
+<h2 id="ケース問題チェックシート活用">ケース問題③（チェックシート活用）</h2>
+
+<p>ある企業では、内部不正防止ガイドラインのチェックシートを用いて、自社の対策状況を確認した。</p>
+
+<p>その結果、以下の項目に不備があることが分かった。</p>
+
+<ul>
+  <li>特権IDの利用ルールが明確に定められていない</li>
+  <li>特権IDの利用ログは取得しているが、確認が行われていない</li>
+  <li>特権IDが複数人で共有されている</li>
+</ul>
+
+<hr />
+
+<h3 id="問題-1">問題</h3>
+<p>この企業が <strong>最優先で実施すべき対策はどれか。</strong></p>
+
+<hr />
+
+<h3 id="選択肢-1">選択肢</h3>
+<p>A. 特権IDのパスワードをより複雑にする<br />
+B. 特権IDの利用を個人ごとに割り当て、操作ログを定期的に確認する<br />
+C. 社員全体に対してセキュリティ教育を実施する<br />
+D. ログの保存期間を延長する</p>
+
+<hr />
+
+<details>
+<summary>▶ タップして答えを見る（SG頻出）</summary>
+
+**正解：B**
+
+</details>
+
+<hr />
+
+<details>
+<summary>▶ タップして解説を見る</summary>
+
+### ■ 起きている問題
+- 特権IDが共有されている → 誰が操作したか分からない  
+- ログを確認していない → 不正を検知できない  
+- ルールがない → 運用が曖昧  
+
+---
+
+### ■ 各選択肢の判断
+- A：パスワード強化  
+  → 認証の話であり、本質的な問題（共有・未監視）を解決できない（✕）
+
+- B：個人割当＋ログ確認  
+  → 誰が操作したか特定でき、かつ不正を検知できる（◎）
+
+- C：教育  
+  → 補助的には有効だが、仕組みの問題が残る（△）
+
+- D：ログ保存期間  
+  → 記録の保持であり、確認しない限り意味がない（✕）
+
+---
+
+### ■ この問題のポイント
+チェックシートは  
+👉 **「できていない対策を特定するためのツール」**
+
+---
+
+今回の本質は👇
+
+- 管理されていない特権ID
+- 監視されていないログ
+
+👉  
+**アクセス管理＋ログ管理の不備**
+
+---
+
+### ■ SG試験のコツ
+- 「何が不足しているか」をまず特定する  
+- その不足を直接補う対策を選ぶ  
+- 教育・パスワード強化などの“それっぽい選択肢”に注意  
+
+---
+
+👉  
+**最も直接的に穴を埋める対策を選ぶ**
+
+</details>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-physical/">入退室管理とは？物理アクセス制御の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control/">アクセス管理とは？特権IDとneed-to-knowで権限を適切に制御【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-rights-management/">アクセス権限管理とは？付与・変更・削除の流れを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/administrator-privileges/">管理者権限とは？特権的アクセス権との違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/anti-passback/">アンチパスバックとは？不正な入退室を防ぐ仕組み【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/insider-threat/">← 内部不正とは？不正のトライアングルで原因と対策を理解【SG試験】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/shadow-it/">シャドーITとは？管理外ITが生むリスクと対策を整理【SG試験】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

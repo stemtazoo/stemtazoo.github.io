@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 日付形式の正規表現とは？形式チェックと妥当性の違い【DS検定】
-description: 日付形式の正規表現は形式チェックと妥当性の違いを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: 日付形式の正規表現について、形式チェックと妥当性確認の違いを整理します。YYYY-MM-DDなどの表記を検出する役割、存在しない日付を別途検証する必要性、DS検定の判断ポイントを確認できます。本文では、用語の定義、具体例、似た概念との違い、試験で迷いやすい選択肢の見分け方まで、短時間で復習できるようにまとめています。
 permalink: /ds/regular-expression-date/
 categories: [data-science]
 tags: [ds, data-processing, preprocessing]

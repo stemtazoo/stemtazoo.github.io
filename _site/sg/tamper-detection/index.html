@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>改ざん検知とは？ハッシュ・MAC・デジタル署名の違いを整理【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="改ざん検知とは？ハッシュ・MAC・デジタル署名の違いを整理【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="改ざん検知は、データが途中で書き換えられていないかを確認する考え方です。SG試験・情報セキュリティマネジメント試験で混同しやすいハッシュ、MAC、HMAC、デジタル署名、暗号化の違いを、選択肢を切る判断基準で整理します。" />
+<meta property="og:description" content="改ざん検知は、データが途中で書き換えられていないかを確認する考え方です。SG試験・情報セキュリティマネジメント試験で混同しやすいハッシュ、MAC、HMAC、デジタル署名、暗号化の違いを、選択肢を切る判断基準で整理します。" />
+<link rel="canonical" href="http://localhost:4000/sg/tamper-detection/" />
+<meta property="og:url" content="http://localhost:4000/sg/tamper-detection/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="改ざん検知とは？ハッシュ・MAC・デジタル署名の違いを整理【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"改ざん検知は、データが途中で書き換えられていないかを確認する考え方です。SG試験・情報セキュリティマネジメント試験で混同しやすいハッシュ、MAC、HMAC、デジタル署名、暗号化の違いを、選択肢を切る判断基準で整理します。","headline":"改ざん検知とは？ハッシュ・MAC・デジタル署名の違いを整理【SG試験】","url":"http://localhost:4000/sg/tamper-detection/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">改ざん検知とは？ハッシュ・MAC・デジタル署名の違いを整理【SG試験】</h1>
+      <h2 class="project-tagline">改ざん検知は、データが途中で書き換えられていないかを確認する考え方です。SG試験・情報セキュリティマネジメント試験で混同しやすいハッシュ、MAC、HMAC、デジタル署名、暗号化の違いを、選択肢を切る判断基準で整理します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">改ざん検知は、データが途中で書き換えられていないかを確認する考え方です。SG試験・情報セキュリティマネジメント試験で混同しやすいハッシュ、MAC、HMAC、デジタル署名、暗号化の違いを、選択肢を切る判断基準で整理します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">cryptography</span>
+        
+          <span class="post-tag">integrity</span>
+        
+          <span class="post-tag">hash</span>
+        
+          <span class="post-tag">authentication</span>
+        
+          <span class="post-tag">non_repudiation</span>
+        
+          <span class="post-tag">security_measures</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+
+<p>改ざん検知とは、<strong>データやメッセージが途中で書き換えられていないかを確認すること</strong>です。</p>
+
+<p>SG試験では、次のように切り分けると判断しやすくなります。</p>
+
+<ul>
+  <li><strong>ハッシュ</strong>：データが変わっていないかを確認するための要約値</li>
+  <li><strong>MAC</strong>：共通鍵を使って、改ざん検知と送信者確認を行う</li>
+  <li><strong>HMAC</strong>：ハッシュ関数を使って作るMACの一種</li>
+  <li><strong>デジタル署名</strong>：秘密鍵と公開鍵を使って、改ざん検知・本人確認・否認防止を行う</li>
+</ul>
+
+<p>特に大事なのは、<strong>改ざん検知だけでは技術を1つに決められない</strong>という点です。</p>
+
+<p>「鍵を使うか」「どの鍵を使うか」「否認防止が必要か」を見て選択肢を切り分けます。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+
+<p>改ざん検知は、荷物に付ける<strong>確認用のシール</strong>のようなものです。</p>
+
+<p>荷物そのものを隠すわけではありません。<br />
+荷物が途中で開けられたり、中身が入れ替えられたりしていないかを確認するためのものです。</p>
+
+<p>たとえば、次のように考えるとわかりやすいです。</p>
+
+<ul>
+  <li><strong>ハッシュ</strong>：荷物の特徴をメモしておく</li>
+  <li><strong>MAC</strong>：合い鍵を持つ相手だけが作れる確認シールを付ける</li>
+  <li><strong>HMAC</strong>：ハッシュを使って作る、鍵付きの確認シール</li>
+  <li><strong>デジタル署名</strong>：本人だけが押せる印鑑を付け、誰でも確認できるようにする</li>
+</ul>
+
+<p>どれも改ざん検知に関係しますが、使う場面と強みが違います。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+
+<h3 id="ハッシュによる改ざん検知">ハッシュによる改ざん検知</h3>
+
+<p>ハッシュは、データから固定長の値を作る仕組みです。<br />
+この値をハッシュ値、またはメッセージダイジェストと呼びます。</p>
+
+<p>データが少しでも変わると、ハッシュ値も大きく変わります。<br />
+そのため、元のハッシュ値と比較することで、データが変わっていないかを確認できます。</p>
+
+<p>ただし、ハッシュ値は誰でも計算できます。<br />
+そのため、攻撃者がデータを書き換えたあと、新しいハッシュ値を付け直すこともできます。</p>
+
+<p>つまり、ハッシュは改ざん検知の基本ですが、<strong>送信者確認には弱い</strong>と考えます。</p>
+
+<hr />
+
+<h3 id="macによる改ざん検知">MACによる改ざん検知</h3>
+
+<p>MAC（Message Authentication Code）は、<strong>メッセージと共通鍵から認証用の値を作る仕組み</strong>です。</p>
+
+<p>受信者は、同じ共通鍵を使ってMAC値を再計算し、送られてきたMAC値と一致するか確認します。</p>
+
+<p>一致すれば、</p>
+
+<ul>
+  <li>メッセージが改ざんされていない</li>
+  <li>同じ共通鍵を持つ相手が作成した可能性が高い</li>
+</ul>
+
+<p>と判断できます。</p>
+
+<p>MACはハッシュよりも、送信者確認の意味が強くなります。<br />
+ただし、送信者と受信者が同じ共通鍵を持つため、<strong>否認防止には向きません</strong>。</p>
+
+<hr />
+
+<h3 id="hmacによる改ざん検知">HMACによる改ざん検知</h3>
+
+<p>HMACは、<strong>ハッシュ関数を使って作るMACの一種</strong>です。</p>
+
+<p>名前に「ハッシュ」が入っていますが、単なるハッシュではありません。<br />
+共通鍵も使うため、鍵を知らない人は正しいHMAC値を作れません。</p>
+
+<p>SG試験では、次のように押さえます。</p>
+
+<ul>
+  <li>ハッシュ関数だけなら、ハッシュ</li>
+  <li>ハッシュ関数と共通鍵を使うなら、HMAC</li>
+  <li>HMACはMACの一種</li>
+</ul>
+
+<p>「ハッシュ関数を用いたメッセージ認証コード」という説明が出たら、HMACを選びます。</p>
+
+<hr />
+
+<h3 id="デジタル署名による改ざん検知">デジタル署名による改ざん検知</h3>
+
+<p>デジタル署名は、<strong>送信者の秘密鍵で署名し、公開鍵で検証する仕組み</strong>です。</p>
+
+<p>受信者は公開鍵を使って署名を検証し、メッセージが改ざんされていないことや、署名者の正当性を確認します。</p>
+
+<p>デジタル署名の大きな特徴は、<strong>否認防止に使える</strong>ことです。</p>
+
+<p>本人だけが秘密鍵を持つ前提なので、あとから「自分は署名していない」と主張しにくくなります。</p>
+
+<p>SG試験では、「否認防止」が出たら、MACやHMACではなくデジタル署名を選ぶのが基本です。</p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+
+<p>改ざん検知は、情報の<strong>完全性</strong>を守りたい場面で使われます。</p>
+
+<p>たとえば、次のような場面です。</p>
+
+<ul>
+  <li>ダウンロードしたファイルが壊れていないか確認する</li>
+  <li>通信中のメッセージが書き換えられていないか確認する</li>
+  <li>API通信のリクエストが正当な相手から送られたか確認する</li>
+  <li>電子文書の作成者と改ざんの有無を確認する</li>
+  <li>ソフトウェアの配布元と改ざんの有無を確認する</li>
+</ul>
+
+<p>ここで注意したいのは、改ざん検知は<strong>内容を隠すことではない</strong>という点です。</p>
+
+<p>内容を読まれないようにする目的なら、暗号化を選びます。</p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="誤解1改ざん検知暗号化である">誤解1：改ざん検知＝暗号化である</h3>
+
+<p>これはよくある混同です。</p>
+
+<ul>
+  <li><strong>改ざん検知</strong>：内容が変わっていないか確認する</li>
+  <li><strong>暗号化</strong>：内容を読めないようにする</li>
+</ul>
+
+<p>暗号化しても、改ざん検知の仕組みがなければ、改ざんに気づけない場合があります。<br />
+逆に、ハッシュやMACを使っても、内容そのものは読める場合があります。</p>
+
+<p>問題文に「内容を秘匿する」「盗聴を防ぐ」とあれば暗号化です。<br />
+「書き換えられていないか確認する」とあれば改ざん検知です。</p>
+
+<hr />
+
+<h3 id="誤解2ハッシュがあれば送信者確認もできる">誤解2：ハッシュがあれば送信者確認もできる</h3>
+
+<p>通常のハッシュだけでは、送信者確認は不十分です。</p>
+
+<p>ハッシュ値は誰でも計算できるため、攻撃者がデータを書き換えて、新しいハッシュ値を付け直すこともできます。</p>
+
+<p>送信者確認まで必要なら、共通鍵を使うMACやHMAC、または秘密鍵と公開鍵を使うデジタル署名を考えます。</p>
+
+<hr />
+
+<h3 id="誤解3macとデジタル署名は同じである">誤解3：MACとデジタル署名は同じである</h3>
+
+<p>MACとデジタル署名は、どちらも改ざん検知に使えます。<br />
+しかし、鍵の使い方と否認防止の有無が違います。</p>
+
+<ul>
+  <li><strong>MAC</strong>：共通鍵を使う</li>
+  <li><strong>デジタル署名</strong>：秘密鍵と公開鍵を使う</li>
+</ul>
+
+<p>MACは、同じ共通鍵を持つ相手同士で確認します。<br />
+デジタル署名は、公開鍵を使って第三者も検証できます。</p>
+
+<p>そのため、否認防止が必要ならデジタル署名です。</p>
+
+<hr />
+
+<h3 id="誤解4hmacはハッシュと同じである">誤解4：HMACはハッシュと同じである</h3>
+
+<p>HMACはハッシュ関数を使いますが、単なるハッシュではありません。</p>
+
+<p>HMACは、メッセージに加えて<strong>共通鍵</strong>を使います。<br />
+そのため、鍵を知らない人は正しいHMAC値を作れません。</p>
+
+<p>「ハッシュ関数を使う」という言葉だけで、通常のハッシュと判断しないように注意しましょう。</p>
+
+<hr />
+
+<h2 id="改ざん検知に関係する技術の比較">改ざん検知に関係する技術の比較</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>技術</th>
+      <th>使うもの</th>
+      <th>主な目的</th>
+      <th>送信者確認</th>
+      <th>否認防止</th>
+      <th>試験でのキーワード</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ハッシュ</td>
+      <td>メッセージ</td>
+      <td>要約値の作成、改ざん検知の補助</td>
+      <td>弱い</td>
+      <td>できない</td>
+      <td>ハッシュ値、メッセージダイジェスト</td>
+    </tr>
+    <tr>
+      <td>MAC</td>
+      <td>メッセージ＋共通鍵</td>
+      <td>改ざん検知、メッセージ認証</td>
+      <td>できる</td>
+      <td>弱い</td>
+      <td>共通鍵、MAC値、メッセージ認証</td>
+    </tr>
+    <tr>
+      <td>HMAC</td>
+      <td>メッセージ＋共通鍵＋ハッシュ関数</td>
+      <td>改ざん検知、メッセージ認証</td>
+      <td>できる</td>
+      <td>弱い</td>
+      <td>ハッシュ関数を用いたMAC</td>
+    </tr>
+    <tr>
+      <td>デジタル署名</td>
+      <td>秘密鍵・公開鍵</td>
+      <td>改ざん検知、本人確認、否認防止</td>
+      <td>できる</td>
+      <td>できる</td>
+      <td>秘密鍵で署名、公開鍵で検証</td>
+    </tr>
+    <tr>
+      <td>暗号化</td>
+      <td>鍵</td>
+      <td>内容の秘匿</td>
+      <td>方式による</td>
+      <td>目的ではない</td>
+      <td>盗聴防止、内容を読めなくする</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="sg試験での判断ポイント">SG試験での判断ポイント</h2>
+
+<p>改ざん検知の問題では、次の順番で確認すると選択肢を切りやすくなります。</p>
+
+<h3 id="1-内容を隠したいのか改ざんを検出したいのか">1. 内容を隠したいのか、改ざんを検出したいのか</h3>
+
+<p>内容を読まれないようにするなら暗号化です。<br />
+内容が変わっていないか確認するなら、ハッシュ、MAC、HMAC、デジタル署名を考えます。</p>
+
+<hr />
+
+<h3 id="2-鍵を使うか">2. 鍵を使うか</h3>
+
+<p>鍵を使わずに要約値を作るなら、ハッシュです。<br />
+共通鍵を使うなら、MACまたはHMACです。<br />
+秘密鍵と公開鍵を使うなら、デジタル署名です。</p>
+
+<hr />
+
+<h3 id="3-否認防止が必要か">3. 否認防止が必要か</h3>
+
+<p>否認防止が必要なら、デジタル署名を選びます。</p>
+
+<p>MACやHMACは、送信者と受信者が同じ共通鍵を持つため、第三者に対して「誰が作ったか」を強く証明する用途には向きません。</p>
+
+<hr />
+
+<h2 id="確認問題">確認問題</h2>
+
+<details>
+<summary>確認問題：改ざん検知と否認防止の両方に適したものはどれか</summary>
+
+電子文書について、内容が改ざんされていないことを確認し、さらに作成者があとから作成を否認しにくくしたい。この目的に最も適したものはどれか。
+
+- ア：ハッシュ値
+- イ：HMAC
+- ウ：デジタル署名
+- エ：暗号化
+
+**正解：ウ**
+
+デジタル署名は、秘密鍵で署名し、公開鍵で検証する仕組みです。  
+改ざん検知に加えて、本人確認や否認防止に使えます。
+
+アのハッシュ値は、改ざん検知の補助には使えますが、送信者確認や否認防止には弱いです。  
+イのHMACは、共通鍵を使うメッセージ認証には使えますが、否認防止には向きません。  
+エの暗号化は、内容を読めなくするための仕組みです。
+
+</details>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>改ざん検知は、<strong>データが書き換えられていないか確認すること</strong></li>
+  <li>共通鍵ならMAC・HMAC、秘密鍵と公開鍵ならデジタル署名</li>
+  <li>否認防止が必要なら、デジタル署名を選ぶ</li>
+</ul>
+
+<p>SG試験では、改ざん検知という言葉だけで判断しないことが大切です。<br />
+<strong>鍵の種類</strong>と<strong>否認防止の有無</strong>を見れば、選択肢をかなり切り分けやすくなります。</p>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/blacklist-whitelist/">ブラックリストとホワイトリストの違いとは？判断基準を整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/bot/">ボットとは？遠隔操作される仕組みを理解する【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/brute-force-attack/">ブルートフォース攻撃とは？総当たり攻撃の仕組みと対策【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/common-port-numbers/">よく出るポート番号とは？試験での見分け方を整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/cryptojacking/">クリプトジャッキングとは？不正マイニングの仕組みを理解する【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

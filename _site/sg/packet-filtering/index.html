@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>パケットフィルタリングとは？ヘッダー情報で通信を通すか判断する仕組み【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="パケットフィルタリングとは？ヘッダー情報で通信を通すか判断する仕組み【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="パケットフィルタリングは、IPアドレスやポート番号などのヘッダー情報をもとに通信の通過可否を判断する仕組みです。SG試験・情報セキュリティマネジメント試験で迷いやすいファイアウォール、改ざん検知、NAPTとの違いを整理します。" />
+<meta property="og:description" content="パケットフィルタリングは、IPアドレスやポート番号などのヘッダー情報をもとに通信の通過可否を判断する仕組みです。SG試験・情報セキュリティマネジメント試験で迷いやすいファイアウォール、改ざん検知、NAPTとの違いを整理します。" />
+<link rel="canonical" href="http://localhost:4000/sg/packet-filtering/" />
+<meta property="og:url" content="http://localhost:4000/sg/packet-filtering/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="パケットフィルタリングとは？ヘッダー情報で通信を通すか判断する仕組み【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"パケットフィルタリングは、IPアドレスやポート番号などのヘッダー情報をもとに通信の通過可否を判断する仕組みです。SG試験・情報セキュリティマネジメント試験で迷いやすいファイアウォール、改ざん検知、NAPTとの違いを整理します。","headline":"パケットフィルタリングとは？ヘッダー情報で通信を通すか判断する仕組み【SG試験】","url":"http://localhost:4000/sg/packet-filtering/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">パケットフィルタリングとは？ヘッダー情報で通信を通すか判断する仕組み【SG試験】</h1>
+      <h2 class="project-tagline">パケットフィルタリングは、IPアドレスやポート番号などのヘッダー情報をもとに通信の通過可否を判断する仕組みです。SG試験・情報セキュリティマネジメント試験で迷いやすいファイアウォール、改ざん検知、NAPTとの違いを整理します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">パケットフィルタリングは、IPアドレスやポート番号などのヘッダー情報をもとに通信の通過可否を判断する仕組みです。SG試験・情報セキュリティマネジメント試験で迷いやすいファイアウォール、改ざん検知、NAPTとの違いを整理します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-measures</span>
+        
+          <span class="post-tag">network_security</span>
+        
+          <span class="post-tag">firewall</span>
+        
+          <span class="post-tag">access_control</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+
+<p>パケットフィルタリングとは、<strong>パケットのヘッダー情報を見て、通信を通すか止めるかを判断する仕組み</strong>です。</p>
+
+<p>SG試験では、ファイアウォールなどがもつ基本機能として出題されやすいです。<br />
+ポイントは、<strong>通信内容の中身を詳しく読むのではなく、IPアドレスやポート番号などで判断する</strong>ことです。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+
+<p>パケットフィルタリングは、ネットワークの入口にある<strong>受付係</strong>のようなものです。</p>
+
+<p>受付係は、来た人の中身までは詳しく調べません。<br />
+代わりに、次のような情報を見て判断します。</p>
+
+<ul>
+  <li>どこから来たか</li>
+  <li>どこへ行くのか</li>
+  <li>どの入口を使うのか</li>
+  <li>入ってよい方向の通信か</li>
+</ul>
+
+<p>ネットワークでは、これにあたる情報が次のようなものです。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>見る情報</th>
+      <th>例</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>送信元IPアドレス</td>
+      <td>どの端末から来た通信か</td>
+    </tr>
+    <tr>
+      <td>宛先IPアドレス</td>
+      <td>どのサーバへ向かう通信か</td>
+    </tr>
+    <tr>
+      <td>送信元ポート番号</td>
+      <td>送信側のポート番号</td>
+    </tr>
+    <tr>
+      <td>宛先ポート番号</td>
+      <td>Web、メールなどのサービス番号</td>
+    </tr>
+    <tr>
+      <td>プロトコル</td>
+      <td>TCP、UDP、ICMPなど</td>
+    </tr>
+    <tr>
+      <td>通信の方向</td>
+      <td>内部から外部か、外部から内部か</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>つまり、パケットフィルタリングは、<strong>通信の宛名や入口番号を見て通行許可を出す仕組み</strong>と考えると分かりやすいです。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+
+<p>パケットフィルタリングでは、あらかじめ決めたルールに基づいて、パケットを通過させるか遮断するかを判断します。</p>
+
+<p>たとえば、次のようなルールを設定します。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>ルール例</th>
+      <th>意味</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>宛先ポート80番を許可</td>
+      <td>Web通信を許可する</td>
+    </tr>
+    <tr>
+      <td>宛先ポート443番を許可</td>
+      <td>HTTPS通信を許可する</td>
+    </tr>
+    <tr>
+      <td>外部から内部への不要な通信を拒否</td>
+      <td>不正アクセスの入口を減らす</td>
+    </tr>
+    <tr>
+      <td>特定のIPアドレスからの通信を拒否</td>
+      <td>怪しい通信元を遮断する</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>判断に使う主な情報は、<strong>パケットのヘッダー部分</strong>です。<br />
+ヘッダーには、通信の宛先や送信元、ポート番号などの情報が入っています。</p>
+
+<p>一方で、パケットのデータ部分、つまり通信内容の本文までは基本的に詳しく確認しません。</p>
+
+<p>そのため、SG試験では次のように整理しておくと判断しやすいです。</p>
+
+<blockquote>
+  <p>パケットフィルタリング ＝ ヘッダー情報を見て、通過可否を判断する</p>
+</blockquote>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+
+<p>パケットフィルタリングは、主にファイアウォールやルータなどで使われます。</p>
+
+<p>代表的な使い方は、次のとおりです。</p>
+
+<h3 id="外部から内部への通信を制限する">外部から内部への通信を制限する</h3>
+
+<p>インターネットから社内ネットワークへ、自由に通信できる状態は危険です。</p>
+
+<p>そこで、必要な通信だけを許可し、それ以外は遮断します。</p>
+
+<p>たとえば、公開WebサーバへのHTTPS通信は許可し、社内端末への直接通信は拒否する、といった使い方です。</p>
+
+<h3 id="不要なポートを閉じる">不要なポートを閉じる</h3>
+
+<p>使っていないサービスのポートを開けたままにすると、攻撃の入口になることがあります。</p>
+
+<p>パケットフィルタリングでは、必要なポートだけを許可し、不要なポートは遮断します。</p>
+
+<h3 id="通信方向で制御する">通信方向で制御する</h3>
+
+<p>同じポート番号でも、通信の方向によって許可・拒否を分けることがあります。</p>
+
+<p>たとえば、社内からインターネットへのWeb閲覧は許可し、インターネットから社内PCへの通信は拒否する、という考え方です。</p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="誤解1パケットの改ざんを修正してくれる">誤解1：パケットの改ざんを修正してくれる</h3>
+
+<p>これは誤りです。</p>
+
+<p>パケットフィルタリングは、パケットを通すか止めるかを判断する仕組みです。<br />
+パケットの改ざんを見つけて修正する機能ではありません。</p>
+
+<p>SG試験では、<strong>改ざんを訂正する</strong>という説明が出たら、パケットフィルタリングの説明としては不適切です。</p>
+
+<hr />
+
+<h3 id="誤解2データ部分まで詳しく検査する">誤解2：データ部分まで詳しく検査する</h3>
+
+<p>これも基本的には誤りです。</p>
+
+<p>パケットフィルタリングが見る中心は、IPアドレスやポート番号などの<strong>ヘッダー情報</strong>です。<br />
+通信内容の本文まで詳しく調べる機能ではありません。</p>
+
+<p>通信内容まで深く見る仕組みは、アプリケーションゲートウェイ、WAF、IDS/IPSなど別の技術と関連します。</p>
+
+<hr />
+
+<h3 id="誤解3ポート番号を変換する機能である">誤解3：ポート番号を変換する機能である</h3>
+
+<p>これはNAPTの説明です。</p>
+
+<p>NAPTは、IPアドレスやポート番号を変換して、複数の端末が一つのグローバルIPアドレスを共有できるようにする仕組みです。</p>
+
+<p>パケットフィルタリングは、ポート番号を変換するのではなく、<strong>ポート番号などを見て通すか止めるかを判断する</strong>仕組みです。</p>
+
+<hr />
+
+<h3 id="誤解4ファイアウォールそのものと同じ意味である">誤解4：ファイアウォールそのものと同じ意味である</h3>
+
+<p>パケットフィルタリングは、ファイアウォールがもつ代表的な機能の一つです。</p>
+
+<p>ただし、ファイアウォールには、パケットフィルタリング以外の機能をもつものもあります。</p>
+
+<p>そのため、試験では次のように切り分けると安全です。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>用語</th>
+      <th>見るポイント</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>パケットフィルタリング</td>
+      <td>ヘッダー情報で通過可否を判断</td>
+    </tr>
+    <tr>
+      <td>ファイアウォール</td>
+      <td>ネットワーク境界で通信を制御する装置・仕組み</td>
+    </tr>
+    <tr>
+      <td>NAPT</td>
+      <td>IPアドレスやポート番号を変換</td>
+    </tr>
+    <tr>
+      <td>IDS</td>
+      <td>不正な通信を検知</td>
+    </tr>
+    <tr>
+      <td>IPS</td>
+      <td>不正な通信を検知して遮断</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="試験での判断ポイント">試験での判断ポイント</h2>
+
+<p>SG試験では、次のような説明が出たらパケットフィルタリングを疑います。</p>
+
+<ul>
+  <li>送信元IPアドレスを見る</li>
+  <li>宛先IPアドレスを見る</li>
+  <li>送信元ポート番号を見る</li>
+  <li>宛先ポート番号を見る</li>
+  <li>プロトコルを見る</li>
+  <li>通信の方向を見る</li>
+  <li>ルールに基づいて通過可否を判断する</li>
+</ul>
+
+<p>反対に、次の説明はパケットフィルタリングとは切り分けます。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>説明</th>
+      <th>該当しやすい用語</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>パケットの改ざんを修正する</td>
+      <td>パケットフィルタリングではない</td>
+    </tr>
+    <tr>
+      <td>データ部分まで詳しく検査する</td>
+      <td>WAF、IDS/IPSなど</td>
+    </tr>
+    <tr>
+      <td>ポート番号を変換する</td>
+      <td>NAPT</td>
+    </tr>
+    <tr>
+      <td>通信を暗号化する</td>
+      <td>VPN、TLSなど</td>
+    </tr>
+    <tr>
+      <td>利用者本人か確認する</td>
+      <td>認証</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<p>パケットフィルタリングは、<strong>パケットのヘッダー情報をもとに、通信を通すか止めるかを判断する仕組み</strong>です。</p>
+
+<p>試験直前は、次の3点で整理しておきましょう。</p>
+
+<ul>
+  <li>
+    <p><strong>見るのはヘッダー情報</strong><br />
+送信元・宛先IPアドレス、ポート番号、プロトコルなどを見る。</p>
+  </li>
+  <li>
+    <p><strong>役割は通過可否の判断</strong><br />
+許可された通信だけを通し、不要な通信を遮断する。</p>
+  </li>
+  <li>
+    <p><strong>改ざん修正やポート変換ではない</strong><br />
+改ざんを直す機能ではなく、NAPTのようにポート番号を変換する機能でもない。</p>
+  </li>
+</ul>
+
+<p>SG試験では、<strong>「ヘッダー情報を見る」「ルールに基づいて通すか止める」</strong>という表現を手がかりにすると、選択肢を切り分けやすくなります。</p>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-model/">アクセス制御モデルとは？RBAC・ABAC・DAC・MACの違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-physical/">入退室管理とは？物理アクセス制御の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control/">アクセス管理とは？特権IDとneed-to-knowで権限を適切に制御【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-rights-management/">アクセス権限管理とは？付与・変更・削除の流れを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/administrator-privileges/">管理者権限とは？特権的アクセス権との違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+
+  
+</div>
+<h2 id="-関連記事-1">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-model/">アクセス制御モデルとは？RBAC・ABAC・DAC・MACの違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-physical/">入退室管理とは？物理アクセス制御の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control/">アクセス管理とは？特権IDとneed-to-knowで権限を適切に制御【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-rights-management/">アクセス権限管理とは？付与・変更・削除の流れを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/administrator-privileges/">管理者権限とは？特権的アクセス権との違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

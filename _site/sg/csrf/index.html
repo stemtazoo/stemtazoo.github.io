@@ -4,18 +4,20 @@
     <meta charset="UTF-8">
 
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>クロスサイトリクエストフォージェリとは？なりすまし操作の仕組み【情報セキュリティマネジメント】 | AI・データサイエンス・IT学習ノート</title>
+<title>クロスサイトリクエストフォージェリとは？なりすまし操作の仕組み【SG試験】 | AI・データサイエンス・IT学習ノート</title>
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="クロスサイトリクエストフォージェリとは？なりすまし操作の仕組み【情報セキュリティマネジメント】" />
+<meta property="og:title" content="クロスサイトリクエストフォージェリとは？なりすまし操作の仕組み【SG試験】" />
 <meta property="og:locale" content="ja" />
 <meta name="description" content="クロスサイトリクエストフォージェリは利用者のログイン状態を悪用して意図しない操作を実行させる攻撃です。CSRFとXSSの違いや試験での判断ポイントを整理します。" />
 <meta property="og:description" content="クロスサイトリクエストフォージェリは利用者のログイン状態を悪用して意図しない操作を実行させる攻撃です。CSRFとXSSの違いや試験での判断ポイントを整理します。" />
+<link rel="canonical" href="http://localhost:4000/sg/csrf/" />
+<meta property="og:url" content="http://localhost:4000/sg/csrf/" />
 <meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="クロスサイトリクエストフォージェリとは？なりすまし操作の仕組み【情報セキュリティマネジメント】" />
+<meta property="twitter:title" content="クロスサイトリクエストフォージェリとは？なりすまし操作の仕組み【SG試験】" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"クロスサイトリクエストフォージェリは利用者のログイン状態を悪用して意図しない操作を実行させる攻撃です。CSRFとXSSの違いや試験での判断ポイントを整理します。","headline":"クロスサイトリクエストフォージェリとは？なりすまし操作の仕組み【情報セキュリティマネジメント】","url":"/sg/csrf/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"クロスサイトリクエストフォージェリは利用者のログイン状態を悪用して意図しない操作を実行させる攻撃です。CSRFとXSSの違いや試験での判断ポイントを整理します。","headline":"クロスサイトリクエストフォージェリとは？なりすまし操作の仕組み【SG試験】","url":"http://localhost:4000/sg/csrf/"}</script>
 <!-- End Jekyll SEO tag -->
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -24,23 +26,20 @@
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="/assets/css/style.css?v=">
-    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
-
-<!-- Setup Google Analytics -->
-
-
-
-<!-- You can set your favicon here -->
-<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
-
-<!-- end custom head snippets -->
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
 
   </head>
   <body>
     <a id="skip-to-content" href="#content">Skip to the content.</a>
 
     <header class="page-header" role="banner">
-      <h1 class="project-name">クロスサイトリクエストフォージェリとは？なりすまし操作の仕組み【情報セキュリティマネジメント】</h1>
+      <h1 class="project-name">クロスサイトリクエストフォージェリとは？なりすまし操作の仕組み【SG試験】</h1>
       <h2 class="project-tagline">クロスサイトリクエストフォージェリは利用者のログイン状態を悪用して意図しない操作を実行させる攻撃です。CSRFとXSSの違いや試験での判断ポイントを整理します。</h2>
       
       
@@ -65,6 +64,8 @@
         
           <span class="post-tag">data_leakage</span>
         
+          <span class="post-tag">sg-security-overview</span>
+        
       </p>
     
     <script>
@@ -79,6 +80,10 @@
 
   </header>
   <div class="post-content">
+    
+    
+    
+    
     <h2 id="まず結論">まず結論</h2>
 <p>クロスサイトリクエストフォージェリ（CSRF）は、ログイン済みの利用者になりすまして、意図しないリクエストを送らせる攻撃です。<br />
 SG試験では「本人の操作に見せかける攻撃かどうか」を見抜けるかがポイントになります。</p>
@@ -190,6 +195,33 @@ SG試験では「本人の操作に見せかける攻撃かどうか」を見抜
 
 <hr />
 
+<h2 id="確認問題sg試験対策">確認問題（SG試験対策）</h2>
+
+<p>次のうち、最も適切なものはどれか。</p>
+
+<p>A. CSRFは、閲覧者のブラウザで不正スクリプトを実行させることでCookieを盗む攻撃である。<br />
+B. CSRF対策として、重要処理のリクエスト時にCSRFトークンを確認する方法が有効である。<br />
+C. CSRFは、通信経路を盗聴してパケット内容を改ざんする攻撃である。<br />
+D. CSRF対策は、ログイン失敗回数の制限だけで十分である。</p>
+
+<details>
+  <summary>答えと解説を見る</summary>
+
+  <p><strong>正解：B</strong></p>
+
+  <h3 id="section">解説</h3>
+  <ul>
+    <li>A：誤り。これはXSSの説明に近く、CSRFの本質（ログイン状態を悪用した不正操作）とは異なります。</li>
+    <li>B：正しい。CSRFは「正規サイトへの不正リクエスト送信」を防ぐ必要があり、トークン検証が有効です。</li>
+    <li>C：誤り。これは中間者攻撃に関する説明で、CSRFの攻撃手法ではありません。</li>
+    <li>D：誤り。ログイン失敗回数制限は総当たり攻撃対策であり、CSRFの主要対策にはなりません。</li>
+  </ul>
+
+  <p>👉 判断ポイント<br />
+「不正スクリプト実行（XSS）」か「ログイン状態の悪用（CSRF）」かで切り分ける。</p>
+
+</details>
+
 <h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
 
 <ul>
@@ -220,8 +252,100 @@ SG試験では「本人の操作に見せかける攻撃かどうか」を見抜
       
 
       
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
         <li style="margin-bottom: 6px;">
-          <a href="/sg/attacker-types/">攻撃者の種類とは？目的と特徴で整理する【情報セキュリティマネジメント】</a>
+          <a href="/sg/attacker-types/">攻撃者の種類とは？目的と特徴で整理する【SG試験】</a>
         </li>
         
       
@@ -245,8 +369,73 @@ SG試験では「本人の操作に見せかける攻撃かどうか」を見抜
       
 
       
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
         <li style="margin-bottom: 6px;">
-          <a href="/sg/blacklist-whitelist/">ブラックリストとホワイトリストの違いとは？判断基準を整理【情報セキュリティマネジメント】</a>
+          <a href="/sg/authentication-methods/">認証方式とは？3要素と多要素認証を整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/blacklist-whitelist/">ブラックリストとホワイトリストの違いとは？判断基準を整理【SG試験】</a>
         </li>
         
       
@@ -261,7 +450,7 @@ SG試験では「本人の操作に見せかける攻撃かどうか」を見抜
 
       
         <li style="margin-bottom: 6px;">
-          <a href="/sg/bot/">ボットとは？遠隔操作される仕組みを理解する【情報セキュリティマネジメント】</a>
+          <a href="/sg/block-stream-cipher/">ブロック暗号とストリーム暗号の違いとは？暗号方式を整理【SG試験】</a>
         </li>
         
       
@@ -276,22 +465,7 @@ SG試験では「本人の操作に見せかける攻撃かどうか」を見抜
 
       
         <li style="margin-bottom: 6px;">
-          <a href="/sg/botnet/">ボットネットとは？踏み台化とDDoSの関係を理解する【情報セキュリティマネジメント】</a>
-        </li>
-        
-      
-
-      
-    
-  
-    
-      
-
-      
-
-      
-        <li style="margin-bottom: 6px;">
-          <a href="/sg/brute-force-attack/">ブルートフォース攻撃とは？総当たり攻撃の仕組みと対策【情報セキュリティマネジメント】</a>
+          <a href="/sg/bot/">ボットとは？遠隔操作される仕組みを理解する【SG試験】</a>
         </li>
         
       
@@ -312,12 +486,12 @@ SG試験では「本人の操作に見せかける攻撃かどうか」を見抜
 <div class="page-navigation" style="margin-top:12px;">
   
     
-    <a class="prev" href="/sg/csirt/">← CSIRTとは？組織内インシデント対応の基本【情報セキュリティマネジメント】</a>
+    <a class="prev" href="/sg/soc-csirt-jpcert/">← SOC・CSIRT・JPCERT/CCの違いとは？役割と関係を図で整理【SG試験】</a>
   
 
   
     
-    <a class="next" href="/sg/cvss/">CVSSとは？脆弱性の深刻度を共通スコアで判断する【情報セキュリティマネジメント】 →</a>
+    <a class="next" href="/sg/cvss/">CVSSとは？脆弱性の深刻度を共通スコアで判断する【SG試験】 →</a>
   
 </div>
 

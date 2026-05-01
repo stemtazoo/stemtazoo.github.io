@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>認証・認可・アクセス制御の違いとは？役割の切り分けを整理【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="認証・認可・アクセス制御の違いとは？役割の切り分けを整理【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="認証・認可・アクセス制御はセキュリティの基本概念です。それぞれの役割の違いを整理し、SG試験・情報セキュリティマネジメント試験で問われる混同ポイントと判断基準を分かりやすく解説します。" />
+<meta property="og:description" content="認証・認可・アクセス制御はセキュリティの基本概念です。それぞれの役割の違いを整理し、SG試験・情報セキュリティマネジメント試験で問われる混同ポイントと判断基準を分かりやすく解説します。" />
+<link rel="canonical" href="http://localhost:4000/sg/authentication-authorization-access-control/" />
+<meta property="og:url" content="http://localhost:4000/sg/authentication-authorization-access-control/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="認証・認可・アクセス制御の違いとは？役割の切り分けを整理【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"認証・認可・アクセス制御はセキュリティの基本概念です。それぞれの役割の違いを整理し、SG試験・情報セキュリティマネジメント試験で問われる混同ポイントと判断基準を分かりやすく解説します。","headline":"認証・認可・アクセス制御の違いとは？役割の切り分けを整理【SG試験】","url":"http://localhost:4000/sg/authentication-authorization-access-control/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">認証・認可・アクセス制御の違いとは？役割の切り分けを整理【SG試験】</h1>
+      <h2 class="project-tagline">認証・認可・アクセス制御はセキュリティの基本概念です。それぞれの役割の違いを整理し、SG試験・情報セキュリティマネジメント試験で問われる混同ポイントと判断基準を分かりやすく解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">認証・認可・アクセス制御はセキュリティの基本概念です。それぞれの役割の違いを整理し、SG試験・情報セキュリティマネジメント試験で問われる混同ポイントと判断基準を分かりやすく解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-measures</span>
+        
+          <span class="post-tag">access_control</span>
+        
+          <span class="post-tag">crypto_auth</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+<p>認証は「誰かを確認する」、認可は「何ができるかを決める」、アクセス制御は「それを仕組みとして実現する」であり、SG試験ではこの役割の違いを正しく切り分けられるかが重要です。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>システムを使う流れは、次の3ステップで考えると分かりやすいです。</p>
+
+<p>① 本人確認する<br />
+② できることを決める<br />
+③ 実際に制御する</p>
+
+<hr />
+
+<p>たとえば👇</p>
+
+<ul>
+  <li>ログインする → 認証</li>
+  <li>管理画面が使えるか決まる → 認可</li>
+  <li>実際にアクセスできる → アクセス制御</li>
+</ul>
+
+<p>👉<br />
+<strong>順番で覚えると混乱しません</strong></p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+
+<h3 id="-認証authentication">■ 認証（Authentication）</h3>
+<ul>
+  <li>本人であることを確認する</li>
+</ul>
+
+<p>例：</p>
+<ul>
+  <li>ID・パスワード</li>
+  <li>多要素認証</li>
+</ul>
+
+<hr />
+
+<p>👉 ポイント<br />
+<strong>「誰か」を確認する</strong></p>
+
+<hr />
+
+<h3 id="-認可authorization">■ 認可（Authorization）</h3>
+<ul>
+  <li>認証されたユーザに対して、何を許可するか決める</li>
+</ul>
+
+<p>例：</p>
+<ul>
+  <li>一般ユーザは閲覧のみ</li>
+  <li>管理者は編集可能</li>
+</ul>
+
+<hr />
+
+<p>👉 ポイント<br />
+<strong>「何ができるか」を決める</strong></p>
+
+<hr />
+
+<h3 id="-アクセス制御access-control">■ アクセス制御（Access Control）</h3>
+<ul>
+  <li>認可の内容に基づいて、実際にアクセスを制御する仕組み</li>
+</ul>
+
+<p>例：</p>
+<ul>
+  <li>権限がなければ画面に入れない</li>
+  <li>データ操作を制限する</li>
+</ul>
+
+<hr />
+
+<p>👉 ポイント<br />
+<strong>決めたルールを“実際に適用する”</strong></p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="-使う場面">■ 使う場面</h3>
+<ul>
+  <li>システム設計</li>
+  <li>セキュリティ対策の検討</li>
+</ul>
+
+<hr />
+
+<p>👉 SG試験では<br />
+「どの段階の話か」を問われます。</p>
+
+<hr />
+
+<h3 id="-使うと誤解しやすい場面">■ 使うと誤解しやすい場面</h3>
+<ul>
+  <li>認証＝権限管理と思ってしまう</li>
+  <li>アクセス制御＝認可と混同する</li>
+</ul>
+
+<hr />
+
+<p>👉<br />
+この3つは役割が違う</p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="-認証すれば何でもできる">❌ 「認証すれば何でもできる」</h3>
+<p>→ ⭕ 認証は入口、権限は別</p>
+
+<hr />
+
+<h3 id="-認可アクセス制御">❌ 「認可＝アクセス制御」</h3>
+<p>→ ⭕</p>
+<ul>
+  <li>認可 → ルールを決める</li>
+  <li>アクセス制御 → 実際に制御する</li>
+</ul>
+
+<hr />
+
+<h3 id="-アクセス制御ログイン">❌ 「アクセス制御＝ログイン」</h3>
+<p>→ ⭕ ログインは認証</p>
+
+<hr />
+
+<h3 id="-sg試験でのひっかけ">■ SG試験でのひっかけ</h3>
+<ul>
+  <li>「本人確認」→ 認証</li>
+  <li>「権限設定」→ 認可</li>
+  <li>「制御する仕組み」→ アクセス制御</li>
+</ul>
+
+<p>👉<br />
+<strong>“何をしているか”で分類する</strong></p>
+
+<hr />
+
+<h2 id="確認問題sg試験対策">確認問題（SG試験対策）</h2>
+
+<p>認証・認可・アクセス制御の関係として、最も適切なものはどれか。</p>
+
+<p>A. 認可で本人確認し、認証で権限を決める。<br />
+B. 認証で本人確認し、認可で許可範囲を決め、アクセス制御で実際に制限を適用する。<br />
+C. アクセス制御はログ取得だけを行い、許可判定はしない。<br />
+D. 認証は不要で、認可だけあれば安全性は担保できる。</p>
+
+<details>
+  <summary>▶ クリックして答えと解説を見る（ここを開く）</summary>
+
+  <p><strong>正解：B</strong></p>
+
+  <h3 id="section">解説</h3>
+  <ul>
+    <li>A：認証と認可が逆です。</li>
+    <li>B：用語の役割と順序が正しいです。</li>
+    <li>C：アクセス制御は実際の許可/拒否を実施します。</li>
+    <li>D：誰か不明のままでは適切な権限付与ができません。</li>
+  </ul>
+
+  <p>👉 判断ポイント<br />
+「認証→認可→制御適用」の流れで覚える。</p>
+
+</details>
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+<ul>
+  <li>認証＝本人確認</li>
+  <li>認可＝権限決定</li>
+  <li>アクセス制御＝実行</li>
+  <li>順番で覚える（認証→認可→制御）</li>
+  <li>SGでは「どの段階か」で選択肢を切る</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-model/">アクセス制御モデルとは？RBAC・ABAC・DAC・MACの違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-physical/">入退室管理とは？物理アクセス制御の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control/">アクセス管理とは？特権IDとneed-to-knowで権限を適切に制御【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-rights-management/">アクセス権限管理とは？付与・変更・削除の流れを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/administrator-privileges/">管理者権限とは？特権的アクセス権との違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/captcha/">← CAPTCHAとは？ボット対策の仕組みをやさしく理解【SG試験】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/id-management/">ID管理（アカウント管理）とは？運用の基本を整理【SG試験】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>物理的セキュリティ対策とは？論理的対策との違いを整理【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="物理的セキュリティ対策とは？論理的対策との違いを整理【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="物理的セキュリティ対策は設備や人の行動を通じて情報資産を守る対策です。論理的対策との違いやSG試験・情報セキュリティマネジメント試験でのひっかけポイント、判断基準を整理します。" />
+<meta property="og:description" content="物理的セキュリティ対策は設備や人の行動を通じて情報資産を守る対策です。論理的対策との違いやSG試験・情報セキュリティマネジメント試験でのひっかけポイント、判断基準を整理します。" />
+<link rel="canonical" href="http://localhost:4000/sg/physical-security/" />
+<meta property="og:url" content="http://localhost:4000/sg/physical-security/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="物理的セキュリティ対策とは？論理的対策との違いを整理【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"物理的セキュリティ対策は設備や人の行動を通じて情報資産を守る対策です。論理的対策との違いやSG試験・情報セキュリティマネジメント試験でのひっかけポイント、判断基準を整理します。","headline":"物理的セキュリティ対策とは？論理的対策との違いを整理【SG試験】","url":"http://localhost:4000/sg/physical-security/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">物理的セキュリティ対策とは？論理的対策との違いを整理【SG試験】</h1>
+      <h2 class="project-tagline">物理的セキュリティ対策は設備や人の行動を通じて情報資産を守る対策です。論理的対策との違いやSG試験・情報セキュリティマネジメント試験でのひっかけポイント、判断基準を整理します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">物理的セキュリティ対策は設備や人の行動を通じて情報資産を守る対策です。論理的対策との違いやSG試験・情報セキュリティマネジメント試験でのひっかけポイント、判断基準を整理します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-measures</span>
+        
+          <span class="post-tag">it_security_operations</span>
+        
+          <span class="post-tag">asset_management</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+<p>物理的セキュリティ対策とは、<strong>設備・施設・人の行動を管理して、情報資産への不正アクセスや災害リスクを防ぐ対策</strong>です。<br />
+SG試験では「これは物理か？論理か？」を切り分けられるかが問われます。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>イメージとしてはシンプルです。</p>
+
+<ul>
+  <li>ドアに鍵をかける → 物理対策</li>
+  <li>システムにパスワードを設定する → 論理対策</li>
+</ul>
+
+<p>つまり、<br />
+👉 <strong>“現実世界で守るか、システム上で守るか”の違い</strong>です。</p>
+
+<p>たとえば、どんなに強いパスワードを設定していても、<br />
+PCそのものを盗まれたら意味がありません。</p>
+
+<p>そのため実務では<br />
+👉 <strong>物理対策と論理対策はセットで考える必要がある</strong><br />
+というのが重要なポイントです。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>物理的セキュリティ対策は、主に次の3つの目的で行われます。</p>
+
+<h3 id="-不正侵入の防止">① 不正侵入の防止</h3>
+<ul>
+  <li>入退室管理</li>
+  <li>鍵・ICカード</li>
+  <li>アンチパスバック</li>
+</ul>
+
+<p>👉 「そもそも入れないようにする」</p>
+
+<hr />
+
+<h3 id="-災害障害への備え可用性">② 災害・障害への備え（可用性）</h3>
+<ul>
+  <li>耐震・耐火設備</li>
+  <li>UPS（無停電電源装置）</li>
+  <li>遠隔バックアップ</li>
+</ul>
+
+<p>👉 「止まらない・失われないようにする」</p>
+
+<hr />
+
+<h3 id="-盗難情報漏えいの防止">③ 盗難・情報漏えいの防止</h3>
+<ul>
+  <li>セキュリティワイヤ</li>
+  <li>USBキー（物理トークン）</li>
+  <li>クリアデスク・クリアスクリーン</li>
+</ul>
+
+<p>👉 「持ち出し・のぞき見を防ぐ」</p>
+
+<hr />
+
+<p>このように物理対策は<br />
+👉 <strong>機密性・完全性・可用性（CIA）のすべてに関わる</strong><br />
+のが特徴です。</p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="使うべき場面">使うべき場面</h3>
+<ul>
+  <li>オフィス・データセンターの管理</li>
+  <li>機密情報を扱う場所</li>
+  <li>災害リスクがある環境</li>
+</ul>
+
+<p>👉 <strong>「場所」や「モノ」を守るときに使う</strong></p>
+
+<hr />
+
+<h3 id="誤解しやすい場面">誤解しやすい場面</h3>
+<ul>
+  <li>認証（パスワード・多要素認証） → 論理対策</li>
+  <li>ファイアウォール・暗号 → 論理対策</li>
+</ul>
+
+<p>👉 「セキュリティっぽい＝全部同じ」ではない</p>
+
+<hr />
+
+<p>SG試験では<br />
+👉 <strong>“IT用語＝論理対策”と誤認させる問題</strong>がよく出ます。</p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="-物理対策設備だけの話">❌ 物理対策＝設備だけの話</h3>
+<p>→ ⭕ 人の行動（クリアデスクなど）も含む</p>
+
+<hr />
+
+<h3 id="-raidやバックアップは全部同じ">❌ RAIDやバックアップは全部同じ</h3>
+<p>→ ⭕ RAIDは冗長化、バックアップは復旧手段</p>
+
+<hr />
+
+<h3 id="-監視カメラは防止策">❌ 監視カメラは防止策</h3>
+<p>→ ⭕ 主目的は「抑止」と「証跡」</p>
+
+<hr />
+
+<h3 id="-usbキーは物理対策ではない">❌ USBキーは物理対策ではない</h3>
+<p>→ ⭕ 物理トークンを使った認証なので物理対策の一部</p>
+
+<hr />
+
+<p>SG試験では<br />
+👉 <strong>「目的（防止・抑止・復旧）」をズラした選択肢</strong>が頻出です。</p>
+
+<hr />
+
+<h2 id="確認問題sg試験対策">確認問題（SG試験対策）</h2>
+
+<p>物理的セキュリティ対策として最も適切なものはどれか。</p>
+
+<p>A. マルウェア検知ソフトのみを導入し、入退室管理は不要とする。<br />
+B. サーバ室の入退室管理、監視、施錠などで機器への物理アクセスを制限する。<br />
+C. 暗号化通信を導入すれば、機器盗難対策は不要になる。<br />
+D. パスワード変更だけを強化すれば、災害対策も同時に解決する。</p>
+
+<details>
+  <summary>▶ クリックして答えと解説を見る（ここを開く）</summary>
+
+  <p><strong>正解：B</strong></p>
+
+  <h3 id="section">解説</h3>
+  <ul>
+    <li>A：論理対策だけでは不十分です。</li>
+    <li>B：物理アクセス制限は物理対策の中核です。</li>
+    <li>C：盗難・破壊リスクは別軸で残ります。</li>
+    <li>D：認証強化と災害対策は別の管理対象です。</li>
+  </ul>
+
+  <p>👉 判断ポイント<br />
+「物理リスクには物理対策」が基本。</p>
+
+</details>
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>物理対策＝設備・場所・人の行動で守る</li>
+  <li>論理対策＝システムやソフトで守る</li>
+  <li>判断軸は「現実世界かシステムか」</li>
+  <li>RAID≠バックアップ（ここは超重要）</li>
+  <li>監視カメラ＝抑止・証跡（防止ではない）</li>
+</ul>
+
+<p>👉 <strong>「何を守るか」と「どう守るか」で切るのがコツ</strong></p>
+
+<hr />
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-model/">アクセス制御モデルとは？RBAC・ABAC・DAC・MACの違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-physical/">入退室管理とは？物理アクセス制御の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control/">アクセス管理とは？特権IDとneed-to-knowで権限を適切に制御【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/anti-passback/">アンチパスバックとは？不正な入退室を防ぐ仕組み【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/asset-register/">情報資産台帳とは？リスク管理の出発点を整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/physical-security-summary/">← 物理的セキュリティ対策まとめ｜出題パターンと切り分け一覧【SG試験】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/access-control-physical/">入退室管理とは？物理アクセス制御の基本【SG試験】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

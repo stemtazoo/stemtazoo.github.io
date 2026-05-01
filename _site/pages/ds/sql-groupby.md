@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: GROUP BYとは？データ集計の基本を理解する【DS検定】
-description: GROUP BYはデータ集計の基本を理解するを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: SQLのGROUP BYをデータ集計の基本として整理します。指定した列で行をグループ化し、COUNTやSUMなどの集計関数と組み合わせる考え方、WHEREやHAVINGとの違いを確認できます。本文では、用語の定義、具体例、似た概念との違い、試験で迷いやすい選択肢の見分け方まで、短時間で復習できるようにまとめています。
 permalink: /ds/sql-groupby/
 categories: [data-engineering]
 tags: [ds, data-processing, sql]

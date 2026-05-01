@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: DS検定 リテラシー｜AI利活用スキル
-description: DS検定 リテラシー｜AI利活用スキルは重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: DS検定リテラシーのAI利活用スキル分野を整理する学習ページです。AIの基本概念、生成AI、機械学習、倫理、活用時のリスクと注意点をまとめ、試験前の確認に使えます。本文では、用語の定義、具体例、似た概念との違い、試験で迷いやすい選択肢の見分け方まで、短時間で復習できるようにまとめています。
 permalink: /ds/ai-utilization-skillcheck/
 categories: [business]
 tags: [ds, skillcheck]

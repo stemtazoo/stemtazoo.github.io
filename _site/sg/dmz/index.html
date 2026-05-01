@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>DMZとは？外部公開サーバを安全に配置する仕組み【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="DMZとは？外部公開サーバを安全に配置する仕組み【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="DMZはインターネットと社内ネットワークの間に設ける中間領域です。公開サーバを安全に配置する目的や、ファイアーウォールとの関係、SG試験・情報セキュリティマネジメント試験でのひっかけポイントを整理します。" />
+<meta property="og:description" content="DMZはインターネットと社内ネットワークの間に設ける中間領域です。公開サーバを安全に配置する目的や、ファイアーウォールとの関係、SG試験・情報セキュリティマネジメント試験でのひっかけポイントを整理します。" />
+<link rel="canonical" href="http://localhost:4000/sg/dmz/" />
+<meta property="og:url" content="http://localhost:4000/sg/dmz/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="DMZとは？外部公開サーバを安全に配置する仕組み【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"DMZはインターネットと社内ネットワークの間に設ける中間領域です。公開サーバを安全に配置する目的や、ファイアーウォールとの関係、SG試験・情報セキュリティマネジメント試験でのひっかけポイントを整理します。","headline":"DMZとは？外部公開サーバを安全に配置する仕組み【SG試験】","url":"http://localhost:4000/sg/dmz/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">DMZとは？外部公開サーバを安全に配置する仕組み【SG試験】</h1>
+      <h2 class="project-tagline">DMZはインターネットと社内ネットワークの間に設ける中間領域です。公開サーバを安全に配置する目的や、ファイアーウォールとの関係、SG試験・情報セキュリティマネジメント試験でのひっかけポイントを整理します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">DMZはインターネットと社内ネットワークの間に設ける中間領域です。公開サーバを安全に配置する目的や、ファイアーウォールとの関係、SG試験・情報セキュリティマネジメント試験でのひっかけポイントを整理します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-technology</span>
+        
+          <span class="post-tag">network</span>
+        
+          <span class="post-tag">system_architecture</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+<ul>
+  <li>DMZとは、インターネットと社内ネットワークの間に設ける中間領域であり、公開サーバを安全に運用するための仕組みで、SG試験では「内部ネットワークを直接守る構成か」が問われる。</li>
+</ul>
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<ul>
+  <li>社内ネットワークを「本丸」とすると、DMZは「外との間にある前線基地」です。</li>
+  <li>外部に公開するサーバ（Webサーバなど）を、社内の中ではなく「一段外」に置くイメージです。</li>
+</ul>
+
+<p>こうすることで：</p>
+<ul>
+  <li>外部からアクセスはできる</li>
+  <li>でも社内ネットワークには直接入れない</li>
+</ul>
+
+<p>という状態を作れます。</p>
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>DMZ（DeMilitarized Zone）は、外部ネットワーク（インターネット）と内部ネットワーク（社内LAN）の間に設ける中間領域です。</p>
+
+<h3 id="主な目的">主な目的</h3>
+<ul>
+  <li>公開サーバを安全に配置する</li>
+  <li>万が一侵入されても内部ネットワークへの影響を防ぐ</li>
+</ul>
+
+<h3 id="構成のポイント">構成のポイント</h3>
+<p>一般的にはファイアーウォールで分離します：</p>
+
+<ul>
+  <li>インターネット ⇔ DMZ</li>
+  <li>DMZ ⇔ 社内ネットワーク</li>
+</ul>
+
+<p>このように「2段階」で通信を制御します。</p>
+
+<h3 id="配置されるもの">配置されるもの</h3>
+<ul>
+  <li>Webサーバ</li>
+  <li>メールサーバ</li>
+  <li>DNSサーバ</li>
+</ul>
+
+<p>→ 外部公開が必要なものだけを置く</p>
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="使うべき場面">使うべき場面</h3>
+<ul>
+  <li>外部公開するサーバがある場合</li>
+  <li>社内ネットワークを直接インターネットにさらしたくない場合</li>
+  <li>セキュリティレベルを分けて管理したい場合</li>
+</ul>
+
+<h3 id="使うと誤解しやすい場面">使うと誤解しやすい場面</h3>
+<ul>
+  <li>DMZに置けば安全になると考える場合</li>
+</ul>
+
+<p>理由：</p>
+<ul>
+  <li>DMZは「隔離する仕組み」であり</li>
+  <li>攻撃を防ぐ仕組みそのものではない（防御は別途必要）</li>
+</ul>
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+<h3 id="-よくある誤解">❌ よくある誤解</h3>
+<ul>
+  <li>DMZは攻撃を防ぐ装置</li>
+  <li>DMZに置けばセキュリティ対策は不要</li>
+</ul>
+
+<h3 id="-正しい理解">⭕ 正しい理解</h3>
+<ul>
+  <li>DMZは「配置場所（ネットワーク構成）の考え方」</li>
+  <li>防御はファイアーウォールやIPSなどが担当</li>
+</ul>
+
+<h3 id="sg試験でのひっかけポイント">SG試験でのひっかけポイント</h3>
+<ul>
+  <li>
+    <p>「外部公開サーバを社内LANに直接置く」<br />
+→ 不適切（DMZを使うべき）</p>
+  </li>
+  <li>
+    <p>「DMZに置けば侵入されない」<br />
+→ 誤り（侵入はあり得るが影響を限定する）</p>
+  </li>
+  <li>
+    <p>「内部ネットワークを直接守る構成」<br />
+→ DMZを介して分離しているかが重要</p>
+  </li>
+</ul>
+
+<p>SG試験では<br />
+「どこにサーバを置くべきか」<br />
+を判断させる問題がよく出ます。</p>
+
+<h2 id="確認問題sg試験対策">確認問題（SG試験対策）</h2>
+
+<p>次のうち、最も適切なものはどれか。</p>
+
+<p>A. DMZは、社内の機密データベースを外部公開するために内部ネットワーク内へ直接配置する構成である。<br />
+B. DMZは、公開サーバを内部ネットワークから分離して配置し、侵入時の影響を内部に広げにくくするための中間領域である。<br />
+C. DMZを設置すれば、ファイアーウォールによる通信制御は不要になる。<br />
+D. DMZは、マルウェアを安全に実行して挙動分析するための隔離環境を指す。</p>
+
+<details>
+  <summary>答えと解説を見る</summary>
+
+  <p><strong>正解：B</strong></p>
+
+  <h3 id="section">解説</h3>
+  <ul>
+    <li>A：誤り。DMZの目的は内部ネットワークと分離することであり、内部へ直接配置する説明は不適切です。</li>
+    <li>B：正しい。公開サーバを中間領域に置き、内部への波及を抑えるのがDMZの役割です。</li>
+    <li>C：誤り。DMZでも通信制御は必須で、通常はファイアーウォールと組み合わせて運用します。</li>
+    <li>D：誤り。これはサンドボックスの説明で、DMZとは用途が異なります。</li>
+  </ul>
+
+  <p>👉 判断ポイント<br />
+「公開が必要なサーバを内部から分離する構成か」でDMZを判断する。</p>
+
+</details>
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+<ul>
+  <li>DMZ＝外部と内部の間の中間領域</li>
+  <li>公開サーバを社内から切り離して配置</li>
+  <li>目的は「侵入されても被害を限定する」</li>
+  <li>防御そのものではない（FWやIPSとセット）</li>
+  <li>「内部に置くかDMZに置くか」で判断する</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-model/">アクセス制御モデルとは？RBAC・ABAC・DAC・MACの違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/blacklist-whitelist/">ブラックリストとホワイトリストの違いとは？判断基準を整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/certificate-revocation-crl-ocsp/">証明書失効（CRL / OCSP）とは？無効な証明書の見分け方【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/client-server-system/">クライアントサーバーシステムとは？役割分担の考え方を理解する【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/common-port-numbers/">よく出るポート番号とは？試験での見分け方を整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/packet-filtering/">← パケットフィルタリングとは？通信を制御する基本技術【SG試験】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/vpn/">VPNとは？安全な通信を実現する仕組み【SG試験】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

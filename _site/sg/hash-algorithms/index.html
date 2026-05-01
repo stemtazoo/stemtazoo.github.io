@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>ハッシュ関数の種類とは？SHAとMD5の違いを整理【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="ハッシュ関数の種類とは？SHAとMD5の違いを整理【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="SHA-2/SHA-3/MD5などハッシュアルゴリズムの差を理解するため、衝突耐性・用途・非推奨理由を比較し、設問で安全な選択肢を技術根拠付きで選べるようにします。" />
+<meta property="og:description" content="SHA-2/SHA-3/MD5などハッシュアルゴリズムの差を理解するため、衝突耐性・用途・非推奨理由を比較し、設問で安全な選択肢を技術根拠付きで選べるようにします。" />
+<link rel="canonical" href="http://localhost:4000/sg/hash-algorithms/" />
+<meta property="og:url" content="http://localhost:4000/sg/hash-algorithms/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="ハッシュ関数の種類とは？SHAとMD5の違いを整理【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"SHA-2/SHA-3/MD5などハッシュアルゴリズムの差を理解するため、衝突耐性・用途・非推奨理由を比較し、設問で安全な選択肢を技術根拠付きで選べるようにします。","headline":"ハッシュ関数の種類とは？SHAとMD5の違いを整理【SG試験】","url":"http://localhost:4000/sg/hash-algorithms/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">ハッシュ関数の種類とは？SHAとMD5の違いを整理【SG試験】</h1>
+      <h2 class="project-tagline">SHA-2/SHA-3/MD5などハッシュアルゴリズムの差を理解するため、衝突耐性・用途・非推奨理由を比較し、設問で安全な選択肢を技術根拠付きで選べるようにします。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">SHA-2/SHA-3/MD5などハッシュアルゴリズムの差を理解するため、衝突耐性・用途・非推奨理由を比較し、設問で安全な選択肢を技術根拠付きで選べるようにします。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-overview</span>
+        
+          <span class="post-tag">crypto_auth</span>
+        
+          <span class="post-tag">risk_assessment</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+<p>ハッシュ関数にはSHAやMD5などがあり、<strong>現在はSHA-256などのSHA系が安全とされ、MD5やSHA-1は危殆化している</strong>と判断します。<br />
+SG試験では「どれが安全か」を判断させる問題で問われます。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>「古い鍵と新しい鍵」の違いです。</p>
+
+<ul>
+  <li>
+    <p>古い鍵（MD5・SHA-1）<br />
+→ 簡単に開けられる可能性あり</p>
+  </li>
+  <li>
+    <p>新しい鍵（SHA-256など）<br />
+→ まだ安全</p>
+  </li>
+</ul>
+
+<p>👉<br />
+<strong>同じハッシュでも安全性に差がある</strong>のがポイントです。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>代表的なハッシュ関数は以下です。</p>
+
+<h3 id="主なハッシュ関数">主なハッシュ関数</h3>
+<p>| 種類 | 特徴 | 安全性 |
+|——|——|——–|
+| MD5 | 古い方式・高速 | ❌ 危殆化 |
+| SHA-1 | MD5より強いが古い | ❌ 危殆化 |
+| SHA-256 | 現在主流 | ⭕ 安全 |
+| SHA-512 | SHA-256より長い | ⭕ 安全 |</p>
+
+<hr />
+
+<h3 id="ポイント">ポイント</h3>
+<ul>
+  <li>数字（256・512）は出力ビット長</li>
+  <li>長いほど安全性が高い傾向</li>
+</ul>
+
+<hr />
+
+<p>👉 SG試験では<br />
+<strong>「MD5・SHA-1 → NG」<br />
+「SHA-256 → OK」</strong><br />
+と判断できるかが重要です。</p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="使う場面">使う場面</h3>
+<ul>
+  <li>パスワード保存</li>
+  <li>電子署名の内部処理</li>
+  <li>ファイル改ざんチェック</li>
+</ul>
+
+<p>👉 現場では<br />
+<strong>安全なハッシュ関数の選択が重要</strong></p>
+
+<hr />
+
+<h3 id="使うと誤解しやすい場面">使うと誤解しやすい場面</h3>
+<ul>
+  <li>古い方式でも問題ない<br />
+→ セキュリティ的にはNG</li>
+</ul>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+<p>SG試験でよく出ます。</p>
+
+<h3 id="-md5はまだ使える">❌ MD5はまだ使える</h3>
+<p>→ ⭕<br />
+<strong>衝突が見つかっており危殆化</strong></p>
+
+<hr />
+
+<h3 id="-sha-1は安全">❌ SHA-1は安全</h3>
+<p>→ ⭕<br />
+<strong>現在は非推奨（危殆化）</strong></p>
+
+<hr />
+
+<h3 id="-ハッシュは全部同じ">❌ ハッシュは全部同じ</h3>
+<p>→ ⭕<br />
+<strong>アルゴリズムによって安全性が違う</strong></p>
+
+<hr />
+
+<h3 id="-長さは関係ない">❌ 長さは関係ない</h3>
+<p>→ ⭕<br />
+<strong>ビット長が長いほど安全性が高い傾向</strong></p>
+
+<hr />
+
+<p>👉 SG試験では<br />
+<strong>「危殆化しているか」で判断する</strong>のが重要です。</p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+<ul>
+  <li>ハッシュ関数には複数種類がある</li>
+  <li>MD5・SHA-1は危殆化 → 使用NG</li>
+  <li>SHA-256・SHA-512が主流</li>
+  <li>安全性はアルゴリズムとビット長で判断</li>
+</ul>
+
+<p>👉 判断基準<br />
+<strong>MD5 / SHA-1 → NG<br />
+SHA-256以上 → OK<br />
+危殆化 → 見直し</strong></p>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/asset-register/">情報資産台帳とは？リスク管理の出発点を整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/attacker-types/">攻撃者の種類とは？目的と特徴で整理する【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/authentication-authorization-access-control/">認証・認可・アクセス制御の違いとは？役割の切り分けを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/authentication-methods/">認証方式とは？3要素と多要素認証を整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/block-stream-cipher/">ブロック暗号とストリーム暗号の違いとは？暗号方式を整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/hash-function/">← ハッシュ化とは？改ざん検知の基本をやさしく理解【SG試験】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/hash-collision-resistance/">ハッシュ関数の衝突耐性とは？改ざん検知の強さを左右する性質【SG試験】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>IPsecのAHとは？暗号化しない認証ヘッダー【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="IPsecのAHとは？暗号化しない認証ヘッダー【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="IPsecのAHは通信データの認証と改ざん検知を行う仕組みです。ESPやIKEとの違い、SG試験・情報セキュリティマネジメント試験で迷いやすいひっかけポイントを整理します。" />
+<meta property="og:description" content="IPsecのAHは通信データの認証と改ざん検知を行う仕組みです。ESPやIKEとの違い、SG試験・情報セキュリティマネジメント試験で迷いやすいひっかけポイントを整理します。" />
+<link rel="canonical" href="http://localhost:4000/sg/ipsec-ah/" />
+<meta property="og:url" content="http://localhost:4000/sg/ipsec-ah/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="IPsecのAHとは？暗号化しない認証ヘッダー【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"IPsecのAHは通信データの認証と改ざん検知を行う仕組みです。ESPやIKEとの違い、SG試験・情報セキュリティマネジメント試験で迷いやすいひっかけポイントを整理します。","headline":"IPsecのAHとは？暗号化しない認証ヘッダー【SG試験】","url":"http://localhost:4000/sg/ipsec-ah/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">IPsecのAHとは？暗号化しない認証ヘッダー【SG試験】</h1>
+      <h2 class="project-tagline">IPsecのAHは通信データの認証と改ざん検知を行う仕組みです。ESPやIKEとの違い、SG試験・情報セキュリティマネジメント試験で迷いやすいひっかけポイントを整理します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">IPsecのAHは通信データの認証と改ざん検知を行う仕組みです。ESPやIKEとの違い、SG試験・情報セキュリティマネジメント試験で迷いやすいひっかけポイントを整理します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-overview</span>
+        
+          <span class="post-tag">crypto_auth</span>
+        
+          <span class="post-tag">network</span>
+        
+          <span class="post-tag">sg-technology</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+
+<p>IPsecのAH（Authentication Header：認証ヘッダー）は、IPパケットの完全性確認と送信元認証を行うが、データの暗号化は行わない仕組みです。</p>
+
+<p>SG試験では、AHを「暗号化する仕組み」と勘違いさせる選択肢が出やすいです。
+判断するときは、まず AH＝認証・改ざん検知、ESP＝暗号化もできる と切り分けるのが大切です。</p>
+
+<h2 id="直感的な説明">直感的な説明</h2>
+
+<p>AHは、荷物の中身を隠すための「箱」ではなく、荷物に付ける「封印シール」のようなものです。</p>
+
+<p>封印シールがあれば、</p>
+
+<p>だれが送ったものか</p>
+
+<p>途中で開けられたり、書き換えられたりしていないか</p>
+
+<p>同じ荷物をもう一度送りつけられていないか</p>
+
+<p>を確認できます。</p>
+
+<p>ただし、荷物の中身そのものを見えなくするわけではありません。
+つまり、AHは 盗み見を防ぐ暗号化 ではなく、改ざんやなりすましに気づくための仕組みです。</p>
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+
+<p>IPsecは、IP層で通信を保護するための仕組みです。
+その中でAHは、IPパケットに認証用の情報を追加して、通信の正しさを確認します。</p>
+
+<p>AHで主に確認するのは、次の3点です。</p>
+
+<p>項目	役割</p>
+
+<p>SPI	どのIPsec通信のルールを使うかを識別する番号
+シーケンス番号	パケットの順番を示し、リプレイ攻撃を防ぐための番号
+認証データ	パケットが改ざんされていないか確認するためのデータ</p>
+
+<p>ここで重要なのは、AHは暗号化を目的にしていないという点です。</p>
+
+<p>SG試験では、選択肢に「暗号化アルゴリズム」「暗号化鍵」「鍵交換」などの言葉が入っていると、AHではなく別の仕組みを説明している可能性があります。</p>
+
+<p>AHでできること</p>
+
+<p>送信元が正しいことを確認する</p>
+
+<p>通信内容が改ざんされていないことを確認する</p>
+
+<p>同じパケットを再送して攻撃するリプレイ攻撃を防ぐ</p>
+
+<p>AHでできないこと</p>
+
+<p>通信内容を暗号化して隠す</p>
+
+<p>暗号化鍵を交換する</p>
+
+<p>暗号化アルゴリズムを決定する</p>
+
+<p>この「できること」と「できないこと」を分けて覚えると、選択肢を切りやすくなります。</p>
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+
+<p>AHは、通信内容の完全性と認証を確認したい場面で使われます。</p>
+
+<p>たとえば、ネットワーク上で送られるIPパケットについて、</p>
+
+<p>途中で改ざんされていないか確認したい</p>
+
+<p>正しい相手から送られてきたことを確認したい</p>
+
+<p>過去の通信データを再利用される攻撃を防ぎたい</p>
+
+<p>といった場面です。</p>
+
+<p>一方で、通信内容を第三者に読まれないようにしたい場合は、AHだけでは不十分です。
+その場合は、暗号化機能をもつESPを考えます。</p>
+
+<p>SG試験では、実務上の細かい設定よりも、何を守るための仕組みかが問われることが多いです。</p>
+
+<p>盗み見を防ぐ → 暗号化</p>
+
+<p>改ざんを検知する → 完全性確認</p>
+
+<p>送信元を確認する → 認証</p>
+
+<p>この3つを分けて考えると、問題文の意図をつかみやすくなります。</p>
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<p>AHとESPの混同</p>
+
+<p>AHとESPは、どちらもIPsecで使われる仕組みです。
+ただし、役割が違います。</p>
+
+<p>用語	主な役割	暗号化</p>
+
+<p>AH	認証、完全性確認、リプレイ攻撃対策	行わない
+ESP	暗号化、必要に応じて認証・完全性確認	行える</p>
+
+<p>選択肢では、「暗号化は行わず」 と書かれていればAHの可能性が高いです。
+反対に、「データを暗号化する」 と書かれていれば、AHではなくESPを疑います。</p>
+
+<p>AHとIKEの混同</p>
+
+<p>IKEは、IPsecで使う鍵やアルゴリズムを決めるための仕組みです。</p>
+
+<p>たとえば、過去問の選択肢で、</p>
+
+<blockquote>
+  <p>暗号化アルゴリズムを決定し、暗号化鍵を動的に生成する鍵交換プロトコル</p>
+</blockquote>
+
+<p>といった説明が出てきた場合、これはAHではなくIKEの説明です。</p>
+
+<p>AHは鍵交換プロトコルではありません。
+AHは、すでに決められたルールに基づいて、パケットの認証や完全性確認を行う役割です。</p>
+
+<p>AHとSAの混同</p>
+
+<p>SA（Security Association）は、IPsec通信で使うルールや設定のまとまりです。</p>
+
+<p>過去問の選択肢で、</p>
+
+<blockquote>
+  <p>暗号化アルゴリズムや暗号化鍵のライフタイムが設定される管理テーブル</p>
+</blockquote>
+
+<p>のように書かれていたら、AHそのものではなく、SAに関する説明と考えます。</p>
+
+<p>AHは「認証ヘッダー」という通信データ側の仕組みです。
+SAは「どのルールで通信するか」を管理する情報です。</p>
+
+<p>トランスポートモード・トンネルモードとの混同</p>
+
+<p>IPsecには、トランスポートモードとトンネルモードがあります。</p>
+
+<p>これは、IPsecで保護する範囲の違いです。
+AHだけに限った説明ではなく、IPsec全体の使い方に関係します。</p>
+
+<p>選択肢で、</p>
+
+<blockquote>
+  <p>IPパケットを暗号化する対象部分によって、トランスポートモード、トンネルモードの方式がある</p>
+</blockquote>
+
+<p>のように書かれていた場合、これはAHそのものの説明としては適切ではありません。</p>
+
+<p>SG試験では、IPsec全体の説明なのか、AH・ESP・IKEなど個別の用語の説明なのかを切り分けることが大切です。</p>
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<p>AHは、IPsecで使われる認証ヘッダーである</p>
+
+<p>AHは、完全性確認・送信元認証・リプレイ攻撃対策を行う</p>
+
+<p>AHは、データの暗号化は行わない</p>
+
+<p>暗号化が出てきたら、ESPやIKEとの混同に注意する</p>
+
+<p>SG試験では、AH＝暗号化しない認証と改ざん検知 と判断する</p>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/attacker-types/">攻撃者の種類とは？目的と特徴で整理する【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/authentication-authorization-access-control/">認証・認可・アクセス制御の違いとは？役割の切り分けを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/authentication-methods/">認証方式とは？3要素と多要素認証を整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/blacklist-whitelist/">ブラックリストとホワイトリストの違いとは？判断基準を整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/block-stream-cipher/">ブロック暗号とストリーム暗号の違いとは？暗号方式を整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/ipsec/">← IPsecとは？IP通信を保護する仕組み【SG試験】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/ipsec-esp/">IPsecのESPとは？暗号化できるセキュリティ機能【SG試験】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

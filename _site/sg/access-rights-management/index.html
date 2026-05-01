@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>アクセス権限管理とは？付与・変更・削除の流れを整理【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="アクセス権限管理とは？付与・変更・削除の流れを整理【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="アクセス権限管理は、利用者に必要な権限を付与・変更・削除し、情報資産へのアクセスを適切に制御する管理です。SG試験・情報セキュリティマネジメント試験で問われやすい申請・承認・設定・確認・定期見直しの流れを整理します。" />
+<meta property="og:description" content="アクセス権限管理は、利用者に必要な権限を付与・変更・削除し、情報資産へのアクセスを適切に制御する管理です。SG試験・情報セキュリティマネジメント試験で問われやすい申請・承認・設定・確認・定期見直しの流れを整理します。" />
+<link rel="canonical" href="http://localhost:4000/sg/access-rights-management/" />
+<meta property="og:url" content="http://localhost:4000/sg/access-rights-management/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="アクセス権限管理とは？付与・変更・削除の流れを整理【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"アクセス権限管理は、利用者に必要な権限を付与・変更・削除し、情報資産へのアクセスを適切に制御する管理です。SG試験・情報セキュリティマネジメント試験で問われやすい申請・承認・設定・確認・定期見直しの流れを整理します。","headline":"アクセス権限管理とは？付与・変更・削除の流れを整理【SG試験】","url":"http://localhost:4000/sg/access-rights-management/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">アクセス権限管理とは？付与・変更・削除の流れを整理【SG試験】</h1>
+      <h2 class="project-tagline">アクセス権限管理は、利用者に必要な権限を付与・変更・削除し、情報資産へのアクセスを適切に制御する管理です。SG試験・情報セキュリティマネジメント試験で問われやすい申請・承認・設定・確認・定期見直しの流れを整理します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">アクセス権限管理は、利用者に必要な権限を付与・変更・削除し、情報資産へのアクセスを適切に制御する管理です。SG試験・情報セキュリティマネジメント試験で問われやすい申請・承認・設定・確認・定期見直しの流れを整理します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-management</span>
+        
+          <span class="post-tag">access_control</span>
+        
+          <span class="post-tag">id_management</span>
+        
+          <span class="post-tag">system_operations</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+
+<p><strong>アクセス権限管理</strong>とは、<strong>利用者が必要な情報やシステムにだけアクセスできるように、権限の付与・変更・削除を管理すること</strong>です。</p>
+
+<p>SG試験では、次のように考えると分かりやすいです。</p>
+
+<blockquote>
+  <p><strong>必要な人に、必要な範囲だけ、必要な期間だけアクセスを許可する</strong></p>
+</blockquote>
+
+<p>アクセス権限管理では、特に次の流れが重要です。</p>
+
+<ul>
+  <li>申請する</li>
+  <li>承認する</li>
+  <li>権限を設定する</li>
+  <li>設定結果を確認する</li>
+  <li>不要になった権限を削除する</li>
+  <li>定期的に見直す</li>
+</ul>
+
+<p>ポイントは、<strong>権限を与えること</strong>だけではありません。</p>
+
+<p>異動・退職・担当変更に合わせて、<strong>変更や削除まで確実に行うこと</strong>が大切です。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+
+<p>アクセス権限管理は、会社の建物でいうと <strong>入れる部屋を決める仕組み</strong> のようなものです。</p>
+
+<p>社員だからといって、すべての部屋に入れるわけではありません。</p>
+
+<ul>
+  <li>営業部の人は営業資料の部屋に入れる</li>
+  <li>経理部の人は経理資料の部屋に入れる</li>
+  <li>管理者だけが設備管理室に入れる</li>
+  <li>退職した人はどの部屋にも入れない</li>
+</ul>
+
+<p>このように、立場や業務に応じて入れる場所を決めます。</p>
+
+<p>システムでも同じです。</p>
+
+<p>利用者ごとに、アクセスできるシステム、画面、ファイル、データ、操作範囲を管理します。</p>
+
+<p>これがアクセス権限管理です。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+
+<p>アクセス権限管理では、利用者や部門、役割に応じて、情報資産へのアクセスを制御します。</p>
+
+<p>代表的な管理対象は、次のとおりです。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>管理対象</th>
+      <th>例</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>利用者ID</td>
+      <td>社員ID、外部委託先ID、管理者ID</td>
+    </tr>
+    <tr>
+      <td>アクセス先</td>
+      <td>業務システム、ファイルサーバ、データベース</td>
+    </tr>
+    <tr>
+      <td>操作範囲</td>
+      <td>閲覧、登録、更新、削除、承認</td>
+    </tr>
+    <tr>
+      <td>権限の種類</td>
+      <td>一般利用者権限、承認者権限、管理者権限</td>
+    </tr>
+    <tr>
+      <td>利用期間</td>
+      <td>在籍中、担当期間中、作業期間中</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>アクセス権限管理で大切なのは、<strong>業務上必要な範囲に限定すること</strong>です。</p>
+
+<p>たとえば、営業担当者に経理システムの更新権限を与える必要はありません。</p>
+
+<p>また、閲覧だけでよい人に、更新や削除の権限まで与えるのも危険です。</p>
+
+<p>この考え方は、<strong>最小権限の原則</strong>と関係します。</p>
+
+<hr />
+
+<h2 id="付与変更削除の流れ">付与・変更・削除の流れ</h2>
+
+<p>アクセス権限管理では、権限を付与するときだけでなく、変更・削除まで含めて管理します。</p>
+
+<h3 id="1-付与">1. 付与</h3>
+
+<p>付与とは、新しく必要になった権限を与えることです。</p>
+
+<p>たとえば、次のような場面です。</p>
+
+<ul>
+  <li>新入社員に業務システムの利用権限を与える</li>
+  <li>担当者にプロジェクトフォルダの閲覧権限を与える</li>
+  <li>承認者に承認画面の利用権限を与える</li>
+</ul>
+
+<p>付与するときは、本人の希望だけで自由に与えるのではなく、申請と承認を行います。</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>利用者または上長が申請する
+  ↓
+責任者が必要性を確認して承認する
+  ↓
+システム管理者が権限を設定する
+  ↓
+設定結果を確認する
+</code></pre></div></div>
+
+<p>この流れにすることで、不要な権限付与を防ぎやすくなります。</p>
+
+<hr />
+
+<h3 id="2-変更">2. 変更</h3>
+
+<p>変更とは、担当業務や役割が変わったときに、権限を見直すことです。</p>
+
+<p>たとえば、次のような場面です。</p>
+
+<ul>
+  <li>部署異動した</li>
+  <li>担当業務が変わった</li>
+  <li>承認者になった</li>
+  <li>プロジェクトから外れた</li>
+  <li>外部委託先の担当範囲が変わった</li>
+</ul>
+
+<p>ここで注意したいのは、<strong>新しい権限を追加するだけで終わらせないこと</strong>です。</p>
+
+<p>異動前の権限が残ったままだと、本来アクセスできない情報にアクセスできてしまいます。</p>
+
+<p>そのため、変更時は次のように考えます。</p>
+
+<blockquote>
+  <p><strong>追加する権限だけでなく、不要になった権限も削除する</strong></p>
+</blockquote>
+
+<p>SG試験では、この視点がよく問われます。</p>
+
+<hr />
+
+<h3 id="3-削除">3. 削除</h3>
+
+<p>削除とは、不要になった権限を取り消すことです。</p>
+
+<p>たとえば、次のような場面です。</p>
+
+<ul>
+  <li>退職した</li>
+  <li>異動した</li>
+  <li>プロジェクトが終了した</li>
+  <li>外部委託契約が終了した</li>
+  <li>一時的な作業が終わった</li>
+</ul>
+
+<p>削除を忘れると、使われていないIDや不要な権限が残ります。</p>
+
+<p>これは、不正アクセスや内部不正の原因になります。</p>
+
+<p>特に、退職者や外部委託先のIDが残っている状態は危険です。</p>
+
+<p>アクセス権限管理では、<strong>付与よりも削除漏れに注意する</strong>ことが大切です。</p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+
+<p>アクセス権限管理は、情報システムを安全に運用するための基本です。</p>
+
+<p>主に次のような場面で使われます。</p>
+
+<ul>
+  <li>新入社員のID発行</li>
+  <li>部署異動時の権限変更</li>
+  <li>退職者のID削除</li>
+  <li>外部委託先への一時的な権限付与</li>
+  <li>プロジェクトメンバーへのフォルダ権限付与</li>
+  <li>承認者権限の設定</li>
+  <li>管理者権限や特権IDの管理</li>
+  <li>定期的な権限棚卸し</li>
+</ul>
+
+<p>アクセス権限管理が不十分だと、必要以上に広い権限が残ります。</p>
+
+<p>その結果、情報漏えい、改ざん、不正操作、ログの削除などにつながる可能性があります。</p>
+
+<hr />
+
+<h2 id="特権id管理職務分掌との関係">特権ID管理・職務分掌との関係</h2>
+
+<p>アクセス権限管理は、特権ID管理や職務分掌ともつながります。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>用語</th>
+      <th>関係</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>アクセス権限管理</td>
+      <td>誰に何の権限を与えるかを管理する</td>
+    </tr>
+    <tr>
+      <td>特権ID管理</td>
+      <td>強い権限を持つIDを特に厳しく管理する</td>
+    </tr>
+    <tr>
+      <td>職務分掌</td>
+      <td>一人に権限を集中させないよう役割を分ける</td>
+    </tr>
+    <tr>
+      <td>最小権限の原則</td>
+      <td>必要最小限の権限だけを与える考え方</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>たとえば、管理者権限を付与する場合は、通常のアクセス権限よりも慎重に管理します。</p>
+
+<p>そのため、特権IDの利用申請、承認、操作ログの記録、定期的な見直しが必要になります。</p>
+
+<p>また、権限を申請する人、承認する人、設定する人、確認する人を分けることで、職務分掌にもつながります。</p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="誤解1権限は多めに与えた方が業務が止まらない">誤解1：権限は多めに与えた方が業務が止まらない</h3>
+
+<p>確かに、広い権限を与えれば作業はしやすくなります。</p>
+
+<p>しかし、不要な権限があると、誤操作や不正利用のリスクが高くなります。</p>
+
+<p>SG試験では、<strong>便利さよりも必要最小限</strong>を優先します。</p>
+
+<hr />
+
+<h3 id="誤解2一度付与した権限はそのままでよい">誤解2：一度付与した権限は、そのままでよい</h3>
+
+<p>これは危険です。</p>
+
+<p>人の役割は変わります。</p>
+
+<p>異動、退職、担当変更、契約終了があれば、権限も見直す必要があります。</p>
+
+<p>特に削除漏れは、試験でも実務でも重要な注意点です。</p>
+
+<hr />
+
+<h3 id="誤解3上司や経営者にはすべての権限を与えてよい">誤解3：上司や経営者にはすべての権限を与えてよい</h3>
+
+<p>役職が高いことと、すべてのシステム権限が必要なことは別です。</p>
+
+<p>経営者が経営情報を見る権限は必要かもしれません。</p>
+
+<p>しかし、システム設定変更やログ削除の権限まで必要とは限りません。</p>
+
+<p>試験では、<strong>役職ではなく業務上の必要性</strong>で判断します。</p>
+
+<hr />
+
+<h3 id="誤解4アクセス権限管理はidを作成する作業だけである">誤解4：アクセス権限管理はIDを作成する作業だけである</h3>
+
+<p>アクセス権限管理は、ID作成だけではありません。</p>
+
+<p>権限の付与、変更、削除、定期見直しまで含みます。</p>
+
+<p>特に、不要な権限を削除することが重要です。</p>
+
+<hr />
+
+<h2 id="試験での判断ポイント">試験での判断ポイント</h2>
+
+<p>アクセス権限管理の問題では、次の観点で選択肢を確認します。</p>
+
+<ol>
+  <li><strong>業務上必要な権限だけを与えているか</strong></li>
+  <li><strong>申請と承認の流れがあるか</strong></li>
+  <li><strong>異動・退職時に権限を変更・削除しているか</strong></li>
+  <li><strong>定期的に権限を見直しているか</strong></li>
+  <li><strong>管理者権限や特権IDを特に厳しく管理しているか</strong></li>
+  <li><strong>共有IDではなく個人を特定できるIDで管理しているか</strong></li>
+</ol>
+
+<p>正しい選択肢になりやすい表現は、次のようなものです。</p>
+
+<ul>
+  <li>業務上必要な範囲に限定して権限を付与する</li>
+  <li>権限付与には申請と承認を必要とする</li>
+  <li>異動や退職に合わせて権限を変更・削除する</li>
+  <li>定期的にアクセス権限を棚卸しする</li>
+  <li>不要なIDや権限を削除する</li>
+  <li>特権IDの利用を記録する</li>
+</ul>
+
+<p>誤りの選択肢になりやすい表現は、次のようなものです。</p>
+
+<ul>
+  <li>業務効率のため全員に広い権限を与える</li>
+  <li>退職者のIDを残しておく</li>
+  <li>異動前の権限を残したままにする</li>
+  <li>承認なしで自由に権限を付与する</li>
+  <li>共有IDを使い、利用者を特定しない</li>
+  <li>権限の見直しを行わない</li>
+</ul>
+
+<p>SG試験では、<strong>必要最小限・承認・削除・定期見直し</strong>を重視する選択肢を選びます。</p>
+
+<hr />
+
+<h2 id="例で確認">例で確認</h2>
+
+<p>次の運用を比べてみます。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>運用</th>
+      <th>判断</th>
+      <th>理由</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>新入社員に必要なシステムだけ利用権限を与える</td>
+      <td>適切</td>
+      <td>業務上必要な範囲に限定している</td>
+    </tr>
+    <tr>
+      <td>異動後も前部署の権限を残す</td>
+      <td>不適切</td>
+      <td>不要なアクセスが可能になる</td>
+    </tr>
+    <tr>
+      <td>退職者のIDを削除する</td>
+      <td>適切</td>
+      <td>不正利用を防げる</td>
+    </tr>
+    <tr>
+      <td>便利なので全社員に管理者権限を与える</td>
+      <td>不適切</td>
+      <td>最小権限の原則に反する</td>
+    </tr>
+    <tr>
+      <td>定期的に権限一覧を確認する</td>
+      <td>適切</td>
+      <td>不要な権限を発見できる</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>このように、アクセス権限管理では <strong>付与して終わりにしない</strong> ことが重要です。</p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<p>アクセス権限管理は、<strong>利用者に必要な権限だけを付与し、変更・削除・見直しまで行う管理</strong>です。</p>
+
+<p>試験では、次の3点を押さえます。</p>
+
+<ul>
+  <li><strong>必要な人に、必要な範囲だけ権限を与える</strong></li>
+  <li><strong>異動・退職・担当変更に合わせて権限を変更・削除する</strong></li>
+  <li><strong>定期的に棚卸しし、不要な権限を残さない</strong></li>
+</ul>
+
+<p>迷ったときは、次の一文で判断します。</p>
+
+<blockquote>
+  <p><strong>アクセス権限管理は、与える管理だけでなく、消す管理まで含む</strong></p>
+</blockquote>
+
+<p>SG試験では、作業効率だけを優先する選択肢よりも、<strong>申請・承認・最小権限・削除・定期見直し</strong>を重視する選択肢を選ぶと判断しやすくなります。</p>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-model/">アクセス制御モデルとは？RBAC・ABAC・DAC・MACの違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-physical/">入退室管理とは？物理アクセス制御の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control/">アクセス管理とは？特権IDとneed-to-knowで権限を適切に制御【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/administrator-privileges/">管理者権限とは？特権的アクセス権との違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/anti-passback/">アンチパスバックとは？不正な入退室を防ぐ仕組み【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

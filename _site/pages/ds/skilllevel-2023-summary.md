@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: "スキルレベル定義2023 総まとめ【Assistant Data Scientist（見習い）】"
-description: "\"スキルレベル定義2023 総まとめ\"は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。"
+description: スキルレベル定義2023の総まとめページです。Assistant Data Scientistに求められるビジネス力、データサイエンス力、データエンジニアリング力の位置づけと学習範囲を整理します。本文では、用語の定義、具体例、似た概念との違い、試験で迷いやすい選択肢の見分け方まで、短時間で復習できるようにまとめています。
 permalink: /ds/skilllevel-2023-summary/
 categories: [business]
 tags: [ds, skillcheck]

@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>ハイブリッド暗号方式とは？速度と安全性を両立する仕組み【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="ハイブリッド暗号方式とは？速度と安全性を両立する仕組み【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="ハイブリッド暗号方式は公開鍵暗号と共通鍵暗号を組み合わせる方式です。鍵配布の安全性と高速処理を両立する仕組みを、SG試験・情報セキュリティマネジメント試験での判断ポイントとともに整理します。" />
+<meta property="og:description" content="ハイブリッド暗号方式は公開鍵暗号と共通鍵暗号を組み合わせる方式です。鍵配布の安全性と高速処理を両立する仕組みを、SG試験・情報セキュリティマネジメント試験での判断ポイントとともに整理します。" />
+<link rel="canonical" href="http://localhost:4000/sg/hybrid-cryptography/" />
+<meta property="og:url" content="http://localhost:4000/sg/hybrid-cryptography/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="ハイブリッド暗号方式とは？速度と安全性を両立する仕組み【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"ハイブリッド暗号方式は公開鍵暗号と共通鍵暗号を組み合わせる方式です。鍵配布の安全性と高速処理を両立する仕組みを、SG試験・情報セキュリティマネジメント試験での判断ポイントとともに整理します。","headline":"ハイブリッド暗号方式とは？速度と安全性を両立する仕組み【SG試験】","url":"http://localhost:4000/sg/hybrid-cryptography/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">ハイブリッド暗号方式とは？速度と安全性を両立する仕組み【SG試験】</h1>
+      <h2 class="project-tagline">ハイブリッド暗号方式は公開鍵暗号と共通鍵暗号を組み合わせる方式です。鍵配布の安全性と高速処理を両立する仕組みを、SG試験・情報セキュリティマネジメント試験での判断ポイントとともに整理します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">ハイブリッド暗号方式は公開鍵暗号と共通鍵暗号を組み合わせる方式です。鍵配布の安全性と高速処理を両立する仕組みを、SG試験・情報セキュリティマネジメント試験での判断ポイントとともに整理します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">crypto_auth</span>
+        
+          <span class="post-tag">sg-security-overview</span>
+        
+          <span class="post-tag">network</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+<p>ハイブリッド暗号方式とは、<strong>公開鍵暗号で共通鍵を安全に交換し、その後は共通鍵暗号で高速に通信する方式</strong>です。<br />
+SG試験では「<strong>速度と鍵配布の両方を満たす現実的な仕組み</strong>」として問われます。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>「最初だけ安全に鍵を渡して、その後は速くやり取りする」イメージです。</p>
+
+<ul>
+  <li>最初：公開鍵暗号で「共通鍵」を安全に送る</li>
+  <li>その後：その共通鍵でデータを高速にやり取り</li>
+</ul>
+
+<p>つまり、</p>
+
+<p>👉 <strong>安全な受け渡し（公開鍵）＋高速通信（共通鍵）</strong></p>
+
+<p>をいいとこ取りした方式です。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>ハイブリッド暗号方式は、2つの暗号方式を組み合わせて使います。</p>
+
+<h3 id="基本の流れ">基本の流れ</h3>
+<ol>
+  <li>受信者が公開鍵を公開する</li>
+  <li>送信者が共通鍵を生成する</li>
+  <li>その共通鍵を公開鍵で暗号化して送る</li>
+  <li>受信者が秘密鍵で共通鍵を復号する</li>
+  <li>以降は共通鍵暗号で通信する</li>
+</ol>
+
+<hr />
+
+<h3 id="なぜこの方式が必要か業務視点">なぜこの方式が必要か（業務視点）</h3>
+<p>単体の方式にはそれぞれ弱点があります。</p>
+
+<ul>
+  <li>共通鍵暗号：速いが鍵配布が危険</li>
+  <li>公開鍵暗号：安全だが遅い</li>
+</ul>
+
+<p>👉 ハイブリッド暗号はこの両方を解決</p>
+
+<p>そのため、</p>
+
+<ul>
+  <li>HTTPS通信</li>
+  <li>VPN</li>
+  <li>セキュアなファイル送信</li>
+</ul>
+
+<p>など、実務のほぼすべての通信で使われています。</p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="使うべき場面">使うべき場面</h3>
+<ul>
+  <li>インターネット通信（HTTPSなど）</li>
+  <li>安全性と速度の両方が必要な場合</li>
+  <li>不特定多数との通信</li>
+</ul>
+
+<hr />
+
+<h3 id="実務での位置づけ">実務での位置づけ</h3>
+<p>実際のシステムでは、</p>
+
+<p>👉 <strong>単体の暗号方式はほぼ使われない</strong></p>
+
+<ul>
+  <li>鍵交換：公開鍵暗号</li>
+  <li>データ通信：共通鍵暗号</li>
+</ul>
+
+<p>という役割分担が基本です。</p>
+
+<hr />
+
+<h3 id="向いていない場面">向いていない場面</h3>
+<ul>
+  <li>単純な閉じた環境（鍵共有が簡単な場合）</li>
+</ul>
+
+<p>→ 共通鍵だけで十分な場合もある</p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+<h3 id="-ハイブリッド暗号は新しい別の暗号方式">❌ ハイブリッド暗号は新しい別の暗号方式</h3>
+<p>👉 ⭕ 既存の2方式の組み合わせ</p>
+
+<hr />
+
+<h3 id="-すべて公開鍵暗号で処理している">❌ すべて公開鍵暗号で処理している</h3>
+<p>👉 ⭕ 実際のデータは共通鍵で処理している</p>
+
+<hr />
+
+<h3 id="-共通鍵暗号とどちらかを選ぶ">❌ 共通鍵暗号とどちらかを選ぶ</h3>
+<p>👉 ⭕ 両方使うのが前提</p>
+
+<hr />
+
+<h3 id="sg試験のひっかけ">SG試験のひっかけ</h3>
+<p>SG試験では次のように問われます。</p>
+
+<ul>
+  <li>「安全に鍵を配布しつつ高速通信する方式はどれか」</li>
+  <li>「HTTPSで使われる暗号方式はどれか」</li>
+</ul>
+
+<p>👉 <strong>両方の特徴（安全＋高速）が書かれていたらハイブリッド</strong></p>
+
+<hr />
+
+<h2 id="確認問題sg試験対策">確認問題（SG試験対策）</h2>
+
+<p>次のうち、ハイブリッド暗号の説明として最も適切なものはどれか。</p>
+
+<p>A. 共通鍵暗号だけで鍵配送と本文暗号化を行う方式である。<br />
+B. 公開鍵暗号で本文をすべて暗号化し、共通鍵暗号は使わない方式である。<br />
+C. 公開鍵暗号で共通鍵を安全に共有し、本文は共通鍵暗号で高速に暗号化する方式である。<br />
+D. ハッシュ関数で鍵を生成し続けることで鍵交換を不要にする方式である。</p>
+
+<details>
+  <summary>▶ クリックして答えと解説を見る（ここを開く）</summary>
+
+  <p><strong>正解：C</strong></p>
+
+  <h3 id="section">解説</h3>
+  <ul>
+    <li>A：鍵配送の課題が解決できません。</li>
+    <li>B：公開鍵暗号のみだと処理負荷が高くなりやすいです。</li>
+    <li>C：鍵配送の安全性と処理速度を両立する典型構成です。</li>
+    <li>D：ハッシュは完全な鍵交換の代替にはなりません。</li>
+  </ul>
+
+  <p>👉 判断ポイント<br />
+「鍵交換は公開鍵、データ本体は共通鍵」という役割分担を押さえる。</p>
+
+</details>
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+<ul>
+  <li>公開鍵で「鍵交換」、共通鍵で「通信」</li>
+  <li>安全性と速度の両立が目的</li>
+  <li>実務ではこれが基本（HTTPSなど）</li>
+  <li>単体方式との違いを問われやすい</li>
+  <li>SG試験では「両方の特徴が出たらハイブリッド」</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/attacker-types/">攻撃者の種類とは？目的と特徴で整理する【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/authentication-authorization-access-control/">認証・認可・アクセス制御の違いとは？役割の切り分けを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/authentication-methods/">認証方式とは？3要素と多要素認証を整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/blacklist-whitelist/">ブラックリストとホワイトリストの違いとは？判断基準を整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/block-stream-cipher/">ブロック暗号とストリーム暗号の違いとは？暗号方式を整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/block-stream-cipher/">← ブロック暗号とストリーム暗号の違いとは？暗号方式を整理【SG試験】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/hash-function/">ハッシュ化とは？改ざん検知の基本をやさしく理解【SG試験】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

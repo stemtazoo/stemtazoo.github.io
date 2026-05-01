@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: DDL文とDML文の違いとは？SQLの基本操作を整理【DS検定】
-description: DDL文とDML文の違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: SQLのDDL文とDML文の違いを整理します。CREATEやALTERなどの定義操作と、SELECTやINSERTなどのデータ操作を切り分け、DS検定で問われるSQLの基本分類を確認できます。本文では、用語の定義、具体例、似た概念との違い、試験で迷いやすい選択肢の見分け方まで、短時間で復習できるようにまとめています。
 permalink: /ds/sql-ddl-dml/
 categories: [data-engineering]
 tags: [ds, sql]

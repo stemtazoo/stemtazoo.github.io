@@ -10,12 +10,14 @@
 <meta property="og:locale" content="ja" />
 <meta name="description" content="AI・データサイエンス・ITの学びをやさしく整理するブログ" />
 <meta property="og:description" content="AI・データサイエンス・ITの学びをやさしく整理するブログ" />
+<link rel="canonical" href="http://localhost:4000/gk/palm-e/" />
+<meta property="og:url" content="http://localhost:4000/gk/palm-e/" />
 <meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="PaLM-E（環境対応マルチモーダルモデル）とは？G検定対策" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"AI・データサイエンス・ITの学びをやさしく整理するブログ","headline":"PaLM-E（環境対応マルチモーダルモデル）とは？G検定対策","url":"/gk/palm-e/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"AI・データサイエンス・ITの学びをやさしく整理するブログ","headline":"PaLM-E（環境対応マルチモーダルモデル）とは？G検定対策","url":"http://localhost:4000/gk/palm-e/"}</script>
 <!-- End Jekyll SEO tag -->
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -24,16 +26,13 @@
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="/assets/css/style.css?v=">
-    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
-
-<!-- Setup Google Analytics -->
-
-
-
-<!-- You can set your favicon here -->
-<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
-
-<!-- end custom head snippets -->
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
 
   </head>
   <body>
@@ -75,6 +74,15 @@
 
   </header>
   <div class="post-content">
+    
+      <div style="font-size: 14px; margin-bottom: 12px;">
+        <a href="/gk/">G検定トップ</a>
+        ＞ PaLM-E（環境対応マルチモーダルモデル）とは？G検定対策
+      </div>
+    
+    
+    
+    
     ## まず結論
 - **PaLM-E**とは、**PaLMを拡張し、画像や環境情報を統合して扱えるマルチモーダルモデル**である。
 - G検定では **PaLMとの違い** を正確に理解しているかが問われる。

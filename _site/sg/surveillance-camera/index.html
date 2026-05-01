@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>監視カメラとは？抑止と証跡の役割を整理【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="監視カメラとは？抑止と証跡の役割を整理【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="監視カメラは不正行為を記録し抑止する物理的セキュリティ対策です。防止との違いやSG試験・情報セキュリティマネジメント試験でのひっかけポイントを整理します。" />
+<meta property="og:description" content="監視カメラは不正行為を記録し抑止する物理的セキュリティ対策です。防止との違いやSG試験・情報セキュリティマネジメント試験でのひっかけポイントを整理します。" />
+<link rel="canonical" href="http://localhost:4000/sg/surveillance-camera/" />
+<meta property="og:url" content="http://localhost:4000/sg/surveillance-camera/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="監視カメラとは？抑止と証跡の役割を整理【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"監視カメラは不正行為を記録し抑止する物理的セキュリティ対策です。防止との違いやSG試験・情報セキュリティマネジメント試験でのひっかけポイントを整理します。","headline":"監視カメラとは？抑止と証跡の役割を整理【SG試験】","url":"http://localhost:4000/sg/surveillance-camera/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">監視カメラとは？抑止と証跡の役割を整理【SG試験】</h1>
+      <h2 class="project-tagline">監視カメラは不正行為を記録し抑止する物理的セキュリティ対策です。防止との違いやSG試験・情報セキュリティマネジメント試験でのひっかけポイントを整理します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">監視カメラは不正行為を記録し抑止する物理的セキュリティ対策です。防止との違いやSG試験・情報セキュリティマネジメント試験でのひっかけポイントを整理します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-measures</span>
+        
+          <span class="post-tag">system_audit</span>
+        
+          <span class="post-tag">it_security_operations</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+<p>監視カメラとは、<strong>人の行動を記録して不正行為の抑止や証跡確保を行う物理的セキュリティ対策</strong>です。<br />
+SG試験では「防止ではなく抑止・記録」と判断できるかが重要です。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>イメージはシンプルです。</p>
+
+<ul>
+  <li>カメラがある → 悪いことをしにくい</li>
+  <li>カメラがない → バレにくい</li>
+</ul>
+
+<p>つまり、<br />
+👉 <strong>「見られているかもしれない」という心理で行動を抑える仕組み</strong></p>
+
+<p>さらに、何か起きたときには<br />
+👉 <strong>あとから確認できる証拠（証跡）になる</strong></p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>監視カメラは、映像を記録して後から確認できるようにする仕組みです。</p>
+
+<hr />
+
+<h3 id="主な役割">主な役割</h3>
+<ul>
+  <li>不正行為の抑止</li>
+  <li>事故・トラブルの記録</li>
+  <li>調査・監査のための証跡確保</li>
+</ul>
+
+<hr />
+
+<h3 id="ポイント">ポイント</h3>
+<ul>
+  <li>リアルタイム監視もできる</li>
+  <li>録画データを保存する</li>
+  <li>ログ（記録）として扱われる</li>
+</ul>
+
+<hr />
+
+<p>👉 技術的にはシンプルですが、<br />
+<strong>「目的」が非常に重要な対策です</strong></p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+
+<h3 id="使うべき場面">使うべき場面</h3>
+<ul>
+  <li>サーバ室</li>
+  <li>データセンター</li>
+  <li>オフィスの出入口</li>
+  <li>金融機関・店舗</li>
+</ul>
+
+<p>👉 <strong>人の行動を記録したい場所</strong></p>
+
+<hr />
+
+<h3 id="誤解しやすい場面">誤解しやすい場面</h3>
+<ul>
+  <li>入退室管理 → 制御（入れない）</li>
+  <li>アンチパスバック → 不正利用の防止</li>
+  <li>認証 → 本人確認</li>
+</ul>
+
+<p>👉 カメラは<br />
+<strong>「見ているだけで制御はしない」</strong>点が違いです</p>
+
+<hr />
+
+<p>SG試験では<br />
+👉 <strong>「防ぐのか、記録するのか」を問う問題</strong>がよく出ます。</p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="-監視カメラは不正侵入を防ぐ">❌ 監視カメラは不正侵入を防ぐ</h3>
+<p>→ ⭕ 直接防ぐのではなく、抑止する</p>
+
+<hr />
+
+<h3 id="-カメラがあれば完全に安全">❌ カメラがあれば完全に安全</h3>
+<p>→ ⭕ あくまで補助的な対策</p>
+
+<hr />
+
+<h3 id="-入退室管理と同じ">❌ 入退室管理と同じ</h3>
+<p>→ ⭕ 入退室管理は制御、カメラは記録</p>
+
+<hr />
+
+<h3 id="-カメラリアルタイム監視だけ">❌ カメラ＝リアルタイム監視だけ</h3>
+<p>→ ⭕ 記録（証跡）としての役割が重要</p>
+
+<hr />
+
+<p>SG試験では<br />
+👉 <strong>「目的をズラした選択肢」</strong>がよく出ます。</p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>監視カメラ＝記録・証跡の確保</li>
+  <li>主目的は抑止（防止ではない）</li>
+  <li>入退室管理＝制御、カメラ＝記録</li>
+  <li>不正行為の事後確認に使う</li>
+  <li>単体では不十分（他対策と併用）</li>
+</ul>
+
+<p>👉 <strong>「制御か記録か」で切ると迷わない</strong></p>
+
+<hr />
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-model/">アクセス制御モデルとは？RBAC・ABAC・DAC・MACの違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-physical/">入退室管理とは？物理アクセス制御の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control/">アクセス管理とは？特権IDとneed-to-knowで権限を適切に制御【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/anti-passback/">アンチパスバックとは？不正な入退室を防ぐ仕組み【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/audit-log/">監査ログとは？不正検知と追跡の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/clear-desk-screen/">← クリアデスク・クリアスクリーンとは？情報漏えい防止の基本ルール【SG試験】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/security-wire/">セキュリティワイヤとは？機器盗難を防ぐ基本対策【SG試験】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

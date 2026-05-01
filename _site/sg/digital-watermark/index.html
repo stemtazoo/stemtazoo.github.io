@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>電子透かしとは？著作権保護のための埋め込み技術【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="電子透かしとは？著作権保護のための埋め込み技術【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="電子透かしはデータに情報を埋め込んで著作権や所有者を示す技術です。ステガノグラフィとの違いや目的を整理し、SG試験・情報セキュリティマネジメント試験での判断ポイントを解説します。" />
+<meta property="og:description" content="電子透かしはデータに情報を埋め込んで著作権や所有者を示す技術です。ステガノグラフィとの違いや目的を整理し、SG試験・情報セキュリティマネジメント試験での判断ポイントを解説します。" />
+<link rel="canonical" href="http://localhost:4000/sg/digital-watermark/" />
+<meta property="og:url" content="http://localhost:4000/sg/digital-watermark/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="電子透かしとは？著作権保護のための埋め込み技術【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"電子透かしはデータに情報を埋め込んで著作権や所有者を示す技術です。ステガノグラフィとの違いや目的を整理し、SG試験・情報セキュリティマネジメント試験での判断ポイントを解説します。","headline":"電子透かしとは？著作権保護のための埋め込み技術【SG試験】","url":"http://localhost:4000/sg/digital-watermark/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">電子透かしとは？著作権保護のための埋め込み技術【SG試験】</h1>
+      <h2 class="project-tagline">電子透かしはデータに情報を埋め込んで著作権や所有者を示す技術です。ステガノグラフィとの違いや目的を整理し、SG試験・情報セキュリティマネジメント試験での判断ポイントを解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">電子透かしはデータに情報を埋め込んで著作権や所有者を示す技術です。ステガノグラフィとの違いや目的を整理し、SG試験・情報セキュリティマネジメント試験での判断ポイントを解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-measures</span>
+        
+          <span class="post-tag">data_leakage</span>
+        
+          <span class="post-tag">it_security_operations</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+<p>電子透かしは、<strong>画像や音声などのデータに情報を埋め込んで著作権や所有者を示す技術</strong>です。<br />
+SG試験では「隠すためか、権利を示すためか」を判断できるかがポイントです。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>電子透かしは「見えないサイン」です。</p>
+
+<p>写真に名前を書きたいけど、<br />
+見た目は変えたくないときに</p>
+
+<p>👉 <strong>目に見えない形で情報を埋め込む</strong></p>
+
+<p>イメージです。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>電子透かしとは、</p>
+
+<blockquote>
+  <p>デジタルデータに識別情報を埋め込み、著作権や所有者を示す技術</p>
+</blockquote>
+
+<p>です。</p>
+
+<p>主な目的：</p>
+
+<ul>
+  <li>著作権の保護</li>
+  <li>不正コピーの検出</li>
+  <li>コンテンツの追跡</li>
+</ul>
+
+<p>仕組みのポイント：</p>
+
+<ul>
+  <li>人間には分かりにくい形で情報を埋め込む</li>
+  <li>データがコピーされても情報が残る</li>
+</ul>
+
+<p>👉 つまり<br />
+<strong>「消えにくい識別情報」を入れる技術</strong></p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="-使うべき場面">✔ 使うべき場面</h3>
+<ul>
+  <li>画像・動画・音楽の著作権保護</li>
+  <li>コンテンツの不正利用の追跡</li>
+  <li>配布元の識別</li>
+</ul>
+
+<hr />
+
+<h3 id="-具体例">✔ 具体例</h3>
+<ul>
+  <li>画像に著作権情報を埋め込む</li>
+  <li>動画の配信元を特定できるようにする</li>
+</ul>
+
+<hr />
+
+<h3 id="-注意が必要な場面">✔ 注意が必要な場面</h3>
+<ul>
+  <li>情報を隠す目的ではない</li>
+  <li>完全なコピー防止はできない</li>
+</ul>
+
+<p>👉 あくまで<br />
+<strong>「証明・追跡」のための技術</strong></p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+<h3 id="-誤解情報を隠す技術">❌ 誤解①：情報を隠す技術</h3>
+<p>→ ⭕ 電子透かしは「隠す」のではなく「証明する」</p>
+
+<hr />
+
+<h3 id="-誤解通信の秘密を守る技術">❌ 誤解②：通信の秘密を守る技術</h3>
+<p>→ ⭕ 暗号ではない</p>
+
+<hr />
+
+<h3 id="-誤解ステガノグラフィと同じ">❌ 誤解③：ステガノグラフィと同じ</h3>
+<p>→ ⭕ 目的が違う</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>技術</th>
+      <th>目的</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>電子透かし</td>
+      <td>権利保護・識別</td>
+    </tr>
+    <tr>
+      <td>ステガノグラフィ</td>
+      <td>情報の隠ぺい</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>👉 SG試験ではここを狙われる</p>
+
+<hr />
+
+<h3 id="-sg試験のひっかけ">🔥 SG試験のひっかけ</h3>
+<ul>
+  <li>「情報を隠す」→ ❌（ステガノグラフィ）</li>
+  <li>「著作権を示す」→ ⭕（電子透かし）</li>
+</ul>
+
+<p>👉 キーワード<br />
+<strong>著作権・識別・追跡</strong></p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+<ul>
+  <li>電子透かし＝データに識別情報を埋め込む技術</li>
+  <li>目的は「著作権保護・追跡」</li>
+  <li>情報隠ぺいではない</li>
+  <li>ステガノグラフィとの違いが最重要</li>
+  <li>「隠すか／証明するか」で判断する</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-model/">アクセス制御モデルとは？RBAC・ABAC・DAC・MACの違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-physical/">入退室管理とは？物理アクセス制御の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control/">アクセス管理とは？特権IDとneed-to-knowで権限を適切に制御【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/anti-passback/">アンチパスバックとは？不正な入退室を防ぐ仕組み【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/audit-log/">監査ログとは？不正検知と追跡の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/steganography/">← ステガノグラフィとは？情報を隠す技術の仕組み【SG試験】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/copyright-transfer/">著作権譲渡契約とは？ライセンス契約との違いを整理【SG試験】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

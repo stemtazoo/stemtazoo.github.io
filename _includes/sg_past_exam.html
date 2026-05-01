@@ -1,0 +1,89 @@
+{% assign exam = nil %}
+{% for item in site.data.sg_past %}
+  {% if item.key == page.exam_key %}
+    {% assign exam = item %}
+  {% endif %}
+{% endfor %}
+
+{% if exam %}
+<section class="sg-past-meta">
+  <p>
+    出典：{{ exam.source_note }}（IPA）
+  </p>
+  <p class="sg-past-links">
+    <a href="{{ exam.official_page }}">公式ページ</a>
+    <a href="{{ exam.question_pdf }}">問題冊子PDF</a>
+    <a href="{{ exam.answer_pdf }}">解答例PDF</a>
+  </p>
+</section>
+
+<section class="sg-past-guide">
+  <h2>解き方</h2>
+  <p>
+    公式PDFを見ながら各問の選択肢を選び，「答えを見る」を押してください。正解・解説・判断ポイントを確認できます。
+    採点ボタンを押すと，回答済みの問題だけを集計します。
+  </p>
+  <p>
+    問題文と図表は，レイアウト崩れを避けるため公式PDFを参照する形にしています。解説は当サイト独自の学習用メモです。
+  </p>
+</section>
+
+<div class="sg-past-pdf">
+  <iframe title="{{ exam.title }} 問題冊子PDF" src="{{ exam.question_pdf }}"></iframe>
+</div>
+
+<div class="sg-past-actions" data-sg-past-actions>
+  <button type="button" class="sg-past-button" data-sg-score>採点する</button>
+  <button type="button" class="sg-past-button sg-past-button--secondary" data-sg-reset>回答をリセット</button>
+  <span class="sg-past-score" data-sg-score-output>未採点</span>
+</div>
+
+<section class="sg-past-questions">
+  {% for q in exam.questions %}
+  <article class="sg-past-question" data-answer="{{ q.answer }}">
+    <header class="sg-past-question__header">
+      <h2>問{{ q.number }}</h2>
+      <span>{{ q.topic }}</span>
+    </header>
+
+    <fieldset class="sg-past-options">
+      <legend>あなたの回答</legend>
+      {% for option in q.options %}
+      <label>
+        <input type="radio" name="{{ exam.key }}-q{{ q.number }}" value="{{ option }}">
+        <span>{{ option }}</span>
+      </label>
+      {% endfor %}
+    </fieldset>
+
+    <button type="button" class="sg-past-button" data-sg-check>答えを見る</button>
+    <p class="sg-past-result" data-sg-result aria-live="polite"></p>
+
+    <details markdown="1" class="sg-past-explanation">
+      <summary>▶ クリックして解説を読む（ここを開く）</summary>
+
+**正解：{{ q.answer }}**
+
+### 解説
+{{ q.explanation }}
+
+👉 判断ポイント  
+{{ q.point }}
+
+{% if q.related %}
+関連ページ：
+{% for link in q.related %}
+- [{{ link.title }}]({{ link.url | relative_url }})
+{% endfor %}
+{% endif %}
+
+出典：{{ exam.source_note }} 問{{ q.number }}
+    </details>
+  </article>
+  {% endfor %}
+</section>
+
+<script src="{{ '/assets/js/sg-past-quiz.js' | relative_url }}" defer></script>
+{% else %}
+<p>過去問データが見つかりませんでした。</p>
+{% endif %}

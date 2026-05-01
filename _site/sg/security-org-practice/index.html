@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>SOC・CSIRT・JPCERT/CC・NISC・IPAのひっかけ問題【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="SOC・CSIRT・JPCERT/CC・NISC・IPAのひっかけ問題【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="SOC・CSIRT・JPCERT/CC・NISC・IPAの違いを問う実戦問題集です。監視・対応・調整・支援・統括の切り分けを練習し、SG試験・情報セキュリティマネジメント試験で迷わない判断基準を身につけます。" />
+<meta property="og:description" content="SOC・CSIRT・JPCERT/CC・NISC・IPAの違いを問う実戦問題集です。監視・対応・調整・支援・統括の切り分けを練習し、SG試験・情報セキュリティマネジメント試験で迷わない判断基準を身につけます。" />
+<link rel="canonical" href="http://localhost:4000/sg/security-org-practice/" />
+<meta property="og:url" content="http://localhost:4000/sg/security-org-practice/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="SOC・CSIRT・JPCERT/CC・NISC・IPAのひっかけ問題【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"SOC・CSIRT・JPCERT/CC・NISC・IPAの違いを問う実戦問題集です。監視・対応・調整・支援・統括の切り分けを練習し、SG試験・情報セキュリティマネジメント試験で迷わない判断基準を身につけます。","headline":"SOC・CSIRT・JPCERT/CC・NISC・IPAのひっかけ問題【SG試験】","url":"http://localhost:4000/sg/security-org-practice/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">SOC・CSIRT・JPCERT/CC・NISC・IPAのひっかけ問題【SG試験】</h1>
+      <h2 class="project-tagline">SOC・CSIRT・JPCERT/CC・NISC・IPAの違いを問う実戦問題集です。監視・対応・調整・支援・統括の切り分けを練習し、SG試験・情報セキュリティマネジメント試験で迷わない判断基準を身につけます。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">SOC・CSIRT・JPCERT/CC・NISC・IPAの違いを問う実戦問題集です。監視・対応・調整・支援・統括の切り分けを練習し、SG試験・情報セキュリティマネジメント試験で迷わない判断基準を身につけます。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-management</span>
+        
+          <span class="post-tag">practice</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+<p>この問題集は、<br />
+<strong>SOC・CSIRT・JPCERT/CC・NISC・IPAの役割を切り分けられるか</strong>を確認するための実戦演習です。</p>
+
+<p>SG試験では、<br />
+用語そのものを知っているかよりも、<br />
+<strong>「誰が何をする組織か」</strong>を判断できるかが大切です。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>この分野は、似たような組織名が並ぶので混乱しやすいです。</p>
+
+<p>でも、見るポイントは単純です。</p>
+
+<ul>
+  <li>監視するのか</li>
+  <li>対応するのか</li>
+  <li>調整するのか</li>
+  <li>支援するのか</li>
+  <li>統括するのか</li>
+</ul>
+
+<p>この違いで切れば、かなり解きやすくなります。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+
+<blockquote>
+  <p>公式: NISC（内閣サイバーセキュリティセンター）：<a href="https://www.nisc.go.jp/">公式: NISC（内閣サイバーセキュリティセンター）</a>
+まずは役割を短く整理します。</p>
+</blockquote>
+
+<ul>
+  <li><strong>SOC</strong>：監視・検知</li>
+  <li><strong>CSIRT</strong>：対応・復旧</li>
+  <li><strong>JPCERT/CC</strong>：外部調整・情報共有</li>
+  <li><strong>IPA</strong>：支援・啓発・情報提供</li>
+  <li><strong>NISC</strong>：政策・統括</li>
+</ul>
+
+<p>問題では、<br />
+この役割を入れ替えてくることが多いです。</p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<p>例えば次のように考えると整理しやすいです。</p>
+
+<ol>
+  <li>SOCが異常を見つける</li>
+  <li>CSIRTが実際に対応する</li>
+  <li>必要に応じてJPCERT/CCと連携する</li>
+  <li>IPAは支援や情報提供を行う</li>
+  <li>NISCは国全体の方針を統括する</li>
+</ol>
+
+<p>この流れを意識すると、<br />
+文章問題でも判断しやすくなります。</p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="-socとcsirtの混同">① SOCとCSIRTの混同</h3>
+<ul>
+  <li>SOCは監視が中心</li>
+  <li>CSIRTは対応が中心</li>
+</ul>
+
+<h3 id="-csirtとjpcertccの混同">② CSIRTとJPCERT/CCの混同</h3>
+<ul>
+  <li>CSIRTは自組織の対応</li>
+  <li>JPCERT/CCは組織間の調整</li>
+</ul>
+
+<h3 id="-ipaとjpcertccの混同">③ IPAとJPCERT/CCの混同</h3>
+<ul>
+  <li>IPAは支援・啓発</li>
+  <li>JPCERT/CCは有事の調整</li>
+</ul>
+
+<h3 id="-niscと他組織の混同">④ NISCと他組織の混同</h3>
+<ul>
+  <li>NISCは政策・統括</li>
+  <li>現場対応はしない</li>
+</ul>
+
+<hr />
+
+<p>👉 理解できたかチェックしてみましょう</p>
+
+<h2 id="実戦演習">実戦演習</h2>
+
+<h3 id="問題基本">問題①（基本）</h3>
+
+<p>次のうち、JPCERT/CCの説明として<strong>正しいもの</strong>はどれか。</p>
+
+<p>A. 組織内でインシデントの対応を行う<br />
+B. 政府としてセキュリティ方針を策定する<br />
+C. インシデントに関する情報共有や調整を行う<br />
+D. セキュリティ監視を行う</p>
+
+<details>
+<summary>▶ 解答と解説を見る</summary>
+
+### 解答
+**C**
+
+### 解説
+- A：CSIRT → 不適切
+- B：NISC → 不適切
+- C：JPCERT/CC → 適切
+- D：SOC → 不適切
+
+**「情報共有・調整」**がJPCERT/CCのポイントです。
+
+</details>
+
+<hr />
+
+<h3 id="問題よくあるひっかけ">問題②（よくあるひっかけ）</h3>
+
+<p>ある企業で不正アクセスが検知され、<br />
+影響範囲の調査と封じ込め対応を行った。</p>
+
+<p>この役割を担う組織として最も適切なものはどれか。</p>
+
+<p>A. IPA<br />
+B. CSIRT<br />
+C. JPCERT/CC<br />
+D. NISC</p>
+
+<details>
+<summary>▶ 解答と解説を見る</summary>
+
+### 解答
+**B**
+
+### 解説
+影響範囲の調査や封じ込めは、  
+**実際に手を動かす対応**です。
+
+したがって、適切なのは **CSIRT** です。
+
+</details>
+
+<hr />
+
+<h3 id="問題やや難">問題③（やや難）</h3>
+
+<p>サイバー攻撃の情報を収集し、<br />
+複数の企業間で共有・連携を促進する役割として最も適切なものはどれか。</p>
+
+<p>A. SOC<br />
+B. CSIRT<br />
+C. JPCERT/CC<br />
+D. NISC</p>
+
+<details>
+<summary>▶ 解答と解説を見る</summary>
+
+### 解答
+**C**
+
+### 解説
+- SOC：監視
+- CSIRT：自組織の対応
+- JPCERT/CC：複数組織の調整・共有
+- NISC：政策・統括
+
+問題文の **「複数の企業間で共有・連携」** から、JPCERT/CCと判断できます。
+
+</details>
+
+<hr />
+
+<h3 id="問題引っかけ強">問題④（引っかけ強）</h3>
+
+<p>サイバーセキュリティ基本法に基づき、<br />
+日本全体のセキュリティ戦略を策定する組織はどれか。</p>
+
+<p>A. IPA<br />
+B. JPCERT/CC<br />
+C. NISC<br />
+D. CSIRT</p>
+
+<details>
+<summary>▶ 解答と解説を見る</summary>
+
+### 解答
+**C**
+
+### 解説
+**「日本全体」**  
+**「戦略を策定」**  
+という表現が出たら、政策・統括を担う **NISC** を考えます。
+
+</details>
+
+<hr />
+
+<h3 id="問題混同狙い">問題⑤（混同狙い）</h3>
+
+<p>標的型攻撃に関する対策の支援や情報提供を行う組織として最も適切なものはどれか。</p>
+
+<p>A. IPA<br />
+B. CSIRT<br />
+C. JPCERT/CC<br />
+D. SOC</p>
+
+<details>
+<summary>▶ 解答と解説を見る</summary>
+
+### 解答
+**A**
+
+### 解説
+**支援・情報提供** が中心なら IPA を考えます。
+
+JPCERT/CCも支援に見えますが、  
+こちらは **インシデント対応時の調整・連携** の色がより強いです。
+
+</details>
+
+<hr />
+
+<h3 id="問題実戦レベル">問題⑥（実戦レベル）</h3>
+
+<p>ある企業がインシデント対応を行う中で、<br />
+海外の関係機関と連携しながら対応を進める必要が生じた。</p>
+
+<p>このとき連携先として最も適切なものはどれか。</p>
+
+<p>A. CSIRT<br />
+B. SOC<br />
+C. JPCERT/CC<br />
+D. IPA</p>
+
+<details>
+<summary>▶ 解答と解説を見る</summary>
+
+### 解答
+**C**
+
+### 解説
+問題文のポイントは **「海外の関係機関と連携」** です。
+
+このような **組織間の調整** に強いのが JPCERT/CC です。
+
+</details>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<p>この分野は、<strong>動詞で切る</strong>と整理しやすいです。</p>
+
+<ul>
+  <li><strong>監視する</strong> → SOC</li>
+  <li><strong>対応する</strong> → CSIRT</li>
+  <li><strong>調整する</strong> → JPCERT/CC</li>
+  <li><strong>支援する</strong> → IPA</li>
+  <li><strong>統括する</strong> → NISC</li>
+</ul>
+
+<p>迷ったら、<br />
+<strong>「その組織は実際に対応するのか、外とつなぐのか、支えるのか、方針を決めるのか」</strong><br />
+を考えると判断しやすくなります。</p>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-rights-management/">アクセス権限管理とは？付与・変更・削除の流れを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/administrator-privileges/">管理者権限とは？特権的アクセス権との違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/asset-register/">情報資産台帳とは？リスク管理の出発点を整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/audit-log/">監査ログとは？不正検知と追跡の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/case-solving-template/">SG試験 ケース問題の解き方テンプレ【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/security-org-cheatsheet/">← NISC・IPA・JPCERT/CC・CSIRTの違いまとめ【一発で切れるチートシート】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/soc-csirt-jpcert/">SOC・CSIRT・JPCERT/CCの違いとは？役割と関係を図で整理【SG試験】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

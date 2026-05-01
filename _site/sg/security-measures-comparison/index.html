@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>セキュリティ対策の違いを一発で整理｜防御・検知・分析・証拠の切り分け【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="セキュリティ対策の違いを一発で整理｜防御・検知・分析・証拠の切り分け【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="セキュリティ対策を防御・検知・分析・証拠の観点で整理します。SG試験・情報セキュリティマネジメント試験で混同しやすい用語の違いと判断基準をまとめて理解できます。" />
+<meta property="og:description" content="セキュリティ対策を防御・検知・分析・証拠の観点で整理します。SG試験・情報セキュリティマネジメント試験で混同しやすい用語の違いと判断基準をまとめて理解できます。" />
+<link rel="canonical" href="http://localhost:4000/sg/security-measures-comparison/" />
+<meta property="og:url" content="http://localhost:4000/sg/security-measures-comparison/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="セキュリティ対策の違いを一発で整理｜防御・検知・分析・証拠の切り分け【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"セキュリティ対策を防御・検知・分析・証拠の観点で整理します。SG試験・情報セキュリティマネジメント試験で混同しやすい用語の違いと判断基準をまとめて理解できます。","headline":"セキュリティ対策の違いを一発で整理｜防御・検知・分析・証拠の切り分け【SG試験】","url":"http://localhost:4000/sg/security-measures-comparison/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">セキュリティ対策の違いを一発で整理｜防御・検知・分析・証拠の切り分け【SG試験】</h1>
+      <h2 class="project-tagline">セキュリティ対策を防御・検知・分析・証拠の観点で整理します。SG試験・情報セキュリティマネジメント試験で混同しやすい用語の違いと判断基準をまとめて理解できます。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">セキュリティ対策を防御・検知・分析・証拠の観点で整理します。SG試験・情報セキュリティマネジメント試験で混同しやすい用語の違いと判断基準をまとめて理解できます。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-measures</span>
+        
+          <span class="post-tag">incident_management</span>
+        
+          <span class="post-tag">it_security_operations</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+<p>セキュリティ対策は、<strong>「防御・検知・分析・証拠」のどれかで分類すると一瞬で判断できる</strong>ようになります。<br />
+SG試験ではこの分類で選択肢を切る問題が多く出題されます。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>セキュリティ対策はすべて同じに見えますが、役割が違います。</p>
+
+<p>👉 イメージ👇</p>
+
+<ul>
+  <li>防御 → 入れない</li>
+  <li>検知 → 気づく</li>
+  <li>分析 → 調べる</li>
+  <li>証拠 → 残す</li>
+</ul>
+
+<p>👉 この4つで整理すると迷わなくなります。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+
+<h3 id="--防御侵入を防ぐ">■ ① 防御（侵入を防ぐ）</h3>
+<p>攻撃を未然に防ぐ対策</p>
+
+<ul>
+  <li>セキュリティパッチ</li>
+  <li>アクセス制御</li>
+  <li>ファイアウォール</li>
+</ul>
+
+<p>👉 キーワード<br />
+<strong>防ぐ・遮断</strong></p>
+
+<hr />
+
+<h3 id="--検知異常に気づく">■ ② 検知（異常に気づく）</h3>
+<p>不正や異常を発見する対策</p>
+
+<ul>
+  <li>ログ管理</li>
+  <li>IDS / 監視</li>
+</ul>
+
+<p>👉 キーワード<br />
+<strong>検知・監視</strong></p>
+
+<hr />
+
+<h3 id="--分析原因を調べる">■ ③ 分析（原因を調べる）</h3>
+<p>攻撃内容や原因を把握する対策</p>
+
+<ul>
+  <li>マルウェア解析</li>
+  <li>ハニーポット</li>
+</ul>
+
+<p>👉 キーワード<br />
+<strong>調査・観察</strong></p>
+
+<hr />
+
+<h3 id="--証拠後で証明する">■ ④ 証拠（後で証明する）</h3>
+<p>証拠としてデータを残す対策</p>
+
+<ul>
+  <li>デジタルフォレンジック</li>
+  <li>ログ（証跡として）</li>
+</ul>
+
+<p>👉 キーワード<br />
+<strong>証拠・保全</strong></p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+
+<h3 id="-sg試験での使い方最重要">✔ SG試験での使い方（最重要）</h3>
+<p>問題を見たらまず👇</p>
+
+<p>👉 <strong>これはどの分類か？</strong></p>
+
+<hr />
+
+<h3 id="-典型パターン">✔ 典型パターン</h3>
+<ul>
+  <li>「侵入を防ぐ」→ 防御</li>
+  <li>「異常を検知する」→ 検知</li>
+  <li>「原因を調査する」→ 分析</li>
+  <li>「証拠として残す」→ 証拠</li>
+</ul>
+
+<hr />
+
+<p>👉 これだけでかなり解ける</p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="-防御と検知の混同">❌ 防御と検知の混同</h3>
+<ul>
+  <li>ログで防げる → ❌</li>
+  <li>ログは検知</li>
+</ul>
+
+<hr />
+
+<h3 id="-分析と証拠の混同">❌ 分析と証拠の混同</h3>
+<ul>
+  <li>解析＝証拠 → ❌</li>
+  <li>フォレンジック＝証拠</li>
+</ul>
+
+<hr />
+
+<h3 id="-侵入前と侵入後の混同">❌ 侵入前と侵入後の混同</h3>
+<ul>
+  <li>パッチ＝侵入後 → ❌</li>
+  <li>パッチ＝侵入前</li>
+</ul>
+
+<hr />
+
+<h3 id="-sg試験のひっかけ">🔥 SG試験のひっかけ</h3>
+<ul>
+  <li>「検知技術」を防御として出す</li>
+  <li>「分析技術」を防御として出す</li>
+  <li>「証拠」を単なる調査として出す</li>
+</ul>
+
+<p>👉 判断基準👇<br />
+<strong>何をしているか（目的）を見る</strong></p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+<ul>
+  <li>セキュリティ対策は4分類で整理</li>
+  <li>防御／検知／分析／証拠</li>
+  <li>用語ではなく「役割」で判断する</li>
+  <li>ログは検知＋証拠</li>
+  <li>フォレンジックは証拠</li>
+  <li>「何をする技術か」で選択肢を切る</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-model/">アクセス制御モデルとは？RBAC・ABAC・DAC・MACの違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-physical/">入退室管理とは？物理アクセス制御の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control/">アクセス管理とは？特権IDとneed-to-knowで権限を適切に制御【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/anti-passback/">アンチパスバックとは？不正な入退室を防ぐ仕組み【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/audit-log/">監査ログとは？不正検知と追跡の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/security-measures-overview/">← 技術的セキュリティ対策まとめ｜侵入防止からフォレンジックまで【情報セキュリティマネジメント】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/perimeter-security/">境界防御とは？ゼロトラストとの違いを整理【SG試験】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>暗号化とハッシュの違いとは？元に戻せるかで整理【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="暗号化とハッシュの違いとは？元に戻せるかで整理【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="暗号化とハッシュの違いを、元に戻せるか、目的、使いどころの観点で整理します。SG試験・情報セキュリティマネジメント試験で迷いやすいSHA-1、AES、RSA、改ざん検知、秘匿の判断ポイントを初心者向けに解説します。" />
+<meta property="og:description" content="暗号化とハッシュの違いを、元に戻せるか、目的、使いどころの観点で整理します。SG試験・情報セキュリティマネジメント試験で迷いやすいSHA-1、AES、RSA、改ざん検知、秘匿の判断ポイントを初心者向けに解説します。" />
+<link rel="canonical" href="http://localhost:4000/sg/encryption-vs-hash/" />
+<meta property="og:url" content="http://localhost:4000/sg/encryption-vs-hash/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="暗号化とハッシュの違いとは？元に戻せるかで整理【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"暗号化とハッシュの違いを、元に戻せるか、目的、使いどころの観点で整理します。SG試験・情報セキュリティマネジメント試験で迷いやすいSHA-1、AES、RSA、改ざん検知、秘匿の判断ポイントを初心者向けに解説します。","headline":"暗号化とハッシュの違いとは？元に戻せるかで整理【SG試験】","url":"http://localhost:4000/sg/encryption-vs-hash/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">暗号化とハッシュの違いとは？元に戻せるかで整理【SG試験】</h1>
+      <h2 class="project-tagline">暗号化とハッシュの違いを、元に戻せるか、目的、使いどころの観点で整理します。SG試験・情報セキュリティマネジメント試験で迷いやすいSHA-1、AES、RSA、改ざん検知、秘匿の判断ポイントを初心者向けに解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">暗号化とハッシュの違いを、元に戻せるか、目的、使いどころの観点で整理します。SG試験・情報セキュリティマネジメント試験で迷いやすいSHA-1、AES、RSA、改ざん検知、秘匿の判断ポイントを初心者向けに解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">cryptography</span>
+        
+          <span class="post-tag">hash_function</span>
+        
+          <span class="post-tag">security_measures</span>
+        
+          <span class="post-tag">authentication</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+<p>暗号化とハッシュの違いは、<strong>元に戻せるかどうか</strong>で整理すると分かりやすいです。</p>
+
+<ul>
+  <li><strong>暗号化</strong>：データを読めない形にして、あとで復号して元に戻す</li>
+  <li><strong>ハッシュ</strong>：データから固定長の値を作り、原則として元には戻せない</li>
+</ul>
+
+<p>SG試験では、<strong>内容を隠すなら暗号化、改ざんを確認するならハッシュ</strong>と考えると、選択肢を切り分けやすくなります。</p>
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>暗号化は、データを「鍵付きの箱」に入れるイメージです。</p>
+
+<p>中身は見えなくなりますが、正しい鍵があれば箱を開けて、元のデータを取り出せます。<br />
+つまり、暗号化は<strong>安全に隠して、必要な人だけが読めるようにする技術</strong>です。</p>
+
+<p>一方、ハッシュは、データの「指紋」を作るイメージです。</p>
+
+<p>同じデータなら同じ指紋になります。<br />
+少しでもデータが変わると、指紋も変わります。<br />
+ただし、指紋から元のデータを復元することはできません。</p>
+
+<p>そのため、ハッシュは<strong>中身を隠す技術ではなく、同じ内容かどうかを確認する技術</strong>です。</p>
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>暗号化は、平文を暗号文に変換する処理です。<br />
+復号によって、暗号文を元の平文に戻せます。</p>
+
+<p>ハッシュは、入力データから固定長のハッシュ値を作る処理です。<br />
+代表例には、SHA-1、SHA-256などがあります。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>観点</th>
+      <th>暗号化</th>
+      <th>ハッシュ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>主な目的</td>
+      <td>内容を隠す</td>
+      <td>内容が同じか確認する</td>
+    </tr>
+    <tr>
+      <td>元に戻せるか</td>
+      <td>復号できる</td>
+      <td>原則戻せない</td>
+    </tr>
+    <tr>
+      <td>出力</td>
+      <td>暗号文</td>
+      <td>ハッシュ値、メッセージダイジェスト</td>
+    </tr>
+    <tr>
+      <td>代表例</td>
+      <td>AES、RSA</td>
+      <td>SHA-1、SHA-256</td>
+    </tr>
+    <tr>
+      <td>試験のキーワード</td>
+      <td>秘匿、盗聴対策、復号</td>
+      <td>改ざん検知、要約値、衝突</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>ここで注意したいのは、どちらもセキュリティで使われる技術ですが、目的が違うことです。</p>
+
+<p>暗号化は、<strong>第三者に内容を読ませない</strong>ために使います。<br />
+ハッシュは、<strong>データが変わっていないかを確認する</strong>ために使います。</p>
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<p>暗号化は、通信や保存データを守る場面で使われます。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>場面</th>
+      <th>使う技術</th>
+      <th>目的</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>通信内容を盗聴から守る</td>
+      <td>暗号化</td>
+      <td>内容を読めなくする</td>
+    </tr>
+    <tr>
+      <td>保存データを守る</td>
+      <td>暗号化</td>
+      <td>漏えい時の被害を抑える</td>
+    </tr>
+    <tr>
+      <td>ファイルの改ざん確認</td>
+      <td>ハッシュ</td>
+      <td>内容が変わっていないか確認する</td>
+    </tr>
+    <tr>
+      <td>電子署名</td>
+      <td>ハッシュ</td>
+      <td>署名対象の要約値を作る</td>
+    </tr>
+    <tr>
+      <td>パスワード保存</td>
+      <td>ハッシュ</td>
+      <td>パスワードそのものを保存しない</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>たとえば、HTTPSでは通信内容を暗号化して盗聴を防ぎます。<br />
+一方、ファイルのダウンロード確認では、公開されているハッシュ値と自分が取得したファイルのハッシュ値を比べて、ファイルが改ざんされていないかを確認します。</p>
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+<h3 id="誤解1sha-1は暗号化方式である">誤解1：SHA-1は暗号化方式である</h3>
+<p>SHA-1は暗号化方式ではありません。<br />
+SHA-1は、入力データから固定長のハッシュ値を作るハッシュ関数です。</p>
+
+<p>暗号化のように、鍵を使って元のデータに戻すものではありません。</p>
+
+<p>SG試験では、SHA-1、SHA-256、メッセージダイジェストという言葉が出たら、まず<strong>ハッシュ関数</strong>を疑うとよいです。</p>
+
+<h3 id="誤解2ハッシュは中身を隠すための技術である">誤解2：ハッシュは中身を隠すための技術である</h3>
+<p>ハッシュ値だけを見ても元データは分かりませんが、目的は「秘匿」ではありません。</p>
+
+<p>ハッシュの主な目的は、データが同じかどうかを確認することです。</p>
+
+<p>「盗聴されても内容を読めないようにする」という説明なら、ハッシュではなく暗号化の話です。</p>
+
+<h3 id="誤解3暗号化すれば改ざん検知も完全にできる">誤解3：暗号化すれば改ざん検知も完全にできる</h3>
+<p>暗号化は内容を読めなくする技術です。<br />
+それだけで改ざん検知まで必ず保証できるわけではありません。</p>
+
+<p>改ざんを確認するには、ハッシュ、メッセージ認証コード、電子署名などの仕組みが関係します。</p>
+
+<p>そのため、試験では「何を守りたいのか」を見ることが大切です。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>守りたいこと</th>
+      <th>関係しやすい技術</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>内容を読まれたくない</td>
+      <td>暗号化</td>
+    </tr>
+    <tr>
+      <td>内容が変わっていないか確認したい</td>
+      <td>ハッシュ</td>
+    </tr>
+    <tr>
+      <td>送信者が本人か確認したい</td>
+      <td>電子署名、認証</td>
+    </tr>
+    <tr>
+      <td>改ざんと送信元を確認したい</td>
+      <td>電子署名、MAC</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="試験での切り分けポイント">試験での切り分けポイント</h2>
+<p>暗号化とハッシュで迷ったら、次の順に確認します。</p>
+
+<h3 id="1-元に戻す話か">1. 元に戻す話か</h3>
+<p>「復号」「元のデータに戻す」「鍵で読む」という話なら、暗号化です。</p>
+
+<p>ハッシュは、原則として元に戻せません。</p>
+
+<h3 id="2-目的は秘匿か確認か">2. 目的は秘匿か、確認か</h3>
+<p>「盗聴されても読めないようにする」「内容を隠す」なら暗号化です。</p>
+
+<p>「改ざんされていないか確認する」「同じ内容か確認する」ならハッシュです。</p>
+
+<h3 id="3-出てくる用語を見る">3. 出てくる用語を見る</h3>
+<p>次のように用語で判断できることも多いです。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>出てくる用語</th>
+      <th>判断</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>AES</td>
+      <td>暗号化</td>
+    </tr>
+    <tr>
+      <td>RSA</td>
+      <td>公開鍵暗号、電子署名にも関係</td>
+    </tr>
+    <tr>
+      <td>SHA-1</td>
+      <td>ハッシュ</td>
+    </tr>
+    <tr>
+      <td>SHA-256</td>
+      <td>ハッシュ</td>
+    </tr>
+    <tr>
+      <td>メッセージダイジェスト</td>
+      <td>ハッシュ</td>
+    </tr>
+    <tr>
+      <td>復号</td>
+      <td>暗号化</td>
+    </tr>
+    <tr>
+      <td>改ざん検知</td>
+      <td>ハッシュ</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>特に、SHA-1を見て「Secure」とあるため暗号化のように感じることがあります。<br />
+しかし、SHA-1の正式名称はSecure Hash Algorithm 1であり、分類は<strong>ハッシュ関数</strong>です。</p>
+
+<h2 id="確認問題">確認問題</h2>
+<p>暗号化とハッシュの違いとして、最も適切なものはどれか。</p>
+
+<p>ア. 暗号化は元に戻せるが、ハッシュは原則として元に戻せない。<br />
+イ. 暗号化は改ざん検知専用で、ハッシュは盗聴対策専用である。<br />
+ウ. SHA-1は代表的な暗号化方式であり、復号して元データを取り出せる。<br />
+エ. ハッシュは鍵を使って平文を暗号文に変換する技術である。</p>
+
+<details>
+<summary>回答と解説</summary>
+
+正解は、**ア**です。
+
+暗号化は、暗号文を復号して元のデータに戻すことを前提にした技術です。  
+一方、ハッシュは入力データからハッシュ値を作る処理であり、原則として元データには戻せません。
+
+イは目的が逆です。  
+ウはSHA-1を暗号化方式と誤解しています。  
+エは暗号化の説明であり、ハッシュの説明ではありません。
+
+</details>
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+<p>暗号化とハッシュは、どちらもセキュリティで重要ですが、目的が違います。</p>
+
+<p>試験直前は、次の3点だけ押さえましょう。</p>
+
+<ul>
+  <li><strong>暗号化は、内容を隠して復号できる</strong></li>
+  <li><strong>ハッシュは、要約値を作って原則戻せない</strong></li>
+  <li><strong>秘匿なら暗号化、改ざん検知ならハッシュ</strong></li>
+</ul>
+
+<p>SHA-1、SHA-256、メッセージダイジェストが出てきたら、暗号化ではなくハッシュ関数として判断します。<br />
+「元に戻すか」「何を守るのか」を見ると、選択肢を切りやすくなります。</p>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/blacklist-whitelist/">ブラックリストとホワイトリストの違いとは？判断基準を整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/bot/">ボットとは？遠隔操作される仕組みを理解する【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/brute-force-attack/">ブルートフォース攻撃とは？総当たり攻撃の仕組みと対策【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/common-port-numbers/">よく出るポート番号とは？試験での見分け方を整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/cryptojacking/">クリプトジャッキングとは？不正マイニングの仕組みを理解する【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

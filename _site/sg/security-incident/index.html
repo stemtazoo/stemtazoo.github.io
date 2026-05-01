@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>情報セキュリティインシデントとは？事象との違いで理解【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="情報セキュリティインシデントとは？事象との違いで理解【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="情報セキュリティインシデントは、被害や影響を伴う重大なセキュリティ問題です。事象との違いやSG試験・情報セキュリティマネジメント試験での判断基準を分かりやすく解説します。" />
+<meta property="og:description" content="情報セキュリティインシデントは、被害や影響を伴う重大なセキュリティ問題です。事象との違いやSG試験・情報セキュリティマネジメント試験での判断基準を分かりやすく解説します。" />
+<link rel="canonical" href="http://localhost:4000/sg/security-incident/" />
+<meta property="og:url" content="http://localhost:4000/sg/security-incident/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="情報セキュリティインシデントとは？事象との違いで理解【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"情報セキュリティインシデントは、被害や影響を伴う重大なセキュリティ問題です。事象との違いやSG試験・情報セキュリティマネジメント試験での判断基準を分かりやすく解説します。","headline":"情報セキュリティインシデントとは？事象との違いで理解【SG試験】","url":"http://localhost:4000/sg/security-incident/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">情報セキュリティインシデントとは？事象との違いで理解【SG試験】</h1>
+      <h2 class="project-tagline">情報セキュリティインシデントは、被害や影響を伴う重大なセキュリティ問題です。事象との違いやSG試験・情報セキュリティマネジメント試験での判断基準を分かりやすく解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">情報セキュリティインシデントは、被害や影響を伴う重大なセキュリティ問題です。事象との違いやSG試験・情報セキュリティマネジメント試験での判断基準を分かりやすく解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-management</span>
+        
+          <span class="post-tag">incident_management</span>
+        
+          <span class="post-tag">risk_assessment</span>
+        
+          <span class="post-tag">it_security_operations</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+<p>情報セキュリティインシデントとは、<strong>組織の業務や情報に影響を与える重大なセキュリティ問題</strong>です。<br />
+SG試験では「事象との違い（影響の有無）」を判断させる問題が頻出です。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>さきほどの「事象」が進むとこうなります：</p>
+
+<ul>
+  <li>ウイルスに感染した</li>
+  <li>情報が漏えいした</li>
+  <li>システムが停止した</li>
+</ul>
+
+<p>👉 これはもう「怪しい」ではなく<br />
+<strong>実際に影響が出ている状態</strong></p>
+
+<p>これが「インシデント」</p>
+
+<p>👉 イメージ<br />
+<strong>「被害が出た状態」</strong></p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>情報セキュリティインシデントは</p>
+
+<blockquote>
+  <p>情報セキュリティに関する出来事のうち、組織の業務や情報に悪影響を及ぼすもの</p>
+</blockquote>
+
+<p>です。</p>
+
+<h3 id="ポイント">ポイント</h3>
+<ul>
+  <li>被害・影響が発生している</li>
+  <li>複数の事象が組み合わさることもある</li>
+  <li>対応（インシデント管理）が必要</li>
+</ul>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="使う場面">使う場面</h3>
+<ul>
+  <li>情報漏えい</li>
+  <li>不正アクセス</li>
+  <li>サービス停止</li>
+</ul>
+
+<p>👉 SG試験では<br />
+「対応が必要なレベルか」で判断</p>
+
+<hr />
+
+<h3 id="注意が必要な場面">注意が必要な場面</h3>
+<ul>
+  <li>アラートだけ → インシデントではない</li>
+</ul>
+
+<p>👉 <strong>影響の有無で区別</strong></p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+<h3 id="-誤解インシデント小さな異常">❌ 誤解：インシデント＝小さな異常</h3>
+<p>👉 ⭕<br />
+インシデントは重大な問題</p>
+
+<hr />
+
+<h3 id="-誤解1つの事象必ずインシデント">❌ 誤解：1つの事象＝必ずインシデント</h3>
+<p>👉 ⭕<br />
+影響がなければ事象のまま</p>
+
+<hr />
+
+<h3 id="sg試験でのひっかけ">SG試験でのひっかけ</h3>
+<ul>
+  <li>「ログ異常」→ 事象</li>
+  <li>「情報漏えい」→ インシデント</li>
+  <li>「影響の可能性」→ 事象</li>
+  <li>「影響が発生」→ インシデント</li>
+</ul>
+
+<p>👉 <strong>“実害があるか”で切る</strong></p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+<ul>
+  <li>インシデント＝被害・影響がある状態</li>
+  <li>事象より重大</li>
+  <li>対応が必要になるレベル</li>
+  <li>「影響あり」ならインシデント</li>
+</ul>
+
+<p>👉 SG試験では<br />
+「被害が出ているか？」で判断</p>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-physical/">入退室管理とは？物理アクセス制御の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control/">アクセス管理とは？特権IDとneed-to-knowで権限を適切に制御【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-rights-management/">アクセス権限管理とは？付与・変更・削除の流れを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/administrator-privileges/">管理者権限とは？特権的アクセス権との違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/anti-passback/">アンチパスバックとは？不正な入退室を防ぐ仕組み【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/security-event/">← 情報セキュリティ事象とは？インシデントとの違いを整理【SG試験】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/log-management/">ログ管理とは？証跡と異常検知の役割を整理【SG試験】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

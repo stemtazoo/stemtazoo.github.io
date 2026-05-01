@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>リスクアセスメントとは？手順とJISの考え方を整理【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="リスクアセスメントとは？手順とJISの考え方を整理【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="リスクアセスメントはリスクを特定・分析・評価するプロセスです。JIS Q 31000・31010の考え方や準備段階の重要性、SG試験・情報セキュリティマネジメント試験のひっかけポイントを整理します。" />
+<meta property="og:description" content="リスクアセスメントはリスクを特定・分析・評価するプロセスです。JIS Q 31000・31010の考え方や準備段階の重要性、SG試験・情報セキュリティマネジメント試験のひっかけポイントを整理します。" />
+<link rel="canonical" href="http://localhost:4000/sg/risk-assessment/" />
+<meta property="og:url" content="http://localhost:4000/sg/risk-assessment/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="リスクアセスメントとは？手順とJISの考え方を整理【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"リスクアセスメントはリスクを特定・分析・評価するプロセスです。JIS Q 31000・31010の考え方や準備段階の重要性、SG試験・情報セキュリティマネジメント試験のひっかけポイントを整理します。","headline":"リスクアセスメントとは？手順とJISの考え方を整理【SG試験】","url":"http://localhost:4000/sg/risk-assessment/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">リスクアセスメントとは？手順とJISの考え方を整理【SG試験】</h1>
+      <h2 class="project-tagline">リスクアセスメントはリスクを特定・分析・評価するプロセスです。JIS Q 31000・31010の考え方や準備段階の重要性、SG試験・情報セキュリティマネジメント試験のひっかけポイントを整理します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">リスクアセスメントはリスクを特定・分析・評価するプロセスです。JIS Q 31000・31010の考え方や準備段階の重要性、SG試験・情報セキュリティマネジメント試験のひっかけポイントを整理します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-management</span>
+        
+          <span class="post-tag">risk_assessment</span>
+        
+          <span class="post-tag">isms</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+<ul>
+  <li>リスクアセスメントとは、リスクを特定・分析・評価して優先順位を決めるプロセスです</li>
+  <li>SG試験では「対策を含まない点」と「事前準備の重要性」がよく問われます</li>
+</ul>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>リスクアセスメントは<br />
+<strong>「危ないところを見つけて、どれから対応すべきか決める作業」</strong>です。</p>
+
+<p>ただし実務ではいきなり分析しません。</p>
+
+<ul>
+  <li>何を守るのか（情報資産）</li>
+  <li>どこまで許容するのか（基準）</li>
+</ul>
+
+<p>を先に決めてから分析します。</p>
+
+<p>👉<br />
+<strong>準備がズレると、全部の判断がズレる</strong><br />
+ここが試験でも実務でも重要ポイントです。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+
+<blockquote>
+  <p>公式: JVN iPedia（脆弱性対策情報）：<a href="https://jvndb.jvn.jp/">公式: JVN iPedia（脆弱性対策情報）</a>
+リスクアセスメントは、JISでも次の流れで整理されています。</p>
+</blockquote>
+
+<h3 id="-準備前提条件の設定">① 準備（前提条件の設定）</h3>
+<p>※ここがよく出る</p>
+
+<ul>
+  <li>情報資産の洗い出し（情報資産台帳）</li>
+  <li>評価対象の範囲を決定</li>
+  <li>リスク基準（受容基準）を決める
+    <ul>
+      <li>どこまで許容するか</li>
+      <li>何を優先するか（CIAなど）</li>
+    </ul>
+  </li>
+</ul>
+
+<p>👉<br />
+JIS Q 31000 の考え方<br />
+<strong>「リスク判断の基準を先に決める」</strong></p>
+
+<hr />
+
+<h3 id="-リスク特定">② リスク特定</h3>
+<ul>
+  <li>脅威（攻撃・ミス）</li>
+  <li>脆弱性（弱点）</li>
+  <li>情報資産（守る対象）</li>
+</ul>
+
+<p>👉<br />
+「何が起きる可能性があるか」を洗い出す</p>
+
+<hr />
+
+<h3 id="-リスク分析">③ リスク分析</h3>
+<p>リスクの大きさを評価</p>
+
+<ul>
+  <li>発生確率</li>
+  <li>影響度</li>
+</ul>
+
+<p>👉<br />
+JIS Q 31010<br />
+<strong>様々な分析手法（定性・定量）がある</strong></p>
+
+<hr />
+
+<h3 id="-リスク評価">④ リスク評価</h3>
+<p>対応の優先順位を決定</p>
+
+<ul>
+  <li>対応すべきリスク</li>
+  <li>許容できるリスク</li>
+</ul>
+
+<p>👉<br />
+ここまでがリスクアセスメント<br />
+この後に「リスク対応」が続く</p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="使う場面">使う場面</h3>
+<ul>
+  <li>ISMSのリスク評価プロセス</li>
+  <li>システム導入前のリスク確認</li>
+  <li>委託先のセキュリティ評価</li>
+  <li>情報資産管理の見直し</li>
+</ul>
+
+<hr />
+
+<h3 id="誤解しやすい場面">誤解しやすい場面</h3>
+<ul>
+  <li>いきなり対策を考える → ❌準備不足</li>
+  <li>資産を整理していない → ❌前提が不明確</li>
+  <li>基準なしで評価 → ❌判断がブレる</li>
+</ul>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+<h3 id="リスクマネジメントとの違い">リスクマネジメントとの違い</h3>
+<ul>
+  <li>❌ リスクアセスメント＝全体活動</li>
+  <li>⭕ 評価まで（対策は含まない）</li>
+</ul>
+
+<p>👉 判断基準<br />
+<strong>「実行しているか」ならマネジメント</strong></p>
+
+<hr />
+
+<h3 id="sg試験のひっかけ超重要">SG試験のひっかけ①（超重要）</h3>
+<ul>
+  <li>「リスクを分析して対策を決定する」→ ❌</li>
+  <li>「リスクの優先順位を決める」→ ⭕</li>
+</ul>
+
+<p>👉<br />
+<strong>対策が入ったらアウト</strong></p>
+
+<hr />
+
+<h3 id="sg試験のひっかけ準備">SG試験のひっかけ②（準備）</h3>
+<ul>
+  <li>「基準を決めずに評価」→ ❌</li>
+  <li>「受容基準を定める」→ ⭕</li>
+</ul>
+
+<p>👉<br />
+<strong>準備工程がある選択肢は正解になりやすい</strong></p>
+
+<hr />
+
+<h3 id="sg試験のひっかけ資産">SG試験のひっかけ③（資産）</h3>
+<ul>
+  <li>「脅威だけ考える」→ ❌</li>
+  <li>「資産・脅威・脆弱性をセットで考える」→ ⭕</li>
+</ul>
+
+<hr />
+
+<h2 id="確認問題sg試験対策">確認問題（SG試験対策）</h2>
+
+<p>リスクアセスメントの説明として最も適切なものはどれか。</p>
+
+<p>A. 脅威の有無を感覚だけで判断し、記録は残さない。<br />
+B. 資産・脅威・脆弱性・影響等を整理し、リスクの大きさを評価して対応判断につなげる。<br />
+C. 対応策を先に決めてから、後でリスクを作る手順である。<br />
+D. 年1回の形式的チェックだけで十分で、環境変化は考慮しない。</p>
+
+<details>
+  <summary>▶ クリックして答えと解説を見る（ここを開く）</summary>
+
+  <p><strong>正解：B</strong></p>
+
+  <h3 id="section">解説</h3>
+  <ul>
+    <li>A：根拠ある評価と記録が必要です。</li>
+    <li>B：リスク評価の目的と手順を正しく表しています。</li>
+    <li>C：順序が逆で、合理性を欠きます。</li>
+    <li>D：変化に応じた見直しが不可欠です。</li>
+  </ul>
+
+  <p>👉 判断ポイント<br />
+リスクアセスメントは「対応のための根拠作り」。</p>
+
+</details>
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+<ul>
+  <li>リスクアセスメント＝特定・分析・評価</li>
+  <li>対策は含まれない（ここ最重要）</li>
+  <li>準備（資産整理・基準設定）が前提</li>
+  <li>JISでは「基準を先に決める」が重要</li>
+  <li>迷ったら「まだ対策前か？」で切る</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-rights-management/">アクセス権限管理とは？付与・変更・削除の流れを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/administrator-privileges/">管理者権限とは？特権的アクセス権との違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/asset-register/">情報資産台帳とは？リスク管理の出発点を整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/audit-log/">監査ログとは？不正検知と追跡の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/case-solving-template/">SG試験 ケース問題の解き方テンプレ【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/risk-management/">← リスクマネジメントとは？全体像と実務の流れを整理【SG試験】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/risk-criteria/">リスク基準（受容基準）とは？判断の軸をやさしく整理【SG試験】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

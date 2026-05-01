@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>境界防御とは？ゼロトラストとの違いを整理【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="境界防御とは？ゼロトラストとの違いを整理【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="境界防御は社内ネットワークを信頼し外部との境界で防御する考え方です。ゼロトラストとの違いを整理し、SG試験・情報セキュリティマネジメント試験で問われるセキュリティモデルの判断ポイントを解説します。" />
+<meta property="og:description" content="境界防御は社内ネットワークを信頼し外部との境界で防御する考え方です。ゼロトラストとの違いを整理し、SG試験・情報セキュリティマネジメント試験で問われるセキュリティモデルの判断ポイントを解説します。" />
+<link rel="canonical" href="http://localhost:4000/sg/perimeter-security/" />
+<meta property="og:url" content="http://localhost:4000/sg/perimeter-security/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="境界防御とは？ゼロトラストとの違いを整理【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"境界防御は社内ネットワークを信頼し外部との境界で防御する考え方です。ゼロトラストとの違いを整理し、SG試験・情報セキュリティマネジメント試験で問われるセキュリティモデルの判断ポイントを解説します。","headline":"境界防御とは？ゼロトラストとの違いを整理【SG試験】","url":"http://localhost:4000/sg/perimeter-security/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">境界防御とは？ゼロトラストとの違いを整理【SG試験】</h1>
+      <h2 class="project-tagline">境界防御は社内ネットワークを信頼し外部との境界で防御する考え方です。ゼロトラストとの違いを整理し、SG試験・情報セキュリティマネジメント試験で問われるセキュリティモデルの判断ポイントを解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">境界防御は社内ネットワークを信頼し外部との境界で防御する考え方です。ゼロトラストとの違いを整理し、SG試験・情報セキュリティマネジメント試験で問われるセキュリティモデルの判断ポイントを解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-measures</span>
+        
+          <span class="post-tag">network</span>
+        
+          <span class="post-tag">it_security_operations</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+<p>境界防御とは、社内ネットワークを信頼し、外部との境界で防御するセキュリティモデルであり、SG試験では「内部は安全という前提」を見抜けるかが重要です。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>「会社の入口でしっかりチェックすれば、中は自由に動ける」イメージです。</p>
+
+<ul>
+  <li>外部 → 厳しくチェック</li>
+  <li>内部 → 信頼して自由</li>
+</ul>
+
+<p>👉<br />
+<strong>入口で守る考え方</strong></p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>境界防御は、ネットワークの内側と外側を区別し、境界部分でセキュリティ対策を行うモデルです。</p>
+
+<hr />
+
+<h3 id="-主な対策">■ 主な対策</h3>
+<ul>
+  <li>ファイアウォール</li>
+  <li>VPN</li>
+  <li>IDS / IPS</li>
+</ul>
+
+<hr />
+
+<p>👉<br />
+<strong>外部からの攻撃を防ぐことが中心</strong></p>
+
+<hr />
+
+<h3 id="-基本の考え方">■ 基本の考え方</h3>
+<ul>
+  <li>社内ネットワークは安全</li>
+  <li>外部は危険</li>
+  <li>境界で遮断する</li>
+</ul>
+
+<hr />
+
+<p>👉<br />
+<strong>「中は信頼する」モデル</strong></p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="-使う場面">■ 使う場面</h3>
+<ul>
+  <li>従来の社内ネットワーク</li>
+  <li>オフィス中心の業務環境</li>
+</ul>
+
+<hr />
+
+<p>👉 SG試験では<br />
+「どこを守っているか」を問われます。</p>
+
+<hr />
+
+<h3 id="-使うと誤解しやすい場面">■ 使うと誤解しやすい場面</h3>
+<ul>
+  <li>内部からの不正<br />
+→ 境界防御では防ぎにくい</li>
+</ul>
+
+<hr />
+
+<ul>
+  <li>テレワーク環境<br />
+→ 境界が曖昧になる</li>
+</ul>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="-社内ネットワークは安全">❌ 社内ネットワークは安全</h3>
+<p>→ ⭕<br />
+内部不正やマルウェア感染のリスクがある</p>
+
+<hr />
+
+<h3 id="-境界防御だけで十分">❌ 境界防御だけで十分</h3>
+<p>→ ⭕<br />
+現在は不十分とされるケースが多い</p>
+
+<hr />
+
+<h3 id="-ゼロトラストと同じ">❌ ゼロトラストと同じ</h3>
+<p>→ ⭕<br />
+考え方が逆</p>
+
+<hr />
+
+<h2 id="ゼロトラストとの違い最重要">ゼロトラストとの違い（最重要）</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>観点</th>
+      <th>境界防御</th>
+      <th>ゼロトラスト</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>信頼</td>
+      <td>内部は信頼</td>
+      <td>一切信頼しない</td>
+    </tr>
+    <tr>
+      <td>認証</td>
+      <td>最初だけ</td>
+      <td>毎回確認</td>
+    </tr>
+    <tr>
+      <td>対象</td>
+      <td>外部中心</td>
+      <td>全アクセス</td>
+    </tr>
+    <tr>
+      <td>前提</td>
+      <td>内部は安全</td>
+      <td>内部も危険</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<p>👉<br />
+<strong>内部を信頼するかどうかが最大の違い</strong></p>
+
+<hr />
+
+<h2 id="sg試験でのひっかけ重要">SG試験でのひっかけ（重要）</h2>
+
+<ul>
+  <li>「社内は安全なので認証を簡略化する」<br />
+→ 境界防御の考え方（ゼロトラストでは誤り）</li>
+</ul>
+
+<hr />
+
+<ul>
+  <li>「内部からの不正を防ぐ」<br />
+→ 境界防御だけでは不十分</li>
+</ul>
+
+<hr />
+
+<p>👉<br />
+<strong>“内部信頼”という前提に気づけるかがポイント</strong></p>
+
+<hr />
+
+<h2 id="確認問題sg試験対策">確認問題（SG試験対策）</h2>
+
+<p>境界防御（perimeter security）の説明として、最も適切なものはどれか。</p>
+
+<p>A. 社内外の境界で通信を制御するが、内部対策も別途必要である。
+B. 境界防御を導入すれば、内部不正対策は不要になる。
+C. 境界防御は暗号鍵管理の運用手順そのものを指す。
+D. 境界防御は可用性だけを対象にし、機密性には関係しない。</p>
+
+<details>
+  <summary>▶ クリックして答えと解説を見る（ここを開く）</summary>
+
+  <p><strong>正解：A</strong></p>
+
+  <h3 id="section">解説</h3>
+  <ul>
+    <li>A：境界防御の役割と限界を正しく表している。</li>
+    <li>B：内部脅威は別途対策が必要。</li>
+    <li>C：これは鍵管理の話であり概念が異なる。</li>
+    <li>D：機密性保護にも大きく関係する。</li>
+  </ul>
+
+  <p>👉 判断ポイント<br />
+「境界で止める」と「内部で備える」は両輪。</p>
+
+</details>
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+<ul>
+  <li>境界防御＝外部との境界で守る</li>
+  <li>内部は信頼する前提</li>
+  <li>ファイアウォールなどで防御</li>
+  <li>内部不正には弱い</li>
+  <li>SGでは「内部信頼かどうか」で判断する</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-model/">アクセス制御モデルとは？RBAC・ABAC・DAC・MACの違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-physical/">入退室管理とは？物理アクセス制御の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control/">アクセス管理とは？特権IDとneed-to-knowで権限を適切に制御【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/anti-passback/">アンチパスバックとは？不正な入退室を防ぐ仕組み【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/audit-log/">監査ログとは？不正検知と追跡の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/security-measures-comparison/">← セキュリティ対策の違いを一発で整理｜防御・検知・分析・証拠の切り分け【SG試験】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/security-patch/">セキュリティパッチとは？脆弱性対策の基本【SG試験】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

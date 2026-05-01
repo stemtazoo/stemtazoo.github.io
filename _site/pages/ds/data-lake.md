@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: データレイクとは？（DWHとの違いも整理）【DS検定リテラシー】
-description: データレイクは（DWHとの違いも整理）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: データレイクの特徴をDWHとの違いから整理します。構造化・非構造化データをそのまま蓄積する考え方、分析基盤としての使いどころ、DS検定で問われるデータ管理の判断ポイントを確認できます。本文では、用語の定義、具体例、似た概念との違い、試験で迷いやすい選択肢の見分け方まで、短時間で復習できるようにまとめています。
 permalink: /ds/data-lake/
 categories: [data-engineering]
 tags: [ds, data-storage, data-structure, database]

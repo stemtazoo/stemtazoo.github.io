@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>ログ管理とSIEMの違い【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="ログ管理とSIEMの違い【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="ログ管理はログを記録・保管・確認できるようにする活動であり、SIEMは複数のログを集約・分析して異常を検知する仕組みです。SG試験・情報セキュリティマネジメント試験で混同しやすいログ管理、監査ログ、SIEM、SOCの違いを判断基準で整理します。" />
+<meta property="og:description" content="ログ管理はログを記録・保管・確認できるようにする活動であり、SIEMは複数のログを集約・分析して異常を検知する仕組みです。SG試験・情報セキュリティマネジメント試験で混同しやすいログ管理、監査ログ、SIEM、SOCの違いを判断基準で整理します。" />
+<link rel="canonical" href="http://localhost:4000/sg/log-management-vs-siem/" />
+<meta property="og:url" content="http://localhost:4000/sg/log-management-vs-siem/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="ログ管理とSIEMの違い【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"ログ管理はログを記録・保管・確認できるようにする活動であり、SIEMは複数のログを集約・分析して異常を検知する仕組みです。SG試験・情報セキュリティマネジメント試験で混同しやすいログ管理、監査ログ、SIEM、SOCの違いを判断基準で整理します。","headline":"ログ管理とSIEMの違い【SG試験】","url":"http://localhost:4000/sg/log-management-vs-siem/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">ログ管理とSIEMの違い【SG試験】</h1>
+      <h2 class="project-tagline">ログ管理はログを記録・保管・確認できるようにする活動であり、SIEMは複数のログを集約・分析して異常を検知する仕組みです。SG試験・情報セキュリティマネジメント試験で混同しやすいログ管理、監査ログ、SIEM、SOCの違いを判断基準で整理します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">ログ管理はログを記録・保管・確認できるようにする活動であり、SIEMは複数のログを集約・分析して異常を検知する仕組みです。SG試験・情報セキュリティマネジメント試験で混同しやすいログ管理、監査ログ、SIEM、SOCの違いを判断基準で整理します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-measures</span>
+        
+          <span class="post-tag">log_management</span>
+        
+          <span class="post-tag">monitoring</span>
+        
+          <span class="post-tag">incident_response</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+
+<p>ログ管理とSIEMの違いは、<strong>ログを「残して管理する」のか、「集めて分析し異常を見つける」のか</strong>です。</p>
+
+<ul>
+  <li><strong>ログ管理</strong>：ログを記録・保管し、あとから確認できるようにすること</li>
+  <li><strong>SIEM</strong>：複数のログを集約・分析し、異常や攻撃の兆候を検知する仕組み</li>
+</ul>
+
+<p>SG試験では、次のように切り分けると判断しやすいです。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>用語</th>
+      <th>判断ポイント</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ログ管理</td>
+      <td>証跡を残す、保管する、あとから確認する</td>
+    </tr>
+    <tr>
+      <td>SIEM</td>
+      <td>ログを集約する、相関分析する、異常を検知する</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>つまり、ログ管理は<strong>記録を残すための基本活動</strong>、SIEMは<strong>そのログを活用して監視する仕組み</strong>です。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+
+<p>ログ管理は、会社の中で起きたことを「日誌」として残しておくイメージです。</p>
+
+<p>たとえば、</p>
+
+<ul>
+  <li>誰がログインしたか</li>
+  <li>いつファイルにアクセスしたか</li>
+  <li>どの端末から接続したか</li>
+  <li>どの通信が許可・拒否されたか</li>
+</ul>
+
+<p>といった記録を残します。</p>
+
+<p>一方、SIEMは、その日誌を大量に集めて、怪しい動きがないかを見つける仕組みです。</p>
+
+<p>たとえば、</p>
+
+<ol>
+  <li>深夜に管理者アカウントでログインした</li>
+  <li>直後に大量のファイルへアクセスした</li>
+  <li>その後、外部へ大きな通信が発生した</li>
+</ol>
+
+<p>という流れを、複数のログから見つけます。</p>
+
+<p>ログ管理は<strong>記録をきちんと残すこと</strong>、SIEMは<strong>記録を使って異常を見つけること</strong>と考えると分かりやすいです。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+
+<h3 id="ログ管理とは">ログ管理とは</h3>
+
+<p>ログ管理は、システムやネットワーク機器、アプリケーションなどが出力するログを、適切に記録・保管・確認できるようにする活動です。</p>
+
+<p>主な目的は、次のとおりです。</p>
+
+<ul>
+  <li>障害や不具合の原因調査</li>
+  <li>不正アクセスや内部不正の調査</li>
+  <li>操作履歴の確認</li>
+  <li>監査の証跡確保</li>
+  <li>インシデント発生時の状況確認</li>
+</ul>
+
+<p>ログ管理では、ログを「残す」だけでなく、改ざんされないように保護したり、必要な期間保管したりすることも重要です。</p>
+
+<hr />
+
+<h3 id="siemとは">SIEMとは</h3>
+
+<p>SIEM（Security Information and Event Management）は、サーバ、OS、ネットワーク機器、アプリケーションなどのログを集約し、セキュリティ上の異常を検知する仕組みです。</p>
+
+<p>主な流れは、次のとおりです。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>流れ</th>
+      <th>内容</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>収集</td>
+      <td>複数の機器やシステムからログを集める</td>
+    </tr>
+    <tr>
+      <td>正規化</td>
+      <td>ログ形式を分析しやすい形に整える</td>
+    </tr>
+    <tr>
+      <td>相関分析</td>
+      <td>複数のログを組み合わせて不審な流れを見つける</td>
+    </tr>
+    <tr>
+      <td>検知</td>
+      <td>攻撃や異常の兆候を見つける</td>
+    </tr>
+    <tr>
+      <td>通知</td>
+      <td>管理者やSOCへアラートを出す</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>SIEMは、ログ管理で集められたログを活用し、セキュリティ監視につなげる仕組みです。</p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+
+<h2 id="ログ管理が重要になる場面">ログ管理が重要になる場面</h2>
+
+<p>ログ管理は、何かが起きたあとに「何が起きたのか」を確認するために重要です。</p>
+
+<p>たとえば、次のような場面です。</p>
+
+<ul>
+  <li>利用者から「システムに入れない」と問い合わせがあった</li>
+  <li>ファイルが削除された原因を調べたい</li>
+  <li>管理者権限で誰が操作したか確認したい</li>
+  <li>監査で操作履歴の提出を求められた</li>
+  <li>インシデント発生後に影響範囲を確認したい</li>
+</ul>
+
+<p>このような場面では、ログが残っていなければ調査できません。</p>
+
+<p>そのためログ管理では、<strong>必要なログを、必要な期間、改ざんされにくい形で保管すること</strong>が大切です。</p>
+
+<hr />
+
+<h2 id="siemが重要になる場面">SIEMが重要になる場面</h2>
+
+<p>SIEMは、ログを使って異常を早く見つけたい場面で重要です。</p>
+
+<p>たとえば、次のような場面です。</p>
+
+<ul>
+  <li>短時間に大量のログイン失敗が発生した</li>
+  <li>いつもと違う国や地域からログインがあった</li>
+  <li>管理者アカウントで不自然な操作が行われた</li>
+  <li>マルウェア感染が疑われる外部通信が発生した</li>
+  <li>複数のシステムで関連する不審な動きがあった</li>
+</ul>
+
+<p>SIEMは、単独のログでは見えにくい異常を、複数のログの組み合わせから見つけます。</p>
+
+<p>そのため、<strong>早期発見・早期対応</strong>につなげやすくなります。</p>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="誤解1ログ管理をしていればsiemと同じである">誤解1：ログ管理をしていればSIEMと同じである</h3>
+
+<p>これは違います。</p>
+
+<p>ログ管理は、ログを記録・保管・確認できるようにする活動です。</p>
+
+<p>SIEMは、そのログを集約・分析して、異常や攻撃の兆候を見つける仕組みです。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>観点</th>
+      <th>ログ管理</th>
+      <th>SIEM</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>主な目的</td>
+      <td>記録・保管・確認</td>
+      <td>分析・検知・通知</td>
+    </tr>
+    <tr>
+      <td>重視すること</td>
+      <td>証跡を残す</td>
+      <td>異常を見つける</td>
+    </tr>
+    <tr>
+      <td>試験でのキーワード</td>
+      <td>保管、証跡、監査</td>
+      <td>集約、相関分析、アラート</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>ログ管理はSIEMの前提になりますが、同じ意味ではありません。</p>
+
+<hr />
+
+<h3 id="誤解2siemがあればログ管理は不要である">誤解2：SIEMがあればログ管理は不要である</h3>
+
+<p>これも違います。</p>
+
+<p>SIEMで分析するためには、そもそも正しくログが取得・保管されている必要があります。</p>
+
+<p>ログが不足していたり、時刻がずれていたり、保管期間が短すぎたりすると、SIEMでも正しく分析できません。</p>
+
+<p>SIEMはログ管理の代わりではなく、<strong>ログ管理を土台にして動く仕組み</strong>です。</p>
+
+<hr />
+
+<h3 id="誤解3ログ管理はセキュリティ対策ではない">誤解3：ログ管理はセキュリティ対策ではない</h3>
+
+<p>ログ管理は、重要なセキュリティ対策です。</p>
+
+<p>ログがなければ、不正アクセスや内部不正が起きたときに、原因や影響範囲を調べられません。</p>
+
+<p>また、ログを残していること自体が、不正の抑止にもつながります。</p>
+
+<p>SG試験では、ログ管理を<strong>証跡確保・監査・インシデント調査の基本</strong>として押さえるとよいです。</p>
+
+<hr />
+
+<h3 id="誤解4siemは攻撃を自動で防ぐ仕組みである">誤解4：SIEMは攻撃を自動で防ぐ仕組みである</h3>
+
+<p>SIEMは、基本的には検知・通知・調査支援の仕組みです。</p>
+
+<p>攻撃を直接遮断する役割は、ファイアウォール、IPS、EDRなどと切り分けます。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>用語</th>
+      <th>主な役割</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>SIEM</td>
+      <td>ログを分析して異常を検知する</td>
+    </tr>
+    <tr>
+      <td>IPS</td>
+      <td>不正通信を検知して遮断する</td>
+    </tr>
+    <tr>
+      <td>ファイアウォール</td>
+      <td>通信を許可・拒否する</td>
+    </tr>
+    <tr>
+      <td>EDR</td>
+      <td>端末上の不審な動きを検知・対応する</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>SIEMは「防ぐ装置」というより、<strong>異常を見つけて対応につなげる仕組み</strong>です。</p>
+
+<hr />
+
+<h2 id="sg試験での判断ポイント">SG試験での判断ポイント</h2>
+
+<p>SG試験では、選択肢のキーワードから判断すると迷いにくくなります。</p>
+
+<h3 id="ログ管理を選ぶキーワード">ログ管理を選ぶキーワード</h3>
+
+<p>次のような表現があれば、ログ管理に近いです。</p>
+
+<ul>
+  <li>ログを保存する</li>
+  <li>操作履歴を残す</li>
+  <li>証跡を確保する</li>
+  <li>監査で確認する</li>
+  <li>一定期間保管する</li>
+  <li>改ざんされないように保護する</li>
+</ul>
+
+<p>ログ管理は、<strong>あとから確認できる状態にすること</strong>が中心です。</p>
+
+<hr />
+
+<h3 id="siemを選ぶキーワード">SIEMを選ぶキーワード</h3>
+
+<p>次のような表現があれば、SIEMに近いです。</p>
+
+<ul>
+  <li>複数のログを集約する</li>
+  <li>大量のログを分析する</li>
+  <li>相関分析を行う</li>
+  <li>異常を検知する</li>
+  <li>アラートを出す</li>
+  <li>SOCで監視に使う</li>
+</ul>
+
+<p>SIEMは、<strong>ログを分析して異常を見つけること</strong>が中心です。</p>
+
+<hr />
+
+<h2 id="関連用語との切り分け">関連用語との切り分け</h2>
+
+<p>ログ管理とSIEMは、ほかの用語とも一緒に問われやすいです。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>用語</th>
+      <th>見分け方</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ログ管理</td>
+      <td>ログを記録・保管・確認する活動</td>
+    </tr>
+    <tr>
+      <td>監査ログ</td>
+      <td>操作やアクセスの証跡として使うログ</td>
+    </tr>
+    <tr>
+      <td>SIEM</td>
+      <td>複数ログを集約・分析し、異常を検知する仕組み</td>
+    </tr>
+    <tr>
+      <td>SOC</td>
+      <td>SIEMなどを使って監視する組織</td>
+    </tr>
+    <tr>
+      <td>CSIRT</td>
+      <td>インシデント対応を調整する組織</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>流れで見ると、次のようになります。</p>
+
+<ol>
+  <li><strong>ログ管理</strong>で記録を残す</li>
+  <li><strong>SIEM</strong>でログを集約・分析する</li>
+  <li><strong>SOC</strong>が監視する</li>
+  <li>異常があれば<strong>CSIRT</strong>などが対応する</li>
+</ol>
+
+<p>この流れで覚えると、用語同士の役割が整理しやすくなります。</p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<p>試験直前は、次の3点だけ押さえておきましょう。</p>
+
+<ul>
+  <li>ログ管理は、<strong>ログを記録・保管し、あとから確認できるようにすること</strong></li>
+  <li>SIEMは、<strong>複数のログを集約・分析し、異常を検知する仕組み</strong></li>
+  <li>判断に迷ったら、<strong>保管・証跡ならログ管理、集約・相関分析・アラートならSIEM</strong></li>
+</ul>
+
+<p>ログ管理は「残す」、SIEMは「見つける」。</p>
+
+<p>この違いを押さえると、SG試験の選択肢をかなり切り分けやすくなります。</p>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-model/">アクセス制御モデルとは？RBAC・ABAC・DAC・MACの違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-physical/">入退室管理とは？物理アクセス制御の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control/">アクセス管理とは？特権IDとneed-to-knowで権限を適切に制御【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/anti-passback/">アンチパスバックとは？不正な入退室を防ぐ仕組み【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/auth-access-summary/">認証・アクセス制御まとめ｜SSO・MFA・ゼロトラストを体系整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>DNSSECとは？DNS応答の正当性と完全性を確認する仕組み【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="DNSSECとは？DNS応答の正当性と完全性を確認する仕組み【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="DNSSECはDNS応答にデジタル署名を付け、応答データの正当性と完全性を検証する仕組みです。DNSキャッシュポイズニング対策や暗号化との違いなど、SG試験・情報セキュリティマネジメント試験で問われる判断ポイントを整理します。" />
+<meta property="og:description" content="DNSSECはDNS応答にデジタル署名を付け、応答データの正当性と完全性を検証する仕組みです。DNSキャッシュポイズニング対策や暗号化との違いなど、SG試験・情報セキュリティマネジメント試験で問われる判断ポイントを整理します。" />
+<link rel="canonical" href="http://localhost:4000/sg/dnssec/" />
+<meta property="og:url" content="http://localhost:4000/sg/dnssec/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="DNSSECとは？DNS応答の正当性と完全性を確認する仕組み【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"DNSSECはDNS応答にデジタル署名を付け、応答データの正当性と完全性を検証する仕組みです。DNSキャッシュポイズニング対策や暗号化との違いなど、SG試験・情報セキュリティマネジメント試験で問われる判断ポイントを整理します。","headline":"DNSSECとは？DNS応答の正当性と完全性を確認する仕組み【SG試験】","url":"http://localhost:4000/sg/dnssec/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">DNSSECとは？DNS応答の正当性と完全性を確認する仕組み【SG試験】</h1>
+      <h2 class="project-tagline">DNSSECはDNS応答にデジタル署名を付け、応答データの正当性と完全性を検証する仕組みです。DNSキャッシュポイズニング対策や暗号化との違いなど、SG試験・情報セキュリティマネジメント試験で問われる判断ポイントを整理します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">DNSSECはDNS応答にデジタル署名を付け、応答データの正当性と完全性を検証する仕組みです。DNSキャッシュポイズニング対策や暗号化との違いなど、SG試験・情報セキュリティマネジメント試験で問われる判断ポイントを整理します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-measures</span>
+        
+          <span class="post-tag">network_security</span>
+        
+          <span class="post-tag">dns</span>
+        
+          <span class="post-tag">cryptography</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+
+<p>DNSSEC（DNS Security Extensions）とは、<strong>DNS応答にデジタル署名を付けて、DNSで受け取った情報が正しい管理者から提供され、途中で改ざんされていないことを確認する仕組み</strong>です。</p>
+
+<p>SG試験では、DNSSECを「DNSの通信内容を暗号化する仕組み」ではなく、<strong>DNS応答の正当性と完全性を検証する仕組み</strong>として押さえることが大切です。</p>
+
+<p>特に、次のように整理すると判断しやすくなります。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>用語</th>
+      <th>役割</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>DNS</td>
+      <td>ドメイン名とIPアドレスを対応付ける仕組み</td>
+    </tr>
+    <tr>
+      <td>DNSSEC</td>
+      <td>DNS応答が正しいか、改ざんされていないかを検証する仕組み</td>
+    </tr>
+    <tr>
+      <td>デジタル署名</td>
+      <td>送信者の正当性とデータの完全性を確認するために使う仕組み</td>
+    </tr>
+    <tr>
+      <td>暗号化</td>
+      <td>第三者に内容を読まれにくくする仕組み</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>DNSSECは、<strong>DNSの信頼性を高めるための拡張機能</strong>です。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+
+<p>DNSは、インターネット上の「住所案内」のような仕組みです。</p>
+
+<p>たとえば、利用者がWebサイトにアクセスするとき、コンピュータは次のような確認をします。</p>
+
+<blockquote>
+  <p>このドメイン名は、どのIPアドレスに対応しているのか？</p>
+</blockquote>
+
+<p>通常のDNSでは、返ってきた応答が本当に正しいものかを十分に確認できない場合があります。もし攻撃者が偽のDNS応答を返すと、利用者を偽サイトへ誘導できてしまう可能性があります。</p>
+
+<p>DNSSECは、このDNS応答に<strong>デジタル署名</strong>を付けることで、次のことを確認できるようにします。</p>
+
+<ul>
+  <li>正しい管理者が作成したDNS情報か</li>
+  <li>途中で改ざんされていないか</li>
+</ul>
+
+<p>イメージとしては、DNSの応答に「本物であることを示す印鑑」が付くようなものです。</p>
+
+<p>ただし、ここで注意したいのは、DNSSECは通信内容を秘密にする仕組みではないという点です。</p>
+
+<p>DNSSECの主な目的は、<strong>盗み見防止ではなく、なりすましや改ざんの検出</strong>です。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+
+<p>DNSSECは、DNSにデジタル署名の仕組みを追加することで、DNS応答の正当性と完全性を検証する技術です。</p>
+
+<p>基本的な流れは次のとおりです。</p>
+
+<ol>
+  <li>権威DNSサーバが、DNSのリソースレコードにデジタル署名を付ける</li>
+  <li>DNSキャッシュサーバなどがDNS応答を受け取る</li>
+  <li>公開鍵を使ってデジタル署名を検証する</li>
+  <li>応答が正しい管理者によって作成され、改ざんされていないことを確認する</li>
+</ol>
+
+<p>ここでのポイントは、DNSSECが<strong>公開鍵暗号方式の考え方を利用している</strong>ことです。</p>
+
+<p>ただし、SG試験では暗号技術の細かい計算方法まで問われるというより、次の判断が重要です。</p>
+
+<blockquote>
+  <p>DNSSECは、DNS応答の正当性と完全性を確認するために、デジタル署名を利用する。</p>
+</blockquote>
+
+<h3 id="dnssecで確認できること">DNSSECで確認できること</h3>
+
+<p>DNSSECで確認できる主な内容は、次の2つです。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>確認すること</th>
+      <th>内容</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>正当性</td>
+      <td>正しい管理者が作成したDNS情報か</td>
+    </tr>
+    <tr>
+      <td>完全性</td>
+      <td>DNS応答が途中で改ざんされていないか</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>一方で、DNSSECだけでは次のことは実現できません。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>DNSSECでできないこと</th>
+      <th>理由</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>DNS通信内容の暗号化</td>
+      <td>DNSSECは署名検証の仕組みであり、暗号化が主目的ではないため</td>
+    </tr>
+    <tr>
+      <td>Webサイト通信全体の保護</td>
+      <td>Web通信の暗号化は主にHTTPS/TLSの役割であるため</td>
+    </tr>
+    <tr>
+      <td>DNSサーバの可用性向上</td>
+      <td>冗長化やセカンダリDNSとは別の考え方であるため</td>
+    </tr>
+    <tr>
+      <td>DNS更新要求を行う端末の認証</td>
+      <td>動的DNS更新の認証とは別の話であるため</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+
+<p>DNSSECは、DNS応答の信頼性を高めたい場面で使われます。</p>
+
+<p>代表的には、次のような攻撃への対策として理解しておくとよいです。</p>
+
+<h3 id="dnsキャッシュポイズニング対策">DNSキャッシュポイズニング対策</h3>
+
+<p>DNSキャッシュポイズニングとは、DNSキャッシュサーバに偽のDNS情報を覚え込ませ、利用者を偽サイトへ誘導する攻撃です。</p>
+
+<p>たとえば、正しいWebサイトにアクセスしたつもりでも、攻撃者が用意した偽サイトに誘導される可能性があります。</p>
+
+<p>DNSSECを利用すると、DNS応答に付けられたデジタル署名を検証できるため、偽のDNS応答や改ざんされた応答を検出しやすくなります。</p>
+
+<h3 id="重要なドメインの信頼性向上">重要なドメインの信頼性向上</h3>
+
+<p>金融機関、行政機関、企業サイトなど、偽サイトへの誘導が大きな被害につながるドメインでは、DNS応答の信頼性が重要です。</p>
+
+<p>DNSSECは、DNSの名前解決結果が正しいものであることを確認するための技術として役立ちます。</p>
+
+<h3 id="dnsとweb通信の役割分担">DNSとWeb通信の役割分担</h3>
+
+<p>DNSSECはDNS応答の正当性を確認しますが、Webページの通信内容を暗号化するわけではありません。</p>
+
+<p>Webサイトとの通信を暗号化するには、HTTPS/TLSが使われます。</p>
+
+<p>つまり、役割は次のように分かれます。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>技術</th>
+      <th>主な目的</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>DNSSEC</td>
+      <td>DNS応答の正当性・完全性を検証する</td>
+    </tr>
+    <tr>
+      <td>HTTPS/TLS</td>
+      <td>Web通信を暗号化し、通信相手の正当性も確認する</td>
+    </tr>
+    <tr>
+      <td>セカンダリDNS</td>
+      <td>DNSサーバを冗長化し、可用性を高める</td>
+    </tr>
+    <tr>
+      <td>ダイナミックDNS</td>
+      <td>IPアドレスが変わる環境でDNS情報を更新する</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="誤解1dnssecはdns通信を暗号化する仕組みである">誤解1：DNSSECはDNS通信を暗号化する仕組みである</h3>
+
+<p>これは誤りです。</p>
+
+<p>DNSSECは、DNS応答にデジタル署名を付けて、正当性と完全性を検証する仕組みです。</p>
+
+<p>DNS通信の内容を読めないようにすることが主目的ではありません。</p>
+
+<p>SG試験では、選択肢に「暗号化」「盗聴防止」「通信内容を秘匿する」といった表現が出た場合、DNSSECの説明として正しいか慎重に確認しましょう。</p>
+
+<h3 id="誤解2dnssecはdnsサーバを二重化する仕組みである">誤解2：DNSSECはDNSサーバを二重化する仕組みである</h3>
+
+<p>これも誤りです。</p>
+
+<p>DNSサーバを複数用意して可用性を高める考え方は、プライマリDNSサーバとセカンダリDNSサーバの冗長化に関する話です。</p>
+
+<p>DNSSECは、DNSサーバを増やす仕組みではなく、DNS応答の信頼性を確認する仕組みです。</p>
+
+<h3 id="誤解3dnssecは再帰問い合わせの受付範囲を広げる仕組みである">誤解3：DNSSECは再帰問い合わせの受付範囲を広げる仕組みである</h3>
+
+<p>これも誤りです。</p>
+
+<p>DNSキャッシュサーバの再帰問い合わせをどこまで受け付けるかは、オープンリゾルバ対策などの設定に関する話です。</p>
+
+<p>DNSSECの目的は、再帰問い合わせの受付範囲を広げることではありません。</p>
+
+<h3 id="誤解4dnssecはダイナミックdnsの更新端末を認証する仕組みである">誤解4：DNSSECはダイナミックDNSの更新端末を認証する仕組みである</h3>
+
+<p>これも誤りです。</p>
+
+<p>ダイナミックDNSでは、IPアドレスが変わる環境でDNSレコードを更新します。その更新要求を許可された端末からのものか確認する話と、DNSSECによるDNS応答の署名検証は別の話です。</p>
+
+<p>SG試験では、DNSSECを「DNS更新要求の認証」と混同しないようにしましょう。</p>
+
+<hr />
+
+<h2 id="sg試験での判断ポイント">SG試験での判断ポイント</h2>
+
+<p>DNSSECの問題では、次のキーワードに注目すると判断しやすくなります。</p>
+
+<h3 id="正解に近いキーワード">正解に近いキーワード</h3>
+
+<ul>
+  <li>DNS応答</li>
+  <li>リソースレコード</li>
+  <li>デジタル署名</li>
+  <li>正当性</li>
+  <li>完全性</li>
+  <li>改ざん検知</li>
+  <li>権威DNSサーバ</li>
+  <li>公開鍵による検証</li>
+</ul>
+
+<p>特に、次のような説明はDNSSECの機能として正しいです。</p>
+
+<blockquote>
+  <p>DNSサーバから受け取るリソースレコードに対するデジタル署名を利用して、リソースレコードの送信者の正当性とデータの完全性を検証する。</p>
+</blockquote>
+
+<p>これは、DNSSECの要点をよく表しています。</p>
+
+<h3 id="誤りを切るキーワード">誤りを切るキーワード</h3>
+
+<p>一方で、次のような表現がある場合は注意が必要です。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>表現</th>
+      <th>切り分け</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>再帰的な問い合わせの受付範囲を最大にする</td>
+      <td>オープンリゾルバに関する話</td>
+    </tr>
+    <tr>
+      <td>セカンダリDNSサーバで可用性を高める</td>
+      <td>DNS冗長化に関する話</td>
+    </tr>
+    <tr>
+      <td>DNS更新要求を許可された端末からのものか認証する</td>
+      <td>ダイナミックDNS更新の認証に関する話</td>
+    </tr>
+    <tr>
+      <td>DNS通信を暗号化する</td>
+      <td>DNSSECの主目的ではない</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="ミニ問題">ミニ問題</h2>
+
+<p>DNSSECの機能として、最も適切なものはどれか。</p>
+
+<div class="sg-question">
+  <p><strong>ア</strong> DNSキャッシュサーバの設定によって、再帰的な問い合わせの受付範囲が最大になるようにする。</p>
+  <p><strong>イ</strong> DNSサーバから受け取るリソースレコードに対するデジタル署名を利用して、リソースレコードの送信者の正当性とデータの完全性を検証する。</p>
+  <p><strong>ウ</strong> ISPなどのセカンダリDNSサーバを利用してDNSコンテンツサーバを二重化することで、名前解決の可用性を高める。</p>
+  <p><strong>エ</strong> 共通鍵暗号技術とハッシュ関数を利用したセキュアな方法で、DNS更新要求が許可されているエンドポイントを特定し認証する。</p>
+</div>
+
+<details>
+<summary>回答と解説</summary>
+
+正解は、<strong>イ</strong>です。
+
+DNSSECは、DNS応答に付けられたデジタル署名を検証することで、DNSリソースレコードの送信者の正当性とデータの完全性を確認する仕組みです。
+
+- ア：オープンリゾルバに関する説明です。
+- ウ：セカンダリDNSサーバを使った可用性向上の説明です。
+- エ：ダイナミックDNSの更新要求の認証に関する説明です。
+
+DNSSECは、DNS応答の「本物か」「改ざんされていないか」を確認する仕組みとして押さえましょう。
+
+</details>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<p>DNSSECは、<strong>DNS応答の正当性と完全性を検証する仕組み</strong>です。</p>
+
+<p>試験直前には、次の3点を押さえておきましょう。</p>
+
+<ul>
+  <li>DNSSECは、DNS応答にデジタル署名を付けて検証する仕組み</li>
+  <li>確認するのは、送信者の正当性とデータの完全性</li>
+  <li>DNS通信の暗号化、DNSサーバの冗長化、ダイナミックDNS更新の認証とは別物</li>
+</ul>
+
+<p>SG試験では、DNSSECを「DNSを安全にする技術」とだけ覚えると、暗号化や可用性向上の選択肢に引っかかりやすくなります。</p>
+
+<p><strong>DNSSEC＝DNS応答の署名検証</strong>と覚えると、選択肢を切り分けやすくなります。</p>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-model/">アクセス制御モデルとは？RBAC・ABAC・DAC・MACの違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-physical/">入退室管理とは？物理アクセス制御の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control/">アクセス管理とは？特権IDとneed-to-knowで権限を適切に制御【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/anti-passback/">アンチパスバックとは？不正な入退室を防ぐ仕組み【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/auth-access-summary/">認証・アクセス制御まとめ｜SSO・MFA・ゼロトラストを体系整理【情報セキュリティマネジメント】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/dns/">← DNSとは？名前解決の仕組みとセキュリティのポイント【SG試験】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/dns-cache-poisoning/">DNSキャッシュポイズニングとは？偽サイトへ誘導する攻撃【SG試験】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>リスク基準（受容基準）とは？判断の軸をやさしく整理【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="リスク基準（受容基準）とは？判断の軸をやさしく整理【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="リスク基準（受容基準）はどのリスクを許容するかを判断するための基準です。リスクアセスメントとの関係やJISの考え方、SG試験・情報セキュリティマネジメント試験のひっかけポイントを整理します。" />
+<meta property="og:description" content="リスク基準（受容基準）はどのリスクを許容するかを判断するための基準です。リスクアセスメントとの関係やJISの考え方、SG試験・情報セキュリティマネジメント試験のひっかけポイントを整理します。" />
+<link rel="canonical" href="http://localhost:4000/sg/risk-criteria/" />
+<meta property="og:url" content="http://localhost:4000/sg/risk-criteria/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="リスク基準（受容基準）とは？判断の軸をやさしく整理【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"リスク基準（受容基準）はどのリスクを許容するかを判断するための基準です。リスクアセスメントとの関係やJISの考え方、SG試験・情報セキュリティマネジメント試験のひっかけポイントを整理します。","headline":"リスク基準（受容基準）とは？判断の軸をやさしく整理【SG試験】","url":"http://localhost:4000/sg/risk-criteria/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">リスク基準（受容基準）とは？判断の軸をやさしく整理【SG試験】</h1>
+      <h2 class="project-tagline">リスク基準（受容基準）はどのリスクを許容するかを判断するための基準です。リスクアセスメントとの関係やJISの考え方、SG試験・情報セキュリティマネジメント試験のひっかけポイントを整理します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">リスク基準（受容基準）はどのリスクを許容するかを判断するための基準です。リスクアセスメントとの関係やJISの考え方、SG試験・情報セキュリティマネジメント試験のひっかけポイントを整理します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-management</span>
+        
+          <span class="post-tag">risk_assessment</span>
+        
+          <span class="post-tag">isms</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+<ul>
+  <li>リスク基準（受容基準）とは、「どのリスクまで許容するか」を決める判断基準です</li>
+  <li>SG試験では「評価の前に決めるもの」として出題されやすいポイントです</li>
+</ul>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>リスク基準は「どこまでならOKかの線引き」です。</p>
+
+<p>たとえば</p>
+<ul>
+  <li>情報漏えい → 少しでもNG</li>
+  <li>業務の遅延 → 多少はOK</li>
+</ul>
+
+<p>というように、<br />
+<strong>リスクによって許せる範囲が違う</strong>はずです。</p>
+
+<p>👉<br />
+この「許せるかどうかの線」を決めるのがリスク基準です。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>リスク基準（受容基準）は、リスクアセスメントの前提として設定します。</p>
+
+<h3 id="-何を基準にするか">① 何を基準にするか</h3>
+<p>主に次の観点で決めます</p>
+
+<ul>
+  <li>機密性（Confidentiality）</li>
+  <li>完全性（Integrity）</li>
+  <li>可用性（Availability）</li>
+  <li>法令・契約要件</li>
+  <li>経営方針・事業影響</li>
+</ul>
+
+<p>👉<br />
+JIS Q 31000 の考え方<br />
+<strong>「リスクの重要度を判断するための基準を事前に定める」</strong></p>
+
+<hr />
+
+<h3 id="-どのように使うか">② どのように使うか</h3>
+<p>リスク評価の場面で使う</p>
+
+<ul>
+  <li>基準より高いリスク → 対応が必要</li>
+  <li>基準内のリスク → 受容（そのまま許容）</li>
+</ul>
+
+<p>👉<br />
+<strong>評価の“ものさし”として使う</strong></p>
+
+<hr />
+
+<h3 id="-リスクアセスメントとの関係">③ リスクアセスメントとの関係</h3>
+<p>流れとしてはこうなります</p>
+
+<ol>
+  <li>リスク基準を決める</li>
+  <li>リスクを特定・分析</li>
+  <li>基準と比較して評価</li>
+</ol>
+
+<p>👉<br />
+<strong>基準がないと評価できない</strong></p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="使う場面">使う場面</h3>
+<ul>
+  <li>ISMSでのリスク評価</li>
+  <li>情報資産の重要度分類</li>
+  <li>委託先のリスク判断</li>
+  <li>セキュリティ投資の判断</li>
+</ul>
+
+<hr />
+
+<h3 id="誤解しやすい場面">誤解しやすい場面</h3>
+<ul>
+  <li>分析の後に決める → ❌順序が逆</li>
+  <li>全リスクをゼロにする基準 → ❌現実的でない</li>
+</ul>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+<h3 id="リスク評価との違い">リスク評価との違い</h3>
+<ul>
+  <li>❌ リスク基準＝評価結果</li>
+  <li>⭕ 評価するためのルール</li>
+</ul>
+
+<p>👉 判断基準<br />
+<strong>「判断する前のルール」か「判断結果」か</strong></p>
+
+<hr />
+
+<h3 id="リスク受容との違い">リスク受容との違い</h3>
+<ul>
+  <li>❌ 基準＝受容そのもの</li>
+  <li>⭕ 基準に基づいて受容するか決める</li>
+</ul>
+
+<p>👉<br />
+基準 → 判断 → 受容</p>
+
+<hr />
+
+<h3 id="sg試験のひっかけ">SG試験のひっかけ</h3>
+<ul>
+  <li>「リスクを評価して基準を決める」→ ❌</li>
+  <li>
+    <p>「基準を決めてから評価する」→ ⭕</p>
+  </li>
+  <li>「すべてのリスクを排除する」→ ❌</li>
+  <li>「許容範囲を決める」→ ⭕</li>
+</ul>
+
+<p>👉<br />
+<strong>順序と“許容”という考え方がカギ</strong></p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+<ul>
+  <li>リスク基準＝許容範囲の線引き</li>
+  <li>評価の前に決める（ここ重要）</li>
+  <li>評価の“ものさし”として使う</li>
+  <li>すべて排除は誤り（現実的でない）</li>
+  <li>迷ったら「基準か結果か」で切る</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-rights-management/">アクセス権限管理とは？付与・変更・削除の流れを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/administrator-privileges/">管理者権限とは？特権的アクセス権との違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/asset-register/">情報資産台帳とは？リスク管理の出発点を整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/audit-log/">監査ログとは？不正検知と追跡の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/case-solving-template/">SG試験 ケース問題の解き方テンプレ【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/risk-assessment/">← リスクアセスメントとは？手順とJISの考え方を整理【SG試験】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/risk-treatment2/">リスク対応とは？4つの対処方法を整理【SG試験】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

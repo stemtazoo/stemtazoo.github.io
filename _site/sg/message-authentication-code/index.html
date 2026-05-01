@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>メッセージ認証符号とは？改ざん検知の仕組みを整理【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="メッセージ認証符号とは？改ざん検知の仕組みを整理【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="メッセージ認証符号は通信内容が改ざんされていないか確認するための仕組みです。生成と照合の流れを整理し、SG試験・情報セキュリティマネジメント試験でのひっかけポイントと判断基準を分かりやすく解説します。" />
+<meta property="og:description" content="メッセージ認証符号は通信内容が改ざんされていないか確認するための仕組みです。生成と照合の流れを整理し、SG試験・情報セキュリティマネジメント試験でのひっかけポイントと判断基準を分かりやすく解説します。" />
+<link rel="canonical" href="http://localhost:4000/sg/message-authentication-code/" />
+<meta property="og:url" content="http://localhost:4000/sg/message-authentication-code/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="メッセージ認証符号とは？改ざん検知の仕組みを整理【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"メッセージ認証符号は通信内容が改ざんされていないか確認するための仕組みです。生成と照合の流れを整理し、SG試験・情報セキュリティマネジメント試験でのひっかけポイントと判断基準を分かりやすく解説します。","headline":"メッセージ認証符号とは？改ざん検知の仕組みを整理【SG試験】","url":"http://localhost:4000/sg/message-authentication-code/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">メッセージ認証符号とは？改ざん検知の仕組みを整理【SG試験】</h1>
+      <h2 class="project-tagline">メッセージ認証符号は通信内容が改ざんされていないか確認するための仕組みです。生成と照合の流れを整理し、SG試験・情報セキュリティマネジメント試験でのひっかけポイントと判断基準を分かりやすく解説します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">メッセージ認証符号は通信内容が改ざんされていないか確認するための仕組みです。生成と照合の流れを整理し、SG試験・情報セキュリティマネジメント試験でのひっかけポイントと判断基準を分かりやすく解説します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-overview</span>
+        
+          <span class="post-tag">crypto_auth</span>
+        
+          <span class="post-tag">it_security_operations</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+<p>メッセージ認証符号（MAC）は、<strong>メッセージが改ざんされていないかを確認するために、メッセージから生成して照合する値</strong>です。<br />
+SG試験では「改ざん検知の仕組みを選ばせる問題」で問われることが多いです。</p>
+
+<hr />
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>荷物に「封印シール」を貼るイメージです。</p>
+
+<ul>
+  <li>送るとき → メッセージから「チェック用の値（MAC）」を作る</li>
+  <li>受け取るとき → 同じ方法で計算して一致するか確認する</li>
+</ul>
+
+<p>一致すれば「途中で開けられていない（改ざんされていない）」と判断できます。</p>
+
+<p>👉 <strong>中身を見るのではなく、“変わっていないか”を確認する仕組み</strong>です。</p>
+
+<hr />
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>メッセージ認証符号（MAC：Message Authentication Code）は、</p>
+
+<ul>
+  <li>メッセージ</li>
+  <li>共有鍵（秘密のキー）</li>
+</ul>
+
+<p>を使って計算される値です。</p>
+
+<p>基本の流れはシンプルです。</p>
+
+<ol>
+  <li>送信側
+    <ul>
+      <li>メッセージ + 共有鍵 → MACを生成</li>
+      <li>メッセージとMACを送る</li>
+    </ul>
+  </li>
+  <li>受信側
+    <ul>
+      <li>同じ方法でMACを再計算</li>
+      <li>受信したMACと一致するか確認</li>
+    </ul>
+  </li>
+</ol>
+
+<p>一致すれば<br />
+→ <strong>改ざんされていないと判断</strong></p>
+
+<p>SG試験では細かい計算方法ではなく、<br />
+👉 <strong>「生成して照合する」流れが理解できているか</strong> が重要です。</p>
+
+<hr />
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<h3 id="使う場面">使う場面</h3>
+<ul>
+  <li>通信データの改ざんチェック（API通信・ログ転送など）</li>
+  <li>システム間連携でのデータの信頼性確認</li>
+  <li>業務システムで「データが途中で書き換えられていないか」の確認</li>
+</ul>
+
+<p>👉 現場では<br />
+<strong>「正しい相手から来て、内容が変わっていないか」を確認する用途</strong>で使います。</p>
+
+<hr />
+
+<h3 id="使うと誤解しやすい場面">使うと誤解しやすい場面</h3>
+<ul>
+  <li>内容を隠したい（機密性）<br />
+→ MACは<strong>暗号化ではない</strong></li>
+</ul>
+
+<hr />
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+<p>SG試験ではここがよく狙われます。</p>
+
+<h3 id="-macは暗号化の仕組み">❌ MACは暗号化の仕組み</h3>
+<p>→ ⭕ <strong>改ざん検知の仕組み（内容は隠さない）</strong></p>
+
+<hr />
+
+<h3 id="-パリティビットと同じ">❌ パリティビットと同じ</h3>
+<p>→ ⭕</p>
+<ul>
+  <li>パリティビット：単純な誤り検出</li>
+  <li>MAC：<strong>鍵を使った改ざん検知（セキュリティ用途）</strong></li>
+</ul>
+
+<hr />
+
+<h3 id="-電子署名と同じ">❌ 電子署名と同じ</h3>
+<p>→ ⭕</p>
+<ul>
+  <li>電子署名：公開鍵を使う（なりすまし防止・否認防止）</li>
+  <li>MAC：<strong>共有鍵を使う（改ざん検知）</strong></li>
+</ul>
+
+<hr />
+
+<h3 id="-pkiや証明書と同じ">❌ PKIや証明書と同じ</h3>
+<p>→ ⭕</p>
+<ul>
+  <li>PKI・証明書：鍵の信頼性を保証する仕組み</li>
+  <li>MAC：<strong>データの改ざん確認</strong></li>
+</ul>
+
+<hr />
+
+<p>👉 SG試験では<br />
+<strong>「改ざん確認 → MAC」<br />
+「なりすまし＋否認防止 → 電子署名」</strong><br />
+で切り分けるのが重要です。</p>
+
+<hr />
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+<ul>
+  <li>MACは<strong>メッセージから生成して照合する改ざん検知の仕組み</strong></li>
+  <li>共有鍵を使うのがポイント</li>
+  <li>暗号化ではない（内容は隠さない）</li>
+  <li>電子署名との違いを必ず区別する</li>
+  <li>「改ざん確認」と書かれていたらMACを疑う</li>
+</ul>
+
+<p>👉 判断基準<br />
+<strong>改ざんチェック → MAC<br />
+本人証明 → 電子署名</strong></p>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-physical/">入退室管理とは？物理アクセス制御の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control/">アクセス管理とは？特権IDとneed-to-knowで権限を適切に制御【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/anti-passback/">アンチパスバックとは？不正な入退室を防ぐ仕組み【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/attacker-types/">攻撃者の種類とは？目的と特徴で整理する【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/audit-log/">監査ログとは？不正検知と追跡の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+    
+    <a class="prev" href="/sg/message-authentication/">← メッセージ認証とは？改ざん検知と送信者確認の仕組み【SG試験】</a>
+  
+
+  
+    
+    <a class="next" href="/sg/digital-signature/">電子署名とは？本人証明と改ざん検知を整理【SG試験】 →</a>
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>
