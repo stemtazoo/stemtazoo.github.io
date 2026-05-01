@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: /exports/
-
-Sitemap: https://stemtazoo.github.io/sitemap.xml
