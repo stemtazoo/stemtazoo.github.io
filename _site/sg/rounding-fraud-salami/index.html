@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>端数処理を悪用した不正とは？サラミ法との関係【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="端数処理を悪用した不正とは？サラミ法との関係【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="端数処理を悪用した不正は、計算や丸め処理で生じる小さな差額を不正に集める手口です。サラミ法との関係とSG試験での切り分けポイントを整理します。" />
+<meta property="og:description" content="端数処理を悪用した不正は、計算や丸め処理で生じる小さな差額を不正に集める手口です。サラミ法との関係とSG試験での切り分けポイントを整理します。" />
+<link rel="canonical" href="https://stemtazoo.github.io/sg/rounding-fraud-salami/" />
+<meta property="og:url" content="https://stemtazoo.github.io/sg/rounding-fraud-salami/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="端数処理を悪用した不正とは？サラミ法との関係【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"端数処理を悪用した不正は、計算や丸め処理で生じる小さな差額を不正に集める手口です。サラミ法との関係とSG試験での切り分けポイントを整理します。","headline":"端数処理を悪用した不正とは？サラミ法との関係【SG試験】","url":"https://stemtazoo.github.io/sg/rounding-fraud-salami/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">端数処理を悪用した不正とは？サラミ法との関係【SG試験】</h1>
+      <h2 class="project-tagline">端数処理を悪用した不正は、計算や丸め処理で生じる小さな差額を不正に集める手口です。サラミ法との関係とSG試験での切り分けポイントを整理します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">端数処理を悪用した不正は、計算や丸め処理で生じる小さな差額を不正に集める手口です。サラミ法との関係とSG試験での切り分けポイントを整理します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-overview</span>
+        
+          <span class="post-tag">threat_vulnerability</span>
+        
+          <span class="post-tag">unauthorized_access</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+<ul>
+  <li><strong>端数処理を悪用した不正</strong>とは、計算や丸め処理で発生する小さな差額を、不正に別の口座などへ集める手口です。</li>
+  <li>SG試験では、<strong>少額を多数から詐取するサラミ法の具体例</strong>として理解すると切り分けやすくなります。</li>
+</ul>
+
+<h2 id="直感的な説明">直感的な説明</h2>
+<p>端数処理を悪用した不正は、「小さすぎて気づかれにくい差額」を集めるイメージです。</p>
+
+<p>たとえば、利息計算や手数料計算で、1円未満の端数が発生したとします。</p>
+
+<p>通常は、ルールに従って切捨て、切上げ、四捨五入などを行います。</p>
+
+<p>しかし、その端数や差額を不正に集めるようにプログラムを改ざんすると、1件あたりは小さくても、多数の取引から集めることで大きな不正利益になります。</p>
+
+<p>ここが、サラミ法と強く関係する点です。</p>
+
+<p><strong>少額なので気づかれにくい。多数から集めるので合計は大きい。</strong></p>
+
+<p>この感覚を押さえておくと、SG試験の選択肢を切りやすくなります。</p>
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+<p>端数処理を悪用した不正は、金額計算やポイント計算などで発生する端数・丸め誤差・差額を、正しい処理に見せかけて不正に取得する行為です。</p>
+
+<p>SG試験の出題範囲では、コンピュータ犯罪や攻撃手法は「脅威、脆弱性、サイバー攻撃手法」などの文脈で扱われます。試験範囲全体は、IPAの<a href="https://www.ipa.go.jp/shiken/kubun/sg/outline.html">情報セキュリティマネジメント試験 出題内容</a>で確認できます。</p>
+
+<p>基本の流れは、次のように考えると分かりやすいです。</p>
+
+<ol>
+  <li>金額やポイントの計算で端数が発生する</li>
+  <li>端数処理のルールを悪用する</li>
+  <li>利用者が気づきにくい少額の差額を集める</li>
+  <li>多数の取引を通じて不正利益を得る</li>
+</ol>
+
+<p>この手口は、<strong>サラミ法の典型例</strong>として説明されることがあります。</p>
+
+<p>サラミ法は、多数の資産から少しずつ詐取する手口です。</p>
+
+<p>端数処理を悪用した不正は、その「少しずつ詐取する」方法の一つと考えると理解しやすくなります。</p>
+
+<p>ただし、すべての端数処理が不正というわけではありません。</p>
+
+<p>業務上、端数処理は必要です。</p>
+
+<p>問題になるのは、<strong>定められた処理ルールに反して、端数や差額を不正に取得すること</strong>です。</p>
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+<p>端数処理を悪用した不正は、次のような場面で考えられます。</p>
+
+<ul>
+  <li>利息計算</li>
+  <li>手数料計算</li>
+  <li>給与計算</li>
+  <li>ポイント計算</li>
+  <li>取引金額の丸め処理</li>
+  <li>為替や単価計算</li>
+</ul>
+
+<p>これらの処理では、1件ごとの端数は小さくても、対象件数が多いと差額が大きくなることがあります。</p>
+
+<p>そのため、業務では次のような管理が重要になります。</p>
+
+<ul>
+  <li>端数処理ルールを明確にする</li>
+  <li>プログラム変更を承認制にする</li>
+  <li>計算結果や差額をログで確認する</li>
+  <li>定期的に突合・監査を行う</li>
+  <li>開発者が本番データを自由に操作できないようにする</li>
+</ul>
+
+<p>SG試験では、技術的な計算式よりも、<strong>小さな差額を不正に集める構造</strong>を理解することが大切です。</p>
+
+<p>選択肢では、次の表現があれば注意します。</p>
+
+<ul>
+  <li>端数</li>
+  <li>少額</li>
+  <li>多数の取引</li>
+  <li>気づかれにくい</li>
+  <li>差額を集める</li>
+  <li>不正に詐取する</li>
+</ul>
+
+<p>これらが組み合わさっていれば、サラミ法またはその具体例を疑います。</p>
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+<h3 id="端数処理そのものが不正という誤解">端数処理そのものが不正という誤解</h3>
+<p>端数処理そのものは不正ではありません。</p>
+
+<p>金額計算では、1円未満の端数や小数点以下の値が出ることがあります。</p>
+
+<p>そのため、切捨て、切上げ、四捨五入などの処理は業務上必要です。</p>
+
+<p>不正になるのは、<strong>決められたルールに反して、差額を自分や第三者の利益にする場合</strong>です。</p>
+
+<h3 id="サラミ法との違い">サラミ法との違い</h3>
+<p>サラミ法は、少額を多数から詐取する手口全体を指します。</p>
+
+<p>端数処理を悪用した不正は、その具体例の一つです。</p>
+
+<p>つまり、関係は次のように整理できます。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>用語</th>
+      <th>意味</th>
+      <th>関係</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>サラミ法</td>
+      <td>多数の資産から少しずつ詐取する手口</td>
+      <td>大きな分類</td>
+    </tr>
+    <tr>
+      <td>端数処理を悪用した不正</td>
+      <td>計算上の端数や差額を不正に集める行為</td>
+      <td>サラミ法の具体例</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>SG試験では、「少額を多数から詐取」という説明ならサラミ法、「端数や丸め処理の差額を集める」という説明なら、サラミ法の具体例として考えるとよいです。</p>
+
+<h3 id="盗聴との違い">盗聴との違い</h3>
+<p>盗聴は、ネットワーク上を流れる通信内容を不正に読み取る行為です。</p>
+
+<p>端数処理を悪用した不正は、通信を読むことではなく、計算や処理の差額を不正に取得することです。</p>
+
+<p>選択肢に「通信」「傍受」「送受信データ」とあれば、盗聴を疑います。</p>
+
+<h3 id="スキャビンジングとの違い">スキャビンジングとの違い</h3>
+<p>スキャビンジングは、コンピュータ内部や周辺、廃棄物などに残された情報を探して入手する行為です。</p>
+
+<p>端数処理を悪用した不正は、残された情報を探すのではなく、処理の差額を集める手口です。</p>
+
+<p>選択肢に「残っている情報」「ゴミ箱」「廃棄物」「探索」とあれば、スキャビンジングを疑います。</p>
+
+<h3 id="sg試験でのひっかけポイント">SG試験でのひっかけポイント</h3>
+<p>SG試験では、次のような表現で迷わせてくることがあります。</p>
+
+<ul>
+  <li>少しずつ情報を探す</li>
+  <li>少しずつ金銭を取る</li>
+  <li>通信から少しずつデータを読む</li>
+  <li>端数を集める</li>
+</ul>
+
+<p>ここでは、「少しずつ」という言葉だけで判断しないことが大切です。</p>
+
+<p>判断基準は、<strong>何を少しずつ取っているか</strong>です。</p>
+
+<ul>
+  <li>金銭や資産を少しずつ詐取 → サラミ法</li>
+  <li>端数や差額を集める → サラミ法の具体例</li>
+  <li>通信内容を読む → 盗聴</li>
+  <li>残った情報を探す → スキャビンジング</li>
+</ul>
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+<ul>
+  <li>端数処理を悪用した不正は、<strong>計算上の小さな差額を不正に集める手口</strong>です。</li>
+  <li>サラミ法は、<strong>少額を多数から詐取する手口全体</strong>を指します。</li>
+  <li>端数処理を悪用した不正は、サラミ法の具体例として理解できます。</li>
+  <li>「端数処理」自体は不正ではなく、ルール違反で差額を取得することが問題です。</li>
+  <li>SG試験では、<strong>少しずつ何を取っているか</strong>を見て選択肢を切り分けます。</li>
+</ul>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/attacker-types/">攻撃者の種類とは？目的と特徴で整理する【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/authentication-methods/">認証方式とは？3要素と多要素認証を整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/blacklist-whitelist/">ブラックリストとホワイトリストの違いとは？判断基準を整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/block-stream-cipher/">ブロック暗号とストリーム暗号の違いとは？暗号方式を整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/bot/">ボットとは？遠隔操作される仕組みを理解する【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

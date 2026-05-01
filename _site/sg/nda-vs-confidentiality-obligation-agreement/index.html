@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>秘密保持契約書と守秘義務契約書の違い【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="秘密保持契約書と守秘義務契約書の違い【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="秘密保持契約書と守秘義務契約書は、秘密情報を漏らさない責任を文書で明確にするための契約です。NDAとの関係、従業員・委託先での使われ方、SG試験での切り分け方を整理します。" />
+<meta property="og:description" content="秘密保持契約書と守秘義務契約書は、秘密情報を漏らさない責任を文書で明確にするための契約です。NDAとの関係、従業員・委託先での使われ方、SG試験での切り分け方を整理します。" />
+<link rel="canonical" href="https://stemtazoo.github.io/sg/nda-vs-confidentiality-obligation-agreement/" />
+<meta property="og:url" content="https://stemtazoo.github.io/sg/nda-vs-confidentiality-obligation-agreement/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="秘密保持契約書と守秘義務契約書の違い【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"秘密保持契約書と守秘義務契約書は、秘密情報を漏らさない責任を文書で明確にするための契約です。NDAとの関係、従業員・委託先での使われ方、SG試験での切り分け方を整理します。","headline":"秘密保持契約書と守秘義務契約書の違い【SG試験】","url":"https://stemtazoo.github.io/sg/nda-vs-confidentiality-obligation-agreement/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">秘密保持契約書と守秘義務契約書の違い【SG試験】</h1>
+      <h2 class="project-tagline">秘密保持契約書と守秘義務契約書は、秘密情報を漏らさない責任を文書で明確にするための契約です。NDAとの関係、従業員・委託先での使われ方、SG試験での切り分け方を整理します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">秘密保持契約書と守秘義務契約書は、秘密情報を漏らさない責任を文書で明確にするための契約です。NDAとの関係、従業員・委託先での使われ方、SG試験での切り分け方を整理します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-management</span>
+        
+          <span class="post-tag">data_leakage</span>
+        
+          <span class="post-tag">vendor_management</span>
+        
+          <span class="post-tag">it_security_operations</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+
+<p><strong>秘密保持契約書</strong>と<strong>守秘義務契約書</strong>は、どちらも秘密情報を漏らさない責任を文書で明確にするための契約です。</p>
+
+<p>SG試験では、細かな契約名の違いを暗記するよりも、<strong>秘密情報にアクセスする前に、誰が、何を、いつまで守るのかを明確にする契約</strong>として理解することが大切です。</p>
+
+<p>ざっくり整理すると、次のように考えると分かりやすいです。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>用語</th>
+      <th>見方</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>秘密保持契約書</td>
+      <td>秘密情報を守るための契約書。NDAとも呼ばれる</td>
+    </tr>
+    <tr>
+      <td>守秘義務契約書</td>
+      <td>秘密を漏らさない義務を明確にする契約書</td>
+    </tr>
+    <tr>
+      <td>守秘義務</td>
+      <td>秘密情報を漏らさない責任そのもの</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>つまり、守秘義務は「責任」、秘密保持契約書や守秘義務契約書は「その責任を文書にしたもの」と考えます。</p>
+
+<h2 id="直感的な説明">直感的な説明</h2>
+
+<p>仕事では、業務上必要だから見られる情報があります。</p>
+
+<p>例えば、次のような情報です。</p>
+
+<ul>
+  <li>顧客リスト</li>
+  <li>取引条件</li>
+  <li>設計図</li>
+  <li>価格情報</li>
+  <li>システム構成</li>
+  <li>アカウント情報</li>
+  <li>未公開の事業計画</li>
+</ul>
+
+<p>これらは、仕事のために共有される情報であり、自由に外部へ話してよい情報ではありません。</p>
+
+<p>そこで、秘密情報を見せる前に、</p>
+
+<blockquote>
+  <p>この情報は秘密です。目的外に使わないでください。外部に漏らさないでください。</p>
+</blockquote>
+
+<p>という約束を文書で明確にします。</p>
+
+<p>この文書が、秘密保持契約書や守秘義務契約書です。</p>
+
+<p>SG試験では、契約書の名称そのものより、<strong>秘密情報を扱う前に責任を明確にしているか</strong>を判断することがポイントになります。</p>
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+
+<p>秘密保持契約書と守秘義務契約書は、どちらも秘密情報を保護するために使われる契約です。</p>
+
+<p>経済産業省の情報セキュリティ管理基準では、「秘密保持契約又は守秘義務契約」について、情報保護に対する組織のニーズを反映し、文書化し、定常的にレビューし、関係者が署名する管理策として示されています。</p>
+
+<ul>
+  <li>経済産業省：情報セキュリティ管理基準（令和7年改正版）<br />
+https://www.meti.go.jp/policy/netsecurity/is-kansa/IS_Management_Standard_R7.pdf</li>
+</ul>
+
+<p>契約では、主に次のような内容を明確にします。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>観点</th>
+      <th>内容</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>秘密情報の範囲</td>
+      <td>何を秘密情報として扱うか</td>
+    </tr>
+    <tr>
+      <td>利用目的</td>
+      <td>何のために使ってよいか</td>
+    </tr>
+    <tr>
+      <td>第三者提供の禁止</td>
+      <td>許可なく外部へ渡してよいか</td>
+    </tr>
+    <tr>
+      <td>管理方法</td>
+      <td>保管、持出し、複製、廃棄のルール</td>
+    </tr>
+    <tr>
+      <td>契約終了時の対応</td>
+      <td>返却、削除、廃棄など</td>
+    </tr>
+    <tr>
+      <td>有効期間</td>
+      <td>いつまで秘密を守るか</td>
+    </tr>
+    <tr>
+      <td>違反時の対応</td>
+      <td>損害賠償、契約解除、懲戒など</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>ここで大切なのは、契約書を作ること自体が目的ではないという点です。</p>
+
+<p>本当の目的は、秘密情報を扱う人に対して、<strong>どの情報を、どの範囲で、どの期間、どう守るのか</strong>を明確にすることです。</p>
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+
+<p>秘密保持契約書や守秘義務契約書は、秘密情報を人や組織に開示する前に使います。</p>
+
+<h3 id="従業員が秘密情報を扱う場面">従業員が秘密情報を扱う場面</h3>
+
+<p>従業員が顧客情報や社内情報にアクセスする場合、守秘義務を明確にしておく必要があります。</p>
+
+<p>例えば、入社時や配属時に、就業規則、雇用契約、誓約書、守秘義務契約などで責任を確認します。</p>
+
+<p>SG試験では、従業員に秘密情報を扱わせる場合、<strong>教育だけでなく、契約や規程で責任を明確にする</strong>という判断が重要です。</p>
+
+<h3 id="委託先に情報を渡す場面">委託先に情報を渡す場面</h3>
+
+<p>システム開発、保守、クラウド利用、データ入力などを外部委託する場合、委託先が秘密情報に触れることがあります。</p>
+
+<p>このとき、委託先との契約で、秘密保持、再委託、事故時の報告、目的外利用の禁止などを定めておきます。</p>
+
+<p>SG試験では、<strong>委託先に任せたから管理責任がなくなるわけではない</strong>という点がよく問われます。</p>
+
+<h3 id="取引先に情報を開示する場面">取引先に情報を開示する場面</h3>
+
+<p>新製品の共同開発や商談では、取引先に未公開情報を見せることがあります。</p>
+
+<p>この場合も、情報を渡す前に秘密保持契約書を締結しておくことで、情報の利用範囲や漏えい時の責任を明確にできます。</p>
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="誤解1秘密保持契約書と守秘義務契約書はまったく別の目的の文書である">誤解1：秘密保持契約書と守秘義務契約書は、まったく別の目的の文書である</h3>
+
+<p>これは試験対策上、深く分けすぎなくてよいです。</p>
+
+<p>どちらも、秘密情報を漏らさない責任を文書で明確にするために使われます。</p>
+
+<p>SG試験では、名称の細かな違いよりも、<strong>秘密情報にアクセスする人へ責任を負わせる管理策</strong>として理解します。</p>
+
+<h3 id="誤解2契約書に署名すればそれだけで十分">誤解2：契約書に署名すれば、それだけで十分</h3>
+
+<p>これも誤りです。</p>
+
+<p>契約書への署名は重要ですが、それだけで情報漏えいを防げるわけではありません。</p>
+
+<p>実際には、次のような管理策と組み合わせる必要があります。</p>
+
+<ul>
+  <li>秘密情報の分類</li>
+  <li>アクセス権限の制限</li>
+  <li>持出しルール</li>
+  <li>教育・訓練</li>
+  <li>ログ管理</li>
+  <li>退職時や契約終了時の返却・削除</li>
+</ul>
+
+<p>SG試験では、契約書だけでなく、<strong>運用として管理されているか</strong>を見ます。</p>
+
+<h3 id="誤解3契約が終われば秘密保持の責任もすぐ終わる">誤解3：契約が終われば、秘密保持の責任もすぐ終わる</h3>
+
+<p>これも注意が必要です。</p>
+
+<p>秘密保持契約では、契約終了後も一定期間、秘密情報を守るように定めることがあります。</p>
+
+<p>そのため、選択肢で、</p>
+
+<blockquote>
+  <p>契約が終了したので、受け取った秘密情報は自由に利用できる</p>
+</blockquote>
+
+<p>のように書かれていたら、誤りの可能性が高いです。</p>
+
+<h3 id="誤解4守秘義務は従業員だけの問題である">誤解4：守秘義務は従業員だけの問題である</h3>
+
+<p>守秘義務は、従業員だけでなく、委託先、派遣社員、取引先などにも関係します。</p>
+
+<p>秘密情報にアクセスできる人や組織には、必要に応じて守秘義務を明確にする必要があります。</p>
+
+<p>SG試験では、<strong>社外の関係者にも秘密情報保護の責任を明確にする</strong>という視点が大切です。</p>
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>秘密保持契約書と守秘義務契約書は、どちらも<strong>秘密情報を守る責任を文書化する契約</strong>である</li>
+  <li>守秘義務は「責任」、契約書は「責任を明確にする手段」と考える</li>
+  <li>秘密情報へアクセスする前に、対象情報、利用目的、期間、終了時の対応を明確にする</li>
+  <li>契約終了後も、秘密保持の責任が続く場合がある</li>
+  <li>SG試験では、「契約書に署名すれば十分」「契約終了後は自由に使える」という選択肢に注意する</li>
+</ul>
+
+<h2 id="確認問題">確認問題</h2>
+
+<p>秘密保持契約書又は守秘義務契約書に関する説明として、最も適切なものはどれか。</p>
+
+<ol>
+  <li>秘密情報を扱う人や組織に対して、秘密情報の範囲、利用目的、保持期間などを明確にするために締結する。</li>
+  <li>秘密保持契約書に署名すれば、アクセス権限管理や教育などの管理策は不要になる。</li>
+  <li>契約期間が終了した時点で、受け取った秘密情報は自由に利用してよい。</li>
+  <li>守秘義務契約書は従業員だけを対象にするものであり、委託先や取引先には関係しない。</li>
+</ol>
+
+<details>
+<summary>回答と解説</summary>
+
+正解は **1** です。
+
+秘密保持契約書や守秘義務契約書は、秘密情報を扱う人や組織に対して、何を秘密として扱うか、どの目的で使ってよいか、いつまで守るかなどを明確にするために使います。
+
+2は誤りです。契約書だけでなく、アクセス権限管理、教育、ログ管理などの運用も必要です。  
+3は誤りです。契約終了後も、一定期間は秘密保持の責任が続く場合があります。  
+4は誤りです。守秘義務は従業員だけでなく、委託先や取引先にも関係します。
+
+</details>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-physical/">入退室管理とは？物理アクセス制御の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control/">アクセス管理とは？特権IDとneed-to-knowで権限を適切に制御【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-rights-management/">アクセス権限管理とは？付与・変更・削除の流れを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/administrator-privileges/">管理者権限とは？特権的アクセス権との違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/anti-passback/">アンチパスバックとは？不正な入退室を防ぐ仕組み【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>情報セキュリティ管理基準とは？情報セキュリティ監査の判断基準を整理【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="情報セキュリティ管理基準とは？情報セキュリティ監査の判断基準を整理【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="情報セキュリティ管理基準は、情報セキュリティ監査で管理策の妥当性を判断するための基準です。JIS Q 27001、JIS Q 27002との関係、管理策と詳細管理策、SG試験で問われやすい守秘義務の考え方を整理します。" />
+<meta property="og:description" content="情報セキュリティ管理基準は、情報セキュリティ監査で管理策の妥当性を判断するための基準です。JIS Q 27001、JIS Q 27002との関係、管理策と詳細管理策、SG試験で問われやすい守秘義務の考え方を整理します。" />
+<link rel="canonical" href="https://stemtazoo.github.io/sg/information-security-management-standard/" />
+<meta property="og:url" content="https://stemtazoo.github.io/sg/information-security-management-standard/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="情報セキュリティ管理基準とは？情報セキュリティ監査の判断基準を整理【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"情報セキュリティ管理基準は、情報セキュリティ監査で管理策の妥当性を判断するための基準です。JIS Q 27001、JIS Q 27002との関係、管理策と詳細管理策、SG試験で問われやすい守秘義務の考え方を整理します。","headline":"情報セキュリティ管理基準とは？情報セキュリティ監査の判断基準を整理【SG試験】","url":"https://stemtazoo.github.io/sg/information-security-management-standard/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">情報セキュリティ管理基準とは？情報セキュリティ監査の判断基準を整理【SG試験】</h1>
+      <h2 class="project-tagline">情報セキュリティ管理基準は、情報セキュリティ監査で管理策の妥当性を判断するための基準です。JIS Q 27001、JIS Q 27002との関係、管理策と詳細管理策、SG試験で問われやすい守秘義務の考え方を整理します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">情報セキュリティ管理基準は、情報セキュリティ監査で管理策の妥当性を判断するための基準です。JIS Q 27001、JIS Q 27002との関係、管理策と詳細管理策、SG試験で問われやすい守秘義務の考え方を整理します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-management</span>
+        
+          <span class="post-tag">isms</span>
+        
+          <span class="post-tag">system_audit</span>
+        
+          <span class="post-tag">security_standard</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+
+<p><strong>情報セキュリティ管理基準</strong>とは、組織が情報資産を守るために、どのような管理策を整備・運用すべきかを示した基準です。<br />
+SG試験では、細かい規格番号を暗記するよりも、<strong>情報セキュリティ監査で「管理策が妥当か」を判断するための尺度</strong>として使われる点を押さえることが大切です。</p>
+
+<p>特に重要なのは、次の3点です。</p>
+
+<ul>
+  <li>情報セキュリティ管理基準は、<strong>情報セキュリティ監査の判断基準</strong>として使われる</li>
+  <li>JIS Q 27001やJIS Q 27002と関係が深い</li>
+  <li>守秘義務、アクセス管理、委託先管理、リスク対応など、組織の管理策を確認するために使われる</li>
+</ul>
+
+<h2 id="直感的な説明">直感的な説明</h2>
+
+<p>情報セキュリティ管理基準は、簡単にいうと、<strong>情報セキュリティ対策のチェックリストの土台</strong>です。</p>
+
+<p>例えば、会社が「情報セキュリティ対策をしています」と言っても、何をもって十分と判断するかが曖昧だと、監査する人によって評価がばらついてしまいます。</p>
+
+<p>そこで、情報セキュリティ管理基準を使うと、</p>
+
+<ul>
+  <li>ルールは整備されているか</li>
+  <li>責任者は決まっているか</li>
+  <li>従業員や委託先の責任は明確か</li>
+  <li>アクセス権限は適切に管理されているか</li>
+  <li>インシデント対応の仕組みはあるか</li>
+</ul>
+
+<p>といった観点で、組織の管理策を確認できます。</p>
+
+<p>つまり、情報セキュリティ管理基準は、<strong>監査人が好き嫌いで判断しないための共通のものさし</strong>と考えると理解しやすいです。</p>
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+
+<p>情報セキュリティ管理基準は、情報セキュリティマネジメントに関する国際規格との整合を意識して作られた基準です。<br />
+現在の基準は、JIS Q 27001やJIS Q 27002の考え方と関係しています。</p>
+
+<p>大きく見ると、次のような内容を扱います。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>観点</th>
+      <th>内容</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>マネジメント</td>
+      <td>方針、体制、責任、リスクへの対応など</td>
+    </tr>
+    <tr>
+      <td>管理策</td>
+      <td>アクセス制御、教育、委託先管理、物理的対策、技術的対策など</td>
+    </tr>
+    <tr>
+      <td>監査での利用</td>
+      <td>組織の管理策が適切かを判断する尺度として利用</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>ここで大切なのは、情報セキュリティ管理基準が、単なる技術対策の一覧ではないという点です。</p>
+
+<p>暗号化、認証、ファイアウォールのような技術だけでなく、</p>
+
+<ul>
+  <li>組織体制</li>
+  <li>役割と責任</li>
+  <li>従業員教育</li>
+  <li>委託先との契約</li>
+  <li>記録と監査</li>
+  <li>継続的改善</li>
+</ul>
+
+<p>のような、管理面・運用面も含めて確認します。</p>
+
+<p>SG試験では、ここを理解していると、単なる技術問題ではなく、<strong>組織としてどう管理すべきか</strong>を問う選択肢に対応しやすくなります。</p>
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+
+<p>情報セキュリティ管理基準は、主に次のような場面で使われます。</p>
+
+<h3 id="情報セキュリティ監査を行う場面">情報セキュリティ監査を行う場面</h3>
+
+<p>監査人が、組織の情報セキュリティ対策を確認するときに、判断の基準として使います。</p>
+
+<p>例えば、従業員の守秘義務について監査する場合、単に「秘密を守るように言っているか」だけでは不十分です。</p>
+
+<ul>
+  <li>雇用契約や就業規則で責任が明確になっているか</li>
+  <li>雇用終了後も必要な期間、守秘義務が継続するようにしているか</li>
+  <li>秘密情報にアクセスする人に、適切な契約や誓約を求めているか</li>
+  <li>違反時の対応が定められているか</li>
+</ul>
+
+<p>といった観点で確認します。</p>
+
+<h3 id="社内ルールを整備する場面">社内ルールを整備する場面</h3>
+
+<p>情報セキュリティポリシーや各種手順書を整備するときにも、情報セキュリティ管理基準の考え方が参考になります。</p>
+
+<p>例えば、次のような社内ルールを整えるときです。</p>
+
+<ul>
+  <li>アクセス権限管理ルール</li>
+  <li>パスワード管理ルール</li>
+  <li>委託先管理ルール</li>
+  <li>情報機器の持出しルール</li>
+  <li>インシデント対応手順</li>
+  <li>従業員教育のルール</li>
+</ul>
+
+<h3 id="外部委託先を管理する場面">外部委託先を管理する場面</h3>
+
+<p>委託先に情報処理を依頼する場合、委託先が情報を適切に扱うかを確認する必要があります。</p>
+
+<p>このとき、契約書や委託先管理のルールに、守秘義務、再委託、アクセス制御、事故時の報告などを定めておくことが重要です。</p>
+
+<p>SG試験では、<strong>委託したら終わりではなく、委託元にも管理責任が残る</strong>という考え方がよく問われます。</p>
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="誤解1情報セキュリティ管理基準は技術対策だけを定めたもの">誤解1：情報セキュリティ管理基準は、技術対策だけを定めたもの</h3>
+
+<p>これは誤りです。</p>
+
+<p>情報セキュリティ管理基準は、技術対策だけでなく、組織、人的対策、物理的対策、運用管理、委託先管理なども含みます。</p>
+
+<p>SG試験では、ファイアウォールや暗号化だけでなく、<strong>責任分担、教育、契約、監査、記録</strong>といった管理面を選べるかが重要です。</p>
+
+<h3 id="誤解2守秘義務は雇用が終われば自動的になくなる">誤解2：守秘義務は、雇用が終われば自動的になくなる</h3>
+
+<p>これは誤りです。</p>
+
+<p>過去問でも問われやすいポイントです。<br />
+組織の管理策として、雇用終了後も、定められた期間は守秘義務を継続させるようにしておくことがあります。</p>
+
+<p>そのため、</p>
+
+<blockquote>
+  <p>雇用の終了をもって守秘義務が解消される</p>
+</blockquote>
+
+<p>という選択肢は、指摘事項になり得ます。</p>
+
+<h3 id="誤解3勤務時間外の守秘義務は雇用契約に書かなければ成立しない">誤解3：勤務時間外の守秘義務は、雇用契約に書かなければ成立しない</h3>
+
+<p>これも注意が必要です。</p>
+
+<p>守秘義務は、労働契約や就業規則、信義則上の義務などと関係します。<br />
+問題文で「雇用契約に書かれているか」だけに注目すると、引っかかりやすくなります。</p>
+
+<p>SG試験では、<strong>その選択肢が情報セキュリティ管理基準上の指摘事項に当たるか</strong>を考えることが大切です。</p>
+
+<h3 id="誤解4情報セキュリティ管理基準と情報セキュリティ監査基準は同じもの">誤解4：情報セキュリティ管理基準と情報セキュリティ監査基準は同じもの</h3>
+
+<p>似ていますが、役割が異なります。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>用語</th>
+      <th>役割</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>情報セキュリティ管理基準</td>
+      <td>管理策の妥当性を判断するための基準</td>
+    </tr>
+    <tr>
+      <td>情報セキュリティ監査基準</td>
+      <td>監査をどのように実施・報告するかの基準</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>ざっくりいうと、管理基準は<strong>何を確認するか</strong>、監査基準は<strong>どう監査するか</strong>に近いイメージです。</p>
+
+<h2 id="sg試験での判断ポイント">SG試験での判断ポイント</h2>
+
+<p>SG試験では、次のように判断すると解きやすくなります。</p>
+
+<h3 id="1-技術ではなく管理策の問題として見る">1. 技術ではなく、管理策の問題として見る</h3>
+
+<p>情報セキュリティ管理基準の問題では、暗号化方式やプロトコルの細かい知識よりも、組織としての管理が問われます。</p>
+
+<p>例えば、守秘義務の問題なら、</p>
+
+<ul>
+  <li>誰に守秘義務を負わせるか</li>
+  <li>いつからいつまで責任を負うか</li>
+  <li>契約や規程で明確になっているか</li>
+  <li>違反時の対応が定められているか</li>
+</ul>
+
+<p>を確認します。</p>
+
+<h3 id="2-雇用中だけ勤務時間中だけと限定する選択肢に注意する">2. 「雇用中だけ」「勤務時間中だけ」と限定する選択肢に注意する</h3>
+
+<p>守秘義務や情報保護の責任は、勤務時間中だけに限られるとは限りません。<br />
+また、雇用終了後も一定期間継続するように定めることがあります。</p>
+
+<p>そのため、</p>
+
+<ul>
+  <li>雇用終了と同時に守秘義務がなくなる</li>
+  <li>勤務時間外は守秘義務を負わない</li>
+</ul>
+
+<p>のような選択肢は、慎重に確認します。</p>
+
+<h3 id="3-契約書への署名だけでなく組織の管理策全体を見る">3. 契約書への署名だけでなく、組織の管理策全体を見る</h3>
+
+<p>守秘義務契約書に署名することは重要ですが、それだけで十分とは限りません。</p>
+
+<p>情報セキュリティ管理では、契約、教育、アクセス管理、違反時の対応などを組み合わせて、実効性のある管理策にする必要があります。</p>
+
+<h2 id="試験で迷ったときの考え方">試験で迷ったときの考え方</h2>
+
+<p>守秘義務に関する問題で迷ったら、次のように考えると整理しやすいです。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>選択肢の内容</th>
+      <th>判断の方向性</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>雇用終了後も一定期間、守秘義務を継続する</td>
+      <td>適切な管理策になりやすい</td>
+    </tr>
+    <tr>
+      <td>雇用終了と同時に守秘義務がなくなる</td>
+      <td>指摘事項になりやすい</td>
+    </tr>
+    <tr>
+      <td>違反時の対応を定める</td>
+      <td>適切な管理策になりやすい</td>
+    </tr>
+    <tr>
+      <td>秘密情報へアクセスする前に守秘義務契約を行う</td>
+      <td>適切な管理策になりやすい</td>
+    </tr>
+    <tr>
+      <td>勤務時間外だから守秘義務がないと考える</td>
+      <td>注意が必要</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>過去問では、<strong>一見すると雇用契約の細かい話に見えても、実際には情報セキュリティ管理基準に基づく管理策の妥当性を問う問題</strong>として出題されます。</p>
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>情報セキュリティ管理基準は、<strong>情報セキュリティ監査で管理策を判断するための基準</strong>である</li>
+  <li>技術対策だけでなく、組織、人的対策、物理的対策、運用、委託先管理も含む</li>
+  <li>JIS Q 27001、JIS Q 27002と関係が深い</li>
+  <li>情報セキュリティ監査基準は「監査の進め方」、情報セキュリティ管理基準は「管理策の判断基準」と考える</li>
+  <li>守秘義務は、雇用終了後も一定期間継続させる管理策が重要</li>
+  <li>SG試験では、<strong>組織として責任や管理策を明確にしているか</strong>で選択肢を判断する</li>
+</ul>
+
+<h2 id="確認問題">確認問題</h2>
+
+<p>従業員の守秘義務について、情報セキュリティ管理基準に基づく監査で指摘事項に該当しやすいものはどれか。</p>
+
+<ol>
+  <li>雇用終了後も、定められた期間は守秘義務を負うことを雇用条件に含めている。</li>
+  <li>秘密情報へアクセスする従業員に、アクセス前に守秘義務契約への署名を求めている。</li>
+  <li>守秘義務に違反した場合の措置を定めている。</li>
+  <li>雇用の終了をもって守秘義務が解消されることを雇用契約に定めている。</li>
+</ol>
+
+<details>
+<summary>回答と解説</summary>
+
+正解は **4** です。
+
+守秘義務は、雇用中だけでなく、雇用終了後も一定期間継続するように定めることがあります。  
+そのため、「雇用の終了をもって守秘義務が解消される」とする契約は、情報セキュリティ管理上の指摘事項になり得ます。
+
+1、2、3は、守秘義務を明確にし、秘密情報を保護するための管理策として適切です。
+
+</details>
+
+<h2 id="関連記事">関連記事</h2>
+
+<ul>
+  <li><a href="/sg/security-audit/">情報セキュリティ監査とは？監査の目的と判断基準を整理【SG試験】</a></li>
+  <li><a href="/sg/information-security-audit-standard/">情報セキュリティ監査基準とは？監査の進め方と報告の基準を整理【SG試験】</a></li>
+  <li><a href="/sg/security-policy/">情報セキュリティポリシーとは？3階層で理解する基本ルール【SG試験】</a></li>
+  <li><a href="/sg/isms/">ISMSとは？情報セキュリティを継続的に管理する仕組み【SG試験】</a></li>
+  <li><a href="/sg/vendor-management/">委託先管理とは？外部委託時の情報セキュリティ責任を整理【SG試験】</a></li>
+</ul>
+
+<h2 id="参考リンク">参考リンク</h2>
+
+<ul>
+  <li>経済産業省：情報セキュリティ監査制度<br />
+https://www.meti.go.jp/policy/netsecurity/is-kansa/</li>
+  <li>経済産業省：情報セキュリティ管理基準（令和7年改正版）<br />
+https://www.meti.go.jp/policy/netsecurity/is-kansa/IS_Management_Standard_R7.pdf</li>
+</ul>
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

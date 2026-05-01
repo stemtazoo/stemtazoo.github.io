@@ -11,9 +11,9 @@
     出典：{{ exam.source_note }}（IPA）
   </p>
   <p class="sg-past-links">
-    <a href="{{ exam.official_page }}">公式ページ</a>
-    <a href="{{ exam.question_pdf }}">問題冊子PDF</a>
-    <a href="{{ exam.answer_pdf }}">解答例PDF</a>
+    <a href="{{ exam.official_page }}" target="_blank" rel="noopener">公式ページ</a>
+    <a href="{{ exam.question_pdf }}" target="_blank" rel="noopener">問題冊子PDF</a>
+    <a href="{{ exam.answer_pdf }}" target="_blank" rel="noopener">解答例PDF</a>
   </p>
 </section>
 
@@ -25,12 +25,20 @@
   </p>
   <p>
     問題文と図表は，レイアウト崩れを避けるため公式PDFを参照する形にしています。解説は当サイト独自の学習用メモです。
+    IPAのPDFはブラウザ内での埋め込み表示が拒否される場合があるため，別タブで開いて参照してください。
   </p>
 </section>
 
-<div class="sg-past-pdf">
-  <iframe title="{{ exam.title }} 問題冊子PDF" src="{{ exam.question_pdf }}"></iframe>
-</div>
+<section class="sg-past-official">
+  <h2>公式PDF</h2>
+  <p>
+    問題冊子PDFを別タブで開き，このページに戻って回答を選んでください。
+  </p>
+  <p class="sg-past-links">
+    <a href="{{ exam.question_pdf }}" target="_blank" rel="noopener">問題冊子PDFを開く</a>
+    <a href="{{ exam.answer_pdf }}" target="_blank" rel="noopener">解答例PDFを開く</a>
+  </p>
+</section>
 
 <div class="sg-past-actions" data-sg-past-actions>
   <button type="button" class="sg-past-button" data-sg-score>採点する</button>
@@ -59,25 +67,27 @@
     <button type="button" class="sg-past-button" data-sg-check>答えを見る</button>
     <p class="sg-past-result" data-sg-result aria-live="polite"></p>
 
-    <details markdown="1" class="sg-past-explanation">
+    <details class="sg-past-explanation">
       <summary>▶ クリックして解説を読む（ここを開く）</summary>
 
-**正解：{{ q.answer }}**
+      <p><strong>正解：{{ q.answer }}</strong></p>
 
-### 解説
-{{ q.explanation }}
+      <h3>解説</h3>
+      <p>{{ q.explanation }}</p>
 
-👉 判断ポイント  
-{{ q.point }}
+      <p class="sg-past-point"><strong>判断ポイント</strong><br>
+      {{ q.point }}</p>
 
-{% if q.related %}
-関連ページ：
-{% for link in q.related %}
-- [{{ link.title }}]({{ link.url | relative_url }})
-{% endfor %}
-{% endif %}
+      {% if q.related %}
+      <p><strong>関連ページ</strong></p>
+      <ul>
+        {% for link in q.related %}
+        <li><a href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
+        {% endfor %}
+      </ul>
+      {% endif %}
 
-出典：{{ exam.source_note }} 問{{ q.number }}
+      <p class="sg-past-source">出典：{{ exam.source_note }} 問{{ q.number }}</p>
     </details>
   </article>
   {% endfor %}

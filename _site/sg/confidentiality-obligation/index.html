@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>守秘義務とは？雇用終了後も続く情報保護の責任【SG試験】 | AI・データサイエンス・IT学習ノート</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="守秘義務とは？雇用終了後も続く情報保護の責任【SG試験】" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="守秘義務は、業務で知った秘密情報を正当な理由なく外部に漏らさない責任です。雇用終了後も続く場合がある点、秘密保持契約との関係、SG試験でのひっかけポイントを整理します。" />
+<meta property="og:description" content="守秘義務は、業務で知った秘密情報を正当な理由なく外部に漏らさない責任です。雇用終了後も続く場合がある点、秘密保持契約との関係、SG試験でのひっかけポイントを整理します。" />
+<link rel="canonical" href="https://stemtazoo.github.io/sg/confidentiality-obligation/" />
+<meta property="og:url" content="https://stemtazoo.github.io/sg/confidentiality-obligation/" />
+<meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="守秘義務とは？雇用終了後も続く情報保護の責任【SG試験】" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"守秘義務は、業務で知った秘密情報を正当な理由なく外部に漏らさない責任です。雇用終了後も続く場合がある点、秘密保持契約との関係、SG試験でのひっかけポイントを整理します。","headline":"守秘義務とは？雇用終了後も続く情報保護の責任【SG試験】","url":"https://stemtazoo.github.io/sg/confidentiality-obligation/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vy0zu3b9yo");
+</script>
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">守秘義務とは？雇用終了後も続く情報保護の責任【SG試験】</h1>
+      <h2 class="project-tagline">守秘義務は、業務で知った秘密情報を正当な理由なく外部に漏らさない責任です。雇用終了後も続く場合がある点、秘密保持契約との関係、SG試験でのひっかけポイントを整理します。</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <article class="post">
+  <header class="post-header">
+    
+      <p class="post-meta">守秘義務は、業務で知った秘密情報を正当な理由なく外部に漏らさない責任です。雇用終了後も続く場合がある点、秘密保持契約との関係、SG試験でのひっかけポイントを整理します。</p>
+    
+    
+      <p class="post-categories">
+        
+          <span class="post-tag">sg</span>
+        
+          <span class="post-tag">sg-security-management</span>
+        
+          <span class="post-tag">data_leakage</span>
+        
+          <span class="post-tag">security_training</span>
+        
+          <span class="post-tag">it_security_operations</span>
+        
+      </p>
+    
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </header>
+  <div class="post-content">
+    
+    
+    
+    
+    <h2 id="まず結論">まず結論</h2>
+
+<p><strong>守秘義務</strong>とは、業務で知った秘密情報を、正当な理由なく外部に漏らさない責任のことです。</p>
+
+<p>SG試験では、守秘義務そのものの法律論を深掘りするよりも、<strong>組織が秘密情報を守るために、従業員や委託先にどのような責任を負わせるべきか</strong>が問われます。</p>
+
+<p>特に重要なのは、次の点です。</p>
+
+<ul>
+  <li>守秘義務は、勤務時間中だけの責任ではない</li>
+  <li>雇用終了後も、一定期間続くように定める場合がある</li>
+  <li>秘密情報へアクセスする前に、契約や誓約で責任を明確にする</li>
+  <li>違反時の対応をあらかじめ決めておく</li>
+</ul>
+
+<p>選択肢で、<strong>「退職したら守秘義務はなくなる」</strong>のように書かれていたら注意です。</p>
+
+<h2 id="直感的な説明">直感的な説明</h2>
+
+<p>守秘義務は、簡単にいうと、<strong>仕事で知った秘密を、仕事の外に持ち出さない約束</strong>です。</p>
+
+<p>例えば、業務では次のような情報に触れることがあります。</p>
+
+<ul>
+  <li>顧客情報</li>
+  <li>取引先情報</li>
+  <li>社内の売上情報</li>
+  <li>設計図や仕様書</li>
+  <li>システムの設定情報</li>
+  <li>パスワードやアクセス権限に関する情報</li>
+</ul>
+
+<p>これらは、仕事をするために必要だから見られる情報です。<br />
+個人が自由に使ってよい情報ではありません。</p>
+
+<p>そのため、従業員は、在職中だけでなく、退職後であっても、業務で知った秘密情報を勝手に話したり、持ち出したりしてはいけません。</p>
+
+<p>SG試験では、守秘義務を<strong>個人の道徳心だけに頼るもの</strong>として考えるのではなく、契約、規程、教育、アクセス管理などで支える管理策として理解することが大切です。</p>
+
+<h2 id="定義仕組み">定義・仕組み</h2>
+
+<p>守秘義務は、秘密情報を扱う人に対して、その情報を漏らさないように求める義務です。</p>
+
+<p>情報セキュリティ管理の文脈では、守秘義務は人的対策の一つです。<br />
+技術的な対策だけではなく、人が情報をどう扱うかを管理するために重要になります。</p>
+
+<p>経済産業省の情報セキュリティ管理基準では、秘密保持契約又は守秘義務契約について、情報保護に対する組織のニーズを反映し、文書化し、定期的にレビューし、関係者が署名する管理策として示されています。</p>
+
+<ul>
+  <li>経済産業省：情報セキュリティ管理基準（令和7年改正版）<br />
+https://www.meti.go.jp/policy/netsecurity/is-kansa/IS_Management_Standard_R7.pdf</li>
+</ul>
+
+<p>守秘義務を実効性のあるものにするには、次のような仕組みが必要です。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>観点</th>
+      <th>内容</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>対象情報</td>
+      <td>何を秘密情報とするかを明確にする</td>
+    </tr>
+    <tr>
+      <td>対象者</td>
+      <td>従業員、派遣社員、委託先など、誰が責任を負うかを明確にする</td>
+    </tr>
+    <tr>
+      <td>期間</td>
+      <td>在職中だけでなく、退職後の扱いも明確にする</td>
+    </tr>
+    <tr>
+      <td>契約・規程</td>
+      <td>雇用契約、就業規則、秘密保持契約などで定める</td>
+    </tr>
+    <tr>
+      <td>違反時の対応</td>
+      <td>違反した場合の措置を定める</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>ここで大切なのは、守秘義務を「口頭で注意しただけ」にしないことです。</p>
+
+<p>秘密情報を守るには、誰が、何を、いつまで、どのように守るのかを文書で明確にしておく必要があります。</p>
+
+<h2 id="どんな場面で使う">どんな場面で使う？</h2>
+
+<p>守秘義務は、秘密情報に触れる可能性がある場面で広く使われます。</p>
+
+<h3 id="従業員が秘密情報を扱う場面">従業員が秘密情報を扱う場面</h3>
+
+<p>従業員が顧客情報や社内情報を扱う場合、守秘義務が重要になります。</p>
+
+<p>例えば、営業担当者が顧客リストを扱う場合や、システム担当者が利用者情報にアクセスする場合です。</p>
+
+<p>このとき、組織は従業員に対して、秘密情報の扱い方を教育し、必要に応じて守秘義務契約や誓約書を求めます。</p>
+
+<h3 id="退職異動の場面">退職・異動の場面</h3>
+
+<p>退職や異動のときは、情報漏えいが起きやすい場面です。</p>
+
+<p>例えば、退職者が顧客リストや設計資料を持ち出すと、組織に大きな損害が出る可能性があります。</p>
+
+<p>そのため、退職時には、</p>
+
+<ul>
+  <li>貸与端末や資料を返却する</li>
+  <li>アカウントを停止する</li>
+  <li>秘密情報の持出しがないか確認する</li>
+  <li>退職後も守秘義務が続くことを確認する</li>
+</ul>
+
+<p>といった対応が重要です。</p>
+
+<h3 id="委託先や外部関係者に情報を渡す場面">委託先や外部関係者に情報を渡す場面</h3>
+
+<p>業務委託や外部サービスの利用では、社外の人が秘密情報に触れることがあります。</p>
+
+<p>この場合も、委託先に守秘義務を負わせることが重要です。</p>
+
+<p>SG試験では、<strong>委託したから責任がなくなるのではなく、委託元にも管理責任が残る</strong>という考え方がよく問われます。</p>
+
+<h2 id="よくある誤解混同">よくある誤解・混同</h2>
+
+<h3 id="誤解1雇用が終了すれば守秘義務も終わる">誤解1：雇用が終了すれば、守秘義務も終わる</h3>
+
+<p>これはSG試験で特に注意したい誤解です。</p>
+
+<p>守秘義務は、雇用中だけでなく、退職後も一定期間続くように定めることがあります。</p>
+
+<p>そのため、選択肢で、</p>
+
+<blockquote>
+  <p>雇用の終了をもって守秘義務が解消される</p>
+</blockquote>
+
+<p>と書かれていたら、情報セキュリティ管理上の指摘事項になりやすいです。</p>
+
+<h3 id="誤解2勤務時間外なら守秘義務は関係ない">誤解2：勤務時間外なら、守秘義務は関係ない</h3>
+
+<p>これも誤りです。</p>
+
+<p>秘密情報を漏らしてはいけない責任は、勤務時間中だけに限られるものではありません。</p>
+
+<p>例えば、勤務時間外に家族や友人へ顧客情報を話す、SNSに業務情報を書く、といった行為も問題になります。</p>
+
+<p>SG試験では、<strong>勤務時間外だから守秘義務がない</strong>という考え方を切れるようにしておきます。</p>
+
+<h3 id="誤解3秘密保持契約書に署名すればそれだけで十分">誤解3：秘密保持契約書に署名すれば、それだけで十分</h3>
+
+<p>署名は重要ですが、それだけで十分とは限りません。</p>
+
+<p>守秘義務を実効性のある管理策にするには、次のような運用も必要です。</p>
+
+<ul>
+  <li>秘密情報の分類</li>
+  <li>アクセス権限の管理</li>
+  <li>情報持出しの制限</li>
+  <li>教育・訓練</li>
+  <li>退職時の確認</li>
+  <li>違反時の対応</li>
+</ul>
+
+<p>SG試験では、契約書だけでなく、<strong>管理策全体として機能しているか</strong>を見ることが大切です。</p>
+
+<h3 id="誤解4守秘義務と秘密保持契約はまったく同じ意味">誤解4：守秘義務と秘密保持契約はまったく同じ意味</h3>
+
+<p>近い関係にありますが、少し見方が違います。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>用語</th>
+      <th>意味</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>守秘義務</td>
+      <td>秘密情報を漏らさない責任そのもの</td>
+    </tr>
+    <tr>
+      <td>秘密保持契約</td>
+      <td>守秘義務を契約として明確にする文書</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>つまり、守秘義務は「責任」、秘密保持契約は「その責任を文書で明確にする手段」と考えると整理しやすいです。</p>
+
+<h2 id="まとめ試験直前用">まとめ（試験直前用）</h2>
+
+<ul>
+  <li>守秘義務は、<strong>業務で知った秘密情報を漏らさない責任</strong>である</li>
+  <li>雇用終了後も、一定期間続くように定める場合がある</li>
+  <li>勤務時間外でも、秘密情報を漏らしてよいわけではない</li>
+  <li>秘密保持契約や誓約書は、守秘義務を明確にする手段である</li>
+  <li>SG試験では、「退職したら守秘義務がなくなる」という選択肢に注意する</li>
+</ul>
+
+<h2 id="確認問題">確認問題</h2>
+
+<p>従業員の守秘義務に関する説明として、情報セキュリティ管理上、最も不適切なものはどれか。</p>
+
+<ol>
+  <li>秘密情報へアクセスする従業員に対して、アクセス前に守秘義務契約への署名を求める。</li>
+  <li>退職後も、定められた期間は秘密情報を漏らさない責任が続くように定める。</li>
+  <li>勤務時間外であっても、業務で知った秘密情報を外部に漏らしてはならない。</li>
+  <li>雇用が終了した時点で、業務中に知った秘密情報に関する守秘義務も自動的に消滅すると定める。</li>
+</ol>
+
+<details>
+<summary>回答と解説</summary>
+
+正解は **4** です。
+
+守秘義務は、雇用中だけでなく、退職後も一定期間続くように定めることがあります。  
+そのため、「雇用が終了したら守秘義務も自動的に消滅する」とする考え方は、情報セキュリティ管理上、不適切です。
+
+1、2、3は、秘密情報を守るための管理策として適切です。  
+特にSG試験では、**雇用終了後も続く責任かどうか**を判断できるかがポイントになります。
+
+</details>
+
+<h2 id="-関連記事">🔗 関連記事</h2>
+
+<ul style="padding-left: 20px;">
+
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control-physical/">入退室管理とは？物理アクセス制御の基本【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-control/">アクセス管理とは？特権IDとneed-to-knowで権限を適切に制御【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/access-rights-management/">アクセス権限管理とは？付与・変更・削除の流れを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/administrator-privileges/">管理者権限とは？特権的アクセス権との違いを整理【SG試験】</a>
+        </li>
+        
+      
+
+      
+    
+  
+    
+  
+    
+      
+
+      
+
+      
+        <li style="margin-bottom: 6px;">
+          <a href="/sg/anti-passback/">アンチパスバックとは？不正な入退室を防ぐ仕組み【SG試験】</a>
+        </li>
+        
+      
+
+      
+        
+
+
+
+</ul>
+
+<hr />
+
+<div style="margin-top: 16px;">
+  🏠 <a href="/sg/">情報セキュリティマネジメントトップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  
+
+  
+</div>
+
+
+  </div>
+
+  
+  
+
+  
+</article>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

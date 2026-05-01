@@ -147,7 +147,8 @@
 }
 
 .sg-past-meta,
-.sg-past-guide {
+.sg-past-guide,
+.sg-past-official {
   background: #f7fbff;
   border: 1px solid #dfe5eb;
   border-radius: 8px;
@@ -181,21 +182,6 @@
 .sg-past-button--secondary {
   background: #fff;
   color: #0b4f7d !important;
-}
-
-.sg-past-pdf {
-  border: 1px solid #dfe5eb;
-  border-radius: 8px;
-  height: 72vh;
-  margin: 1.5rem 0;
-  min-height: 520px;
-  overflow: hidden;
-}
-
-.sg-past-pdf iframe {
-  border: 0;
-  height: 100%;
-  width: 100%;
 }
 
 .sg-past-actions {
@@ -310,6 +296,24 @@
   font-weight: 700;
 }
 
+.sg-past-explanation h3 {
+  border-bottom: 0;
+  margin-top: 1.2rem;
+  padding-bottom: 0;
+}
+
+.sg-past-point {
+  background: #f2f6f9;
+  border: 1px solid #dfe5eb;
+  border-radius: 6px;
+  padding: 0.75rem 0.85rem;
+}
+
+.sg-past-source {
+  color: #586878;
+  font-size: 0.95rem;
+}
+
 @media (max-width: 768px) {
   .post {
     margin: 1.5rem 1rem;
@@ -322,11 +326,6 @@
 
   .tag-filter {
     align-items: flex-start;
-  }
-
-  .sg-past-pdf {
-    height: 62vh;
-    min-height: 360px;
   }
 
   .sg-past-question__header {
