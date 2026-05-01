@@ -10,14 +10,14 @@
 <meta property="og:locale" content="ja" />
 <meta name="description" content="AI・データサイエンス・ITの学びをやさしく整理するブログ" />
 <meta property="og:description" content="AI・データサイエンス・ITの学びをやさしく整理するブログ" />
-<link rel="canonical" href="https://stemtazoo.github.io/gk/clip/" />
-<meta property="og:url" content="https://stemtazoo.github.io/gk/clip/" />
+<link rel="canonical" href="http://localhost:4000/gk/clip/" />
+<meta property="og:url" content="http://localhost:4000/gk/clip/" />
 <meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="CLIP（画像とテキストの対応付けモデル）とは？G検定対策" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"AI・データサイエンス・ITの学びをやさしく整理するブログ","headline":"CLIP（画像とテキストの対応付けモデル）とは？G検定対策","url":"https://stemtazoo.github.io/gk/clip/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"AI・データサイエンス・ITの学びをやさしく整理するブログ","headline":"CLIP（画像とテキストの対応付けモデル）とは？G検定対策","url":"http://localhost:4000/gk/clip/"}</script>
 <!-- End Jekyll SEO tag -->
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
