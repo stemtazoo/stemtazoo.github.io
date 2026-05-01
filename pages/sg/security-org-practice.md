@@ -91,22 +91,22 @@ SG試験では、
 
 次のうち、JPCERT/CCの説明として**正しいもの**はどれか。
 
-A. 組織内でインシデントの対応を行う  
-B. 政府としてセキュリティ方針を策定する  
-C. インシデントに関する情報共有や調整を行う  
-D. セキュリティ監視を行う
+ア. 組織内でインシデントの対応を行う  
+イ. 政府としてセキュリティ方針を策定する  
+ウ. インシデントに関する情報共有や調整を行う  
+エ. セキュリティ監視を行う
 
 <details>
 <summary>▶ 解答と解説を見る</summary>
 
 ### 解答
-**C**
+**ウ**
 
 ### 解説
-- A：CSIRT → 不適切
-- B：NISC → 不適切
-- C：JPCERT/CC → 適切
-- D：SOC → 不適切
+- ア：CSIRT → 不適切
+- イ：NISC → 不適切
+- ウ：JPCERT/CC → 適切
+- エ：SOC → 不適切
 
 **「情報共有・調整」**がJPCERT/CCのポイントです。
 
@@ -121,16 +121,16 @@ D. セキュリティ監視を行う
 
 この役割を担う組織として最も適切なものはどれか。
 
-A. IPA  
-B. CSIRT  
-C. JPCERT/CC  
-D. NISC
+ア. IPA  
+イ. CSIRT  
+ウ. JPCERT/CC  
+エ. NISC
 
 <details>
 <summary>▶ 解答と解説を見る</summary>
 
 ### 解答
-**B**
+**イ**
 
 ### 解説
 影響範囲の調査や封じ込めは、  
@@ -147,16 +147,16 @@ D. NISC
 サイバー攻撃の情報を収集し、  
 複数の企業間で共有・連携を促進する役割として最も適切なものはどれか。
 
-A. SOC  
-B. CSIRT  
-C. JPCERT/CC  
-D. NISC
+ア. SOC  
+イ. CSIRT  
+ウ. JPCERT/CC  
+エ. NISC
 
 <details>
 <summary>▶ 解答と解説を見る</summary>
 
 ### 解答
-**C**
+**ウ**
 
 ### 解説
 - SOC：監視
@@ -175,16 +175,16 @@ D. NISC
 サイバーセキュリティ基本法に基づき、  
 日本全体のセキュリティ戦略を策定する組織はどれか。
 
-A. IPA  
-B. JPCERT/CC  
-C. NISC  
-D. CSIRT
+ア. IPA  
+イ. JPCERT/CC  
+ウ. NISC  
+エ. CSIRT
 
 <details>
 <summary>▶ 解答と解説を見る</summary>
 
 ### 解答
-**C**
+**ウ**
 
 ### 解説
 **「日本全体」**  
@@ -199,16 +199,16 @@ D. CSIRT
 
 標的型攻撃に関する対策の支援や情報提供を行う組織として最も適切なものはどれか。
 
-A. IPA  
-B. CSIRT  
-C. JPCERT/CC  
-D. SOC
+ア. IPA  
+イ. CSIRT  
+ウ. JPCERT/CC  
+エ. SOC
 
 <details>
 <summary>▶ 解答と解説を見る</summary>
 
 ### 解答
-**A**
+**ア**
 
 ### 解説
 **支援・情報提供** が中心なら IPA を考えます。
@@ -227,16 +227,16 @@ JPCERT/CCも支援に見えますが、
 
 このとき連携先として最も適切なものはどれか。
 
-A. CSIRT  
-B. SOC  
-C. JPCERT/CC  
-D. IPA
+ア. CSIRT  
+イ. SOC  
+ウ. JPCERT/CC  
+エ. IPA
 
 <details>
 <summary>▶ 解答と解説を見る</summary>
 
 ### 解答
-**C**
+**ウ**
 
 ### 解説
 問題文のポイントは **「海外の関係機関と連携」** です。

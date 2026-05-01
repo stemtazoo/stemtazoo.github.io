@@ -282,10 +282,10 @@ This file is intended to evolve. Good future additions include:
 
 次のうち、最も適切なものはどれか。
 
-A.  
-B.  
-C.  
-D.  
+ア.  
+イ.  
+ウ.  
+エ.  
 
 <details markdown="1">
 <summary>▶ クリックして答えと解説を見る（ここを開く）</summary>
@@ -293,10 +293,10 @@ D.
 **正解：X**
 
 ### 解説
-- A：
-- B：
-- C：
-- D：
+- ア：
+- イ：
+- ウ：
+- エ：
 
 👉 判断ポイント  
 （1行で、本質的な切り分け基準を書く）
