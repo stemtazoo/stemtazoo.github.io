@@ -10,14 +10,14 @@
 <meta property="og:locale" content="ja" />
 <meta name="description" content="AI・データサイエンス・ITの学びをやさしく整理するブログ" />
 <meta property="og:description" content="AI・データサイエンス・ITの学びをやさしく整理するブログ" />
-<link rel="canonical" href="http://localhost:4000/gk/palm/" />
-<meta property="og:url" content="http://localhost:4000/gk/palm/" />
+<link rel="canonical" href="https://stemtazoo.github.io/gk/palm/" />
+<meta property="og:url" content="https://stemtazoo.github.io/gk/palm/" />
 <meta property="og:site_name" content="AI・データサイエンス・IT学習ノート" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="PaLM（大規模言語モデル）とは？G検定対策" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"AI・データサイエンス・ITの学びをやさしく整理するブログ","headline":"PaLM（大規模言語モデル）とは？G検定対策","url":"http://localhost:4000/gk/palm/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"AI・データサイエンス・ITの学びをやさしく整理するブログ","headline":"PaLM（大規模言語モデル）とは？G検定対策","url":"https://stemtazoo.github.io/gk/palm/"}</script>
 <!-- End Jekyll SEO tag -->
 
     <link rel="preconnect" href="https://fonts.gstatic.com">

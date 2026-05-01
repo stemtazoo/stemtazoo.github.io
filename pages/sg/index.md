@@ -43,6 +43,15 @@ categories: [business]
 - [リスク対応とは？4つの対処方法を整理](/sg/risk-response-cia/)
 - [リスク対応の総合問題](/sg/risk-management-final-exercise/)
 
+## 公式過去問で演習する
+
+公式PDFを見ながら回答し、正解・解説・判断ポイントを確認できます。
+
+- [SG公式過去問](/sg/past/)
+- [令和7年度 SG公式過去問](/sg/past/2025r07/)
+- [令和6年度 SG公式過去問](/sg/past/2024r06/)
+- [令和5年度 SG公式過去問](/sg/past/2023r05/)
+
 ## 分野別に探す
 
 - [情報セキュリティ全般](/sg/category/security-overview/)
