@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: NoSQLデータストアとは？RDBとの違いと使いどころを整理【DS検定】
-description: NoSQLデータストアはRDBとの違いと使いどころを整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: NoSQLデータストアの特徴をRDBとの違いから整理します。スキーマレス、分散処理、非構造データ、スケーラビリティの考え方を押さえ、DS検定で問われる使い分けを確認できます。本文では、用語の定義、具体例、似た概念との違い、試験で迷いやすい選択肢の見分け方まで、短時間で復習できるようにまとめています。
 permalink: /ds/nosql-datastore/
 categories: [data-engineering]
 tags: [ds, data-storage, database]

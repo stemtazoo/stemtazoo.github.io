@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "SQLインジェクションとは？仕組みと対策をやさしく理解【SG試験】"
-description: "SQLインジェクションは仕組みと対策をやさしく理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験・情報セキュリティマネジメント試験とで狙われるひっかけポイントを解説します。"
+description: SQLインジェクションの仕組みと対策をSG試験向けに整理します。入力値を悪用した不正SQL実行、情報漏えい・改ざんのリスク、プレースホルダや入力検証による防御の判断ポイントを確認できます。本文では、用語の定義、攻撃や対策の具体例、似た組織や仕組みとの違い、SG試験での判断ポイントまで整理しています。
 permalink: /sg/sql-injection/
 tags: [sg, threat_vulnerability, unauthorized_access, database, sg-security-overview]
 prev: /sg/spyware/

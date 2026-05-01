@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 標準化（Standardization）とは？G検定対策
-description: 標準化（Standardization）はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: 標準化（Standardization）の意味を機械学習の前処理として整理します。平均0、標準偏差1に変換する考え方、正規化との違い、勾配法や距離ベース手法での重要性をG検定向けに確認できます。本文では、用語の定義、代表例、似た概念との違い、G検定で迷いやすい選択肢の見分け方まで、短時間で復習できるようにまとめています。
 permalink: /gk/standardization/
 tags: [gk, neural_network]
 gk_section: ディープラーニングの要素技術/ネットワークの構成要素

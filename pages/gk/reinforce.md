@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: REINFORCEとは？（方策勾配法）G検定対策
-description: REINFORCEは（方策勾配法）G検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: REINFORCEの考え方を方策勾配法として整理します。価値関数を介さず方策を直接更新する流れ、報酬による重み付け、強化学習アルゴリズムとしての位置づけをG検定向けに確認できます。本文では、用語の定義、代表例、似た概念との違い、G検定で迷いやすい選択肢の見分け方まで、短時間で復習できるようにまとめています。
 permalink: /gk/reinforce/
 tags: [gk, reinforcement_learning]
 gk_section: 機械学習の概要/代表的な手法/強化学習
