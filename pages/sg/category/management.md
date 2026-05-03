@@ -31,9 +31,19 @@ permalink: /sg/category/management/
     {% unless p.path contains "pages/sg/category/" %}
       {% if p.url != "/sg/" and p.url != "/sg/all/" %}
         {% if p.tags %}
-          {% if p.tags contains 'management' or p.tags contains 'sg-management' or p.tags contains 'project_management' or p.tags contains 'service_management' or p.tags contains 'system_audit' %}
-            {% assign has_items = true %}
+          {% assign is_summary_page = false %}
+          {% if p.url contains '-summary/' %}
+            {% assign is_summary_page = true %}
+          {% endif %}
+          {% if p.tags contains 'summary' or p.tags contains 'sg-summary' %}
+            {% assign is_summary_page = true %}
+          {% endif %}
+
+          {% if is_summary_page == false %}
+            {% if p.tags contains 'management' or p.tags contains 'sg-management' or p.tags contains 'project_management' or p.tags contains 'service_management' or p.tags contains 'system_audit' %}
+              {% assign has_items = true %}
   <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+            {% endif %}
           {% endif %}
         {% endif %}
       {% endif %}
