@@ -14,6 +14,7 @@ plugins:
 exclude:
   - AGENTS.md
   - ACTIONS_TROUBLESHOOTING.md
+  - docs/agent/
 
 title: AI・データサイエンス・IT学習ノート
 description: AI・データサイエンス・ITの学びをやさしく整理するブログ
