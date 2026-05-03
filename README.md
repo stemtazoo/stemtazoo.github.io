@@ -31,7 +31,8 @@
 - `scripts/`: データ生成、メタデータ補完、NotebookLM エクスポート、IndexNow 送信用スクリプト
 - `.github/workflows/`: GitHub Actions
 - `f0977966c6644641ae35df01652658c4.txt`: IndexNow のルート検証ファイル
-- `AGENTS.md`: AIエージェント・共同編集者向けの詳細な運用ルール
+- `AGENTS.md`: AIエージェント・共同編集者向けの入口ルール
+- `docs/agent/`: GitHub Pages互換性、IndexNow、テーマ設計、SG記事ルールなどの詳細な運用メモ
 
 ## テーマ別の運用
 
@@ -58,7 +59,7 @@
 - `pages/sg/category/*.md`: 分野別カテゴリ
 - `pages/sg/past/*.md`: 公式過去問演習
 
-SG の通常記事に確認問題を追加するときの細かいルールは `AGENTS.md` の「SG確認問題（SG試験対策）追加ルール」を参照してください。
+SG の通常記事に確認問題を追加するときの細かいルールは `docs/agent/sg-content-rules.md` を参照してください。
 
 ## よく使うスクリプト
 
@@ -153,7 +154,20 @@ Liquid を編集するときは、次を優先します。
 - 新しい Liquid 構文より、GitHub Pages で確実に動く書き方
 - きれいさより、ビルド安定性
 
-より詳しい互換性ルールや既知の失敗例は `AGENTS.md` を参照してください。
+より詳しい互換性ルールや既知の失敗例は `docs/agent/github-pages-compat.md` を参照してください。
+
+## AIエージェント・共同編集者向けルール
+
+AIエージェントや共同編集者が作業するときは、まず `AGENTS.md` を入口として確認します。
+
+詳細な運用ルールは内容ごとに `docs/agent/` 配下へ分けています。
+
+- GitHub Pages / Liquid 互換性: `docs/agent/github-pages-compat.md`
+- IndexNow 運用: `docs/agent/indexnow.md`
+- テーマ・レイアウト整合性: `docs/agent/theme-consistency.md`
+- SG記事・確認問題追加ルール: `docs/agent/sg-content-rules.md`
+
+新しい運用メモを追加するときは、`AGENTS.md` を長くしすぎず、必要に応じて `docs/agent/` に詳細ファイルを追加してください。
 
 ## デプロイと IndexNow
 
