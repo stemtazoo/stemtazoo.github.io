@@ -59,6 +59,7 @@ When fixing site issues:
 ## Commit Guidance
 
 Prefer small, focused commits with messages that explain the intent clearly.
+When responding to instructions from Visual Studio Code, include a suggested GitHub commit message at the end of the final response.
 
 Examples:
 
