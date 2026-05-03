@@ -13,8 +13,6 @@ permalink: /sg/category/security-measures/
 - 似た用語との違いを押さえる
 - 実務上の目的とセットで理解する
 
-## 関連記事一覧
-
 ## まず読むまとめ記事
 
 - [認証・アクセス制御まとめ](/sg/auth-access-summary/)
@@ -27,7 +25,9 @@ permalink: /sg/category/security-measures/
 - [DNS・メールなりすまし対策まとめ｜SPF・DKIM・S/MIMEを整理](/sg/dns-mail-security-summary/)
 - [マルウェアまとめ｜種類・感染後の動き・解析方法を整理](/sg/malware-threats-summary/)
 
-## 認証・アクセス制御
+## 分野別に読む
+
+### 認証・アクセス制御
 
 試験では、「本人確認」なのか「操作権限の制御」なのかで切り分けます。
 
@@ -50,7 +50,7 @@ permalink: /sg/category/security-measures/
 - [ゼロトラストとは？境界防御との違いを整理](/sg/zero-trust/)
 - [境界防御とは？ゼロトラストとの違いを整理](/sg/perimeter-security/)
 
-## パスワード・ログイン攻撃
+### パスワード・ログイン攻撃
 
 試験では、「1つのIDを狙う攻撃」か「多くのIDに同じパスワードを試す攻撃」かで切り分けます。
 
@@ -63,7 +63,7 @@ permalink: /sg/category/security-measures/
 - [ソルトとは？パスワードハッシュ強化の仕組み](/sg/salt/)
 - [CAPTCHAとは？ボット対策の仕組みをやさしく理解](/sg/captcha/)
 
-## ネットワーク対策
+### ネットワーク対策
 
 試験では、「通信を遮断する対策」か「検知・監視する対策」かで切り分けます。
 
@@ -81,7 +81,7 @@ permalink: /sg/category/security-measures/
 - [ポート番号とは？通信先サービスの識別を理解する](/sg/port-number/)
 - [SMTPのポート番号とは？パケットフィルタリングでの見方を整理](/sg/smtp-port-packet-filtering/)
 
-## DNS・メール対策
+### DNS・メール対策
 
 試験では、「名前解決の悪用」か「送信元のなりすまし対策」かで切り分けます。
 
@@ -95,7 +95,7 @@ permalink: /sg/category/security-measures/
 - [S/MIMEとは？メールの暗号化と電子署名の仕組み](/sg/smime/)
 - [メールヘッダーインジェクションとは？改行を悪用する攻撃](/sg/mail-header-injection/)
 
-## Webアプリ攻撃対策
+### Webアプリ攻撃対策
 
 試験では、「入力値を悪用する攻撃」か「利用者の操作を悪用する攻撃」かで切り分けます。
 
@@ -108,7 +108,7 @@ permalink: /sg/category/security-measures/
 - [中間者攻撃とは？通信を盗み見る仕組みと対策](/sg/man-in-the-middle-attack/)
 - [Man-in-the-Browserとは？ブラウザ内改ざん攻撃の仕組み](/sg/man-in-the-browser/)
 
-## マルウェア対策
+### マルウェア対策
 
 試験では、「感染後に何をするか」と「どの情報を盗むか」で切り分けます。
 
@@ -125,7 +125,7 @@ permalink: /sg/category/security-measures/
 - [サンドボックスとは？安全にプログラムを実行する仕組み](/sg/sandbox/)
 - [マルウェア解析とは？静的解析と動的解析の違い](/sg/malware-analysis/)
 
-## 無線LAN対策
+### 無線LAN対策
 
 試験では、「暗号化方式」か「接続する端末の制御」かで切り分けます。
 
@@ -135,7 +135,7 @@ permalink: /sg/category/security-measures/
 - [プライバシーセパレータとは？無線LANで端末同士を隔離する仕組み](/sg/privacy-separator/)
 - [MACアドレスとは？機器を識別する番号の役割](/sg/mac-address/)
 
-## 物理的セキュリティ対策
+### 物理的セキュリティ対策
 
 試験では、「人の入退室」か「機器・画面・紙の保護」かで切り分けます。
 
@@ -146,7 +146,7 @@ permalink: /sg/category/security-measures/
 - [クリアデスク・クリアスクリーンとは？情報漏えい防止の基本ルール](/sg/clear-desk-screen/)
 - [物理的セキュリティ対策まとめ｜出題パターンと切り分け一覧](/sg/physical-security-summary/)
 
-## バックアップ・可用性対策
+### バックアップ・可用性対策
 
 試験では、「データを戻す対策」か「サービスを止めない対策」かで切り分けます。
 
@@ -155,7 +155,7 @@ permalink: /sg/category/security-measures/
 - [UPSとは？停電時の業務継続を支える仕組み](/sg/ups/)
 - [稼働率とは？可用性の考え方とSLAでの判断基準](/sg/availability/)
 
-## 検知・分析・脆弱性対策
+### 検知・分析・脆弱性対策
 
 試験では、「弱点を見つける」か「攻撃後の証拠を調べる」かで切り分けます。
 
