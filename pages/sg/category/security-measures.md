@@ -23,6 +23,9 @@ permalink: /sg/category/security-measures/
 - [物理的セキュリティ対策まとめ](/sg/physical-security-summary/)
 - [セキュリティ対策の違いまとめ](/sg/security-measures-comparison/)
 - [脆弱性対策まとめ](/sg/vulnerability-cheatsheet/)
+- [Webアプリ攻撃まとめ｜SQLインジェクション・XSS・CSRFを整理](/sg/web-application-attacks-summary/)
+- [DNS・メールなりすまし対策まとめ｜SPF・DKIM・S/MIMEを整理](/sg/dns-mail-security-summary/)
+- [マルウェアまとめ｜種類・感染後の動き・解析方法を整理](/sg/malware-threats-summary/)
 
 ## 認証・アクセス制御
 
@@ -172,7 +175,7 @@ permalink: /sg/category/security-measures/
 
 以下は `sg-security-measures` タグが付いているものの、上記セクションには未掲載だった関連記事です。新規記事に同タグを付ければ、この一覧に自動で表示されます。
 
-{% assign curated_slugs = "auth-access-summary,auth-access-control-summary,security-measures-overview,physical-security-summary,security-measures-comparison,vulnerability-cheatsheet,authentication-methods,frr-far,identification-code,authorization,access-control,access-control-model,authentication-authorization-access-control,multi-factor-authentication,mfa-vs-step-auth,sso,idp,token-authentication,risk-based-authentication,challenge-response-authentication,privileged-id,least-privilege,zero-trust,perimeter-security,brute-force-attack,reverse-brute-force-attack,dictionary-attack,password-list-attack,password-management,rainbow-table,salt,captcha,firewall,packet-filtering,ips,waf,dmz,vpn,secure-protocol,ssh,telnet,ssl-tls,http-https,port-number,smtp-port-packet-filtering,dns,dns-cache-poisoning,dns-reflector-attack,domain-hijacking,spf,spf-dkim,smtp-auth,smime,mail-header-injection,sql-injection,xss,csrf,clickjacking,directory-traversal,session-hijacking,man-in-the-middle-attack,man-in-the-browser,malware,ransomware,spyware,keylogger,rootkit,macro-virus,bot,botnet,command-and-control,cryptojacking,sandbox,malware-analysis,wifi-security-protocols,wifi-auth-wpa2-wpa3-8021x,psk-wireless-auth,privacy-separator,mac-address,access-control-physical,anti-passback,security-wire,surveillance-camera,clear-desk-screen,remote-backup,raid,ups,availability,vulnerability-scan,fuzzing,cvss,jvn,port-scan,honeypot,digital-forensics,log-management,audit-log" | split: "," %}
+{% assign curated_slugs = "auth-access-summary,auth-access-control-summary,security-measures-overview,physical-security-summary,security-measures-comparison,vulnerability-cheatsheet,web-application-attacks-summary,dns-mail-security-summary,malware-threats-summary,authentication-methods,frr-far,identification-code,authorization,access-control,access-control-model,authentication-authorization-access-control,multi-factor-authentication,mfa-vs-step-auth,sso,idp,token-authentication,risk-based-authentication,challenge-response-authentication,privileged-id,least-privilege,zero-trust,perimeter-security,brute-force-attack,reverse-brute-force-attack,dictionary-attack,password-list-attack,password-management,rainbow-table,salt,captcha,firewall,packet-filtering,ips,waf,dmz,vpn,secure-protocol,ssh,telnet,ssl-tls,http-https,port-number,smtp-port-packet-filtering,dns,dns-cache-poisoning,dns-reflector-attack,domain-hijacking,spf,spf-dkim,smtp-auth,smime,mail-header-injection,sql-injection,xss,csrf,clickjacking,directory-traversal,session-hijacking,man-in-the-middle-attack,man-in-the-browser,malware,ransomware,spyware,keylogger,rootkit,macro-virus,bot,botnet,command-and-control,cryptojacking,sandbox,malware-analysis,wifi-security-protocols,wifi-auth-wpa2-wpa3-8021x,psk-wireless-auth,privacy-separator,mac-address,access-control-physical,anti-passback,security-wire,surveillance-camera,clear-desk-screen,remote-backup,raid,ups,availability,vulnerability-scan,fuzzing,cvss,jvn,port-scan,honeypot,digital-forensics,log-management,audit-log" | split: "," %}
 {% assign auto_related = site.pages | where: "tags", "sg-security-measures" | sort: "title" %}
 {% assign auto_count = 0 %}
 {% for p in auto_related %}
