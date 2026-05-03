@@ -13,6 +13,14 @@ permalink: /sg/category/management/
 - 監査・運用・改善の流れを区別する
 - 現場運用に落ちるかどうかで理解する
 
+## 関連するまとめページ
+
+このカテゴリに関連する学習まとめページです。  
+はじめに全体像を確認したい場合は、まとめページから読むと理解しやすくなります。
+
+- [プロジェクトマネジメントまとめ｜PMBOK・WBS・PERT図を整理【SG試験】](/sg/project-management-summary/)  
+  プロジェクトマネジメントの全体像、PMBOKの管理領域、WBS、アローダイアグラム、クリティカルパスを整理したまとめページです。
+
 ## 関連記事一覧
 
 {% assign sg_pages = site.pages | sort: "title" %}
