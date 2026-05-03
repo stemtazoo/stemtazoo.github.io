@@ -30,7 +30,7 @@ Read the relevant detailed guide before changing each area:
 - GitHub Pages / Liquid compatibility: `docs/agent/github-pages-compat.md`
 - IndexNow deployment automation: `docs/agent/indexnow.md`
 - Theme and layout consistency: `docs/agent/theme-consistency.md`
-- SG content and confirmation-question rules: `docs/agent/sg-content-rules.md`
+- SG content, confirmation-question, and series-summary rules: `docs/agent/sg-content-rules.md`
 
 ## Editing Strategy
 
