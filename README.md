@@ -1,232 +1,187 @@
 # stemtazoo.github.io
 
-`stemtazoo.github.io` は、Jekyll / GitHub Pages で公開している学習用サイトです。  
-現在は主に次の 3 テーマを `pages/` 配下で管理しています。
+`stemtazoo.github.io` は、Jekyll / GitHub Pages で公開している日本語の学習ノートサイトです。
 
-- `pages/ds`: データサイエンス学習コンテンツ
-- `pages/gk`: G 検定・G 検定系の学習コンテンツ
-- `pages/sg`: 情報処理安全確保支援士（SG）学習コンテンツ
+現在は主に、次の 3 テーマを `pages/` 配下で管理しています。
 
-このリポジトリでは、記事本文だけでなく、ページ一覧、テーマ別ナビゲーション、補助データ生成、公開後の検索エンジン連携まで含めて運用しています。
+- `pages/ds`: DS検定リテラシー、データサイエンス、統計、データエンジニアリング、AI利活用
+- `pages/gk`: G検定、AI、機械学習、深層学習、画像認識、自然言語処理、強化学習、法律・倫理
+- `pages/sg`: 情報セキュリティマネジメント試験、セキュリティ用語、カテゴリ別まとめ、過去問演習
+
+記事本文だけでなく、テーマ別インデックス、前後ナビゲーション、NotebookLM 向けエクスポート、DS スキルチェックデータ、公開後の IndexNow 送信もこのリポジトリで扱います。
+
+## 公開ページ
+
+- DS検定: <https://stemtazoo.github.io/ds/>
+- G検定: <https://stemtazoo.github.io/gk/>
+- 情報セキュリティマネジメント試験: <https://stemtazoo.github.io/sg/>
+- SG公式過去問: <https://stemtazoo.github.io/sg/past/>
+- SG全記事一覧: <https://stemtazoo.github.io/sg/all/>
 
 ## リポジトリ構成
 
-主なディレクトリとファイルは次のとおりです。
-
 - `_layouts/`: 共通レイアウト
-- `_includes/`: テーマ別・共通の部品
-- `pages/`: 公開ページ本体
-- `data/`: ビルドや表示で使う補助データ
-- `scripts/`: データ生成や書き出し用スクリプト
+- `_includes/`: テーマ別・共通の Liquid 部品
+- `pages/ds/`: DS検定・データサイエンス系の記事
+- `pages/gk/`: G検定・AI系の記事
+- `pages/sg/`: SG試験・情報セキュリティ系の記事
+- `pages/sg/category/`: SG の分野別カテゴリページ
+- `pages/sg/past/`: SG 公式過去問演習ページ
+- `data/skillcheck/`: DS協会スキルチェックリストのバージョン管理データ
+- `scripts/`: データ生成、メタデータ補完、NotebookLM エクスポート、IndexNow 送信用スクリプト
 - `.github/workflows/`: GitHub Actions
-- `f0977966c6644641ae35df01652658c4.txt`: IndexNow 用のルート検証ファイル
+- `f0977966c6644641ae35df01652658c4.txt`: IndexNow のルート検証ファイル
+- `AGENTS.md`: AIエージェント・共同編集者向けの詳細な運用ルール
 
-## ビルドと運用の前提
+## テーマ別の運用
 
-このサイトは GitHub Pages 互換を優先して運用しています。
+### DS検定 / データサイエンス
 
-- ローカルで通っても、GitHub Pages 側の古い Jekyll / Liquid で失敗することがあります
-- レイアウトや include の変更では、簡潔さより互換性を優先します
-- Liquid は複雑な条件式より、単純な `if` / `for` / `assign` ベースの実装を優先します
+`pages/ds/` は DS検定リテラシーを中心に、統計、SQL、分析手法、AI利活用、データエンジニアリング、セキュリティ基礎などを扱います。
 
-詳しい作業方針は [AGENTS.md](/p:/MyDocuments/GitHub/stemtazoo.github.io/AGENTS.md) を参照してください。
+主な入口は `pages/ds/index.md` です。スキルチェックリスト関連のデータは `data/skillcheck/` に保持し、表示側では原則 `data/skillcheck/exports/latest.json` を参照します。
 
-## コンテンツ運用
+### G検定 / AI
 
-テーマごとにページを分けていますが、構成やナビゲーションの考え方はできるだけ揃える方針です。
+`pages/gk/` は G検定対策向けの記事群です。`pages/gk/index.md` の `gk_sections` で表示順と章立てを管理しています。
 
-- `pages/ds`: 学習まとめ、スキルチェック、NotebookLM 向け書き出しなどを運用
-- `pages/gk`: セクション単位の学習記事と関連ナビゲーションを運用
-- `pages/sg`: セキュリティ学習記事と関連ナビゲーションを運用
+個別記事の前後ナビゲーションは `gk_section` / `gk_order` と `_includes/gk_article_footer.html` に依存します。GitHub Pages の古い Liquid でも動くよう、include 側の条件式は保守的に書く方針です。
 
-新しい記事やシリーズを追加するときは、front matter の `layout`、`tags`、順序項目、permalink の整合性を保つ必要があります。
+### SG試験 / 情報セキュリティ
 
-## スクリプト
+`pages/sg/` は情報セキュリティマネジメント試験向けの記事群です。通常記事に加えて、分野別カテゴリページ、全記事一覧、過去問ページ、ケース問題・総合演習系の記事があります。
 
-`scripts/` には、公開データや補助ファイルを生成するためのスクリプトがあります。
+主な入口は次の通りです。
 
-### 一覧
+- `pages/sg/index.md`: 学習まとめトップ
+- `pages/sg/all.md`: 全記事一覧
+- `pages/sg/category/*.md`: 分野別カテゴリ
+- `pages/sg/past/*.md`: 公式過去問演習
 
-- `scripts/build_skillcheck_data.py`
-  - `pages/ds` のスキルチェック表示に使う JSON / CSV を生成します
-- `scripts/export_ds_notebooklm.py`
-  - `pages/ds` の記事を NotebookLM 用 Markdown に書き出します
-- `scripts/export_sg_notebooklm.py`
-  - `pages/sg` の記事を NotebookLM 用 Markdown に書き出します
-- `scripts/lint_ds_frontmatter.py`
-  - `pages/ds` の front matter の整合性確認に使えます
-- `scripts/fix_page_metadata.py`
-  - 指定フォルダ直下の Markdown を走査し、テーマごとの不足設定を検出します
-  - `sg` / `ds` では `prev` / `next` と footer include を確認し、既存リンクから一意に推定できるものだけ補完できます
-  - `gk` では `gk_section` / `gk_order` / footer include を確認し、footer include の安全な補完を行えます
-- `scripts/submit_indexnow.py`
-  - GitHub Pages 公開後に IndexNow へ URL を送信します
+SG の通常記事に確認問題を追加するときの細かいルールは `AGENTS.md` の「SG確認問題（SG試験対策）追加ルール」を参照してください。
 
-### DS スキルチェックデータ生成
+## よく使うスクリプト
 
-`/pages/ds` 向けのスキルチェック関連データは、`data/skillcheck` 配下でバージョン管理しています。
-
-- 実行スクリプト: `scripts/build_skillcheck_data.py`
-- 詳細: `data/skillcheck/README.md`
-
-#### Quick start
+### DS スキルチェックデータを生成する
 
 ```bash
 python scripts/build_skillcheck_data.py
 ```
 
-この処理では、公開元データから `versions/<version>/` と `exports/` 配下の公開用データを生成し、`pages/ds` で参照できる形に整えます。
+ローカルの xlsx を使う場合:
 
-### NotebookLM 向け DS エクスポート
+```bash
+python scripts/build_skillcheck_data.py --xlsx ./data/skillcheck/raw/skillcheck_ver5.00_simple.xlsx --version 5.00
+```
 
-`pages/ds/*.md` を、NotebookLM に読み込ませやすい Markdown として書き出すために `scripts/export_ds_notebooklm.py` を使います。
+詳細は `data/skillcheck/README.md` を参照してください。
 
-#### 基本実行
+### DS 記事を NotebookLM 向けに出力する
 
 ```bash
 python scripts/export_ds_notebooklm.py
 ```
 
-#### グループ定義を使う場合
+出力先:
 
-`pages/ds/index.md` の `ds_sections` ではなく、外部 JSON を使って書き出したい場合は `--groups-file` を指定します。
+- `exports/notebooklm/ds/sections/*.md`
+- `exports/notebooklm/ds/all.md`
+
+外部のグループ定義を使う場合:
 
 ```bash
 python scripts/export_ds_notebooklm.py --groups-file exports/notebooklm/ds/groups.template.json
 ```
 
-#### 出力先
-
-- `exports/notebooklm/ds/sections/*.md`: セクションごとのファイル
-- `exports/notebooklm/ds/all.md`: 全セクションを結合したファイル
-
-#### 更新手順の目安
-
-1. `pages/ds/` の記事を更新する
-2. 必要に応じて `pages/ds/index.md` の `ds_sections` またはグループ定義 JSON を見直す
-3. `python scripts/export_ds_notebooklm.py` を実行する
-
-必要に応じて `scripts/lint_ds_frontmatter.py` で front matter の揺れも確認できます。
-
-### 記事の不足設定を点検・補完する
-
-スマートフォンから記事を追加したときに、前後ページや footer include が抜けることがあります。  
-その場合は `scripts/fix_page_metadata.py` を使うと、指定フォルダ直下だけを対象に不足を検出できます。
-
-まずは report モードで確認します。
-
-```bash
-python scripts/fix_page_metadata.py pages/sg
-```
-
-安全に一意に決められるものだけ書き戻すときは `--apply` を付けます。
-
-```bash
-python scripts/fix_page_metadata.py pages/sg --apply
-```
-
-テーマごとの判定ルールは次の通りです。
-
-- `pages/sg`
-  - `prev` / `next`
-  - `{% include sg_article_footer.html %}`
-- `pages/gk`
-  - `gk_section` / `gk_order`
-  - `{% include gk_article_footer.html %}`
-- `pages/ds`
-  - `prev` / `next`
-
-補完方針は保守的です。
-
-- 対象は指定フォルダ直下の `*.md` のみ
-- パンくずは既存レイアウト側で自動表示されるテーマでは、記事本文を触らずに不足設定のみ確認
-- `prev` / `next` は既存記事の front matter から一意に逆算できる場合だけ自動補完
-- 曖昧なものは未修正のままレポートに出します
-
-### NotebookLM 向け SG エクスポート
-
-`pages/sg/*.md` を、NotebookLM に読み込ませやすい Markdown として書き出すために `scripts/export_sg_notebooklm.py` を使います。
-
-#### これはいつ実行するか
-
-`pages/sg/` に記事を追加したあと、次のどれかに当てはまるときは実行します。
-
-- 新しい SG 記事を追加した
-- 既存の記事本文を大きく更新した
-- `pages/sg/index.md` の「まず読む3記事」やカテゴリ一覧を更新した
-
-このスクリプトを実行すると、SG 記事をまとめた NotebookLM 用 Markdown が最新状態になります。
-
-#### 基本実行
+### SG 記事を NotebookLM 向けに出力する
 
 ```bash
 python scripts/export_sg_notebooklm.py
 ```
 
-`python` コマンドが使えない環境では、`py scripts/export_sg_notebooklm.py` や、インストール済みの Python 実行ファイルを指定して実行します。
+出力先:
 
-#### 何をもとにグループ化しているか
+- `exports/notebooklm/sg/sections/*.md`
+- `exports/notebooklm/sg/all.md`
 
-デフォルトでは `pages/sg/index.md` を読み、次のまとまりごとに出力します。
-
-- 「まず読む3記事」
-- 「試験概要」
-- 各カテゴリ見出し
-  - 情報セキュリティ全般
-  - 情報セキュリティ管理
-  - 情報セキュリティ対策
-  - 情報セキュリティ関連法規
-  - テクノロジ
-  - マネジメント
-  - ストラテジ
-
-つまり、記事だけでなく `pages/sg/index.md` の見出し名や掲載場所を変えた場合も、再実行して出力を更新します。
-
-#### 出力先
-
-- `exports/notebooklm/sg/sections/*.md`: セクションごとのファイル
-- `exports/notebooklm/sg/all.md`: 全セクションを結合したファイル
-
-#### 記事を追加した後のおすすめ手順
-
-1. `pages/sg/` に記事を追加する
-2. 追加した記事の `title` `permalink` `tags` を確認する
-3. 必要なら `pages/sg/index.md` の掲載カテゴリや「まず読む3記事」を更新する
-4. `python scripts/export_sg_notebooklm.py` を実行する
-5. `exports/notebooklm/sg/all.md` または `exports/notebooklm/sg/sections/` を開いて内容を確認する
-
-#### グループ定義を手動で指定したい場合
-
-`pages/sg/index.md` ではなく、外部 JSON を使って書き出したい場合は `--groups-file` を指定します。
+外部のグループ定義を使う場合:
 
 ```bash
 python scripts/export_sg_notebooklm.py --groups-file path/to/sg-groups.json
 ```
 
-JSON の例:
+### ページのメタデータを確認・補完する
 
-```json
-{
-  "groups": [
-    {
-      "id": "network",
-      "title": "ネットワーク",
-      "items": ["/sg/dns/", "/sg/dhcp/"]
-    }
-  ]
-}
+まずは report モードで確認します。
+
+```bash
+python scripts/fix_page_metadata.py pages/sg
+python scripts/fix_page_metadata.py pages/gk
+python scripts/fix_page_metadata.py pages/ds
 ```
 
-## デプロイ関連
+安全に補完できるものを書き戻す場合:
 
-GitHub Actions では、GitHub Pages のビルドに加えて IndexNow 送信も扱っています。
+```bash
+python scripts/fix_page_metadata.py pages/sg --apply
+```
 
-- IndexNow のキー検証ファイルはリポジトリルートに置いたままにします
-- `f0977966c6644641ae35df01652658c4.txt` の内容はファイル名の stem と一致させます
-- IndexNow は公開前ではなく、公開後に送信する運用です
+このスクリプトは、テーマごとに `prev` / `next`、`gk_section` / `gk_order`、footer include などの不足を確認します。
 
-## メモ
+### DS front matter を確認する
 
-- 日本語コンテンツを多く含むため、編集時は UTF-8 を前提にします
-- GitHub Pages 互換の都合で、Liquid は保守的な書き方を優先します
-- テーマごとの差分を広げすぎず、構造やナビゲーションの一貫性を保つ方針です
+```bash
+python scripts/lint_ds_frontmatter.py
+```
+
+### IndexNow に URL を送信する
+
+通常は GitHub Actions が GitHub Pages のデプロイ成功後に実行します。手元で動作確認する場合は、送信対象やキーを明示して実行します。
+
+```bash
+python scripts/submit_indexnow.py --all-known --key-file f0977966c6644641ae35df01652658c4.txt
+```
+
+## GitHub Pages 互換性
+
+このサイトは GitHub Pages でのビルド成功を最優先します。ローカル環境では通っても、GitHub Pages 側の Jekyll / Liquid が古くて失敗することがあります。
+
+Liquid を編集するときは、次を優先します。
+
+- 複雑な `where_exp` より、明示的な `{% for %}` と `{% if %}`
+- 複雑な boolean 条件より、段階的な分岐
+- 新しい Liquid 構文より、GitHub Pages で確実に動く書き方
+- きれいさより、ビルド安定性
+
+より詳しい互換性ルールや既知の失敗例は `AGENTS.md` を参照してください。
+
+## デプロイと IndexNow
+
+GitHub Pages の公開後、`.github/workflows/indexnow.yml` が IndexNow 送信を行います。
+
+- post-deploy の `deployment_status` 成功時に動く
+- 手動実行 `workflow_dispatch` に対応
+- 週次の full refresh に対応
+- 差分範囲が取れない場合は `--all-known` にフォールバック
+
+IndexNow キーファイル `f0977966c6644641ae35df01652658c4.txt` はリポジトリルートに置き、ファイル名 stem と中身を一致させる必要があります。移動したり front matter を付けたりしないでください。
+
+## 編集時の注意
+
+- 日本語本文は UTF-8 で扱う
+- 端末表示が文字化けしても、ファイル自体が壊れているとは限らない
+- front matter の `layout`、`title`、`description`、`permalink`、`tags` は慎重に変更する
+- G検定記事では `gk_section` / `gk_order` を崩さない
+- SG や DS の前後ナビゲーションでは `prev` / `next` と footer include の整合性を見る
+- Index / 一覧 / 比較 / まとめページと、通常の1用語記事を混同しない
+- 大きな構造変更の前後では、NotebookLM エクスポートや IndexNow 対象 URL への影響も確認する
+
+## ローカル確認
+
+可能であれば、レイアウト・include・front matter・インデックスを触った後に Jekyll ビルドを確認します。
+
+```bash
+bundle exec jekyll build
+```
+
+ただし、最終的な互換性確認は GitHub Actions / GitHub Pages 側の結果を優先します。特に `Liquid syntax error`、`Liquid Exception`、`_includes/...`、`_layouts/...` に関するエラーはブロッカーとして扱います。
