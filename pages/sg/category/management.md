@@ -25,6 +25,7 @@ permalink: /sg/category/management/
 
 {% assign sg_pages = site.pages | sort: "title" %}
 {% assign has_items = false %}
+{% assign summary_page_urls = "/sg/project-management-summary/" | split: "," %}
 <ul>
 {% for p in sg_pages %}
   {% if p.path contains "pages/sg/" %}
@@ -40,10 +41,12 @@ permalink: /sg/category/management/
           {% endif %}
 
           {% if is_summary_page == false %}
+            {% unless summary_page_urls contains p.url %}
             {% if p.tags contains 'management' or p.tags contains 'sg-management' or p.tags contains 'project_management' or p.tags contains 'service_management' or p.tags contains 'system_audit' %}
               {% assign has_items = true %}
   <li><a href="{{ p.url }}">{{ p.title }}</a></li>
             {% endif %}
+            {% endunless %}
           {% endif %}
         {% endif %}
       {% endif %}
