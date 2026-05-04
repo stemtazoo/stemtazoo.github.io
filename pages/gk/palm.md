@@ -1,6 +1,7 @@
 ---
 layout: page
 title: PaLM（大規模言語モデル）とは？G検定対策
+description: PaLMはGoogleが開発した大規模言語モデルで、スケーリング則に基づく性能向上や推論能力の高さで注目された基盤モデルです。Transformerとの関係、few-shot性能、G検定で問われるLLMの流れの中での位置づけを整理します。
 permalink: /gk/palm/
 tags: [gk, neural_network, transformer]
 gk_section: ディープラーニングの応用例/マルチモーダル

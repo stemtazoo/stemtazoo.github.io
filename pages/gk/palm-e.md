@@ -1,6 +1,7 @@
 ---
 layout: page
 title: PaLM-E（環境対応マルチモーダルモデル）とは？G検定対策
+description: PaLM-Eは言語モデルに視覚・ロボット状態などの連続入力を統合し、現実世界のタスクに対応するためのマルチモーダルモデルです。VLMとの違い、エンボディドAIでの役割、G検定での重要ポイントを整理します。
 permalink: /gk/palm-e/
 tags: [gk, neural_network, transformer, attention]
 gk_section: ディープラーニングの応用例/マルチモーダル
