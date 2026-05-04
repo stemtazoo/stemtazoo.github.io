@@ -1,6 +1,7 @@
 ---
 layout: page
 title: PCAとSVDの関係とは？（数式なしで理解）【G検定対策】
+description: PCAとSVDの違いを、次元削減と行列分解の観点から整理します。共分散行列の固有値分解との関係、計算手順の対応、実務での使い分けを押さえ、G検定で混同しやすい論点を短時間で復習できるように解説します。
 permalink: /gk/pca-vs-svd/
 tags: [gk, unsupervised_learning, dimensionality_reduction]
 gk_section: 機械学習の概要/代表的な手法/教師なし学習

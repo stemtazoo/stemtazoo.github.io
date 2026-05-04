@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: ベルヌーイ試行と二項分布とは？【DS検定リテラシー】
-description: ベルヌーイ試行と二項分布はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: ベルヌーイ試行と二項分布の違いを、1回の成功・失敗を扱うモデルと複数回の成功回数を扱う分布として整理します。確率変数の定義、期待値の考え方、典型問題の解き分けを押さえ、DS検定で迷いやすい選択肢を見分けられるように解説します。
 permalink: /ds/bernoulli-binomial/
 categories: [data-science]
 tags: [ds, statistics]

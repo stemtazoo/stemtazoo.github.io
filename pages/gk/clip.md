@@ -1,6 +1,7 @@
 ---
 layout: page
 title: CLIP（画像とテキストの対応付けモデル）とは？G検定対策
+description: CLIPは画像と言語を同じ埋め込み空間で学習し、テキストによる画像分類や検索を可能にするマルチモーダルモデルです。ゼロショット推論の仕組み、従来の画像分類との違い、G検定で問われる活用場面と注意点を整理します。
 permalink: /gk/clip/
 tags: [gk, neural_network, attention]
 ---
