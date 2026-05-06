@@ -5,6 +5,10 @@ layout: default
   <header class="post-header">
     <p class="post-meta">{{ page.date | date: "%Y-%m-%d" }}</p>
     <h1 class="post-title">{{ page.title }}</h1>
+    {% assign page_last_modified = page.last_modified_at | default: page.date %}
+    {% if page_last_modified %}
+      <p class="page-last-modified">最終更新日：{{ page_last_modified | date: "%Y年%-m月%-d日" }}</p>
+    {% endif %}
     {% if page.categories %}
       <p class="post-categories">{{ page.categories | join: ", " }}</p>
     {% endif %}

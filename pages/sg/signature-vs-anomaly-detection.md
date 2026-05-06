@@ -4,6 +4,7 @@ title: シグネチャ型検知と異常検知の違い【SG試験】
 description: シグネチャ型検知は既知の攻撃パターンで検知し、異常検知は通常と違う動きを検知する考え方です。SG試験で迷いやすい既知攻撃と未知攻撃の切り分けを整理します。
 permalink: /sg/signature-vs-anomaly-detection/
 tags: [sg, sg-security-measures, threat_vulnerability, unauthorized_access, incident_management]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

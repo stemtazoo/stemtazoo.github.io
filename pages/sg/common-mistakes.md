@@ -6,6 +6,7 @@ permalink: /sg/common-mistakes/
 tags: [sg, risk_assessment, security_management, it_security_operations, sg-security-management]
 prev: /sg/command-and-control/
 next: /sg/common-port-numbers/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

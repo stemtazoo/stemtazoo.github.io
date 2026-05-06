@@ -48,6 +48,9 @@ When fixing site issues:
 - If terminal output looks garbled, verify file contents before assuming the file itself is broken.
 - Be careful when editing `layout`, `title`, `description`, `permalink`, `tags`, theme-specific ordering fields such as `gk_section` / `gk_order`, and navigation fields such as `prev` / `next`.
 - Do not rename or remove front matter keys that includes depend on without updating those includes.
+- For article pages where `last_modified_at` is already used for display, update `last_modified_at` in front matter when you modify the article content. Use `YYYY-MM-DD` format (example: `2026-05-06`).
+- For newly added articles, always set `last_modified_at` in front matter at creation time to avoid missing update-date metadata.
+- Layouts may fall back to `page.date` when `last_modified_at` is missing, but this is only a fallback; preferred source is explicit `last_modified_at`.
 
 ## Communication Preferences
 

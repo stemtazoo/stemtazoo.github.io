@@ -6,6 +6,7 @@ permalink: /sg/targeted-attack/
 tags: [sg, security_measures, unauthorized_access, risk_assessment, security_training, sg-security-measures]
 prev: /sg/stepping-stone-attack/
 next: /sg/telnet/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論
