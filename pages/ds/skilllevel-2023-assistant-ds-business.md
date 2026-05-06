@@ -7,6 +7,7 @@ categories: [business]
 tags: [ds, skillcheck, skilllevel, business, problem-solving, intro, cheatsheet]
 prev: /ds/skillcheck/
 next: /ds/skilllevel-2023-assistant-ds-dataengineering/
+last_modified_at: 2026-05-06
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>

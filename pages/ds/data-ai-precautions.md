@@ -6,6 +6,7 @@ permalink: /ds/data-ai-precautions/
 categories: [ai-utilization]
 tags: [ds, ai-use, literacy, ethics, security, ai, gdpr, cheatsheet]
 prev: /ds/weak-strong-ai/
+last_modified_at: 2026-05-06
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
