@@ -6,6 +6,7 @@ permalink: /sg/sandbox/
 tags: [sg, security_measures, unauthorized_access, system_architecture, sg-security-measures]
 prev: /sg/safety-control-measures/
 next: /sg/script-kiddie/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

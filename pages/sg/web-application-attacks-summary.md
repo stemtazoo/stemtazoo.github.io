@@ -4,6 +4,7 @@ title: Webアプリ攻撃まとめ｜SQLインジェクション・XSS・CSRFを
 description: Webアプリ攻撃は入力値や利用者操作、セッションを悪用する攻撃です。SG試験で問われやすいSQLインジェクション、XSS、CSRFなどの違いと判断基準を整理します。
 permalink: /sg/web-application-attacks-summary/
 tags: [sg, sg-security-measures, web_security, threat_vulnerability]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

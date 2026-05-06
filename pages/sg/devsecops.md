@@ -4,6 +4,7 @@ title: DevSecOpsとは？開発にセキュリティを組み込む考え方【S
 description: DevSecOpsは、開発と運用の流れにセキュリティ確認を組み込み、早い段階から脆弱性を減らす考え方です。SG試験で迷いやすいDevOps、セキュアコーディング、シフトレフトとの違いを整理します。
 permalink: /sg/devsecops/
 tags: [sg, sg-security-management, sg-security-measures, it_security_operations, threat_vulnerability]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

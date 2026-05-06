@@ -6,6 +6,7 @@ permalink: /sg/authoritative-dns-vs-cache-dns/
 tags: [sg, sg-security-measures, network_security, dns]
 prev: /sg/dns-cache-poisoning/
 next: /sg/open-resolver/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

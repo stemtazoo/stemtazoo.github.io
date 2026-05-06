@@ -6,6 +6,7 @@ permalink: /sg/availability/
 tags: [sg, sg-management]
 prev: /sg/attacker-types/
 next: /sg/blacklist-whitelist/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

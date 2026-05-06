@@ -6,6 +6,7 @@ permalink: /sg/outsourcing-contract-difference/
 tags: [sg, management, vendor_management, it_security_operations, sg-management]
 prev: /sg/ng-patterns/
 next: /sg/password-list-attack/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

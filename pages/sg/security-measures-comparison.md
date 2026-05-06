@@ -6,6 +6,7 @@ permalink: /sg/security-measures-comparison/
 prev: /sg/security-measures-overview/
 next: /sg/perimeter-security/
 tags: [sg, sg-security-measures, incident_management, it_security_operations]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

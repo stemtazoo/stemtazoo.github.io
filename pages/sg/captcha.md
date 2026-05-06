@@ -6,6 +6,7 @@ permalink: /sg/captcha/
 prev: /sg/ips/
 next: /sg/authentication-authorization-access-control/
 tags: [sg, sg-security-measures, unauthorized_access, access_control]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

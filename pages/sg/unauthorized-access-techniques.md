@@ -6,6 +6,7 @@ permalink: /sg/unauthorized-access-techniques/
 tags: [sg, security_measures, unauthorized_access, threat_vulnerability, risk_assessment, sg-security-measures]
 prev: /sg/timestamp/
 next: /sg/unauthorized-access/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

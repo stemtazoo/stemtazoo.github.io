@@ -6,6 +6,7 @@ permalink: /sg/nco/
 tags: [sg, sg-security-management]
 prev: /sg/mttr/
 next: /sg/ng-patterns/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

@@ -6,6 +6,7 @@ permalink: /sg/pci-dss/
 prev: /sg/copyright-transfer/
 next: /sg/security-management-overview/
 tags: [sg, sg-security-law, it_security_operations, vendor_management]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論  

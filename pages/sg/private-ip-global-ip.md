@@ -4,6 +4,7 @@ title: プライベートIPアドレスとグローバルIPアドレスの違い
 description: プライベートIPアドレスとグローバルIPアドレスは、ネットワーク内外で使うIPアドレスの違いです。SG試験で迷いやすいNATやIPマスカレードとの関係も整理します。
 permalink: /sg/private-ip-global-ip/
 tags: [sg, sg-technology, network, unauthorized_access]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

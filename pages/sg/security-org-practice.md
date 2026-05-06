@@ -6,6 +6,7 @@ permalink: /sg/security-org-practice/
 tags: [sg, sg-security-management, practice]  
 prev: /sg/security-org-cheatsheet/  
 next: /sg/soc-csirt-jpcert/  
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

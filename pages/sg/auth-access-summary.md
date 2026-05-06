@@ -6,6 +6,7 @@ permalink: /sg/auth-access-summary/
 prev: /sg/access-control-model/
 next: /sg/token-authentication/
 tags: [sg, sg-security-measures, access_control, it_security_operations]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

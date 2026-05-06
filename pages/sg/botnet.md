@@ -6,6 +6,7 @@ permalink: /sg/botnet/
 tags: [sg, threat_vulnerability, malware, unauthorized_access, sg-security-overview]
 prev: /sg/bot/
 next: /sg/brute-force-attack/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

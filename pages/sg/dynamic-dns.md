@@ -6,6 +6,7 @@ permalink: /sg/dynamic-dns/
 tags: [sg, sg-security-measures, network_security, dns]
 prev: /sg/dnssec-vs-https-tls/
 next: /sg/primary-secondary-dns/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

@@ -6,6 +6,7 @@ permalink: /sg/dns-reflector-attack/
 tags: [sg, threat_vulnerability, unauthorized_access, network, sg-security-overview]
 prev: /sg/dns-poisoning-vs-pharming/
 next: /sg/dns/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

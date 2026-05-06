@@ -6,6 +6,7 @@ permalink: /sg/dnssec/
 tags: [sg, sg-security-measures, network_security, dns, cryptography]
 prev: /sg/dns/
 next: /sg/dns-cache-poisoning/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

@@ -6,6 +6,7 @@ permalink: /sg/directory-traversal/
 tags: [sg, security_general, threat_vulnerability, unauthorized_access, it_security_operations, sg-security-overview]
 prev: /sg/dictionary-attack/
 next: /sg/disciplinary-action/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

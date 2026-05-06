@@ -7,6 +7,7 @@ permalink: /sg/eal/
 tags: [sg, sg-security-overview, crypto_auth, sg-technology, it_security_operations]
 prev: /sg/iso-iec-15408/
 next: /sg/jisec/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

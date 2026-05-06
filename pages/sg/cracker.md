@@ -6,6 +6,7 @@ permalink: /sg/cracker/
 tags: [sg, threat_vulnerability, unauthorized_access, risk_assessment, sg-security-overview]
 prev: /sg/copyright-ownership/
 next: /sg/crl/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

@@ -6,6 +6,7 @@ permalink: /sg/rainbow-table/
 prev: /sg/salt/
 next: /sg/asset-register/
 tags: [sg, sg-security-overview, threat_vulnerability, risk_assessment]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

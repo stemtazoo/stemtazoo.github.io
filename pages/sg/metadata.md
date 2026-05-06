@@ -4,6 +4,7 @@ title: メタデータとは？データに付く情報の管理ポイント【S
 description: メタデータは、ファイルや写真などのデータに付く説明情報です。SG試験で問われやすい情報漏えいリスク、証跡との違い、管理時の注意点を整理します。
 permalink: /sg/metadata/
 tags: [sg, sg-security-management, asset_management, data_leakage]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

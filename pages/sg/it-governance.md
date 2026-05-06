@@ -4,6 +4,7 @@ title: ITガバナンスとは？ITマネジメントとの違い【SG試験】
 description: ITガバナンスは、経営目標に沿ってITを活用・統制するための考え方です。ITマネジメントとの違いや、SG試験で問われやすい判断基準を整理します。
 permalink: /sg/it-governance/
 tags: [sg, sg-management, system_strategy, business_management]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

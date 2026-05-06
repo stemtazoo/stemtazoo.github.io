@@ -6,6 +6,7 @@ permalink: /sg/common-port-numbers/
 tags: [sg, technology, network, security_measures, unauthorized_access, sg-security-measures]
 prev: /sg/common-mistakes/
 next: /sg/contract-nonconformity/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

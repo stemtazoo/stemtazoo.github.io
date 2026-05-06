@@ -4,6 +4,7 @@ title: ダミー作業とは？PERT図で依存関係を表すための作業【
 description: ダミー作業は、PERT図やアローダイアグラムで作業の依存関係だけを表すための仮の作業です。SG試験で迷いやすい実作業や所要日数との違いを整理します。
 permalink: /sg/dummy-activity/
 tags: [sg, sg-management, project_management]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

@@ -4,6 +4,7 @@ title: VBScriptとは？マクロウイルスとの違いを整理【SG試験】
 description: VBScriptは、Windows環境などで使われる軽量なスクリプト言語です。SG試験で迷いやすいマクロウイルスとの違いを、動く場所で整理します。
 permalink: /sg/vbscript/
 tags: [sg, sg-security-measures, malware, threat_vulnerability]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

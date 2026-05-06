@@ -5,6 +5,7 @@ description: "ソフトウェアライセンス違反は、使用許諾契約で
 permalink: /sg/software-license-violation/
 tags: [sg, sg-strategy, business_management, it_security_operations]
 prev: /sg/site-license-contract/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

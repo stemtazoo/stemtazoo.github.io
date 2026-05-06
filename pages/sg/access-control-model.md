@@ -6,6 +6,7 @@ permalink: /sg/access-control-model/
 tags: [sg, sg-security-measures, access_control, system_architecture]
 prev: /sg/access-control/
 next: /sg/least-privilege/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

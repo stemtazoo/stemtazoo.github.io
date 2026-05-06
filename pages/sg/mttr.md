@@ -6,6 +6,7 @@ permalink: /sg/mttr/
 tags: [sg, sg-management]
 prev: /sg/mtbf/
 next: /sg/nco/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

@@ -6,6 +6,7 @@ permalink: /sg/id-management/
 prev: /sg/authentication-authorization-access-control/
 next: /sg/authorization/
 tags: [sg, sg-security-management, access_control, it_security_operations]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

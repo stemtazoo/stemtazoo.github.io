@@ -4,6 +4,7 @@ title: BCMとは？BCPを運用・改善する考え方【SG試験】
 description: BCMは、BCPを作って終わりにせず、教育・訓練・見直しを通じて事業継続力を高める管理活動です。SG試験で問われるBCPとの違いを整理します。
 permalink: /sg/business-continuity-management/
 tags: [sg, sg-strategy, business_management, risk_assessment, it_security_operations]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

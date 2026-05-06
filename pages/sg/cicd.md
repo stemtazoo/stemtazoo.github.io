@@ -4,6 +4,7 @@ title: CI/CDとは？自動化された開発・テストの流れ【SG試験】
 description: CI/CDは、コード変更後のビルド、テスト、リリース作業を自動化し、継続的に品質を確認する開発の仕組みです。SG試験で迷いやすいDevOps、DevSecOps、シフトレフトとの違いを整理します。
 permalink: /sg/cicd/
 tags: [sg, sg-management, service_management, sg-security-measures, it_security_operations]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

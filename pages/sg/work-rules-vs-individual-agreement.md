@@ -6,6 +6,7 @@ permalink: /sg/work-rules-vs-individual-agreement/
 tags: [sg, security_law, business_management, risk_assessment, sg-security-law]
 prev: /sg/wifi-auth-wpa2-wpa3-8021x/
 next: /sg/xss/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

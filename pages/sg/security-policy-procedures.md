@@ -6,6 +6,7 @@ permalink: /sg/security-policy-procedures/
 tags: [sg, security_management, isms, it_security_operations, security_training, sg-security-management]
 prev: /sg/security-policy-basic/
 next: /sg/security-policy-standards/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

@@ -6,6 +6,7 @@ permalink: /sg/smime/
 prev: /sg/spf-dkim/
 next: /sg/secure-protocol/
 tags: [sg, sg-security-measures, crypto_auth, network]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

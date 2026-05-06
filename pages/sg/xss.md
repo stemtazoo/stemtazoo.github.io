@@ -6,6 +6,7 @@ permalink: /sg/xss/
 prev: /sg/work-rules-vs-individual-agreement/
 next: /sg/zero-trust/
 tags: [sg, security_general, threat_vulnerability, unauthorized_access, data_leakage, sg-security-overview]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

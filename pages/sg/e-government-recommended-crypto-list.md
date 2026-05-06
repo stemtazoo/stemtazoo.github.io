@@ -7,6 +7,7 @@ permalink: /sg/e-government-recommended-crypto-list/
 tags: [sg, sg-security-overview, crypto_auth, sg-security-measures]
 prev: /sg/cryptrec-list/
 next: /sg/recommended-candidate-crypto-list/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

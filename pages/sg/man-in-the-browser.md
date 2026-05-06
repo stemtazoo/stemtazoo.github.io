@@ -6,6 +6,7 @@ permalink: /sg/man-in-the-browser/
 tags: [sg, security_measures, malware, unauthorized_access, sg-security-measures]
 prev: /sg/malware/
 next: /sg/man-in-the-middle-attack/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

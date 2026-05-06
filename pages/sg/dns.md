@@ -6,6 +6,7 @@ permalink: /sg/dns/
 tags: [sg, technology, network, security_measures, unauthorized_access, sg-technology]
 prev: /sg/dns-reflector-attack/
 next: /sg/domain-hijacking/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

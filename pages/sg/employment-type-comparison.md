@@ -6,6 +6,7 @@ permalink: /sg/employment-type-comparison/
 tags: [sg, management, business_management, vendor_management, risk_assessment, sg-management]
 prev: /sg/dos-vs-ddos/
 next: /sg/five-basic-components/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

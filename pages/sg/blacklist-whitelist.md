@@ -6,6 +6,7 @@ permalink: /sg/blacklist-whitelist/
 tags: [sg, security_measures, unauthorized_access, network, sg-security-measures]
 prev: /sg/availability/
 next: /sg/bot/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

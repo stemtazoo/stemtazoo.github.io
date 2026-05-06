@@ -4,6 +4,7 @@ title: ファジングとは？未知の脆弱性を見つける検査手法【S
 description: ファジングは、問題を起こしそうなデータを大量に入力し、ソフトウェアの応答から未知の脆弱性を見つける検査手法です。SG試験で混同しやすい検疫ネットワークやソースコード検査との違いを整理します。
 permalink: /sg/fuzzing/
 tags: [sg, sg-security-overview, threat_vulnerability, sg-security-measures, unauthorized_access]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

@@ -7,6 +7,7 @@ permalink: /sg/cryptographic-deprecation/
 tags: [sg, sg-security-overview, crypto_auth, risk_assessment]
 prev: /sg/monitoring-crypto-list/
 next: /sg/compromise-crypto/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

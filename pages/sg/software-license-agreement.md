@@ -5,6 +5,7 @@ description: "ソフトウェア使用許諾契約は、ソフトウェアの所
 permalink: /sg/software-license-agreement/
 tags: [sg, sg-strategy, business_management, it_security_operations]
 prev: /sg/click-wrap-contract/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

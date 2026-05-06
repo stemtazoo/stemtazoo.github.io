@@ -6,6 +6,7 @@ permalink: /sg/token-authentication/
 prev: /sg/auth-access-summary/
 next: /sg/idp/
 tags: [sg, sg-security-measures, crypto_auth, system_architecture]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

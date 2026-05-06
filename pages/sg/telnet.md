@@ -6,6 +6,7 @@ permalink: /sg/telnet/
 tags: [sg, technology, network, unauthorized_access, sg-technology]
 prev: /sg/targeted-attack/
 next: /sg/timestamp/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

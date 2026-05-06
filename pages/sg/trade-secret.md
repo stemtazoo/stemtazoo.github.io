@@ -4,6 +4,7 @@ title: 営業秘密とは？3要件で判断する【SG試験】
 description: "営業秘密は、不正競争防止法で保護される企業の秘密情報です。SG試験・情報セキュリティマネジメント試験で問われやすい秘密管理性・有用性・非公知性の3要件を、顧客名簿・設計書・手順書などの例で判断できるように整理します。"
 permalink: /sg/trade-secret/
 tags: [sg, law, security_management, information_management, trade_secret]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

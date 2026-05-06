@@ -6,6 +6,7 @@ permalink: /sg/reverse-brute-force-attack/
 tags: [sg, security_measures, unauthorized_access, threat_vulnerability, access_control, sg-security-measures]
 prev: /sg/residual-risk/
 next: /sg/risk-response-cia/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

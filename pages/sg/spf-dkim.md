@@ -6,6 +6,7 @@ permalink: /sg/spf-dkim/
 prev: /sg/spf/
 next: /sg/smime/
 tags: [sg, sg-security-measures, unauthorized_access, network]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

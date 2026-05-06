@@ -4,6 +4,7 @@ title: CSIRTの種類まとめ｜6分類と役割の違い【SG試験】
 description: CSIRTの種類はサービス対象によって整理できます。組織内CSIRT、国際連携CSIRT、コーディネーションセンターなど6分類をSG試験の判断基準で解説します。
 permalink: /sg/csirt-types/
 tags: [sg, sg-security-management, incident_management, csirt, it_security_operations]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

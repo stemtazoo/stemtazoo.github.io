@@ -6,6 +6,7 @@ permalink: /sg/contract-types/
 tags: [sg, management, vendor_management, system_strategy, sg-strategy]
 prev: /sg/contract-nonconformity/
 next: /sg/copyright-ownership/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

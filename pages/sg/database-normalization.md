@@ -6,6 +6,7 @@ permalink: /sg/database-normalization/
 tags: [sg, database, system_planning, data_modeling]
 prev: /sg/primary-key-foreign-key/
 next: /sg/database-denormalization/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

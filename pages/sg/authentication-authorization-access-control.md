@@ -6,6 +6,7 @@ permalink: /sg/authentication-authorization-access-control/
 tags: [sg, sg-security-measures, access_control, crypto_auth]
 prev: /sg/captcha/
 next: /sg/id-management/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

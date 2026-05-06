@@ -6,6 +6,7 @@ permalink: /sg/isms/
 prev: /sg/security-management-overview/
 next: /sg/security-committee/
 tags: [sg, sg-security-management, isms, risk_assessment, it_security_operations]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

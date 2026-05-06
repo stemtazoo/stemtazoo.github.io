@@ -6,6 +6,7 @@ permalink: /sg/labor-contract-disadvantageous-change/
 tags: [sg, security_law, business_management, risk_assessment, sg-security-law]
 prev: /sg/keylogger/
 next: /sg/labor-law-difference/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

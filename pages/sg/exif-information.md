@@ -4,6 +4,7 @@ title: EXIF情報とは？写真に残る位置情報のリスク【SG試験】
 description: EXIF情報は、写真に記録される撮影日時や位置情報などのメタデータです。SG試験で問われやすい情報漏えいリスクと確認・削除の判断基準を整理します。
 permalink: /sg/exif-information/
 tags: [sg, sg-security-measures, data_leakage, asset_management]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

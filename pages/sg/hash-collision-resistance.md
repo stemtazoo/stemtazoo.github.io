@@ -6,6 +6,7 @@ permalink: /sg/hash-collision-resistance/
 prev: /sg/hash-algorithms/
 next: /sg/message-authentication/
 tags: [sg, sg-security-overview, crypto_auth, data_leakage]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

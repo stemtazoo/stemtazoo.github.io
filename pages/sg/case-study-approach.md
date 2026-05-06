@@ -6,6 +6,7 @@ permalink: /sg/case-study-approach/
 tags: [sg, risk_assessment, it_security_operations, security_management, sg-security-management]
 prev: /sg/case-solving-template/
 next: /sg/clickjacking/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

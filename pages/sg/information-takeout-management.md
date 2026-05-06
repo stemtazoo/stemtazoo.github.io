@@ -4,6 +4,7 @@ title: "情報の持ち出し管理とは？許可と記録で漏えいを防ぐ
 description: "情報の持ち出し管理は、重要情報を社外へ持ち出すときに許可・記録・保護を行う対策です。SG試験で問われやすい紛失、盗難、無断持ち出しとの関係を整理します。"
 permalink: /sg/information-takeout-management/
 tags: [sg, sg-security-measures, data_leakage, asset_management, it_security_operations]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

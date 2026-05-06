@@ -6,6 +6,7 @@ permalink: /sg/mac-address/
 tags: [sg, technology, network, access_control, sg-technology]
 prev: /sg/labor-law-difference/
 next: /sg/macro-virus/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

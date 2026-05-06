@@ -6,6 +6,7 @@ permalink: /sg/er-diagram-vs-dfd/
 tags: [sg, database, system_planning, data_modeling]
 prev: /sg/data-flow-diagram/
 next: /sg/data-model/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

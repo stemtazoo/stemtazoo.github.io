@@ -6,6 +6,7 @@ permalink: /sg/clear-desk-screen/
 prev: /sg/anti-passback/
 next: /sg/surveillance-camera/
 tags: [sg, sg-security-measures, data_leakage, security_training]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

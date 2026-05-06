@@ -6,6 +6,7 @@ permalink: /sg/project-lifecycle-characteristics/
 tags: [sg, management, project_management, risk_assessment, sg-strategy]
 prev: /sg/privacy-separator/
 next: /sg/psk-wireless-auth/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

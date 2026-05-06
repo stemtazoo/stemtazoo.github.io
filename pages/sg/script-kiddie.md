@@ -6,6 +6,7 @@ permalink: /sg/script-kiddie/
 tags: [sg, threat_vulnerability, security_awareness, security_measures, sg-security-measures]
 prev: /sg/sandbox/
 next: /sg/security-measures-cia/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

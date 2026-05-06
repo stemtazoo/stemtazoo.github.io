@@ -6,6 +6,7 @@ permalink: /sg/case-solving-template/
 tags: [sg, risk_assessment, it_security_operations, security_management, security_training, sg-security-management]
 prev: /sg/brute-force-attack/
 next: /sg/case-study-approach/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

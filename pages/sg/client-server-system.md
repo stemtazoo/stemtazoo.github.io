@@ -6,6 +6,7 @@ permalink: /sg/client-server-system/
 tags: [sg, sg-technology]
 prev: /sg/clickjacking/
 next: /sg/command-and-control/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

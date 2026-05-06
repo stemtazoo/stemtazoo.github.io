@@ -6,6 +6,7 @@ permalink: /sg/data-model/
 tags: [sg, database, system_planning, data_modeling]
 prev: /sg/er-diagram-vs-dfd/
 next: /sg/primary-key-foreign-key/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

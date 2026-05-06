@@ -5,6 +5,7 @@ description: "サイトライセンス契約は、特定の組織・学校・事
 permalink: /sg/site-license-contract/
 tags: [sg, sg-strategy, business_management, it_security_operations]
 prev: /sg/volume-license-contract/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

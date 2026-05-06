@@ -6,6 +6,7 @@ permalink: /sg/certificate-revocation-crl-ocsp/
 prev: /sg/self-signed-certificate/
 next: /sg/secure-protocol/
 tags: [sg, crypto_auth, sg-security-overview, network]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

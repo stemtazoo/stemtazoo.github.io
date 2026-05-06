@@ -6,6 +6,7 @@ permalink: /sg/challenge-response-why-not-used/
 prev: /sg/challenge-response-authentication/
 next: /sg/frr-far/
 tags: [sg, sg-security-measures, access_control, risk_assessment]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

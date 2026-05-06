@@ -6,6 +6,7 @@ permalink: /sg/asset-register/
 prev: /sg/rainbow-table/
 next: /sg/risk-management/
 tags: [sg, sg-security-management, asset_management, risk_assessment]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

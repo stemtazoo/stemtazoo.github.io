@@ -6,6 +6,7 @@ permalink: /sg/data-flow-diagram/
 tags: [sg, database, system_planning, data_modeling]
 prev: /sg/er-diagram/
 next: /sg/er-diagram-vs-dfd/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

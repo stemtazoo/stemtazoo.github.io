@@ -6,6 +6,7 @@ permalink: /sg/ips/
 prev: /sg/vpn/
 next: /sg/captcha/
 tags: [sg, sg-security-measures, unauthorized_access, network]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

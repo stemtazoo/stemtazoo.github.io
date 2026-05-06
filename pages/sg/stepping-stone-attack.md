@@ -6,6 +6,7 @@ permalink: /sg/stepping-stone-attack/
 tags: [sg, threat_vulnerability, unauthorized_access, it_security_operations, sg-security-overview]
 prev: /sg/ssl-tls/
 next: /sg/targeted-attack/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

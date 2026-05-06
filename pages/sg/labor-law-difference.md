@@ -6,6 +6,7 @@ permalink: /sg/labor-law-difference/
 tags: [sg, security_law, business_management, risk_assessment, sg-security-law]
 prev: /sg/labor-contract-disadvantageous-change/
 next: /sg/mac-address/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

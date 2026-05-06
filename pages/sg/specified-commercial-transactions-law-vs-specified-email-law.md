@@ -4,6 +4,7 @@ title: 特定商取引法と特定電子メール法の違い【SG試験】
 description: 特定商取引法と特定電子メール法は、どちらも広告メールに関係する法律です。取引ルール全体を規制する法律か、広告メール送信そのものを規制する法律かで切り分けます。
 permalink: /sg/specified-commercial-transactions-law-vs-specified-email-law/
 tags: [sg, sg-security-law, privacy_law, it_security_operations]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

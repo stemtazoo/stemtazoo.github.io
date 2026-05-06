@@ -6,6 +6,7 @@ permalink: /sg/psk-wireless-auth/
 tags: [sg, security_measures, access_control, network, sg-security-measures]
 prev: /sg/project-lifecycle-characteristics/
 next: /sg/ransomware/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

@@ -6,6 +6,7 @@ permalink: /sg/vpn/
 prev: /sg/dmz/
 next: /sg/ips/
 tags: [sg, sg-technology, network, unauthorized_access]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

@@ -6,6 +6,7 @@ permalink: /sg/cryptrec/
 tags: [sg, sg-security-measures]
 prev: /sg/cryptojacking/
 next: /sg/csirt/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

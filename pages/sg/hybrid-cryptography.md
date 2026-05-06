@@ -6,6 +6,7 @@ permalink: /sg/hybrid-cryptography/
 prev: /sg/block-stream-cipher/
 next: /sg/hash-function/
 tags: [sg, crypto_auth, sg-security-overview, network]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

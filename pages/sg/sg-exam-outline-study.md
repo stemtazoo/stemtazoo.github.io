@@ -7,6 +7,7 @@ prev: /sg/session-hijacking/
 next: /sg/sla-summary/
 categories: [business]
 tags: [sg, sg-exam-outline]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

@@ -4,6 +4,7 @@ title: IDS・IPSとファイアウォールの違い【SG試験】
 description: "IDS、IPS、ファイアウォールは、いずれもネットワークの安全を守る仕組みですが、役割が異なります。SG試験・情報セキュリティマネジメント試験で迷いやすい「許可・拒否」「検知」「検知して遮断」の違いを、判断基準として整理します。"
 permalink: /sg/ids-ips-firewall-difference/
 tags: [sg, sg-security-measures, network_security, firewall, ids, ips]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

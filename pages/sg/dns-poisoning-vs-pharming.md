@@ -6,6 +6,7 @@ permalink: /sg/dns-poisoning-vs-pharming/
 tags: [sg, threat_vulnerability, network, data_leakage, sg-security-overview]
 prev: /sg/dns-cache-poisoning/
 next: /sg/dns-reflector-attack/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

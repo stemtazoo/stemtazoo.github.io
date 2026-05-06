@@ -6,6 +6,7 @@ permalink: /sg/raid/
 prev: /sg/security-wire/
 next: /sg/remote-backup/
 tags: [sg, sg-security-measures, system_architecture, it_security_operations]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

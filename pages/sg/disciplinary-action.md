@@ -6,6 +6,7 @@ permalink: /sg/disciplinary-action/
 tags: [sg, security_law, business_management, risk_assessment, sg-security-law]
 prev: /sg/directory-traversal/
 next: /sg/dns-attack-difference/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

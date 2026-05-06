@@ -6,6 +6,7 @@ permalink: /sg/http-https/
 tags: [sg, technology, network, data_leakage, sg-technology]
 prev: /sg/honeypot/
 next: /sg/incident-response/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

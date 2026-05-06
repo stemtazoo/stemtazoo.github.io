@@ -6,6 +6,7 @@ permalink: /sg/identification-code/
 tags: [sg, sg-security-management, law, access_control, authentication]
 prev: /sg/unauthorized-access-related-actions/
 next: /sg/unauthorized-access/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

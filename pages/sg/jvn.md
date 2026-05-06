@@ -6,6 +6,7 @@ permalink: /sg/jvn/
 tags: [sg, sg-security-management]  
 prev: /sg/vulnerability-overview/  
 next: /sg/cvss/  
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

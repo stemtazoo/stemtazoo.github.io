@@ -6,6 +6,7 @@ permalink: /sg/multi-factor-authentication/
 tags: [sg, sg-security-measures, crypto_auth, access_control]
 prev: /sg/password-management/
 next: /sg/mfa-vs-step-auth/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

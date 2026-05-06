@@ -6,6 +6,7 @@ permalink: /sg/session-hijacking/
 tags: [sg, security_measures, unauthorized_access, network, access_control, sg-security-measures]
 prev: /sg/shadow-it/
 next: /sg/sg-exam-outline-study/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

@@ -4,6 +4,7 @@ title: 無線LANのセキュリティ対策まとめ【SG試験】
 description: 無線LANのセキュリティ対策は、暗号化・認証・接続制限・ネットワーク分離を組み合わせて考えます。SG試験で迷いやすい用語の違いを整理します。
 permalink: /sg/wireless-lan-security-summary/
 tags: [sg, sg-security-measures, access_control, network]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

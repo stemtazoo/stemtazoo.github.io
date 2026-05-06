@@ -6,6 +6,7 @@ permalink: /sg/risk-treatment/
 tags: [sg, security_management, risk_assessment, it_security_operations, sg-security-management]
 prev: /sg/risk-response-cia/
 next: /sg/rootkit/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

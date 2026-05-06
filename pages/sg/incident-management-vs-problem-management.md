@@ -4,6 +4,7 @@ title: インシデント管理と問題管理の違いを整理【SG試験】
 description: インシデント管理は早期復旧を目指す活動、問題管理は根本原因を分析して再発を防ぐ活動です。SG試験で迷いやすい目的と対応タイミングの違いを整理します。
 permalink: /sg/incident-management-vs-problem-management/
 tags: [sg, sg-management, service_management, incident_management, it_security_operations]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

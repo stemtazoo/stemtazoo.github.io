@@ -6,6 +6,7 @@ permalink: /sg/command-and-control/
 tags: [sg, threat_vulnerability, malware, unauthorized_access, sg-security-overview]
 prev: /sg/client-server-system/
 next: /sg/common-mistakes/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

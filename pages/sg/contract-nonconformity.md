@@ -6,6 +6,7 @@ permalink: /sg/contract-nonconformity/
 tags: [sg, management, vendor_management, risk_assessment, sg-management]
 prev: /sg/common-port-numbers/
 next: /sg/contract-types/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

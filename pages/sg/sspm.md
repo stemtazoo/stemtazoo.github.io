@@ -4,6 +4,7 @@ title: SSPMとは？SaaSの設定ミスを管理する仕組み【SG試験】
 description: SSPMは、SaaSアプリケーションの設定や権限を継続的に確認し、設定ミスや過剰権限を管理する仕組みです。SG試験で問われやすいCSPM、CASBとの違いも整理します。
 permalink: /sg/sspm/
 tags: [sg, sg-security-measures, it_security_operations, access_control]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

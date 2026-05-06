@@ -6,6 +6,7 @@ permalink: /sg/five-basic-components/
 tags: [sg, sg-technology]
 prev: /sg/employment-type-comparison/
 next: /sg/fraud-triangle/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

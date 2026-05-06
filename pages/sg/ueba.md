@@ -4,6 +4,7 @@ title: UEBAとは？利用者のふるまいから異常を見つける仕組み
 description: "UEBAは、利用者や端末の通常のふるまいをもとに、いつもと違う不審な行動を検知する仕組みです。SG試験・情報セキュリティマネジメント試験で混同しやすいSIEM、EDR、SOCとの違いを判断基準で整理します。"
 permalink: /sg/ueba/
 tags: [sg, sg-security-measures, monitoring, log_management, incident_response]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

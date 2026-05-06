@@ -6,6 +6,7 @@ permalink: /sg/frr-far/
 prev: /sg/challenge-response-why-not-used/
 next: /sg/symmetric-key-cryptography/
 tags: [sg, sg-security-measures, access_control, crypto_auth]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

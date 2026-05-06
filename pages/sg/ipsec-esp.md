@@ -6,6 +6,7 @@ permalink: /sg/ipsec-esp/
 prev: /sg/ipsec-ah/
 next: /sg/ipsec-ike/
 tags: [sg, sg-security-overview, crypto_auth, network, sg-technology]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

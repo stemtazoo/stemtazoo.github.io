@@ -6,6 +6,7 @@ permalink: /sg/cyber-attack-cia/
 prev: /sg/vulnerability-case-practice/
 next: /sg/cyber-kill-chain/
 tags: [sg, security_general, cia, risk_assessment, sg-security-overview]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

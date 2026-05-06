@@ -6,6 +6,7 @@ permalink: /sg/access-control/
 tags: [sg, sg-security-measures, access_control, it_security_operations]
 prev: /sg/authorization/
 next: /sg/access-control-model/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

@@ -6,6 +6,7 @@ permalink: /sg/brute-force-attack/
 tags: [sg, security_measures, unauthorized_access, threat_vulnerability, access_control, sg-security-measures]
 prev: /sg/botnet/
 next: /sg/case-solving-template/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

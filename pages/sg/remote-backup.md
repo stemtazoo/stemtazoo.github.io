@@ -6,6 +6,7 @@ permalink: /sg/remote-backup/
 prev: /sg/raid/
 next: /sg/ups/
 tags: [sg, sg-security-measures, data_leakage, it_security_operations]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

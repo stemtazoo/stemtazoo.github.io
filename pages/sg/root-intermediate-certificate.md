@@ -6,6 +6,7 @@ permalink: /sg/root-intermediate-certificate/
 prev: /sg/root-certificate/
 next: /sg/self-signed-certificate/
 tags: [sg, crypto_auth, sg-security-overview, network]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論
