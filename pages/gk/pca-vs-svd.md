@@ -6,6 +6,7 @@ permalink: /gk/pca-vs-svd/
 tags: [gk, unsupervised_learning, dimensionality_reduction]
 gk_section: 機械学習の概要/代表的な手法/教師なし学習
 gk_order: 6
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

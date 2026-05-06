@@ -6,6 +6,7 @@ permalink: /gk/speech-preprocessing/
 tags: [gk, signal_processing, nlp]
 gk_section: ディープラーニングの応用例/音声処理
 gk_order: 5
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

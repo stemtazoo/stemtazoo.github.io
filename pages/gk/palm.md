@@ -6,6 +6,7 @@ permalink: /gk/palm/
 tags: [gk, neural_network, transformer]
 gk_section: ディープラーニングの応用例/マルチモーダル
 gk_order: 2
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

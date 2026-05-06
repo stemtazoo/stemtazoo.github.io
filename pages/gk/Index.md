@@ -529,6 +529,7 @@ gk_sections:
     items:
       - /gk/trick-questions-1/
       - /gk/trick-questions-xai-1/
+last_modified_at: 2026-05-06
 ---
 
 {% comment %}
