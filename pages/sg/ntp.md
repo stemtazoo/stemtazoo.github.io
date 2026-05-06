@@ -4,6 +4,7 @@ title: NTPとは？時刻同期と踏み台対策を整理【SG試験】
 description: NTPはネットワーク上で機器の時刻を同期するためのプロトコルです。SG試験で問われやすい時刻同期の役割と、NTPリフレクション攻撃への対策を整理します。
 permalink: /sg/ntp/
 tags: [sg, sg-technology, network, threat_vulnerability, sg-security-measures]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

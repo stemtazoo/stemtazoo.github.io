@@ -6,6 +6,7 @@ permalink: /sg/ups/
 prev: /sg/remote-backup/
 next: /sg/physical-security-summary/
 tags: [sg, sg-security-measures, it_security_operations, system_architecture]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

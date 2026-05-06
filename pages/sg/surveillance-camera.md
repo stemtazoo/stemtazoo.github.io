@@ -6,6 +6,7 @@ permalink: /sg/surveillance-camera/
 prev: /sg/clear-desk-screen/
 next: /sg/security-wire/
 tags: [sg, sg-security-measures, system_audit, it_security_operations]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

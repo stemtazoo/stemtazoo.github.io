@@ -5,6 +5,7 @@ description: "ボリュームライセンス契約は、複数台・複数ユー
 permalink: /sg/volume-license-contract/
 tags: [sg, sg-strategy, business_management, it_security_operations]
 prev: /sg/software-license-agreement/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

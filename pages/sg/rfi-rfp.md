@@ -4,6 +4,7 @@ title: RFIとRFPの違いとは？情報提供依頼と提案依頼を整理【S
 description: RFIは情報提供依頼、RFPは提案依頼です。外部委託やシステム導入で使う文書の違いを、SG試験で迷いやすい目的・タイミング・判断基準から整理します。
 permalink: /sg/rfi-rfp/
 tags: [sg, sg-strategy, system_planning, vendor_management]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

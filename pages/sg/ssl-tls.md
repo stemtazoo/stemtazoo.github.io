@@ -6,6 +6,7 @@ permalink: /sg/ssl-tls/
 tags: [sg, security_general, crypto_auth, network, sg-security-overview]
 prev: /sg/ssh/
 next: /sg/stepping-stone-attack/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

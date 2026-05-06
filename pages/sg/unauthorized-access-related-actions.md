@@ -6,6 +6,7 @@ permalink: /sg/unauthorized-access-related-actions/
 tags: [sg, sg-security-management, law, access_control, cybercrime]
 prev: /sg/unauthorized-access-law/
 next: /sg/identification-code/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

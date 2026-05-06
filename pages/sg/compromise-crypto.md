@@ -6,6 +6,7 @@ permalink: /sg/compromise-crypto/
 prev: /sg/wifi-security-protocols/
 next: /sg/cryptrec1/
 tags: [sg, sg-security-overview, crypto_auth, risk_assessment]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

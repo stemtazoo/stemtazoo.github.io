@@ -6,6 +6,7 @@ permalink: /sg/copyright-ownership/
 tags: [sg, 著作権, 委託開発, 法務, sg-security-law]
 prev: /sg/contract-types/
 next: /sg/cracker/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

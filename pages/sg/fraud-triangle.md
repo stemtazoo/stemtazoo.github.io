@@ -6,6 +6,7 @@ permalink: /sg/fraud-triangle/
 tags: [sg, security_management, risk_assessment, security_awareness, sg-security-management]
 prev: /sg/five-basic-components/
 next: /sg/hacker/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

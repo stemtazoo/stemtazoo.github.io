@@ -6,6 +6,7 @@ permalink: /sg/ddos/
 tags: [sg, security_measures, unauthorized_access, it_security_operations, sg-security-measures]
 prev: /sg/ddos-attack-summary/
 next: /sg/dhcp/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

@@ -6,6 +6,7 @@ permalink: /sg/exam-scope/
 prev: /sg/information-security-management-exam/
 next: /sg/study-method/
 tags: [sg, sg-security-overview, sg-security-management, it_security_operations]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

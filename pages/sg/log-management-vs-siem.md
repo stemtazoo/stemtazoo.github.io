@@ -4,6 +4,7 @@ title: ログ管理とSIEMの違い【SG試験】
 description: "ログ管理はログを記録・保管・確認できるようにする活動であり、SIEMは複数のログを集約・分析して異常を検知する仕組みです。SG試験・情報セキュリティマネジメント試験で混同しやすいログ管理、監査ログ、SIEM、SOCの違いを判断基準で整理します。"
 permalink: /sg/log-management-vs-siem/
 tags: [sg, sg-security-measures, log_management, monitoring, incident_response]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

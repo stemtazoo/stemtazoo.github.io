@@ -4,6 +4,7 @@ title: ESPとは？IPsecでデータを暗号化する仕組み【SG試験】
 description: ESPは、IPsecで通信データを暗号化し、必要に応じて改ざん検知も行う仕組みです。トンネルモードで暗号化される範囲と認証データとの違いをSG試験向けに整理します。
 permalink: /sg/esp/
 tags: [sg, sg-technology, network, crypto_auth]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

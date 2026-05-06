@@ -6,6 +6,7 @@ permalink: /sg/crl/
 tags: [sg, security_general, crypto_auth, risk_assessment, sg-security-overview]
 prev: /sg/cracker/
 next: /sg/cryptojacking/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

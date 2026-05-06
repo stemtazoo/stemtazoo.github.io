@@ -4,6 +4,7 @@ title: "SG公式過去問"
 description: "情報セキュリティマネジメント試験（SG）のIPA公式公開問題を，PDFを見ながら回答・採点・解説確認できるページです。"
 permalink: /sg/past/
 tags: [sg, sg-past-exam]
+last_modified_at: 2026-05-06
 ---
 
 ## SG公式過去問

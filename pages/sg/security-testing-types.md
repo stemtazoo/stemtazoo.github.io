@@ -4,6 +4,7 @@ title: セキュリティテストの種類まとめ【SG試験】
 description: セキュリティテストは、開発・運用の中で脆弱性や設定不備を見つける確認活動です。SG試験で迷いやすいSAST、DAST、ファジング、脆弱性診断、ペネトレーションテストの違いを整理します。
 permalink: /sg/security-testing-types/
 tags: [sg, sg-security-overview, threat_vulnerability, sg-security-measures, unauthorized_access]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

@@ -6,6 +6,7 @@ permalink: /sg/physical-security-summary/
 prev: /sg/ups/
 next: /sg/physical-security/
 tags: [sg, sg-security-measures, risk_assessment, it_security_operations]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

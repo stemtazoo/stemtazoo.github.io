@@ -4,6 +4,7 @@ title: PGPとは？メール暗号化で使われる仕組み【SG試験】
 description: PGPはメールやファイルの暗号化、デジタル署名に使われる仕組みです。公開鍵暗号、共通鍵暗号、S/MIMEやSSL/TLSとの違いをSG試験向けに整理します。
 permalink: /sg/pgp/
 tags: [sg, sg-security-overview, crypto_auth, network, data_leakage]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

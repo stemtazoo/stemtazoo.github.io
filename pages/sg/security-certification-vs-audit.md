@@ -6,6 +6,7 @@ permalink: /sg/security-certification-vs-audit/
 tags: [sg, sg-security-management, system_audit, isms, it_security_operations]
 prev: /sg/jisec/
 next: /sg/audit-log/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

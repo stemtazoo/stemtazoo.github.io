@@ -6,6 +6,7 @@ permalink: /sg/dns-attack-difference/
 tags: [sg, threat_vulnerability, network, unauthorized_access, sg-security-overview]
 prev: /sg/disciplinary-action/
 next: /sg/dns-cache-poisoning/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

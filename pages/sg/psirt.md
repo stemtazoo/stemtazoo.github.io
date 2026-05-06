@@ -4,6 +4,7 @@ title: PSIRTとは？製品脆弱性に対応するベンダーチーム【SG試
 description: PSIRTは自社が開発・提供する製品やサービスの脆弱性に対応するチームです。CSIRTやSOCとの違いをSG試験の判断基準で整理します。
 permalink: /sg/psirt/
 tags: [sg, sg-security-management, incident_management, csirt, sg-security-measures]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

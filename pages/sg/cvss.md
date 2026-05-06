@@ -6,6 +6,7 @@ permalink: /sg/cvss/
 tags: [sg, security_general, threat_vulnerability, risk_assessment, sg-security-overview]
 prev: /sg/jvn/
 next: /sg/vulnerability-scan/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

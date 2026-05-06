@@ -6,6 +6,7 @@ permalink: /sg/cryptojacking/
 tags: [sg, security_measures, malware, it_security_operations, sg-security-measures]
 prev: /sg/crl/
 next: /sg/cryptrec/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

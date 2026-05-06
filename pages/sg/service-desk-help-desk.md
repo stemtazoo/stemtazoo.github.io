@@ -4,6 +4,7 @@ title: サービスデスクとは？ヘルプデスクとの違いを整理【S
 description: サービスデスクは、利用者とITサービス提供側をつなぐ窓口です。SG試験で迷いやすいヘルプデスクとの違い、インシデント管理との関係を整理します。
 permalink: /sg/service-desk-help-desk/
 tags: [sg, sg-management, service_management, it_security_operations]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

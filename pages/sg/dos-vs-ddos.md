@@ -6,6 +6,7 @@ permalink: /sg/dos-vs-ddos/
 tags: [sg, threat_vulnerability, unauthorized_access, network, sg-security-overview]
 prev: /sg/dos-attack-difference/
 next: /sg/employment-type-comparison/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

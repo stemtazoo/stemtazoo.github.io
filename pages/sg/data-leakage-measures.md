@@ -4,6 +4,7 @@ title: 情報漏えい対策とは？技術的対策と運用対策を整理【S
 description: 情報漏えい対策は、機密情報が外部に漏れないようにするための対策です。技術的対策と運用対策の違い、SG試験での判断ポイントを整理します。
 permalink: /sg/data-leakage-measures/
 tags: [sg, sg-security-measures, data_leakage, it_security_operations]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

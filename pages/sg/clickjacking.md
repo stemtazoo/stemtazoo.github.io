@@ -6,6 +6,7 @@ permalink: /sg/clickjacking/
 tags: [sg, threat_vulnerability, unauthorized_access, web_security, sg-security-overview]
 prev: /sg/case-study-approach/
 next: /sg/client-server-system/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

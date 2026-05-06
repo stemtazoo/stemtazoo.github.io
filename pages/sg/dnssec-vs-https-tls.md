@@ -6,6 +6,7 @@ permalink: /sg/dnssec-vs-https-tls/
 tags: [sg, sg-security-measures, network_security, dns, tls, cryptography]
 prev: /sg/open-resolver/
 next: /sg/dynamic-dns/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

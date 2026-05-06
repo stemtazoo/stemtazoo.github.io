@@ -6,6 +6,7 @@ permalink: /sg/waf/
 tags: [sg, security_measures, unauthorized_access, network, sg-security-measures]
 prev: /sg/vulnerability/
 next: /sg/wifi-auth-wpa2-wpa3-8021x/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

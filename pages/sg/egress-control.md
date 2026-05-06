@@ -6,6 +6,7 @@ permalink: /sg/egress-control/
 prev: /sg/security-patch/
 next: /sg/malware-analysis/
 tags: [sg, sg-security-measures, malware, it_security_operations]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

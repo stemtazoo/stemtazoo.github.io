@@ -6,6 +6,7 @@ permalink: /sg/sla-summary/
 tags: [sg, sg-management]
 prev: /sg/sg-exam-outline-study/
 next: /sg/sla/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

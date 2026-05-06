@@ -6,6 +6,7 @@ permalink: /sg/attacker-types/
 tags: [sg, security_general, threat_vulnerability, security_awareness, sg-security-overview]
 prev: /sg/
 next: /sg/availability/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

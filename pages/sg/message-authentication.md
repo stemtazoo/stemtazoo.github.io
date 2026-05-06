@@ -6,6 +6,7 @@ permalink: /sg/message-authentication/
 prev: /sg/hash-collision-resistance/
 next: /sg/message-authentication-code/
 tags: [sg, security_general, crypto_auth, access_control, sg-security-overview]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

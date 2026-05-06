@@ -6,6 +6,7 @@ permalink: /sg/risk-management/
 prev: /sg/asset-register/
 next: /sg/risk-assessment/
 tags: [sg, sg-security-management, risk_assessment, isms]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

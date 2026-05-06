@@ -6,6 +6,7 @@ permalink: /sg/arp-vs-dns/
 tags: [sg, sg-security-measures, network_security, threat_vulnerability]
 prev: /sg/arp/
 next: /sg/arp-spoofing/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

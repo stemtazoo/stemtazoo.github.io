@@ -6,6 +6,7 @@ permalink: /sg/incident-management/
 prev: /sg/log-management/
 next: /sg/vulnerability-cheatsheet/
 tags: [sg, sg-security-management, incident_management, risk_assessment, it_security_operations]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

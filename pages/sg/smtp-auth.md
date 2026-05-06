@@ -6,6 +6,7 @@ permalink: /sg/smtp-auth/
 prev: /sg/mail-header-injection/
 next: /sg/spf/
 tags: [sg, sg-security-measures, unauthorized_access, network]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

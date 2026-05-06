@@ -6,6 +6,7 @@ permalink: /sg/insider-threat/
 tags: [sg, sg-security-management, it_security_operations, security_training]
 prev: /sg/security-training/
 next: /sg/insider-guideline/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

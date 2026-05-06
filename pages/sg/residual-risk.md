@@ -6,6 +6,7 @@ permalink: /sg/residual-risk/
 tags: [sg, sg-security-management]
 prev: /sg/ransomware/
 next: /sg/reverse-brute-force-attack/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

@@ -6,6 +6,7 @@ permalink: /sg/steganography/
 prev: /sg/security-measures-comparison/
 next: /sg/digital-watermark/
 tags: [sg, sg-security-measures, data_leakage, threat_vulnerability]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

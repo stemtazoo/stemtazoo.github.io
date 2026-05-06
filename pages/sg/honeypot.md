@@ -6,6 +6,7 @@ permalink: /sg/honeypot/
 tags: [sg, sg-security-measures, unauthorized_access, incident_management]
 prev: /sg/hacker/
 next: /sg/http-https/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

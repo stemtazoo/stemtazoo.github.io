@@ -6,6 +6,7 @@ permalink: /sg/mtbf/
 tags: [sg, sg-management]
 prev: /sg/man-in-the-middle-attack/
 next: /sg/mttr/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

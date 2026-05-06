@@ -6,6 +6,7 @@ permalink: /sg/security-training/
 tags: [sg, security_management, security_training, risk_assessment, security_awareness, sg-security-management]
 prev: /sg/security-policy/
 next: /sg/insider-threat/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

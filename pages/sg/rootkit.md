@@ -6,6 +6,7 @@ permalink: /sg/rootkit/
 tags: [sg, security_measures, malware, unauthorized_access, sg-security-measures]
 prev: /sg/risk-treatment/
 next: /sg/safety-control-measures/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

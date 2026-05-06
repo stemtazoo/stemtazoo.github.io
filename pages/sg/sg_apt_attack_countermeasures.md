@@ -4,6 +4,7 @@ title: "APT攻撃への対策とは？侵入前提で被害を広げない考え
 description: "APT攻撃への対策は、侵入を防ぐだけでなく、侵入後に気付く、広げない、被害を小さくすることが重要です。SG試験・情報セキュリティマネジメント試験で問われる入口対策、検知、被害拡大防止、事後対応の判断ポイントを整理します。"
 permalink: /sg/apt-attack-countermeasures/
 tags: [sg, sg-security-measures, threat_vulnerability, cyber_attack, incident_response]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

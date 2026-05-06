@@ -6,6 +6,7 @@ permalink: /sg/cyber-kill-chain/
 tags: [sg, security_measures, unauthorized_access, risk_assessment, incident_management, sg-security-measures]
 prev: /sg/cyber-attack-cia/
 next: /sg/ddos-attack-summary/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

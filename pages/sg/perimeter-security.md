@@ -6,6 +6,7 @@ permalink: /sg/perimeter-security/
 prev: /sg/security-measures-comparison/
 next: /sg/security-patch/
 tags: [sg, sg-security-measures, network, it_security_operations]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

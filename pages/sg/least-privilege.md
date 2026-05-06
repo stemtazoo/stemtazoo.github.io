@@ -6,6 +6,7 @@ permalink: /sg/least-privilege/
 prev: /sg/access-control-model/
 next: /sg/privileged-id/
 tags: [sg, sg-security-measures, access_control, risk_assessment]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

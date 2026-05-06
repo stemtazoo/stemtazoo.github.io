@@ -4,6 +4,7 @@ title: RSAとは？公開鍵暗号方式の基本【SG試験】
 description: RSAは公開鍵と秘密鍵のペアを使う代表的な公開鍵暗号方式です。SG試験で迷いやすい共通鍵暗号方式・電子署名・鍵交換との違いを整理します。
 permalink: /sg/rsa/
 tags: [sg, sg-security-overview, crypto_auth, threat_vulnerability]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

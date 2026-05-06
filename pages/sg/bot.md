@@ -6,6 +6,7 @@ permalink: /sg/bot/
 tags: [sg, security_measures, malware, unauthorized_access, sg-security-measures]
 prev: /sg/blacklist-whitelist/
 next: /sg/botnet/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

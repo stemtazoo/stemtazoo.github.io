@@ -4,6 +4,7 @@ title: "キーロガーとは？入力情報を盗む仕組みを理解する【
 description: "キーロガーは、利用者の入力情報を記録してIDやパスワードを盗む仕組みです。SG試験で迷いやすい中間者攻撃、アドウェア、ブラウザ拡張との違いを整理します。"
 permalink: /sg/keylogger/
 tags: [sg, sg-security-measures, malware, data_leakage, unauthorized_access]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

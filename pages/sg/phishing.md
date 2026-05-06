@@ -6,6 +6,7 @@ permalink: /sg/phishing/
 tags: [sg, sg-security-measures, sg-security-management, cyberattack, authentication]
 prev: /sg/unauthorized-access/
 next: /sg/access-control/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

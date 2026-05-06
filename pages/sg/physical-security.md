@@ -6,6 +6,7 @@ permalink: /sg/physical-security/
 prev: /sg/physical-security-summary/
 next: /sg/access-control-physical/
 tags: [sg, sg-security-measures, it_security_operations, asset_management]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

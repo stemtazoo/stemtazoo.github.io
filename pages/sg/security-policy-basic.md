@@ -6,6 +6,7 @@ permalink: /sg/security-policy-basic/
 tags: [sg, security_management, isms, asset_management, it_security_operations, sg-security-management]
 prev: /sg/security-measures-cia/
 next: /sg/security-policy-procedures/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

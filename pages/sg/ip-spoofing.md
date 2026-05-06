@@ -6,6 +6,7 @@ permalink: /sg/ip-spoofing/
 tags: [sg, security_measures, unauthorized_access, network, threat_vulnerability, sg-security-measures]
 prev: /sg/information-security-management-exam/
 next: /sg/jpcert-cc/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

@@ -6,6 +6,7 @@ permalink: /sg/unauthorized-access/
 tags: [sg, sg-security-management, law, access_control, cybercrime]
 prev: /sg/identification-code/
 next: /sg/phishing/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

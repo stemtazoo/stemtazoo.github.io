@@ -4,6 +4,7 @@ title: 逓減課金方式とは？使うほど単価が下がる料金体系【S
 description: 逓減課金方式は、累積使用量が増えるほど利用単位当たりの料金が下がる課金方式です。SG試験でグラフや料金体系を判断するポイントを整理します。
 permalink: /sg/decreasing-rate-billing/
 tags: [sg, sg-strategy, business_management, system_strategy]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

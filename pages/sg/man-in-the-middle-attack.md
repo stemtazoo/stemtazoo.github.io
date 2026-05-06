@@ -6,6 +6,7 @@ permalink: /sg/man-in-the-middle-attack/
 tags: [sg, security_measures, unauthorized_access, network, crypto_auth, sg-security-measures]
 prev: /sg/man-in-the-browser/
 next: /sg/mtbf/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

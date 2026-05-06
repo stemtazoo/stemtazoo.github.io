@@ -7,6 +7,7 @@ permalink: /sg/monitoring-crypto-list/
 tags: [sg, sg-security-overview, crypto_auth, sg-security-measures]
 prev: /sg/recommended-candidate-crypto-list/
 next: /sg/cryptographic-deprecation/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

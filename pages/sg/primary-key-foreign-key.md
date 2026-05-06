@@ -6,6 +6,7 @@ permalink: /sg/primary-key-foreign-key/
 tags: [sg, database, system_planning, data_modeling]
 prev: /sg/data-model/
 next: /sg/database-normalization/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

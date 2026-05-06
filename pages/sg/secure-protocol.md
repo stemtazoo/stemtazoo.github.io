@@ -6,6 +6,7 @@ permalink: /sg/secure-protocol/
 prev: /sg/certificate-revocation-crl-ocsp/
 next: /sg/wifi-security-protocols/
 tags: [sg, sg-technology, network, crypto_auth]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

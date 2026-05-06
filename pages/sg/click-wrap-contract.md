@@ -5,6 +5,7 @@ description: "クリックラップ契約は、画面上の利用規約を確認
 permalink: /sg/click-wrap-contract/
 tags: [sg, sg-strategy, business_management, it_security_operations]
 prev: /sg/shrink-wrap-contract/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

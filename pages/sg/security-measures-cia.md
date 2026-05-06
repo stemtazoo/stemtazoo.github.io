@@ -6,6 +6,7 @@ permalink: /sg/security-measures-cia/
 tags: [sg, security_measures, cia, it_security_operations, sg-security-measures]
 prev: /sg/script-kiddie/
 next: /sg/security-policy-basic/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

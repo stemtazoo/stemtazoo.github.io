@@ -6,6 +6,7 @@ permalink: /sg/hash-algorithms/
 prev: /sg/hash-function/
 next: /sg/hash-collision-resistance/
 tags: [sg, sg-security-overview, crypto_auth, risk_assessment]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

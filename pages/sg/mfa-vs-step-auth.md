@@ -6,6 +6,7 @@ permalink: /sg/mfa-vs-step-auth/
 prev: /sg/multi-factor-authentication/
 next: /sg/sso/
 tags: [sg, sg-security-measures, access_control, it_security_operations]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

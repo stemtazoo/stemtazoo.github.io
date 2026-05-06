@@ -6,6 +6,7 @@ permalink: /sg/challenge-response-authentication/
 prev: /sg/risk-based-authentication/
 next: /sg/challenge-response-why-not-used/
 tags: [sg, sg-security-measures, access_control, crypto_auth]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

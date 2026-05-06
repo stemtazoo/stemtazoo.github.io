@@ -6,6 +6,7 @@ permalink: /sg/information-security-management-standard/
 tags: [sg, sg-security-management, isms, system_audit, security_standard]
 prev: /sg/security-audit/
 next: /sg/information-security-audit-standard/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

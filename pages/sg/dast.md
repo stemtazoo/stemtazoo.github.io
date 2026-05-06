@@ -4,6 +4,7 @@ title: DASTとは？実行中のアプリを検査する仕組み【SG試験】
 description: DASTは、実行中のWebアプリケーションに外部からアクセスし、応答や挙動を見て脆弱性を検査する手法です。SG試験で迷いやすい静的解析やファジングとの違いを整理します。
 permalink: /sg/dast/
 tags: [sg, sg-security-overview, threat_vulnerability, sg-security-measures, unauthorized_access]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

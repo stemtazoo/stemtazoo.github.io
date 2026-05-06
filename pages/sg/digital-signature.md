@@ -6,6 +6,7 @@ permalink: /sg/digital-signature/
 prev: /sg/message-authentication-code/
 next: /sg/xml-signature/
 tags: [sg, sg-security-overview, crypto_auth, it_security_operations]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

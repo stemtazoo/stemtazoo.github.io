@@ -4,6 +4,7 @@ title: 情報機器の廃棄管理とは？委託先管理と消去証明書【S
 description: "情報機器の廃棄管理では、PCや記憶媒体を廃棄するときに、データ消去だけでなく委託先管理、廃棄記録、消去証明書の確認が重要です。SG試験・情報セキュリティマネジメント試験で問われる情報漏えい対策と運用面の判断ポイントを整理します。"
 permalink: /sg/information-equipment-disposal-management/
 tags: [sg, sg-security-measures, asset_management, physical_security, outsourcing, information_leakage]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

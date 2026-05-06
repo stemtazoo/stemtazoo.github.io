@@ -6,6 +6,7 @@ permalink: /sg/certificate-authority-role/
 prev: /sg/digital-certificate/
 next: /sg/root-certificate/
 tags: [sg, crypto_auth, sg-security-overview, access_control]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

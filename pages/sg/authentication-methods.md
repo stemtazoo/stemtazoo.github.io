@@ -6,6 +6,7 @@ permalink: /sg/authentication-methods/
 prev: /sg/privileged-id-management/
 next: /sg/password-management/
 tags: [sg, sg-security-overview, access_control, it_security_operations]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

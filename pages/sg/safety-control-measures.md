@@ -6,6 +6,7 @@ permalink: /sg/safety-control-measures/
 tags: [sg, security_law, privacy_law, risk_assessment, it_security_operations, sg-security-law]
 prev: /sg/rootkit/
 next: /sg/sandbox/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

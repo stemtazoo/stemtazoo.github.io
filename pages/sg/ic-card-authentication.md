@@ -4,6 +4,7 @@ title: ICカード認証とは？接触型・非接触型の違い【SG試験】
 description: ICカード認証は、本人が持つICカードを使って本人確認する認証方式です。接触型・非接触型の違いと、生体認証やパスワード認証との切り分けを整理します。
 permalink: /sg/ic-card-authentication/
 tags: [sg, sg-security-overview, crypto_auth, access_control]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

@@ -6,6 +6,7 @@ permalink: /sg/risk-response-cia/
 tags: [sg, risk_assessment, security_management, it_security_operations, sg-security-management]
 prev: /sg/reverse-brute-force-attack/
 next: /sg/risk-treatment/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

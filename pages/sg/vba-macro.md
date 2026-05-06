@@ -4,6 +4,7 @@ title: VBAマクロとは？VBScriptとの違い【SG試験】
 description: VBAマクロは、WordやExcelなどのOffice文書で処理を自動化する機能です。SG試験で混同しやすいVBScriptとの違いを、動く場所で整理します。
 permalink: /sg/vba-macro/
 tags: [sg, sg-security-measures, malware, threat_vulnerability]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

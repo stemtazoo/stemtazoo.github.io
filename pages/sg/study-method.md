@@ -6,6 +6,7 @@ permalink: /sg/study-method/
 prev: /sg/exam-scope/
 next: /sg/case-solving-template/
 tags: [sg, sg-security-overview, sg-security-management, it_security_operations]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

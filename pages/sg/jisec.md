@@ -7,6 +7,7 @@ permalink: /sg/jisec/
 tags: [sg, sg-security-overview, crypto_auth, sg-technology, it_security_operations]
 prev: /sg/eal/
 next: /sg/security-certification-vs-audit/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

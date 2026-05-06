@@ -6,6 +6,7 @@ permalink: /sg/security-committee/
 prev: /sg/isms/
 next: /sg/security-event/
 tags: [sg, sg-security-management, isms, it_security_operations, security_training]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

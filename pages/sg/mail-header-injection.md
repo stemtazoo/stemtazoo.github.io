@@ -6,6 +6,7 @@ permalink: /sg/mail-header-injection/
 tags: [sg, threat_vulnerability, unauthorized_access, data_leakage, sg-security-overview]
 prev: /sg/macro-virus/
 next: /sg/malware/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

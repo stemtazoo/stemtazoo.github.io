@@ -6,6 +6,7 @@ permalink: /sg/sql-injection/
 tags: [sg, threat_vulnerability, unauthorized_access, database, sg-security-overview]
 prev: /sg/spyware/
 next: /sg/ssh/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

@@ -6,6 +6,7 @@ permalink: /sg/port-number/
 tags: [sg, sg-technology]
 prev: /sg/phishing/
 next: /sg/port-scan/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

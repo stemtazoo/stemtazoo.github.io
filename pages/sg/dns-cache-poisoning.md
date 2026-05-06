@@ -6,6 +6,7 @@ permalink: /sg/dns-cache-poisoning/
 tags: [sg, security_measures, unauthorized_access, network, sg-security-measures]
 prev: /sg/dns-attack-difference/
 next: /sg/dns-poisoning-vs-pharming/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

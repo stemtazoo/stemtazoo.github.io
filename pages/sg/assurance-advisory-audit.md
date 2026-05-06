@@ -4,6 +4,7 @@ title: 保証型監査と助言型監査の違い【SG試験】
 description: 保証型監査と助言型監査は、監査の目的が異なります。保証型は適切性を示す監査、助言型は改善提案につなげる監査として、SG試験での切り分け方を整理します。
 permalink: /sg/assurance-advisory-audit/
 tags: [sg, sg-management, system_audit, sg-security-management]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

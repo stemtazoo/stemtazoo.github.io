@@ -6,6 +6,7 @@ permalink: /sg/log-management/
 tags: [sg, sg-security-management, incident_management, it_security_operations]
 prev: /sg/security-incident/
 next: /sg/incident-management/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

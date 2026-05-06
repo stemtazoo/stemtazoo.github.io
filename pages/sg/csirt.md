@@ -6,6 +6,7 @@ permalink: /sg/csirt/
 tags: [sg, sg-security-management]  
 prev: /sg/cryptrec/  
 next: /sg/nisc/  
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論  

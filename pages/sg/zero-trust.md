@@ -6,6 +6,7 @@ permalink: /sg/zero-trust/
 prev: /sg/xss/
 next: /sg/firewall/
 tags: [sg, sg-security-measures, access_control, it_security_operations]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

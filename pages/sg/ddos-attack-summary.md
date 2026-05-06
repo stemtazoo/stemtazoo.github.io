@@ -6,6 +6,7 @@ permalink: /sg/ddos-attack-summary/
 tags: [sg, threat_vulnerability, unauthorized_access, network, sg-security-overview]
 prev: /sg/cyber-kill-chain/
 next: /sg/ddos/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

@@ -6,6 +6,7 @@ permalink: /sg/dos-attack-difference/
 tags: [sg, threat_vulnerability, network, unauthorized_access, sg-security-overview]
 prev: /sg/domain-hijacking/
 next: /sg/dos-vs-ddos/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

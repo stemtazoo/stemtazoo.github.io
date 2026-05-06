@@ -7,6 +7,7 @@ permalink: /sg/dispatch-worker-responsibility/
 tags: [sg, sg-strategy, business_management, vendor_management, security_training]
 prev: /sg/vendor-management/
 next: /sg/outsourcing-contract-difference/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

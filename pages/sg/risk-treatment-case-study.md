@@ -6,6 +6,7 @@ permalink: /sg/risk-treatment-case-study/
 prev: /sg/risk-treatment-exercises/
 next: /sg/risk-criteria-treatment-exercises/
 tags: [sg, sg-security-management, risk_assessment, isms]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

@@ -6,6 +6,7 @@ permalink: /sg/hash-function/
 prev: /sg/hybrid-cryptography/
 next: /sg/hash-algorithms/
 tags: [sg, sg-security-overview, crypto_auth, it_security_operations]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

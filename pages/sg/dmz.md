@@ -6,6 +6,7 @@ permalink: /sg/dmz/
 prev: /sg/packet-filtering/
 next: /sg/vpn/
 tags: [sg, sg-technology, network, system_architecture]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

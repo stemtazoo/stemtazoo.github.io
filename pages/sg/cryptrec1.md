@@ -6,6 +6,7 @@ permalink: /sg/cryptrec1/
 prev: /sg/compromise-crypto/
 next: /sg/salt/
 tags: [sg, sg-security-overview, crypto_auth, risk_assessment]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

@@ -6,6 +6,7 @@ permalink: /sg/open-resolver/
 tags: [sg, sg-security-measures, network_security, dns, ddos]
 prev: /sg/authoritative-dns-vs-cache-dns/
 next: /sg/primary-secondary-dns/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

@@ -6,6 +6,7 @@ permalink: /sg/vishing/
 tags: [sg, security_measures, unauthorized_access, data_leakage, sg-security-measures]
 prev: /sg/vendor-management/
 next: /sg/vulnerability/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

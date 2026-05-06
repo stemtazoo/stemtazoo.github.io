@@ -6,6 +6,7 @@ permalink: /sg/unauthorized-access-law/
 tags: [sg, sg-security-management, law, access_control, cybercrime]
 prev: /sg/act-on-the-protection-of-personal-information/
 next: /sg/unauthorized-access/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

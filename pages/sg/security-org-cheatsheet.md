@@ -6,6 +6,7 @@ permalink: /sg/security-org-cheatsheet/
 tags: [sg, sg-security-management, cheatsheet]  
 prev: /sg/ipa/  
 next: /sg/security-org-practice/  
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論  

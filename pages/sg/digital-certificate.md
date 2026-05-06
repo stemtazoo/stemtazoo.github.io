@@ -6,6 +6,7 @@ permalink: /sg/digital-certificate/
 prev: /sg/pki/
 next: /sg/certificate-authority-role/
 tags: [sg, sg-security-overview, crypto_auth, it_security_operations]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

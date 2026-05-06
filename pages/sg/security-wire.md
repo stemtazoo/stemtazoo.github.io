@@ -6,6 +6,7 @@ permalink: /sg/security-wire/
 prev: /sg/surveillance-camera/
 next: /sg/raid/
 tags: [sg, sg-security-measures, asset_management, data_leakage]
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

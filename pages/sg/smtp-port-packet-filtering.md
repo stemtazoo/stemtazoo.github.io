@@ -6,6 +6,7 @@ permalink: /sg/smtp-port-packet-filtering/
 tags: [sg, technology, network, security_measures, unauthorized_access, sg-security-measures]
 prev: /sg/smishing/
 next: /sg/spyware/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論

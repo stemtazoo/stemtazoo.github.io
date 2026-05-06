@@ -6,6 +6,7 @@ permalink: /sg/spyware/
 tags: [sg, security_measures, malware, data_leakage, sg-security-measures]
 prev: /sg/smtp-port-packet-filtering/
 next: /sg/sql-injection/
+last_modified_at: 2026-05-06
 ---
 
 ## まず結論
