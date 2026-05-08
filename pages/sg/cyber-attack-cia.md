@@ -1,12 +1,12 @@
 ---
 layout: page
 title: "攻撃の目的をCIAで整理！試験で迷わない判断軸【SG試験】"
-description: "CIA分類で攻撃を整理したい人向けに、機密性・完全性・可用性への代表攻撃と被害像を対応付け、設問文のキーワードから狙われた要素を即判定する方法を解説します。"
+description: "CIA分類で攻撃を整理したい人向けに、機密性・完全性・可用性への代表攻撃と被害像を対応付け、設問文のキーワードから狙われた要素を即判定する方法を解説します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。"
 permalink: /sg/cyber-attack-cia/
 prev: /sg/vulnerability-case-practice/
 next: /sg/cyber-kill-chain/
 tags: [sg, security_general, cia, risk_assessment, sg-security-overview]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

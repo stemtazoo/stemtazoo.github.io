@@ -1,10 +1,10 @@
 ---
 layout: page
 title: デジタルディバイドとは？情報格差を生む要因と対策【SG試験】
-description: デジタルディバイドは、情報通信技術を使える人と使えない人の間に生じる情報格差です。SG試験で問われやすい要因、対策、ITガバナンスとの違いを整理します。
+description: デジタルディバイドは、情報通信技術を使える人と使えない人の間に生じる情報格差です。SG試験で問われやすい要因、対策、ITガバナンスとの違いを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/digital-divide/
 tags: [sg, sg-strategy, system_strategy, security_awareness]
-last_modified_at: 2026-05-07
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

@@ -1,10 +1,10 @@
 ---
 layout: page
 title: 個人情報保護マネジメントシステムとは？JIS Q 15001の役割を整理【SG試験】
-description: 個人情報保護マネジメントシステムは、個人情報を組織として継続的に守るための仕組みです。JIS Q 15001との関係やSG試験でのひっかけポイントを整理します。
+description: 個人情報保護マネジメントシステムは、個人情報を組織として継続的に守るための仕組みです。JIS Q 15001との関係やSG試験でのひっかけポイントを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/personal-information-protection-management-system/
 tags: [sg, sg-security-law, privacy_law, sg-security-management, isms]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

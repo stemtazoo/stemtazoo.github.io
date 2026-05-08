@@ -1,10 +1,10 @@
 ---
 layout: page
 title: USBキー認証とは？ICカード認証との違い【SG試験】
-description: USBキー認証は、本人が持つUSB型の認証デバイスを使って本人確認する方式です。ICカード認証との違いや、所有物認証としての判断ポイントを整理します。
+description: USBキー認証は、本人が持つUSB型の認証デバイスを使って本人確認する方式です。ICカード認証との違いや、所有物認証としての判断ポイントを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/usb-key-authentication/
 tags: [sg, sg-security-overview, crypto_auth, access_control]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

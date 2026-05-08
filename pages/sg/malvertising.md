@@ -1,10 +1,10 @@
 ---
 layout: page
 title: マルバタイジングとは？広告を悪用した感染経路【SG試験】
-description: マルバタイジングは、Web広告を悪用してマルウェア感染や不正サイトへの誘導を狙う攻撃です。SG試験で迷いやすいドライブバイダウンロードやフィッシングとの違いを整理します。
+description: マルバタイジングは、Web広告を悪用してマルウェア感染や不正サイトへの誘導を狙う攻撃です。SG試験で迷いやすいドライブバイダウンロードやフィッシングとの違いを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/malvertising/
 tags: [sg, sg-security-overview, threat_vulnerability, malware]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

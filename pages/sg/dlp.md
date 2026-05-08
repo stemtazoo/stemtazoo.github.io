@@ -1,10 +1,10 @@
 ---
 layout: page
 title: DLPとは？機密情報の持ち出しを防ぐ仕組み【SG試験】
-description: DLPは、機密情報の送信や持ち出しを検知し、情報漏えいを防ぐ仕組みです。SG試験で迷いやすいIDS・IPS・DMZとの違いを整理します。
+description: DLPは、機密情報の送信や持ち出しを検知し、情報漏えいを防ぐ仕組みです。SG試験で迷いやすいIDS・IPS・DMZとの違いを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/dlp/
 tags: [sg, sg-security-measures, data_leakage, it_security_operations]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

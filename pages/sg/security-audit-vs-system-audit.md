@@ -1,10 +1,10 @@
 ---
 layout: page
 title: 情報セキュリティ監査とシステム監査の違い【SG試験】
-description: 情報セキュリティ監査とシステム監査は、どちらも証拠にもとづいて評価する監査ですが、主な対象が異なります。SG試験で迷いやすい対象・目的・判断基準の違いを整理します。
+description: 情報セキュリティ監査とシステム監査は、どちらも証拠にもとづいて評価する監査ですが、主な対象が異なります。SG試験で迷いやすい対象・目的・判断基準の違いを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/security-audit-vs-system-audit/
 tags: [sg, sg-management, system_audit, sg-security-management, isms]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

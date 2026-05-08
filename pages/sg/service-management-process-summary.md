@@ -1,10 +1,10 @@
 ---
 layout: page
 title: サービスマネジメントプロセスまとめ【SG試験】
-description: サービスマネジメントプロセスは、ITサービスを安定して提供するための運用管理のまとまりです。インシデント管理、問題管理、変更管理などの違いをSG試験向けに整理します。
+description: サービスマネジメントプロセスは、ITサービスを安定して提供するための運用管理のまとまりです。インシデント管理、問題管理、変更管理などの違いをSG試験向けに整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/service-management-process-summary/
 tags: [sg, sg-management, service_management, it_security_operations]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

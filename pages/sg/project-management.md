@@ -1,10 +1,10 @@
 ---
 layout: page
 title: プロジェクトマネジメントとは？PMBOKをもとに基本を整理【SG試験】
-description: プロジェクトマネジメントは、限られた時間・費用・資源の中で成果物を生み出すための管理です。PMBOKの考え方とSG試験での判断基準を整理します。
+description: プロジェクトマネジメントは、限られた時間・費用・資源の中で成果物を生み出すための管理です。PMBOKの考え方とSG試験での判断基準を整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/project-management/
 tags: [sg, sg-management, project_management]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

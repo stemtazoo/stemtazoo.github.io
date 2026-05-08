@@ -1,10 +1,10 @@
 ---
 layout: page
 title: 委託先管理とは？外部委託のリスクを管理する考え方【SG試験】
-description: 委託先管理は、外部委託した業務で発生する情報漏えいや不正アクセスなどのリスクを管理する考え方です。SG試験で問われる契約・監督・責任範囲の判断ポイントを整理します。
+description: 委託先管理は、外部委託した業務で発生する情報漏えいや不正アクセスなどのリスクを管理する考え方です。SG試験で問われる契約・監督・責任範囲の判断ポイントを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/vendor-management/
 tags: [sg, sg-security-management, vendor_management, risk_assessment, data_leakage]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

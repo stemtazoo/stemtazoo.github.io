@@ -1,10 +1,10 @@
 ---
 layout: page
 title: UDPを悪用した増幅攻撃とは？DNS・NTPとの関係【SG試験】
-description: UDPを悪用した増幅攻撃は、小さな要求に対する大きな応答を攻撃対象へ集めるDDoS攻撃です。SG試験で問われるDNS・NTPとの関係と対策を整理します。
+description: UDPを悪用した増幅攻撃は、小さな要求に対する大きな応答を攻撃対象へ集めるDDoS攻撃です。SG試験で問われるDNS・NTPとの関係と対策を整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/udp-amplification-attack/
 tags: [sg, sg-security-overview, threat_vulnerability, sg-security-measures, network]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

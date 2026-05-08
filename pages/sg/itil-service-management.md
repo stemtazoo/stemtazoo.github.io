@@ -1,10 +1,10 @@
 ---
 layout: page
 title: ITILとは？サービスマネジメントとの関係を整理【SG試験】
-description: ITILは、ITサービスマネジメントのベストプラクティスを整理したフレームワークです。SG試験で迷いやすいSMS・SLA・サービスデスクとの関係を整理します。
+description: ITILは、ITサービスマネジメントのベストプラクティスを整理したフレームワークです。SG試験で迷いやすいSMS・SLA・サービスデスクとの関係を整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/itil-service-management/
 tags: [sg, sg-management, service_management, it_security_operations]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

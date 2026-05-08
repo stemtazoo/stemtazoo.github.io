@@ -1,10 +1,10 @@
 ---
 layout: page
 title: 再委託とは？委託先管理で注意するポイント【SG試験】
-description: 再委託は、委託先が受けた業務の全部または一部をさらに別の事業者へ委託することです。SG試験で問われやすい承認、責任、情報管理の判断ポイントを整理します。
+description: 再委託は、委託先が受けた業務の全部または一部をさらに別の事業者へ委託することです。SG試験で問われやすい承認、責任、情報管理の判断ポイントを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/subcontracting/
 tags: [sg, sg-security-management, vendor_management, risk_assessment]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

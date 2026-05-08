@@ -1,10 +1,10 @@
 ---
 layout: page
 title: プロジェクト統合マネジメントとは？全体を調整する役割【SG試験】
-description: プロジェクト統合マネジメントは、プロジェクト全体を見て変更や作業を調整する管理です。SG試験で迷いやすいスコープ・コスト・期間との関係を整理します。
+description: プロジェクト統合マネジメントは、プロジェクト全体を見て変更や作業を調整する管理です。SG試験で迷いやすいスコープ・コスト・期間との関係を整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/project-integration-management/
 tags: [sg, sg-management, project_management]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

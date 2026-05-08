@@ -1,10 +1,10 @@
 ---
 layout: page
 title: Unicodeとは？EUCとの違いを文字コードで整理【SG試験】
-description: Unicodeは世界中の文字を共通の仕組みで扱うための文字コード体系です。SG試験で迷いやすいEUCやASCII、シフトJISとの違いを整理します。
+description: Unicodeは世界中の文字を共通の仕組みで扱うための文字コード体系です。SG試験で迷いやすいEUCやASCII、シフトJISとの違いを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/unicode/
 tags: [sg, sg-technology, system_architecture, it_security_operations]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

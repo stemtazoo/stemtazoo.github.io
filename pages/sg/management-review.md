@@ -1,10 +1,10 @@
 ---
 layout: page
 title: マネジメントレビューとは？ISMSを見直すトップの確認【SG試験】
-description: マネジメントレビューは、トップマネジメントがISMSの有効性を定期的に確認し、改善を判断する活動です。SG試験で迷いやすい確認対象と目的の違いを整理します。
+description: マネジメントレビューは、トップマネジメントがISMSの有効性を定期的に確認し、改善を判断する活動です。SG試験で迷いやすい確認対象と目的の違いを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/management-review/
 tags: [sg, sg-security-management, isms, risk_assessment, business_management]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

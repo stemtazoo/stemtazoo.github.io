@@ -1,10 +1,10 @@
 ---
 layout: page
 title: サービスマネジメントとは？ITサービスを安定して提供する考え方【SG試験】
-description: サービスマネジメントは、ITサービスを利用者に安定して提供し続けるための管理活動です。SLA、ITIL、インシデント管理との関係をSG試験向けに整理します。
+description: サービスマネジメントは、ITサービスを利用者に安定して提供し続けるための管理活動です。SLA、ITIL、インシデント管理との関係をSG試験向けに整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/service-management/
 tags: [sg, sg-management, service_management, it_security_operations]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

@@ -1,10 +1,10 @@
 ---
 layout: page
 title: 水飲み場攻撃とは？ドライブバイダウンロードとの違い【SG試験】
-description: 水飲み場攻撃は、標的がよく利用するWebサイトを改ざんして感染を狙う標的型攻撃です。ドライブバイダウンロードとの違いを、SG試験の判断基準で整理します。
+description: 水飲み場攻撃は、標的がよく利用するWebサイトを改ざんして感染を狙う標的型攻撃です。ドライブバイダウンロードとの違いを、SG試験の判断基準で整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/watering-hole-attack/
 tags: [sg, sg-security-overview, threat_vulnerability, malware, unauthorized_access]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

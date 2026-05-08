@@ -1,10 +1,10 @@
 ---
 layout: page
 title: 認証・アクセス制御まとめ｜主要用語を整理【SG試験】
-description: 認証・認可・アクセス制御からMFA、SSO、ゼロトラストまでを一つの流れで整理します。SG試験で問われやすい用語の違い、判断基準、学習順序を初学者向けに分かりやすくまとめます。
+description: 認証・認可・アクセス制御からMFA、SSO、ゼロトラストまでを一つの流れで整理します。SG試験で問われやすい用語の違い、判断基準、学習順序を初学者向けに分かりやすくまとめます。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/auth-access-control-summary/
 tags: [sg, sg-security-measures, access_control]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

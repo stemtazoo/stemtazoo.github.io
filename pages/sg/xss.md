@@ -1,12 +1,12 @@
 ---
 layout: page
 title: "クロスサイトスクリプティングとは？スクリプト実行の仕組み【SG試験】"
-description: "クロスサイトスクリプティングはWebサイトに不正なスクリプトを埋め込み利用者のブラウザで実行させる攻撃です。CSRFとの違いや情報漏えいの仕組みを試験対策として整理します。"
+description: "クロスサイトスクリプティングはWebサイトに不正なスクリプトを埋め込み利用者のブラウザで実行させる攻撃です。CSRFとの違いや情報漏えいの仕組みを試験対策として整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。"
 permalink: /sg/xss/
 prev: /sg/work-rules-vs-individual-agreement/
 next: /sg/zero-trust/
 tags: [sg, security_general, threat_vulnerability, unauthorized_access, data_leakage, sg-security-overview]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

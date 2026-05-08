@@ -1,10 +1,10 @@
 ---
 layout: page
 title: CSPMとは？クラウド設定ミスを検知する仕組み【SG試験】
-description: CSPMは、クラウド環境の設定や構成を継続的に確認し、設定ミスやリスクを検知する仕組みです。SG試験で問われやすい責任共有モデル、検知後の是正、SSPMとの違いを整理します。
+description: CSPMは、クラウド環境の設定や構成を継続的に確認し、設定ミスやリスクを検知する仕組みです。SG試験で問われやすい責任共有モデル、検知後の是正、SSPMとの違いを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/cspm/
 tags: [sg, sg-security-measures, it_security_operations, access_control]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

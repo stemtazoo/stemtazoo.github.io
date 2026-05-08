@@ -1,10 +1,10 @@
 ---
 layout: page
 title: 仮名加工情報とは？匿名加工情報との違い【SG試験】
-description: 仮名加工情報は、他の情報と照合しない限り個人を識別できないように加工した情報です。匿名加工情報との違い、第三者提供、識別行為の禁止をSG試験向けに整理します。
+description: 仮名加工情報は、他の情報と照合しない限り個人を識別できないように加工した情報です。匿名加工情報との違い、第三者提供、識別行為の禁止をSG試験向けに整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/pseudonymized-vs-anonymized-information/
 tags: [sg, sg-security-law, privacy_law, data_leakage, it_security_operations]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

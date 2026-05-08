@@ -1,10 +1,10 @@
 ---
 layout: page
 title: トランスポートモードとは？IPsecでホスト間を暗号化する方式【SG試験】
-description: トランスポートモードは、IPsecで送信ホストと受信ホストの間を暗号化する方式です。トンネルモードとの違い、VPN装置間通信との切り分けをSG試験向けに整理します。
+description: トランスポートモードは、IPsecで送信ホストと受信ホストの間を暗号化する方式です。トンネルモードとの違い、VPN装置間通信との切り分けをSG試験向けに整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/transport-mode/
 tags: [sg, sg-security-overview, crypto_auth, network]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

@@ -1,10 +1,10 @@
 ---
 layout: page
 title: 情報セキュリティ監査基準とは？監査の進め方を整理【SG試験】
-description: 情報セキュリティ監査基準は、情報セキュリティ監査を適切に実施し報告するための基準です。管理基準との違い、一般基準・実施基準・報告基準の役割、SG試験での判断ポイントを整理します。
+description: 情報セキュリティ監査基準は、情報セキュリティ監査を適切に実施し報告するための基準です。管理基準との違い、一般基準・実施基準・報告基準の役割、SG試験での判断ポイントを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/information-security-audit-standard/
 tags: [sg, sg-management, system_audit, sg-security-management, isms]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

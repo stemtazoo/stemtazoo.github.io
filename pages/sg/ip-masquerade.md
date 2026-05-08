@@ -1,10 +1,10 @@
 ---
 layout: page
 title: IPマスカレードとは？1つのグローバルIPで複数端末を接続する仕組み【SG試験】
-description: IPマスカレードは、1つのグローバルIPアドレスで複数の端末をインターネットに接続する仕組みです。NATやNAPTとの違い、SG試験でのひっかけポイントを整理します。
+description: IPマスカレードは、1つのグローバルIPアドレスで複数の端末をインターネットに接続する仕組みです。NATやNAPTとの違い、SG試験でのひっかけポイントを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/ip-masquerade/
 tags: [sg, sg-technology, network, unauthorized_access]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

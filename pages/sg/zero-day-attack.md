@@ -1,10 +1,10 @@
 ---
 layout: page
 title: ゼロデイ攻撃とは？修正前の脆弱性を狙う攻撃【SG試験】
-description: ゼロデイ攻撃は、修正プログラムが提供される前の脆弱性を悪用する攻撃です。SG試験で迷いやすい既知の脆弱性、パッチ管理、脆弱性情報との違いを整理します。
+description: ゼロデイ攻撃は、修正プログラムが提供される前の脆弱性を悪用する攻撃です。SG試験で迷いやすい既知の脆弱性、パッチ管理、脆弱性情報との違いを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/zero-day-attack/
 tags: [sg, sg-security-overview, threat_vulnerability, sg-security-measures, unauthorized_access]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

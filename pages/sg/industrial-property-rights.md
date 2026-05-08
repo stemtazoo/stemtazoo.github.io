@@ -1,10 +1,10 @@
 ---
 layout: page
 title: 産業財産権とは？特許・実用新案・意匠・商標を整理【SG試験】
-description: 産業財産権は、発明・考案・デザイン・マークなどを保護する知的財産権です。SG試験で混同しやすい著作権との違い、4つの権利の対象と存続期間を整理します。
+description: 産業財産権は、発明・考案・デザイン・マークなどを保護する知的財産権です。SG試験で混同しやすい著作権との違い、4つの権利の対象と存続期間を整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/industrial-property-rights/
 tags: [sg, sg-security-law, privacy_law, business_management]
-last_modified_at: 2026-05-07
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

@@ -1,10 +1,10 @@
 ---
 layout: page
 title: ERP・SCM・BPR・RPAの違い【SG試験】
-description: ERP・SCM・BPR・RPAは、業務や経営を改善するための考え方・仕組みです。SG試験で混同しやすい対象範囲、目的、業務改善との関係を整理します。
+description: ERP・SCM・BPR・RPAは、業務や経営を改善するための考え方・仕組みです。SG試験で混同しやすい対象範囲、目的、業務改善との関係を整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/erp-scm-bpr-rpa/
 tags: [sg, sg-strategy, business_management, system_strategy]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

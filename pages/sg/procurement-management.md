@@ -1,10 +1,10 @@
 ---
 layout: page
 title: 調達マネジメントとは？外部から必要なものを調達する考え方【SG試験】
-description: 調達マネジメントは、プロジェクトに必要な製品・サービス・作業を外部から調達し、契約や委託先との関係を管理する考え方です。SG試験で迷いやすい委託先管理との違いも整理します。
+description: 調達マネジメントは、プロジェクトに必要な製品・サービス・作業を外部から調達し、契約や委託先との関係を管理する考え方です。SG試験で迷いやすい委託先管理との違いも整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/procurement-management/
 tags: [sg, sg-management, project_management, vendor_management]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

@@ -1,11 +1,11 @@
 ---
 layout: page
 title: IMAPとは？サーバ上のメールを管理する受信プロトコル【SG試験】
-description: 情報セキュリティマネジメント試験で問われるIMAPについて、SMTP・POP3との違い、サーバ上で管理する受信方式、試験での切り分け方を初心者向けに整理します。
+description: 情報セキュリティマネジメント試験で問われるIMAPについて、SMTP・POP3との違い、サーバ上で管理する受信方式、試験での切り分け方を初心者向けに整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /pages/sg/imap/
 tags: [sg, network, mail, protocol]
 date: 2026-05-07
-last_modified_at: 2026-05-07
+last_modified_at: 2026-05-08
 ---
 
 # IMAPとは？サーバ上のメールを管理する受信プロトコル【SG試験】

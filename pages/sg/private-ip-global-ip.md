@@ -1,10 +1,10 @@
 ---
 layout: page
 title: プライベートIPアドレスとグローバルIPアドレスの違い【SG試験】
-description: プライベートIPアドレスとグローバルIPアドレスは、ネットワーク内外で使うIPアドレスの違いです。SG試験で迷いやすいNATやIPマスカレードとの関係も整理します。
+description: プライベートIPアドレスとグローバルIPアドレスは、ネットワーク内外で使うIPアドレスの違いです。SG試験で迷いやすいNATやIPマスカレードとの関係も整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/private-ip-global-ip/
 tags: [sg, sg-technology, network, unauthorized_access]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

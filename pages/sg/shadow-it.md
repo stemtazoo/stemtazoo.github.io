@@ -1,10 +1,10 @@
 ---
 layout: page
 title: シャドーITとは？利用部門が勝手に使うクラウドのリスク【SG試験】
-description: シャドーITは、情報システム部門が把握していないIT機器やクラウドサービスを業務で使う状態です。SG試験で問われやすいリスク、管理方法、CASBとの関係を整理します。
+description: シャドーITは、情報システム部門が把握していないIT機器やクラウドサービスを業務で使う状態です。SG試験で問われやすいリスク、管理方法、CASBとの関係を整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/shadow-it/
 tags: [sg, sg-security-management, asset_management, it_security_operations]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

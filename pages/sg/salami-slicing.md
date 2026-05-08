@@ -1,10 +1,10 @@
 ---
 layout: page
 title: サラミ法とは？少しずつ不正に詐取する手口【SG試験】
-description: サラミ法は、多数の資産から少額ずつ不正に詐取するコンピュータ犯罪の手口です。SG試験で混同しやすい盗聴、不正アクセス、スキャビンジングとの違いを整理します。
+description: サラミ法は、多数の資産から少額ずつ不正に詐取するコンピュータ犯罪の手口です。SG試験で混同しやすい盗聴、不正アクセス、スキャビンジングとの違いを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/salami-slicing/
 tags: [sg, sg-security-overview, threat_vulnerability, unauthorized_access]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

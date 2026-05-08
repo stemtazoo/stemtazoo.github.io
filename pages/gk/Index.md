@@ -1,7 +1,7 @@
 ---
 layout: page
 title: G検定 学習まとめ
-description: G検定対策の学習まとめページです。人工知能の歴史、機械学習、深層学習、画像認識、自然言語処理、強化学習、法律・倫理などの頻出論点を分野別に整理し、試験前の復習に使えます。
+description: G検定対策の学習まとめページです。人工知能の歴史、機械学習、深層学習、画像認識、自然言語処理、強化学習、法律・倫理などの頻出論点を分野別に整理し、試験前の復習に使えます。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /gk/
 tags: [gk]
 
@@ -529,7 +529,7 @@ gk_sections:
     items:
       - /gk/trick-questions-1/
       - /gk/trick-questions-xai-1/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 {% comment %}

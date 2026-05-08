@@ -1,10 +1,10 @@
 ---
 layout: page
 title: ばらまき型メールとは？標的型攻撃メールとの違い【SG試験】
-description: ばらまき型メールは、不特定多数に同じような内容を大量送信して添付ファイルやURLを開かせるメールです。標的型攻撃メールとの違いや、SG試験での見分け方を整理します。
+description: ばらまき型メールは、不特定多数に同じような内容を大量送信して添付ファイルやURLを開かせるメールです。標的型攻撃メールとの違いや、SG試験での見分け方を整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/mass-mail-attack/
 tags: [sg, sg-security-measures, malware, security_training, threat_vulnerability]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

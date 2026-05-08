@@ -1,10 +1,10 @@
 ---
 layout: page
 title: トンネルモードとは？IPsecで拠点間通信を保護する方式【SG試験】
-description: トンネルモードは、IPsecで元のIPパケットを包み込み、VPN装置間などで通信を保護する方式です。トランスポートモードとの違いをSG試験向けに整理します。
+description: トンネルモードは、IPsecで元のIPパケットを包み込み、VPN装置間などで通信を保護する方式です。トランスポートモードとの違いをSG試験向けに整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/tunnel-mode/
 tags: [sg, sg-security-overview, crypto_auth, network]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

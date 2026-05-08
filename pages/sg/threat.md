@@ -1,10 +1,10 @@
 ---
 layout: page
 title: 脅威とは？損害の原因になる事象を整理【SG試験】
-description: 脅威は、情報資産に損害を与える可能性がある事象の原因です。脆弱性・リスク・残存リスクとの違いを整理し、SG試験で選択肢を切る判断基準を学びます。
+description: 脅威は、情報資産に損害を与える可能性がある事象の原因です。脆弱性・リスク・残存リスクとの違いを整理し、SG試験で選択肢を切る判断基準を学びます。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/threat/
 tags: [sg, sg-security-overview, threat_vulnerability, risk_assessment, isms]
-last_modified_at: 2026-05-07
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

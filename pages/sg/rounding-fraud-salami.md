@@ -1,10 +1,10 @@
 ---
 layout: page
 title: 端数処理を悪用した不正とは？サラミ法との関係【SG試験】
-description: 端数処理を悪用した不正は、計算や丸め処理で生じる小さな差額を不正に集める手口です。サラミ法との関係とSG試験での切り分けポイントを整理します。
+description: 端数処理を悪用した不正は、計算や丸め処理で生じる小さな差額を不正に集める手口です。サラミ法との関係とSG試験での切り分けポイントを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/rounding-fraud-salami/
 tags: [sg, sg-security-overview, threat_vulnerability, unauthorized_access]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

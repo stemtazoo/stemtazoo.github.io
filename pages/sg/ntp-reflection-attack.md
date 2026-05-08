@@ -1,10 +1,10 @@
 ---
 layout: page
 title: NTPリフレクション攻撃とは？踏み台化の仕組み【SG試験】
-description: NTPリフレクション攻撃は、NTPサーバの応答を悪用して攻撃対象に大量通信を送るDDoS攻撃です。SG試験で迷いやすい踏み台化の仕組みと対策を整理します。
+description: NTPリフレクション攻撃は、NTPサーバの応答を悪用して攻撃対象に大量通信を送るDDoS攻撃です。SG試験で迷いやすい踏み台化の仕組みと対策を整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/ntp-reflection-attack/
 tags: [sg, sg-security-overview, threat_vulnerability, sg-security-measures, network]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

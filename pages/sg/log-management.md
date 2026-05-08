@@ -1,12 +1,12 @@
 ---
 layout: page
 title: "ログ管理とは？証跡と異常検知の役割を整理【SG試験】"
-description: "ログ管理は操作履歴を記録し証跡として活用する仕組みです。異常検知やフォレンジックとの関係を整理し、SG試験・情報セキュリティマネジメント試験で問われる判断基準を解説します。"
+description: "ログ管理は操作履歴を記録し証跡として活用する仕組みです。異常検知やフォレンジックとの関係を整理し、SG試験・情報セキュリティマネジメント試験で問われる判断基準を解説します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。"
 permalink: /sg/log-management/
 tags: [sg, sg-security-management, incident_management, it_security_operations]
 prev: /sg/security-incident/
 next: /sg/incident-management/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

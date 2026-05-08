@@ -1,10 +1,10 @@
 ---
 layout: page
 title: 生体認証とは？指紋・顔・虹彩・静脈認証の違い【SG試験】
-description: 生体認証は、本人の身体的特徴や行動的特徴を使って本人確認する認証方式です。指紋・顔・虹彩・静脈認証の違いとSG試験での判断ポイントを整理します。
+description: 生体認証は、本人の身体的特徴や行動的特徴を使って本人確認する認証方式です。指紋・顔・虹彩・静脈認証の違いとSG試験での判断ポイントを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/biometric-authentication/
 tags: [sg, sg-security-overview, crypto_auth, access_control]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

@@ -1,10 +1,10 @@
 ---
 layout: page
 title: システム監査とは？情報システムの有効性を保証・助言する活動【SG試験】
-description: システム監査は、情報システムの利活用や管理が適切かを、独立した立場から証拠にもとづいて評価する活動です。SG試験で迷いやすい情報セキュリティ監査との違いも整理します。
+description: システム監査は、情報システムの利活用や管理が適切かを、独立した立場から証拠にもとづいて評価する活動です。SG試験で迷いやすい情報セキュリティ監査との違いも整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/system-audit/
 tags: [sg, sg-management, system_audit, sg-security-management]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

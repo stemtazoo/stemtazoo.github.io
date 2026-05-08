@@ -1,10 +1,10 @@
 ---
 layout: page
 title: 著作権と著作者人格権の違いとは？権利の目的で整理【SG試験】
-description: 著作権と著作者人格権の違いは、財産的利益を守るか、人格的利益を守るかです。SG試験で混同しやすい複製権・公衆送信権・同一性保持権の切り分けを整理します。
+description: 著作権と著作者人格権の違いは、財産的利益を守るか、人格的利益を守るかです。SG試験で混同しやすい複製権・公衆送信権・同一性保持権の切り分けを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/copyright-vs-moral-rights/
 tags: [sg, sg-security-law, business_management, intellectual_property]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

@@ -1,10 +1,10 @@
 ---
 layout: page
 title: 情報セキュリティガバナンスとは？ITガバナンスとの違い【SG試験】
-description: 情報セキュリティガバナンスは、経営の視点で情報セキュリティを方向付け、管理する考え方です。ITガバナンスとの範囲の違いと重なりをSG試験向けに整理します。
+description: 情報セキュリティガバナンスは、経営の視点で情報セキュリティを方向付け、管理する考え方です。ITガバナンスとの範囲の違いと重なりをSG試験向けに整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/information-security-governance/
 tags: [sg, sg-security-management, isms, risk_assessment, business_management]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

@@ -1,12 +1,12 @@
 ---
 layout: page
 title: "リスク対応のケース問題（応用）で判断力を鍛える【SG試験】"
-description: "リスク対応（回避・低減・移転・受容）を文章問題で判断する力を養います。SG試験・情報セキュリティマネジメント試験のケース問題で迷いやすい選択肢の切り方を解説します。"
+description: "リスク対応（回避・低減・移転・受容）を文章問題で判断する力を養います。SG試験・情報セキュリティマネジメント試験のケース問題で迷いやすい選択肢の切り方を解説します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。"
 permalink: /sg/risk-treatment-case-study/
 prev: /sg/risk-treatment-exercises/
 next: /sg/risk-criteria-treatment-exercises/
 tags: [sg, sg-security-management, risk_assessment, isms]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

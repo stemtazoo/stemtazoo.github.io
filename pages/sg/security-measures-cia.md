@@ -1,12 +1,12 @@
 ---
 layout: page
 title: 情報セキュリティ対策をCIAで整理！実務と試験の判断軸【SG試験】
-description: "CIA別のセキュリティ対策を得点化するため、暗号化・改ざん防止・冗長化など主要手段を対応付け、対策名称から守るべき性質を素早く逆引きできるように整理します。"
+description: "CIA別のセキュリティ対策を得点化するため、暗号化・改ざん防止・冗長化など主要手段を対応付け、対策名称から守るべき性質を素早く逆引きできるように整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。"
 permalink: /sg/security-measures-cia/
 tags: [sg, security_measures, cia, it_security_operations, sg-security-measures]
 prev: /sg/script-kiddie/
 next: /sg/security-policy-basic/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

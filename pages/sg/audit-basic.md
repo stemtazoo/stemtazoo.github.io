@@ -1,10 +1,10 @@
 ---
 layout: page
 title: 監査とは？証拠にもとづいて有効性を確認する考え方【SG試験】
-description: 監査は、基準に照らして業務や仕組みが適切かを証拠にもとづいて確認する活動です。SG試験で迷いやすいシステム監査・情報セキュリティ監査との関係も整理します。
+description: 監査は、基準に照らして業務や仕組みが適切かを証拠にもとづいて確認する活動です。SG試験で迷いやすいシステム監査・情報セキュリティ監査との関係も整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/audit-basic/
 tags: [sg, sg-management, system_audit, sg-security-management]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

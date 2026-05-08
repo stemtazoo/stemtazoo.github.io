@@ -1,12 +1,12 @@
 ---
 layout: page
 title: "リスク基準＋リスク対応の複合問題で判断力を鍛える【SG試験】"
-description: "リスク基準とリスク対応を組み合わせた問題で判断力を強化します。SG試験・情報セキュリティマネジメント試験で頻出の「基準→評価→対応」の流れと選択肢の切り方を解説します。"
+description: "リスク基準とリスク対応を組み合わせた問題で判断力を強化します。SG試験・情報セキュリティマネジメント試験で頻出の「基準→評価→対応」の流れと選択肢の切り方を解説します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。"
 permalink: /sg/risk-criteria-treatment-exercises/
 prev: /sg/risk-treatment-case-study/
 next: /sg/risk-management-final-exercise/
 tags: [sg, sg-security-management, risk_assessment, isms]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

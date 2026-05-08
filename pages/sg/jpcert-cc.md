@@ -1,10 +1,10 @@
 ---
 layout: page
 title: JPCERT/CCとは？国内外のインシデント対応を調整する組織【SG試験】
-description: JPCERT/CCは国内外の情報セキュリティインシデント対応を調整する組織です。CSIRT、SOC、IPA、NISCとの違いをSG試験の判断基準で整理します。
+description: JPCERT/CCは国内外の情報セキュリティインシデント対応を調整する組織です。CSIRT、SOC、IPA、NISCとの違いをSG試験の判断基準で整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/jpcert-cc/
 tags: [sg, sg-security-management, incident_management, csirt, it_security_operations]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

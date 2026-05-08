@@ -1,10 +1,10 @@
 ---
 layout: page
 title: スミッシングとは？SMSを使った詐欺との違い【SG試験】
-description: スミッシングは、SMSを使って偽サイトや不正アプリへ誘導するフィッシング詐欺です。SG試験で迷いやすいフィッシングや標的型攻撃メールとの違いを整理します。
+description: スミッシングは、SMSを使って偽サイトや不正アプリへ誘導するフィッシング詐欺です。SG試験で迷いやすいフィッシングや標的型攻撃メールとの違いを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/smishing/
 tags: [sg, sg-security-measures, threat_vulnerability, security_training, data_leakage]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

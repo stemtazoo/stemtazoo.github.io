@@ -1,10 +1,10 @@
 ---
 layout: page
 title: サイドチャネル攻撃とは？暗号処理の外側から秘密情報を推測する攻撃【SG試験】
-description: サイドチャネル攻撃は、暗号処理中の消費電力・電磁波・処理時間などから秘密情報を推測する攻撃です。SG試験で迷いやすい関連平文攻撃やジャミングとの違いを整理します。
+description: サイドチャネル攻撃は、暗号処理中の消費電力・電磁波・処理時間などから秘密情報を推測する攻撃です。SG試験で迷いやすい関連平文攻撃やジャミングとの違いを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/side-channel-attack/
 tags: [sg, sg-security-overview, threat_vulnerability, crypto_auth]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

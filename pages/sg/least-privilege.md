@@ -1,12 +1,12 @@
 ---
 layout: page
 title: 最小権限の原則とは？権限管理の基本を理解【SG試験】
-description: "最小権限の原則を実務と試験で使える形にするため、権限付与の最小化・職務分離・定期棚卸しの観点を整理し、内部不正や被害拡大を抑える理由を理解できます。"
+description: "最小権限の原則を実務と試験で使える形にするため、権限付与の最小化・職務分離・定期棚卸しの観点を整理し、内部不正や被害拡大を抑える理由を理解できます。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。"
 permalink: /sg/least-privilege/
 prev: /sg/access-control-model/
 next: /sg/privileged-id/
 tags: [sg, sg-security-measures, access_control, risk_assessment]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

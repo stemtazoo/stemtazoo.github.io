@@ -1,10 +1,10 @@
 ---
 layout: page
 title: AESとは？鍵長とラウンド数も押さえる共通鍵暗号【SG試験】
-description: AESは同じ秘密鍵で暗号化と復号を行う代表的な共通鍵暗号方式です。SG試験で迷いやすい鍵長・ブロック長・ラウンド数・公開鍵暗号との違いを整理します。
+description: AESは同じ秘密鍵で暗号化と復号を行う代表的な共通鍵暗号方式です。SG試験で迷いやすい鍵長・ブロック長・ラウンド数・公開鍵暗号との違いを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/aes/
 tags: [sg, sg-security-overview, crypto_auth, threat_vulnerability]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

@@ -1,10 +1,10 @@
 ---
 layout: page
 title: システムテストとは？要件を満たすか確認する総合テスト【SG試験】
-description: システムテストは、完成したシステムが要件どおりに動くかを確認する総合的なテストです。SG試験で問われやすい管理策や承認、開発環境との切り分けを整理します。
+description: システムテストは、完成したシステムが要件どおりに動くかを確認する総合的なテストです。SG試験で問われやすい管理策や承認、開発環境との切り分けを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/system-test/
 tags: [sg, sg-management, project_management, system_planning]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

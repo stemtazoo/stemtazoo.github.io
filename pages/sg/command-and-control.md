@@ -1,12 +1,12 @@
 ---
 layout: page
 title: "C&Cサーバとは？ボットネットを操る指令の仕組み【SG試験】"
-description: "C&Cサーバの理解を深めるため、感染端末への命令配信、ボットネット運用の流れ、遮断時の監視ポイントを整理し、攻撃基盤に関するSG設問の読み違いを防げるようにします。"
+description: "C&Cサーバの理解を深めるため、感染端末への命令配信、ボットネット運用の流れ、遮断時の監視ポイントを整理し、攻撃基盤に関するSG設問の読み違いを防げるようにします。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。"
 permalink: /sg/command-and-control/
 tags: [sg, threat_vulnerability, malware, unauthorized_access, sg-security-overview]
 prev: /sg/client-server-system/
 next: /sg/common-mistakes/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論
