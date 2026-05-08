@@ -1,10 +1,10 @@
 ---
 layout: page
 title: タイムスタンプとは？電子文書の存在時刻を証明する仕組み【SG試験】
-description: タイムスタンプは、電子文書がある時刻に存在し、その後改ざんされていないことを証明する仕組みです。SG試験で問われやすい電子署名との違いを整理します。
+description: タイムスタンプは、電子文書がある時刻に存在し、その後改ざんされていないことを証明する仕組みです。SG試験で問われやすい電子署名との違いを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/timestamp/
 tags: [sg, sg-security-law, crypto_auth, data_leakage]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

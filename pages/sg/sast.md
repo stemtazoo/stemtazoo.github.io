@@ -1,10 +1,10 @@
 ---
 layout: page
 title: SASTとは？ソースコードを実行せずに検査する仕組み【SG試験】
-description: SASTは、ソースコードを実行せずに解析し、危険な書き方や脆弱性につながる実装を見つける検査手法です。SG試験で迷いやすいDASTや動的解析との違いを整理します。
+description: SASTは、ソースコードを実行せずに解析し、危険な書き方や脆弱性につながる実装を見つける検査手法です。SG試験で迷いやすいDASTや動的解析との違いを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/sast/
 tags: [sg, sg-security-overview, threat_vulnerability, sg-security-measures, unauthorized_access]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

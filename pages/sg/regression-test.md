@@ -1,10 +1,10 @@
 ---
 layout: page
 title: リグレッションテストとは？変更後の影響を確認するテスト【SG試験】
-description: リグレッションテストは、プログラムや設定を変更したあとに、既存機能へ想定外の影響が出ていないかを確認するテストです。負荷テストやシステムテストとの違いをSG試験向けに整理します。
+description: リグレッションテストは、プログラムや設定を変更したあとに、既存機能へ想定外の影響が出ていないかを確認するテストです。負荷テストやシステムテストとの違いをSG試験向けに整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/regression-test/
 tags: [sg, sg-technology, system_architecture, service_management]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

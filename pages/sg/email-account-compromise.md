@@ -1,10 +1,10 @@
 ---
 layout: page
 title: メールアカウント乗っ取りとは？BECとの関係【SG試験】
-description: メールアカウント乗っ取りは、第三者が正規のメールアカウントを不正利用する攻撃です。BECとの関係、なりすましとの違い、SG試験での判断基準を整理します。
+description: メールアカウント乗っ取りは、第三者が正規のメールアカウントを不正利用する攻撃です。BECとの関係、なりすましとの違い、SG試験での判断基準を整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/email-account-compromise/
 tags: [sg, sg-security-overview, threat_vulnerability, unauthorized_access, security_training]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

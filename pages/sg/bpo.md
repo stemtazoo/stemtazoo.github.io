@@ -1,10 +1,10 @@
 ---
 layout: page
 title: BPOとは？業務プロセスを外部委託する考え方【SG試験】
-description: BPOは、業務プロセスの一部または全体を外部の専門業者に委託する考え方です。SG試験で迷いやすいBCP・MRP・IT投資マネジメントとの違いを整理します。
+description: BPOは、業務プロセスの一部または全体を外部の専門業者に委託する考え方です。SG試験で迷いやすいBCP・MRP・IT投資マネジメントとの違いを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/bpo/
 tags: [sg, sg-strategy, business_management, vendor_management]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

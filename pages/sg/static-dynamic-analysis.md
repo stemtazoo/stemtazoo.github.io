@@ -1,10 +1,10 @@
 ---
 layout: page
 title: 静的解析と動的解析の違いとは？検査タイミングで整理【SG試験】
-description: 静的解析と動的解析は、ソフトウェアの脆弱性や不具合を見つける検査手法です。SG試験で迷いやすい「動かさずに調べる」「動かして挙動を見る」の違いを整理します。
+description: 静的解析と動的解析は、ソフトウェアの脆弱性や不具合を見つける検査手法です。SG試験で迷いやすい「動かさずに調べる」「動かして挙動を見る」の違いを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/static-dynamic-analysis/
 tags: [sg, sg-security-overview, threat_vulnerability, sg-security-measures, unauthorized_access]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

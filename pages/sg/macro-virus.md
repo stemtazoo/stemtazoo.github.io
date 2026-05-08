@@ -1,10 +1,10 @@
 ---
 layout: page
 title: マクロウイルスとは？Office文書を悪用する攻撃【SG試験】
-description: マクロウイルスは、WordやExcelなどのOffice文書に含まれるマクロ機能を悪用するマルウェアです。VBScriptとの違いも動く場所で整理します。
+description: マクロウイルスは、WordやExcelなどのOffice文書に含まれるマクロ機能を悪用するマルウェアです。VBScriptとの違いも動く場所で整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/macro-virus/
 tags: [sg, sg-security-measures, malware, threat_vulnerability]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

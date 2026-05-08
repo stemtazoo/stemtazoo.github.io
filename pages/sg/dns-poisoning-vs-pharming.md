@@ -1,12 +1,12 @@
 ---
 layout: page
 title: DNSキャッシュポイズニングとファーミングの違いを整理【SG試験】
-description: "DNSキャッシュポイズニングとファーミングを区別するため、改ざん対象・誘導経路・対策ポイントを比較し、偽サイト誘導問題で原因箇所を正確に特定できるようにします。"
+description: "DNSキャッシュポイズニングとファーミングを区別するため、改ざん対象・誘導経路・対策ポイントを比較し、偽サイト誘導問題で原因箇所を正確に特定できるようにします。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。"
 permalink: /sg/dns-poisoning-vs-pharming/
 tags: [sg, threat_vulnerability, network, data_leakage, sg-security-overview]
 prev: /sg/dns-cache-poisoning/
 next: /sg/dns-reflector-attack/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

@@ -1,10 +1,10 @@
 ---
 layout: page
 title: 電子署名法とは？電子署名の効力と認証業務を整理【SG試験】
-description: 電子署名法は、電子データに付けられた電子署名の法的効力と認証業務の制度を定める法律です。SG試験で問われやすい押印との関係や認証局のひっかけを整理します。
+description: 電子署名法は、電子データに付けられた電子署名の法的効力と認証業務の制度を定める法律です。SG試験で問われやすい押印との関係や認証局のひっかけを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/electronic-signature-law/
 tags: [sg, sg-security-law, crypto_auth, privacy_law]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

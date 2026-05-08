@@ -1,10 +1,10 @@
 ---
 layout: page
 title: ポートスキャンとは？管理目的と攻撃目的の違い【SG試験】
-description: ポートスキャンは、対象機器の開いている通信ポートを調べる行為です。管理目的と攻撃目的の違い、SG試験で問われる判断基準を整理します。
+description: ポートスキャンは、対象機器の開いている通信ポートを調べる行為です。管理目的と攻撃目的の違い、SG試験で問われる判断基準を整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/port-scan/
 tags: [sg, sg-security-overview, threat_vulnerability, network]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

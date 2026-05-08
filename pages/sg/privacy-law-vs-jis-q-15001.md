@@ -1,10 +1,10 @@
 ---
 layout: page
 title: 個人情報保護法とJIS Q 15001の違い【SG試験】
-description: 個人情報保護法とJIS Q 15001は、どちらも個人情報保護に関係しますが、法律と規格という役割が異なります。SG試験で混同しやすい判断ポイントを整理します。
+description: 個人情報保護法とJIS Q 15001は、どちらも個人情報保護に関係しますが、法律と規格という役割が異なります。SG試験で混同しやすい判断ポイントを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/privacy-law-vs-jis-q-15001/
 tags: [sg, sg-security-law, privacy_law, sg-security-management, isms]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

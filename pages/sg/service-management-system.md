@@ -1,10 +1,10 @@
 ---
 layout: page
 title: サービスマネジメントシステムとは？サービス提供を継続的に管理する仕組み【SG試験】
-description: サービスマネジメントシステムは、ITサービスを安定して提供するための管理の仕組みです。SG試験で迷いやすいSLA・サービスカタログ・サービス提供者の関係を整理します。
+description: サービスマネジメントシステムは、ITサービスを安定して提供するための管理の仕組みです。SG試験で迷いやすいSLA・サービスカタログ・サービス提供者の関係を整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/service-management-system/
 tags: [sg, sg-management, service_management, it_security_operations]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

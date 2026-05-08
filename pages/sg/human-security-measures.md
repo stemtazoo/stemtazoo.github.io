@@ -1,10 +1,10 @@
 ---
 layout: page
 title: 人的対策とは？従業員・委託先・退職者への管理策【SG試験】
-description: 人的対策は、従業員・委託先・退職者など人に起因する情報漏えいを防ぐ管理策です。教育、守秘義務、権限管理、退職時対応をSG試験向けに整理します。
+description: 人的対策は、従業員・委託先・退職者など人に起因する情報漏えいを防ぐ管理策です。教育、守秘義務、権限管理、退職時対応をSG試験向けに整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/human-security-measures/
 tags: [sg, sg-security-measures, data_leakage, security_training, vendor_management]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

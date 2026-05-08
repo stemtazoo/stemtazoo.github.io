@@ -1,10 +1,10 @@
 ---
 layout: page
 title: システム管理基準とは？システム管理の判断尺度を整理【SG試験】
-description: システム管理基準は、情報システムの管理で共通して留意すべき事項を整理した基準です。SG試験で混同しやすいシステム監査基準や情報システム安全対策基準との違いを整理します。
+description: システム管理基準は、情報システムの管理で共通して留意すべき事項を整理した基準です。SG試験で混同しやすいシステム監査基準や情報システム安全対策基準との違いを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/system-management-standard/
 tags: [sg, sg-management, system_audit, system_strategy]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

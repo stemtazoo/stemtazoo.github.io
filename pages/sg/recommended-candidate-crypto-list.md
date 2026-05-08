@@ -2,12 +2,12 @@
 
 layout: page
 title: 推奨候補暗号リストとは？電子政府推奨暗号リストとの違い【SG試験】
-description: "推奨候補暗号リストは、将来電子政府推奨暗号リストに掲載される可能性がある暗号技術のリストです。SG試験・情報セキュリティマネジメント試験で混同しやすい推奨との違いを整理します。"
+description: "推奨候補暗号リストは、将来電子政府推奨暗号リストに掲載される可能性がある暗号技術のリストです。SG試験・情報セキュリティマネジメント試験で混同しやすい推奨との違いを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。"
 permalink: /sg/recommended-candidate-crypto-list/
 tags: [sg, sg-security-overview, crypto_auth, sg-security-measures]
 prev: /sg/e-government-recommended-crypto-list/
 next: /sg/monitoring-crypto-list/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

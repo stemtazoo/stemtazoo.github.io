@@ -1,10 +1,10 @@
 ---
 layout: page
 title: ワークアラウンドとは？パッチ適用までの暫定対策【SG試験】
-description: ワークアラウンドは、正式なパッチを適用できるまでの間にリスクを下げる暫定的な回避策です。パッチとの違い、使う場面、SG試験の判断基準を整理します。
+description: ワークアラウンドは、正式なパッチを適用できるまでの間にリスクを下げる暫定的な回避策です。パッチとの違い、使う場面、SG試験の判断基準を整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/workaround/
 tags: [sg, sg-security-management, risk_assessment, incident_management, it_security_operations]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

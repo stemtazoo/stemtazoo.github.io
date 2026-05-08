@@ -1,11 +1,11 @@
 ---
 layout: page
 title: バックドアとは？侵入後に仕掛けられる裏口【SG試験】
-description: 情報セキュリティマネジメント試験向けに、バックドアの意味、攻撃者が組み込む目的、ほかの選択肢との違い、試験での判断基準を初心者向けに整理します。
+description: 情報セキュリティマネジメント試験向けに、バックドアの意味、攻撃者が組み込む目的、ほかの選択肢との違い、試験での判断基準を初心者向けに整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/backdoor/
 tags: [sg, security, malware, unauthorized-access]
 date: 2026-05-07
-last_modified_at: 2026-05-07
+last_modified_at: 2026-05-08
 ---
 
 [SGトップへ戻る](/sg/)

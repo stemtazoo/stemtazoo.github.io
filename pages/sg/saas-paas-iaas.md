@@ -1,10 +1,10 @@
 ---
 layout: page
 title: SaaS・PaaS・IaaSの違いとは？クラウドサービスの範囲で整理【SG試験】
-description: SaaS・PaaS・IaaSは、クラウド事業者がどこまで提供するかで分かれるサービス形態です。SG試験で迷いやすい利用者の管理範囲と責任共有の考え方を整理します。
+description: SaaS・PaaS・IaaSは、クラウド事業者がどこまで提供するかで分かれるサービス形態です。SG試験で迷いやすい利用者の管理範囲と責任共有の考え方を整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/saas-paas-iaas/
 tags: [sg, sg-technology, network, it_security_operations]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

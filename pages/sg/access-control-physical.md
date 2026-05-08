@@ -1,12 +1,12 @@
 ---
 layout: page
 title: "入退室管理とは？物理アクセス制御の基本【SG試験】"
-description: "入退室管理は施設への出入りを制御し不正侵入を防ぐ物理的セキュリティ対策です。認証との違いやSG試験・情報セキュリティマネジメント試験でのひっかけポイントを整理します。"
+description: "入退室管理は施設への出入りを制御し不正侵入を防ぐ物理的セキュリティ対策です。認証との違いやSG試験・情報セキュリティマネジメント試験でのひっかけポイントを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。"
 permalink: /sg/access-control-physical/
 prev: /sg/physical-security/
 next: /sg/anti-passback/
 tags: [sg, sg-security-measures, access_control, it_security_operations]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

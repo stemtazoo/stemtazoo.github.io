@@ -1,12 +1,12 @@
 ---
 layout: page
 title: "監視カメラとは？抑止と証跡の役割を整理【SG試験】"
-description: "監視カメラは不正行為を記録し抑止する物理的セキュリティ対策です。防止との違いやSG試験・情報セキュリティマネジメント試験でのひっかけポイントを整理します。"
+description: "監視カメラは不正行為を記録し抑止する物理的セキュリティ対策です。防止との違いやSG試験・情報セキュリティマネジメント試験でのひっかけポイントを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。"
 permalink: /sg/surveillance-camera/
 prev: /sg/clear-desk-screen/
 next: /sg/security-wire/
 tags: [sg, sg-security-measures, system_audit, it_security_operations]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

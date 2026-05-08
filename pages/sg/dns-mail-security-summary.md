@@ -1,10 +1,10 @@
 ---
 layout: page
 title: DNS・メールなりすまし対策まとめ｜SPF・DKIM・S/MIMEを整理【SG試験】
-description: DNSとメール対策は、名前解決の悪用となりすまし防止を分けて考えると整理できます。SG試験で問われやすいSPF、DKIM、SMTP-AUTH、S/MIMEなどの違いをまとめます。
+description: DNSとメール対策は、名前解決の悪用となりすまし防止を分けて考えると整理できます。SG試験で問われやすいSPF、DKIM、SMTP-AUTH、S/MIMEなどの違いをまとめます。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/dns-mail-security-summary/
 tags: [sg, sg-security-measures, network, data_leakage]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

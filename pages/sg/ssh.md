@@ -1,10 +1,10 @@
 ---
 layout: page
 title: SSHとは？安全な遠隔操作とポートフォワーディングを整理【SG試験】
-description: SSHは遠隔地のコンピュータを安全に操作するためのプロトコルです。Telnetとの違い、公開鍵認証、ポートフォワーディングの役割をSG試験向けに整理します。
+description: SSHは遠隔地のコンピュータを安全に操作するためのプロトコルです。Telnetとの違い、公開鍵認証、ポートフォワーディングの役割をSG試験向けに整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/ssh/
 tags: [sg, sg-technology, network, crypto_auth, unauthorized_access]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

@@ -1,10 +1,10 @@
 ---
 layout: page
 title: CVSSベースの対応優先順位演習｜脆弱性対応の判断基準を整理【SG試験】
-description: CVSSスコアを使った脆弱性対応の優先順位づけを演習形式で整理します。SG試験で迷いやすい「高スコアでも後回しになる条件」や運用判断の基準を学べます。
+description: CVSSスコアを使った脆弱性対応の優先順位づけを演習形式で整理します。SG試験で迷いやすい「高スコアでも後回しになる条件」や運用判断の基準を学べます。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/cvss-priority-exercise/
 tags: [sg, sg-security-management, threat_vulnerability]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

@@ -1,10 +1,10 @@
 ---
 layout: page
 title: 不正競争の定義とは？20個以上の類型を試験向けに整理【SG試験】
-description: 不正競争の定義は、不正競争防止法で定められた公正な競争を妨げる行為の分類です。SG試験で迷いやすい営業秘密、ドメイン名、模倣、信用毀損の切り分けを整理します。
+description: 不正競争の定義は、不正競争防止法で定められた公正な競争を妨げる行為の分類です。SG試験で迷いやすい営業秘密、ドメイン名、模倣、信用毀損の切り分けを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/unfair-competition-definition/
 tags: [sg, sg-security-law, sg-strategy, business_management]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

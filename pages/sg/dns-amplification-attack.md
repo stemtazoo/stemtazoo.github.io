@@ -1,11 +1,11 @@
 ---
 layout: page
 title: DNSアンプ攻撃とは？反射型DDoS攻撃の仕組み【SG試験】
-description: DNSアンプ攻撃は、DNSキャッシュサーバの応答を攻撃対象へ集める反射型DDoS攻撃です。SG試験で問われるオープンリゾルバ、踏み台化防止、DNSSECとの違いを整理します。
+description: DNSアンプ攻撃は、DNSキャッシュサーバの応答を攻撃対象へ集める反射型DDoS攻撃です。SG試験で問われるオープンリゾルバ、踏み台化防止、DNSSECとの違いを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/dns-amplification-attack/
 tags: [sg, sg-security-overview, threat_vulnerability, sg-security-measures, network]
 date: 2026-05-06
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

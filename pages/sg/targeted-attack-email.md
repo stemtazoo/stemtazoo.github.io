@@ -1,10 +1,10 @@
 ---
 layout: page
 title: 標的型攻撃メールとは？業務メールを装う攻撃【SG試験】
-description: 標的型攻撃メールは、特定の組織や担当者を狙い、業務メールを装って添付ファイルやURLを開かせる攻撃です。SG試験での見分け方と報告の判断を整理します。
+description: 標的型攻撃メールは、特定の組織や担当者を狙い、業務メールを装って添付ファイルやURLを開かせる攻撃です。SG試験での見分け方と報告の判断を整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/targeted-attack-email/
 tags: [sg, sg-security-measures, malware, security_training]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

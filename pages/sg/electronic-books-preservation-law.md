@@ -1,10 +1,10 @@
 ---
 layout: page
 title: 電子帳簿保存法とは？電子データ保存のルール【SG試験】
-description: 電子帳簿保存法は、国税関係の帳簿や書類を電子データで保存するためのルールを定める法律です。SG試験で問われやすい電子取引・スキャナ保存・タイムスタンプとの関係を整理します。
+description: 電子帳簿保存法は、国税関係の帳簿や書類を電子データで保存するためのルールを定める法律です。SG試験で問われやすい電子取引・スキャナ保存・タイムスタンプとの関係を整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/electronic-books-preservation-law/
 tags: [sg, sg-security-law, asset_management, it_security_operations]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

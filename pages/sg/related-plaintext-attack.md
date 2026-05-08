@@ -1,10 +1,10 @@
 ---
 layout: page
 title: 関連平文攻撃とは？サイドチャネル攻撃との違い【SG試験】
-description: 関連平文攻撃は、攻撃者が選んだ平文と対応する暗号文の関係から暗号鍵などを推測する攻撃です。SG試験で迷いやすいサイドチャネル攻撃との違いを整理します。
+description: 関連平文攻撃は、攻撃者が選んだ平文と対応する暗号文の関係から暗号鍵などを推測する攻撃です。SG試験で迷いやすいサイドチャネル攻撃との違いを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/related-plaintext-attack/
 tags: [sg, sg-security-overview, threat_vulnerability, crypto_auth]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

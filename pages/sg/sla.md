@@ -1,10 +1,10 @@
 ---
 layout: page
 title: SLAとは？委託先とのサービス品質を決める考え方【SG試験】
-description: SLAは、サービス提供者と利用者の間でサービス内容や品質水準を合意する文書です。SG試験で問われる委託先管理・SLM・契約との違いを整理します。
+description: SLAは、サービス提供者と利用者の間でサービス内容や品質水準を合意する文書です。SG試験で問われる委託先管理・SLM・契約との違いを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/sla/
 tags: [sg, sg-management, service_management, vendor_management]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

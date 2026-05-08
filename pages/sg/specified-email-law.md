@@ -1,10 +1,10 @@
 ---
 layout: page
 title: 特定電子メール法とは？広告メール送信のルールを整理【SG試験】
-description: 特定電子メール法は、広告宣伝メールの送信を適正化するための法律です。オプトイン、表示義務、受信拒否後の送信禁止を中心に、SG試験での判断基準を整理します。
+description: 特定電子メール法は、広告宣伝メールの送信を適正化するための法律です。オプトイン、表示義務、受信拒否後の送信禁止を中心に、SG試験での判断基準を整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/specified-email-law/
 tags: [sg, sg-security-law, privacy_law, it_security_operations]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

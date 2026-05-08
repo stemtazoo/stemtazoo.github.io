@@ -1,10 +1,10 @@
 ---
 layout: page
 title: セキュリティホールとは？脆弱性との違いと修正プログラム【SG試験】
-description: セキュリティホールは、ソフトウェアの不具合や設計ミスから生じる情報セキュリティ上の弱点です。脆弱性との関係や修正プログラムによる対策をSG試験向けに整理します。
+description: セキュリティホールは、ソフトウェアの不具合や設計ミスから生じる情報セキュリティ上の弱点です。脆弱性との関係や修正プログラムによる対策をSG試験向けに整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/security-hole/
 tags: [sg, sg-security-overview, threat_vulnerability, unauthorized_access, it_security_operations]
-last_modified_at: 2026-05-07
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

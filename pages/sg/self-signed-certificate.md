@@ -1,12 +1,12 @@
 ---
 layout: page
 title: "自己署名証明書とは？なぜ危険なのかを整理【SG試験】"
-description: "自己署名証明書の理解を深めるため、CA署名証明書との信頼モデル差、警告表示の理由、社内利用時の注意点を整理し、設問で問われる「信頼できない理由」を説明できます。"
+description: "自己署名証明書の理解を深めるため、CA署名証明書との信頼モデル差、警告表示の理由、社内利用時の注意点を整理し、設問で問われる「信頼できない理由」を説明できます。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。"
 permalink: /sg/self-signed-certificate/
 prev: /sg/root-intermediate-certificate/
 next: /sg/certificate-revocation-crl-ocsp/
 tags: [sg, crypto_auth, sg-security-overview, network]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

@@ -1,10 +1,10 @@
 ---
 layout: page
 title: IT投資評価とは？効果とリスクで判断する考え方【SG試験】
-description: IT投資評価は、システム導入や改善にかける費用に対して、期待する効果とリスクが妥当かを判断する考え方です。SG試験で迷いやすい費用対効果やITガバナンスとの関係を整理します。
+description: IT投資評価は、システム導入や改善にかける費用に対して、期待する効果とリスクが妥当かを判断する考え方です。SG試験で迷いやすい費用対効果やITガバナンスとの関係を整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/it-investment-evaluation/
 tags: [sg, sg-management, system_strategy, business_management]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

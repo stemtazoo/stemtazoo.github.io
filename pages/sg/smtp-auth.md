@@ -1,12 +1,12 @@
 ---
 layout: page
 title: "SMTP-AUTHとは？メール送信時の認証方式【SG試験】"
-description: "SMTP-AUTHはメール送信時に利用者を認証する仕組みです。なりすまし対策との違いや役割を整理し、SG試験・情報セキュリティマネジメント試験で問われる判断ポイントを解説します。"
+description: "SMTP-AUTHはメール送信時に利用者を認証する仕組みです。なりすまし対策との違いや役割を整理し、SG試験・情報セキュリティマネジメント試験で問われる判断ポイントを解説します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。"
 permalink: /sg/smtp-auth/
 prev: /sg/mail-header-injection/
 next: /sg/spf/
 tags: [sg, sg-security-measures, unauthorized_access, network]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

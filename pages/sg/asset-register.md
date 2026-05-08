@@ -1,12 +1,12 @@
 ---
 layout: page
 title: "情報資産台帳とは？リスク管理の出発点を整理【SG試験】"
-description: "情報資産台帳は組織の情報資産を一覧で管理するための台帳です。リスクアセスメントとの関係やJISの考え方、SG試験・情報セキュリティマネジメント試験のひっかけポイントを整理します。"
+description: "情報資産台帳は組織の情報資産を一覧で管理するための台帳です。リスクアセスメントとの関係やJISの考え方、SG試験・情報セキュリティマネジメント試験のひっかけポイントを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。"
 permalink: /sg/asset-register/
 prev: /sg/rainbow-table/
 next: /sg/risk-management/
 tags: [sg, sg-security-management, asset_management, risk_assessment]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

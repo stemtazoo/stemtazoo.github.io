@@ -1,10 +1,10 @@
 ---
 layout: page
 title: ソースコードレビューとは？静的解析との違い【SG試験】
-description: ソースコードレビューは、人がソースコードを確認し、設計・保守性・安全性の問題を見つける活動です。SG試験で迷いやすい静的解析やSASTとの違いを整理します。
+description: ソースコードレビューは、人がソースコードを確認し、設計・保守性・安全性の問題を見つける活動です。SG試験で迷いやすい静的解析やSASTとの違いを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/source-code-review/
 tags: [sg, sg-security-overview, threat_vulnerability, sg-security-measures, unauthorized_access]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

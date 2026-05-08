@@ -1,12 +1,12 @@
 ---
 layout: page
 title: "セキュリティ対策の違いを一発で整理｜防御・検知・分析・証拠の切り分け【SG試験】"
-description: "セキュリティ対策を防御・検知・分析・証拠の観点で整理します。SG試験・情報セキュリティマネジメント試験で混同しやすい用語の違いと判断基準をまとめて理解できます。"
+description: "セキュリティ対策を防御・検知・分析・証拠の観点で整理します。SG試験・情報セキュリティマネジメント試験で混同しやすい用語の違いと判断基準をまとめて理解できます。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。"
 permalink: /sg/security-measures-comparison/
 prev: /sg/security-measures-overview/
 next: /sg/perimeter-security/
 tags: [sg, sg-security-measures, incident_management, it_security_operations]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

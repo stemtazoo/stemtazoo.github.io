@@ -1,10 +1,10 @@
 ---
 layout: page
 title: 職務分掌とは？一人に権限を集中させない管理策【SG試験】
-description: 職務分掌は、業務や権限を複数の担当者に分け、不正やミスを防ぐ管理策です。SG試験で問われやすい権限集中、相互けん制、内部不正対策との関係を整理します。
+description: 職務分掌は、業務や権限を複数の担当者に分け、不正やミスを防ぐ管理策です。SG試験で問われやすい権限集中、相互けん制、内部不正対策との関係を整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/segregation-of-duties/
 tags: [sg, sg-security-management, access_control, risk_assessment, it_security_operations]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

@@ -1,12 +1,12 @@
 ---
 layout: page
 title: リスク対応とCIAの関係を整理！試験で迷わない判断フロー【SG試験】
-description: "リスク対応×CIAを一気に整理したい人向けに、回避・低減・移転・受容の選び方と保護対象の関係を具体例で示し、対策選定の妥当性をSG設問で判断できるようにします。"
+description: "リスク対応×CIAを一気に整理したい人向けに、回避・低減・移転・受容の選び方と保護対象の関係を具体例で示し、対策選定の妥当性をSG設問で判断できるようにします。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。"
 permalink: /sg/risk-response-cia/
 tags: [sg, risk_assessment, security_management, it_security_operations, sg-security-management]
 prev: /sg/reverse-brute-force-attack/
 next: /sg/risk-treatment/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

@@ -1,10 +1,10 @@
 ---
 layout: page
 title: セキュアブートとは？OS起動前のマルウェア実行を防ぐ仕組み【SG試験】
-description: セキュアブートは、PC起動時にOS起動ファイルやドライバのデジタル署名を検証する仕組みです。BIOSパスワードやマルウェア対策ソフトとの違いをSG試験向けに整理します。
+description: セキュアブートは、PC起動時にOS起動ファイルやドライバのデジタル署名を検証する仕組みです。BIOSパスワードやマルウェア対策ソフトとの違いをSG試験向けに整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/secure-boot/
 tags: [sg, sg-security-measures, malware, crypto_auth, system_architecture]
-last_modified_at: 2026-05-07
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

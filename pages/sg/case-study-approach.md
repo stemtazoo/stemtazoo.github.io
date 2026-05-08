@@ -1,12 +1,12 @@
 ---
 layout: page
 title: ケース問題の解き方！CIAとリスク対応で考える実践手順【SG試験】
-description: "ケース問題攻略を目的に、CIA観点での読み取り手順、リスク対応4分類への落とし込み、選択肢消去の順序を示し、SG本試験で再現できる解法フローを身につけられます。"
+description: "ケース問題攻略を目的に、CIA観点での読み取り手順、リスク対応4分類への落とし込み、選択肢消去の順序を示し、SG本試験で再現できる解法フローを身につけられます。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。"
 permalink: /sg/case-study-approach/
 tags: [sg, risk_assessment, it_security_operations, security_management, sg-security-management]
 prev: /sg/case-solving-template/
 next: /sg/clickjacking/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

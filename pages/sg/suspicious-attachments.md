@@ -1,10 +1,10 @@
 ---
 layout: page
 title: 不審な添付ファイルとは？メール経由の感染を防ぐ基本【SG試験】
-description: 不審な添付ファイルは、マルウェア感染や情報漏えいにつながる危険なメール添付です。SG試験で問われる開かない判断と教育・対策を整理します。
+description: 不審な添付ファイルは、マルウェア感染や情報漏えいにつながる危険なメール添付です。SG試験で問われる開かない判断と教育・対策を整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/suspicious-attachments/
 tags: [sg, sg-security-measures, malware, security_training]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

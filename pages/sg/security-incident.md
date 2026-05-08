@@ -1,12 +1,12 @@
 ---
 layout: page
 title: "情報セキュリティインシデントとは？事象との違いで理解【SG試験】"
-description: "情報セキュリティインシデントは、被害や影響を伴う重大なセキュリティ問題です。事象との違いやSG試験・情報セキュリティマネジメント試験での判断基準を分かりやすく解説します。"
+description: "情報セキュリティインシデントは、被害や影響を伴う重大なセキュリティ問題です。事象との違いやSG試験・情報セキュリティマネジメント試験での判断基準を分かりやすく解説します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。"
 permalink: /sg/security-incident/
 prev: /sg/security-event/
 next: /sg/log-management/
 tags: [sg, sg-security-management, incident_management, risk_assessment, it_security_operations]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

@@ -1,12 +1,12 @@
 ---
 layout: page
 title: "データ・AI利活用における留意事項とは？【DS検定リテラシー】"
-description: "\"データ・AI利活用における留意事項は\"を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。"
+description: "\\"データ・AI利活用における留意事項は\\"を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。"
 permalink: /ds/data-ai-precautions/
 categories: [ai-utilization]
 tags: [ds, ai-use, literacy, ethics, security, ai, gdpr, cheatsheet]
 prev: /ds/weak-strong-ai/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>

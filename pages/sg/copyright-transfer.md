@@ -1,12 +1,12 @@
 ---
 layout: page
 title: "著作権譲渡契約とは？ライセンス契約との違いを整理【SG試験】"
-description: "著作権譲渡契約の試験対策として、著作権の帰属・利用許諾・再利用条件の違いを整理し、委託開発でどこまで権利移転されるかをSG頻出パターンで理解できます。"
+description: "著作権譲渡契約の試験対策として、著作権の帰属・利用許諾・再利用条件の違いを整理し、委託開発でどこまで権利移転されるかをSG頻出パターンで理解できます。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。"
 permalink: /sg/copyright-transfer/
 prev: /sg/audit-log/
 next: /sg/pci-dss/
 tags: [sg, security_law, vendor_management, system_strategy, sg-security-law]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

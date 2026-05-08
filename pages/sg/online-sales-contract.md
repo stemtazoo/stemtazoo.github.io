@@ -1,10 +1,10 @@
 ---
 layout: page
 title: インターネットでの売買契約とは？成立時期を到達で整理【SG試験】
-description: インターネットでの売買契約は、注文ボタンを押しただけで直ちに成立するとは限りません。SG試験で迷いやすい申込み・承諾・到達の考え方を整理します。
+description: インターネットでの売買契約は、注文ボタンを押しただけで直ちに成立するとは限りません。SG試験で迷いやすい申込み・承諾・到達の考え方を整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/online-sales-contract/
 tags: [sg, sg-strategy, business_management, sg-security-law]
-last_modified_at: 2026-05-07
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

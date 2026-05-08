@@ -1,10 +1,10 @@
 ---
 layout: page
 title: ポートスキャナーとは？稼働サービスを調べる検査ツール【SG試験】
-description: ポートスキャナーは、サーバで開いている通信ポートや稼働サービスを調べる検査ツールです。SG試験で迷いやすい脆弱性診断やログ分析との違いを整理します。
+description: ポートスキャナーは、サーバで開いている通信ポートや稼働サービスを調べる検査ツールです。SG試験で迷いやすい脆弱性診断やログ分析との違いを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/port-scanner/
 tags: [sg, sg-security-measures, unauthorized_access, network]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

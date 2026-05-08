@@ -1,10 +1,10 @@
 ---
 layout: page
 title: ストレステストとは？負荷テストとの違い【SG試験】
-description: ストレステストは、システムに限界を超えるような負荷をかけて、どこで性能低下や障害が起きるかを確認するテストです。負荷テストとの違いをSG試験向けに整理します。
+description: ストレステストは、システムに限界を超えるような負荷をかけて、どこで性能低下や障害が起きるかを確認するテストです。負荷テストとの違いをSG試験向けに整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/stress-test/
 tags: [sg, sg-technology, system_architecture, service_management]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

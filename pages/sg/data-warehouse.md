@@ -1,10 +1,10 @@
 ---
 layout: page
 title: データウェアハウスとは？データマートとの違い【SG試験】
-description: データウェアハウスは、企業内のデータを統合して分析しやすく蓄積する仕組みです。データマートやデータレイクとの違いをSG試験向けに整理します。
+description: データウェアハウスは、企業内のデータを統合して分析しやすく蓄積する仕組みです。データマートやデータレイクとの違いをSG試験向けに整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/data-warehouse/
 tags: [sg, sg-technology, database, system_strategy]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

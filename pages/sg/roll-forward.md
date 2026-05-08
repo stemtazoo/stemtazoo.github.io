@@ -1,10 +1,10 @@
 ---
 layout: page
 title: ロールフォワードとは？ログを使った障害復旧【SG試験】
-description: ロールフォワードは、コミット済みの更新をログから再反映して障害直前の状態へ復旧する処理です。SG試験で混同しやすいロールバックとの違いを整理します。
+description: ロールフォワードは、コミット済みの更新をログから再反映して障害直前の状態へ復旧する処理です。SG試験で混同しやすいロールバックとの違いを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/roll-forward/
 tags: [sg, sg-technology, database, system_architecture]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

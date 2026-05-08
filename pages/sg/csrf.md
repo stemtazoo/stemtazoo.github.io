@@ -1,12 +1,12 @@
 ---
 layout: page
 title: "クロスサイトリクエストフォージェリとは？なりすまし操作の仕組み【SG試験】"
-description: "クロスサイトリクエストフォージェリは利用者のログイン状態を悪用して意図しない操作を実行させる攻撃です。CSRFとXSSの違いや試験での判断ポイントを整理します。"
+description: "クロスサイトリクエストフォージェリは利用者のログイン状態を悪用して意図しない操作を実行させる攻撃です。CSRFとXSSの違いや試験での判断ポイントを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。"
 permalink: /sg/csrf/
 tags: [sg, security_general, threat_vulnerability, unauthorized_access, data_leakage, sg-security-overview]
 prev: /sg/soc-csirt-jpcert/
 next: /sg/cvss/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

@@ -1,10 +1,10 @@
 ---
 layout: page
 title: 秘密保持契約書と守秘義務契約書の違い【SG試験】
-description: 秘密保持契約書と守秘義務契約書は、秘密情報を漏らさない責任を文書で明確にするための契約です。NDAとの関係、従業員・委託先での使われ方、SG試験での切り分け方を整理します。
+description: 秘密保持契約書と守秘義務契約書は、秘密情報を漏らさない責任を文書で明確にするための契約です。NDAとの関係、従業員・委託先での使われ方、SG試験での切り分け方を整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/nda-vs-confidentiality-obligation-agreement/
 tags: [sg, sg-security-management, data_leakage, vendor_management, it_security_operations]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

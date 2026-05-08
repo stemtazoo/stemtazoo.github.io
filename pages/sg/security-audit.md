@@ -1,10 +1,10 @@
 ---
 layout: page
 title: 情報セキュリティ監査とは？目的と監査人の役割を整理【SG試験】
-description: 情報セキュリティ監査は、組織の情報セキュリティ対策が適切かを確認し、改善につなげる活動です。監査の目的、監査人の役割、管理基準との関係をSG試験向けに整理します。
+description: 情報セキュリティ監査は、組織の情報セキュリティ対策が適切かを確認し、改善につなげる活動です。監査の目的、監査人の役割、管理基準との関係をSG試験向けに整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/security-audit/
 tags: [sg, sg-management, system_audit, sg-security-management, isms]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

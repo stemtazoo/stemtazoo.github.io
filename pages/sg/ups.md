@@ -1,12 +1,12 @@
 ---
 layout: page
 title: "UPSとは？停電時の業務継続を支える仕組み【SG試験】"
-description: "UPSは停電時に短時間だけ電力を供給する装置です。発電機との違いや役割、SG試験・情報セキュリティマネジメント試験でのひっかけポイントを整理し、正しく判断できるようにします。"
+description: "UPSは停電時に短時間だけ電力を供給する装置です。発電機との違いや役割、SG試験・情報セキュリティマネジメント試験でのひっかけポイントを整理し、正しく判断できるようにします。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。"
 permalink: /sg/ups/
 prev: /sg/remote-backup/
 next: /sg/physical-security-summary/
 tags: [sg, sg-security-measures, it_security_operations, system_architecture]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

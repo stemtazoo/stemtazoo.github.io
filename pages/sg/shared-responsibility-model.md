@@ -1,10 +1,10 @@
 ---
 layout: page
 title: クラウドサービス利用時の責任共有モデルとは？責任範囲の考え方【SG試験】
-description: 責任共有モデルは、クラウドサービスの利用者と事業者がセキュリティ上の責任を分担する考え方です。SG試験で問われやすい責任範囲とひっかけポイントを整理します。
+description: 責任共有モデルは、クラウドサービスの利用者と事業者がセキュリティ上の責任を分担する考え方です。SG試験で問われやすい責任範囲とひっかけポイントを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/shared-responsibility-model/
 tags: [sg, sg-security-management, risk_assessment, vendor_management]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

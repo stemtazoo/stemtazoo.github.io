@@ -1,10 +1,10 @@
 ---
 layout: page
 title: リスクマネジメントとは？不確実な問題に備える考え方【SG試験】
-description: リスクマネジメントは、まだ発生していない不確実な問題を事前に洗い出し、影響を減らすために備える管理です。SG試験で迷いやすい課題管理やインシデント対応との違いを整理します。
+description: リスクマネジメントは、まだ発生していない不確実な問題を事前に洗い出し、影響を減らすために備える管理です。SG試験で迷いやすい課題管理やインシデント対応との違いを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/project-risk-management/
 tags: [sg, sg-management, project_management, risk_assessment]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論

@@ -1,10 +1,10 @@
 ---
 layout: page
 title: 攻撃の事前調査とは？偵察・スキャン・脆弱性探索の流れ【SG試験】
-description: 攻撃の事前調査は、攻撃者が侵入前に対象の情報や弱点を集める活動です。偵察・スキャン・脆弱性探索の流れとSG試験の判断基準を整理します。
+description: 攻撃の事前調査は、攻撃者が侵入前に対象の情報や弱点を集める活動です。偵察・スキャン・脆弱性探索の流れとSG試験の判断基準を整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/attack-reconnaissance/
 tags: [sg, sg-security-overview, threat_vulnerability, unauthorized_access]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-08
 ---
 
 ## まず結論
