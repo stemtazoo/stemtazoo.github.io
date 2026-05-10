@@ -102,3 +102,5 @@ SG試験では、次のようなひっかけに注意します。
 - EAP-TLSは、証明書でサーバとクライアントを相互認証する
 - PEAPやEAP-TTLSは、TLSトンネル内で別の認証を行う
 - SG試験では「チャレンジレスポンス＝EAP-MD5」と判断する
+
+{% include sg_article_footer.html %}

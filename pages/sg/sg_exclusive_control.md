@@ -181,3 +181,5 @@ tags: [sg, database, transaction, exclusive-control]
 - **物理的に整理する** → 再編成
 
 排他制御は、データベースの設計や整理ではなく、**トランザクションの衝突を防ぐための制御**と覚えておくと選びやすくなります。
+
+{% include sg_article_footer.html %}

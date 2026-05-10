@@ -172,3 +172,5 @@ last_modified_at: 2026-05-10
 > それとも「仕組みを変える対策」か？
 
 と考えると、エラープルーフ化を見分けやすくなります。
+
+{% include sg_article_footer.html %}

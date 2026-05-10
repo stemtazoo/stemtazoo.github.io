@@ -5,7 +5,7 @@ description: 情報セキュリティマネジメント試験で問われるIMAP
 permalink: /pages/sg/imap/
 tags: [sg, network, mail, protocol]
 date: 2026-05-07
-last_modified_at: 2026-05-08
+last_modified_at: 2026-05-10
 ---
 
 # IMAPとは？サーバ上のメールを管理する受信プロトコル【SG試験】
@@ -137,3 +137,5 @@ IMAPは、次の3点で覚えておきましょう。
 ```
 
 と判断できれば、選択肢をかなり絞れます。
+
+{% include sg_article_footer.html %}
