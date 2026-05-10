@@ -111,3 +111,5 @@ SG試験では、次のようなひっかけに注意します。
 - ID・パスワードなどはTLSトンネル内でやり取りする
 - EAP-TLSは、証明書による相互認証で切り分ける
 - SG試験では「TLSトンネル内で認証＝PEAPまたはEAP-TTLS」と判断する
+
+{% include sg_article_footer.html %}

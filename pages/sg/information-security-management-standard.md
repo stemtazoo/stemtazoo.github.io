@@ -6,7 +6,7 @@ permalink: /sg/information-security-management-standard/
 tags: [sg, sg-security-management, isms, system_audit, security_standard]
 prev: /sg/security-audit/
 next: /sg/information-security-audit-standard/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-10
 ---
 
 ## まず結論
@@ -240,3 +240,5 @@ SG試験では、次のように判断すると解きやすくなります。
   https://www.meti.go.jp/policy/netsecurity/is-kansa/
 - 経済産業省：情報セキュリティ管理基準（令和7年改正版）  
   https://www.meti.go.jp/policy/netsecurity/is-kansa/IS_Management_Standard_R7.pdf
+
+{% include sg_article_footer.html %}

@@ -98,3 +98,5 @@ SG試験では、次のようなひっかけに注意します。
 - ID・パスワード中心の方式と混同しない
 - PEAPやEAP-TTLSは、TLSトンネル内で別の認証を行う方式として切り分ける
 - SG試験では「証明書による相互認証」と書かれていたらEAP-TLSを選ぶ
+
+{% include sg_article_footer.html %}
