@@ -24,6 +24,7 @@ permalink: /sg/category/security-measures/
 - [Webアプリ攻撃まとめ｜SQLインジェクション・XSS・CSRFを整理](/sg/web-application-attacks-summary/)
 - [DNS・メールなりすまし対策まとめ｜SPF・DKIM・S/MIMEを整理](/sg/dns-mail-security-summary/)
 - [マルウェアまとめ｜種類・感染後の動き・解析方法を整理](/sg/malware-threats-summary/)
+- [暗号・認証まとめ｜主要用語を整理【SG試験】](/sg/crypto-auth-summary/)
 
 ## 分野別に読む
 
