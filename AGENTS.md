@@ -30,7 +30,23 @@ Read the relevant detailed guide before changing each area:
 - GitHub Pages / Liquid compatibility: `docs/agent/github-pages-compat.md`
 - IndexNow deployment automation: `docs/agent/indexnow.md`
 - Theme and layout consistency: `docs/agent/theme-consistency.md`
-- SG content, confirmation-question, and series-summary rules: `docs/agent/sg-content-rules.md`
+- SG article writing policy: `docs/agent/sg-content-rules.md`
+- SG article template: `docs/agent/sg-article-template.md`
+- SG front matter rules: `docs/agent/sg-frontmatter-rules.md`
+- SG tag rules: `docs/agent/sg-tag-rules.md`
+- SG example-question and confirmation-question rules: `docs/agent/sg-example-question-rules.md`
+- SG series-summary rules: `docs/agent/sg-series-summary-rules.md`
+
+## SG Article Policy
+
+When creating or editing `pages/sg` articles, write them as study articles for the Information Security Management Examination (SG試験).
+
+- Prioritize the judgment criteria used to eliminate answer choices over deep technical or legal detail.
+- Explain concepts in the context of workplace decisions, operations, risk response, education, vendor management, and practical security management.
+- For laws and standards, focus on what the rule protects and how it is used, not on memorizing minor clauses.
+- Bridge 科目A knowledge and 科目B case-question judgment.
+- Match the structure, granularity, and wording style of existing `pages/sg` articles.
+- Use GitHub Pages-compatible Markdown and simple Liquid.
 
 ## Editing Strategy
 

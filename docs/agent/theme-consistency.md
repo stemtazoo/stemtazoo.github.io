@@ -34,6 +34,15 @@ The repository contains multiple study themes under `pages/`. Changes should be 
 - If theme-specific logic is necessary, isolate it in includes rather than scattering logic across many pages.
 - Prefer data-driven or front-matter-driven organization over repeated hardcoded HTML when it does not reduce compatibility.
 
+## SG Content Consistency
+
+When editing `pages/sg`, keep the article experience aligned with the SG-specific rules in `docs/agent/sg-content-rules.md`.
+
+- Normal SG articles should use the fixed 6-heading structure defined in `docs/agent/sg-article-template.md`.
+- Use `_includes/sg_article_footer.html` for related article behavior instead of adding ad hoc related-link sections to article bodies.
+- Keep category and summary pages distinct from single-concept articles.
+- Do not introduce SG-only navigation or footer patterns that would make later DS/GK alignment harder unless the user explicitly asks for it.
+
 ## Front Matter Conventions
 
 Many pages depend on front matter for navigation and grouping. Be careful when editing:
