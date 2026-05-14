@@ -6,7 +6,7 @@ permalink: /sg/isms/
 prev: /sg/security-management-overview/
 next: /sg/security-committee/
 tags: [sg, sg-security-management, isms, risk_assessment, it_security_operations]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-14
 ---
 
 ## まず結論
@@ -76,6 +76,20 @@ ISMSの本質はここです。
 - 適合していれば「ISMS認証」を取得
 
 👉 信頼性向上・リスク低減につながる
+
+---
+
+### ⑤ 情報セキュリティ目的の達成計画で決める5項目（頻出）
+JIS Q 27001では、情報セキュリティ目的をどう達成するかを計画するとき、次を決めます。
+
+- 実施事項
+- 必要な資源
+- 責任者
+- 達成期限
+- 結果の評価方法
+
+SG試験では、ここに**「必要なプロセス」**や**「適用する管理策」**を混ぜてくるひっかけに注意します。  
+この設問軸では、まず上の5項目を思い出して切り分けるのが有効です。
 
 ---
 
