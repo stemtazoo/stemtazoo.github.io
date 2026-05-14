@@ -6,7 +6,7 @@ permalink: /sg/outsourcing-contract-difference/
 tags: [sg, management, vendor_management, it_security_operations, sg-management]
 prev: /sg/ng-patterns/
 next: /sg/password-list-attack/
-last_modified_at: 2026-05-11
+last_modified_at: 2026-05-14
 ---
 
 ## まず結論
@@ -135,6 +135,11 @@ SG試験では次のように問われることが多いです。
 - 「就業条件を現場で勝手に変更」→ 不適切
 
 👉 **「指示してよい関係か？」で切る**
+
+### 労働条件の管理主体で切る（勤務時間・休日）
+請負契約では、労働者の雇用主は請負企業です。したがって、勤務時間・休日・出退勤管理などの労務管理は、原則として請負企業側が行います。
+
+選択肢で「契約先が労働条件を定める」と書かれていたら、請負契約の文脈では誤りになりやすい点に注意します。
 
 ---
 
