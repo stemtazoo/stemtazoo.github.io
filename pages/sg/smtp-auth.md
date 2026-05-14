@@ -6,7 +6,7 @@ permalink: /sg/smtp-auth/
 prev: /sg/mail-header-injection/
 next: /sg/spf/
 tags: [sg, sg-security-measures, unauthorized_access, network]
-last_modified_at: 2026-05-08
+last_modified_at: 2026-05-14
 ---
 
 ## まず結論
@@ -88,9 +88,33 @@ SMTP-AUTHとは、
 
 ---
 
+### ❌ 誤解④：APOPやPOP before SMTPと同じ
+→ ⭕ 似ていますが、認証の場所と考え方が違います
+
+| 方式 | ざっくりした役割 | 切り分けのキーワード |
+|------|------|------|
+| SMTP-AUTH | SMTP接続時に送信者を認証 | 「SMTPサーバにアクセスするときに認証」 |
+| APOP | POP受信時の認証方式（平文パスワードを避ける） | 「POP」「PASSコマンドの代替」 |
+| POP before SMTP | 先にPOP認証したIPに一時的に送信許可 | 「先に受信」「一定時間だけ送信許可」 |
+
+SG試験では、**「SMTPに入るときに認証する」ならSMTP-AUTH**、  
+**「先にPOPで認証してから送る」ならPOP before SMTP**と判断します。
+
+---
+
+### ❌ 誤解⑤：クライアント証明書を使う説明はSMTP-AUTH
+→ ⭕ それはSMTP-AUTHではなく、証明書を使った別の認証・検証の説明です
+
+SMTP-AUTHの基本は、SMTP接続時にID・パスワードなどで送信者を認証することです。  
+そのため、選択肢に**「CA署名付きクライアント証明書の妥当性を確認する」**のような表現がある場合は、SMTP-AUTHの説明としては不適切だと切り分けられます。
+
+---
+
 ### 🔥 SG試験のひっかけ
 - 「受信側で確認する」→ ❌  
 - 「送信時に認証する」→ ⭕  
+- 「先にPOP認証して一定時間送信可」→ ❌（POP before SMTP）  
+- 「PASSコマンドの代替」→ ❌（APOP）  
 
 👉 キーワード  
 **送信時・認証・ログイン**
