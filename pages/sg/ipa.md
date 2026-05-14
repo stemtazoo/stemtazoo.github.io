@@ -6,7 +6,7 @@ permalink: /sg/ipa/
 tags: [sg, sg-security-management]  
 prev: /sg/nisc/  
 next: /sg/security-org-cheatsheet/  
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-14
 ---
 
 ## まず結論  
@@ -134,6 +134,16 @@ IPA（情報処理推進機構）は
 - IPA：**現場支援**  
 
 👉 「上（政策）」か「横（支援）」か  
+
+---
+
+### ④ J-CSIPと他用語の切り分け  
+- J-CSIP：**IPAを情報ハブとして、参加組織間でサイバー攻撃情報を共有する枠組み**  
+- CSIRT：**自組織のインシデントに対応・復旧する実働チーム**  
+- CRYPTREC：**暗号技術の安全性を評価する取組み**  
+- JISEC：**IT製品・システムを評価・認証する制度**  
+
+👉 選択肢で「IPAがハブ」「参加組織間で共有」と書かれていたら、まずJ-CSIPを検討する  
 
 ---
 
