@@ -6,7 +6,7 @@ permalink: /sg/sso/
 prev: /sg/mfa-vs-step-auth/
 next: /sg/risk-based-authentication/
 tags: [sg, sg-security-measures, access_control, it_security_operations]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-14
 ---
 
 ## まず結論
@@ -56,6 +56,18 @@ SSOは、
 ### ■ 重要なポイント（SG頻出）
 - SSOは「認証」の仕組み
 - 認可（権限管理）は別で管理する
+
+さらに、SG試験では**似たXML系用語との切り分け**も狙われます。
+
+| 用語 | 何をする？ | 試験での切り分け |
+|---|---|---|
+| SAML | 認証・属性・認可情報をサービス間で連携する | 「SSOを実現する枠組み」の説明ならSAML |
+| SOAP | Webサービス間でメッセージをやり取りする通信手順 | 「認証連携そのもの」ではない |
+| XKMS | 公開鍵基盤（PKI）の鍵管理をWebサービス経由で扱う仕様 | 鍵管理の話でありSSO本体ではない |
+| XML Signature | XML文書に電子署名して改ざん検知・真正性確認を行う | 署名技術であり、SSOの説明とは別 |
+
+👉  
+**「複数サイト間で認証情報を安全に交換」ならSAML**と判断します。
 
 👉  
 **認証と認可を混同しないことが重要**
