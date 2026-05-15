@@ -201,3 +201,5 @@ SG試験でイメージしやすいのは、次のような場面です。
   https://www.isplaw.jp/
 - 総務省：情報流通プラットフォーム対処法 関連資料  
   https://www.soumu.go.jp/
+
+{% include sg_article_footer.html %}

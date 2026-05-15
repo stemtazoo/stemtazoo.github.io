@@ -167,3 +167,5 @@ CSIRTマテリアルは、
 より詳しく確認したい場合は、以下の公式情報も参考になります。
 
 - [JPCERT/CC：CSIRTマテリアル](https://www.jpcert.or.jp/csirt_material/)
+
+{% include sg_article_footer.html %}

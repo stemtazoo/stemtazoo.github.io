@@ -186,3 +186,5 @@ BSSID → アクセスポイントの識別情報
 ```
 
 この2つを切り分けられれば、SSIDの問題はかなり解きやすくなります。
+
+{% include sg_article_footer.html %}

@@ -177,3 +177,5 @@ ISMSユーザーズガイドは、
 より詳しく確認したい場合は、以下の公式情報も参考になります。
 
 - [JIPDEC：情報マネジメントシステム関連文書](https://www.jipdec.or.jp/library/smpo_doc.html)
+
+{% include sg_article_footer.html %}

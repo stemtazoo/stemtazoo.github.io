@@ -4,7 +4,7 @@ title: 特許法とは？発明を守る法律の要点【SG試験】
 description: 特許法は、自然法則を利用した高度な発明を保護する法律です。SG試験で迷いやすい著作権法・実用新案法・意匠法との違いを整理します。
 permalink: /sg/patent-law/
 tags: [sg, sg-strategy, sg-security-law, intellectual_property]
-last_modified_at: 2026-05-11
+last_modified_at: 2026-05-15
 ---
 
 ## まず結論
@@ -145,3 +145,5 @@ SG試験では、
 SG試験では、「法律名を知っているか」だけでなく、**何を守るための法律か**が問われます。
 
 特許法は、文章やデザインではなく、**自然法則を利用した技術的なアイデアを守る法律**として押さえておくと判断しやすくなります。
+
+{% include sg_article_footer.html %}

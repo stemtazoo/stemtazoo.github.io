@@ -5,7 +5,7 @@ description: Cookieの保存場所・送信方法・属性（Secure/HttpOnly/Sam
 permalink: /sg/cookie/
 tags: [sg, sg-technology, web, network, authentication]
 date: 2026-05-13
-last_modified_at: 2026-05-13
+last_modified_at: 2026-05-15
 ---
 
 # Cookieとは？HTTPヘッダで扱う状態管理の基本
@@ -356,3 +356,5 @@ Cookieの問題では、
 - [RFC 6265: HTTP State Management Mechanism](https://www.rfc-editor.org/rfc/rfc6265)
 - [Cookies: HTTP State Management Mechanism（rfc6265bis draft）](https://datatracker.ietf.org/doc/draft-ietf-httpbis-rfc6265bis/)
 - [HTTP Cookie の使用 - MDN Web Docs](https://developer.mozilla.org/ja/docs/Web/HTTP/Guides/Cookies)
+
+{% include sg_article_footer.html %}

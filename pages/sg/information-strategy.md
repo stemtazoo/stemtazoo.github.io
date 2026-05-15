@@ -6,7 +6,7 @@ permalink: /sg/information-strategy/
 categories: [sg]
 tags: [SG試験, 情報セキュリティマネジメント, 情報戦略, 経営戦略, 情報システム戦略]
 date: 2026-05-10
-last_modified_at: 2026-05-10
+last_modified_at: 2026-05-15
 ---
 
 # 情報戦略とは？経営戦略と情報システムをつなぐ考え方【SG試験】
@@ -195,3 +195,5 @@ AI、クラウド、データ分析などを導入する場合でも、
 > これは経営目標とつながっているか？
 
 と考えると、正しい選択肢を選びやすくなります。
+
+{% include sg_article_footer.html %}

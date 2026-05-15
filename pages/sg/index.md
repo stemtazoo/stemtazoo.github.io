@@ -82,3 +82,5 @@ categories: [business]
 ## すべての記事を見る
 
 - [全記事一覧](/sg/all/)
+
+{% include sg_article_footer.html %}

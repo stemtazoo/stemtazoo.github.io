@@ -233,3 +233,5 @@ SG試験では、
   https://www.caa.go.jp/policies/policy/consumer_system/consumer_contract_act/
 - e-Gov法令検索：消費者契約法  
   https://laws.e-gov.go.jp/document?lawid=412AC0000000061
+
+{% include sg_article_footer.html %}

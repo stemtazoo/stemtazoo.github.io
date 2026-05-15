@@ -53,3 +53,5 @@ categories: [business]
 学習順の導線は /sg/ と /sg/category/ 配下で強化する。
 タイトル順/更新順の切替は、必要性が高まった段階で検討する。
 -->
+
+{% include sg_article_footer.html %}

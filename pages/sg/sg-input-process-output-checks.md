@@ -310,3 +310,5 @@ tags: [sg, system-audit, internal-control, data-check]
 > 存在時刻を見る
 
 という4つの視点で整理すると、選択肢を切りやすくなります。
+
+{% include sg_article_footer.html %}

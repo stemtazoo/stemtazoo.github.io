@@ -192,3 +192,5 @@ SG試験では、ガイドライン名と役割をセットで切り分けるこ
 より詳しく確認したい場合は、以下の公式情報も参考になります。
 
 - [デジタル・フォレンジック研究会：証拠保全ガイドライン第10版](https://digitalforensic.jp/home/act/products/df-guideline-10th/)
+
+{% include sg_article_footer.html %}

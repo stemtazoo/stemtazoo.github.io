@@ -5,7 +5,7 @@ description: "情報セキュリティマネジメント試験で出題される
 permalink: /sg/sme-security-guideline/
 tags: [sg, security-management, guideline, information-asset]
 date: 2026-05-10
-last_modified_at: 2026-05-14
+last_modified_at: 2026-05-15
 ---
 
 # 中小企業の情報セキュリティ対策ガイドラインとは？SG試験向けにわかりやすく解説
@@ -281,3 +281,5 @@ SG試験では、次のように考えると選択肢を切りやすいです。
 - 情報セキュリティポリシー
 - クラウドサービス
 - 個人情報
+
+{% include sg_article_footer.html %}

@@ -5,7 +5,7 @@ permalink: /sg/tokusei-youinzu/
 description: SG試験で問われる特性要因図について、結果と原因の関係、魚の骨のような図で整理する考え方、管理図・パレート図・ヒストグラムとの違いを初心者向けに整理します。
 tags: [sg, management, quality-control, qc-seven-tools]
 date: 2026-05-12
-last_modified_at: 2026-05-12
+last_modified_at: 2026-05-15
 ---
 
 # 特性要因図とは？結果と原因を魚の骨のように整理する図
@@ -176,3 +176,5 @@ SG試験では、次のように覚えると切り分けやすいです。
 SG試験では、
 **「魚の骨」「原因の整理」「結果と原因」**が出てきたら、
 特性要因図を選びます。
+
+{% include sg_article_footer.html %}

@@ -181,3 +181,5 @@ BSSID → アクセスポイント識別
 ```
 
 この対応で覚えると、選択肢をかなり切りやすくなります。
+
+{% include sg_article_footer.html %}

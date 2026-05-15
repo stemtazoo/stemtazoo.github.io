@@ -4,7 +4,7 @@ title: "ウイルスを検知する方法｜SG試験対策"
 description: "情報セキュリティマネジメント試験で問われやすい、パターンマッチング、ヒューリスティック、ビヘイビア、サンドボックス、ハッシュ値などのウイルス検知方法を初心者向けに整理します。"
 permalink: /sg/virus-detection-methods/
 tags: [sg, sg-security-measures, malware, it_security_operations]
-last_modified_at: 2026-05-14
+last_modified_at: 2026-05-15
 ---
 
 # ウイルスを検知する方法｜SG試験対策
@@ -324,3 +324,5 @@ SG試験では、次の判断基準を押さえておきましょう。
 - **未知・変種対策では、ヒューリスティック、ビヘイビア、サンドボックスが重要**
 
 「何と照合するのか」「何を観察するのか」を意識すると、選択肢を切り分けやすくなります。
+
+{% include sg_article_footer.html %}

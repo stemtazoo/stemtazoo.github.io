@@ -190,3 +190,5 @@ SG試験では、次のように判断すると選択肢を切りやすくなり
 
 - [情報セキュリティポリシーに関するガイドライン（国立国会図書館デジタルコレクション）](https://dl.ndl.go.jp/view/prepareDownload?contentNo=1&itemId=info%3Andljp%2Fpid%2F3531232)
 - [IPA 中小企業の情報セキュリティ対策ガイドライン](https://www.ipa.go.jp/security/guide/sme/about.html)
+
+{% include sg_article_footer.html %}

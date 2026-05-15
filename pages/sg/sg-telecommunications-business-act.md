@@ -279,3 +279,5 @@ SG試験では、法律名を丸暗記するよりも、
   https://laws.e-gov.go.jp/law/359AC0000000086/
 - 総務省  
   https://www.soumu.go.jp/
+
+{% include sg_article_footer.html %}
