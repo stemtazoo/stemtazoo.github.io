@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<div class="site-layout">
+<div class="site-layout{% if page.show_sidebar == false %} site-layout--no-sidebar{% endif %}">
   <main class="site-main">
     <article class="post">
       <header class="post-header">
@@ -68,7 +68,9 @@ layout: default
     </article>
   </main>
 
-  <div class="site-sidebar">
-    {% include sidebar.html %}
-  </div>
+  {% unless page.show_sidebar == false %}
+    <div class="site-sidebar">
+      {% include sidebar.html %}
+    </div>
+  {% endunless %}
 </div>

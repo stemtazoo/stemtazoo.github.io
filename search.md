@@ -3,10 +3,10 @@ layout: page
 title: サイト内検索
 description: SG試験、G検定、DS検定の記事をキーワードで検索できます。
 permalink: /search/
+show_sidebar: false
 ---
 
 <div class="search-panel" data-pagefind-ignore>
-  <p class="search-panel__lead">SG試験、G検定、DS検定の記事をキーワードで検索できます。</p>
   <div id="search"></div>
 </div>
 
