@@ -36,7 +36,7 @@ layout: default
         ＞ {{ page.title }}
       </div>
     {% endif %}
-    {{ content }}
+    {{ content | replace: "<h1", "<h2" | replace: "</h1>", "</h2>" }}
   </div>
 
   {% assign has_page_navigation = false %}
