@@ -1,3 +1,5 @@
+<div data-pagefind-ignore markdown="1">
+
 ## 🔗 関連記事
 
 {% assign current_tags = page.tags %}
@@ -50,4 +52,6 @@
     {% assign next_page = site.pages | where: "url", page.next | first %}
     <a class="next" href="{{ page.next | relative_url }}">{% if next_page %}{{ next_page.title }}{% else %}次の記事{% endif %} →</a>
   {% endif %}
+</div>
+
 </div>

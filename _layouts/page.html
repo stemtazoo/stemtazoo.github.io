@@ -38,7 +38,9 @@ layout: default
             ＞ {{ page.title }}
           </div>
         {% endif %}
-        {{ content | replace: "<h1", "<h2" | replace: "</h1>", "</h2>" }}
+        <div class="pagefind-content" data-pagefind-body>
+          {{ content | replace: "<h1", "<h2" | replace: "</h1>", "</h2>" }}
+        </div>
       </div>
 
       {% assign has_page_navigation = false %}

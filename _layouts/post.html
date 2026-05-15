@@ -23,7 +23,9 @@ layout: default
         {% endif %}
       </header>
       <div class="post-content">
-        {{ content | replace: "<h1", "<h2" | replace: "</h1>", "</h2>" }}
+        <div class="pagefind-content" data-pagefind-body>
+          {{ content | replace: "<h1", "<h2" | replace: "</h1>", "</h2>" }}
+        </div>
       </div>
 
       {% include site_footer.html %}

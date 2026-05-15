@@ -169,6 +169,43 @@
   text-decoration: none !important;
 }
 
+.search-panel {
+  background: #fff;
+  border: 1px solid #dfe5eb;
+  border-radius: 8px;
+  margin: 1.5rem 0 2rem;
+  padding: 1rem 1.1rem;
+}
+
+.search-panel__lead {
+  color: #4c5f70;
+  margin: 0 0 1rem;
+}
+
+.pagefind-ui {
+  color: #1c2d3a;
+  --pagefind-ui-primary: #0b6fae;
+  --pagefind-ui-text: #1c2d3a;
+  --pagefind-ui-background: #fff;
+  --pagefind-ui-border: #dfe5eb;
+  --pagefind-ui-border-width: 1px;
+  --pagefind-ui-border-radius: 8px;
+  --pagefind-ui-image-border-radius: 8px;
+}
+
+.pagefind-ui__search-input {
+  box-shadow: none;
+}
+
+.pagefind-ui__result {
+  border-top: 1px solid #e6ecf1;
+  padding: 1rem 0;
+}
+
+.pagefind-ui__result-title a {
+  color: #0b6fae;
+}
+
 @media (min-width: 1024px) {
   .site-layout {
     align-items: start;

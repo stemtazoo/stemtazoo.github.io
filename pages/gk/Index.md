@@ -548,6 +548,11 @@ last_modified_at: 2026-05-15
     <p>チートシートとひっかけ問題で、頻出論点を短時間で復習します。</p>
     <a class="portal-card__button" href="/gk/concepts-final-cheatsheet/">学習開始</a>
   </section>
+  <section class="portal-card">
+    <h3>サイト内検索</h3>
+    <p>SG試験、G検定、DS検定の記事をキーワードで横断検索できます。</p>
+    <a class="portal-card__button" href="{{ '/search/' | relative_url }}">検索する</a>
+  </section>
 </div>
 
 {% comment %}

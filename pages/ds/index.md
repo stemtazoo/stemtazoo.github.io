@@ -23,6 +23,11 @@ tags: [ds, index]
     <p>チートシートとスキルチェックで、弱点を短時間で見直します。</p>
     <a class="portal-card__button" href="/ds/skillcheck/">学習開始</a>
   </section>
+  <section class="portal-card">
+    <h3>サイト内検索</h3>
+    <p>SG試験、G検定、DS検定の記事をキーワードで横断検索できます。</p>
+    <a class="portal-card__button" href="{{ '/search/' | relative_url }}">検索する</a>
+  </section>
 </div>
 
 ## 📚 学習の進め方

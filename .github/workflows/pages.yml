@@ -30,6 +30,14 @@ jobs:
           source: ./
           destination: ./_site
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run Pagefind
+        run: npx -y pagefind --site _site
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 

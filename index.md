@@ -67,6 +67,24 @@ permalink: /
       </a>
     </p>
   </article>
+
+  <article class="home-card">
+    <h2>サイト内検索</h2>
+    <p>
+      SG試験、G検定、DS検定の記事を横断して検索できます。<br>
+      用語名や比較したいキーワードから、関連する学習ページを探せます。
+    </p>
+    <ul>
+      <li>RADIUS、Cookie、DNSSEC などの用語検索</li>
+      <li>教師あり学習、混同行列などの復習</li>
+      <li>リスク、CIA、AES などの横断確認</li>
+    </ul>
+    <p>
+      <a href="{{ '/search/' | relative_url }}">
+        → サイト内検索へ
+      </a>
+    </p>
+  </article>
 </section>
 
 <section>

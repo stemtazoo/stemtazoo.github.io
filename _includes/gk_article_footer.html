@@ -1,3 +1,5 @@
+<div data-pagefind-ignore markdown="1">
+
 ## 🔗 関連記事
 
 <ul style="padding-left: 20px;">
@@ -69,4 +71,6 @@
     {% assign next_page = site.pages | where: "url", next_url | first %}
     <a class="next" href="{{ next_url }}">{% if next_page %}{{ next_page.title }}{% else %}次の記事{% endif %} →</a>
   {% endif %}
+</div>
+
 </div>

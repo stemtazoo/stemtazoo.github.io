@@ -22,6 +22,11 @@ categories: [business]
     <p>ケース問題の判断軸、NG選択肢、過去問演習へすぐ移動できます。</p>
     <a class="portal-card__button" href="/sg/case-solving-template/">学習開始</a>
   </section>
+  <section class="portal-card">
+    <h3>サイト内検索</h3>
+    <p>SG試験、G検定、DS検定の記事をキーワードで横断検索できます。</p>
+    <a class="portal-card__button" href="{{ '/search/' | relative_url }}">検索する</a>
+  </section>
 </div>
 
 ## 公式リンク
