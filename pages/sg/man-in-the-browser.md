@@ -6,7 +6,7 @@ permalink: /sg/man-in-the-browser/
 tags: [sg, security_measures, malware, unauthorized_access, sg-security-measures]
 prev: /sg/malware/
 next: /sg/man-in-the-middle-attack/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-15
 ---
 
 ## まず結論
@@ -41,6 +41,9 @@ Man-in-the-Browser攻撃は、次の流れで行われます。
 - **ブラウザの中で書き換える**
 
 そのため、HTTPS通信であっても防げない場合があります。
+
+不正送金対策として問われることが多い
+[トランザクション署名](/sg/transaction-signing/)は、MITB論点とセットで確認しておくと切り分けやすくなります。
 
 ---
 
