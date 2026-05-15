@@ -1,64 +1,72 @@
 ---
 layout: default
 ---
-<article class="post">
-  <header class="post-header">
-    {% if page.description %}
-      <p class="post-meta">{{ page.description }}</p>
-    {% endif %}
-    {% assign page_last_modified = page.last_modified_at | default: page.date %}
-    {% if page_last_modified %}
-      <p class="page-last-modified">最終更新日：{{ page_last_modified | date: "%Y年%-m月%-d日" }}</p>
-    {% endif %}
-    {% if page.tags %}
-      <p class="post-categories">
-        {% for tag in page.tags %}
-          <span class="post-tag">{{ tag }}</span>
-        {% endfor %}
-      </p>
-    {% endif %}
-    {% include mathjax.html %}
-  </header>
-  <div class="post-content">
-    {% if page.url contains "/gk/" and page.url != "/gk/" %}
-      <div style="font-size: 14px; margin-bottom: 12px;">
-        <a href="{{ '/gk/' | relative_url }}">G検定トップ</a>
-        ＞ {{ page.title }}
+<div class="site-layout">
+  <main class="site-main">
+    <article class="post">
+      <header class="post-header">
+        {% if page.description %}
+          <p class="post-meta">{{ page.description }}</p>
+        {% endif %}
+        {% assign page_last_modified = page.last_modified_at | default: page.date %}
+        {% if page_last_modified %}
+          <p class="page-last-modified">最終更新日：{{ page_last_modified | date: "%Y年%-m月%-d日" }}</p>
+        {% endif %}
+        {% if page.tags %}
+          <p class="post-categories">
+            {% for tag in page.tags %}
+              <span class="post-tag">{{ tag }}</span>
+            {% endfor %}
+          </p>
+        {% endif %}
+        {% include mathjax.html %}
+      </header>
+      <div class="post-content">
+        {% if page.url contains "/gk/" and page.url != "/gk/" %}
+          <div style="font-size: 14px; margin-bottom: 12px;">
+            <a href="{{ '/gk/' | relative_url }}">G検定トップ</a>
+            ＞ {{ page.title }}
+          </div>
+        {% endif %}
+        {% assign is_sg_page = false %}
+        {% if page.dir == "/pages/sg/" %}
+          {% assign is_sg_page = true %}
+        {% endif %}
+        {% if is_sg_page and page.name != "index.md" %}
+          <div style="font-size: 14px; margin-bottom: 12px;">
+            <a href="{{ '/sg/' | relative_url }}">SGトップ</a>
+            ＞ {{ page.title }}
+          </div>
+        {% endif %}
+        {{ content | replace: "<h1", "<h2" | replace: "</h1>", "</h2>" }}
       </div>
-    {% endif %}
-    {% assign is_sg_page = false %}
-    {% if page.dir == "/pages/sg/" %}
-      {% assign is_sg_page = true %}
-    {% endif %}
-    {% if is_sg_page and page.name != "index.md" %}
-      <div style="font-size: 14px; margin-bottom: 12px;">
-        <a href="{{ '/sg/' | relative_url }}">SGトップ</a>
-        ＞ {{ page.title }}
-      </div>
-    {% endif %}
-    {{ content | replace: "<h1", "<h2" | replace: "</h1>", "</h2>" }}
+
+      {% assign has_page_navigation = false %}
+      {% if page.url contains "/ds/" and page.url != "/ds/" %}
+        {% if page.prev or page.next %}
+          {% assign has_page_navigation = true %}
+        {% endif %}
+      {% endif %}
+
+      {% if has_page_navigation %}
+        <hr>
+
+        <div class="page-navigation">
+          {% if page.prev %}
+            <a class="prev" href="{{ page.prev | relative_url }}">← 前の記事</a>
+          {% endif %}
+
+          {% if page.next %}
+            <a class="next" href="{{ page.next | relative_url }}">次の記事 →</a>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% include site_footer.html %}
+    </article>
+  </main>
+
+  <div class="site-sidebar">
+    {% include sidebar.html %}
   </div>
-
-  {% assign has_page_navigation = false %}
-  {% if page.url contains "/ds/" and page.url != "/ds/" %}
-    {% if page.prev or page.next %}
-      {% assign has_page_navigation = true %}
-    {% endif %}
-  {% endif %}
-
-  {% if has_page_navigation %}
-    <hr>
-
-    <div class="page-navigation">
-      {% if page.prev %}
-        <a class="prev" href="{{ page.prev | relative_url }}">← 前の記事</a>
-      {% endif %}
-
-      {% if page.next %}
-        <a class="next" href="{{ page.next | relative_url }}">次の記事 →</a>
-      {% endif %}
-    </div>
-  {% endif %}
-
-  {% include site_footer.html %}
-</article>
+</div>

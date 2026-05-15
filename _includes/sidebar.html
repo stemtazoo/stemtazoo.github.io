@@ -1,0 +1,41 @@
+<aside class="sidebar" aria-label="学習ナビゲーション">
+  <section class="sidebar-card">
+    <h2 class="sidebar-title">学習トップ</h2>
+    <ul class="sidebar-list">
+      <li><a href="{{ '/gk/' | relative_url }}">G検定 学習まとめ</a></li>
+      <li><a href="{{ '/ds/' | relative_url }}">DS検定 リテラシー 学習まとめ</a></li>
+      <li><a href="{{ '/sg/' | relative_url }}">情報セキュリティマネジメント試験 まとめ</a></li>
+    </ul>
+  </section>
+
+  <section class="sidebar-card">
+    <h2 class="sidebar-title">記事一覧</h2>
+    <ul class="sidebar-list">
+      <li><a href="{{ '/posts/' | relative_url }}">すべての記事を見る</a></li>
+    </ul>
+  </section>
+
+  <section class="sidebar-card">
+    <h2 class="sidebar-title">最新記事</h2>
+    <ul class="sidebar-list sidebar-list--compact">
+      {% for post in site.posts limit: 5 %}
+        <li>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          <span class="sidebar-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section class="sidebar-card">
+    <h2 class="sidebar-title">分野で探す</h2>
+    <ul class="sidebar-list">
+      <li><a href="{{ '/gk/' | relative_url }}">G検定</a></li>
+      <li><a href="{{ '/ds/' | relative_url }}">DS検定</a></li>
+      <li><a href="{{ '/sg/category/security-overview/' | relative_url }}">情報セキュリティ全般</a></li>
+      <li><a href="{{ '/sg/category/security-management/' | relative_url }}">情報セキュリティ管理</a></li>
+      <li><a href="{{ '/sg/category/security-measures/' | relative_url }}">情報セキュリティ対策</a></li>
+      <li><a href="{{ '/sg/category/law/' | relative_url }}">情報セキュリティ関連法規</a></li>
+    </ul>
+  </section>
+</aside>

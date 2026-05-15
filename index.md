@@ -13,58 +13,60 @@ permalink: /
   </p>
 </section>
 
-<section style="border: 1px solid #ddd; padding: 1rem; border-radius: 6px; margin: 2rem 0;">
-  <h2>📘 G検定 学習まとめ</h2>
-  <p>
-    G検定の過去問・模擬試験で間違えた内容をもとに、<br>
-    用語・概念を体系的に整理しています。
-  </p>
-  <ul>
-    <li>✔ 用語ごとに1ページ完結</li>
-    <li>✔ ひっかけポイント重視</li>
-    <li>✔ 試験直前の確認にも対応</li>
-  </ul>
-  <p>
-    <a href="{{ '/gk/' | relative_url }}">
-      → G検定 学習まとめページへ
-    </a>
-  </p>
-</section>
+<section class="home-card-grid" aria-label="学習まとめ">
+  <article class="home-card">
+    <h2>📘 G検定 学習まとめ</h2>
+    <p>
+      G検定の過去問・模擬試験で間違えた内容をもとに、<br>
+      用語・概念を体系的に整理しています。
+    </p>
+    <ul>
+      <li>✔ 用語ごとに1ページ完結</li>
+      <li>✔ ひっかけポイント重視</li>
+      <li>✔ 試験直前の確認にも対応</li>
+    </ul>
+    <p>
+      <a href="{{ '/gk/' | relative_url }}">
+        → G検定 学習まとめページへ
+      </a>
+    </p>
+  </article>
 
-<section style="border: 1px solid #ddd; padding: 1rem; border-radius: 6px; margin: 2rem 0;">
-  <h2>📊 DS検定 リテラシー 学習まとめ</h2>
-  <p>
-    DS検定（リテラシーレベル）の出題範囲をもとに、<br>
-    統計・確率・データ活用の考え方を整理しています。
-  </p>
-  <ul>
-    <li>✔ 数式より「意味」と「使い分け」を重視</li>
-    <li>✔ よくある誤解・ひっかけポイントを整理</li>
-    <li>✔ 実務と試験の両方に役立つ構成</li>
-  </ul>
-  <p>
-    <a href="{{ '/ds/' | relative_url }}">
-      → DS検定 リテラシー 学習まとめページへ
-    </a>
-  </p>
-</section>
+  <article class="home-card">
+    <h2>📊 DS検定 リテラシー 学習まとめ</h2>
+    <p>
+      DS検定（リテラシーレベル）の出題範囲をもとに、<br>
+      統計・確率・データ活用の考え方を整理しています。
+    </p>
+    <ul>
+      <li>✔ 数式より「意味」と「使い分け」を重視</li>
+      <li>✔ よくある誤解・ひっかけポイントを整理</li>
+      <li>✔ 実務と試験の両方に役立つ構成</li>
+    </ul>
+    <p>
+      <a href="{{ '/ds/' | relative_url }}">
+        → DS検定 リテラシー 学習まとめページへ
+      </a>
+    </p>
+  </article>
 
-<section style="border: 1px solid #ddd; padding: 1rem; border-radius: 6px; margin: 2rem 0;">
-  <h2>情報セキュリティマネジメント試験 まとめ</h2>
-  <p>
-    情報セキュリティマネジメント試験の試験概要、出題内容、勉強の進め方を整理していくページです。<br>
-    セキュリティの基礎、管理、法務、運用などを試験対策の観点から見やすくまとめていきます。
-  </p>
-  <ul>
-    <li>試験概要と対象者像を最初に確認</li>
-    <li>科目A・科目Bの出題内容を整理</li>
-    <li>頻出テーマを分野ごとに学習</li>
-  </ul>
-  <p>
-    <a href="{{ '/sg/' | relative_url }}">
-      → 情報セキュリティマネジメント試験 まとめページへ
-    </a>
-  </p>
+  <article class="home-card">
+    <h2>情報セキュリティマネジメント試験 まとめ</h2>
+    <p>
+      情報セキュリティマネジメント試験の試験概要、出題内容、勉強の進め方を整理していくページです。<br>
+      セキュリティの基礎、管理、法務、運用などを試験対策の観点から見やすくまとめていきます。
+    </p>
+    <ul>
+      <li>試験概要と対象者像を最初に確認</li>
+      <li>科目A・科目Bの出題内容を整理</li>
+      <li>頻出テーマを分野ごとに学習</li>
+    </ul>
+    <p>
+      <a href="{{ '/sg/' | relative_url }}">
+        → 情報セキュリティマネジメント試験 まとめページへ
+      </a>
+    </p>
+  </article>
 </section>
 
 <section>
