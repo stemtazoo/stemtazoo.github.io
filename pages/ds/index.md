@@ -7,6 +7,24 @@ categories: [business]
 tags: [ds, index]
 ---
 
+<div class="portal-card-grid">
+  <section class="portal-card">
+    <h3>はじめてのDS検定</h3>
+    <p>試験範囲の全体像と、データサイエンス・統計の基礎から学習を始めます。</p>
+    <a class="portal-card__button" href="/ds/statistics-overview/">学習開始</a>
+  </section>
+  <section class="portal-card">
+    <h3>データ分析の基礎</h3>
+    <p>前処理、可視化、統計、モデル化など、頻出分野を順番に確認します。</p>
+    <a class="portal-card__button" href="/ds/data-literacy/">学習開始</a>
+  </section>
+  <section class="portal-card">
+    <h3>試験直前チェック</h3>
+    <p>チートシートとスキルチェックで、弱点を短時間で見直します。</p>
+    <a class="portal-card__button" href="/ds/skillcheck/">学習開始</a>
+  </section>
+</div>
+
 ## 📚 学習の進め方
 
 <div style="padding:16px;border-radius:12px;background:#f8fafc;margin-bottom:20px;">

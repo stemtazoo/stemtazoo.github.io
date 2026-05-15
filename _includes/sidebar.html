@@ -9,16 +9,29 @@
   </section>
 
   <section class="sidebar-card">
-    <h2 class="sidebar-title">記事一覧</h2>
+    <h2 class="sidebar-title">初学者向け</h2>
     <ul class="sidebar-list">
-      <li><a href="{{ '/posts/' | relative_url }}">すべての記事を見る</a></li>
+      <li><a href="{{ '/sg/information-security-management-exam/' | relative_url }}">SG試験とは</a></li>
+      <li><a href="{{ '/gk/ai-booms-cheatsheet/' | relative_url }}">G検定の全体像</a></li>
+      <li><a href="{{ '/ds/statistics-overview/' | relative_url }}">DS統計の基礎</a></li>
+    </ul>
+  </section>
+
+  <section class="sidebar-card">
+    <h2 class="sidebar-title">人気カテゴリ</h2>
+    <ul class="sidebar-list">
+      <li><a href="{{ '/sg/category/security-overview/' | relative_url }}">情報セキュリティ全般</a></li>
+      <li><a href="{{ '/sg/category/security-management/' | relative_url }}">情報セキュリティ管理</a></li>
+      <li><a href="{{ '/sg/category/security-measures/' | relative_url }}">情報セキュリティ対策</a></li>
+      <li><a href="{{ '/gk/nn-cheatsheet/' | relative_url }}">ニューラルネットワーク</a></li>
+      <li><a href="{{ '/ds/sql-join/' | relative_url }}">SQL・データベース</a></li>
     </ul>
   </section>
 
   <section class="sidebar-card">
     <h2 class="sidebar-title">最新記事</h2>
     <ul class="sidebar-list sidebar-list--compact">
-      {% for post in site.posts limit: 5 %}
+      {% for post in site.posts limit: 4 %}
         <li>
           <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
           <span class="sidebar-date">{{ post.date | date: "%Y-%m-%d" }}</span>
@@ -28,14 +41,31 @@
   </section>
 
   <section class="sidebar-card">
-    <h2 class="sidebar-title">分野で探す</h2>
+    <h2 class="sidebar-title">試験直前まとめ</h2>
     <ul class="sidebar-list">
-      <li><a href="{{ '/gk/' | relative_url }}">G検定</a></li>
-      <li><a href="{{ '/ds/' | relative_url }}">DS検定</a></li>
-      <li><a href="{{ '/sg/category/security-overview/' | relative_url }}">情報セキュリティ全般</a></li>
-      <li><a href="{{ '/sg/category/security-management/' | relative_url }}">情報セキュリティ管理</a></li>
-      <li><a href="{{ '/sg/category/security-measures/' | relative_url }}">情報セキュリティ対策</a></li>
-      <li><a href="{{ '/sg/category/law/' | relative_url }}">情報セキュリティ関連法規</a></li>
+      <li><a href="{{ '/sg/ng-patterns/' | relative_url }}">SG よくあるNG選択肢</a></li>
+      <li><a href="{{ '/sg/case-solving-template/' | relative_url }}">SG ケース問題テンプレ</a></li>
+      <li><a href="{{ '/gk/concepts-final-cheatsheet/' | relative_url }}">G検定 直前チェック</a></li>
+      <li><a href="{{ '/ds/skillcheck/' | relative_url }}">DS スキルチェック</a></li>
+    </ul>
+  </section>
+
+  <section class="sidebar-card">
+    <h2 class="sidebar-title">すべての記事</h2>
+    <ul class="sidebar-list">
+      <li><a href="{{ '/sg/all/' | relative_url }}">SG 記事一覧</a></li>
+      <li><a href="{{ '/gk/' | relative_url }}">G検定 目次</a></li>
+      <li><a href="{{ '/ds/' | relative_url }}">DS検定 目次</a></li>
+      <li><a href="{{ '/posts/' | relative_url }}">更新記事一覧</a></li>
+    </ul>
+  </section>
+
+  <section class="sidebar-card">
+    <h2 class="sidebar-title">公式リンク</h2>
+    <ul class="sidebar-list">
+      <li><a href="https://www.ipa.go.jp/shiken/kubun/sg/index.html">IPA SG試験</a></li>
+      <li><a href="https://www.jdla.org/certificate/general/">JDLA G検定</a></li>
+      <li><a href="https://www.datascientist.or.jp/dscertification/">DS検定</a></li>
     </ul>
   </section>
 </aside>

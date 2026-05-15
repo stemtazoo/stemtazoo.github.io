@@ -6,6 +6,23 @@ permalink: /sg/
 categories: [business]
 ---
 
+<div class="portal-card-grid">
+  <section class="portal-card">
+    <h3>はじめてのSG試験</h3>
+    <p>試験の位置づけ、出題範囲、学習方法を確認してから学習を始めます。</p>
+    <a class="portal-card__button" href="/sg/information-security-management-exam/">学習開始</a>
+  </section>
+  <section class="portal-card">
+    <h3>基礎から固める</h3>
+    <p>情報セキュリティ管理、対策、認証・アクセス制御をまとめて確認します。</p>
+    <a class="portal-card__button" href="/sg/security-management-overview/">学習開始</a>
+  </section>
+  <section class="portal-card">
+    <h3>試験直前まとめ</h3>
+    <p>ケース問題の判断軸、NG選択肢、過去問演習へすぐ移動できます。</p>
+    <a class="portal-card__button" href="/sg/case-solving-template/">学習開始</a>
+  </section>
+</div>
 
 ## 公式リンク
 

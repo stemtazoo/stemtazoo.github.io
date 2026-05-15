@@ -529,8 +529,26 @@ gk_sections:
     items:
       - /gk/trick-questions-1/
       - /gk/trick-questions-xai-1/
-last_modified_at: 2026-05-08
+last_modified_at: 2026-05-15
 ---
+
+<div class="portal-card-grid">
+  <section class="portal-card">
+    <h3>はじめてのG検定</h3>
+    <p>AIの歴史、探索・推論、機械学習の全体像から順番に学びます。</p>
+    <a class="portal-card__button" href="/gk/ai-booms-cheatsheet/">学習開始</a>
+  </section>
+  <section class="portal-card">
+    <h3>機械学習・深層学習</h3>
+    <p>教師あり学習、評価指標、ニューラルネットワーク、CNN・Transformerを整理します。</p>
+    <a class="portal-card__button" href="/gk/supervised-learning/">学習開始</a>
+  </section>
+  <section class="portal-card">
+    <h3>試験直前チェック</h3>
+    <p>チートシートとひっかけ問題で、頻出論点を短時間で復習します。</p>
+    <a class="portal-card__button" href="/gk/concepts-final-cheatsheet/">学習開始</a>
+  </section>
+</div>
 
 {% comment %}
   gk_sections に書いた URL から対応する page を引く
