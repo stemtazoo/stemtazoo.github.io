@@ -1,7 +1,7 @@
-﻿---
+---
 layout: page
 title: Contrastive Loss（コントラスト損失）とは？【G検定対策】
-description: Contrastive Loss（コントラスト損失）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: Contrastive Lossを似たデータを近づけ、異なるデータを遠ざける距離学習の損失として整理します。ペア学習、埋め込み表現、G検定での使いどころを確認できます。本文では、基本定義、代表例、関連用語との違い、G検定で問われやすい観点まで短時間で復習できます。
 permalink: /gk/contrastive-loss/
 tags: [gk, neural_network, metrics]
 gk_section: ディープラーニングの概要/誤差関数

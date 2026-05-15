@@ -1,12 +1,12 @@
 ---
 layout: page
 title: "ポート番号とは？通信先サービスの識別を理解する【SG試験】"
-description: "ポート番号は通信先サービスの識別を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験・情報セキュリティマネジメント試験とで狙われるひっかけポイントを解説します。"
+description: ポート番号を通信先サービスやアプリケーションを識別する番号として整理します。HTTP、HTTPS、SMTPなど代表例と、ファイアウォール設定での判断をSG試験向けに確認できます。本文では、用語の定義、業務での使いどころ、似た対策との違い、選択肢を切る判断基準まで短時間で復習できます。
 permalink: /sg/port-number/
 tags: [sg, sg-technology]
 prev: /sg/phishing/
 next: /sg/port-scan/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-15
 ---
 
 ## まず結論

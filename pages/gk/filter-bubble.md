@@ -1,7 +1,7 @@
-﻿---
+---
 layout: page
 title: フィルターバブル（Filter Bubble）とは？G検定対策
-description: フィルターバブル（Filter Bubble）はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: フィルターバブルを推薦や検索結果が個人の関心に偏り、異なる情報に触れにくくなる現象として整理します。エコーチェンバーとの違いとG検定の論点を確認できます。本文では、基本定義、代表例、関連用語との違い、G検定で問われやすい観点まで短時間で復習できます。
 permalink: /gk/filter-bubble/
 tags: [gk, ethics, personalization]
 gk_section: AIの法律と倫理/AIの法律と倫理

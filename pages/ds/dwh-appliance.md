@@ -1,7 +1,7 @@
-﻿---
+---
 layout: page
 title: DWHアプライアンスとは？OLTPとの違いを整理【DS検定】
-description: DWHアプライアンスはOLTPとの違いを整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: DWHアプライアンスを大規模データ分析向けの専用基盤として整理します。OLTPとの違い、検索・集計処理での強み、DS検定で問われる利用場面を確認できます。本文では、用語の定義、具体例、似た概念との違い、試験で迷いやすい選択肢の見分け方まで短時間で復習できます。
 permalink: /ds/dwh-appliance/
 categories: [data-engineering]
 tags: [ds, data-storage, database]

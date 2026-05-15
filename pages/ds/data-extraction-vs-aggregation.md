@@ -1,7 +1,7 @@
-﻿---
+---
 layout: page
 title: データ抽出と集計の違いとは？（SQL・BIで混同しやすい操作）【DS検定】
-description: データ抽出と集計の違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: データ抽出と集計の違いを、行を選ぶ操作と複数行をまとめて指標化する操作として整理します。SQLやBIで混同しやすい処理をDS検定向けに確認できます。本文では、用語の定義、具体例、似た概念との違い、試験で迷いやすい選択肢の見分け方まで短時間で復習できます。
 permalink: /ds/data-extraction-vs-aggregation/
 categories: [data-science]
 tags: [ds, data-collection, preprocessing]

@@ -1,7 +1,7 @@
-﻿---
+---
 layout: page
 title: 二重降下現象とは？（Double Descent）【G検定対策】
-description: 二重降下現象は（Double Descent）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: 二重降下現象を、モデル容量が増えると誤差が一度悪化した後に再び改善する現象として整理します。過学習との関係、近年の深層学習での意味をG検定向けに確認できます。本文では、基本定義、代表例、関連用語との違い、G検定で問われやすい観点まで短時間で復習できます。
 permalink: /gk/double-descent/
 tags: [gk, neural_network]
 gk_section: ディープラーニングの概要/最適化手法

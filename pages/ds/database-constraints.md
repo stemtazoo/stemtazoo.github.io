@@ -1,7 +1,7 @@
-﻿---
+---
 layout: page
 title: データベースの制約とは？NOT NULL・一意性・外部キーを整理【DS検定】
-description: データベースの制約はNOT NULL・一意性・外部キーを整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: データベースの制約をデータ品質と整合性を守るルールとして整理します。NOT NULL、一意制約、主キー、外部キーの役割とDS検定での見分け方を確認できます。本文では、用語の定義、具体例、似た概念との違い、試験で迷いやすい選択肢の見分け方まで短時間で復習できます。
 permalink: /ds/database-constraints/
 categories: [data-engineering]
 tags: [ds, database]

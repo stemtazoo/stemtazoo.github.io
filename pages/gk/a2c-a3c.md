@@ -1,7 +1,7 @@
-﻿---
+---
 layout: page
 title: A2C / A3C とは？（Actor–Critic の実装差）【G検定対策】
-description: A2C / A3Cは（Actor–Critic の実装差）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: A2CとA3CをActor-Critic系強化学習の実装差として整理します。同期・非同期の違い、方策と価値関数の役割、G検定での比較ポイントを確認できます。本文では、基本定義、代表例、関連用語との違い、G検定で問われやすい観点まで短時間で復習できます。
 permalink: /gk/a2c-a3c/
 tags: [gk, neural_network]
 gk_section: 機械学習の概要/代表的な手法/強化学習

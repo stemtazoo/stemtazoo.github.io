@@ -1,12 +1,12 @@
 ---
 layout: page
 title: "シングルサインオン（SSO）とは？利便性とリスクを整理【SG試験】"
-description: "シングルサインオン（SSO）は一度の認証で複数システムにアクセスできる仕組みです。認証基盤の集中によるリスクやMFAとの関係を整理し、SG試験・情報セキュリティマネジメント試験で問われる判断ポイントを解説します。"
+description: シングルサインオン（SSO）を一度の認証で複数サービスを利用する仕組みとして整理します。利便性、認証基盤集中のリスク、MFA併用の判断をSG試験向けに確認できます。本文では、用語の定義、業務での使いどころ、似た対策との違い、選択肢を切る判断基準まで短時間で復習できます。
 permalink: /sg/sso/
 prev: /sg/mfa-vs-step-auth/
 next: /sg/risk-based-authentication/
 tags: [sg, sg-security-measures, access_control, it_security_operations]
-last_modified_at: 2026-05-14
+last_modified_at: 2026-05-15
 ---
 
 ## まず結論

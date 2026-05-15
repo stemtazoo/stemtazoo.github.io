@@ -1,7 +1,7 @@
-﻿---
+---
 layout: page
 title: RNNエンコーダ・デコーダ（Seq2Seq）とは？【G検定対策】
-description: RNNエンコーダ・デコーダ（Seq2Seq）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: RNNエンコーダ・デコーダを系列を別の系列へ変換するSeq2Seq構造として整理します。機械翻訳、文脈ベクトル、Attentionとの関係をG検定向けに確認できます。本文では、基本定義、代表例、関連用語との違い、G検定で問われやすい観点まで短時間で復習できます。
 permalink: /gk/rnn-encoder-decoder/
 tags: [gk, rnn, nlp]
 gk_section: ディープラーニングの要素技術/リカレントニューラルネットワーク (RNN)

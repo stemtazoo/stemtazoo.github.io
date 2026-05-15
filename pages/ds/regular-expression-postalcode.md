@@ -1,7 +1,7 @@
-﻿---
+---
 layout: page
 title: 郵便番号の正規表現とは？電話番号との違いで理解する【DS検定】
-description: 郵便番号の正規表現は電話番号との違いで理解するを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: 郵便番号の正規表現を、桁数やハイフンの有無で入力形式を確認する例として整理します。電話番号との違い、完全な妥当性確認との限界をDS検定向けに確認できます。本文では、用語の定義、具体例、似た概念との違い、試験で迷いやすい選択肢の見分け方まで短時間で復習できます。
 permalink: /ds/regular-expression-postalcode/
 categories: [data-science]
 tags: [ds, data-processing, preprocessing]

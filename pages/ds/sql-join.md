@@ -1,7 +1,7 @@
-﻿---
+---
 layout: page
 title: JOINとは？テーブル結合の基本を理解する【DS検定】
-description: JOINはテーブル結合の基本を理解するを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: JOINを複数テーブルをキーで結合して必要なデータを取り出すSQL操作として整理します。内部結合・外部結合の違い、NULLの扱い、DS検定での見分け方を確認できます。本文では、用語の定義、具体例、似た概念との違い、試験で迷いやすい選択肢の見分け方まで短時間で復習できます。
 permalink: /ds/sql-join/
 categories: [data-engineering]
 tags: [ds, data-processing, sql]

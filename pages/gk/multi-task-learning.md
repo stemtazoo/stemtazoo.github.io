@@ -1,7 +1,7 @@
-﻿---
+---
 layout: page
 title: マルチタスク学習（Multi-task Learning）とは？【G検定対策】
-description: マルチタスク学習（Multi-task Learning）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: マルチタスク学習を複数の関連タスクを同時に学習して汎化性能を高める方法として整理します。転移学習との違い、共有表現の役割、G検定の要点を確認できます。本文では、基本定義、代表例、関連用語との違い、G検定で問われやすい観点まで短時間で復習できます。
 permalink: /gk/multi-task-learning/
 tags: [gk, neural_network]
 gk_section: ディープラーニングの応用例/画像認識/マルチタスク学習

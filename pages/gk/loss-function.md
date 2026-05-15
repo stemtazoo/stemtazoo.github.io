@@ -1,7 +1,7 @@
-﻿---
+---
 layout: page
 title: 損失関数（Loss / Cost / Objective）とは？【違いと使い分け｜G検定対策】
-description: 損失関数（Loss / Cost / Objective）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: 損失関数の役割を、モデルの予測誤差を数値化して学習を進める基準として整理します。Loss、Cost、Objectiveの違いと、G検定で迷いやすい使い分けを確認できます。本文では、基本定義、代表例、関連用語との違い、G検定で問われやすい観点まで短時間で復習できます。
 permalink: /gk/loss-function/
 tags: [gk, neural_network, optimization]
 gk_section: ディープラーニングの概要/ニューラルネットワークとディープラーニング

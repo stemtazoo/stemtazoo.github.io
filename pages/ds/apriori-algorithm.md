@@ -1,7 +1,7 @@
-﻿---
+---
 layout: page
 title: Aprioriアルゴリズムとは？（アソシエーション分析の基本手法）【DS検定】
-description: Aprioriアルゴリズムは（アソシエーション分析の基本手法）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: Aprioriアルゴリズムをアソシエーション分析で頻出項目集合を見つける手法として整理します。支持度、信頼度、リフトとの関係とDS検定の判断ポイントを確認できます。本文では、用語の定義、具体例、似た概念との違い、試験で迷いやすい選択肢の見分け方まで短時間で復習できます。
 permalink: /ds/apriori-algorithm/
 categories: [data-science]
 tags: [ds, modeling]

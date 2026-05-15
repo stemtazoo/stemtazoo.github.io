@@ -1,7 +1,7 @@
-﻿---
+---
 layout: page
 title: 日本語の形態素解析ツールとは？代表例と違いを整理【DS検定】
-description: 日本語の形態素解析ツールは代表例と違いを整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: 日本語の形態素解析ツールを、文章を単語単位に分けて品詞などを扱う前処理として整理します。代表ツールの違いとDS検定で問われる自然言語処理の基本を確認できます。本文では、用語の定義、具体例、似た概念との違い、試験で迷いやすい選択肢の見分け方まで短時間で復習できます。
 permalink: /ds/japanese-morphological-analysis-tools/
 categories: [business]
 tags: [ds, unstructured-data, design]

@@ -1,7 +1,7 @@
-﻿---
+---
 layout: page
 title: Attention機構（Self-Attention）とは？【文脈理解の仕組み｜G検定対策】
-description: Attention機構（Self-Attention）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: Self-Attentionを系列内の各単語が互いにどこへ注目するかを学ぶ仕組みとして整理します。Transformer、文脈理解、Attentionとの関係をG検定向けに確認できます。本文では、基本定義、代表例、関連用語との違い、G検定で問われやすい観点まで短時間で復習できます。
 permalink: /gk/self-attention/
 tags: [gk, attention, transformer]
 gk_section: ディープラーニングの要素技術/トランスフォーマー (Transformer)

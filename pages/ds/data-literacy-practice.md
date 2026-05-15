@@ -1,7 +1,7 @@
-﻿---
+---
 layout: page
 title: "データを読む・説明する・扱うとは？データリテラシー実践ガイド【DS検定】"
-description: "\"データを読む・説明する・扱うはデータリテラシー実践ガイド\"を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。"
+description: データを読む・説明する・扱う力を、実務でデータを意思決定につなげる基礎として整理します。グラフ読解、指標理解、伝え方の注意点をDS検定向けに確認できます。本文では、用語の定義、具体例、似た概念との違い、試験で迷いやすい選択肢の見分け方まで短時間で復習できます。
 permalink: /ds/data-literacy-practice/
 categories: [business]
 tags: [ds, data-understanding, design, literacy, intro, dataliteracy, statistics, visualization, cheatsheet]
