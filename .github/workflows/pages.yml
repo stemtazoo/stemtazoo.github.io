@@ -35,11 +35,18 @@ jobs:
         with:
           node-version: "20"
 
+      - name: Prepare writable site output
+        run: |
+          rm -rf site_out
+          cp -a _site/. site_out/
+
       - name: Run Pagefind
-        run: npx -y pagefind --site _site
+        run: npx -y pagefind --site site_out
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./site_out
 
   deploy:
     environment:
