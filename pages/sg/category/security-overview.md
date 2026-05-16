@@ -68,6 +68,7 @@ permalink: /sg/category/security-overview/
 - [電子署名とは？本人証明と改ざん検知を整理](/sg/digital-signature/)
 - [電子証明書とは？公開鍵の正当性を証明する仕組み](/sg/digital-certificate/)
 - [認証局（CA）の役割とは？デジタル証明書の信頼の仕組み](/sg/certificate-authority-role/)
+- [VAとは？証明書の有効性を確認する機関](/sg/validation-authority/)
 - [PKIとは？公開鍵基盤の役割をやさしく整理](/sg/pki/)
 
 ## 攻撃と対策の全体像
@@ -109,7 +110,7 @@ permalink: /sg/category/security-overview/
 
 以下は `sg-security-overview` タグが付いているものの、上記セクションには未掲載だった関連記事です。新規記事に同タグを付ければ、この一覧に自動で表示されます。
 
-{% assign curated_slugs = "information-security-management-exam,sg-exam-outline-study,case-solving-template,availability,raid,asset-register,vulnerability,risk-management,attacker-types,hacker,cracker,script-kiddie,insider-threat,fraud-triangle,vulnerability-cheatsheet,cvss,jvn,security-patch,symmetric-key-cryptography,public-key-cryptography,hybrid-cryptography,hash-function,salt,digital-signature,digital-certificate,certificate-authority-role,pki,malware,unauthorized-access,unauthorized-access-techniques,identification-code,phishing,smishing,vishing,targeted-attack,cyber-kill-chain,ddos,man-in-the-middle-attack,dns-cache-poisoning,sql-injection,xss,csrf,authorization,security-event,security-incident,soc-csirt-jpcert,security-org-cheatsheet" | split: "," %}
+{% assign curated_slugs = "information-security-management-exam,sg-exam-outline-study,case-solving-template,availability,raid,asset-register,vulnerability,risk-management,attacker-types,hacker,cracker,script-kiddie,insider-threat,fraud-triangle,vulnerability-cheatsheet,cvss,jvn,security-patch,symmetric-key-cryptography,public-key-cryptography,hybrid-cryptography,hash-function,salt,digital-signature,digital-certificate,certificate-authority-role,validation-authority,pki,malware,unauthorized-access,unauthorized-access-techniques,identification-code,phishing,smishing,vishing,targeted-attack,cyber-kill-chain,ddos,man-in-the-middle-attack,dns-cache-poisoning,sql-injection,xss,csrf,authorization,security-event,security-incident,soc-csirt-jpcert,security-org-cheatsheet" | split: "," %}
 {% assign auto_related = site.pages | where: "tags", "sg-security-overview" | sort: "title" %}
 {% assign auto_count = 0 %}
 {% for p in auto_related %}
