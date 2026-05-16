@@ -138,4 +138,10 @@ VAは、申請段階の本人確認ではなく、証明書利用時の有効性
 - 属性証明書の発行はAA
 - 「発行」ではなく「今も有効か確認」ならVA
 
+## 参考リンク
+
+- [IPA｜証明書検証サーバ 03-00](https://www.ipa.go.jp/archive/security/jisec/software/certified-cert/c0135_it7149.html)
+- [JIPDEC｜CRL](https://www.jipdec.or.jp/library/word/csm0kn0000000165.html)
+- [RFC 6960｜Online Certificate Status Protocol - OCSP](https://www.rfc-editor.org/rfc/rfc6960)
+
 {% include sg_article_footer.html %}
