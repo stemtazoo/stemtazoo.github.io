@@ -1,0 +1,40 @@
+---
+layout: null
+permalink: /search-index.json
+sitemap: false
+---
+[
+{%- assign first_item = true -%}
+{%- assign searchable_pages = site.pages | sort: "url" -%}
+{%- for item in searchable_pages -%}
+  {%- assign include_page = false -%}
+  {%- if item.url contains "/sg/" -%}
+    {%- assign include_page = true -%}
+  {%- endif -%}
+  {%- if item.url contains "/gk/" -%}
+    {%- assign include_page = true -%}
+  {%- endif -%}
+  {%- if item.url contains "/ds/" -%}
+    {%- assign include_page = true -%}
+  {%- endif -%}
+  {%- if item.url == "/" -%}
+    {%- assign include_page = true -%}
+  {%- endif -%}
+  {%- if item.url == "/search/" -%}
+    {%- assign include_page = false -%}
+  {%- endif -%}
+  {%- if item.url == "/search-index.json" -%}
+    {%- assign include_page = false -%}
+  {%- endif -%}
+  {%- if include_page and item.title and item.content -%}
+    {%- unless first_item -%},{%- endunless -%}
+    {
+      "title": {{ item.title | jsonify }},
+      "description": {{ item.description | default: "" | jsonify }},
+      "url": {{ item.url | relative_url | jsonify }},
+      "content": {{ item.content | strip_html | strip_newlines | replace: "　", " " | jsonify }}
+    }
+    {%- assign first_item = false -%}
+  {%- endif -%}
+{%- endfor -%}
+]

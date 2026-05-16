@@ -30,23 +30,10 @@ jobs:
           source: ./
           destination: ./_site
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-
-      - name: Prepare writable site output
-        run: |
-          rm -rf site_out
-          cp -a _site/. site_out/
-
-      - name: Run Pagefind
-        run: npx -y pagefind --site site_out
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./site_out
+          path: ./_site
 
   deploy:
     environment:
