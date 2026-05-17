@@ -1,38 +1,40 @@
 # SG Series Summary Rules
 
-`pages/sg` 配下の既存記事をもとに、学習しやすいシリーズまとめページを作るための標準ルールです。
+This file is written in English for Codex readability. However, SG article content must be written in Japanese unless the user explicitly requests otherwise.
 
-ユーザーから「SG記事のシリーズページを作って」「○○まとめを作って」「シリーズ候補を出して」などと指示された場合は、この流れに従います。
+Use these standard rules when creating study-friendly series summary pages from existing articles under `pages/sg`.
 
-## 基本方針
+Follow this workflow when the user asks to create an SG article series page, create a `まとめ`, or propose series candidates.
 
-- まとめページは単なるリンク集にしない。
-- 既存の単独記事を、初学者が順番に読める学習導線として再整理する。
-- SG試験で選択肢を切るための判断基準を中心に書く。
-- 似た用語の違い、役割、手順、対象範囲を整理する。
-- まとめページを作った後は、必ず関連する `pages/sg/category/*.md` のカテゴリまとめページにリンクを追加する。
+## Basic Policy
 
-## 事前確認
+- Do not make summary pages into simple link collections.
+- Reorganize existing standalone articles into a learning path that beginners can read in order.
+- Focus on the judgment criteria used to eliminate choices in the SG exam.
+- Organize differences, roles, procedures, and scope for similar terms.
+- After creating a summary page, always add a link to the related category summary page under `pages/sg/category/*.md`.
 
-作業前に必ず確認します。
+## Pre-Work Checks
 
-- `pages/sg` 配下の対象記事。
-- 各記事の front matter の `title` / `description` / `permalink` / `tags`。
-- 本文の見出しと、記事が扱う概念。
-- 関連しそうな `pages/sg/category/*.md`。
+Before editing, always check:
 
-重要:
+- Target articles under `pages/sg`.
+- Each article's front matter `title` / `description` / `permalink` / `tags`.
+- Body headings and the concept handled by each article.
+- Related `pages/sg/category/*.md` files.
 
-- permalink は推測せず、必ず実際の front matter を確認して使う。
-- 存在しない記事への内部リンクは作らない。
-- 追加予定の記事は本文内リンクにせず、「今後追加するとよさそうな記事」として提案に留める。
-- 既存記事のタイトル表記とリンク先を正確にそろえる。
+Important:
 
-## シリーズ候補を提案する段階
+- Do not guess `permalink`; always confirm and use the actual front matter.
+- Do not create internal links to non-existent articles.
+- Do not link planned articles in the body. Mention them only as possible future additions.
+- Match existing article title text and link targets accurately.
 
-ユーザーがまだ作成対象を選んでいない場合は、ファイルを作成しません。
+## When Proposing Series Candidates
 
-まず既存記事を確認し、自然にまとまるテーマを5〜10件程度提案します。例のテーマ名に引きずられすぎず、実際の記事量とつながりを優先します。
+If the user has not chosen the target series yet, do not create files.
+
+First check existing articles, then propose around 5-10 themes that naturally group together. Do not be overly guided by example theme names; prioritize the actual article set and relationships.
 
 ```md
 ### シリーズ候補1：〇〇まとめ
@@ -47,19 +49,19 @@
 - 追加で作るとよさそうな記事：
 ```
 
-提案時の注意:
+Proposal cautions:
 
-- 「対象になりそうな既存記事」には、実在する記事だけを書く。
-- 追加で作るとよさそうな記事は、既存記事と分けて書く。
-- まとめページ候補は、1用語記事ではなく、複数記事を束ねるテーマにする。
-- 既存のまとめページと重複しそうな場合は、統合・補強・別テーマ化のどれがよいか明記する。
+- Under `対象になりそうな既存記事`, list only articles that actually exist.
+- List useful future articles separately from existing articles.
+- Summary page candidates should group multiple articles; they should not be single-term articles.
+- If a candidate may overlap with an existing summary page, state whether consolidation, reinforcement, or a separate theme is better.
 
-## 選ばれたシリーズを作成する段階
+## When Creating The Selected Series
 
-ユーザーが対象シリーズを指定したら、`pages/sg` に Markdown ファイルを新規作成します。
+When the user specifies the target series, create a new Markdown file under `pages/sg`.
 
-- ファイル名は permalink に合わせた英語スラッグにする。
-- 例: `/sg/project-management-summary/` なら `pages/sg/project-management-summary.md`。
+- Match the filename to the English slug used in `permalink`.
+- Example: `/sg/project-management-summary/` uses `pages/sg/project-management-summary.md`.
 
 front matter:
 
@@ -74,19 +76,19 @@ last_modified_at: YYYY-MM-DD
 ---
 ```
 
-front matter の注意:
+Front matter cautions:
 
-- front matter の前に空行や文字を入れない。
-- `layout` は `page` にする。
-- `description` はそのシリーズ固有の内容にし、100〜140文字程度を目安にする。
-- `tags` は YAML 配列形式にする。
-- `last_modified_at` を入れる。
-- `prev` / `next` は入れない。
-- 既存カテゴリに合わせて、`sg-security-measures`、`sg-security-management`、`sg-management` などの分類タグを選ぶ。
+- Do not put blank lines or characters before front matter.
+- Use `layout: page`.
+- Make `description` unique to the series and aim for roughly 100-140 Japanese characters.
+- Write `tags` as a YAML array.
+- Include `last_modified_at`.
+- Do not add `prev` / `next`.
+- Choose category tags such as `sg-security-measures`, `sg-security-management`, or `sg-management` according to the existing category structure.
 
-## まとめページの標準構成
+## Standard Summary Page Structure
 
-原則として、次の見出し順で作ります。
+As a rule, use the following heading order.
 
 ```md
 ## まず結論
@@ -106,52 +108,52 @@ front matter の注意:
 {% include sg_article_footer.html %}
 ```
 
-各セクションの役割:
+Role of each section:
 
-- `## まず結論`: このシリーズで何を学ぶか、SG試験で何を判断できればよいかを書く。
-- `## 全体像`: 初学者向けにテーマ全体の見取り図を書く。
-- `## 主要用語の整理`: 表で用語と判断基準を整理し、既存記事へリンクする。
-- `## SG試験でのひっかけポイント`: 似た用語の違いを表で整理する。
-- `## おすすめの学習順序`: 初心者が読む順番を番号付きリストで示す。
-- `## 記事一覧`: シリーズ内の記事をカテゴリ分けして一覧にする。
-- `## まとめ（試験直前用）`: 3〜5行程度で判断基準を思い出せる形にする。
+- `## まず結論`: Explain what the reader will learn in this series and what they need to judge in the SG exam.
+- `## 全体像`: Give beginners a high-level map of the theme.
+- `## 主要用語の整理`: Use a table to organize terms and judgment criteria, with links to existing articles.
+- `## SG試験でのひっかけポイント`: Use a table to organize differences between similar terms.
+- `## おすすめの学習順序`: Show the recommended reading order as a numbered list.
+- `## 記事一覧`: List the articles in the series by category.
+- `## まとめ（試験直前用）`: Summarize judgment criteria in about 3-5 lines.
 
-## 本文リンクのルール
+## Body Link Rules
 
-- まとめページ本文には、存在する内部リンクだけを入れる。
-- `permalink` は実際の front matter から確認する。
-- リンクテキストは、既存記事の `title` を基本にする。
-- 同じ記事を複数回リンクしてもよいが、学習上の意味がある場合に限る。
-- 外部リンクは必要最小限にし、通常は既存記事への内部リンクを優先する。
+- Put only existing internal links in the summary page body.
+- Confirm `permalink` from actual front matter.
+- Base link text on the existing article `title`.
+- Linking the same article multiple times is acceptable only when it has learning value.
+- Keep external links to the minimum necessary; usually prioritize internal links to existing articles.
 
-## カテゴリまとめページへの追加
+## Adding Links To Category Summary Pages
 
-シリーズまとめページを作成したら、必ず関連カテゴリの `pages/sg/category/*.md` にリンクを追加します。
+After creating a series summary page, always add a link to the related category file under `pages/sg/category/*.md`.
 
-追加先の選び方:
+How to choose the destination:
 
-- 認証、アクセス制御、ネットワーク対策、マルウェア、物理対策、脆弱性対策: `pages/sg/category/security-measures.md`
-- 情報セキュリティ方針、ISMS、リスク管理、委託先管理、インシデント対応、監査、ログ管理: `pages/sg/category/security-management.md`
-- 法令、個人情報、著作権、電子署名、不正アクセス: `pages/sg/category/law.md`
-- ネットワーク、データベース、システム構成、暗号技術などの技術要素: `pages/sg/category/technology.md`
-- PMBOK、プロジェクト管理、サービスマネジメント、システム監査: `pages/sg/category/management.md`
-- 経営戦略、業務改善、組織管理、調達・契約寄りの内容: `pages/sg/category/strategy.md`
-- 情報セキュリティ全般の入口や横断テーマ: `pages/sg/category/security-overview.md`
+- Authentication, access control, network countermeasures, malware, physical controls, vulnerability countermeasures: `pages/sg/category/security-measures.md`
+- Information security policy, ISMS, risk management, vendor management, incident response, audit, log management: `pages/sg/category/security-management.md`
+- Laws, personal information, copyright, electronic signatures, unauthorized access: `pages/sg/category/law.md`
+- Network, database, system configuration, cryptography, and other technology elements: `pages/sg/category/technology.md`
+- PMBOK, project management, service management, system audit: `pages/sg/category/management.md`
+- Business strategy, business improvement, organization management, procurement and contract topics: `pages/sg/category/strategy.md`
+- Entry points and cross-cutting themes for information security as a whole: `pages/sg/category/security-overview.md`
 
-追加方法:
+How to add the link:
 
-- カテゴリページに `## まず読むまとめ記事` または `## 関連するまとめページ` がある場合は、そこにリンクを追加する。
-- そのセクションがない場合は、カテゴリの見方説明の後、関連記事一覧の前に追加する。
-- リンクの下に1行で内容説明を付けるか、既存カテゴリページの書き方に合わせる。
-- カテゴリページに `summary_page_urls` がある場合は、新しいまとめページの permalink を追加し、通常記事一覧に重複表示されないようにする。
-- カテゴリページに `curated_slugs` がある場合は、新しいまとめページの slug を必要に応じて追加し、「その他の関連記事」に重複表示されないようにする。
-- 複数カテゴリに強く関係する場合でも、まず主カテゴリを1つ選ぶ。必要なら副カテゴリにもリンクするが、重複しすぎないようにする。
+- If the category page has `## まず読むまとめ記事` or `## 関連するまとめページ`, add the link there.
+- If that section does not exist, add the link after the category explanation and before the related article list.
+- Add a one-line description under the link, or follow the existing category page style.
+- If the category page has `summary_page_urls`, add the new summary page `permalink` so it does not duplicate in the normal article list.
+- If the category page has `curated_slugs`, add the new summary page slug when needed so it does not duplicate in `その他の関連記事`.
+- Even when the summary strongly relates to multiple categories, choose one primary category first. Add secondary category links only when useful, and avoid excessive duplication.
 
-## 作成後の確認
+## Post-Creation Checks
 
-- 新規まとめページの front matter が正しいか確認する。
-- すべての内部リンクが実在する permalink を指しているか確認する。
-- カテゴリまとめページから新規まとめページへリンクされているか確認する。
-- `summary_page_urls` や `curated_slugs` の重複除外が必要なページでは更新漏れがないか確認する。
-- 可能であれば `bundle exec jekyll build` を実行する。
-- Liquid を編集した場合は、GitHub Pages 互換性を優先し、複雑な条件式を避ける。
+- Confirm that the new summary page front matter is correct.
+- Confirm that every internal link points to an existing `permalink`.
+- Confirm that the related category summary page links to the new summary page.
+- Confirm that pages needing `summary_page_urls` or `curated_slugs` updates are not missed.
+- Run `bundle exec jekyll build` if possible.
+- If editing Liquid, prioritize GitHub Pages compatibility and avoid complex conditions.

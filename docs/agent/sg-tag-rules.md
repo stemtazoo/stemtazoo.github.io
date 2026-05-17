@@ -1,17 +1,19 @@
 # SG Tag Rules
 
-SG記事の `tags` は、3〜5個を目安に厳選します。
+This file is written in English for Codex readability. However, SG article content must be written in Japanese unless the user explicitly requests otherwise.
 
-## 基本ルール
+For SG articles, select roughly 3-5 values for `tags`.
 
-- 全ページに必ず `sg` を入れる。
-- 必ず「主分類タグ」を1つ入れる。
-- 内容に応じて具体タグを1〜3個入れる。
-- タグを付けすぎない。
-- 科目Bのケース判断が中心なら、`risk_assessment` / `vendor_management` / `security_training` / `it_security_operations` を優先候補にする。
-- 既存記事のタグ設計と矛盾しないように、必要なら既存 `pages/sg` の記事を確認してから決める。
+## Basic Rules
 
-## 主分類タグ
+- Always include `sg` on every SG page.
+- Always include exactly one primary category tag.
+- Add 1-3 concrete tags according to the article content.
+- Do not over-tag pages.
+- If 科目B case judgment is central, prioritize `risk_assessment`, `vendor_management`, `security_training`, or `it_security_operations` as candidates.
+- To avoid conflicts with the existing tag design, check existing `pages/sg` articles before deciding tags when needed.
+
+## Primary Category Tags
 
 ```yaml
 sg-security-overview
@@ -23,7 +25,7 @@ sg-management
 sg-strategy
 ```
 
-## 具体タグ候補
+## Concrete Tag Candidates
 
 ```yaml
 cia
@@ -54,21 +56,21 @@ vendor_management
 security_training
 ```
 
-## タグ選定例
+## Tag Selection Examples
 
-Cookieの記事:
+Cookie article:
 
 ```yaml
 tags: [sg, sg-technology, web, network, authentication]
 ```
 
-法令記事:
+Law article:
 
 ```yaml
 tags: [sg, sg-security-law, privacy_law]
 ```
 
-リスク管理系の記事:
+Risk management article:
 
 ```yaml
 tags: [sg, sg-security-management, risk_assessment, asset_management]

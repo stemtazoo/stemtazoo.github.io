@@ -1,20 +1,24 @@
 # SG Example Question Rules
 
-過去問、例題、スクリーンショットをもとにSG記事を作る場合と、記事内に確認問題を追加する場合のルールです。
+This file is written in English for Codex readability. However, SG article content must be written in Japanese unless the user explicitly requests otherwise.
 
-## 過去問・例題から記事化する場合
+Use these rules when creating SG articles from past questions, example questions, or screenshots, and when adding confirmation questions inside articles.
 
-- 添付された問題や解説は、直接引用しない。
-- 問題そのものの答えを解説する記事にしない。
-- 用語・概念を理解する教材記事に一般化する。
-- ユーザーが間違えた理由をもとに、よくある誤解・混同を強化する。
-- 選択肢を切る判断基準を本文中に必ず入れる。
+## When Turning Past Questions Or Examples Into Articles
 
-## 確認問題を追加してよいページ
+- Do not directly quote attached questions or explanations.
+- Do not create an article whose main purpose is to explain the answer to that specific question.
+- Generalize the material into a teaching article for understanding the term or concept.
+- Use the reason the user made a mistake to strengthen common misunderstanding and confusion-prevention sections.
+- Always include judgment criteria for eliminating answer choices in the body.
 
-- front matter の `tags` に `sg` を含む。
-- 1用語・1概念を解説する通常記事。
-- 本文に次の見出しがそろっている。
+## Pages Where Confirmation Questions May Be Added
+
+Only add confirmation questions to pages that meet all of these conditions:
+
+- The front matter `tags` includes `sg`.
+- The page is a normal article that explains one term or one concept.
+- The body contains all of these headings:
   - `## まず結論`
   - `## 直感的な説明`
   - `## 定義・仕組み`
@@ -22,23 +26,23 @@
   - `## よくある誤解・混同`
   - `## まとめ（試験直前用）`
 
-## 確認問題を追加しないページ
+## Pages Where Confirmation Questions Must Not Be Added
 
-- Indexページ / まとめページ / 比較ページ / 一覧ページ / ロードマップ。
-- カテゴリトップ、リンク集、複数用語横断ページ。
-- タイトルに `まとめ` `一覧` `比較` `ロードマップ` `Index` `index` `overview` `summary` `comparison` を含むページ。
-- permalink に `overview` `summary` `comparison` `index` を含むページ。
-- 判断に迷うページ。保守優先で追加しない。
+- Index pages, summary pages, comparison pages, list pages, and roadmaps.
+- Category top pages, link collections, and pages that cover multiple terms across a theme.
+- Pages whose title includes `まとめ`, `一覧`, `比較`, `ロードマップ`, `Index`, `index`, `overview`, `summary`, or `comparison`.
+- Pages whose `permalink` includes `overview`, `summary`, `comparison`, or `index`.
+- Any page where the classification is uncertain. Prefer maintainability and do not add the question.
 
-## 重複防止
+## Duplicate Prevention
 
-すでに `## 確認問題（SG試験対策）` がある場合は追加しません。
+Do not add a confirmation question if `## 確認問題（SG試験対策）` already exists.
 
-## 追加位置
+## Placement
 
-確認問題は、必ず `## まとめ（試験直前用）` の直前に追加します。
+Always add the confirmation question immediately before `## まとめ（試験直前用）`.
 
-## 標準フォーマット
+## Standard Format
 
 ```md
 ## 確認問題（SG試験対策）
@@ -67,23 +71,23 @@
 </details>
 ```
 
-## 出題品質ルール
+## Question Quality Rules
 
-- SG試験レベルに合わせる。
-- 単純な暗記問題ではなく、選択肢を切り分ける問題にする。
-- 正解は必ず1つ。
-- 誤答は「近いが違う」ものにする。
-- 明らかな捨て選択肢は避ける。
-- 折りたたみは `<details markdown="1">` を使う。
-- `summary` はクリック可能であることが分かる文言にする。
-- 既存本文の文体（やさしい日本語）を崩さない。
+- Match the SG exam level.
+- Do not make the question a simple memorization check; make it require separating answer choices.
+- There must be exactly one correct answer.
+- Wrong choices should be close but still wrong.
+- Avoid obviously disposable choices.
+- Use `<details markdown="1">` for collapsible answers.
+- Make the `summary` text clearly indicate that it can be clicked.
+- Preserve the existing body style, which is beginner-friendly Japanese.
 
-少なくとも次の軸のいずれかを含めます。
+Include at least one of these axes:
 
-- 役割の違い。
-- 手順・順序。
-- 似た用語の切り分け。
-- 送信側 / 受信側。
-- 侵入前 / 侵入後。
-- 事前対策 / 事後対応。
-- 管理策 / 技術的対策。
+- Difference in role.
+- Procedure or order.
+- Separation of similar terms.
+- Sender / receiver.
+- Before intrusion / after intrusion.
+- Preventive measure / post-incident response.
+- Management control / technical control.

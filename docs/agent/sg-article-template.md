@@ -1,6 +1,8 @@
 # SG Article Template
 
-`pages/sg` の通常記事は、1ページで「1用語・1概念」を扱い、次の6見出しを固定で使います。
+This file is written in English for Codex readability. However, SG article content must be written in Japanese unless the user explicitly requests otherwise.
+
+Normal articles under `pages/sg` must cover one term or one concept per page and use the following six fixed Japanese headings.
 
 ```md
 ## まず結論
@@ -16,47 +18,47 @@
 ## まとめ（試験直前用）
 ```
 
-## 各見出しの役割
+## Role Of Each Heading
 
 ### まず結論
 
-- 用語・概念を一文で説明する。
-- SG試験で何を判断させたいテーマなのかを書く。
+- Explain the term or concept in one sentence.
+- State what the SG exam expects the reader to judge about the topic.
 
 ### 直感的な説明
 
-- 日常例または業務例で説明する。
-- 「なぜ重要か」が感覚的に分かるようにする。
+- Explain using an everyday example or workplace example.
+- Help readers intuitively understand why the topic matters.
 
 ### 定義・仕組み
 
-- 用語の定義をかみ砕く。
-- 制度・規格・対策は「目的」と「基本の流れ」を中心に説明する。
-- 法令、IPA、NISC、JPCERT/CC、CRYPTREC、個人情報保護委員会、e-Gov、JIS / ISO / IEC などの公式情報がある場合は、ここに公式リンクを自然に入れる。
+- Explain the definition in plain language.
+- For systems, standards, and countermeasures, focus on the purpose and basic flow.
+- When official information exists from sources such as laws, IPA, NISC, JPCERT/CC, CRYPTREC, 個人情報保護委員会, e-Gov法令検索, or JIS / ISO / IEC, place the official link here naturally.
 
 ### どんな場面で使う？
 
-- 使うべき場面を書く。
-- 使うと誤解しやすい場面も書く。
-- 科目Bケース問題でどう判断するかを意識する。
+- Explain when the concept should be used.
+- Also explain situations where it is easy to misuse or misunderstand.
+- Keep 科目B case-question judgment in mind.
 
 ### よくある誤解・混同
 
-- 混同しやすい用語との差を書く。
-- SG試験での典型的なひっかけを書く。
-- 「この表現なら誤り」と判断できる形にする。
+- Explain differences from terms that are easy to confuse.
+- Include typical SG exam traps.
+- Write so the reader can judge that a specific expression is wrong.
 
 ### まとめ（試験直前用）
 
-- 3〜5行で要点を整理する。
-- 暗記文ではなく、判断基準が思い出せる形にする。
+- Summarize the key points in 3-5 lines.
+- Make the summary help readers recall judgment criteria, not just memorize wording.
 
-## フッター
+## Footer
 
-記事本文の最後には、必ず次の1行を入れます。
+At the end of the article body, always add this single line:
 
 ```liquid
 {% include sg_article_footer.html %}
 ```
 
-ユーザーから明示がない限り、記事本文には不要な関連記事セクションを追加しません。関連記事はフッター include に任せます。
+Unless the user explicitly asks otherwise, do not add unnecessary related-article sections inside the article body. Leave related-article behavior to the footer include.
