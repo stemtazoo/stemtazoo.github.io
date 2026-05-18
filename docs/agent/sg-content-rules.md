@@ -75,6 +75,10 @@ Link placement rules:
 - Keep the main role of the article as SG exam study explanation.
 - If no reliable official source can be confirmed, do not force a link.
 - Use normal Markdown syntax for external links.
+- When you add official links, verify that each destination URL actually exists if the current environment allows it (for example, by opening it or checking HTTP response status).
+- If verification fails because of an environment/network error such as `CONNECT tunnel failed, response 403`, do not treat it as a broken link. Report it as "not verifiable in the Codex environment" and keep the link only when it is clearly an official, theme-direct URL.
+- Prefer a theme-direct official page over a broad top page whenever possible (for example, an incident-response page rather than an organization home page).
+- If a link is not clearly official or theme-direct and cannot be verified, do not add it to the article body; report it as an unverified candidate instead.
 
 Example:
 

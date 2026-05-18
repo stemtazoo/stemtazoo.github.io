@@ -6,7 +6,7 @@ permalink: /sg/incident-response/
 tags: [sg, sg-security-management, incident_management, it_security_operations]
 prev: /sg/http-https/
 next: /sg/information-security-management-exam/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-18
 ---
 
 ## まず結論
@@ -174,5 +174,13 @@ CSIRT（インシデント対応チーム）は、
 - 原因調査や復旧は後  
 - 証拠を壊さないことも重要（フォレンジック）  
 - 「最初に何をするか」で選択肢を切る
+
+## 公式情報・参考リンク
+
+- IPA（情報処理推進機構）: [セキュリティインシデント対応机上演習教材](https://www.ipa.go.jp/security/sec-tools/ttx.html)
+- IPA（情報処理推進機構）: [情報セキュリティ対策のしおり](https://www.ipa.go.jp/security/guide/shiori.html)
+- JPCERT/CC: [インシデント対応とは](https://www.jpcert.or.jp/ir/index.html)
+
+※試験対策では、細かな対応手順を暗記するよりも、インシデント対応が「検知後に被害拡大を防ぎ、調査・復旧・再発防止につなげる活動」である点を優先して整理すると判断しやすくなります。
 
 {% include sg_article_footer.html %}
