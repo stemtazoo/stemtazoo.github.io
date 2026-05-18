@@ -71,6 +71,7 @@ Preferred source examples:
 Link placement rules:
 
 - Place official links naturally in `## 定義・仕組み` or `## どんな場面で使う？`.
+- In SG articles, place official/reference links in a dedicated `## 公式情報・参考リンク` section near the end of the article, just before the footer include, unless an inline citation is clearly more natural.
 - Do not turn the article into a link collection.
 - Keep the main role of the article as SG exam study explanation.
 - If no reliable official source can be confirmed, do not force a link.

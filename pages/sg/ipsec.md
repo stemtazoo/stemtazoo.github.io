@@ -6,7 +6,7 @@ permalink: /sg/ipsec/
 prev: /sg/vpn/
 next: /sg/ipsec-ah/
 tags: [sg, sg-security-overview, crypto_auth, network, sg-technology]
-last_modified_at: 2026-05-08
+last_modified_at: 2026-05-18
 ---
 
 ## まず結論
@@ -193,5 +193,8 @@ ESPは、暗号化を行える
 IKEは、暗号方式や鍵を決める鍵交換の仕組み
 
 VPNや拠点間通信の文脈で出たら、IPsecを候補にする
+
+## 公式情報・参考リンク
+- [IETF RFC 4301｜Security Architecture for the Internet Protocol](https://www.rfc-editor.org/rfc/rfc4301)
 
 {% include sg_article_footer.html %}

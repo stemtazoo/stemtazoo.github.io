@@ -6,7 +6,7 @@ permalink: /sg/xss/
 prev: /sg/work-rules-vs-individual-agreement/
 next: /sg/zero-trust/
 tags: [sg, security_general, threat_vulnerability, unauthorized_access, data_leakage, sg-security-overview]
-last_modified_at: 2026-05-08
+last_modified_at: 2026-05-18
 ---
 
 ## まず結論
@@ -128,5 +128,9 @@ SG試験では「スクリプトが実行されるかどうか」で見分ける
 - 被害はCookie盗取やセッション乗っ取り
 - CSRFは「リクエスト悪用」、XSSは「スクリプト実行」
 - 選択肢で「スクリプト」「ブラウザ実行」があればXSSを疑う
+
+## 公式情報・参考リンク
+- [OWASP｜Cross Site Scripting (XSS)](https://owasp.org/www-community/attacks/xss/)
+- [IPA｜安全なウェブサイトの作り方](https://www.ipa.go.jp/security/vuln/websecurity/about.html)
 
 {% include sg_article_footer.html %}

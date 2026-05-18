@@ -6,7 +6,7 @@ permalink: /sg/csirt/
 tags: [sg, sg-security-management]  
 prev: /sg/cryptrec/  
 next: /sg/nisc/  
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-18
 ---
 
 ## まず結論  
@@ -192,5 +192,9 @@ CSIRTは「インシデント発生後に、調査・対応・復旧まで動く
   - 「対応・復旧」→CSIRT  
 
 👉 **「誰のために動くか（自社か外部か）」で切る**
+
+## 公式情報・参考リンク
+- [JPCERT/CC｜脆弱性情報ハンドリング](https://www.jpcert.or.jp/vh/)
+- [IPA｜セキュリティインシデント対応机上演習教材](https://www.ipa.go.jp/security/anshin/mgdayori20210720.html)
 
 {% include sg_article_footer.html %}

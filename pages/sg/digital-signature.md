@@ -6,7 +6,7 @@ permalink: /sg/digital-signature/
 prev: /sg/message-authentication-code/
 next: /sg/xml-signature/
 tags: [sg, sg-security-overview, crypto_auth, it_security_operations]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-18
 ---
 
 ## まず結論
@@ -149,5 +149,9 @@ SG試験の超重要ポイントです。
 **本人証明＋改ざん検知 → 電子署名  
 改ざん検知のみ → MAC / ハッシュ  
 機密性 → 暗号化**
+
+## 公式情報・参考リンク
+- [e-Gov法令検索｜電子署名及び認証業務に関する法律](https://laws.e-gov.go.jp/law/412AC0000000102)
+- [総務省｜国民のためのサイバーセキュリティサイト（電子署名）](https://www.soumu.go.jp/main_sosiki/joho_tsusin/security/basic/tool/09.html)
 
 {% include sg_article_footer.html %}
