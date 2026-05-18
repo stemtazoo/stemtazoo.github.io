@@ -6,7 +6,7 @@ permalink: /sg/access-control/
 tags: [sg, sg-security-measures, access_control, it_security_operations]
 prev: /sg/authorization/
 next: /sg/access-control-model/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-18
 ---
 
 ## まず結論
@@ -162,5 +162,8 @@ last_modified_at: 2026-05-06
 - SGでは「権限が過剰かどうか」で選択肢を切る
 
 ---
+
+## 公式情報・参考リンク
+- [IPA｜情報セキュリティ対策の基本](https://www.ipa.go.jp/security/anshin/measures/)
 
 {% include sg_article_footer.html %}
