@@ -6,7 +6,7 @@ permalink: /sg/clickjacking/
 tags: [sg, threat_vulnerability, unauthorized_access, web_security, sg-security-overview]
 prev: /sg/case-study-approach/
 next: /sg/client-server-system/
-last_modified_at: 2026-05-12
+last_modified_at: 2026-05-18
 ---
 
 ## まず結論
@@ -51,6 +51,8 @@ last_modified_at: 2026-05-12
 - Web管理画面（クラウド・社内システム）  
 - ブラウザで操作する設定変更系の画面  
 → **クリックだけで重要操作ができる設計はリスク**
+- 管理画面は再認証・確認ダイアログを組み合わせる
+- 重要操作は「見た目の誘導」だけで完了しない設計にする
 
 ---
 
@@ -69,6 +71,10 @@ last_modified_at: 2026-05-12
 
 ### ❌ ユーザが操作していない
 → ⭕ ユーザ自身がクリックしてしまうのが特徴
+
+### 対策を問う選択肢での判断軸
+- `X-Frame-Options` や `CSP frame-ancestors` はクリックジャッキング対策
+- 入力値検証やSQLエスケープはSQLインジェクション対策であり、主対策は別
 
 ---
 

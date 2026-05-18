@@ -6,7 +6,7 @@ permalink: /sg/sandbox/
 tags: [sg, security_measures, unauthorized_access, system_architecture, sg-security-measures]
 prev: /sg/safety-control-measures/
 next: /sg/script-kiddie/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-18
 ---
 
 ## まず結論
@@ -55,6 +55,11 @@ last_modified_at: 2026-05-06
 - 攻撃を「防ぐ」仕組みと混同しやすい  
   → サンドボックスは**防御というより被害の限定**です
 
+### 導入時の判断ポイント（実務）
+- メール添付・ダウンロードファイルの**事前確認工程**に組み込む
+- サンドボックスの判定結果だけに依存せず、EDRやアンチウイルスと併用する
+- 「未知の挙動を観察する用途」と「通信遮断の用途」を分けて設計する
+
 ---
 
 ## よくある誤解・混同
@@ -64,6 +69,11 @@ last_modified_at: 2026-05-06
 
 ### ⭕ 正しい理解
 - **プログラムの行動範囲を制限する仕組み**
+
+### 混同を防ぐ切り分け軸
+- **サンドボックス**：隔離実行・挙動観察
+- **WAF/IPS**：通信やリクエストの検知・遮断
+- **ハニーポット**：攻撃者の観測・分析
 
 ---
 

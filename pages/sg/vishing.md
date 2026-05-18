@@ -6,7 +6,7 @@ permalink: /sg/vishing/
 tags: [sg, security_measures, unauthorized_access, data_leakage, sg-security-measures]
 prev: /sg/vendor-management/
 next: /sg/vulnerability/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-18
 ---
 
 ## まず結論
@@ -49,6 +49,8 @@ last_modified_at: 2026-05-06
 - 電話でも情報を教えてはいけない教育が必要  
 - 折り返し確認（公式番号へ）が重要  
 - コールセンターを狙った攻撃にも注意  
+- 「今すぐ答えてください」という緊急性の演出を疑う
+- 本人確認フローを文書化し、例外運用を作らない
 
 👉 **人の心理（焦り・信頼）を利用する攻撃**
 
@@ -76,6 +78,11 @@ last_modified_at: 2026-05-06
 - 攻撃：暗証番号・パスワードを聞く  
 
 👉 **「電話で認証情報を聞かれたら疑う」が基本**
+
+### 混同を防ぐ切り分け軸
+- **音声通話でだます**：ビッシング
+- **SMSで誘導する**：スミッシング
+- **メールで誘導する**：フィッシング
 
 ---
 

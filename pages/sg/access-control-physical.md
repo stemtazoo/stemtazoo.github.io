@@ -6,7 +6,7 @@ permalink: /sg/access-control-physical/
 prev: /sg/physical-security/
 next: /sg/anti-passback/
 tags: [sg, sg-security-measures, access_control, it_security_operations]
-last_modified_at: 2026-05-08
+last_modified_at: 2026-05-18
 ---
 
 ## まず結論
@@ -108,6 +108,11 @@ SG試験では
 👉 **「対象が何か（場所かシステムか）」で切る問題**が頻出です。
 
 ---
+
+### 判断軸の再確認（確認問題の前に）
+- **目的**を先に見る：この対策・用語は「予防」「検知」「対応」のどこを担うか。
+- **対象**を切り分ける：ネットワーク／端末／利用者／運用手順のどこに効くか。
+- **選択肢の言い過ぎ**に注意：「必ず」「完全に」「不要になる」といった断定は誤りになりやすい。
 
 ## 確認問題（SG試験対策）
 

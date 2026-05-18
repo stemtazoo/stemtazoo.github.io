@@ -6,7 +6,7 @@ permalink: /sg/identification-code/
 tags: [sg, sg-security-management, law, access_control, authentication]
 prev: /sg/unauthorized-access-related-actions/
 next: /sg/unauthorized-access/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-18
 ---
 
 ## まず結論
@@ -258,6 +258,11 @@ SG試験で識別符号が出てきたら、次の順番で考えると整理し
 特に、問題文で「識別符号」と出てきたら、難しい法律用語だと思わず、まずは **ID・パスワードなど** と読み替えると解きやすくなります。
 
 ---
+
+### 判断軸の再確認（確認問題の前に）
+- **目的**を先に見る：この対策・用語は「予防」「検知」「対応」のどこを担うか。
+- **対象**を切り分ける：ネットワーク／端末／利用者／運用手順のどこに効くか。
+- **選択肢の言い過ぎ**に注意：「必ず」「完全に」「不要になる」といった断定は誤りになりやすい。
 
 ## 確認問題
 

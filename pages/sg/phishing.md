@@ -6,7 +6,7 @@ permalink: /sg/phishing/
 tags: [sg, sg-security-measures, sg-security-management, cyberattack, authentication]
 prev: /sg/unauthorized-access/
 next: /sg/access-control/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-18
 ---
 
 ## まず結論
@@ -227,6 +227,11 @@ ID・パスワード、認証コード、カード情報などを入力させて
 特に、選択肢では「フィッシングサイトを開設して入力させる」とあれば、**不正アクセス行為そのものではなく、不正要求**を疑います。
 
 ---
+
+### 判断軸の再確認（確認問題の前に）
+- **目的**を先に見る：この対策・用語は「予防」「検知」「対応」のどこを担うか。
+- **対象**を切り分ける：ネットワーク／端末／利用者／運用手順のどこに効くか。
+- **選択肢の言い過ぎ**に注意：「必ず」「完全に」「不要になる」といった断定は誤りになりやすい。
 
 ## 確認問題
 
