@@ -31,6 +31,7 @@ permalink: /sg/category/security-management/
 - [リスクマネジメントとは？](/sg/risk-management/)
 - [脆弱性管理・診断運用まとめ｜主要用語を整理](/sg/vulnerability-management-summary/)
 - [インシデント対応・監視体制まとめ｜主要用語を整理](/sg/incident-response-summary/)
+- [インシデント対応・証拠保全まとめ｜主要用語を整理](/sg/incident-response-forensics-summary/)
 - [インシデント管理とは？](/sg/incident-management/)
 - [ログ管理とは？](/sg/log-management/)
 
@@ -78,6 +79,7 @@ permalink: /sg/category/security-management/
 - [情報セキュリティ事象とは？](/sg/security-event/)
 - [情報セキュリティインシデントとは？](/sg/security-incident/)
 - [インシデント対応・監視体制まとめ｜主要用語を整理](/sg/incident-response-summary/)
+- [インシデント対応・証拠保全まとめ｜主要用語を整理](/sg/incident-response-forensics-summary/)
 - [インシデント対応とは？](/sg/incident-response/)
 - [インシデント管理とは？](/sg/incident-management/)
 - [デジタルフォレンジックとは？](/sg/digital-forensics/)
