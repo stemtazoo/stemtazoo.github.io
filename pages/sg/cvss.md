@@ -3,10 +3,10 @@ layout: page
 title: "CVSSとは？脆弱性の深刻度を共通スコアで判断する【SG試験】"
 description: CVSSを脆弱性の深刻度を共通スコアで表す指標として整理します。基本評価基準、対応優先度、JVNや脆弱性検査との関係をSG試験向けに確認できます。本文では、用語の定義、業務での使いどころ、似た対策との違い、選択肢を切る判断基準まで短時間で復習できます。
 permalink: /sg/cvss/
-tags: [sg, security_general, threat_vulnerability, risk_assessment, sg-security-overview]
+tags: [sg, sg-security-overview, threat_vulnerability, risk_assessment]
 prev: /sg/jvn/
 next: /sg/vulnerability-scan/
-last_modified_at: 2026-05-15
+last_modified_at: 2026-05-18
 ---
 
 ## まず結論
@@ -139,7 +139,7 @@ CVSSは、脆弱性の深刻度を **3つの観点** で評価します。
 
 ---
 
-## よくある誤解・混同（ここが試験）
+## よくある誤解・混同
 
 ### ① JVNとの違い
 - JVN：情報を提供  
