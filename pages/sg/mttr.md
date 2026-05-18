@@ -133,7 +133,6 @@ MTTR（Mean Time To Repair / Recovery）は、
 
 ## まとめ（試験直前用）
 
-
 - MTTR＝復旧までの時間
 - 短いほど良い（影響が小さい）
 - MTBFとセットで覚える
