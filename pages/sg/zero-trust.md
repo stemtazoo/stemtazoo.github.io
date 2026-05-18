@@ -6,7 +6,7 @@ permalink: /sg/zero-trust/
 prev: /sg/xss/
 next: /sg/firewall/
 tags: [sg, sg-security-measures, access_control, it_security_operations]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-18
 ---
 
 ## まず結論
@@ -38,6 +38,8 @@ last_modified_at: 2026-05-06
 - 必要最小限の権限だけ許可する  
 
 というセキュリティモデルです。
+
+ゼロトラストの代表的な公式文書として、NISTの[Zero Trust Architecture（SP 800-207）](https://csrc.nist.gov/pubs/sp/800/207/final)があります。
 
 ---
 

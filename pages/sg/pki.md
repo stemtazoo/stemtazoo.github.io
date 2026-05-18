@@ -56,6 +56,8 @@ PKI（Public Key Infrastructure）は、
 SG試験では  
 **「PKI＝仕組み全体」**と捉えることが重要です。
 
+PKIの証明書プロファイルや失効確認の考え方は、IETFの[X.509 Public Key Infrastructure Certificate and CRL Profile（RFC 5280）](https://www.rfc-editor.org/rfc/rfc5280)で確認できます。
+
 ---
 
 ## どんな場面で使う？

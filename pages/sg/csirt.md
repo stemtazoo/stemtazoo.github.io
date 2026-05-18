@@ -6,7 +6,7 @@ permalink: /sg/csirt/
 tags: [sg, sg-security-management]  
 prev: /sg/cryptrec/  
 next: /sg/nisc/  
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-18
 ---
 
 ## まず結論  
@@ -106,6 +106,8 @@ CSIRT（Computer Security Incident Response Team）は、
 - **CSIRT＝組織内だけではない（総称）**  
 - ただし試験では  
   👉 **「組織内CSIRT」が基本**  
+
+公式情報として、JPCERT/CCの[脆弱性情報ハンドリング](https://www.jpcert.or.jp/vh/)や、IPAの[セキュリティインシデント対応机上演習教材](https://www.ipa.go.jp/security/anshin/mgdayori20210720.html)も、CSIRTの役割理解に役立ちます。
 
 ---
 
