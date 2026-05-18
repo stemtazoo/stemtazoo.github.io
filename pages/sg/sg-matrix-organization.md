@@ -3,11 +3,9 @@ layout: page
 title: マトリックス組織とは｜SG試験で押さえる組織形態の考え方
 description: 情報セキュリティマネジメント試験で出題されるマトリックス組織について、職能別組織・事業部制組織・プロジェクト組織との違い、ひっかけポイント、試験での判断基準を初心者向けに整理します。
 permalink: /sg/matrix-organization/
-tags: [sg, management, organization]
+tags: [sg, sg-management, business_management]
+last_modified_at: 2026-05-18
 ---
-
-# マトリックス組織とは｜SG試験で押さえる組織形態の考え方
-
 ## まず結論
 
 **マトリックス組織**とは、
@@ -172,7 +170,7 @@ SG試験では、
 
 ---
 
-## 試験でのひっかけポイント
+### 試験でのひっかけポイント
 
 マトリックス組織でよくあるひっかけは、
 **「部門横断」だけで判断してしまうこと**です。

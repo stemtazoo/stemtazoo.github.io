@@ -3,11 +3,9 @@ layout: page
 title: 入力・処理・出力チェックの違い｜コントロールトータル、ランツーラン、バリデーションを整理
 description: 情報セキュリティマネジメント試験（SG試験）対策として、入力チェック・処理チェック・出力チェックの違いを、エディットバリデーションチェック、ランツーランコントロール、コントロールトータルを中心に初心者向けに整理します。
 permalink: /sg/input-process-output-checks/
-tags: [sg, system-audit, internal-control, data-check]
+tags: [sg, sg-management, system_audit, business_management]
+last_modified_at: 2026-05-18
 ---
-
-# 入力・処理・出力チェックの違い｜コントロールトータル、ランツーラン、バリデーションを整理
-
 情報セキュリティマネジメント試験では、システムで扱うデータについて、
 
 > 入力から出力まで、正しく処理されているか
@@ -218,7 +216,7 @@ tags: [sg, system-audit, internal-control, data-check]
 
 「電子文書」「存在証明」「非改ざん性」が出てきたら、タイムスタンプを考えます。
 
-## 試験での判断ポイント
+### 試験での判断ポイント
 
 問題文を読んだら、まず次の順番で考えると選びやすいです。
 
