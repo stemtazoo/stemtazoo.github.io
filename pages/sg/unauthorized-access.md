@@ -6,7 +6,7 @@ permalink: /sg/unauthorized-access/
 tags: [sg, sg-security-management, law, access_control, cybercrime]
 prev: /sg/identification-code/
 next: /sg/phishing/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-18
 ---
 
 ## まず結論
@@ -229,6 +229,11 @@ ID・パスワードを使っていなくても、脆弱性を突いて制限を
 不正アクセス行為は、**実際に入った・使ったか**を軸に判断すると整理しやすくなります。
 
 ---
+
+### 判断軸の再確認（確認問題の前に）
+- **目的**を先に見る：この対策・用語は「予防」「検知」「対応」のどこを担うか。
+- **対象**を切り分ける：ネットワーク／端末／利用者／運用手順のどこに効くか。
+- **選択肢の言い過ぎ**に注意：「必ず」「完全に」「不要になる」といった断定は誤りになりやすい。
 
 ## 確認問題
 
