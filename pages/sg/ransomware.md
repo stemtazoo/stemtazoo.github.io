@@ -6,7 +6,7 @@ permalink: /sg/ransomware/
 tags: [sg, security_measures, malware, data_leakage, sg-security-measures]
 prev: /sg/psk-wireless-auth/
 next: /sg/residual-risk/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-18
 ---
 
 ## まず結論
@@ -53,6 +53,8 @@ last_modified_at: 2026-05-06
   - 暗号化＋情報を盗んで公開を脅す
 
 👉 可用性＋機密性の両方を脅かす
+
+IPAの[情報セキュリティ10大脅威](https://www.ipa.go.jp/security/10threats/)では、ランサムウェア被害やその対策の重要性が継続的に取り上げられています。
 
 ---
 

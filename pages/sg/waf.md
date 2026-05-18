@@ -6,7 +6,7 @@ permalink: /sg/waf/
 tags: [sg, security_measures, unauthorized_access, network, sg-security-measures]
 prev: /sg/vulnerability/
 next: /sg/wifi-auth-wpa2-wpa3-8021x/
-last_modified_at: 2026-05-14
+last_modified_at: 2026-05-18
 ---
 
 ## まず結論
@@ -52,6 +52,8 @@ WAF（Web Application Firewall）は、
 
 👉 ポイントは  
 「**通信内容（中身）を見て判断する**」ことです。
+
+IPAの[安全なウェブサイトの作り方](https://www.ipa.go.jp/security/vuln/websecurity/about.html)でも、SQLインジェクションやXSSを含むWebアプリ脆弱性への対策が整理されています。
 
 ---
 
