@@ -6,7 +6,7 @@ permalink: /sg/multi-factor-authentication/
 tags: [sg, sg-security-measures, crypto_auth, access_control]
 prev: /sg/password-management/
 next: /sg/mfa-vs-step-auth/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-18
 ---
 
 ## まず結論
@@ -58,6 +58,8 @@ last_modified_at: 2026-05-06
 
 👉  
 **異なる要素を組み合わせて初めてMFA**
+
+多要素認証の考え方は、NISTの[Digital Identity Guidelines（SP 800-63B）](https://csrc.nist.gov/pubs/sp/800/63/b/upd2/final)でも整理されています。
 
 ---
 

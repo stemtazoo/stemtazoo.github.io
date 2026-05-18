@@ -6,7 +6,7 @@ permalink: /sg/ipsec/
 prev: /sg/vpn/
 next: /sg/ipsec-ah/
 tags: [sg, sg-security-overview, crypto_auth, network, sg-technology]
-last_modified_at: 2026-05-08
+last_modified_at: 2026-05-18
 ---
 
 ## まず結論
@@ -50,6 +50,8 @@ IPsecは、ネットワーク上を流れる通信に対して、安全な通路
 
 IPsecは、IP層で通信を保護するためのプロトコル群です。
 「プロトコル群」というのは、1つの機能だけでなく、複数の仕組みを組み合わせたものという意味です。
+
+IPsecの公式仕様は、IETFの[Security Architecture for the Internet Protocol（RFC 4301）](https://www.rfc-editor.org/rfc/rfc4301)で確認できます。
 
 IPsecで特に重要なのは、次の3つです。
 

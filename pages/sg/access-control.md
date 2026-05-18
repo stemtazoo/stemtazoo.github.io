@@ -6,7 +6,7 @@ permalink: /sg/access-control/
 tags: [sg, sg-security-measures, access_control, it_security_operations]
 prev: /sg/authorization/
 next: /sg/access-control-model/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-18
 ---
 
 ## まず結論
@@ -68,6 +68,8 @@ last_modified_at: 2026-05-06
 - 必要最低限の権限のみを与える
 
 👉 need-to-knowとセットで覚えると理解しやすい
+
+IPAの[情報セキュリティ対策の基本](https://www.ipa.go.jp/security/anshin/measures/)でも、権限管理やアカウント管理を含む基本的な対策が整理されています。
 
 ---
 
