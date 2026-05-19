@@ -6,7 +6,7 @@ permalink: /sg/dnssec-vs-https-tls/
 tags: [sg, sg-security-measures, network_security, dns, tls, cryptography]
 prev: /sg/open-resolver/
 next: /sg/dynamic-dns/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-19
 ---
 
 ## まず結論
@@ -23,6 +23,35 @@ SG試験では、次のように整理すると判断しやすくなります。
 DNSSECは、ドメイン名からIPアドレスを調べる段階で、**そのDNS応答が本物か、改ざんされていないか**を確認する仕組みです。
 
 HTTPS/TLSは、Webサイトに接続した後の通信で、**通信内容を盗み見されにくくし、接続先が正しい相手か**を確認する仕組みです。
+
+---
+
+## このページで切り分けること（先にここだけ）
+
+このページは、**DNSSECとHTTPS/TLSが守る場所の違い**を中心に整理します。
+
+- DNSSEC：DNS応答の正当性・完全性を確認する
+- HTTPS/TLS：Web通信の暗号化と通信相手確認を行う
+- 試験の切り分け：名前解決を守るのか、通信中を守るのか
+
+> 迷ったら、**「名前解決の話か、通信中の話か」**を見ます。
+
+## SG試験で選択肢を切る判断軸（DNSSEC/HTTPS-TLS編）
+
+- 「DNS応答の改ざん検知」「正しいゾーン情報」
+  → DNSSECの話
+
+- 「通信内容の暗号化」「盗聴防止」「サーバ証明書」
+  → HTTPS/TLSの話
+
+- 「DNSSECで通信内容を暗号化する」
+  → 誤り。DNSSECはDNS応答検証であり通信暗号化そのものではない
+
+## 関連記事との役割分担（混同防止）
+
+- DNSSECを単体で確認したい → `/sg/dnssec/`
+- HTTP/HTTPSの基本を確認したい → `/sg/http-https/`
+- TLSの仕組みを確認したい → `/sg/ssl-tls/`
 
 ---
 
