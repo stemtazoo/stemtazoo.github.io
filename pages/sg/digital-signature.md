@@ -6,7 +6,7 @@ permalink: /sg/digital-signature/
 prev: /sg/message-authentication-code/
 next: /sg/xml-signature/
 tags: [sg, sg-security-overview, crypto_auth, it_security_operations]
-last_modified_at: 2026-05-18
+last_modified_at: 2026-05-19
 ---
 
 ## まず結論
@@ -15,6 +15,34 @@ SG試験では「なりすまし防止と改ざん検知の両方」を判断さ
 
 ---
 
+## このページで切り分けること（先にここだけ）
+
+このページは、**電子署名の役割（本人証明・改ざん検知・否認防止）**を中心に整理します。
+
+- 電子署名：署名者確認＋改ざん検知＋否認防止
+- MAC：改ざん検知と送信者確認（否認防止は弱い）
+- 電子証明書：公開鍵が誰のものかを証明
+
+> 迷ったら、
+> **「あとで“自分は関係ない”と言えないようにする話か」**を見ます。  
+> 言い逃れを防ぐ話なら電子署名です。
+
+## SG試験で選択肢を切る判断軸（電子署名編）
+
+- 「秘密鍵で署名し、公開鍵で検証する」  
+  → 電子署名
+- 「公開鍵の持ち主の正当性を示す」  
+  → 電子証明書
+- 「共有鍵で改ざん検知する」  
+  → MAC
+
+## 関連記事との役割分担（混同防止）
+
+- 証明書の役割を確認したい → `/sg/digital-certificate/`
+- MACとの違いを比べたい → `/sg/mac-vs-digital-signature/`
+- MAC単体を確認したい → `/sg/message-authentication-code/`
+
+---
 ## 直感的な説明
 「実印＋改ざん防止の封印」をイメージすると分かりやすいです。
 

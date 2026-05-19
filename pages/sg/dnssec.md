@@ -6,7 +6,7 @@ permalink: /sg/dnssec/
 tags: [sg, sg-security-measures, network_security, dns, cryptography]
 prev: /sg/dns/
 next: /sg/dns-cache-poisoning/
-last_modified_at: 2026-05-18
+last_modified_at: 2026-05-19
 ---
 
 ## まず結論
@@ -28,6 +28,34 @@ DNSSECは、**DNSの信頼性を高めるための拡張機能**です。
 
 ---
 
+## このページで切り分けること（先にここだけ）
+
+このページは、**DNSSECが守る範囲（名前解決の信頼性）**を中心に整理します。
+
+- DNSSEC：DNS応答の正当性・完全性を確認
+- HTTPS/TLS：Web通信の暗号化と相手確認
+- 重要な違い：守る段階（名前解決か、通信中か）
+
+> 迷ったら、
+> **「ドメイン名→IPアドレスの答えが正しいか」**の話かどうかを見ます。  
+> それならDNSSECです。
+
+## SG試験で選択肢を切る判断軸（DNSSEC編）
+
+- 「DNS応答」「リソースレコード」「名前解決」が出る  
+  → DNSSEC
+- 「Web通信の暗号化」「サーバ証明書」が出る  
+  → HTTPS/TLS
+- 「DNSSECで通信内容を暗号化する」と書かれている  
+  → 誤り（DNSSECは主に応答検証）
+
+## 関連記事との役割分担（混同防止）
+
+- DNSSECとHTTPS/TLSを比較したい → `/sg/dnssec-vs-https-tls/`
+- HTTPS/TLSの基本を確認したい → `/sg/ssl-tls/` / `/sg/http-https/`
+- DNS攻撃の背景を確認したい → `/sg/dns-cache-poisoning/`
+
+---
 ## 直感的な説明
 
 DNSは、インターネット上の「住所案内」のような仕組みです。
