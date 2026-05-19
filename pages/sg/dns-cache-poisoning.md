@@ -6,7 +6,7 @@ permalink: /sg/dns-cache-poisoning/
 tags: [sg, security_measures, unauthorized_access, network, sg-security-measures]
 prev: /sg/dns-attack-difference/
 next: /sg/dns-poisoning-vs-pharming/
-last_modified_at: 2026-05-11
+last_modified_at: 2026-05-19
 ---
 
 ## まず結論
@@ -216,10 +216,5 @@ DNSキャッシュポイズニングは、**DNSキャッシュに偽の名前解
 - 書き換えるのは「DNSサーバ名」ではなく「名前解決情報」
 - ワーム感染やメールアドレス改ざんとは別物
 - 「DNS」「キャッシュ」「偽の名前解決」「偽サイト誘導」がそろえば正解候補
-
-## 学習上の注意
-
-本記事はSG試験の学習と防御・検知の理解を目的とした解説です。
-実行手順や攻撃を助長する具体的な方法は扱わず、選択肢を見抜くための判断軸に集中してください。
 
 {% include sg_article_footer.html %}

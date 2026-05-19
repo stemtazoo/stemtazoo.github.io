@@ -6,7 +6,7 @@ permalink: /sg/cryptojacking/
 tags: [sg, security_measures, malware, it_security_operations, sg-security-measures]
 prev: /sg/crl/
 next: /sg/cryptrec/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-19
 ---
 
 ## まず結論
@@ -133,10 +133,5 @@ SG試験では、
 - データ破壊や情報漏えいは目的ではない  
 - 気づきにくく長期間続く  
 - 判断基準は「CPUなど資源を勝手に使うか」
-
-## 学習上の注意
-
-本記事はSG試験の学習と防御・検知の理解を目的とした解説です。
-実行手順や攻撃を助長する具体的な方法は扱わず、選択肢を見抜くための判断軸に集中してください。
 
 {% include sg_article_footer.html %}

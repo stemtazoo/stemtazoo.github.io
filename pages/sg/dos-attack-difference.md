@@ -6,7 +6,7 @@ permalink: /sg/dos-attack-difference/
 tags: [sg, threat_vulnerability, network, unauthorized_access, sg-security-overview]
 prev: /sg/domain-hijacking/
 next: /sg/dos-vs-ddos/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-19
 ---
 
 ## まず結論
@@ -85,10 +85,5 @@ SG試験では「**増幅か／接続枯渇か**」で切り分けます。
 - DNSが出たらリフレクターを疑う
 - SYNが出たら即SYNフラッド
 - 「通信量か接続か」で判断
-
-## 学習上の注意
-
-本記事はSG試験の学習と防御・検知の理解を目的とした解説です。
-実行手順や攻撃を助長する具体的な方法は扱わず、選択肢を見抜くための判断軸に集中してください。
 
 {% include sg_article_footer.html %}
