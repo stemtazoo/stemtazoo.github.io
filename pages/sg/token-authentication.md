@@ -6,7 +6,7 @@ permalink: /sg/token-authentication/
 prev: /sg/auth-access-summary/
 next: /sg/idp/
 tags: [sg, sg-security-measures, crypto_auth, system_architecture]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-19
 ---
 
 ## まず結論
@@ -167,10 +167,10 @@ SSOでは、毎回パスワードを入力する代わりに👇
 </details>
 
 ## まとめ（試験直前用）
-- トークン認証＝認証結果の使い回し
-- SAML＝認証（SSO）
-- OAuth＝認可（権限委譲）
-- OIDC＝認証＋認可
-- SGでは「目的」で見分ける
+- 先に「本人確認の話か」「権限委譲の話か」を判定する。
+- トークン認証は、認証後に発行した証票で再入力を減らす仕組み（漏えい前提で短寿命・失効管理が重要）。
+- **SAML/OIDC**が中心なら認証（SSO）寄り、**OAuth**が中心なら認可（権限委譲）寄り。
+- 「外部アプリに代理アクセスさせる」文脈ならOAuth、「ログイン連携で本人確認」ならSAML/OIDCを優先。
+- 迷ったら「誰を確認するか＝認証」「何を許すか＝認可」で選択肢を切る。
 
 {% include sg_article_footer.html %}
