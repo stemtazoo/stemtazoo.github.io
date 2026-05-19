@@ -6,7 +6,7 @@ permalink: /sg/mtbf/
 tags: [sg, sg-management]
 prev: /sg/man-in-the-middle-attack/
 next: /sg/mttr/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-19
 ---
 
 ## まず結論
@@ -153,11 +153,10 @@ MTBFの説明として、最も適切なものはどれか。
 
 ## まとめ（試験直前用）
 
-- MTBF＝故障と故障の間の時間（稼働時間）
-- 長いほど「壊れにくい」
-- MTTRとセットで覚える
-- 稼働率はMTBFとMTTRで決まる
-- SG試験は  
-  👉 「壊れている時間か？動いている時間か？」で切る
+- 先に「壊れている時間」か「動いている時間」かで判定する。
+- **MTBF**は故障と故障の間の稼働時間（長いほど壊れにくい）。
+- **MTTR**は故障してから復旧するまでの時間（短いほど復旧が早い）。
+- 稼働率は MTBF と MTTR の両方で決まるため、片方だけで判断しない。
+- 迷ったら「壊れにくさ＝MTBF」「直しやすさ＝MTTR」で選択肢を切る。
 
 {% include sg_article_footer.html %}
