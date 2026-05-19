@@ -6,12 +6,44 @@ permalink: /sg/crl/
 tags: [sg, security_general, crypto_auth, risk_assessment, sg-security-overview]
 prev: /sg/cracker/
 next: /sg/cryptojacking/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-19
 ---
 
 ## まず結論
 - CRL（証明書失効リスト）は「有効期限内でも使ってはいけない証明書」を一覧にしたもの
 - SG試験では「有効期限」と「失効」の違いを理解できているかが問われる
+
+---
+
+## このページで切り分けること（先にここだけ）
+
+このページは、**CRLで失効証明書を確認する考え方**を中心に整理します。
+
+- 有効期限：証明書の通常の期限切れ
+- 失効：期限前に証明書を無効化
+- CRL：失効証明書だけをまとめた一覧
+
+> 迷ったら、
+> **「期限切れの話か、途中失効の話か」** を先に見ます。
+
+## SG試験で選択肢を切る判断軸（CRL編）
+
+- 「失効証明書の一覧を参照する」と書かれている
+  → CRL
+
+- 「証明書ごとにオンライン照会する」と書かれている
+  → OCSPの説明
+
+- 「有効期限内なら失効確認は不要」と書かれている
+  → 誤り（失効確認が必要）
+
+## 関連記事との役割分担（混同防止）
+
+- CRLとOCSPの違いをまとめて見たい → `/sg/certificate-revocation-crl-ocsp/`
+- 証明書の基本を確認したい → `/sg/digital-certificate/`
+- 電子署名との関係を確認したい → `/sg/digital-signature/`
+
+---
 
 ## 直感的な説明
 CRLは「ブラックリスト」です。

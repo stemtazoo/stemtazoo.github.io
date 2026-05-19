@@ -6,12 +6,42 @@ permalink: /sg/certificate-revocation-crl-ocsp/
 prev: /sg/self-signed-certificate/
 next: /sg/secure-protocol/
 tags: [sg, crypto_auth, sg-security-overview, network]
-last_modified_at: 2026-05-08
+last_modified_at: 2026-05-19
 ---
 
 ## まず結論
 - 証明書失効は「有効期限内でも使えなくする仕組み」  
 - SG試験では「証明書の状態確認の方法」を判断させる問題が多い
+
+---
+
+## このページで切り分けること（先にここだけ）
+
+このページは、**証明書失効の確認方法（CRLとOCSP）**を中心に整理します。
+
+- 失効：有効期限内でも証明書を無効にする
+- CRL：失効証明書の一覧を定期取得して確認
+- OCSP：証明書ごとにオンラインで状態確認
+
+> 迷ったら、
+> **「一覧で確認するか、都度問い合わせるか」** を見ます。
+
+## SG試験で選択肢を切る判断軸（CRL/OCSP編）
+
+- 「失効証明書のリストを配布して確認する」
+  → CRL
+
+- 「証明書の状態をオンラインで照会する」
+  → OCSP
+
+- 「有効期限内なら必ず有効」と書かれている
+  → 誤り（失効で無効になることがある）
+
+## 関連記事との役割分担（混同防止）
+
+- CRLを単体で確認したい → `/sg/crl/`
+- 証明書の基本を確認したい → `/sg/digital-certificate/`
+- 認証局の役割を確認したい → `/sg/certificate-authority-role/`
 
 ---
 
