@@ -197,9 +197,27 @@ Read the relevant detailed guide before changing each area:
 - SG example-question and confirmation-question rules: `docs/agent/sg-example-question-rules.md`
 - SG series-summary rules: `docs/agent/sg-series-summary-rules.md`
 
+
 ## SG Article Policy
 
 When creating or editing `pages/sg` articles, write them as study articles for the Information Security Management Examination (SG試験).
+
+### SG記事のAI検索・読者理解向け改善
+
+SG記事を新規作成・改善・横展開する場合は、必要に応じて次のルールを参照すること。
+
+- `project_rules/sg_article_ai_search_improvement.md`
+
+このルールは、AI検索専用の小手先対策ではなく、読者がSG試験で選択肢を切れるようにするための改善ルールである。
+
+特に、通常記事に以下のブロックを追加・調整する場合は、このルールに従うこと。
+
+- このページで切り分けること（先にここだけ）
+- SG試験で選択肢を切る判断軸（〇〇編）
+- 関連記事との役割分担（混同防止）
+
+ただし、全記事に機械的に追加してはいけない。
+対象記事の選定、追加位置、文章量、関連記事リンク、対象外ページの扱いは、上記ルールファイルに従うこと。
 
 - Prioritize the judgment criteria used to eliminate answer choices over deep technical or legal detail.
 - Explain concepts in the context of workplace decisions, operations, risk response, education, vendor management, and practical security management.
