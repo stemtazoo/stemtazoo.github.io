@@ -6,7 +6,7 @@ permalink: /sg/targeted-attack/
 tags: [sg, security_measures, unauthorized_access, risk_assessment, security_training, sg-security-measures]
 prev: /sg/stepping-stone-attack/
 next: /sg/telnet/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-19
 ---
 
 ## まず結論
@@ -157,10 +157,5 @@ last_modified_at: 2026-05-06
   👉 防止＋検知＋被害抑止の組み合わせ
 - 選択肢では  
   👉 「人・運用・技術のどれが不足しているか」で判断する
-
-## 学習上の注意
-
-本記事はSG試験の学習と防御・検知の理解を目的とした解説です。
-実行手順や攻撃を助長する具体的な方法は扱わず、選択肢を見抜くための判断軸に集中してください。
 
 {% include sg_article_footer.html %}

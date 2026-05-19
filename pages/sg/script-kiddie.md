@@ -6,7 +6,7 @@ permalink: /sg/script-kiddie/
 tags: [sg, threat_vulnerability, security_awareness, security_measures, sg-security-measures]
 prev: /sg/sandbox/
 next: /sg/security-measures-cia/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-19
 ---
 
 ## まず結論
@@ -107,10 +107,5 @@ last_modified_at: 2026-05-06
 - 既知の脆弱性を狙うのが特徴
 - 基本的なセキュリティ対策で防げる
 - SG試験では「高度攻撃との違い」で判断する
-
-## 学習上の注意
-
-本記事はSG試験の学習と防御・検知の理解を目的とした解説です。
-実行手順や攻撃を助長する具体的な方法は扱わず、選択肢を見抜くための判断軸に集中してください。
 
 {% include sg_article_footer.html %}

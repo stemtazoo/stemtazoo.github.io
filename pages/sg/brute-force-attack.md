@@ -6,7 +6,7 @@ permalink: /sg/brute-force-attack/
 tags: [sg, security_measures, unauthorized_access, threat_vulnerability, access_control, sg-security-measures]
 prev: /sg/botnet/
 next: /sg/case-solving-template/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-19
 ---
 
 ## まず結論
@@ -144,10 +144,5 @@ last_modified_at: 2026-05-06
   👉 試行回数制限＋多要素認証
 - 試験では  
   👉 「推測型か漏えい型か」で切り分ける
-
-## 学習上の注意
-
-本記事はSG試験の学習と防御・検知の理解を目的とした解説です。
-実行手順や攻撃を助長する具体的な方法は扱わず、選択肢を見抜くための判断軸に集中してください。
 
 {% include sg_article_footer.html %}

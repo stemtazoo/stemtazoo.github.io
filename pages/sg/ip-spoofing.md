@@ -6,7 +6,7 @@ permalink: /sg/ip-spoofing/
 tags: [sg, security_measures, unauthorized_access, network, threat_vulnerability, firewall, sg-security-measures]
 prev: /sg/information-security-management-exam/
 next: /sg/jpcert-cc/
-last_modified_at: 2026-05-10
+last_modified_at: 2026-05-19
 ---
 
 ## まず結論
@@ -225,10 +225,5 @@ IPスプーフィング対策は、
 - 外部から来たのに送信元が内部IPなら不自然
 - あて先IPではなく、**送信元IP**が判断ポイント
 - IPアドレスだけを認証に使うのは危険
-
-## 学習上の注意
-
-本記事はSG試験の学習と防御・検知の理解を目的とした解説です。
-実行手順や攻撃を助長する具体的な方法は扱わず、選択肢を見抜くための判断軸に集中してください。
 
 {% include sg_article_footer.html %}

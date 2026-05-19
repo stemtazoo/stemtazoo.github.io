@@ -6,7 +6,7 @@ permalink: /sg/attacker-types/
 tags: [sg, security_general, threat_vulnerability, security_awareness, sg-security-overview]
 prev: /sg/
 next: /sg/availability/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-19
 ---
 
 ## まず結論
@@ -146,10 +146,5 @@ SG試験では、次のように問われます。
 - クラッカー＝悪意ある攻撃者（試験で重要）
 - ハッカーは中立なので混同注意
 - SG試験では「誰が・何の目的で」を見て対策を判断する
-
-## 学習上の注意
-
-本記事はSG試験の学習と防御・検知の理解を目的とした解説です。
-実行手順や攻撃を助長する具体的な方法は扱わず、選択肢を見抜くための判断軸に集中してください。
 
 {% include sg_article_footer.html %}

@@ -6,7 +6,7 @@ permalink: /sg/unauthorized-access-techniques/
 tags: [sg, security_measures, unauthorized_access, threat_vulnerability, risk_assessment, sg-security-measures]
 prev: /sg/timestamp/
 next: /sg/unauthorized-access/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-19
 ---
 
 ## まず結論
@@ -177,10 +177,5 @@ SG試験では、この中の**名前を覚えることよりも**
   👉 スキャン系／盗聴系／認証突破系／脆弱性攻撃 に分類できる
 - 試験では  
   👉 「この攻撃に効く対策は何か」で切り分ける
-
-## 学習上の注意
-
-本記事はSG試験の学習と防御・検知の理解を目的とした解説です。
-実行手順や攻撃を助長する具体的な方法は扱わず、選択肢を見抜くための判断軸に集中してください。
 
 {% include sg_article_footer.html %}
