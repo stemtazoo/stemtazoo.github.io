@@ -6,7 +6,7 @@ permalink: /sg/ssl-tls/
 tags: [sg, security_general, crypto_auth, network, sg-security-overview]
 prev: /sg/ssh/
 next: /sg/stepping-stone-attack/
-last_modified_at: 2026-05-11
+last_modified_at: 2026-05-19
 ---
 
 ## まず結論
@@ -16,6 +16,37 @@ SG試験では「なぜ安全なのか（暗号化＋認証）」を判断させ
 
 ---
 
+## このページで切り分けること（先にここだけ）
+
+このページは、**TLSが通信を守る仕組み（機密性・完全性・相手確認）**を中心に整理します。
+
+- 機密性：通信内容を暗号化して盗み見を防ぐ
+- 完全性：通信途中の改ざんを検知する
+- 相手確認：証明書で接続先の正当性を確認する
+
+> 迷ったら、
+> **「通信中のデータを守る話か」**を見ます。  
+> それならTLSの論点です。
+
+> 補足：現在は主に**TLS**が使われ、**SSL**は古い呼び方として出てくることが多いです。
+> HTTPSは、HTTPの内側でTLSを使って通信を保護しています。
+
+## SG試験で選択肢を切る判断軸（TLS編）
+
+- 「HTTPをTLSで保護する」  
+  → HTTPS
+- 「名前解決結果の正当性を確認する」  
+  → DNSSEC
+- 「公開鍵の持ち主を証明する」  
+  → 電子証明書
+
+## 関連記事との役割分担（混同防止）
+
+- HTTP/HTTPSの基本差分を確認したい → `/sg/http-https/`
+- DNS段階との違いを確認したい → `/sg/dnssec-vs-https-tls/`
+- 証明書を先に整理したい → `/sg/digital-certificate/`
+
+---
 ## 直感的な説明
 SSL/TLSは「通信に鍵をかける仕組み」です。
 

@@ -6,7 +6,7 @@ permalink: /sg/access-control/
 tags: [sg, sg-security-measures, access_control, it_security_operations]
 prev: /sg/authorization/
 next: /sg/access-control-model/
-last_modified_at: 2026-05-18
+last_modified_at: 2026-05-19
 ---
 
 ## まず結論
@@ -14,6 +14,34 @@ last_modified_at: 2026-05-18
 
 ---
 
+## このページで切り分けること（先にここだけ）
+
+このページは、**アクセス制御をどう設計し、運用で効かせるか**を中心に整理します。
+
+- 認可：何を許可するか決める（ルール設計）
+- アクセス制御：決めたルールを通す／拒否する（実施）
+- 監査・棚卸：運用で崩れていないか確認する（維持）
+
+> 迷ったら、
+> 「権限を決める話」か「実際に止める話」かで見分けます。  
+> **実際に通す・拒否する話ならアクセス制御です。**
+
+## SG試験で選択肢を切る判断軸（アクセス制御編）
+
+- 「誰に何を許可するか」の方針を決める説明  
+  → 認可の話
+- 「権限がない操作を拒否する」仕組みの説明  
+  → アクセス制御の話
+- 「最小権限・特権ID・権限棚卸」の説明  
+  → アクセス制御運用の話
+
+## 関連記事との役割分担（混同防止）
+
+- 認可そのものを整理したい → `/sg/authorization/`
+- 3用語をまとめて比較したい → `/sg/authentication-authorization-access-control/`
+- モデル（RBAC/ABAC/DAC/MAC）を整理したい → `/sg/access-control-model/`
+
+---
 ## 直感的な説明
 社内のシステムは、誰でも何でもできる状態だと危険です。
 
