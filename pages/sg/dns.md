@@ -6,11 +6,40 @@ permalink: /sg/dns/
 tags: [sg, technology, network, security_measures, unauthorized_access, sg-technology]
 prev: /sg/dns-reflector-attack/
 next: /sg/domain-hijacking/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
 - DNSとは、**ドメイン名（例：google.com）をIPアドレスに変換する仕組み**であり、SG試験では「通信の流れ」と「なりすまし攻撃との関係」を判断させる問題として出題される。
+
+---
+
+## このページで切り分けること（先にここだけ）
+
+このページは、**DNSの基本役割（名前解決）**を中心に整理します。
+
+- DNS：接続先IPアドレスを調べる
+- HTTPS/TLS：通信内容を暗号化して保護する
+- DNSSEC：DNS応答が改ざんされていないかを検証する
+
+> 迷ったら、**「接続先を決める話か、通信内容を守る話か」**を見ます。
+
+## SG試験で選択肢を切る判断軸（DNS編）
+
+- 「ドメイン名をIPアドレスへ変換する」が出る  
+  → DNSの話
+
+- 「通信本文を暗号化する」と書かれている  
+  → 誤り。これはHTTPS/TLSの役割
+
+- 「偽の接続先に誘導される」が出る  
+  → DNS周辺（キャッシュポイズニング等）を疑う
+
+## 関連記事との役割分担（混同防止）
+
+- DNSSECとの違いを確認したい → `/sg/dnssec/`
+- DNSキャッシュポイズニングの攻撃像を確認したい → `/sg/dns-cache-poisoning/`
+- 権威DNSとキャッシュDNSの役割差を確認したい → `/sg/authoritative-dns-vs-cache-dns/`
 
 ---
 

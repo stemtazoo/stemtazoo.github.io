@@ -6,7 +6,7 @@ permalink: /sg/ipsec/
 prev: /sg/vpn/
 next: /sg/ipsec-ah/
 tags: [sg, sg-security-overview, crypto_auth, network, sg-technology]
-last_modified_at: 2026-05-18
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -24,6 +24,33 @@ AH：認証・改ざん検知を行うが、暗号化はしない
 ESP：暗号化を行える
 
 IKE：暗号化方式や鍵を決めるための仕組み
+
+## このページで切り分けること（先にここだけ）
+
+このページは、**IPsec全体とAH/ESP/IKEの役割差**を中心に整理します。
+
+- AH：認証・改ざん検知（暗号化はしない）
+- ESP：通信データの暗号化を担当
+- IKE：鍵交換や暗号方式の合意を担当
+
+> 迷ったら、**「暗号化の話か、認証・鍵交換の話か」**を見ます。
+
+## SG試験で選択肢を切る判断軸（IPsec編）
+
+- 「暗号化しないが完全性確認を行う」と出る  
+  → AH
+
+- 「通信内容を暗号化する」と出る  
+  → ESP
+
+- 「鍵交換・アルゴリズム合意」と書かれている  
+  → IKE
+
+## 関連記事との役割分担（混同防止）
+
+- AHを単体で確認したい → `/sg/ipsec-ah/`
+- ESPを単体で確認したい → `/sg/ipsec-esp/`
+- IKEを単体で確認したい → `/sg/ipsec-ike/`
 
 ## 直感的な説明
 
