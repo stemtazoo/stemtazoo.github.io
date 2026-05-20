@@ -6,7 +6,7 @@ permalink: /sg/message-authentication-code/
 prev: /sg/message-authentication/
 next: /sg/digital-signature/
 tags: [sg, sg-security-overview, crypto_auth, it_security_operations]
-last_modified_at: 2026-05-19
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -40,9 +40,9 @@ SG試験では「改ざん検知の仕組みを選ばせる問題」で問われ
 
 ## 関連記事との役割分担（混同防止）
 
-- MACと電子署名の違いを先に見たい → `/sg/mac-vs-digital-signature/`
-- 電子署名の仕組みを確認したい → `/sg/digital-signature/`
-- HMACを確認したい → `/sg/hmac/`
+- MACと電子署名の違いを先に見たい → [MACとデジタル署名の違いとは？改ざん検知と否認防止で整理【SG試験】](/sg/mac-vs-digital-signature/)
+- 電子署名の仕組みを確認したい → [電子署名とは？本人証明と改ざん検知を整理【SG試験】](/sg/digital-signature/)
+- HMACを確認したい → [HMACとは？ハッシュと共通鍵でメッセージを認証する仕組み【SG試験】](/sg/hmac/)
 
 ---
 

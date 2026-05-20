@@ -6,7 +6,7 @@ permalink: /sg/mtbf/
 tags: [sg, sg-management]
 prev: /sg/man-in-the-middle-attack/
 next: /sg/mttr/
-last_modified_at: 2026-05-19
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -39,9 +39,9 @@ last_modified_at: 2026-05-19
 
 ## 関連記事との役割分担（混同防止）
 
-- MTTRを中心に確認したい → `/sg/mttr/`
-- 可用性の概念から確認したい → `/sg/availability/`
-- 稼働率計算の注意点を見たい → `/sg/frr-far/`
+- MTTRを中心に確認したい → [MTTRとは？平均復旧時間の意味と短縮の考え方【SG試験】](/sg/mttr/)
+- 可用性の概念から確認したい → [稼働率とは？可用性の考え方とSLAでの判断基準【SG試験】](/sg/availability/)
+- 稼働率計算の注意点を見たい → [本人拒否率と他人受入率とは？生体認証の重要指標を整理【SG試験】](/sg/frr-far/)
 
 ---
 

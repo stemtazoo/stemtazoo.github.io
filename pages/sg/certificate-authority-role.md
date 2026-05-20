@@ -38,9 +38,9 @@ last_modified_at: 2026-05-20
 
 ## 関連記事との役割分担（混同防止）
 
-- 電子証明書そのものを確認したい → `/sg/digital-certificate/`
-- 電子署名の目的（否認防止）を確認したい → `/sg/digital-signature/`
-- 失効確認（CRL/OCSP）を確認したい → `/sg/certificate-revocation-crl-ocsp/`
+- 電子証明書そのものを確認したい → [電子証明書とは？公開鍵の正当性を証明する仕組み【SG試験】](/sg/digital-certificate/)
+- 電子署名の目的（否認防止）を確認したい → [電子署名とは？本人証明と改ざん検知を整理【SG試験】](/sg/digital-signature/)
+- 失効確認（CRL/OCSP）を確認したい → [証明書失効（CRL / OCSP）とは？無効な証明書の見分け方【SG試験】](/sg/certificate-revocation-crl-ocsp/)
 
 ---
 

@@ -6,7 +6,7 @@ permalink: /sg/authorization/
 prev: /sg/id-management/
 next: /sg/access-control/
 tags: [sg, sg-security-measures, access_control, it_security_operations]
-last_modified_at: 2026-05-19
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -47,8 +47,8 @@ SG試験では「認証との違い」を判断させる問題で頻出です。
 ## 関連記事との役割分担（混同防止）
 
 - 認可を中心に確認したい → 本ページ
-- 3用語をまとめて比較したい → `/sg/authentication-authorization-access-control/`
-- 運用面（最小権限、特権ID管理）まで見たい → `/sg/access-control/`
+- 3用語をまとめて比較したい → [認証・認可・アクセス制御の違いとは？役割の切り分けを整理【SG試験】](/sg/authentication-authorization-access-control/)
+- 運用面（最小権限、特権ID管理）まで見たい → [アクセス管理とは？特権IDとneed-to-knowで権限を適切に制御【SG試験】](/sg/access-control/)
 
 ---
 ## 直感的な説明

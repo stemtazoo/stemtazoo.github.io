@@ -48,9 +48,9 @@ IKE：暗号化方式や鍵を決めるための仕組み
 
 ## 関連記事との役割分担（混同防止）
 
-- AHを単体で確認したい → `/sg/ipsec-ah/`
-- ESPを単体で確認したい → `/sg/ipsec-esp/`
-- IKEを単体で確認したい → `/sg/ipsec-ike/`
+- AHを単体で確認したい → [IPsecのAHとは？暗号化しない認証ヘッダー【SG試験】](/sg/ipsec-ah/)
+- ESPを単体で確認したい → [IPsecのESPとは？暗号化できるセキュリティ機能【SG試験】](/sg/ipsec-esp/)
+- IKEを単体で確認したい → [IKEとは？IPsecで鍵を交換する仕組み【SG試験】](/sg/ipsec-ike/)
 
 ## 直感的な説明
 

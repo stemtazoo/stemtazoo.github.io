@@ -11,6 +11,7 @@ title: （日本語タイトル）
 description: （そのページ固有のmeta description）
 permalink: /sg/（英語スラッグ）/
 tags: [sg, 分類タグ1, 分類タグ2]
+date: YYYY-MM-DD
 last_modified_at: YYYY-MM-DD
 ---
 ```
@@ -18,6 +19,12 @@ last_modified_at: YYYY-MM-DD
 ## Required Rules
 
 - The first line of the file must be `---`.
+
+- Front matter must end with `---` on its own line.
+- Do not compress front matter into a single line.
+- Do not allow `layout`, `title`, `description`, `permalink`, `tags`, `date`, or `last_modified_at` to appear as accidental plain text in the article body.
+- `description` is metadata. Do not duplicate the same sentence in visible body text unless intentionally rewritten for the introduction.
+- `tags` is metadata. Do not print tags as a plain-text line in the article body.
 - Do not put blank lines, characters, or invisible characters before front matter.
 - Use `layout: page`.
 - Always include `description`.

@@ -4,7 +4,7 @@ title: IDSとIPSの違い【SG試験】
 description: "IDSは不正な通信や攻撃の兆候を検知する仕組みであり、IPSは検知した不正通信を遮断する仕組みです。SG試験・情報セキュリティマネジメント試験で混同しやすいIDS、IPS、ファイアウォール、SIEMの違いを判断基準で整理します。"
 permalink: /sg/ids-vs-ips/
 tags: [sg, sg-security-measures, network_security, monitoring, incident_response]
-last_modified_at: 2026-05-19
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -48,9 +48,9 @@ SG試験では、次のように切り分けると判断しやすいです。
 
 ## 関連記事との役割分担（混同防止）
 
-- IDSの基本を確認したい → `/sg/ids/`
-- IPSの基本を確認したい → `/sg/ips/`
-- IDS/IPSとFWの違いを確認したい → `/sg/firewall/`
+- IDSの基本を確認したい → [IDSとは？侵入を検知して通知する仕組み【SG試験】](/sg/ids/)
+- IPSの基本を確認したい → [IPSとは？不正侵入を検知して遮断する仕組み【SG試験】](/sg/ips/)
+- IDS/IPSとFWの違いを確認したい → [ファイアーウォールとは？通信を制御する基本対策【SG試験】](/sg/firewall/)
 
 ---
 

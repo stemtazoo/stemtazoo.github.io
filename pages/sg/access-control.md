@@ -6,7 +6,7 @@ permalink: /sg/access-control/
 tags: [sg, sg-security-measures, access_control, it_security_operations]
 prev: /sg/authorization/
 next: /sg/access-control-model/
-last_modified_at: 2026-05-19
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -41,9 +41,9 @@ last_modified_at: 2026-05-19
 
 ## 関連記事との役割分担（混同防止）
 
-- 認可そのものを整理したい → `/sg/authorization/`
-- 3用語をまとめて比較したい → `/sg/authentication-authorization-access-control/`
-- モデル（RBAC/ABAC/DAC/MAC）を整理したい → `/sg/access-control-model/`
+- 認可そのものを整理したい → [アクセス制御（認可）とは？認証との違いを整理【SG試験】](/sg/authorization/)
+- 3用語をまとめて比較したい → [認証・認可・アクセス制御の違いとは？役割の切り分けを整理【SG試験】](/sg/authentication-authorization-access-control/)
+- モデル（RBAC/ABAC/DAC/MAC）を整理したい → [アクセス制御モデルとは？RBAC・ABAC・DAC・MACの違いを整理【SG試験】](/sg/access-control-model/)
 
 ---
 ## 直感的な説明

@@ -38,9 +38,9 @@ last_modified_at: 2026-05-20
 
 ## 関連記事との役割分担（混同防止）
 
-- インシデント管理全体の流れを確認したい → `/sg/incident-management/`
-- CSIRTの役割を確認したい → `/sg/csirt/`
-- SOC・CSIRT・JPCERT/CCの関係を整理したい → `/sg/soc-csirt-jpcert/`
+- インシデント管理全体の流れを確認したい → [インシデント管理とは？対応プロセスを流れで理解【SG試験】](/sg/incident-management/)
+- CSIRTの役割を確認したい → [CSIRTとは？組織内インシデント対応の基本【SG試験】](/sg/csirt/)
+- SOC・CSIRT・JPCERT/CCの関係を整理したい → [SOC・CSIRT・JPCERT/CCの違いとは？役割と関係を図で整理【SG試験】](/sg/soc-csirt-jpcert/)
 
 ---
 

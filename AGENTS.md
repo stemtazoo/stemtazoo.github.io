@@ -197,6 +197,12 @@ Read the relevant detailed guide before changing each area:
 - SG example-question and confirmation-question rules: `docs/agent/sg-example-question-rules.md`
 - SG series-summary rules: `docs/agent/sg-series-summary-rules.md`
 
+- SG Markdown rendering safety (must-read before creating or editing SG articles):
+  - `docs/agent/sg-article-template.md` (standard article structure and Markdown layout)
+  - `docs/agent/sg-content-rules.md` (Markdown spacing, links, tables, rendering checks)
+  - `docs/agent/sg-frontmatter-rules.md` (multi-line YAML front matter and metadata leakage prevention)
+  - `docs/agent/sg-example-question-rules.md` (choice formatting and explanation quality in confirmation questions)
+
 
 ## SG Article Policy
 

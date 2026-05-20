@@ -6,7 +6,7 @@ permalink: /sg/dnssec-vs-https-tls/
 tags: [sg, sg-security-measures, network_security, dns, tls, cryptography]
 prev: /sg/open-resolver/
 next: /sg/dynamic-dns/
-last_modified_at: 2026-05-19
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -49,9 +49,9 @@ HTTPS/TLSは、Webサイトに接続した後の通信で、**通信内容を盗
 
 ## 関連記事との役割分担（混同防止）
 
-- DNSSECを単体で確認したい → `/sg/dnssec/`
-- HTTP/HTTPSの基本を確認したい → `/sg/http-https/`
-- TLSの仕組みを確認したい → `/sg/ssl-tls/`
+- DNSSECを単体で確認したい → [DNSSECとは？DNS応答の正当性と完全性を確認する仕組み【SG試験】](/sg/dnssec/)
+- HTTP/HTTPSの基本を確認したい → [HTTPとHTTPSの違いとは？安全な通信の判断ポイント【SG試験】](/sg/http-https/)
+- TLSの仕組みを確認したい → [SSL/TLSとは？通信を守る暗号化の仕組み【SG試験】](/sg/ssl-tls/)
 
 ---
 

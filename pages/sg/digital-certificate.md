@@ -6,7 +6,7 @@ permalink: /sg/digital-certificate/
 prev: /sg/pki/
 next: /sg/certificate-authority-role/
 tags: [sg, sg-security-overview, crypto_auth, it_security_operations]
-last_modified_at: 2026-05-19
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -38,9 +38,9 @@ SG試験では「公開鍵をどう信頼するか」を判断させる問題で
 
 ## 関連記事との役割分担（混同防止）
 
-- TLS/HTTPSとの関係を押さえたい → `/sg/http-https/` / `/sg/ssl-tls/`
-- 認証局の役割を確認したい → `/sg/certificate-authority-role/`
-- 署名との違いを確認したい → `/sg/digital-signature/`
+- TLS/HTTPSとの関係を押さえたい → [HTTPとHTTPSの違いとは？安全な通信の判断ポイント【SG試験】](/sg/http-https/) / [SSL/TLSとは？通信を守る暗号化の仕組み【SG試験】](/sg/ssl-tls/)
+- 認証局の役割を確認したい → [認証局（CA）の役割とは？デジタル証明書の信頼の仕組み【SG試験】](/sg/certificate-authority-role/)
+- 署名との違いを確認したい → [電子署名とは？本人証明と改ざん検知を整理【SG試験】](/sg/digital-signature/)
 
 ---
 ## 直感的な説明

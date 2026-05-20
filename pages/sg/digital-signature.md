@@ -6,7 +6,7 @@ permalink: /sg/digital-signature/
 prev: /sg/message-authentication-code/
 next: /sg/xml-signature/
 tags: [sg, sg-security-overview, crypto_auth, it_security_operations]
-last_modified_at: 2026-05-19
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -42,9 +42,9 @@ SG試験では「なりすまし防止と改ざん検知の両方」を判断さ
 
 ## 関連記事との役割分担（混同防止）
 
-- 証明書の役割を確認したい → `/sg/digital-certificate/`
-- MACとの違いを比べたい → `/sg/mac-vs-digital-signature/`
-- MAC単体を確認したい → `/sg/message-authentication-code/`
+- 証明書の役割を確認したい → [電子証明書とは？公開鍵の正当性を証明する仕組み【SG試験】](/sg/digital-certificate/)
+- MACとの違いを比べたい → [MACとデジタル署名の違いとは？改ざん検知と否認防止で整理【SG試験】](/sg/mac-vs-digital-signature/)
+- MAC単体を確認したい → [メッセージ認証符号とは？改ざん検知の仕組みを整理【SG試験】](/sg/message-authentication-code/)
 
 ---
 ## 直感的な説明

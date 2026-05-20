@@ -6,7 +6,7 @@ permalink: /sg/certificate-revocation-crl-ocsp/
 prev: /sg/self-signed-certificate/
 next: /sg/secure-protocol/
 tags: [sg, crypto_auth, sg-security-overview, network]
-last_modified_at: 2026-05-19
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -39,9 +39,9 @@ last_modified_at: 2026-05-19
 
 ## 関連記事との役割分担（混同防止）
 
-- CRLを単体で確認したい → `/sg/crl/`
-- 証明書の基本を確認したい → `/sg/digital-certificate/`
-- 認証局の役割を確認したい → `/sg/certificate-authority-role/`
+- CRLを単体で確認したい → [CRLとは？失効証明書リストの役割【SG試験】](/sg/crl/)
+- 証明書の基本を確認したい → [電子証明書とは？公開鍵の正当性を証明する仕組み【SG試験】](/sg/digital-certificate/)
+- 認証局の役割を確認したい → [認証局（CA）の役割とは？デジタル証明書の信頼の仕組み【SG試験】](/sg/certificate-authority-role/)
 
 ---
 

@@ -6,7 +6,7 @@ permalink: /sg/soc-csirt-jpcert/
 tags: [sg, sg-security-management]  
 prev: /sg/security-org-practice/  
 next: /sg/csrf/  
-last_modified_at: 2026-05-19
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論  
@@ -42,9 +42,9 @@ last_modified_at: 2026-05-19
 
 ## 関連記事との役割分担（混同防止）
 
-- SOCを単体で確認したい → `/sg/soc/`
-- CSIRTを単体で確認したい → `/sg/csirt/`
-- JPCERT/CCを単体で確認したい → `/sg/jpcert-cc/`
+- SOCを単体で確認したい → [SOCとは？SIEMを使って監視する組織【SG試験】](/sg/soc/)
+- CSIRTを単体で確認したい → [CSIRTとは？組織内インシデント対応の基本【SG試験】](/sg/csirt/)
+- JPCERT/CCを単体で確認したい → [JPCERT/CCとは？国内外のインシデント対応を調整する組織【SG試験】](/sg/jpcert-cc/)
 
 ---
 
