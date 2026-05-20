@@ -6,7 +6,7 @@ permalink: /sg/arp/
 tags: [sg, sg-security-measures, network_security, access_control, threat_vulnerability]
 prev: /sg/mac-address/
 next: /sg/ip-spoofing/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -80,7 +80,7 @@ ARPは、LAN内で通信するときに自動的に使われます。
 | 無線LANルータで接続制御する | IPアドレスから取得したMACアドレスを確認する |
 | 通信トラブルを調べる | ARPテーブルを確認する |
 
-添付の問題解説にもあるように、無線LANルータでは、あらかじめ登録したMACアドレスの機器だけを接続許可する**MACアドレスフィルタリング**が使われることがあります。  
+無線LANルータでは、あらかじめ登録したMACアドレスの機器だけを接続許可する**MACアドレスフィルタリング**が使われることがあります。  
 このとき、ルータ側は接続を要求するPCのIPアドレスからARPを使ってMACアドレスを取得し、登録済みのMACアドレスと照合します。
 
 ---
