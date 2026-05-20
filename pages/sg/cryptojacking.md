@@ -6,7 +6,7 @@ permalink: /sg/cryptojacking/
 tags: [sg, security_measures, malware, it_security_operations, sg-security-measures]
 prev: /sg/crl/
 next: /sg/cryptrec/
-last_modified_at: 2026-05-19
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -103,10 +103,10 @@ SG試験では、
 
 次のうち、クリプトジャッキングの説明として最も適切なものはどれか。
 
-ア. 他人のPCやサーバの計算資源を無断で使い、暗号資産を採掘する行為である。  
-イ. 電子メールに電子署名を付けて送信者を確認する仕組みである。  
-ウ. 証明書の失効状態をオンラインで確認する方式である。  
-エ. ネットワーク機器に固定IPを割り当てる管理手順である。  
+- ア. 他人のPCやサーバの計算資源を無断で使い、暗号資産を採掘する行為である。
+- イ. 電子メールに電子署名を付けて送信者を確認する仕組みである。
+- ウ. 証明書の失効状態をオンラインで確認する方式である。
+- エ. ネットワーク機器に固定IPを割り当てる管理手順である。
 
 <details markdown="1">
 <summary>▶ クリックして答えと解説を見る（ここを開く）</summary>

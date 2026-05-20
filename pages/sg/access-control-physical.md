@@ -6,7 +6,7 @@ permalink: /sg/access-control-physical/
 prev: /sg/physical-security/
 next: /sg/anti-passback/
 tags: [sg, sg-security-measures, access_control, it_security_operations]
-last_modified_at: 2026-05-18
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -118,10 +118,10 @@ SG試験では
 
 次のうち、最も適切なものはどれか。
 
-ア. 共連れや貸与カードの使い回しによる不正入退室を抑止する。
-イ. 入室ログを暗号化して改ざん不能にする。
-ウ. 生体認証の誤受入率(FAR)をゼロにする。
-エ. 退室時の避難経路を自動最適化する。
+- ア. 共連れや貸与カードの使い回しによる不正入退室を抑止する。
+- イ. 入室ログを暗号化して改ざん不能にする。
+- ウ. 生体認証の誤受入率(FAR)をゼロにする。
+- エ. 退室時の避難経路を自動最適化する。
 
 <details markdown="1">
 <summary>▶ クリックして答えと解説を見る（ここを開く）</summary>

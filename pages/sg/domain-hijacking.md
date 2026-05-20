@@ -6,7 +6,7 @@ permalink: /sg/domain-hijacking/
 tags: [sg, security_measures, unauthorized_access, network, threat_vulnerability, sg-security-measures]
 prev: /sg/dns/
 next: /sg/dos-attack-difference/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -115,10 +115,10 @@ last_modified_at: 2026-05-06
 
 次のうち、ドメインハイジャックの説明として最も適切なものはどれか。
 
-ア. ドメインの登録情報や管理権限を不正に奪い、別サイトへ誘導するなどの攻撃である。  
-イ. 通信量を大量に発生させ、サービスを停止させる攻撃である。  
-ウ. パスワード候補をすべての組合せで試す攻撃である。  
-エ. Webページに不正なスクリプトを埋め込んで利用者側で実行させる攻撃である。  
+- ア. ドメインの登録情報や管理権限を不正に奪い、別サイトへ誘導するなどの攻撃である。
+- イ. 通信量を大量に発生させ、サービスを停止させる攻撃である。
+- ウ. パスワード候補をすべての組合せで試す攻撃である。
+- エ. Webページに不正なスクリプトを埋め込んで利用者側で実行させる攻撃である。
 
 <details markdown="1">
 <summary>▶ クリックして答えと解説を見る（ここを開く）</summary>

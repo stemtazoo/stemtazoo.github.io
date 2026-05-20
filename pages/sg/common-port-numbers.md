@@ -6,7 +6,7 @@ permalink: /sg/common-port-numbers/
 tags: [sg, technology, network, security_measures, unauthorized_access, sg-security-measures]
 prev: /sg/common-mistakes/
 next: /sg/contract-nonconformity/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -134,10 +134,10 @@ SG試験では細かいプロトコルよりも、
 
 次のうち、ポート番号の組合せとして最も適切なものはどれか。
 
-ア. Webページを暗号化して閲覧する通信には、HTTPSの443番を使う  
-イ. メールを受信するPOP3には、SMTPの25番を使う  
-ウ. Webページを通常のHTTPで閲覧する通信には、DNSの53番を使う  
-エ. クライアントからWebサーバへ接続するとき、クライアント側も必ず80番を使う  
+- ア. Webページを暗号化して閲覧する通信には、HTTPSの443番を使う
+- イ. メールを受信するPOP3には、SMTPの25番を使う
+- ウ. Webページを通常のHTTPで閲覧する通信には、DNSの53番を使う
+- エ. クライアントからWebサーバへ接続するとき、クライアント側も必ず80番を使う
 
 <details markdown="1">
 <summary>▶ クリックして答えと解説を見る（ここを開く）</summary>

@@ -7,7 +7,7 @@ tags: [sg, security_measures, unauthorized_access, network, crypto_auth, sg-secu
 prev: /sg/man-in-the-browser/
 next: /sg/mtbf/
 date: 2026-05-06
-last_modified_at: 2026-05-19
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -172,10 +172,10 @@ last_modified_at: 2026-05-19
 
 次のうち、中間者攻撃への対策として最も適切なものはどれか。
 
-ア. 公開鍵の正当性を確認できるデジタル証明書を利用する。  
-イ. 利用者のブラウザに保存されたCookieを削除する。  
-ウ. 大量の通信を送ってサーバの負荷を確認する。  
-エ. パスワード候補を順番に試して強度を確認する。  
+- ア. 公開鍵の正当性を確認できるデジタル証明書を利用する。
+- イ. 利用者のブラウザに保存されたCookieを削除する。
+- ウ. 大量の通信を送ってサーバの負荷を確認する。
+- エ. パスワード候補を順番に試して強度を確認する。
 
 <details markdown="1">
 <summary>▶ クリックして答えと解説を見る（ここを開く）</summary>

@@ -6,7 +6,7 @@ permalink: /sg/password-list-attack/
 tags: [sg, security_measures, unauthorized_access, threat_vulnerability, access_control, sg-security-measures]
 prev: /sg/outsourcing-contract-difference/
 next: /sg/phishing/
-last_modified_at: 2026-05-19
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -110,10 +110,10 @@ last_modified_at: 2026-05-19
 
 次のうち、パスワードリスト攻撃の説明として最も適切なものはどれか。
 
-ア. 他サービスから漏えいしたID・パスワードの組合せを使い、不正ログインを試みる攻撃である。  
-イ. すべての文字列を順番に生成してパスワードを試す攻撃である。  
-ウ. 利用者のブラウザに不正なスクリプトを実行させる攻撃である。  
-エ. DNSサーバのキャッシュに偽情報を入れる攻撃である。  
+- ア. 他サービスから漏えいしたID・パスワードの組合せを使い、不正ログインを試みる攻撃である。
+- イ. すべての文字列を順番に生成してパスワードを試す攻撃である。
+- ウ. 利用者のブラウザに不正なスクリプトを実行させる攻撃である。
+- エ. DNSサーバのキャッシュに偽情報を入れる攻撃である。
 
 <details markdown="1">
 <summary>▶ クリックして答えと解説を見る（ここを開く）</summary>

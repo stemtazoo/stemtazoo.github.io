@@ -6,7 +6,7 @@ permalink: /sg/sso/
 prev: /sg/mfa-vs-step-auth/
 next: /sg/risk-based-authentication/
 tags: [sg, sg-security-measures, access_control, it_security_operations]
-last_modified_at: 2026-05-15
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -145,10 +145,10 @@ SSOは**認証の仕組み**
 
 次のうち、最も適切なものはどれか。
 
-ア. SSOは、1回の認証で複数システムを利用可能にする仕組みであり、利便性向上と認証管理の集約に役立つ。  
-イ. SSOは、1つのIDを複数人で共有して運用することで管理を簡素化する仕組みである。  
-ウ. SSOを導入すると、多要素認証は不要になる。  
-エ. SSOは、通信経路を暗号化して盗聴を防ぐための技術である。  
+- ア. SSOは、1回の認証で複数システムを利用可能にする仕組みであり、利便性向上と認証管理の集約に役立つ。
+- イ. SSOは、1つのIDを複数人で共有して運用することで管理を簡素化する仕組みである。
+- ウ. SSOを導入すると、多要素認証は不要になる。
+- エ. SSOは、通信経路を暗号化して盗聴を防ぐための技術である。
 
 <details markdown="1">
 <summary>答えと解説を見る</summary>

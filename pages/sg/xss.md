@@ -6,7 +6,7 @@ permalink: /sg/xss/
 prev: /sg/work-rules-vs-individual-agreement/
 next: /sg/zero-trust/
 tags: [sg, security_general, threat_vulnerability, unauthorized_access, data_leakage, sg-security-overview]
-last_modified_at: 2026-05-18
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -101,10 +101,10 @@ SG試験では「スクリプトが実行されるかどうか」で見分ける
 
 次のうち、最も適切なものはどれか。
 
-ア. XSSは、利用者のブラウザで不正スクリプトを実行させ、情報を盗むなどの被害を生じさせる攻撃である。  
-イ. XSSは、ログイン済み利用者になりすまして正規サイトへ不正リクエストを送らせる攻撃である。  
-ウ. XSS対策は、CSRFトークンを埋め込めば十分である。  
-エ. XSSは、送信元IPアドレスの偽装を防止すれば根本的に解決できる。  
+- ア. XSSは、利用者のブラウザで不正スクリプトを実行させ、情報を盗むなどの被害を生じさせる攻撃である。
+- イ. XSSは、ログイン済み利用者になりすまして正規サイトへ不正リクエストを送らせる攻撃である。
+- ウ. XSS対策は、CSRFトークンを埋め込めば十分である。
+- エ. XSSは、送信元IPアドレスの偽装を防止すれば根本的に解決できる。
 
 <details markdown="1">
 <summary>答えと解説を見る</summary>

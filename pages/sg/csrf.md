@@ -6,7 +6,7 @@ permalink: /sg/csrf/
 tags: [sg, security_general, threat_vulnerability, unauthorized_access, data_leakage, sg-security-overview]
 prev: /sg/soc-csirt-jpcert/
 next: /sg/cvss/
-last_modified_at: 2026-05-18
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -100,10 +100,10 @@ SG試験では「本人の操作に見せかける攻撃かどうか」を見抜
 
 CSRFについての説明として、次のうち、最も適切なものはどれか。
 
-ア. CSRFは、閲覧者のブラウザで不正スクリプトを実行させることでCookieを盗む攻撃である。  
-イ. CSRF対策として、重要処理のリクエスト時にCSRFトークンを確認する方法が有効である。  
-ウ. CSRFは、通信経路を盗聴してパケット内容を改ざんする攻撃である。  
-エ. CSRF対策は、ログイン失敗回数の制限だけで十分である。  
+- ア. CSRFは、閲覧者のブラウザで不正スクリプトを実行させることでCookieを盗む攻撃である。
+- イ. CSRF対策として、重要処理のリクエスト時にCSRFトークンを確認する方法が有効である。
+- ウ. CSRFは、通信経路を盗聴してパケット内容を改ざんする攻撃である。
+- エ. CSRF対策は、ログイン失敗回数の制限だけで十分である。
 
 <details markdown="1">
 <summary>答えと解説を見る</summary>

@@ -6,7 +6,7 @@ permalink: /sg/dictionary-attack/
 tags: [sg, security_measures, unauthorized_access, threat_vulnerability, access_control, sg-security-measures]
 prev: /sg/dhcp/
 next: /sg/directory-traversal/
-last_modified_at: 2026-05-19
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -121,10 +121,10 @@ last_modified_at: 2026-05-19
 
 次のうち、辞書攻撃の説明として最も適切なものはどれか。
 
-ア. よく使われる単語やパスワード候補をリスト化して試す攻撃である。  
-イ. すべての文字列を順番に試す攻撃であり、候補リストは使わない。  
-ウ. 正規サイトに透明な画面を重ねてクリックを誘導する攻撃である。  
-エ. DNSのキャッシュに偽の名前解決結果を入れる攻撃である。  
+- ア. よく使われる単語やパスワード候補をリスト化して試す攻撃である。
+- イ. すべての文字列を順番に試す攻撃であり、候補リストは使わない。
+- ウ. 正規サイトに透明な画面を重ねてクリックを誘導する攻撃である。
+- エ. DNSのキャッシュに偽の名前解決結果を入れる攻撃である。
 
 <details markdown="1">
 <summary>▶ クリックして答えと解説を見る（ここを開く）</summary>

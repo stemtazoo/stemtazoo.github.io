@@ -6,7 +6,7 @@ permalink: /sg/blacklist-whitelist/
 tags: [sg, security_measures, unauthorized_access, network, sg-security-measures]
 prev: /sg/availability/
 next: /sg/bot/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -119,10 +119,10 @@ SG試験では、
 
 次のうち、ホワイトリスト方式の説明として最も適切なものはどれか。
 
-ア. 原則としてすべて許可し、危険と分かった通信だけを遮断する方式  
-イ. 原則としてすべて拒否し、許可した対象だけを通す方式  
-ウ. 攻撃パターンを登録し、既知の攻撃だけを検知する方式  
-エ. 通信量が多い送信元を自動的に遮断し、負荷を下げる方式  
+- ア. 原則としてすべて許可し、危険と分かった通信だけを遮断する方式
+- イ. 原則としてすべて拒否し、許可した対象だけを通す方式
+- ウ. 攻撃パターンを登録し、既知の攻撃だけを検知する方式
+- エ. 通信量が多い送信元を自動的に遮断し、負荷を下げる方式
 
 <details markdown="1">
 <summary>▶ クリックして答えと解説を見る（ここを開く）</summary>

@@ -6,7 +6,7 @@ permalink: /sg/token-authentication/
 prev: /sg/auth-access-summary/
 next: /sg/idp/
 tags: [sg, sg-security-measures, crypto_auth, system_architecture]
-last_modified_at: 2026-05-19
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -145,10 +145,10 @@ SSOでは、毎回パスワードを入力する代わりに👇
 
 トークン認証の説明として最も適切なものはどれか。
 
-ア. 毎回ID/パスワードを平文送信する方式である。  
-イ. 認証後に発行されたトークンを用いて、後続アクセスを検証する方式である。  
-ウ. 認可情報は含められず、用途はログ記録だけである。  
-エ. トークンは漏えいしても不正利用されない。  
+- ア. 毎回ID/パスワードを平文送信する方式である。
+- イ. 認証後に発行されたトークンを用いて、後続アクセスを検証する方式である。
+- ウ. 認可情報は含められず、用途はログ記録だけである。
+- エ. トークンは漏えいしても不正利用されない。
 
 <details markdown="1">
 <summary>▶ クリックして答えと解説を見る（ここを開く）</summary>

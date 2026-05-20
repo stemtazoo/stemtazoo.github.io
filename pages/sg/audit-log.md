@@ -6,7 +6,7 @@ permalink: /sg/audit-log/
 prev: /sg/risk-management-final-exercise/
 next: /sg/copyright-transfer/
 tags: [sg, sg-security-management, incident_management, it_security_operations]
-last_modified_at: 2026-05-08
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -102,10 +102,10 @@ SG試験でよく狙われます。
 
 監査ログについての説明として、次のうち、最も適切なものはどれか。
 
-ア. 監査ログの主目的は、攻撃通信をリアルタイムで遮断することである。  
-イ. 監査ログは、誰がいつ何をしたかを後から追跡・検証するための証跡として利用する。  
-ウ. 監査ログは、通信内容を暗号化して盗聴を防ぐための仕組みである。  
-エ. 監査ログを取得していれば、アクセス権管理は不要になる。  
+- ア. 監査ログの主目的は、攻撃通信をリアルタイムで遮断することである。
+- イ. 監査ログは、誰がいつ何をしたかを後から追跡・検証するための証跡として利用する。
+- ウ. 監査ログは、通信内容を暗号化して盗聴を防ぐための仕組みである。
+- エ. 監査ログを取得していれば、アクセス権管理は不要になる。
 
 <details markdown="1">
 <summary>答えと解説を見る</summary>

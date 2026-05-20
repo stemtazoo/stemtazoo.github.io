@@ -6,7 +6,7 @@ permalink: /sg/outsourcing-contract-difference/
 tags: [sg, management, vendor_management, it_security_operations, sg-management]
 prev: /sg/ng-patterns/
 next: /sg/password-list-attack/
-last_modified_at: 2026-05-14
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -147,10 +147,10 @@ SG試験では次のように問われることが多いです。
 
 請負契約と派遣契約の説明として、最も適切なものはどれか。
 
-ア. 請負契約では、発注元が受注側の作業者へ日常的に直接指揮命令を行う。  
-イ. 派遣契約では、派遣先は派遣労働者へ業務上の指揮命令を行える。  
-ウ. 派遣契約では、派遣元と派遣先の間に契約は不要である。  
-エ. 請負契約と派遣契約は、指揮命令系統の違いはなく同じである。  
+- ア. 請負契約では、発注元が受注側の作業者へ日常的に直接指揮命令を行う。
+- イ. 派遣契約では、派遣先は派遣労働者へ業務上の指揮命令を行える。
+- ウ. 派遣契約では、派遣元と派遣先の間に契約は不要である。
+- エ. 請負契約と派遣契約は、指揮命令系統の違いはなく同じである。
 
 <details markdown="1">
 <summary>▶ クリックして答えと解説を見る（ここを開く）</summary>

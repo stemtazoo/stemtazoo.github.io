@@ -6,7 +6,7 @@ permalink: /sg/mail-header-injection/
 tags: [sg, threat_vulnerability, unauthorized_access, data_leakage, sg-security-overview]
 prev: /sg/macro-virus/
 next: /sg/malware/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -85,10 +85,10 @@ last_modified_at: 2026-05-06
 
 次のうち、メールヘッダインジェクションの説明として最も適切なものはどれか。
 
-ア. 入力値に改行などを混入させ、メールヘッダを不正に追加・改変する攻撃である。  
-イ. メール送信時に利用者認証を行う正規の仕組みである。  
-ウ. メール本文を暗号化し、電子署名を付ける仕組みである。  
-エ. DNSに送信元メールサーバを登録してなりすましを防ぐ仕組みである。  
+- ア. 入力値に改行などを混入させ、メールヘッダを不正に追加・改変する攻撃である。
+- イ. メール送信時に利用者認証を行う正規の仕組みである。
+- ウ. メール本文を暗号化し、電子署名を付ける仕組みである。
+- エ. DNSに送信元メールサーバを登録してなりすましを防ぐ仕組みである。
 
 <details markdown="1">
 <summary>▶ クリックして答えと解説を見る（ここを開く）</summary>

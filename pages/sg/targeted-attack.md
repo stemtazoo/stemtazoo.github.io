@@ -6,7 +6,7 @@ permalink: /sg/targeted-attack/
 tags: [sg, security_measures, unauthorized_access, risk_assessment, security_training, sg-security-measures]
 prev: /sg/stepping-stone-attack/
 next: /sg/telnet/
-last_modified_at: 2026-05-19
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -124,10 +124,10 @@ last_modified_at: 2026-05-19
 
 次のうち、標的型攻撃の説明として最も適切なものはどれか。
 
-ア. 特定の組織や個人を狙い、事前調査やメールなどを組み合わせて侵入を試みる攻撃である。  
-イ. 不特定多数に同じ広告を表示する通常のマーケティング手法である。  
-ウ. 端末へIPアドレスを自動配布するネットワーク機能である。  
-エ. 失効した証明書を一覧で確認する方式である。  
+- ア. 特定の組織や個人を狙い、事前調査やメールなどを組み合わせて侵入を試みる攻撃である。
+- イ. 不特定多数に同じ広告を表示する通常のマーケティング手法である。
+- ウ. 端末へIPアドレスを自動配布するネットワーク機能である。
+- エ. 失効した証明書を一覧で確認する方式である。
 
 <details markdown="1">
 <summary>▶ クリックして答えと解説を見る（ここを開く）</summary>
