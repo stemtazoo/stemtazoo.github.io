@@ -6,7 +6,7 @@ permalink: /sg/isms/
 prev: /sg/security-management-overview/
 next: /sg/security-committee/
 tags: [sg, sg-security-management, isms, risk_assessment, it_security_operations]
-last_modified_at: 2026-05-14
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -150,10 +150,10 @@ SG試験では、ここに**「必要なプロセス」**や**「適用する管
 
 ISMS運用の考え方として最も適切なものはどれか。
 
-ア. 一度ルールを作ったら、継続的改善は不要である。  
-イ. リスクアセスメントに基づき、PDCAで管理策を継続的に改善する。  
-ウ. 技術対策だけ導入すれば、組織的対策は不要である。  
-エ. 対象範囲を定めずに全社一律で始めるのが必須である。  
+- ア. 一度ルールを作ったら、継続的改善は不要である。
+- イ. リスクアセスメントに基づき、PDCAで管理策を継続的に改善する。
+- ウ. 技術対策だけ導入すれば、組織的対策は不要である。
+- エ. 対象範囲を定めずに全社一律で始めるのが必須である。
 
 <details markdown="1">
 <summary>▶ クリックして答えと解説を見る（ここを開く）</summary>

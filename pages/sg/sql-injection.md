@@ -6,7 +6,7 @@ permalink: /sg/sql-injection/
 tags: [sg, threat_vulnerability, unauthorized_access, database, sg-security-overview]
 prev: /sg/spyware/
 next: /sg/ssh/
-last_modified_at: 2026-05-18
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -110,10 +110,10 @@ SG試験では次のように混同させてきます。
 
 次のうち、SQLインジェクション対策として最も適切なものはどれか。
 
-ア. 入力値をSQL文へ直接連結せず、プレースホルダなどで安全に扱う。  
-イ. 利用者全員に管理者権限を与え、エラーを減らす。  
-ウ. データベースのパスワードを画面に表示して確認しやすくする。  
-エ. 入力値の検査をやめ、SQLエラーの詳細を利用者へ表示する。  
+- ア. 入力値をSQL文へ直接連結せず、プレースホルダなどで安全に扱う。
+- イ. 利用者全員に管理者権限を与え、エラーを減らす。
+- ウ. データベースのパスワードを画面に表示して確認しやすくする。
+- エ. 入力値の検査をやめ、SQLエラーの詳細を利用者へ表示する。
 
 <details markdown="1">
 <summary>▶ クリックして答えと解説を見る（ここを開く）</summary>

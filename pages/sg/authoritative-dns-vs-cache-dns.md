@@ -6,7 +6,7 @@ permalink: /sg/authoritative-dns-vs-cache-dns/
 tags: [sg, sg-security-measures, network_security, dns]
 prev: /sg/dns-cache-poisoning/
 next: /sg/open-resolver/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -235,10 +235,10 @@ SG試験では、権威DNSサーバを「正式情報の管理」、キャッシ
 
 権威DNSサーバとキャッシュDNSサーバの違いとして適切なものはどれか。
 
-ア. 権威DNSは正式ゾーン情報を保持し、キャッシュDNSは問い合わせ結果を一時保持する。
-イ. どちらも必ず同一組織でしか運用できない。
-ウ. キャッシュDNSは名前解決を行わない。
-エ. 権威DNSは外部公開してはいけない。
+- ア. 権威DNSは正式ゾーン情報を保持し、キャッシュDNSは問い合わせ結果を一時保持する。
+- イ. どちらも必ず同一組織でしか運用できない。
+- ウ. キャッシュDNSは名前解決を行わない。
+- エ. 権威DNSは外部公開してはいけない。
 
 <details markdown="1">
 <summary>▶ クリックして答えと解説を見る（ここを開く）</summary>

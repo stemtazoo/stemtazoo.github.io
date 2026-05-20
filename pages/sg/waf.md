@@ -6,7 +6,7 @@ permalink: /sg/waf/
 tags: [sg, security_measures, unauthorized_access, network, sg-security-measures]
 prev: /sg/vulnerability/
 next: /sg/wifi-auth-wpa2-wpa3-8021x/
-last_modified_at: 2026-05-18
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -126,10 +126,10 @@ SG試験では次のように混同させてきます。
 
 次のうち、WAFの役割として最も適切なものはどれか。
 
-ア. Webアプリケーションへの通信を検査し、SQLインジェクションやXSSなどを防ぐ。  
-イ. 端末へIPアドレスを自動的に割り当てる。  
-ウ. 証明書の失効状態をリアルタイムで確認する。  
-エ. システムの稼働率を契約で保証する。  
+- ア. Webアプリケーションへの通信を検査し、SQLインジェクションやXSSなどを防ぐ。
+- イ. 端末へIPアドレスを自動的に割り当てる。
+- ウ. 証明書の失効状態をリアルタイムで確認する。
+- エ. システムの稼働率を契約で保証する。
 
 <details markdown="1">
 <summary>▶ クリックして答えと解説を見る（ここを開く）</summary>

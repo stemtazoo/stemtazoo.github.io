@@ -6,7 +6,7 @@ permalink: /sg/unauthorized-access-techniques/
 tags: [sg, security_measures, unauthorized_access, threat_vulnerability, risk_assessment, sg-security-measures]
 prev: /sg/timestamp/
 next: /sg/unauthorized-access/
-last_modified_at: 2026-05-19
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -145,10 +145,10 @@ SG試験では、この中の**名前を覚えることよりも**
 
 次のうち、不正アクセス手口の切り分けとして最も適切なものはどれか。
 
-ア. パスワードリスト攻撃は、漏えいしたID・パスワードの組合せを悪用する。  
-イ. SQLインジェクションは、DNSキャッシュに偽情報を登録する攻撃である。  
-ウ. セッションハイジャックは、端末へIPアドレスを自動配布する仕組みである。  
-エ. ディレクトリトラバーサルは、メール本文を暗号化する仕組みである。  
+- ア. パスワードリスト攻撃は、漏えいしたID・パスワードの組合せを悪用する。
+- イ. SQLインジェクションは、DNSキャッシュに偽情報を登録する攻撃である。
+- ウ. セッションハイジャックは、端末へIPアドレスを自動配布する仕組みである。
+- エ. ディレクトリトラバーサルは、メール本文を暗号化する仕組みである。
 
 <details markdown="1">
 <summary>▶ クリックして答えと解説を見る（ここを開く）</summary>

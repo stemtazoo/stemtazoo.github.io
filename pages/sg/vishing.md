@@ -6,7 +6,7 @@ permalink: /sg/vishing/
 tags: [sg, security_measures, unauthorized_access, data_leakage, sg-security-measures]
 prev: /sg/vendor-management/
 next: /sg/vulnerability/
-last_modified_at: 2026-05-18
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -98,10 +98,10 @@ last_modified_at: 2026-05-18
 
 次のうち、ビッシングの説明として最も適切なものはどれか。
 
-ア. 電話などの音声通話で相手をだまし、認証情報や個人情報を聞き出す攻撃である。  
-イ. SMSで偽サイトへ誘導し、IDやパスワードを入力させる攻撃である。  
-ウ. SQL文に不正な命令を混入させる攻撃である。  
-エ. 証明書の失効状態をオンラインで確認する方式である。  
+- ア. 電話などの音声通話で相手をだまし、認証情報や個人情報を聞き出す攻撃である。
+- イ. SMSで偽サイトへ誘導し、IDやパスワードを入力させる攻撃である。
+- ウ. SQL文に不正な命令を混入させる攻撃である。
+- エ. 証明書の失効状態をオンラインで確認する方式である。
 
 <details markdown="1">
 <summary>▶ クリックして答えと解説を見る（ここを開く）</summary>

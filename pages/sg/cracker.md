@@ -6,7 +6,7 @@ permalink: /sg/cracker/
 tags: [sg, threat_vulnerability, unauthorized_access, risk_assessment, sg-security-overview]
 prev: /sg/copyright-ownership/
 next: /sg/crl/
-last_modified_at: 2026-05-19
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -109,10 +109,10 @@ last_modified_at: 2026-05-19
 
 次のうち、クラッカーの説明として最も適切なものはどれか。
 
-ア. 悪意をもって不正侵入や破壊、情報窃取などを行う攻撃者である。  
-イ. システムの安全性向上だけを目的として、許可を得て検査する専門家である。  
-ウ. 暗号方式の安全性を公的に評価する制度そのものである。  
-エ. 利用者にIPアドレスを自動配布するサーバである。  
+- ア. 悪意をもって不正侵入や破壊、情報窃取などを行う攻撃者である。
+- イ. システムの安全性向上だけを目的として、許可を得て検査する専門家である。
+- ウ. 暗号方式の安全性を公的に評価する制度そのものである。
+- エ. 利用者にIPアドレスを自動配布するサーバである。
 
 <details markdown="1">
 <summary>▶ クリックして答えと解説を見る（ここを開く）</summary>

@@ -6,7 +6,7 @@ permalink: /sg/physical-security/
 prev: /sg/physical-security-summary/
 next: /sg/access-control-physical/
 tags: [sg, sg-security-measures, it_security_operations, asset_management]
-last_modified_at: 2026-05-08
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -123,10 +123,10 @@ SG試験では
 
 物理的セキュリティ対策として最も適切なものはどれか。
 
-ア. マルウェア検知ソフトのみを導入し、入退室管理は不要とする。  
-イ. サーバ室の入退室管理、監視、施錠などで機器への物理アクセスを制限する。  
-ウ. 暗号化通信を導入すれば、機器盗難対策は不要になる。  
-エ. パスワード変更だけを強化すれば、災害対策も同時に解決する。  
+- ア. マルウェア検知ソフトのみを導入し、入退室管理は不要とする。
+- イ. サーバ室の入退室管理、監視、施錠などで機器への物理アクセスを制限する。
+- ウ. 暗号化通信を導入すれば、機器盗難対策は不要になる。
+- エ. パスワード変更だけを強化すれば、災害対策も同時に解決する。
 
 <details markdown="1">
 <summary>▶ クリックして答えと解説を見る（ここを開く）</summary>

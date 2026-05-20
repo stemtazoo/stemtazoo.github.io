@@ -6,7 +6,7 @@ permalink: /sg/public-key-cryptography/
 prev: /sg/symmetric-key-cryptography/
 next: /sg/rsa/
 tags: [sg, crypto_auth, sg-security-overview, network]
-last_modified_at: 2026-05-18
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -128,10 +128,10 @@ SG試験では次のように問われます。
 
 公開鍵暗号方式の説明として、最も適切なものはどれか。
 
-ア. 暗号化と復号に同じ鍵を使う方式である。
-イ. 公開鍵は秘密に保管し、秘密鍵は公開する方式である。
-ウ. 公開鍵と秘密鍵のペアを使い、役割を分けて運用する方式である。
-エ. 署名検証は必ず秘密鍵で行う。
+- ア. 暗号化と復号に同じ鍵を使う方式である。
+- イ. 公開鍵は秘密に保管し、秘密鍵は公開する方式である。
+- ウ. 公開鍵と秘密鍵のペアを使い、役割を分けて運用する方式である。
+- エ. 署名検証は必ず秘密鍵で行う。
 
 <details markdown="1">
 <summary>▶ クリックして答えと解説を見る（ここを開く）</summary>

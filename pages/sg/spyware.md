@@ -6,7 +6,7 @@ permalink: /sg/spyware/
 tags: [sg, security_measures, malware, data_leakage, sg-security-measures]
 prev: /sg/smtp-port-packet-filtering/
 next: /sg/sql-injection/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -106,10 +106,10 @@ SG試験では、
 
 次のうち、スパイウェアの説明として最も適切なものはどれか。
 
-ア. 利用者に気付かれにくい形で情報を収集し、外部へ送信するソフトウェアである。  
-イ. 証明書の失効状態をリアルタイムで確認するプロトコルである。  
-ウ. システムの復旧目標時間を示す指標である。  
-エ. ネットワーク境界で通信を中継する通常の機器である。  
+- ア. 利用者に気付かれにくい形で情報を収集し、外部へ送信するソフトウェアである。
+- イ. 証明書の失効状態をリアルタイムで確認するプロトコルである。
+- ウ. システムの復旧目標時間を示す指標である。
+- エ. ネットワーク境界で通信を中継する通常の機器である。
 
 <details markdown="1">
 <summary>▶ クリックして答えと解説を見る（ここを開く）</summary>

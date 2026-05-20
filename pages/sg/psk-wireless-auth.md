@@ -6,7 +6,7 @@ permalink: /sg/psk-wireless-auth/
 tags: [sg, security_measures, access_control, network, sg-security-measures]
 prev: /sg/project-lifecycle-characteristics/
 next: /sg/ransomware/
-last_modified_at: 2026-05-18
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -132,10 +132,10 @@ SG試験ではこう問われます：
 
 無線LANのPSK方式について、最も適切な説明はどれか。
 
-ア. 利用者ごとに証明書を発行し、共通鍵は使わない方式である。  
-イ. 端末とAPで事前共有鍵を使って認証する方式で、小規模環境でよく使われる。  
-ウ. 認証サーバ（RADIUS）が必須で、鍵共有は不要である。  
-エ. 一度接続した端末は鍵なしで永続的に接続できる。  
+- ア. 利用者ごとに証明書を発行し、共通鍵は使わない方式である。
+- イ. 端末とAPで事前共有鍵を使って認証する方式で、小規模環境でよく使われる。
+- ウ. 認証サーバ（RADIUS）が必須で、鍵共有は不要である。
+- エ. 一度接続した端末は鍵なしで永続的に接続できる。
 
 <details markdown="1">
 <summary>▶ クリックして答えと解説を見る（ここを開く）</summary>

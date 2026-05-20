@@ -6,7 +6,7 @@ permalink: /sg/pci-dss/
 prev: /sg/copyright-transfer/
 next: /sg/security-management-overview/
 tags: [sg, sg-security-law, it_security_operations, vendor_management]
-last_modified_at: 2026-05-18
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論  
@@ -122,10 +122,10 @@ CVSSは「脆弱性の深刻度を数値化する指標」
 
 PCI DSSの説明として最も適切なものはどれか。
 
-ア. すべての業種に共通する労務管理の法令要件である。  
-イ. クレジットカード会員データを扱う事業者向けのセキュリティ基準である。  
-ウ. 無線LAN暗号化方式の技術仕様そのものである。  
-エ. インシデント報告の書式だけを定めたガイドである。  
+- ア. すべての業種に共通する労務管理の法令要件である。
+- イ. クレジットカード会員データを扱う事業者向けのセキュリティ基準である。
+- ウ. 無線LAN暗号化方式の技術仕様そのものである。
+- エ. インシデント報告の書式だけを定めたガイドである。
 
 <details markdown="1">
 <summary>▶ クリックして答えと解説を見る（ここを開く）</summary>

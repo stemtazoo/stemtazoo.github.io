@@ -6,7 +6,7 @@ permalink: /sg/dos-vs-ddos/
 tags: [sg, threat_vulnerability, unauthorized_access, network, sg-security-overview]
 prev: /sg/dos-attack-difference/
 next: /sg/employment-type-comparison/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -91,10 +91,10 @@ SG試験では「**攻撃元が1つか複数か**」で切り分けます。
 
 次のうち、DoS攻撃とDDoS攻撃の違いとして最も適切なものはどれか。
 
-ア. DoSは単一または少数の攻撃元、DDoSは多数の攻撃元からサービス停止を狙う。  
-イ. DoSは暗号化、DDoSは電子署名を行う方式である。  
-ウ. DoSはDNSの名前解決、DDoSはIPアドレスの自動配布である。  
-エ. DoSは証明書の失効確認、DDoSは証明書の発行である。  
+- ア. DoSは単一または少数の攻撃元、DDoSは多数の攻撃元からサービス停止を狙う。
+- イ. DoSは暗号化、DDoSは電子署名を行う方式である。
+- ウ. DoSはDNSの名前解決、DDoSはIPアドレスの自動配布である。
+- エ. DoSは証明書の失効確認、DDoSは証明書の発行である。
 
 <details markdown="1">
 <summary>▶ クリックして答えと解説を見る（ここを開く）</summary>

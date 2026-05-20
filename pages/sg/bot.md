@@ -6,7 +6,7 @@ permalink: /sg/bot/
 tags: [sg, security_measures, malware, unauthorized_access, sg-security-measures]
 prev: /sg/blacklist-whitelist/
 next: /sg/botnet/
-last_modified_at: 2026-05-10
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -207,10 +207,10 @@ SG試験では、
 
 次のうち、ボット感染を防ぐ対策として最も適切なものはどれか。
 
-ア. 見知らぬメールの添付ファイルを安易に開かない。  
-イ. ハードディスクを暗号化し、PC紛失時の情報漏えいを防ぐ。  
-ウ. Webページのデザインを見やすく変更する。  
-エ. 電子証明書を発行して利用者の本人確認を行う。  
+- ア. 見知らぬメールの添付ファイルを安易に開かない。
+- イ. ハードディスクを暗号化し、PC紛失時の情報漏えいを防ぐ。
+- ウ. Webページのデザインを見やすく変更する。
+- エ. 電子証明書を発行して利用者の本人確認を行う。
 
 <details markdown="1">
 <summary>▶ クリックして答えと解説を見る（ここを開く）</summary>

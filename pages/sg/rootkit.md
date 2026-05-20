@@ -6,7 +6,7 @@ permalink: /sg/rootkit/
 tags: [sg, security_measures, malware, unauthorized_access, sg-security-measures]
 prev: /sg/risk-treatment/
 next: /sg/safety-control-measures/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -110,10 +110,10 @@ SG試験では、
 
 次のうち、ルートキットの説明として最も適切なものはどれか。
 
-ア. 侵入後に存在や不正活動を隠し、管理者権限の維持などに使われるツール群である。  
-イ. 利用者にIPアドレスを自動配布する通常のネットワーク機能である。  
-ウ. 電子署名の検証に使う公開鍵証明書の失効リストである。  
-エ. サービス停止を目的に大量通信を送る攻撃である。  
+- ア. 侵入後に存在や不正活動を隠し、管理者権限の維持などに使われるツール群である。
+- イ. 利用者にIPアドレスを自動配布する通常のネットワーク機能である。
+- ウ. 電子署名の検証に使う公開鍵証明書の失効リストである。
+- エ. サービス停止を目的に大量通信を送る攻撃である。
 
 <details markdown="1">
 <summary>▶ クリックして答えと解説を見る（ここを開く）</summary>
