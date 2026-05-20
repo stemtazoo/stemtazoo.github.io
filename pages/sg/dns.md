@@ -37,9 +37,9 @@ last_modified_at: 2026-05-20
 
 ## 関連記事との役割分担（混同防止）
 
-- DNSSECとの違いを確認したい → `/sg/dnssec/`
-- DNSキャッシュポイズニングの攻撃像を確認したい → `/sg/dns-cache-poisoning/`
-- 権威DNSとキャッシュDNSの役割差を確認したい → `/sg/authoritative-dns-vs-cache-dns/`
+- DNSSECとの違いを確認したい → [DNSSECとは？DNS応答の正当性と完全性を確認する仕組み【SG試験】](/sg/dnssec/)
+- DNSキャッシュポイズニングの攻撃像を確認したい → [DNSキャッシュポイズニングとは？偽サイトへ誘導する攻撃【SG試験】](/sg/dns-cache-poisoning/)
+- 権威DNSとキャッシュDNSの役割差を確認したい → [権威DNSサーバとキャッシュDNSサーバの違い【SG試験】](/sg/authoritative-dns-vs-cache-dns/)
 
 ---
 

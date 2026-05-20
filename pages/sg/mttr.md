@@ -6,7 +6,7 @@ permalink: /sg/mttr/
 tags: [sg, sg-management]
 prev: /sg/mtbf/
 next: /sg/nco/
-last_modified_at: 2026-05-19
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -40,9 +40,9 @@ last_modified_at: 2026-05-19
 
 ## 関連記事との役割分担（混同防止）
 
-- MTBFを中心に確認したい → `/sg/mtbf/`
-- 可用性全体を確認したい → `/sg/availability/`
-- 応答時間との違いを確認したい → `/sg/response-time/`
+- MTBFを中心に確認したい → [MTBFとは？平均故障間隔の意味と稼働率との関係【SG試験】](/sg/mtbf/)
+- 可用性全体を確認したい → [稼働率とは？可用性の考え方とSLAでの判断基準【SG試験】](/sg/availability/)
+- 応答時間との違いを確認したい → [応答時間とは？最初の反応までの時間を整理【SG試験】](/sg/response-time/)
 
 ---
 

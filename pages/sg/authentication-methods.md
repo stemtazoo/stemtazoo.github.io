@@ -38,9 +38,9 @@ SG試験では「どの要素か」「多要素か」を判断させる問題で
 
 ## 関連記事との役割分担（混同防止）
 
-- 認証・認可・アクセス制御の全体差分を確認したい → `/sg/authentication-authorization-access-control/`
-- MFAと多段階認証の違いに絞って確認したい → `/sg/mfa-vs-step-auth/`
-- MFAの実務運用を確認したい → `/sg/multi-factor-authentication/`
+- 認証・認可・アクセス制御の全体差分を確認したい → [認証・認可・アクセス制御の違いとは？役割の切り分けを整理【SG試験】](/sg/authentication-authorization-access-control/)
+- MFAと多段階認証の違いに絞って確認したい → [多要素認証と多段階認証の違いとは？混同しやすい認証方式を整理【SG試験】](/sg/mfa-vs-step-auth/)
+- MFAの実務運用を確認したい → [多要素認証（MFA）とは？認証強化の仕組みと判断ポイント【SG試験】](/sg/multi-factor-authentication/)
 
 ---
 

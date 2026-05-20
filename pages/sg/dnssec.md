@@ -6,7 +6,7 @@ permalink: /sg/dnssec/
 tags: [sg, sg-security-measures, network_security, dns, cryptography]
 prev: /sg/dns/
 next: /sg/dns-cache-poisoning/
-last_modified_at: 2026-05-19
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -55,9 +55,9 @@ DNSSECは、**DNSの信頼性を高めるための拡張機能**です。
 
 ## 関連記事との役割分担（混同防止）
 
-- DNSSECとHTTPS/TLSを比較したい → `/sg/dnssec-vs-https-tls/`
-- HTTPS/TLSの基本を確認したい → `/sg/ssl-tls/` / `/sg/http-https/`
-- DNS攻撃の背景を確認したい → `/sg/dns-cache-poisoning/`
+- DNSSECとHTTPS/TLSを比較したい → [DNSSECとHTTPS/TLSの違い【SG試験】](/sg/dnssec-vs-https-tls/)
+- HTTPS/TLSの基本を確認したい → [SSL/TLSとは？通信を守る暗号化の仕組み【SG試験】](/sg/ssl-tls/) / [HTTPとHTTPSの違いとは？安全な通信の判断ポイント【SG試験】](/sg/http-https/)
+- DNS攻撃の背景を確認したい → [DNSキャッシュポイズニングとは？偽サイトへ誘導する攻撃【SG試験】](/sg/dns-cache-poisoning/)
 
 ---
 ## 直感的な説明

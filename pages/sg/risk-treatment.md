@@ -6,7 +6,7 @@ permalink: /sg/risk-treatment/
 tags: [sg, security_management, risk_assessment, it_security_operations, sg-security-management]
 prev: /sg/risk-response-cia/
 next: /sg/rootkit/
-last_modified_at: 2026-05-19
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -40,9 +40,9 @@ SG試験では「その対策がどの種類のリスク対応か」を判断さ
 
 ## 関連記事との役割分担（混同防止）
 
-- リスク対応の全体像を確認したい → `/sg/risk-response/`
-- 残留リスクを確認したい → `/sg/residual-risk/`
-- コントロールとファイナンスの違いを確認したい → `/sg/risk-control-vs-risk-finance/`
+- リスク対応の全体像を確認したい → [リスク対応とは？リスクへの対処方法を整理【SG試験】](/sg/risk-response/)
+- 残留リスクを確認したい → [残留リスクとは？対応後にも残るリスクを理解する【SG試験】](/sg/residual-risk/)
+- コントロールとファイナンスの違いを確認したい → [リスクコントロールとリスクファイナンスの違い【SG試験】](/sg/risk-control-vs-risk-finance/)
 
 ---
 

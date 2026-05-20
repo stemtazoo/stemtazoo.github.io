@@ -6,7 +6,7 @@ permalink: /sg/ips/
 prev: /sg/vpn/
 next: /sg/captcha/
 tags: [sg, sg-security-measures, unauthorized_access, network]
-last_modified_at: 2026-05-19
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -39,9 +39,9 @@ last_modified_at: 2026-05-19
 
 ## 関連記事との役割分担（混同防止）
 
-- IDSとIPSの違いを先に確認したい → `/sg/ids-vs-ips/`
-- IDS単体を確認したい → `/sg/ids/`
-- ファイアウォールとの違いを確認したい → `/sg/firewall/`
+- IDSとIPSの違いを先に確認したい → [IDSとIPSの違い【SG試験】](/sg/ids-vs-ips/)
+- IDS単体を確認したい → [IDSとは？侵入を検知して通知する仕組み【SG試験】](/sg/ids/)
+- ファイアウォールとの違いを確認したい → [ファイアーウォールとは？通信を制御する基本対策【SG試験】](/sg/firewall/)
 
 ---
 

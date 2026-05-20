@@ -4,7 +4,7 @@ title: IDSとは？侵入を検知して通知する仕組み【SG試験】
 description: IDSは、ネットワークやホストを監視し、不正な通信や操作を検知して通知する仕組みです。NIDSとHIDS、IPSとの違いをSG試験のひっかけポイントで整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/ids/
 tags: [sg, sg-security-measures, unauthorized_access, network, incident_management]
-last_modified_at: 2026-05-19
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -47,9 +47,9 @@ SG試験では、IDSそのものの細かい製品知識よりも、次の切り
 
 ## 関連記事との役割分担（混同防止）
 
-- IDSとIPSの差分を先に見たい → `/sg/ids-vs-ips/`
-- IPS単体を確認したい → `/sg/ips/`
-- ファイアウォールとの違いを確認したい → `/sg/firewall/`
+- IDSとIPSの差分を先に見たい → [IDSとIPSの違い【SG試験】](/sg/ids-vs-ips/)
+- IPS単体を確認したい → [IPSとは？不正侵入を検知して遮断する仕組み【SG試験】](/sg/ips/)
+- ファイアウォールとの違いを確認したい → [ファイアーウォールとは？通信を制御する基本対策【SG試験】](/sg/firewall/)
 
 ---
 

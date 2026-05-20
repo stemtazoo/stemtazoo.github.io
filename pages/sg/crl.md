@@ -6,7 +6,7 @@ permalink: /sg/crl/
 tags: [sg, security_general, crypto_auth, risk_assessment, sg-security-overview]
 prev: /sg/cracker/
 next: /sg/cryptojacking/
-last_modified_at: 2026-05-19
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -39,9 +39,9 @@ last_modified_at: 2026-05-19
 
 ## 関連記事との役割分担（混同防止）
 
-- CRLとOCSPの違いをまとめて見たい → `/sg/certificate-revocation-crl-ocsp/`
-- 証明書の基本を確認したい → `/sg/digital-certificate/`
-- 電子署名との関係を確認したい → `/sg/digital-signature/`
+- CRLとOCSPの違いをまとめて見たい → [証明書失効（CRL / OCSP）とは？無効な証明書の見分け方【SG試験】](/sg/certificate-revocation-crl-ocsp/)
+- 証明書の基本を確認したい → [電子証明書とは？公開鍵の正当性を証明する仕組み【SG試験】](/sg/digital-certificate/)
+- 電子署名との関係を確認したい → [電子署名とは？本人証明と改ざん検知を整理【SG試験】](/sg/digital-signature/)
 
 ---
 

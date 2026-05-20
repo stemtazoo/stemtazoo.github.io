@@ -6,7 +6,7 @@ permalink: /sg/ssl-tls/
 tags: [sg, security_general, crypto_auth, network, sg-security-overview]
 prev: /sg/ssh/
 next: /sg/stepping-stone-attack/
-last_modified_at: 2026-05-19
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -46,9 +46,9 @@ SG試験では「なぜ安全なのか（暗号化＋認証）」を判断させ
 
 ## 関連記事との役割分担（混同防止）
 
-- HTTP/HTTPSの基本差分を確認したい → `/sg/http-https/`
-- DNS段階との違いを確認したい → `/sg/dnssec-vs-https-tls/`
-- 証明書を先に整理したい → `/sg/digital-certificate/`
+- HTTP/HTTPSの基本差分を確認したい → [HTTPとHTTPSの違いとは？安全な通信の判断ポイント【SG試験】](/sg/http-https/)
+- DNS段階との違いを確認したい → [DNSSECとHTTPS/TLSの違い【SG試験】](/sg/dnssec-vs-https-tls/)
+- 証明書を先に整理したい → [電子証明書とは？公開鍵の正当性を証明する仕組み【SG試験】](/sg/digital-certificate/)
 
 ---
 ## 直感的な説明

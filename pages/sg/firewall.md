@@ -6,7 +6,7 @@ permalink: /sg/firewall/
 prev: /sg/zero-trust/
 next: /sg/packet-filtering/
 tags: [sg, sg-security-measures, unauthorized_access, network]
-last_modified_at: 2026-05-19
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -39,9 +39,9 @@ last_modified_at: 2026-05-19
 
 ## 関連記事との役割分担（混同防止）
 
-- IDS/IPSとの違いをまとめて見たい → `/sg/sg-ids-ips-firewall-difference/`
-- IDS単体を確認したい → `/sg/ids/`
-- IPS単体を確認したい → `/sg/ips/`
+- IDS/IPSとの違いをまとめて見たい → [sg ids ips firewall difference](/sg/sg-ids-ips-firewall-difference/)
+- IDS単体を確認したい → [IDSとは？侵入を検知して通知する仕組み【SG試験】](/sg/ids/)
+- IPS単体を確認したい → [IPSとは？不正侵入を検知して遮断する仕組み【SG試験】](/sg/ips/)
 
 ---
 

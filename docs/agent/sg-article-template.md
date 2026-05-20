@@ -62,3 +62,38 @@ At the end of the article body, always add this single line:
 ```
 
 Unless the user explicitly asks otherwise, do not add unnecessary related-article sections inside the article body. Leave related-article behavior to the footer include.
+
+
+## Optional Confirmation Question Block (Recommended)
+
+When adding `## 確認問題（SG試験対策）`, place it immediately before `## まとめ（試験直前用）` and use this rendering-safe format:
+
+```md
+## 確認問題（SG試験対策）
+
+次のうち、最も適切なものはどれか。
+
+- ア. ...
+- イ. ...
+- ウ. ...
+- エ. ...
+
+<details markdown="1">
+<summary>▶ クリックして答えと解説を見る（ここを開く）</summary>
+
+**正解：X**
+
+### 解説
+- ア：不適切。理由を1文で書く。
+- イ：適切。理由を1文で書く。
+- ウ：不適切。理由を1文で書く。
+- エ：不適切。理由を1文で書く。
+
+👉 判断ポイント  
+「最小権限・申請承認・異動退職時の削除」がある選択肢を優先する。
+
+</details>
+```
+
+
+Note: Replace every placeholder in this template (`...`, `X`, and example reason text) before publishing; do not leave instruction text in final articles.

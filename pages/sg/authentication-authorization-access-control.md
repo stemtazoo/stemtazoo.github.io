@@ -6,7 +6,7 @@ permalink: /sg/authentication-authorization-access-control/
 tags: [sg, sg-security-measures, access_control, crypto_auth]
 prev: /sg/captcha/
 next: /sg/id-management/
-last_modified_at: 2026-05-19
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -38,9 +38,9 @@ last_modified_at: 2026-05-19
 
 ## 関連記事との役割分担（混同防止）
 
-- 認可を中心に確認したい → `/sg/authorization/`
-- アクセス管理の運用まで確認したい → `/sg/access-control/`
-- 認証方式を確認したい → `/sg/authentication-methods/`
+- 認可を中心に確認したい → [アクセス制御（認可）とは？認証との違いを整理【SG試験】](/sg/authorization/)
+- アクセス管理の運用まで確認したい → [アクセス管理とは？特権IDとneed-to-knowで権限を適切に制御【SG試験】](/sg/access-control/)
+- 認証方式を確認したい → [認証方式とは？3要素と多要素認証を整理【SG試験】](/sg/authentication-methods/)
 
 ---
 

@@ -87,6 +87,59 @@ Example:
 公式な出題範囲は、IPAの[情報セキュリティマネジメント試験の試験内容](https://www.ipa.go.jp/shiken/kubun/sg/outline.html)でも確認できます。
 ```
 
+
+## SG Markdown Rendering Rules
+
+When creating or editing SG articles under `pages/sg`, always ensure that Markdown renders correctly on GitHub Pages.
+
+### Markdown spacing
+
+Always insert blank lines:
+
+- before and after headings
+- before and after tables
+- before and after lists
+- before and after horizontal rules (`---` or `* * *`)
+- before and after collapsible question blocks such as `<details markdown="1">`
+
+Do not place headings, lists, tables, or horizontal rules immediately after normal text without a blank line.
+
+### Internal links
+
+- Do not leave internal URLs as code text, such as `` `/sg/authorization/` ``.
+- When referencing another SG article, always use a clickable Markdown link.
+- Use the target article title as link text when possible.
+- If the exact title is unknown, use a clear natural Japanese label.
+
+### Tables
+
+- Markdown tables must include a header separator row (for example `|---|---|`).
+- Keep blank lines before and after every table.
+- Avoid pseudo-table plain text that relies only on spaces.
+
+### Final self-check before saving
+
+Before saving any SG article, check the following:
+
+- front matter is valid multi-line YAML (`---` start and end)
+- `description` and `tags` are not visible in the article body
+- internal SG links are clickable Markdown links
+- tables have separator rows
+- confirmation-question choices are one per line
+- each explanation includes a short reason
+- headings, lists, tables, and horizontal rules have blank lines around them
+
+### Optional quick checks
+
+Use simple checks only as hints, and always review context manually:
+
+```bash
+rg -n "`/sg/" pages/sg
+rg -n "ア\..*イ\..*ウ\..*エ\." pages/sg
+```
+
+Do not fix articles by blind global replacement.
+
 ## Procedure For Creating A New SG Article
 
 1. Identify the term or concept to turn into an article from the user's request.
