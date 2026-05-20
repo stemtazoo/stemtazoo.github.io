@@ -6,12 +6,41 @@ permalink: /sg/authentication-methods/
 prev: /sg/privileged-id-management/
 next: /sg/password-management/
 tags: [sg, sg-security-overview, access_control, it_security_operations]
-last_modified_at: 2026-05-08
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
 認証方式は、**利用者が本人であることを確認する方法で、「知識・所持・生体」の3要素に分類される**ものです。  
 SG試験では「どの要素か」「多要素か」を判断させる問題で問われます。
+
+---
+
+## このページで切り分けること（先にここだけ）
+
+このページは、**認証要素（知識・所持・生体）とMFA成立条件**を中心に整理します。
+
+- 認証方式：本人確認の手段を要素で分ける
+- MFA：異なる要素を2つ以上組み合わせる
+- 多段階認証：手順が複数でも、要素が同じならMFAとは限らない
+
+> 迷ったら、**「異なる要素かどうか」**を見ます。
+
+## SG試験で選択肢を切る判断軸（認証方式編）
+
+- 「パスワード＋PIN」など知識同士の組合せ  
+  → MFAではない
+
+- 「パスワード＋スマホトークン」「ICカード＋指紋」  
+  → 異なる要素なのでMFA
+
+- 「手順が2回あるから多要素」と書かれている  
+  → 誤り。要素の種類で判断する
+
+## 関連記事との役割分担（混同防止）
+
+- 認証・認可・アクセス制御の全体差分を確認したい → `/sg/authentication-authorization-access-control/`
+- MFAと多段階認証の違いに絞って確認したい → `/sg/mfa-vs-step-auth/`
+- MFAの実務運用を確認したい → `/sg/multi-factor-authentication/`
 
 ---
 
