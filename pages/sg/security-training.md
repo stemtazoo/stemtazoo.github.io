@@ -6,7 +6,7 @@ permalink: /sg/security-training/
 tags: [sg, security_management, security_training, risk_assessment, security_awareness, sg-security-management]
 prev: /sg/security-policy/
 next: /sg/insider-threat/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-21
 ---
 
 ## まず結論
@@ -104,6 +104,20 @@ last_modified_at: 2026-05-06
 👉 問題の原因を見ることが重要
 
 ---
+
+
+## SG試験で選択肢を切る判断軸（予防・検知・回復編）
+
+- 「社内教育・ルール周知・意識向上」と書かれている  
+  → **予防**の対策を優先します。事故を起こしにくくする事前対策です。
+
+- 「アクセスログを監視し、異常を見つける」と書かれている  
+  → **検知・追跡**側の対策です。発生前に止めるというより、兆候や事後の証跡を扱います。
+
+- 「コンティンジェンシープラン」や「バックアップ」と書かれている  
+  → **回復（復旧）**側の対策です。被害後に業務を戻す準備として整理します。
+
+迷ったら、**「起こる前に減らすか（予防）／起きたことを見つけるか（検知）／起きた後に戻すか（回復）」**で切り分けます。
 
 ## まとめ（試験直前用）
 
