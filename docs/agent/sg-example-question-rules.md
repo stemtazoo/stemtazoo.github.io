@@ -12,6 +12,14 @@ Use these rules when creating SG articles from past questions, example questions
 - Use the reason the user made a mistake to strengthen common misunderstanding and confusion-prevention sections.
 - Always include judgment criteria for eliminating answer choices in the body.
 
+### Handling Judgment Criteria Derived From Attached Questions
+
+- Do not copy the attached question's wording, sentence order, or option phrasing as-is into article judgment criteria.
+- Convert the question-specific clue into a reusable SG decision axis that works across multiple similar questions.
+- Keep the axis at concept level (role, order, scope, responsibility, preventive vs post-incident, etc.), not at one-question trivia level.
+- If you reference expressions that appeared in the attached question, rewrite them in your own words and explain why they indicate correct/incorrect choices.
+- Prefer concise, evergreen phrasing that remains useful even when the original attached question is removed.
+
 ## Pages Where Confirmation Questions May Be Added
 
 Only add confirmation questions to pages that meet all of these conditions:
