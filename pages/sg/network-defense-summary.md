@@ -81,6 +81,7 @@ SG試験では、同じ「ネットワーク対策」に見える選択肢でも
 ### ファイアウォール方式・境界構成
 
 - [ファイアーウォールとは？通信を制御する基本対策【SG試験】](/sg/firewall/)
+- [ルータ・ブリッジ・リピータ・スイッチングハブの違いは？OSI層で切り分ける【SG試験】](/sg/router-bridge-repeater-switch-difference/)
 - [パケットフィルタリング方式とは？ファイアウォール方式の基本【SG試験】](/sg/packet-filtering-firewall/)
 - [ステートフルインスペクション方式とは？ファイアウォール方式の切り分け【SG試験】](/sg/stateful-inspection-firewall/)
 - [アプリケーションゲートウェイ方式とは？プロキシ型ファイアウォールの切り分け【SG試験】](/sg/application-gateway-firewall/)
