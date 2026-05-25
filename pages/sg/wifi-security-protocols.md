@@ -6,7 +6,7 @@ permalink: /sg/wifi-security-protocols/
 prev: /sg/secure-protocol/
 next: /sg/compromise-crypto/
 tags: [sg, sg-security-measures, unauthorized_access, network]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-25
 ---
 
 ## まず結論
@@ -72,6 +72,20 @@ Wi-Fiのセキュリティ方式は、無線通信を暗号化して盗聴や不
 SG試験では  
 「どの方式を選ぶべきか」  
 を判断させる問題が多いです。
+
+---
+
+### SG試験のひっかけ（WPA2と似た用語の切り分け）
+
+| 問題文のキーワード | 優先して考える用語 |
+|---|---|
+| AES + CCMP | WPA2の特徴 |
+| RC4 + IV | WEPの特徴 |
+| AH / ESP | IPsecの特徴（無線LAN暗号そのものではない） |
+| SSL Handshake | Web通信のTLS/SSL文脈（WPA2の説明ではない） |
+
+WPA2の特徴を問う問題では、**「AESを使うCCMP」**と書かれた選択肢を軸に判断します。  
+一方で、RC4はWEP、AH/ESPはIPsec、SSL HandshakeはTLSの話なので切り分けます。
 
 ## まとめ（試験直前用）
 - Wi-Fi暗号方式は WEP → WPA → WPA2 → WPA3 の順で強化
