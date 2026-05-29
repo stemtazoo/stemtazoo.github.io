@@ -5,7 +5,7 @@ description: Cookieの保存場所・送信方法・属性（Secure/HttpOnly/Sam
 permalink: /sg/cookie/
 tags: [sg, sg-technology, web, network, authentication]
 date: 2026-05-13
-last_modified_at: 2026-05-15
+last_modified_at: 2026-05-29
 ---
 
 # Cookieとは？HTTPヘッダで扱う状態管理の基本
@@ -298,38 +298,30 @@ Cookieの問題では、次の3つを分けると考えやすいです。
 
 ---
 
-## 確認問題
-
-### 問題
+## 確認問題（SG試験対策）
 
 Cookieに関する説明として、適切なものはどれか。
 
-1. Cookieは、通信内容を暗号化するためのHTTPの仕組みである。  
-2. `Set-Cookie` は、ブラウザがサーバへCookieを送信するためのリクエストヘッダである。  
-3. `HttpOnly` 属性を付けると、JavaScriptからCookieを読み取りにくくできる。  
-4. `Secure` 属性を付けると、Cookieの値そのものが暗号化される。  
+- 1. Cookieは、通信内容を暗号化するためのHTTPの仕組みである。
+- 2. `Set-Cookie` は、ブラウザがサーバへCookieを送信するためのリクエストヘッダである。
+- 3. `HttpOnly` 属性を付けると、JavaScriptからCookieを読み取りにくくできる。
+- 4. `Secure` 属性を付けると、Cookieの値そのものが暗号化される。
 
-### 解答
+<details markdown="1">
+<summary>▶ クリックして答えと解説を見る（ここを開く）</summary>
 
-正解は **3** です。
+**正解：3**
 
 ### 解説
 
-1は誤りです。
-Cookieは状態管理の仕組みであり、通信を暗号化する仕組みではありません。
-通信を暗号化するのはHTTPSです。
+- 1：誤りです。Cookieは状態管理の仕組みであり、通信を暗号化する仕組みではありません。通信を暗号化するのはHTTPSです。
+- 2：誤りです。`Set-Cookie` は、サーバがブラウザにCookieを保存させるためのレスポンスヘッダです。ブラウザがサーバへ送るときは `Cookie` ヘッダを使います。
+- 3：適切です。`HttpOnly` は、JavaScriptからCookieを読み取れないようにする属性です。XSSによるCookie窃取リスクを下げる目的で使われます。
+- 4：誤りです。`Secure` は、CookieをHTTPS通信時にだけ送信する属性です。Cookieの値そのものを暗号化する機能ではありません。
 
-2は誤りです。
-`Set-Cookie` は、サーバがブラウザにCookieを保存させるためのレスポンスヘッダです。
-ブラウザがサーバへ送るときは `Cookie` ヘッダを使います。
+判断ポイント：Cookieは状態管理の仕組みです。暗号化、送信方向、JavaScriptからの読み取り制限を分けて判断します。
 
-3は正しいです。
-`HttpOnly` は、JavaScriptからCookieを読み取れないようにする属性です。
-XSSによるCookie窃取リスクを下げる目的で使われます。
-
-4は誤りです。
-`Secure` は、CookieをHTTPS通信時にだけ送信する属性です。
-Cookieの値そのものを暗号化する機能ではありません。
+</details>
 
 ---
 
