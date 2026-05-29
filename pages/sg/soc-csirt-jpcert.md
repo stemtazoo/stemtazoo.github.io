@@ -6,7 +6,7 @@ permalink: /sg/soc-csirt-jpcert/
 tags: [sg, sg-security-management]  
 prev: /sg/security-org-practice/  
 next: /sg/csrf/  
-last_modified_at: 2026-05-08
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論  
@@ -16,6 +16,35 @@ last_modified_at: 2026-05-08
 
 👉 SG試験は  
 **「誰が何をやるか」で切る問題が中心**
+
+---
+
+## このページで切り分けること（先にここだけ）
+
+このページは、**SOC・CSIRT・JPCERT/CCの役割分担**を中心に整理します。
+
+- SOC：監視・検知を行う
+- CSIRT：事故対応・封じ込め・復旧を行う
+- JPCERT/CC：組織横断の外部連携・情報共有を行う
+
+> 迷ったら、**「監視の担当か、対応の担当か、外部連携の担当か」**を見ます。
+
+## SG試験で選択肢を切る判断軸（SOC/CSIRT/JPCERT編）
+
+- 「ログ監視」「アラート監視」「24時間監視」
+  → SOCの話
+
+- 「インシデント対応」「封じ込め」「原因調査」
+  → CSIRTの話
+
+- 「外部機関と連携」「他組織への注意喚起」
+  → JPCERT/CCの話
+
+## 関連記事との役割分担（混同防止）
+
+- SOCを単体で確認したい → [SOCとは？SIEMを使って監視する組織【SG試験】](/sg/soc/)
+- CSIRTを単体で確認したい → [CSIRTとは？組織内インシデント対応の基本【SG試験】](/sg/csirt/)
+- JPCERT/CCを単体で確認したい → [JPCERT/CCとは？国内外のインシデント対応を調整する組織【SG試験】](/sg/jpcert-cc/)
 
 ---
 

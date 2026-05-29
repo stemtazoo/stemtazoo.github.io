@@ -6,7 +6,7 @@ permalink: /sg/dos-attack-difference/
 tags: [sg, threat_vulnerability, network, unauthorized_access, sg-security-overview]
 prev: /sg/domain-hijacking/
 next: /sg/dos-vs-ddos/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-19
 ---
 
 ## まず結論
@@ -79,7 +79,6 @@ SG試験では「**増幅か／接続枯渇か**」で切り分けます。
 ---
 
 ## まとめ（試験直前用）
-
 
 - リフレクター攻撃＝**増幅型DDoS**
 - SYNフラッド＝**接続枯渇型DoS**

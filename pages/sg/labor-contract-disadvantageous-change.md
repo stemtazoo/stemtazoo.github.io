@@ -6,7 +6,7 @@ permalink: /sg/labor-contract-disadvantageous-change/
 tags: [sg, security_law, business_management, risk_assessment, sg-security-law]
 prev: /sg/keylogger/
 next: /sg/labor-law-difference/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -116,10 +116,10 @@ last_modified_at: 2026-05-06
 
 労働条件の不利益変更に関する説明として、最も適切なものはどれか。
 
-ア. 使用者が一方的に通知すれば、常に有効になる。
-イ. 合理性や周知などの要件を満たす必要がある。
-ウ. 就業規則の変更は、本人同意があれば必ず無効になる。
-エ. 労働条件の変更は、労働法では一切認められない。
+- ア. 使用者が一方的に通知すれば、常に有効になる。
+- イ. 合理性や周知などの要件を満たす必要がある。
+- ウ. 就業規則の変更は、本人同意があれば必ず無効になる。
+- エ. 労働条件の変更は、労働法では一切認められない。
 
 <details markdown="1">
 <summary>▶ クリックして答えと解説を見る（ここを開く）</summary>
@@ -138,7 +138,6 @@ last_modified_at: 2026-05-06
 </details>
 
 ## まとめ（試験直前用）
-
 
 - 不利益変更は原則NG  
 - 例外は「合理性あり」の場合のみ  

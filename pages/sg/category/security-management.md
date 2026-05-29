@@ -31,8 +31,10 @@ permalink: /sg/category/security-management/
 - [リスクマネジメントとは？](/sg/risk-management/)
 - [脆弱性管理・診断運用まとめ｜主要用語を整理](/sg/vulnerability-management-summary/)
 - [インシデント対応・監視体制まとめ｜主要用語を整理](/sg/incident-response-summary/)
+- [インシデント対応・証拠保全まとめ｜主要用語を整理](/sg/incident-response-forensics-summary/)
 - [インシデント管理とは？](/sg/incident-management/)
 - [ログ管理とは？](/sg/log-management/)
+- [委託先・契約・再委託管理まとめ｜主要用語を整理](/sg/vendor-outsourcing-summary/)
 
 ## 組織・体制
 
@@ -78,6 +80,7 @@ permalink: /sg/category/security-management/
 - [情報セキュリティ事象とは？](/sg/security-event/)
 - [情報セキュリティインシデントとは？](/sg/security-incident/)
 - [インシデント対応・監視体制まとめ｜主要用語を整理](/sg/incident-response-summary/)
+- [インシデント対応・証拠保全まとめ｜主要用語を整理](/sg/incident-response-forensics-summary/)
 - [インシデント対応とは？](/sg/incident-response/)
 - [インシデント管理とは？](/sg/incident-management/)
 - [デジタルフォレンジックとは？](/sg/digital-forensics/)
@@ -118,7 +121,7 @@ permalink: /sg/category/security-management/
 
 以下は `sg-security-management` タグが付いているものの、上記セクションには未掲載だった関連記事です。新規記事に同タグを付ければ、この一覧に自動で表示されます。
 
-{% assign curated_slugs = "security-management-overview,security-policy,isms,risk-management,vulnerability-management-summary,incident-response-summary,incident-management,log-management,security-committee,csirt,soc-csirt-jpcert,nisc,nco,ipa,jpcert-cc,security-org-cheatsheet,security-policy-basic,security-policy-standards,security-policy-procedures,security-training,clear-desk-screen,risk-assessment,risk-criteria,risk-treatment,residual-risk,asset-register,risk-response-cia,risk-management-final-exercise,security-event,security-incident,incident-response,digital-forensics,audit-log,id-management,access-control,privileged-id-management,shadow-it,security-patch,vendor-management,unauthorized-access-law,identification-code,unauthorized-access-related-actions,vulnerability-scan,fuzzing,cvss,cvss-priority-exercise,jvn" | split: "," %}
+{% assign curated_slugs = "security-management-overview,security-policy,isms,risk-management,vulnerability-management-summary,incident-response-summary,incident-management,log-management,security-committee,csirt,soc-csirt-jpcert,nisc,nco,ipa,jpcert-cc,security-org-cheatsheet,security-policy-basic,security-policy-standards,security-policy-procedures,security-training,clear-desk-screen,risk-assessment,risk-criteria,risk-treatment,residual-risk,asset-register,risk-response-cia,risk-management-final-exercise,security-event,security-incident,incident-response,digital-forensics,audit-log,id-management,access-control,privileged-id-management,shadow-it,security-patch,vendor-management,vendor-outsourcing-summary,unauthorized-access-law,identification-code,unauthorized-access-related-actions,vulnerability-scan,fuzzing,cvss,cvss-priority-exercise,jvn" | split: "," %}
 {% assign auto_related = site.pages | where: "tags", "sg-security-management" | sort: "title" %}
 {% assign auto_count = 0 %}
 {% for p in auto_related %}

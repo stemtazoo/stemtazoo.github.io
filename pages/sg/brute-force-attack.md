@@ -6,7 +6,7 @@ permalink: /sg/brute-force-attack/
 tags: [sg, security_measures, unauthorized_access, threat_vulnerability, access_control, sg-security-measures]
 prev: /sg/botnet/
 next: /sg/case-solving-template/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -113,10 +113,10 @@ last_modified_at: 2026-05-06
 
 次のうち、ブルートフォース攻撃への対策として最も適切なものはどれか。
 
-ア. ログイン失敗回数の制限や多要素認証を導入する。  
-イ. 利用者全員に同じ初期パスワードを使わせ続ける。  
-ウ. パスワードの文字数を短くして入力ミスを減らす。  
-エ. 攻撃を受けてもログを保存しないようにする。  
+- ア. ログイン失敗回数の制限や多要素認証を導入する。
+- イ. 利用者全員に同じ初期パスワードを使わせ続ける。
+- ウ. パスワードの文字数を短くして入力ミスを減らす。
+- エ. 攻撃を受けてもログを保存しないようにする。
 
 <details markdown="1">
 <summary>▶ クリックして答えと解説を見る（ここを開く）</summary>
@@ -137,7 +137,6 @@ last_modified_at: 2026-05-06
 ---
 
 ## まとめ（試験直前用）
-
 
 - ブルートフォース攻撃＝「総当たりでパスワードを試す」
 - シンプルだが確実な攻撃

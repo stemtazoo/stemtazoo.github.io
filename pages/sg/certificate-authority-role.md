@@ -6,12 +6,41 @@ permalink: /sg/certificate-authority-role/
 prev: /sg/digital-certificate/
 next: /sg/root-certificate/
 tags: [sg, crypto_auth, sg-security-overview, access_control]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
 - 認証局（CA）は「この公開鍵はこの相手のものです」と保証する第三者機関  
 - SG試験では「誰が信頼を担保しているか」を判断させる問題が多い
+
+---
+
+## このページで切り分けること（先にここだけ）
+
+このページは、**認証局（CA）が担う「公開鍵と主体の結び付け」**を中心に整理します。
+
+- 電子証明書：公開鍵が誰のものかを示すデータ
+- 認証局（CA）：証明書発行で信頼を担保する第三者
+- 電子署名/MAC：メッセージ改ざん検知・否認防止の仕組み
+
+> 迷ったら、**「この鍵は誰のものかを保証する話か」**を見ます。
+
+## SG試験で選択肢を切る判断軸（認証局編）
+
+- 「公開鍵と主体の結び付け」「証明書発行審査」が出る  
+  → CAの話
+
+- 「CAが通信を暗号化する」と書かれている  
+  → 誤り。暗号化はTLS等、CAは証明
+
+- 「失効確認（CRL/OCSP）」が出る  
+  → 証明書の有効性確認の話
+
+## 関連記事との役割分担（混同防止）
+
+- 電子証明書そのものを確認したい → [電子証明書とは？公開鍵の正当性を証明する仕組み【SG試験】](/sg/digital-certificate/)
+- 電子署名の目的（否認防止）を確認したい → [電子署名とは？本人証明と改ざん検知を整理【SG試験】](/sg/digital-signature/)
+- 失効確認（CRL/OCSP）を確認したい → [証明書失効（CRL / OCSP）とは？無効な証明書の見分け方【SG試験】](/sg/certificate-revocation-crl-ocsp/)
 
 ---
 

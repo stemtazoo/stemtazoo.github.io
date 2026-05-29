@@ -6,7 +6,7 @@ permalink: /sg/multi-factor-authentication/
 tags: [sg, sg-security-measures, crypto_auth, access_control]
 prev: /sg/password-management/
 next: /sg/mfa-vs-step-auth/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-18
 ---
 
 ## まず結論
@@ -123,5 +123,8 @@ last_modified_at: 2026-05-06
 - 同じ種類を2つ使ってもMFAではない
 - SGでは「種類の違い」で判断する
 - 迷ったら要素の分類を見る
+
+## 公式情報・参考リンク
+- [NIST SP 800-63B｜Digital Identity Guidelines](https://csrc.nist.gov/pubs/sp/800/63/b/upd2/final)
 
 {% include sg_article_footer.html %}

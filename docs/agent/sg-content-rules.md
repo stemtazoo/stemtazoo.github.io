@@ -71,16 +71,74 @@ Preferred source examples:
 Link placement rules:
 
 - Place official links naturally in `## 定義・仕組み` or `## どんな場面で使う？`.
+- In SG articles, place official/reference links in a dedicated `## 公式情報・参考リンク` section near the end of the article, just before the footer include, unless an inline citation is clearly more natural.
 - Do not turn the article into a link collection.
 - Keep the main role of the article as SG exam study explanation.
 - If no reliable official source can be confirmed, do not force a link.
 - Use normal Markdown syntax for external links.
+- When you add official links, verify that each destination URL actually exists if the current environment allows it (for example, by opening it or checking HTTP response status).
+- If verification fails because of an environment/network error such as `CONNECT tunnel failed, response 403`, do not treat it as a broken link. Report it as "not verifiable in the Codex environment" and keep the link only when it is clearly an official, theme-direct URL.
+- Prefer a theme-direct official page over a broad top page whenever possible (for example, an incident-response page rather than an organization home page).
+- If a link is not clearly official or theme-direct and cannot be verified, do not add it to the article body; report it as an unverified candidate instead.
 
 Example:
 
 ```md
 公式な出題範囲は、IPAの[情報セキュリティマネジメント試験の試験内容](https://www.ipa.go.jp/shiken/kubun/sg/outline.html)でも確認できます。
 ```
+
+
+## SG Markdown Rendering Rules
+
+When creating or editing SG articles under `pages/sg`, always ensure that Markdown renders correctly on GitHub Pages.
+
+### Markdown spacing
+
+Always insert blank lines:
+
+- before and after headings
+- before and after tables
+- before and after lists
+- before and after horizontal rules (`---` or `* * *`)
+- before and after collapsible question blocks such as `<details markdown="1">`
+
+Do not place headings, lists, tables, or horizontal rules immediately after normal text without a blank line.
+
+### Internal links
+
+- Do not leave internal URLs as code text, such as `` `/sg/authorization/` ``.
+- When referencing another SG article, always use a clickable Markdown link.
+- Use the target article title as link text when possible.
+- If the exact title is unknown, use a clear natural Japanese label.
+
+### Tables
+
+- Markdown tables must include a header separator row (for example `|---|---|`).
+- Keep blank lines before and after every table.
+- Avoid pseudo-table plain text that relies only on spaces.
+
+### Final self-check before saving
+
+Before saving any SG article, check the following:
+
+- front matter is valid multi-line YAML (`---` start and end)
+- `description` and `tags` are not visible in the article body
+- internal SG links are clickable Markdown links
+- tables have separator rows
+- confirmation-question choices are one per line
+- each explanation includes a short reason
+- headings, lists, tables, and horizontal rules have blank lines around them
+
+### Optional quick checks
+
+Use simple checks only as hints, and always review context manually:
+
+```bash
+rg -n "`/sg/" pages/sg
+rg -n "ア\..*イ\..*ウ\..*エ\." pages/sg
+```
+
+Do not fix articles by blind global replacement.
 
 ## Procedure For Creating A New SG Article
 

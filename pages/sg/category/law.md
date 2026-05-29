@@ -21,6 +21,9 @@ permalink: /sg/category/law/
 - [法務・知的財産・委託契約まとめ｜主要用語を整理【SG試験】](/sg/legal-contract-ip-summary/)  
   法令上の禁止行為、知的財産の権利整理、委託契約の責任分界を、試験での判断軸で横断整理したまとめページです。
 
+- [法令・知財・契約実務まとめ｜主要用語を整理【SG試験】](/sg/law-ip-contract-summary/)  
+  法令・知財・契約実務を「何を守る制度か」「誰が責任を負うか」で切り分け、試験で迷いやすい論点を一気に整理できます。
+
 ## 関連記事一覧
 
 {% assign sg_pages = site.pages | sort: "title" %}

@@ -6,7 +6,7 @@ permalink: /sg/security-policy-basic/
 tags: [sg, security_management, isms, asset_management, it_security_operations, sg-security-management]
 prev: /sg/security-measures-cia/
 next: /sg/security-policy-procedures/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -106,10 +106,10 @@ SG試験では
 
 情報セキュリティ基本方針の位置づけとして、最も適切なものはどれか。
 
-ア. 現場の具体的な操作手順を秒単位で規定する文書である。  
-イ. 経営層の意思を示し、組織全体の方向性と原則を定める最上位文書である。  
-ウ. 個別システムの設定値のみを記載する技術仕様書である。  
-エ. 監査結果の記録だけをまとめる報告書である。  
+- ア. 現場の具体的な操作手順を秒単位で規定する文書である。
+- イ. 経営層の意思を示し、組織全体の方向性と原則を定める最上位文書である。
+- ウ. 個別システムの設定値のみを記載する技術仕様書である。
+- エ. 監査結果の記録だけをまとめる報告書である。
 
 <details markdown="1">
 <summary>▶ クリックして答えと解説を見る（ここを開く）</summary>
@@ -128,7 +128,6 @@ SG試験では
 </details>
 
 ## まとめ（試験直前用）
-
 
 - 基本方針＝**経営者の宣言（方向性）**
 - 具体的対策は書かない（→対策基準・手順）

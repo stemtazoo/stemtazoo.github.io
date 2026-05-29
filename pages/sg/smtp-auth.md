@@ -6,7 +6,7 @@ permalink: /sg/smtp-auth/
 prev: /sg/mail-header-injection/
 next: /sg/spf/
 tags: [sg, sg-security-measures, unauthorized_access, network]
-last_modified_at: 2026-05-14
+last_modified_at: 2026-05-22
 ---
 
 ## まず結論
@@ -85,6 +85,23 @@ SMTP-AUTHとは、
 | SPF/DKIM | 送信元の正当性を確認（受信側） |
 
 👉 SG試験ではここがよく出る
+
+---
+
+### ❌ 誤解③-2：宛先アドレス確認を求める対策はSMTP-AUTH
+→ ⭕ 宛先確認は、主に**電子メールの誤送信対策**です
+
+SMTP-AUTHは、SMTP接続時に「送信者が正当な利用者か」を認証する仕組みです。  
+一方、送信前に宛先を再確認させる対策は、利用者の操作ミスを防ぐための運用対策です。
+
+| 対策 | 主な目的 | 判断キーワード |
+|------|------|------|
+| SMTP-AUTH | 送信者認証・不正送信の抑止 | 「SMTP接続時の認証」「ID・パスワード」 |
+| 電子メールの誤送信対策 | 宛先入力ミスの防止 | 「送信前の宛先確認」「再確認ダイアログ」 |
+| SPF | 送信元ドメイン正当性の確認（受信側） | 「DNSのSPFレコード」「受信側で検証」 |
+| OP25B | 外向き25番ポート制御でスパム抑止 | 「Outbound Port 25 Blocking」 |
+
+SG試験では、問題文に**「送信者に宛先確認を求める」**とあれば、SMTP-AUTHよりも誤送信対策を優先して判断します。
 
 ---
 

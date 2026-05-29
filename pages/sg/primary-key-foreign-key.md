@@ -6,7 +6,7 @@ permalink: /sg/primary-key-foreign-key/
 tags: [sg, database, system_planning, data_modeling]
 prev: /sg/data-model/
 next: /sg/database-normalization/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -181,10 +181,10 @@ ER図は「関係を整理する図」、主キー・外部キーは「その関
 
 主キーと外部キーの説明として、最も適切なものはどれか。
 
-ア. 主キーは表内で行を一意に識別し、外部キーは他表との関連を保つ。
-イ. 主キーは重複を許可し、外部キーは必ず重複不可である。
-ウ. 主キーは文字列型では定義できない。
-エ. 外部キーは同一表の参照では使えない。
+- ア. 主キーは表内で行を一意に識別し、外部キーは他表との関連を保つ。
+- イ. 主キーは重複を許可し、外部キーは必ず重複不可である。
+- ウ. 主キーは文字列型では定義できない。
+- エ. 外部キーは同一表の参照では使えない。
 
 <details markdown="1">
 <summary>▶ クリックして答えと解説を見る（ここを開く）</summary>

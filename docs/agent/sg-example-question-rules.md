@@ -12,6 +12,14 @@ Use these rules when creating SG articles from past questions, example questions
 - Use the reason the user made a mistake to strengthen common misunderstanding and confusion-prevention sections.
 - Always include judgment criteria for eliminating answer choices in the body.
 
+### Handling Judgment Criteria Derived From Attached Questions
+
+- Do not copy the attached question's wording, sentence order, or option phrasing as-is into article judgment criteria.
+- Convert the question-specific clue into a reusable SG decision axis that works across multiple similar questions.
+- Keep the axis at concept level (role, order, scope, responsibility, preventive vs post-incident, etc.), not at one-question trivia level.
+- If you reference expressions that appeared in the attached question, rewrite them in your own words and explain why they indicate correct/incorrect choices.
+- Prefer concise, evergreen phrasing that remains useful even when the original attached question is removed.
+
 ## Pages Where Confirmation Questions May Be Added
 
 Only add confirmation questions to pages that meet all of these conditions:
@@ -49,10 +57,10 @@ Always add the confirmation question immediately before `## まとめ（試験�
 
 次のうち、最も適切なものはどれか。
 
-ア.  
-イ.  
-ウ.  
-エ.  
+- ア. ...
+- イ. ...
+- ウ. ...
+- エ. ...
 
 <details markdown="1">
 <summary>▶ クリックして答えと解説を見る（ここを開く）</summary>
@@ -91,3 +99,11 @@ Include at least one of these axes:
 - Before intrusion / after intrusion.
 - Preventive measure / post-incident response.
 - Management control / technical control.
+
+
+## Rendering Safety For Confirmation Questions
+
+- In `## 確認問題（SG試験対策）`, choices must be written as a Markdown list (`- ア. ...` etc.), one choice per line.
+- Do not write all choices on one line (for example `ア. ... イ. ... ウ. ... エ. ...`).
+- In `### 解説`, do not write only `適切` / `不適切`. Add a short reason for each choice so readers can eliminate wrong options.
+- Keep blank lines before and after the question heading, choice list, and `<details markdown="1">` block for stable rendering on GitHub Pages.

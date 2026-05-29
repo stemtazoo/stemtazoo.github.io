@@ -6,7 +6,7 @@ permalink: /sg/reverse-brute-force-attack/
 tags: [sg, security_measures, unauthorized_access, threat_vulnerability, access_control, sg-security-measures]
 prev: /sg/residual-risk/
 next: /sg/risk-response-cia/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -116,10 +116,10 @@ last_modified_at: 2026-05-06
 
 次のうち、リバースブルートフォース攻撃の説明として最も適切なものはどれか。
 
-ア. 固定したよくあるパスワードを、多数のIDに対して試す攻撃である。  
-イ. 1つのIDに対して、すべてのパスワード候補を順に試す攻撃である。  
-ウ. 利用者に偽サイトで情報を入力させる攻撃である。  
-エ. 送信元IPアドレスを偽装して通信する攻撃である。  
+- ア. 固定したよくあるパスワードを、多数のIDに対して試す攻撃である。
+- イ. 1つのIDに対して、すべてのパスワード候補を順に試す攻撃である。
+- ウ. 利用者に偽サイトで情報を入力させる攻撃である。
+- エ. 送信元IPアドレスを偽装して通信する攻撃である。
 
 <details markdown="1">
 <summary>▶ クリックして答えと解説を見る（ここを開く）</summary>
@@ -140,7 +140,6 @@ last_modified_at: 2026-05-06
 ---
 
 ## まとめ（試験直前用）
-
 
 - リバースブルートフォース＝「パスワード固定で複数IDを試す」
 - 特徴は  

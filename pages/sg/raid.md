@@ -6,7 +6,7 @@ permalink: /sg/raid/
 prev: /sg/security-wire/
 next: /sg/remote-backup/
 tags: [sg, sg-security-measures, system_architecture, it_security_operations]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-19
 ---
 
 ## まず結論
@@ -195,13 +195,11 @@ SG試験では、
 
 ## まとめ（試験直前用）
 
-- RAID＝複数ディスクを組み合わせる仕組み
-- RAID0＝速いが冗長性なし
-- RAID1＝同じデータを複製する
-- RAID5＝1台故障まで、パリティあり
-- RAID6＝2台故障まで、RAID5より安全
-- RAID10＝RAID1＋RAID0
-- RAIDはバックアップではない
+- 先に「故障に備える話」か「復旧する話」かを判定する。
+- RAIDは**ディスク故障に備える可用性対策**で、バックアップ（過去状態へ戻す対策）とは別。
+- RAID0は高速化寄りで冗長性なし、RAID1はミラー、RAID5は1台故障まで、RAID6は2台故障まで。
+- 「誤削除・ランサムウェア・災害復旧」の文脈ならRAID単独の選択肢は切る。
+- 迷ったら「止まりにくくする＝RAID」「戻せるようにする＝バックアップ」で最終確認。
 
 👉 **RAIDは「ディスク故障への備え」、バックアップは「復旧のための備え」と切る**
 

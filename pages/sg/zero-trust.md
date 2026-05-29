@@ -6,7 +6,7 @@ permalink: /sg/zero-trust/
 prev: /sg/xss/
 next: /sg/firewall/
 tags: [sg, sg-security-measures, access_control, it_security_operations]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-18
 ---
 
 ## まず結論
@@ -164,6 +164,9 @@ last_modified_at: 2026-05-06
 
 👉 判断基準  
 - 内部だから安全 → ❌  
-- 毎回検証する → ⭕  
+- 毎回検証する → ⭕
+
+## 公式情報・参考リンク
+- [NIST SP 800-207｜Zero Trust Architecture](https://csrc.nist.gov/pubs/sp/800/207/final)
 
 {% include sg_article_footer.html %}

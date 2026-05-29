@@ -6,7 +6,7 @@ permalink: /sg/pci-dss/
 prev: /sg/copyright-transfer/
 next: /sg/security-management-overview/
 tags: [sg, sg-security-law, it_security_operations, vendor_management]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論  
@@ -122,10 +122,10 @@ CVSSは「脆弱性の深刻度を数値化する指標」
 
 PCI DSSの説明として最も適切なものはどれか。
 
-ア. すべての業種に共通する労務管理の法令要件である。  
-イ. クレジットカード会員データを扱う事業者向けのセキュリティ基準である。  
-ウ. 無線LAN暗号化方式の技術仕様そのものである。  
-エ. インシデント報告の書式だけを定めたガイドである。  
+- ア. すべての業種に共通する労務管理の法令要件である。
+- イ. クレジットカード会員データを扱う事業者向けのセキュリティ基準である。
+- ウ. 無線LAN暗号化方式の技術仕様そのものである。
+- エ. インシデント報告の書式だけを定めたガイドである。
 
 <details markdown="1">
 <summary>▶ クリックして答えと解説を見る（ここを開く）</summary>
@@ -150,5 +150,14 @@ PCI DSSは「カード会員データ保護の実務基準」。
 - 小規模でも、委託していても対象  
 - ISMSとは別物（より具体・対象限定）  
 - 「責任がない」と書かれていたら誤りと判断する
+
+
+
+## 公式情報・参考リンク
+
+- PCI Security Standards Council（PCI SSC）: [PCI DSS の公式ページ](https://www.pcisecuritystandards.org/standards/pci-dss/)
+- PCI Security Standards Council（PCI SSC）: [Document Library（公式ドキュメント一覧）](https://www.pcisecuritystandards.org/document_library/)
+
+※試験対策では、版数や細かな要件番号を暗記するよりも、PCI DSSが「カード会員データを扱う組織向けのセキュリティ基準」である点を優先して整理すると判断しやすくなります。
 
 {% include sg_article_footer.html %}

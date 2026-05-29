@@ -6,7 +6,7 @@ permalink: /sg/session-hijacking/
 tags: [sg, security_measures, unauthorized_access, network, access_control, sg-security-measures]
 prev: /sg/shadow-it/
 next: /sg/sg-exam-outline-study/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -110,10 +110,10 @@ last_modified_at: 2026-05-06
 
 次のうち、セッションハイジャックの説明として最も適切なものはどれか。
 
-ア. セッションIDなどを盗み、正規利用者になりすまして操作する攻撃である。  
-イ. 利用者にIPアドレスを自動的に割り当てる仕組みである。  
-ウ. 証明書の発行者を信頼の階層で確認する仕組みである。  
-エ. すべてのパスワード候補を順に試す攻撃である。  
+- ア. セッションIDなどを盗み、正規利用者になりすまして操作する攻撃である。
+- イ. 利用者にIPアドレスを自動的に割り当てる仕組みである。
+- ウ. 証明書の発行者を信頼の階層で確認する仕組みである。
+- エ. すべてのパスワード候補を順に試す攻撃である。
 
 <details markdown="1">
 <summary>▶ クリックして答えと解説を見る（ここを開く）</summary>
@@ -134,7 +134,6 @@ last_modified_at: 2026-05-06
 ---
 
 ## まとめ（試験直前用）
-
 
 - セッションハイジャック＝「ログイン状態の乗っ取り」
 - パスワード不要で侵入できるのが特徴

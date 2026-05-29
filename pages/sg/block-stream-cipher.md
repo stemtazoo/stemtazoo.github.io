@@ -6,7 +6,7 @@ permalink: /sg/block-stream-cipher/
 prev: /sg/rsa/
 next: /sg/hybrid-cryptography/
 tags: [sg, sg-security-overview, crypto_auth, it_security_operations]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -118,10 +118,10 @@ SG試験ではここが狙われます。
 
 ブロック暗号とストリーム暗号の説明として適切なものはどれか。
 
-ア. ブロック暗号は固定長単位で処理し、動作モードで利用形態が変わる。
-イ. ストリーム暗号は必ず公開鍵を使う。
-ウ. ブロック暗号は復号できない。
-エ. どちらもハッシュ関数の一種である。
+- ア. ブロック暗号は固定長単位で処理し、動作モードで利用形態が変わる。
+- イ. ストリーム暗号は必ず公開鍵を使う。
+- ウ. ブロック暗号は復号できない。
+- エ. どちらもハッシュ関数の一種である。
 
 <details markdown="1">
 <summary>▶ クリックして答えと解説を見る（ここを開く）</summary>

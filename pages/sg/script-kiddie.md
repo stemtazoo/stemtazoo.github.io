@@ -6,7 +6,7 @@ permalink: /sg/script-kiddie/
 tags: [sg, threat_vulnerability, security_awareness, security_measures, sg-security-measures]
 prev: /sg/sandbox/
 next: /sg/security-measures-cia/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-19
 ---
 
 ## まず結論
@@ -101,7 +101,6 @@ last_modified_at: 2026-05-06
 ---
 
 ## まとめ（試験直前用）
-
 
 - スクリプトキディ＝ツール頼みの初心者攻撃者
 - 技術力は低いが数が多く無差別攻撃をする

@@ -6,7 +6,7 @@ permalink: /sg/root-certificate/
 prev: /sg/certificate-authority-role/
 next: /sg/root-intermediate-certificate/
 tags: [sg, sg-security-overview, crypto_auth, it_security_operations]
-last_modified_at: 2026-05-08
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -111,10 +111,10 @@ SG試験ではここがよく狙われます。
 
 ルート証明書の説明として最も適切なものはどれか。
 
-ア. 必ず中間CAが発行する証明書であり、自己署名はありえない。  
-イ. 信頼の起点となる証明書で、OSやブラウザの信頼ストアに登録される。  
-ウ. サーバ証明書と同じ用途で、利用者端末には不要である。  
-エ. 有効期限が切れても信頼性に影響しない。  
+- ア. 必ず中間CAが発行する証明書であり、自己署名はありえない。
+- イ. 信頼の起点となる証明書で、OSやブラウザの信頼ストアに登録される。
+- ウ. サーバ証明書と同じ用途で、利用者端末には不要である。
+- エ. 有効期限が切れても信頼性に影響しない。
 
 <details markdown="1">
 <summary>▶ クリックして答えと解説を見る（ここを開く）</summary>

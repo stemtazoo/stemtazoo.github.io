@@ -4,7 +4,7 @@ title: Evil Twin攻撃とは？偽Wi-Fiに接続させる攻撃【SG試験】
 description: Evil Twin攻撃は、正規のWi-Fiに似せた偽アクセスポイントへ利用者を接続させる攻撃です。なりすましAPとの関係とSG試験の判断ポイントを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/evil-twin-attack/
 tags: [sg, sg-security-overview, threat_vulnerability, network]
-last_modified_at: 2026-05-08
+last_modified_at: 2026-05-19
 ---
 
 ## まず結論

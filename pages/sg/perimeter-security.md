@@ -6,7 +6,7 @@ permalink: /sg/perimeter-security/
 prev: /sg/security-measures-comparison/
 next: /sg/security-patch/
 tags: [sg, sg-security-measures, network, it_security_operations]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-20
 ---
 
 ## まず結論
@@ -134,10 +134,10 @@ last_modified_at: 2026-05-06
 
 境界防御（perimeter security）の説明として、最も適切なものはどれか。
 
-ア. 社内外の境界で通信を制御するが、内部対策も別途必要である。
-イ. 境界防御を導入すれば、内部不正対策は不要になる。
-ウ. 境界防御は暗号鍵管理の運用手順そのものを指す。
-エ. 境界防御は可用性だけを対象にし、機密性には関係しない。
+- ア. 社内外の境界で通信を制御するが、内部対策も別途必要である。
+- イ. 境界防御を導入すれば、内部不正対策は不要になる。
+- ウ. 境界防御は暗号鍵管理の運用手順そのものを指す。
+- エ. 境界防御は可用性だけを対象にし、機密性には関係しない。
 
 <details markdown="1">
 <summary>▶ クリックして答えと解説を見る（ここを開く）</summary>

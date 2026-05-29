@@ -156,18 +156,60 @@ Liquid を編集するときは、次を優先します。
 
 より詳しい互換性ルールや既知の失敗例は `docs/agent/github-pages-compat.md` を参照してください。
 
-## AIエージェント・共同編集者向けルール
+## AIエージェント・共同編集者向けルール（役割整理）
 
-AIエージェントや共同編集者が作業するときは、まず `AGENTS.md` を入口として確認します。
+このリポジトリの運用ルールは、**「入口（AGENTS.md）→ 分野別詳細（docs/agent）→ SG補助方針（project_rules）」** の3層で管理します。
 
-詳細な運用ルールは内容ごとに `docs/agent/` 配下へ分けています。
+### 1) 入口: `AGENTS.md`
 
-- GitHub Pages / Liquid 互換性: `docs/agent/github-pages-compat.md`
-- IndexNow 運用: `docs/agent/indexnow.md`
-- テーマ・レイアウト整合性: `docs/agent/theme-consistency.md`
-- SG記事・確認問題追加ルール: `docs/agent/sg-content-rules.md`
+- 役割: リポジトリ全体で必ず最初に読む「総合ガイド」
+- 含む内容:
+  - サイト全体の優先順位（Pages互換性、内容正確性、テーマ整合など）
+  - 新規記事作成の判断フロー（重複・近似重複の扱い）
+  - 編集前に確認すべき詳細ルールへのリンク
+- 使い方: まず `AGENTS.md` を読んで、対象作業に必要な詳細ファイルへ進む
 
-新しい運用メモを追加するときは、`AGENTS.md` を長くしすぎず、必要に応じて `docs/agent/` に詳細ファイルを追加してください。
+### 2) 分野別の正式ルール: `docs/agent/*.md`
+
+`AGENTS.md` から参照する詳細ルールです。実作業時は、変更対象に応じて次を参照します。
+
+- `docs/agent/github-pages-compat.md`
+  - 役割: GitHub Pages で壊れない Liquid / Jekyll 記法の基準
+  - 主な用途: include / layout / Liquid 条件分岐を編集するとき
+- `docs/agent/indexnow.md`
+  - 役割: IndexNow 送信とワークフロー運用の基準
+  - 主な用途: URL変更、送信対象、運用確認
+- `docs/agent/theme-consistency.md`
+  - 役割: DS/GK/SG のテーマ間で見た目・構造を揃える基準
+  - 主な用途: レイアウト、ナビ、カテゴリ導線の調整
+- `docs/agent/sg-content-rules.md`
+  - 役割: SG通常記事の執筆・改善方針（試験判断軸重視）
+- `docs/agent/sg-article-template.md`
+  - 役割: SG記事のテンプレート構造
+- `docs/agent/sg-frontmatter-rules.md`
+  - 役割: SG front matter の定義・更新ルール
+- `docs/agent/sg-tag-rules.md`
+  - 役割: SGタグ設計と一貫性ルール
+- `docs/agent/sg-example-question-rules.md`
+  - 役割: SGの例題・確認問題ブロック追加ルール
+- `docs/agent/sg-series-summary-rules.md`
+  - 役割: SGのまとめ・シリーズ系ページ構成ルール
+
+### 3) SG補助ルール: `project_rules/*.md`
+
+- `project_rules/sg_article_ai_search_improvement.md`
+  - 役割: SG記事で「読者の切り分け判断」を強化するための追加ガイド
+  - 位置づけ: `docs/agent/` の正式ルールを補助する実践ガイド
+  - 主な用途: 「このページで切り分けること」「判断軸」「関連記事との役割分担」ブロックを追加・調整するとき
+
+### ルール参照の実務フロー（最短）
+
+1. `AGENTS.md` で優先順位と作業方針を確認  
+2. 変更箇所に対応する `docs/agent/*.md` を確認  
+3. SG記事で必要な場合のみ `project_rules/sg_article_ai_search_improvement.md` を追加参照  
+4. 変更後は GitHub Pages 互換性を意識して最小修正で反映
+
+新しい運用メモを追加する場合は、`AGENTS.md` には概要のみを書き、詳細は原則 `docs/agent/`（または補助方針なら `project_rules/`）へ分離してください。
 
 ## デプロイと IndexNow
 
