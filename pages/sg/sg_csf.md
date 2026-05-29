@@ -2,7 +2,7 @@
 layout: page
 title: CSFとは｜KGI・KPIとの違いをやさしく整理【SG試験対策】
 description: 情報セキュリティマネジメント試験で問われるCSFについて、KGI・KPI・MBOとの違いを、過去問で迷わない判断基準を中心に解説します。
-permalink: /pages/sg/csf/
+permalink: /sg/csf/
 tags: [sg, management, strategy, kgi, kpi]
 ---
 

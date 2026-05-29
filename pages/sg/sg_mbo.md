@@ -2,7 +2,7 @@
 layout: page
 title: MBOとは｜CSF・KGI・KPIとの違いをやさしく整理【SG試験対策】
 description: 情報セキュリティマネジメント試験で問われるMBOについて、目標管理制度の考え方と、CSF・KGI・KPIとの違いを過去問で迷わない判断基準で解説します。
-permalink: /pages/sg/mbo/
+permalink: /sg/mbo/
 tags: [sg, management, strategy, goal-management, kgi, kpi, csf]
 ---
 

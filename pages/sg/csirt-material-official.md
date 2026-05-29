@@ -2,7 +2,7 @@
 layout: page
 title: CSIRTマテリアル
 description: SG試験で問われるCSIRTマテリアルについて、組織内CSIRTの構築・運用を支援するガイドラインとして、他のガイドラインとの違いを含めて初心者向けに整理します。
-permalink: /pages/sg/csirt-material/
+permalink: /sg/csirt-material/
 tags: [sg, security-management, incident-response, csirt]
 ---
 

@@ -2,7 +2,7 @@
 layout: page
 title: エラープルーフ化とは？人のミスを起こしにくくする仕組み【SG試験】
 description: 情報セキュリティマネジメント試験（SG試験）で問われるエラープルーフ化について、排除・代替化・容易化・異常検出・影響緩和の5つの考え方と、教育訓練との違いを初心者向けに解説します。
-permalink: /pages/sg/error-proofing/
+permalink: /sg/error-proofing/
 tags: [sg, security-management, human-error, risk-management]
 date: 2026-05-10
 last_modified_at: 2026-05-10
