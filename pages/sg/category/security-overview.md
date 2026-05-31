@@ -45,6 +45,7 @@ permalink: /sg/category/security-overview/
 - [スクリプトキディとは？初心者攻撃者の特徴と対策](/sg/script-kiddie/)
 - [内部不正とは？不正のトライアングルで原因と対策を理解](/sg/insider-threat/)
 - [不正のトライアングルとは？内部不正が起こる3要素](/sg/fraud-triangle/)
+- [割れ窓理論とは？小さな不正放置が重大化する考え方](/sg/broken-windows-theory/)
 
 ## 脆弱性と評価
 
