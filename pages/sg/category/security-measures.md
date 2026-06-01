@@ -97,6 +97,7 @@ permalink: /sg/category/security-measures/
 - [SPFとは？送信元IPでなりすましを防ぐ仕組み](/sg/spf/)
 - [SPF・DKIMとは？なりすましメール対策の仕組み](/sg/spf-dkim/)
 - [SMTP-AUTHとは？メール送信時の認証方式](/sg/smtp-auth/)
+- [OP25Bとは？外向き25番ポート遮断とスパム対策](/sg/op25b/)
 - [S/MIMEとは？メールの暗号化と電子署名の仕組み](/sg/smime/)
 - [メールヘッダーインジェクションとは？改行を悪用する攻撃](/sg/mail-header-injection/)
 

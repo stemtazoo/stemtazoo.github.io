@@ -6,7 +6,7 @@ permalink: /sg/digital-certificate/
 prev: /sg/pki/
 next: /sg/certificate-authority-role/
 tags: [sg, sg-security-overview, crypto_auth, it_security_operations]
-last_modified_at: 2026-05-20
+last_modified_at: 2026-05-31
 ---
 
 ## まず結論
@@ -108,6 +108,24 @@ SG試験では
 
 ## よくある誤解・混同
 SG試験でよく出ます。
+
+### ❌ EV SSL証明書の Organization Name はCA名である
+→ ⭕ `Organization Name` は、証明書の対象となる組織名です。
+
+EV SSL証明書では、証明書のサブジェクト情報に、Webサイトを運営する法人などの正式な組織名が記載されます。
+
+SG試験では、次のように切り分けます。
+
+| 用語 | 見るポイント |
+|---|---|
+| Organization Name | Webサイト運営団体など、証明書の対象組織 |
+| CA | 証明書を発行・署名する認証局 |
+| RA | 証明書申請者の本人確認・登録審査を行う機関 |
+| レジストラ | ドメイン名の登録申請を受け付ける機関 |
+
+「証明書の Subject / Organization Name に記載されるもの」と問われたら、発行者ではなく、証明書の対象となる組織名を選びます。
+
+---
 
 ### ❌ 電子証明書＝公開鍵
 → ⭕  
