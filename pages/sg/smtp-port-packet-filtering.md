@@ -6,7 +6,7 @@ permalink: /sg/smtp-port-packet-filtering/
 tags: [sg, technology, network, security_measures, unauthorized_access, sg-security-measures]
 prev: /sg/smishing/
 next: /sg/spyware/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-31
 ---
 
 ## まず結論
@@ -66,6 +66,8 @@ SMTPは、**電子メールを送信するためのプロトコル**です。
 このため、選択肢では **「SMTPなのに110番になっていないか」**、**「PC側が25番になっていないか」**、**「応答の向きが逆になっているか」** を見ると判断しやすくなります。
 
 なお、SG試験ではポート番号そのものを細かく暗記するより、**サーバ側は固定の代表的なポート、クライアント側は動的なポート**という考え方を押さえておく方が得点につながります。
+
+また、外部メールサーバへ向かう25番ポート通信を止める対策として [OP25B](/sg/op25b/) が出ることがあります。OP25Bでは、単なるSMTPのポート番号ではなく、**動的IPアドレスからISPのメールサーバを経由せずに直接送信しているか**を見ます。
 
 ## どんな場面で使う？
 
