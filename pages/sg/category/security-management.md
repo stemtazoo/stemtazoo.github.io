@@ -49,6 +49,7 @@ permalink: /sg/category/security-management/
 - [NISCとは？](/sg/nisc/)
 - [NCOとは？](/sg/nco/)
 - [IPAとは？](/sg/ipa/)
+- [J-CRATとは？](/sg/j-crat/)
 - [JPCERT/CCとは？](/sg/jpcert-cc/)
 - [NISC・IPA・JPCERT/CC・CSIRTの違いまとめ](/sg/security-org-cheatsheet/)
 
