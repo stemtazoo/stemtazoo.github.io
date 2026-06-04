@@ -7,7 +7,7 @@ permalink: /sg/jisec/
 tags: [sg, sg-security-overview, crypto_auth, sg-technology, it_security_operations]
 prev: /sg/eal/
 next: /sg/security-certification-vs-audit/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-06-04
 ---
 
 ## まず結論
@@ -22,6 +22,20 @@ JISEC：その基準に基づいて評価・認証する制度
 つまり、ISO/IEC 15408が「ものさし」だとすると、JISECはそのものさしを使って、IT製品やシステムを評価・認証する仕組みです。
 
 選択肢では、規格そのものと評価・認証制度を混同させてくることがあります。
+
+## SG試験で選択肢を切る判断軸（JISEC編）
+
+- 「ISO/IEC 15408」「IT製品」「セキュリティ機能」「第三者が評価・認証」が出る
+  → JISECの説明です。
+
+- 「暗号モジュール」「暗号アルゴリズム」「暗号鍵の保護」が中心に出る
+  → JCMVPなど暗号モジュール評価の話を疑います。
+
+- 「ネットワーク接続時の利用者認証」や「認証済み利用者だけ通信を許可する」が中心に出る
+  → 無線LAN認証や802.1X系の話であり、JISECではありません。
+
+- 「マネジメントシステム」「組織内に構築・運用」が中心に出る
+  → ISMS適合性評価制度の話を疑います。
 
 ## 直感的な説明
 
