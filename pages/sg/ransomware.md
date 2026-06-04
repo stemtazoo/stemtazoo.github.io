@@ -6,7 +6,7 @@ permalink: /sg/ransomware/
 tags: [sg, security_measures, malware, data_leakage, sg-security-measures]
 prev: /sg/psk-wireless-auth/
 next: /sg/residual-risk/
-last_modified_at: 2026-05-20
+last_modified_at: 2026-06-04
 ---
 
 ## まず結論
@@ -53,6 +53,22 @@ last_modified_at: 2026-05-20
   - 暗号化＋情報を盗んで公開を脅す
 
 👉 可用性＋機密性の両方を脅かす
+
+---
+
+### WannaCryptor（WannaCry）を問う問題
+
+WannaCryptor（WannaCry）は、ランサムウェアの特徴に加えて、**古いWindowsファイル共有機能の脆弱性を悪用してネットワーク上に感染を広げた**点が試験で狙われやすい事例です。
+
+| 表現 | 判断 |
+|---|---|
+| Windowsファイル共有の古い脆弱性を悪用する | WannaCryptor（WannaCry）の重要な手掛かり |
+| データを利用不能にし、復旧と引き換えに金銭を要求する | ランサムウェアの特徴 |
+| 他のPCへ感染を広げる | ワーム的な感染拡大機能をもつ |
+| 連絡先情報を使ってメール拡散する | VBS.LoveLetterなど別のワームの特徴 |
+| 特定サーバ製品の脆弱性を探して高速に拡散する | SQL Slammerなど別のワームの特徴 |
+
+SG試験では、**「データ利用不能化＋金銭要求」だけでなく「古いファイル共有の脆弱性＋横展開」**がそろえば、WannaCryptor（WannaCry）の説明として判断しやすくなります。
 
 ---
 
