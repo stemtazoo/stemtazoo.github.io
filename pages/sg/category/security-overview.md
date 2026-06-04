@@ -86,6 +86,7 @@ permalink: /sg/category/security-overview/
 - [標的型攻撃とは？狙われる組織の特徴と対策](/sg/targeted-attack/)
 - [サイバーキルチェーンとは？攻撃の流れから対策を考える](/sg/cyber-kill-chain/)
 - [DDoS攻撃とは？サービス停止を狙う攻撃の仕組み](/sg/ddos/)
+- [EDoS攻撃とは？クラウド従量課金を狙う経済的DoS攻撃](/sg/edos-attack/)
 - [中間者攻撃とは？通信を盗み見る仕組みと対策](/sg/man-in-the-middle-attack/)
 - [DNSキャッシュポイズニングとは？偽サイトへ誘導する攻撃](/sg/dns-cache-poisoning/)
 - [SQLインジェクションとは？仕組みと対策をやさしく理解](/sg/sql-injection/)
@@ -111,7 +112,7 @@ permalink: /sg/category/security-overview/
 
 以下は `sg-security-overview` タグが付いているものの、上記セクションには未掲載だった関連記事です。新規記事に同タグを付ければ、この一覧に自動で表示されます。
 
-{% assign curated_slugs = "information-security-management-exam,sg-exam-outline-study,case-solving-template,availability,raid,asset-register,vulnerability,risk-management,attacker-types,hacker,cracker,script-kiddie,insider-threat,fraud-triangle,vulnerability-cheatsheet,cvss,jvn,security-patch,symmetric-key-cryptography,public-key-cryptography,hybrid-cryptography,hash-function,salt,digital-signature,digital-certificate,certificate-authority-role,validation-authority,pki,malware,unauthorized-access,unauthorized-access-techniques,identification-code,phishing,smishing,vishing,targeted-attack,cyber-kill-chain,ddos,man-in-the-middle-attack,dns-cache-poisoning,sql-injection,xss,csrf,authorization,security-event,security-incident,soc-csirt-jpcert,security-org-cheatsheet" | split: "," %}
+{% assign curated_slugs = "information-security-management-exam,sg-exam-outline-study,case-solving-template,availability,raid,asset-register,vulnerability,risk-management,attacker-types,hacker,cracker,script-kiddie,insider-threat,fraud-triangle,vulnerability-cheatsheet,cvss,jvn,security-patch,symmetric-key-cryptography,public-key-cryptography,hybrid-cryptography,hash-function,salt,digital-signature,digital-certificate,certificate-authority-role,validation-authority,pki,malware,unauthorized-access,unauthorized-access-techniques,identification-code,phishing,smishing,vishing,targeted-attack,cyber-kill-chain,ddos,edos-attack,man-in-the-middle-attack,dns-cache-poisoning,sql-injection,xss,csrf,authorization,security-event,security-incident,soc-csirt-jpcert,security-org-cheatsheet" | split: "," %}
 {% assign auto_related = site.pages | where: "tags", "sg-security-overview" | sort: "title" %}
 {% assign auto_count = 0 %}
 {% for p in auto_related %}

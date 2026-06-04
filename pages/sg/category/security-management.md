@@ -43,11 +43,13 @@ permalink: /sg/category/security-management/
 試験では、「組織内で対応する体制」か「外部の支援・調整機関」かで切り分けます。
 
 - [情報セキュリティ委員会とは？](/sg/security-committee/)
+- [トップマネジメントのリーダーシップ及びコミットメントとは？](/sg/isms-top-management-leadership/)
 - [CSIRTとは？](/sg/csirt/)
 - [SOC・CSIRT・JPCERT/CCの違い](/sg/soc-csirt-jpcert/)
 - [NISCとは？](/sg/nisc/)
 - [NCOとは？](/sg/nco/)
 - [IPAとは？](/sg/ipa/)
+- [J-CRATとは？](/sg/j-crat/)
 - [JPCERT/CCとは？](/sg/jpcert-cc/)
 - [NISC・IPA・JPCERT/CC・CSIRTの違いまとめ](/sg/security-org-cheatsheet/)
 
@@ -131,8 +133,10 @@ permalink: /sg/category/security-management/
   {% if p.permalink %}
     {% assign slug = p.permalink | remove: "/sg/" | remove: "/" %}
     {% unless curated_slugs contains slug %}
+      {% unless slug == "isms-top-management-leadership" %}
 - [{{ p.title }}]({{ p.permalink }})
-      {% assign auto_count = auto_count | plus: 1 %}
+        {% assign auto_count = auto_count | plus: 1 %}
+      {% endunless %}
     {% endunless %}
   {% endif %}
 {% endfor %}

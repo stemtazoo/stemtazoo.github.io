@@ -6,7 +6,7 @@ permalink: /sg/dos-vs-ddos/
 tags: [sg, threat_vulnerability, unauthorized_access, network, sg-security-overview]
 prev: /sg/dos-attack-difference/
 next: /sg/employment-type-comparison/
-last_modified_at: 2026-05-20
+last_modified_at: 2026-06-01
 ---
 
 ## まず結論
@@ -79,9 +79,17 @@ SG試験では「**攻撃元が1つか複数か**」で切り分けます。
 
 ---
 
+### ❌ EDoSも単にDDoSの別名である
+→ ⭕ EDoSは、クラウドの従量課金やリソース消費による**経済的損失**に注目する攻撃です。
+
+[EDoS攻撃とは？クラウド従量課金を狙う経済的DoS攻撃【SG試験】](/sg/edos-attack/)では、DoS/DDoSとの違いを費用負担の観点で整理しています。
+
+---
+
 ### SG試験のひっかけ
 - 「複数の端末」「ボットネット」 → DDoS
 - 「単一の攻撃元」 → DoS
+- 「従量課金」「経済的損失」「クラウドリソース大量消費」 → EDoS
 
 👉 攻撃手法ではなく“構成”で判断
 
