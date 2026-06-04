@@ -6,7 +6,7 @@ permalink: /sg/digital-certificate/
 prev: /sg/pki/
 next: /sg/certificate-authority-role/
 tags: [sg, sg-security-overview, crypto_auth, it_security_operations]
-last_modified_at: 2026-05-31
+last_modified_at: 2026-06-03
 ---
 
 ## まず結論
@@ -152,6 +152,15 @@ SG試験では、次のように切り分けます。
 → ⭕  
 - 電子証明書：公開鍵の証明  
 - 電子署名：データの改ざん検知＋本人証明
+
+---
+
+### ❌ 個人認証用の電子証明書は特定PCにしか置けない
+→ ⭕
+電子証明書はデジタルデータなので、ICカードやUSBトークンなどに格納して利用できる場合があります。
+
+ただし、本人確認に使う証明書では、対応する秘密鍵を安全に保護することが重要です。
+「どのPCに保存するか」だけでなく、**証明書・秘密鍵・ICカード・PINを適切に管理できているか**を見ます。
 
 ---
 

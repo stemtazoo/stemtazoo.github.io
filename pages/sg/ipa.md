@@ -6,7 +6,7 @@ permalink: /sg/ipa/
 tags: [sg, sg-security-management]  
 prev: /sg/nisc/  
 next: /sg/security-org-cheatsheet/  
-last_modified_at: 2026-06-03
+last_modified_at: 2026-06-04
 ---
 
 ## まず結論  
