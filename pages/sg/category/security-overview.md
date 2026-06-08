@@ -79,6 +79,7 @@ permalink: /sg/category/security-overview/
 - [マルウェアとは？種類と見分け方を整理](/sg/malware/)
 - [不正アクセスとは？攻撃の流れと対策の考え方](/sg/unauthorized-access/)
 - [不正アクセスの手法とは？攻撃パターンを整理して対策につなげる](/sg/unauthorized-access-techniques/)
+- [エクスプロイトコードとは？脆弱性を利用するプログラムを整理](/sg/exploit-code/)
 - [識別符号とは？ID・パスワードとの関係を整理](/sg/identification-code/)
 - [フィッシングとは？だましの手口と見抜き方](/sg/phishing/)
 - [スミッシングとは？SMSを使った詐欺手口](/sg/smishing/)
