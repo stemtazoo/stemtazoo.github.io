@@ -6,7 +6,7 @@ permalink: /sg/security-training/
 tags: [sg, security_management, security_training, risk_assessment, security_awareness, sg-security-management]
 prev: /sg/security-policy/
 next: /sg/insider-threat/
-last_modified_at: 2026-05-21
+last_modified_at: 2026-06-06
 ---
 
 ## まず結論
@@ -21,6 +21,7 @@ last_modified_at: 2026-05-21
 - メールの誤送信  
 - パスワードの使い回し  
 - 不審メールを開く  
+- なりすまし電話で秘密情報を聞かれる
 
 👉 つまり「人のミス」
 
@@ -46,6 +47,7 @@ last_modified_at: 2026-05-21
 #### 訓練（実践）
 - 標的型メール訓練  
 - インシデント対応訓練  
+- なりすましの問い合わせを受けた場合の本人確認・報告訓練
 
 👉 「知る」＋「できる」がセット
 
@@ -125,6 +127,7 @@ last_modified_at: 2026-05-21
 - 教育（知識）＋訓練（実践）がセット  
 - 人のミスは技術だけでは防げない  
 - 問題は「原因が人か」で判断  
+- ソーシャルエンジニアリングは、本人確認・折返し確認・報告ルールを訓練する
 - 「対策の種類ズレ」に注意
 
 {% include sg_article_footer.html %}
