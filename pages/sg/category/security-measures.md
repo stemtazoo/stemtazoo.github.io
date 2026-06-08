@@ -82,6 +82,7 @@ permalink: /sg/category/security-measures/
 - [SSHとは？安全な遠隔操作の仕組み](/sg/ssh/)
 - [Telnetとは？安全でない遠隔操作の仕組み](/sg/telnet/)
 - [SSL/TLSとは？通信を守る暗号化の仕組み](/sg/ssl-tls/)
+- [EDoS攻撃とは？クラウド従量課金を狙う経済的DoS攻撃](/sg/edos-attack/)
 - [HTTPとHTTPSの違いとは？安全な通信の判断ポイント](/sg/http-https/)
 - [ポート番号とは？通信先サービスの識別を理解する](/sg/port-number/)
 - [SMTPのポート番号とは？パケットフィルタリングでの見方を整理](/sg/smtp-port-packet-filtering/)
@@ -97,8 +98,10 @@ permalink: /sg/category/security-measures/
 - [SPFとは？送信元IPでなりすましを防ぐ仕組み](/sg/spf/)
 - [SPF・DKIMとは？なりすましメール対策の仕組み](/sg/spf-dkim/)
 - [SMTP-AUTHとは？メール送信時の認証方式](/sg/smtp-auth/)
+- [OP25Bとは？外向き25番ポート遮断とスパム対策](/sg/op25b/)
 - [S/MIMEとは？メールの暗号化と電子署名の仕組み](/sg/smime/)
 - [メールヘッダーインジェクションとは？改行を悪用する攻撃](/sg/mail-header-injection/)
+- [メールヘッダの読み方とは？迷惑メール調査の判断軸](/sg/mail-header-analysis/)
 
 ### Webアプリ攻撃対策
 
@@ -180,7 +183,7 @@ permalink: /sg/category/security-measures/
 
 以下は `sg-security-measures` タグが付いているものの、上記セクションには未掲載だった関連記事です。新規記事に同タグを付ければ、この一覧に自動で表示されます。
 
-{% assign curated_slugs = "auth-access-summary,auth-access-control-summary,crypto-certificate-integrity-summary,crypto-auth-platform-summary,security-measures-overview,physical-security-summary,security-measures-comparison,vulnerability-cheatsheet,web-application-attacks-summary,dns-mail-security-summary,network-defense-summary,malware-threats-summary,authentication-methods,frr-far,identification-code,authorization,access-control,access-control-model,authentication-authorization-access-control,multi-factor-authentication,mfa-vs-step-auth,sso,idp,token-authentication,risk-based-authentication,challenge-response-authentication,privileged-id,least-privilege,zero-trust,perimeter-security,brute-force-attack,reverse-brute-force-attack,dictionary-attack,password-list-attack,password-management,password-hash-authentication,rainbow-table,salt,captcha,firewall,packet-filtering,ips,waf,dmz,vpn,secure-protocol,ssh,telnet,ssl-tls,http-https,port-number,smtp-port-packet-filtering,dns,dns-cache-poisoning,dns-reflector-attack,domain-hijacking,spf,spf-dkim,smtp-auth,smime,mail-header-injection,sql-injection,xss,csrf,clickjacking,directory-traversal,session-hijacking,man-in-the-middle-attack,man-in-the-browser,malware,ransomware,spyware,keylogger,rootkit,macro-virus,bot,botnet,command-and-control,cryptojacking,sandbox,malware-analysis,wifi-security-protocols,wifi-auth-wpa2-wpa3-8021x,psk-wireless-auth,privacy-separator,mac-address,access-control-physical,anti-passback,security-wire,surveillance-camera,clear-desk-screen,remote-backup,raid,ups,availability,vulnerability-scan,fuzzing,cvss,jvn,port-scan,honeypot,digital-forensics,log-management,audit-log" | split: "," %}
+{% assign curated_slugs = "auth-access-summary,auth-access-control-summary,crypto-certificate-integrity-summary,crypto-auth-platform-summary,security-measures-overview,physical-security-summary,security-measures-comparison,vulnerability-cheatsheet,web-application-attacks-summary,dns-mail-security-summary,network-defense-summary,malware-threats-summary,authentication-methods,frr-far,identification-code,authorization,access-control,access-control-model,authentication-authorization-access-control,multi-factor-authentication,mfa-vs-step-auth,sso,idp,token-authentication,risk-based-authentication,challenge-response-authentication,privileged-id,least-privilege,zero-trust,perimeter-security,brute-force-attack,reverse-brute-force-attack,dictionary-attack,password-list-attack,password-management,password-hash-authentication,rainbow-table,salt,captcha,firewall,packet-filtering,ips,waf,dmz,vpn,secure-protocol,ssh,telnet,ssl-tls,edos-attack,http-https,port-number,smtp-port-packet-filtering,dns,dns-cache-poisoning,dns-reflector-attack,domain-hijacking,spf,spf-dkim,smtp-auth,smime,mail-header-injection,sql-injection,xss,csrf,clickjacking,directory-traversal,session-hijacking,man-in-the-middle-attack,man-in-the-browser,malware,ransomware,spyware,keylogger,rootkit,macro-virus,bot,botnet,command-and-control,cryptojacking,sandbox,malware-analysis,wifi-security-protocols,wifi-auth-wpa2-wpa3-8021x,psk-wireless-auth,privacy-separator,mac-address,access-control-physical,anti-passback,security-wire,surveillance-camera,clear-desk-screen,remote-backup,raid,ups,availability,vulnerability-scan,fuzzing,cvss,jvn,port-scan,honeypot,digital-forensics,log-management,audit-log" | split: "," %}
 {% assign auto_related = site.pages | where: "tags", "sg-security-measures" | sort: "title" %}
 {% assign auto_count = 0 %}
 {% for p in auto_related %}

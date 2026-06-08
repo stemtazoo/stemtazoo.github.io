@@ -6,7 +6,7 @@ permalink: /sg/mail-header-injection/
 tags: [sg, threat_vulnerability, unauthorized_access, data_leakage, sg-security-overview]
 prev: /sg/macro-virus/
 next: /sg/malware/
-last_modified_at: 2026-05-20
+last_modified_at: 2026-05-27
 ---
 
 ## まず結論
@@ -62,6 +62,15 @@ last_modified_at: 2026-05-20
 - ヘッダーインジェクション：システムの不備を突く  
 
 👉 **人を狙う vs システムを狙う**
+
+---
+
+
+### ❌ HTTPヘッダーインジェクション／OSコマンドインジェクションとの混同
+- ヘッダーインジェクション（メール/HTTP）：改行（CRLF）でヘッダー項目を差し込む
+- OSコマンドインジェクション：`system()` や `exec()` などを悪用してサーバでコマンド実行させる
+
+👉 **「改行でヘッダー改ざん」か「コマンド実行」か** で切り分けます。
 
 ---
 
