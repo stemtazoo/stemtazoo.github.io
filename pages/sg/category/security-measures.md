@@ -101,6 +101,7 @@ permalink: /sg/category/security-measures/
 - [OP25Bとは？外向き25番ポート遮断とスパム対策](/sg/op25b/)
 - [S/MIMEとは？メールの暗号化と電子署名の仕組み](/sg/smime/)
 - [メールヘッダーインジェクションとは？改行を悪用する攻撃](/sg/mail-header-injection/)
+- [メールヘッダの読み方とは？迷惑メール調査の判断軸](/sg/mail-header-analysis/)
 
 ### Webアプリ攻撃対策
 

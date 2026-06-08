@@ -44,6 +44,7 @@ DNSは、ドメイン名をIPアドレスへ変換する仕組みです。ここ
 | [メールヘッダとは？Bcc・Date・Received・X-Mailerの違い【SG試験】](/sg/mail-header/) | Bcc、Date、Received、X-Mailerなど通常のメールヘッダ項目の違いか |
 | [メールヘッダの読み方とは？迷惑メール調査の判断軸【SG試験】](/sg/mail-header-analysis/) | Receivedなどから配送経路や送信元の手掛かりを確認する話か |
 | [メールヘッダーインジェクションとは？改行を悪用する攻撃【SG試験】](/sg/mail-header-injection/) | 入力値を悪用して不正メール送信を引き起こす攻撃か |
+| [メールヘッダの読み方とは？迷惑メール調査の判断軸【SG試験】](/sg/mail-header-analysis/) | ReceivedやFromなどの信頼性を分け、配送経路や通報先を調査する話か |
 
 ## SG試験でのひっかけポイント
 
@@ -97,6 +98,7 @@ DNSは、ドメイン名をIPアドレスへ変換する仕組みです。ここ
 - [メールヘッダとは？Bcc・Date・Received・X-Mailerの違い【SG試験】](/sg/mail-header/)
 - [メールヘッダの読み方とは？迷惑メール調査の判断軸【SG試験】](/sg/mail-header-analysis/)
 - [メールヘッダーインジェクションとは？改行を悪用する攻撃【SG試験】](/sg/mail-header-injection/)
+- [メールヘッダの読み方とは？迷惑メール調査の判断軸【SG試験】](/sg/mail-header-analysis/)
 
 ## まとめ（試験直前用）
 
