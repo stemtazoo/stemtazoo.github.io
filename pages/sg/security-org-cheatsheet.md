@@ -6,7 +6,7 @@ permalink: /sg/security-org-cheatsheet/
 tags: [sg, sg-security-management, cheatsheet]  
 prev: /sg/ipa/  
 next: /sg/security-org-practice/  
-last_modified_at: 2026-05-14
+last_modified_at: 2026-06-09
 ---
 
 ## まず結論  
@@ -61,7 +61,7 @@ last_modified_at: 2026-05-14
 
 ## 補足：J-CSIPの切り分け
 
-- **J-CSIP**：IPAを情報ハブにして、参加組織間でサイバー攻撃情報を共有する枠組み
+- **[J-CSIP](/sg/j-csip/)**：IPAを情報ハブにして、参加組織間でサイバー攻撃情報を共有する枠組み
 - **CSIRT**：自組織のインシデントに対応する実働チーム
 - **CRYPTREC**：暗号技術の安全性評価
 - **JISEC**：IT製品・システムの評価認証
