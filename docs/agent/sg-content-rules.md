@@ -11,6 +11,7 @@ Always check the related rule files as needed:
 - Tags: `docs/agent/sg-tag-rules.md`
 - Past questions, examples, and confirmation questions: `docs/agent/sg-example-question-rules.md`
 - Series summary pages: `docs/agent/sg-series-summary-rules.md`
+- SG navigation and `prev` / `next`: `docs/agent/sg-navigation-rules.md`
 
 ## Basic Stance
 

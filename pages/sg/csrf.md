@@ -5,8 +5,7 @@ description: "クロスサイトリクエストフォージェリは利用者の
 permalink: /sg/csrf/
 tags: [sg, security_general, threat_vulnerability, unauthorized_access, data_leakage, sg-security-overview]
 prev: /sg/soc-csirt-jpcert/
-next: /sg/cvss/
-last_modified_at: 2026-05-20
+last_modified_at: 2026-06-10
 ---
 
 ## まず結論

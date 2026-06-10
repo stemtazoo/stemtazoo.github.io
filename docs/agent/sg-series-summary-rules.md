@@ -6,6 +6,8 @@ Use these standard rules when creating study-friendly series summary pages from 
 
 Follow this workflow when the user asks to create an SG article series page, create a `まとめ`, or propose series candidates.
 
+For `prev` / `next` navigation decisions around SG series and summary pages, also read `docs/agent/sg-navigation-rules.md`.
+
 ## Basic Policy
 
 - Do not make summary pages into simple link collections.
@@ -83,7 +85,7 @@ Front matter cautions:
 - Make `description` unique to the series and aim for roughly 100-140 Japanese characters.
 - Write `tags` as a YAML array.
 - Include `last_modified_at`.
-- Do not add `prev` / `next`.
+- Do not add `prev` / `next` by default. If the user explicitly wants the existing footer-style link from a summary page to the first article, follow the `next`-only exception in `docs/agent/sg-navigation-rules.md`.
 - Choose category tags such as `sg-security-measures`, `sg-security-management`, or `sg-management` according to the existing category structure.
 
 ## Standard Summary Page Structure

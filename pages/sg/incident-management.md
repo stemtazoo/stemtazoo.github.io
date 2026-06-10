@@ -4,9 +4,8 @@ title: "インシデント管理とは？対応プロセスを流れで理解【
 description: "インシデント管理は、発生したセキュリティ事故に適切に対応し再発防止まで行うプロセスです。対応の流れとSG試験・情報セキュリティマネジメント試験での判断ポイントを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。"
 permalink: /sg/incident-management/
 prev: /sg/log-management/
-next: /sg/vulnerability-cheatsheet/
 tags: [sg, sg-security-management, incident_management, risk_assessment, it_security_operations]
-last_modified_at: 2026-05-20
+last_modified_at: 2026-06-10
 ---
 
 ## まず結論

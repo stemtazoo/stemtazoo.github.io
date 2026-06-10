@@ -196,6 +196,7 @@ Read the relevant detailed guide before changing each area:
 - SG tag rules: `docs/agent/sg-tag-rules.md`
 - SG example-question and confirmation-question rules: `docs/agent/sg-example-question-rules.md`
 - SG series-summary rules: `docs/agent/sg-series-summary-rules.md`
+- SG navigation / prev-next rules: `docs/agent/sg-navigation-rules.md`
 
 - SG Markdown rendering safety (must-read before creating or editing SG articles):
   - `docs/agent/sg-article-template.md` (standard article structure and Markdown layout)

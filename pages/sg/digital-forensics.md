@@ -4,9 +4,8 @@ title: "デジタルフォレンジックとは？証拠としてのデータ活
 description: "デジタルフォレンジックはインシデント発生時に証拠としてデータを収集・分析する技術です。ログ分析との違いやSG試験・情報セキュリティマネジメント試験での判断ポイントを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。"
 permalink: /sg/digital-forensics/
 prev: /sg/malware-analysis/
-next: /sg/vulnerability-scan/
 tags: [sg, sg-security-management, incident_management, it_security_operations]
-last_modified_at: 2026-05-08
+last_modified_at: 2026-06-10
 ---
 
 ## まず結論
