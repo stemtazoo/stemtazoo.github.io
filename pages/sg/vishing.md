@@ -5,8 +5,7 @@ description: "ビッシングは電話でだます詐欺手口を理解するた
 permalink: /sg/vishing/
 tags: [sg, security_measures, unauthorized_access, data_leakage, sg-security-measures]
 prev: /sg/vendor-management/
-next: /sg/vulnerability/
-last_modified_at: 2026-05-20
+last_modified_at: 2026-06-10
 ---
 
 ## まず結論
