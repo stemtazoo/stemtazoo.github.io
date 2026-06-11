@@ -3,10 +3,9 @@ layout: page
 title: "認証・認可・アクセス制御の違いとは？役割の切り分けを整理【SG試験】"
 description: "認証・認可・アクセス制御はセキュリティの基本概念です。それぞれの役割の違いを整理し、SG試験・情報セキュリティマネジメント試験で問われる混同ポイントと判断基準を分かりやすく解説します。"
 permalink: /sg/authentication-authorization-access-control/
-tags: [sg, sg-security-measures, access_control, crypto_auth]
-prev: /sg/captcha/
 next: /sg/id-management/
-last_modified_at: 2026-05-20
+tags: [sg, sg-security-measures, access_control, crypto_auth]
+last_modified_at: 2026-06-11
 ---
 
 ## まず結論

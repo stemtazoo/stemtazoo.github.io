@@ -3,8 +3,10 @@ layout: page
 title: "リスクベース認証とは？いつもと違うアクセスだけ追加確認する仕組み【SG試験】"
 description: "リスクベース認証は、IPアドレスや端末などの利用環境からリスクを判断し、必要な場合だけ追加認証を行う仕組みです。ワンタイムパスワード、マトリクスコード認証、多要素認証との違いを整理します。"
 permalink: /sg/risk-based-authentication/
+prev: /sg/mfa-vs-step-auth/
+next: /sg/challenge-response-authentication/
 tags: [sg, sg-security-measures, crypto_auth, access_control, it_security_operations]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-06-11
 ---
 
 ## まず結論

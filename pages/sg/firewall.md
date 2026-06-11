@@ -3,10 +3,9 @@ layout: page
 title: "ファイアーウォールとは？通信を制御する基本対策【SG試験】"
 description: "ファイアーウォールはネットワークの境界で通信を制御し、不正アクセスを防ぐ仕組みです。パケットフィルタリングとの関係やWAF・IPSとの違いを、SG試験・情報セキュリティマネジメント試験のひっかけポイントを交えて整理します。"
 permalink: /sg/firewall/
-prev: /sg/zero-trust/
 next: /sg/packet-filtering/
 tags: [sg, sg-security-measures, unauthorized_access, network]
-last_modified_at: 2026-05-20
+last_modified_at: 2026-06-11
 ---
 
 ## まず結論
@@ -39,7 +38,7 @@ last_modified_at: 2026-05-20
 
 ## 関連記事との役割分担（混同防止）
 
-- IDS/IPSとの違いをまとめて見たい → [sg ids ips firewall difference](/sg/sg-ids-ips-firewall-difference/)
+- IDS/IPSとの違いをまとめて見たい → [IDS・IPSとファイアウォールの違い](/sg/ids-ips-firewall-difference/)
 - IDS単体を確認したい → [IDSとは？侵入を検知して通知する仕組み【SG試験】](/sg/ids/)
 - IPS単体を確認したい → [IPSとは？不正侵入を検知して遮断する仕組み【SG試験】](/sg/ips/)
 

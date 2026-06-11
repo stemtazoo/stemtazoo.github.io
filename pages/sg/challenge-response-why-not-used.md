@@ -4,9 +4,9 @@ title: "チャレンジレスポンス認証はなぜ使われない？現代の
 description: "チャレンジレスポンスが普及しにくい理由として、運用コスト・ユーザ体験・TLS普及後の相対的優位低下を整理し、実務採用判断とSGの理由説明問題に対応できるようにします。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。"
 permalink: /sg/challenge-response-why-not-used/
 prev: /sg/challenge-response-authentication/
-next: /sg/frr-far/
+next: /sg/sso/
 tags: [sg, sg-security-measures, access_control, risk_assessment]
-last_modified_at: 2026-05-08
+last_modified_at: 2026-06-11
 ---
 
 ## まず結論
