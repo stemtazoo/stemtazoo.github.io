@@ -3,10 +3,9 @@ layout: page
 title: "フィッシングとは？偽サイトで認証情報を入力させる攻撃【SG試験】"
 description: "フィッシングは、正規のサービスを装ったメールや偽サイトで利用者をだまし、ID・パスワードなどの認証情報を入力させる攻撃です。SG試験・情報セキュリティマネジメント試験で問われる不正アクセス禁止法の不正要求、不正取得、不正アクセス行為との違いを整理します。"
 permalink: /sg/phishing/
-tags: [sg, sg-security-measures, sg-security-management, cyberattack, authentication]
 prev: /sg/unauthorized-access/
-next: /sg/access-control/
-last_modified_at: 2026-05-18
+tags: [sg, sg-security-measures, sg-security-management, cyberattack, authentication]
+last_modified_at: 2026-06-11
 ---
 
 ## まず結論

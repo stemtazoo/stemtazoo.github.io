@@ -3,10 +3,10 @@ layout: page
 title: "パスワード管理とは？強度とロックアウトの考え方を整理【SG試験】"
 description: "パスワード管理は利用者認証を安全に運用するための基本対策です。強度要件やアカウントロックアウトを中心に、SG試験・情報セキュリティマネジメント試験で問われる運用上の判断ポイントを整理します。"
 permalink: /sg/password-management/
-tags: [sg, sg-security-measures, access_control, it_security_operations]
 prev: /sg/authentication-methods/
-next: /sg/multi-factor-authentication/
-last_modified_at: 2026-05-06
+next: /sg/password-hash-authentication/
+tags: [sg, sg-security-measures, access_control, it_security_operations]
+last_modified_at: 2026-06-11
 ---
 
 ## まず結論
