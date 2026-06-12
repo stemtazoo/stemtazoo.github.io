@@ -4,7 +4,7 @@ title: 法務・知的財産・委託契約まとめ｜主要用語を整理【S
 description: 法務・知的財産・委託契約は、法令上の禁止行為、権利の保護対象、契約上の責任分界を切り分けて理解するのが重要です。SG試験で迷いやすい論点を学習順序つきで整理します。
 permalink: /sg/legal-contract-ip-summary/
 tags: [sg, sg-security-law, vendor_management]
-last_modified_at: 2026-06-03
+last_modified_at: 2026-06-11
 ---
 
 ## まず結論
@@ -48,6 +48,7 @@ SG試験では、
 | 用語 | 判断基準 |
 |---|---|
 | [不正アクセス禁止法](/sg/unauthorized-access-law/) | 「アクセス制御機能を回避する行為」など、**不正アクセス関連行為の規制**が論点。 |
+| [コンピュータ不正アクセス対策基準](/sg/unauthorized-access-countermeasure-standard/) | ID共有禁止、最小権限、ネットワーク分離、教育など、**不正アクセス対策の運用基準**が論点。 |
 | [不正取得・不正保管・助長行為](/sg/unauthorized-access-related-actions/) | 不正アクセスそのものではなく、**識別符号の不正な取り扱い・助長**に当たるかで判断。 |
 | [不正競争防止法](/sg/unfair-competition-prevention-act/) | 営業秘密の保護など、**公正な競争秩序を守る法制度**として整理。 |
 | [営業秘密](/sg/trade-secret/) | 「秘密管理性・有用性・非公知性」の**3要件を満たすか**で判断。 |
@@ -63,6 +64,7 @@ SG試験では、
 | 迷いやすい組合せ | 切り分けのポイント |
 |---|---|
 | 不正アクセス禁止法 vs 不正競争防止法 | 前者は**アクセス行為の規制**、後者は**営業秘密等を含む競争秩序の保護**。 |
+| 不正アクセス禁止法 vs コンピュータ不正アクセス対策基準 | 前者は**禁止される行為**、後者は**利用者・管理者などが実施すべき対策**で切り分け。 |
 | 営業秘密 vs 著作権 | 営業秘密は**秘密管理された非公知情報**、著作権は**創作物の利用に関する権利**。 |
 | 著作権 vs 著作者人格権 | 譲渡・利用許諾の中心は著作権。著作者人格権は原則として著作者に専属。 |
 | 請負契約 vs 準委任契約 | 納品物の完成責任を問うか、業務遂行過程の適切性を問うかを見る。 |
@@ -73,14 +75,15 @@ SG試験では、
 
 1. [不正アクセス禁止法とは？禁止される行為を整理](/sg/unauthorized-access-law/)
 2. [不正取得・不正保管・助長行為の違い](/sg/unauthorized-access-related-actions/)
-3. [不正競争防止法とは？営業秘密の3要件を整理](/sg/unfair-competition-prevention-act/)
-4. [営業秘密とは？3要件で判断する](/sg/trade-secret/)
-5. [著作権と著作者人格権の違いとは？権利の目的で整理](/sg/copyright-vs-moral-rights/)
-6. [著作権譲渡契約とは？ライセンス契約との違いを整理](/sg/copyright-transfer/)
-7. [請負契約と準委任契約の違いとは？成果物か作業かで判断](/sg/contract-types/)
-8. [委託先管理とは？外部委託のリスクを管理する考え方](/sg/vendor-management/)
-9. [再委託とは？委託先管理で注意するポイント](/sg/subcontracting/)
-10. [中小受託取引適正化法とは？委託取引の禁止行為を整理](/sg/toriteki-law/)
+3. [コンピュータ不正アクセス対策基準とは？4つの基準と選択肢の切り方](/sg/unauthorized-access-countermeasure-standard/)
+4. [不正競争防止法とは？営業秘密の3要件を整理](/sg/unfair-competition-prevention-act/)
+5. [営業秘密とは？3要件で判断する](/sg/trade-secret/)
+6. [著作権と著作者人格権の違いとは？権利の目的で整理](/sg/copyright-vs-moral-rights/)
+7. [著作権譲渡契約とは？ライセンス契約との違いを整理](/sg/copyright-transfer/)
+8. [請負契約と準委任契約の違いとは？成果物か作業かで判断](/sg/contract-types/)
+9. [委託先管理とは？外部委託のリスクを管理する考え方](/sg/vendor-management/)
+10. [再委託とは？委託先管理で注意するポイント](/sg/subcontracting/)
+11. [中小受託取引適正化法とは？委託取引の禁止行為を整理](/sg/toriteki-law/)
 
 ## 記事一覧
 
@@ -88,6 +91,7 @@ SG試験では、
 
 - [不正アクセス禁止法とは？禁止される行為を整理](/sg/unauthorized-access-law/)
 - [不正取得・不正保管・助長行為の違い](/sg/unauthorized-access-related-actions/)
+- [コンピュータ不正アクセス対策基準とは？4つの基準と選択肢の切り方](/sg/unauthorized-access-countermeasure-standard/)
 - [不正競争防止法とは？営業秘密の3要件を整理](/sg/unfair-competition-prevention-act/)
 
 ### 知的財産（権利・保護対象）
