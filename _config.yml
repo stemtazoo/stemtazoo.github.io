@@ -17,6 +17,10 @@ exclude:
   - docs/agent/
   - internal/
 
+# Include well-known discovery files for static-site agents.
+include:
+  - .well-known
+
 title: AI・データサイエンス・IT学習ノート
 description: AI・データサイエンス・ITの学びをやさしく整理するブログ
 lang: ja

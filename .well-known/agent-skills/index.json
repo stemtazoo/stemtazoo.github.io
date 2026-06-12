@@ -1,0 +1,17 @@
+{
+  "$schema": "https://agentskills.io/schemas/agent-skills-index-v0.2.0.json",
+  "skills": [
+    {
+      "name": "site-overview",
+      "type": "documentation",
+      "description": "Overview of the site's main learning sections for AI agents.",
+      "url": "https://stemtazoo.github.io/llms.txt"
+    },
+    {
+      "name": "sitemap",
+      "type": "documentation",
+      "description": "XML sitemap for discovering public pages on the site.",
+      "url": "https://stemtazoo.github.io/sitemap.xml"
+    }
+  ]
+}
