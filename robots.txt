@@ -1,4 +1,5 @@
 User-agent: *
 Disallow: /exports/
 
+Content-Signal: ai-train=no, search=yes, ai-input=yes
 Sitemap: https://stemtazoo.github.io/sitemap.xml
