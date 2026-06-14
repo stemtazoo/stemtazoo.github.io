@@ -44,6 +44,7 @@ permalink: /sg/category/security-management/
 
 - [情報セキュリティ委員会とは？](/sg/security-committee/)
 - [トップマネジメントのリーダーシップ及びコミットメントとは？](/sg/isms-top-management-leadership/)
+- [サイバーセキュリティ経営ガイドラインとは？](/sg/cybersecurity-management-guideline/)
 - [CSIRTとは？](/sg/csirt/)
 - [SOC・CSIRT・JPCERT/CCの違い](/sg/soc-csirt-jpcert/)
 - [NISCとは？](/sg/nisc/)
@@ -127,7 +128,7 @@ permalink: /sg/category/security-management/
 
 以下は `sg-security-management` タグが付いているものの、上記セクションには未掲載だった関連記事です。新規記事に同タグを付ければ、この一覧に自動で表示されます。
 
-{% assign curated_slugs = "security-management-overview,security-policy,isms,isms-security-policy-summary,risk-management-summary,risk-management,vulnerability-management-summary,incident-response-summary,incident-management,log-management,security-committee,csirt,soc-csirt-jpcert,nisc,nco,ipa,j-crat,j-csip,jpcert-cc,security-org-cheatsheet,security-policy-basic,security-policy-standards,security-policy-procedures,security-training,clear-desk-screen,risk-assessment,risk-criteria,risk-treatment,residual-risk,asset-register,risk-response-cia,risk-management-final-exercise,security-event,security-incident,incident-response,digital-forensics,audit-log,id-management,access-control,privileged-id-management,shadow-it,security-patch,vendor-management,vendor-outsourcing-summary,unauthorized-access-law,identification-code,unauthorized-access-related-actions,vulnerability-scan,fuzzing,cvss,cvss-priority-exercise,jvn" | split: "," %}
+{% assign curated_slugs = "security-management-overview,security-policy,isms,isms-security-policy-summary,risk-management-summary,risk-management,vulnerability-management-summary,incident-response-summary,incident-management,log-management,security-committee,cybersecurity-management-guideline,csirt,soc-csirt-jpcert,nisc,nco,ipa,j-crat,j-csip,jpcert-cc,security-org-cheatsheet,security-policy-basic,security-policy-standards,security-policy-procedures,security-training,clear-desk-screen,risk-assessment,risk-criteria,risk-treatment,residual-risk,asset-register,risk-response-cia,risk-management-final-exercise,security-event,security-incident,incident-response,digital-forensics,audit-log,id-management,access-control,privileged-id-management,shadow-it,security-patch,vendor-management,vendor-outsourcing-summary,unauthorized-access-law,identification-code,unauthorized-access-related-actions,vulnerability-scan,fuzzing,cvss,cvss-priority-exercise,jvn" | split: "," %}
 {% assign auto_related = site.pages | where: "tags", "sg-security-management" | sort: "title" %}
 {% assign auto_count = 0 %}
 {% for p in auto_related %}
