@@ -1,194 +1,289 @@
-﻿---
+---
 layout: page
 title: COUNT DISTINCTとは？ユニーク数を数える方法【DS検定】
-description: COUNT DISTINCTはユニーク数を数える方法を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: COUNT DISTINCTは、重複を除いたユニークな値の件数を数えるSQLの集計方法です。COUNT(*)、COUNT(列)、COUNT(DISTINCT 列)の違い、NULLの扱い、GROUP BYとの組み合わせ、DS検定で問われやすい判断ポイントを整理します。
 permalink: /ds/sql-count-distinct/
 categories: [data-engineering]
 tags: [ds, data-processing, sql]
 prev: /ds/sql-count-diff/
 next: /ds/sql-ddl-dml/
+last_modified_at: 2026-06-17
 ---
-<div style="font-size: 14px; margin-bottom: 12px;">
-  <a href="/ds/">DS検定トップ</a>
-  ＞ {{ page.title }}
-</div>
 
 ## まず結論
+`COUNT(DISTINCT 列名)` とは、**指定した列について、重複を除いたユニークな値の件数を数えるSQLの集計方法**です。
 
-COUNT DISTINCTとは「重複を除いたユニークな件数を数える」SQLの機能
+DS検定では、`COUNT(*)`、`COUNT(列名)`、`COUNT(DISTINCT 列名)` の違いを見分けることが重要です。
 
-DS検定では「重複込みの件数か、ユニーク数か」を見抜けるかが重要
+| 書き方 | 数えるもの | NULLの扱い |
+|---|---|---|
+| `COUNT(*)` | 行数を数える | NULLを含む行も数える |
+| `COUNT(列名)` | 指定列がNULLでない行数を数える | NULLは数えない |
+| `COUNT(DISTINCT 列名)` | 指定列のユニークな非NULL値を数える | NULLは数えない |
 
+試験では、**「全部の件数」なのか「ユニーク数」なのか**を見抜くのがポイントです。
 
-
+---
 
 ## 直感的な説明
+次のような購入履歴があるとします。
 
-例えば、購入履歴が次のようになっているとします。
+| 行 | 顧客ID |
+|---|---|
+| 1 | A |
+| 2 | A |
+| 3 | B |
+| 4 | A |
 
-Aさん
-Aさん
-Bさん
-Aさん
+このとき、購入履歴の行数は4件です。
 
-このとき
+しかし、購入した顧客の種類は `A` と `B` の2人だけです。
 
-COUNT → 4件（全部数える）
+```sql
+SELECT COUNT(*) FROM sales;
+```
 
-COUNT DISTINCT → 2人（Aさん・Bさん）
+結果は `4` です。  
+すべての行を数えます。
 
+```sql
+SELECT COUNT(DISTINCT customer_id) FROM sales;
+```
 
-👉 「種類の数」を知りたいときに使うのがCOUNT DISTINCT
+結果は `2` です。  
+重複した `A` を1つとして数えるため、ユニークな顧客数は2になります。
 
+つまり、`COUNT(DISTINCT)` は**種類の数**や**ユニーク数**を知りたいときに使います。
 
+---
 
-## 定義・仕組み
+## COUNT / COUNT(列) / COUNT(DISTINCT 列) の違い
+COUNT系の関数は似ていますが、数える対象が違います。
 
-COUNT DISTINCTは、重複を除いた値の個数を数えるSQL関数です。
+### COUNT(*)
+`COUNT(*)` は、条件に一致した行の数を数えます。
 
-基本形：
+```sql
+SELECT COUNT(*) FROM sales;
+```
 
-SELECT COUNT(DISTINCT 列名) FROM テーブル名;
+行そのものを数えるため、列にNULLが含まれていても、その行はカウントされます。
 
-例：
+### COUNT(列名)
+`COUNT(列名)` は、指定した列がNULLでない行の数を数えます。
 
-SELECT COUNT(DISTINCT 顧客ID) FROM 売上テーブル;
+```sql
+SELECT COUNT(customer_id) FROM sales;
+```
 
-👉 何人の顧客がいるか（ユニーク数）を取得できる
+`customer_id` がNULLの行は数えません。
 
-ポイント：
+### COUNT(DISTINCT 列名)
+`COUNT(DISTINCT 列名)` は、指定した列について、NULLを除いたユニークな値の数を数えます。
 
-重複は1つとしてカウント
+```sql
+SELECT COUNT(DISTINCT customer_id) FROM sales;
+```
 
-NULLはカウントされない
+同じ顧客IDが何度出てきても、1種類として数えます。
 
+---
 
+## 実データで確認する
+次の売上テーブルを考えます。
 
+| order_id | customer_id | product |
+|---|---|---|
+| 1 | A | book |
+| 2 | A | pen |
+| 3 | B | book |
+| 4 | NULL | notebook |
+| 5 | C | book |
+| 6 | C | book |
+
+このテーブルに対して、次のSQLを実行すると結果は次のようになります。
+
+| SQL | 結果 | 意味 |
+|---|---:|---|
+| `COUNT(*)` | 6 | 全部の行数 |
+| `COUNT(customer_id)` | 5 | `customer_id` がNULLでない行数 |
+| `COUNT(DISTINCT customer_id)` | 3 | ユニークな顧客ID数（A、B、C） |
+| `COUNT(DISTINCT product)` | 3 | ユニークな商品数（book、pen、notebook） |
+
+`customer_id` のNULLは、`COUNT(customer_id)` でも `COUNT(DISTINCT customer_id)` でも数えません。
+
+---
+
+## NULLの扱い
+`COUNT(DISTINCT 列名)` では、NULLはユニークな値として数えません。
+
+たとえば、`customer_id` が次のようになっているとします。
+
+| customer_id |
+|---|
+| A |
+| A |
+| B |
+| NULL |
+| NULL |
+
+```sql
+SELECT COUNT(DISTINCT customer_id) FROM sales;
+```
+
+結果は `2` です。
+
+`A` と `B` だけが数えられ、NULLは除外されます。  
+NULLが2行あっても、「NULLという1種類」として数えるわけではありません。
+
+DS検定では、**COUNT(DISTINCT)はNULLを含めて数える**という選択肢が出たら誤りです。
+
+---
+
+## GROUP BYと組み合わせる例
+`COUNT(DISTINCT)` は、`GROUP BY` と組み合わせると「グループごとのユニーク数」を求められます。
+
+たとえば、商品ごとのユニーク顧客数を求める場合は次のように書きます。
+
+```sql
+SELECT
+  product,
+  COUNT(DISTINCT customer_id) AS unique_customers
+FROM sales
+GROUP BY product;
+```
+
+このSQLは、商品ごとに「その商品を購入した顧客の種類数」を数えます。
+
+| product | unique_customers |
+|---|---:|
+| book | 3 |
+| pen | 1 |
+| notebook | 0 |
+
+`notebook` の行では `customer_id` がNULLなので、ユニーク顧客数は0になります。
+
+総購入回数を知りたいなら `COUNT(*)`、購入した顧客の種類数を知りたいなら `COUNT(DISTINCT customer_id)` を使います。
+
+---
+
+## SELECT DISTINCTとの違い
+`SELECT DISTINCT` と `COUNT(DISTINCT)` は、どちらも重複を除くという点では似ています。
+
+ただし、目的が違います。
+
+| 書き方 | 目的 | 返すもの |
+|---|---|---|
+| `SELECT DISTINCT 列名` | 重複を除いた値の一覧を出す | 値の一覧 |
+| `COUNT(DISTINCT 列名)` | 重複を除いた値の件数を出す | 件数 |
+
+たとえば、顧客IDの一覧を見たい場合は次のように書きます。
+
+```sql
+SELECT DISTINCT customer_id FROM sales;
+```
+
+ユニークな顧客数だけを知りたい場合は次のように書きます。
+
+```sql
+SELECT COUNT(DISTINCT customer_id) FROM sales;
+```
+
+DS検定では、**一覧を出すのか、件数を出すのか**を区別します。
+
+---
 
 ## どんな場面で使う？
+`COUNT(DISTINCT)` は、重複を除いた数を知りたい場面でよく使います。
 
-よく使う場面
+- ユニークユーザー数（UU）
+- 商品の種類数
+- 購入した顧客数
+- 利用された店舗数
+- アクセスした端末の種類数
+- アンケート回答者数
 
-ユニークユーザー数（UU）
+一方で、総件数や回数を知りたい場合に `COUNT(DISTINCT)` を使うと、意味が変わってしまいます。
 
-商品の種類数
+たとえば「購入回数」を知りたいなら `COUNT(*)` が適切です。  
+「購入した顧客数」を知りたいなら `COUNT(DISTINCT customer_id)` が適切です。
 
-利用した顧客数
+---
 
+## DS検定ひっかけポイント
 
-注意が必要な場面
+### よくある誤り1：COUNTとCOUNT DISTINCTを同じと考える
+`COUNT(*)` は行数を数えます。
 
-総件数を知りたいとき → COUNTと混同しやすい
+`COUNT(DISTINCT 列名)` は、指定列の重複を除いた値の数を数えます。
 
-データの回数が重要なとき → 重複を消すと意味が変わる
+両者は同じではありません。
 
+### よくある誤り2：NULLも1種類として数える
+`COUNT(DISTINCT 列名)` はNULLを数えません。
 
+NULLが複数行あっても、NULLを1種類としてカウントするわけではありません。
 
+### よくある誤り3：総件数とユニーク数を混同する
+アクセスログで `user_id` が同じ人が10回アクセスした場合、行数は10件ですが、ユニークユーザー数は1人です。
 
-## よくある誤解・混同
+総件数とユニーク数は別の指標です。
 
-❌ COUNTと同じ
+### よくある誤り4：SELECT DISTINCTとCOUNT(DISTINCT)を混同する
+`SELECT DISTINCT` は重複を除いた一覧を返します。
 
-→ ⭕ COUNTは「全部数える」
+`COUNT(DISTINCT)` は重複を除いた件数を返します。
 
-COUNT：行数（重複込み）
+### 選択肢の判断基準
+- 「全行数」→ `COUNT(*)`
+- 「NULL以外の件数」→ `COUNT(列名)`
+- 「重複を除いた件数」→ `COUNT(DISTINCT 列名)`
+- 「値の一覧」→ `SELECT DISTINCT 列名`
+- 「グループごとのユニーク数」→ `GROUP BY` と `COUNT(DISTINCT)`
 
-COUNT DISTINCT：種類数（重複なし）
+---
 
+## 確認問題（DS検定対策）
 
-👉 DS検定ではここが典型的なひっかけ
+次の `customer_id` 列について、`COUNT(DISTINCT customer_id)` の結果として正しいものはどれか。
 
+| customer_id |
+|---|
+| A |
+| A |
+| B |
+| NULL |
+| C |
+| C |
 
+- ア. 6
+- イ. 5
+- ウ. 4
+- エ. 3
 
-❌ DISTINCTを使ってからCOUNTするのと同じ
+<details markdown="1">
+<summary>▶ クリックして答えと解説を見る（ここを開く）</summary>
 
-→ ⭕ 結果は同じでも意味の理解が重要
+**正解：エ**
 
-SELECT COUNT(DISTINCT A)
+### 解説
+`COUNT(DISTINCT customer_id)` は、重複を除いた非NULLの値を数えます。
 
-は
+この列に含まれる非NULLのユニーク値は、`A`、`B`、`C` の3種類です。
 
-SELECT COUNT(*) FROM (SELECT DISTINCT A ...)
+- `A` は2回出ていますが、1種類として数えます。
+- `C` も2回出ていますが、1種類として数えます。
+- NULLは数えません。
 
-と同じ意味だが、 👉 「ユニーク数を数えている」と理解することが重要
+したがって、答えは `3` です。
 
-
-
-❌ NULLも数える
-
-→ ⭕ NULLはカウントされない
-
-選択肢で 「NULLも含めて数える」 → ❌ 誤り
-
-
+</details>
 
 ## まとめ（試験直前用）
-
-COUNT＝全部の件数
-
-COUNT DISTINCT＝ユニーク数
-
-重複は1つとして数える
-
-NULLはカウントされない
-
-「種類の数か？」と考えるのがコツ
-
-
-
-
-## 対応スキル項目（データエンジニアリング力シート）
-
-データ基盤
-
-データ操作
-
-★ SQLを用いた基本的なデータ操作（検索・集計・結合等）ができる
-
-## 🔗 関連記事
-
-<ul style="padding-left: 20px;">
-{% assign current_tags = page.tags %}
-{% assign count = 0 %}
-
-{% for p in site.pages %}
-  {% if p.url != page.url and p.tags %}
-    {% assign matched = false %}
-
-    {% for tag in current_tags %}
-      {% if p.tags contains tag and tag != "ds" %}
-        {% assign matched = true %}
-      {% endif %}
-    {% endfor %}
-
-    {% if matched %}
-      <li style="margin-bottom: 6px;">
-        <a href="{{ p.url }}">{{ p.title }}</a>
-      </li>
-      {% assign count = count | plus: 1 %}
-    {% endif %}
-
-    {% if count >= 5 %}
-      {% break %}
-    {% endif %}
-  {% endif %}
-{% endfor %}
-</ul>
-
-<hr>
-
-<div style="margin-top: 16px;">
-  🏠 <a href="/ds/">DS検定トップに戻る</a>
-</div>
-
-<div style="display:flex;justify-content:space-between;margin-top:12px;">
-
-  {% if page.previous.url %}
-    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
-  {% endif %}
-
-  {% if page.next.url %}
-    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
-  {% endif %}
-
-</div>
+- `COUNT(DISTINCT 列名)` は、重複を除いたユニークな値の件数を数える
+- `COUNT(*)` は行数を数える
+- `COUNT(列名)` は指定列がNULLでない行数を数える
+- `COUNT(DISTINCT 列名)` はNULLを数えない
+- `SELECT DISTINCT` は一覧、`COUNT(DISTINCT)` は件数
+- `GROUP BY` と組み合わせると、グループごとのユニーク数を求められる
+- 総件数かユニーク数かを見分けるのがDS検定のポイント
