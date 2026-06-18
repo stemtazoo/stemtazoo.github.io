@@ -6,7 +6,7 @@ permalink: /sg/jvn/
 prev: /sg/vulnerability-information-jvn-cve-cvss/
 next: /sg/cvss/
 tags: [sg, sg-security-management]  
-last_modified_at: 2026-06-10
+last_modified_at: 2026-06-18
 ---
 
 ## まず結論
@@ -96,6 +96,24 @@ JVN（Japan Vulnerability Notes）は、
 
 ---
 
+### 関連組織・関連情報との切り分け
+
+JVNは、ソフトウェアなどの脆弱性関連情報や対策情報を確認するための情報源です。
+
+SG試験では、次のように切り分けます。
+
+| 手掛かり | 疑う用語・組織 |
+|---|---|
+| 脆弱性の概要、影響、対策・回避策を確認するポータル | JVN |
+| 公開済みの脆弱性情報を条件検索して調べるデータベース | JVN iPedia |
+| 製品安全、事故情報、品質に関する情報 | NITE |
+| 政府機関や重要インフラを含むサイバー政策・事案対応 | NISC |
+| 脆弱性の深刻度をスコアで表す尺度 | CVSS |
+
+「脆弱性の対策情報を見る場所」ならJVN、「蓄積された脆弱性を検索する場所」ならJVN iPedia、「製品安全・事故・品質」ならNITEと判断します。
+
+---
+
 ## よくある誤解・混同
 
 ### ① IPAとの違い
@@ -127,6 +145,7 @@ JVN（Japan Vulnerability Notes）は、
 - JVN＝**脆弱性情報のポータルサイト**  
 - JVN iPedia＝**データベース**  
 - IPAとJPCERT/CCが運営  
+- NITEは製品事故・品質情報、NISCは国家・重要インフラ寄りのサイバーセキュリティ情報と切り分ける
 
 ---
 
