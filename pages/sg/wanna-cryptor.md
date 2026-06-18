@@ -4,7 +4,7 @@ title: Wanna Cryptorとは？ランサムウェア型ワームの判断ポイン
 description: Wanna Cryptorは、SMBv1の脆弱性を悪用して感染を広げ、ファイルを暗号化して金銭を要求するランサムウェアです。SG試験で問われる特徴と混同しやすいマルウェアを整理します。
 permalink: /sg/wanna-cryptor/
 tags: [sg, threat_vulnerability, malware, incident_management]
-last_modified_at: 2026-06-14
+last_modified_at: 2026-06-18
 ---
 
 # Wanna Cryptorとは？ランサムウェア型ワームの判断ポイント【SG試験】
@@ -92,10 +92,10 @@ Wanna Cryptorは、ほかのマルウェア名と混同しやすいです。
 
 | 用語 | 判断ポイント |
 |---|---|
-| Wanna Cryptor | SMBv1の脆弱性を悪用し、ファイルを暗号化して金銭を要求する |
-| Bagleワーム | 電子メールやファイル共有などを使って感染を広げるワーム |
-| SQL Slammer | SQL Serverの脆弱性を悪用し、大量通信でネットワークに影響を与えるワーム |
-| VBS.LoveLetter | VBScriptの添付ファイルを実行させ、メールで拡散するワーム |
+| [Wanna Cryptor](/sg/wanna-cryptor/) | SMBv1の脆弱性を悪用し、ファイルを暗号化して金銭を要求する |
+| [Bagleワーム](/sg/bagle-worm/) | 電子メールやファイル共有などを使って感染を広げるワーム |
+| [SQL Slammer](/sg/sql-slammer/) | SQL Serverの脆弱性を悪用し、大量通信でネットワークに影響を与えるワーム |
+| [VBS.LoveLetter](/sg/vbs-loveletter/) | VBScriptの添付ファイルを実行させ、メールで拡散するワーム |
 
 SG試験では、次のような切り分けが大切です。
 
@@ -109,9 +109,9 @@ SG試験では、次のような切り分けが大切です。
 
 **Wanna Cryptorではないと判断する材料**
 
-- メール添付のVBScriptが中心なら、VBS.LoveLetterを疑う
-- SQL Serverの脆弱性と大量通信が中心なら、SQL Slammerを疑う
-- メールアドレス収集やメール拡散が中心なら、Bagleワームを疑う
+- メール添付のVBScriptが中心なら、[VBS.LoveLetter](/sg/vbs-loveletter/)を疑う
+- SQL Serverの脆弱性と大量通信が中心なら、[SQL Slammer](/sg/sql-slammer/)を疑う
+- メールアドレス収集やメール拡散が中心なら、[Bagleワーム](/sg/bagle-worm/)を疑う
 
 選択肢では「感染を広げる」とだけ書かれていると、どのワームにも見えてしまいます。  
 そのため、**Wanna Cryptorは『暗号化して金銭要求』と『SMBv1』をセットで見る**のが判断基準です。
