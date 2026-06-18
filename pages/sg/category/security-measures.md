@@ -106,6 +106,7 @@ permalink: /sg/category/security-measures/
 - [SMTP-AUTHとは？メール送信時の認証方式](/sg/smtp-auth/)
 - [OP25Bとは？外向き25番ポート遮断とスパム対策](/sg/op25b/)
 - [スパムメールとは？メーリングリスト・チェーンメールとの違い](/sg/spam-mail/)
+- [ベイジアンフィルタリングとは？迷惑メールを学習して判定する仕組み](/sg/bayesian-filtering/)
 - [S/MIMEとは？メールの暗号化と電子署名の仕組み](/sg/smime/)
 - [メールヘッダーインジェクションとは？改行を悪用する攻撃](/sg/mail-header-injection/)
 - [メールヘッダの読み方とは？迷惑メール調査の判断軸](/sg/mail-header-analysis/)
@@ -131,8 +132,12 @@ permalink: /sg/category/security-measures/
 - [ランサムウェアとは？身代金要求型攻撃の仕組み](/sg/ransomware/)
 - [スパイウェアとは？情報を盗むマルウェアの特徴](/sg/spyware/)
 - [キーロガーとは？入力情報を盗む仕組みを理解する](/sg/keylogger/)
+- [バックドアとは？攻撃者が仕込む裏口を見分ける](/sg/backdoor/)
 - [ルートキットとは？管理者権限で隠蔽する仕組み](/sg/rootkit/)
 - [マクロウイルスとは？Officeファイル経由の感染を理解する](/sg/macro-virus/)
+- [Bagleワームとは？メール拡散型マルウェアの判断ポイント](/sg/bagle-worm/)
+- [SQL Slammerとは？SQL Serverの脆弱性を悪用するワーム](/sg/sql-slammer/)
+- [VBS.LoveLetterとは？VBScript添付ファイルで広がるワーム](/sg/vbs-loveletter/)
 - [ボットとは？遠隔操作される仕組みを理解する](/sg/bot/)
 - [ボットネットとは？踏み台化とDDoSの関係を理解する](/sg/botnet/)
 - [C&Cサーバとは？ボットネットを操る指令の仕組み](/sg/command-and-control/)
@@ -191,7 +196,7 @@ permalink: /sg/category/security-measures/
 
 以下は `sg-security-measures` タグが付いているものの、上記セクションには未掲載だった関連記事です。新規記事に同タグを付ければ、この一覧に自動で表示されます。
 
-{% assign curated_slugs = "auth-access-summary,auth-access-control-summary,crypto-certificate-integrity-summary,crypto-auth-platform-summary,security-measures-overview,physical-security-summary,security-measures-comparison,vulnerability-cheatsheet,web-application-attacks-summary,dns-mail-security-summary,network-defense-summary,malware-threats-summary,authentication-methods,frr-far,identification-code,authorization,access-control,access-control-model,authentication-authorization-access-control,multi-factor-authentication,mfa-vs-step-auth,sso,idp,token-authentication,risk-based-authentication,challenge-response-authentication,privileged-id,least-privilege,zero-trust,perimeter-security,brute-force-attack,reverse-brute-force-attack,dictionary-attack,password-list-attack,password-management,hdd-password,password-hash-authentication,rainbow-table,salt,captcha,firewall,packet-filtering,ips,waf,dmz,vpn,secure-protocol,ssh,telnet,ssl-tls,edos-attack,http-https,port-number,smtp-port-packet-filtering,dns,dns-zone-transfer,dns-cache-poisoning,dns-reflector-attack,domain-hijacking,spf,spf-dkim,smtp-auth,smime,mail-header-injection,sql-injection,xss,csrf,clickjacking,directory-traversal,session-hijacking,man-in-the-middle-attack,man-in-the-browser,malware,ransomware,spyware,keylogger,rootkit,macro-virus,bot,botnet,command-and-control,cryptojacking,sandbox,malware-analysis,rlo-extension-spoofing,wifi-security-protocols,wifi-auth-wpa2-wpa3-8021x,psk-wireless-auth,privacy-separator,mac-address,access-control-physical,anti-passback,security-wire,surveillance-camera,clear-desk-screen,remote-backup,raid,ups,availability,vulnerability-scan,fuzzing,cvss,jvn,port-scan,honeypot,digital-forensics,log-management,audit-log" | split: "," %}
+{% assign curated_slugs = "auth-access-summary,auth-access-control-summary,crypto-certificate-integrity-summary,crypto-auth-platform-summary,security-measures-overview,physical-security-summary,security-measures-comparison,vulnerability-cheatsheet,web-application-attacks-summary,dns-mail-security-summary,network-defense-summary,malware-threats-summary,authentication-methods,frr-far,identification-code,authorization,access-control,access-control-model,authentication-authorization-access-control,multi-factor-authentication,mfa-vs-step-auth,sso,idp,token-authentication,risk-based-authentication,challenge-response-authentication,privileged-id,least-privilege,zero-trust,perimeter-security,brute-force-attack,reverse-brute-force-attack,dictionary-attack,password-list-attack,password-management,hdd-password,password-hash-authentication,rainbow-table,salt,captcha,firewall,packet-filtering,ips,waf,dmz,vpn,secure-protocol,ssh,telnet,ssl-tls,edos-attack,http-https,port-number,smtp-port-packet-filtering,dns,dns-zone-transfer,dns-cache-poisoning,dns-reflector-attack,domain-hijacking,spf,spf-dkim,smtp-auth,bayesian-filtering,smime,mail-header-injection,sql-injection,xss,csrf,clickjacking,directory-traversal,session-hijacking,man-in-the-middle-attack,man-in-the-browser,malware,ransomware,spyware,keylogger,backdoor,rootkit,macro-virus,bot,botnet,command-and-control,cryptojacking,sandbox,malware-analysis,rlo-extension-spoofing,wifi-security-protocols,wifi-auth-wpa2-wpa3-8021x,psk-wireless-auth,privacy-separator,mac-address,access-control-physical,anti-passback,security-wire,surveillance-camera,clear-desk-screen,remote-backup,raid,ups,availability,vulnerability-scan,fuzzing,cvss,jvn,port-scan,honeypot,digital-forensics,log-management,audit-log" | split: "," %}
 {% assign auto_related = site.pages | where: "tags", "sg-security-measures" | sort: "title" %}
 {% assign auto_count = 0 %}
 {% for p in auto_related %}
