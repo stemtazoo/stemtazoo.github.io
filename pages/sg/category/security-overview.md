@@ -79,6 +79,7 @@ permalink: /sg/category/security-overview/
 - [マルウェアとは？種類と見分け方を整理](/sg/malware/)
 - [不正アクセスとは？攻撃の流れと対策の考え方](/sg/unauthorized-access/)
 - [不正アクセスの手法とは？攻撃パターンを整理して対策につなげる](/sg/unauthorized-access-techniques/)
+- [ソーシャルエンジニアリングとは？なりすまし・のぞき見・トラッシングの違い](/sg/social-engineering/)
 - [エクスプロイトコードとは？脆弱性を利用するプログラムを整理](/sg/exploit-code/)
 - [識別符号とは？ID・パスワードとの関係を整理](/sg/identification-code/)
 - [フィッシングとは？だましの手口と見抜き方](/sg/phishing/)
@@ -113,7 +114,7 @@ permalink: /sg/category/security-overview/
 
 以下は `sg-security-overview` タグが付いているものの、上記セクションには未掲載だった関連記事です。新規記事に同タグを付ければ、この一覧に自動で表示されます。
 
-{% assign curated_slugs = "information-security-management-exam,sg-exam-outline-study,case-solving-template,availability,raid,asset-register,vulnerability,risk-management,attacker-types,hacker,cracker,script-kiddie,insider-threat,fraud-triangle,vulnerability-cheatsheet,cvss,jvn,security-patch,symmetric-key-cryptography,public-key-cryptography,hybrid-cryptography,hash-function,salt,digital-signature,digital-certificate,certificate-authority-role,validation-authority,pki,malware,unauthorized-access,unauthorized-access-techniques,identification-code,phishing,smishing,vishing,targeted-attack,cyber-kill-chain,ddos,edos-attack,man-in-the-middle-attack,dns-cache-poisoning,sql-injection,xss,csrf,authorization,security-event,security-incident,soc-csirt-jpcert,security-org-cheatsheet" | split: "," %}
+{% assign curated_slugs = "information-security-management-exam,sg-exam-outline-study,case-solving-template,availability,raid,asset-register,vulnerability,risk-management,attacker-types,hacker,cracker,script-kiddie,insider-threat,fraud-triangle,vulnerability-cheatsheet,cvss,jvn,security-patch,symmetric-key-cryptography,public-key-cryptography,hybrid-cryptography,hash-function,salt,digital-signature,digital-certificate,certificate-authority-role,validation-authority,pki,malware,unauthorized-access,unauthorized-access-techniques,social-engineering,identification-code,phishing,smishing,vishing,targeted-attack,cyber-kill-chain,ddos,edos-attack,man-in-the-middle-attack,dns-cache-poisoning,sql-injection,xss,csrf,authorization,security-event,security-incident,soc-csirt-jpcert,security-org-cheatsheet" | split: "," %}
 {% assign auto_related = site.pages | where: "tags", "sg-security-overview" | sort: "title" %}
 {% assign auto_count = 0 %}
 {% for p in auto_related %}
@@ -140,7 +141,6 @@ permalink: /sg/category/security-overview/
 - 否認防止とは？
 - 脅威とは？
 - リスクとは？
-- ソーシャルエンジニアリングとは？
 - CVEとは？
 - ゼロデイ攻撃とは？
 - 暗号化とは？
