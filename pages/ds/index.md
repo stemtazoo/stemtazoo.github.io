@@ -95,7 +95,7 @@ tags: [ds, index]
 
 ---
 
-# 🧠 データサイエンス力
+## 🧠 データサイエンス力
 
 ### 線形代数
 <ul>
@@ -180,7 +180,7 @@ tags: [ds, index]
 
 ---
 
-# 🛠 データエンジニアリング力
+## 🛠 データエンジニアリング力
 
 ### 環境構築
 <ul>
@@ -257,7 +257,7 @@ tags: [ds, index]
 
 ---
 
-# 📊 ビジネス力
+## 📊 ビジネス力
 
 <ul>
 {% for p in site.pages %}
@@ -269,7 +269,7 @@ tags: [ds, index]
 
 ---
 
-# 🤖 AI利活用
+## 🤖 AI利活用
 
 <ul>
 {% for p in site.pages %}
@@ -281,7 +281,7 @@ tags: [ds, index]
 
 ---
 
-# 🧪 試験対策
+## 🧪 試験対策
 
 <ul>
 {% for p in site.pages %}
@@ -427,7 +427,7 @@ tags: [ds, index]
 
 ---
 
-# 🧩 未分類（あとで整理）
+## 🧩 未分類（あとで整理）
 
 <ul>
 {% for p in site.pages %}
