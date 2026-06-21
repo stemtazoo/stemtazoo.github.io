@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 多要素認証（MFA）とは？仕組みと必要性を整理【DS検定リテラシー】
-description: "多要素認証（MFA：Multi-Factor Authentication）とは、異なる種類の認証要素を2つ以上組み合わせて本人確認を行う仕組みです。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
+description: "多要素認証（MFA：Multi-Factor Authentication）とは、異なる種類の認証要素を2つ以上組み合わせて本人確認を行う仕組みです。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。"
 permalink: /ds/mfa/
 categories: [business]
 tags: [ds, security, design]

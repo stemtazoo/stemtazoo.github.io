@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 認証と認可の違いとは？アクセス制御を一発で整理【DS検定】
-description: "DS検定では、「本人確認」と「権限付与」を混同していないかを問う問題がよく出ます。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
+description: "DS検定では、「本人確認」と「権限付与」を混同していないかを問う問題がよく出ます。定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。初学者が迷いやすい判断ポイントも確認します。"
 permalink: /ds/authentication-authorization/
 categories: [business]
 tags: [ds, security, design]

@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 標準正規分布と正規分布の違いとは？【DS検定リテラシー】
-description: "DS検定では正規分布の性質標準化（Z変換）の意味Zを使う理由を理解しているかが問われます。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
+description: "DS検定では正規分布の性質標準化（Z変換）の意味Zを使う理由を理解しているかが問われます。定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。初学者が迷いやすい判断ポイントも確認します。"
 permalink: /ds/normal-and-standard-normal/
 categories: [data-science]
 tags: [ds, statistics]

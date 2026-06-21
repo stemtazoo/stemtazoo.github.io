@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: SOAPとは？RESTとの違いを整理【DS検定】
-description: "SOAPとは、XML形式のメッセージを使って通信するWebサービスのプロトコル（通信仕様）です。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
+description: "SOAPとは、XML形式のメッセージを使って通信するWebサービスのプロトコル（通信仕様）です。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。初学者が迷いやすい判断ポイントも確認します。"
 permalink: /ds/soap/
 categories: [data-engineering]
 tags: [ds, data-processing]

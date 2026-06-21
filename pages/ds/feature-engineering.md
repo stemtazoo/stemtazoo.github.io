@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 特徴量エンジニアリングとは？モデル性能を高めるデータ加工【DS検定】
-description: "特徴量エンジニアリング（Feature Engineering）とは機械学習モデルの性能を高めるために特徴量を作成・加工することです。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
+description: "特徴量エンジニアリング（Feature Engineering）とは機械学習モデルの性能を高めるために特徴量を作成・加工することです。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。"
 permalink: /ds/feature-engineering/
 categories: [data-science]
 tags: [ds, data-preparation, preprocessing]

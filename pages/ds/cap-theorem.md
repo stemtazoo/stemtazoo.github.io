@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: CAP定理とは？分散システムの基本原則【DS検定】
-description: "CAP定理とは、分散システムでは「一貫性（Consistency）」「可用性（Availability）」「分断耐性（Partition tolerance）」の3つを同時に完全には満たせないという原則です。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
+description: "CAP定理とは、分散システムでは「一貫性（Consistency）」「可用性（Availability）」「分断耐性（Partition tolerance）」の3つを同時に完全には満たせないという原則です。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。"
 permalink: /ds/cap-theorem/
 categories: [business]
 tags: [ds, design]

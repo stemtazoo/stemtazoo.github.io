@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: OLAPとは？BIツール分析の基本概念をわかりやすく解説【DS検定】
-description: "OLAP（Online Analytical Processing）とは、多次元データをさまざまな視点から分析するための技術です。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
+description: "OLAP（Online Analytical Processing）とは、多次元データをさまざまな視点から分析するための技術です。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。"
 permalink: /ds/olap/
 categories: [data-engineering]
 tags: [ds, visualization, database]

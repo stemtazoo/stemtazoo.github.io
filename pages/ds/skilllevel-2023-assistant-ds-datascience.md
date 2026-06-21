@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: "④ Assistant Data Scientist（見習い）に求められるデータサイエンス力"
-description: "④ Assistant Data Scientist（見習いレベル）に求められるデータサイエンス力とは、統計・機械学習の基礎を理解し、適切な指示のもとで基本的な分析を実行できる状態です。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
+description: "④ Assistant Data Scientist（見習いレベル）に求められるデータサイエンス力とは、統計・機械学習の基礎を理解し、適切な指示のもとで基本的な分析を実行できる状態です。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。"
 permalink: /ds/skilllevel-2023-assistant-ds-datascience/
 categories: [business]
 tags: [ds, skillcheck]

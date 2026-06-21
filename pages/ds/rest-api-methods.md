@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: REST API のメソッドとは？データ操作の役割を整理【DS検定】
-description: "REST API のメソッドとは、API を通じてデータに対してどのような操作（取得・作成・更新・削除）を行うかを表す HTTP の命令です。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
+description: "REST API のメソッドとは、API を通じてデータに対してどのような操作（取得・作成・更新・削除）を行うかを表す HTTP の命令です。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。"
 permalink: /ds/rest-api-methods/
 categories: [data-engineering]
 tags: [ds, data-collection, data-processing]

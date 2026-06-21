@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: KPIとKGIの違いとは？目標管理の基本を整理【DS検定】
-description: "KGI（Key Goal Indicator）は最終的な目標を示す指標、KPI（Key Performance Indicator）はその目標達成のための途中の指標です。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
+description: "KGI（Key Goal Indicator）は最終的な目標を示す指標、KPI（Key Performance Indicator）はその目標達成のための途中の指標です。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。"
 permalink: /ds/kpi-kgi/
 categories: [business]
 tags: [ds, design]

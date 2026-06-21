@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 標本分散と不偏分散の違いとは？【DS検定リテラシー】
-description: "DS検定ではnで割るのか」「n−1で割るのか」を正しく判断できるかが問われます。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
+description: "DS検定ではnで割るのか」「n−1で割るのか」を正しく判断できるかが問われます。定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。初学者が迷いやすい判断ポイントも確認します。分析や業務での判断場面も確認します。"
 permalink: /ds/sample-variance-unbiased-variance/
 categories: [data-science]
 tags: [ds, statistics]

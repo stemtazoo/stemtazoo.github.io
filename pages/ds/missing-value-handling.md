@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 欠損値の処理方法とは？代表的な手法と使い分け【DS検定】
-description: "欠損値の処理方法は代表的な手法と使い分けを理解するための用語です。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
+description: "欠損値の処理方法は、代表的な手法と使い分けを理解するための基本テーマです。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。初学者が迷いやすい判断ポイントも確認します。"
 permalink: /ds/missing-value-handling/
 categories: [data-science]
 tags: [ds, data-preparation, preprocessing]

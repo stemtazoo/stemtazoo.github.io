@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: クリティカルパスとは？プロジェクト遅延を左右する重要な経路【DS検定】
-description: "クリティカルパス（Critical Path）とは、プロジェクト全体の完了時間を決める最も長い作業経路のことです。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
+description: "クリティカルパス（Critical Path）とは、プロジェクト全体の完了時間を決める最も長い作業経路のことです。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。"
 permalink: /ds/critical-path/
 categories: [business]
 tags: [ds, design]

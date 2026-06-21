@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: データガバナンスとは？データ活用に必要な管理の仕組み【DS検定】
-description: "データガバナンス（Data Governance）とは、組織がデータを適切に管理・活用するためのルールや仕組みのことです。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
+description: "データガバナンス（Data Governance）とは、組織がデータを適切に管理・活用するためのルールや仕組みのことです。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。"
 permalink: /ds/data-governance/
 categories: [ai-utilization]
 tags: [ds, ai-use]

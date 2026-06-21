@@ -1,7 +1,7 @@
 ---
 layout: page
 title: FTPとSSHの違いとは？（ファイル転送と安全な接続）【DS検定】
-description: "FTPはファイル転送、SSHは暗号化された安全なリモート接続に使うプロトコルです。標準FTPは暗号化されないこと、SFTPはSSHを使う安全なファイル転送、FTPSはFTPをTLSで保護する方式として整理します。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
+description: "FTPはファイル転送、SSHは暗号化された安全なリモート接続に使うプロトコルです。標準FTPは暗号化されないこと、SFTPはSSHを使う安全なファイル転送、FTPSはFTPをTLSで保護する方式として整理します。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。"
 permalink: /ds/ftp-ssh/
 categories: [data-engineering]
 tags: [ds, data-collection, data-processing]

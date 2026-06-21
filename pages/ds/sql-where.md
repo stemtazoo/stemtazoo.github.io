@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: WHERE句とは？条件抽出の基本を理解する【DS検定】
-description: "WHERE句とは、SQLで特定の条件に一致するデータだけを取り出すための仕組みです。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
+description: "WHERE句とは、SQLで特定の条件に一致するデータだけを取り出すための仕組みです。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。初学者が迷いやすい判断ポイントも確認します。"
 permalink: /ds/sql-where/
 categories: [data-engineering]
 tags: [ds, data-processing, sql]

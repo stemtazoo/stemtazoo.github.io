@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 次元の呪いとは？（高次元データで起きる問題）【DS検定】
-description: "次元の呪い（Curse of Dimensionality）とは、特徴量（変数）の数が増えすぎると、データの解析や機械学習がうまく機能しなくなる問題のことです。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
+description: "次元の呪い（Curse of Dimensionality）とは、特徴量（変数）の数が増えすぎると、データの解析や機械学習がうまく機能しなくなる問題のことです。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。"
 permalink: /ds/curse-of-dimensionality/
 categories: [data-science]
 tags: [ds, modeling]

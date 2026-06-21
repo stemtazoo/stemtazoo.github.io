@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: ER図とは？エンティティとリレーションを整理する図【DS検定】
-description: "ER図（Entity Relationship Diagram）とは、データ同士の「もの」と「関係」を整理して可視化する図です。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
+description: "ER図（Entity Relationship Diagram）とは、データ同士の「もの」と「関係」を整理して可視化する図です。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。"
 permalink: /ds/er-diagram/
 categories: [data-engineering]
 tags: [ds, data-structure, database]

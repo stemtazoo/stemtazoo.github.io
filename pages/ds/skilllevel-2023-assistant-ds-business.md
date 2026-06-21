@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "④ Assistant Data Scientist（見習い）に求められるビジネス力"
-description: "④ Assistant Data Scientist（見習いレベル）に求められるビジネス力とは、データを使ってビジネス課題に向き合うための「基本姿勢」と「論理的な進め方」が身についている状態です。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
+description: "④ Assistant Data Scientist（見習いレベル）に求められるビジネス力とは、データを使ってビジネス課題に向き合うための「基本姿勢」と「論理的な進め方」が身についている状態です。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。"
 permalink: /ds/skilllevel-2023-assistant-ds-business/
 categories: [business]
 tags: [ds, skillcheck, skilllevel, business, problem-solving, intro, cheatsheet]

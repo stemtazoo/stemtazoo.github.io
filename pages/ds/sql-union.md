@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: UNIONとUNION ALLの違いとは？重複の扱いを整理【DS検定】
-description: "UNION＝重複を除いて結合UNION ALL＝重複もそのまま結合DS検定では「重複が消えるかどうか」を判断できるかがポイント。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
+description: "UNION＝重複を除いて結合UNION ALL＝重複もそのまま結合DS検定では「重複が消えるかどうか」を判断できるかがポイント。定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。"
 permalink: /ds/sql-union/
 categories: [data-engineering]
 tags: [ds, data-processing, sql]

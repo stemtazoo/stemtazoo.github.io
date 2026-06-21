@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: フィルターとは？BIツールの基本操作をわかりやすく解説【DS検定】
-description: "フィルター（Filter）とは、条件を指定して表示するデータを絞り込む操作です。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
+description: "フィルター（Filter）とは、条件を指定して表示するデータを絞り込む操作です。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。初学者が迷いやすい判断ポイントも確認します。"
 permalink: /ds/filter/
 categories: [business]
 tags: [ds, data-processing, visualization, design]

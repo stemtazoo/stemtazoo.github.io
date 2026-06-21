@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: PoC（概念実証）とは？AIプロジェクトで重要な理由【DS検定】
-description: "PoC（Proof of Concept）とは、新しい技術やアイデアが実際に実現可能かを検証するための試験的な取り組みです。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
+description: "PoC（Proof of Concept）とは、新しい技術やアイデアが実際に実現可能かを検証するための試験的な取り組みです。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。"
 permalink: /ds/poc-concept-proof/
 categories: [business]
 tags: [ds, design]
