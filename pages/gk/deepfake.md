@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: ディープフェイク（Deepfake）とは？【フェイクニュースとの違い】
-description: "ディープフェイク（Deepfake）は、試験で意味や使いどころを問われやすい重要概念です。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "ディープフェイク（Deepfake）について、G検定で問われるAI倫理・法規分野の観点から、制度・リスク・社会実装で問われやすい判断基準と境界を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/deepfake/
 tags: [gk, ethics, social_issues]
 gk_section: AIの法律と倫理/AIの法律と倫理

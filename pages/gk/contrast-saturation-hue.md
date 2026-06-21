@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: Contrast / Saturation / Hue とは？（色系データ拡張の違い）【G検定対策】
-description: "Contrast / Saturation / Hueは（色系データ拡張の違い）を理解するための用語です。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "Contrast / Saturation / Hue （色系データ拡張の違い）について、G検定で問われるAI・機械学習分野の観点から、目的、前提、モデル構造、入力と出力、評価観点のどこが異なるかを比較します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/contrast-saturation-hue/
 tags: [gk, cnn]
 gk_section: ディープラーニングの応用例/画像認識/データ拡張

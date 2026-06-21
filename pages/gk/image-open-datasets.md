@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 画像のオープンデータセットまとめ
-description: "* MNIST / CIFAR-10 / Pascal VOC は画像データセット* SQuAD は画像ではなく自然言語処理（NLP）用* G検定では 「画像か。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "画像のオープンデータセットまとめについて、G検定で問われる画像認識・CNN分野の観点から、画像タスクでの役割、特徴抽出の流れ、代表モデルとの関係を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/image-open-datasets/
 tags: [gk, dataset, cnn, cheatsheet]
 gk_section: ディープラーニングの応用例/画像認識/ネオコグニトロンとLeNet

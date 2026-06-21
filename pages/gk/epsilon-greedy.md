@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: ε-greedy方策（epsilon-greedy policy）とは？【G検定対策】
-description: "ε-greedy方策（epsilon-greedy policy）は、試験で意味や使いどころを問われやすい重要概念です。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "ε-greedy方策（epsilon-greedy policy）について、G検定で問われる強化学習分野の観点から、状態・行動・報酬・方策との関係、価値ベース手法や方策ベース手法との違いを整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/epsilon-greedy/
 tags: [gk, reinforcement_learning, policy]
 gk_section: 機械学習の概要/代表的な手法/強化学習

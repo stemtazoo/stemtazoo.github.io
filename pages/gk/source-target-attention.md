@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: Source-Target Attention（Encoder-Decoder Attention）とは？G検定対策
-description: "* Source-Target Attentionとは、入力文（Source）と出力文（Target）が異なる系列であることを前提に、両者の対応関係を学習するAttention機構。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "Source-Target Attentionについて、G検定で問われる自然言語処理・系列データ分野の観点から、系列データを扱う仕組み、学習目的、代表モデルとの関係を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/source-target-attention/
 tags: [gk, attention, transformer]
 gk_section: ディープラーニングの要素技術/トランスフォーマー (Transformer)

@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: Pooling・Stride・Dilated Convolution の違い
-description: "* Pooling：サイズを小さくして情報を要約する* Stride：畳み込みの移動間隔を広げてサイズを小さくする* Dilated Convolution：サイズを保ったまま受容野を広げるサイズがどうなるか」 が最重要。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "Pooling・Stride・Dilated Convolution の違いについて、G検定で問われる画像認識・CNN分野の観点から、目的、前提、モデル構造、入力と出力、評価観点のどこが異なるかを比較します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/pooling-stride-dilation/
 tags: [gk, neural_network, cnn, cheatsheet]
 gk_section: ディープラーニングの要素技術/ネットワークの構成要素

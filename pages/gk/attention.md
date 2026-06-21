@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: Attention（注意機構）
-description: "* Attentionは「どこに注目するか」を学習する仕組み* 系列全体を見渡し、重要な部分に重みを置く* 長期依存問題を緩和 し、RNNの弱点を補う。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "Attention（注意機構）について、G検定で問われる自然言語処理・系列データ分野の観点から、系列データを扱う仕組み、学習目的、代表モデルとの関係を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/attention/
 tags: [gk, neural_network, attention]
 gk_section: ディープラーニングの要素技術/リカレントニューラルネットワーク (RNN)

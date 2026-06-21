@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: Conditional GAN（条件付きGAN）とは？Pix2Pixとの関係【G検定対策】
-description: "Conditional GAN（条件付きGAN）は「条件情報を与えて生成を制御するGAN」で、G検定では「Pix2PixはConditional GANの一種」という位置づけを正しく理解できているかが問われる。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "Conditional GAN（条件付きGAN）Pix2Pixとの関係について、G検定で問われる生成モデル分野の観点から、生成や表現学習での役割、モデル構造、学習方法の違いを整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/conditional-gan/
 tags: [gk, neural_network, cnn]
 gk_section: ディープラーニングの応用例/データ生成

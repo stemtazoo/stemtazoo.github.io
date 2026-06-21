@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: ResNet・DenseNet・EfficientNet 比較（G検定対策）
-description: "（試験はここだけ見ればOK）* ResNet：勾配消失を防ぐ（スキップ接続）* DenseNet：特徴量を再利用（全結合的な接続）* EfficientNet：。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "ResNet・DenseNet・EfficientNet 比較（）について、G検定で問われる画像認識・CNN分野の観点から、目的、前提、モデル構造、入力と出力、評価観点のどこが異なるかを比較します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/cnn-architectures-comparison/
 tags: [gk, cnn, neural_network, cheatsheet]
 gk_section: ディープラーニングの応用例/画像認識/ネオコグニトロンとLeNet

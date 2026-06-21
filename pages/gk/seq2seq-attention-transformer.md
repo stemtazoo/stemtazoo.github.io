@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: Seq2SeqからTransformerへの進化【Attention登場の理由】
-description: "長文が苦手」「並列処理できない」というRNNの限界を克服するための進化の流れである。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "Seq2SeqからTransformerへの進化について、G検定で問われる自然言語処理・系列データ分野の観点から、系列データを扱う仕組み、学習目的、代表モデルとの関係を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/seq2seq-attention-transformer/
 tags: [gk, rnn, attention, transformer, nlp]
 gk_section: ディープラーニングの要素技術/リカレントニューラルネットワーク (RNN)

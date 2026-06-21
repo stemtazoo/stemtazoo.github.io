@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 未学習（Underfitting）
-description: "* 未学習とは、モデルが十分に学習できていない状態* 学習データ・テストデータ どちらでも精度が低い* モデルが「考える力を持てていない」ことが原因。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "未学習（Underfitting）について、G検定で問われるモデル評価分野の観点から、基本的な意味、代表モデル・手法との関係、試験で問われやすい判断軸を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/underfitting/
 tags: [gk, machine_learning, underfitting]
 gk_section: 機械学習の概要/よくあるつまずき（過学習など）

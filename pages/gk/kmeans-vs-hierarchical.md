@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: k-means と階層型クラスタリングの違い【G検定頻出比較】
-description: "階層型クラスタリングは「クラスタ数を決めずに階層構造を作る手法」である。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "k-means と階層型クラスタリングの違いについて、G検定で問われる特徴量・教師なし学習分野の観点から、目的、前提、モデル構造、入力と出力、評価観点のどこが異なるかを比較します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/kmeans-vs-hierarchical/
 tags: [gk, unsupervised_learning, clustering]
 gk_section: 機械学習の概要/代表的な手法/教師なし学習

@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: モデル窃取攻撃（Model Extraction Attack）とは？【G検定対策】
-description: "モデル窃取攻撃（Model Extraction Attack）とは、学習済みAIモデルへの入出力を大量に観測することで、モデルの挙動や構造を模倣し、同等性能のモデルを再構築する攻撃である。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "モデル窃取攻撃について、G検定で問われるAI倫理・法規分野の観点から、基本的な意味、代表モデル・手法との関係、試験で問われやすい判断軸を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/model-extraction-attack/
 tags: [gk, security, privacy]
 gk_section: AIの法律と倫理/AIの法律と倫理

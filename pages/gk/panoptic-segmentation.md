@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: パノプティックセグメンテーション（Panoptic Segmentation）とは？G検定対策
-description: "* パノプティックセグメンテーション（Panoptic Segmentation）とは、画像内のすべてのピクセルに対して、物体（インスタンス）と背景（セマンティック）を同時に分類するセグメンテーション手法。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "パノプティックセグメンテーション（Panoptic Segmentation）について、G検定で問われる画像認識・CNN分野の観点から、画像タスクでの役割、特徴抽出の流れ、代表モデルとの関係を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/panoptic-segmentation/
 tags: [gk, cnn]
 gk_section: ディープラーニングの応用例/画像認識/セグメンテーションタスク

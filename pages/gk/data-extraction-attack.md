@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: データ窃取攻撃（Data Extraction Attack）とは？【G検定対策】
-description: "データ窃取攻撃（Data Extraction Attack）とは、学習済みAIモデルの出力結果を分析することで、学習データの一部や特徴を推定・抽出しようとする攻撃である。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "データ窃取攻撃について、G検定で問われるAI倫理・法規分野の観点から、基本的な意味、代表モデル・手法との関係、試験で問われやすい判断軸を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/data-extraction-attack/
 tags: [gk, security, privacy]
 gk_section: AIの法律と倫理/AIの法律と倫理

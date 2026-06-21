@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 局所表現と分散表現の違いとは？G検定対策
-description: "* 局所表現（Local Representation）と分散表現（Distributed Representation）は、単語などをベクトルで表す方法の違いです。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "局所表現と分散表現の違いについて、G検定で問われる特徴量・教師なし学習分野の観点から、目的、前提、モデル構造、入力と出力、評価観点のどこが異なるかを比較します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/local-vs-distributed-representation/
 tags: [gk, nlp]
 gk_section: ディープラーニングの応用例/自然言語処理

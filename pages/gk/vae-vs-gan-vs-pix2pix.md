@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: VAE・GAN・Pix2Pixの違い【最終チートシート｜G検定対策】
-description: "VAE・GAN・Pix2Pixはすべて生成モデルだが、G検定では「何を入力として、何を出力するか」「条件の有無」で明確に使い分ける必要がある。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "VAE・GAN・Pix2Pixの違いについて、G検定で問われる生成モデル分野の観点から、目的、前提、モデル構造、入力と出力、評価観点のどこが異なるかを比較します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/vae-vs-gan-vs-pix2pix/
 tags: [gk, neural_network, cheatsheet]
 gk_section: ディープラーニングの応用例/データ生成

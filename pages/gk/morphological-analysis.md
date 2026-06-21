@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 形態素解析（Morphological Analysis）とは？【G検定対策】
-description: "形態素解析（Morphological Analysis）とは、文章を意味を持つ最小単位（形態素）に分割し、それぞれに品詞などの情報を付与する処理である。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "形態素解析について、G検定で問われる自然言語処理・系列データ分野の観点から、基本的な意味、代表モデル・手法との関係、試験で問われやすい判断軸を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/morphological-analysis/
 tags: [gk, nlp]
 gk_section: ディープラーニングの応用例/自然言語処理

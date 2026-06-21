@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 差分学習（TD学習, Temporal Difference Learning）とは？G検定対策
-description: "* 差分学習（TD学習, Temporal Difference Learning）とは、強化学習において、現在の予測と次の予測の差（時間差誤差）を用いて価値関数を更新する学習手法。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "差分学習について、G検定で問われるAI・機械学習分野の観点から、基本的な意味、代表モデル・手法との関係、試験で問われやすい判断軸を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。具体例や典型的なひっかけも意識して、試験でどの知識として使うかを押さえます。"
 permalink: /gk/td-learning/
 tags: [gk, reinforcement_learning]
 gk_section: ディープラーニングの応用例/深層強化学習

@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 物体検出（Object Detection）とは？G検定対策
-description: "* 物体検出（Object Detection）とは、画像や映像の中にある複数の物体について「何か（クラス）」と「どこか（位置）」を同時に推定するタスク。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "物体検出（Object Detection）について、G検定で問われる画像認識・CNN分野の観点から、画像タスクでの役割、特徴抽出の流れ、代表モデルとの関係を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/object-detection/
 tags: [gk, cnn]
 gk_section: ディープラーニングの応用例/画像認識/物体検出タスク

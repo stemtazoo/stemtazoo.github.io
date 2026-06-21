@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: モデル圧縮まとめ（Pruning・Quantization・Distillation）
-description: "* モデル圧縮は「軽く・速く・省メモリ」にするための技術群* G検定で重要なのは 目的・手法・違い を区別できること* 代表的な手法は Pruning / Qu。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "モデル圧縮まとめについて、G検定で問われるAI・機械学習分野の観点から、基本的な意味、代表モデル・手法との関係、試験で問われやすい判断軸を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/model-compression/
 tags: [gk, model_compression, pruning, quantization, distillation]
 gk_section: ディープラーニングの概要/ニューラルネットワークとディープラーニング

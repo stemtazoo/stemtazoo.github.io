@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: Embedding / Word2Vec
-description: "* Embeddingは単語やカテゴリをベクトルで表現する方法* Word2Vecは代表的な単語Embedding手法* 意味の近さを 数値（ベクトル距離）で扱。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "Embedding / Word2Vecについて、G検定で問われる自然言語処理・系列データ分野の観点から、系列データを扱う仕組み、学習目的、代表モデルとの関係を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/embedding-word2vec/
 tags: [gk, neural_network, nlp, embedding]
 gk_section: ディープラーニングの要素技術/ネットワークの構成要素

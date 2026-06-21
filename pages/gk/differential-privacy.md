@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 差分プライバシー（Differential Privacy）とは？【G検定対策】
-description: "差分プライバシー（Differential Privacy）とは、個々のデータが学習データに含まれていてもいなくても、モデルの出力結果がほとんど変わらないようにするプライバシー保護の考え方である。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "差分プライバシー（Differential Privacy）について、G検定で問われるAI倫理・法規分野の観点から、制度・リスク・社会実装で問われやすい判断基準と境界を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/differential-privacy/
 tags: [gk, security, privacy]
 gk_section: AIの法律と倫理/AIの法律と倫理

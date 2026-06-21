@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: LAWS（自律型致死兵器システム）とは？G検定対策
-description: "* LAWS（Lethal Autonomous Weapons System）とは、人間の直接的な関与なしに、攻撃目標の選択から攻撃までを自律的に行う致死兵器システムです。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "LAWS（自律型致死兵器システム）について、G検定で問われるAI・機械学習分野の観点から、基本的な意味、代表モデル・手法との関係、試験で問われやすい判断軸を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/laws/
 tags: [gk, ethics]
 gk_section: AIの法律と倫理/AIの法律と倫理

@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 誤差逆伝播法（Backpropagation）
-description: "* 誤差逆伝播法はニューラルネットワークの学習を支える中核アルゴリズム* 出力の誤差を後ろから前へ伝えて重みを更新する* 連鎖律（chain rule）に基づい。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "誤差逆伝播法（Backpropagation）について、G検定で問われる学習・最適化分野の観点から、基本的な意味、代表モデル・手法との関係、試験で問われやすい判断軸を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/backpropagation/
 tags: [gk, neural_network, backprop]
 gk_section: ディープラーニングの概要/誤差逆伝播法（Backpropagation）

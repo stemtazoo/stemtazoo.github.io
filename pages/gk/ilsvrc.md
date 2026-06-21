@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: ILSVRC（ImageNet Large Scale Visual Recognition Challenge）とは？G検定対策
-description: "* ILSVRCとは、大規模画像データセット ImageNet を用いて、画像認識アルゴリズムの性能を競う国際的コンペティションです。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "ILSVRCについて、G検定で問われるAI・機械学習分野の観点から、基本的な意味、代表モデル・手法との関係、試験で問われやすい判断軸を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。具体例や典型的なひっかけも意識して、試験でどの知識として使うかを押さえます。"
 permalink: /gk/ilsvrc/
 tags: [gk, cnn]
 gk_section: 人工知能をめぐる動向/人工知能をめぐる動向

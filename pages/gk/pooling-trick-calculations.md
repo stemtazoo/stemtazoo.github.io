@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: Pooling層の計算ひっかけ問題集（出力サイズ）
-description: "* Pooling層にも出力サイズの計算がある* ただし「パラメータ数」は 0* G検定では Convと混同させる罠 が多い。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "Pooling層の計算ひっかけ問題集（出力サイズ）について、G検定で問われる画像認識・CNN分野の観点から、画像タスクでの役割、特徴抽出の流れ、代表モデルとの関係を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/pooling-trick-calculations/
 tags: [gk, cnn, pooling, cheatsheet]
 gk_section: ディープラーニングの応用例/画像認識/ネオコグニトロンとLeNet

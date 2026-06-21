@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: Transformer（概要）
-description: "* TransformerはRNNを使わない系列モデル* Self-Attentionを中心に構成 されている* 並列計算が可能 で、長期依存関係に強い。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "Transformer（概要）について、G検定で問われる自然言語処理・系列データ分野の観点から、系列データを扱う仕組み、学習目的、代表モデルとの関係を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/transformer/
 tags: [gk, neural_network, transformer]
 gk_section: ディープラーニングの要素技術/トランスフォーマー (Transformer)

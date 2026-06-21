@@ -1,7 +1,7 @@
 ---
 layout: page
 title: TF-IDF・Word2Vec・BERTの違いとは？役割で整理するNLP基礎【G検定対策】
-description: "TF-IDF・Word2Vec・BERTの違いを、疎ベクトル・分散表現・文脈依存表現の軸で整理します。特徴量の作り方、意味表現の精度、計算コストの違いを比較し、G検定で頻出の自然言語処理モデルの選び分けを解説します。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "TF-IDF・Word2Vec・BERTの違い役割で整理するNLP基礎について、G検定で問われる自然言語処理・系列データ分野の観点から、目的、前提、モデル構造、入力と出力、評価観点のどこが異なるかを比較します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/tfidf-word2vec-bert/
 tags: [gk, nlp, neural_network]
 gk_section: ディープラーニングの応用例/自然言語処理

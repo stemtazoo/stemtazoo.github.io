@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 勾配ブースティング（Gradient Boosting）とは？G検定対策
-description: "* 勾配ブースティング（Gradient Boosting）は、予測誤差（損失）の勾配を利用して、弱い学習器を逐次的に追加していくアンサンブル学習手法です。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "勾配ブースティング（Gradient Boosting）について、G検定で問われる学習・最適化分野の観点から、学習が進む仕組み、更新の考え方、過学習対策や代表手法との違いを整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/gradient-boosting/
 tags: [gk, ensemble]
 gk_section: 機械学習の概要/代表的な手法/強化学習

@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: Adam / RMSProp / AdaDelta / AdaBound の違い【4点比較｜G検定対策】
-description: "Adam・RMSProp・AdaDelta・AdaBoundはいずれも学習率を自動調整する最適化手法だが、G検定では特に「モーメントの使い方」と「学習率の制御方法（境界の有無）」の違いを正確に区別できるかが問われる。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "Adam / RMSProp / AdaDelta / AdaBound の違いについて、G検定で問われる学習・最適化分野の観点から、目的、前提、モデル構造、入力と出力、評価観点のどこが異なるかを比較します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/optimizer-compare-4/
 tags: [gk]
 gk_section: ディープラーニングの概要/最適化手法

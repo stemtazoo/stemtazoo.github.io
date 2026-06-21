@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: Anchor Box / Default Box / RPN
-description: "* Anchor Box（Default Box）：物体検出で使う「最初から用意しておく四角のひな形（基準の箱）」。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "Anchor Box / Default Box / RPNについて、G検定で問われるAI・機械学習分野の観点から、基本的な意味、代表モデル・手法との関係、試験で問われやすい判断軸を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/anchor-defaultbox-rpn/
 tags: [G検定, 画像認識, 物体検出]
 gk_section: ディープラーニングの応用例/画像認識/ネオコグニトロンとLeNet

@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: PSPNet（ピラミッドシーンパースネットワーク）とは？G検定対策
-description: "* PSPNet（Pyramid Scene Parsing Network）は、画像全体の文脈情報を取り入れることで高精度なセマンティックセグメンテーションを実現するCNNモデル。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "PSPNet（ピラミッドシーンパースネットワーク）について、G検定で問われるAI・機械学習分野の観点から、基本的な意味、代表モデル・手法との関係、試験で問われやすい判断軸を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/pspnet/
 tags: [gk, cnn, semantic_segmentation]
 gk_section: ディープラーニングの応用例/画像認識/セグメンテーションタスク

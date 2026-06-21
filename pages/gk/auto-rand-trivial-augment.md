@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: AutoAugment・RandAugment・TrivialAugmentの違い【画像データ拡張 完全比較｜G検定対策】
-description: "AutoAugment・RandAugment・TrivialAugmentの違いは似た概念との違いを比較して理解するテーマです。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "AutoAugment・RandAugment・TrivialAugmentの違いについて、G検定で問われるAI・機械学習分野の観点から、目的、前提、モデル構造、入力と出力、評価観点のどこが異なるかを比較します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/auto-rand-trivial-augment/
 tags: [gk, cnn, cheatsheet]
 gk_section: ディープラーニングの応用例/画像認識/データ拡張

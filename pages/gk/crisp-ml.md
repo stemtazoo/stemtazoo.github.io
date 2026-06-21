@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: CRISP-ML（機械学習プロセス標準）とは？G検定対策
-description: "* CRISP-ML（Cross-Industry Standard Process for Machine Learning）とは、機械学習プロジェクトをビジネス理解から運用・改善まで一貫して管理するためのプロセスフレー。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "CRISP-ML（機械学習プロセス標準）について、G検定で問われるAI・機械学習分野の観点から、基本的な意味、代表モデル・手法との関係、試験で問われやすい判断軸を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/crisp-ml/
 tags: [gk, ml_process]
 gk_section: AIの社会実装に向けて/AIの社会実装に向けて

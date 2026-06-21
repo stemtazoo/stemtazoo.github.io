@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: WideResNet（幅を広げたResNet）とは？G検定対策
-description: "* WideResNetとは、ResNetをさらに深くするのではなく、ネットワークの幅（チャネル数）を広げることで性能向上を図ったCNN。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "WideResNet（幅を広げたResNet）について、G検定で問われるAI・機械学習分野の観点から、基本的な意味、代表モデル・手法との関係、試験で問われやすい判断軸を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/wideresnet/
 tags: [gk, cnn]
 gk_section: ディープラーニングの応用例/画像認識/物体認識タスク

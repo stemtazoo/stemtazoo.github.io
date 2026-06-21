@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: CAM と Grad-CAM（クラス活性化マップ）
-description: "* CAM / Grad-CAM は CNN の判断根拠を可視化する手法* 「どこを見てそのクラスと判断したか」を示せる* GAP を使うのが CAM、勾配を使。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "CAM と Grad-CAM（クラス活性化マップ）について、G検定で問われるAI・機械学習分野の観点から、基本的な意味、代表モデル・手法との関係、試験で問われやすい判断軸を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/cam-grad-cam/
 tags: [gk, neural_network, cnn, xai]
 gk_section: ディープラーニングの応用例/モデルの解釈性

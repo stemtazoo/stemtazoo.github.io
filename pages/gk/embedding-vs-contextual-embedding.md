@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: Embedding と ELMo・BERT の違いとは？G検定対策
-description: "* Embedding（Word2Vec など）は単語ごとに1つの固定ベクトルを割り当てるのに対し、ELMo や BERTは文脈に応じてベクトルが変わる文脈依存型Embeddingです。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "Embedding と ELMo・BERT の違いについて、G検定で問われる自然言語処理・系列データ分野の観点から、目的、前提、モデル構造、入力と出力、評価観点のどこが異なるかを比較します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/embedding-vs-contextual-embedding/
 tags: [gk, nlp, attention]
 gk_section: ディープラーニングの応用例/自然言語処理

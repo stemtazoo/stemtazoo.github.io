@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: EfficientNet（Compound Scaling による高効率CNN）
-description: "EfficientNet は、画像認識向けに設計された CNN であり、深さ・幅・入力解像度」を同時にバランスよく拡張するCompound Scaling によって、高精度と高効率を両立したモデルです。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "EfficientNetについて、G検定で問われるAI・機械学習分野の観点から、基本的な意味、代表モデル・手法との関係、試験で問われやすい判断軸を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/efficientnet/
 tags: [gk, neural_network, cnn]
 gk_section: ディープラーニングの応用例/画像認識/物体認識タスク

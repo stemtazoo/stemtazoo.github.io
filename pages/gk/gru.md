@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: GRU（Gated Recurrent Unit）
-description: "* GRUはLSTMを簡略化したRNNの一種* ゲート数を減らして 構造をシンプルに した* 勾配消失を緩和 しつつ、計算効率が良い。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "GRU（Gated Recurrent Unit）について、G検定で問われる自然言語処理・系列データ分野の観点から、基本的な意味、代表モデル・手法との関係、試験で問われやすい判断軸を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/gru/
 tags: [gk, neural_network, rnn, gru]
 gk_section: ディープラーニングの要素技術/リカレントニューラルネットワーク (RNN)

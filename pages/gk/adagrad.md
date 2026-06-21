@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: AdaGradとは？G検定対策
-description: "AdaGrad（Adaptive Gradient）は、各パラメータごとに学習率を自動調整する最適化手法です。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "AdaGradについて、G検定で問われる学習・最適化分野の観点から、学習が進む仕組み、更新の考え方、過学習対策や代表手法との違いを整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。具体例や典型的なひっかけも意識して、試験でどの知識として使うかを押さえます。"
 permalink: /gk/adagrad/
 tags: [gk, neural_network]
 gk_section: ディープラーニングの概要/最適化手法

@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: CRISP-DM
-description: "* CRISP-DMはデータ分析プロジェクトの標準的な進め方（プロセスモデル）* 全部で 6つのフェーズ から構成される* 「契約」や法務プロセスは含まれない。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "CRISP-DMについて、G検定で問われるAI・機械学習分野の観点から、基本的な意味、代表モデル・手法との関係、試験で問われやすい判断軸を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/crisp-dm/
 tags: [gk, data_mining, process, crisp-dm]
 gk_section: AIの社会実装に向けて/AIの社会実装に向けて

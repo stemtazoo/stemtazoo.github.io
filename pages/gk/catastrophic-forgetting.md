@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 破壊的忘却（Catastrophic Forgetting）とは？【連続学習の落とし穴｜G検定対策】
-description: "破壊的忘却（Catastrophic Forgetting）は、試験で意味や使いどころを問われやすい重要概念です。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "破壊的忘却について、G検定で問われるAI・機械学習分野の観点から、基本的な意味、代表モデル・手法との関係、試験で問われやすい判断軸を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。具体例や典型的なひっかけも意識して、試験でどの知識として使うかを押さえます。"
 permalink: /gk/catastrophic-forgetting/
 tags: [gk, neural_network]
 gk_section: ディープラーニングの応用例/転移学習・ファインチューニング

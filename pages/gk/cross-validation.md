@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 交差検証（Cross Validation）とは？【k分割の考え方｜G検定対策】
-description: "交差検証（Cross Validation）は、試験で意味や使いどころを問われやすい重要概念です。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "交差検証（Cross Validation）について、G検定で問われるモデル評価分野の観点から、指標の意味、計算の考え方、モデル評価で何を判断するかを整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/cross-validation/
 tags: [gk, machine_learning, evaluation]
 gk_section: 機械学習の概要/モデルの選択・評価

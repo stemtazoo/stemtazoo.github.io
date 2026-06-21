@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: CRISP-DM と 機械学習パイプラインの違い
-description: "* CRISP-DM：データ分析プロジェクト全体の進め方（プロセスモデル）* 機械学習パイプライン：モデル構築〜推論までの処理の流れ（実装寄り）* 目的も粒度も。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "CRISP-DM と 機械学習パイプラインの違いについて、G検定で問われるAI・機械学習分野の観点から、目的、前提、モデル構造、入力と出力、評価観点のどこが異なるかを比較します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/crisp-dm-vs-ml-pipeline/
 tags: [gk, crisp-dm, ml_pipeline, comparison]
 gk_section: AIの社会実装に向けて/AIの社会実装に向けて

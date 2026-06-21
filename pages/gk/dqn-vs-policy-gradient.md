@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: DQNとPolicy Gradientの違い【強化学習体系図・G検定対策】
-description: "* DQN は「価値（Q値）を学習して行動を選ぶ」手法* Policy Gradient は「行動方針（方策）そのものを直接学習する」手法* G検定では「Q値か。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "DQNとPolicy Gradientの違いについて、G検定で問われる学習・最適化分野の観点から、目的、前提、モデル構造、入力と出力、評価観点のどこが異なるかを比較します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/dqn-vs-policy-gradient/
 tags: [gk]
 gk_section: ディープラーニングの応用例/深層強化学習

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: ジョルダンネットワークとは？Elman Networkとの違いを整理【G検定対策】
-description: "ジョルダンネットワークは、前時刻の出力を次時刻の隠れ層へフィードバックするRNNの一種です。Elman Network、通常のRNN、LSTM、GRU、Transformerとの違いをG検定向けに整理します。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "ジョルダンネットワークElman Networkとの違いを整理について、G検定で問われるAI・機械学習分野の観点から、目的、前提、モデル構造、入力と出力、評価観点のどこが異なるかを比較します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/jordan-network/
 tags: [gk, neural_network, rnn]
 gk_section: ディープラーニングの要素技術/リカレントニューラルネットワーク (RNN)

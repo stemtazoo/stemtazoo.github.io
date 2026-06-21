@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: Few-shot・Zero-shot・転移学習の違い【少量データ学習の整理｜G検定対策】
-description: "Zero-shot学習は「データなしで推論する」手法、転移学習は「事前学習モデルを別タスクに流用する」手法である。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "Few-shot・Zero-shot・転移学習の違いについて、G検定で問われるAI・機械学習分野の観点から、目的、前提、モデル構造、入力と出力、評価観点のどこが異なるかを比較します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/few-shot-vs-zero-shot-vs-transfer/
 tags: [gk, neural_network]
 gk_section: ディープラーニングの応用例/転移学習・ファインチューニング
