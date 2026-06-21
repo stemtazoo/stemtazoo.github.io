@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: クラウドサービスのIAMポリシーとは？（アクセス制御の基本）【DS検定】
-description: クラウドサービスのIAMポリシーは（アクセス制御の基本）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "IAMポリシーとは、「誰が」「どのリソースに」「何をしてよいか」を定義するアクセス権限ルールです。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/iam-policy/
 categories: [business]
 tags: [ds, security, design]

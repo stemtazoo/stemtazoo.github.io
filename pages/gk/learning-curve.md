@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 学習曲線（Learning Curve）
-description: 学習曲線（Learning Curve）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "* 学習曲線は、学習誤差と検証誤差の変化を見るグラフ* 過学習・未学習・適切な学習状態を判別できる* 汎化性能を判断するための重要な手がかり。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/learning-curve/
 tags: [gk, machine_learning, evaluation]
 gk_section: 機械学習の概要/よくあるつまずき（過学習など）

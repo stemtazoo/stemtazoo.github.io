@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 技術的セキュリティ対策まとめ｜侵入防止からフォレンジックまで【情報セキュリティマネジメント】
-description: "技術的セキュリティ対策を侵入防止・被害拡大防止・検知・分析・証拠保全の流れで整理します。SG試験・情報セキュリティマネジメント試験で問われる判断基準と用語の切り分けをまとめて理解できます。"
+description: "技術的セキュリティ対策を侵入防止・被害拡大防止・検知・分析・証拠保全の流れで整理します。SG試験・情報セキュリティマネジメント試験で問われる判断基準と用語の切り分けをまとめて理解できます。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/security-measures-overview/
 prev: /sg/security-management-overview/
 next: /sg/security-measures-comparison/

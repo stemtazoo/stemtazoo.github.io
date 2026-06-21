@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 情報セキュリティポリシーとは？基本方針・対策基準・実施手順の違いをやさしく解説
-description: 情報セキュリティマネジメント試験（SG）で問われやすい情報セキュリティポリシーについて、基本方針・対策基準・実施手順の違い、公開範囲、ひっかけポイントを初心者向けに整理します。
+description: "情報セキュリティマネジメント試験（SG）で問われやすい情報セキュリティポリシーについて、基本方針・対策基準・実施手順の違い、公開範囲、ひっかけポイントを初心者向けに整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/information-security-policy/
 tags: [sg, security-management, policy, organization]
 last_modified_at: 2026-05-18

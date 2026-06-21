@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: TF-IDFとは？【単語の重要度指標｜G検定対策】
-description: TF-IDFはを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "TF-IDFは、試験で意味や使いどころを問われやすい重要概念です。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/tf-idf/
 tags: [gk, nlp, machine_learning]
 gk_section: ディープラーニングの応用例/自然言語処理

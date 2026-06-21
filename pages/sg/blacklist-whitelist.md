@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "ブラックリストとホワイトリストの違いとは？判断基準を整理【SG試験】"
-description: "ブラックリストとホワイトリストの違いは許可・拒否の基準設定です。この記事では運用上の役割、誤設定リスク、使い分け、SG試験・情報セキュリティマネジメント試験で混同しやすいひっかけポイントを整理します。"
+description: "ブラックリストとホワイトリストの違いは許可・拒否の基準設定です。この記事では運用上の役割、誤設定リスク、使い分け、SG試験・情報セキュリティマネジメント試験で混同しやすいひっかけポイントを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/blacklist-whitelist/
 tags: [sg, security_measures, unauthorized_access, network, sg-security-measures]
 prev: /sg/availability/

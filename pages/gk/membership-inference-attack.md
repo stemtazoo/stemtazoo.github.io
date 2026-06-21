@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: メンバーシップ推論攻撃（Membership Inference Attack）とは？【G検定対策】
-description: メンバーシップ推論攻撃（Membership Inference Attack）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "メンバーシップ推論攻撃（Membership Inference Attack）とは、あるデータが学習データに含まれていたかどうかを、学習済みモデルの出力結果から推定する攻撃である。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/membership-inference-attack/
 tags: [gk, security, privacy]
 gk_section: AIの法律と倫理/AIの法律と倫理

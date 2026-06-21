@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "S/KEYとは？ハッシュチェーン型ワンタイムパスワード【SG試験】"
-description: "S/KEYは、ハッシュ関数を繰り返し使うワンタイムパスワード方式です。シーケンス番号、Seed、サーバ側の比較方法、時刻同期方式との違いをSG試験向けに整理します。"
+description: "S/KEYは、ハッシュ関数を繰り返し使うワンタイムパスワード方式です。シーケンス番号、Seed、サーバ側の比較方法、時刻同期方式との違いをSG試験向けに整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/s-key/
 tags: [sg, sg-security-overview, crypto_auth, access_control]
 date: 2026-06-01

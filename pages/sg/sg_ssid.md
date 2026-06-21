@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "SSIDとは？SG試験で押さえる無線LANのネットワーク識別子"
-description: "SSIDは、無線LANの接続先を識別するネットワーク名です。BSSID、ESSID、SSIDステルスとの違いを整理し、SG試験での判断基準を解説します。"
+description: "SSIDは、無線LANの接続先を識別するネットワーク名です。BSSID、ESSID、SSIDステルスとの違いを整理し、SG試験での判断基準を解説します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/ssid/
 tags: [sg, sg-technology, network, access_control]
 last_modified_at: 2026-05-17

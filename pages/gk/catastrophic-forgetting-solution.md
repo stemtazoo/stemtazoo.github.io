@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 破壊的忘却を防ぐ方法とは？EWCとリプレイ手法【G検定対策】
-description: 破壊的忘却を防ぐ方法はEWCとリプレイ手法を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "破壊的忘却を防ぐ方法はEWCとリプレイ手法を理解するための用語です。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/catastrophic-forgetting-solution/
 tags: [gk, neural_network]
 gk_section: ディープラーニングの応用例/転移学習・ファインチューニング

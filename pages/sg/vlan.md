@@ -1,7 +1,7 @@
 ---
 layout: page
 title: VLANとは？ネットワークを論理的に分ける仕組み【SG試験】
-description: VLANは、同じスイッチに接続された端末を論理的に分け、ブロードキャストの到達範囲を制限する仕組みです。SG試験で問われるセグメント分割、認証VLAN、MACアドレスフィルタリングとの違いを整理します。
+description: "VLANは、同じスイッチに接続された端末を論理的に分け、ブロードキャストの到達範囲を制限する仕組みです。SG試験で問われるセグメント分割、認証VLAN、MACアドレスフィルタリングとの違いを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/vlan/
 tags: [sg, sg-security-measures, network, access_control]
 last_modified_at: 2026-06-11

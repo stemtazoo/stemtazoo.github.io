@@ -1,7 +1,7 @@
 ---
 layout: page
 title: ISMS・セキュリティポリシー・組織管理まとめ｜主要用語を整理【SG試験】
-description: ISMS・セキュリティポリシー・組織管理は、組織で情報を守る仕組みを継続的に回す分野です。SG試験で問われやすい用語の違い、判断基準、学習順序を整理します。
+description: "ISMS・セキュリティポリシー・組織管理は、組織で情報を守る仕組みを継続的に回す分野です。SG試験で問われやすい用語の違い、判断基準、学習順序を整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/isms-security-policy-summary/
 tags: [sg, sg-security-management, isms]
 last_modified_at: 2026-06-01

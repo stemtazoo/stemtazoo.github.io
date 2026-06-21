@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: ベイズ情報量基準（BIC）とは？G検定対策
-description: ベイズ情報量基準（BIC）はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "ベイズ情報量基準（BIC: Bayesian Information Criterion）は、モデルの複雑さにより強いペナルティを与えてモデル選択を行う指標です。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/bic/
 tags: [gk, metrics]
 gk_section: 機械学習の概要/モデルの選択・評価

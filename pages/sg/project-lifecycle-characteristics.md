@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "プロジェクトライフサイクルの特性とは？頻出パターンを整理【SG試験】"
-description: "プロジェクトライフサイクルの特性は、人員・リスク・変更影響・ステークホルダの影響力の変化を整理する考え方です。この記事ではSG試験で選択肢を切るための判断基準を、ひっかけポイントとあわせて解説します。"
+description: "プロジェクトライフサイクルの特性は、人員・リスク・変更影響・ステークホルダの影響力の変化を整理する考え方です。この記事ではSG試験で選択肢を切るための判断基準を、ひっかけポイントとあわせて解説します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/project-lifecycle-characteristics/
 tags: [sg, management, project_management, risk_assessment, sg-strategy]
 prev: /sg/privacy-separator/

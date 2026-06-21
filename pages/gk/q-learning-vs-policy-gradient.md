@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: Q学習と方策勾配法の違いとは？【G検定超重要対比】
-description: Q学習と方策勾配法の違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "Q学習は「行動価値関数」を学習する手法、方策勾配法は「方策（行動ルール）」を直接学習する手法である。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/q-learning-vs-policy-gradient/
 tags: [gk, reinforcement_learning, neural_network]
 gk_section: 機械学習の概要/代表的な手法/強化学習

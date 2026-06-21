@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: DISTINCTとは？重複データを除去する基本操作【DS検定】
-description: DISTINCTは重複データを除去する基本操作を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "DISTINCTとは「重複している値を1つにまとめる（重複排除する）」SQLの機能DS検定では「重複を消すのか・残すのか」を判断させる問題としてよく出る。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/sql-distinct/
 categories: [data-engineering]
 tags: [ds, data-processing, sql]

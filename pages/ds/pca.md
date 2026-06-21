@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 主成分分析（PCA）とは？次元削減の基本をわかりやすく整理【DS検定】
-description: 主成分分析（PCA）は次元削減の基本をわかりやすく整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "主成分分析（PCA：Principal Component Analysis）とは、多くの特徴量を、情報をできるだけ保ちながら少ない次元にまとめる「次元削減」の手法です。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/pca/
 categories: [data-science]
 tags: [ds, linear-algebra, math]

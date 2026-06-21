@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 著作物とは？著作権の対象・対象外と帰属を整理【SG試験】
-description: 著作物は、思想や感情を創作的に表現したものです。講演、映画、新聞連載小説、法令・判決など、SG試験で迷いやすい著作権の対象・対象外と帰属を整理します。
+description: "著作物は、思想や感情を創作的に表現したものです。講演、映画、新聞連載小説、法令・判決など、SG試験で迷いやすい著作権の対象・対象外と帰属を整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/copyrighted-work/
 tags: [sg, sg-security-law, intellectual_property, business_management]
 date: 2026-06-15

@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: SQuAD（Stanford Question Answering Dataset）
-description: SQuAD（Stanford Question Answering Dataset）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "* SQuADは自然言語処理（NLP）の質問応答データセット* 画像データセットではない* 文書中から 答えの位置を抽出するタスク が中心G検定では画像ではないデータセット」 と即判断できるかがポイント。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/squad/
 tags: [gk, nlp, dataset]
 gk_section: ディープラーニングの応用例/自然言語処理

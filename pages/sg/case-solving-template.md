@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "SG試験 ケース問題の解き方テンプレ【SG試験】"
-description: "SG試験・情報セキュリティマネジメント試験 ケース問題の解き方テンプレは頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、とで狙われるひっかけポイントを解説します。"
+description: "SG試験・情報セキュリティマネジメント試験 ケース問題の解き方テンプレは頻出論点を整理して得点力につなげる学習テーマです。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/case-solving-template/
 tags: [sg, risk_assessment, it_security_operations, security_management, security_training, sg-security-management]
 prev: /sg/brute-force-attack/

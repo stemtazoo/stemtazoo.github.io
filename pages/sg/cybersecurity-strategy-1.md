@@ -1,7 +1,7 @@
 ---
 layout: page
 title: サイバーセキュリティ戦略とは？5つの基本原則をやさしく整理【SG試験】
-description: サイバーセキュリティ戦略は、自由・公正・安全なサイバー空間を実現するための国の基本方針です。SG試験で問われやすい5つの基本原則と選択肢の切り方を整理します。
+description: "サイバーセキュリティ戦略は、自由・公正・安全なサイバー空間を実現するための国の基本方針です。SG試験で問われやすい5つの基本原則と選択肢の切り方を整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/cybersecurity-strategy/
 tags: [sg, sg-security-overview, threat_vulnerability, it_security_operations]
 last_modified_at: 2026-06-12

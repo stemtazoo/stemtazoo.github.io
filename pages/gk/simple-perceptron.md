@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 単純パーセプトロン（Simple Perceptron）とは？G検定対策
-description: 単純パーセプトロン（Simple Perceptron）はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "* 単純パーセプトロン（Simple Perceptron）は、1950年代にフランク・ローゼンブラットが提案した、最も基本的なニューラルネットワークモデルです。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/simple-perceptron/
 tags: [gk, neural_network]
 gk_section: 人工知能をめぐる動向/人工知能をめぐる動向

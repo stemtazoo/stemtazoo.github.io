@@ -1,7 +1,7 @@
 ---
 layout: page
 title: XSSとSQLインジェクションの違い｜入力された文字列が「どこで悪さをするか」で切り分ける
-description: XSSとSQLインジェクションの違いを、攻撃対象・実行される場所・被害の出方から整理し、SG試験で選択肢を切る判断軸を解説します。
+description: "XSSとSQLインジェクションの違いを、攻撃対象・実行される場所・被害の出方から整理し、SG試験で選択肢を切る判断軸を解説します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/xss-vs-sql-injection/
 tags: [sg, sg-technology, web, security, attack]
 ---

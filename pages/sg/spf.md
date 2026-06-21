@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "SPFとは？送信元IPでなりすましを防ぐ仕組み【SG試験】"
-description: "SPFは、送信元ドメインのDNSに登録されたSPFレコードと送信元IPアドレスを照合し、正規のメールサーバから送られたかを確認する仕組みです。DKIM、メールアーカイブ、上長承認との違いもSG試験向けに整理します。"
+description: "SPFは、送信元ドメインのDNSに登録されたSPFレコードと送信元IPアドレスを照合し、正規のメールサーバから送られたかを確認する仕組みです。DKIM、メールアーカイブ、上長承認との違いもSG試験向けに整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/spf/
 tags: [sg, sg-security-measures, unauthorized_access, network, mail-security]
 last_modified_at: 2026-06-21

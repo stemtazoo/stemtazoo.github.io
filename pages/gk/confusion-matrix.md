@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 混同行列（Confusion Matrix）
-description: 混同行列（Confusion Matrix）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "混同行列とは、分類結果を「正解／不正解 × 予測／実際」の4パターンに分けて整理した表です。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/confusion-matrix/
 tags: [gk, 機械学習, 評価指標, 頻出]
 gk_section: 機械学習の概要/モデルの選択・評価

@@ -1,7 +1,7 @@
 ---
 layout: page  
 title: "SOC・CSIRT・JPCERT/CC・NISC・IPAのひっかけ問題【SG試験】"
-description: "SOC・CSIRT・JPCERT/CC・NISC・IPAの違いを問う実戦問題集です。監視・対応・調整・支援・統括の切り分けを練習し、SG試験・情報セキュリティマネジメント試験で迷わない判断基準を身につけます。"
+description: "SOC・CSIRT・JPCERT/CC・NISC・IPAの違いを問う実戦問題集です。監視・対応・調整・支援・統括の切り分けを練習し、SG試験・情報セキュリティマネジメント試験で迷わない判断基準を身につけます。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/security-org-practice/  
 tags: [sg, sg-security-management, practice]  
 prev: /sg/security-org-cheatsheet/  

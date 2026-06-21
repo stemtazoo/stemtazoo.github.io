@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: R-CNN / Fast R-CNN
-description: R-CNN / Fast R-CNNは重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "* R-CNNは「2段階モデル」の出発点で、候補領域ごとにCNNで分類します（遅い）。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/rcnn-fast-rcnn/
 tags: [gk, 画像認識, 物体検出]
 gk_section: ディープラーニングの応用例/画像認識/物体検出タスク

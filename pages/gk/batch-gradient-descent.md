@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: バッチ勾配降下法とは？【G検定対策】
-description: バッチ勾配降下法はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "* バッチ勾配降下法（Batch Gradient Descent）とは、学習データ全体を一度に使って勾配を計算し、パラメータを更新する最適化手法である。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/batch-gradient-descent/
 tags: [gk, neural_network]
 gk_section: ディープラーニングの概要/最適化手法

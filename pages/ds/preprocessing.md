@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: データ前処理（Preprocessing）とは？分析前に行う重要ステップ【DS検定】
-description: データ前処理（Preprocessing）は分析前に行う重要ステップを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "データ前処理とは、分析や機械学習を行う前にデータを整える作業です。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/preprocessing/
 categories: [data-science]
 tags: [ds, data-preparation, preprocessing]

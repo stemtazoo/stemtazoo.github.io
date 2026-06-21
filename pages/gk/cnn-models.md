@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: CNN代表モデルまとめ（LeNet / AlexNet / VGG / ResNet）
-description: CNN代表モデルまとめ（LeNet / AlexNet / VGG / ResNet）は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "* CNNは課題に応じて進化してきた* 各モデルは「何を解決したか」で覚える* G検定では モデル名と特徴の対応 が頻出。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/cnn-models/
 tags: [gk, neural_network, cnn, models]
 gk_section: ディープラーニングの要素技術/ネットワークの構成要素

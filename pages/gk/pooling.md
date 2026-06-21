@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: プーリング（Pooling）
-description: プーリング（Pooling）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "* プーリングは特徴マップを縮小する処理* 重要な特徴を残しつつ 計算量と過学習を抑える* 位置ズレに強くなる のが大きな利点。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/pooling/
 tags: [gk, neural_network, cnn, pooling]
 gk_section: ディープラーニングの要素技術/ネットワークの構成要素

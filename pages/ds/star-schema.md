@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: スタースキーマとは？ファクトテーブルとディメンションテーブルを理解する【DS検定】
-description: スタースキーマはファクトテーブルとディメンションテーブルを理解するを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "DS検定ではファクトテーブルとディメンションテーブルの違いを理解しているかがよく問われます。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/star-schema/
 categories: [data-engineering]
 tags: [ds, data-structure, database]

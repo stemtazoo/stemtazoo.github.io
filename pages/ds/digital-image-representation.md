@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 画像のデジタル表現とは？（標本化と量子化の基本）【DS検定】
-description: 画像のデジタル表現は（標本化と量子化の基本）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "画像のデジタル表現とは、画像を「標本化（サンプリング）」と「量子化」によって数値データとして表す仕組みです。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/digital-image-representation/
 categories: [business]
 tags: [ds, unstructured-data, design]

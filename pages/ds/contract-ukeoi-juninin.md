@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 請負契約と準委任契約の違いとは？成果責任と業務責任を整理【DS検定】
-description: 請負契約と準委任契約の違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "DS検定では成果責任なのか、業務遂行責任なのかを見分けさせる問題として出題されることがあります。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/contract-ukeoi-juninin/
 categories: [business]
 tags: [ds, design]

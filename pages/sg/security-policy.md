@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "情報セキュリティポリシーとは？3階層で理解する基本ルール【SG試験】"
-description: "情報セキュリティポリシーは、組織のセキュリティ方針とルールを3階層で整理したものです。基本方針・対策基準・実施手順の違いとSG試験・情報セキュリティマネジメント試験のひっかけポイントを分かりやすく解説します。"
+description: "情報セキュリティポリシーは、組織のセキュリティ方針とルールを3階層で整理したものです。基本方針・対策基準・実施手順の違いとSG試験・情報セキュリティマネジメント試験のひっかけポイントを分かりやすく解説します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/security-policy/
 tags: [sg, sg-security-management, isms, asset_management, it_security_operations]
 prev: /sg/security-policy-standards/

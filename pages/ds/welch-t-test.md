@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: ウェルチのt検定とは？等分散でない場合の平均比較【DS検定】
-description: ウェルチのt検定は等分散でない場合の平均比較を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "ウェルチのt検定とは、「分散が等しいと仮定できない2つの平均」を比較するための検定です。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/welch-t-test/
 categories: [data-science]
 tags: [ds, statistics]

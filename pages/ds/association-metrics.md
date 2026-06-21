@@ -2,7 +2,7 @@
 
 layout: page
 title: 共起頻度・支持度・信頼度・リフト値の違いとは？【DS検定】
-description: 共起頻度・支持度・信頼度・リフト値の違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "共起頻度・支持度（Support）・信頼度（Confidence）・リフト値（Lift）は、アソシエーション分析（購買パターン分析）で「XとYが一緒に起こる関係」を評価する指標です。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/association-metrics/
 categories: [data-science]
 tags: [ds, modeling]

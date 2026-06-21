@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: PPO（Proximal Policy Optimization）とは？【G検定対策】
-description: PPO（Proximal Policy Optimization）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "PPO（Proximal Policy Optimization）とは、方策（Policy）の更新量を制限することで、学習を安定させる強化学習アルゴリズムである。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/ppo/
 tags: [gk, reinforcement_learning, neural_network]
 gk_section: 機械学習の概要/代表的な手法/強化学習

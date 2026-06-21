@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 確率的勾配降下法（SGD）とは？G検定対策
-description: 確率的勾配降下法（SGD）はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "* 確率的勾配降下法（SGD：Stochastic Gradient Descent）とは、訓練データの一部をランダムに抽出して勾配を近似的に計算し、パラメータを更新する最適化手法。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/sgd/
 tags: [gk, optimization]
 gk_section: ディープラーニングの概要/最適化手法

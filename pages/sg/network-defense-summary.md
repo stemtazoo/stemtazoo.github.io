@@ -1,7 +1,7 @@
 ---
 layout: page
 title: ネットワーク防御と通信保護まとめ｜主要用語を整理【SG試験】
-description: ネットワーク防御と通信保護は、境界で止める対策と通信経路を守る対策を使い分ける考え方です。SG試験で問われやすい用語の違い、判断基準、学習順序を整理します。
+description: "ネットワーク防御と通信保護は、境界で止める対策と通信経路を守る対策を使い分ける考え方です。SG試験で問われやすい用語の違い、判断基準、学習順序を整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/network-defense-summary/
 tags: [sg, sg-security-measures, network, unauthorized_access]
 last_modified_at: 2026-06-14

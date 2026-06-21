@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 外部キー（Foreign Key）とは？テーブルの関係を理解【DS検定】
-description: 外部キー（Foreign Key）はテーブルの関係を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "外部キー（Foreign Key）とは、別のテーブルの主キーを参照することでテーブル同士の関係を表す列です。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/foreign-key/
 categories: [data-engineering]
 tags: [ds, database]

@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 機械学習アルゴリズム一覧チートシート（教師あり・教師なし・強化学習）【DS検定】
-description: 機械学習アルゴリズム一覧チートシート（教師あり・教師なし・強化学習）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "機械学習アルゴリズムは「教師あり学習・教師なし学習・強化学習」の3つに分類されます。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/machine-learning-algorithms-cheatsheet/
 categories: [data-science]
 tags: [ds, modeling]

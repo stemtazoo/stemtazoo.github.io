@@ -1,7 +1,7 @@
 ---
 layout: page
 title: ビジネスモデル特許とは？仕組みとひっかけを整理【SG試験】
-description: ビジネスモデル特許は、ビジネスの方法を技術的な仕組みで実現した発明に関する特許です。SG試験で迷いやすい、単なるアイデアや著作権との違いを整理します。
+description: "ビジネスモデル特許は、ビジネスの方法を技術的な仕組みで実現した発明に関する特許です。SG試験で迷いやすい、単なるアイデアや著作権との違いを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/business-model-patent/
 tags: [sg, sg-security-law, sg-strategy, business_management]
 last_modified_at: 2026-05-29

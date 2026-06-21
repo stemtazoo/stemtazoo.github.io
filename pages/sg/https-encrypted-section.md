@@ -1,7 +1,7 @@
 ---
 layout: page
 title: HTTPSで暗号化される区間とは？プロキシがある場合の考え方【SG試験】
-description: HTTPSで暗号化される区間は、基本的にブラウザとWebサーバ間です。プロキシを含む図で迷わないための判断基準を、SG試験向けに整理します。
+description: "HTTPSで暗号化される区間は、基本的にブラウザとWebサーバ間です。プロキシを含む図で迷わないための判断基準を、SG試験向けに整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/https-encrypted-section/
 tags: [sg, sg-technology, network, crypto_auth]
 last_modified_at: 2026-05-21

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: アクセス権限管理とは？付与・変更・削除の流れを整理【SG試験】
-description: "アクセス権限管理は、利用者に必要な権限を付与・変更・削除し、情報資産へのアクセスを適切に制御する管理です。SG試験・情報セキュリティマネジメント試験で問われやすい申請・承認・設定・確認・定期見直しの流れを整理します。"
+description: "アクセス権限管理は、利用者に必要な権限を付与・変更・削除し、情報資産へのアクセスを適切に制御する管理です。SG試験・情報セキュリティマネジメント試験で問われやすい申請・承認・設定・確認・定期見直しの流れを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/access-rights-management/
 tags: [sg, sg-security-management, access_control, id_management, system_operations]
 last_modified_at: 2026-06-18

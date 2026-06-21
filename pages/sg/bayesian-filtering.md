@@ -1,7 +1,7 @@
 ---
 layout: page
 title: ベイジアンフィルタリングとは？迷惑メールを学習して判定する仕組み【SG試験】
-description: ベイジアンフィルタリングは、利用者が迷惑メールと判定した内容の特徴を学習し、統計的に迷惑メールかどうかを判定する方式です。ホワイトリスト、SPF・DKIM、RBLとの違いをSG試験向けに整理します。
+description: "ベイジアンフィルタリングは、利用者が迷惑メールと判定した内容の特徴を学習し、統計的に迷惑メールかどうかを判定する方式です。ホワイトリスト、SPF・DKIM、RBLとの違いをSG試験向けに整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/bayesian-filtering/
 tags: [sg, sg-security-measures, it_security_operations, security_awareness, data_leakage]
 date: 2026-06-18

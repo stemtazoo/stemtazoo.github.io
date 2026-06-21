@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 過学習（Overfitting）
-description: 過学習（Overfitting）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "* 過学習とは、学習データに過度に適合しすぎた状態* 学習データでは高精度だが、未知データで性能が落ちる* モデルが「覚えすぎてしまう」ことが原因。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/overfitting/
 tags: [gk, machine_learning, overfitting, regularization]
 gk_section: 機械学習の概要/よくあるつまずき（過学習など）

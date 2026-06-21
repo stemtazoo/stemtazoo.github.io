@@ -1,7 +1,7 @@
 ---
 layout: page
 title: リスク管理・リスク対応まとめ｜主要用語を整理【SG試験】
-description: リスク管理・リスク対応は、資産・脅威・脆弱性からリスクを評価し、回避・低減・移転・受容を選ぶ分野です。SG試験で問われやすい用語の違い、判断基準、学習順序を整理します。
+description: "リスク管理・リスク対応は、資産・脅威・脆弱性からリスクを評価し、回避・低減・移転・受容を選ぶ分野です。SG試験で問われやすい用語の違い、判断基準、学習順序を整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/risk-management-summary/
 tags: [sg, sg-security-management, risk_assessment]
 last_modified_at: 2026-06-01

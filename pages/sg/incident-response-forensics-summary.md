@@ -1,7 +1,7 @@
 ---
 layout: page
 title: インシデント対応・証拠保全まとめ｜主要用語を整理【SG試験】
-description: インシデント対応・証拠保全は、事象判断から初動対応、証拠保全、原因分析、再発防止までを一連で捉える分野です。SG試験で迷いやすい用語の違いと判断基準、学習順序を整理します。
+description: "インシデント対応・証拠保全は、事象判断から初動対応、証拠保全、原因分析、再発防止までを一連で捉える分野です。SG試験で迷いやすい用語の違いと判断基準、学習順序を整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/incident-response-forensics-summary/
 tags: [sg, sg-security-management, incident_management]
 last_modified_at: 2026-05-18

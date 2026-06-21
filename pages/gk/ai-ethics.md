@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: AI倫理まとめ（G検定対策）
-description: AI倫理まとめ（G検定対策）は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "* G検定のAI倫理は「3本柱」で整理すると強い* 公平性（Fairness）* 説明可能性（Explainability / XAI）* プライバシー（Pri。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/ai-ethics/
 tags: [gk, ethics, cheatsheet]
 gk_section: AIの法律と倫理/AIの法律と倫理

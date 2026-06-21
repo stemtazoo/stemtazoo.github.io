@@ -1,7 +1,7 @@
 ---
 layout: page
 title: RADIUSとは？認証と利用記録を一元管理する仕組み【SG試験】
-description: RADIUSは、リモートアクセスや無線LANなどで認証情報や利用記録を一元管理するためのプロトコルです。SG試験で混同しやすいCHAP・PAP・PPTPとの違いを整理します。
+description: "RADIUSは、リモートアクセスや無線LANなどで認証情報や利用記録を一元管理するためのプロトコルです。SG試験で混同しやすいCHAP・PAP・PPTPとの違いを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/radius/
 tags: [sg, sg-security-measures, access_control, crypto_auth, network]
 last_modified_at: 2026-05-15

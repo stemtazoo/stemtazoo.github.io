@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: CBOW と Skip-gram の違いとは？G検定対策
-description: CBOW と Skip-gram の違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "* CBOW（Continuous Bag of Words）とSkip-gramは、Word2Vecで使われる単語埋め込み（Embedding）の学習方法です。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/cbow-vs-skipgram/
 tags: [gk, nlp]
 gk_section: ディープラーニングの応用例/自然言語処理

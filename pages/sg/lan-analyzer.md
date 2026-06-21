@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "LANアナライザーとは？ミラーポート運用時の注意点を整理【SG試験】"
-description: "LANアナライザーはLAN上を流れるパケットを監視・記録するためのツールです。ミラーポート接続時の基本動作、通常通信への影響、悪用リスク、SG試験でのひっかけポイントを整理します。"
+description: "LANアナライザーはLAN上を流れるパケットを監視・記録するためのツールです。ミラーポート接続時の基本動作、通常通信への影響、悪用リスク、SG試験でのひっかけポイントを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/lan-analyzer/
 tags: [sg, sg-technology, network, it_security_operations]
 last_modified_at: 2026-05-27

@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: DCGAN（Deep Convolutional GAN）
-description: DCGAN（Deep Convolutional GAN）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "* DCGANはGANにCNNを導入した画像生成モデル* Generator / Discriminator の両方に畳み込みを使用* 従来GANより高品質な画像生成が可能G検定ではGAN + CNN」＝ DCGAN と即。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/dcgan/
 tags: [gk, neural_network, cnn, gan]
 gk_section: ディープラーニングの応用例/データ生成

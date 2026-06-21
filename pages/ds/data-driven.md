@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: データドリブンとは？勘や経験に頼らない意思決定【DS検定】
-description: データドリブンは勘や経験に頼らない意思決定を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "データドリブン（Data Driven）とは、勘や経験ではなく、データに基づいて意思決定を行う考え方です。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/data-driven/
 categories: [business]
 tags: [ds, design]

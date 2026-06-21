@@ -1,7 +1,7 @@
 ---
 layout: page
 title: アプリケーションゲートウェイ方式とは？プロキシ型ファイアウォールの切り分け【SG試験】
-description: アプリケーションゲートウェイ方式は、アプリケーションごとにプロキシとして通信を中継し、内容を検査するファイアウォール方式です。SG試験で迷いやすい他方式との違いも整理します。
+description: "アプリケーションゲートウェイ方式は、アプリケーションごとにプロキシとして通信を中継し、内容を検査するファイアウォール方式です。SG試験で迷いやすい他方式との違いも整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/application-gateway-firewall/
 tags: [sg, sg-security-measures, unauthorized_access, network, access_control]
 last_modified_at: 2026-06-18

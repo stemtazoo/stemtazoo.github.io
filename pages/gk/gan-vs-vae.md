@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: GAN と VAE の違い（生成モデル比較）
-description: GAN と VAE の違い（生成モデル比較）は関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "* GAN：リアルな画像生成が得意（対戦学習）* VAE：安定した学習・潜在空間の扱いやすさが強み* 画質重視 → GAN / 理論・安定性 → VAEG検定では対戦か？確率モデルか？」 で切る。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/gan-vs-vae/
 tags: [gk, neural_network, generative_model, cheatsheet]
 gk_section: ディープラーニングの応用例/データ生成

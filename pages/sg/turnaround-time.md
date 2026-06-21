@@ -1,7 +1,7 @@
 ---
 layout: page
 title: ターンアラウンドタイムとは？全体完了までの時間を整理【SG試験】
-description: ターンアラウンドタイムは、利用者が処理を要求してから、処理結果がすべて返って完了するまでの時間です。応答時間との違いを、SG試験で迷わない判断基準で整理します。
+description: "ターンアラウンドタイムは、利用者が処理を要求してから、処理結果がすべて返って完了するまでの時間です。応答時間との違いを、SG試験で迷わない判断基準で整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/turnaround-time/
 tags: [sg, sg-technology, system_architecture, service_management]
 last_modified_at: 2026-05-15

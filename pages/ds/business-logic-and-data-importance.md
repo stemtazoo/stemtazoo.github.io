@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: ビジネスにおける「論理とデータの重要性」とは？【DS検定リテラシー】
-description: ビジネスにおける「論理とデータの重要性」はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "ビジネスにおける「論理とデータの重要性」は、試験で意味や使いどころを問われやすい重要概念です。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/business-logic-and-data-importance/
 categories: [business]
 tags: [ds, design]

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: PPTPとは？PPPを使ってVPNのトンネルを作る技術【SG試験】
-description: PPTPは、PPPパケットをIPデータグラムでカプセル化してVPNのトンネルを作るプロトコルです。SG試験で混同しやすいCHAP・PAP・RADIUSとの違いを整理します。
+description: "PPTPは、PPPパケットをIPデータグラムでカプセル化してVPNのトンネルを作るプロトコルです。SG試験で混同しやすいCHAP・PAP・RADIUSとの違いを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/pptp/
 tags: [sg, sg-security-measures, network, vpn, access_control]
 last_modified_at: 2026-05-15

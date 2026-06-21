@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: Word2Vec（CBOW / Skip-gram）とは？【分散表現の基本｜G検定対策】
-description: Word2Vec（CBOW / Skip-gram）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "Word2Vec（CBOW / Skip-gram）は、試験で意味や使いどころを問われやすい重要概念です。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/word2vec/
 tags: [gk, nlp, machine_learning]
 gk_section: ディープラーニングの応用例/自然言語処理

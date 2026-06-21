@@ -1,7 +1,7 @@
 ---
 layout: page
 title: パスワードのハッシュ保存とは？認証時の比較方法を整理【SG試験】
-description: パスワードのハッシュ保存は、平文パスワードではなくハッシュ値を保存し、認証時に入力パスワードを同じ方法でハッシュ化して比較する方法です。SG試験で迷いやすい利用者IDとの比較、暗号化、ソルトとの違いを整理します。
+description: "パスワードのハッシュ保存は、平文パスワードではなくハッシュ値を保存し、認証時に入力パスワードを同じ方法でハッシュ化して比較する方法です。SG試験で迷いやすい利用者IDとの比較、暗号化、ソルトとの違いを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/password-hash-authentication/
 prev: /sg/password-management/
 next: /sg/multi-factor-authentication/

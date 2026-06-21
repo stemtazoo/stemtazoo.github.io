@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 外れ値を見出すための適切な可視化手法とは？【DS検定】
-description: 外れ値を見出すための適切な可視化手法はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "外れ値を見出すための適切な可視化手法は、試験で意味や使いどころを問われやすい重要概念です。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/outlier-visualization/
 categories: [data-science]
 tags: [ds, visualization]

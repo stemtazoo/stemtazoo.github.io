@@ -1,7 +1,7 @@
 ---
 layout: page
 title: システム監査基準の監査技法をやさしく整理【SG試験】
-description: システム監査基準の監査技法は、監査人が証拠を集めて管理状況を確認するための方法です。ウォークスルー法や監査モジュール法など、SG試験で迷いやすい技法の違いを整理します。
+description: "システム監査基準の監査技法は、監査人が証拠を集めて管理状況を確認するための方法です。ウォークスルー法や監査モジュール法など、SG試験で迷いやすい技法の違いを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/system-audit-techniques/
 tags: [sg, sg-management, system_audit, it_security_operations]
 last_modified_at: 2026-06-11

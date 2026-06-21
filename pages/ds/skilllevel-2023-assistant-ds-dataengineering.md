@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "④ Assistant Data Scientist（見習い）に求められるデータエンジニアリング力"
-description: "\"④ Assistant Data Scientist（見習い）に求められるデータエンジニアリング力\"は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。"
+description: "④ Assistant Data Scientist（見習いレベル）に求められるデータエンジニアリング力とは、データを安全に扱い、必要な形に加工し、正しく取り出せる基礎的なITスキルを持っている状態です。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/skilllevel-2023-assistant-ds-dataengineering/
 categories: [business]
 tags: [ds, skillcheck]

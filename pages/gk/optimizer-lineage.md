@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: SGD / Momentum / Adam 系の系譜まとめ【1枚理解｜G検定対策】
-description: SGD / Momentum / Adam 系の系譜まとめは頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "最適化手法は、SGD → Momentum → RMSProp → Adam → AdaBound という流れで発展しており、G検定では「何を改良した手法か」「どの問題を解決しようとしたか」を系譜で理解できているかが問われ。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/optimizer-lineage/
 tags: [gk]
 gk_section: ディープラーニングの概要/最適化手法

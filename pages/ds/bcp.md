@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: BCP（事業継続計画）とは？災害時でも業務を止めない仕組み【DS検定】
-description: BCP（事業継続計画）は災害時でも業務を止めない仕組みを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "BCP（Business Continuity Plan：事業継続計画）とは、災害・事故・システム障害などの非常事態が起きても、企業の重要な業務を継続または早期復旧させるための計画です。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/bcp/
 categories: [business]
 tags: [ds, design]

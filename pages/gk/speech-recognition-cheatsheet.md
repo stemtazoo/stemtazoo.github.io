@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 音声認識まとめ（WaveNet・CTC・RNN）
-description: 音声認識まとめ（WaveNet・CTC・RNN）は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "（この1ページで即断）音声認識は「音声という時系列データ」をどう扱うかがすべてです。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/speech-recognition-cheatsheet/
 tags: [gk, cheatsheet]
 gk_section: チートシート（試験直前）/チートシート（試験直前）

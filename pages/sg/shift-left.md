@@ -1,7 +1,7 @@
 ---
 layout: page
 title: シフトレフトとは？早い段階でセキュリティを確認する考え方【SG試験】
-description: シフトレフトは、開発工程の早い段階で品質やセキュリティを確認し、手戻りや脆弱性の作り込みを減らす考え方です。SG試験で迷いやすいDevSecOpsやCI/CDとの違いを整理します。
+description: "シフトレフトは、開発工程の早い段階で品質やセキュリティを確認し、手戻りや脆弱性の作り込みを減らす考え方です。SG試験で迷いやすいDevSecOpsやCI/CDとの違いを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/shift-left/
 tags: [sg, sg-security-management, sg-security-measures, it_security_operations, threat_vulnerability]
 last_modified_at: 2026-05-06

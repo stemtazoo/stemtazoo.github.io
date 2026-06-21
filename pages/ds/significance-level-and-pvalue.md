@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 有意水準とp値の違いとは？【DS検定リテラシー】
-description: 有意水準とp値の違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "DS検定では、p値と有意水準を比較して、帰無仮説を棄却できるかを判断できるかが問われます。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/significance-level-and-pvalue/
 categories: [data-science]
 tags: [ds, statistics]

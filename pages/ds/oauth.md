@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: OAuthとは？仕組みとアクセストークンの流れを整理【DS検定リテラシー】
-description: OAuthは仕組みとアクセストークンの流れを整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "OAuth（オーオース）は、パスワードを渡さずに、外部サービスへアクセス権を安全に委任する仕組みです。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/oauth/
 categories: [business]
 tags: [ds, security, design]

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: インシデント対応・監視体制まとめ｜主要用語を整理【SG試験】
-description: インシデント対応・監視体制は、事象の検知から初動対応、分析、証拠保全、外部連携までを整理する分野です。SG試験で問われやすい役割の違いと判断基準を学習順に整理します。
+description: "インシデント対応・監視体制は、事象の検知から初動対応、分析、証拠保全、外部連携までを整理する分野です。SG試験で問われやすい役割の違いと判断基準を学習順に整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/incident-response-summary/
 tags: [sg, sg-security-management, incident_management]
 last_modified_at: 2026-06-03

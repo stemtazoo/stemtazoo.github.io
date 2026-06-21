@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 統計の基本まとめ（平均・分散・相関・回帰の関係を整理）【DS検定】
-description: 統計の基本まとめ（平均・分散・相関・回帰の関係を整理）は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "統計とは「データのばらつき」と「データ同士の関係」を理解するための考え方です。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/statistics-overview/
 categories: [data-science]
 tags: [ds, data-understanding, statistics]

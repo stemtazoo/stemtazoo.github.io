@@ -1,7 +1,7 @@
 ---
 layout: page
 title: SMTPのポート番号とは？パケットフィルタリングでの見方を整理【SG試験】
-description: "SMTPは電子メール送信で使うプロトコルで、代表的なポート番号は25番です。パケットフィルタリングで送信元・あて先ポートをどう見るかをSG試験向けに整理します。"
+description: "SMTPは電子メール送信で使うプロトコルで、代表的なポート番号は25番です。パケットフィルタリングで送信元・あて先ポートをどう見るかをSG試験向けに整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/smtp-port-packet-filtering/
 tags: [sg, sg-security-measures, network, it_security_operations]
 prev: /sg/smishing/

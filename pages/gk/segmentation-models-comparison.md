@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: DeepLab vs U-Net vs Mask R-CNN（役割比較）G検定対策
-description: DeepLab vs U-Net vs Mask R-CNN（役割比較）G検定対策は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "* DeepLab・U-Net・Mask R-CNN は「画像をどう分けるか」の役割が異なるモデルです。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/segmentation-models-comparison/
 tags: [gk, cnn, cheatsheet]
 gk_section: ディープラーニングの応用例/画像認識/セグメンテーションタスク

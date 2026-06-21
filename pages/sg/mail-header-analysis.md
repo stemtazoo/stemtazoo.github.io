@@ -1,7 +1,7 @@
 ---
 layout: page
 title: メールヘッダの読み方とは？迷惑メール調査の判断軸【SG試験】
-description: メールヘッダの読み方は、迷惑メール調査で配送経路や通報先を推定するための基本です。Received、Return-Path、From、HELOの信頼性の違いをSG試験向けに整理します。
+description: "メールヘッダの読み方は、迷惑メール調査で配送経路や通報先を推定するための基本です。Received、Return-Path、From、HELOの信頼性の違いをSG試験向けに整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/mail-header-analysis/
 tags: [sg, sg-security-measures, network, mail-security, incident_management]
 date: 2026-06-05

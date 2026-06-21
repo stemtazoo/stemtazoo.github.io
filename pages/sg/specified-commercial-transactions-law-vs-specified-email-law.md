@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 特定商取引法と特定電子メール法の違い【SG試験】
-description: 特定商取引法は、訪問販売や通信販売などトラブルが起きやすい取引で消費者を守る法律です。特定電子メール法、PL法、独占禁止法、不正競争防止法との違いをSG試験向けに整理します。
+description: "特定商取引法は、訪問販売や通信販売などトラブルが起きやすい取引で消費者を守る法律です。特定電子メール法、PL法、独占禁止法、不正競争防止法との違いをSG試験向けに整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/specified-commercial-transactions-law-vs-specified-email-law/
 tags: [sg, sg-security-law, privacy_law, it_security_operations]
 last_modified_at: 2026-06-15

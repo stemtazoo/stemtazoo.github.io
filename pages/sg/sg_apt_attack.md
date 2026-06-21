@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "APT攻撃とは？長期間ねらい続ける標的型攻撃を整理【SG試験】"
-description: "APT攻撃は、特定の組織や個人を長期間ねらい続ける高度で持続的なサイバー攻撃です。SG試験・情報セキュリティマネジメント試験で問われる標的型攻撃との関係、DDoS攻撃やマルウェアとの違い、ひっかけポイントを整理します。"
+description: "APT攻撃は、特定の組織や個人を長期間ねらい続ける高度で持続的なサイバー攻撃です。SG試験・情報セキュリティマネジメント試験で問われる標的型攻撃との関係、DDoS攻撃やマルウェアとの違い、ひっかけポイントを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/apt-attack/
 tags: [sg, sg-security-overview, threat_vulnerability, cyber_attack, targeted_attack]
 last_modified_at: 2026-05-19

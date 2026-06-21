@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "ウイルスを検知する方法｜SG試験対策"
-description: "情報セキュリティマネジメント試験で問われやすい、パターンマッチング、ヒューリスティック、ビヘイビア、サンドボックス、ハッシュ値、逆アセンブルなどのウイルス検知・調査方法を初心者向けに整理します。"
+description: "情報セキュリティマネジメント試験で問われやすい、パターンマッチング、ヒューリスティック、ビヘイビア、サンドボックス、ハッシュ値、逆アセンブルなどのウイルス検知・調査方法を初心者向けに整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/virus-detection-methods/
 tags: [sg, sg-security-measures, malware, it_security_operations]
 last_modified_at: 2026-05-29

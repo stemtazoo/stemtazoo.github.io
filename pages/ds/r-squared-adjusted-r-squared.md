@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 決定係数と自由度調整済決定係数の違いとは？【DS検定】
-description: 決定係数は回帰モデルの説明力、自由度調整済決定係数は説明変数の数を考慮した説明力です。DS検定で問われる使い分け、過学習との関係、モデル比較の判断ポイントを整理します。
+description: "決定係数は回帰モデルの説明力、自由度調整済決定係数は説明変数の数を考慮した説明力です。DS検定で問われる使い分け、過学習との関係、モデル比較の判断ポイントを整理します。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/r-squared-adjusted-r-squared/
 categories: [data-science]
 tags: [ds, modeling, evaluation]

@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: カプセル化とは？情報隠蔽との違いを整理【DS検定リテラシー】
-description: カプセル化は情報隠蔽との違いを整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "カプセル化は情報隠蔽との違いを整理するための用語です。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/encapsulation/
 categories: [business]
 tags: [ds, design]

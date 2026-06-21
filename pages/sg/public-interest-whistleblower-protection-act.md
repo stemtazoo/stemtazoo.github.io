@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 公益通報者保護法とは？保護される通報の要件を整理【SG試験】
-description: 公益通報者保護法の保護要件を、通報先・通報対象事実・業務関連性・相当理由の観点で整理します。SG試験で迷いやすい弁護士相談やWeb投稿との違いを、選択肢を切る判断軸で解説します。
+description: "公益通報者保護法の保護要件を、通報先・通報対象事実・業務関連性・相当理由の観点で整理します。SG試験で迷いやすい弁護士相談やWeb投稿との違いを、選択肢を切る判断軸で解説します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/public-interest-whistleblower-protection-act/
 tags: [sg, sg-law, compliance, internal-control, risk-management]
 last_modified_at: 2026-05-25

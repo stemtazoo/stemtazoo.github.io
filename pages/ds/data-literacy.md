@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: データリテラシーとは？データを読み解く力【DS検定】
-description: データリテラシーはデータを読み解く力を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "データリテラシー（Data Literacy）とは、データを理解し、正しく読み取り、意思決定に活用する能力のことです。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/data-literacy/
 categories: [business]
 tags: [ds, data-understanding, design]

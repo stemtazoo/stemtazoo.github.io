@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 法務・知的財産・委託契約まとめ｜主要用語を整理【SG試験】
-description: 法務・知的財産・委託契約は、法令上の禁止行為、権利の保護対象、契約上の責任分界を切り分けて理解するのが重要です。SG試験で迷いやすい論点を学習順序つきで整理します。
+description: "法務・知的財産・委託契約は、法令上の禁止行為、権利の保護対象、契約上の責任分界を切り分けて理解するのが重要です。SG試験で迷いやすい論点を学習順序つきで整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/legal-contract-ip-summary/
 tags: [sg, sg-security-law, vendor_management]
 last_modified_at: 2026-06-15

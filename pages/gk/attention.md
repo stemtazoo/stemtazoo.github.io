@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: Attention（注意機構）
-description: Attention（注意機構）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "* Attentionは「どこに注目するか」を学習する仕組み* 系列全体を見渡し、重要な部分に重みを置く* 長期依存問題を緩和 し、RNNの弱点を補う。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/attention/
 tags: [gk, neural_network, attention]
 gk_section: ディープラーニングの要素技術/リカレントニューラルネットワーク (RNN)

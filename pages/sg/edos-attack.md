@@ -1,7 +1,7 @@
 ---
 layout: page
 title: EDoS攻撃とは？クラウド従量課金を狙う経済的DoS攻撃【SG試験】
-description: EDoS攻撃は、クラウドサービスの従量課金や自動拡張を悪用し、利用企業に不要な費用やリソース消費を発生させる攻撃です。DoS・DDoSとの違いとSG試験での選択肢の切り方を整理します。
+description: "EDoS攻撃は、クラウドサービスの従量課金や自動拡張を悪用し、利用企業に不要な費用やリソース消費を発生させる攻撃です。DoS・DDoSとの違いとSG試験での選択肢の切り方を整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/edos-attack/
 tags: [sg, sg-security-measures, threat_vulnerability, it_security_operations, risk_assessment]
 date: 2026-06-01

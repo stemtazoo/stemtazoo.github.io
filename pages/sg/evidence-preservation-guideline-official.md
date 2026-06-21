@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 証拠保全ガイドライン
-description: SG試験で問われる証拠保全ガイドラインについて、電磁的証拠を正しく保全するための指針として、CSIRTマテリアルなど似たガイドラインとの違いを初心者向けに整理します。
+description: "SG試験で問われる証拠保全ガイドラインについて、電磁的証拠を正しく保全するための指針として、CSIRTマテリアルなど似たガイドラインとの違いを初心者向けに整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/evidence-preservation-guideline/
 tags: [sg, security-management, digital-forensics, incident-response]
 last_modified_at: 2026-05-18

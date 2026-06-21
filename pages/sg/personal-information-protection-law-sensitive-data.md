@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 個人情報保護法（要配慮個人情報）とは？同意要件と実務上の注意点【SG試験】
-description: 個人情報保護法における要配慮個人情報は、取得・提供時の同意要件が重要です。SG試験で混同しやすい個人情報・特定個人情報・オプトイン/オプトアウトとの違いを、判断基準ベースで整理します。
+description: "個人情報保護法における要配慮個人情報は、取得・提供時の同意要件が重要です。SG試験で混同しやすい個人情報・特定個人情報・オプトイン/オプトアウトとの違いを、判断基準ベースで整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/personal-information-protection-law-sensitive-data/
 tags: [sg, law, security_law, personal_information, privacy_law, sg-security-management]
 last_modified_at: 2026-06-04

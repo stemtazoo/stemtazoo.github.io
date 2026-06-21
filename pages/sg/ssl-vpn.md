@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "SSL-VPNとは？証明書でVPN装置を確認する仕組み【SG試験】"
-description: "SSL-VPNは、SSL/TLSを使ってリモートアクセス用の安全な通信路を作る方式です。SSL-VPN装置に必要なデジタル証明書、FQDNやIPアドレス、認証局との関係をSG試験向けに整理します。"
+description: "SSL-VPNは、SSL/TLSを使ってリモートアクセス用の安全な通信路を作る方式です。SSL-VPN装置に必要なデジタル証明書、FQDNやIPアドレス、認証局との関係をSG試験向けに整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/ssl-vpn/
 tags: [sg, sg-technology, network, vpn, crypto_auth]
 date: 2026-06-01

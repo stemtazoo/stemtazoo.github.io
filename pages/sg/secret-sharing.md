@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 秘密鍵分散法とは？鍵を分けて守る管理策【SG試験】
-description: 秘密鍵分散法は、重要な秘密鍵を複数に分けて保管し、単独管理による漏えいや不正利用を防ぐ考え方です。SG試験で問われる職務分離や復元条件との切り分けを整理します。
+description: "秘密鍵分散法は、重要な秘密鍵を複数に分けて保管し、単独管理による漏えいや不正利用を防ぐ考え方です。SG試験で問われる職務分離や復元条件との切り分けを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/secret-sharing/
 tags: [sg, sg-security-overview, crypto_auth, asset_management]
 last_modified_at: 2026-06-14

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: SOARとは？インシデント対応を自動化する仕組み【SG試験】
-description: "SOARは、セキュリティ監視で検知したアラートに対して、調査や対応手順を自動化・効率化する仕組みです。SG試験・情報セキュリティマネジメント試験で混同しやすいSIEM、SOC、CSIRTとの違いを判断基準で整理します。"
+description: "SOARは、セキュリティ監視で検知したアラートに対して、調査や対応手順を自動化・効率化する仕組みです。SG試験・情報セキュリティマネジメント試験で混同しやすいSIEM、SOC、CSIRTとの違いを判断基準で整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/soar/
 tags: [sg, sg-security-measures, incident_response, monitoring, log_management]
 last_modified_at: 2026-05-06

@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: NLTKとは？自然言語処理ライブラリの役割を整理【DS検定】
-description: NLTKは自然言語処理ライブラリの役割を整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "NLTKとは、自然言語処理（NLP）を学習・実装するためのPythonライブラリです。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/nltk/
 categories: [business]
 tags: [ds, unstructured-data, design]

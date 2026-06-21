@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "グラフの選び方とは？積上げ棒・二重円・ポートフォリオ・レーダーチャートの違い【SG試験】"
-description: "グラフの選び方は、比較したい対象と見せたい情報に合わせて図を選ぶ考え方です。積上げ棒グラフ、二重円グラフ、ポートフォリオ図、レーダーチャートの違いをSG試験向けに整理します。"
+description: "グラフの選び方は、比較したい対象と見せたい情報に合わせて図を選ぶ考え方です。積上げ棒グラフ、二重円グラフ、ポートフォリオ図、レーダーチャートの違いをSG試験向けに整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/chart-selection/
 tags: [sg, sg-management, business_management, project_management]
 last_modified_at: 2026-06-12

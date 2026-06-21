@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 情報流通プラットフォーム対処法とは？SG試験で押さえる対応ルール
-description: 情報流通プラットフォーム対処法は、SNSや掲示板などの権利侵害情報に対する削除対応や発信者情報開示を定める法律です。SG試験で混同しやすい個人情報保護法、電気通信事業法、消費者契約法との違いを整理します。
+description: "情報流通プラットフォーム対処法は、SNSや掲示板などの権利侵害情報に対する削除対応や発信者情報開示を定める法律です。SG試験で混同しやすい個人情報保護法、電気通信事業法、消費者契約法との違いを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/information-distribution-platform-act/
 tags: [sg, sg-security-law, privacy_law, it_security_operations]
 last_modified_at: 2026-05-17

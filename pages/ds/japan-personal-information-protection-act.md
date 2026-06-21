@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 改正個人情報保護法とは？日本のデータ保護ルール【DS検定】
-description: 改正個人情報保護法は日本のデータ保護ルールを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "改正個人情報保護法は日本のデータ保護ルールを理解するための用語です。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/japan-personal-information-protection-act/
 categories: [ai-utilization]
 tags: [ds, ethics]

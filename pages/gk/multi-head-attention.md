@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: Multi-Head Attentionとは？複数視点で関係性を学ぶ仕組み【G検定対策】
-description: Multi-Head Attentionは複数視点で関係性を学ぶ仕組みを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "Multi-Head Attentionは複数視点で関係性を学ぶ仕組みを理解するための用語です。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/multi-head-attention/
 tags: [gk, attention, transformer]
 gk_section: ディープラーニングの要素技術/トランスフォーマー (Transformer)

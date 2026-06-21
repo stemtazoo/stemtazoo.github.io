@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: BERTはなぜRNNではなくTransformerなのか？G検定対策
-description: BERTはなぜRNNではなくTransformerなのか？G検定対策は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "* BERTは、長距離の文脈依存を効率よく学習するために、RNNではなくTransformerを採用しています。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/bert-why-transformer/
 tags: [gk, attention, transformer]
 gk_section: ディープラーニングの応用例/自然言語処理

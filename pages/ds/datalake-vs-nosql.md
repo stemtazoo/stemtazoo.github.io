@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: データレイクとNoSQLの違いとは？役割の違いを整理【DS検定】
-description: データレイクとNoSQLの違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "NoSQLは「データベースの種類」、データレイクは「データを大量にためる仕組み（保管基盤）」です。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/datalake-vs-nosql/
 categories: [data-engineering]
 tags: [ds, data-storage, database]

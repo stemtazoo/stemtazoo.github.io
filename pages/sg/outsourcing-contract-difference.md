@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 請負契約と派遣契約の違いとは？指示系統で判断するポイント【SG試験】
-description: "請負契約と派遣契約の違いは関連概念を正しく切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、SG試験・情報セキュリティマネジメント試験とで狙われるひっかけポイントを解説します。"
+description: "請負契約と派遣契約の違いは関連概念を正しく切り分けるための考え方です。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/outsourcing-contract-difference/
 tags: [sg, management, vendor_management, it_security_operations, sg-management]
 prev: /sg/ng-patterns/

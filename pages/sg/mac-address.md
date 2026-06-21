@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "MACアドレスとは？機器を識別する番号の役割【SG試験】"
-description: "MACアドレスは機器を識別する番号の役割を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験・情報セキュリティマネジメント試験とで狙われるひっかけポイントを解説します。"
+description: "MACアドレスとは、ネットワーク機器ごとに製造時に割り当てられる一意の識別番号であり、SG試験では「機器レベルでの識別」と「IPアドレスとの違い」を判断させる問題でよく問われます。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/mac-address/
 tags: [sg, technology, network, access_control, sg-technology]
 prev: /sg/labor-law-difference/

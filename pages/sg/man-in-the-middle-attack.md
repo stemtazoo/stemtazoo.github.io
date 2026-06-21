@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "中間者攻撃とは？通信の間に割り込む攻撃【SG試験】"
-description: "中間者攻撃は、通信する2者の間に攻撃者が割り込み、盗聴や改ざんを行う攻撃です。この記事では、公開鍵暗号で起こる例、デジタル証明書による対策、マン・イン・ザ・ブラウザ攻撃との違いをSG試験向けに整理します。"
+description: "中間者攻撃は、通信する2者の間に攻撃者が割り込み、盗聴や改ざんを行う攻撃です。この記事では、公開鍵暗号で起こる例、デジタル証明書による対策、マン・イン・ザ・ブラウザ攻撃との違いをSG試験向けに整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/man-in-the-middle-attack/
 tags: [sg, security_measures, unauthorized_access, network, crypto_auth, sg-security-measures]
 prev: /sg/man-in-the-browser/

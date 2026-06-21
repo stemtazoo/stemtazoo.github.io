@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: ピアソンの相関係数とは？関係の強さをどう読むか【DS検定】
-description: ピアソンの相関係数は関係の強さをどう読むかを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "ピアソンの相関係数とは、「2つの数値データがどれくらい直線的に一緒に動くか」を表す指標です。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/pearson-correlation/
 categories: [data-science]
 tags: [ds, statistics]

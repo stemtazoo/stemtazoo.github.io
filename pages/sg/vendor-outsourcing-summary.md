@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 委託先・契約・再委託管理まとめ｜主要用語を整理【SG試験】
-description: 委託先管理・請負/派遣契約・再委託は、責任主体と指揮命令系統の違いで整理するとSG試験で判断しやすくなります。契約時と運用時の確認ポイント、学習順序をまとめます。
+description: "委託先管理・請負/派遣契約・再委託は、責任主体と指揮命令系統の違いで整理するとSG試験で判断しやすくなります。契約時と運用時の確認ポイント、学習順序をまとめます。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/vendor-outsourcing-summary/
 tags: [sg, sg-security-management, sg-management]
 last_modified_at: 2026-06-03

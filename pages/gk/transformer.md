@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: Transformer（概要）
-description: Transformer（概要）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "* TransformerはRNNを使わない系列モデル* Self-Attentionを中心に構成 されている* 並列計算が可能 で、長期依存関係に強い。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/transformer/
 tags: [gk, neural_network, transformer]
 gk_section: ディープラーニングの要素技術/トランスフォーマー (Transformer)

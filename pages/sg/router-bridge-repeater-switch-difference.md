@@ -1,7 +1,7 @@
 ---
 layout: page
 title: ルータ・ブリッジ・リピータ・スイッチングハブの違いは？OSI層で切り分ける【SG試験】
-description: ルータ、ブリッジ、リピータ、スイッチングハブの違いをOSI層と判断材料（IPアドレス・MACアドレス・信号増幅）で整理します。SG試験で頻出のひっかけ選択肢を切るコツを解説します。
+description: "ルータ、ブリッジ、リピータ、スイッチングハブの違いをOSI層と判断材料（IPアドレス・MACアドレス・信号増幅）で整理します。SG試験で頻出のひっかけ選択肢を切るコツを解説します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/router-bridge-repeater-switch-difference/
 tags: [sg, sg-technology, network_security, it_security_operations]
 last_modified_at: 2026-05-24

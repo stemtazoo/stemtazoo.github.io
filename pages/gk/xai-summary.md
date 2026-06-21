@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: XAIまとめ（LIME・SHAP・CAM・Grad-CAM）
-description: XAIまとめ（LIME・SHAP・CAM・Grad-CAM）は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "* XAI（Explainable AI）は「なぜその判断か」を説明するための技術* モデルの精度を上げるものではない* 手法ごとに「対象モデル」と「説明の仕方。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/xai-summary/
 tags: [gk, xai, neural_network, cheatsheet]
 gk_section: ディープラーニングの応用例/モデルの解釈性

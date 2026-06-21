@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 特徴量エンジニアリングとは？モデル精度を左右する重要工程【DS検定】
-description: 特徴量エンジニアリングはモデル精度を左右する重要工程を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "特徴量エンジニアリングとは、機械学習モデルの性能を高めるためにデータの特徴量を作成・変換する工程です。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/feature-engineering2/
 categories: [business]
 tags: [ds, data-preparation, design]

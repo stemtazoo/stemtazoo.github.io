@@ -1,7 +1,7 @@
 ---
 layout: page
 title: パケットフィルタリング方式とは？ファイアウォール方式の基本【SG試験】
-description: パケットフィルタリング方式は、IPアドレスやポート番号などのパケット情報をもとに通信を許可・遮断するファイアウォール方式です。SG試験で迷いやすい他方式との違いも整理します。
+description: "パケットフィルタリング方式は、IPアドレスやポート番号などのパケット情報をもとに通信を許可・遮断するファイアウォール方式です。SG試験で迷いやすい他方式との違いも整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/packet-filtering-firewall/
 tags: [sg, sg-security-measures, unauthorized_access, network, access_control]
 last_modified_at: 2026-06-21

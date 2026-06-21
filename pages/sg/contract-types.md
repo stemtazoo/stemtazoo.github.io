@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "請負契約と準委任契約の違いとは？成果物か作業かで判断【SG試験】"
-description: "請負契約と準委任契約の違いは関連概念を正しく切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、SG試験・情報セキュリティマネジメント試験とで狙われるひっかけポイントを解説します。"
+description: "SG試験では成果物の完成責任があるか」で判断する。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/contract-types/
 tags: [sg, management, vendor_management, system_strategy, sg-strategy]
 prev: /sg/contract-nonconformity/

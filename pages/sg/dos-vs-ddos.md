@@ -1,7 +1,7 @@
 ---
 layout: page
 title: DoS攻撃とDDoS攻撃の違いを整理【SG試験】
-description: "DoS攻撃とDDoS攻撃はどちらもサービス停止を狙う攻撃ですが、攻撃元の数が異なります。本記事では違いと見分け方を整理し、SG試験・情報セキュリティマネジメント試験で迷わない判断基準を解説します。"
+description: "DoS攻撃とDDoS攻撃はどちらもサービス停止を狙う攻撃ですが、攻撃元の数が異なります。本記事では違いと見分け方を整理し、SG試験・情報セキュリティマネジメント試験で迷わない判断基準を解説します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/dos-vs-ddos/
 tags: [sg, threat_vulnerability, unauthorized_access, network, sg-security-overview]
 prev: /sg/dos-attack-difference/

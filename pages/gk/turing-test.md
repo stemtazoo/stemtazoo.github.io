@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: チューリングテスト（Turing Test）とは？G検定対策
-description: チューリングテスト（Turing Test）はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "* チューリングテストとは、会話の結果だけを見て「相手が人間かAIかを区別できるか」を評価する思考実験です。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/turing-test/
 tags: [gk, ethics]
 gk_section: 人工知能（AI）とは/人工知能（AI）とは

@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: GPT（自己回帰モデル）とは？G検定対策
-description: GPT（自己回帰モデル）はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "GPT（自己回帰モデル）はG検定対策を理解するための用語です。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/gpt/
 tags: [gk, nlp, transformer, attention]
 gk_section: ディープラーニングの応用例/自然言語処理

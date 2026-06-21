@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 電磁的記録不正作出罪とは？虚偽データ作出・行使を整理【SG試験】
-description: 電磁的記録不正作出罪は、人の事務処理を誤らせる目的で、権利・義務・事実証明に関する虚偽の電子データを不正に作る行為を処罰する刑法上の規定です。SG試験で迷いやすい行使や電子計算機使用詐欺罪との違いを整理します。
+description: "電磁的記録不正作出罪は、人の事務処理を誤らせる目的で、権利・義務・事実証明に関する虚偽の電子データを不正に作る行為を処罰する刑法上の規定です。SG試験で迷いやすい行使や電子計算機使用詐欺罪との違いを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/false-electromagnetic-record/
 tags: [sg, sg-security-law, threat_vulnerability, unauthorized_access]
 last_modified_at: 2026-05-12

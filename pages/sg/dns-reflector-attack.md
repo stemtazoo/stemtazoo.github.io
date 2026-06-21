@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "DNSリフレクター攻撃とは？仕組みと対策の考え方【SG試験】"
-description: "DNSリフレクター攻撃は、送信元IPを偽装してDNSサーバから大量の応答を標的に送りつけるDoS攻撃です。仕組みと増幅の考え方、SG試験・情報セキュリティマネジメント試験でのひっかけポイントを整理します。"
+description: "DNSリフレクター攻撃は、送信元IPを偽装してDNSサーバから大量の応答を標的に送りつけるDoS攻撃です。仕組みと増幅の考え方、SG試験・情報セキュリティマネジメント試験でのひっかけポイントを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/dns-reflector-attack/
 tags: [sg, threat_vulnerability, unauthorized_access, network, sg-security-overview]
 prev: /sg/dns-poisoning-vs-pharming/

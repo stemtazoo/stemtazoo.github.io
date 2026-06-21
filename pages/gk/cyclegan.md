@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: CycleGAN（Pix2Pixとの違い）とは？G検定対策
-description: CycleGAN（Pix2Pixとの違い）は関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "CycleGANは対応する画像ペアがなくても画像→画像変換ができる生成モデルで、G検定ではPix2Pixとの「教師あり／なし」の違いが最重要ポイントとして問われる。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/cyclegan/
 tags: [gk, cnn, neural_network]
 gk_section: ディープラーニングの応用例/データ生成

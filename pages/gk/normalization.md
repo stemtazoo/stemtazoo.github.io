@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 正規化（Normalization）とは？G検定対策
-description: 正規化（Normalization）はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "* 正規化（Normalization）とは、入力データのスケール（範囲）をそろえるための前処理の総称。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/normalization/
 tags: [gk, neural_network]
 gk_section: ディープラーニングの要素技術/ネットワークの構成要素

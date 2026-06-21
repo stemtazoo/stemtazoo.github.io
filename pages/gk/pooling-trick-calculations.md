@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: Pooling層の計算ひっかけ問題集（出力サイズ）
-description: Pooling層の計算ひっかけ問題集（出力サイズ）は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "* Pooling層にも出力サイズの計算がある* ただし「パラメータ数」は 0* G検定では Convと混同させる罠 が多い。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/pooling-trick-calculations/
 tags: [gk, cnn, pooling, cheatsheet]
 gk_section: ディープラーニングの応用例/画像認識/ネオコグニトロンとLeNet

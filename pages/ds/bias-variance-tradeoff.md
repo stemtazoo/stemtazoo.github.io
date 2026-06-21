@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: バイアス・バリアンスのトレードオフとは？過学習との関係【DS検定】
-description: バイアス・バリアンスのトレードオフは過学習との関係を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "バイアス・バリアンスのトレードオフとは、モデルを複雑にするとバイアスは下がるがバリアンスが上がる、という関係のことです。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/bias-variance-tradeoff/
 categories: [data-science]
 tags: [ds, modeling, evaluation]

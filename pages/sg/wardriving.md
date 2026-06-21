@@ -1,7 +1,7 @@
 ---
 layout: page
 title: ウォードライビングとは？無線LANを探して侵入に悪用する行為【SG試験】
-description: ウォードライビングは、移動しながら無線LANアクセスポイントを探し、脆弱な設定のネットワークを不正利用につなげる行為です。SG試験でのひっかけポイントを整理します。
+description: "ウォードライビングは、移動しながら無線LANアクセスポイントを探し、脆弱な設定のネットワークを不正利用につなげる行為です。SG試験でのひっかけポイントを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/wardriving/
 tags: [sg, sg-security-overview, threat_vulnerability, unauthorized_access, network]
 last_modified_at: 2026-05-19

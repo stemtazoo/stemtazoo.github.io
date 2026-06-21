@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: データドリブン経営とは？データにもとづいて意思決定する考え方【DS検定】
-description: データドリブン経営はデータにもとづいて意思決定する考え方を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "データドリブン経営（Data Driven Management）とは、経験や勘だけではなく「データにもとづいて意思決定を行う経営手法」です。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/data-driven-management/
 categories: [business]
 tags: [ds, design]

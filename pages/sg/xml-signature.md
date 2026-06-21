@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "XML署名とは？XML文書の改ざん検知と署名者確認の仕組み【SG試験】"
-description: "XML署名は、XML文書全体または一部にデジタル署名を付け、改ざん検知や署名者確認を行う仕組みです。XML暗号、電子署名、Reference要素との違いをSG試験向けに整理します。"
+description: "XML署名は、XML文書全体または一部にデジタル署名を付け、改ざん検知や署名者確認を行う仕組みです。XML暗号、電子署名、Reference要素との違いをSG試験向けに整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/xml-signature/
 tags: [sg, sg-technology, crypto_auth]
 date: 2026-05-09

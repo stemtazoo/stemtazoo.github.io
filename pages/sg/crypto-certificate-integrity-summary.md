@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 暗号・証明書・改ざん検知まとめ｜主要用語を整理【SG試験】
-description: 暗号・証明書・改ざん検知は、機密性・完全性・真正性を支える技術です。SG試験で迷いやすい用語の違い、判断基準、学習順序を整理します。
+description: "暗号・証明書・改ざん検知は、機密性・完全性・真正性を支える技術です。SG試験で迷いやすい用語の違い、判断基準、学習順序を整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/crypto-certificate-integrity-summary/
 tags: [sg, sg-security-measures, crypto_auth]
 last_modified_at: 2026-05-17

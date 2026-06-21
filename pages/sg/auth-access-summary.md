@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 認証・アクセス制御まとめ｜SSO・MFA・ゼロトラストを体系整理【情報セキュリティマネジメント】
-description: "認証・認可・アクセス制御からSSO・MFA・ゼロトラストまでを体系的に整理したまとめページです。SG試験・情報セキュリティマネジメント試験で問われる違いや判断基準を一気に確認できます。"
+description: "認証・認可・アクセス制御からSSO・MFA・ゼロトラストまでを体系的に整理したまとめページです。SG試験・情報セキュリティマネジメント試験で問われる違いや判断基準を一気に確認できます。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/auth-access-summary/
 tags: [sg, sg-security-measures, access_control, it_security_operations]
 last_modified_at: 2026-06-11

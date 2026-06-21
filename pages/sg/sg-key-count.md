@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 鍵の数とは？共通鍵暗号方式と公開鍵暗号方式の違い
-description: 共通鍵暗号方式と公開鍵暗号方式では、通信人数が増えたときに必要な鍵の数が変わります。SG試験で問われやすい式の意味と選択肢の切り分け方を整理します。
+description: "共通鍵暗号方式と公開鍵暗号方式では、通信人数が増えたときに必要な鍵の数が変わります。SG試験で問われやすい式の意味と選択肢の切り分け方を整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/key-count/
 tags: [sg, sg-security-overview, crypto_auth, network]
 last_modified_at: 2026-05-17

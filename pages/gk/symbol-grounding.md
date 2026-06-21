@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: シンボルグラウンディング問題とは？G検定対策
-description: シンボルグラウンディング問題はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "* シンボルグラウンディング問題（Symbol Grounding Problem）とは、AIが扱う記号（シンボル）が、現実世界の意味とどのように結びつくのか説明できない問題です。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/symbol-grounding/
 tags: [gk, ethics]
 gk_section: 人工知能（AI）とは/人工知能（AI）とは

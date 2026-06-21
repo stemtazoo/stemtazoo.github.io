@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "割れ窓理論とは？小さな不正放置が重大化する考え方【SG試験】"
-description: "割れ窓理論は、小さな不正や秩序の乱れを放置すると、より大きな不正や犯罪が起こりやすくなるという考え方です。日常活動理論・不正のトライアングル・CPTEDとの違いをSG試験向けに整理します。"
+description: "割れ窓理論は、小さな不正や秩序の乱れを放置すると、より大きな不正や犯罪が起こりやすくなるという考え方です。日常活動理論・不正のトライアングル・CPTEDとの違いをSG試験向けに整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/broken-windows-theory/
 tags: [sg, sg-security-management, insider_threat, risk_management]
 last_modified_at: 2026-05-28

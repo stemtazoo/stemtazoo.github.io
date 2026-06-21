@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: F検定とは？t検定との違いを整理【DS検定リテラシー】
-description: F検定はt検定との違いを整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "F検定とは、主に「分散が等しいかどうか」を検定するための手法です。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/f-test/
 categories: [data-science]
 tags: [ds, statistics]

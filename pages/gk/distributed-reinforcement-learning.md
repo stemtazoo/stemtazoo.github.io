@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 分散型強化学習とは？マルチエージェントとの違いを整理【G検定対策】
-description: 分散型強化学習は、複数の計算資源や環境を使って強化学習を並列化し、学習を高速化する考え方です。マルチエージェント強化学習、単一エージェント、CPU・GPU利用との違いをG検定向けに整理します。
+description: "分散型強化学習は、複数の計算資源や環境を使って強化学習を並列化し、学習を高速化する考え方です。マルチエージェント強化学習、単一エージェント、CPU・GPU利用との違いをG検定向けに整理します。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/distributed-reinforcement-learning/
 tags: [gk, reinforcement_learning, machine_learning]
 gk_section: 機械学習の概要/代表的な手法/強化学習

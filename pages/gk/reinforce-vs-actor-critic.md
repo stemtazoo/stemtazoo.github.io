@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: REINFORCEとActor-Criticの違いとは？G検定対策
-description: REINFORCEとActor-Criticの違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "* REINFORCEは価値関数を使わず方策（ポリシー）を直接勾配で更新する手法、Actor-Criticは方策（Actor）と価値関数（Critic）を併用して学習を安定させる手法です。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/reinforce-vs-actor-critic/
 tags: [gk, reinforcement_learning]
 gk_section: 機械学習の概要/代表的な手法/強化学習

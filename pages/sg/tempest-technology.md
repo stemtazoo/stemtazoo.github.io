@@ -1,7 +1,7 @@
 ---
 layout: page
 title: テンペスト技術とは？電磁波からの情報漏えいを防ぐ考え方【SG試験】
-description: テンペスト技術は、機器から出る微弱な電磁波などを解析して情報を読み取る攻撃と、その対策に関する考え方です。SG試験で問われる漏えい経路と対策の切り分けを整理します。
+description: "テンペスト技術は、機器から出る微弱な電磁波などを解析して情報を読み取る攻撃と、その対策に関する考え方です。SG試験で問われる漏えい経路と対策の切り分けを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/tempest-technology/
 tags: [sg, sg-security-measures, data_leakage, threat_vulnerability, it_security_operations]
 last_modified_at: 2026-05-10

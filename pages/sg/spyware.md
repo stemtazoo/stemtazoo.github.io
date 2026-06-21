@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "スパイウェアとは？情報を盗むマルウェアの特徴【SG試験】"
-description: "スパイウェアは情報を盗むマルウェアの特徴を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験・情報セキュリティマネジメント試験とで狙われるひっかけポイントを解説します。"
+description: "スパイウェアとは、利用者に気づかれずに個人情報や操作情報を収集・外部へ送信するマルウェアであり、SG試験では「情報を盗む目的かどうか」を見抜くことが重要です。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/spyware/
 tags: [sg, security_measures, malware, data_leakage, sg-security-measures]
 prev: /sg/smtp-port-packet-filtering/

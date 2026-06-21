@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: ミニバッチ学習（Mini-batch Gradient Descent）とは？G検定対策
-description: ミニバッチ学習（Mini-batch Gradient Descent）はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "* ミニバッチ学習（Mini-batch Gradient Descent）とは、訓練データの一部（ミニバッチ）を使って勾配を計算し、パラメータを更新する最適化手法。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/mini-batch/
 tags: [gk, optimization]
 gk_section: ディープラーニングの概要/最適化手法

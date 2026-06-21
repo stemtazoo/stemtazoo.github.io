@@ -1,7 +1,7 @@
 ---
 layout: page
 title: ビッグデータとは？3Vとパターン発見の判断軸【SG試験】
-description: ビッグデータは、Volume・Variety・Velocityの特徴をもつ巨大で多様なデータ群です。3V、データクレンジング、予測精度、パターン発見の違いをSG試験向けに整理します。
+description: "ビッグデータは、Volume・Variety・Velocityの特徴をもつ巨大で多様なデータ群です。3V、データクレンジング、予測精度、パターン発見の違いをSG試験向けに整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/big-data/
 tags: [sg, sg-strategy, system_strategy, business_management]
 date: 2026-06-16

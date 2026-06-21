@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "DNSキャッシュポイズニングとは？偽サイトへ誘導する攻撃【SG試験】"
-description: "DNSキャッシュポイズニングは、DNSサーバのキャッシュに偽の名前解決情報を登録させ、利用者を偽サイトへ誘導する攻撃です。この記事では、仕組み・被害・SG試験でのひっかけポイントを解説します。"
+description: "DNSキャッシュポイズニングは、DNSサーバのキャッシュに偽の名前解決情報を登録させ、利用者を偽サイトへ誘導する攻撃です。この記事では、仕組み・被害・SG試験でのひっかけポイントを解説します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/dns-cache-poisoning/
 tags: [sg, security_measures, unauthorized_access, network, sg-security-measures]
 prev: /sg/dns-attack-difference/
