@@ -216,9 +216,9 @@ Liquid を編集するときは、次を優先します。
 GitHub Pages の公開後、`.github/workflows/indexnow.yml` が IndexNow 送信を行います。
 
 - post-deploy の `deployment_status` 成功時に動く
-- 手動実行 `workflow_dispatch` に対応
-- 週次の full refresh に対応
-- 差分範囲が取れない場合は `--all-known` にフォールバック
+- 通常は前回成功デプロイとの差分 URL だけを送信する
+- 差分範囲が取れない場合は、全件バッチ送信を避けるため送信をスキップする
+- 手動実行 `workflow_dispatch` に対応し、明示的に `all-known` を選んだ場合だけ全既知 URL を送信する
 
 IndexNow キーファイル `f0977966c6644641ae35df01652658c4.txt` はリポジトリルートに置き、ファイル名 stem と中身を一致させる必要があります。移動したり front matter を付けたりしないでください。
 
