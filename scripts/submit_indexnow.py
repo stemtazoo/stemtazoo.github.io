@@ -320,11 +320,12 @@ def main() -> int:
 
     if args.max_urls and len(urls) > args.max_urls and not args.allow_large_batch:
         print(
-            f"Refusing to submit {len(urls)} URLs because it exceeds --max-urls {args.max_urls}. "
+            f"Warning: IndexNow submission skipped because {len(urls)} URLs exceeds "
+            f"--max-urls {args.max_urls}. This avoids automatic large batch submission. "
             "Use --allow-large-batch only for an intentional manual full-site refresh.",
             file=sys.stderr,
         )
-        return 1
+        return 0
 
     print(f"Submitting {len(urls)} URL(s) to IndexNow.")
     return submit_to_indexnow(site_root, key, key_location, urls, args.dry_run)
