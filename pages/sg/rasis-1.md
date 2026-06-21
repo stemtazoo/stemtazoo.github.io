@@ -1,7 +1,7 @@
 ---
 layout: page
 title: RASISとは？システム品質を切り分ける考え方【SG試験】
-description: "RASISはシステムの信頼性・可用性・保守性・完全性・安全性を整理する考え方です。SG試験で各項目を切り分ける判断基準を解説します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: RASISは、システム品質を信頼性・可用性・保守性・完全性・安全性の5つの観点で整理する考え方です。稼働し続けること、故障しにくいこと、直しやすいことなどの違いを押さえ、SG試験で各項目を切り分ける基準を整理します。科目Aの用語理解と科目Bのケース判断で迷いやすい表現も確認します。
 permalink: /sg/rasis/
 tags: [sg, sg-technology, system_architecture, it_security_operations]
 last_modified_at: 2026-06-16

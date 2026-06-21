@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 正規化とは？データの重複を減らして整合性を保つ考え方【SG試験】
-description: "正規化は、関係データベースでデータの重複や更新時の不整合を減らすために、表を適切に分ける考え方です。この記事では第1正規形・第2正規形・第3正規形の違いと、SG試験・情報セキュリティマネジメント試験で狙われるひっかけポイントを整理します。"
+description: 正規化は、関係データベースでデータの重複や更新時の不整合を減らすために、表を適切に分ける考え方です。第1正規形・第2正規形・第3正規形の違い、主キーと関数従属の見方、SG試験で狙われる表設計のひっかけを整理します。科目Aの用語理解と科目Bのケース判断で迷いやすい表現も確認します。
 permalink: /sg/database-normalization/
 tags: [sg, database, system_planning, data_modeling]
 prev: /sg/primary-key-foreign-key/

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "不正のトライアングルとは？内部不正が起こる3要素【SG試験】"
-description: "不正のトライアングルは、内部不正が起こる3要素である動機・機会・正当化を理解するための用語です。この記事では、SG試験で問われやすい機会・動機・正当化の切り分けと、よくあるひっかけを解説します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: 不正のトライアングルは、内部不正が起こる要因を動機・機会・正当化の3つで整理する考え方です。権限集中や監視不足が機会になる点、教育や相互けん制でどの要因を下げるかを押さえ、SG試験の判断基準を整理します。SG試験の出題文で迷いやすい判断ポイントも確認します。
 permalink: /sg/fraud-triangle/
 tags: [sg, security_management, risk_assessment, security_awareness, sg-security-management]
 prev: /sg/five-basic-components/

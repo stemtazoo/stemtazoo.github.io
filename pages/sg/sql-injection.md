@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "SQLインジェクションとは？仕組みと対策をやさしく理解【SG試験】"
-description: SQLインジェクションを入力値から不正SQLを実行させる攻撃として整理します。情報漏えい・改ざんのリスク、プレースホルダによる対策判断をSG試験向けに確認できます。本文では、用語の定義、業務での使いどころ、似た対策との違い、選択肢を切る判断基準まで短時間で復習できます。
+description: SQLインジェクションは、入力値に不正なSQL断片を混入させ、データベースを不正操作する攻撃です。情報漏えい、改ざん、認証回避のリスク、プレースホルダや入力値検証による対策、XSSとの違いをSG試験向けに整理します。SG試験の出題文で迷いやすい判断ポイントも確認します。
 permalink: /sg/sql-injection/
 tags: [sg, threat_vulnerability, unauthorized_access, database, sg-security-overview]
 prev: /sg/spyware/

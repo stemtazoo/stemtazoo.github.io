@@ -1,7 +1,7 @@
 ---
 layout: page
 title: ステートフルインスペクション方式とは？ファイアウォール方式の切り分け【SG試験】
-description: ステートフルインスペクション方式は、通信セッションの状態を記録し、その状態に合うパケットだけを通すファイアウォール方式です。パケットフィルタリング、WAF、アプリケーションゲートウェイとの違いをSG試験向けに整理します。
+description: ステートフルインスペクション方式は、IPアドレスやポート番号だけでなく通信セッションの状態を参照してパケットを通す方式です。状態表の役割、静的なパケットフィルタリング、WAF、アプリケーションゲートウェイとの違い、戻り通信を許可できる理由をSG試験向けに整理します。
 permalink: /sg/stateful-inspection-firewall/
 tags: [sg, sg-security-measures, unauthorized_access, network, access_control]
 last_modified_at: 2026-06-17

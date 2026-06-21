@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 記憶媒体の廃棄方法とは？上書き・消磁・物理破壊を整理【SG試験】
-description: "記憶媒体の廃棄方法では、保存されたデータを復元されない状態にすることが重要です。上書き、消磁、物理破壊の違いを整理し、SG試験・情報セキュリティマネジメント試験で問われる情報漏えい対策と選択肢の切り分けポイントを解説します。"
+description: 記憶媒体の廃棄方法では、保存されたデータを復元されない状態にすることが重要です。上書き、消磁、物理破壊、暗号化消去の違いを押さえ、HDD・SSD・USBメモリなど媒体ごとの注意点とSG試験での判断基準を整理します。科目Aの用語理解と科目Bのケース判断で迷いやすい表現も確認します。
 permalink: /sg/storage-media-disposal-methods/
 tags: [sg, sg-security-measures, asset_management, physical_security, information_leakage]
 last_modified_at: 2026-05-06

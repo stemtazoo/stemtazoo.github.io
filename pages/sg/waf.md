@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "WAFとは？Webアプリを守る仕組みを理解する【SG試験】"
-description: "WAFはWebアプリを守る仕組みを理解するための用語です。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: WAFは、Webアプリケーションへの攻撃を検知・遮断するために、HTTPリクエストやレスポンスの内容を検査する仕組みです。SQLインジェクションやXSS対策での役割、ファイアウォールやIPSとの違いをSG試験向けに整理します。SG試験の出題文で迷いやすい判断ポイントも確認します。
 permalink: /sg/waf/
 tags: [sg, security_measures, unauthorized_access, network, sg-security-measures]
 next: /sg/wifi-auth-wpa2-wpa3-8021x/

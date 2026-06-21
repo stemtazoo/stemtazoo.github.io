@@ -1,7 +1,7 @@
 ---
 layout: page
 title: SOCとは？SIEMを使って監視する組織【SG試験】
-description: "SOCは、組織のセキュリティを監視し、サイバー攻撃や不審な兆候を検知・分析・対応する専門組織です。SIEMとの違いやCSIRTとの役割分担を、SG試験・情報セキュリティマネジメント試験で迷わない判断基準として整理します。"
+description: SOCは、組織のセキュリティを常時監視し、サイバー攻撃や不審な兆候を検知・分析・初動対応する専門組織です。SIEMを使う側の組織である点、CSIRTやPSIRTとの役割分担を押さえ、SG試験で迷わない判断基準を整理します。科目Aの用語理解と科目Bのケース判断で迷いやすい表現も確認します。
 permalink: /sg/soc/
 tags: [sg, sg-security-measures, monitoring, incident_response, log_management]
 last_modified_at: 2026-05-06

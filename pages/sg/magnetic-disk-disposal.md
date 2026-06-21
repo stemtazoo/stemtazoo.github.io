@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 磁気ディスクの廃棄とは？データを復元されないように消去する考え方【SG試験】
-description: "磁気ディスクの廃棄では、ファイル削除やフォーマットだけではなく、実データ領域を上書きして復元できない状態にすることが重要です。SG試験・情報セキュリティマネジメント試験で問われる情報漏えい対策と選択肢の切り分けポイントを整理します。"
+description: 磁気ディスクの廃棄では、ファイル削除や通常のフォーマットだけではなく、実データ領域を上書きする、消磁する、物理破壊するなどの対策が重要です。HDDの記録特性、復元リスク、委託廃棄時の確認事項をSG試験向けに整理します。科目Aの用語理解と科目Bのケース判断で迷いやすい表現も確認します。
 permalink: /sg/magnetic-disk-disposal/
 tags: [sg, sg-security-measures, asset_management, physical_security, information_leakage]
 last_modified_at: 2026-05-06

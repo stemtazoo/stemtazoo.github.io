@@ -1,7 +1,7 @@
 ---
 layout: page
 title: リスクコントロールとリスクファイナンスの違い【SG試験】
-description: リスクコントロールとリスクファイナンスは、リスク対応の考え方を分ける用語です。SG試験で迷いやすい「リスクそのものを減らす対策」と「損失に備える対策」の違いを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
+description: リスクコントロールとリスクファイナンスは、リスク対応の方向性を分ける考え方です。前者は事故の発生確率や影響を下げ、後者は保険や引当金などで損失に備えます。リスク低減・移転との関係をSG試験向けに整理します。SG試験の出題文で迷いやすい判断ポイントも確認します。
 permalink: /sg/risk-control-vs-risk-finance/
 tags: [sg, sg-security-management, risk_assessment, asset_management]
 last_modified_at: 2026-05-08

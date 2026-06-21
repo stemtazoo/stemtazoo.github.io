@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Bagleワームとは？メール拡散型マルウェアの判断ポイント【SG試験】
-description: Bagleワームは、電子メールやファイル共有などを使って感染を広げるワーム型マルウェアです。SG試験で混同しやすいWanna Cryptor、SQL Slammer、VBS.LoveLetterとの切り分けを整理します。
+description: Bagleワームは、電子メールやファイル共有を使って感染を広げるワーム型マルウェアです。メール拡散、添付ファイル、バックドア化の特徴を押さえ、Wanna Cryptor、SQL Slammer、VBS.LoveLetterとの違いをSG試験向けに整理します。
 permalink: /sg/bagle-worm/
 tags: [sg, threat_vulnerability, malware, security_awareness]
 last_modified_at: 2026-06-18

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "セッションハイジャックとは？ログイン乗っ取りの仕組みと対策【SG試験】"
-description: "セッションハイジャックはログイン乗っ取りの仕組みと対策を理解するための用語です。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: セッションハイジャックは、ログイン後のセッションIDなどを盗み、利用者になりすまして操作する攻撃です。パスワード窃取そのものではない点、Cookie保護、HTTPS、セッションID再発行などの対策をSG試験向けに整理します。SG試験の出題文で迷いやすい判断ポイントも確認します。
 permalink: /sg/session-hijacking/
 tags: [sg, security_measures, unauthorized_access, network, access_control, sg-security-measures]
 prev: /sg/shadow-it/

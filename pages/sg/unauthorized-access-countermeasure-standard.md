@@ -1,7 +1,7 @@
 ---
 layout: page
 title: コンピュータ不正アクセス対策基準とは？4つの基準と選択肢の切り方【SG試験】
-description: コンピュータ不正アクセス対策基準は、不正アクセス被害の予防・発見・復旧・再発防止のために、利用者・管理者・事業者が実施すべき対策を整理した基準です。SG試験で問われるID共有禁止、最小権限、ネットワーク分離、教育の判断軸を解説します。
+description: コンピュータ不正アクセス対策基準は、不正アクセス被害の予防・発見・復旧・再発防止のために、利用者・管理者・事業者が実施すべき対策を整理した基準です。ID共有禁止、最小権限、ネットワーク分離、教育の判断軸をSG試験向けに整理します。科目Aの用語理解と科目Bのケース判断で迷いやすい表現も確認します。
 permalink: /sg/unauthorized-access-countermeasure-standard/
 tags: [sg, sg-security-law, unauthorized_access, access_control, sg-security-management]
 date: 2026-06-11

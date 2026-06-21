@@ -1,7 +1,7 @@
 ---
 layout: page
 title: DXレポート2とは？DXの3段階を整理【SG試験】
-description: DXレポート2は、経済産業省がDX推進の考え方を整理した資料です。SG試験で問われやすい3段階の違いと選択肢の切り方を解説します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
+description: DXレポート2は、経済産業省がDX推進の段階や企業が取るべき対応を整理した資料です。デジタイゼーション、デジタライゼーション、デジタルトランスフォーメーションの違いを押さえ、SG試験でDXの目的や段階を判断するポイントを整理します。科目Aの用語理解と科目Bのケース判断で迷いやすい表現も確認します。
 permalink: /sg/dx-report-2/
 tags: [sg, sg-strategy, system_strategy, business_management]
 last_modified_at: 2026-05-08

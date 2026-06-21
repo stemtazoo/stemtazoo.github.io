@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "安全管理措置とは？個人情報保護法の基本と実務対応【SG試験】"
-description: "安全管理措置は個人情報保護法の基本と実務対応を理解するための用語です。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: 安全管理措置は、個人データを漏えい、滅失、毀損から守るために事業者が講じる管理策です。組織的・人的・物理的・技術的安全管理措置の違い、委託先管理や従業者教育との関係をSG試験向けに整理します。SG試験の出題文で迷いやすい判断ポイントも確認します。
 permalink: /sg/safety-control-measures/
 tags: [sg, security_law, privacy_law, risk_assessment, it_security_operations, sg-security-law]
 prev: /sg/rootkit/

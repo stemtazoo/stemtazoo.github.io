@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "クリアデスクとは？机上の情報放置を防ぐ基本対策【SG試験】"
-description: "クリアデスクは、机上に重要情報を放置しないための基本対策です。SG試験で問われやすい情報漏えい、盗み見、持ち去り対策との関係を整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。"
+description: クリアデスクは、離席時や退勤時に書類・記録媒体・メモなどを机上へ放置しないための物理的・運用的対策です。盗み見、持ち去り、紛失による情報漏えいを防ぐ考え方と、クリアスクリーンとの違いをSG試験向けに整理します。科目Aの用語理解と科目Bのケース判断で迷いやすい表現も確認します。
 permalink: /sg/clear-desk/
 tags: [sg, sg-security-measures, data_leakage, asset_management, security_awareness]
 last_modified_at: 2026-05-20

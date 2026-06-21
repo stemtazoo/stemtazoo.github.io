@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "不正アクセス禁止法とは？禁止される行為を整理【SG試験】"
-description: "不正アクセス禁止法は、不正アクセス行為そのものだけでなく、ID・パスワードの不正取得、提供、保管、入力要求なども規制する法律です。SG試験・情報セキュリティマネジメント試験で問われる禁止行為の違いと、選択肢を切る判断基準を整理します。"
+description: 不正アクセス禁止法は、不正アクセス行為だけでなく、ID・パスワードの不正取得、提供、保管、入力要求なども規制する法律です。禁止行為の違い、アクセス制御との関係、助長行為の見分け方をSG試験向けに整理します。科目Aの用語理解と科目Bのケース判断で迷いやすい表現も確認します。
 permalink: /sg/unauthorized-access-law/
 tags: [sg, sg-security-management, law, access_control, cybercrime]
 prev: /sg/act-on-the-protection-of-personal-information/

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: セキュリティ関連の標準・規格まとめ｜JIS・ISO・IETF・RFCの違い【SG試験】
-description: セキュリティ関連の標準・規格は、対象領域で切り分けると理解しやすくなります。JIS Q 27002、JIS X 5070、ISO/IEC 15408、X.509、IETF、RFC、RADIUS、LDAPの違いをSG試験向けに整理します。
+description: セキュリティ関連の標準・規格は、管理策、製品評価、暗号モジュール、通信仕様など対象領域で切り分けると理解しやすくなります。JIS Q 27002、ISO/IEC 15408、X.509、IETF、RFC、RADIUS、LDAPの違いをSG試験向けに整理します。
 permalink: /sg/security-standards-comparison/
 tags: [sg, sg-security-management, security_standard, network]
 date: 2026-06-15

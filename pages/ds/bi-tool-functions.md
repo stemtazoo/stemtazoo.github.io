@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: BIツールの基本機能とは？OLAP・データマイニングを整理【DS検定】
-description: "DS検定ではBIツールの機能」と「OLAP操作（スライス・ダイスなど）」の関係を理解しているかが問われます。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
+description: "BIツールは、蓄積データを可視化・集計・多次元分析して意思決定に使うための道具です。レポート、ダッシュボード、OLAP、データマイニング、スライス・ダイス、ドリル操作などの機能の役割と、集計表を読む場面で混同しやすい操作名をDS検定向けに整理します。"
 permalink: /ds/bi-tool-functions/
 categories: [business]
 tags: [ds, design]

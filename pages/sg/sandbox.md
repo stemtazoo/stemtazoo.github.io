@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "サンドボックスとは？安全にプログラムを実行する仕組み【SG試験】"
-description: "サンドボックスは安全にプログラムを実行する仕組みを理解するための用語です。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: サンドボックスは、疑わしいプログラムやファイルを隔離された環境で実行し、実システムへの影響を抑える仕組みです。マルウェア解析、未知の添付ファイル確認、仮想環境との関係、通常実行との違いをSG試験向けに整理します。SG試験の出題文で迷いやすい判断ポイントも確認します。
 permalink: /sg/sandbox/
 tags: [sg, security_measures, unauthorized_access, system_architecture, sg-security-measures]
 prev: /sg/safety-control-measures/

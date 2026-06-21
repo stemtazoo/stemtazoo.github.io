@@ -1,7 +1,7 @@
 ---
 layout: page
 title: データ消去とは？削除・初期化・上書きの違い【SG試験】
-description: "データ消去は、不要になったデータを復元できない状態にするための対策です。ファイル削除、初期化、上書きの違いを整理し、SG試験・情報セキュリティマネジメント試験で問われる情報漏えい対策と選択肢の切り分けポイントを解説します。"
+description: データ消去は、不要になった情報を第三者に復元されない状態にするための対策です。ファイル削除、初期化、上書き、物理破壊の違いを押さえ、記憶媒体廃棄時の情報漏えい対策とSG試験での選択肢の切り分けを整理します。科目Aの用語理解と科目Bのケース判断で迷いやすい表現も確認します。
 permalink: /sg/data-erasure-delete-format-overwrite/
 tags: [sg, sg-security-measures, asset_management, physical_security, information_leakage]
 last_modified_at: 2026-05-06

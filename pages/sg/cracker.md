@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "クラッカー／クラッキングとは？悪意ある不正侵入との見分け方【SG試験】"
-description: "クラッカー／クラッキングは、悪意をもってシステムを不正利用する攻撃者や行為を表す用語です。正当な試験・管理作業・監査活動との違いをSG試験向けに整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: クラッカーは、悪意をもってシステムへ侵入したり、不正利用や破壊、情報窃取を行ったりする攻撃者を指します。ハッカー、ホワイトハッカー、スクリプトキディとの違い、正当な脆弱性診断との境界をSG試験向けに整理します。SG試験の出題文で迷いやすい判断ポイントも確認します。
 permalink: /sg/cracker/
 tags: [sg, threat_vulnerability, unauthorized_access, risk_assessment, sg-security-overview]
 prev: /sg/copyright-ownership/

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "CRYPTRECとは？暗号の安全性評価の役割を理解する【SG試験】"
-description: "CRYPTRECは暗号の安全性評価の役割を理解するための用語です。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: CRYPTRECは、日本で利用される暗号技術の安全性を評価し、電子政府推奨暗号リストなどに反映する取組みです。暗号方式を作る機関ではなく評価・推奨の枠組みである点、NISCやJISECとの違いをSG試験向けに整理します。SG試験の出題文で迷いやすい判断ポイントも確認します。
 permalink: /sg/cryptrec/
 tags: [sg, sg-security-measures]
 prev: /sg/cryptojacking/

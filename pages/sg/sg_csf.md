@@ -1,7 +1,7 @@
 ---
 layout: page
 title: CSFとは｜KGI・KPIとの違いをやさしく整理【SG試験対策】
-description: "情報セキュリティマネジメント試験で問われるCSFについて、KGI・KPI・MBOとの違いを、過去問で迷わない判断基準を中心に解説します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: CSFは、組織やプロジェクトの目標達成に不可欠な重要成功要因です。KGIが最終目標、KPIが進捗指標であるのに対し、CSFは成功のために重点的に満たすべき条件を表します。SG試験でKGI・KPI・MBOと切り分ける基準を整理します。科目Aの用語理解と科目Bのケース判断で迷いやすい表現も確認します。
 permalink: /sg/csf/
 tags: [sg, management, strategy, kgi, kpi]
 last_modified_at: 2026-05-18

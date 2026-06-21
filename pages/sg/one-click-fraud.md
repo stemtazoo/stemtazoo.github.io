@@ -1,7 +1,7 @@
 ---
 layout: page
 title: ワンクリック詐欺とは？不安をあおる表示への対応【SG試験】
-description: ワンクリック詐欺は、クリック後に登録完了や請求画面を表示して支払いを迫る詐欺です。SG試験で問われる慌てず対応する判断基準を整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
+description: ワンクリック詐欺は、クリック後に登録完了や請求画面を表示し、利用者の不安をあおって支払いを迫る詐欺です。慌てて連絡しない、支払わない、証拠を残すといった対応と、SG試験で問われる利用者教育の判断基準を整理します。科目Aの用語理解と科目Bのケース判断で迷いやすい表現も確認します。
 permalink: /sg/one-click-fraud/
 tags: [sg, sg-security-measures, threat_vulnerability, security_training]
 last_modified_at: 2026-05-08

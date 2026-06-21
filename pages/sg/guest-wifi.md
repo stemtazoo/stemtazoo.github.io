@@ -1,7 +1,7 @@
 ---
 layout: page
 title: ゲストWi-Fiとは？社内LANと分離する理由【SG試験】
-description: ゲストWi-Fiは、来訪者や一時利用者に提供する無線LANです。社内LANと分離する理由と、SG試験で問われる判断ポイントを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
+description: ゲストWi-Fiは、来訪者や一時利用者にインターネット接続を提供するための無線LANです。社内LANや業務システムから分離する理由、認証・利用規約・通信制限の考え方、SG試験で情報漏えい対策として判断するポイントを整理します。科目Aの用語理解と科目Bのケース判断で迷いやすい表現も確認します。
 permalink: /sg/guest-wifi/
 tags: [sg, sg-security-measures, access_control, network]
 last_modified_at: 2026-05-08

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: メッセージダイジェストとは？ハッシュ値との関係を整理【SG試験】
-description: "メッセージダイジェストは、ハッシュ関数によって入力データから作られる固定長の要約値です。SHA-1やSHA-256との関係、暗号化との違い、改ざん検知での役割をSG試験・情報セキュリティマネジメント試験向けに整理します。"
+description: メッセージダイジェストは、ハッシュ関数によって入力データから作られる固定長の要約値です。SHA-1やSHA-256との関係、暗号化ではなく改ざん検知に使う点、デジタル署名やMACとの違いをSG試験向けに整理します。科目Aの用語理解と科目Bのケース判断で迷いやすい表現も確認します。
 permalink: /sg/message-digest/
 tags: [sg, cryptography, hash_function, authentication, security_measures]
 last_modified_at: 2026-05-06

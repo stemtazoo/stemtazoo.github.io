@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 虹彩認証とは？眼球の模様で本人確認する仕組み【SG試験】
-description: 虹彩認証は、眼球の虹彩パターンを使って本人確認する生体認証です。SG試験で迷いやすい指紋認証やICカード認証との違いを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
+description: 虹彩認証は、眼球の虹彩パターンを使って本人確認を行う生体認証です。身体的特徴を使うため貸し借りしにくい一方、登録データ保護が重要になります。指紋認証、顔認証、ICカード認証との違いをSG試験向けに整理します。科目Aの用語理解と科目Bのケース判断で迷いやすい表現も確認します。
 permalink: /sg/iris-authentication/
 tags: [sg, sg-security-overview, crypto_auth, access_control]
 last_modified_at: 2026-05-08

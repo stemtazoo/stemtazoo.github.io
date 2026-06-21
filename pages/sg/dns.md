@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "DNSとは？名前解決の仕組みとセキュリティのポイント【SG試験】"
-description: "DNSは名前解決の仕組みとセキュリティのポイントを理解するための用語です。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: DNSは、ドメイン名とIPアドレスを対応づける名前解決の仕組みです。権威DNSサーバ、キャッシュDNSサーバ、DNSキャッシュポイズニング、DNSSECとの関係を押さえ、SG試験で通信障害や攻撃対策を見分ける基準を整理します。SG試験の出題文で迷いやすい判断ポイントも確認します。
 permalink: /sg/dns/
 tags: [sg, technology, network, security_measures, unauthorized_access, sg-technology]
 prev: /sg/dns-reflector-attack/

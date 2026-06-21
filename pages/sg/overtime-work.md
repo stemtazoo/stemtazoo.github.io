@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 時間外労働とは？裁量労働制・年俸制との関係を整理【SG試験】
-description: 時間外労働は、法定労働時間を超えて働くことです。SG試験で迷いやすい36協定、割増賃金、裁量労働制、年俸制との関係を整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
+description: 時間外労働は、法定労働時間を超えて働くことです。36協定、割増賃金、裁量労働制、年俸制との関係を押さえ、労働時間管理や契約条件に関するSG試験の選択肢で、何が免除されず何が必要かを判断する基準を整理します。科目Aの用語理解と科目Bのケース判断で迷いやすい表現も確認します。
 permalink: /sg/overtime-work/
 tags: [sg, sg-security-law, business_management, it_security_operations]
 last_modified_at: 2026-05-29

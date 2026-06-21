@@ -1,7 +1,7 @@
 ---
 layout: page
 title: SIEMとは？ログを集約して異常を検知する仕組み【SG試験】
-description: "SIEMは、サーバ、ネットワーク機器、アプリケーションなどのログを集約・分析し、セキュリティ上の異常を発見する仕組みです。SG試験・情報セキュリティマネジメント試験で問われるログ管理、監視、インシデント対応との違いを整理します。"
+description: SIEMは、サーバ、ネットワーク機器、アプリケーションなどのログを集約・相関分析し、セキュリティ上の異常を発見する仕組みです。ログ管理、SOC、IDS・IPS、インシデント対応との違いを押さえ、SG試験での役割を整理します。科目Aの用語理解と科目Bのケース判断で迷いやすい表現も確認します。
 permalink: /sg/siem/
 tags: [sg, sg-security-measures, log_management, monitoring, incident_response]
 last_modified_at: 2026-05-18

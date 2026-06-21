@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "労働契約法（不利益変更）とは？就業規則との関係を整理【SG試験】"
-description: "労働契約法（不利益変更）は就業規則との関係を整理するための用語です。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: 労働契約の不利益変更は、賃金や労働条件を労働者に不利な方向へ変える場面で問題になります。就業規則の合理性、周知、個別合意との関係を押さえ、SG試験で変更が有効になる条件とNG例を切り分ける基準を整理します。SG試験の出題文で迷いやすい判断ポイントも確認します。
 permalink: /sg/labor-contract-disadvantageous-change/
 tags: [sg, security_law, business_management, risk_assessment, sg-security-law]
 prev: /sg/keylogger/

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 無線LANのなりすましアクセスポイントとは？悪質なAPの見分け方【SG試験】
-description: 無線LANのなりすましアクセスポイントは、正規のAPに見せかけて利用者を接続させる攻撃です。SG試験で問われる見分け方と対策を整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
+description: 無線LANのなりすましアクセスポイントは、正規のAPに見せかけて利用者を接続させる攻撃用または不正設置のAPです。SSID、暗号化、証明書、接続先確認の観点から、情報窃取や社内LAN侵入を防ぐ判断基準をSG試験向けに整理します。科目Aの用語理解と科目Bのケース判断で迷いやすい表現も確認します。
 permalink: /sg/rogue-access-point/
 tags: [sg, sg-security-overview, threat_vulnerability, network]
 last_modified_at: 2026-05-08

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "SSL/TLSとは？通信を守る暗号化の仕組み【SG試験】"
-description: "SSL/TLSとは、インターネット通信を暗号化し、盗聴や改ざんを防ぐための仕組みであり、HTTPSなどの安全な通信の基盤となる技術である。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: SSL/TLSは、インターネット上の通信を暗号化し、盗聴や改ざんを防ぐための仕組みです。HTTPSでの使われ方、サーバ証明書、公開鍵暗号と共通鍵暗号の役割、VPNやSSHとの違いを押さえ、SG試験で判断する基準を整理します。科目Aの用語理解と科目Bのケース判断で迷いやすい表現も確認します。
 permalink: /sg/ssl-tls/
 tags: [sg, security_general, crypto_auth, network, sg-security-overview]
 prev: /sg/ssh/

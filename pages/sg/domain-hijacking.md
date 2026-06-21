@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "ドメイン名ハイジャックとは？DNSを悪用したなりすましの仕組み【SG試験】"
-description: "ドメイン名ハイジャックはDNSを悪用したなりすましの仕組みを理解するための用語です。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: ドメイン名ハイジャックは、ドメイン登録情報やDNS設定を不正に変更し、利用者を偽サイトへ誘導する攻撃です。DNSキャッシュポイズニング、フィッシング、ファーミングとの違いを押さえ、SG試験で攻撃対象を切り分ける基準を整理します。SG試験の出題文で迷いやすい判断ポイントも確認します。
 permalink: /sg/domain-hijacking/
 tags: [sg, security_measures, unauthorized_access, network, threat_vulnerability, sg-security-measures]
 prev: /sg/dns/

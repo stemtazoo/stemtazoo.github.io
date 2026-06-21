@@ -1,7 +1,7 @@
 ---
 layout: page
 title: RLOとは？文字の表示順を悪用した拡張子偽装の手口【SG試験】
-description: RLO（Right-to-Left Override）は、文字の表示順を変えるUnicode制御文字です。SG試験で問われる拡張子偽装、不審な添付ファイル、アドウェア・ハニーポット・SNMP Trapとの切り分けを整理します。
+description: RLOは、文字の表示順を右から左へ変えるUnicode制御文字で、ファイル名の拡張子偽装に悪用されます。不審な添付ファイル、実行形式ファイル、表示名と実体の違いを押さえ、SG試験で攻撃手口を見分けるポイントを整理します。科目Aの用語理解と科目Bのケース判断で迷いやすい表現も確認します。
 permalink: /sg/rlo-extension-spoofing/
 tags: [sg, sg-security-measures, malware, security_training, threat_vulnerability]
 last_modified_at: 2026-06-09

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: SHA-1とは？暗号化ではなくハッシュ関数として整理【SG試験】
-description: "SHA-1は入力データから160ビットのハッシュ値を作るハッシュ関数です。暗号化との違い、改ざん検知での役割、SHA-2やSHA-3への移行、SG試験・情報セキュリティマネジメント試験で迷いやすい判断ポイントを整理します。"
+description: SHA-1は、入力データから160ビットのハッシュ値を作るハッシュ関数です。暗号化ではなく改ざん検知やメッセージダイジェストに使う点、衝突耐性の弱体化、SHA-2やSHA-3への移行を押さえ、SG試験での判断ポイントを整理します。科目Aの用語理解と科目Bのケース判断で迷いやすい表現も確認します。
 permalink: /sg/sha-1/
 tags: [sg, cryptography, hash_function, authentication, security_measures]
 last_modified_at: 2026-05-06

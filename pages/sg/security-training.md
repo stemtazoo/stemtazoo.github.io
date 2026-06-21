@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "情報セキュリティ教育・訓練とは？人的対策の基本を整理【SG試験】"
-description: "情報セキュリティ教育・訓練は人的対策の基本を整理するための用語です。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: 情報セキュリティ教育・訓練は、従業員にルールや脅威、事故時の対応を理解させ、人的ミスや内部不正のリスクを下げる人的対策です。標的型メール訓練、周知、定期教育、技術的対策との違いをSG試験向けに整理します。SG試験の出題文で迷いやすい判断ポイントも確認します。
 permalink: /sg/security-training/
 tags: [sg, security_management, security_training, risk_assessment, security_awareness, sg-security-management]
 prev: /sg/security-policy/
