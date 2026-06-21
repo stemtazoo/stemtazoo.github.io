@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: データマートとは？（DWHとの違いを整理）【DS検定リテラシー】
-description: データマートは（DWHとの違いを整理）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "データマートとは、特定の部門や目的に特化した小規模な分析用データベースです。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/data-mart/
 categories: [data-engineering]
 tags: [ds, database]

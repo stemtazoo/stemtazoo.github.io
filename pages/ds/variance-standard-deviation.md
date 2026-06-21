@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 分散と標準偏差とは？ばらつきを理解する基本統計【DS検定】
-description: 分散と標準偏差はばらつきを理解する基本統計を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "分散と標準偏差は、データが平均からどれくらい散らばっているか（ばらつき）を表す指標です。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/variance-standard-deviation/
 categories: [data-science]
 tags: [ds, statistics]

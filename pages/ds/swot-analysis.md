@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: SWOT分析とは？企業の強みと外部環境を整理するフレームワーク【DS検定】
-description: SWOT分析は企業の強みと外部環境を整理するフレームワークを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "SWOT分析（SWOT Analysis）とは、企業や事業の状況を「強み・弱み・機会・脅威」の4つの視点で整理するフレームワークです。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/swot-analysis/
 categories: [business]
 tags: [ds, design]

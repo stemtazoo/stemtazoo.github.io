@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: EDA（探索的データ分析）とは？分析の第一歩を理解する【DS検定】
-description: EDA（探索的データ分析）は分析の第一歩を理解するを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "EDA（Exploratory Data Analysis：探索的データ分析）とは、データの特徴や傾向を理解するために、可視化や基本統計量を使ってデータを探索する分析プロセスです。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/eda/
 categories: [business]
 tags: [ds, visualization, design]

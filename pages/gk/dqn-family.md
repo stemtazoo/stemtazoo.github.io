@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: DQN / Double DQN / Prioritized Replay / APE-X【強化学習の系譜まとめ】
-description: DQN / Double DQN / Prioritized Replay / APE-Xは重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "DQN / Double DQN / Prioritized Replay / APE-Xは試験で意味・役割・使い方を問われやすいテーマです。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/dqn-family/
 tags: [gk, neural_network, cheatsheet]
 gk_section: ディープラーニングの応用例/深層強化学習

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: PPPとは？2点間を接続するための基本プロトコル【SG試験】
-description: PPPは、2つの機器間を1対1で接続し、データリンク層で通信を行うためのプロトコルです。SG試験で混同しやすいPPTP・CHAP・PAP・RADIUSとの違いを整理します。
+description: "PPPは、2つの機器間を1対1で接続し、データリンク層で通信を行うためのプロトコルです。SG試験で混同しやすいPPTP・CHAP・PAP・RADIUSとの違いを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/ppp/
 tags: [sg, sg-security-measures, network, vpn, access_control]
 last_modified_at: 2026-05-15

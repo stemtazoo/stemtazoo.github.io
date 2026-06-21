@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 情報戦略とは？経営戦略と情報システムをつなぐ考え方【SG試験】
-description: 情報戦略は、経営戦略を実現するために情報やITをどう活用するかを決める方針です。SG試験で問われる経営戦略・情報システム戦略との違い、選択肢の切り分け方を整理します。
+description: "情報戦略は、経営戦略を実現するために情報やITをどう活用するかを決める方針です。SG試験で問われる経営戦略・情報システム戦略との違い、選択肢の切り分け方を整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/information-strategy/
 categories: [sg]
 tags: [sg, sg-strategy, system_strategy, business_management]

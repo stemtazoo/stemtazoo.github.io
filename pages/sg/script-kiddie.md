@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "スクリプトキディとは？初心者攻撃者の特徴と対策【SG試験】"
-description: "スクリプトキディは初心者攻撃者の特徴と対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験・情報セキュリティマネジメント試験とで狙われるひっかけポイントを解説します。"
+description: "スクリプトキディとは、自分で攻撃を作れず、他人が作ったツールを使って攻撃する未熟な攻撃者であり、SG試験では「無差別攻撃や基本対策で防げる相手か」を判断させる問題として出題されます。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/script-kiddie/
 tags: [sg, threat_vulnerability, security_awareness, security_measures, sg-security-measures]
 prev: /sg/sandbox/

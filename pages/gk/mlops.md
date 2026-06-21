@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: MLOps（機械学習運用）とは？G検定対策
-description: MLOps（機械学習運用）はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "MLOps（機械学習運用）はG検定対策を理解するための用語です。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/mlops/
 tags: [gk, mlops, devops]
 gk_section: AIの社会実装に向けて/AIの社会実装に向けて

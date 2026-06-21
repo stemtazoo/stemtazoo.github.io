@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: UCB方策（Upper-Confidence Bound）とは？【G検定対策】
-description: UCB方策（Upper-Confidence Bound）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "* UCB方策（Upper-Confidence Bound）とは、選択肢の「平均報酬」と「不確実性（信頼区間）」を組み合わせて評価し、上限値が最大となる行動を選ぶ探索方策である。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/ucb/
 tags: [gk, reinforcement_learning]
 gk_section: 機械学習の概要/代表的な手法/強化学習

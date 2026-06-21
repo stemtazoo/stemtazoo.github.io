@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 係り受け解析とは？形態素解析との違いを整理【DS検定】
-description: 係り受け解析は形態素解析との違いを整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "係り受け解析とは、文の中で「どの語がどの語にかかっているか」という関係（構造）を解析する処理です。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/dependency-parsing/
 categories: [business]
 tags: [ds, unstructured-data, design]

@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 信用割当問題（Credit Assignment Problem）とは？G検定対策
-description: 信用割当問題（Credit Assignment Problem）はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "* 信用割当問題（Credit Assignment Problem）とは、「ニューラルネットワークの出力結果に対して、どのパラメータ（重み・層）がどれだけ貢献したのか分からない問題」のこと。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/credit-assignment-problem/
 tags: [gk, neural_network]
 gk_section: ディープラーニングの概要/誤差逆伝播法（Backpropagation）

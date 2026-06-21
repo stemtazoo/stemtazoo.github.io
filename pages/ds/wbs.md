@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: WBS（Work Breakdown Structure）とは？タスクを分解してプロジェクトを管理する方法【DS検定】
-description: WBS（Work Breakdown Structure）はタスクを分解してプロジェクトを管理する方法を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "WBS（Work Breakdown Structure）とは、プロジェクトの作業を細かいタスクに分解して整理する管理手法です。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/wbs/
 categories: [business]
 tags: [ds, design]

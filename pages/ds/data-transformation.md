@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: データトランスフォーメーションとは？（非構造化データの変換）【DS検定】
-description: データトランスフォーメーションは（非構造化データの変換）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "データトランスフォーメーションとは、データを分析可能な形式に変換する処理のことです。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/data-transformation/
 categories: [data-science]
 tags: [ds, data-processing, unstructured-data, data-preparation, preprocessing]

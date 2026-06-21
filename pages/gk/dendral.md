@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: DENDRAL（初期の専門家システム）とは？【G検定対策】
-description: DENDRAL（初期の専門家システム）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "DENDRAL（初期の専門家システム）は、試験で意味や使いどころを問われやすい重要概念です。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/dendral/
 tags: [gk, neural_network]
 gk_section: 人工知能をめぐる動向/人工知能をめぐる動向

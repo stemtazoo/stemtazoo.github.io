@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 入力値検証とは？不正な入力を防ぐ基本対策【SG試験】
-description: 入力値検証は、利用者や外部システムから受け取ったデータが想定どおりかを確認する基本対策です。SG試験でエスケープ処理、サニタイジング、認証との違いを切り分ける判断基準を整理します。
+description: "入力値検証は、利用者や外部システムから受け取ったデータが想定どおりかを確認する基本対策です。SG試験でエスケープ処理、サニタイジング、認証との違いを切り分ける判断基準を整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/input-validation/
 tags: [sg, sg-security-measures, threat_vulnerability, unauthorized_access]
 last_modified_at: 2026-05-06

@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 一次情報と二次情報の違いとは？境界を整理【DS検定】
-description: 一次情報と二次情報の違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "一次情報とは「自分たちが直接生成・取得したオリジナルデータ」、二次情報とは「他者が生成・加工した既存データ」です。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/primary-secondary-data/
 categories: [business]
 tags: [ds, data-understanding, design]

@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: VPNとSSHの違いとは？（安全な通信の仕組みを整理）【DS検定】
-description: VPNとSSHの違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "DS検定では、「守っている範囲の違い」を切り分けられるかがポイントです。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/vpn-ssh/
 categories: [business]
 tags: [ds, security, design]

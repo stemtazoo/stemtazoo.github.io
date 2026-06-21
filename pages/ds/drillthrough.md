@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: ドリルスルーとは？ドリルダウンとの違いを整理【DS検定】
-description: ドリルスルーはドリルダウンとの違いを整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "ドリルスルー（Drill Through）とは、集計データから別の詳細レポートへ移動して詳細データを確認する操作です。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/drillthrough/
 categories: [data-science]
 tags: [ds, visualization]

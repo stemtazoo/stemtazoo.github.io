@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "メールヘッダーインジェクションとは？改行を悪用する攻撃【SG試験】"
-description: "メールヘッダーインジェクションは改行を悪用する攻撃を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験・情報セキュリティマネジメント試験とで狙われるひっかけポイントを解説します。"
+description: "メールヘッダーインジェクションは改行を悪用する攻撃を理解するための用語です。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/mail-header-injection/
 tags: [sg, threat_vulnerability, unauthorized_access, data_leakage, sg-security-overview]
 prev: /sg/macro-virus/

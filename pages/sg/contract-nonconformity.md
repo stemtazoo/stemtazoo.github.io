@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "契約不適合責任とは？瑕疵担保責任との違いも整理【SG試験】"
-description: "契約不適合責任は、納品物が契約内容に合わない場合の責任です。旧制度の用語、受任者の注意義務、金銭補償、秘密保持との違いをSG試験向けに整理します。"
+description: "契約不適合責任は、納品物が契約内容に合わない場合の責任です。旧制度の用語、受任者の注意義務、金銭補償、秘密保持との違いをSG試験向けに整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/contract-nonconformity/
 tags: [sg, management, vendor_management, risk_assessment, sg-management]
 prev: /sg/common-port-numbers/

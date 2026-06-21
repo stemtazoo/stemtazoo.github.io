@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: RPOとRTOの違いとは？（障害復旧の判断基準）【DS検定】
-description: RPOとRTOの違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "RPOとRTOの違いは似た概念との違いを比較して理解するテーマです。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/rpo-rto/
 categories: [business]
 tags: [ds, design]

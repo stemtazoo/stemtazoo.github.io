@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 抽出方法の違いを整理（単純無作為・層化・集落・多段・系統）【DS検定】
-description: 抽出方法の違いを整理（単純無作為・層化・集落・多段・系統）は関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "特に試験では次の5つの抽出方法を区別できることが重要です。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/sampling-methods-comparison/
 categories: [data-science]
 tags: [ds, data-preparation, statistics]

@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: SENet（Squeeze-and-Excitation Network）とは？G検定対策
-description: SENet（Squeeze-and-Excitation Network）はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "* SENet（Squeeze-and-Excitation Network）とは、チャネル方向のAttention機構を導入し、重要な特徴チャネルを強調することで認識性能を向上させたCNNアーキテクチャ。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/senet/
 tags: [gk, cnn]
 gk_section: ディープラーニングの応用例/画像認識/物体認識タスク

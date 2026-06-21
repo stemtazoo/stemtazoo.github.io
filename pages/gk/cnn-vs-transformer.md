@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: CNN vs Transformer（G検定対策）
-description: CNN vs Transformer（G検定対策）は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "* G検定で計算問題が出るのはCNN、出ないのがTransformer* CNNは「局所構造」、Transformerは「全体関係」を扱う* 両者は競合ではなく。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/cnn-vs-transformer/
 tags: [gk, cnn, transformer, cheatsheet]
 gk_section: ディープラーニングの応用例/画像認識/ネオコグニトロンとLeNet

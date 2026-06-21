@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 匿名加工情報
-description: 匿名加工情報は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "* 匿名加工情報は、個人情報に該当しない* 第三者提供や外部公開が可能* 仮名加工情報との違いを問われやすい。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/anonymized-information/
 tags: [gk, ethics, privacy]
 gk_section: AIの法律と倫理/AIの法律と倫理

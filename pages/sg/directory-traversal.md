@@ -1,7 +1,7 @@
 ---
 layout: page
 title: ディレクトリトラバーサル攻撃とは？ファイル指定のひっかけを整理【SG試験】
-description: ディレクトリトラバーサル攻撃は、相対パスなどを悪用して想定外のファイルへアクセスする攻撃です。SG試験でSQLインジェクションやXSSと混同しない判断基準を整理します。
+description: "ディレクトリトラバーサル攻撃は、相対パスなどを悪用して想定外のファイルへアクセスする攻撃です。SG試験でSQLインジェクションやXSSと混同しない判断基準を整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/directory-traversal/
 tags: [sg, sg-security-overview, threat_vulnerability, unauthorized_access, data_leakage]
 last_modified_at: 2026-05-15

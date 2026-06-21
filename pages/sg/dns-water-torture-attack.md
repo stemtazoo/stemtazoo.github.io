@@ -1,7 +1,7 @@
 ---
 layout: page
 title: DNS水責め攻撃とは？ランダムサブドメインで権威DNSを狙う攻撃【SG試験】
-description: "DNS水責め攻撃は、ランダムなサブドメイン名への大量問い合わせによって、対象ドメインの権威DNSサーバへ負荷を集中させるDDoS攻撃です。DNSアンプ攻撃やDNSキャッシュポイズニングとの違いを整理します。"
+description: "DNS水責め攻撃は、ランダムなサブドメイン名への大量問い合わせによって、対象ドメインの権威DNSサーバへ負荷を集中させるDDoS攻撃です。DNSアンプ攻撃やDNSキャッシュポイズニングとの違いを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/dns-water-torture-attack/
 tags: [sg, sg-security-overview, threat_vulnerability, network]
 last_modified_at: 2026-06-06

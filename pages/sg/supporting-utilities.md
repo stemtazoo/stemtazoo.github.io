@@ -1,7 +1,7 @@
 ---
 layout: page
 title: サポートユーティリティとは？システムを支えるライフライン【SG試験】
-description: サポートユーティリティは、情報システムの稼働を支える電気・通信・空調などのライフラインです。SG試験で問われやすい判断基準と混同ポイントを整理します。
+description: "サポートユーティリティは、情報システムの稼働を支える電気・通信・空調などのライフラインです。SG試験で問われやすい判断基準と混同ポイントを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/supporting-utilities/
 tags: [sg, sg-technology, system_architecture, sg-security-measures, it_security_operations]
 last_modified_at: 2026-05-15

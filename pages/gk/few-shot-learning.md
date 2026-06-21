@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: Few-shot学習とは？少量データで学ぶ仕組み【G検定対策】
-description: Few-shot学習は少量データで学ぶ仕組みを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "Few-shot学習は少量データで学ぶ仕組みを理解するための用語です。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/few-shot-learning/
 tags: [gk, neural_network]
 gk_section: ディープラーニングの応用例/転移学習・ファインチューニング

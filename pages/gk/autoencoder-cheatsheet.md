@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: オートエンコーダまとめ（AE / CAE / DAE / VAE）とは？G検定対策
-description: オートエンコーダまとめ（AE / CAE / DAE / VAE）はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "* オートエンコーダ（AE）系は、入力データをいったん圧縮し、元に復元することで本質的な特徴を学習するモデル群です。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/autoencoder-cheatsheet/
 tags: [gk, neural_network, cheatsheet]
 gk_section: ディープラーニングの要素技術/オートエンコーダ

@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: Accuracy（正解率）
-description: Accuracy（正解率）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "Accuracy（正解率）は、全データのうち「正しく分類できた割合」です。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/accuracy/
 tags: [gk, 機械学習, 評価指標, 頻出]
 gk_section: 機械学習の概要/モデルの選択・評価

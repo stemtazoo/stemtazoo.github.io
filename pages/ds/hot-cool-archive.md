@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: Hot・Cool・Archiveの違いとは？（クラウドストレージ階層の整理）【DS検定】
-description: Hot・Cool・Archiveの違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "Hot・Cool・Archiveとは「データのアクセス頻度に応じてコストと性能を変えるクラウドストレージの階層」のことです。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/hot-cool-archive/
 categories: [business]
 tags: [ds, data-storage, environment-setup, design]

@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 主成分分析（PCA：Principal Component Analysis）とは？G検定対策
-description: 主成分分析（PCA：Principal Component Analysis）はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "* 主成分分析（PCA）とは、ラベルを使わずにデータの分散が最大となる方向（主成分）を見つけ、次元削減を行う教師なし学習手法。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/pca/
 tags: [gk, unsupervised_learning]
 gk_section: 機械学習の概要/代表的な手法/教師なし学習

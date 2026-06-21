@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: Batch・Layer・Instance Normalizationの違いとは？【正規化まとめ】G検定対策
-description: Batch・Layer・Instance Normalizationの違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "* 正規化手法の違いは「どの単位で平均・分散を計算するか」に集約されます。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/normalization-cheatsheet/
 tags: [gk, neural_network, cnn, cheatsheet]
 gk_section: ディープラーニングの要素技術/ネットワークの構成要素

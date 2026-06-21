@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: RMSEとMAEの違い（回帰評価指標）
-description: RMSEとMAEの違い（回帰評価指標）は関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "RMSE と MAE は「似ているが同じではない」回帰評価指標です。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/rmse-mae/
 tags: [gk, metrics]
 gk_section: 機械学習の概要/モデルの選択・評価

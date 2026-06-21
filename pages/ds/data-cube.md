@@ -1,7 +1,7 @@
 ---
 layout: page
 title: データキューブとは？OLAP分析の基本をわかりやすく整理【DS検定】
-description: データキューブは、商品・地域・時間など複数の軸でデータを集計・分析するための多次元データ構造です。OLAP、スライス、ダイス、ドリルダウンとの違いをDS検定向けに整理します。
+description: "データキューブは、商品・地域・時間など複数の軸でデータを集計・分析するための多次元データ構造です。OLAP、スライス、ダイス、ドリルダウンとの違いをDS検定向けに整理します。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/data-cube/
 categories: [data-engineering]
 tags: [ds, visualization, database]

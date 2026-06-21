@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 内部統制の基本的要素とは？統制活動を6要素で整理【SG試験】
-description: 内部統制の基本的要素は、業務に組み込まれたルールや手続を有効に働かせるための構成要素です。統制環境、リスクの評価と対応、統制活動、情報と伝達、モニタリング、ITへの対応をSG試験向けに整理します。
+description: "内部統制の基本的要素は、業務に組み込まれたルールや手続を有効に働かせるための構成要素です。統制環境、リスクの評価と対応、統制活動、情報と伝達、モニタリング、ITへの対応をSG試験向けに整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/internal-control-components/
 tags: [sg, sg-security-management, system_audit, risk_assessment, it_security_operations]
 date: 2026-06-03

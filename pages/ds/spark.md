@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: Sparkとは？ビッグデータを高速処理する分散処理エンジン【DS検定】
-description: Sparkはビッグデータを高速処理する分散処理エンジンを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "Spark（Apache Spark）とは、大量データを複数のコンピュータで並列処理するための高速な分散処理エンジンです。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/spark/
 categories: [data-engineering]
 tags: [ds, data-storage, data-processing]

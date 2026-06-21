@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "適用宣言書とは？ISMSで選んだ管理策を根拠付きで示す文書【SG試験】"
-description: "適用宣言書は、ISMSで必要と判断した管理策、その実施状況、適用・除外の理由を整理する文書です。リスクアセスメント、リスク対応計画、JIS Q 27001附属書Aとの順序をSG試験向けに整理します。"
+description: "適用宣言書は、ISMSで必要と判断した管理策、その実施状況、適用・除外の理由を整理する文書です。リスクアセスメント、リスク対応計画、JIS Q 27001附属書Aとの順序をSG試験向けに整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/statement-of-applicability/
 tags: [sg, sg-security-management, isms, risk_assessment]
 date: 2026-06-01

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "ISO/IEC 15408（CC）とは？IT製品のセキュリティ評価基準【SG試験】"
-description: "ISO/IEC 15408（CC）は、IT製品やシステムのセキュリティ機能を評価する国際的な基準です。TCSEC、ITSEC、FIPS 140、情報セキュリティ管理基準との違いを整理します。"
+description: "ISO/IEC 15408（CC）は、IT製品やシステムのセキュリティ機能を評価する国際的な基準です。TCSEC、ITSEC、FIPS 140、情報セキュリティ管理基準との違いを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/iso-iec-15408/
 tags: [sg, sg-technology, it_security_operations, system_architecture]
 prev: /sg/security-management-overview/

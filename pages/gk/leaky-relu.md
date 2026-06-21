@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: Leaky ReLU（リーキーReLU）
-description: Leaky ReLU（リーキーReLU）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "* Leaky ReLUは、入力が負でも0にせず「小さな負の値」を出力する活性化関数* ReLUの欠点（Dying ReLU問題）を緩和するために考案された* 負の入力でも勾配が完全に0にならないG検定では 「ReLUとの。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/leaky-relu/
 tags: [gk, neural_network]
 gk_section: ディープラーニングの概要/活性化関数

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: L2TPとは？暗号化しないトンネリングプロトコルを整理【SG試験】
-description: L2TPは、レイヤ2でトンネルを作るためのプロトコルです。単体では暗号化機能を持たないため、IPsecと組み合わせて使われる点をSG試験向けに整理します。
+description: "L2TPは、レイヤ2でトンネルを作るためのプロトコルです。単体では暗号化機能を持たないため、IPsecと組み合わせて使われる点をSG試験向けに整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/l2tp/
 tags: [sg, sg-technology, network, vpn, crypto_auth]
 date: 2026-05-10

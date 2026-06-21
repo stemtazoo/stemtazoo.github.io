@@ -1,7 +1,7 @@
 ---
 layout: page
 title: ダイジェスト認証とベーシック認証の違い【SG試験】
-description: ダイジェスト認証とベーシック認証は、HTTPで利用される基本的な認証方式です。IDとパスワードの扱い方、Base64とハッシュ化の違い、SG試験でのひっかけポイントを整理します。
+description: "ダイジェスト認証とベーシック認証は、HTTPで利用される基本的な認証方式です。IDとパスワードの扱い方、Base64とハッシュ化の違い、SG試験でのひっかけポイントを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/basic-digest-authentication/
 tags: [sg, sg-technology, network, crypto_auth]
 last_modified_at: 2026-06-12

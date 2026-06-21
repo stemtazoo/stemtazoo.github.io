@@ -1,7 +1,7 @@
 ---
 layout: page
 title: デジュール標準とデファクトスタンダードの違い【SG試験】
-description: デジュール標準とデファクトスタンダードは、標準の決まり方の違いです。公的機関が定めた標準と、市場で事実上広まった標準を切り分ける判断基準を整理します。
+description: "デジュール標準とデファクトスタンダードは、標準の決まり方の違いです。公的機関が定めた標準と、市場で事実上広まった標準を切り分ける判断基準を整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/de-jure-de-facto-standard/
 tags: [sg, sg-strategy, business_management, system_strategy]
 last_modified_at: 2026-05-12

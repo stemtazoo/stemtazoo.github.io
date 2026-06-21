@@ -1,7 +1,7 @@
 ---
 layout: page
 title: IMAPとは？サーバ上のメールを管理する受信プロトコル【SG試験】
-description: IMAPは、メールサーバ上のメールを複数端末から閲覧・管理する受信プロトコルです。SG試験で迷いやすいSMTP・POP3との違い、送信と受信の切り分け方を整理します。
+description: "IMAPは、メールサーバ上のメールを複数端末から閲覧・管理する受信プロトコルです。SG試験で迷いやすいSMTP・POP3との違い、送信と受信の切り分け方を整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/imap/
 tags: [sg, sg-technology, network]
 date: 2026-05-07

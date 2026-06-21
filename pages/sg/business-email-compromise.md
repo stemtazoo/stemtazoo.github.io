@@ -1,7 +1,7 @@
 ---
 layout: page
 title: BEC（ビジネスメール詐欺）とは？偽請求書・経営者なりすましを整理【SG試験】
-description: BEC（ビジネスメール詐欺）は、取引先や経営者を装ったメールで偽の振込先へ送金させる詐欺です。フィッシングや標的型攻撃メールとの違い、SG試験での判断ポイントを整理します。
+description: "BEC（ビジネスメール詐欺）は、取引先や経営者を装ったメールで偽の振込先へ送金させる詐欺です。フィッシングや標的型攻撃メールとの違い、SG試験での判断ポイントを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/business-email-compromise/
 tags: [sg, sg-security-measures, security_training, threat_vulnerability, mail-security]
 date: 2026-06-21

@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: AIの公平性とバイアス（Fairness）
-description: AIの公平性とバイアス（Fairness）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "AI の公平性（Fairness）とは、「特定の属性によって不利益が生じないようにする考え方」です。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/fairness-bias/
 tags: [gk]
 gk_section: AIの法律と倫理/AIの法律と倫理

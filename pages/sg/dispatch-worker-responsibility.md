@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "派遣労働者に対する法令上の責任とは？派遣元と派遣先の違いを整理【SG試験】"
-description: "派遣労働者に対する法令上の責任は、雇用する派遣元と指揮命令する派遣先で分担されます。労働者派遣契約、雇用契約、指揮命令関係の三者関係をSG試験向けに整理します。"
+description: "派遣労働者に対する法令上の責任は、雇用する派遣元と指揮命令する派遣先で分担されます。労働者派遣契約、雇用契約、指揮命令関係の三者関係をSG試験向けに整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/dispatch-worker-responsibility/
 tags: [sg, sg-strategy, business_management, vendor_management, security_training]
 prev: /sg/vendor-management/

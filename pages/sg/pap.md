@@ -1,7 +1,7 @@
 ---
 layout: page
 title: PAPとは？IDとパスワードを平文で送る認証方式【SG試験】
-description: PAPは、PPPで利用できる認証プロトコルで、IDとパスワードを平文で送る方式です。SG試験で混同しやすいCHAP・PPP・PPTP・RADIUSとの違いを整理します。
+description: "PAPは、PPPで利用できる認証プロトコルで、IDとパスワードを平文で送る方式です。SG試験で混同しやすいCHAP・PPP・PPTP・RADIUSとの違いを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/pap/
 tags: [sg, sg-security-measures, access_control, crypto_auth, network]
 last_modified_at: 2026-05-15

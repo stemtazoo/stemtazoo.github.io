@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Wi-Fiのセキュリティ方式を比較！WEP・WPA・WPA2・WPA3の違い【SG試験】"
-description: "Wi-Fiのセキュリティ方式（WEP・WPA・WPA2・WPA3）は暗号化強度が異なります。本記事では違いと危険性、SG試験・情報セキュリティマネジメント試験での見分け方を整理します。"
+description: "Wi-Fiのセキュリティ方式（WEP・WPA・WPA2・WPA3）は暗号化強度が異なります。本記事では違いと危険性、SG試験・情報セキュリティマネジメント試験での見分け方を整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/wifi-security-protocols/
 prev: /sg/secure-protocol/
 next: /sg/compromise-crypto/

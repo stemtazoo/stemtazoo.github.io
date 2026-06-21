@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 検疫ネットワークとは？接続前に端末を確認する仕組み【SG試験】
-description: 検疫ネットワークは、社内ネットワークへ接続する前に端末の安全状態を確認し、条件を満たす端末だけ接続を許可する仕組みです。SG試験で混同しやすいファジングや脆弱性診断との違いを整理します。
+description: "検疫ネットワークは、社内ネットワークへ接続する前に端末の安全状態を確認し、条件を満たす端末だけ接続を許可する仕組みです。SG試験で混同しやすいファジングや脆弱性診断との違いを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/quarantine-network/
 tags: [sg, sg-security-measures, malware, unauthorized_access, access_control]
 last_modified_at: 2026-05-06

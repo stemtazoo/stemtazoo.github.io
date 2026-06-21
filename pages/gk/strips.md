@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: STRIPS（計画問題）とは？G検定対策
-description: STRIPS（計画問題）はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "* STRIPS（Stanford Research Institute Problem Solver）とは、前提条件・行動・結果の3要素で記述し、目標達成までの行動計画を立てる古典的な計画問題の枠組みです。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/strips/
 tags: [gk, planning]
 gk_section: 人工知能をめぐる動向/人工知能をめぐる動向

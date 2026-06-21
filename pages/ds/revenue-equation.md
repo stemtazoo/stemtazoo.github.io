@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 収益方程式とは？KPI設計の基本となるビジネスモデル【DS検定】
-description: 収益方程式はKPI設計の基本となるビジネスモデルを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "収益方程式とは、企業の売上がどの要素の掛け合わせで構成されているかを表した式です。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/revenue-equation/
 categories: [business]
 tags: [ds, design]

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: SHA-2とは？SHA-1との違いと安全なハッシュ関数を整理【SG試験】
-description: "SHA-2はSHA-256やSHA-512などを含むハッシュ関数群です。SHA-1との違い、暗号化との違い、改ざん検知や電子署名での役割をSG試験・情報セキュリティマネジメント試験向けにやさしく整理します。"
+description: "SHA-2はSHA-256やSHA-512などを含むハッシュ関数群です。SHA-1との違い、暗号化との違い、改ざん検知や電子署名での役割をSG試験・情報セキュリティマネジメント試験向けにやさしく整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/sha-2/
 tags: [sg, cryptography, hash_function, security_measures, authentication]
 last_modified_at: 2026-05-06

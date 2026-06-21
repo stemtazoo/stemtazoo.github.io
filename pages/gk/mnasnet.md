@@ -1,7 +1,7 @@
 ---
 layout: page
 title: MnasNetとは？AutoMLで設計されたモバイル向けCNN【G検定対策】
-description: MnasNetは、NASによって設計されたモバイル向けCNNです。精度だけでなく実機での推論レイテンシも考慮して探索する点が特徴で、MobileNet、NASNet、GoogLeNetとの違いをG検定向けに整理します。
+description: "MnasNetは、NASによって設計されたモバイル向けCNNです。精度だけでなく実機での推論レイテンシも考慮して探索する点が特徴で、MobileNet、NASNet、GoogLeNetとの違いをG検定向けに整理します。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/mnasnet/
 tags: [gk, cnn, neural_network]
 gk_section: ディープラーニングの応用例/画像認識/物体認識タスク

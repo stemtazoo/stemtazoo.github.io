@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 活性化関数（ReLU / Sigmoid / tanh）の役割とは？G検定対策
-description: 活性化関数（ReLU / Sigmoid / tanh）の役割はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "* 活性化関数の役割は、ニューラルネットワークに「非線形性」を与えることです。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/activation-functions-role/
 tags: [gk, neural_network]
 gk_section: 人工知能をめぐる動向/人工知能をめぐる動向

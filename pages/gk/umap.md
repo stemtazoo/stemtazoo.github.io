@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: UMAP（Uniform Manifold Approximation and Projection）とは？G検定対策
-description: UMAP（Uniform Manifold Approximation and Projection）はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "* UMAPとは、高次元データの局所構造を重視しつつ、大域構造もある程度保ちながら低次元に可視化する教師なし次元削減手法。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/umap/
 tags: [gk, unsupervised_learning]
 gk_section: 機械学習の概要/代表的な手法/教師なし学習

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: DAE（デノイジングオートエンコーダ）とは？ノイズ除去で特徴を学ぶ仕組み【G検定対策】
-description: DAE（デノイジングオートエンコーダ）は、ノイズを加えた入力から元のきれいなデータを復元するように学習するオートエンコーダです。AE、CAE、VAE、CAM・Grad-CAMとの違いをG検定向けに整理します。
+description: "DAE（デノイジングオートエンコーダ）は、ノイズを加えた入力から元のきれいなデータを復元するように学習するオートエンコーダです。AE、CAE、VAE、CAM・Grad-CAMとの違いをG検定向けに整理します。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/dae/
 tags: [gk, neural_network, autoencoder]
 gk_section: ディープラーニングの要素技術/オートエンコーダ

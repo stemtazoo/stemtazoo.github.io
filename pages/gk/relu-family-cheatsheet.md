@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: ReLU / Leaky ReLU / PReLU（比較チートシート）
-description: ReLU / Leaky ReLU / PReLU（比較チートシート）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "（試験で即切る）違いは「負の入力をどう扱うか」だけ。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/relu-family-cheatsheet/
 tags: [gk, cheatsheet, neural_network]
 gk_section: ディープラーニングの概要/活性化関数

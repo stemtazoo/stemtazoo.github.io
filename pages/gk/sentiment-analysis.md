@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 感情分析（Sentiment Analysis）とは？【NLP基本タスク｜G検定対策】
-description: 感情分析（Sentiment Analysis）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "感情分析（Sentiment Analysis）は、試験で意味や使いどころを問われやすい重要概念です。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/sentiment-analysis/
 tags: [gk, nlp, neural_network]
 gk_section: ディープラーニングの応用例/自然言語処理

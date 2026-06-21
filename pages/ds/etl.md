@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: ETLとは？（データ統合の基本プロセス）【DS検定リテラシー】
-description: ETLは（データ統合の基本プロセス）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "ETLとは、データを「抽出（Extract）→変換（Transform）→格納（Load）」する一連の処理のことです。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/etl/
 categories: [data-engineering]
 tags: [ds, data-collection, data-processing]

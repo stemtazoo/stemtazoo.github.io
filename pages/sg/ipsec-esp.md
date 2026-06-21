@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "IPsecのESPとは？暗号化できるセキュリティ機能【SG試験】"
-description: "IPsecのESPはIP通信のデータを暗号化し、必要に応じて認証や改ざん検知も行う仕組みです。AHやIKEとの違いをSG試験・情報セキュリティマネジメント試験向けに整理します。"
+description: "IPsecのESPはIP通信のデータを暗号化し、必要に応じて認証や改ざん検知も行う仕組みです。AHやIKEとの違いをSG試験・情報セキュリティマネジメント試験向けに整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/ipsec-esp/
 prev: /sg/ipsec-ah/
 next: /sg/ipsec-ike/

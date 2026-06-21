@@ -1,7 +1,7 @@
 ---
 layout: page
 title: ソフトウェアインスペクションとは？人の目で誤りを見つけるレビュー手法【SG試験】
-description: ソフトウェアインスペクションは、仕様書やプログラムを実行せずに、人の目で検証して誤りを見つけるレビュー手法です。SG試験で迷いやすいウォークスルー、ペネトレーションテスト、リグレッションテストとの違いを整理します。
+description: "ソフトウェアインスペクションは、仕様書やプログラムを実行せずに、人の目で検証して誤りを見つけるレビュー手法です。SG試験で迷いやすいウォークスルー、ペネトレーションテスト、リグレッションテストとの違いを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/software-inspection/
 tags: [sg, sg-system-development, software_review, quality_management, risk_assessment]
 last_modified_at: 2026-05-10

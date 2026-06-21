@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: Contrastive LossとTriplet Lossの違い【G検定対策】
-description: Contrastive LossとTriplet Lossの違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "Triplet Loss は「3点（トリプレット）」の相対関係を学習する。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/contrastive-vs-triplet-loss/
 tags: [gk, neural_network, metrics]
 gk_section: ディープラーニングの概要/誤差関数

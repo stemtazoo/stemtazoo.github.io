@@ -1,7 +1,7 @@
 ---
 layout: page
 title: テスト工程の種類まとめ【SG試験】
-description: テスト工程は、単体テスト、結合テスト、システムテスト、受入テストなど、確認する範囲ごとに分かれるテストの流れです。SG試験で混同しやすい負荷テストやリグレッションテストもあわせて整理します。
+description: "テスト工程は、単体テスト、結合テスト、システムテスト、受入テストなど、確認する範囲ごとに分かれるテストの流れです。SG試験で混同しやすい負荷テストやリグレッションテストもあわせて整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/test-process-summary/
 tags: [sg, sg-technology, system_architecture, service_management]
 last_modified_at: 2026-05-27

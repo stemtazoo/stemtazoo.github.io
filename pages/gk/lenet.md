@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: LeNetとは？【G検定対策】
-description: LeNetはを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "* LeNetとは、1989年に Yann LeCun によって提案された、畳み込みニューラルネットワーク（CNN）の黎明期を代表するモデルで、主に手書き数字認識で高い性能を示した。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/lenet/
 tags: [gk, neural_network, cnn]
 gk_section: ディープラーニングの応用例/画像認識/ネオコグニトロンとLeNet

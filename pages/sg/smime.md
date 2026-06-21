@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "S/MIMEとは？メールの暗号化と電子署名の仕組み【SG試験】"
-description: "S/MIMEはメールの内容を暗号化し改ざんを防ぐ技術です。SMTP-AUTHやSPF・DKIMとの違いを整理し、SG試験・情報セキュリティマネジメント試験で問われる判断基準を解説します。"
+description: "S/MIMEはメールの内容を暗号化し改ざんを防ぐ技術です。SMTP-AUTHやSPF・DKIMとの違いを整理し、SG試験・情報セキュリティマネジメント試験で問われる判断基準を解説します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/smime/
 prev: /sg/spf-dkim/
 next: /sg/secure-protocol/

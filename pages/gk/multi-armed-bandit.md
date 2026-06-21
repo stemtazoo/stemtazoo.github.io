@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: パンディットアルゴリズム（Multi-Armed Bandit）とは？【探索と活用｜G検定対策】
-description: パンディットアルゴリズム（Multi-Armed Bandit）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "パンディットアルゴリズム（Multi-Armed Bandit）は、試験で意味や使いどころを問われやすい重要概念です。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/multi-armed-bandit/
 tags: [gk, reinforcement_learning]
 gk_section: 機械学習の概要/代表的な手法/強化学習

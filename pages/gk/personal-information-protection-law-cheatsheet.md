@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 個人情報保護法まとめ（G検定対策）
-description: 個人情報保護法まとめ（G検定対策）は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "* G検定では「仮名加工情報」と「匿名加工情報」の違いが最重要* 外部提供できるかどうかが最大の分岐点* 定義よりも 扱いの違い を問われる。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/personal-information-protection-law-cheatsheet/
 tags: [gk, ethics, privacy, cheatsheet]
 gk_section: AIの法律と倫理/AIの法律と倫理

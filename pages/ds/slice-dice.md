@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: スライスとダイスの違いとは？BIツールの基本操作を整理【DS検定】
-description: スライスとダイスの違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "DS検定では、BIツールの操作としてスライス・ダイス・ドリルダウン・フィルター」の違いを判断させる問題がよく出題されます。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/slice-dice/
 categories: [data-science]
 tags: [ds, visualization]

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: リーダーシップ理論（PM理論）とは？仕事本位と人間関係本位の使い分け【SG試験】
-description: リーダーシップ理論（PM理論）は、仕事本位と人間関係本位の強弱を組織の成熟度に応じて使い分ける考え方です。SG試験で出やすい象限問題の切り分けポイントを整理します。
+description: "リーダーシップ理論（PM理論）は、仕事本位と人間関係本位の強弱を組織の成熟度に応じて使い分ける考え方です。SG試験で出やすい象限問題の切り分けポイントを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/leadership-pm-theory/
 tags: [sg, sg-management, project_management, business_management]
 last_modified_at: 2026-05-14

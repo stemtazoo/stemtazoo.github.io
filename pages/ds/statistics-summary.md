@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: DS検定でよく出る統計まとめ（平均・分散・相関を一気に整理）
-description: DS検定でよく出る統計まとめ（平均・分散・相関を一気に整理）は頻出論点を整理して得点力につなげる学習テーマです。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "DS検定の統計問題は、次の流れで理解すると整理できます。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/statistics-summary/
 categories: [data-science]
 tags: [ds, statistics]

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 暗号化とハッシュの違いとは？元に戻せるかで整理【SG試験】
-description: "暗号化とハッシュの違いを、元に戻せるか、目的、使いどころの観点で整理します。SG試験・情報セキュリティマネジメント試験で迷いやすいSHA-1、AES、RSA、改ざん検知、秘匿の判断ポイントを初心者向けに解説します。"
+description: "暗号化とハッシュの違いを、元に戻せるか、目的、使いどころの観点で整理します。SG試験・情報セキュリティマネジメント試験で迷いやすいSHA-1、AES、RSA、改ざん検知、秘匿の判断ポイントを初心者向けに解説します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/encryption-vs-hash/
 tags: [sg, cryptography, hash_function, security_measures, authentication]
 last_modified_at: 2026-05-06

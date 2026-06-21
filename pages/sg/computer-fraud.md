@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 電子計算機使用詐欺罪とは？財産的利益を得る目的で切り分ける【SG試験】
-description: 電子計算機使用詐欺罪は、コンピュータに虚偽の情報や不正な指令を与え、財産上不法の利益を得る行為を処罰する刑法上の規定です。SG試験で問われやすい詐欺罪や業務妨害罪との違いを整理します。
+description: "電子計算機使用詐欺罪は、コンピュータに虚偽の情報や不正な指令を与え、財産上不法の利益を得る行為を処罰する刑法上の規定です。SG試験で問われやすい詐欺罪や業務妨害罪との違いを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/computer-fraud/
 tags: [sg, sg-security-law, unauthorized_access, threat_vulnerability]
 last_modified_at: 2026-05-12

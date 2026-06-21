@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "多要素認証（MFA）とは？認証強化の仕組みと判断ポイント【SG試験】"
-description: "多要素認証（MFA）は複数の認証要素を組み合わせて本人確認を強化する仕組みです。知識・所持・生体の違いを整理し、SG試験・情報セキュリティマネジメント試験で問われる認証強化の判断ポイントを解説します。"
+description: "多要素認証（MFA）は複数の認証要素を組み合わせて本人確認を強化する仕組みです。知識・所持・生体の違いを整理し、SG試験・情報セキュリティマネジメント試験で問われる認証強化の判断ポイントを解説します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/multi-factor-authentication/
 prev: /sg/password-hash-authentication/
 next: /sg/mfa-vs-step-auth/

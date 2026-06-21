@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "ビッシングとは？電話でだます詐欺手口【SG試験】"
-description: "ビッシングは電話でだます詐欺手口を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験・情報セキュリティマネジメント試験とで狙われるひっかけポイントを解説します。"
+description: "ビッシングは電話でだます詐欺手口を理解するための用語です。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/vishing/
 tags: [sg, security_measures, unauthorized_access, data_leakage, sg-security-measures]
 prev: /sg/vendor-management/

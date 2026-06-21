@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "HTTPとHTTPSの違いとは？安全な通信の判断ポイント【SG試験】"
-description: "HTTPとHTTPSの違いは関連概念を正しく切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、SG試験・情報セキュリティマネジメント試験とで狙われるひっかけポイントを解説します。"
+description: "HTTPは暗号化されない通信、HTTPSは暗号化された安全な通信であり、SG試験では「情報が保護されるかどうか」を判断する問題として出題される。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/http-https/
 tags: [sg, technology, network, data_leakage, sg-technology]
 prev: /sg/honeypot/

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 応答時間とは？最初の反応までの時間を整理【SG試験】
-description: 応答時間は、利用者の要求に対してシステムが最初の反応を返すまでの時間です。ターンアラウンドタイムやTTFBとの違いを、SG試験で迷わない判断基準で整理します。
+description: "応答時間は、利用者の要求に対してシステムが最初の反応を返すまでの時間です。ターンアラウンドタイムやTTFBとの違いを、SG試験で迷わない判断基準で整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/response-time/
 tags: [sg, sg-technology, system_architecture, service_management]
 last_modified_at: 2026-05-21

@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 特徴量（Feature）とは？機械学習で使う入力データを理解する【DS検定】
-description: 特徴量（Feature）は機械学習で使う入力データを理解するを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "特徴量（Feature）とは、機械学習モデルが学習や予測に利用する入力データのことです。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/feature/
 categories: [business]
 tags: [ds, design]

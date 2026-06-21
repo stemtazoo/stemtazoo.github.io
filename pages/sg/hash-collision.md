@@ -1,7 +1,7 @@
 ---
 layout: page
 title: ハッシュ関数の衝突とは？SHA-1の弱点を整理【SG試験】
-description: "ハッシュ関数の衝突とは、異なる入力データから同じハッシュ値が作られてしまうことです。SHA-1の弱点、改ざん検知や電子署名への影響、SG試験・情報セキュリティマネジメント試験での判断ポイントを初心者向けに整理します。"
+description: "ハッシュ関数の衝突とは、異なる入力データから同じハッシュ値が作られてしまうことです。SHA-1の弱点、改ざん検知や電子署名への影響、SG試験・情報セキュリティマネジメント試験での判断ポイントを初心者向けに整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/hash-collision/
 tags: [sg, sg-security-overview, crypto_auth, threat_vulnerability]
 last_modified_at: 2026-05-20

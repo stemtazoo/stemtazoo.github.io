@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: SSL/TLSとは？公開鍵暗号と共通鍵暗号の役割を整理【DS検定】
-description: SSL/TLSは公開鍵暗号と共通鍵暗号の役割を整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "SSL/TLSとは、通信の最初に公開鍵暗号で安全に鍵を共有し、その後は共通鍵暗号で高速にデータを守る仕組みです。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/ssl-tls/
 categories: [business]
 tags: [ds, security, design]

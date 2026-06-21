@@ -1,7 +1,7 @@
 ---
 layout: page
 title: スパムメールとは？メーリングリスト・チェーンメールとの違い【SG試験】
-description: スパムメールは、同意なく大量・無差別に送られる迷惑メールです。メーリングリスト、チェーンメール、Web掲示板との違いをSG試験向けに整理します。
+description: "スパムメールは、同意なく大量・無差別に送られる迷惑メールです。メーリングリスト、チェーンメール、Web掲示板との違いをSG試験向けに整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/spam-mail/
 tags: [sg, sg-security-measures, it_security_operations, security_awareness]
 date: 2026-06-16

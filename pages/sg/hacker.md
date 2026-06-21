@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "ハッカーとは？本来の意味とホワイトハッカーとの違い【SG試験】"
-description: "ハッカーは本来の意味とホワイトハッカーとの違いを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験・情報セキュリティマネジメント試験とで狙われるひっかけポイントを解説します。"
+description: "ハッカーとは、本来は高い技術力を持つ技術者を指す中立的な言葉であり、SG試験では「ハッカー＝悪意ではない」と正しく切り分けられるかが問われます。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/hacker/
 tags: [sg, threat_vulnerability, security_awareness, risk_assessment, sg-security-overview]
 prev: /sg/fraud-triangle/

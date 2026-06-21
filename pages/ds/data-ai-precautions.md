@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "データ・AI利活用における留意事項とは？【DS検定リテラシー】"
-description: '"データ・AI利活用における留意事項"を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。'
+description: "データ・AI利活用における留意事項とは、データやAIを使うときに守るべき倫理・法律・セキュリティの理解です。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/data-ai-precautions/
 categories: [ai-utilization]
 tags: [ds, ai-use, literacy, ethics, security, ai, gdpr, cheatsheet]

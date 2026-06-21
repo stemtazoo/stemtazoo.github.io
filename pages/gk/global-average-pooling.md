@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: グローバルアベレージプーリング（Global Average Pooling）
-description: グローバルアベレージプーリング（Global Average Pooling）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "* GAPは全結合層の代わりに使われるプーリング手法* 特徴マップと出力クラスの対応関係を保てる* パラメータ数削減＋解釈性向上 が目的。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/global-average-pooling/
 tags: [gk, neural_network, cnn]
 gk_section: ディープラーニングの要素技術/ネットワークの構成要素

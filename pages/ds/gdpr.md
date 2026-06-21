@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: GDPRとは？個人データ保護の基本を整理【DS検定】
-description: GDPRは個人データ保護の基本を整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "GDPR（EU一般データ保護規則）とは、EUにおける個人データの保護とプライバシーを強化するための法規制です。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/gdpr/
 categories: [ai-utilization]
 tags: [ds, ethics]

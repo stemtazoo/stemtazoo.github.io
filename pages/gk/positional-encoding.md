@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 位置エンコーディング（Positional Encoding）とは？【Transformerの弱点補完｜G検定対策】
-description: 位置エンコーディング（Positional Encoding）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "位置エンコーディング（Positional Encoding）は、試験で意味や使いどころを問われやすい重要概念です。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/positional-encoding/
 tags: [gk, attention, transformer]
 gk_section: ディープラーニングの要素技術/トランスフォーマー (Transformer)

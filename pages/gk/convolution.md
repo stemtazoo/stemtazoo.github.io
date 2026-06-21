@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 畳み込み（Convolution）
-description: 畳み込み（Convolution）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "* 畳み込みはCNNの中核となる処理* 小さなフィルタを画像上で滑らせて特徴を抽出する* ストライド・パディングで 出力サイズと特徴の取り方 が決まる。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/convolution/
 tags: [gk, neural_network, cnn, convolution]
 gk_section: ディープラーニングの要素技術/ネットワークの構成要素

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: OECDプライバシーガイドライン8原則を整理【SG試験】
-description: OECDプライバシーガイドラインの8原則（収集制限・データ内容・目的明確化・利用制限・安全保護・公開・個人参加・責任）をSG試験向けに整理し、選択肢の混同を切る判断軸を解説します。
+description: "OECDプライバシーガイドラインの8原則（収集制限・データ内容・目的明確化・利用制限・安全保護・公開・個人参加・責任）をSG試験向けに整理し、選択肢の混同を切る判断軸を解説します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/oecd-privacy-guidelines-8-principles/
 tags: [sg, sg-management, personal_information, compliance, privacy]
 last_modified_at: 2026-05-21

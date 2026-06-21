@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: ソフトマックス関数（Softmax）とは？G検定対策
-description: ソフトマックス関数（Softmax）はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "* ソフトマックス関数（Softmax）とは、ニューラルネットワークの出力を確率分布（合計が1）に変換する関数。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/softmax/
 tags: [gk, neural_network]
 gk_section: 機械学習の概要/代表的な手法/教師あり学習

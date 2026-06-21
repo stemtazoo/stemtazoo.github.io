@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 固有値分解（EVD, Eigenvalue Decomposition）とは？G検定対策
-description: 固有値分解（EVD, Eigenvalue Decomposition）はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "* 固有値分解（EVD, Eigenvalue Decomposition）とは、正方行列を固有値と固有ベクトルに分解し、行列の本質的な性質を理解・利用するための線形代数手法。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/evd/
 tags: [gk, linear_algebra]
 gk_section: 機械学習の概要/代表的な手法/教師なし学習

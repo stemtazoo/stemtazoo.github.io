@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 空・雨・傘とは？仮説思考の基本フレーム【DS検定】
-description: 空・雨・傘は仮説思考の基本フレームを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "空・雨・傘とは、「事実→解釈→行動」の順で考えるビジネス思考フレームです。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/sora-ame-kasa/
 categories: [ai-utilization]
 tags: [ds, ai-use]

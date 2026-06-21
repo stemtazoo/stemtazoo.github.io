@@ -1,7 +1,7 @@
 ---
 layout: page
 title: リスク対応とは？リスクへの対処方法を整理【SG試験】
-description: リスク対応は、リスク分析・リスク評価で明らかになったリスクに対して対処方法を決めることです。SG試験で迷いやすいリスクコントロール、リスクファイナンス、リスク受容の違いを整理します。
+description: "リスク対応は、リスク分析・リスク評価で明らかになったリスクに対して対処方法を決めることです。SG試験で迷いやすいリスクコントロール、リスクファイナンス、リスク受容の違いを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/risk-response/
 tags: [sg, sg-security-management, risk_assessment, asset_management]
 last_modified_at: 2026-05-20

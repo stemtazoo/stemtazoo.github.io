@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 人間中心のAI社会原則とは？AIと社会のルールを理解する【DS検定】
-description: 人間中心のAI社会原則はAIと社会のルールを理解するを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "人間中心のAI社会原則はAIと社会のルールを理解するを理解するための用語です。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/human-centered-ai-principles/
 categories: [ai-utilization]
 tags: [ds, ai-use]

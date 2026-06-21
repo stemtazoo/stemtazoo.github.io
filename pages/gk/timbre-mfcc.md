@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 音色の違い（MFCC）
-description: 音色の違い（MFCC）は関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "* 音色の違いはスペクトル包絡の違いとして表現される* 音色特徴量として最も代表的なのが MFCC（メル周波数ケプストラム係数）* FFT やメル尺度は MFC。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/timbre-mfcc/
 tags: [gk, audio, mfcc, signal_processing]
 gk_section: ディープラーニングの応用例/音声処理

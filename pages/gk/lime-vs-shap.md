@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: LIME と SHAP の違い（XAI 深掘り）
-description: LIME と SHAP の違い（XAI 深掘り）は関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "* LIME：局所的・近似的に「その1件」を説明* SHAP：理論的に厳密に「寄与度」を説明* 速さ・手軽さはLIME、理論的一貫性はSHAPG検定では局所か／寄与度か」 で切る。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/lime-vs-shap/
 tags: [gk, xai, cheatsheet]
 gk_section: ディープラーニングの応用例/モデルの解釈性

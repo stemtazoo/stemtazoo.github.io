@@ -1,7 +1,7 @@
 ---
 layout: page
 title: MDMとは？スマートフォンを一元管理する仕組み【SG試験】
-description: "MDMは、組織がスマートフォンやタブレットなどのモバイル端末を一元管理する仕組みです。BYOD、ECM、LTEとの違いと、SG試験での判断ポイントを整理します。"
+description: "MDMは、組織がスマートフォンやタブレットなどのモバイル端末を一元管理する仕組みです。BYOD、ECM、LTEとの違いと、SG試験での判断ポイントを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/mdm/
 tags: [sg, sg-security-measures, it_security_operations, data_leakage]
 last_modified_at: 2026-06-06

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: ドライブバイダウンロードとは？Web閲覧で感染する攻撃【SG試験】
-description: ドライブバイダウンロードは、利用者がWebサイトを閲覧しただけでマルウェアをダウンロードさせられる攻撃です。SG試験で迷いやすいランサムウェアやSQLインジェクションとの違いを整理します。
+description: "ドライブバイダウンロードは、利用者がWebサイトを閲覧しただけでマルウェアをダウンロードさせられる攻撃です。SG試験で迷いやすいランサムウェアやSQLインジェクションとの違いを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/drive-by-download/
 tags: [sg, sg-security-overview, threat_vulnerability, malware]
 last_modified_at: 2026-05-19

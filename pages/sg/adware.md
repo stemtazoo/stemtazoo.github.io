@@ -1,7 +1,7 @@
 ---
 layout: page
 title: アドウェアとは？広告表示を行うソフトウェアの特徴【SG試験】
-description: アドウェアは、利用者のPC画面などに広告を表示するソフトウェアです。SG試験で混同しやすいワーム、ボット、マクロウイルス、スパイウェアとの違いを整理します。
+description: "アドウェアは、利用者のPC画面などに広告を表示するソフトウェアです。SG試験で混同しやすいワーム、ボット、マクロウイルス、スパイウェアとの違いを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/adware/
 tags: [sg, sg-security-measures, malware, threat_vulnerability]
 last_modified_at: 2026-06-11

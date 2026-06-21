@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 画像のフィルタ処理とは？（ノイズ除去と特徴強調の基本）【DS検定】
-description: 画像のフィルタ処理は（ノイズ除去と特徴強調の基本）を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "画像のフィルタ処理とは、画像データに対してノイズ除去や特徴強調などの処理を行い、分析や認識に使いやすい形にする前処理のことです。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/image-filter-processing/
 categories: [data-science]
 tags: [ds, unstructured-data, preprocessing]

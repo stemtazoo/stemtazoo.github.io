@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: AMSBound（AMSGrad＋SGDの最適化手法）とは？【G検定対策】
-description: AMSBound（AMSGrad＋SGDの最適化手法）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "AMSBound（AMSGrad＋SGDの最適化手法）は、試験で意味や使いどころを問われやすい重要概念です。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/amsbound/
 tags: [gk, neural_network]
 gk_section: ディープラーニングの概要/最適化手法

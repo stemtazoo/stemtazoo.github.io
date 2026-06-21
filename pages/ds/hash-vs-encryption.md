@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: ハッシュと暗号化の違いとは？（復号できるかが分かれ目）【DS検定】
-description: ハッシュと暗号化の違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "ハッシュは復元できない不可逆な変換、暗号化は鍵を使えば元に戻せる可逆な変換です。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/hash-vs-encryption/
 categories: [business]
 tags: [ds, security, design]

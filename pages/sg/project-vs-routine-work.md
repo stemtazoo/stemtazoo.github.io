@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "プロジェクトと定常業務の違いとは？有期性と独自性で整理【SG試験】"
-description: "プロジェクトは期限があり独自の成果物や目標をもつ一度限りの活動、定常業務は継続的に繰り返す業務です。有期性・独自性・反復性でSG試験の選択肢を切り分けます。"
+description: "プロジェクトは期限があり独自の成果物や目標をもつ一度限りの活動、定常業務は継続的に繰り返す業務です。有期性・独自性・反復性でSG試験の選択肢を切り分けます。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/project-vs-routine-work/
 tags: [sg, sg-management, project_management, business_management]
 date: 2026-06-01

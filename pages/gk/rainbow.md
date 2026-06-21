@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: Rainbow（強化学習アルゴリズム）とは？【G検定対策】
-description: Rainbow（強化学習アルゴリズム）はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "* Rainbowとは、DQNをベースに複数の改良手法を統合した、高性能なモデルフリー型の強化学習アルゴリズムである。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/rainbow/
 tags: [gk, reinforcement_learning]
 gk_section: ディープラーニングの応用例/深層強化学習

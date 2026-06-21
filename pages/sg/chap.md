@@ -1,7 +1,7 @@
 ---
 layout: page
 title: CHAPとは？パスワードをそのまま送らない認証方式【SG試験】
-description: CHAPは、PPPで利用できるチャレンジレスポンス方式の認証プロトコルです。SG試験で混同しやすいPAP・RADIUS・PPTPとの違いを整理します。
+description: "CHAPは、PPPで利用できるチャレンジレスポンス方式の認証プロトコルです。SG試験で混同しやすいPAP・RADIUS・PPTPとの違いを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/chap/
 tags: [sg, sg-security-measures, access_control, crypto_auth, network]
 last_modified_at: 2026-05-15

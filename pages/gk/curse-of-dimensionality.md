@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 次元の呪い（Curse of Dimensionality）とは？G検定対策
-description: 次元の呪い（Curse of Dimensionality）はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "* 次元の呪い（Curse of Dimensionality）とは、特徴量（次元）が増えるほど、データが疎になり、学習や探索が極端に難しくなる現象です。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/curse-of-dimensionality/
 tags: [gk, machine_learning]
 gk_section: 人工知能をめぐる動向/人工知能をめぐる動向

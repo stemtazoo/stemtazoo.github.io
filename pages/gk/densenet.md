@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: DenseNet（高密度接続CNN）とは？G検定対策
-description: DenseNet（高密度接続CNN）はG検定対策を理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "* DenseNet（Densely Connected Convolutional Network）とは、各層がそれ以前のすべての層の出力を結合（concatenate）して受け取ることで、勾配消失を防ぎつつ効率的に学習。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/densenet/
 tags: [gk, cnn]
 gk_section: ディープラーニングの応用例/画像認識/物体認識タスク

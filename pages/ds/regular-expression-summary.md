@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 正規表現のひっかけ総整理（試験直前チートシート）【DS検定】
-description: 正規表現のひっかけ総整理（試験直前チートシート）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "正規表現は「文字列の形式」を確認する道具であり、「意味の正しさ」までは保証しません。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/regular-expression-summary/
 categories: [data-science]
 tags: [ds, preprocessing]

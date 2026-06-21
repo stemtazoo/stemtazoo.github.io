@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 消費者契約法とは？SG試験でのポイントをやさしく解説
-description: 消費者契約法について、SG試験で問われやすい不当な勧誘による取消し、不当な契約条項の無効、高額な違約金、個人情報保護法や電気通信事業法との違いを初心者向けに整理します。
+description: "消費者契約法について、SG試験で問われやすい不当な勧誘による取消し、不当な契約条項の無効、高額な違約金、個人情報保護法や電気通信事業法との違いを初心者向けに整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/consumer-contract-act/
 tags: [sg, sg-security-law, privacy_law, business_management]
 last_modified_at: 2026-05-18

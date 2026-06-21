@@ -1,7 +1,7 @@
 ---
 layout: page
 title: ソーシャルエンジニアリングとは？なりすまし・のぞき見・トラッシングの違い【SG試験】
-description: ソーシャルエンジニアリングは、人の心理や不注意を悪用して秘密情報を得る手口です。なりすまし、ショルダーハッキング、トラッシング、のぞき見、トロイの木馬や踏み台攻撃との違いをSG試験向けに整理します。
+description: "ソーシャルエンジニアリングは、人の心理や不注意を悪用して秘密情報を得る手口です。なりすまし、ショルダーハッキング、トラッシング、のぞき見、トロイの木馬や踏み台攻撃との違いをSG試験向けに整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/social-engineering/
 tags: [sg, sg-security-overview, threat_vulnerability, unauthorized_access]
 last_modified_at: 2026-06-20

@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: Dilated Convolution（空洞畳み込み）
-description: Dilated Convolution（空洞畳み込み）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "* Dilated Convolution は受容野を広げられる畳み込み* プーリングを使わずに特徴マップの解像度を保てる* 画像サイズを小さくしないことが最大。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/dilated-convolution/
 tags: [gk, neural_network, cnn]
 gk_section: ディープラーニングの要素技術/ネットワークの構成要素

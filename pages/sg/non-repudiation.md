@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 否認防止とは？証跡で「やっていない」を防ぐ考え方【SG試験】
-description: 否認防止は、操作や事象の発生を後から否定されないように証明する考え方です。SG試験で混同しやすい機密性・可用性・信頼性との違いを整理します。
+description: "否認防止は、操作や事象の発生を後から否定されないように証明する考え方です。SG試験で混同しやすい機密性・可用性・信頼性との違いを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/non-repudiation/
 tags: [sg, sg-security-overview, crypto_auth, it_security_operations]
 last_modified_at: 2026-05-11

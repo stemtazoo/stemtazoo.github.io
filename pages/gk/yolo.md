@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: YOLO（You Only Look Once）
-description: YOLO（You Only Look Once）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "YOLOは「1段階モデル」で、主な目的は「処理速度の高速化」です。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/yolo/
 tags: [gk, 画像認識, 物体検出]
 gk_section: ディープラーニングの応用例/画像認識/物体検出タスク

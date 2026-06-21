@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: EXISTSとは？サブクエリの存在判定を理解する【DS検定】
-description: EXISTSはサブクエリの存在判定を理解するを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "EXISTSとは「条件を満たすデータが存在するかどうか」を判定するSQLの構文DS検定では「値比較ではなく存在チェック」であることを見抜けるかが重要。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/sql-exists/
 categories: [data-engineering]
 tags: [ds, sql]

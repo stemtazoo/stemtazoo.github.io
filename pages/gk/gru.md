@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: GRU（Gated Recurrent Unit）
-description: GRU（Gated Recurrent Unit）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "* GRUはLSTMを簡略化したRNNの一種* ゲート数を減らして 構造をシンプルに した* 勾配消失を緩和 しつつ、計算効率が良い。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/gru/
 tags: [gk, neural_network, rnn, gru]
 gk_section: ディープラーニングの要素技術/リカレントニューラルネットワーク (RNN)

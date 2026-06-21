@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 汎化性能
-description: 汎化性能は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "* 汎化性能とは、未知データに対する性能* 学習データではなく テストデータでの精度が重要* 過学習・未学習の判断基準になる。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/generalization/
 tags: [gk, machine_learning, generalization]
 gk_section: 機械学習の概要/モデルの選択・評価

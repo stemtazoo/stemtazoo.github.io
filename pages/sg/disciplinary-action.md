@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "懲戒処分とは？有効となる条件とNG例を整理【SG試験】"
-description: "懲戒処分は有効となる条件とNG例を整理するための用語です。この記事では仕組み・役割・使いどころを押さえ、SG試験・情報セキュリティマネジメント試験とで狙われるひっかけポイントを解説します。"
+description: "懲戒処分は有効となる条件とNG例を整理するための用語です。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/disciplinary-action/
 tags: [sg, security_law, business_management, risk_assessment, sg-security-law]
 prev: /sg/directory-traversal/

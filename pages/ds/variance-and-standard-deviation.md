@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 分散と標準偏差の違いとは？ばらつきをどう読むか【DS検定】
-description: 分散と標準偏差の違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "分散と標準偏差はどちらも「データのばらつきの大きさ」を表す指標で、標準偏差は分散の平方根です。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/variance-and-standard-deviation/
 categories: [data-science]
 tags: [ds, statistics]

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 変更管理とは？リリース時のリスクを減らす管理策【SG試験】
-description: 変更管理は、システム変更やリリース作業による障害・情報漏えい・設定ミスを防ぐために、変更内容を事前に確認し、承認・記録する管理策です。SG試験で迷いやすい構成管理やパッチ管理との違いを整理します。
+description: "変更管理は、システム変更やリリース作業による障害・情報漏えい・設定ミスを防ぐために、変更内容を事前に確認し、承認・記録する管理策です。SG試験で迷いやすい構成管理やパッチ管理との違いを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/change-management/
 tags: [sg, sg-management, service_management, sg-security-management, it_security_operations]
 last_modified_at: 2026-05-06

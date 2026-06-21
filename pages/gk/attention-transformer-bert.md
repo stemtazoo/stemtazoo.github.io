@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: Attention・Transformer・BERTの関係とは？【仕組みで整理｜G検定対策】
-description: Attention・Transformer・BERTの関係はを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "Attention・Transformer・BERTの関係は、試験で意味や使いどころを問われやすい重要概念です。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/attention-transformer-bert/
 tags: [gk, neural_network, attention, transformer]
 gk_section: ディープラーニングの応用例/自然言語処理

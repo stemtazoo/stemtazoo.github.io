@@ -1,7 +1,7 @@
 ---
 layout: page
 title: J-CRATとは？標的型攻撃の相談・分析を支援するIPAの取組み【SG試験】
-description: J-CRATは、標的型攻撃に関する相談対応、分析、助言、関係機関との連携を行うIPAの取組みです。NCO、CSIRT、ISMS適合性評価制度との違いをSG試験向けに整理します。
+description: "J-CRATは、標的型攻撃に関する相談対応、分析、助言、関係機関との連携を行うIPAの取組みです。NCO、CSIRT、ISMS適合性評価制度との違いをSG試験向けに整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/j-crat/
 tags: [sg, sg-security-management, incident_management, csirt]
 date: 2026-06-02

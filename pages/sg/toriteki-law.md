@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 中小受託取引適正化法とは？委託取引の禁止行為を整理【SG試験】
-description: 中小受託取引適正化法は、委託事業者と中小受託事業者の公正な取引を守る法律です。発注内容等の明示、代金決定、支払期日、禁止行為をSG試験向けに整理します。
+description: "中小受託取引適正化法は、委託事業者と中小受託事業者の公正な取引を守る法律です。発注内容等の明示、代金決定、支払期日、禁止行為をSG試験向けに整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/toriteki-law/
 tags: [sg, sg-security-law, vendor_management, it_security_operations]
 date: 2026-06-03

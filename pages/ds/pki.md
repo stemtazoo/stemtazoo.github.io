@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 公開鍵認証基盤（PKI）とは？電子署名の信頼を保証する仕組み【DS検定】
-description: 公開鍵認証基盤（PKI）は電子署名の信頼を保証する仕組みを理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "公開鍵認証基盤（PKI：Public Key Infrastructure）とは、「公開鍵が本当にその人のものか」を証明する仕組みです。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/pki/
 categories: [business]
 tags: [ds, security, design]

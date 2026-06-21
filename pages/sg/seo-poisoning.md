@@ -1,7 +1,7 @@
 ---
 layout: page
 title: SEOポイズニングとは？検索上位を悪用する攻撃【SG試験】
-description: SEOポイズニングは、検索結果の上位に悪意のあるサイトを表示させ、利用者を不正サイトへ誘導する攻撃です。SG試験で迷いやすいDNSキャッシュポイズニングやIDSとの違いを整理します。
+description: "SEOポイズニングは、検索結果の上位に悪意のあるサイトを表示させ、利用者を不正サイトへ誘導する攻撃です。SG試験で迷いやすいDNSキャッシュポイズニングやIDSとの違いを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/seo-poisoning/
 tags: [sg, sg-security-overview, threat_vulnerability, malware]
 last_modified_at: 2026-05-19

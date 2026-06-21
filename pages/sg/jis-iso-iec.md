@@ -1,7 +1,7 @@
 ---
 layout: page
 title: JIS・ISO・IECの違いをやさしく整理【SG試験】
-description: JIS・ISO・IECと日本産業標準調査会（JISC）の違いを整理します。日本国内の産業規格、国際規格、電気・電子分野、ANSI・IEEE、WTO政府調達の文脈を切り分けます。
+description: "JIS・ISO・IECと日本産業標準調査会（JISC）の違いを整理します。日本国内の産業規格、国際規格、電気・電子分野、ANSI・IEEE、WTO政府調達の文脈を切り分けます。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/jis-iso-iec/
 tags: [sg, sg-strategy, business_management, system_strategy]
 last_modified_at: 2026-06-13

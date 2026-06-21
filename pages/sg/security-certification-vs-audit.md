@@ -1,7 +1,7 @@
 ---
 layout: page
 title: セキュリティ認証と監査の違いを整理【SG試験】
-description: "セキュリティ認証と監査は、どちらも安全性を確認する考え方ですが、見る対象と目的が異なります。SG試験・情報セキュリティマネジメント試験で迷いやすい製品評価と組織運用の違いを整理します。"
+description: "セキュリティ認証と監査は、どちらも安全性を確認する考え方ですが、見る対象と目的が異なります。SG試験・情報セキュリティマネジメント試験で迷いやすい製品評価と組織運用の違いを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/security-certification-vs-audit/
 tags: [sg, sg-security-management, system_audit, isms, it_security_operations]
 prev: /sg/jisec/

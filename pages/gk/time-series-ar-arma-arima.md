@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: AR / MA / ARMA / ARIMAの違いまとめ【G検定対策】
-description: AR / MA / ARMA / ARIMAの違いまとめは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "AR / MA / ARMA / ARIMAの違いまとめは似た概念との違いを比較して理解するテーマです。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/time-series-ar-arma-arima/
 tags: [gk, time_series]
 gk_section: 機械学習の概要/代表的な手法/教師あり学習

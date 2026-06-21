@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: Precision–Recall曲線
-description: Precision–Recall曲線は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "Precision–Recall（PR）曲線は、しきい値を変化させたときの Precision（適合率）と Recall（再現率）の関係を表すグラフです。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/precision-recall-curve/
 tags: [gk, 機械学習, 評価指標, 頻出]
 gk_section: 機械学習の概要/モデルの選択・評価

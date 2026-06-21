@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: ステミングとレンマ化の違いとは？（テキスト前処理の基本）【DS検定】
-description: ステミングとレンマ化の違いは関連概念を切り分けるための考え方です。この記事では仕組み・役割・使いどころを押さえ、DS検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "ステミングとレンマ化は、単語を「基本形にそろえる」前処理だが、精度と方法が異なる。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
 permalink: /ds/stemming-vs-lemmatization/
 categories: [data-science]
 tags: [ds, preprocessing]

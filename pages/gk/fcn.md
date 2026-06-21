@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: FCN（Fully Convolutional Network）
-description: FCN（Fully Convolutional Network）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "FCN（Fully Convolutional Network）は、画像分類用の CNN を「全結合層なし（畳み込みだけ）」に作り替えて、画素ごとの分類（セマンティックセグメンテーション）を可能にした基本モデルです。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/fcn/
 tags: [gk, neural_network, cnn]
 gk_section: ディープラーニングの応用例/画像認識/セグメンテーションタスク

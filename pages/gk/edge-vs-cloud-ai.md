@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: エッジAI vs クラウドAI（使い分けチートシート）
-description: エッジAI vs クラウドAI（使い分けチートシート）は重要ポイントを整理して理解するための用語です。この記事では仕組み・役割・使いどころを押さえ、G検定で問われる判断ポイントとひっかけポイントを解説します。
+description: "（試験で即使う）エッジAIとクラウドAIの違いは「処理場所」ではなく「判断の即時性」。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/edge-vs-cloud-ai/
 tags: [gk, cheatsheet]
 gk_section: AIの社会実装に向けて/AIの社会実装に向けて
