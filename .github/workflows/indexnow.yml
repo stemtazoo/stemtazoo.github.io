@@ -12,9 +12,6 @@ on:
         options:
           - auto
           - all-known
-  schedule:
-    # Weekly full refresh (UTC): every Monday 03:17
-    - cron: "17 3 * * 1"
 
 permissions:
   contents: read
@@ -24,7 +21,6 @@ jobs:
   submit-indexnow:
     if: >
       github.event_name == 'workflow_dispatch' ||
-      github.event_name == 'schedule' ||
       (
         github.event_name == 'deployment_status' &&
         github.event.deployment_status.state == 'success' &&
@@ -75,16 +71,9 @@ jobs:
               write_output("after", "")
               raise SystemExit(0)
 
-          if event_name == "schedule":
-              print("Scheduled run: forcing --all-known")
-              write_output("mode", "all-known")
-              write_output("before", "")
-              write_output("after", "")
-              raise SystemExit(0)
-
           if event_name != "deployment_status":
-              print("workflow_dispatch auto mode: fallback to --all-known")
-              write_output("mode", "all-known")
+              print("workflow_dispatch auto mode: no deployment range; skipping IndexNow submission")
+              write_output("mode", "skip")
               write_output("before", "")
               write_output("after", "")
               raise SystemExit(0)
@@ -127,8 +116,8 @@ jobs:
               write_output("before", before)
               write_output("after", after)
           else:
-              print("No previous successful deployment range found. Falling back to --all-known")
-              write_output("mode", "all-known")
+              print("No previous successful deployment range found. Skipping IndexNow submission to avoid full-site batch submission")
+              write_output("mode", "skip")
               write_output("before", "")
               write_output("after", after)
           PY
@@ -144,7 +133,13 @@ jobs:
           if [ "$INDEXNOW_MODE" = "git-diff" ]; then
             python scripts/submit_indexnow.py \
               --from-git-diff "$INDEXNOW_BEFORE" "$INDEXNOW_AFTER" \
-              --key-file "$INDEXNOW_KEY_FILE"
+              --key-file "$INDEXNOW_KEY_FILE" \
+              --max-urls 100
+          elif [ "$INDEXNOW_MODE" = "all-known" ]; then
+            python scripts/submit_indexnow.py \
+              --all-known \
+              --key-file "$INDEXNOW_KEY_FILE" \
+              --allow-large-batch
           else
-            python scripts/submit_indexnow.py --all-known --key-file "$INDEXNOW_KEY_FILE"
+            echo "Skipping IndexNow submission."
           fi

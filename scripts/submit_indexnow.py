@@ -55,6 +55,17 @@ def parse_args() -> argparse.Namespace:
         help="Submit all known public URLs derived from tracked files.",
     )
     parser.add_argument(
+        "--max-urls",
+        type=int,
+        default=0,
+        help="Maximum number of URLs to submit unless --allow-large-batch is set. 0 disables the limit.",
+    )
+    parser.add_argument(
+        "--allow-large-batch",
+        action="store_true",
+        help="Allow submissions that exceed --max-urls. Intended for explicit manual full-site refreshes.",
+    )
+    parser.add_argument(
         "--dry-run",
         action="store_true",
         help="Print the payload without sending it.",
@@ -302,6 +313,18 @@ def main() -> int:
     if not urls:
         print("No public URLs matched the selected files.")
         return 0
+
+    if args.max_urls < 0:
+        print("--max-urls must be 0 or greater.", file=sys.stderr)
+        return 1
+
+    if args.max_urls and len(urls) > args.max_urls and not args.allow_large_batch:
+        print(
+            f"Refusing to submit {len(urls)} URLs because it exceeds --max-urls {args.max_urls}. "
+            "Use --allow-large-batch only for an intentional manual full-site refresh.",
+            file=sys.stderr,
+        )
+        return 1
 
     print(f"Submitting {len(urls)} URL(s) to IndexNow.")
     return submit_to_indexnow(site_root, key, key_location, urls, args.dry_run)

@@ -26,5 +26,7 @@ This repository uses GitHub Actions for post-deploy automation related to search
 ## Maintenance Guidance
 
 - Favor simple, debuggable URL collection logic over aggressive optimization.
-- If choosing between full-site submission and a more fragile differential approach, prefer the more reliable option unless rate, scale, or workflow cost becomes a real problem.
+- Prefer changed-URL submission for normal post-deploy runs. Avoid full-site batch submission unless it is an intentional manual refresh.
+- If the deployment diff range cannot be resolved, skip automatic submission rather than falling back to a full-site batch.
+- Keep sitemap.xml generation unchanged; IndexNow submission should not depend on reading the full sitemap on every build.
 - When changing site URL structure, permalink logic, or root verification files, review the IndexNow workflow and submission script together.
