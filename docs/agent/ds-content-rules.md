@@ -46,12 +46,15 @@ Include at least one of the following when relevant:
 
 ## Related Links And Skill Items
 
-Existing DS articles often include `## 対応スキル項目（...）` and `## 🔗 関連記事`.
+Existing DS articles often include `## 対応スキル項目（...）` and a standard related-article/footer area.
 
 - Include `## 対応スキル項目（...）` when it is useful and consistent with nearby DS articles.
 - Use a skill-sheet label that matches the topic, such as `データサイエンス力シート`, `データエンジニアリング力シート`, `ビジネス力シート`, or `AI利活用スキルシート`.
-- Add related articles when they help readers distinguish similar terms or continue a learning path.
-- Avoid repeating large Liquid or manual related-article blocks if a safer shared include exists. If no include exists, follow the current nearby DS convention rather than redesigning it in the same task.
+- Normal DS articles should use `{% include ds_article_footer.html %}` for the standard related-article/footer block when the page follows the shared DS footer pattern.
+- Do not paste the large related-article Liquid block manually into new DS articles.
+- Keep `## 対応スキル項目（...）` before the footer include when present.
+- Preserve an existing manual related/footer block only when the page has a special structure and the include would change behavior.
+- Add special manual related articles only when they help readers distinguish similar terms or continue a learning path.
 
 ## Markdown Rendering Rules
 
