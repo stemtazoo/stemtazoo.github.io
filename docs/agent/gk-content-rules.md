@@ -70,4 +70,5 @@ Before saving a GK article, check that:
 - `## G検定ひっかけポイント` helps readers eliminate wrong choices;
 - the article does not over-explain mathematics beyond what helps G検定 judgment;
 - the footer include is present when expected;
+- `last_modified_at` is present and updated for normal individual articles when the article is meaningfully edited;
 - front matter is valid YAML and metadata is not visible in the body.

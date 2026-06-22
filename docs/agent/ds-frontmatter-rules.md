@@ -34,10 +34,15 @@ Existing DS files vary, so preserve existing valid conventions unless the reques
 - Use the format `/ds/english-slug/` for `permalink`.
 - Preserve existing `categories` and `tags` conventions after checking nearby DS articles.
 - Always include `ds` in `tags` for DS pages.
-- For new DS articles, include `last_modified_at` in `YYYY-MM-DD` format if the current convention in nearby DS articles supports it.
-- Do not blindly add `last_modified_at` to every existing DS article in unrelated tasks.
-- When substantially editing the body of an existing DS article that already uses `last_modified_at`, update it when appropriate.
+- Normal individual DS articles should use `last_modified_at`.
+- For new normal DS articles, always include `last_modified_at` in `YYYY-MM-DD` format.
+- When meaningfully editing the body, title, description, or reader-facing metadata of an existing normal DS article, update `last_modified_at`.
+- If an edited normal DS article does not yet have `last_modified_at`, add it.
+- Use the current date at the time of editing.
 - Do not write visible "last updated" text inside the body.
+- Do not add `last_modified_at` to DS index pages, category pages, generated exports, or non-article files unless the page is clearly a normal reader-facing article.
+- Do not mass-add `last_modified_at` to unrelated DS files in a content-editing task.
+- Do not change `categories`, `tags`, `prev`, or `next` just because `last_modified_at` is being added.
 - Do not guess `prev` / `next`.
 
 ## Title

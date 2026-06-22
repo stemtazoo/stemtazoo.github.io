@@ -74,4 +74,5 @@ Before saving a DS article, check that:
 - practical examples are accurate and beginner-friendly;
 - `## よくある誤解・混同` helps readers avoid exam and practical mistakes;
 - `## 対応スキル項目（...）` is present when useful and consistent with nearby pages;
+- `last_modified_at` is present and updated for normal individual articles when the article is meaningfully edited;
 - front matter is valid YAML and metadata is not visible in the body.
