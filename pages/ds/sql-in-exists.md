@@ -7,6 +7,7 @@ categories: [data-engineering]
 tags: [ds, sql]
 prev: /ds/sql-having/
 next: /ds/sql-join/
+last_modified_at: 2026-06-22
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -176,13 +177,3 @@ WHERE EXISTS (
   {% endif %}
 
 </div>
-
-
----
-
-layout: page
-title: INとEXISTSの違いとは？値比較と存在判定を整理【DS検定】
-permalink: /ds/sql-in-exists/
-tags: [ds, preprocessing, database]
------------------------------------
-

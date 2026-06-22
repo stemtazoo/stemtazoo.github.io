@@ -7,19 +7,13 @@ categories: [data-science]
 tags: [ds, data-processing, preprocessing]
 prev: /ds/regular-expression-date/
 next: /ds/regular-expression-postalcode/
+last_modified_at: 2026-06-22
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
   ＞ {{ page.title }}
 </div>
 
----
-
-layout: page
-title: メールアドレスの正規表現とは？なぜ難しいのかを整理【DS検定】
-permalink: /ds/regular-expression-email/
-tags: [ds, preprocessing, cheatsheet]
--------------------------------------
 
 ## まず結論
 

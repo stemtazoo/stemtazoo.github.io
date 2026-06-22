@@ -8,6 +8,7 @@ categories: [data-science]
 tags: [ds, modeling]
 prev: /ds/association-analysis/
 next: /ds/basket-analysis/
+last_modified_at: 2026-06-22
 ---
 
 ## まず結論
@@ -112,11 +113,10 @@ Y が起きる確率
 
 Confidence = P(Y | X)
 
-つまり
+つまり、信頼度は **「Xが起きたケースのうち、Yも一緒に起きた割合」** です。
 
-## XとYの共起回数
-
-Xが起きた回数
+* 分子：XとYが一緒に起きた回数
+* 分母：Xが起きた回数
 
 です。
 
