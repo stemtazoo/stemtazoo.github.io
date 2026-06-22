@@ -26,9 +26,7 @@ DS検定では主に次の判断を問われます。
 **「一緒に起きる頻度」と「偶然ではない関係」を区別できるか**
 
 が重要になります。
-prev: /ds/association-analysis/
-next: /ds/basket-analysis/
----
+
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
   ＞ {{ page.title }}
@@ -282,50 +280,4 @@ Y → X
 * データの関係性理解
 * ★ データ間の関係性を分析する基本的な手法を理解している
 
-## 🔗 関連記事
-
-<ul style="padding-left: 20px;">
-{% assign current_tags = page.tags %}
-{% assign count = 0 %}
-
-{% for p in site.pages %}
-  {% if p.url != page.url and p.tags %}
-    {% assign matched = false %}
-
-    {% for tag in current_tags %}
-      {% if p.tags contains tag and tag != "ds" %}
-        {% assign matched = true %}
-      {% endif %}
-    {% endfor %}
-
-    {% if matched %}
-      <li style="margin-bottom: 6px;">
-        <a href="{{ p.url }}">{{ p.title }}</a>
-      </li>
-      {% assign count = count | plus: 1 %}
-    {% endif %}
-
-    {% if count >= 5 %}
-      {% break %}
-    {% endif %}
-  {% endif %}
-{% endfor %}
-</ul>
-
-<hr>
-
-<div style="margin-top: 16px;">
-  🏠 <a href="/ds/">DS検定トップに戻る</a>
-</div>
-
-<div style="display:flex;justify-content:space-between;margin-top:12px;">
-
-  {% if page.previous.url %}
-    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
-  {% endif %}
-
-  {% if page.next.url %}
-    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
-  {% endif %}
-
-</div>
+{% include ds_article_footer.html %}
