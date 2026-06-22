@@ -53,11 +53,15 @@ title: LEFT JOINでWHERE句を使うときの注意点【SQL・DS検定】
 
 ## Description
 
-- Make the description unique to the page.
-- Explain what the reader will understand after reading.
-- Mention similar-term differences, practical use, or exam judgment when natural.
-- Avoid repeating one long boilerplate sentence across many pages.
-- Do not contradict the page scope.
+- Make the description unique to each page.
+- Aim for roughly 120-160 Japanese characters.
+- Start with a clear definition or role of the concept when possible.
+- Explain what the reader can distinguish, judge, or understand after reading.
+- Include exam context such as `DS検定` only when it fits naturally.
+- Avoid keyword stuffing.
+- Avoid generic boilerplate endings reused across many pages.
+- Do not make the description look like a bullet list.
+- Do not contradict the page title or page scope.
 - Do not duplicate the same sentence as visible body text unless intentionally rewritten.
 
 ## Categories
