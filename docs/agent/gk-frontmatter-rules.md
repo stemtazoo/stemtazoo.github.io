@@ -34,10 +34,15 @@ Existing GK files vary, so preserve existing valid conventions unless the reques
 - Always include `gk` in `tags` for GK pages.
 - Preserve `gk_section` and `gk_order` when they already exist.
 - Do not invent `gk_section` or `gk_order` without checking nearby GK articles and index behavior.
-- For new GK articles, include `last_modified_at` in `YYYY-MM-DD` format if the current convention in nearby GK articles supports it.
-- Do not blindly add `last_modified_at` to every existing GK article in unrelated tasks.
-- When substantially editing the body of an existing GK article that already uses `last_modified_at`, update it when appropriate.
+- Normal individual GK articles should use `last_modified_at`.
+- For new normal GK articles, always include `last_modified_at` in `YYYY-MM-DD` format.
+- When meaningfully editing the body, title, description, or reader-facing metadata of an existing normal GK article, update `last_modified_at`.
+- If an edited normal GK article does not yet have `last_modified_at`, add it.
+- Use the current date at the time of editing.
 - Do not write visible "last updated" text inside the body.
+- Do not add `last_modified_at` to GK index pages, category pages, generated exports, or non-article files unless the page is clearly a normal reader-facing article.
+- Do not mass-add `last_modified_at` to unrelated GK files in a content-editing task.
+- Do not change `gk_section` or `gk_order` just because `last_modified_at` is being added.
 - Do not guess `prev` / `next`.
 
 ## Title
