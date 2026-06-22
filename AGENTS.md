@@ -243,6 +243,26 @@ SG記事を新規作成・改善・横展開する場合は、必要に応じて
 - Match the structure, granularity, and wording style of existing `pages/sg` articles.
 - Use GitHub Pages-compatible Markdown and simple Liquid.
 
+## GK Article Policy
+
+When creating or editing `pages/gk` articles, write them as G検定 study articles.
+
+- Prioritize conceptual understanding, similar-term confusion prevention, and answer-choice judgment.
+- Avoid deep mathematical derivations unless they directly help exam judgment.
+- Match the structure, granularity, and wording style of existing `pages/gk` articles.
+- Preserve `gk_section`, `gk_order`, and GK footer conventions unless the user explicitly requests a structural change.
+- Use GitHub Pages-compatible Markdown and simple Liquid.
+
+## DS Article Policy
+
+When creating or editing `pages/ds` articles, write them as DS検定 and beginner-friendly data-analysis study articles.
+
+- Prioritize intuition, practical use, and exam judgment.
+- Explain formulas, statistics, Python, SQL, and data-engineering topics from the viewpoint of how they are used.
+- Match the structure, granularity, and wording style of existing `pages/ds` articles.
+- Preserve existing `categories`, `tags`, `prev` / `next`, and related-link conventions unless the user explicitly requests cleanup.
+- Use GitHub Pages-compatible Markdown and simple Liquid.
+
 ## Editing Strategy
 
 When fixing site issues:
