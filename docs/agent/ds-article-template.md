@@ -73,22 +73,20 @@ Choose the parenthetical label according to the topic and nearby articles, for e
 
 Do not invent overly specific skill labels when nearby DS pages use broader labels.
 
-## Optional Related Articles Section
+## Standard Footer / Related Articles Include
 
-If related links are useful and nearby DS articles use a manual related-article section, use a concise section such as:
+Normal DS articles that use the standard related-article/footer pattern should place the shared include after the optional skill item section:
 
 ```md
-## 🔗 関連記事
-
-- [関連記事タイトル](/ds/example/)
+{% include ds_article_footer.html %}
 ```
 
 Rules:
 
-- Link only existing pages unless the user explicitly asks for planned links.
-- Confirm the target `permalink` from front matter.
-- Do not duplicate large blocks across many articles in this task.
-- Prefer a shared include if one exists and is already used safely by nearby DS pages.
+- Do not paste the large related-article Liquid block manually into new normal DS articles.
+- Keep `## 対応スキル項目（...）` before the footer include when that section is present.
+- Preserve an existing manual related/footer block only when the page has a special structure and the include would change behavior.
+- For special manual related links, link only existing pages unless the user explicitly asks for planned links, and confirm the target `permalink` from front matter.
 
 ## Comparison Articles
 
