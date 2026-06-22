@@ -7,6 +7,7 @@ categories: [business]
 tags: [ds, design]
 prev: /ds/wbs/
 next: /ds/five-forces-analysis/
+last_modified_at: 2026-06-22
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -239,13 +240,3 @@ DS検定では
   {% endif %}
 
 </div>
-
-
----
-
-layout: page
-title: カスタマージャーニーとは？顧客体験を理解するフレームワーク【DS検定】
-permalink: /ds/customer-journey/
-tags: [ds, business, marketing]
--------------------------------
-
