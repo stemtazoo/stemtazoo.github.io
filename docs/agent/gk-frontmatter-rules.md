@@ -53,11 +53,15 @@ title: ランダムフォレストとは？決定木との違いを整理【G検
 
 ## Description
 
-- Make the description unique to the page.
-- Explain what the reader will understand after reading.
-- Mention similar-term differences or exam judgment when natural.
-- Avoid repeating one long boilerplate sentence across many pages.
-- Do not contradict the page scope.
+- Make the description unique to each page.
+- Aim for roughly 120-160 Japanese characters.
+- Start with a clear definition or role of the concept when possible.
+- Explain what the reader can distinguish, judge, or understand after reading.
+- Include exam context such as `G検定` only when it fits naturally.
+- Avoid keyword stuffing.
+- Avoid generic boilerplate endings reused across many pages.
+- Do not make the description look like a bullet list.
+- Do not contradict the page title or page scope.
 
 ## `gk_section` And `gk_order`
 
