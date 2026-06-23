@@ -7,6 +7,7 @@ categories: [data-science]
 tags: [ds, evaluation]
 prev: /ds/predictive-analytics/
 next: /ds/bias-variance-tradeoff/
+last_modified_at: 2026-06-23
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -196,7 +197,7 @@ DS検定では
 
 ---
 
-【対応スキル項目（ビジネス力シート）】
+## 対応スキル項目（ビジネス力シート）
 
 * ビジネス理解
 * データ活用

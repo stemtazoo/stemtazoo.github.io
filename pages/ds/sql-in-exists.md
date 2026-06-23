@@ -7,7 +7,7 @@ categories: [data-engineering]
 tags: [ds, sql]
 prev: /ds/sql-having/
 next: /ds/sql-join/
-last_modified_at: 2026-06-22
+last_modified_at: 2026-06-23
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -124,7 +124,7 @@ WHERE EXISTS (
 
 ---
 
-【対応スキル項目（データエンジニアリング力シート）】
+## 対応スキル項目（データエンジニアリング力シート）
 
 * データ基盤
 * データ操作
