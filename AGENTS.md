@@ -10,6 +10,7 @@ This repository powers a Jekyll site with multiple content themes under `pages/`
 - `pages/ds`: Data Science / skill-check style content
 - `pages/gk`: G-kentei study content
 - `pages/sg`: Security / SG study content
+- `pages/fe`: Fundamental Information Technology Engineer Examination (FE) study content
 
 The project goal is not only to publish correct content, but to keep the site buildable on GitHub Pages and visually consistent across themes.
 
@@ -34,8 +35,8 @@ Agents should act like an editorial team for the whole blog operation:
 
 - Editor-in-Chief: manage the overall direction of the site, decide whether a request belongs as a new article, an update, a comparison article, a summary article, a category/index improvement, or internal-link work, and check whether pages overlap in role, search intent, or learning purpose.
 - SEO / AI Search Editor: review `title`, `description`, `permalink`, `tags`, and internal links so search engines and AI search systems can identify the preferred or representative page for each topic.
-- Learning Design Editor: maintain clear learning paths for `pages/sg`, `pages/ds`, and `pages/gk`, and separate the roles of individual articles, comparison articles, summary articles, category pages, and index pages.
-- Article Writer: write with the same structure, granularity, and wording style as existing pages; for SG content, prioritize exam judgment criteria used to eliminate incorrect choices; for DS content, prioritize practical Python and data-analysis explanations for beginners; for GK content, prioritize conceptual understanding, confusion prevention, and exam-focused review.
+- Learning Design Editor: maintain clear learning paths for `pages/sg`, `pages/ds`, `pages/gk`, and `pages/fe`, and separate the roles of individual articles, comparison articles, summary articles, category pages, and index pages.
+- Article Writer: write with the same structure, granularity, and wording style as existing pages; for SG content, prioritize exam judgment criteria used to eliminate incorrect choices; for DS content, prioritize practical Python and data-analysis explanations for beginners; for GK content, prioritize conceptual understanding, confusion prevention, and exam-focused review; for FE content, prioritize 科目A judgment and 科目B reading/use for beginner learners.
 - Copy Editor: check wording consistency, terminology, headings, explanation depth, Japanese readability, front matter consistency, and UTF-8 Japanese text.
 - Site Operations Editor: maintain category pages, index pages, related links, and `prev` / `next` navigation when appropriate, while keeping GitHub Pages compatibility as a top priority.
 - Site Quality / AdSense Readiness Editor: ensure pages are useful, original, trustworthy, and easy to navigate, and avoid thin content, copied content, or unnecessary duplication.
@@ -47,7 +48,7 @@ Before creating or editing content, agents must consider:
 - whether the request should be handled as a new article, an existing article update, a comparison article, a summary article, a category/index improvement, or internal-link improvement
 - whether the change improves the learning flow for readers
 - whether related category pages, index pages, internal links, or `prev` / `next` navigation should also be updated
-- whether the change preserves the existing editorial style for `pages/sg`, `pages/ds`, and `pages/gk`
+- whether the change preserves the existing editorial style for `pages/sg`, `pages/ds`, `pages/gk`, and `pages/fe`
 
 Do not optimize only one page in isolation when the change affects site structure.
 
@@ -58,6 +59,7 @@ Before creating a new article, agents must check for similar existing content un
 - `pages/sg`
 - `pages/ds`
 - `pages/gk`
+- `pages/fe`
 
 Use repository search, filenames, front matter, headings, and internal links to identify related pages before creating a new page.
 
@@ -207,6 +209,10 @@ Read the relevant detailed guide before changing each area:
 - DS front matter rules: `docs/agent/ds-frontmatter-rules.md`
 - DS tag rules: `docs/agent/ds-tag-rules.md`
 - DS navigation / prev-next rules: `docs/agent/ds-navigation-rules.md`
+- FE article writing policy: `docs/agent/fe-content-rules.md`
+- FE article template: `docs/agent/fe-article-template.md`
+- FE front matter rules: `docs/agent/fe-frontmatter-rules.md`
+- FE tag rules: `docs/agent/fe-tag-rules.md`
 
 - SG Markdown rendering safety (must-read before creating or editing SG articles):
   - `docs/agent/sg-article-template.md` (standard article structure and Markdown layout)
@@ -241,6 +247,21 @@ SG記事を新規作成・改善・横展開する場合は、必要に応じて
 - For laws and standards, focus on what the rule protects and how it is used, not on memorizing minor clauses.
 - Bridge 科目A knowledge and 科目B case-question judgment.
 - Match the structure, granularity, and wording style of existing `pages/sg` articles.
+- Use GitHub Pages-compatible Markdown and simple Liquid.
+
+## FE Article Policy
+
+When creating or editing `pages/fe` articles, write them as study articles for the 基本情報技術者試験 (FE).
+
+- Read `docs/agent/fe-content-rules.md`, `docs/agent/fe-article-template.md`, `docs/agent/fe-frontmatter-rules.md`, and `docs/agent/fe-tag-rules.md` before creating or editing FE articles.
+- Write in Japanese unless the user explicitly requests otherwise.
+- Normal FE articles should focus on one term or one concept per page.
+- Prioritize 科目A answer-choice judgment and 科目B reading/use over broad textbook-style explanations.
+- Always include `tags`, `fe_section`, `fe_subsection`, and `fe_order` for normal FE articles so they appear correctly on `/fe/`.
+- Use clickable Markdown links for official references; do not paste raw official URLs into article bodies.
+- Normal FE articles should end with `{% include fe_article_footer.html %}`.
+- FE related articles must be limited to FE pages and must not show DS, SG, or GK articles.
+- Do not add `prev` or `next` unless the user explicitly requests it.
 - Use GitHub Pages-compatible Markdown and simple Liquid.
 
 ## GK Article Policy
