@@ -1,0 +1,57 @@
+<div data-pagefind-ignore markdown="1">
+
+## 🔗 関連記事
+
+{% assign current_tags = page.tags %}
+{% assign count = 0 %}
+
+<ul style="padding-left: 20px;">
+{% if current_tags and current_tags.size > 0 %}
+  {% for p in site.pages %}
+    {% if p.url != page.url and p.tags %}
+      {% assign matched = false %}
+
+      {% for tag in current_tags %}
+        {% if p.tags contains tag and tag != "fe" %}
+          {% assign matched = true %}
+        {% endif %}
+      {% endfor %}
+
+      {% if matched %}
+        <li style="margin-bottom: 6px;">
+          <a href="{{ p.url | relative_url }}">{{ p.title }}</a>
+        </li>
+        {% assign count = count | plus: 1 %}
+      {% endif %}
+
+      {% if count >= 5 %}
+        {% break %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% if count == 0 %}
+  <li style="margin-bottom: 6px;">関連記事は準備中です。</li>
+{% endif %}
+</ul>
+
+<hr>
+
+<div style="margin-top: 16px;">
+  🏠 <a href="{{ '/fe/' | relative_url }}">基本情報技術者トップに戻る</a>
+</div>
+
+<div class="page-navigation" style="margin-top:12px;">
+  {% if page.prev %}
+    {% assign prev_page = site.pages | where: "url", page.prev | first %}
+    <a class="prev" href="{{ page.prev | relative_url }}">← {% if prev_page %}{{ prev_page.title }}{% else %}前の記事{% endif %}</a>
+  {% endif %}
+
+  {% if page.next %}
+    {% assign next_page = site.pages | where: "url", page.next | first %}
+    <a class="next" href="{{ page.next | relative_url }}">{% if next_page %}{{ next_page.title }}{% else %}次の記事{% endif %} →</a>
+  {% endif %}
+</div>
+
+</div>
