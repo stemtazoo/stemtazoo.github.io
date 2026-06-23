@@ -7,7 +7,7 @@ categories: [business]
 tags: [ds, design]
 prev: /ds/wbs/
 next: /ds/five-forces-analysis/
-last_modified_at: 2026-06-22
+last_modified_at: 2026-06-23
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -187,7 +187,7 @@ DS検定では
 
 ---
 
-【対応スキル項目（ビジネス力シート）】
+## 対応スキル項目（ビジネス力シート）
 
 * ビジネス理解
 * データ活用
