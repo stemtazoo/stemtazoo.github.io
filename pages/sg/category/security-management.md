@@ -33,8 +33,8 @@ permalink: /sg/category/security-management/
 - [リスク管理・リスク対応まとめ｜主要用語を整理](/sg/risk-management-summary/)
 - [リスクマネジメントとは？](/sg/risk-management/)
 - [脆弱性管理・診断運用まとめ｜主要用語を整理](/sg/vulnerability-management-summary/)
-- [インシデント対応・監視体制まとめ｜主要用語を整理](/sg/incident-response-summary/)
-- [インシデント対応・証拠保全まとめ｜主要用語を整理](/sg/incident-response-forensics-summary/)
+- [インシデント対応まとめ｜検知・初動対応・外部連携を整理](/sg/incident-response-summary/)
+- [証拠保全・デジタルフォレンジックまとめ｜インシデント後の判断軸](/sg/incident-response-forensics-summary/)
 - [インシデント管理とは？](/sg/incident-management/)
 - [ログ管理とは？](/sg/log-management/)
 - [委託先・契約・再委託管理まとめ｜主要用語を整理](/sg/vendor-outsourcing-summary/)
@@ -87,8 +87,8 @@ permalink: /sg/category/security-management/
 
 - [情報セキュリティ事象とは？](/sg/security-event/)
 - [情報セキュリティインシデントとは？](/sg/security-incident/)
-- [インシデント対応・監視体制まとめ｜主要用語を整理](/sg/incident-response-summary/)
-- [インシデント対応・証拠保全まとめ｜主要用語を整理](/sg/incident-response-forensics-summary/)
+- [インシデント対応まとめ｜検知・初動対応・外部連携を整理](/sg/incident-response-summary/)
+- [証拠保全・デジタルフォレンジックまとめ｜インシデント後の判断軸](/sg/incident-response-forensics-summary/)
 - [インシデント対応とは？](/sg/incident-response/)
 - [インシデント管理とは？](/sg/incident-management/)
 - [デジタルフォレンジックとは？](/sg/digital-forensics/)
@@ -119,7 +119,7 @@ permalink: /sg/category/security-management/
 
 試験では、「弱点を見つける検査」か「運用が適切か確認する監査」かで切り分けます。
 
-- [脆弱性検査とペネトレーションテストの違いとは？](/sg/vulnerability-scan/)
+- [脆弱性スキャンとは？自動検査で弱点を見つける仕組み](/sg/vulnerability-scan/)
 - [ファジングとは？](/sg/fuzzing/)
 - [CVSSとは？](/sg/cvss/)
 - [CVSSベースの対応優先順位演習｜脆弱性対応の判断基準を整理](/sg/cvss-priority-exercise/)

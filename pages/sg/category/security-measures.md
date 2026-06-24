@@ -27,9 +27,9 @@ permalink: /sg/category/security-measures/
 - [DNS・メールなりすまし対策まとめ｜SPF・DKIM・S/MIMEを整理](/sg/dns-mail-security-summary/)
 - [ネットワーク防御と通信保護まとめ｜主要用語を整理【SG試験】](/sg/network-defense-summary/)
 - [マルウェアまとめ｜種類・感染後の動き・解析方法を整理](/sg/malware-threats-summary/)
-- [暗号・認証まとめ｜主要用語を整理【SG試験】](/sg/crypto-auth-summary/)
-- [暗号・証明書・改ざん検知まとめ｜主要用語を整理【SG試験】](/sg/crypto-certificate-integrity-summary/)
-- [暗号・証明書・認証基盤まとめ｜主要用語を整理【SG試験】](/sg/crypto-auth-platform-summary/)
+- [暗号と認証の基本まとめ｜秘密にする・確認するを整理【SG試験】](/sg/crypto-auth-summary/)
+- [改ざん検知・電子署名・証明書まとめ｜完全性と真正性で整理【SG試験】](/sg/crypto-certificate-integrity-summary/)
+- [暗号・証明書・認証基盤まとめ｜証明書運用まで整理【SG試験】](/sg/crypto-auth-platform-summary/)
 
 ## 分野別に読む
 
@@ -181,7 +181,7 @@ permalink: /sg/category/security-measures/
 試験では、「弱点を見つける」か「攻撃後の証拠を調べる」かで切り分けます。
 
 - [脆弱性対策まとめ｜JVN・CVSS・検査・ペンテスト・ファジングの違い](/sg/vulnerability-cheatsheet/)
-- [脆弱性検査とペネトレーションテストの違いとは？判断基準を整理](/sg/vulnerability-scan/)
+- [脆弱性スキャンとは？自動検査で弱点を見つける仕組み](/sg/vulnerability-scan/)
 - [ファジングとは？脆弱性を見つけるテスト手法を整理](/sg/fuzzing/)
 - [CVSSとは？脆弱性の深刻度を共通スコアで判断する](/sg/cvss/)
 - [JVNとは？脆弱性情報の見方とJVN iPediaとの違い](/sg/jvn/)

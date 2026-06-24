@@ -1,15 +1,15 @@
 ---
 layout: page
-title: 暗号・認証まとめ｜主要用語を整理【SG試験】
-description: "暗号・認証は、機密性・完全性・真正性をどう実現するかを見分ける分野です。SG試験で頻出の用語の違い、選択肢を切る判断基準、学習順序を一つに整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+title: 暗号と認証の基本まとめ｜秘密にする・確認するを整理【SG試験】
+description: "暗号と認証の基本として、暗号化、ハッシュ、MAC、電子署名を「秘密にする」「改ざんを確認する」「相手を確認する」に分けて整理します。SG試験で証明書・認証基盤の詳細へ進む前に、主要用語の役割、鍵の使い方、選択肢の切り方を短時間で復習できます。"
 permalink: /sg/crypto-auth-summary/
 tags: [sg, sg-security-measures, crypto_auth]
-last_modified_at: 2026-06-12
+last_modified_at: 2026-06-24
 ---
 
 ## まず結論
 
-- このシリーズでは、**「何を守る技術か」**で暗号・認証用語を切り分けられるようになることを目標にします。
+- このページでは、暗号・認証の入口として、**「秘密にする」「改ざんを確認する」「相手を確認する」**の3観点で主要用語を切り分けます。
 - SG試験では、暗号（秘密にする）、ハッシュ（改ざん検知）、署名（送信者証明）を混同しないことが得点の鍵です。
 - 丸暗記ではなく、**復号の要否・鍵の使い方・確認したい性質（機密性/完全性/真正性）**の3観点で判断します。
 
@@ -35,7 +35,7 @@ last_modified_at: 2026-06-12
 | [公開鍵暗号方式](/sg/public-key-cryptography/) | 公開鍵と秘密鍵を使い分ける方式。鍵配送問題を緩和。 |
 | [ハイブリッド暗号方式](/sg/hybrid-cryptography/) | 通信本体は共通鍵、鍵配送は公開鍵で行う実運用型。 |
 | [ハッシュ関数](/sg/hash-function/) | 復号しない要約値で整合性を確認。改ざん検知に使う。 |
-| [メッセージ認証コード（MAC）](/sg/message-authentication-code/) | 共通鍵を使って改ざん・なりすましを検知。送信者共有鍵前提。 |
+| [メッセージ認証符号（MAC）](/sg/message-authentication-code/) | 共通鍵を使って改ざん・なりすましを検知。送信者共有鍵前提。 |
 | [デジタル署名](/sg/digital-signature/) | 秘密鍵で署名し、公開鍵で検証。真正性・否認防止に強い。 |
 | [電子証明書](/sg/digital-certificate/) | 公開鍵が誰のものかを第三者（認証局）が証明する。 |
 | [SSL/TLS](/sg/ssl-tls/) | 通信路の暗号化とサーバ認証を提供するプロトコル。 |
@@ -61,7 +61,7 @@ last_modified_at: 2026-06-12
 2. [公開鍵暗号方式](/sg/public-key-cryptography/)
 3. [ハイブリッド暗号方式](/sg/hybrid-cryptography/)
 4. [ハッシュ関数](/sg/hash-function/)
-5. [メッセージ認証コード（MAC）](/sg/message-authentication-code/)
+5. [メッセージ認証符号（MAC）](/sg/message-authentication-code/)
 6. [デジタル署名](/sg/digital-signature/)
 7. [電子証明書](/sg/digital-certificate/)
 8. [SSL/TLS](/sg/ssl-tls/)
@@ -81,7 +81,7 @@ last_modified_at: 2026-06-12
 ### 完全性・真正性の確認
 
 - [ハッシュ関数とは？改ざん検知の基本をやさしく整理【SG試験】](/sg/hash-function/)
-- [メッセージ認証コード（MAC）とは？改ざん検知の仕組み【SG試験】](/sg/message-authentication-code/)
+- [メッセージ認証符号（MAC）とは？共有鍵で改ざんを検知する仕組み【SG試験】](/sg/message-authentication-code/)
 - [デジタル署名とは？改ざん検知となりすまし防止の仕組み【SG試験】](/sg/digital-signature/)
 
 ### 証明書と通信路保護

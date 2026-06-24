@@ -1,16 +1,16 @@
 ---
 layout: page
-title: "メッセージ認証とは？改ざん検知と送信者確認の仕組み【SG試験】"
-description: "メッセージ認証の要点を押さえるため、改ざん検知・送信者確認・否認防止の違いを比較し、MACや電子署名を設問文から正しく選ぶ判断軸を身につけられます。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。"
+title: "メッセージ認証とは？MAC・電子署名との違い【SG試験】"
+description: "メッセージ認証は、データの改ざん有無や送信者の正しさを確認する考え方です。SG試験でMAC、電子署名、否認防止を混同しないように、共有鍵を使うのか公開鍵で第三者に証明できるのか、何を確認したい場面なのかを比較して整理します。"
 permalink: /sg/message-authentication/
 prev: /sg/hash-collision-resistance/
 next: /sg/message-authentication-code/
 tags: [sg, security_general, crypto_auth, access_control, sg-security-overview]
-last_modified_at: 2026-05-08
+last_modified_at: 2026-06-24
 ---
 
 ## まず結論
-メッセージ認証とは、**「データが改ざんされていないこと」と「送信者が正しいこと」を確認する仕組み**であり、SG試験では「電子署名との関係」で問われることが多い。
+メッセージ認証とは、**データが改ざんされていないこと**と**送信者が正しいこと**を確認する考え方です。SG試験では、MACや電子署名などの具体的な仕組みを選ばせる問題として問われます。
 
 ---
 
