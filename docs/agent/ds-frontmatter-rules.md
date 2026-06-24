@@ -58,17 +58,36 @@ title: LEFT JOINでWHERE句を使うときの注意点【SQL・DS検定】
 
 ## Description
 
-- Make the description unique to each page.
-- Aim for roughly 120-160 Japanese characters.
+When creating or revising the `description` field in front matter:
+
+- Do not use boilerplate descriptions that could fit any article.
+- Avoid generic phrases such as `初心者向けにわかりやすく解説します`, `基本から整理します`, `試験対策として重要なポイントを解説します`, or `この記事では〜について説明します`.
+- The description must summarize the article-specific learning value.
+- Include at least one concrete element from the article, such as the main judgment criterion, a common misunderstanding, a distinction from a similar term, a typical exam trap, a practical use case, or the type of question where the concept appears.
+- Prefer roughly 80-140 Japanese characters when natural. Do not simply lengthen the description by adding filler.
+- Do not repeat the title with minor wording changes.
+- Make each description unique enough that it could not be reused for another article without editing.
+- For DS articles, prioritize descriptions that show what data literacy judgment the reader will be able to make, what practical misunderstanding the article prevents, and how the concept appears in analysis, statistics, visualization, business use, or data handling.
 - Start with a clear definition or role of the concept when possible.
-- Explain what the reader can distinguish, judge, or understand after reading.
 - Include exam context such as `DS検定` only when it fits naturally.
 - Avoid keyword stuffing.
-- Avoid generic boilerplate endings reused across many pages.
 - Do not make the description look like a bullet list.
 - Do not contradict the page title or page scope.
 - Do not duplicate the same sentence as visible body text unless intentionally rewritten.
 
+Bad / good examples:
+
+```yaml
+# Bad
+description: 相関係数について初心者向けにわかりやすく解説します。
+# Good
+description: 相関係数を「2つの量が一緒に増減する強さ」として整理し、因果関係との混同や外れ値に左右される分析上の注意点を解説します。
+
+# Bad
+description: SQLのJOINの基本を整理します。
+# Good
+description: JOINを「複数テーブルをキーで結合する操作」として整理し、INNER JOINとLEFT JOINで残る行が変わる実務上の判断ポイントを解説します。
+```
 ## Categories
 
 - Check nearby DS articles before choosing `categories`.
