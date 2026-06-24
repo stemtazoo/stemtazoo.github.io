@@ -1,12 +1,12 @@
 ---
 layout: page
 title: "攻撃者の種類とは？目的と特徴で整理する【SG試験】"
-description: "攻撃者の種類はサイバー攻撃を目的別に整理する分類です。この記事では愉快犯・金銭目的・内部不正の違い、対策選定の要点、SG試験・情報セキュリティマネジメント試験で狙われるひっかけポイントを解説します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: 攻撃者の種類を、愉快犯、金銭目的、内部不正、組織的攻撃などの目的別に整理します。脅威の動機を読み取り、技術対策だけでなく教育・権限管理・監視のどれを優先するかをSG試験向けに判断します。内部者か外部者かで責任範囲が変わる点も確認します。対策の優先順位を読み違えないための復習にも使えます。
 permalink: /sg/attacker-types/
 tags: [sg, security_general, threat_vulnerability, security_awareness, sg-security-overview]
 prev: /sg/
 next: /sg/availability/
-last_modified_at: 2026-05-20
+last_modified_at: 2026-06-24
 ---
 
 ## まず結論

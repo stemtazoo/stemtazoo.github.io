@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 改ざん検知・電子署名・証明書まとめ｜完全性と真正性で整理【SG試験】
-description: "改ざん検知・電子署名・証明書を、完全性、真正性、否認防止の観点で比較します。SG試験でハッシュ、MAC、電子署名、電子証明書、CRL/OCSPを混同せず、鍵の有無、否認防止、証明書の有効性確認から選択肢を判断できるようにします。"
+description: 改ざん検知・電子署名・証明書を、完全性・真正性・否認防止の違いから比較します。ハッシュ、MAC、電子署名、電子証明書、CRL/OCSPを鍵の種類と第三者証明の有無で判断するSG試験向けまとめです。暗号化と署名を混同する誤答を避けます。証明書の有効性確認を問う問題にもつなげます。
 permalink: /sg/crypto-certificate-integrity-summary/
 tags: [sg, sg-security-measures, crypto_auth]
 last_modified_at: 2026-06-24

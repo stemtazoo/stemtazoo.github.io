@@ -1,12 +1,12 @@
 ---
 layout: page
 title: Recall（再現率）とは？見逃しを評価する指標【G検定対策】
-description: "Recall（再現率）を、実際に陽性だったものをどれだけ拾えたかを見る指標として整理します。PrecisionやAccuracyとの分母の違い、FN（見逃し）を減らしたい場面、G検定で選択肢を切る判断軸を確認できます。"
+description: Recall（再現率）は、実際に陽性のものをどれだけ見逃さず拾えたかを表す評価指標です。Precision・Accuracyとの分母の違い、医療検査や不正検知などFNを減らしたい場面での選択肢判断を整理します。適合率とのトレードオフも押さえます。
 permalink: /gk/recall/
 tags: [gk, 機械学習, 評価指標, 頻出]
 gk_section: 機械学習の概要/モデルの選択・評価
 gk_order: 4
-last_modified_at: 2026-06-22
+last_modified_at: 2026-06-24
 ---
 
 ## まず結論

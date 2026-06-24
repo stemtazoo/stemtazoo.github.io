@@ -1,12 +1,12 @@
 ---
 layout: page
 title: "CRLとは？失効証明書リストの役割【SG試験】"
-description: "CRLは失効した電子証明書を管理し不正利用を防ぐ仕組みです。この記事では有効期限との違い、証明書検証時の役割、SG試験・情報セキュリティマネジメント試験で混同しやすいひっかけポイントと試験対策を解説します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: CRLは、失効した電子証明書を一覧で確認し、期限内でも信頼できなくなった証明書を排除する仕組みです。有効期限、OCSP、CAの役割と混同せず、証明書検証時に何を確認するのかを整理します。秘密鍵漏えい時の対応判断にも関係します。失効確認を省くリスクも試験文から読み取れるようにします。
 permalink: /sg/crl/
 tags: [sg, security_general, crypto_auth, risk_assessment, sg-security-overview]
 prev: /sg/cracker/
 next: /sg/cryptojacking/
-last_modified_at: 2026-05-20
+last_modified_at: 2026-06-24
 ---
 
 ## まず結論

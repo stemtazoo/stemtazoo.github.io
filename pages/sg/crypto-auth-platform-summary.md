@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 暗号・証明書・認証基盤まとめ｜証明書運用まで整理【SG試験】
-description: "暗号・証明書・認証基盤を、暗号化、ハッシュ、MAC、電子署名、電子証明書、CA、CRL/OCSPの役割まで一連で整理します。SG試験で機密性・完全性・真正性・否認防止のどれを問う選択肢かを、証明書の信頼と失効確認まで含めて切り分けます。"
+description: 暗号・証明書・認証基盤を、暗号化、ハッシュ、MAC、電子署名、CA、CRL/OCSPまで一連の信頼確認として整理します。機密性・完全性・真正性・否認防止のどれを満たす仕組みかをSG試験向けに切り分けます。HTTPSや電子署名の実務場面にもつなげます。
 permalink: /sg/crypto-auth-platform-summary/
 tags: [sg, sg-security-measures, crypto_auth]
 last_modified_at: 2026-06-24

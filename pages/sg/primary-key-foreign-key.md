@@ -1,12 +1,12 @@
 ---
 layout: page
 title: 主キー・外部キーとは？表を識別し関係づける基本【SG試験】
-description: "主キーは表の行を一意に識別する項目、外部キーは別の表との関係を表す項目です。この記事では主キーと外部キーの違い、ER図やデータモデルとの関係、SG試験・情報セキュリティマネジメント試験で迷いやすいポイントを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: 主キーは表の行を一意に識別する項目、外部キーは別表の行との関係を保つ項目です。重複禁止と参照整合性の違い、ER図やデータモデルで何を表しているかをSG試験向けに整理します。候補キーや単なる項目名との混同を防ぎます。更新時の不整合を防ぐ観点でも確認します。
 permalink: /sg/primary-key-foreign-key/
 tags: [sg, database, system_planning, data_modeling]
 prev: /sg/data-model/
 next: /sg/database-normalization/
-last_modified_at: 2026-05-20
+last_modified_at: 2026-06-24
 ---
 
 ## まず結論
