@@ -143,6 +143,7 @@ Duplicate or near-duplicate pages may not be a penalty by themselves, but they c
 
 When creating or editing pages, agents should check:
 
+- whether the page follows the shared AI search / grounding-oriented readability rules in `docs/agent/ai-search-content-rules.md`
 - whether the page has a clear and unique search intent
 - whether the `title` and `description` are distinct from similar pages
 - whether the `permalink` reflects the page scope
@@ -192,6 +193,7 @@ Read the relevant detailed guide before changing each area:
 - GitHub Pages / Liquid compatibility: `docs/agent/github-pages-compat.md`
 - IndexNow deployment automation: `docs/agent/indexnow.md`
 - Theme and layout consistency: `docs/agent/theme-consistency.md`
+- AI search / grounding-oriented readability: `docs/agent/ai-search-content-rules.md`
 - SG article writing policy: `docs/agent/sg-content-rules.md`
 - SG article template: `docs/agent/sg-article-template.md`
 - SG front matter rules: `docs/agent/sg-frontmatter-rules.md`
