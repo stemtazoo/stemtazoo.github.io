@@ -1,7 +1,7 @@
 ---
 layout: page
 title: インシデント対応まとめ｜検知・初動対応・外部連携を整理【SG試験】
-description: "インシデント対応を、ログ監視、事象判断、初動対応、原因分析、復旧、外部連携の流れで整理します。SG試験でSOC、CSIRT、JPCERT/CC、SIEM、SOARなどの役割を、監視するのか対応するのかで切り分けます。"
+description: インシデント対応を、検知、初動、封じ込め、原因分析、復旧、再発防止の流れで整理します。SOC・CSIRT・JPCERT/CC・SIEM・SOARを「監視する組織か、対応する組織か、支援する仕組みか」で切り分けます。科目Bの対応順序の判断にも使えます。
 permalink: /sg/incident-response-summary/
 tags: [sg, sg-security-management, incident_management]
 last_modified_at: 2026-06-24

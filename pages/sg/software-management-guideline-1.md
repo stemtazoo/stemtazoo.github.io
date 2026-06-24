@@ -1,7 +1,7 @@
 ---
 layout: page
 title: ソフトウェア管理ガイドラインの管理責任者・監査・教育【SG試験】
-description: ソフトウェア管理ガイドラインのうち、管理責任者の任命、管理規則、使用状況の監査、教育に絞って整理する復習ページです。SG試験で違法コピー防止の組織的管理を選ぶ判断軸を確認します。
+description: ソフトウェア管理ガイドラインのうち、管理責任者の任命、管理規則、使用状況の監査、教育に焦点を当てます。違法コピー防止を個人任せにせず、組織的な管理策として選ぶSG試験の判断軸を確認します。ライセンス管理の責任所在も整理します。監査や教育を選ぶ場面の根拠も明確にします。
 permalink: /sg/software-management-guideline-operations/
 tags: [sg, sg-security-management, asset_management, system_audit, security_training]
 last_modified_at: 2026-06-24

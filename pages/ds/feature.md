@@ -1,13 +1,13 @@
 ---
 layout: page
 title: 特徴量（Feature）とは？機械学習で使う入力データを理解する【DS検定】
-description: "特徴量は、機械学習モデルに入力する説明変数です。目的変数や生データとの違い、特徴量エンジニアリングとの関係、予測精度やリークを避けるための実務上の判断ポイントをDS検定向けに整理します。"
+description: 特徴量は、機械学習モデルが予測や分類に使う入力データです。目的変数や生データとの違い、特徴量エンジニアリング、リークや不要な変数による精度低下を避ける実務上の判断ポイントをDS検定向けに整理します。数値化・カテゴリ変換・業務知識の使いどころも確認します。
 permalink: /ds/feature/
 categories: [business]
 tags: [ds, design]
 prev: /ds/estimator-properties/
 next: /ds/feature-engineering2/
-last_modified_at: 2026-06-22
+last_modified_at: 2026-06-24
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>

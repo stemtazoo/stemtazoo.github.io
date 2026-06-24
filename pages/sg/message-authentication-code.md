@@ -1,7 +1,7 @@
 ---
 layout: page
 title: メッセージ認証符号（MAC）とは？共有鍵で改ざんを検知する仕組み【SG試験】
-description: "メッセージ認証符号（MAC）は、共有鍵を使ってメッセージの改ざん有無と送信者の正しさを確認する仕組みです。SG試験でハッシュ、電子署名、否認防止との違いを、鍵を使うか、第三者に証明できるか、共有鍵前提かで判断します。"
+description: メッセージ認証符号（MAC）は、共有鍵を使ってメッセージの改ざん有無と送信元の正しさを確認する仕組みです。ハッシュ、電子署名、否認防止との違いを、共有鍵か公開鍵か、第三者に証明できるかで整理します。完全性と真正性の範囲を見極めます。受信者だけが確認できる点も誤答回避に役立ちます。
 permalink: /sg/message-authentication-code/
 prev: /sg/message-authentication/
 next: /sg/digital-signature/

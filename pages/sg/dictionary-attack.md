@@ -1,12 +1,12 @@
 ---
 layout: page
 title: "辞書攻撃とは？効率的なパスワード破解の仕組み【SG試験】"
-description: "辞書攻撃は単語リストを使って認証突破を狙う手口です。この記事では総当たり攻撃との違い、破られやすい条件、多要素認証の効果、SG試験・情報セキュリティマネジメント試験で狙われるひっかけポイントと試験対策を解説します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: 辞書攻撃は、よく使われる単語や漏えい済みパスワードのリストを試して認証突破を狙う攻撃です。総当たり攻撃との違い、推測されやすいパスワードの危険性、多要素認証やロックアウトの効果を整理します。単語リストを使う点が判断の決め手です。パスワードポリシーの効果を選ぶ問題にもつなげます。
 permalink: /sg/dictionary-attack/
 tags: [sg, security_measures, unauthorized_access, threat_vulnerability, access_control, sg-security-measures]
 prev: /sg/dhcp/
 next: /sg/directory-traversal/
-last_modified_at: 2026-05-20
+last_modified_at: 2026-06-24
 ---
 
 ## まず結論

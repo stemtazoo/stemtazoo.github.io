@@ -1,12 +1,12 @@
 ---
 layout: page
 title: 教師強制（Teacher Forcing）とは？正解を次の入力に使う学習手法【G検定対策】
-description: 教師強制（Teacher Forcing）は、系列モデルの学習時にモデルの予測ではなく正解ラベルを次の入力として与える学習手法です。この記事ではRNNや系列生成での役割、推論時との違い、exposure biasとの関係、G検定でのひっかけポイントを整理します。
+description: 教師強制（Teacher Forcing）は、系列モデルの学習中に前時刻の予測ではなく正解トークンを次の入力へ渡す方法です。推論時との入力条件の差、Exposure Biasとの関係、RNN・Seq2Seqの生成問題での選択肢判断を整理します。
 permalink: /gk/teacher-forcing/
 tags: [gk, rnn, neural_network]
 gk_section: ディープラーニングの要素技術/リカレントニューラルネットワーク (RNN)
 gk_order: 14
-last_modified_at: 2026-05-06
+last_modified_at: 2026-06-24
 ---
 
 ## まず結論

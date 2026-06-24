@@ -1,12 +1,12 @@
 ---
 layout: page
 title: よく出るポート番号とは？試験での見分け方を整理【SG試験】
-description: "よく出るポート番号は主要サービス識別に使うSG試験・情報セキュリティマネジメント試験頻出の番号群です。この記事ではHTTP・HTTPS・SMTPなどの役割、暗記のコツ、選択肢で狙われるひっかけポイントを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: ポート番号は、通信先でどのサービスを使うかを識別する番号です。HTTP・HTTPS・SMTP・DNSなどの代表例を、プロトコル名だけでなく用途と安全な通信かどうかの観点でSG試験向けに整理します。暗記だけでなくファイアウォール設定の読み取りにもつなげます。
 permalink: /sg/common-port-numbers/
 tags: [sg, technology, network, security_measures, unauthorized_access, sg-security-measures]
 prev: /sg/common-mistakes/
 next: /sg/contract-nonconformity/
-last_modified_at: 2026-05-25
+last_modified_at: 2026-06-24
 ---
 
 ## まず結論
