@@ -75,7 +75,7 @@ permalink: /sg/category/security-management/
 - [リスクマネジメントとは？](/sg/risk-management/)
 - [リスクアセスメントとは？](/sg/risk-assessment/)
 - [リスク基準（受容基準）とは？](/sg/risk-criteria/)
-- [リスク対応とは？4つの対処方法を整理](/sg/risk-treatment/)
+- [リスク対応とは？基本概念と4つの分類を整理](/sg/risk-treatment/)
 - [残留リスクとは？](/sg/residual-risk/)
 - [情報資産台帳とは？](/sg/asset-register/)
 - [リスク対応とCIAの関係を整理](/sg/risk-response-cia/)

@@ -1,9 +1,9 @@
 ---
 layout: page
-title: "リスク対応とは？4つの対処方法を整理【SG試験】"
+title: "リスク対応とは？基本概念と4つの分類を整理【SG試験】"
 description: リスク対応は、リスク評価の結果をもとに、リスクを低減・回避・移転・受容のどれで扱うかを決めて実行することです。リスクアセスメントとの違い、保険や委託による移転、対策実施後の残留リスクをSG試験向けに整理します。科目Aの用語理解と科目Bのケース判断で迷いやすい表現も確認します。
 permalink: /sg/risk-treatment/
-tags: [sg, security_management, risk_assessment, it_security_operations, sg-security-management]
+tags: [sg, sg-security-management, risk_assessment, it_security_operations]
 prev: /sg/risk-response-cia/
 next: /sg/rootkit/
 last_modified_at: 2026-06-24
@@ -17,7 +17,7 @@ SG試験では「その対策がどの種類のリスク対応か」を判断さ
 
 ## このページで切り分けること（先にここだけ）
 
-このページは、**4つのリスク対応（回避・低減・共有・受容）**を中心に整理します。
+このページは、**リスク対応の基本概念と4分類（回避・低減・共有・受容）**を中心に整理します。評価後の流れ全体ではなく、「リスクをどう扱うか」という用語の意味と分類を確認するためのページです。
 
 - 回避：リスク源そのものを避ける
 - 低減：発生確率や影響を下げる
@@ -42,6 +42,7 @@ SG試験では「その対策がどの種類のリスク対応か」を判断さ
 
 - リスク対応の全体像を確認したい → [リスク対応の全体像とは？評価後に対処方針を決める流れ【SG試験】](/sg/risk-response/)
 - 残留リスクを確認したい → [残留リスクとは？対応後にも残るリスクを理解する【SG試験】](/sg/residual-risk/)
+- 具体例で4分類を見分けたい → [リスク対応の具体例で覚える回避・低減・移転・受容【SG試験】](/sg/risk-treatment2/)
 - コントロールとファイナンスの違いを確認したい → [リスクコントロールとリスクファイナンスの違い【SG試験】](/sg/risk-control-vs-risk-finance/)
 
 ---
