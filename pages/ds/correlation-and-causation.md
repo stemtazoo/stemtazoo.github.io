@@ -1,12 +1,13 @@
 ﻿---
 layout: page
-title: 相関と因果の違いを一発で整理【DS検定リテラシー】
-description: "相関と因果の違いは、相関と因果の違いを一発で整理を理解するための基本テーマです。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。初学者が迷いやすい判断ポイントも確認します。"
+title: 相関があっても因果とは限らない理由を例で理解する【DS検定】
+description: "アイス売上や広告費の例を使い、相関だけでは因果を断定できない理由を確認します。代表ページで整理した相関と因果の違いを、初学者向けの具体例で復習します。"
 permalink: /ds/correlation-and-causation/
 categories: [data-science]
 tags: [ds, statistics]
 prev: /ds/chi-square-distribution/
 next: /ds/correlation-coefficient-determination/
+last_modified_at: 2026-06-24
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -15,7 +16,10 @@ next: /ds/correlation-coefficient-determination/
 
 ## まず結論
 
-**相関とは「一緒に変化する関係」、因果とは「原因と結果の関係」です。**  
+
+**相関とは「一緒に変化する関係」、因果とは「原因と結果の関係」です。**
+
+このページでは、相関と因果の網羅的な整理ではなく、アイス売上や広告費のような具体例から「相関があっても因果とは限らない」理由を理解します。
 
 DS検定では、「相関がある＝原因である」と早合点していないかを問われることが多いです。
 

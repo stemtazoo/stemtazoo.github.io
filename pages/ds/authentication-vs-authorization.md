@@ -1,12 +1,13 @@
 ﻿---
 layout: page
-title: 認証と認可の違いとは？一発で整理【DS検定リテラシー】
-description: 認証と認可の違いをアクセス制御の基本として整理します。本人確認を行う認証と、利用できる操作や資源を決める認可を切り分け、ログイン後の権限管理やDS検定での判断ポイントを確認できます。本文では、用語の定義、具体例、似た概念との違い、試験で迷いやすい選択肢の見分け方まで、短時間で復習できるようにまとめています。
+title: 認証・認可・アクセス制御の関係を例で理解する【DS検定】
+description: "認証と認可の基本を押さえたうえで、社内システムやAPI利用の例からアクセス制御の流れを確認します。本人確認、権限判断、OAuthを混同しないための実践的な見分け方を整理します。"
 permalink: /ds/authentication-vs-authorization/
 categories: [business]
 tags: [ds, security, design]
 prev: /ds/authentication-authorization/
 next: /ds/constructor/
+last_modified_at: 2026-06-24
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -15,10 +16,12 @@ next: /ds/constructor/
 
 ## まず結論
 
-認証（Authentication）は「あなたは誰かを確認すること」、  
-認可（Authorization）は「あなたに何を許可するかを決めること」です。
 
-DS検定では、この2つを**明確に切り分けられるか**がよく問われます。
+認証（Authentication）は「あなたは誰かを確認すること」、認可（Authorization）は「あなたに何を許可するかを決めること」です。
+
+このページでは、認証と認可の定義だけでなく、社内システム・クラウド・API利用の例から、アクセス制御の流れを理解します。
+
+DS検定では、この2つを**明確に切り分けたうえで、OAuthなどの具体例を判断できるか**がよく問われます。
 
 
 ## 直感的な説明
