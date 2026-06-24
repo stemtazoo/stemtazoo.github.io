@@ -6,6 +6,7 @@ Use these rules when creating or editing 基本情報技術者試験 (FE) articl
 
 Always check the related rule files as needed:
 
+- AI search / grounding-oriented readability: `docs/agent/ai-search-content-rules.md`
 - Normal article structure: `docs/agent/fe-article-template.md`
 - Front matter: `docs/agent/fe-frontmatter-rules.md`
 - Tags: `docs/agent/fe-tag-rules.md`

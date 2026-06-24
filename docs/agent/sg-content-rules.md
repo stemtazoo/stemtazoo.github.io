@@ -6,6 +6,7 @@ Use these rules when creating or editing Information Security Management Examina
 
 Always check the related rule files as needed:
 
+- AI search / grounding-oriented readability: `docs/agent/ai-search-content-rules.md`
 - Normal article structure: `docs/agent/sg-article-template.md`
 - Front matter: `docs/agent/sg-frontmatter-rules.md`
 - Tags: `docs/agent/sg-tag-rules.md`

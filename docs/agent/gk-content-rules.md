@@ -6,6 +6,7 @@ Use these rules when creating or editing G検定 study articles under `pages/gk`
 
 Always check the related rule files as needed:
 
+- AI search / grounding-oriented readability: `docs/agent/ai-search-content-rules.md`
 - Normal article structure: `docs/agent/gk-article-template.md`
 - Front matter: `docs/agent/gk-frontmatter-rules.md`
 - Tags: `docs/agent/gk-tag-rules.md`

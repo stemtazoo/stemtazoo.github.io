@@ -6,6 +6,7 @@ Use these rules when creating or editing Data Science / DS検定 articles under 
 
 Always check the related rule files as needed:
 
+- AI search / grounding-oriented readability: `docs/agent/ai-search-content-rules.md`
 - Normal article structure: `docs/agent/ds-article-template.md`
 - Front matter: `docs/agent/ds-frontmatter-rules.md`
 - Tags: `docs/agent/ds-tag-rules.md`
