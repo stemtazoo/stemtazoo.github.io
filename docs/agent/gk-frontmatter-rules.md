@@ -58,16 +58,35 @@ title: ランダムフォレストとは？決定木との違いを整理【G検
 
 ## Description
 
-- Make the description unique to each page.
-- Aim for roughly 120-160 Japanese characters.
+When creating or revising the `description` field in front matter:
+
+- Do not use boilerplate descriptions that could fit any article.
+- Avoid generic phrases such as `初心者向けにわかりやすく解説します`, `基本から整理します`, `試験対策として重要なポイントを解説します`, or `この記事では〜について説明します`.
+- The description must summarize the article-specific learning value.
+- Include at least one concrete element from the article, such as the main judgment criterion, a common misunderstanding, a distinction from a similar term, a typical exam trap, a practical use case, or the type of question where the concept appears.
+- Prefer roughly 80-140 Japanese characters when natural. Do not simply lengthen the description by adding filler.
+- Do not repeat the title with minor wording changes.
+- Make each description unique enough that it could not be reused for another article without editing.
+- For GK articles, prioritize descriptions that show how to distinguish the term from similar AI/ML concepts, what exam trap or selection criterion the article helps with, and what role the concept has in machine learning, deep learning, evaluation, optimization, or AI systems.
 - Start with a clear definition or role of the concept when possible.
-- Explain what the reader can distinguish, judge, or understand after reading.
 - Include exam context such as `G検定` only when it fits naturally.
 - Avoid keyword stuffing.
-- Avoid generic boilerplate endings reused across many pages.
 - Do not make the description look like a bullet list.
 - Do not contradict the page title or page scope.
 
+Bad / good examples:
+
+```yaml
+# Bad
+description: 過学習について初心者向けにわかりやすく解説します。
+# Good
+description: 過学習を「訓練データに合わせすぎて未知データで精度が落ちる状態」として整理し、汎化・正則化・検証データとの関係をG検定向けに解説します。
+
+# Bad
+description: 勾配降下法の基本を整理します。
+# Good
+description: 勾配降下法を「損失が小さくなる向きへ重みを更新する最適化手法」として整理し、学習率や局所最適に関する選択肢の判断軸を解説します。
+```
 ## `gk_section` And `gk_order`
 
 `gk_section` and `gk_order` support GK learning paths and indexes.
