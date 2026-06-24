@@ -1,10 +1,10 @@
 ---
 layout: page
 title: バッファーオーバーフローとは？メモリ領域を超える攻撃を整理【SG試験】
-description: "バッファーオーバーフローは、確保されたメモリ領域を超えてデータを書き込み、異常終了や不正コード実行を引き起こす脆弱性です。SG試験でSQLインジェクションやXSSと切り分ける判断基準を整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: バッファーオーバーフローを領域外への書込みで異常終了や不正コード実行を招く脆弱性として整理し、SQLインジェクションやXSSとの入力悪用の違いを判断します。 境界チェック不足が原因になる点を押さえ、文字列を画面に出す攻撃やSQL文を改変する攻撃を選ばせるひっかけを避けます。
 permalink: /sg/buffer-overflow/
 tags: [sg, sg-security-overview, threat_vulnerability, unauthorized_access]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-06-24
 ---
 
 ## まず結論

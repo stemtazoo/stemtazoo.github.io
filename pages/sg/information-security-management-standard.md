@@ -1,12 +1,12 @@
 ---
 layout: page
 title: 情報セキュリティ管理基準とは？情報セキュリティ監査の判断基準を整理【SG試験】
-description: "情報セキュリティ管理基準は、情報セキュリティ監査で管理策の妥当性を判断するための基準です。JIS Q 27001、JIS Q 27002との関係、管理策と詳細管理策、SG試験で問われやすい守秘義務の考え方を整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: 情報セキュリティ管理基準を監査で管理策の妥当性を確認する基準として整理し、JIS Q 27001・27002との関係や守秘義務を問う選択肢の見分け方を押さえます。 管理策が実施されているかを見る監査の文脈で使う点を押さえ、認証取得そのものを定める規格との混同を防ぎます。
 permalink: /sg/information-security-management-standard/
 tags: [sg, sg-security-management, isms, system_audit, security_standard]
 prev: /sg/security-audit/
 next: /sg/information-security-audit-standard/
-last_modified_at: 2026-06-02
+last_modified_at: 2026-06-24
 ---
 
 ## まず結論

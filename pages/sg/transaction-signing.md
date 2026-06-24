@@ -1,10 +1,10 @@
 ---
 layout: page
 title: トランザクション署名とは？MITBによる不正送金を防ぐ判断軸【SG試験】
-description: "トランザクション署名は、送金先や金額など取引内容にひもづけて署名値を作ることで改ざんを検知する仕組みです。SG試験で混同しやすいワンタイムパスワード、クライアント認証、多要素認証との違いを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: トランザクション署名を送金先や金額など取引内容に結び付けた署名として整理し、ワンタイムパスワードやクライアント認証では防ぎにくい改ざん対策を見分けます。 取引内容の途中改ざんに気付ける点を押さえ、本人確認だけを強化する対策を正解にするひっかけを避けます。
 permalink: /sg/transaction-signing/
 tags: [sg, sg-security-measures, crypto_auth, unauthorized_access, it_security_operations]
-last_modified_at: 2026-05-15
+last_modified_at: 2026-06-24
 ---
 
 ## まず結論

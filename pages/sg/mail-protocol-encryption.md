@@ -1,10 +1,10 @@
 ---
 layout: page
 title: POP3・IMAP・SMTPの暗号化とは？メール通信の安全性【SG試験】
-description: "POP3・IMAP・SMTPの暗号化は、メールの受信・送信時に認証情報や本文を守るための考え方です。平文通信との違い、SSL/TLS、SMTPS・POP3S・IMAPSの判断ポイントをSG試験向けに整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: POP3・IMAP・SMTPの暗号化を、受信と送信の経路で認証情報や本文を守る仕組みとして整理し、SMTPS・POP3S・IMAPSやSSL/TLSの対応関係を見分けます。 受信プロトコルと送信プロトコルを混同せず、平文認証を避けるためにどの通信区間を保護するかを判断します。
 permalink: /sg/mail-protocol-encryption/
 tags: [sg, sg-technology, network, crypto_auth, data_leakage]
-last_modified_at: 2026-06-18
+last_modified_at: 2026-06-24
 ---
 
 ## まず結論

@@ -1,10 +1,10 @@
 ---
 layout: page
 title: VBS.LoveLetterとは？VBScript添付ファイルで広がるワーム【SG試験】
-description: "VBS.LoveLetterは、VBScriptの添付ファイルを実行させて感染し、メールなどで拡散するワーム型マルウェアです。BagleワームやWanna Cryptorとの違いを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: VBS.LoveLetterをVBScript添付ファイルの実行で感染しメールなどで拡散するワームとして整理し、Wanna CryptorやBagleとの感染経路・被害内容の違いを確認します。 添付ファイル実行とアドレス帳を使った拡散が特徴である点を押さえ、脆弱性悪用型やランサムウェア型と切り分けます。
 permalink: /sg/vbs-loveletter/
 tags: [sg, sg-security-measures, malware, security_awareness, threat_vulnerability]
-last_modified_at: 2026-06-18
+last_modified_at: 2026-06-24
 ---
 
 # VBS.LoveLetterとは？VBScript添付ファイルで広がるワーム【SG試験】

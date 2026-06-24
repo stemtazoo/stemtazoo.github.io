@@ -1,12 +1,12 @@
 ---
 layout: page  
 title: NISC・IPA・JPCERT/CC・CSIRTの違いまとめ【一発で切れるチートシート】  
-description: "NISC・IPA・JPCERT/CC・CSIRTの役割を一発で切り分けるためのチートシート。監視・対応・調整・統括の違いを整理し、SG試験・情報セキュリティマネジメント試験で迷わない判断基準をまとめました。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: NISC・IPA・JPCERT/CC・CSIRTを、国の統括、情報提供、調整、組織内対応の役割で比較し、通報先やインシデント対応主体を問う問題で迷わない軸をまとめます。 国内外の情報共有や注意喚起、社内の初動対応など、問題文の行動主体から最も適切な組織名を選ぶ練習に使えます。
 permalink: /sg/security-org-cheatsheet/  
 tags: [sg, sg-security-management, cheatsheet]  
 prev: /sg/ipa/  
 next: /sg/security-org-practice/  
-last_modified_at: 2026-06-09
+last_modified_at: 2026-06-24
 ---
 
 ## まず結論  

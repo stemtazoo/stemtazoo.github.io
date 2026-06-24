@@ -1,12 +1,12 @@
 ---
 layout: page
 title: DNSリフレクター攻撃とDNSキャッシュポイズニングの違いを整理【SG試験】
-description: "DNSリフレクター攻撃とDNSキャッシュポイズニングは混同しやすいDNS関連攻撃です。攻撃目的と仕組みの違いを整理し、SG試験・情報セキュリティマネジメント試験での切り分けポイントを明確にします。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: DNSリフレクター攻撃とDNSキャッシュポイズニングを、通信量を増幅して止める攻撃か、名前解決結果を偽る攻撃かで切り分け、目的と被害の違いを整理します。 リフレクター攻撃は可用性、キャッシュポイズニングは正しい接続先の信頼性を崩す点に注目し、対策の選び方も確認します。
 permalink: /sg/dns-attack-difference/
 tags: [sg, threat_vulnerability, network, unauthorized_access, sg-security-overview]
 prev: /sg/disciplinary-action/
 next: /sg/dns-cache-poisoning/
-last_modified_at: 2026-05-19
+last_modified_at: 2026-06-24
 ---
 
 ## まず結論

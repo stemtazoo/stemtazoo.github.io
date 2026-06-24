@@ -1,11 +1,11 @@
 ---
 layout: page
 title: ボリュームライセンス契約とは？複数台利用を管理する契約【SG試験】
-description: "ボリュームライセンス契約は、複数台・複数ユーザー分のソフトウェア利用権をまとめて契約する方式です。SG試験・情報セキュリティマネジメント試験で迷いやすいサイトライセンス契約や使用許諾契約との違いを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: ボリュームライセンス契約を複数台・複数利用者分の利用権をまとめて契約する方式として整理し、サイトライセンスや個別の使用許諾契約との境界を確認します。 契約単位がまとまることで管理しやすくなる一方、利用範囲を超えたインストールは違反になる点も確認します。
 permalink: /sg/volume-license-contract/
 tags: [sg, sg-strategy, business_management, it_security_operations]
 prev: /sg/software-license-agreement/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-06-24
 ---
 
 ## まず結論

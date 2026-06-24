@@ -1,11 +1,11 @@
 ---
 layout: page
 title: サイトライセンス契約とは？組織や場所単位で使える契約【SG試験】
-description: "サイトライセンス契約は、特定の組織・学校・事業所などの範囲でソフトウェアの利用を許可する契約です。SG試験・情報セキュリティマネジメント試験で迷いやすいボリュームライセンス契約との違いを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: サイトライセンス契約を特定組織や事業所の範囲で利用を認める契約として整理し、利用者数でまとめるボリュームライセンスとの違いを契約範囲から判断します。 学校や企業内など場所・組織単位で許諾される点に注目し、台数追加や利用者追加の契約方式を問う問題に備えます。
 permalink: /sg/site-license-contract/
 tags: [sg, sg-strategy, business_management, it_security_operations]
 prev: /sg/volume-license-contract/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-06-24
 ---
 
 ## まず結論
