@@ -1,11 +1,11 @@
 ---
 layout: page
 title: トップマネジメントのリーダーシップ及びコミットメントとは？ISMSで経営層が行うこと【SG試験】
-description: "トップマネジメントのリーダーシップ及びコミットメントは、ISMSを組織に統合し有効に機能させるために経営層が示す責任と支援です。SG試験で迷いやすい方針策定、業務への組込み、各部門への方向付け・支援を整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: ISMSで経営層が担うリーダーシップとコミットメントを、方針策定だけでなく業務への統合、資源確保、部門支援まで含めて判断する視点で整理します。 現場任せの対策ではなく経営課題として情報セキュリティを扱う点を押さえ、責任の所在を問う問題に備えます。
 permalink: /sg/isms-top-management-leadership/
 tags: [sg, sg-security-management, isms, business_management, risk_assessment]
 date: 2026-06-01
-last_modified_at: 2026-06-02
+last_modified_at: 2026-06-24
 ---
 
 ## まず結論

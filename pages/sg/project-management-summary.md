@@ -1,10 +1,10 @@
 ---
 layout: page
 title: プロジェクトマネジメントまとめ｜PMBOK・WBS・PERTを整理【SG試験】
-description: "プロジェクトマネジメントは、限られた時間・費用・資源の中で成果物を作るための管理です。PMBOK、WBS、ガントチャート、PERT、アローダイアグラム、クリティカルパスなどSG試験で問われる用語を整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: プロジェクトマネジメントの頻出用語を、成果物を期限・費用・資源の制約内で作る管理として整理し、WBS、ガントチャート、PERT、クリティカルパスの役割を見分けます。 図表や日数計算で問われる用語も、作業分解、進捗把握、所要期間の見積りという目的から判断できるようにします。
 permalink: /sg/project-management-summary/
 tags: [sg, sg-management, project_management]
-last_modified_at: 2026-06-18
+last_modified_at: 2026-06-24
 ---
 
 ## まず結論

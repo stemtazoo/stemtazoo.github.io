@@ -1,10 +1,10 @@
 ---
 layout: page
 title: SQL Slammerとは？SQL Serverの脆弱性を悪用するワーム【SG試験】
-description: "SQL Slammerは、SQL Serverの脆弱性を悪用して短時間で感染を広げ、大量通信でネットワークに影響を与えるワームです。Wanna CryptorやBagleワームとの違いを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: SQL SlammerをSQL Serverの脆弱性を悪用して高速に拡散するワームとして整理し、ファイル暗号化型ランサムウェアやメール添付型ワームとの特徴差を押さえます。 大量通信によるネットワーク障害が特徴である点を押さえ、身代金要求やメール送信を主な特徴とする事例と切り分けます。
 permalink: /sg/sql-slammer/
 tags: [sg, sg-security-measures, malware, threat_vulnerability, network]
-last_modified_at: 2026-06-18
+last_modified_at: 2026-06-24
 ---
 
 # SQL Slammerとは？SQL Serverの脆弱性を悪用するワーム【SG試験】
