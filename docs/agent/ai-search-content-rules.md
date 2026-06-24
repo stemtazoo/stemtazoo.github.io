@@ -10,6 +10,7 @@ These rules are based on the general direction of AI search and grounding system
 - Keep one normal article focused on one concept, one term, one method, or one exam judgment point.
 - Write paragraphs so that each paragraph is understandable even if it is extracted independently from the page.
 - Use explicit, searchable headings that name the concept and learning purpose, rather than vague headings that depend on surrounding context.
+- Do not change the required fixed heading structure for each theme. When fixed headings are used, make the paragraphs under each heading self-contained and searchable.
 - Avoid vague references such as `this`, `that`, `it`, `the above`, `これ`, `それ`, `上記`, and `前述` when the sentence may be read out of context. Repeat the noun or concept name when clarity matters.
 - Compare confusing terms clearly with short explanations, tables, or judgment criteria so readers and AI systems can distinguish the pages.
 - Include official or primary source links when useful for grounding, especially for laws, standards, syllabi, public organizations, and vendor-defined technologies.
