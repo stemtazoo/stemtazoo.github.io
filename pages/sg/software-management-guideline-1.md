@@ -1,15 +1,15 @@
 ---
 layout: page
-title: ソフトウエア管理ガイドラインとは？違法複製を防ぐ管理の基本【SG試験】
-description: "ソフトウエア管理ガイドラインは、法人などがソフトウェアの違法複製を防ぐための基本事項です。SG試験で問われやすい管理責任者、管理規則、監査、教育の切り分けを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
-permalink: /sg/software-management-guideline/
+title: ソフトウェア管理ガイドラインの管理責任者・監査・教育【SG試験】
+description: ソフトウェア管理ガイドラインのうち、管理責任者の任命、管理規則、使用状況の監査、教育に絞って整理する復習ページです。SG試験で違法コピー防止の組織的管理を選ぶ判断軸を確認します。
+permalink: /sg/software-management-guideline-operations/
 tags: [sg, sg-security-management, asset_management, system_audit, security_training]
-last_modified_at: 2026-06-13
+last_modified_at: 2026-06-24
 ---
 
 ## まず結論
 
-ソフトウエア管理ガイドラインは、**法人や団体がソフトウェアの違法複製を防ぐために、管理体制・管理規則・監査・教育を整えるための指針**です。
+このページは、ソフトウェア管理ガイドラインの中でも、**管理責任者・管理規則・監査・教育**に焦点を当てる復習ページです。全体像は[ソフトウェア管理ガイドラインとは？違法複製を防ぐ管理ルール](/sg/software-management-guideline/)で確認できます。
 
 SG試験では、細かい条文を覚えるよりも、**「違法コピーを防ぐための組織的な管理」**だと判断できることが大切です。
 
