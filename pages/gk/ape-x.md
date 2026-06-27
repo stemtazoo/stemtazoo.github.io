@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: APE-X（Distributed Prioritized Experience Replay）とは？【G検定対策】
-description: "APE-Xについて、G検定で問われる強化学習分野の観点から、状態・行動・報酬・方策との関係、価値ベース手法や方策ベース手法との違いを整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。具体例や典型的なひっかけも意識して、試験でどの知識として使うかを押さえます。"
+description: "APE-Xは、多数のActorが並列に経験を集め、優先度付き経験再生を使ってLearnerが行動価値関数を学ぶ分散・オフポリシー型の深層強化学習手法です。大量の試行と重要な経験の重点学習を組み合わせる役割を捉え、Attention、教師あり学習、時系列モデルという誤説明を切り分けます。"
 permalink: /gk/ape-x/
 tags: [gk, neural_network]
 gk_section: ディープラーニングの応用例/深層強化学習
