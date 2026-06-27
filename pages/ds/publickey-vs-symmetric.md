@@ -1,12 +1,13 @@
 ﻿---
 layout: page
 title: 公開鍵暗号方式と共通鍵暗号方式の違いとは？【DS検定】
-description: "共通鍵暗号方式は「同じ鍵で暗号化と復号を行う方式公開鍵暗号方式は「公開鍵と秘密鍵の2つの鍵を使う方式DS検定では共通鍵暗号＝高速」「公開鍵暗号＝鍵共有問題を解決という役割の違いを理解しているかが問われます。定義、具体例、似た概念との違い、選択肢の見分け方を整理します。"
+description: "共通鍵暗号方式は同じ鍵で暗号化と復号を行うため高速ですが、安全な鍵配送が課題です。公開鍵暗号方式は公開鍵と秘密鍵を使い分け、鍵共有の問題を解決します。通信では両方式を組み合わせる理由と、DS検定で問われる速度・鍵管理・用途の違いを整理します。"
 permalink: /ds/publickey-vs-symmetric/
 categories: [business]
 tags: [ds, security, design]
 prev: /ds/primary-secondary-data/
 next: /ds/rainbow-table-attack/
+last_modified_at: 2026-06-27
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>

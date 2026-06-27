@@ -1,12 +1,13 @@
 ﻿---
 layout: page
 title: "数理・データサイエンス・AIリテラシーモデルカリキュラム総まとめ【DS検定対応】"
-description: "モデルカリキュラムは、次の4つの柱で構成されています。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
+description: "数理・データサイエンス・AIリテラシーレベルのモデルカリキュラムを、社会でのデータ・AI利活用、データリテラシー、倫理・法・セキュリティ、数理・技術基礎の4分野に分けて整理します。DS検定の出題範囲を俯瞰し、学習項目の位置付けと優先順位を確認できます。"
 permalink: /ds/model-curriculum-summary/
 categories: [business]
 tags: [ds, skillcheck]
 prev: /ds/type1-type2-error/
 next: /ds/ai-utilization-skillcheck/
+last_modified_at: 2026-06-27
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
