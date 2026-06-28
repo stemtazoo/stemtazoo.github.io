@@ -1,11 +1,12 @@
 ﻿---
 layout: page
 title: TF-IDFとは？【単語の重要度指標｜G検定対策】
-description: "TF-IDFについて、G検定で問われる自然言語処理・系列データ分野の観点から、基本的な意味、代表モデル・手法との関係、試験で問われやすい判断軸を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
+description: "TF-IDFは、文書内での出現頻度TFと、文書集合での珍しさIDFを掛け、単語の重要度を数値化する手法です。どの文書にも現れる語の重みが下がる仕組みと、語の意味を学習するWord2Vecとの違いをG検定向けに整理します。"
 permalink: /gk/tf-idf/
 tags: [gk, nlp, machine_learning]
 gk_section: ディープラーニングの応用例/自然言語処理
 gk_order: 4
+last_modified_at: 2026-06-28
 ---
 
 ## まず結論
@@ -78,6 +79,8 @@ TF-IDF は、次の2つを掛け合わせた値。
 ### Word2Vecとの違い
 - TF-IDF：頻度ベース
 - Word2Vec：意味ベース
+
+より広い比較は、[TF-IDF・Word2Vec・BERTの違い](/gk/tfidf-word2vec-bert/)で確認できます。
 
 ## まとめ（試験直前用）
 - TF-IDF＝単語の重要度指標

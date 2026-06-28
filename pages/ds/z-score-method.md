@@ -1,12 +1,13 @@
 ﻿---
 layout: page
 title: zスコア法とは？異常値判定の基本を整理【DS検定リテラシー】
-description: zスコア法を異常値判定の基本として整理します。平均から何標準偏差離れているかを見る考え方、標準化との関係、外れ値検出での注意点を押さえ、DS検定の統計問題に備えます。本文では、用語の定義、具体例、似た概念との違い、試験で迷いやすい選択肢の見分け方まで、短時間で復習できるようにまとめています。
+description: zスコアは、観測値が平均から標準偏差何個分離れているかを表す指標です。標準化と外れ値判定で目的が異なること、計算自体に正規分布は必須でないこと、±2～3のしきい値を使う前に分布の偏りを確認する理由を整理します。
 permalink: /ds/z-score-method/
 categories: [data-science]
 tags: [ds, data-preparation, statistics]
 prev: /ds/entropy/
 next: /ds/annotation/
+last_modified_at: 2026-06-28
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -81,8 +82,8 @@ DS検定では、
 - データが極端に偏っている場合（正規分布でない）
 - 外れ値がすでに平均を大きく歪めている場合
 
-zスコア法は  
-**「平均と標準偏差」が意味を持つ分布であることが前提**です。
+zスコア自体は正規分布でなくても計算できます。
+ただし、**「|z|が2や3を超えたら外れ値」とする経験則は、分布がおおむね正規分布に近いときに解釈しやすい基準**です。強く偏った分布や外れ値の多いデータでは、中央値と四分位範囲（IQR）なども検討します。
 
 
 ## よくある誤解・混同
@@ -130,6 +131,7 @@ DS検定ではここを狙われます。
 
 - zスコア法＝平均との差を標準偏差で割った指標
 - ±2〜±3を超えると外れ値の可能性
+- zスコアの計算に正規分布は必須ではないが、しきい値判定では分布の形を確認
 - 分類モデルではない（前処理）
 - DS検定では「外れ値判定」として問われやすい
 - クラスタリングや決定木と混同しない
@@ -141,50 +143,4 @@ DS検定ではここを狙われます。
 - データの前処理
 - ★ データの前処理（外れ値処理、欠損値処理など）を理解している
 
-## 🔗 関連記事
-
-<ul style="padding-left: 20px;">
-{% assign current_tags = page.tags %}
-{% assign count = 0 %}
-
-{% for p in site.pages %}
-  {% if p.url != page.url and p.tags %}
-    {% assign matched = false %}
-
-    {% for tag in current_tags %}
-      {% if p.tags contains tag and tag != "ds" %}
-        {% assign matched = true %}
-      {% endif %}
-    {% endfor %}
-
-    {% if matched %}
-      <li style="margin-bottom: 6px;">
-        <a href="{{ p.url }}">{{ p.title }}</a>
-      </li>
-      {% assign count = count | plus: 1 %}
-    {% endif %}
-
-    {% if count >= 5 %}
-      {% break %}
-    {% endif %}
-  {% endif %}
-{% endfor %}
-</ul>
-
-<hr>
-
-<div style="margin-top: 16px;">
-  🏠 <a href="/ds/">DS検定トップに戻る</a>
-</div>
-
-<div style="display:flex;justify-content:space-between;margin-top:12px;">
-
-  {% if page.previous.url %}
-    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
-  {% endif %}
-
-  {% if page.next.url %}
-    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
-  {% endif %}
-
-</div>
+{% include ds_article_footer.html %}
