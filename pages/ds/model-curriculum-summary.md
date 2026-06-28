@@ -7,7 +7,7 @@ categories: [business]
 tags: [ds, skillcheck]
 prev: /ds/type1-type2-error/
 next: /ds/ai-utilization-skillcheck/
-last_modified_at: 2026-06-27
+last_modified_at: 2026-06-28
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -189,6 +189,8 @@ DS検定は、
 - 数理・アルゴリズム・データ活用基礎  
 
 この順番で読むと、最も理解しやすくなります。
+
+モデルカリキュラムの最新版と認定制度の情報は、文部科学省の[数理・データサイエンス・AI教育プログラム認定制度](https://www.mext.go.jp/a_menu/koutou/suuri_datascience_ai/00001.htm)で確認できます。
 
 ## 🔗 関連記事
 

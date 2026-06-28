@@ -7,6 +7,7 @@ categories: [ai-utilization]
 tags: [ds, ethics]
 prev: /ds/gdpr/
 next: /ds/opt-out/
+last_modified_at: 2026-06-28
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -216,6 +217,8 @@ DS検定では
 **データ活用のリスク管理**
 
 という文脈で出題されます。
+
+個人情報保護法の法令、各種ガイドライン、改正情報は、個人情報保護委員会の[個人情報保護法等](https://www.ppc.go.jp/personalinfo/)で確認できます。
 
 
 ## まとめ（試験直前用）

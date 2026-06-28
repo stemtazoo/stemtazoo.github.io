@@ -7,6 +7,7 @@ categories: [data-science]
 tags: [ds, data-understanding, statistics]
 prev: /ds/spearman-rank-correlation/
 next: /ds/statistics-summary/
+last_modified_at: 2026-06-28
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -352,6 +353,8 @@ y = x²
 予測が当たらないことがあります。
 
 DS検定ではこのような選択肢がよく出ます。
+
+データの種類と、それぞれに適したグラフや分析方法の基礎は、総務省統計局の[データ・データセットの種類](https://www.stat.go.jp/naruhodo/4_graph/data.html)で確認できます。
 
 
 

@@ -6,7 +6,7 @@ permalink: /ds/data-ai-precautions/
 categories: [ai-utilization]
 tags: [ds, ai-use, literacy, ethics, security, ai, gdpr, cheatsheet]
 prev: /ds/weak-strong-ai/
-last_modified_at: 2026-05-16
+last_modified_at: 2026-06-28
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -156,6 +156,8 @@ DS検定では：
 
 ❌ 法律は海外の話  
 → GDPRは日本企業にも影響
+
+AIの開発・提供・利用で求められる基本的な取組は、内閣府の[人工知能関連技術の研究開発及び活用の適正性確保に関する指針](https://www8.cao.go.jp/cstp/ai/ai_guideline/ai_guideline.html)で確認できます。
 
 
 ## まとめ（試験直前用）

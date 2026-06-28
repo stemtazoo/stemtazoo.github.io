@@ -7,7 +7,7 @@ categories: [business]
 tags: [ds, design]
 prev: /ds/feature-engineering2/
 next: /ds/file-transfer-protocol/
-last_modified_at: 2026-06-17
+last_modified_at: 2026-06-28
 ---
 
 ## まず結論
@@ -156,6 +156,8 @@ FFPは、単にルール違反というだけではありません。
 - AIやデータ活用への信頼を低下させる
 
 特にデータサイエンスでは、誤ったデータや改ざんされた結果がAIモデルや意思決定システムに使われると、広い範囲に悪影響が出る可能性があります。
+
+研究活動における不正行為の考え方や国の対応については、文部科学省の[研究活動における不正行為への対応等](https://www.mext.go.jp/a_menu/jinzai/fusei/index.htm)で確認できます。
 
 ---
 

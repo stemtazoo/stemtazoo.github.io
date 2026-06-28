@@ -7,7 +7,7 @@ categories: [ai-utilization]
 tags: [ds, ai-use]
 prev: /ds/governance/
 next: /ds/social-data-ai-utilization/
-last_modified_at: 2026-06-22
+last_modified_at: 2026-06-28
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -97,6 +97,8 @@ DS検定では、ブラックボックス性への対応として両方が出る
 人間中心の考え方では、AIは意思決定を支援できますが、重要な判断では人間の責任や確認が必要です。
 
 「AIが判断したので説明や確認は不要」とする選択肢は危険です。
+
+原則の決定文書や検討経緯は、内閣官房の[人間中心のAI社会原則会議](https://www.cas.go.jp/jp/seisaku/jinkouchinou/index.html)で確認できます。
 
 ## まとめ（試験直前用）
 

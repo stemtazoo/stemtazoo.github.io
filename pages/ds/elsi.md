@@ -6,6 +6,7 @@ permalink: /ds/elsi/
 categories: [ai-utilization]
 tags: [ds, ethics]
 next: /ds/ccpa/
+last_modified_at: 2026-06-28
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -186,6 +187,8 @@ DS検定では次のような形で出題されます。
 
 **これらをまとめた概念が ELSI**  
 と判断できると正解しやすくなります。
+
+ELSIの成り立ちや倫理・法・社会の関係は、大阪大学社会技術共創研究センターの[ELSIとは](https://elsi.osaka-u.ac.jp/what_elsi)で確認できます。
 
 
 ## まとめ（試験直前用）

@@ -7,6 +7,7 @@ categories: [data-science]
 tags: [ds, data-understanding, statistics]
 prev: /ds/f-test/
 next: /ds/normal-and-standard-normal/
+last_modified_at: 2026-06-28
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -320,6 +321,8 @@ DS検定では
 相関と因果の混同
 
 が頻出のひっかけです。
+
+統計データの読み取り方や誤解を招かないグラフの作り方は、総務省統計局の[グラフ作成の基本](https://www.stat.go.jp/naruhodo/9_graph/kihon.html)で確認できます。
 
 
 

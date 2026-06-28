@@ -6,6 +6,7 @@ permalink: /gk/lottery-ticket-hypothesis/
 tags: [gk, neural_network]
 gk_section: ディープラーニングの応用例/モデルの軽量化
 gk_order: 1
+last_modified_at: 2026-06-28
 ---
 
 ## まず結論
@@ -76,6 +77,8 @@ gk_order: 1
 - **宝くじ仮説**：なぜ剪定で性能が保たれるかの説明仮説
 
 👉 **手法ではなく“理由づけ”の理論**
+
+宝くじ仮説の原論文は、Jonathan FrankleとMichael Carbinによる[The Lottery Ticket Hypothesis: Finding Sparse, Trainable Neural Networks](https://arxiv.org/abs/1803.03635)です。
 
 ## まとめ（試験直前用）
 - 宝くじ仮説は理論・仮説

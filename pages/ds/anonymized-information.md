@@ -7,6 +7,7 @@ categories: [ai-utilization]
 tags: [ds, ethics]
 prev: /ds/third-party-provision/
 next: /ds/k-anonymity/
+last_modified_at: 2026-06-28
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -179,6 +180,8 @@ DS検定では
 **「復元できるかどうか」**
 
 が判断ポイントになります。
+
+制度上の定義や加工方法は、個人情報保護委員会の[個人情報の保護に関する法律についてのガイドライン（仮名加工情報・匿名加工情報編）](https://www.ppc.go.jp/personalinfo/legal/guidelines_anonymous/)で確認できます。
 
 
 ## まとめ（試験直前用）

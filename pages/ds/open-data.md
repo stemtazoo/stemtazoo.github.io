@@ -7,6 +7,7 @@ categories: [business]
 tags: [ds, data-collection, environment-setup, design]
 prev: /ds/nltk/
 next: /ds/paired-vs-independent-data/
+last_modified_at: 2026-06-28
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -129,6 +130,8 @@ DS検定では、
 > 「自治体のWebサイトに掲載されている統計」
 
 という表現だけでオープンデータと判断させようとする選択肢に注意です。
+
+国のオープンデータの定義、意義、公開ルールは、デジタル庁の[オープンデータ](https://www.digital.go.jp/resources/open_data)に掲載されている「オープンデータ基本指針」で確認できます。
 
 
 ## まとめ（試験直前用）

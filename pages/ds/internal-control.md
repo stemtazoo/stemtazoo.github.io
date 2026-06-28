@@ -7,6 +7,7 @@ categories: [business]
 tags: [ds, design]
 prev: /ds/incident-management/
 next: /ds/operational-risk/
+last_modified_at: 2026-06-28
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -221,6 +222,8 @@ DS検定では
 企業管理の仕組みとして理解すること
 
 が重要になります。
+
+内部統制の基本的枠組みや評価・監査の考え方は、金融庁の[財務報告に係る内部統制の評価及び監査の基準等の改訂について](https://www.fsa.go.jp/news/r4/sonota/20230407/20230407.html)で確認できます。
 
 
 

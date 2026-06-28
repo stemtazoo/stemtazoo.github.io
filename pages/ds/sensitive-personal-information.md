@@ -7,6 +7,7 @@ categories: [ai-utilization]
 tags: [ds, ethics]
 prev: /ds/personal-identifier-code/
 next: /ds/third-party-provision/
+last_modified_at: 2026-06-28
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -216,6 +217,8 @@ DS検定では
 
 DS検定では  
 この違いを混同させる問題が出ることがあります。
+
+要配慮個人情報の定義、取得時の同意、第三者提供の扱いは、個人情報保護委員会の[個人情報の保護に関する法律についてのガイドライン（通則編）](https://www.ppc.go.jp/personalinfo/legal/guidelines_tsusoku/)で確認できます。
 
 
 ## まとめ（試験直前用）

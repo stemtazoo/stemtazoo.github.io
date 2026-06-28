@@ -7,6 +7,7 @@ categories: [ai-utilization]
 tags: [ds, ethics]
 prev: /ds/japan-personal-information-protection-act/
 next: /ds/personal-identifier-code/
+last_modified_at: 2026-06-28
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -96,6 +97,8 @@ next: /ds/personal-identifier-code/
 - 「本人同意なしでもOK」→ ⭕（ただし条件あり）
 
 👉 **“通知だけでOK”という雑な表現は必ず疑う**
+
+オプトアウトによる第三者提供の条件や届出制度は、個人情報保護委員会の[オプトアウト規定による第三者提供の届出](https://www.ppc.go.jp/personalinfo/legal/optout/)で確認できます。
 
 
 ## まとめ（試験直前用）
