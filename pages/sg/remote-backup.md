@@ -6,7 +6,7 @@ permalink: /sg/remote-backup/
 prev: /sg/raid/
 next: /sg/ups/
 tags: [sg, sg-security-measures, data_leakage, it_security_operations]
-last_modified_at: 2026-05-20
+last_modified_at: 2026-06-28
 ---
 
 ## まず結論
@@ -50,6 +50,7 @@ RAIDとの違いをイメージで押さえると一発です。
 ---
 
 ### RAIDとの違い（超重要）
+
 | 項目 | RAID | 遠隔バックアップ |
 |---|---|---|
 | 守る対象 | ディスク故障 | 災害・重大障害 |

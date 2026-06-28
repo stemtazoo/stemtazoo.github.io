@@ -6,7 +6,7 @@ permalink: /sg/cryptrec1/
 prev: /sg/compromise-crypto/
 next: /sg/salt/
 tags: [sg, sg-security-overview, crypto_auth, risk_assessment]
-last_modified_at: 2026-06-24
+last_modified_at: 2026-06-28
 ---
 
 ## まず結論
@@ -47,6 +47,7 @@ CRYPTOREC（クリプトレック）は、
 ---
 
 ### 主な暗号技術（CRYPTORECリストの例）
+
 | 技術分類 | 用途 | 主な暗号技術 |
 |----------|------|--------------|
 | 公開鍵暗号 | 署名 | DSA / ECDSA / RSA-PSS / RSASSA-PKCS1-v1_5 |
