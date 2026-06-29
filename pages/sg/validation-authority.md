@@ -1,10 +1,10 @@
 ---
 layout: page
 title: VAとは？証明書の有効性を確認する機関【SG試験】
-description: "VAは、電子証明書が現在も有効かどうかを確認する問合せに応答する機関です。CA・RA・AAとの違い、CRL・OCSPとの関係、SG試験でのひっかけポイントを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "VAを電子証明書が現在有効かを確認する機関として整理し、証明書を発行するCA、本人確認するRA、属性証明を扱うAA、CRL・OCSPとの関係を切り分けます。PKIの役割分担を問う問題で、証明書を作る機関と失効確認に答える機関を混同しないようにします。"
 permalink: /sg/validation-authority/
 tags: [sg, sg-security-overview, crypto_auth, access_control]
-last_modified_at: 2026-05-20
+last_modified_at: 2026-06-29
 ---
 
 ## まず結論

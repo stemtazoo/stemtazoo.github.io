@@ -1,12 +1,12 @@
 ---
 layout: page
 title: "VPNとは？安全な通信を実現する仕組み【SG試験】"
-description: "VPNはインターネット上に仮想的な専用回線を作り、安全に通信する仕組みです。暗号化の役割や利用場面、専用線との違いをSG試験・情報セキュリティマネジメント試験の判断ポイントとともに整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "VPNをインターネット上に暗号化された仮想的な通信路を作る仕組みとして整理し、専用線、HTTPS、無線LAN暗号化との違いを利用場面と保護範囲から判断します。リモートアクセスや拠点間接続の問題で、通信路の保護と接続先システムの認証・権限管理を切り分けます。"
 permalink: /sg/vpn/
 prev: /sg/dmz/
 next: /sg/ips/
 tags: [sg, sg-technology, network, unauthorized_access]
-last_modified_at: 2026-05-20
+last_modified_at: 2026-06-29
 ---
 
 ## まず結論

@@ -1,10 +1,10 @@
 ---
 layout: page
 title: 個人情報の第三者提供は本人同意が必要？4つの例外を整理【SG試験】
-description: "個人情報の第三者提供は原則として本人同意が必要ですが、法令に基づく場合など4つの例外があります。SG試験で狙われる同意要否の切り分けを、選択肢を消去できる形で整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "個人情報の第三者提供を原則本人同意が必要な行為として整理し、法令、人命・財産保護、公衆衛生、国等への協力という例外で同意不要になる場面を判断します。委託、共同利用、オプトアウトとの混同を避け、本人同意を取るべきケースと例外ケースを事例で切ります。"
 permalink: /sg/third-party-provision-consent-exceptions/
 tags: [sg, sg-security-law, privacy_law, vendor_management, compliance]
-last_modified_at: 2026-05-13
+last_modified_at: 2026-06-29
 ---
 
 ## まず結論
