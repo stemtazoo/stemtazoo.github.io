@@ -1,10 +1,10 @@
 ---
 layout: page
 title: 認証・アクセス制御まとめ｜主要用語を整理【SG試験】
-description: "認証・認可・アクセス制御を軸に、ID管理、MFA、SSO、リスクベース認証、特権ID、ゼロトラストの違いと判断基準を学習順で整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "認証・認可・アクセス制御を「本人確認」「許可範囲」「操作制限」に分け、MFA、SSO、特権ID、ゼロトラストを責任範囲と運用場面からつなげて復習するまとめです。ログイン可否、操作許可、権限棚卸しを別問題として読むことで、似た対策名に迷わない学習導線を作ります。"
 permalink: /sg/auth-access-control-summary/
 tags: [sg, sg-security-measures, access_control]
-last_modified_at: 2026-06-11
+last_modified_at: 2026-06-29
 ---
 
 ## まず結論

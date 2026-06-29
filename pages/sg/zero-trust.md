@@ -1,11 +1,11 @@
 ---
 layout: page
 title: "ゼロトラストとは？境界防御との違いを整理【SG試験】"
-description: "ゼロトラストは社内外を問わずすべてのアクセスを検証するセキュリティモデルです。境界防御との違いやMFA・RBAとの関係を整理し、SG試験・情報セキュリティマネジメント試験で問われる設計思想を解説します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "ゼロトラストを「社内だから信頼する」を前提にしない設計思想として整理し、境界防御、MFA、リスクベース認証との違いをアクセスごとの検証という判断軸で見分けます。社内ネットワーク、VPN、ファイアウォールを置けば十分という発想と対比し、継続的な認証・認可を重視します。"
 permalink: /sg/zero-trust/
 prev: /sg/privileged-id/
 tags: [sg, sg-security-measures, access_control, it_security_operations]
-last_modified_at: 2026-06-11
+last_modified_at: 2026-06-29
 ---
 
 ## まず結論

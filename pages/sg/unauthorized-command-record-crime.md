@@ -1,10 +1,10 @@
 ---
 layout: page
 title: 不正指令電磁的記録に関する罪とは？マルウェア作成・提供・取得保管の切り分け【SG試験】
-description: "不正指令電磁的記録に関する罪は、マルウェアなどを作成・提供・供用・取得保管する行為を処罰する刑法上の規定です。SG試験で迷いやすい行為の違いを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "不正指令電磁的記録に関する罪をマルウェアの作成・提供・供用・取得保管を処罰する規定として整理し、実行被害だけでなく準備行為も問われる点を判断します。不正アクセス禁止法や著作権法ではなく、悪意あるプログラム自体を扱う刑法上の論点として読み分けます。"
 permalink: /sg/unauthorized-command-record-crime/
 tags: [sg, sg-security-law, malware, unauthorized_access, threat_vulnerability]
-last_modified_at: 2026-05-12
+last_modified_at: 2026-06-29
 ---
 
 ## まず結論
