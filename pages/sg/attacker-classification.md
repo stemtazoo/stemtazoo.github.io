@@ -1,10 +1,10 @@
 ---
 layout: page
 title: 攻撃者の分類とは？目的で見分ける脅威の整理【SG試験】
-description: "攻撃者の分類は、サイバー攻撃を行う人や組織を目的や立場で整理する考え方です。ハクティビスト、金銭目的、内部不正などを、SG試験で迷わない判断基準としてまとめます。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "攻撃者を目的・立場・動機で分類し、ハクティビスト、金銭目的の犯罪者、内部不正者、愉快犯を混同しないための見分け方を整理します。攻撃手段だけでなく「なぜ攻撃するか」に注目して、SGの脅威分析問題に対応します。"
 permalink: /sg/attacker-classification/
 tags: [sg, sg-security-overview, threat_vulnerability, unauthorized_access, incident_management]
-last_modified_at: 2026-06-17
+last_modified_at: 2026-06-30
 ---
 
 ## まず結論

@@ -1,12 +1,12 @@
 ---
 layout: page
 title: "アクセス制御モデルとは？RBAC・ABAC・DAC・MACの違いを整理【SG試験】"
-description: "アクセス制御モデルは権限をどのように管理するかの方式です。RBACやABACなどの違いを整理し、SG試験・情報セキュリティマネジメント試験で問われるアクセス管理の判断ポイントを分かりやすく解説します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "アクセス制御モデルを「権限決定のルール」として整理し、RBAC・ABAC・DAC・MACで管理主体や判断材料がどう変わるかを比較します。利用者の役割、属性、所有者、機密度のどれで許可を決めるかを押さえ、アクセス管理問題のひっかけを見抜けるようにします。"
 permalink: /sg/access-control-model/
 prev: /sg/access-control/
 next: /sg/least-privilege/
 tags: [sg, sg-security-measures, access_control, system_architecture]
-last_modified_at: 2026-06-11
+last_modified_at: 2026-06-30
 ---
 
 ## まず結論

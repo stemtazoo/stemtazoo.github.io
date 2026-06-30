@@ -1,10 +1,10 @@
 ---
 layout: page
 title: サーキットレベルゲートウェイ方式とは？接続を中継するFW方式【SG試験】
-description: "サーキットレベルゲートウェイ方式は、クライアントとサーバの間に入り、コネクションの確立を制御するファイアウォール方式です。SG試験で迷いやすい他方式との違いも整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "サーキットレベルゲートウェイ方式をコネクション確立を中継・制御する方式として整理し、通信内容よりも接続の成立を扱う点を確認します。アプリケーション内容を詳しく検査する方式との違いをファイアウォール問題で判断します。"
 permalink: /sg/circuit-level-gateway-firewall/
 tags: [sg, sg-security-measures, unauthorized_access, network, access_control]
-last_modified_at: 2026-05-10
+last_modified_at: 2026-06-30
 ---
 
 ## まず結論
