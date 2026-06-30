@@ -1,11 +1,11 @@
 ---
 layout: page
 title: 監査証拠とは？システム監査で根拠になる記録を整理【SG試験】
-description: "監査証拠は、システム監査人が監査意見や結論を裏付けるために入手する資料や記録です。監査調書、監査報告書、監査計画書との違いをSG試験向けに整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "監査証拠を監査意見を裏付ける記録や資料として整理し、監査人が結論を出す根拠をどこから得るかを確認します。監査調書・監査報告書・監査計画書との役割差から、証拠と成果物を取り違える選択肢を見分けます。"
 permalink: /sg/audit-evidence/
 tags: [sg, sg-management, system_audit, it_security_operations]
 date: 2026-06-03
-last_modified_at: 2026-06-04
+last_modified_at: 2026-06-30
 ---
 
 ## まず結論

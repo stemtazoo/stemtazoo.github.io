@@ -1,10 +1,10 @@
 ---
 layout: page
 title: 管理者権限とは？特権的アクセス権との違いを整理【SG試験】
-description: "管理者権限は、システム設定やユーザー管理など管理操作を行える権限です。特権的アクセス権・特権IDとの違いを整理し、SG試験・情報セキュリティマネジメント試験で迷いやすい選択肢の切り分け方を解説します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "管理者権限を「システム全体に強い操作ができる権限」として整理し、特権ID・一般利用者権限との違いを確認します。貸与・共有・棚卸し・操作ログ管理で問われる責任範囲を切り分け、便利さ優先の誤答を避けます。"
 permalink: /sg/administrator-privileges/
 tags: [sg, sg-security-management, access_control, id_management, system_operations]
-last_modified_at: 2026-05-20
+last_modified_at: 2026-06-30
 ---
 
 ## まず結論

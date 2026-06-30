@@ -1,11 +1,11 @@
 ---
 layout: page
 title: バックドアとは？攻撃者が仕込む裏口を見分ける【SG試験】
-description: "バックドアは、攻撃者が正規の認証や手続きを回避して再侵入するために仕込む裏口です。シンクライアントエージェント、ストリクトルーティング、デジタルフォレンジックとの違いをSG試験向けに整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "バックドアを正規の認証や手続きを回避して再侵入する裏口として整理し、攻撃者が侵入後に残す仕掛けの意味を確認します。保守用機能・ルーティング設定・フォレンジック調査との違いから、再侵入リスクを問う選択肢を判断します。"
 permalink: /sg/backdoor/
 tags: [sg, sg-security-measures, malware, unauthorized_access, threat_vulnerability]
 date: 2026-06-18
-last_modified_at: 2026-06-18
+last_modified_at: 2026-06-30
 ---
 
 ## まず結論
