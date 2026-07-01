@@ -1,13 +1,13 @@
 ﻿---
 layout: page
 title: 記述的・診断的・予測的・処方的分析の違いとは？4分類を整理【DS検定】
-description: 記述的分析、診断的分析、予測的分析、処方的分析の違いを整理します。過去の把握、原因分析、将来予測、意思決定支援の役割を切り分け、DS検定で迷いやすい選択肢を判断できます。本文では、用語の定義、具体例、似た概念との違い、試験で迷いやすい選択肢の見分け方まで、短時間で復習できるようにまとめています。
+description: 記述的・診断的・予測的・処方的分析を、「何が起きたか」「なぜ起きたか」「今後どうなるか」「何をすべきか」という問いで切り分けます。売上低下の集計、原因探索、需要予測、施策最適化の例を対応させ、分析手法名ではなく意思決定で果たす役割から選択肢を判断します。
 permalink: /ds/analytics-4types/
 categories: [business]
 tags: [ds, design]
 prev: /ds/analysis-approach-selection/
 next: /ds/design-thinking/
-last_modified_at: 2026-06-28
+last_modified_at: 2026-07-01
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>

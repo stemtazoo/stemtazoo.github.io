@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: AIOpsとは？MLOpsとの違いを整理【DS検定リテラシー】
-description: "AIOpsは、MLOpsとの違いを理解するための基本テーマです。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。初学者が迷いやすい判断ポイントも確認します。"
+description: "AIOpsを、ログ・メトリクス・イベントをAIで分析してIT運用の異常検知、原因推定、対応自動化を支援する考え方として整理します。機械学習モデルの開発・配備・監視を管理するMLOpsとの対象の違いを押さえ、運用監視とモデル運用を入れ替えた選択肢を見抜きます。"
 permalink: /ds/aiops/
 categories: [ai-utilization]
 tags: [ds, environment-setup, ai-use]

@@ -1,12 +1,12 @@
 ---
 layout: page
 title: よくある誤答パターンまとめ！SG試験で選択肢を切るコツ【情報セキュリティマネジメント】
-description: "SGでの誤答を減らすため、CIA取り違え・対策と脅威の逆転・用語の似非概念を実例で整理し、選択肢を根拠付きで切るためのチェック観点を短時間で確認できます。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。"
+description: "SG試験の誤答を、機密性・完全性・可用性の取り違え、脅威と対策の目的不一致、似た用語への反射的な反応という3パターンで整理します。設問の保護対象と被害、実施主体、対策のタイミングを先に確認し、もっともらしいが目的のずれた選択肢を根拠付きで消す手順を示します。"
 permalink: /sg/common-mistakes/
 tags: [sg, risk_assessment, security_management, it_security_operations, sg-security-management]
 prev: /sg/command-and-control/
 next: /sg/common-port-numbers/
-last_modified_at: 2026-05-08
+last_modified_at: 2026-07-01
 ---
 
 ## まず結論

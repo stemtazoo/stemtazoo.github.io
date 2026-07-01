@@ -1,12 +1,12 @@
 ---
 layout: page
 title: "クリックジャッキングとは？見えない操作誘導の仕組み【SG試験】"
-description: "クリックジャッキング対策を理解するため、透明iframe悪用の攻撃手順、X-Frame-Optionsなど防御策、XSSとの違いを整理し、SGで狙われる操作誘導型攻撃を見分けられます。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "クリックジャッキングを、透明なiframeなどで正規画面を重ね、利用者のクリックを意図しない操作へ誘導する攻撃として整理します。スクリプト注入を狙うXSSや偽サイトへ導くフィッシングとの違いを押さえ、X-Frame-OptionsやCSPを選ぶSG試験の対策問題を判断します。"
 permalink: /sg/clickjacking/
 tags: [sg, threat_vulnerability, unauthorized_access, web_security, sg-security-overview]
 prev: /sg/case-study-approach/
 next: /sg/client-server-system/
-last_modified_at: 2026-05-20
+last_modified_at: 2026-07-01
 ---
 
 ## まず結論

@@ -1,13 +1,13 @@
 ﻿---
 layout: page
 title: 匿名加工情報とは？個人情報との違いをわかりやすく整理【DS検定】
-description: "匿名加工情報は、個人情報との違いを理解するための基本テーマです。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。初学者が迷いやすい判断ポイントも確認します。"
+description: "匿名加工情報を、特定の個人を識別できず、元の個人情報を復元できないよう法令の基準に従って加工した情報として整理します。本人同意なしで第三者提供できる場合にも加工方法等情報の安全管理や公表義務が残る点を押さえ、仮名加工情報・統計情報との違いを判断します。"
 permalink: /ds/anonymized-information/
 categories: [ai-utilization]
 tags: [ds, ethics]
 prev: /ds/third-party-provision/
 next: /ds/k-anonymity/
-last_modified_at: 2026-06-28
+last_modified_at: 2026-07-01
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
