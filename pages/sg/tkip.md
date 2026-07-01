@@ -1,10 +1,10 @@
 ---
 layout: page
 title: TKIPとは？WPAで使われた無線LAN暗号化方式【情報セキュリティマネジメント】
-description: "TKIPは、WEPの弱点を補うためにWPAで使われた無線LANの暗号化方式です。WPA2やAESとの違い、SG試験でのひっかけポイントを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "TKIPをWEPの弱点を補うためWPAで使われた旧式の無線LAN暗号化方式として整理し、WPA2で標準的なAES、WEP、認証方式を問う選択肢を切り分けます。「WPAで使われたから安全」と読むのではなく、旧方式として扱うべき理由と更新先を確認できます。"
 permalink: /sg/tkip/
 tags: [sg, sg-technology, network, crypto_auth]
-last_modified_at: 2026-05-10
+last_modified_at: 2026-06-29
 ---
 
 ## まず結論

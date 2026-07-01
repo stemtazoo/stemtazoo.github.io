@@ -1,12 +1,12 @@
 ---
 layout: page
 title: "クリアデスク・クリアスクリーンとは？情報漏えい防止の基本ルール【SG試験】"
-description: "クリアデスク・クリアスクリーンは机や画面に情報を残さないことで漏えいを防ぐ対策です。物理対策と人的対策の違いやSG試験・情報セキュリティマネジメント試験での判断ポイントを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "クリアデスク・クリアスクリーンを机上や画面に情報を残さない漏えい防止ルールとして整理し、離席時・退勤時の職場運用を確認します。物理的対策、人的対策、入退室管理との関係から、日常業務で選ぶべき対策を判断します。"
 permalink: /sg/clear-desk-screen/
 prev: /sg/anti-passback/
 next: /sg/surveillance-camera/
 tags: [sg, sg-security-measures, data_leakage, security_training]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-06-30
 ---
 
 ## まず結論

@@ -1,10 +1,10 @@
 ---
 layout: page
 title: VDIのセキュリティ効果とは？DMZ配置で端末感染を減らす考え方【SG試験】
-description: "VDIはサーバ上の仮想デスクトップを利用する方式です。内部PCがインターネット上のWebサイトと直接通信しない構成にすることで、マルウェアのダウンロードを内部端末に持ち込みにくくする効果をSG試験向けに整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "VDIをサーバ上の仮想デスクトップ利用として整理し、DMZ配置で内部PCの直接通信を避ける効果、端末感染リスクの下げ方、VPNや単なるリモート接続との違いを見分けます。Web閲覧やメール利用を仮想環境に寄せる問題で、情報持ち出し対策とマルウェア持込み抑制を分けて考えます。"
 permalink: /sg/vdi-security/
 tags: [sg, sg-security-measures, network_security, endpoint_security]
-last_modified_at: 2026-05-20
+last_modified_at: 2026-06-29
 ---
 
 ## まず結論

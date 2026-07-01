@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: 基礎理論
 fe_order: 20
 date: 2026-06-24
-last_modified_at: 2026-06-23
+last_modified_at: 2026-06-29
 ---
 
 ## まず結論
@@ -304,7 +304,7 @@ A ≠ B かつ B ≠ C
 - `same(X, Y)` は、XとYが等しければ1、異なれば0
 - 入れ子の関数は、内側から順番に計算する
 - `same(same(A, B), same(B, C)) = 1` は、2つのsameの結果が同じという意味
-- 答えは `(A = B かつ B = C) 又は (A ≠ B かつ B ≠ C)`
+- 必要十分条件は `(A = B かつ B = C) 又は (A ≠ B かつ B ≠ C)` のように、成立する場合を過不足なく表す
 - 必要十分条件は「成り立つ場合をすべて含む」ことが大切
 
 {% include fe_article_footer.html %}

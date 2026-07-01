@@ -1,11 +1,11 @@
 ---
 layout: page
 title: TPMとは？セキュリティチップの鍵生成・保管機能を整理【SG試験】
-description: "TPMはPCやサーバに搭載されるセキュリティチップで、暗号鍵の生成・保管、乱数生成、ハッシュ計算、署名などを支援します。SG試験で迷いやすいCAやネットワーク機能との違いを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "TPMを端末内で暗号鍵の生成・保管や署名、ハッシュ計算を支援するセキュリティチップとして整理し、CAの証明書発行機能やネットワーク認証装置との違いを判断します。端末紛失時の鍵保護やセキュアブートに関わる問題で、ソフトウェア対策だけではない根拠を確認します。"
 permalink: /sg/tpm/
 tags: [sg, sg-security-measures, crypto_auth, system_architecture, access_control]
 date: 2026-06-01
-last_modified_at: 2026-06-01
+last_modified_at: 2026-06-29
 ---
 
 ## まず結論

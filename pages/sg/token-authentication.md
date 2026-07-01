@@ -1,12 +1,12 @@
 ---
 layout: page
 title: "トークン認証とは？SAML・OAuth・OIDCの違いを整理【SG試験】"
-description: "トークン認証は認証結果を使い回す仕組みです。SAML・OAuth・OIDCの役割の違いを整理し、SG試験・情報セキュリティマネジメント試験で問われるSSOやIdPとの関係を分かりやすく解説します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "トークン認証を認証結果や権限情報を受け渡す仕組みとして整理し、SAML、OAuth、OIDCが担うSSO、認可、本人情報連携の違いをIdPとの関係から見分けます。ログイン連携、API利用許可、IDトークンの目的を混同せず、どの情報を誰に渡す仕組みかで判断します。"
 permalink: /sg/token-authentication/
 prev: /sg/idp/
 next: /sg/authorization/
 tags: [sg, sg-security-measures, crypto_auth, system_architecture]
-last_modified_at: 2026-06-11
+last_modified_at: 2026-06-29
 ---
 
 ## まず結論

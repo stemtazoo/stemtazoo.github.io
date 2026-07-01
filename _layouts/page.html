@@ -5,9 +5,6 @@ layout: default
   <main class="site-main">
     <article class="post">
       <header class="post-header">
-        {% if page.description %}
-          <p class="post-meta">{{ page.description }}</p>
-        {% endif %}
         {% assign page_last_modified = page.last_modified_at | default: page.date %}
         {% if page_last_modified %}
           <p class="page-last-modified">最終更新日：{{ page_last_modified | date: "%Y年%-m月%-d日" }}</p>

@@ -1,12 +1,12 @@
 ---
 layout: page
 title: "アクセス管理とは？特権IDとneed-to-knowで権限を適切に制御【SG試験】"
-description: "アクセス管理は利用者に応じて適切な権限を設定する仕組みです。特権IDやneed-to-knowの考え方を中心に、SG試験・情報セキュリティマネジメント試験で問われる権限設定と内部不正対策の判断ポイントを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "アクセス管理を「必要な人に必要な範囲だけ許可する運用」として整理し、特権ID管理、need-to-know、内部不正防止の関係を確認します。申請・承認・棚卸しの観点から、過剰権限や権限放置を問う選択肢を切り分けます。"
 permalink: /sg/access-control/
 prev: /sg/authorization/
 next: /sg/access-control-model/
 tags: [sg, sg-security-measures, access_control, it_security_operations]
-last_modified_at: 2026-06-11
+last_modified_at: 2026-06-30
 ---
 
 ## まず結論
