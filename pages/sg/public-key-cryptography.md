@@ -1,12 +1,12 @@
 ---
 layout: page
 title: "公開鍵暗号方式とは？鍵の受け渡し問題を解決する仕組み【SG試験】"
-description: "公開鍵暗号方式は暗号化と復号で異なる鍵を使う暗号方式です。暗号化鍵・暗号化アルゴリズムは公開でき、復号鍵は秘密にするというSG試験の判断ポイントを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "公開鍵暗号方式を暗号化鍵と復号鍵を分ける仕組みとして整理し、鍵配送問題、秘密鍵を公開しない原則、共通鍵暗号や電子署名との違いを判断します。受信者の公開鍵で暗号化し、受信者の秘密鍵で復号する流れをSG試験向けに確認します。"
 permalink: /sg/public-key-cryptography/
 prev: /sg/symmetric-key-cryptography/
 next: /sg/rsa/
 tags: [sg, crypto_auth, sg-security-overview, network]
-last_modified_at: 2026-06-01
+last_modified_at: 2026-07-02
 ---
 
 ## まず結論

@@ -1,10 +1,10 @@
 ---
 layout: page
 title: EAP-OTPとは？ワンタイムパスワードで認証するEAP方式【SG試験】
-description: "EAP-OTPは、ワンタイムパスワードを使って利用者を認証するEAP方式です。SG試験で混同しやすいEAP-MD5、EAP-TLS、PEAP、EAP-TTLSとの違いを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "EAP-OTPをワンタイムパスワードで利用者を認証するEAP方式として整理し、EAP-MD5、EAP-TLS、PEAP、EAP-TTLSとの認証材料の違いを判断します。証明書を使う方式、トンネルを作る方式、使い捨てパスワードを使う方式を分けます。"
 permalink: /sg/eap-otp/
 tags: [sg, sg-security-overview, crypto_auth, network, access_control]
-last_modified_at: 2026-05-10
+last_modified_at: 2026-07-02
 ---
 
 ## まず結論

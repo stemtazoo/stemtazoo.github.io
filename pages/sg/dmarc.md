@@ -1,10 +1,10 @@
 ---
 layout: page
 title: DMARCとは？なりすましメール対策をSPF・DKIMと整理【SG試験】
-description: "DMARCは、SPFやDKIMの認証結果をもとに、なりすましメールをどう扱うかを送信側ドメインが示す仕組みです。SG試験で混同しやすいSPF・DKIMとの違いを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "DMARCをSPF・DKIMの認証結果を使ってなりすましメールの扱いを送信側ドメインが示す仕組みとして整理し、3方式の役割分担を見分けます。送信元IPの確認、電子署名による確認、失敗時ポリシーの指定を分けて選択肢を切ります。"
 permalink: /sg/dmarc/
 tags: [sg, sg-security-measures, data_leakage, crypto_auth, network]
-last_modified_at: 2026-06-17
+last_modified_at: 2026-07-02
 ---
 
 ## まず結論

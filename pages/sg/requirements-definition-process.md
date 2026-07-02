@@ -1,10 +1,10 @@
 ---
 layout: page
 title: 要求定義プロセスとは？企画・開発・保守との違いを整理【SG試験】
-description: "要求定義プロセスは、利害関係者のニーズ・要望・制約条件を明確にし、システムに求める内容を整理する工程です。SG試験で混同しやすい企画、システム開発、実装、保守との違いを判断基準で整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "要求定義プロセスを利害関係者のニーズと制約を明確にする工程として整理し、企画・設計・実装・保守を選ばせるSG試験のひっかけを工程の目的で見分けます。システムに何を求めるかを固める段階であり、作り方を決める工程ではない点を押さえます。"
 permalink: /sg/requirements-definition-process/
 tags: [sg, sg-strategy, system_planning, project_management, system_strategy]
-last_modified_at: 2026-06-06
+last_modified_at: 2026-07-02
 ---
 
 ## まず結論

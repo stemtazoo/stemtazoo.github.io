@@ -1,12 +1,12 @@
 ---
 layout: page
 title: "リスク対応の具体例問題で理解を深める【SG試験】"
-description: "リスク対応（回避・低減・移転・受容）の違いを具体例で判断できるように整理します。SG試験・情報セキュリティマネジメント試験での選択肢の切り方とひっかけポイントを演習形式で解説します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "リスク対応の回避・低減・移転・受容を具体例で判定する演習として整理し、対策をやめる、発生確率を下げる、保険へ移す、受け入れる場面を見分けます。用語定義ではなく、事例の行動がどの対応に当たるかを選ぶ練習にします。"
 permalink: /sg/risk-treatment-exercises/
 prev: /sg/risk-treatment2/
 next: /sg/risk-treatment-case-study/
 tags: [sg, sg-security-management, risk_assessment, isms]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-07-02
 ---
 
 ## まず結論

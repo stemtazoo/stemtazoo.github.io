@@ -1,10 +1,10 @@
 ---
 layout: page
 title: ペネトレーションテストとは？侵入できるかを実際に確認する検査【SG試験】
-description: "ペネトレーションテストは、攻撃者の視点で実際に侵入を試み、脆弱性の影響を確認する検査です。SG試験で迷いやすい脆弱性診断やレビューとの違いを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "ペネトレーションテストを攻撃者視点で実際に侵入可能性を確認する検査として整理し、脆弱性診断やレビューとの違いを検査方法と目的から判断します。設定やコードの確認だけでなく、許可された範囲で攻撃を試す点をSG試験の選択肢で見抜きます。"
 permalink: /sg/penetration-test/
 tags: [sg, sg-security-measures, unauthorized_access, risk_assessment, it_security_operations]
-last_modified_at: 2026-05-20
+last_modified_at: 2026-07-02
 ---
 
 ## まず結論

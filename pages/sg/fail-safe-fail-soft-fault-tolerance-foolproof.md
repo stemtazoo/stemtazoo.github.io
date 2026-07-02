@@ -1,11 +1,11 @@
 ---
 layout: page
 title: フェールセーフ・フェールソフト・フォールトトレランス・フールプルーフの違い【SG試験】
-description: "フェールセーフは故障時に安全側へ制御する設計です。フェールソフト、フォールトトレランス、フールプルーフとの違いを、SG試験の選択肢を切る観点で整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "フェールセーフ、フェールソフト、フォールトトレランス、フールプルーフを故障時の安全性、継続運転、ミス防止の観点で比較し、似た選択肢を切り分けます。止める、安全側に倒す、一部機能で続ける、誤操作を防ぐという目的の違いを押さえます。"
 permalink: /sg/fail-safe-fail-soft-fault-tolerance-foolproof/
 tags: [sg, sg-management, system_architecture, service_management]
 date: 2026-06-14
-last_modified_at: 2026-06-14
+last_modified_at: 2026-07-02
 ---
 
 ## まず結論
