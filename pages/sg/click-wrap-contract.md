@@ -1,11 +1,11 @@
 ---
 layout: page
 title: クリックラップ契約とは？同意ボタンで成立する契約方式【SG試験】
-description: "クリックラップ契約は、画面上の利用規約を確認し「同意する」ボタンをクリックすることで契約に同意したとみなす方式です。SG試験・情報セキュリティマネジメント試験で迷いやすいシュリンクラップ契約との違いも整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "クリックラップ契約を画面上の同意操作で成立を確認する方式として整理し、シュリンクラップ契約との違いや、利用規約への同意を問うSG試験の判断軸を示します。包装の開封ではなく、Web画面で規約確認とクリック同意を求める点を押さえます。"
 permalink: /sg/click-wrap-contract/
 tags: [sg, sg-strategy, business_management, it_security_operations]
 prev: /sg/shrink-wrap-contract/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-07-02
 ---
 
 ## まず結論

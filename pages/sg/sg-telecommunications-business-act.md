@@ -1,10 +1,10 @@
 ---
 layout: page
 title: 電気通信事業法とは？SG試験で押さえる通信の秘密
-description: "電気通信事業法は、電話、インターネット、メールなどの通信サービスで通信の秘密や利用者保護を定める法律です。SG試験で混同しやすい個人情報保護法や情報流通プラットフォーム対処法との違いを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "電気通信事業法を通信の秘密と利用者保護の法律として整理し、個人情報保護法や情報流通プラットフォーム対処法と混同しやすい保護対象の違いを示します。メールやインターネット接続など通信サービスに関する問題で、守る対象を軸に判断します。"
 permalink: /sg/telecommunications-business-act/
 tags: [sg, sg-security-law, privacy_law, it_security_operations]
-last_modified_at: 2026-05-17
+last_modified_at: 2026-07-02
 ---
 
 ## まず結論

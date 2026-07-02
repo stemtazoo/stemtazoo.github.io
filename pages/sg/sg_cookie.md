@@ -1,11 +1,11 @@
 ---
 layout: page
 title: Cookieとは？HTTPヘッダで扱う状態管理の基本
-description: "Cookieの保存場所・送信方法・属性（Secure/HttpOnly/SameSite）を、HTTPSとの違いとあわせて整理し、SG試験で誤答選択肢を切る判断軸を解説します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "CookieをHTTPで状態を保持する仕組みとして整理し、Secure・HttpOnly・SameSite属性、HTTPSとの役割の違い、保存場所を問うSG試験の誤答を切る視点を示します。サーバ側セッションや暗号化通信そのものと混同せず、ブラウザが送受信する情報として扱います。"
 permalink: /sg/cookie/
 tags: [sg, sg-technology, web, network, authentication]
 date: 2026-05-13
-last_modified_at: 2026-05-29
+last_modified_at: 2026-07-02
 ---
 
 # Cookieとは？HTTPヘッダで扱う状態管理の基本

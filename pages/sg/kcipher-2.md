@@ -1,10 +1,10 @@
 ---
 layout: page
 title: KCipher-2とは？高速・軽量な共通鍵暗号方式を整理【SG試験】
-description: "KCipher-2は、KDDI総合研究所と九州大学が研究・開発に関わった高速・軽量な共通鍵暗号方式です。SG試験で混同しやすいAES、RSA、SHA-256との違いを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "KCipher-2を高速・軽量な共通鍵暗号方式として整理し、AESなどの共通鍵暗号、RSAなどの公開鍵暗号、SHA-256などのハッシュとの違いを示します。暗号方式の分類を問う問題で、鍵の使い方とハッシュ関数の用途を混同しないようにします。"
 permalink: /sg/kcipher-2/
 tags: [sg, sg-security-overview, crypto_auth, network]
-last_modified_at: 2026-05-10
+last_modified_at: 2026-07-02
 ---
 
 ## まず結論

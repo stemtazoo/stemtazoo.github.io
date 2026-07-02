@@ -1,12 +1,12 @@
 ---
 layout: page
 title: "セキュアプロトコルとは？代表例と使い分けを整理【SG試験】"
-description: "セキュアプロトコルは、暗号化・認証・改ざん検知によって通信を安全にする仕組みです。HTTPS、TLS、SSH、SFTP、IPsec、WPA3などの用途の違いと、SG試験での切り分け方を解説します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "セキュアプロトコルを暗号化・認証・改ざん検知で通信を守る仕組みとして整理し、HTTPS、TLS、SSH、SFTP、IPsec、WPA3の用途差を見分けます。Web、リモートログイン、ファイル転送、VPN、無線LANのどこを守るかで判断します。"
 permalink: /sg/secure-protocol/
 prev: /sg/certificate-revocation-crl-ocsp/
 next: /sg/wifi-security-protocols/
 tags: [sg, sg-technology, network, crypto_auth]
-last_modified_at: 2026-06-17
+last_modified_at: 2026-07-02
 ---
 
 ## まず結論

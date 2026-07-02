@@ -1,12 +1,12 @@
 ---
 layout: page
 title: "就業形態の違いを完全整理【SG試験】"
-description: "就業形態の違いを完全整理は関連概念を正しく切り分けるための考え方です。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "請負・派遣・出向・雇用契約の違いを指揮命令、成果物責任、雇用関係で比較し、就業形態を問うSG試験の選択肢を契約関係から切れるようにします。誰が作業者へ指示し、誰が成果物や労務管理に責任を持つかを表で確認します。"
 permalink: /sg/employment-type-comparison/
 tags: [sg, management, business_management, vendor_management, risk_assessment, sg-management]
 prev: /sg/dos-vs-ddos/
 next: /sg/five-basic-components/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-07-02
 ---
 
 ## まず結論

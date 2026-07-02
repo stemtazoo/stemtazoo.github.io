@@ -1,12 +1,12 @@
 ---
 layout: page
 title: "リスク管理の総合問題（科目B対策）で実戦力を鍛える【SG試験】"
-description: "リスク基準・リスクアセスメント・リスク対応を組み合わせた科目B形式の総合問題です。SG試験・情報セキュリティマネジメント試験での判断プロセスと選択肢の切り方を実戦レベルで解説します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "リスク基準、リスクアセスメント、リスク対応を組み合わせた科目B形式の総合演習で、回避・低減・移転・受容を事例文から選ぶ判断プロセスを確認します。単語暗記ではなく、業務影響、発生可能性、残留リスクを読み取って対応を選ぶ練習にします。"
 permalink: /sg/risk-management-final-exercise/
 prev: /sg/risk-criteria-treatment-exercises/
 next: /sg/audit-log/
 tags: [sg, sg-security-management, risk_assessment, isms]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-07-02
 ---
 
 ## まず結論
