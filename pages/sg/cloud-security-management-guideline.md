@@ -1,10 +1,10 @@
 ---
 layout: page
 title: クラウドサービス利用のための情報セキュリティマネジメントガイドラインとは？利用者視点で整理【SG試験】
-description: "クラウドサービス利用のための情報セキュリティマネジメントガイドラインは、クラウド利用時のリスク対応を利用者視点で整理した指針です。SG試験で問われやすい目的とひっかけポイントを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "クラウド利用時の情報セキュリティ管理を利用者責任・委託先管理・サービス設定の観点で整理し、クラウドサービスの便利さだけを選ぶ誤答を避け、リスク評価や契約・運用確認を問うSGの選択肢を判断します。"
 permalink: /sg/cloud-security-management-guideline/
 tags: [sg, sg-security-management, risk_assessment, vendor_management]
-last_modified_at: 2026-05-14
+last_modified_at: 2026-07-04
 ---
 
 ## まず結論

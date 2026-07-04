@@ -1,11 +1,11 @@
 ---
 layout: page
 title: DNSゾーン転送とは？許可先を制限する理由をやさしく解説【SG試験】
-description: "DNSゾーン転送は、プライマリDNSからセカンダリDNSへゾーン情報を同期する仕組みです。許可先制限、SOA、TTL、ラウンドロビンとの違いをSG試験向けに整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "DNSゾーン転送を、プライマリDNSからセカンダリDNSへゾーン情報を同期する仕組みとして整理し、許可先制限が必要な理由や、SOA・TTL・ラウンドロビンとの役割差を確認します。"
 permalink: /sg/dns-zone-transfer/
 tags: [sg, sg-security-measures, network, dns]
 date: 2026-06-14
-last_modified_at: 2026-06-14
+last_modified_at: 2026-07-04
 ---
 
 ## まず結論

@@ -1,10 +1,10 @@
 ---
 layout: page
 title: CSAとは？統制自己評価でリスクを見つける考え方【SG試験】
-description: "CSAは、業務部門が自分たちの業務や管理策を点検し、リスクや統制の弱点を見つける考え方です。システム監査や内部統制との違いを、SG試験の判断基準として整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "CSAを、業務部門が自ら統制やリスクを点検する活動として整理し、独立した監査人が保証を与えるシステム監査との違いを、自己点検・改善促進・現場主体の観点で判断します。"
 permalink: /sg/csa-control-self-assessment/
 tags: [sg, sg-management, system_audit, risk_assessment]
-last_modified_at: 2026-06-17
+last_modified_at: 2026-07-04
 ---
 
 ## まず結論

@@ -1,11 +1,11 @@
 ---
 layout: page
 title: サイバーセキュリティ経営ガイドラインとは？3原則と重要10項目を整理【SG試験】
-description: "サイバーセキュリティ経営ガイドラインは、経営者がサイバーセキュリティを経営課題として扱うための指針です。SG試験で人材・予算、情報共有、取引先管理の選択肢を切る判断軸を整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "サイバーセキュリティ経営ガイドラインを、経営者がリスクを経営課題として扱うための指針として整理し、人材・予算、情報共有、委託先管理を現場任せにする誤答を避けます。"
 permalink: /sg/cybersecurity-management-guideline/
 tags: [sg, sg-security-management, risk_assessment, vendor_management, security_training]
 date: 2026-06-13
-last_modified_at: 2026-06-15
+last_modified_at: 2026-07-04
 ---
 
 ## まず結論

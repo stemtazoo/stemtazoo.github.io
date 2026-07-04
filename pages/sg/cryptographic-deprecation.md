@@ -2,12 +2,12 @@
 
 layout: page
 title: 暗号の危殆化とは？古い暗号技術が危険になる理由【SG試験】
-description: "暗号の危殆化は、以前は安全だった暗号技術が、計算能力や攻撃手法の進歩によって安全とはいえなくなることです。SG試験・情報セキュリティマネジメント試験で問われる移行判断を整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "暗号の危殆化を、計算能力や攻撃手法の進歩で従来の暗号が十分に安全でなくなる状態として整理し、継続利用ではなく移行計画や推奨暗号への切替えを選ぶ判断を確認します。"
 permalink: /sg/cryptographic-deprecation/
 tags: [sg, sg-security-overview, crypto_auth, risk_assessment]
 prev: /sg/monitoring-crypto-list/
 next: /sg/compromise-crypto/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-07-04
 ---
 
 ## まず結論
