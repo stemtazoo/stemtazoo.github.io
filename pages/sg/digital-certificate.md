@@ -1,12 +1,12 @@
 ---
 layout: page
 title: 電子証明書とは？公開鍵の正当性を証明する仕組み【SG試験】
-description: "電子証明書は公開鍵が正しい所有者のものであることを証明する仕組みです。PKIやルート証明書との関係を整理し、SG試験・情報セキュリティマネジメント試験のひっかけポイントと判断基準を分かりやすく解説します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "電子証明書を、公開鍵が正しい所有者のものだと示す仕組みとして整理し、認証局、PKI、ルート証明書との関係や、通信内容を暗号化する技術そのものではない点を確認します。"
 permalink: /sg/digital-certificate/
 prev: /sg/pki/
 next: /sg/certificate-authority-role/
 tags: [sg, sg-security-overview, crypto_auth, it_security_operations]
-last_modified_at: 2026-06-03
+last_modified_at: 2026-07-04
 ---
 
 ## まず結論

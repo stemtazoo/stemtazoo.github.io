@@ -1,10 +1,10 @@
 ---
 layout: page
 title: DNS・メールセキュリティまとめ｜SPF・DKIM・OP25Bを整理【SG試験】
-description: "DNS・メールのなりすまし対策は、名前解決の保護、送信者確認、迷惑メール判定を分けて理解するのが近道です。DNSSEC・SPF・DKIM・ベイジアンフィルタリング・S/MIMEの違いをSG試験向けに整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "DNS・メールセキュリティを、名前解決の正当性、送信ドメイン確認、迷惑メール判定、暗号化メールに分けて整理し、DNSSEC・SPF・DKIM・S/MIMEなどの守る対象を比較します。"
 permalink: /sg/dns-mail-security-summary/
 tags: [sg, sg-security-measures, network, data_leakage]
-last_modified_at: 2026-06-18
+last_modified_at: 2026-07-04
 ---
 
 ## まず結論

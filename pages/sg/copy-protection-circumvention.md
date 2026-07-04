@@ -1,11 +1,11 @@
 ---
 layout: page
 title: コピーコントロール回避プログラムとは？著作権法で禁止される行為【SG試験】
-description: "コピーコントロール回避プログラムは、デジタルコンテンツの技術的保護手段を無効化する機能を持つプログラムです。著作権法、不正アクセス禁止法、電気通信事業法との違いをSG試験向けに整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "コピーコントロール回避プログラムを、デジタルコンテンツの技術的保護手段を無効化するものとして整理し、著作権法上の保護対象と不正アクセス・通信規制との線引きを確認します。"
 permalink: /sg/copy-protection-circumvention/
 tags: [sg, sg-security-law, intellectual_property, copyright]
 date: 2026-06-08
-last_modified_at: 2026-06-08
+last_modified_at: 2026-07-04
 ---
 
 ## まず結論
