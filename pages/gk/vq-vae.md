@@ -1,12 +1,12 @@
 ---
 layout: page
-title: VQ-VAE（Vector Quantized Variational AutoEncoder）とは？【G検定対策】
+title: VQ-VAEとは？【G検定】
 description: VQ-VAEは、VAEの潜在表現を連続値ではなくコードブック上の離散ベクトルで表す生成モデルです。量子化、コードブック学習、再構成誤差の考え方に加え、通常のVAE・β-VAE・CVAE・GANとの違い、画像生成での位置づけをG検定向けに整理します。
 permalink: /gk/vq-vae/
 tags: [gk, generative_model, neural_network]
 gk_section: ディープラーニングの要素技術/オートエンコーダ
 gk_order: 8
-last_modified_at: 2026-06-17
+last_modified_at: 2026-07-06
 ---
 
 ## まず結論

@@ -1,12 +1,12 @@
 ---
 layout: page
-title: Atrous Convolution（拡張畳み込み）とは？受容野と解像度の関係を整理【G検定対策】
+title: Atrous Convolutionとは？【G検定】
 description: Atrous Convolutionは、畳み込みカーネルの間隔を広げ、解像度を落とさずに受容野を広げる手法です。DeepLab、セグメンテーション、通常の畳み込み、プーリング、Depthwise Separable Convolutionとの違いをG検定向けに整理します。
 permalink: /gk/atrous-convolution/
 tags: [gk, cnn, image_recognition]
 gk_section: ディープラーニングの要素技術/ネットワークの構成要素
 gk_order: 12
-last_modified_at: 2026-06-18
+last_modified_at: 2026-07-06
 ---
 
 ## まず結論
