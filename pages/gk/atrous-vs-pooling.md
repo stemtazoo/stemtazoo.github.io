@@ -1,11 +1,12 @@
-﻿---
+---
 layout: page
-title: Atrous ConvolutionとPoolingの違いとは？【受容野と解像度の観点で整理｜G検定対策】
+title: Atrous ConvolutionとPoolingの違い【G検定】
 description: "Atrous ConvolutionとPoolingの違いについて、G検定で問われる画像認識・CNN分野の観点から、目的、前提、モデル構造、入力と出力、評価観点のどこが異なるかを比較します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/atrous-vs-pooling/
 tags: [gk, cnn]
 gk_section: ディープラーニングの要素技術/ネットワークの構成要素
 gk_order: 13
+last_modified_at: 2026-07-06
 ---
 
 ## まず結論

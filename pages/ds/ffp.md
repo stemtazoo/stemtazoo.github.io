@@ -1,11 +1,11 @@
 ---
 layout: page
-title: FFPとは？研究不正の3つの基本（Fabrication・Falsification・Plagiarism）【DS検定】
+title: FFPとは？研究不正の3分類【DS検定】
 description: FFPとは、研究不正の代表例であるFabrication（捏造）、Falsification（改ざん）、Plagiarism（盗用）の総称です。データサイエンスでの具体例、ミスやバイアスとの違い、DS検定で問われやすい判断ポイントを整理します。
 permalink: /ds/ffp/
 categories: [business]
 tags: [ds, ethics, governance]
-last_modified_at: 2026-06-28
+last_modified_at: 2026-07-06
 ---
 
 ## まず結論

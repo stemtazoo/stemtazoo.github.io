@@ -1,11 +1,12 @@
-﻿---
+---
 layout: page
-title: GLUE（General Language Understanding Evaluation）とは？【G検定対策】
+title: GLUEとは？【G検定】
 description: "GLUEは、文分類、意味類似度、自然言語推論など複数の自然言語理解タスクをまとめ、NLPモデルの性能を共通条件で比較するベンチマークです。BERTなどの評価に使われますが、GLUE自体は学習アルゴリズムでも言語モデルでもない点を押さえ、「評価用タスク群」という語から正しい選択肢を判別します。"
 permalink: /gk/glue/
 tags: [gk, nlp]
 gk_section: ディープラーニングの応用例/自然言語処理
 gk_order: 30
+last_modified_at: 2026-07-06
 ---
 
 ## まず結論
