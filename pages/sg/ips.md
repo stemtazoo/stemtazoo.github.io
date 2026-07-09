@@ -1,12 +1,12 @@
 ---
 layout: page
 title: "IPSとは？不正侵入を検知して遮断する仕組み【SG試験】"
-description: "IPSは通信内容を監視し、不正なアクセスや攻撃を検知して自動的に遮断する仕組みです。IDSとの違いやファイアーウォールとの役割分担を、SG試験・情報セキュリティマネジメント試験の判断ポイントとともに整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "IPSは通信内容を監視し、不正なアクセスや攻撃を検知して自動的に遮断する仕組みです。IDSとの違いやファイアーウォールとの役割分担を、SG試験・情報セキュリティマネジメント試験の判断ポイントとともに整理します。"
 permalink: /sg/ips/
 prev: /sg/vpn/
 next: /sg/captcha/
 tags: [sg, sg-security-measures, unauthorized_access, network]
-last_modified_at: 2026-05-20
+last_modified_at: 2026-07-09
 ---
 
 ## まず結論

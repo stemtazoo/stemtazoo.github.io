@@ -1,10 +1,10 @@
 ---
 layout: page
 title: 組織における内部不正防止ガイドラインとは？管理者不正を防ぐ体制【SG試験】
-description: "組織における内部不正防止ガイドラインは、内部者による不正行為を防ぎ、早期発見と被害拡大防止につなげるための指針です。SG試験で問われやすい管理者権限、ログ確認、単独作業の制限を整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "組織における内部不正防止ガイドラインは、内部者による不正行為を防ぎ、早期発見と被害拡大防止につなげるための指針です。SG試験で問われやすい管理者権限、ログ確認、単独作業の制限を整理します。"
 permalink: /sg/internal-fraud-prevention-guideline/
 tags: [sg, sg-security-management, risk_assessment, access_control, it_security_operations]
-last_modified_at: 2026-05-21
+last_modified_at: 2026-07-09
 ---
 
 ## まず結論

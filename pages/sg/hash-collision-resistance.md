@@ -1,12 +1,12 @@
 ---
 layout: page
 title: "ハッシュ関数の衝突耐性とは？改ざん検知の強さを左右する性質【SG試験】"
-description: "ハッシュ関数の衝突耐性は、同じハッシュ値になる異なるデータを見つけることが困難な性質です。改ざん検知や電子署名の信頼性に直結する重要ポイントをSG試験・情報セキュリティマネジメント試験向けに整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "ハッシュ関数の衝突耐性は、同じハッシュ値になる異なるデータを見つけることが困難な性質です。改ざん検知や電子署名の信頼性に直結する重要ポイントをSG試験・情報セキュリティマネジメント試験向けに整理します。"
 permalink: /sg/hash-collision-resistance/
 prev: /sg/hash-algorithms/
 next: /sg/message-authentication/
 tags: [sg, sg-security-overview, crypto_auth, data_leakage]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-07-09
 ---
 
 ## まず結論
