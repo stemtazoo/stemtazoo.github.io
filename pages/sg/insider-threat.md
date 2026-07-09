@@ -1,12 +1,12 @@
 ---
 layout: page
 title: "内部不正とは？不正のトライアングルで原因と対策を理解【SG試験】"
-description: "内部不正は組織内部の人によって行われる不正行為です。不正のトライアングル（動機・機会・正当化）を軸に、SG試験・情報セキュリティマネジメント試験で問われる原因分析と対策の考え方を整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "内部不正は組織内部の人によって行われる不正行為です。不正のトライアングル（動機・機会・正当化）を軸に、SG試験・情報セキュリティマネジメント試験で問われる原因分析と対策の考え方を整理します。"
 permalink: /sg/insider-threat/
 tags: [sg, sg-security-management, it_security_operations, security_training]
 prev: /sg/security-training/
 next: /sg/insider-guideline/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-07-09
 ---
 
 ## まず結論

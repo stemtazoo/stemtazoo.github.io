@@ -1,10 +1,10 @@
 ---
 layout: page
 title: ハクティビストとは？主張を目的にしたサイバー攻撃の見分け方【SG試験】
-description: "ハクティビストは、政治的・社会的な主張を目的にサイバー攻撃や情報発信を行う人や集団です。金銭目的の攻撃者や愉快犯との違いを、SG試験のひっかけポイントとして整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "ハクティビストは、政治的・社会的な主張を目的にサイバー攻撃や情報発信を行う人や集団です。金銭目的の攻撃者や愉快犯との違いを、SG試験のひっかけポイントとして整理します。"
 permalink: /sg/hacktivist/
 tags: [sg, sg-security-overview, threat_vulnerability, unauthorized_access]
-last_modified_at: 2026-06-17
+last_modified_at: 2026-07-09
 ---
 
 ## まず結論

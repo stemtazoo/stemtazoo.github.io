@@ -1,10 +1,10 @@
 ---
 layout: page
 title: Flood攻撃とは？大量通信でサービスを妨害する攻撃【SG試験】
-description: "Flood攻撃は、大量の通信や要求を送り付けてサーバや回線の処理能力を圧迫する攻撃です。SG試験で迷いやすいICMP Flood、SYN Flood、HTTP GET Floodの切り分けを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "Flood攻撃は、大量の通信や要求を送り付けてサーバや回線の処理能力を圧迫する攻撃です。SG試験で迷いやすいICMP Flood、SYN Flood、HTTP GET Floodの切り分けを整理します。"
 permalink: /sg/flood-attack/
 tags: [sg, sg-security-overview, threat_vulnerability, network]
-last_modified_at: 2026-06-04
+last_modified_at: 2026-07-09
 ---
 
 ## まず結論

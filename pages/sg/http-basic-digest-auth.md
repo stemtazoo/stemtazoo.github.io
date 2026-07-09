@@ -1,11 +1,11 @@
 ---
 layout: page
 title: HTTPのBasic認証とDigest認証とは？Authorizationヘッダの違いを整理【SG試験】
-description: "HTTPのBasic認証とDigest認証について、Authorizationヘッダで扱う認証情報、Base64とハッシュ値の違い、SG試験での判断軸を整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "HTTPのBasic認証とDigest認証について、Authorizationヘッダで扱う認証情報、Base64とハッシュ値の違い、SG試験での判断軸を整理します。"
 permalink: /sg/http-basic-digest-auth/
 tags: [sg, sg-technology, access_control, network, crypto_auth]
 date: 2026-06-01
-last_modified_at: 2026-06-01
+last_modified_at: 2026-07-09
 ---
 
 ## まず結論

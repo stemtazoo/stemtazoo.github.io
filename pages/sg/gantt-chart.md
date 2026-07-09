@@ -1,10 +1,10 @@
 ---
 layout: page
 title: ガントチャートとは？作業期間と進捗を横棒で見る図【SG試験】
-description: "ガントチャートは、作業項目ごとの期間計画や実施状況を横棒で表す工程管理図です。SG試験で混同しやすいアローダイアグラム、マイルストーン、EVMとの違いを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "ガントチャートは、作業項目ごとの期間計画や実施状況を横棒で表す工程管理図です。SG試験で混同しやすいアローダイアグラム、マイルストーン、EVMとの違いを整理します。"
 permalink: /sg/gantt-chart/
 tags: [sg, sg-management, project_management]
-last_modified_at: 2026-06-03
+last_modified_at: 2026-07-09
 ---
 
 ## まず結論

@@ -1,11 +1,11 @@
 ---
 layout: page
 title: "本人拒否率と他人受入率とは？生体認証の重要指標を整理【SG試験】"
-description: "本人拒否率（FRR）と他人受入率（FAR）は、生体認証の利便性と安全性を評価する指標です。しきい値調整、トレードオフ、EERとの関係を整理し、SG試験で選択肢を切る判断軸を解説します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "本人拒否率（FRR）と他人受入率（FAR）は、生体認証の利便性と安全性を評価する指標です。しきい値調整、トレードオフ、EERとの関係を整理し、SG試験で選択肢を切る判断軸を解説します。"
 permalink: /sg/frr-far/
 next: /sg/symmetric-key-cryptography/
 tags: [sg, sg-security-measures, access_control, crypto_auth]
-last_modified_at: 2026-06-17
+last_modified_at: 2026-07-09
 ---
 
 ## まず結論

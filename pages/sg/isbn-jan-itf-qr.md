@@ -1,10 +1,10 @@
 ---
 layout: page
 title: ISBN・JAN・ITF・QRの違いは？識別コードの選択肢を切るコツ【SG試験】
-description: "ISBNは図書を世界標準で識別する番号です。SG試験で混同しやすいJAN・ITF・QRとの違いを、用途ベースで整理し、選択肢の切り分け方をやさしく解説します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "ISBNは図書を世界標準で識別する番号です。SG試験で混同しやすいJAN・ITF・QRとの違いを、用途ベースで整理し、選択肢の切り分け方をやさしく解説します。"
 permalink: /sg/isbn-jan-itf-qr/
 tags: [sg, sg-technology, system_strategy, it_security_operations]
-last_modified_at: 2026-06-14
+last_modified_at: 2026-07-09
 ---
 
 ## まず結論
