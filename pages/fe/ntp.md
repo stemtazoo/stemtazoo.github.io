@@ -24,7 +24,7 @@ NTPは、Network Time Protocol の略です。
 → NTP
 ```
 
-今回のように、複数のノードにおける時刻の同期を図るプロトコルを聞かれたら、NTPを選びます。
+試験で、複数のノードにおける時刻の同期を図るプロトコルを聞かれたら、NTPを選びます。
 
 ## 直感的な説明
 
@@ -86,12 +86,12 @@ FE試験では、細かい時刻補正の仕組みよりも、次の対応を押
 | 電子メールを送信・転送する | SMTP |
 | ネットワーク機器を監視・管理する | SNMP |
 
-今回のような選択肢では、次のように切ります。
+似た選択肢は、次のように切ります。
 
-| 選択肢 | 判断 |
+| 用語 | 判断 |
 |---|---|
 | NNTP | Network News Transfer Protocol。ネットニュースの記事を扱う |
-| NTP | Network Time Protocol。時刻同期。正しい |
+| NTP | Network Time Protocol。時刻同期 |
 | SMTP | Simple Mail Transfer Protocol。メール送信・転送 |
 | SNMP | Simple Network Management Protocol。ネットワーク機器の監視・管理 |
 
