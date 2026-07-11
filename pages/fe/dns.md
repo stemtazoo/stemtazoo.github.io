@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 50
 date: 2026-06-26
-last_modified_at: 2026-06-26
+last_modified_at: 2026-07-11
 ---
 
 ## まず結論
@@ -203,5 +203,13 @@ DNSは、すでに対応付けられた名前とIPアドレスを調べる仕組
 - プライベートIPとグローバルIPを変換するのはNAT
 - 遠隔の手続きを呼び出すのはRPC
 - FEでもSGでも、まずDNS＝名前解決と覚える
+
+## 関連記事
+
+ネットワーク用語は、役割の違いで切り分けると覚えやすくなります。
+
+- [DHCPとは？IPアドレスを自動で割り当てる仕組み](/fe/dhcp/)
+- [NATとは？プライベートIPアドレスをグローバルIPアドレスへ変換する仕組み](/fe/nat/)
+- [RPCとは？離れたプログラムを呼び出す仕組み](/fe/rpc/)
 
 {% include fe_article_footer.html %}
