@@ -6,7 +6,7 @@ permalink: /sg/domain-hijacking/
 tags: [sg, security_measures, unauthorized_access, network, threat_vulnerability, sg-security-measures]
 prev: /sg/dns/
 next: /sg/dos-attack-difference/
-last_modified_at: 2026-05-27
+last_modified_at: 2026-07-13
 ---
 
 ## まず結論
@@ -108,7 +108,6 @@ last_modified_at: 2026-05-27
 
 👉 正しくは  
 - **接続先を偽装する攻撃**
-
 - 「大量リクエストで停止させる」とする選択肢  
 → ❌ DoS / DDoSの説明
 
@@ -120,13 +119,12 @@ last_modified_at: 2026-05-27
 
 ---
 
-## 例題で確認：正規ドメインなのに偽サイトへ誘導される場合
+## SG試験での判断ポイント
+正しいURLを入力しているのに偽サイトへ誘導される場合は、**名前解決先が不正に変更されていないか**を確認します。
 
-「利用者は正しいURLを入力しているのに、偽サイトへ誘導される。考えられる原因はどれか」という設問では、  
-**DNS登録情報の不正変更（ドメイン名ハイジャック）**を優先して考えます。
+このような状況では、DNS登録情報の不正変更やドメイン管理権限の奪取など、ドメイン名ハイジャックを優先して考えます。
 
-### この設問の切り分け
-
+### 選択肢を切る基準
 - 名前解決結果そのものが攻撃者サイトのIPに変えられている  
   → ドメイン名ハイジャック / DNS改ざん
 - 通信の途中で内容を盗み見る・書き換える  
