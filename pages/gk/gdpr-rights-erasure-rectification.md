@@ -6,6 +6,7 @@ permalink: /gk/gdpr-rights-erasure-rectification/
 tags: [gk]
 gk_section: AIの法律と倫理/AIの法律と倫理
 gk_order: 25
+last_modified_at: 2026-07-14
 ---
 
 ## まず結論
@@ -29,7 +30,7 @@ GDPRの権利は、ひとことで言うと
 
 ### 消去権（Right to Erasure / Right to be Forgotten）
 
-* 不要になった個人データの**削除を求める権利**
+* 一定の条件で個人データの**削除を求める権利**
 * 同意を撤回した場合
 * 不正に取得された場合
 
@@ -37,7 +38,7 @@ GDPRの権利は、ひとことで言うと
 
 ### 訂正権（Right to Rectification）
 
-* 不正確・不完全な個人データの**修正を求める権利**
+* 不正確な個人データの**訂正**や、不完全なデータの**補完を求める権利**
 * 氏名・住所・履歴などの誤り訂正
 
 が対象です。
@@ -45,7 +46,7 @@ GDPRの権利は、ひとことで言うと
 重要なのは、
 
 * どちらも**本人からの請求が前提**
-* 事業者は原則として対応義務がある
+* 権利には成立要件や例外があり、請求すれば常に消去・訂正されるわけではない
 
 という点です。
 
@@ -79,9 +80,14 @@ G検定では、**データポータビリティとの混同**を狙ってきま
 ## まとめ（試験直前用）
 
 * GDPRは個人のデータコントロール権を定める
-* 消去権：データを消してもらう権利
-* 訂正権：データを直してもらう権利
+* 消去権：一定の条件でデータの消去を求める権利
+* 訂正権：不正確なデータの訂正などを求める権利
 * ポータビリティとは別概念
 * G検定では動詞で判断する
+
+## 公式・一次情報
+
+- [Regulation (EU) 2016/679（GDPR）｜EUR-Lex](https://eur-lex.europa.eu/eli/reg/2016/679/oj)
+- [Information for individuals｜European Commission](https://commission.europa.eu/law/law-topic/data-protection/information-individuals_en)
 
 {% include gk_article_footer.html %}

@@ -6,7 +6,7 @@ permalink: /gk/personal-information-law/
 tags: [gk, ethics, privacy]
 gk_section: AIの法律と倫理/AIの法律と倫理
 gk_order: 7
-last_modified_at: 2026-06-27
+last_modified_at: 2026-07-14
 ---
 
 ## まず結論
@@ -120,8 +120,9 @@ last_modified_at: 2026-06-27
 
 👉 **仮名加工情報・匿名加工情報とセット**で覚えると盤石です。
 
-## 公式資料
+## 公式・一次情報
 
+- [個人情報の保護に関する法律｜e-Gov法令検索](https://laws.e-gov.go.jp/law/415AC0000000057)
 - [個人情報保護法ガイドライン（通則編）｜個人情報保護委員会](https://www.ppc.go.jp/personalinfo/legal/guidelines_tsusoku/)
 - [「個人情報」「個人データ」「保有個人データ」とは｜個人情報保護委員会](https://www.ppc.go.jp/all_faq_index/faq3-q2-1)
 
