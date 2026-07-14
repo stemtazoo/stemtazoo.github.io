@@ -6,7 +6,7 @@ permalink: /gk/accuracy/
 tags: [gk, machine_learning, metrics, frequent]
 gk_section: 機械学習の概要/モデルの選択・評価
 gk_order: 2
-last_modified_at: 2026-07-13
+last_modified_at: 2026-07-14
 ---
 
 ## まず結論
@@ -23,8 +23,8 @@ G検定では、次のように判断します。
 
 - クラスの偏りが小さい → Accuracyが全体性能の目安になりやすい
 - クラスの偏りが大きい → Accuracyだけでは判断しない
-- 見逃しが重要 → Recallを確認する
-- 誤検知が重要 → Precisionを確認する
+- 見逃しが重要 → [Recall](/gk/recall/)を確認する
+- 誤検知が重要 → [Precision](/gk/precision/)を確認する
 
 ## 直感的な説明
 
@@ -111,7 +111,7 @@ Accuracy = (30 + 50) / 100 = 0.8
 Accuracyだけを見ると高性能に見えます。
 しかし、異常を1件も検出できていないため、異常検知モデルとしては役に立ちません。
 
-このようなときは、RecallやPrecision、F1スコアも確認します。
+このようなときは、[Recall](/gk/recall/)や[Precision](/gk/precision/)、[F1-score](/gk/f1-score/)も確認します。
 
 ## G検定ひっかけポイント
 
@@ -120,9 +120,9 @@ Accuracyだけを見ると高性能に見えます。
 | 指標 | 何を見るか | 重視する場面 |
 |---|---|---|
 | Accuracy | 全体のうち正解した割合 | クラスの偏りが小さい |
-| Precision | 陽性と予測した中で、本当に陽性だった割合 | 誤検知を減らしたい |
-| Recall | 実際の陽性のうち、検出できた割合 | 見逃しを減らしたい |
-| F1スコア | PrecisionとRecallの調和平均 | 両者のバランスを見たい |
+| [Precision](/gk/precision/) | 陽性と予測した中で、本当に陽性だった割合 | 誤検知を減らしたい |
+| [Recall](/gk/recall/) | 実際の陽性のうち、検出できた割合 | 見逃しを減らしたい |
+| [F1-score](/gk/f1-score/) | PrecisionとRecallの調和平均 | 両者のバランスを見たい |
 
 ### Accuracyが高ければ良いモデルとは限らない
 
@@ -152,9 +152,9 @@ Accuracyは重要な指標ですが、単独でモデルの良し悪しを決め
 ### 選択肢を切る判断基準
 
 - 「全体の正解割合」→ Accuracy
-- 「陽性予測の信頼性」→ Precision
-- 「実際の陽性をどれだけ拾ったか」→ Recall
-- 「PrecisionとRecallのバランス」→ F1スコア
+- 「陽性予測の信頼性」→ [Precision](/gk/precision/)
+- 「実際の陽性をどれだけ拾ったか」→ [Recall](/gk/recall/)
+- 「PrecisionとRecallのバランス」→ [F1-score](/gk/f1-score/)
 - 「クラスが偏っている」→ Accuracy単独評価を疑う
 
 ## 確認問題
@@ -184,6 +184,8 @@ Accuracyは重要な指標ですが、単独でモデルの良し悪しを決め
 - 式は `(TP + TN) / 全件数`
 - 陽性と陰性の両方の正解を数える
 - クラス不均衡では高く見えることがある
-- 見逃しはRecall、誤検知はPrecision、両者のバランスはF1で確認する
+- 見逃しは[Recall](/gk/recall/)、誤検知は[Precision](/gk/precision/)、両者のバランスは[F1-score](/gk/f1-score/)で確認する
+
+次に読むなら、誤検知を扱う[Precision](/gk/precision/)と、見逃しを扱う[Recall](/gk/recall/)がおすすめです。
 
 {% include gk_article_footer.html %}
