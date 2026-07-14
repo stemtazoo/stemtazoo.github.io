@@ -1,20 +1,45 @@
 <link rel="help" href="{{ '/llms.txt' | relative_url }}">
 <link rel="sitemap" type="application/xml" href="{{ '/sitemap.xml' | relative_url }}">
 {% assign has_agent_markdown = false %}
+{% assign agent_source_parts = page.path | split: "/" %}
+{% assign agent_source_depth = agent_source_parts | size %}
+{% assign agent_source_name = agent_source_parts | last | downcase %}
+{% assign agent_tags = page.tags | join: "|" | downcase | prepend: "|" | append: "|" %}
 {% if page.permalink %}
-  {% if page.tags contains "sg" %}
+  {% if agent_tags contains "|sg|" %}
     {% assign has_agent_markdown = true %}
   {% endif %}
-  {% if page.tags contains "fe" %}
+  {% if agent_tags contains "|fe|" %}
     {% assign has_agent_markdown = true %}
   {% endif %}
-  {% if page.tags contains "gk" %}
+  {% if agent_tags contains "|gk|" %}
     {% assign has_agent_markdown = true %}
   {% endif %}
-  {% if page.tags contains "ds" %}
+  {% if agent_tags contains "|ds|" %}
     {% assign has_agent_markdown = true %}
   {% endif %}
-  {% if page.tags contains "index" %}
+  {% if agent_tags contains "|index|" %}
+    {% assign has_agent_markdown = false %}
+  {% endif %}
+  {% if agent_tags contains "|search|" %}
+    {% assign has_agent_markdown = false %}
+  {% endif %}
+  {% if agent_source_depth != 3 %}
+    {% assign has_agent_markdown = false %}
+  {% endif %}
+  {% if agent_source_name == "index.md" %}
+    {% assign has_agent_markdown = false %}
+  {% endif %}
+  {% if page.content_status == "deprecated" %}
+    {% assign has_agent_markdown = false %}
+  {% endif %}
+  {% if page.content_status == "superseded" %}
+    {% assign has_agent_markdown = false %}
+  {% endif %}
+  {% if page.content_status == "draft" %}
+    {% assign has_agent_markdown = false %}
+  {% endif %}
+  {% if page.content_status == "noindex" %}
     {% assign has_agent_markdown = false %}
   {% endif %}
 {% endif %}

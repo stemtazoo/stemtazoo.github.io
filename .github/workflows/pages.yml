@@ -30,6 +30,9 @@ jobs:
           source: ./
           destination: ./_site
 
+      - name: Make Jekyll output writable
+        run: sudo chown -R "$(id -u):$(id -g)" ./_site
+
       - name: Generate agent resources
         run: python scripts/generate_agent_resources.py
 

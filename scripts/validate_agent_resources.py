@@ -67,9 +67,12 @@ def main() -> int:
             errors.append(f"generated Markdown file missing: {path_text}")
         else:
             try:
-                path.read_text(encoding="utf-8")
+                markdown_text = path.read_text(encoding="utf-8")
             except UnicodeDecodeError:
                 errors.append(f"generated Markdown is not valid UTF-8: {path_text}")
+            else:
+                if contains_unresolved_liquid(markdown_text):
+                    errors.append(f"generated Markdown contains unresolved Liquid: {path_text}")
         html_path = path.with_suffix(".html")
         if path == html_path:
             errors.append(f"generated Markdown would overwrite HTML: {path_text}")
@@ -103,15 +106,33 @@ def main() -> int:
         if expected not in root_text:
             errors.append(f"root llms.txt missing section discovery link: {expected}")
 
-    # Validate generated-resource alternate links in representative built HTML.
-    for item in entries[:50]:
+    # Validate the alternate link on every generated article page.
+    for item in entries:
         permalink = item.get("permalink", "")
         html_path = SITE_DIR / permalink.strip("/") / "index.html"
-        if html_path.exists():
-            html = html_path.read_text(encoding="utf-8", errors="replace")
-            expected_href = item.get("markdown_url", "")
-            if 'rel="alternate"' not in html or expected_href not in html:
-                errors.append(f"article page does not advertise generated Markdown alternate: {permalink}")
+        if not html_path.exists():
+            errors.append(f"included article HTML is missing: {permalink}")
+            continue
+        html = html_path.read_text(encoding="utf-8", errors="replace")
+        expected_href = item.get("markdown_url", "")
+        if 'rel="alternate"' not in html or expected_href not in html:
+            errors.append(f"article page does not advertise generated Markdown alternate: {permalink}")
+
+    # No built page may advertise an agent-readable resource that was not generated.
+    alternate_pattern = re.compile(
+        r'<link\s+rel="alternate"\s+type="text/markdown"\s+href="([^"]+)"'
+    )
+    for html_path in SITE_DIR.rglob("*.html"):
+        html = html_path.read_text(encoding="utf-8", errors="replace")
+        for alternate_url in alternate_pattern.findall(html):
+            if not alternate_url.startswith(SITE_URL):
+                errors.append(f"invalid Markdown alternate URL in {html_path.relative_to(ROOT)}: {alternate_url}")
+                continue
+            alternate_path = SITE_DIR / alternate_url.removeprefix(SITE_URL).strip("/")
+            if not alternate_path.exists():
+                errors.append(
+                    f"Markdown alternate points to missing file in {html_path.relative_to(ROOT)}: {alternate_url}"
+                )
 
     if warnings:
         print("Warnings:")
@@ -135,6 +156,23 @@ def duplicated(values: list[str]) -> dict[str, int]:
     return {value: count for value, count in counts.items() if count > 1}
 
 
+def contains_unresolved_liquid(text: str) -> bool:
+    in_fence = False
+    fence_marker = ""
+    for line in text.splitlines():
+        fence_match = re.match(r"^\s*(```+|~~~+)", line)
+        if fence_match:
+            marker = fence_match.group(1)
+            if not in_fence:
+                in_fence = True
+                fence_marker = marker[:3]
+            elif marker.startswith(fence_marker):
+                in_fence = False
+            continue
+        if not in_fence and ("{{" in line or "{%" in line):
+            return True
+    return False
+
+
 if __name__ == "__main__":
     raise SystemExit(main())
-

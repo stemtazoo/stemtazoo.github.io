@@ -76,7 +76,8 @@ class FrontMatterError(ValueError):
 
 
 def read_text(path: Path) -> str:
-    return path.read_text(encoding="utf-8")
+    # utf-8-sig also reads ordinary UTF-8 while removing a leading BOM.
+    return path.read_text(encoding="utf-8-sig")
 
 
 def split_front_matter(path: Path) -> tuple[dict[str, Any], str]:
@@ -235,6 +236,8 @@ def clean_body(body: str, record: PageRecord) -> str:
     cleaned_lines: list[str] = []
     in_fence = False
     fence_marker = ""
+    liquid_block_depth = 0
+    block_tags = {"case", "capture", "comment", "for", "if", "raw", "unless"}
 
     for line in body.splitlines():
         stripped = line.strip()
@@ -253,19 +256,64 @@ def clean_body(body: str, record: PageRecord) -> str:
             cleaned_lines.append(line)
             continue
 
-        if re.search(r"{%\s*include\s+[^%]*(?:article_footer|footer|navigation|sidebar)[^%]*%}", line):
+        liquid_tags = re.findall(r"{%\s*([a-zA-Z_]+)\b[^%]*%}", line)
+        if liquid_block_depth:
+            for tag in liquid_tags:
+                if tag in block_tags:
+                    liquid_block_depth += 1
+                elif tag.startswith("end"):
+                    liquid_block_depth = max(0, liquid_block_depth - 1)
             continue
-        if re.search(r"{%\s*(assign|for|endfor|if|endif|unless|endunless|comment|endcomment)\b", line):
+
+        if liquid_tags:
             record.warnings.append("unsupported Liquid construct removed")
+            for tag in liquid_tags:
+                if tag in block_tags:
+                    liquid_block_depth += 1
+                elif tag.startswith("end"):
+                    liquid_block_depth = max(0, liquid_block_depth - 1)
             continue
         if stripped.startswith("<script") or stripped.startswith("</script") or stripped.startswith("<style") or stripped.startswith("</style"):
             record.warnings.append("script or style tag removed")
             continue
-        cleaned_lines.append(line)
+
+        rendered_line = render_known_liquid_outputs(line, record)
+        if "{{" in rendered_line or "}}" in rendered_line:
+            record.warnings.append("unsupported Liquid output removed")
+            continue
+        cleaned_lines.append(rendered_line)
 
     cleaned = "\n".join(cleaned_lines).strip()
     cleaned = rewrite_internal_links(cleaned)
+    cleaned = remove_empty_liquid_wrappers(cleaned)
     return cleaned + "\n"
+
+
+def render_known_liquid_outputs(line: str, record: PageRecord) -> str:
+    line = re.sub(r"{{\s*page\.title\s*}}", record.title, line)
+
+    def relative_url_repl(match: re.Match[str]) -> str:
+        return SITE_URL + match.group("path")
+
+    return re.sub(
+        r"{{\s*(?P<quote>['\"])(?P<path>/[^'\"]*)(?P=quote)\s*\|\s*relative_url\s*}}",
+        relative_url_repl,
+        line,
+    )
+
+
+def remove_empty_liquid_wrappers(text: str) -> str:
+    empty_container = re.compile(
+        r"<(?P<tag>div|nav|ol|ul)\b[^>]*>\s*</(?P=tag)>",
+        flags=re.IGNORECASE,
+    )
+    while empty_container.search(text):
+        text = empty_container.sub("", text)
+    return re.sub(
+        r"(?m)^##[^\n]*関連記事[^\n]*\n+(?=(?:<hr\b|##\s|\Z))",
+        "",
+        text,
+    ).strip()
 
 
 def rewrite_internal_links(text: str) -> str:
