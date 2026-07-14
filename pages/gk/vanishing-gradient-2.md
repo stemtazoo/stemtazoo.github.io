@@ -1,103 +1,23 @@
-﻿---
-layout: page
-title: 勾配消失問題とは？原因と対策まとめ【RNN・深層学習｜G検定対策】
-description: "勾配消失問題原因と対策まとめについて、G検定で問われる学習・最適化分野の観点から、学習が進む仕組み、更新の考え方、過学習対策や代表手法との違いを整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
-permalink: /gk/vanishing-gradient-2/
-tags: [gk, neural_network]
-gk_section: ディープラーニングの要素技術/リカレントニューラルネットワーク (RNN)
-gk_order: 13
-last_modified_at: 2026-07-14
 ---
-
-## まず結論
-- **勾配消失問題**とは、**誤差逆伝播の過程で勾配が極端に小さくなり、学習が進まなくなる現象**である。
-- G検定では「**なぜ起きるか／どう防ぐか**」がセットで問われる。
-
-## 直感的な説明
-勾配消失は、  
-**「誤差の情報が、入力側まで届かなくなる」**状態です。
-
-- 出力層では学習できている
-- でも入力層に近い層ほど、更新量がほぼゼロ
-
-👉 **前の層ほど“学習しないAI”になる**  
-これが勾配消失です。
-
-## 定義・仕組み
-勾配消失は、誤差逆伝播（Backpropagation）で  
-**小さい値を何度も掛け算する**ことで起こります。
-
-主な原因：
-- 活性化関数が Sigmoid / Tanh
-- 層が深いネットワーク
-- RNNで時系列が長い
-
-特にRNNでは、
-- 時刻をさかのぼるほど勾配が減衰
-- **長期依存関係を学習できない**
-
-## いつ使う？（得意・不得意）
-### 勾配消失が問題になる場面
-- 深いニューラルネットワーク
-- RNN / Elman / Jordan ネットワーク
-- 長い時系列データ
-
-### 問題になりにくい場面
-- 浅いネットワーク
-- 勾配が流れやすい構造を持つモデル
-
-## G検定ひっかけポイント
-G検定では、次の混同を狙ってきます。
-
-### よくある誤解
-- ❌「勾配消失＝過学習」
-- ❌「ノイズが原因」
-- ❌「最適化手法の問題だけ」
-
-### 正しい判断基準
-- **勾配が小さくなる → 勾配消失**
-- **勾配が大きくなる → 勾配爆発**
-- **学習が進まない → 勾配消失を疑う**
-
-## 勾配消失への主な対策
-### ① 活性化関数の工夫
-- Sigmoid / Tanh → 勾配が小さくなりやすい
-- **ReLU系（ReLU / Leaky ReLU）** → 勾配が流れやすい
-
-### ② ネットワーク構造の工夫
-- **LSTM / GRU**
-  - ゲート機構により勾配を保持
-  - RNNの代表的対策
-
-- **Residual Connection（残差接続）**
-  - 勾配の通り道を確保
-  - 深層学習で必須
-
-### ③ 重み初期化
-- Xavier初期化
-- He初期化  
-👉 勾配の大きさを適切に保つ
-
-### ④ 正規化手法
-- Batch Normalization
-- Layer Normalization  
-👉 勾配の安定化
-
-## G検定での頻出対応表
-
-| 問題文のキーワード | 連想する答え |
-|---|---|
-| 長期依存関係が学習できない | 勾配消失 |
-| RNNの欠点 | 勾配消失 |
-| ゲート機構 | LSTM / GRU |
-| 深いネットワークでも学習可能 | 残差接続 |
-| 学習が進まない | 勾配消失 |
-
-## まとめ（試験直前用）
-- 勾配消失＝勾配が小さくなる
-- 深い層・長い時系列で発生
-- Sigmoid/Tanhは要注意
-- LSTM/GRUは代表的対策
-- 構造・活性化・初期化で防ぐ
-
-{% include gk_article_footer.html %}
+layout: null
+permalink: /gk/vanishing-gradient-2/
+sitemap: false
+---
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,follow">
+  <meta http-equiv="refresh" content="0; url=/gk/vanishing-gradient/">
+  <link rel="canonical" href="https://stemtazoo.github.io/gk/vanishing-gradient/">
+  <title>勾配消失問題の記事へ移動します</title>
+</head>
+<body>
+  <p>
+    RNN・LSTMとの関係を含め、記事を統合しました。
+    <a href="/gk/vanishing-gradient/">勾配消失問題とは？原因と対策をシグモイド・RNNで整理【G検定】</a>
+    へ移動します。
+  </p>
+</body>
+</html>
