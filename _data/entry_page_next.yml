@@ -1,0 +1,97 @@
+- page: /ds/ffp/
+  intro: 研究不正の3分類を押さえたら、次はデータ・AI利用を広い倫理・社会の視点で整理します。
+  items:
+    - url: /ds/elsi/
+      title: ELSIとは？倫理・法・社会問題
+      reason: FFPを含む技術利用の社会的影響を広く整理する
+    - url: /ds/data-ai-precautions/
+      title: データ・AI利活用における留意事項
+      reason: 実務で守るべき倫理・法律・セキュリティを確認する
+
+- page: /ds/elsi/
+  intro: ELSIの3観点を理解したら、AIを社会で使う原則と具体的な注意事項へ進みます。
+  items:
+    - url: /ds/human-centered-ai-principles/
+      title: 人間中心のAI社会原則とは？
+      reason: 公平性・透明性・プライバシーを原則として整理する
+    - url: /ds/data-ai-precautions/
+      title: データ・AI利活用における留意事項
+      reason: 倫理・法律・セキュリティを実務の判断につなげる
+    - url: /ds/ffp/
+      title: FFPとは？研究不正の3分類
+      reason: 捏造・改ざん・盗用を具体的な不正行為として見分ける
+
+- page: /gk/xor-problem/
+  intro: XOR問題で単純パーセプトロンの限界を理解したら、多層化と学習方法へ進みます。
+  items:
+    - url: /gk/perceptron/
+      title: パーセプトロン
+      reason: 線形分離できる問題とできない問題を整理する
+    - url: /gk/mlp/
+      title: 多層パーセプトロン（MLP）
+      reason: 中間層と非線形活性化でXORを解ける理由を確認する
+    - url: /gk/backpropagation/
+      title: 誤差逆伝播法
+      reason: 多層ネットワークが重みを学習する仕組みを理解する
+
+- page: /ds/apriori-algorithm/
+  intro: Aprioriの枝刈りを理解したら、分析全体とルール評価指標を順番に確認します。
+  items:
+    - url: /ds/association-analysis/
+      title: アソシエーション分析とは？
+      reason: Aprioriが使われる分析の目的と全体像を整理する
+    - url: /ds/association-metrics/
+      title: 支持度・信頼度・リフト値の違い
+      reason: 抽出したルールを評価する3指標を切り分ける
+    - url: /ds/basket-analysis/
+      title: バスケット分析とは？
+      reason: 購買データでの具体的な活用方法を確認する
+
+- page: /gk/contrastive-loss/
+  intro: 距離学習の基本を押さえたら、Triplet Lossとの違いと少数例学習へのつながりを確認します。
+  items:
+    - url: /gk/contrastive-vs-triplet-loss/
+      title: Contrastive LossとTriplet Lossの違い
+      reason: ペアと三つ組の違いを試験の判断軸で整理する
+    - url: /gk/one-shot-learning/
+      title: One-shot学習とは？
+      reason: 類似度を使って少ない例から識別する考え方を確認する
+
+- page: /gk/elman-network/
+  intro: エルマンネットワークの構造を理解したら、RNN全体と類似構造を比較します。
+  items:
+    - url: /gk/jordan-vs-elman/
+      title: ジョルダンネットワークとElmanネットワークの違い
+      reason: 出力層を戻すか隠れ層を戻すかで切り分ける
+    - url: /gk/rnn/
+      title: RNN（再帰型ニューラルネットワーク）
+      reason: 系列情報を内部状態として保持する全体像を整理する
+    - url: /gk/vanishing-gradient/
+      title: 勾配消失問題とは？
+      reason: 初期のRNNが長期依存を学びにくい理由を確認する
+
+- page: /gk/jordan-vs-elman/
+  intro: 2つのフィードバック元を見分けたら、それぞれの単独記事とRNN全体へ進みます。
+  items:
+    - url: /gk/elman-network/
+      title: エルマンネットワークとは？
+      reason: 隠れ層の状態を再利用する構造を詳しく確認する
+    - url: /gk/jordan-network/
+      title: ジョルダンネットワークとは？
+      reason: 出力を次時刻へ戻す構造を詳しく確認する
+    - url: /gk/rnn/
+      title: RNN（再帰型ニューラルネットワーク）
+      reason: 両者が属する再帰型ネットワークの基本を整理する
+
+- page: /sg/hash-collision/
+  intro: 衝突の意味を押さえたら、安全性を支える性質と利用場面を順番に確認します。
+  items:
+    - url: /sg/hash-collision-resistance/
+      title: ハッシュ関数の衝突耐性とは？
+      reason: 衝突を見つけにくい性質が必要な理由を整理する
+    - url: /sg/hash-algorithms/
+      title: ハッシュアルゴリズムの違い
+      reason: SHA-1・SHA-2など方式ごとの位置付けを確認する
+    - url: /sg/digital-signature/
+      title: 電子署名とは？
+      reason: ハッシュ値が本人証明と改ざん検知に使われる流れを理解する
