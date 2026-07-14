@@ -1,4 +1,4 @@
-﻿---
+---
 layout: page
 title: Transformer（概要）
 description: "Transformer（概要）について、G検定で問われる自然言語処理・系列データ分野の観点から、系列データを扱う仕組み、学習目的、代表モデルとの関係を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
@@ -6,6 +6,7 @@ permalink: /gk/transformer/
 tags: [gk, neural_network, transformer]
 gk_section: ディープラーニングの要素技術/トランスフォーマー (Transformer)
 gk_order: 1
+last_modified_at: 2026-07-14
 ---
 
 ## まず結論
@@ -24,7 +25,7 @@ Transformerは、
 
 モデルです。
 
-RNNのように
+[RNN](/gk/rnn/)のように
 
 * 前から順に処理する
 
@@ -60,6 +61,8 @@ Transformerは主に次の要素で構成されます。
 
 という役割分担になります。
 
+この構造をもとに、Encoder側を中心に使う代表例が[BERT](/gk/bert/)、Decoder側の考え方を使う代表例が[GPT](/gk/gpt/)です。
+
 ---
 
 ### なぜRNNを使わない？
@@ -93,6 +96,7 @@ Self-Attentionにより、
 * ❌「Attentionは補助的要素」→ **誤り**
 * ✅ Transformerの中核は **Self-Attention**
 * ✅ 並列計算が可能
+* ✅ [BERT](/gk/bert/)はEncoder側、[GPT](/gk/gpt/)はDecoder側の特徴で見分ける
 
 ---
 
@@ -102,6 +106,6 @@ Self-Attentionにより、
 * Self-Attentionが中心
 * 並列化・長期依存に強い
 
-👉 次は **Embedding / Word2Vec** を整理するとNLPが完成します。
+次は、意味理解に強い[BERT](/gk/bert/)、文章生成に強い[GPT](/gk/gpt/)、単語の分散表現を学ぶ[Word2Vec](/gk/word2vec/)を確認すると、NLP分野のつながりが見えやすくなります。
 
 {% include gk_article_footer.html %}
