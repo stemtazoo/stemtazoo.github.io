@@ -1,4 +1,4 @@
-﻿---
+---
 layout: page
 title: Precision（適合率）
 description: "Precision（適合率）は、陽性と予測したデータのうち実際に陽性だった割合で、TP÷（TP＋FP）で求めます。誤検知を減らしたいアラート、スパム、不正検知で重視される理由を確認し、見逃しに注目するRecallや全予測を見るAccuracyと、分母および重視する誤りの違いで判別します。"
@@ -6,6 +6,7 @@ permalink: /gk/precision/
 tags: [gk, 機械学習, 評価指標, 頻出]
 gk_section: 機械学習の概要/モデルの選択・評価
 gk_order: 3
+last_modified_at: 2026-07-14
 ---
 
 ## まず結論
@@ -56,12 +57,12 @@ Precision（適合率）は、**「陽性と予測したものの中で、実際
 ### 苦手
 - 見逃し（FN）が多くても、数値が高くなることがある
 
-👉 **Precisionが高くても、Recallが低い場合がある**。
+👉 **Precisionが高くても、[Recall（再現率）](/gk/recall/)が低い場合があります**。
 
 ---
 
 ## Accuracyとの違い
-- Accuracy：**全体でどれだけ当たったか**
+- [Accuracy（正解率）](/gk/accuracy/)：**全体でどれだけ当たったか**
 - Precision：**当たったと言ったものは、本当に当たっているか**
 
 👉 見ている視点がまったく違います。
@@ -88,6 +89,8 @@ Precision（適合率）は、**「陽性と予測したものの中で、実際
 - Precision = **TP / (TP + FP)**
 - 誤検知をどれだけ抑えられているかを見る指標
 - 「当たったと言ったものの信頼性」
-- Recall と **必ずセットで考える**
+- [Recall](/gk/recall/) と **必ずセットで考える**
+
+次に読むなら、見逃しを見る[Recall](/gk/recall/)と、両者のバランスを見る[F1-score](/gk/f1-score/)がおすすめです。
 
 {% include gk_article_footer.html %}
