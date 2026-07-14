@@ -6,7 +6,7 @@ permalink: /gk/ai-ethics/
 tags: [gk, ethics, cheatsheet]
 gk_section: AIの法律と倫理/AIの法律と倫理
 gk_order: 9
-last_modified_at: 2026-06-27
+last_modified_at: 2026-07-14
 ---
 
 ## まず結論
@@ -129,5 +129,10 @@ AI倫理は開発時だけの確認事項ではありません。導入後も性
 * 法務分野とセットで覚える
 
 👉 次は **法務・倫理ひっかけ問題集（総集編）** に進むと完成です。
+
+## 公式・一次情報
+
+- [AI事業者ガイドライン（第1.2版）｜総務省・経済産業省](https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/20260331_report.html)
+- [Recommendation on the Ethics of Artificial Intelligence｜UNESCO](https://www.unesco.org/en/legal-affairs/recommendation-ethics-artificial-intelligence)
 
 {% include gk_article_footer.html %}

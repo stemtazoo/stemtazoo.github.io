@@ -6,18 +6,21 @@ permalink: /gk/ai-ethics-cheatsheet/
 tags: [gk, cheatsheet]
 gk_section: チートシート（試験直前）/チートシート（試験直前）
 gk_order: 4
+last_modified_at: 2026-07-14
 ---
 
 ## まず結論（この1ページで即断）
 
 G検定で「AIの社会的側面・倫理」が出たら、
-**見るべき観点は次の3つだけ**です。
+**まず見るべき観点は次の3つ**です。
 
 1. **説明できるか？（XAI）**
 2. **偏っていないか？（公平性）**
 3. **個人を侵害していないか？（プライバシー）**
 
 👉 技術の正しさよりも、**社会的な妥当性**が問われます。
+
+この3つはAI倫理を支える異なる観点です。AI倫理には、安全性、透明性、説明責任、人間による監督などの観点も含まれます。
 
 ---
 
@@ -94,5 +97,11 @@ G検定で「AIの社会的側面・倫理」が出たら、
 👉 迷ったら
 
 > **AIは万能ではなく、社会とのバランスが必要**
+
+## 公式・一次情報
+
+- [AI事業者ガイドライン（第1.2版）｜総務省・経済産業省](https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/20260331_report.html)
+- [人間中心のAI社会原則｜内閣府](https://www8.cao.go.jp/cstp/ai/ningen/ningen.html)
+- [Recommendation on the Ethics of Artificial Intelligence｜UNESCO](https://www.unesco.org/en/legal-affairs/recommendation-ethics-artificial-intelligence)
 
 {% include gk_article_footer.html %}

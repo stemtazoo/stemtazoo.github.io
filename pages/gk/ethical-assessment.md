@@ -6,6 +6,7 @@ permalink: /gk/ethical-assessment/
 tags: [gk]
 gk_section: AIの法律と倫理/AIの法律と倫理
 gk_order: 19
+last_modified_at: 2026-07-14
 ---
 
 ## まず結論
@@ -44,13 +45,18 @@ G検定では、
 
 評価対象の例：
 
+* 利用目的と影響を受ける人
 * 公平性（バイアスはないか）
 * 透明性・説明可能性
 * プライバシー
+* 安全性・人権
+* 説明責任
 * 法令・社会規範との整合性
 
 つまり、
 **事故防止は一部であって、目的のすべてではない**。
+
+倫理アセスメントに、すべてのAIへ一律に適用できる単一の評価方式があるわけではありません。利用目的や影響の大きさに応じて評価し、導入後もモニタリングします。
 
 ---
 
@@ -100,5 +106,10 @@ G検定では、
 * 公平性・透明性・信頼性を含む
 * 運用中も継続的に見直す
 * 「主眼が事故防止」と書かれていたら注意
+
+## 公式・一次情報
+
+- [AI事業者ガイドライン（第1.2版）｜総務省・経済産業省](https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/20260331_report.html)
+- [Recommendation on the Ethics of Artificial Intelligence｜UNESCO](https://www.unesco.org/en/legal-affairs/recommendation-ethics-artificial-intelligence)
 
 {% include gk_article_footer.html %}

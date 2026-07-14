@@ -6,6 +6,7 @@ permalink: /gk/inclusion/
 tags: [gk, ethics]
 gk_section: AIの法律と倫理/AIの法律と倫理
 gk_order: 24
+last_modified_at: 2026-07-14
 ---
 
 ## まず結論
@@ -87,5 +88,10 @@ gk_order: 24
 - 技術用語ではない
 - AI倫理・社会原則の文脈
 - 人間中心AIと強く関連
+
+## 公式・一次情報
+
+- [人間中心のAI社会原則｜内閣府](https://www8.cao.go.jp/cstp/ai/ningen/ningen.html)
+- [Recommendation on the Ethics of Artificial Intelligence｜UNESCO](https://www.unesco.org/en/legal-affairs/recommendation-ethics-artificial-intelligence)
 
 {% include gk_article_footer.html %}

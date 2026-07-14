@@ -6,6 +6,7 @@ permalink: /gk/diversity-inclusion/
 tags: [gk]
 gk_section: AIの法律と倫理/AIの法律と倫理
 gk_order: 33
+last_modified_at: 2026-07-14
 ---
 
 ## まず結論
@@ -80,5 +81,10 @@ G検定では、**D&Iと無関係な「経営・コスト」の話を混ぜる**
 * データ・人・運用すべてが対象
 * 予算確保はD&Iではない
 * G検定では「関係ある／ない」を見抜く
+
+## 公式・一次情報
+
+- [人間中心のAI社会原則｜内閣府](https://www8.cao.go.jp/cstp/ai/ningen/ningen.html)
+- [Recommendation on the Ethics of Artificial Intelligence｜UNESCO](https://www.unesco.org/en/legal-affairs/recommendation-ethics-artificial-intelligence)
 
 {% include gk_article_footer.html %}

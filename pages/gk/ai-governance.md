@@ -6,6 +6,7 @@ permalink: /gk/ai-governance/
 tags: [gk]
 gk_section: AIの法律と倫理/AIの法律と倫理
 gk_order: 4
+last_modified_at: 2026-07-14
 ---
 
 ## まず結論
@@ -46,8 +47,11 @@ AIが社会で使われるようになると、
 
 * AI の開発・運用・廃棄までを管理する考え方
 * 法律・ガイドライン・社内ルールなどを含む
+* 方針、役割と責任、リスク評価、モニタリング、改善を組織として継続的に回す
 
 👉 **技術 + ルール + 運用**
+
+倫理が「何を大切にするか」を示すのに対し、ガバナンスは、その原則を組織で実行・管理する仕組みです。
 
 ---
 
@@ -128,5 +132,10 @@ AIが社会で使われるようになると、
 > **AIはルールと一緒に使う**
 
 と覚えておく
+
+## 公式・一次情報
+
+- [AI事業者ガイドライン（第1.2版）｜総務省・経済産業省](https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/20260331_report.html)
+- [AI Risk Management Framework｜NIST](https://www.nist.gov/itl/ai-risk-management-framework)
 
 {% include gk_article_footer.html %}

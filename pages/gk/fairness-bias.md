@@ -6,7 +6,7 @@ permalink: /gk/fairness-bias/
 tags: [gk]
 gk_section: AIの法律と倫理/AIの法律と倫理
 gk_order: 1
-last_modified_at: 2026-06-24
+last_modified_at: 2026-07-14
 ---
 
 ## まず結論
@@ -30,6 +30,8 @@ AIは、過去のデータ、人が決めた目的関数、運用ルールから
 - 特定の属性によって不当な差別や不利益が生じないようにする考え方
 - 採用、融資、医療、行政サービスなど、社会的影響が大きい場面で特に重要
 - ただし、公平性の定義は1つではなく、精度や説明可能性とトレードオフになる場合がある
+- 全員に同じ処理や同じ結果を与えることが、常に公平とは限らない
+- 複数の公平性指標を同時に満たせない場合があるため、利用目的に応じて基準を検討する
 
 ### バイアス（Bias）
 
@@ -74,5 +76,10 @@ AIは、過去のデータ、人が決めた目的関数、運用ルールから
 - 公平性は、特定属性による不当な不利益を避ける論点
 - プライバシー、セキュリティ、説明可能性とは見る観点が違う
 - 社会的影響が大きい領域では、人間による監督と継続的な評価が重要
+
+## 公式・一次情報
+
+- [AI事業者ガイドライン（第1.2版）｜総務省・経済産業省](https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/20260331_report.html)
+- [Towards a Standard for Identifying and Managing Bias in Artificial Intelligence（NIST SP 1270）｜NIST](https://www.nist.gov/publications/towards-standard-identifying-and-managing-bias-artificial-intelligence)
 
 {% include gk_article_footer.html %}

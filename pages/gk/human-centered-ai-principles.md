@@ -6,6 +6,7 @@ permalink: /gk/human-centered-ai-principles/
 tags: [gk, ethics]
 gk_section: AIの法律と倫理/AIの法律と倫理
 gk_order: 23
+last_modified_at: 2026-07-14
 ---
 
 ## まず結論
@@ -85,5 +86,9 @@ AIが高度になっても、
 - 全部で7原則
 - 倫理・公平性・透明性を重視
 - 収益確保は含まれない
+
+## 公式・一次情報
+
+- [人間中心のAI社会原則｜内閣府](https://www8.cao.go.jp/cstp/ai/ningen/ningen.html)
 
 {% include gk_article_footer.html %}
