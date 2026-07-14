@@ -4,7 +4,7 @@ title: 基本情報技術者試験 学習まとめ
 description: 基本情報技術者試験（FE）の科目A・科目B対策を、テクノロジ、マネジメント、ストラテジ、アルゴリズム、情報セキュリティなどの分野別に整理した学習ページです。
 permalink: /fe/
 tags: [fe]
-last_modified_at: 2026-06-22
+last_modified_at: 2026-07-14
 ---
 
 # 基本情報技術者試験 学習まとめ
@@ -240,3 +240,6 @@ SGで学んだリスク、認証、アクセス制御、ログ、インシデン
 最新の試験情報、出題範囲、受験案内は公式ページで確認してください。
 
 - [IPA：基本情報技術者試験](https://www.ipa.go.jp/shiken/kubun/fe.html)
+- [IPA：試験要綱・シラバスについて](https://www.ipa.go.jp/shiken/syllabus/gaiyou.html)
+- [IPA：試験要綱 Ver.5.6（PDF）](https://www.ipa.go.jp/shiken/syllabus/rcu1hd00000141gq-att/youkou_ver5_6.pdf)
+- [IPA：基本情報技術者試験 シラバス Ver.9.2（PDF）](https://www.ipa.go.jp/shiken/syllabus/omgdg50000005kpe-att/syllabus_fe_ver9_2.pdf)
