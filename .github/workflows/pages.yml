@@ -30,6 +30,15 @@ jobs:
           source: ./
           destination: ./_site
 
+      - name: Generate agent resources
+        run: python scripts/generate_agent_resources.py
+
+      - name: Validate agent resources
+        run: python scripts/validate_agent_resources.py
+
+      - name: Audit agent-facing content
+        run: python scripts/audit_agent_content.py
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

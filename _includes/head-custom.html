@@ -1,6 +1,26 @@
 <link rel="help" href="{{ '/llms.txt' | relative_url }}">
 <link rel="sitemap" type="application/xml" href="{{ '/sitemap.xml' | relative_url }}">
-<link rel="alternate" type="text/plain" href="{{ '/llms.txt' | relative_url }}">
+{% assign has_agent_markdown = false %}
+{% if page.permalink %}
+  {% if page.tags contains "sg" %}
+    {% assign has_agent_markdown = true %}
+  {% endif %}
+  {% if page.tags contains "fe" %}
+    {% assign has_agent_markdown = true %}
+  {% endif %}
+  {% if page.tags contains "gk" %}
+    {% assign has_agent_markdown = true %}
+  {% endif %}
+  {% if page.tags contains "ds" %}
+    {% assign has_agent_markdown = true %}
+  {% endif %}
+  {% if page.tags contains "index" %}
+    {% assign has_agent_markdown = false %}
+  {% endif %}
+{% endif %}
+{% if has_agent_markdown %}
+<link rel="alternate" type="text/markdown" href="{{ site.url }}{{ page.permalink }}index.md">
+{% endif %}
 <script type="text/javascript">
   (function(c,l,a,r,i,t,y){
       c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};

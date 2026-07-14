@@ -2,22 +2,28 @@
 
 ## Site purpose
 
-stemtazoo.github.io is a Japanese learning blog that organizes beginner-friendly study notes for AI, data science, Python, G検定, and Information Security Management Examination (SG試験) topics.
+stemtazoo.github.io is a Japanese learning blog that organizes beginner-friendly study notes for AI, data science, Python, G検定, 基本情報技術者試験（FE）, and Information Security Management Examination（SG試験） topics.
 
-The site is intended to help readers review concepts, compare similar terms, and understand exam-oriented judgment criteria without claiming to provide APIs, tools, authentication services, or an MCP server.
+The site is intended to help readers review concepts, compare similar terms, and understand exam-oriented judgment criteria without claiming to provide APIs, tools, authentication services, commerce functionality, OAuth/OIDC discovery, WebMCP tools, or an MCP server.
 
 ## Primary audience
 
 - Japanese learners studying AI, data science, Python, and IT basics
 - G検定 learners who want conceptual explanations and confusion-prevention notes
 - SG試験 learners who want practical security-management judgment criteria
+- FE learners who want 科目A judgment criteria and 科目B reading practice
 - Readers and AI assistants looking for public pages to cite or summarize accurately
 
 ## Main sections
 
-- Data Science / Python / IT learning notes: https://stemtazoo.github.io/ds/
-- G検定 study notes: https://stemtazoo.github.io/gk/
-- SG試験 study notes: https://stemtazoo.github.io/sg/
+- SG試験 study notes and agent-readable Markdown list: https://stemtazoo.github.io/sg/llms.txt
+- 基本情報技術者試験（FE） study notes and agent-readable Markdown list: https://stemtazoo.github.io/fe/llms.txt
+- G検定 study notes and agent-readable Markdown list: https://stemtazoo.github.io/gk/llms.txt
+- DS・Python learning notes and agent-readable Markdown list: https://stemtazoo.github.io/ds/llms.txt
+- Public SG section homepage: https://stemtazoo.github.io/sg/
+- Public FE section homepage: https://stemtazoo.github.io/fe/
+- Public G検定 section homepage: https://stemtazoo.github.io/gk/
+- Public DS / Python section homepage: https://stemtazoo.github.io/ds/
 - Site search: https://stemtazoo.github.io/search/
 - XML sitemap: https://stemtazoo.github.io/sitemap.xml
 
@@ -29,4 +35,6 @@ The site is intended to help readers review concepts, compare similar terms, and
 
 ## Discovery notes for AI agents
 
-Use the sitemap to discover public pages. Use section index pages to understand topic groupings before citing individual articles. This site is a static GitHub Pages / Jekyll blog and does not advertise an API catalog, OAuth/OIDC discovery, MCP server, WebMCP endpoint, or protected-resource metadata.
+Use the section-level llms.txt files to discover agent-readable Markdown versions of public learning articles. Use the sitemap and section index pages to understand topic groupings before citing individual articles.
+
+This site is a static GitHub Pages / Jekyll blog. It does not advertise an API catalog, OAuth/OIDC discovery, OAuth protected-resource metadata, MCP server, WebMCP endpoint, DNS-AID record, commerce endpoint, or agent registration service.

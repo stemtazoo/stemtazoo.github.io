@@ -13,6 +13,17 @@ permalink: /
   </p>
 </section>
 
+<section aria-label="主要な学習エリア">
+  <h2>主要な学習エリア</h2>
+  <ul>
+    <li><a href="{{ '/gk/' | relative_url }}">G検定の記事を見る</a> - AI、機械学習、深層学習、法律・倫理を概念理解と混同防止の視点で整理しています。</li>
+    <li><a href="{{ '/sg/' | relative_url }}">SG試験の記事を見る</a> - 情報セキュリティマネジメント試験の判断軸、実務場面、ひっかけポイントを確認できます。</li>
+    <li><a href="{{ '/fe/' | relative_url }}">基本情報技術者試験の記事を見る</a> - 科目Aの用語判断と科目Bの読み取りに使う基礎を整理しています。</li>
+    <li><a href="{{ '/ds/' | relative_url }}">DS・Pythonの記事を見る</a> - 統計、データ分析、SQL、Python、データ活用の基礎を学べます。</li>
+    <li><a href="{{ '/search/' | relative_url }}">サイト内を検索する</a> - SG、FE、G検定、DS・Pythonの記事を横断検索できます。</li>
+  </ul>
+</section>
+
 <section class="home-card-grid" aria-label="学習まとめ">
   <article class="home-card">
     <h2>📘 G検定 学習まとめ</h2>

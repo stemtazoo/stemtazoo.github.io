@@ -12,6 +12,30 @@
       "type": "documentation",
       "description": "XML sitemap for discovering public pages on the site.",
       "url": "https://stemtazoo.github.io/sitemap.xml"
+    },
+    {
+      "name": "sg-article-discovery",
+      "type": "documentation",
+      "description": "Agent-readable Markdown discovery list for SG learning articles.",
+      "url": "https://stemtazoo.github.io/sg/llms.txt"
+    },
+    {
+      "name": "fe-article-discovery",
+      "type": "documentation",
+      "description": "Agent-readable Markdown discovery list for FE learning articles.",
+      "url": "https://stemtazoo.github.io/fe/llms.txt"
+    },
+    {
+      "name": "gk-article-discovery",
+      "type": "documentation",
+      "description": "Agent-readable Markdown discovery list for G検定 learning articles.",
+      "url": "https://stemtazoo.github.io/gk/llms.txt"
+    },
+    {
+      "name": "ds-article-discovery",
+      "type": "documentation",
+      "description": "Agent-readable Markdown discovery list for DS and Python learning articles.",
+      "url": "https://stemtazoo.github.io/ds/llms.txt"
     }
   ]
 }
