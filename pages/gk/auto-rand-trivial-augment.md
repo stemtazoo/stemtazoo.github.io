@@ -6,7 +6,7 @@ permalink: /gk/auto-rand-trivial-augment/
 tags: [gk, cnn, cheatsheet]
 gk_section: ディープラーニングの応用例/画像認識/データ拡張
 gk_order: 5
-last_modified_at: 2026-07-06
+last_modified_at: 2026-07-14
 ---
 
 ## まず結論
@@ -85,6 +85,7 @@ last_modified_at: 2026-07-06
 - **1回だけ適用 → TrivialAugment**
 
 ## 完全比較表（これだけ見ればOK）
+
 | 項目 | AutoAugment | RandAugment | TrivialAugment |
 |---|---|---|---|
 | 拡張の選び方 | 探索・最適化 | ランダム | ランダム |
