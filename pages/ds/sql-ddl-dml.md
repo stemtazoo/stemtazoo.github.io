@@ -1,302 +1,217 @@
-﻿---
+---
 layout: page
-title: DDL文とDML文の違いとは？SQLの基本操作を整理【DS検定】
-description: SQLのDDL文とDML文の違いを整理します。CREATEやALTERなどの定義操作と、SELECTやINSERTなどのデータ操作を切り分け、DS検定で問われるSQLの基本分類を確認できます。本文では、用語の定義、具体例、似た概念との違い、試験で迷いやすい選択肢の見分け方まで、短時間で復習できるようにまとめています。
+title: DDLとDMLの違いとは？CREATE・SELECTはどっち？【DS検定】
+description: DDLはデータベースの構造を定義し、DMLはデータを検索・追加・更新・削除します。CREATE・ALTER・DROPとSELECT・INSERT・UPDATE・DELETEを一覧で比較し、DS検定での見分け方を整理します。
 permalink: /ds/sql-ddl-dml/
 categories: [data-engineering]
-tags: [ds, sql]
+tags: [ds, sql, database]
 prev: /ds/sql-count-distinct/
 next: /ds/sql-distinct/
+last_modified_at: 2026-07-14
 ---
-<div style="font-size: 14px; margin-bottom: 12px;">
-  <a href="/ds/">DS検定トップ</a>
-  ＞ {{ page.title }}
-</div>
 
 ## まず結論
 
-**DDL文（Data Definition Language）**は「データベースの構造を定義するSQL」
+DDLとDMLの違いは、**操作する対象**で判断します。
 
-**DML文（Data Manipulation Language）**は「テーブルに入っているデータを操作するSQL」
+| 分類 | 何を操作する？ | 代表的なSQL |
+|---|---|---|
+| DDL | テーブルなどの構造 | `CREATE`、`ALTER`、`DROP` |
+| DML | テーブル内のデータ | `SELECT`、`INSERT`、`UPDATE`、`DELETE` |
 
+DS検定では、次のように切り分けると判断しやすいです。
 
-DS検定では、「テーブルを作るSQL」と「データを操作するSQL」の違いを理解しているかが問われることが多く、
-DDL＝構造、DML＝データ操作と整理できるかが判断ポイントになります。
+> **入れ物を作る・変える → DDL**  
+> **中のデータを扱う → DML**
 
-
+---
 
 ## 直感的な説明
 
-データベースはよく「Excelの表」に例えられます。
+データベースを、Excelの表に置き換えて考えてみます。
 
-まず、
+最初に必要なのは、表の入れ物を作ることです。
 
-表の列や構造を作る
+- 表を新しく作る
+- 列を追加する
+- 表そのものを削除する
 
-どんなデータを入れるか決める
+このような**表の構造を扱う操作**がDDLです。
 
+入れ物を作った後は、中のデータを扱います。
 
-必要があります。
+- データを検索する
+- 行を追加する
+- 値を書き換える
+- 行を削除する
 
-そのあとで、
+このような**表の中身を扱う操作**がDMLです。
 
-データを追加する
-
-データを修正する
-
-データを削除する
-
-
-といった操作を行います。
-
-この2つの役割を分けたものがSQLの
-
-DDL文：テーブルの構造を作る
-
-DML文：テーブルのデータを操作する
-
-
-という分類です。
-
-つまり、
-
-DDL → データの入れ物を作る
-DML → 中に入っているデータを扱う
-
-と覚えると理解しやすいです。
-
-
+---
 
 ## 定義・仕組み
 
-SQL（Structured Query Language）は
-リレーショナルデータベースを操作するための言語です。
+SQL（Structured Query Language）は、リレーショナルデータベースを操作するための言語です。
 
-その中でも基本的な分類として、
+SQLは役割によっていくつかに分類され、その代表がDDLとDMLです。
 
-DDL文（Data Definition Language）
+### DDL（Data Definition Language）
 
-データベースの構造を定義するSQL
+DDLは、**データベースやテーブルの構造を定義するSQL**です。
 
-代表例
+| SQL | 主な役割 |
+|---|---|
+| `CREATE` | テーブルやデータベースを作成する |
+| `ALTER` | テーブル構造を変更する |
+| `DROP` | テーブルやデータベースを削除する |
 
-SQL	意味
+例として、社員テーブルを作るSQLを見てみます。
 
-CREATE	テーブルやデータベースを作成
-ALTER	テーブル構造を変更
-DROP	テーブルを削除
-
-
-例
-
+```sql
 CREATE TABLE employees (
   id INT,
   name VARCHAR(50)
 );
+```
 
-これは
+これは、`employees`という**テーブルの構造を作る**ため、DDLです。
 
-「employeesというテーブル構造を作る」
+### DML（Data Manipulation Language）
 
-DDL文です。
+DMLは、**テーブルに格納されたデータを操作するSQL**です。
 
+| SQL | 主な役割 |
+|---|---|
+| `SELECT` | データを検索・取得する |
+| `INSERT` | データを追加する |
+| `UPDATE` | データを更新する |
+| `DELETE` | データを削除する |
 
+例として、社員テーブルからデータを取得するSQLを見てみます。
 
-DML文（Data Manipulation Language）
+```sql
+SELECT *
+FROM employees;
+```
 
-テーブルに格納されたデータを操作するSQL
+これは、テーブルの構造ではなく、**中にあるデータを取得する**ため、DMLとして扱います。
 
-代表例
+### 一覧で比較
 
-SQL	意味
+| 操作 | SQL | 分類 |
+|---|---|---|
+| テーブルを作る | `CREATE` | DDL |
+| 列を追加する | `ALTER` | DDL |
+| テーブルを削除する | `DROP` | DDL |
+| データを検索する | `SELECT` | DML |
+| データを追加する | `INSERT` | DML |
+| データを書き換える | `UPDATE` | DML |
+| データを削除する | `DELETE` | DML |
 
-SELECT	データ取得
-INSERT	データ追加
-UPDATE	データ更新
-DELETE	データ削除
-
-
-例
-
-SELECT * FROM employees;
-
-これは
-
-「employeesテーブルのデータを取得する」
-
-DML文になります。
-
-
+---
 
 ## どんな場面で使う？
 
-実務では次のような流れになります。
+### システムを作るとき
 
-システム開発の初期
+開発の初期には、テーブルや列の構造を決める必要があります。
 
-データベースの構造を作る
+このときは、次のようなDDLを使います。
 
-CREATE TABLE
+```sql
+CREATE TABLE sales (
+  sale_id INT,
+  amount INT
+);
+```
 
-などの DDL文 を使う。
+### データを分析するとき
 
+データ分析では、テーブル内のデータを取得・集計するため、DMLをよく使います。
 
+```sql
+SELECT customer_id, SUM(amount)
+FROM sales
+GROUP BY customer_id;
+```
 
-システム運用・分析
+`WHERE`、`JOIN`、`GROUP BY`などを含んでいても、中心となる操作が`SELECT`であれば、データを取得するDMLとして考えます。
 
-データを扱う
-
-売上データ取得
-
-顧客情報更新
-
-ログデータ分析
-
-
-などで
-
-SELECT
-INSERT
-UPDATE
-DELETE
-
-などの DML文 を使います。
-
-データ分析では特に
-
-SELECT + WHERE + JOIN + GROUP BY
-
-のようなDML操作が頻繁に使われます。
-
-
+---
 
 ## よくある誤解・混同
 
-① SELECTはDDLだと思ってしまう
+### 誤解1：SELECTは構造を指定するのでDDLである
 
-これはよくある誤解です。
+`SELECT`では取得する列を指定しますが、テーブル構造そのものを変更しているわけではありません。
 
-SELECTは
+**既存データを検索・取得する操作**なので、DS検定ではDMLとして判断します。
 
-「データの参照」
+### 誤解2：DELETEとDROPは同じ削除操作である
 
-なので DML文 に分類されます。
+どちらも「削除」ですが、削除する対象が違います。
 
+| SQL | 削除するもの | 分類 |
+|---|---|---|
+| `DELETE` | テーブル内の行 | DML |
+| `DROP` | テーブルそのもの | DDL |
 
+迷ったら、**中身を消すのか、入れ物ごと消すのか**を確認します。
 
-② SQLは全部同じ種類と思ってしまう
+### 誤解3：JOINやWHEREはDDLである
 
-SQLには実は役割ごとに分類があります。
+`JOIN`や`WHERE`は、データを絞り込んだり結合したりするために使います。
 
-代表的には
-
-DDL：構造定義
-
-DML：データ操作
-
-
-です。
-
-DS検定では、
-
-「次のうちDMLに該当するものはどれか」
-
-という形で出題されることがあります。
-
-
-
-③ JOINやWHEREはDDLと思ってしまう
-
-これも注意ポイントです。
-
-例えば
-
+```sql
 SELECT *
 FROM sales
 JOIN customers
+  ON sales.customer_id = customers.customer_id
+WHERE sales.amount >= 10000;
+```
 
-のようなSQLは
+このSQLはデータを取得しているため、DMLの範囲です。
 
-データを取り出す操作なので
-すべて DML文 の範囲です。
+### 誤解4：SELECTは必ずDMLとだけ呼ばれる
 
+分類体系によっては、`SELECT`をDQL（Data Query Language）として分ける場合もあります。
 
+ただし、DS検定の基本的な切り分けでは、`SELECT`をデータ操作側として扱う問題が多いため、**問題文や選択肢の分類方法を確認する**ことが大切です。
+
+---
+
+## 確認問題（DS検定対策）
+
+次のうち、DDLに分類されるSQLはどれか。
+
+- ア. `SELECT`
+- イ. `INSERT`
+- ウ. `UPDATE`
+- エ. `ALTER`
+
+<details markdown="1">
+<summary>▶ クリックして答えと解説を見る（ここを開く）</summary>
+
+**正解：エ**
+
+- `SELECT`：データを取得するDML
+- `INSERT`：データを追加するDML
+- `UPDATE`：データを更新するDML
+- `ALTER`：テーブル構造を変更するDDL
+
+判断ポイントは、**テーブルの構造を変える操作かどうか**です。
+
+</details>
+
+---
 
 ## まとめ（試験直前用）
 
-DDL文 = データベースの構造を定義するSQL
+- DDLは、データベースやテーブルの**構造を定義するSQL**
+- DMLは、テーブル内の**データを操作するSQL**
+- `CREATE`、`ALTER`、`DROP`はDDL
+- `SELECT`、`INSERT`、`UPDATE`、`DELETE`はDMLとして整理する
+- `DELETE`は行を削除し、`DROP`はテーブルそのものを削除する
+- 迷ったら、**入れ物か、中身か**で切り分ける
 
-DML文 = テーブルのデータを操作するSQL
-
-CREATE / ALTER / DROP → DDL
-
-SELECT / INSERT / UPDATE / DELETE → DML
-
-DS検定では **「構造操作か、データ操作か」**を区別できることが重要
-
-
-迷ったら
-
-テーブルの形を作る → DDL
-データを扱う → DML
-
-で判断すると選択肢を切りやすくなります。
-
-
-
-## 対応スキル項目（データエンジニアリング力シート）
-
-スキルカテゴリ：プログラミング
-
-サブカテゴリ：SQL
-
-
-★ SQLの構文を一通り知っていて、記述・実行できる（DML・DDLの理解、各種JOINの使い分け、集計関数とGROUP BY、CASE文を使用した縦横変換、副問合せやEXISTSの活用など）
-
-## 🔗 関連記事
-
-<ul style="padding-left: 20px;">
-{% assign current_tags = page.tags %}
-{% assign count = 0 %}
-
-{% for p in site.pages %}
-  {% if p.url != page.url and p.tags %}
-    {% assign matched = false %}
-
-    {% for tag in current_tags %}
-      {% if p.tags contains tag and tag != "ds" %}
-        {% assign matched = true %}
-      {% endif %}
-    {% endfor %}
-
-    {% if matched %}
-      <li style="margin-bottom: 6px;">
-        <a href="{{ p.url }}">{{ p.title }}</a>
-      </li>
-      {% assign count = count | plus: 1 %}
-    {% endif %}
-
-    {% if count >= 5 %}
-      {% break %}
-    {% endif %}
-  {% endif %}
-{% endfor %}
-</ul>
-
-<hr>
-
-<div style="margin-top: 16px;">
-  🏠 <a href="/ds/">DS検定トップに戻る</a>
-</div>
-
-<div style="display:flex;justify-content:space-between;margin-top:12px;">
-
-  {% if page.previous.url %}
-    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
-  {% endif %}
-
-  {% if page.next.url %}
-    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
-  {% endif %}
-
-</div>
+{% include ds_article_footer.html %}
