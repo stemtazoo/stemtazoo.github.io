@@ -6,12 +6,13 @@ permalink: /gk/gpt/
 tags: [gk, nlp, transformer, attention]
 gk_section: ディープラーニングの応用例/自然言語処理
 gk_order: 2
+last_modified_at: 2026-07-14
 ---
 
 ## まず結論
 
-* **GPT（Generative Pre-trained Transformer）**は、Transformerの**Decoder側の考え方**を使い、これまでの単語から**次の単語を予測する自己回帰モデル**です。
-* G検定では、**GPT＝一方向・次単語予測・生成向き**、**BERT＝双方向・MLM・理解向き**で切り分けます。
+* **GPT（Generative Pre-trained Transformer）**は、[Transformer](/gk/transformer/)の**Decoder側の考え方**を使い、これまでの単語から**次の単語を予測する自己回帰モデル**です。
+* G検定では、**GPT＝一方向・次単語予測・生成向き**、**[BERT](/gk/bert/)＝双方向・MLM・理解向き**で切り分けます。
 
 ## 直感的な説明
 
@@ -29,7 +30,7 @@ GPTは、文章の続きを1語ずつ書いていくモデルです。
 
 ## 定義・仕組み
 
-GPTは、ラベルなしの大量テキストから「次の単語を当てる」タスクで事前学習します。TransformerのSelf-Attentionを使いますが、生成時に未来の単語を見ないようにするため、**一方向の文脈**だけを使う点が特徴です。
+GPTは、ラベルなしの大量テキストから「次の単語を当てる」タスクで事前学習します。[Transformer](/gk/transformer/)のSelf-Attentionを使いますが、生成時に未来の単語を見ないようにするため、**一方向の文脈**だけを使う点が特徴です。
 
 G検定で押さえる構造は次の3点です。
 
@@ -39,7 +40,7 @@ G検定で押さえる構造は次の3点です。
 | 学習タスク | 次単語予測 |
 | 得意分野 | 文章生成、要約、対話、補完 |
 
-BERTのように文中の単語を隠して前後から当てる **Masked Language Model（MLM）** ではありません。
+[BERT](/gk/bert/)のように文中の単語を隠して前後から当てる **Masked Language Model（MLM）** ではありません。
 
 ## いつ使う？（得意・不得意）
 
@@ -54,7 +55,7 @@ BERTのように文中の単語を隠して前後から当てる **Masked Langua
 
 * もっともらしいが誤った内容を生成することがある
 * 事実確認や根拠提示は別途必要になる
-* BERT型モデルのような穴埋め・文理解タスクと同じものではない
+* [BERT](/gk/bert/)型モデルのような穴埋め・文理解タスクと同じものではない
 
 ## G検定ひっかけポイント
 
@@ -63,7 +64,7 @@ GPTは、BERTやMLMとの混同が狙われます。
 | 問題文のキーワード | 判断 |
 |---|---|
 | 一方向、自己回帰、次単語予測 | GPT |
-| 双方向、前後の文脈、MLM | BERT |
+| 双方向、前後の文脈、MLM | [BERT](/gk/bert/) |
 | Encoderのみ | BERT寄り |
 | Decoder、生成、左から右 | GPT寄り |
 
@@ -76,5 +77,7 @@ GPTは、BERTやMLMとの混同が狙われます。
 * Transformer Decoder側の考え方を使う
 * 文章生成が得意
 * 「双方向」「MLM」「穴埋め」はBERT側のキーワード
+
+次に読むなら、双方向モデルの[BERT](/gk/bert/)と、両者の基盤となる[Transformer](/gk/transformer/)を確認しましょう。
 
 {% include gk_article_footer.html %}
