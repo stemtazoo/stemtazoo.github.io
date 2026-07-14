@@ -6,6 +6,7 @@ permalink: /gk/k-means-vs-knn/
 tags: [gk, clustering]
 gk_section: 機械学習の概要/代表的な手法/教師なし学習
 gk_order: 7
+last_modified_at: 2026-07-14
 ---
 
 ## まず結論
@@ -84,6 +85,7 @@ gk_order: 7
 とあれば **k-NN**。
 
 ## 最終比較表（これだけ見ればOK）
+
 | 項目 | k-means | k-NN |
 |---|---|---|
 | 学習形態 | 教師なし | 教師あり |

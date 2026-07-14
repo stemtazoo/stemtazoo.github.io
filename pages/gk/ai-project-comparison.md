@@ -6,6 +6,7 @@ permalink: /gk/ai-project-comparison/
 tags: [gk, reinforcement_learning, cheatsheet]
 gk_section: ディープラーニングの応用例/深層強化学習
 gk_order: 16
+last_modified_at: 2026-07-14
 ---
 
 ## まず結論
@@ -21,6 +22,7 @@ gk_order: 16
 - **AlphaStar**：StarCraft II 専用AI  
 
 ## 完全比較表（最重要）
+
 | 項目 | AlphaGo | AlphaGo Zero | AlphaZero | OpenAI Five | AlphaStar |
 |---|---|---|---|---|---|
 | 開発元 | DeepMind | DeepMind | DeepMind | OpenAI | DeepMind |

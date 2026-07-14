@@ -6,6 +6,7 @@ permalink: /gk/data-augmentation-vs-normalization/
 tags: [gk, cnn, neural_network]
 gk_section: ディープラーニングの応用例/画像認識/データ拡張
 gk_order: 6
+last_modified_at: 2026-07-14
 ---
 
 ## まず結論
@@ -92,6 +93,7 @@ BatchNormの役割：
 とあれば **正規化**。
 
 ## 最終比較表（これだけ見ればOK）
+
 | 観点 | データ拡張 | 正規化 |
 |---|---|---|
 | 作用する場所 | 入力データ | ネットワーク内部 |

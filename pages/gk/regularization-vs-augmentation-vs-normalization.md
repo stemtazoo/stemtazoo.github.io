@@ -6,6 +6,7 @@ permalink: /gk/regularization-vs-augmentation-vs-normalization/
 tags: [gk, neural_network, cnn]
 gk_section: ディープラーニングの応用例/画像認識/データ拡張
 gk_order: 7
+last_modified_at: 2026-07-14
 ---
 
 ## まず結論
@@ -100,6 +101,7 @@ gk_order: 7
 - **分布を安定化 → 正規化**
 
 ## 最終比較表（これだけ見ればOK）
+
 | 観点 | 正則化 | データ拡張 | 正規化 |
 |---|---|---|---|
 | 作用対象 | 重み・ノード | 入力データ | 層の出力 |

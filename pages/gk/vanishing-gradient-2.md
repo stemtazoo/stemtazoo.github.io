@@ -6,6 +6,7 @@ permalink: /gk/vanishing-gradient-2/
 tags: [gk, neural_network]
 gk_section: ディープラーニングの要素技術/リカレントニューラルネットワーク (RNN)
 gk_order: 13
+last_modified_at: 2026-07-14
 ---
 
 ## まず結論
@@ -83,6 +84,7 @@ G検定では、次の混同を狙ってきます。
 👉 勾配の安定化
 
 ## G検定での頻出対応表
+
 | 問題文のキーワード | 連想する答え |
 |---|---|
 | 長期依存関係が学習できない | 勾配消失 |

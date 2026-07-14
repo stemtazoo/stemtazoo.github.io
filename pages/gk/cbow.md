@@ -6,6 +6,7 @@ permalink: /gk/cbow/
 tags: [gk, nlp, embedding]
 gk_section: ディープラーニングの応用例/自然言語処理
 gk_order: 12
+last_modified_at: 2026-07-14
 ---
 
 ## まず結論
@@ -74,6 +75,7 @@ CBOWは、
 - 「単語順序を無視」→ CBOW  
 
 ## Skip-gramとの最重要対比
+
 | 観点 | CBOW | Skip-gram |
 |---|---|---|
 | 予測方向 | 文脈 → 単語 | 単語 → 文脈 |

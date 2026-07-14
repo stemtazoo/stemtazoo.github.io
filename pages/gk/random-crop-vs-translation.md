@@ -6,6 +6,7 @@ permalink: /gk/random-crop-vs-translation/
 tags: [gk, cnn, neural_network]
 gk_section: ディープラーニングの応用例/画像認識/データ拡張
 gk_order: 9
+last_modified_at: 2026-07-14
 ---
 
 ## まず結論
@@ -92,6 +93,7 @@ gk_order: 9
 とあれば **Random Translation**。
 
 ## 最終比較表（これだけ見ればOK）
+
 | 観点 | Random Crop | Random Translation |
 |---|---|---|
 | 操作内容 | 切り出し | 平行移動 |

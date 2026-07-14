@@ -6,7 +6,7 @@ permalink: /gk/atrous-vs-pooling/
 tags: [gk, cnn]
 gk_section: ディープラーニングの要素技術/ネットワークの構成要素
 gk_order: 13
-last_modified_at: 2026-07-06
+last_modified_at: 2026-07-14
 ---
 
 ## まず結論
@@ -78,6 +78,7 @@ last_modified_at: 2026-07-06
 とあれば **Atrous Convolution**。
 
 ## 最終比較表（これだけ見ればOK）
+
 | 観点 | Pooling | Atrous Convolution |
 |---|---|---|
 | 目的 | 情報圧縮 | 文脈拡張 |

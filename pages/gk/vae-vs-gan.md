@@ -6,6 +6,7 @@ permalink: /gk/vae-vs-gan/
 tags: [gk, neural_network, generative_model, cheatsheet]
 gk_section: ディープラーニングの応用例/データ生成
 gk_order: 6
+last_modified_at: 2026-07-14
 ---
 
 ## まず結論
@@ -87,6 +88,7 @@ gk_order: 6
 - 「安定」→ VAE
 
 ## 一発比較表（試験用）
+
 | 観点 | VAE | GAN |
 |---|---|---|
 | 学習方法 | 確率分布学習 | 敵対的学習 |

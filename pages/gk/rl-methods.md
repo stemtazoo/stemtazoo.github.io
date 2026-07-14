@@ -6,7 +6,7 @@ permalink: /gk/rl-methods/
 tags: [gk, reinforcement_learning, cheatsheet]
 gk_section: ディープラーニングの応用例/深層強化学習
 gk_order: 5
-last_modified_at: 2026-07-06
+last_modified_at: 2026-07-14
 ---
 
 ## まず結論
@@ -89,6 +89,7 @@ last_modified_at: 2026-07-06
 - **Actor / Critic の2つ** → Actor-Critic
 
 ### キーワード対応
+
 | 選択肢の表現 | 手法 |
 |---|---|
 | 行動価値関数 | DQN |

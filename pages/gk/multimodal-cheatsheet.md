@@ -6,7 +6,7 @@ permalink: /gk/multimodal-cheatsheet/
 tags: [gk, cheatsheet, neural_network, attention]
 gk_section: ディープラーニングの応用例/マルチモーダル
 gk_order: 8
-last_modified_at: 2026-06-27
+last_modified_at: 2026-07-14
 ---
 
 ## まず結論
@@ -45,6 +45,7 @@ G検定の選択肢は、だいたいこう攻めてきます。
 ## いつ使う？（得意・不得意）
 
 ### 🔴 生成するモデル
+
 | モデル | 得意なこと |
 |---|---|
 | DALL·E | テキスト → 画像生成 |
@@ -52,12 +53,14 @@ G検定の選択肢は、だいたいこう攻めてきます。
 | Unified-IO | 入出力統一で生成も理解も |
 
 ### 🔵 生成しないモデル
+
 | モデル | 得意なこと |
 |---|---|
 | CLIP | 画像 × テキストの対応付け |
 | PaLM | テキスト理解・生成（画像なし） |
 
 ### 🟢 特化系
+
 | モデル | 特徴 |
 |---|---|
 | Flamingo | 画像×テキスト × Few-shot |

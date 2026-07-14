@@ -6,6 +6,7 @@ permalink: /gk/few-shot-vs-zero-shot-vs-transfer/
 tags: [gk, neural_network]
 gk_section: ディープラーニングの応用例/転移学習・ファインチューニング
 gk_order: 8
+last_modified_at: 2026-07-14
 ---
 
 ## まず結論
@@ -86,6 +87,7 @@ gk_order: 8
 - **エピソード学習 → Few-shot**
 
 ## 最終比較表（これだけ見ればOK）
+
 | 観点 | 転移学習 | Few-shot学習 | Zero-shot学習 |
 |---|---|---|---|
 | 新タスクのデータ | あり | 少量 | なし |
