@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 物体検出モデル総まとめ（SSD / YOLO / R-CNN系）
-description: "G検定の物体検出は、「段数」と「目的」の2軸で一瞬で切ります。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "物体検出モデルを、候補領域の抽出と分類を一度に行うSSD・YOLOなどの1段階型と、候補領域を作ってから分類するR-CNN系の2段階型に整理します。速度を優先する用途と精度を重視する用途、Anchor・Default Box・RPNの担当を比較し、Fast R-CNNとFaster R-CNNの混同を防ぎます。"
 permalink: /gk/object-detection-summary/
 tags: [gk, 画像認識, 物体検出, まとめ]
 gk_section: ディープラーニングの応用例/画像認識/物体検出タスク

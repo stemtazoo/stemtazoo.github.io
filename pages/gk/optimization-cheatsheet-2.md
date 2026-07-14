@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 最適化手法まとめ（SGD / AdaGrad / RMSprop / Adam）
-description: "最適化手法は、「勾配をどう使ってパラメータを更新するか」の違いです。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "SGD・AdaGrad・RMSprop・Adamを、勾配をそのまま使うか、パラメータごとに学習率を調整するか、移動平均や慣性を組み合わせるかで比較します。AdaGradで学習率が小さくなり続ける課題、RMSpropの指数移動平均、AdamがMomentumと適応的学習率を併用する点から選択肢を判定します。"
 permalink: /gk/optimization-cheatsheet-2/
 tags: [gk, neural_network, cheatsheet]
 gk_section: ディープラーニングの概要/最適化手法

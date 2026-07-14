@@ -1,10 +1,10 @@
 ---
 layout: page
 title: ネットワーク防御と通信保護まとめ｜主要用語を整理【SG試験】
-description: "ネットワーク防御と通信保護は、境界で止める対策と通信経路を守る対策を使い分ける考え方です。SG試験で問われやすい用語の違い、判断基準、学習順序を整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "ネットワーク防御を、通信を許可・遮断するファイアウォール、公開サーバを隔離するDMZ、攻撃を検知・防御するIDS・IPSと、通信経路を暗号化するTLS・VPN・IPsecに分けて整理します。DNSやメール経路の防御も含め、境界・配置・検知・暗号化のどの役割が求められているかからSG試験の対策を選ぶ学習マップです。"
 permalink: /sg/network-defense-summary/
 tags: [sg, sg-security-measures, network, unauthorized_access]
-last_modified_at: 2026-06-14
+last_modified_at: 2026-07-14
 ---
 
 ## まず結論

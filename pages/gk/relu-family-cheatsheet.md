@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: ReLU / Leaky ReLU / PReLU（比較チートシート）
-description: "（試験で即切る）違いは「負の入力をどう扱うか」だけ。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "ReLU・Leaky ReLU・PReLUを、負の入力を0にするか、小さな固定傾きを残すか、その傾きを学習するかで比較します。計算が軽いReLUと、負領域で勾配が0になりニューロンが更新されなくなるDying ReLUへの対策を結び付け、Leaky ReLUの傾きも学習されるというG検定の誤答を切ります。"
 permalink: /gk/relu-family-cheatsheet/
 tags: [gk, cheatsheet, neural_network]
 gk_section: ディープラーニングの概要/活性化関数

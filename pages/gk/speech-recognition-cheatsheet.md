@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 音声認識まとめ（WaveNet・CTC・RNN）
-description: "（この1ページで即断）音声認識は「音声という時系列データ」をどう扱うかがすべてです。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "音声認識の主要技術を、時系列の前後関係を扱うRNN・LSTM・GRU、入力音声と文字列の対応付けを学ぶCTC、系列を別の系列へ変換するEncoder-Decoder、音声波形を生成するWaveNetに整理します。音声に使われる技術をすべて認識モデルとみなさず、認識・対応付け・生成の役割からG検定の選択肢を切ります。"
 permalink: /gk/speech-recognition-cheatsheet/
 tags: [gk, cheatsheet]
 gk_section: チートシート（試験直前）/チートシート（試験直前）

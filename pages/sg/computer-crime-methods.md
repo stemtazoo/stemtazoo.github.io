@@ -1,10 +1,10 @@
 ---
 layout: page
 title: コンピュータ犯罪の手口まとめ【SG試験】
-description: コンピュータ犯罪の手口は、不正アクセス、盗聴、サラミ法、スキャビンジングなどを切り分けて理解することが大切です。SG試験で迷いやすい攻撃手法の判断基準を整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
+description: コンピュータ犯罪の手口を、認証を破って侵入する不正アクセス、通信を読み取る盗聴、少額ずつ不正取得するサラミ法、廃棄物や残存データから情報を拾うスキャビンジングなど、対象と行動で比較します。金銭・認証情報・可用性のどれを狙うか、侵入・窃取・妨害のどの動作かを手掛かりにSG試験の攻撃名を選びます。
 permalink: /sg/computer-crime-methods/
 tags: [sg, sg-security-overview, threat_vulnerability, unauthorized_access]
-last_modified_at: 2026-05-08
+last_modified_at: 2026-07-14
 ---
 
 ## まず結論

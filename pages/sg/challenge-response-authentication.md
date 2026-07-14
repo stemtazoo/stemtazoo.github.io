@@ -1,12 +1,12 @@
 ---
 layout: page
 title: "チャレンジレスポンス認証とは？パスワードを送らない認証の仕組み【SG試験】"
-description: "チャレンジレスポンス認証の理解向上に向け、平文送信を避ける仕組み、盗聴耐性、ワンタイム性の考え方を整理し、パスワード認証との違いをSG文脈で説明できるようになります。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。"
+description: "チャレンジレスポンス認証を、サーバが毎回異なる乱数を送り、利用者側が秘密情報と組み合わせた応答値を返して本人確認する方式として整理します。パスワード自体を通信路へ流さず、過去の応答値の再利用を防ぐ仕組みを押さえ、単なるパスワード暗号化、多要素認証、固定応答を返す方式とする誤答を判別します。"
 permalink: /sg/challenge-response-authentication/
 prev: /sg/risk-based-authentication/
 next: /sg/challenge-response-why-not-used/
 tags: [sg, sg-security-measures, access_control, crypto_auth]
-last_modified_at: 2026-06-11
+last_modified_at: 2026-07-14
 ---
 
 ## まず結論

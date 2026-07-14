@@ -1,10 +1,10 @@
 ---
 layout: page
 title: コンティンジェンシープランとは？緊急時の対応計画を整理【SG試験】
-description: コンティンジェンシープランは、事故や災害などの緊急事態に備えて、あらかじめ対応手順を決めておく計画です。SG試験で問われやすいBCPや復旧計画との違いを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
+description: コンティンジェンシープランを、事故・災害・サイバー攻撃など想定外の事態が起きた際の連絡先、指揮命令、代替手段、初動をあらかじめ定める緊急時対応計画として整理します。事業全体の継続を扱うBCPやシステムを元へ戻す復旧計画との範囲を比較し、発生後にその場で考える対応とする誤答を切ります。
 permalink: /sg/contingency-plan/
 tags: [sg, sg-security-management, incident_management, risk_assessment, it_security_operations]
-last_modified_at: 2026-06-21
+last_modified_at: 2026-07-14
 ---
 
 ## まず結論

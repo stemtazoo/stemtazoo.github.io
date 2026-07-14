@@ -1,12 +1,12 @@
 ---
 layout: page
 title: 正規化手法の違い【G検定】
-description: "* 正規化手法の違いは「どの単位で平均・分散を計算するか」に集約されます。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "深層学習のBatch Normalization、Layer Normalization、Instance Normalizationを、平均・分散を計算する単位で比較します。ミニバッチを基準にするBN、各サンプルの特徴方向で整えるLN、画像ごと・チャネルごとに整えるINの違いと、CNN・Transformer・画像変換で使われやすい場面を対応させます。"
 permalink: /gk/normalization-cheatsheet/
 tags: [gk, neural_network, cnn, cheatsheet]
 gk_section: ディープラーニングの要素技術/ネットワークの構成要素
 gk_order: 11
-last_modified_at: 2026-07-06
+last_modified_at: 2026-07-14
 ---
 
 ## まず結論

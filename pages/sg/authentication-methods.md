@@ -1,12 +1,12 @@
 ---
 layout: page
 title: 認証方式とは？3要素と多要素認証を整理【SG試験】
-description: "認証方式を得点源にするため、知識・所持・生体の3要素と多要素認証の成立条件を具体キーワードで整理し、設問で問われる本人確認手段の違いを判断できるようになります。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。"
+description: "認証方式を、パスワードやPINの知識要素、ICカードやスマートフォンの所持要素、指紋や顔の生体要素に分類します。異なる要素を2つ以上組み合わせて初めて多要素認証になる点を押さえ、パスワードとPINのような同一要素の併用や、手順が複数あるだけの多段階認証をMFAとする誤答を切り分けます。"
 permalink: /sg/authentication-methods/
 prev: /sg/id-management/
 next: /sg/password-management/
 tags: [sg, sg-security-overview, access_control, it_security_operations]
-last_modified_at: 2026-06-11
+last_modified_at: 2026-07-14
 ---
 
 ## まず結論

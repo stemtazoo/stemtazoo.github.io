@@ -1,10 +1,10 @@
 ---
 layout: page
 title: CASBとは？クラウド利用を可視化・制御する仕組み【SG試験】
-description: CASBは、クラウド利用の見える化とアクセス制御を行う仕組みです。SG試験で問われやすいシャドーITの発見、情報漏えい対策、CSPM・SSPMとの違いを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
+description: CASBを、利用者とクラウドサービスの間で利用状況を可視化し、アクセス制御やデータ保護によってシャドーITと情報漏えいを抑える仕組みとして整理します。クラウド基盤の設定を点検するCSPM、SaaSの設定・権限を管理するSSPMとの対象差を押さえ、サービス事業者そのものとする誤答を切り分けます。
 permalink: /sg/casb/
 tags: [sg, sg-security-measures, it_security_operations, access_control]
-last_modified_at: 2026-05-08
+last_modified_at: 2026-07-14
 ---
 
 ## まず結論

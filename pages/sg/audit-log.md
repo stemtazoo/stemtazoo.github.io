@@ -1,12 +1,12 @@
 ---
 layout: page
 title: 監査ログとは？不正検知と追跡の基本【SG試験】
-description: "監査ログ管理の要点として、取得対象・保全要件・改ざん防止・追跡可能性を具体的に整理し、事故後の証跡確保で何を優先すべきかをSGのケース問題で判断できるようになります。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。"
+description: "監査ログを、誰が・いつ・何に・どの操作をしたかを記録し、不正検知や事故原因の追跡に使う証跡として整理します。特権IDを含む個人単位の識別、時刻同期、保存期間、アクセス制限と改ざん防止、定期的な監視・分析が必要な理由を押さえ、ログを取得するだけで十分とするSGの誤答を見抜きます。"
 permalink: /sg/audit-log/
 prev: /sg/risk-management-final-exercise/
 next: /sg/copyright-transfer/
 tags: [sg, sg-security-management, incident_management, it_security_operations]
-last_modified_at: 2026-05-20
+last_modified_at: 2026-07-14
 ---
 
 ## まず結論

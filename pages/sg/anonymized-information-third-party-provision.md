@@ -1,10 +1,10 @@
 ---
 layout: page
 title: 匿名加工情報の第三者提供とは？公表義務と注意点【SG試験】
-description: 匿名加工情報の第三者提供は、個人を識別できず復元できないように加工した情報を、一定のルールに従って外部提供することです。公表義務や再識別禁止をSG試験向けに整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
+description: 匿名加工情報の第三者提供を、特定個人を識別できず元の個人情報へ復元できないように加工したデータの外部提供として整理します。提供項目・方法の公表、提供先への明示、再識別の禁止を押さえ、本人同意が必要な通常の個人情報や、追加情報で照合できる仮名加工情報との違いを判断します。
 permalink: /sg/anonymized-information-third-party-provision/
 tags: [sg, sg-security-law, privacy_law, data_leakage, it_security_operations]
-last_modified_at: 2026-05-20
+last_modified_at: 2026-07-14
 ---
 
 ## まず結論

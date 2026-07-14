@@ -1,10 +1,10 @@
 ---
 layout: page
 title: ビジネスインパクト分析とは？BCP策定前に影響度を整理する分析【SG試験】
-description: ビジネスインパクト分析は、障害や災害による業務停止の影響を評価する分析です。BCP策定でのMTD・RTOの位置づけと、SG試験のひっかけポイントを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
+description: ビジネスインパクト分析（BIA）を、災害や障害で業務が停止したときの時間経過による損失を評価し、重要業務と復旧優先順位を決めるBCP策定前の分析として整理します。許容できる最大停止時間MTDと目標復旧時間RTO、復旧時点を示すRPOを比較し、復旧手順の作成や訓練そのものとする誤答を切ります。
 permalink: /sg/business-impact-analysis/
 tags: [sg, sg-strategy, business_management, risk_assessment, it_security_operations]
-last_modified_at: 2026-06-06
+last_modified_at: 2026-07-14
 ---
 
 ## まず結論

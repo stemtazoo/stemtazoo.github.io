@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: 勾配降下法（Gradient Descent）とは？【訓練誤差との関係｜G検定対策】
-description: "勾配降下法（Gradient Descent）について、G検定で問われる学習・最適化分野の観点から、学習が進む仕組み、更新の考え方、過学習対策や代表手法との違いを整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
+description: "勾配降下法を、損失関数の傾きとは逆方向へパラメータを少しずつ更新し、訓練誤差を小さくする最適化手法として整理します。学習率が大きすぎると発散し、小さすぎると収束が遅くなる点、バッチ・確率的・ミニバッチで勾配に使うデータ量が異なる点を押さえ、測定誤差や過学習を直接なくす手法という誤答を切ります。"
 permalink: /gk/gradient-descent/
 tags: [gk, neural_network, optimization]
 gk_section: ディープラーニングの概要/誤差逆伝播法（Backpropagation）

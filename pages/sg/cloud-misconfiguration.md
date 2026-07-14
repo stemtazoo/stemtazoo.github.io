@@ -1,10 +1,10 @@
 ---
 layout: page
 title: クラウドサービスの設定ミスとは？利用者側の責任を整理【SG試験】
-description: クラウドサービスの設定ミスは、アクセス権限や公開範囲などの誤設定によって情報漏えいなどを招くリスクです。SG試験で問われやすい利用者側の責任と確認ポイントを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
+description: クラウドサービスの設定ミスを、ストレージの公開範囲、共有リンク、管理者権限、認証設定などの誤りから情報漏えいや不正利用を招くリスクとして整理します。責任共有モデルでは事業者が基盤を守っても利用者側の設定責任は残るため、SaaSなら確認不要、技術部門だけで管理すればよいというSG試験の判断を退けます。
 permalink: /sg/cloud-misconfiguration/
 tags: [sg, sg-security-measures, it_security_operations, access_control]
-last_modified_at: 2026-05-08
+last_modified_at: 2026-07-14
 ---
 
 ## まず結論

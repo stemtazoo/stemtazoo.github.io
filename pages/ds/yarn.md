@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: YARNとは？Hadoopクラスタのリソース管理の仕組み【DS検定】
-description: "YARN（Yet Another Resource Negotiator）とは、Hadoopクラスタ全体の計算資源（CPUやメモリ）を管理し、どの処理をどのサーバーで動かすかを調整する仕組みです。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。"
+description: "YARNを、HadoopクラスタのCPU・メモリを管理し、複数の処理へ実行資源を割り当てる基盤として整理します。クラスタ全体を調整するResourceManager、各ノードの資源を管理するNodeManager、アプリ単位で実行を調整するApplicationMasterの役割を押さえ、データを保存するHDFSや処理モデルのMapReduceとの違いを判断します。"
 permalink: /ds/yarn/
 categories: [data-engineering]
 tags: [ds, data-storage, data-processing]

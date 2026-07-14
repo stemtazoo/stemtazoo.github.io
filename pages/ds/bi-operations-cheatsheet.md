@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: BIツール操作チートシート｜スライス・ダイス・ドリルダウンの違い【DS検定】
-description: "BIツールの代表的な操作は次の7つに整理できます。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
+description: "BIツールの操作を、条件で絞るフィルター、特定軸を切り出すスライス、複数軸で見るダイス、集計粒度を上下するドリルダウン・ドリルアップ、表の軸を入れ替えるピボット、別の詳細レポートへ移るドリルスルーに整理します。データを減らすのか、粒度・向き・画面を変えるのかでDS検定の用語を選びます。"
 permalink: /ds/bi-operations-cheatsheet/
 categories: [business]
 tags: [ds, visualization, design]

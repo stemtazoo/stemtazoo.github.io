@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: AIOpsとMLOpsの違いを一発整理【DS検定チートシート】
-description: "DS検定では、この2つを混同させる問題が非常に出やすいです。 データ分析での使いどころ、関連する指標・手法との違い、DS検定で迷いやすい判断軸を確認できます。"
+description: "AIOpsとMLOpsを、AIでログやメトリクスを分析してIT運用の異常検知・原因分析・自動化を行う活動か、機械学習モデルの開発・学習・配備・監視・再学習を継続的に管理する活動かで比較します。監視対象がシステム運用かモデルのライフサイクルかを見て、モデル監視をAIOpsとするDS検定の誤答を切ります。"
 permalink: /ds/aiops-mlops-cheatsheet/
 categories: [ai-utilization]
 tags: [ds, environment-setup, ai-use]

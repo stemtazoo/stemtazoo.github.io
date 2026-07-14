@@ -1,7 +1,7 @@
 ﻿---
 layout: page
 title: G検定ひっかけ最適化問題10連発【SGD / Adam / RMSprop ほか｜解説付き】
-description: "G検定ひっかけ最適化問題10連発は頻出論点を整理して得点力につなげる学習テーマです。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "SGD、Momentum、AdaGrad、RMSprop、Adamなど最適化手法の違いを、10問のひっかけ問題で確認します。勾配の向き、過去の更新を使う慣性、学習率の自動調整、二乗勾配の累積と移動平均という手掛かりを整理し、Adamなら学習率設定が不要、最適化手法が過学習を必ず防ぐといった誤答を外します。"
 permalink: /gk/optimizer-trick-questions/
 tags: [gk, cheatsheet, neural_network]
 gk_section: ディープラーニングの概要/最適化手法

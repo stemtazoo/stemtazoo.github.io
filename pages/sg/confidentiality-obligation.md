@@ -1,10 +1,10 @@
 ---
 layout: page
 title: 守秘義務とは？雇用終了後も続く情報保護の責任【SG試験】
-description: 守秘義務は、業務で知った秘密情報を正当な理由なく外部に漏らさない責任です。雇用終了後も続く場合がある点、秘密保持契約との関係、SG試験でのひっかけポイントを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
+description: 守秘義務を、従業員や委託先が業務で知った顧客情報・営業秘密などを、正当な理由なく利用・開示しない責任として整理します。退職・異動・契約終了後も対象情報や契約に応じて義務が続くこと、秘密保持契約への署名だけで教育・アクセス制御・返却確認が不要になるわけではないことをSGの事例で判断します。
 permalink: /sg/confidentiality-obligation/
 tags: [sg, sg-security-management, data_leakage, security_training, it_security_operations]
-last_modified_at: 2026-05-18
+last_modified_at: 2026-07-14
 ---
 
 ## まず結論
