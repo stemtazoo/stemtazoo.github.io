@@ -7,6 +7,8 @@ categories: [data-science]
 tags: [ds, statistics]
 prev: /ds/vector-dot-product/
 next: /ds/bernoulli-binomial/
+last_modified_at: 2026-06-23
+
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>

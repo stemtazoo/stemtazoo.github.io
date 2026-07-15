@@ -7,6 +7,8 @@ categories: [data-engineering]
 tags: [ds, database]
 prev: /ds/data-warehouse-vs-datamart/
 next: /ds/datalake-vs-nosql/
+last_modified_at: 2026-05-15
+
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>

@@ -7,6 +7,8 @@ categories: [data-science]
 tags: [ds, data-processing, preprocessing]
 prev: /ds/jupyter-r-usage/
 next: /ds/web-crawling-scraping/
+last_modified_at: 2026-06-21
+
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>

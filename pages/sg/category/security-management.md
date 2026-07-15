@@ -3,6 +3,8 @@ layout: page
 title: 情報セキュリティ管理まとめ
 description: "情報セキュリティポリシー、ISMS、リスク管理、監査、ログ管理を横断し、組織として守る仕組みを確認する入口ページです。方針・手順・証跡・改善の役割差から、管理策の目的を問う選択肢を切り分けます。"
 permalink: /sg/category/security-management/
+last_modified_at: 2026-07-01
+
 ---
 
 [SGトップへ戻る](/sg/)

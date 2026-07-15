@@ -6,6 +6,8 @@ permalink: /gk/bag-of-words/
 tags: [gk, nlp, machine_learning]
 gk_section: ディープラーニングの応用例/自然言語処理
 gk_order: 5
+last_modified_at: 2026-05-15
+
 ---
 
 ## まず結論

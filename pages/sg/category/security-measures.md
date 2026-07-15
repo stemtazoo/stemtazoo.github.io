@@ -3,6 +3,8 @@ layout: page
 title: 情報セキュリティ対策まとめ
 description: "認証、アクセス制御、マルウェア対策、ネットワーク対策、物理的対策を目的別に整理するまとめページです。侵入防止、検知、被害拡大防止、情報漏えい防止のどれに当たるかを比較して、対策選択の判断軸を学べます。"
 permalink: /sg/category/security-measures/
+last_modified_at: 2026-07-01
+
 ---
 
 [SGトップへ戻る](/sg/)

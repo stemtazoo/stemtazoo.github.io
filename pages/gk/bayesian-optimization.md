@@ -6,6 +6,8 @@ permalink: /gk/bayesian-optimization/
 tags: [gk]
 gk_section: ディープラーニングの概要/最適化手法
 gk_order: 17
+last_modified_at: 2026-05-15
+
 ---
 
 ## まず結論

@@ -2,6 +2,8 @@
 layout: null
 permalink: /gk/vanishing-gradient-2/
 sitemap: false
+last_modified_at: 2026-07-14
+
 ---
 <!doctype html>
 <html lang="ja">

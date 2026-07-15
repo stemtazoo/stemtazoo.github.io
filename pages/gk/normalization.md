@@ -6,6 +6,8 @@ permalink: /gk/normalization/
 tags: [gk, neural_network]
 gk_section: ディープラーニングの要素技術/ネットワークの構成要素
 gk_order: 16
+last_modified_at: 2026-06-22
+
 ---
 
 ## まず結論

@@ -7,6 +7,8 @@ categories: [data-science]
 tags: [ds, modeling]
 prev: /ds/dendrogram/
 next: /ds/association-analysis/
+last_modified_at: 2026-07-01
+
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>

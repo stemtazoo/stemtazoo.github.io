@@ -6,6 +6,8 @@ permalink: /gk/multi-task-learning/
 tags: [gk, neural_network]
 gk_section: ディープラーニングの応用例/画像認識/マルチタスク学習
 gk_order: 3
+last_modified_at: 2026-05-15
+
 ---
 
 ## まず結論

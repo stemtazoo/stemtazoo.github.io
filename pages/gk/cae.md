@@ -6,6 +6,8 @@ permalink: /gk/cae/
 tags: [gk, neural_network, cnn]
 gk_section: ディープラーニングの要素技術/オートエンコーダ
 gk_order: 7
+last_modified_at: 2026-06-22
+
 ---
 
 ## まず結論

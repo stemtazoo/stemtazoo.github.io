@@ -6,6 +6,8 @@ permalink: /gk/symbol-grounding-problem/
 tags: [gk]
 gk_section: 人工知能（AI）とは/人工知能（AI）とは
 gk_order: 8
+last_modified_at: 2026-05-15
+
 ---
 
 ## まず結論

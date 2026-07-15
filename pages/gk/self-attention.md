@@ -6,6 +6,8 @@ permalink: /gk/self-attention/
 tags: [gk, attention, transformer]
 gk_section: ディープラーニングの要素技術/トランスフォーマー (Transformer)
 gk_order: 3
+last_modified_at: 2026-05-15
+
 ---
 
 ## まず結論

@@ -6,6 +6,8 @@ permalink: /gk/loss-function/
 tags: [gk, neural_network, optimization]
 gk_section: ディープラーニングの概要/ニューラルネットワークとディープラーニング
 gk_order: 10
+last_modified_at: 2026-05-15
+
 ---
 
 ## まず結論

@@ -6,6 +6,8 @@ permalink: /gk/dall-e/
 tags: [gk, neural_network, attention]
 gk_section: ディープラーニングの応用例/マルチモーダル
 gk_order: 7
+last_modified_at: 2026-05-15
+
 ---
 
 ## まず結論

@@ -6,6 +6,8 @@ permalink: /gk/vae-variants-cheatsheet/
 tags: [gk, generative_model, neural_network, cheatsheet]
 gk_section: ディープラーニングの要素技術/オートエンコーダ
 gk_order: 9
+last_modified_at: 2026-05-15
+
 ---
 
 ## まず結論

@@ -6,6 +6,8 @@ permalink: /gk/learning-curve/
 tags: [gk, machine_learning, evaluation]
 gk_section: 機械学習の概要/よくあるつまずき（過学習など）
 gk_order: 3
+last_modified_at: 2026-06-22
+
 ---
 
 ## まず結論

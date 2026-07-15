@@ -7,6 +7,8 @@ categories: [data-science]
 tags: [ds, visualization]
 prev: /ds/boxplot/
 next: /ds/drilldown-drillup/
+last_modified_at: 2026-05-15
+
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>

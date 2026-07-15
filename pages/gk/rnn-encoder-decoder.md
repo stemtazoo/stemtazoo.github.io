@@ -6,6 +6,8 @@ permalink: /gk/rnn-encoder-decoder/
 tags: [gk, rnn, nlp]
 gk_section: ディープラーニングの要素技術/リカレントニューラルネットワーク (RNN)
 gk_order: 5
+last_modified_at: 2026-05-15
+
 ---
 
 ## まず結論

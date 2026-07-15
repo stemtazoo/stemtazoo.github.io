@@ -3,6 +3,8 @@ layout: page
 title: マネジメント系まとめ
 description: "サービスマネジメント、システム監査、プロジェクト管理をまとめ、SGのマネジメント系で問われる論点を学習順に確認できます。計画・実施・評価・改善のどこを問う用語かを整理し、管理分野の似た選択肢を切り分けます。"
 permalink: /sg/category/management/
+last_modified_at: 2026-07-01
+
 ---
 
 [SGトップへ戻る](/sg/)

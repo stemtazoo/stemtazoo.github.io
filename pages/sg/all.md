@@ -4,6 +4,8 @@ title: 情報セキュリティマネジメント試験 全記事一覧
 description: 情報セキュリティマネジメント試験（SG）の全記事を分野別・タイトル順で探せる索引ページです。学習目的に合わせて関連テーマへ素早く移動できます。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/all/
 categories: [business]
+last_modified_at: 2026-06-24
+
 ---
 
 {% assign sg_pages = site.pages | sort: "title" %}

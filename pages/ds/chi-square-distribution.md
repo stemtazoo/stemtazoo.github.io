@@ -7,6 +7,8 @@ categories: [data-science]
 tags: [ds, statistics]
 prev: /ds/binomial-bernoulli/
 next: /ds/correlation-and-causation/
+last_modified_at: 2026-06-21
+
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
