@@ -6,7 +6,7 @@ permalink: /sg/unauthorized-access-law/
 tags: [sg, sg-security-management, law, access_control, cybercrime]
 prev: /sg/act-on-the-protection-of-personal-information/
 next: /sg/unauthorized-access/
-last_modified_at: 2026-06-13
+last_modified_at: 2026-07-18
 ---
 
 ## まず結論
@@ -147,8 +147,8 @@ SG試験では、次のような文脈で出題されやすいです。
 
 このように、**動詞に注目する**と選択肢を切りやすくなります。
 
-### 例題の整理
-今回の例題では、次のように切り分けます。
+### 禁止行為の具体的な切り分け
+代表的な選択肢は、次のように切り分けます。
 
 | 選択肢の内容 | 見るべき動詞 | 該当する行為 |
 |---|---|---|
