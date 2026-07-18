@@ -7,7 +7,7 @@ categories: [ai-utilization]
 tags: [ds, ethics]
 prev: /ds/japan-personal-information-protection-act/
 next: /ds/personal-identifier-code/
-last_modified_at: 2026-06-28
+last_modified_at: 2026-07-18
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -76,7 +76,7 @@ last_modified_at: 2026-06-28
 - 通知だけでは不十分
 - 停止できる仕組みや届出などが必要
 
-👉 これが今回の問題でBが間違いの理由
+👉 通知だけで提供できる、という説明は誤りです。
 
 
 ### ❌ 「本人の同意が必要」
