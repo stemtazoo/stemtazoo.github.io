@@ -6,7 +6,7 @@ permalink: /sg/privileged-id/
 prev: /sg/least-privilege/
 next: /sg/zero-trust/
 tags: [sg, sg-security-measures, access_control, it_security_operations]
-last_modified_at: 2026-07-02
+last_modified_at: 2026-07-18
 ---
 
 ## まず結論
@@ -134,7 +134,7 @@ last_modified_at: 2026-07-02
 
 ## SG試験で選択肢を切る判断軸（特権作業の見分け方）
 
-例題では、用語の暗記よりも「その作業に特権が必要か」を問われます。
+特権IDに関する問題では、用語の暗記よりも「その作業に特権が必要か」を見分けることが重要です。
 
 迷ったら、次の2点で判断します。
 
