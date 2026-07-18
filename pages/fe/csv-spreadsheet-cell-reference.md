@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ソフトウェア
 fe_order: 30
 date: 2026-07-17
-last_modified_at: 2026-07-17
+last_modified_at: 2026-07-18
 ---
 
 ## まず結論
@@ -88,6 +88,8 @@ CSVは、Comma-Separated Valuesの略です。
 | 2 | 商品B | 200 | 5 |
 
 CSVは、表計算ソフトやデータベースなどでデータ交換に使われる形式です。
+
+CSVの引用符、TSV、表計算ソフト固有形式との違いは、[CSVとは？コンマ・改行・引用符の役割とTSVとの違い](/fe/csv-format/)で整理しています。
 
 ### セル番地の読み方
 
