@@ -6,7 +6,7 @@ permalink: /sg/certificate-revocation-crl-ocsp/
 prev: /sg/self-signed-certificate/
 next: /sg/secure-protocol/
 tags: [sg, crypto_auth, sg-security-overview, network]
-last_modified_at: 2026-07-14
+last_modified_at: 2026-07-18
 ---
 
 ## まず結論
@@ -50,7 +50,6 @@ last_modified_at: 2026-07-14
 
 - 有効期限内の免許証  
 👉 でも不正があれば取り消し（失効）される  
-
 👉 証明書も同じで  
 **「期限内でも無効になることがある」**
 
@@ -104,7 +103,7 @@ last_modified_at: 2026-07-14
 - CRL → 「リストでまとめて確認」  
 - OCSP → 「その場で個別に確認」
 
-### OCSPの目的（今回の例題対応）
+### OCSPの目的
 
 OCSPの目的は、**デジタル証明書の失効情報をオンラインで問い合わせ、現在も有効かを確認すること**です。
 
