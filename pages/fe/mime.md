@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 57
 date: 2026-07-10
-last_modified_at: 2026-07-10
+last_modified_at: 2026-07-20
 ---
 
 ## まず結論
@@ -128,7 +128,7 @@ MIME
 | Webサーバが外部プログラムを実行して結果を返す | CGI |
 | キーと値で表す軽量なデータ交換形式 | JSON |
 
-今回のCGIのような問題でも、MIMEは選択肢に出やすいです。
+CGI・HTML・URLなどと比較する問題では、MIMEも選択肢に出ることがあります。
 
 ただし、MIMEは **プログラムを実行する仕組み** ではありません。
 
