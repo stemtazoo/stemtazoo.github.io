@@ -46,6 +46,26 @@
 {% if has_agent_markdown %}
 <link rel="alternate" type="text/markdown" href="{{ site.url }}{{ page.permalink }}index.md">
 {% endif %}
+<style>
+  .home-card {
+    color: #4c5f70;
+  }
+
+  .home-card h2 {
+    color: #083c5a;
+  }
+
+  .tag-button {
+    border-color: #0b6fae;
+    color: #0b6fae;
+  }
+
+  .tag-button.active,
+  .tag-button:hover {
+    background: #0b6fae;
+    color: #fff;
+  }
+</style>
 <script type="text/javascript">
   (function(c,l,a,r,i,t,y){
       c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
