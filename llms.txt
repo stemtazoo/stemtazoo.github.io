@@ -16,16 +16,16 @@ The site is intended to help readers review concepts, compare similar terms, and
 
 ## Main sections
 
-- SG試験 study notes and agent-readable Markdown list: https://stemtazoo.github.io/sg/llms.txt
-- 基本情報技術者試験（FE） study notes and agent-readable Markdown list: https://stemtazoo.github.io/fe/llms.txt
-- G検定 study notes and agent-readable Markdown list: https://stemtazoo.github.io/gk/llms.txt
-- DS・Python learning notes and agent-readable Markdown list: https://stemtazoo.github.io/ds/llms.txt
-- Public SG section homepage: https://stemtazoo.github.io/sg/
-- Public FE section homepage: https://stemtazoo.github.io/fe/
-- Public G検定 section homepage: https://stemtazoo.github.io/gk/
-- Public DS / Python section homepage: https://stemtazoo.github.io/ds/
-- Site search: https://stemtazoo.github.io/search/
-- XML sitemap: https://stemtazoo.github.io/sitemap.xml
+- [SG試験 study notes and agent-readable Markdown list](https://stemtazoo.github.io/sg/llms.txt)
+- [基本情報技術者試験（FE） study notes and agent-readable Markdown list](https://stemtazoo.github.io/fe/llms.txt)
+- [G検定 study notes and agent-readable Markdown list](https://stemtazoo.github.io/gk/llms.txt)
+- [DS・Python learning notes and agent-readable Markdown list](https://stemtazoo.github.io/ds/llms.txt)
+- [Public SG section homepage](https://stemtazoo.github.io/sg/)
+- [Public FE section homepage](https://stemtazoo.github.io/fe/)
+- [Public G検定 section homepage](https://stemtazoo.github.io/gk/)
+- [Public DS / Python section homepage](https://stemtazoo.github.io/ds/)
+- [Site search](https://stemtazoo.github.io/search/)
+- [XML sitemap](https://stemtazoo.github.io/sitemap.xml)
 
 ## Content use policy
 
