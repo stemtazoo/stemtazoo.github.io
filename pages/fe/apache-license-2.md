@@ -8,7 +8,7 @@ fe_section: ストラテジ系
 fe_subsection: 企業と法務
 fe_order: 40
 date: 2026-07-13
-last_modified_at: 2026-07-13
+last_modified_at: 2026-07-25
 ---
 
 ## まず結論
@@ -127,9 +127,8 @@ Apache License 2.0は、GPLのような強いコピーレフト型ではあり�
 
 Apache License 2.0では、ライセンス文、変更表示、帰属表示、NOTICE、特許条項を見る方が適切です。
 
-## 科目Bでどう使う？
+## どんな場面で使う？
 
-Apache License 2.0が科目Bの中心になることは多くありませんが、OSSを利用したシステム開発や製品配布の事例では、条件を順番に確認する考え方が役立ちます。
 
 問題文にApache License 2.0のOSSが出てきたら、次の順番で整理します。
 
