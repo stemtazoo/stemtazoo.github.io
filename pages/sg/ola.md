@@ -1,10 +1,10 @@
 ---
 layout: page
 title: OLAとは？SLAとの違いを内部合意で理解する【SG試験】
-description: "OLAは、SLAを達成するためにサービス提供者側の内部部門同士で結ぶ運用上の合意です。SLA、UC、サービス説明書との違いを、誰と誰の合意かで整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "OLAは、顧客とのSLAを達成するために、サービス提供組織の内部部門間で責任や目標を合意する文書です。顧客と提供者のSLA、外部供給者とのUC、サービス内容を示すサービス説明書を「合意する当事者」で分け、運用管理問題の選択肢を判断します。内部支援の責任分界も確認できます。"
 permalink: /sg/ola/
 tags: [sg, sg-management, service_management, it_security_operations]
-last_modified_at: 2026-06-17
+last_modified_at: 2026-07-27
 ---
 
 ## まず結論
