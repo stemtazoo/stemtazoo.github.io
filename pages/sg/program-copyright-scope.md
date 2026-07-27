@@ -1,10 +1,10 @@
 ---
 layout: page
 title: プログラム著作物の保護対象とは？著作権法の判断基準を整理【SG試験】
-description: "プログラム著作物は表現として創作されたコードが保護対象です。アルゴリズム、必要な改変、バックアップ、違法コピー利用のひっかけをSG試験向けに整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "プログラムの著作権が保護するのは創作的なコードの表現であり、アルゴリズムやプログラミング言語、規約、解法そのものではありません。必要な改変やバックアップが許される範囲と、違法複製物を業務で使用する場合の責任を分け、SG試験の権利範囲を判断します。"
 permalink: /sg/program-copyright-scope/
 tags: [sg, sg-security-law, intellectual_property, business_management]
-last_modified_at: 2026-06-06
+last_modified_at: 2026-07-27
 ---
 
 ## まず結論

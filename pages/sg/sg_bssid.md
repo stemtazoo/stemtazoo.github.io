@@ -1,10 +1,10 @@
 ---
 layout: page
 title: "BSSIDとは？SG試験で押さえるSSIDとの違い"
-description: "BSSIDは、無線LANでアクセスポイントを識別する情報です。SSID、MACアドレス、ESSIDとの違いを整理し、SG試験で選択肢を切る判断基準を解説します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "BSSIDは、無線LANのアクセスポイントを識別する値で、一般にその無線インタフェースのMACアドレスが使われます。利用者が接続先として見るSSIDや、複数APで構成するESSの名称とは役割と粒度が異なります。設問がネットワーク名か個別APかを見て選択肢を判別します。"
 permalink: /sg/bssid/
 tags: [sg, sg-technology, network, access_control]
-last_modified_at: 2026-05-17
+last_modified_at: 2026-07-27
 ---
 
 ## まず結論
