@@ -1,11 +1,11 @@
 ---
 layout: page
 title: OP25Bとは？外向き25番ポート遮断とスパム対策【SG試験】
-description: "OP25Bは、利用者回線などから外部へ向かう25番ポートのSMTP通信を制御し、スパムメール送信を抑止する仕組みです。SMTP-AUTHやSPFとの違いをSG試験向けに整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "OP25Bは、動的IPアドレスの利用者回線などから外部メールサーバへ直接向かう25番ポートの通信を遮断し、ボットによるスパム送信を抑える対策です。利用者認証を行うSMTP-AUTHや送信元を検証するSPFとは、制御する通信方向と目的が異なる点を判断できます。"
 permalink: /sg/op25b/
 tags: [sg, sg-security-measures, network, unauthorized_access]
 date: 2026-05-31
-last_modified_at: 2026-06-04
+last_modified_at: 2026-07-27
 ---
 
 ## まず結論

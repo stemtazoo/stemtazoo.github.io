@@ -2,12 +2,12 @@
 
 layout: page
 title: JISECとは？ITセキュリティ評価及び認証制度を整理【SG試験】
-description: "JISECはIT製品やシステムのセキュリティ機能を第三者が評価・認証する制度です。ISO/IEC 15408との関係やSG試験・情報セキュリティマネジメント試験のひっかけポイントを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "JISECは、ISO/IEC 15408に基づいてIT製品やシステムのセキュリティ機能を第三者が評価・認証する日本の制度です。組織の情報セキュリティ管理を認証するISMSとは対象が異なるため、製品評価・評価基準・認証制度の関係からSG試験の誤答を除けます。"
 permalink: /sg/jisec/
 tags: [sg, sg-security-overview, crypto_auth, sg-technology, it_security_operations]
 prev: /sg/eal/
 next: /sg/security-certification-vs-audit/
-last_modified_at: 2026-06-13
+last_modified_at: 2026-07-27
 ---
 
 ## まず結論

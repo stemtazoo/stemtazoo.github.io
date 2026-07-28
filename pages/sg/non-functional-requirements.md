@@ -1,11 +1,11 @@
 ---
 layout: page
 title: 非機能要件とは？機能要件との違いをSG試験向けに整理
-description: "非機能要件は、性能・信頼性・可用性・使用性・保守性など、システムがどのような品質で動くべきかを示す要件です。SG試験で迷いやすい機能要件との違いを、業務システムの例で整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "非機能要件は、処理速度、可用性、使いやすさ、保守性など、システムが機能をどの品質水準で提供するかを定めます。「何ができるか」を示す機能要件と分け、応答時間や稼働率など測定可能な目標にする必要性から、要件定義やシステム調達の事例問題を判断できます。"
 permalink: /sg/non-functional-requirements/
 tags: [sg, sg-strategy, system_planning, project_management, system_strategy]
 date: 2026-05-31
-last_modified_at: 2026-05-31
+last_modified_at: 2026-07-27
 ---
 
 ## まず結論

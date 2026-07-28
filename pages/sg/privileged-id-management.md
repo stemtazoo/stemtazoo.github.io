@@ -1,10 +1,10 @@
 ---
 layout: page
 title: 特権ID管理とは？管理者アカウントを守る考え方【SG試験】
-description: "特権ID管理は、管理者アカウントなど強い権限を持つIDを安全に管理する考え方です。SG試験・情報セキュリティマネジメント試験で問われやすい共有IDの危険性、最小権限、承認、ログ記録、定期的な見直しを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "特権ID管理は、管理者アカウントの発行・貸出し・利用・返却・棚卸しを統制し、強い権限の不正使用を防ぐ運用です。共有IDの常用では責任追跡が難しくなるため、個人の識別、事前承認、最小権限、操作ログの監視を組み合わせる選択肢が適切だと判断できます。"
 permalink: /sg/privileged-id-management/
 tags: [sg, sg-security-management, access_control, id_management, system_operations]
-last_modified_at: 2026-05-29
+last_modified_at: 2026-07-27
 ---
 
 ## まず結論

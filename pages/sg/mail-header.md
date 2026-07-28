@@ -1,10 +1,10 @@
 ---
 layout: page
 title: メールヘッダとは？Bcc・Date・Received・X-Mailerの違い【SG試験】
-description: "メールヘッダは、電子メールの宛先、送信日時、経由サーバ、送信ソフトなどの情報を表す部分です。Bcc、Date、Received、X-Mailerの違いをSG試験向けに整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "メールヘッダは、宛先や送信日時、配送経路、利用したメールソフトなどの制御情報を記録する領域です。Bccは配送時の宛先、Dateは作成日時、Receivedは中継履歴、X-Mailerは送信ソフトを示すという対応から、不審メール調査の設問を読み分けられます。"
 permalink: /sg/mail-header/
 tags: [sg, sg-technology, network, data_leakage]
-last_modified_at: 2026-06-06
+last_modified_at: 2026-07-27
 ---
 
 ## まず結論

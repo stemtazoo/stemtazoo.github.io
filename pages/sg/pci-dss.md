@@ -1,12 +1,12 @@
 ---
 layout: page
 title: "PCI DSSとは？クレジットカード情報を守る国際基準【SG試験】"
-description: "PCI DSSはクレジットカード情報を保護するための国際セキュリティ基準です。対象範囲や目的を整理し、SG試験・情報セキュリティマネジメント試験で問われる適用対象や誤解ポイントを分かりやすく解説します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "PCI DSSは、クレジットカード会員データを保存・処理・伝送する事業者が守る国際的なセキュリティ基準です。法律やクレジットカードの品質規格ではなく、加盟店やサービスプロバイダも対象となる点を押さえ、保護対象と適用範囲を問う選択肢を判定できます。"
 permalink: /sg/pci-dss/
 prev: /sg/copyright-transfer/
 next: /sg/security-management-overview/
 tags: [sg, sg-security-law, it_security_operations, vendor_management]
-last_modified_at: 2026-06-13
+last_modified_at: 2026-07-27
 ---
 
 ## まず結論

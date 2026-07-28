@@ -1,10 +1,10 @@
 ---
 layout: page
 title: PEAPとは？TLSトンネル内で認証するEAP方式【SG試験】
-description: "PEAPは、TLSで保護されたトンネルを作り、その中でID・パスワードなどの認証情報をやり取りするEAP方式です。SG試験で混同しやすいEAP-TLS、EAP-TTLS、EAP-MD5との違いを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "PEAPは、サーバ証明書でTLSトンネルを確立し、その内側でID・パスワードなどの認証情報を保護するEAP方式です。クライアント証明書を用いるEAP-TLS、トンネルを作らないEAP-MD5と比較し、証明書をどちら側に必要とするかで無線LAN認証の選択肢を切れます。"
 permalink: /sg/peap/
 tags: [sg, sg-security-overview, crypto_auth, network, access_control]
-last_modified_at: 2026-05-10
+last_modified_at: 2026-07-27
 ---
 
 ## まず結論
