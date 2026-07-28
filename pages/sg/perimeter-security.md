@@ -1,12 +1,12 @@
 ---
 layout: page
 title: "境界防御とは？ゼロトラストとの違いを整理【SG試験】"
-description: "境界防御は社内ネットワークを信頼し外部との境界で防御する考え方です。ゼロトラストとの違いを整理し、SG試験・情報セキュリティマネジメント試験で問われるセキュリティモデルの判断ポイントを解説します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "境界防御は、社内ネットワークを信頼領域とみなし、インターネットとの境界にファイアウォールなどを配置して侵入を防ぐ考え方です。場所を問わず毎回検証するゼロトラストとの信頼モデルの差を押さえ、クラウド利用や内部不正への弱点を示す選択肢を判断できます。"
 permalink: /sg/perimeter-security/
 prev: /sg/security-measures-comparison/
 next: /sg/security-patch/
 tags: [sg, sg-security-measures, network, it_security_operations]
-last_modified_at: 2026-05-20
+last_modified_at: 2026-07-27
 ---
 
 ## まず結論

@@ -1,10 +1,10 @@
 ---
 layout: page
 title: ISMSユーザーズガイド
-description: "SG試験で問われるISMSユーザーズガイドについて、ISMS認証基準の要求事項を理解するためのガイドとして、CSIRTマテリアルや証拠保全ガイドラインとの違いを初心者向けに整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "ISMSユーザーズガイドは、JIS Q 27001の要求事項を組織の構築・運用へ落とし込む際の手引です。認証基準そのものやCSIRTマテリアル、デジタル・フォレンジックの証拠保全ガイドラインと取り違えず、文書の利用目的からSG試験の選択肢を判別する視点が身につきます。"
 permalink: /sg/isms-users-guide/
 tags: [sg, security-management, isms, guideline]
-last_modified_at: 2026-05-18
+last_modified_at: 2026-07-27
 ---
 
 # ISMSユーザーズガイド

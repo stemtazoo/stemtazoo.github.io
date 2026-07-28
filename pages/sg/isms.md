@@ -1,12 +1,12 @@
 ---
 layout: page
 title: "ISMSとは？組織で回すセキュリティ管理の仕組み【SG試験】"
-description: "ISMSは、情報セキュリティを組織的に管理・運用するための国際規格に基づく仕組みです。PDCAの考え方やSG試験・情報セキュリティマネジメント試験でのひっかけポイントを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "ISMSは、情報の機密性・完全性・可用性を守るため、組織がリスクに応じた管理策を継続的に運用する仕組みです。単発のセキュリティ製品導入や一度きりの監査ではないこと、経営者の関与とPDCAが必要なことを押さえ、SG試験の組織的対策を見分けられます。"
 permalink: /sg/isms/
 prev: /sg/security-management-overview/
 next: /sg/security-committee/
 tags: [sg, sg-security-management, isms, risk_assessment, it_security_operations]
-last_modified_at: 2026-06-03
+last_modified_at: 2026-07-27
 ---
 
 ## まず結論

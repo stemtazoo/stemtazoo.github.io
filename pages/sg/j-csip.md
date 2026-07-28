@@ -1,10 +1,10 @@
 ---
 layout: page
 title: J-CSIPとは？IPAを情報ハブにしたサイバー攻撃情報共有の取組み【SG試験】
-description: "J-CSIPは、IPAを情報ハブとして参加組織間でサイバー攻撃情報を共有し、高度な攻撃対策につなげる取組みです。CRYPTREC、CSMS認証、脆弱性関連情報取扱いガイドラインとの違いをSG試験向けに整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
+description: "J-CSIPは、IPAを情報ハブとして参加組織が標的型攻撃などの情報を共有し、類似攻撃の早期検知と対策に生かす取組みです。暗号技術を選定するCRYPTRECや制御システム向けのCSMS認証と区別し、誰が何の情報を共有する制度かで選択肢を絞れます。"
 permalink: /sg/j-csip/
 tags: [sg, sg-security-management, incident_management, threat_vulnerability]
-last_modified_at: 2026-06-09
+last_modified_at: 2026-07-27
 ---
 
 ## まず結論
