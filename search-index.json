@@ -8,6 +8,9 @@ sitemap: false
 {%- assign searchable_pages = site.pages | sort: "url" -%}
 {%- for item in searchable_pages -%}
   {%- assign include_page = false -%}
+  {%- if item.url contains "/fe/" -%}
+    {%- assign include_page = true -%}
+  {%- endif -%}
   {%- if item.url contains "/sg/" -%}
     {%- assign include_page = true -%}
   {%- endif -%}
