@@ -116,6 +116,16 @@ permalink: /
   </article>
 </section>
 
+<section aria-labelledby="about-site-heading">
+  <h2 id="about-site-heading">このサイトについて</h2>
+  <p>
+    このサイトを作った目的、運営者、参考資料、記事制作や生成AIの利用方針について紹介しています。
+  </p>
+  <p>
+    <a href="{{ '/about/' | relative_url }}">→ 運営者と記事制作方針を見る</a>
+  </p>
+</section>
+
 <section>
   <h2>最新記事</h2>
   <div class="tag-filter">
