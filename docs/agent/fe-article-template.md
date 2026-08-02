@@ -4,6 +4,27 @@ This file is written in English for Codex readability. However, FE article conte
 
 Normal individual articles under `pages/fe` should cover one term or one concept per page.
 
+## Standalone Article Requirement
+
+Each FE article must stand on its own.
+
+- Do not assume that the reader has seen the source question, screenshot, table, diagram, answer choices, or explanation page.
+- When an article is created from an example question, extract the reusable concept and explain it independently from the original question.
+- Reproduce every value, condition, table, formula, diagram description, or definition needed to understand an example inside the article itself.
+- Replace question-specific values and labels with a complete self-contained example when the original values are not essential.
+- Explain symbols, variables, abbreviations, and table columns before using them.
+- Avoid context-dependent phrases such as `この問題`, `この例題`, `設問の表`, `上の図`, `前述の選択肢`, or `したがってウが正解` unless all required information is included immediately in the article.
+- Do not make the correct option letter the main conclusion. State the general judgment rule that lets the reader solve similar questions.
+- A reader who opens the article directly from search results must be able to understand the topic without opening another page first.
+
+Before saving an article derived from an example question, check:
+
+1. Can the title and conclusion be understood without the original question?
+2. Are all required inputs, assumptions, labels, and formulas present in the article?
+3. Does the example still make sense when separated from its source screenshot?
+4. Does the article explain why incorrect approaches are wrong without relying on unseen answer choices?
+5. Does the summary state reusable judgment criteria rather than the answer to one specific question?
+
 ## Standard Headings For Normal FE Articles
 
 Use this standard structure when the topic has a direct and concrete connection to the official Subject B scope:
