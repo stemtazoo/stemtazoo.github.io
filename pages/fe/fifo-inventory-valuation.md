@@ -5,10 +5,10 @@ description: 先入先出法で古い在庫から払出し、月末に残った�
 permalink: /fe/fifo-inventory-valuation/
 tags: [fe, fe-strategy, accounting]
 fe_section: ストラテジ系
-fe_subsection: 企業活動
+fe_subsection: 企業と法務
 fe_order: 90
 date: 2026-07-17
-last_modified_at: 2026-07-17
+last_modified_at: 2026-08-03
 ---
 
 ## まず結論
