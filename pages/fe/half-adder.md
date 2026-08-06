@@ -300,4 +300,6 @@ C = AND
 S = XOR
 ```
 
+ANDを反転したNANDや、NANDだけで基本ゲートを作る仕組みは、[NANDとは？AND・OR・NOTを作れる万能ゲートの仕組み](/fe/nand-gate/)で整理しています。
+
 {% include fe_article_footer.html %}
