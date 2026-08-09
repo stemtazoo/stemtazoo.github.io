@@ -6,7 +6,7 @@ permalink: /fe/cpu-registers/
 tags: [fe, fe-technology, computer-architecture, cpu]
 fe_section: テクノロジ系
 fe_subsection: コンピュータ構成要素
-last_modified_at: 2026-08-09
+last_modified_at: 2026-08-10
 ---
 
 ## まず結論
@@ -113,6 +113,8 @@ CPUは、命令をおおむね次の流れで実行します。
 データレジスタ・汎用レジスタ・アキュムレータ
 → データや演算結果を保持する
 ```
+
+この流れを先に整理したい場合は、[CPUの命令実行サイクルとは？フェッチ・解読・オペランド読出し・実行の順番](/fe/cpu-instruction-cycle/)を確認すると、各レジスタがどの段階で関わるのかをつなげて理解できます。
 
 ### プログラムカウンタ
 
