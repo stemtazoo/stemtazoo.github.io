@@ -8,7 +8,7 @@ fe_section: マネジメント系
 fe_subsection: プロジェクトマネジメント
 fe_order: 10
 date: 2026-06-25
-last_modified_at: 2026-08-04
+last_modified_at: 2026-08-10
 ---
 
 ## まず結論
@@ -75,6 +75,8 @@ last_modified_at: 2026-08-04
 ```
 
 詳しい図の読み方は、[アローダイアグラムの記事](/fe/arrow-diagram/)でも確認できます。
+
+また、**作業の前後関係だけでなく、人員や設備などの資源制約まで考える方法との違い**を整理したい場合は、[クリティカルパスとクリティカルチェーンの違い](/fe/critical-path-vs-critical-chain/)を確認するとつながりやすくなります。
 
 公式の出題範囲やシラバスは、[IPA：基本情報技術者試験](https://www.ipa.go.jp/shiken/kubun/fe.html)から確認できます。
 
