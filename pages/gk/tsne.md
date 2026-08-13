@@ -1,11 +1,12 @@
 ﻿---
 layout: page
-title: t-SNE（t-distributed Stochastic Neighbor Embedding）とは？G検定対策
+title: t-SNEとは？高次元データを可視化する次元削減手法【G検定】
 description: "t-SNEについて、G検定で問われる特徴量・教師なし学習分野の観点から、特徴の捉え方、データの分布、教師なし学習で何を判断するかを整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。具体例や典型的なひっかけも意識して、試験でどの知識として使うかを押さえます。"
 permalink: /gk/tsne/
 tags: [gk, unsupervised_learning]
 gk_section: 機械学習の概要/代表的な手法/教師なし学習
 gk_order: 10
+last_modified_at: 2026-08-13
 ---
 
 ## まず結論

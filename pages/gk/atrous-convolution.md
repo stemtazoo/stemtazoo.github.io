@@ -1,12 +1,12 @@
 ---
 layout: page
-title: Dilated Convolution（Atrous Convolution）とは？受容野と解像度【G検定】
+title: Atrous（Dilated）Convolutionとは？受容野を広げる仕組み【G検定】
 description: "Dilated Convolution（Atrous Convolution・拡張畳み込み）は、カーネル要素の間隔を広げ、パラメータ数や特徴マップの解像度を大きく変えずに受容野を広げる手法です。dilation rate、DeepLab・ASPPとの関係、プーリングやDepthwise Convolutionとの違いを整理します。"
 permalink: /gk/atrous-convolution/
 tags: [gk, cnn, image_recognition]
 gk_section: ディープラーニングの要素技術/ネットワークの構成要素
 gk_order: 12
-last_modified_at: 2026-07-14
+last_modified_at: 2026-08-13
 ---
 
 ## まず結論

@@ -1,12 +1,12 @@
 ﻿---
 layout: page
-title: 最適化手法まとめ（SGD / Adam / AdaGrad / RMSprop / AMSGrad / AdaBound / AMSBound / Adadelta）【G検定対策】
+title: 最適化8手法の違い｜SGD・Adam・AdaBoundほか【G検定】
 description: "ニューラルネットワークの最適化手法を、学習率が固定か自動調整か、学習途中で性質が変わるかという軸で比較します。勾配二乗和のAdaGrad、移動平均のRMSprop、モーメンタムを組み合わせるAdam、収束性を補うAMSGrad、終盤にSGDへ近づくAdaBound系を対応付けます。"
 permalink: /gk/optimizer-comparison/
 tags: [gk, cheatsheet, neural_network]
 gk_section: ディープラーニングの概要/最適化手法
 gk_order: 21
-last_modified_at: 2026-07-14
+last_modified_at: 2026-08-13
 ---
 
 ## まず結論

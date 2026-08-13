@@ -1,11 +1,12 @@
 ﻿---
 layout: page
-title: 異常検知手法まとめ（AE / VAE / Isolation Forest / One-Class SVM）【G検定対策】
+title: 異常検知4手法の比較｜AE・VAE・Isolation Forestほか【G検定】
 description: "異常検知手法まとめについて、G検定で問われる特徴量・教師なし学習分野の観点から、特徴の捉え方、データの分布、教師なし学習で何を判断するかを整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/anomaly-detection-methods/
 tags: [gk, cheatsheet, neural_network]
 gk_section: ディープラーニングの要素技術/オートエンコーダ
 gk_order: 5
+last_modified_at: 2026-08-13
 ---
 
 ## まず結論
