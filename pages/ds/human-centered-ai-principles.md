@@ -1,13 +1,13 @@
 ﻿---
 layout: page
 title: 人間中心のAI社会原則とは？AIと社会のルールを理解する【DS検定】
-description: "人間中心のAI社会原則は、AIを人間の尊厳・権利・社会の利益を守る形で開発・利用するための基本原則です。公平性、説明責任、透明性、プライバシー、セキュリティをDS検定向けに整理します。"
+description: "人間中心のAI社会原則は、AIを人間の尊厳・多様性・持続可能性を守る形で開発し、社会へ活用するための指針です。公平性、説明責任、透明性、プライバシー、セキュリティを具体的なAI利用場面に対応付け、AIを禁止する法律ではない点や、透明性と説明可能性、プライバシーと安全対策の違いをDS検定向けに整理します。"
 permalink: /ds/human-centered-ai-principles/
 categories: [ai-utilization]
 tags: [ds, ai-use]
 prev: /ds/governance/
 next: /ds/social-data-ai-utilization/
-last_modified_at: 2026-06-28
+last_modified_at: 2026-08-13
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>

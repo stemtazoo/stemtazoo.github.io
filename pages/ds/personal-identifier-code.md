@@ -1,13 +1,13 @@
 ---
 layout: page
 title: 個人識別符号とは？個人情報・個人関連情報との違い【DS検定】
-description: 個人識別符号は、身体的特徴を変換した符号や、法令で定められた番号など、それ単体で特定の個人を識別できる情報です。個人情報、個人関連情報、要配慮個人情報との違いをDS検定向けに整理します。
+description: 個人識別符号は、指紋・顔・虹彩などの身体的特徴を変換した符号や、旅券番号・基礎年金番号など、それ単体で特定の個人を識別できる情報です。氏名がなくても個人情報になる理由を押さえ、Cookieなどの個人関連情報、病歴などの要配慮個人情報との区分、本人確認や生体認証での扱いをDS検定向けに整理し、法務判断にもつなげます。
 permalink: /ds/personal-identifier-code/
 categories: [ai-utilization]
 tags: [ds, ethics]
 prev: /ds/opt-out/
 next: /ds/sensitive-personal-information/
-last_modified_at: 2026-08-02
+last_modified_at: 2026-08-13
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>

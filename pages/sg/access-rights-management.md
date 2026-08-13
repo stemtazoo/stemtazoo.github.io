@@ -1,10 +1,10 @@
 ---
 layout: page
 title: アクセス権限管理とは？付与・変更・削除の流れを整理【SG試験】
-description: アクセス権限管理を申請・承認・設定・確認・定期見直しの流れで整理し、最小権限、異動・退職時の削除、権限棚卸しをSG試験の判断軸として解説します。
+description: アクセス権限管理は、業務上必要な人へ必要最小限の権限だけを付与し、異動・休職・退職など役割の変化に合わせて変更・削除する継続的な運用です。申請者と承認者を分離する流れ、設定後の確認、定期的な権限棚卸しを整理します。便利だから多めに与える、一度付与したら放置するというSG試験の誤答を運用場面から判断できます。
 permalink: /sg/access-rights-management/
 tags: [sg, sg-security-management, access_control, id_management, system_operations]
-last_modified_at: 2026-07-21
+last_modified_at: 2026-08-13
 ---
 
 ## まず結論

@@ -1,11 +1,11 @@
 ---
 layout: page
 title: 著作物とは？著作権の対象・対象外と帰属を整理【SG試験】
-description: "著作物を「思想や感情を創作的に表現したもの」として整理し、講演・映画・小説は対象になる一方、法令や判決などは対象外になる点から、SGで迷いやすい著作権の帰属と範囲を判断します。"
+description: "著作物は、思想または感情を創作的に表現し、文芸・学術・美術・音楽の範囲に属するものです。原稿のない講演、小説、映画なども対象になり得る一方、単なるアイデア、法令、裁判所の判決などは原則として保護対象外です。掲載先へ権利が当然移るわけではない点や、映画の著作者・著作権者をSG試験の事例から判断します。"
 permalink: /sg/copyrighted-work/
 tags: [sg, sg-security-law, intellectual_property, business_management]
 date: 2026-06-15
-last_modified_at: 2026-07-04
+last_modified_at: 2026-08-13
 ---
 
 ## まず結論

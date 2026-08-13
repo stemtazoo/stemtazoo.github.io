@@ -1,12 +1,12 @@
 ---
 layout: page
 title: MLMとは？BERTのマスク言語モデルを整理【G検定】
-description: MLMを、文章中の一部を隠して前後の文脈から予測するBERTの事前学習手法として整理します。自己回帰型言語モデル、次単語予測、因果言語モデルとの違いをG検定向けに解説します。
+description: MLM（Masked Language Model）は、文の一部を[MASK]で隠し、その語を左右の文脈から予測するBERTの自己教師あり事前学習です。双方向の文脈表現を得られる一方、文章を左から順に生成する方式ではありません。次トークンだけを予測する自己回帰型・因果言語モデルとの違いからG検定の選択肢を切ります。
 permalink: /gk/mlm/
 tags: [gk, nlp, transformer]
 gk_section: ディープラーニングの応用例/自然言語処理
 gk_order: 11
-last_modified_at: 2026-07-18
+last_modified_at: 2026-08-13
 ---
 
 ## まず結論

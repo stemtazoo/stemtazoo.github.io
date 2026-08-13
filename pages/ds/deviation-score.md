@@ -1,13 +1,13 @@
 ---
 layout: page
 title: 偏差値とは？zスコア・標準偏差との違いを整理【DS検定】
-description: 偏差値は、得点が平均からどれだけ離れているかを、平均50・標準偏差10の尺度で表した値です。zスコア、偏差、標準偏差との違いと、相対評価として読むポイントをDS検定向けに整理します。
+description: 偏差値は、得点が集団平均から何標準偏差離れているかを、平均50・標準偏差10の尺度へ変換した相対的位置です。偏差値＝50＋10×zスコアの関係、偏差・標準偏差との違いを整理し、高得点でも集団によって値が変わることや、異なる母集団の偏差値を無条件に比較できない点をDS検定向けに確認して計算問題にも備えます。
 permalink: /ds/deviation-score/
 categories: [data-science]
 tags: [ds, statistics]
 prev: /ds/covariance-correlation/
 next: /ds/discrete-continuous-distribution/
-last_modified_at: 2026-08-02
+last_modified_at: 2026-08-13
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>

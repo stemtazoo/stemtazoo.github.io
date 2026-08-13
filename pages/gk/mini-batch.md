@@ -1,12 +1,12 @@
 ﻿---
 layout: page
 title: ミニバッチ学習（Mini-batch Gradient Descent）とは？G検定対策
-description: "ミニバッチ学習は、訓練データを小さなまとまりに分け、まとまりごとに勾配を計算して重みを更新する方法です。SGD・バッチ勾配降下法との違いと、バッチサイズが速度や安定性へ与える影響を整理します。"
+description: "ミニバッチ学習は、訓練データを数十～数百件の小さなまとまりに分け、各まとまりの勾配で重みを更新する方法です。全件を使うバッチ勾配降下法より計算しやすく、1件ずつ更新するSGDより勾配が安定する折衷点を示します。バッチサイズがGPU効率、メモリ使用量、更新の揺らぎ、汎化性能へ与える影響をG検定向けに整理します。"
 permalink: /gk/mini-batch/
 tags: [gk, optimization]
 gk_section: ディープラーニングの概要/最適化手法
 gk_order: 4
-last_modified_at: 2026-06-28
+last_modified_at: 2026-08-13
 ---
 
 ## まず結論

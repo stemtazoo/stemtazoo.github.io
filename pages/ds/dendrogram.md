@@ -1,13 +1,13 @@
 ---
 layout: page
 title: デンドログラムの見方とは？縦軸とクラスタ数【DS検定】
-description: "デンドログラムは、階層クラスタリングの結合過程を木構造で表す図です。縦軸が結合距離を示すこと、横線を引く高さでクラスタ数が変わること、横軸やk-meansとの混同をDS検定向けに整理します。"
+description: "デンドログラムは、階層クラスタリングで似た観測同士がどの距離で結合されたかを木構造で表す図です。縦軸は結合距離、葉は観測対象を示し、任意の高さで横線を引いたときに分かれる枝の数がクラスタ数になります。横軸の間隔や枝の左右順に意味があるという誤解、k-meansとの違いをDS検定の図問題向けに整理します。"
 permalink: /ds/dendrogram/
 categories: [data-science]
 tags: [ds, modeling, visualization]
 prev: /ds/visualization-basic-perspectives/
 next: /ds/apriori-algorithm/
-last_modified_at: 2026-07-14
+last_modified_at: 2026-08-13
 ---
 
 ## まず結論

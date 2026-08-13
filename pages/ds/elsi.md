@@ -1,12 +1,12 @@
 ---
 layout: page
 title: ELSIとは？AI時代に重要な倫理・法・社会問題を理解する【DS検定】
-description: ELSIは、科学技術やAIの活用によって生じる倫理・法・社会の課題をまとめて考える枠組みです。AI倫理との違い、個人情報・公平性・説明責任などの具体例、DS検定での見分け方を整理します。
+description: ELSIは、科学技術やAIの研究・活用によって生じる倫理的・法的・社会的課題を、導入前から横断して検討する枠組みです。公平性や説明責任という倫理、個人情報保護や著作権という法、雇用や格差への影響という社会の具体例を対応付け、倫理だけを扱うAI倫理との範囲の違いとDS検定での見分け方を整理して実務にもつなげます。
 permalink: /ds/elsi/
 categories: [ai-utilization]
 tags: [ds, ethics]
 next: /ds/ccpa/
-last_modified_at: 2026-08-02
+last_modified_at: 2026-08-13
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>

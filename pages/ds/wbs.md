@@ -1,13 +1,13 @@
 ---
 layout: page
 title: WBSとは？作業分解とワークパッケージを整理【DS検定】
-description: WBSを、プロジェクトの成果物や作業を階層的に分解する管理手法として整理します。ワークパッケージ、100％ルール、WBS辞書、ガントチャート・OBS・RACIとの違いをDS検定向けに確認します。
+description: WBSは、プロジェクトの成果物や必要作業を漏れなく階層分解し、見積り・担当割当て・進捗管理の単位を明確にする手法です。最下層のワークパッケージ、全作業を含める100％ルール、詳細を補うWBS辞書を整理し、時間軸を示すガントチャート、組織を示すOBS、責任分担を示すRACIとの違いを試験で判断します。
 permalink: /ds/wbs/
 categories: [business]
 tags: [ds, design]
 prev: /ds/scrum/
 next: /ds/customer-journey/
-last_modified_at: 2026-07-18
+last_modified_at: 2026-08-13
 ---
 
 ## まず結論

@@ -1,13 +1,13 @@
 ﻿---
 layout: page
 title: 電子署名とは？本人性・完全性と公開鍵での検証を整理【DS検定】
-description: "電子署名を、送信者本人が作成したことと文書が改ざんされていないことを確認する仕組みとして整理します。秘密鍵で署名し公開鍵で検証する流れをDS検定向けに確認します。"
+description: "電子署名は、文書のハッシュ値を送信者の秘密鍵で署名し、対応する公開鍵で検証することで、作成者の本人性と改ざんされていない完全性を確認する仕組みです。文書内容を秘密にする暗号化とは目的が異なる点、鍵を使う向き、電子証明書が公開鍵と本人を結び付ける役割を整理し、DS検定の選択肢と実務の検証手順を判断します。"
 permalink: /ds/digital-signature/
 categories: [business]
 tags: [ds, security, design]
 prev: /ds/contract-ukeoi-juninin/
 next: /ds/digital-signature2/
-last_modified_at: 2026-06-24
+last_modified_at: 2026-08-13
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>

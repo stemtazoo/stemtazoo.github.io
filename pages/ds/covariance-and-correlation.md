@@ -1,13 +1,13 @@
 ﻿---
 layout: page
 title: 共分散を相関係数に直す意味とは？単位の影響を外す考え方【DS検定】
-description: "共分散の値が単位に左右される理由と、相関係数で標準化する意味を整理します。計算式そのものより、なぜ比較しやすくなるのかをDS検定向けに確認します。"
+description: "共分散を標準偏差の積で割って相関係数に直すと、cmとkgなど測定単位や尺度の影響を除き、異なる変数ペアの関係を比較できます。共分散の符号が動く方向を示す一方、値の大きさだけでは強さを比べられない理由を、標準化の式と具体例から理解し、計算結果の意味を問うDS検定の選択肢と換算問題に備えて実務にも応用できます。"
 permalink: /ds/covariance-and-correlation/
 categories: [data-science]
 tags: [ds, statistics]
 prev: /ds/correlation-vs-causation/
 next: /ds/covariance-correlation/
-last_modified_at: 2026-06-24
+last_modified_at: 2026-08-13
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>

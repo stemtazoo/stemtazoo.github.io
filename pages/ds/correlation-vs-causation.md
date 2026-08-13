@@ -1,13 +1,13 @@
 ﻿---
 layout: page
 title: 相関と因果の違いとは？交絡と「原因とは限らない」を整理【DS検定】
-description: "相関は2つの値が一緒に動く関係、因果は一方が原因となって結果を生む関係です。交絡や偶然の一致を見抜き、「相関がある＝原因」と判断しないためのDS検定の選択肢判断を整理します。"
+description: "相関は2つの値が一緒に動く関係、因果は一方への介入が結果を変える関係です。交絡因子、逆因果、偶然の一致を区別し、「相関係数が高い」「時系列で先に起きた」だけでは因果を断定できない理由を整理します。DS検定で調査結果の解釈や施策効果に関する誤った選択肢を切り、分析の結論を誤らないための代表ページです。"
 permalink: /ds/correlation-vs-causation/
 categories: [data-science]
 tags: [ds, statistics]
 prev: /ds/correlation-coefficient-determination/
 next: /ds/covariance-and-correlation/
-last_modified_at: 2026-06-24
+last_modified_at: 2026-08-13
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>

@@ -1,13 +1,13 @@
 ---
 layout: page
 title: "情報セキュリティマネジメント試験とは？役割・対象者・試験の位置づけを整理【SG試験】"
-description: "情報セキュリティマネジメント試験は、組織の情報セキュリティを守るために必要な、基本的な管理スキルを確認する国家試験です。"
+description: "情報セキュリティマネジメント試験は、技術者だけでなく業務部門で情報を扱う人も対象に、組織のセキュリティを計画・運用・評価・改善する管理力を確認する国家試験です。対象者、レベル2相当という位置づけ、年間随時のCBT方式、現場で期待される役割を整理し、ITパスポート後の学習先や受験目的を具体的に判断できます。"
 permalink: /sg/information-security-management-exam/
 prev: /sg/incident-response/
 next: /sg/ip-spoofing/
 categories: [business]
 tags: [sg, sg-exam-outline]
-last_modified_at: 2026-07-09
+last_modified_at: 2026-08-13
 ---
 
 ## まず結論

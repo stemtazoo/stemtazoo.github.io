@@ -1,13 +1,13 @@
 ﻿---
 layout: page
 title: エビデンスベースドとは？（Evidence-Basedの考え方）【DS検定】
-description: "エビデンスベースドとは、経験だけに頼らず、目的に適したデータや検証結果を根拠に意思決定する考え方です。相関と因果、データの偏り、根拠の質と適用範囲を確認し、数値があるだけの判断と区別します。"
+description: "エビデンスベースドとは、経験や権威だけに頼らず、目的に適したデータや検証結果を吟味して意思決定する考え方です。数値があるだけでは十分でない理由を、相関と因果、標本の偏り、研究設計、再現性、適用対象の違いから確認します。根拠の強さと業務条件を併せて判断するDS検定の選択肢を切り分け、実務にも応用できます。"
 permalink: /ds/evidence-based/
 categories: [business]
 tags: [ds, data-understanding, design]
 prev: /ds/data-literacy-practice/
 next: /ds/hypothesis-thinking/
-last_modified_at: 2026-06-28
+last_modified_at: 2026-08-13
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>

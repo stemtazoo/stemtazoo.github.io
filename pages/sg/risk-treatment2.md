@@ -1,12 +1,12 @@
 ---
 layout: page
 title: "リスク対応の具体例で覚える回避・低減・移転・受容【SG試験】"
-description: リスク対応の4分類を、情報漏えい、サービス停止、委託、保険などの具体例で確認する復習ページです。SG試験で問題文の行動が回避・低減・移転・受容のどれに当たるかを素早く判断できるようにします。
+description: リスク対応の4分類を、危険な業務を中止する回避、対策で発生確率や影響を下げる低減、保険や契約で損失負担を移す移転、残存リスクを承認して受け入れる受容として整理します。情報漏えい、サービス停止、クラウド委託の具体例から、対策後も責任そのものは移らない点や、放置と受容の違いをSG試験向けに正しく判断します。
 permalink: /sg/risk-treatment2/
 prev: /sg/risk-criteria/
 next: /sg/risk-treatment-exercises/
 tags: [sg, sg-security-management, risk_assessment, isms]
-last_modified_at: 2026-06-24
+last_modified_at: 2026-08-13
 ---
 
 ## まず結論

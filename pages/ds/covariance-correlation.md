@@ -1,13 +1,13 @@
 ﻿---
 layout: page
 title: 共分散と相関係数の違いとは？単位の影響と-1〜1の意味で整理【DS検定】
-description: "共分散は2変数が同じ方向に動くかを表し、相関係数は単位の影響を除いて-1〜1で関係の強さを比較する指標です。DS検定で迷いやすい「符号」「大きさ」「単位」の判断軸を整理します。"
+description: "共分散は2変数が同じ方向に動くかを符号で表し、相関係数は単位の影響を除いて-1〜1で線形関係の向きと強さを示します。共分散の絶対値をそのまま比較できない理由、相関0でも関係がないとは限らない点、外れ値の影響を整理し、DS検定で迷いやすい「符号・大きさ・単位」の選択肢と計算結果を判断してグラフの読み取りにも備えます。"
 permalink: /ds/covariance-correlation/
 categories: [data-science]
 tags: [ds, statistics]
 prev: /ds/covariance-and-correlation/
 next: /ds/deviation-score/
-last_modified_at: 2026-06-24
+last_modified_at: 2026-08-13
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>

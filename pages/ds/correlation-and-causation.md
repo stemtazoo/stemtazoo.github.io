@@ -1,13 +1,13 @@
 ﻿---
 layout: page
 title: 相関があっても因果とは限らない理由を例で理解する【DS検定】
-description: "アイス売上や広告費の例を使い、相関だけでは因果を断定できない理由を確認します。代表ページで整理した相関と因果の違いを、初学者向けの具体例で復習します。"
+description: "アイスの売上と気温、広告費と売上の具体例から、相関があっても一方が他方の原因とは限らない理由を初学者向けに復習します。第三の要因である交絡、逆の因果、偶然の一致を疑う手順と、観察データ・ランダム化比較・分析条件から主張できる範囲を判断するポイントを確認し、身近な数値の誤読を防いで因果推論の基礎も学べます。"
 permalink: /ds/correlation-and-causation/
 categories: [data-science]
 tags: [ds, statistics]
 prev: /ds/chi-square-distribution/
 next: /ds/correlation-coefficient-determination/
-last_modified_at: 2026-06-24
+last_modified_at: 2026-08-13
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>

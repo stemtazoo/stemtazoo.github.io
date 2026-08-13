@@ -1,13 +1,13 @@
 ---
 layout: page
 title: "データを読む・説明する・扱うとは？データリテラシー実践ガイド【DS検定】"
-description: "データリテラシーを、データを読む・説明する・扱うの3つの力に分けて整理します。平均と中央値、相関と因果、標本抽出、グラフの読み方、比較条件、データ品質をDS検定の判断問題に対応できる形で確認します。"
+description: "データリテラシーを、数値やグラフを正しく読む、根拠と限界を説明する、品質と権利に配慮して扱うという3つの実践力に分けます。平均と中央値、相関と因果、標本の偏り、軸を省略したグラフ、比較条件、欠損や重複を横断して確認し、業務報告やAIの出力を鵜呑みにしないDS検定の判断手順を身につけて実務に生かします。"
 permalink: /ds/data-literacy-practice/
 categories: [business]
 tags: [ds, data-understanding, design, literacy, statistics, visualization]
 prev: /ds/data-literacy/
 next: /ds/evidence-based/
-last_modified_at: 2026-07-13
+last_modified_at: 2026-08-13
 ---
 
 ## まず結論

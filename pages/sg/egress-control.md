@@ -1,12 +1,12 @@
 ---
 layout: page
 title: "出口対策とは？侵入後の被害拡大を防ぐ考え方【SG試験】"
-description: "出口対策はマルウェア感染後の通信や情報流出を防ぐための対策です。侵入前対策との違いや実務での判断ポイントを整理し、SG試験・情報セキュリティマネジメント試験のひっかけを解説します。"
+description: "出口対策は、端末への侵入を完全に防げない前提で、感染後のC&Cサーバ通信や機密情報の外部送信を検知・遮断して被害拡大を抑える対策です。外向き通信の監視、プロキシやファイアウォールの制御、DNS監視などを例に、入口対策・内部対策との目的と実施時点を比較し、SG試験で「侵入後」に注目して選択肢を切ります。"
 permalink: /sg/egress-control/
 prev: /sg/security-patch/
 next: /sg/malware-analysis/
 tags: [sg, sg-security-measures, malware, it_security_operations]
-last_modified_at: 2026-07-09
+last_modified_at: 2026-08-13
 ---
 
 ## まず結論

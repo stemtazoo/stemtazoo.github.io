@@ -1,10 +1,10 @@
 ---
 layout: page
 title: EAP-TLSとは？デジタル証明書で相互認証する方式【SG試験】
-description: "EAP-TLSを、TLSとデジタル証明書で認証サーバとクライアントを相互認証する方式として整理し、パスワード中心のEAP-MD5や、サーバ証明書でトンネルを作るPEAPとの違いを見分けます。"
+description: "EAP-TLSは、802.1X認証でサーバ証明書とクライアント証明書を使い、TLSによる相互認証を行うEAP方式です。パスワードだけに依存せず強固な一方、端末ごとの証明書発行・配布・失効管理が必要です。相互認証を行わないEAP-MD5、サーバ証明書でトンネルを作り内部認証するPEAPとの違いをSG試験向けに見分けます。"
 permalink: /sg/eap-tls/
 tags: [sg, sg-security-overview, crypto_auth, network, access_control]
-last_modified_at: 2026-07-04
+last_modified_at: 2026-08-13
 ---
 
 ## まず結論

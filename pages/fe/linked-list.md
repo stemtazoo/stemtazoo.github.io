@@ -1,14 +1,14 @@
 ---
 layout: page
 title: 連結リストとは？単方向・双方向と配列の違い【基本情報技術者試験】
-description: 連結リストを「データ部と次の要素を指すポインタ部でつながる構造」として整理し、単方向・双方向、配列との違い、挿入・削除時の参照の付け替えをFE試験向けに解説します。
+description: 連結リストは、各要素のデータ部と次の要素を指すポインタ部をたどって格納順を表すデータ構造です。次方向だけの単方向、前後へ進める双方向、連続領域と添字を使う配列を比較します。科目Aでは探索・挿入・削除の計算量、科目Bではノード追加時の参照の付け替え順を図と疑似言語から正しく判断するポイントを確認します。
 permalink: /fe/linked-list/
 tags: [fe, fe-technology, data-structure, algorithm]
 fe_section: 科目B対策
 fe_subsection: データ構造
 fe_order: 50
 date: 2026-07-13
-last_modified_at: 2026-07-28
+last_modified_at: 2026-08-13
 ---
 
 ## まず結論

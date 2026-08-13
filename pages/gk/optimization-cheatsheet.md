@@ -1,7 +1,8 @@
 ﻿---
 layout: page
 title: 最適化手法まとめ（チートシート）
-description: "最適化手法まとめ（チートシート）は頻出論点を整理して得点力につなげる学習テーマです。 AI・機械学習での位置づけ、関連モデルや手法との違い、G検定で混同しやすい判断軸を確認できます。"
+description: "ニューラルネットワークの最適化手法を、全データで更新する最急降下法、ランダムに使うSGD、慣性で振動を抑えるモーメンタム、学習率を調整するRMSProp、両者を組み合わせるAdamの順に一覧化します。G検定で「慣性」「勾配の二乗移動平均」「学習率の自動調整」から手法を選ぶ直前確認用チートシートです。"
+last_modified_at: 2026-08-13
 permalink: /gk/optimization-cheatsheet/
 tags: [gk, neural_network, optimization, cheatsheet]
 gk_section: ディープラーニングの概要/最適化手法

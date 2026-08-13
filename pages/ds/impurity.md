@@ -1,13 +1,13 @@
 ---
 layout: page
 title: 不純度とは？決定木の分岐基準を整理【DS検定】
-description: 不純度を、決定木でクラスの混ざり具合を測る指標として整理します。ジニ不純度、エントロピー、子ノードの加重平均、情報利得、回帰木との違いをDS検定向けに確認します。
+description: 不純度は、決定木のノード内で複数クラスがどれだけ混ざっているかを測る指標で、値が小さいほど分類結果が純粋です。ジニ不純度とエントロピー、分岐前後の不純度差である情報利得を対応付け、片方の子だけでなくサンプル数による加重平均で分岐を評価する理由や、回帰木では分散などを使う違いを確認して分岐問題に備えます。
 permalink: /ds/impurity/
 categories: [data-science]
 tags: [ds, modeling, evaluation]
 prev: /ds/gini-vs-entropy/
 next: /ds/information-gain/
-last_modified_at: 2026-07-18
+last_modified_at: 2026-08-13
 ---
 
 ## まず結論

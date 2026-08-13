@@ -1,13 +1,13 @@
 ---
 layout: page
 title: 利用可能性ヒューリスティックとは？代表性ヒューリスティックとの違い【DS検定】
-description: 利用可能性ヒューリスティックは、思い出しやすい出来事ほど起こりやすいと判断してしまう傾向です。代表性ヒューリスティック、確証バイアス、アンカリングとの違いをDS検定向けに整理します。
+description: 利用可能性ヒューリスティックは、思い出しやすい出来事ほど起こりやすいと判断してしまう傾向です。事故報道後のリスク評価や印象的な顧客事例に偏るビジネス判断を例に、代表性ヒューリスティック、確証バイアス、アンカリングとの違いを比較し、データの母数や発生率を確認すべき選択肢を見分けて判断の偏りを防ぎます。
 permalink: /ds/availability-heuristic/
 categories: [business]
 tags: [ds, design]
 prev: /ds/anchoring-effect/
 next: /ds/bi-operations-cheatsheet/
-last_modified_at: 2026-08-02
+last_modified_at: 2026-08-13
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
