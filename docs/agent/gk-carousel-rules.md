@@ -221,6 +221,13 @@ Instagram投稿URLが確定
 - 単純なMarkdownリンクを使い、埋め込みHTMLや複雑なLiquidは使わない
 - 公開後に、リンクが対応するInstagram投稿へ遷移することを確認する
 
+Instagram投稿URLをGK記事へ保存する前に、共有用・追跡用のクエリパラメータを取り除いて正規化する。
+
+- `utm_source`、`igsh`、その他同様の追跡パラメータはGKのMarkdownファイルへ保存しない
+- Instagramの投稿IDは一切変更しない
+- 投稿種別や投稿IDなど、意味のあるパス情報は削除しない
+- 通常のカルーセル投稿では、`https://www.instagram.com/p/POST_ID/` 形式を優先する
+
 ## 日本語テキスト事故防止
 
 - 短文を優先する
