@@ -206,6 +206,7 @@ Read the relevant detailed guide before changing each area:
 - GK front matter rules: `docs/agent/gk-frontmatter-rules.md`
 - GK tag rules: `docs/agent/gk-tag-rules.md`
 - GK navigation / prev-next rules: `docs/agent/gk-navigation-rules.md`
+- GK Instagram carousel rules: `docs/agent/gk-carousel-rules.md`
 - DS article writing policy: `docs/agent/ds-content-rules.md`
 - DS article template: `docs/agent/ds-article-template.md`
 - DS front matter rules: `docs/agent/ds-frontmatter-rules.md`
