@@ -6,7 +6,7 @@ permalink: /gk/occams-razor/
 tags: [gk, model_selection, generalization]
 gk_section: 機械学習の概要/モデルの選択・評価
 gk_order: 20
-last_modified_at: 2026-08-13
+last_modified_at: 2026-08-14
 ---
 
 ## まず結論
@@ -19,6 +19,9 @@ last_modified_at: 2026-08-13
 | 必要以上に仮定を増やさない | オッカムの剃刀 |
 | どの問題にも万能なモデルはない | ノーフリーランチ定理 |
 | 仮定なしでは分類できない | みにくいアヒルの子定理 |
+
+📌 **Instagramでも5枚のカルーセルで復習できます。**
+[オッカムの剃刀｜G検定対策カルーセルを見る](https://www.instagram.com/p/DcA5Mp6maDc/)
 
 ---
 
