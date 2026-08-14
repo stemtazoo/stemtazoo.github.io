@@ -25,6 +25,7 @@ Normal individual articles under `pages/gk` should cover one term or one concept
 - Explain the concept in one or two sentences.
 - State the main G検定 judgment point.
 - Avoid starting with a formula or historical detail.
+- When a corresponding Instagram carousel has been published and its post URL is available, add the visible review link at the end of this section by following `docs/agent/gk-carousel-rules.md`. Use `pages/gk/dendrogram.md` as the reference implementation.
 
 ### 直感的な説明
 
