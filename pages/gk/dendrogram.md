@@ -6,7 +6,7 @@ permalink: /gk/dendrogram/
 tags: [gk, unsupervised_learning, clustering]
 gk_section: 機械学習の概要/代表的な手法/教師なし学習
 gk_order: 5
-last_modified_at: 2026-07-14
+last_modified_at: 2026-08-14
 ---
 
 ## まず結論
@@ -22,6 +22,9 @@ last_modified_at: 2026-07-14
 | 判断キーワード | 階層、結合、樹形図、距離 | 主成分、特異値、次元圧縮 |
 
 迷ったら、**「クラスタの関係を図で表す」ならデンドログラム、「次元を減らす」ならPCAやSVD**と切り分けます。
+
+📌 **Instagramでも5枚のカルーセルで復習できます。**  
+[デンドログラム｜G検定対策カルーセルを見る](https://www.instagram.com/p/DcAxLUDGWo8/)
 
 ---
 
