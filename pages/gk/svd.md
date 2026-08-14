@@ -6,7 +6,7 @@ permalink: /gk/svd/
 tags: [gk, linear_algebra, machine_learning]
 gk_section: 機械学習の概要/代表的な手法/教師なし学習
 gk_order: 12
-last_modified_at: 2026-07-14
+last_modified_at: 2026-08-14
 ---
 
 ## まず結論
@@ -26,6 +26,11 @@ G検定では、次の3点を押さえます。
 | 主な用途 | 次元削減、低ランク近似、ノイズ除去、推薦、潜在意味解析 |
 
 **「行列をU・Σ・Vᵀに分解する」「特異値の大きい成分を残す」ならSVD**と判断します。
+
+📌 **Instagramでも5枚のカルーセルで復習できます。**  
+[SVD（特異値分解）｜G検定対策カルーセルを見る](https://www.instagram.com/p/DcA-7g7mbkL/)
+
+---
 
 ## 直感的な説明
 
