@@ -24,7 +24,7 @@ last_modified_at: 2026-08-14
 迷ったら、**「クラスタの関係を図で表す」ならデンドログラム、「次元を減らす」ならPCAやSVD**と切り分けます。
 
 📌 **Instagramでも5枚のカルーセルで復習できます。**  
-[デンドログラム｜G検定対策カルーセルを見る](https://www.instagram.com/p/DcAxLUDGWo8/)
+[デンドログラム｜G検定対策カルーセルを見る](https://www.instagram.com/p/DcA2ByZmcOO/)
 
 ---
 
