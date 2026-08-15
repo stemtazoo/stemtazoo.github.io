@@ -185,6 +185,7 @@ SGで学んだリスク、認証、アクセス制御、ログ、インシデン
     <li><a href="#fe-strategy">ストラテジ系</a></li>
     <li><a href="#fe-subject-b">科目B対策</a></li>
     <li><a href="#fe-security">情報セキュリティ</a></li>
+    <li><a href="#fe-unclassified">その他・分類未設定</a></li>
   </ul>
 </nav>
 
@@ -267,6 +268,60 @@ SGで学んだリスク、認証、アクセス制御、ログ、インシデン
 {% endif %}
 {% endfor %}
 
+{% assign rendered_extra_subsections = "|" %}
+{% for candidate in fe_pages %}
+  {% if candidate.url != page.url %}
+    {% if candidate.tags %}
+      {% if candidate.tags contains "fe" %}
+        {% if candidate.fe_section == section %}
+          {% if candidate.fe_subsection %}
+            {% unless fe_subsections contains candidate.fe_subsection %}
+              {% capture subsection_marker %}|{{ candidate.fe_subsection }}|{% endcapture %}
+              {% unless rendered_extra_subsections contains subsection_marker %}
+                {% assign subsection_count = 0 %}
+                {% for p in fe_pages %}
+                  {% if p.url != page.url %}
+                    {% if p.tags %}
+                      {% if p.tags contains "fe" %}
+                        {% if p.fe_section == section %}
+                          {% if p.fe_subsection == candidate.fe_subsection %}
+                            {% assign subsection_count = subsection_count | plus: 1 %}
+                          {% endif %}
+                        {% endif %}
+                      {% endif %}
+                    {% endif %}
+                  {% endif %}
+                {% endfor %}
+                {% if subsection_count > 0 %}
+<details class="fe-index-subsection">
+  <summary><strong>{{ candidate.fe_subsection }}</strong>（{{ subsection_count }}記事）</summary>
+<ul>
+                {% for p in fe_pages %}
+                  {% if p.url != page.url %}
+                    {% if p.tags %}
+                      {% if p.tags contains "fe" %}
+                        {% if p.fe_section == section %}
+                          {% if p.fe_subsection == candidate.fe_subsection %}
+  <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
+                          {% endif %}
+                        {% endif %}
+                      {% endif %}
+                    {% endif %}
+                  {% endif %}
+                {% endfor %}
+</ul>
+</details>
+                {% endif %}
+                {% capture rendered_extra_subsections %}{{ rendered_extra_subsections }}{{ candidate.fe_subsection }}|{% endcapture %}
+              {% endunless %}
+            {% endunless %}
+          {% endif %}
+        {% endif %}
+      {% endif %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
 {% assign no_subsection_count = 0 %}
 {% for p in fe_pages %}
   {% if p.url != page.url %}
@@ -303,6 +358,39 @@ SGで学んだリスク、認証、アクセス制御、ログ、インシデン
 {% endif %}
 {% endif %}
 {% endfor %}
+
+{% assign unclassified_count = 0 %}
+{% for p in fe_pages %}
+  {% if p.url != page.url %}
+    {% if p.tags %}
+      {% if p.tags contains "fe" %}
+        {% unless fe_sections contains p.fe_section %}
+          {% assign unclassified_count = unclassified_count | plus: 1 %}
+        {% endunless %}
+      {% endif %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+{% if unclassified_count > 0 %}
+<h3 id="fe-unclassified">その他・分類未設定（{{ unclassified_count }}記事）</h3>
+<details class="fe-index-subsection">
+  <summary><strong>分類を確認中の記事</strong>（{{ unclassified_count }}記事）</summary>
+<ul>
+{% for p in fe_pages %}
+  {% if p.url != page.url %}
+    {% if p.tags %}
+      {% if p.tags contains "fe" %}
+        {% unless fe_sections contains p.fe_section %}
+  <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
+        {% endunless %}
+      {% endif %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>
+</details>
+{% endif %}
 
 ## 学習の進め方
 
