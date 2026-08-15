@@ -1,13 +1,13 @@
 ﻿---
 layout: page
 title: KPIとKGIの違いとは？目標管理の基本を整理【DS検定】
-description: "KGI（Key Goal Indicator）は最終的な目標を示す指標、KPI（Key Performance Indicator）はその目標達成のための途中の指標です。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。"
+description: "KGI（Key Goal Indicator）は最終的な目標を示す指標、KPI（Key Performance Indicator）はその目標達成に向けた途中の進捗を測る指標です。ECサイトの例を使い、DS検定で迷いやすい両者の役割を整理します。"
 permalink: /ds/kpi-kgi/
 categories: [business]
 tags: [ds, design]
 prev: /ds/five-forces-analysis/
 next: /ds/pest-analysis/
-last_modified_at: 2026-06-21
+last_modified_at: 2026-08-16
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -16,245 +16,116 @@ last_modified_at: 2026-06-21
 
 ## まず結論
 
-**KGI（Key Goal Indicator）**は最終的な目標を示す指標、**KPI（Key Performance Indicator）**はその目標達成のための途中の指標です。
+**KGI（Key Goal Indicator）**は最終目標を示す指標、**KPI（Key Performance Indicator）**はその目標達成に向けた途中の進捗を測る指標です。
 
-DS検定では「KGIが最終目標、KPIがその進捗管理」という関係を理解しているかが問われます。
+| 指標 | 役割 | 例 |
+|---|---|---|
+| KGI | 最終目標 | 年間売上1億円 |
+| KPI | 途中の進捗指標 | 購入率、訪問数、新規顧客数 |
 
-
-試験では特に
-
-KPIとKGIの役割の違い
-
-KPIがKGI達成のための指標であること
-
-
-を理解しているかがポイントになります。
-
-
+DS検定では、**最終目標か、途中の進捗か**で切り分けます。
 
 ## 直感的な説明
 
-例えばECサイトの売上を伸ばしたいとします。
+ECサイトの売上を伸ばしたいとします。
 
-最終的な目標は
+最終目標が「年間売上1億円」なら、これはKGIです。
 
-売上を1億円にする
+しかし、売上だけを見ていても、なぜ目標に届かないのかは分かりません。
 
-といったものです。
+そこで、途中の状態を表す指標を見ます。
 
-これは KGI です。
+- サイト訪問数
+- 商品閲覧数
+- 購入率
+- 新規顧客数
 
-しかし売上は突然増えるわけではありません。
+これらがKPIです。
 
-その途中には
+> **KPIを見ながら途中経過を改善し、KGIの達成につなげる**
 
-サイト訪問数
-
-商品閲覧数
-
-購入率
-
-
-などの指標があります。
-
-これらを改善していくことで
-
-最終目標に近づきます。
-
-この 途中の管理指標 が KPI です。
-
-
+という関係です。
 
 ## 定義・仕組み
 
-KGI（Key Goal Indicator）
+### KGI：最終的に達成したい結果
 
-企業や組織の 最終的な目標を示す指標 です。
+KGIは、企業や組織が最終的に達成したい成果を示します。
 
-例
+代表例：
 
-売上
+- 売上
+- 利益
+- 市場シェア
+- 契約件数
 
-利益
+### KPI：KGIへ向かう途中を測る
 
-市場シェア
+KPIは、KGI達成に向けた活動や進捗を測る指標です。
 
+代表例：
 
+- 新規顧客数
+- サイト訪問数
+- 購入率
+- 問い合わせから契約への転換率
 
+関係は次のように考えます。
 
-KPI（Key Performance Indicator）
+> **KPI（途中の進捗） → KGI（最終成果）**
 
-KGIを達成するための 進捗を管理する指標 です。
-
-例
-
-新規顧客数
-
-サイト訪問数
-
-購入率
-
-
-
-
-つまり
-
-KPI（途中の指標）
-        ↓
-KGI（最終目標）
-
-という関係になります。
-
-企業ではKPIを定期的に確認することで
-
-目標達成に近づいているかを管理します。
-
-
+KPIを定期的に確認することで、最終目標に近づいているかを判断できます。
 
 ## どんな場面で使う？
 
-経営目標の管理
+### 経営目標の管理
 
-企業の目標達成状況を管理するために使われます。
+たとえば、
 
-例
+| 種類 | 指標 |
+|---|---|
+| KGI | 売上10億円 |
+| KPI | 月間新規顧客数、購入率 |
 
-KGI
+のように設定します。
 
-売上10億円
+### データドリブン経営
 
+KPIを継続的に測定し、施策がKGI達成につながっているかをデータで判断します。
 
-KPI
+### プロジェクト管理
 
-月間新規顧客数
-
-購入率
-
-
-
-
-データドリブン経営
-
-データにもとづいた意思決定のために
-
-KPIを定量的に管理します。
-
-
-
-プロジェクト管理
-
-プロジェクトの進捗を確認するためにも使われます。
-
-
+最終成果だけでなく、途中の進捗を測る指標としてKPIを設定することがあります。
 
 ## よくある誤解・混同
 
-KPIとKGIの逆転
+### ❌ KPIが最終目標
 
-DS検定では次のような誤り選択肢が出ることがあります。
+逆です。
 
-> KPIが最終目標を表す
+- **KGI = 最終目標**
+- **KPI = 途中の進捗指標**
 
+### ❌ KPIはKGIと無関係に設定してよい
 
+KPIは、KGI達成につながる指標であることが重要です。測りやすいだけの数字を置いても、目標管理には役立ちません。
 
-これは誤りです。
+### ❌ KGIは必ず1つだけ
 
-KGI → 最終目標
-
-KPI → 途中の管理指標
-
-
-です。
-
-
-
-KGIが複数あるという誤解
-
-通常KGIは
-
-最終目標として1つ設定されることが多いです。
-
-一方でKPIは
-
-複数設定されることがあります。
-
-
+実務では複数のKGIを置く場合もあります。試験では「KGIは最終成果、KPIは途中の進捗」という役割で判断する方が安全です。
 
 ## まとめ（試験直前用）
 
-KGIは最終目標を示す指標
-
-KPIは目標達成の途中指標
-
-KPIを改善することでKGIに近づく
-
-DS検定では KPIとKGIの役割の違い が問われる
-
-
-試験では
-
-> 「最終目標を示す指標」
-
-
-
-と書かれていたら
-
-KGIと判断するのがポイントです。
-
-
+- **KGI = 最終目標**
+- **KPI = 途中の進捗指標**
+- KPIを改善してKGI達成につなげる
+- 「最終的な成果」ならKGI
+- 「途中の状態を測る」ならKPI
 
 ## 対応スキル項目（ビジネス力シート）
 
-ビジネス理解
+- ビジネス理解
+- データ活用
+- ★ データを活用した意思決定の重要性を理解している
 
-データ活用
-
-★ データを活用した意思決定の重要性を理解している
-
-## 🔗 関連記事
-
-<ul style="padding-left: 20px;">
-{% assign current_tags = page.tags %}
-{% assign count = 0 %}
-
-{% for p in site.pages %}
-  {% if p.url != page.url and p.tags %}
-    {% assign matched = false %}
-
-    {% for tag in current_tags %}
-      {% if p.tags contains tag and tag != "ds" %}
-        {% assign matched = true %}
-      {% endif %}
-    {% endfor %}
-
-    {% if matched %}
-      <li style="margin-bottom: 6px;">
-        <a href="{{ p.url }}">{{ p.title }}</a>
-      </li>
-      {% assign count = count | plus: 1 %}
-    {% endif %}
-
-    {% if count >= 5 %}
-      {% break %}
-    {% endif %}
-  {% endif %}
-{% endfor %}
-</ul>
-
-<hr>
-
-<div style="margin-top: 16px;">
-  🏠 <a href="/ds/">DS検定トップに戻る</a>
-</div>
-
-<div style="display:flex;justify-content:space-between;margin-top:12px;">
-
-  {% if page.previous.url %}
-    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
-  {% endif %}
-
-  {% if page.next.url %}
-    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
-  {% endif %}
-
-</div>
+{% include ds_article_footer.html %}
