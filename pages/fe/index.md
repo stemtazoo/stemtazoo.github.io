@@ -183,9 +183,8 @@ SGで学んだリスク、認証、アクセス制御、ログ、インシデン
     <li><a href="#fe-technology">テクノロジ系</a></li>
     <li><a href="#fe-management">マネジメント系</a></li>
     <li><a href="#fe-strategy">ストラテジ系</a></li>
-    <li><a href="#fe-subject-b">科目B対策</a></li>
     <li><a href="#fe-security">情報セキュリティ</a></li>
-    <li><a href="#fe-unclassified">その他・分類未設定</a></li>
+    <li><a href="#fe-subject-b">科目B対策</a></li>
   </ul>
 </nav>
 
@@ -206,9 +205,9 @@ SGで学んだリスク、認証、アクセス制御、ログ、インシデン
 まずは科目Aの基礎用語と、科目Bのアルゴリズム問題から整備していきます。
 {% endif %}
 
-{% assign fe_sections = "テクノロジ系|マネジメント系|ストラテジ系|科目B対策|情報セキュリティ" | split: "|" %}
-{% assign fe_section_ids = "fe-technology|fe-management|fe-strategy|fe-subject-b|fe-security" | split: "|" %}
-{% assign fe_subsections = "基礎理論|アルゴリズムとプログラミング|コンピュータ構成要素|システム構成要素|ソフトウェア|ハードウェア|データベース|ネットワーク|システム開発技術|プロジェクトマネジメント|サービスマネジメント|システム監査|システム戦略|経営戦略|企業と法務|アルゴリズム|データ構造|疑似言語|トレース|情報セキュリティ問題" | split: "|" %}
+{% assign fe_sections = "テクノロジ系|マネジメント系|ストラテジ系|情報セキュリティ|科目B対策" | split: "|" %}
+{% assign fe_section_ids = "fe-technology|fe-management|fe-strategy|fe-security|fe-subject-b" | split: "|" %}
+{% assign fe_subsections = "基礎理論|アルゴリズムとプログラミング|コンピュータ構成要素|コンピュータシステム|システム構成要素|システム構成|ソフトウェア|オペレーティングシステム|OS|ハードウェア|マルチメディア|データベース|ネットワーク|セキュリティ|システム開発技術|ソフトウェア開発|ソフトウェア設計|ソフトウェア開発管理技術|システムの評価指標|プロジェクトマネジメント|サービスマネジメント|システム監査|システム戦略|システム企画|システム調達|経営戦略|経営戦略・業務システム|経営戦略マネジメント|ビジネスインダストリ|企業活動|オペレーションズリサーチ|OR・IE|企業と法務|法務|情報セキュリティ問題|暗号と認証|認証・アクセス制御|セキュリティ技術|セキュリティ対策|マルウェア・攻撃手法|セキュリティ運用|セキュリティマネジメント|セキュリティ管理|アルゴリズム|プログラミング|データ構造" | split: "|" %}
 
 {% for section in fe_sections %}
 {% assign section_index = forloop.index0 %}
@@ -266,60 +265,6 @@ SGで学んだリスク、認証、アクセス制御、ログ、インシデン
 </ul>
 </details>
 {% endif %}
-{% endfor %}
-
-{% assign rendered_extra_subsections = "|" %}
-{% for candidate in fe_pages %}
-  {% if candidate.url != page.url %}
-    {% if candidate.tags %}
-      {% if candidate.tags contains "fe" %}
-        {% if candidate.fe_section == section %}
-          {% if candidate.fe_subsection %}
-            {% unless fe_subsections contains candidate.fe_subsection %}
-              {% capture subsection_marker %}|{{ candidate.fe_subsection }}|{% endcapture %}
-              {% unless rendered_extra_subsections contains subsection_marker %}
-                {% assign subsection_count = 0 %}
-                {% for p in fe_pages %}
-                  {% if p.url != page.url %}
-                    {% if p.tags %}
-                      {% if p.tags contains "fe" %}
-                        {% if p.fe_section == section %}
-                          {% if p.fe_subsection == candidate.fe_subsection %}
-                            {% assign subsection_count = subsection_count | plus: 1 %}
-                          {% endif %}
-                        {% endif %}
-                      {% endif %}
-                    {% endif %}
-                  {% endif %}
-                {% endfor %}
-                {% if subsection_count > 0 %}
-<details class="fe-index-subsection">
-  <summary><strong>{{ candidate.fe_subsection }}</strong>（{{ subsection_count }}記事）</summary>
-<ul>
-                {% for p in fe_pages %}
-                  {% if p.url != page.url %}
-                    {% if p.tags %}
-                      {% if p.tags contains "fe" %}
-                        {% if p.fe_section == section %}
-                          {% if p.fe_subsection == candidate.fe_subsection %}
-  <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
-                          {% endif %}
-                        {% endif %}
-                      {% endif %}
-                    {% endif %}
-                  {% endif %}
-                {% endfor %}
-</ul>
-</details>
-                {% endif %}
-                {% capture rendered_extra_subsections %}{{ rendered_extra_subsections }}{{ candidate.fe_subsection }}|{% endcapture %}
-              {% endunless %}
-            {% endunless %}
-          {% endif %}
-        {% endif %}
-      {% endif %}
-    {% endif %}
-  {% endif %}
 {% endfor %}
 
 {% assign no_subsection_count = 0 %}
