@@ -6,6 +6,7 @@ on:
     paths:
       - '.github/workflows/ds-flat-markdown-audit.yml'
       - 'scripts/audit_ds_flat_markdown.py'
+      - 'pages/ds/**/*.md'
 
 permissions:
   contents: read
