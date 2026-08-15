@@ -1,13 +1,13 @@
 ﻿---
 layout: page
 title: EXISTSとは？サブクエリの存在判定を理解する【DS検定】
-description: "EXISTSとは「条件を満たすデータが存在するかどうか」を判定するSQLの構文DS検定では「値比較ではなく存在チェック」であることを見抜けるかが重要。定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。"
+description: "EXISTSは、サブクエリが1行でも結果を返すかどうかでTRUE/FALSEを判定するSQL構文です。値の一致を見るINとの違い、NOT EXISTS、相関サブクエリの読み方をDS検定向けに整理します。"
 permalink: /ds/sql-exists/
 categories: [data-engineering]
 tags: [ds, sql]
 prev: /ds/sql-distinct/
 next: /ds/sql-filtering/
-last_modified_at: 2026-06-21
+last_modified_at: 2026-08-16
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -16,171 +16,110 @@ last_modified_at: 2026-06-21
 
 ## まず結論
 
-EXISTSとは「条件を満たすデータが存在するかどうか」を判定するSQLの構文
+**EXISTS**は、サブクエリが**1行でも結果を返すか**を判定するSQL構文です。
 
-DS検定では「値比較ではなく存在チェック」であることを見抜けるかが重要
-
-
-
+DS検定では、**値そのものを比較するのではなく「該当データが存在するか」を見る**点が重要です。
 
 ## 直感的な説明
 
-「その条件に合うデータが1件でもある？」をチェックするイメージです。
+「注文したことがある顧客だけを出したい」とします。
 
-例えば
+このとき知りたいのは、注文金額そのものではありません。
 
-注文したことがある顧客だけ抽出したい
+> その顧客に対応する注文が**1件でもあるか？**
 
+を確認できれば十分です。
 
-👉 「注文データが存在するか？」で判断する
-
-👉 1件でもあればOK（中身は関係ない）
-
-
+これがEXISTSの考え方です。
 
 ## 定義・仕組み
 
-EXISTSは、サブクエリの結果が1件でもあればTRUEになる条件式です。
+基本形は次の通りです。
 
-基本形：
-
+```sql
 SELECT *
-FROM 顧客テーブル A
+FROM customers A
 WHERE EXISTS (
     SELECT 1
-    FROM 注文テーブル B
-    WHERE A.顧客ID = B.顧客ID
+    FROM orders B
+    WHERE A.customer_id = B.customer_id
 );
+```
 
-ポイント：
+このSQLでは、各顧客について対応する注文が1件でも見つかれば、その顧客を残します。
 
-サブクエリの中身（SELECT 1）は重要ではない
+### SELECT 1 の意味
 
-1件でも見つかればTRUE
+EXISTSが見るのは、サブクエリの**返す値ではなく、行が存在するかどうか**です。
 
+そのため、存在判定という意味では `SELECT 1` の値そのものに意味はありません。
 
+### NOT EXISTS
 
+該当する行が**1件も存在しない**ことを確認したい場合は `NOT EXISTS` を使います。
+
+```sql
+SELECT *
+FROM customers A
+WHERE NOT EXISTS (
+    SELECT 1
+    FROM orders B
+    WHERE A.customer_id = B.customer_id
+);
+```
+
+これは「注文履歴がない顧客」を探す例です。
 
 ## どんな場面で使う？
 
-よく使う場面
+### 関連データがある行だけ残したい
 
-関連データが存在するかの判定 （例：注文がある顧客）
+- 注文がある顧客
+- 在庫がある商品
+- 対応履歴がある問い合わせ
 
-データの有無チェック
+### 関連データがない行を探したい
 
+`NOT EXISTS` を使います。
 
-注意が必要な場面
-
-値の比較をしたいとき → EXISTSではなくINや=を使う
-
-
-
+- 注文がない顧客
+- 未処理の案件
 
 ## よくある誤解・混同
 
-❌ INと同じ
+### ❌ EXISTSとINは同じ
 
-→ ⭕ 似ているが役割が違う
+目的が似る場合はありますが、判断軸が違います。
 
-EXISTS：存在するか
+| 構文 | 見ているもの |
+|---|---|
+| `EXISTS` | 条件を満たす行が存在するか |
+| `IN` | 値が候補集合に含まれるか |
 
-IN：値が含まれるか
+### ❌ サブクエリが返す値が重要
 
+EXISTSでは、**行が返るかどうか**が重要です。
 
-👉 DS検定ではここを混同させる
+### ❌ EXISTSは常に全行を最後まで調べる
 
+実装最適化はDBMSに依存しますが、EXISTSの論理上の目的は「存在確認」です。試験では、**1件でも存在すれば条件を満たす**と理解すれば十分です。
 
+### ❌ NOT EXISTSは値の不一致を調べる
 
-❌ サブクエリの値が重要
-
-→ ⭕ 件数（存在）が重要
-
-SELECT 1でもSELECT *でも結果は同じ
-
-
-
-❌ 全件チェックする
-
-→ ⭕ 1件見つかった時点で終了
-
-👉 EXISTSは効率的な判定
-
-
-
-❌ NOT EXISTSは逆に全部必要
-
-→ ⭕ 1件も存在しないことを確認する
-
-
+NOT EXISTSは、条件を満たす行が**存在しないこと**を確認します。
 
 ## まとめ（試験直前用）
 
-EXISTS＝存在するかの判定
-
-1件でもあればTRUE
-
-中身の値は関係ない
-
-INとは「存在 vs 値」で違う
-
-「あるかどうか？」で考えるのがコツ
-
-
-
+- `EXISTS` = **存在判定**
+- サブクエリが1行でも返ればTRUE
+- 値ではなく「行があるか」を見る
+- `NOT EXISTS` = 該当行が存在しない
+- **EXISTS = 存在 / IN = 値**で切り分ける
 
 ## 対応スキル項目（データエンジニアリング力シート）
 
-データ基盤
+- データ基盤
+- データ操作
+- ★ SQLを用いた基本的なデータ操作（検索・集計・結合等）ができる
 
-データ操作
-
-★ SQLを用いた基本的なデータ操作（検索・集計・結合等）ができる
-
-## 🔗 関連記事
-
-<ul style="padding-left: 20px;">
-{% assign current_tags = page.tags %}
-{% assign count = 0 %}
-
-{% for p in site.pages %}
-  {% if p.url != page.url and p.tags %}
-    {% assign matched = false %}
-
-    {% for tag in current_tags %}
-      {% if p.tags contains tag and tag != "ds" %}
-        {% assign matched = true %}
-      {% endif %}
-    {% endfor %}
-
-    {% if matched %}
-      <li style="margin-bottom: 6px;">
-        <a href="{{ p.url }}">{{ p.title }}</a>
-      </li>
-      {% assign count = count | plus: 1 %}
-    {% endif %}
-
-    {% if count >= 5 %}
-      {% break %}
-    {% endif %}
-  {% endif %}
-{% endfor %}
-</ul>
-
-<hr>
-
-<div style="margin-top: 16px;">
-  🏠 <a href="/ds/">DS検定トップに戻る</a>
-</div>
-
-<div style="display:flex;justify-content:space-between;margin-top:12px;">
-
-  {% if page.previous.url %}
-    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
-  {% endif %}
-
-  {% if page.next.url %}
-    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
-  {% endif %}
-
-</div>
+{% include ds_article_footer.html %}
