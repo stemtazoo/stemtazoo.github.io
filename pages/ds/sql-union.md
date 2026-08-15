@@ -1,13 +1,13 @@
 ﻿---
 layout: page
 title: UNIONとUNION ALLの違いとは？重複の扱いを整理【DS検定】
-description: "UNION＝重複を除いて結合UNION ALL＝重複もそのまま結合DS検定では「重複が消えるかどうか」を判断できるかがポイント。定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。"
+description: "UNIONは複数のSELECT結果を結合するときに重複行を除き、UNION ALLは重複もそのまま残します。件数・重複・処理コストの違いをDS検定向けに整理します。"
 permalink: /ds/sql-union/
 categories: [data-engineering]
 tags: [ds, data-processing, sql]
 prev: /ds/sql-join/
 next: /ds/sql-where/
-last_modified_at: 2026-06-21
+last_modified_at: 2026-08-16
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -16,184 +16,100 @@ last_modified_at: 2026-06-21
 
 ## まず結論
 
-UNION＝重複を除いて結合
+| 構文 | 重複行 |
+|---|---|
+| `UNION` | 除く |
+| `UNION ALL` | そのまま残す |
 
-UNION ALL＝重複もそのまま結合
-
-DS検定では「重複が消えるかどうか」を判断できるかがポイント
-
-
-
+DS検定では、**重複を消すかどうか**が最重要ポイントです。
 
 ## 直感的な説明
 
-2つのリストをくっつけるイメージです。
+2つの一覧を結合します。
 
-A
-B
+| 一覧1 | 一覧2 |
+|---|---|
+| A | B |
+| B | C |
 
-B
-C
+結果は次のようになります。
 
-これを結合すると…
+- `UNION` → A, B, C
+- `UNION ALL` → A, B, B, C
 
-UNION → A, B, C（重複削除）
-
-UNION ALL → A, B, B, C（そのまま）
-
-
-👉 「Bが1つになるか、そのまま2つか」の違い
-
-
+> **Bを1つにまとめるか、2つとも残すか**が違いです。
 
 ## 定義・仕組み
 
+### UNION
+
+複数のSELECT結果を縦に結合し、重複行を除きます。
+
+```sql
+SELECT name FROM customers_a
 UNION
+SELECT name FROM customers_b;
+```
 
-複数のSELECT結果を結合
+### UNION ALL
 
-重複は自動的に削除される
+複数のSELECT結果を縦に結合し、重複行もそのまま残します。
 
-
+```sql
+SELECT name FROM customers_a
 UNION ALL
+SELECT name FROM customers_b;
+```
 
-複数のSELECT結果を結合
+### 結合できる条件
 
-重複も含めてすべて残す
+基本的には、対応する列について次をそろえる必要があります。
 
-
-基本形：
-
-SELECT 列 FROM テーブル1
-UNION
-SELECT 列 FROM テーブル2;
-
-SELECT 列 FROM テーブル1
-UNION ALL
-SELECT 列 FROM テーブル2;
-
-ポイント：
-
-列の数・型は揃える必要がある
-
-
-
+- 列数
+- 対応する列のデータ型が互換であること
 
 ## どんな場面で使う？
 
-UNION
+### 重複を除いた一覧が欲しい
 
-ユニークな一覧を作りたいとき
+`UNION` を使います。
 
-重複が不要な場合
+### 全データをそのまま残したい
 
+`UNION ALL` を使います。
 
-UNION ALL
-
-全データをそのまま結合したいとき
-
-件数を正しく保ちたいとき
-
-
-
+件数をそのまま保持したい集計では、重複削除が不要なら `UNION ALL` が適しています。
 
 ## よくある誤解・混同
 
-❌ UNIONとUNION ALLは同じ
+### ❌ UNIONとUNION ALLは同じ
 
-→ ⭕ 重複の扱いが違う
+重複の扱いが違います。
 
-👉 DS検定ではここが典型的なひっかけ
+### ❌ UNIONでも件数は変わらない
 
+重複行があれば、`UNION` では件数が減ります。
 
+### ❌ UNIONの方が常に高速
 
-❌ 件数は同じになる
+`UNION` は重複除去が必要になるため、一般に `UNION ALL` より追加処理が発生します。
 
-→ ⭕ UNIONは重複があると件数が減る
+### ❌ 結果の順番は保証される
 
-
-
-❌ UNIONは速い
-
-→ ⭕ UNIONは重複削除処理があるため遅くなりやすい
-
-👉 UNION ALLの方が基本的に高速
-
-
-
-❌ 行の順番は保証される
-
-→ ⭕ ORDER BYを使わないと順序は保証されない
-
-
+並び順が必要なら `ORDER BY` を明示します。
 
 ## まとめ（試験直前用）
 
-UNION＝重複削除して結合
-
-UNION ALL＝そのまま結合
-
-件数が変わるかが重要ポイント
-
-UNION ALLの方が高速
-
-「重複を消すか？」で判断する
-
-
-
+- `UNION` = **重複を除いて結合**
+- `UNION ALL` = **重複を残して結合**
+- 重複があれば件数が変わる
+- 重複除去が不要なら `UNION ALL` の方が処理を減らしやすい
+- **「重複を消すか？」で選択肢を切る**
 
 ## 対応スキル項目（データエンジニアリング力シート）
 
-データ基盤
+- データ基盤
+- データ操作
+- ★ SQLを用いた基本的なデータ操作（検索・集計・結合等）ができる
 
-データ操作
-
-★ SQLを用いた基本的なデータ操作（検索・集計・結合等）ができる
-
-## 🔗 関連記事
-
-<ul style="padding-left: 20px;">
-{% assign current_tags = page.tags %}
-{% assign count = 0 %}
-
-{% for p in site.pages %}
-  {% if p.url != page.url and p.tags %}
-    {% assign matched = false %}
-
-    {% for tag in current_tags %}
-      {% if p.tags contains tag and tag != "ds" %}
-        {% assign matched = true %}
-      {% endif %}
-    {% endfor %}
-
-    {% if matched %}
-      <li style="margin-bottom: 6px;">
-        <a href="{{ p.url }}">{{ p.title }}</a>
-      </li>
-      {% assign count = count | plus: 1 %}
-    {% endif %}
-
-    {% if count >= 5 %}
-      {% break %}
-    {% endif %}
-  {% endif %}
-{% endfor %}
-</ul>
-
-<hr>
-
-<div style="margin-top: 16px;">
-  🏠 <a href="/ds/">DS検定トップに戻る</a>
-</div>
-
-<div style="display:flex;justify-content:space-between;margin-top:12px;">
-
-  {% if page.previous.url %}
-    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
-  {% endif %}
-
-  {% if page.next.url %}
-    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
-  {% endif %}
-
-</div>
+{% include ds_article_footer.html %}
