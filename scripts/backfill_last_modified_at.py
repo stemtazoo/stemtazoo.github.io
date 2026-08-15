@@ -31,7 +31,11 @@ def latest_commit_date(path: Path) -> str:
     return value
 
 
-def front_matter(text: str) -> tuple[str, int] | None:
+def front_matter(text: str) -> tuple[str, int, str] | None:
+    bom = "\ufeff" if text.startswith("\ufeff") else ""
+    if bom:
+        text = text[1:]
+
     if not text.startswith("---\n"):
         return None
 
@@ -39,7 +43,7 @@ def front_matter(text: str) -> tuple[str, int] | None:
     if closing == -1:
         return None
 
-    return text[4:closing], closing
+    return text[4:closing], closing, bom
 
 
 def is_normal_article(path: Path, metadata: str) -> bool:
@@ -56,7 +60,7 @@ def update_file(path: Path) -> bool:
     if parsed is None:
         return False
 
-    metadata, closing = parsed
+    metadata, closing, bom = parsed
     if not is_normal_article(path, metadata):
         return False
 
@@ -70,9 +74,10 @@ def update_file(path: Path) -> bool:
             f"last_modified_at: {value}", metadata, count=1
         )
     else:
-        updated_metadata = metadata.rstrip() + f"\nlast_modified_at: {value}\n"
+        updated_metadata = metadata.rstrip() + f"\nlast_modified_at: {value}"
 
-    updated = "---\n" + updated_metadata + text[closing:]
+    source = text[1:] if bom else text
+    updated = bom + "---\n" + updated_metadata + source[closing:]
     path.write_text(updated, encoding="utf-8", newline="\n")
     return True
 
