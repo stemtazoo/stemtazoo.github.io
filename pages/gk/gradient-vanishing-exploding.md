@@ -6,6 +6,7 @@ permalink: /gk/gradient-vanishing-exploding/
 tags: [gk, neural_network, cheatsheet]
 gk_section: ディープラーニングの概要/ニューラルネットワークとディープラーニング
 gk_order: 6
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

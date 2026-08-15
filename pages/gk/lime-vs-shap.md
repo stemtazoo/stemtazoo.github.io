@@ -6,6 +6,7 @@ permalink: /gk/lime-vs-shap/
 tags: [gk, xai, cheatsheet]
 gk_section: ディープラーニングの応用例/モデルの解釈性
 gk_order: 3
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

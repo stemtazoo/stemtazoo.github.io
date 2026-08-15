@@ -6,6 +6,7 @@ permalink: /gk/dendral/
 tags: [gk, neural_network]
 gk_section: 人工知能をめぐる動向/人工知能をめぐる動向
 gk_order: 14
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

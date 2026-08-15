@@ -6,6 +6,7 @@ permalink: /gk/classical-ai-vs-ml/
 tags: [gk, cheatsheet]
 gk_section: 人工知能をめぐる動向/人工知能をめぐる動向
 gk_order: 3
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論（G検定での即断）

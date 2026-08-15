@@ -6,6 +6,7 @@ permalink: /gk/regularization/
 tags: [gk, neural_network, regularization]
 gk_section: ディープラーニングの概要/正則化
 gk_order: 1
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

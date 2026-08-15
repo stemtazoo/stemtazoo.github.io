@@ -6,6 +6,7 @@ permalink: /gk/kl-divergence/
 tags: [gk, metrics, probability]
 gk_section: ディープラーニングの概要/誤差関数
 gk_order: 4
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

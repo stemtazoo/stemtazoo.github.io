@@ -6,6 +6,7 @@ permalink: /gk/rlhf/
 tags: [gk, neural_network]
 gk_section: ディープラーニングの応用例/自然言語処理
 gk_order: 19
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

@@ -6,6 +6,7 @@ permalink: /gk/model-compression/
 tags: [gk, model_compression, pruning, quantization, distillation]
 gk_section: ディープラーニングの概要/ニューラルネットワークとディープラーニング
 gk_order: 9
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

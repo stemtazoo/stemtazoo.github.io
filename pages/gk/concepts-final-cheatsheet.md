@@ -6,6 +6,7 @@ permalink: /gk/concepts-final-cheatsheet/
 tags: [gk, cheatsheet]
 gk_section: 人工知能をめぐる動向/人工知能をめぐる動向
 gk_order: 4
+last_modified_at: 2026-07-14
 ---
 
 ## まず結論（ここだけ見ればOK）

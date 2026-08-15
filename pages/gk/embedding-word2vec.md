@@ -6,6 +6,7 @@ permalink: /gk/embedding-word2vec/
 tags: [gk, neural_network, nlp, embedding]
 gk_section: ディープラーニングの要素技術/ネットワークの構成要素
 gk_order: 9
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

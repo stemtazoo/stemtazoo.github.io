@@ -6,6 +6,7 @@ permalink: /gk/speech-recognition-cheatsheet/
 tags: [gk, cheatsheet]
 gk_section: チートシート（試験直前）/チートシート（試験直前）
 gk_order: 5
+last_modified_at: 2026-07-14
 ---
 
 ## まず結論（この1ページで即断）

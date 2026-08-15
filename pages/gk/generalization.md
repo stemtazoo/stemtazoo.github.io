@@ -6,6 +6,7 @@ permalink: /gk/generalization/
 tags: [gk, machine_learning, generalization]
 gk_section: 機械学習の概要/モデルの選択・評価
 gk_order: 24
+last_modified_at: 2026-06-27
 ---
 
 ## まず結論

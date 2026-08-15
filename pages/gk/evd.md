@@ -6,6 +6,7 @@ permalink: /gk/evd/
 tags: [gk, linear_algebra]
 gk_section: 機械学習の概要/代表的な手法/教師なし学習
 gk_order: 13
+last_modified_at: 2026-06-27
 ---
 
 ## まず結論

@@ -6,6 +6,7 @@ permalink: /gk/learning-rate-scheduling/
 tags: [gk, neural_network, cheatsheet]
 gk_section: ディープラーニングの概要/ニューラルネットワークとディープラーニング
 gk_order: 7
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

@@ -6,6 +6,7 @@ permalink: /gk/segnet/
 tags: [gk, neural_network, cnn]
 gk_section: ディープラーニングの応用例/画像認識/セグメンテーションタスク
 gk_order: 1
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

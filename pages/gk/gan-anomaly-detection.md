@@ -6,6 +6,7 @@ permalink: /gk/gan-anomaly-detection/
 tags: [gk, neural_network]
 gk_section: ディープラーニングの応用例/データ生成
 gk_order: 11
+last_modified_at: 2026-06-27
 ---
 
 ## まず結論

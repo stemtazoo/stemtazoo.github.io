@@ -7,6 +7,7 @@ categories: [data-science]
 tags: [ds, statistics]
 prev: /ds/deviation-score/
 next: /ds/f-test/
+last_modified_at: 2026-05-01
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>

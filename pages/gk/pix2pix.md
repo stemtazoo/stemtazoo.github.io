@@ -6,6 +6,7 @@ permalink: /gk/pix2pix/
 tags: [gk, cnn, neural_network]
 gk_section: ディープラーニングの応用例/データ生成
 gk_order: 7
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

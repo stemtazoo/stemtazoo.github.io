@@ -6,6 +6,7 @@ permalink: /gk/crisp-dm-vs-ml-pipeline/
 tags: [gk, crisp-dm, ml_pipeline, comparison]
 gk_section: AIの社会実装に向けて/AIの社会実装に向けて
 gk_order: 4
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

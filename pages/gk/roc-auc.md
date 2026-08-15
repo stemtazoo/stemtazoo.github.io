@@ -6,6 +6,7 @@ permalink: /gk/roc-auc/
 tags: [gk, 機械学習, 評価指標, 頻出]
 gk_section: 機械学習の概要/モデルの選択・評価
 gk_order: 6
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

@@ -6,6 +6,7 @@ permalink: /gk/vit/
 tags: [gk, transformer, attention]
 gk_section: ディープラーニングの応用例/画像認識/ネオコグニトロンとLeNet
 gk_order: 15
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

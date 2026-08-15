@@ -6,6 +6,7 @@ permalink: /gk/actor-critic/
 tags: [gk, neural_network]
 gk_section: 機械学習の概要/代表的な手法/強化学習
 gk_order: 7
+last_modified_at: 2026-07-01
 ---
 
 ## まず結論

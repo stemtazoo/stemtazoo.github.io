@@ -6,6 +6,7 @@ permalink: /gk/relu-family-cheatsheet/
 tags: [gk, cheatsheet, neural_network]
 gk_section: ディープラーニングの概要/活性化関数
 gk_order: 4
+last_modified_at: 2026-07-14
 ---
 
 ## まず結論（試験で即切る）

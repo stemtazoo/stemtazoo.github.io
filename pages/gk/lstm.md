@@ -6,6 +6,7 @@ permalink: /gk/lstm/
 tags: [gk, neural_network, rnn, lstm]
 gk_section: ディープラーニングの要素技術/リカレントニューラルネットワーク (RNN)
 gk_order: 2
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

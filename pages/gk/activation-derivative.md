@@ -6,6 +6,7 @@ permalink: /gk/activation-derivative/
 tags: [gk, neural_network, cheatsheet]
 gk_section: ディープラーニングの概要/ニューラルネットワークとディープラーニング
 gk_order: 5
+last_modified_at: 2026-07-18
 ---
 
 ## まず結論

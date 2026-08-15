@@ -6,6 +6,7 @@ permalink: /ds/e-calculus/
 categories: [data-science]
 tags: [ds, calculus, math]
 next: /ds/eigenvalue/
+last_modified_at: 2026-07-14
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>

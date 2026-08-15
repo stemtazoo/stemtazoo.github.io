@@ -6,6 +6,7 @@ permalink: /gk/underfitting/
 tags: [gk, machine_learning, underfitting]
 gk_section: 機械学習の概要/よくあるつまずき（過学習など）
 gk_order: 2
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

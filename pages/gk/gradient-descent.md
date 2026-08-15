@@ -6,6 +6,7 @@ permalink: /gk/gradient-descent/
 tags: [gk, neural_network, optimization]
 gk_section: ディープラーニングの概要/誤差逆伝播法（Backpropagation）
 gk_order: 2
+last_modified_at: 2026-07-18
 ---
 
 ## まず結論

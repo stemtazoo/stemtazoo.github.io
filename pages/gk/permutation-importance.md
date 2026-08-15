@@ -6,6 +6,7 @@ permalink: /gk/permutation-importance/
 tags: [gk, metrics]
 gk_section: ディープラーニングの応用例/モデルの解釈性
 gk_order: 4
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

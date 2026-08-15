@@ -6,6 +6,7 @@ permalink: /gk/search-vs-ml-cheatsheet/
 tags: [gk, cheatsheet]
 gk_section: チートシート（試験直前）/チートシート（試験直前）
 gk_order: 3
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論（この1ページで即断）

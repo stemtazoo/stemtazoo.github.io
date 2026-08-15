@@ -6,6 +6,7 @@ permalink: /gk/cutmix/
 tags: [gk, cnn, neural_network]
 gk_section: ディープラーニングの応用例/画像認識/データ拡張
 gk_order: 10
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

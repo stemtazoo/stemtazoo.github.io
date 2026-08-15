@@ -6,6 +6,7 @@ permalink: /ds/data-literacy/
 categories: [business]
 tags: [ds, data-understanding, design]
 next: /ds/data-literacy-practice/
+last_modified_at: 2026-06-21
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>

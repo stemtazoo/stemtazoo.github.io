@@ -6,6 +6,7 @@ permalink: /gk/object-detection-summary/
 tags: [gk, 画像認識, 物体検出, まとめ]
 gk_section: ディープラーニングの応用例/画像認識/物体検出タスク
 gk_order: 2
+last_modified_at: 2026-07-14
 ---
 
 ## まず結論

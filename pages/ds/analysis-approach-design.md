@@ -7,6 +7,7 @@ categories: [business]
 tags: [ds, design]
 prev: /ds/why-structure/
 next: /ds/analysis-approach-selection/
+last_modified_at: 2026-07-01
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>

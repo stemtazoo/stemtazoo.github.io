@@ -6,6 +6,7 @@ permalink: /gk/image-tasks-summary/
 tags: [gk, cnn, computer_vision, cheatsheet]
 gk_section: ディープラーニングの応用例/画像認識/ネオコグニトロンとLeNet
 gk_order: 11
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論（ここだけで8割切れる）

@@ -6,6 +6,7 @@ permalink: /gk/agent57/
 tags: [gk, neural_network]
 gk_section: ディープラーニングの応用例/深層強化学習
 gk_order: 10
+last_modified_at: 2026-07-01
 ---
 
 ## まず結論

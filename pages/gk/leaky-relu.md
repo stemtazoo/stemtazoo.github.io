@@ -6,6 +6,7 @@ permalink: /gk/leaky-relu/
 tags: [gk, neural_network]
 gk_section: ディープラーニングの概要/活性化関数
 gk_order: 3
+last_modified_at: 2026-07-18
 ---
 
 ## まず結論

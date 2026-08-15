@@ -6,6 +6,7 @@ permalink: /gk/var-vs-arima/
 tags: [gk, time_series]
 gk_section: 機械学習の概要/代表的な手法/教師あり学習
 gk_order: 7
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

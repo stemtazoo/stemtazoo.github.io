@@ -6,6 +6,7 @@ permalink: /gk/anchor-defaultbox-rpn/
 tags: [G検定, 画像認識, 物体検出]
 gk_section: ディープラーニングの応用例/画像認識/ネオコグニトロンとLeNet
 gk_order: 3
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

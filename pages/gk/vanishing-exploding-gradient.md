@@ -6,6 +6,7 @@ permalink: /gk/vanishing-exploding-gradient/
 tags: [gk, neural_network, rnn, gradient]
 gk_section: ディープラーニングの要素技術/ネットワークの構成要素
 gk_order: 8
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

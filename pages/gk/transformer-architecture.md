@@ -6,6 +6,7 @@ permalink: /gk/transformer-architecture/
 tags: [gk, transformer, attention]
 gk_section: ディープラーニングの要素技術/トランスフォーマー (Transformer)
 gk_order: 5
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

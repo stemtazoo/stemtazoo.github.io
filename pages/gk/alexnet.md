@@ -6,6 +6,7 @@ permalink: /gk/alexnet/
 tags: [gk, cnn]
 gk_section: ディープラーニングの応用例/画像認識/物体認識タスク
 gk_order: 1
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

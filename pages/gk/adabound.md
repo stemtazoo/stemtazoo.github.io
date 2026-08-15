@@ -6,6 +6,7 @@ permalink: /gk/adabound/
 tags: [gk]
 gk_section: ディープラーニングの概要/最適化手法
 gk_order: 8
+last_modified_at: 2026-07-01
 ---
 
 ## まず結論

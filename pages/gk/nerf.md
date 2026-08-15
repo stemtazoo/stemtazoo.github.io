@@ -6,6 +6,7 @@ permalink: /gk/nerf/
 tags: [gk, vision]
 gk_section: ディープラーニングの応用例/データ生成
 gk_order: 12
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

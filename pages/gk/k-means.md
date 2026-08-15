@@ -6,6 +6,7 @@ permalink: /gk/k-means/
 tags: [gk, clustering]
 gk_section: 機械学習の概要/代表的な手法/教師なし学習
 gk_order: 1
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

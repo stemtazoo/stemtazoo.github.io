@@ -6,6 +6,7 @@ permalink: /gk/cross-validation-with-search/
 tags: [gk]
 gk_section: ディープラーニングの概要/最適化手法
 gk_order: 18
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

@@ -6,6 +6,7 @@ permalink: /gk/vae/
 tags: [gk, neural_network, generative_model]
 gk_section: ディープラーニングの要素技術/オートエンコーダ
 gk_order: 1
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

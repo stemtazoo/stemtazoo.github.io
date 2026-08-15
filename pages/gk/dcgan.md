@@ -6,6 +6,7 @@ permalink: /gk/dcgan/
 tags: [gk, neural_network, cnn, gan]
 gk_section: ディープラーニングの応用例/データ生成
 gk_order: 1
+last_modified_at: 2026-06-27
 ---
 
 ## まず結論

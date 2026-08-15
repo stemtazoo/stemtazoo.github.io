@@ -6,6 +6,7 @@ permalink: /gk/embedding-layer/
 tags: [gk, nlp, neural_network]
 gk_section: ディープラーニングの応用例/自然言語処理
 gk_order: 9
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

@@ -6,6 +6,7 @@ permalink: /gk/fpn/
 tags: [gk, cnn]
 gk_section: ディープラーニングの応用例/画像認識/物体検出タスク
 gk_order: 7
+last_modified_at: 2026-06-27
 ---
 
 ## まず結論

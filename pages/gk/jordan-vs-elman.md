@@ -6,6 +6,7 @@ permalink: /gk/jordan-vs-elman/
 tags: [gk, neural_network, rnn]
 gk_section: ディープラーニングの要素技術/リカレントニューラルネットワーク (RNN)
 gk_order: 12
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

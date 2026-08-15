@@ -7,6 +7,7 @@ categories: [data-science]
 tags: [ds, visualization]
 prev: /ds/drilldown-drillup/
 next: /ds/gantt-chart/
+last_modified_at: 2026-06-21
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>

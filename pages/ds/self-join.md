@@ -7,6 +7,7 @@ categories: [data-engineering]
 tags: [ds, data-processing, sql]
 prev: /ds/left-join-where/
 next: /ds/batch-vs-stream/
+last_modified_at: 2026-06-21
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>

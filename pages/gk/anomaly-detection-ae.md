@@ -6,6 +6,7 @@ permalink: /gk/anomaly-detection-ae/
 tags: [gk, neural_network]
 gk_section: ディープラーニングの要素技術/オートエンコーダ
 gk_order: 3
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

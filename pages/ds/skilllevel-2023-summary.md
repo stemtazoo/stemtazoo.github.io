@@ -6,6 +6,7 @@ permalink: /ds/skilllevel-2023-summary/
 categories: [business]
 tags: [ds, skillcheck]
 prev: /ds/skilllevel-2023-assistant-ds-datascience/
+last_modified_at: 2026-05-01
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>

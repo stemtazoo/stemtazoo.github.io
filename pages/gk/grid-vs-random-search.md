@@ -6,6 +6,7 @@ permalink: /gk/grid-vs-random-search/
 tags: [gk]
 gk_section: ディープラーニングの概要/最適化手法
 gk_order: 16
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

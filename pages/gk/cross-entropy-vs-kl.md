@@ -6,6 +6,7 @@ permalink: /gk/cross-entropy-vs-kl/
 tags: [gk, metrics, neural_network]
 gk_section: ディープラーニングの概要/誤差関数
 gk_order: 5
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

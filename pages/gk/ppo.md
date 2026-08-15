@@ -6,6 +6,7 @@ permalink: /gk/ppo/
 tags: [gk, reinforcement_learning, neural_network]
 gk_section: 機械学習の概要/代表的な手法/強化学習
 gk_order: 17
+last_modified_at: 2026-06-27
 ---
 
 ## まず結論

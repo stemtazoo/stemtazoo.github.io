@@ -7,6 +7,7 @@ categories: [business]
 tags: [ds, set-theory, design]
 prev: /ds/sigmoid-function/
 next: /ds/type1-type2-error/
+last_modified_at: 2026-07-14
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>

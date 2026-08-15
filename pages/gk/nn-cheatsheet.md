@@ -6,6 +6,7 @@ permalink: /gk/nn-cheatsheet/
 tags: [gk, neural_network, cheatsheet]
 gk_section: チートシート（試験直前）/チートシート（試験直前）
 gk_order: 1
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

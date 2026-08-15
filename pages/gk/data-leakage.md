@@ -6,6 +6,7 @@ permalink: /gk/data-leakage/
 tags: [gk, machine_learning, evaluation]
 gk_section: AIの社会実装に向けて/AIの社会実装に向けて
 gk_order: 11
+last_modified_at: 2026-07-18
 ---
 
 ## まず結論

@@ -6,6 +6,7 @@ permalink: /gk/perceptron/
 tags: [gk, neural_network, perceptron]
 gk_section: ディープラーニングの概要/ニューラルネットワークとディープラーニング
 gk_order: 1
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

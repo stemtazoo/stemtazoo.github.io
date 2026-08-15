@@ -6,6 +6,7 @@ permalink: /gk/differential-privacy/
 tags: [gk, security, privacy]
 gk_section: AIの法律と倫理/AIの法律と倫理
 gk_order: 32
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

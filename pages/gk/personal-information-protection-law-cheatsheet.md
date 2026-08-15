@@ -6,6 +6,7 @@ permalink: /gk/personal-information-protection-law-cheatsheet/
 tags: [gk, ethics, privacy, cheatsheet]
 gk_section: AIの法律と倫理/AIの法律と倫理
 gk_order: 8
+last_modified_at: 2026-07-14
 ---
 
 ## まず結論

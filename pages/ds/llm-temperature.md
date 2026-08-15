@@ -7,6 +7,7 @@ categories: [ai-utilization]
 tags: [ds, ai-use]
 prev: /ds/hallucination/
 next: /ds/mlops/
+last_modified_at: 2026-05-01
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>

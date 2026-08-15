@@ -7,6 +7,7 @@ categories: [business]
 tags: [ds, design]
 prev: /ds/industry4-0/
 next: /ds/japanese-morphological-analysis-tools/
+last_modified_at: 2026-06-21
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>

@@ -6,6 +6,7 @@ permalink: /gk/mlops/
 tags: [gk, mlops, devops]
 gk_section: AIの社会実装に向けて/AIの社会実装に向けて
 gk_order: 6
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

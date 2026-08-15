@@ -6,6 +6,7 @@ permalink: /gk/alphago-vs-alphastar/
 tags: [gk, reinforcement_learning, cheatsheet]
 gk_section: ディープラーニングの応用例/深層強化学習
 gk_order: 4
+last_modified_at: 2026-05-01
 ---
 
 ## まず結論

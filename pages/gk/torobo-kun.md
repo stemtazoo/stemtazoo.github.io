@@ -6,6 +6,7 @@ permalink: /gk/torobo-kun/
 tags: [gk, ai_history]
 gk_section: 人工知能をめぐる動向/人工知能をめぐる動向
 gk_order: 5
+last_modified_at: 2026-07-18
 ---
 
 ## まず結論

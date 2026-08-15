@@ -6,6 +6,7 @@ permalink: /gk/contrastive-vs-triplet-loss/
 tags: [gk, neural_network, metrics]
 gk_section: ディープラーニングの概要/誤差関数
 gk_order: 2
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

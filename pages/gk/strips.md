@@ -6,6 +6,7 @@ permalink: /gk/strips/
 tags: [gk, planning]
 gk_section: 人工知能をめぐる動向/人工知能をめぐる動向
 gk_order: 11
+last_modified_at: 2026-07-18
 ---
 
 ## まず結論

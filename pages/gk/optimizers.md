@@ -6,6 +6,7 @@ permalink: /gk/optimizers/
 tags: [gk, neural_network, optimizer]
 gk_section: ディープラーニングの概要/ニューラルネットワークとディープラーニング
 gk_order: 3
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

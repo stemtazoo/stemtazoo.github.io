@@ -7,6 +7,7 @@ categories: [data-science]
 tags: [ds, modeling, evaluation]
 prev: /ds/information-gain/
 next: /ds/coefficient-of-determination-contribution/
+last_modified_at: 2026-06-21
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>

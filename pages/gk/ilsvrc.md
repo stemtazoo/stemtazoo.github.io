@@ -6,6 +6,7 @@ permalink: /gk/ilsvrc/
 tags: [gk, cnn]
 gk_section: 人工知能をめぐる動向/人工知能をめぐる動向
 gk_order: 12
+last_modified_at: 2026-06-27
 ---
 
 ## まず結論

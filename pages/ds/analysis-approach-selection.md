@@ -7,6 +7,7 @@ categories: [business]
 tags: [ds, design]
 prev: /ds/analysis-approach-design/
 next: /ds/analytics-4types/
+last_modified_at: 2026-06-23
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>

@@ -6,6 +6,7 @@ permalink: /gk/cnn-cheatsheet/
 tags: [gk, cnn, cheatsheet]
 gk_section: ディープラーニングの応用例/画像認識/ネオコグニトロンとLeNet
 gk_order: 8
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論（この1枚でOK）

@@ -6,6 +6,7 @@ permalink: /gk/multi-head-attention/
 tags: [gk, attention, transformer]
 gk_section: ディープラーニングの要素技術/トランスフォーマー (Transformer)
 gk_order: 6
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

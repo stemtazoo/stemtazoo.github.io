@@ -6,6 +6,7 @@ permalink: /gk/pooling-stride-dilation/
 tags: [gk, neural_network, cnn, cheatsheet]
 gk_section: ディープラーニングの要素技術/ネットワークの構成要素
 gk_order: 6
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

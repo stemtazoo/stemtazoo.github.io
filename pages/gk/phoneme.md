@@ -6,6 +6,7 @@ permalink: /gk/phoneme/
 tags: [gk, speech, nlp]
 gk_section: ディープラーニングの応用例/音声処理
 gk_order: 8
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

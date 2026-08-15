@@ -6,6 +6,7 @@ permalink: /gk/paraphrasing/
 tags: [gk, nlp]
 gk_section: ディープラーニングの応用例/自然言語処理
 gk_order: 26
+last_modified_at: 2026-07-18
 ---
 
 ## まず結論

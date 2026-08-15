@@ -6,6 +6,7 @@ permalink: /gk/early-stopping/
 tags: [gk, neural_network]
 gk_section: ディープラーニングの概要/正則化
 gk_order: 4
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

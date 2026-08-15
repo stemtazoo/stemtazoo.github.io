@@ -6,6 +6,7 @@ permalink: /gk/reinforcement-learning-cheatsheet/
 tags: [gk, reinforcement_learning, cheatsheet]
 gk_section: 機械学習の概要/代表的な手法/強化学習
 gk_order: 2
+last_modified_at: 2026-05-01
 ---
 
 ## まず結論

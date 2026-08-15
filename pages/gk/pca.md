@@ -6,6 +6,7 @@ permalink: /gk/pca/
 tags: [gk, unsupervised_learning]
 gk_section: 機械学習の概要/代表的な手法/教師なし学習
 gk_order: 16
+last_modified_at: 2026-06-27
 ---
 
 ## まず結論

@@ -6,6 +6,7 @@ permalink: /gk/gan-variants/
 tags: [gk, neural_network, gan, cheatsheet]
 gk_section: ディープラーニングの応用例/データ生成
 gk_order: 2
+last_modified_at: 2026-06-27
 ---
 
 ## まず結論

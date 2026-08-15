@@ -6,6 +6,7 @@ permalink: /gk/visual-question-answering/
 tags: [gk, vision, nlp]
 gk_section: ディープラーニングの応用例/マルチモーダル
 gk_order: 9
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

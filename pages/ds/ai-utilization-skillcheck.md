@@ -7,6 +7,7 @@ categories: [business]
 tags: [ds, skillcheck]
 prev: /ds/model-curriculum-summary/
 next: /ds/business-skillcheck/
+last_modified_at: 2026-07-01
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>

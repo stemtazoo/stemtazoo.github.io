@@ -6,6 +6,7 @@ permalink: /gk/rmse-mae/
 tags: [gk, metrics]
 gk_section: 機械学習の概要/モデルの選択・評価
 gk_order: 9
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

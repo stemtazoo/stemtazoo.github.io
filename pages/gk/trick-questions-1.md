@@ -6,6 +6,7 @@ permalink: /gk/trick-questions-1/
 tags: [gk, cheatsheet]
 gk_section: ひっかけ問題集/ひっかけ問題集
 gk_order: 1
+last_modified_at: 2026-07-14
 ---
 
 ## まず結論

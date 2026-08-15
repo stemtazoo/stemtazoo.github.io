@@ -6,6 +6,7 @@ permalink: /gk/mlp/
 tags: [gk, neural_network, mlp]
 gk_section: ディープラーニングの概要/ニューラルネットワークとディープラーニング
 gk_order: 2
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

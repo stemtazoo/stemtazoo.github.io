@@ -6,6 +6,7 @@ permalink: /gk/adam/
 tags: [gk, neural_network]
 gk_section: ディープラーニングの概要/最適化手法
 gk_order: 7
+last_modified_at: 2026-06-27
 ---
 
 ## まず結論

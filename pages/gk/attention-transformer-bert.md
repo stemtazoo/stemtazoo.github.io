@@ -6,6 +6,7 @@ permalink: /gk/attention-transformer-bert/
 tags: [gk, neural_network, attention, transformer]
 gk_section: ディープラーニングの応用例/自然言語処理
 gk_order: 22
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

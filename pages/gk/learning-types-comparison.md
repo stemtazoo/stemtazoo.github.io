@@ -6,6 +6,7 @@ permalink: /gk/learning-types-comparison/
 tags: [gk, 機械学習, まとめ, 頻出]
 gk_section: 機械学習の概要/代表的な手法/学習の種類
 gk_order: 4
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

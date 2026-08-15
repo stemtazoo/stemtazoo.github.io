@@ -6,6 +6,7 @@ permalink: /gk/second-ai-boom/
 tags: [gk, cheatsheet]
 gk_section: 人工知能（AI）とは/人工知能（AI）とは
 gk_order: 2
+last_modified_at: 2026-07-18
 ---
 
 ## まず結論

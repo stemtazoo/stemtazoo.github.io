@@ -6,6 +6,7 @@ permalink: /gk/reward-shaping/
 tags: [gk, reinforcement_learning]
 gk_section: ディープラーニングの応用例/深層強化学習
 gk_order: 20
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

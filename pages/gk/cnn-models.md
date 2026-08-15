@@ -6,6 +6,7 @@ permalink: /gk/cnn-models/
 tags: [gk, neural_network, cnn, models]
 gk_section: ディープラーニングの要素技術/ネットワークの構成要素
 gk_order: 4
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

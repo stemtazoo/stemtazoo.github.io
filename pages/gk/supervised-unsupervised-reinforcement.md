@@ -6,6 +6,7 @@ permalink: /gk/supervised-unsupervised-reinforcement/
 tags: [gk, machine_learning, cheatsheet]
 gk_section: 機械学習の概要/代表的な手法/学習の種類
 gk_order: 5
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

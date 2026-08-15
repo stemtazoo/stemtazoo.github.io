@@ -6,6 +6,7 @@ permalink: /gk/detection-segmentation-map/
 tags: [gk, cnn, cheatsheet]
 gk_section: ディープラーニングの応用例/画像認識/ネオコグニトロンとLeNet
 gk_order: 14
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

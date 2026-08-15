@@ -6,6 +6,7 @@ permalink: /gk/dqn/
 tags: [gk]
 gk_section: ディープラーニングの応用例/深層強化学習
 gk_order: 2
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

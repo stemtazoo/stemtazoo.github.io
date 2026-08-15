@@ -6,6 +6,7 @@ permalink: /gk/data-augmentation-cheatsheet/
 tags: [gk, cnn, cheatsheet]
 gk_section: ディープラーニングの応用例/画像認識/データ拡張
 gk_order: 3
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

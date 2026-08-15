@@ -6,6 +6,7 @@ permalink: /gk/diffusion-model/
 tags: [gk, neural_network, generative_model]
 gk_section: ディープラーニングの応用例/データ生成
 gk_order: 4
+last_modified_at: 2026-05-01
 ---
 
 ## まず結論

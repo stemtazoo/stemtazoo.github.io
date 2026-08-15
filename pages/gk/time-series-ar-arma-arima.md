@@ -6,6 +6,7 @@ permalink: /gk/time-series-ar-arma-arima/
 tags: [gk, time_series]
 gk_section: 機械学習の概要/代表的な手法/教師あり学習
 gk_order: 6
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

@@ -7,6 +7,7 @@ categories: [data-science]
 tags: [ds, data-processing, preprocessing]
 prev: /ds/regular-expression-basic/
 next: /ds/regular-expression-email/
+last_modified_at: 2026-05-01
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>

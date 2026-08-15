@@ -6,6 +6,7 @@ permalink: /gk/symbol-grounding/
 tags: [gk, ethics]
 gk_section: 人工知能（AI）とは/人工知能（AI）とは
 gk_order: 13
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

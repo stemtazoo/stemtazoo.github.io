@@ -6,6 +6,7 @@ permalink: /gk/segmentation-models-comparison/
 tags: [gk, cnn, cheatsheet]
 gk_section: ディープラーニングの応用例/画像認識/セグメンテーションタスク
 gk_order: 7
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

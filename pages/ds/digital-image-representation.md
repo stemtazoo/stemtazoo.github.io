@@ -7,6 +7,7 @@ categories: [business]
 tags: [ds, unstructured-data, design]
 prev: /ds/design-of-experiments/
 next: /ds/digital-twin/
+last_modified_at: 2026-06-21
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>

@@ -6,6 +6,7 @@ permalink: /gk/search-and-inference/
 tags: [gk]
 gk_section: 人工知能をめぐる動向/人工知能をめぐる動向
 gk_order: 17
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

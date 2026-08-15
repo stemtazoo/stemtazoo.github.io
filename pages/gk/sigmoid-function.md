@@ -6,6 +6,7 @@ permalink: /gk/sigmoid-function/
 tags: [gk, neural_network]
 gk_section: ディープラーニングの概要/活性化関数
 gk_order: 1
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

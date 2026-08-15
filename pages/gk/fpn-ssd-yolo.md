@@ -6,6 +6,7 @@ permalink: /gk/fpn-ssd-yolo/
 tags: [gk, cnn, cheatsheet]
 gk_section: ディープラーニングの応用例/画像認識/物体検出タスク
 gk_order: 8
+last_modified_at: 2026-05-01
 ---
 
 ## まず結論

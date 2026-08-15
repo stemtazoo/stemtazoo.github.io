@@ -6,6 +6,7 @@ permalink: /gk/seq2seq-attention-transformer/
 tags: [gk, rnn, attention, transformer, nlp]
 gk_section: ディープラーニングの要素技術/リカレントニューラルネットワーク (RNN)
 gk_order: 7
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

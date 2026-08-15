@@ -6,6 +6,7 @@ permalink: /gk/backpropagation/
 tags: [gk, neural_network, backprop]
 gk_section: ディープラーニングの概要/誤差逆伝播法（Backpropagation）
 gk_order: 1
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

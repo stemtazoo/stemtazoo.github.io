@@ -6,6 +6,7 @@ permalink: /gk/bias-variance/
 tags: [gk, metrics]
 gk_section: 機械学習の概要/モデルの選択・評価
 gk_order: 18
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

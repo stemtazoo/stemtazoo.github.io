@@ -7,6 +7,7 @@ categories: [data-engineering]
 tags: [ds, data-storage, database]
 prev: /ds/nosql/
 next: /ds/olap/
+last_modified_at: 2026-05-01
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>

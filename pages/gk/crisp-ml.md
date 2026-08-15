@@ -6,6 +6,7 @@ permalink: /gk/crisp-ml/
 tags: [gk, ml_process]
 gk_section: AIの社会実装に向けて/AIの社会実装に向けて
 gk_order: 5
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

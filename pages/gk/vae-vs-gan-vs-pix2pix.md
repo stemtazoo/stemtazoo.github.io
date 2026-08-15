@@ -6,6 +6,7 @@ permalink: /gk/vae-vs-gan-vs-pix2pix/
 tags: [gk, neural_network, cheatsheet]
 gk_section: ディープラーニングの応用例/データ生成
 gk_order: 10
+last_modified_at: 2026-06-21
 ---
 
 ## まず結論

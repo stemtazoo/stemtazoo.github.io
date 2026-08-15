@@ -6,6 +6,7 @@ permalink: /gk/detection-vs-semantic-vs-instance/
 tags: [gk, cnn, cheatsheet]
 gk_section: ディープラーニングの応用例/画像認識/ネオコグニトロンとLeNet
 gk_order: 13
+last_modified_at: 2026-05-01
 ---
 
 ## まず結論

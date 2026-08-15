@@ -7,6 +7,7 @@ categories: [ai-utilization]
 tags: [ds, environment-setup, ai-use]
 prev: /ds/llm-temperature/
 next: /ds/sora-ame-kasa/
+last_modified_at: 2026-06-21
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>

@@ -7,6 +7,7 @@ categories: [business]
 tags: [ds, visualization, design]
 prev: /ds/availability-heuristic/
 next: /ds/bi-tool-functions/
+last_modified_at: 2026-07-14
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
