@@ -1,13 +1,13 @@
-﻿---
+---
 layout: page
 title: ETLとは？（データ統合の基本プロセス）【DS検定リテラシー】
-description: "ETLとは、データを「抽出（Extract）→変換（Transform）→格納（Load）」する一連の処理のことです。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。"
+description: "ETLは、データをExtract（抽出）→Transform（変換）→Load（格納）の順で処理するデータ統合プロセスです。DWHへ格納する前に整形する点、ELTやデータレイクとの違い、DS検定での判断基準を整理します。"
 permalink: /ds/etl/
 categories: [data-engineering]
 tags: [ds, data-collection, data-processing]
 prev: /ds/batch-vs-stream/
 next: /ds/hadoop/
-last_modified_at: 2026-06-21
+last_modified_at: 2026-08-16
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -15,120 +15,97 @@ last_modified_at: 2026-06-21
 </div>
 
 ## まず結論
-ETLとは、データを「抽出（Extract）→変換（Transform）→格納（Load）」する一連の処理のことです。  
-DS検定では「DWHにデータを入れる前の処理は何か？」という形で問われます。
 
+**ETL = Extract（抽出）→ Transform（変換）→ Load（格納）** です。
+
+DS検定では、**「変換してからDWHなどへ格納する」**という順番を押さえるのがポイントです。
 
 ## 直感的な説明
 
-企業には、
+企業には販売・会計・顧客管理など、別々のシステムがあります。
 
-- 販売システム
-- 会計システム
-- 顧客管理システム
-
-など、別々のデータがあります。
-
-そのままでは形式がバラバラ。
+それぞれのデータは形式が異なるため、そのままでは分析しにくいことがあります。
 
 そこで、
 
-① 必要なデータを取り出す  
-② 形式をそろえて加工する  
-③ 分析基盤（DWHなど）に入れる  
+1. 必要なデータを取り出す
+2. 形式をそろえて加工する
+3. DWHなどの分析基盤へ格納する
 
-この流れがETLです。
-
-「データを整えてから倉庫に入れる作業」と考えると分かりやすいです。
-
+という流れでデータを整えます。これがETLです。
 
 ## 定義・仕組み
 
-ETLは3つの工程から成ります。
+| 工程 | 意味 | 例 |
+|---|---|---|
+| Extract | 抽出 | 販売・会計システムからデータ取得 |
+| Transform | 変換 | 型・単位の統一、欠損処理、不要列削除 |
+| Load | 格納 | 整形済みデータをDWHへ保存 |
 
-### ① Extract（抽出）
-各システムからデータを取り出す
+### Extract（抽出）
 
+各システムから必要なデータを取り出します。
 
-### ② Transform（変換）
+### Transform（変換）
+
+分析しやすい形へ整えます。
+
 - データ形式の統一
 - 不要データの削除
 - 単位の変換
 - 欠損値処理
 
-ここが最も重要です。
+### Load（格納）
 
+整形済みデータをDWHなどへ格納します。
 
-### ③ Load（格納）
-整形済みデータをDWHに保存する
-
-
-重要ポイント：
-
-ETLは「分析前の前処理プロセス」です。  
-分析そのものではありません。
-
+**ETLは分析そのものではなく、分析に使うデータを準備する工程**です。
 
 ## どんな場面で使う？
 
-### 使う場面
+### DWHを作るとき
 
-- DWH構築
-- 経営ダッシュボード作成
-- 部門横断データ統合
+複数システムのデータを統合して、分析用データとして蓄積するときに使います。
 
-特に「複数システムを統合する」場面で使われます。
+### 経営ダッシュボードを作るとき
 
+販売・顧客・会計などのデータ形式をそろえてから可視化します。
 
-### 向かない場面
+### 部門横断でデータを統合するとき
 
-- リアルタイム処理
-- 生データをそのまま保存するデータレイク
-
-その場合はELTやストリーム処理が使われます。
-
+異なるシステム間の表記や単位を合わせる処理が必要になります。
 
 ## よくある誤解・混同
 
-### ① ETL＝データ分析？
+### ❌ ETL = データ分析
 
-違います。
+ETLは**分析前のデータ統合・準備プロセス**です。
 
-ETLは分析の前段階です。
-
-DS検定では  
-「分析モデルを構築する工程」と混同させてきます。
-
-
-### ② ELTとの違い
+### ETLとELTの違い
 
 | 項目 | ETL | ELT |
-|------|-----|-----|
-| 変換タイミング | 格納前 | 格納後 |
-| 主な用途 | 従来型DWH | クラウド基盤 |
+|---|---|---|
+| 順番 | 抽出 → 変換 → 格納 | 抽出 → 格納 → 変換 |
+| 変換する時点 | 格納前 | 格納後 |
+| 判断の軸 | 整えてから入れる | まず入れてから整える |
 
-DS検定では  
-「クラウド」「大容量基盤」とあればELT寄りです。
+### データレイクとの違い
 
+- **ETL**：データを移動・加工するプロセス
+- **データレイク**：さまざまなデータを蓄積する考え方・保存基盤
 
-### ③ データレイクとの混同
-
-データレイクは保存の考え方。  
-ETLは加工プロセス。
-
-役割がまったく違います。
-
+「処理の流れ」なのか「保存先・保存の考え方」なのかで切り分けます。
 
 ## まとめ（試験直前用）
 
-- ETL＝抽出→変換→格納  
-- DWHに入れる前の整形作業  
-- 分析そのものではない  
-- 複数システム統合に必須  
-- 「変換してから保存」→ ETL
-
+- ETL = **抽出 → 変換 → 格納**
+- Transformは格納前に行う
+- DWH向けのデータ統合で使われる
+- 分析モデルを作る工程ではない
+- **格納前に変換 = ETL / 格納後に変換 = ELT**
 
 ## 対応スキル項目（データエンジニアリング力シート）
+
 - データ基盤
 - データ統合
 - ★ データ統合プロセス（ETL）の基本を理解している
@@ -139,45 +116,24 @@ ETLは加工プロセス。
 <ul style="padding-left: 20px;">
 {% assign current_tags = page.tags %}
 {% assign count = 0 %}
-
 {% for p in site.pages %}
   {% if p.url != page.url and p.tags %}
     {% assign matched = false %}
-
     {% for tag in current_tags %}
-      {% if p.tags contains tag and tag != "ds" %}
-        {% assign matched = true %}
-      {% endif %}
+      {% if p.tags contains tag and tag != "ds" %}{% assign matched = true %}{% endif %}
     {% endfor %}
-
     {% if matched %}
-      <li style="margin-bottom: 6px;">
-        <a href="{{ p.url }}">{{ p.title }}</a>
-      </li>
+      <li style="margin-bottom: 6px;"><a href="{{ p.url }}">{{ p.title }}</a></li>
       {% assign count = count | plus: 1 %}
     {% endif %}
-
-    {% if count >= 5 %}
-      {% break %}
-    {% endif %}
+    {% if count >= 5 %}{% break %}{% endif %}
   {% endif %}
 {% endfor %}
 </ul>
 
 <hr>
-
-<div style="margin-top: 16px;">
-  🏠 <a href="/ds/">DS検定トップに戻る</a>
-</div>
-
+<div style="margin-top: 16px;">🏠 <a href="/ds/">DS検定トップに戻る</a></div>
 <div style="display:flex;justify-content:space-between;margin-top:12px;">
-
-  {% if page.previous.url %}
-    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
-  {% endif %}
-
-  {% if page.next.url %}
-    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
-  {% endif %}
-
+  {% if page.previous.url %}<a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>{% endif %}
+  {% if page.next.url %}<a href="{{ page.next.url }}">{{ page.next.title }} →</a>{% endif %}
 </div>
