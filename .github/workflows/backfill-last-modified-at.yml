@@ -1,4 +1,4 @@
-name: Backfill missing article update dates
+name: Backfill missing DS and GK article update dates
 
 on:
   push:
@@ -20,18 +20,18 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Add missing last_modified_at values
+      - name: Add missing DS and GK article update dates
         run: python scripts/backfill_last_modified_at.py
 
       - name: Commit updated pages
         run: |
-          if git diff --quiet -- pages; then
-            echo "No missing update dates found."
+          if git diff --quiet -- pages/ds pages/gk; then
+            echo "No missing DS/GK article update dates found."
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add pages
-          git commit -m "Backfill missing article update dates"
+          git add pages/ds pages/gk
+          git commit -m "Backfill missing DS and GK article update dates"
           git push
