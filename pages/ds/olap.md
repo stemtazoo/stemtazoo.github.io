@@ -153,5 +153,4 @@ DS検定では、OLAP操作とOLTPとの違いを切り分けられるように�
   {% if page.next.url %}
     <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
   {% endif %}
-{% endfor %}
 </div>
