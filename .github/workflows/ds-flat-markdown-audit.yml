@@ -8,7 +8,7 @@ on:
       - 'scripts/audit_ds_flat_markdown.py'
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   audit:
@@ -30,3 +30,15 @@ jobs:
         with:
           name: ds-flat-markdown-audit
           path: docs/audits/ds-flat-markdown-audit.md
+
+      - name: Commit audit report
+        run: |
+          if git diff --quiet -- docs/audits/ds-flat-markdown-audit.md; then
+            echo "Audit report is unchanged."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/audits/ds-flat-markdown-audit.md
+          git commit -m "Update DS flat Markdown audit report"
+          git push
