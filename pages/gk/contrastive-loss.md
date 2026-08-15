@@ -6,7 +6,7 @@ permalink: /gk/contrastive-loss/
 tags: [gk, neural_network, metrics]
 gk_section: ディープラーニングの概要/誤差関数
 gk_order: 1
-last_modified_at: 2026-06-17
+last_modified_at: 2026-08-15
 ---
 
 ## まず結論
@@ -23,6 +23,9 @@ G検定では、Contrastive Lossを「分類クラスを直接当てる損失」
 | 代表的な用途 | 顔認識、画像検索、類似文検索、推薦 |
 
 試験では、**「距離」「類似・非類似」「埋め込み表現」**が出てきたらContrastive Lossを疑うと判断しやすいです。
+
+📌 **Instagramでも5枚のカルーセルで復習できます。**
+[Contrastive Loss｜G検定対策カルーセルを見る](https://www.instagram.com/p/DcCiz_EmX_v/)
 
 ---
 
