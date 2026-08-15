@@ -1,12 +1,12 @@
 ---
 layout: search
 title: サイト内検索
-description: FE、SG試験、G検定、DS検定の記事をキーワードで検索できます。
+description: 基本情報処理技術者試験、SG試験、G検定、DS検定の記事をキーワードで検索できます。
 permalink: /search/
 sitemap: true
 ---
 
-<p class="search-page-description">FE、SG試験、G検定、DS検定の記事をキーワードで検索できます。</p>
+<p class="search-page-description">基本情報処理技術者試験、SG試験、G検定、DS検定の記事をキーワードで検索できます。</p>
 
 <div class="search-panel" data-search-root data-search-index="{{ '/search-index.json' | relative_url }}">
   <label class="search-panel__label" for="site-search-input">検索キーワード</label>
