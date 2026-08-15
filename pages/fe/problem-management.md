@@ -183,3 +183,5 @@ last_modified_at: 2026-07-20
 覚える一文はこれです。
 
 > **復旧はインシデント管理、原因究明と再発防止は問題管理。**
+
+{% include fe_article_footer.html %}

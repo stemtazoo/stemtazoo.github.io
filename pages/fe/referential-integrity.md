@@ -265,3 +265,5 @@ NULLを禁止したい場合は、`NOT NULL`も指定します。
 覚える一文はこれです。
 
 > **FOREIGN KEYで参照する列を決め、REFERENCESで参照先を指定する。**
+
+{% include fe_article_footer.html %}

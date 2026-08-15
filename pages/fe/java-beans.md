@@ -217,3 +217,5 @@ FE試験で単にJavaBeansと出た場合は、一般的な再利用可能部品
 試験直前は、次の一文で整理します。
 
 > **ライブラリ全体ではなく、再利用できるJavaの部品がJavaBeans。**
+
+{% include fe_article_footer.html %}

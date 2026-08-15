@@ -321,3 +321,5 @@ SOAについては、[SOAとは？](/fe/soa/)で詳しく整理しています�
 - HRMは従業員、SCMは供給の流れ、財務管理は企業のお金を扱う
 
 > **営業活動ならSFA、顧客関係やワントゥワンマーケティングならCRM。**
+
+{% include fe_article_footer.html %}
