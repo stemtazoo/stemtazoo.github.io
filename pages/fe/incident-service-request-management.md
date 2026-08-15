@@ -4,7 +4,10 @@ title: インシデント及びサービス要求管理とは？受付後の記�
 description: インシデント及びサービス要求管理について、受付後に最初に行う記録、分類、優先度の割当て、段階的取扱いの違いを、基本情報技術者試験の選択肢を切る視点で整理します。
 permalink: /fe/incident-service-request-management/
 tags: [fe, fe-management, service-management, incident-management]
-last_modified_at: 2026-07-29
+fe_section: マネジメント系
+fe_subsection: サービスマネジメント
+fe_order: 220
+last_modified_at: 2026-08-15
 ---
 
 ## まず結論

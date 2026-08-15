@@ -3,8 +3,11 @@ layout: page
 title: 反復処理と不動点とは？値が変わらなくなる条件の読み方【FE試験】
 description: "基本情報技術者試験で問われる反復処理について、代入を数回展開して処理を追う方法と、値が変化しなくなったときに f(x)=x が成り立つ不動点の考え方を整理します。初期値との混同や、収束条件の読み違いを避ける判断軸を解説します。"
 permalink: /fe/fixed-point-iteration/
-tags: [fe, technology, algorithm, numerical-analysis]
-last_modified_at: 2026-08-12
+tags: [fe, fe-technology, basic-theory, algorithm, numerical-analysis]
+fe_section: テクノロジ系
+fe_subsection: 基礎理論
+fe_order: 140
+last_modified_at: 2026-08-15
 ---
 
 ## まず結論

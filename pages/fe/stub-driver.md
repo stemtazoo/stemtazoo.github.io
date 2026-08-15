@@ -3,8 +3,11 @@ layout: page
 title: スタブとドライバの違いとは？トップダウンテスト・ボトムアップテストで整理【FE試験】
 description: 基本情報技術者試験で混同しやすいスタブとドライバを、結合テスト、トップダウンテスト、ボトムアップテストの流れから整理します。上位からテストする場合は下位の代役としてスタブ、下位からテストする場合は上位の代役としてドライバを使う判断軸を確認します。
 permalink: /fe/stub-driver/
-tags: [fe, technology, software-testing, integration-test]
-last_modified_at: 2026-07-29
+tags: [fe, fe-technology, system-development, software-testing, integration-test]
+fe_section: テクノロジ系
+fe_subsection: システム開発技術
+fe_order: 30
+last_modified_at: 2026-08-15
 ---
 
 ## まず結論

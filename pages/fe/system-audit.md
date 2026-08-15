@@ -3,8 +3,11 @@ layout: page
 title: システム監査とは？独立性・報告先・責任の所在を整理【FE試験】
 description: "基本情報技術者試験で問われやすいシステム監査について、システム監査人の役割、監査依頼者への報告、監査対象からの独立性、専門家支援を受ける場合の責任の所在を整理します。選択肢で迷いやすい自己監査や責任の丸投げを切る判断軸も確認します。"
 permalink: /fe/system-audit/
-tags: [fe, management, system-audit, governance]
-last_modified_at: 2026-08-12
+tags: [fe, fe-management, system-audit, governance]
+fe_section: マネジメント系
+fe_subsection: システム監査
+fe_order: 410
+last_modified_at: 2026-08-15
 ---
 
 ## まず結論

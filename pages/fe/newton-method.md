@@ -3,8 +3,11 @@ layout: page
 title: ニュートン法とは？接線で方程式の解に近づく方法【FE試験】
 description: "基本情報技術者試験で問われやすいニュートン法について、方程式 f(x)=0 の解の近似値を、接線と微分を使って反復的に求める方法として整理します。微分可能性、初期値は1つ、必ず収束するとは限らない点を押さえ、選択肢を切る判断軸を確認します。"
 permalink: /fe/newton-method/
-tags: [fe, technology, algorithm, numerical-analysis]
-last_modified_at: 2026-07-06
+tags: [fe, fe-technology, basic-theory, algorithm, numerical-analysis]
+fe_section: テクノロジ系
+fe_subsection: 基礎理論
+fe_order: 130
+last_modified_at: 2026-08-15
 ---
 
 ## まず結論

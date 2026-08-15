@@ -3,8 +3,11 @@ layout: page
 title: 2進数の表現とは？2の補数と2進小数を整理【FE試験】
 description: "基本情報技術者試験で問われやすい2進数の表現について、2の補数による負数表現と、2進小数の読み方を整理します。ビット反転して1を足す方法、小数点以下の重み、分数を2進小数へ直す考え方を確認します。"
 permalink: /fe/binary-representation/
-tags: [fe, technology, binary, computer-architecture]
-last_modified_at: 2026-08-14
+tags: [fe, fe-technology, basic-theory, binary, computer-system]
+fe_section: テクノロジ系
+fe_subsection: 基礎理論
+fe_order: 15
+last_modified_at: 2026-08-15
 ---
 
 ## まず結論

@@ -3,8 +3,11 @@ layout: page
 title: "機能要件と非機能要件の違いとは？品質・性能・運用で切り分ける【基本情報技術者試験】"
 description: "機能要件と非機能要件の違いを、業務要件との関係も含めて初心者向けに整理します。基本情報技術者試験で選択肢を切るための判断基準も解説します。"
 permalink: /fe/functional-nonfunctional-requirements/
-tags: [fe, system-development, requirements-definition, non-functional-requirements]
-last_modified_at: 2026-08-08
+tags: [fe, fe-technology, system-development, requirements-definition, non-functional-requirements]
+fe_section: テクノロジ系
+fe_subsection: システム開発技術
+fe_order: 70
+last_modified_at: 2026-08-15
 ---
 
 ## まず結論

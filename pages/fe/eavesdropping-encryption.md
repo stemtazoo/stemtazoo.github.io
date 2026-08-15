@@ -3,8 +3,11 @@ layout: page
 title: 盗聴対策とは？通信の暗号化とアクセス制御の違いを整理【FE試験】
 description: "基本情報技術者試験で問われやすい盗聴対策について、通信経路上でデータを読まれないようにする通信の暗号化を中心に整理します。IPアドレス制限、パスワード設定、ポート番号変更との違いを押さえ、選択肢を切る判断軸を確認します。"
 permalink: /fe/eavesdropping-encryption/
-tags: [fe, security, encryption, network]
-last_modified_at: 2026-07-06
+tags: [fe, fe-technology, security, network, encryption]
+fe_section: 情報セキュリティ
+fe_subsection: 情報セキュリティ問題
+fe_order: 20
+last_modified_at: 2026-08-15
 ---
 
 ## まず結論

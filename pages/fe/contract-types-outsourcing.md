@@ -3,8 +3,11 @@ layout: page
 title: 請負契約・準委任契約・派遣契約の違いとは？外部委託で責任を切り分ける【FE試験】
 description: "基本情報技術者試験で問われやすい請負契約、準委任契約、委任契約、派遣契約、パート契約の違いを、成果物責任・業務遂行責任・指揮命令・雇用関係の観点で整理します。システム開発を外部に発注したときの契約不適合責任も、選択肢を切る判断軸として確認します。"
 permalink: /fe/contract-types-outsourcing/
-tags: [fe, strategy, system-development, contract, outsourcing]
-last_modified_at: 2026-07-06
+tags: [fe, fe-strategy, law, contract, outsourcing]
+fe_section: ストラテジ系
+fe_subsection: 企業と法務
+fe_order: 100
+last_modified_at: 2026-08-15
 ---
 
 ## まず結論
