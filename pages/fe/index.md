@@ -112,6 +112,71 @@ SGで学んだリスク、認証、アクセス制御、ログ、インシデン
 
 ## 分野別の記事一覧
 
+<style>
+.fe-index-subsection {
+  background: #fff;
+  border: 1px solid #d3e6ff;
+  border-radius: 8px;
+  margin: 0.65rem 0;
+  overflow: hidden;
+}
+
+.fe-index-subsection summary {
+  background: #f7fbff;
+  box-sizing: border-box;
+  color: #0b6fae;
+  cursor: pointer;
+  display: block;
+  font-weight: 700;
+  list-style: none;
+  padding: 0.75rem 3rem 0.75rem 1rem;
+  position: relative;
+}
+
+.fe-index-subsection summary::-webkit-details-marker {
+  display: none;
+}
+
+.fe-index-subsection summary::after {
+  align-items: center;
+  background: #0b6fae;
+  border-radius: 50%;
+  color: #fff;
+  content: "＋";
+  display: inline-flex;
+  height: 1.65rem;
+  justify-content: center;
+  line-height: 1;
+  position: absolute;
+  right: 0.85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.65rem;
+}
+
+.fe-index-subsection[open] summary {
+  border-bottom: 1px solid #d3e6ff;
+}
+
+.fe-index-subsection[open] summary::after {
+  content: "−";
+}
+
+.fe-index-subsection summary:hover {
+  background: #eef6ff;
+}
+
+.fe-index-subsection summary:focus-visible {
+  outline: 3px solid rgba(30, 144, 255, 0.3);
+  outline-offset: -3px;
+}
+
+.fe-index-subsection > ul {
+  margin: 0;
+  padding: 0.75rem 1rem 0.9rem 2.2rem;
+}
+</style>
+
 <nav class="fe-index-jump" aria-label="FE分野別記事一覧">
   <p><strong>分野から探す</strong></p>
   <ul>
