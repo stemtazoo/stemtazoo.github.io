@@ -112,6 +112,17 @@ SGで学んだリスク、認証、アクセス制御、ログ、インシデン
 
 ## 分野別の記事一覧
 
+<nav class="fe-index-jump" aria-label="FE分野別記事一覧">
+  <p><strong>分野から探す</strong></p>
+  <ul>
+    <li><a href="#fe-technology">テクノロジ系</a></li>
+    <li><a href="#fe-management">マネジメント系</a></li>
+    <li><a href="#fe-strategy">ストラテジ系</a></li>
+    <li><a href="#fe-subject-b">科目B対策</a></li>
+    <li><a href="#fe-security">情報セキュリティ</a></li>
+  </ul>
+</nav>
+
 {% assign fe_pages = site.pages | sort: "fe_order" %}
 {% assign fe_total = 0 %}
 {% for p in fe_pages %}
@@ -130,11 +141,12 @@ SGで学んだリスク、認証、アクセス制御、ログ、インシデン
 {% endif %}
 
 {% assign fe_sections = "テクノロジ系|マネジメント系|ストラテジ系|科目B対策|情報セキュリティ" | split: "|" %}
+{% assign fe_section_ids = "fe-technology|fe-management|fe-strategy|fe-subject-b|fe-security" | split: "|" %}
 {% assign fe_subsections = "基礎理論|アルゴリズムとプログラミング|コンピュータ構成要素|システム構成要素|ソフトウェア|ハードウェア|データベース|ネットワーク|システム開発技術|プロジェクトマネジメント|サービスマネジメント|システム監査|システム戦略|経営戦略|企業と法務|アルゴリズム|データ構造|疑似言語|トレース|情報セキュリティ問題" | split: "|" %}
 
 {% for section in fe_sections %}
-### {{ section }}
-
+{% assign section_index = forloop.index0 %}
+{% assign section_id = fe_section_ids[section_index] %}
 {% assign section_count = 0 %}
 {% for p in fe_pages %}
   {% if p.url != page.url %}
@@ -147,6 +159,8 @@ SGで学んだリスク、認証、アクセス制御、ログ、インシデン
     {% endif %}
   {% endif %}
 {% endfor %}
+
+<h3 id="{{ section_id }}">{{ section }}（{{ section_count }}記事）</h3>
 
 {% if section_count == 0 %}
 - 準備中です。
@@ -167,8 +181,8 @@ SGで学んだリスク、認証、アクセス制御、ログ、インシデン
   {% endif %}
 {% endfor %}
 {% if subsection_count > 0 %}
-#### {{ subsection }}
-
+<details class="fe-index-subsection">
+  <summary><strong>{{ subsection }}</strong>（{{ subsection_count }}記事）</summary>
 <ul>
 {% for p in fe_pages %}
   {% if p.url != page.url %}
@@ -184,6 +198,7 @@ SGで学んだリスク、認証、アクセス制御、ログ、インシデン
   {% endif %}
 {% endfor %}
 </ul>
+</details>
 {% endif %}
 {% endfor %}
 
@@ -202,6 +217,8 @@ SGで学んだリスク、認証、アクセス制御、ログ、インシデン
   {% endif %}
 {% endfor %}
 {% if no_subsection_count > 0 %}
+<details class="fe-index-subsection">
+  <summary><strong>その他</strong>（{{ no_subsection_count }}記事）</summary>
 <ul>
 {% for p in fe_pages %}
   {% if p.url != page.url %}
@@ -217,6 +234,7 @@ SGで学んだリスク、認証、アクセス制御、ログ、インシデン
   {% endif %}
 {% endfor %}
 </ul>
+</details>
 {% endif %}
 {% endif %}
 {% endfor %}
