@@ -1,13 +1,13 @@
 ﻿---
 layout: page
 title: LEFT JOINとWHEREの関係とは？（SQLのひっかけ問題）【DS検定】
-description: "LEFT JOINのあとにWHEREで右テーブル条件を書くと、LEFT JOINが実質INNER JOINのような動きになることがある。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。"
+description: "LEFT JOINのあとに右テーブルの条件をWHEREへ書くと、NULL行が除外され、結果としてINNER JOINに近い結果になることがあります。ONとWHEREの役割、NULLの扱い、DS検定での判断ポイントを整理します。"
 permalink: /ds/left-join-where/
 categories: [data-engineering]
 tags: [ds, data-processing, sql]
 prev: /ds/sql-where/
 next: /ds/self-join/
-last_modified_at: 2026-06-21
+last_modified_at: 2026-08-16
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -16,182 +16,127 @@ last_modified_at: 2026-06-21
 
 ## まず結論
 
-LEFT JOINのあとにWHEREで右テーブル条件を書くと、LEFT JOINが実質INNER JOINのような動きになることがある。
+LEFT JOINのあとに**右テーブルの条件をWHEREへ書くと、NULL行が除外されて左側の行が消えることがあります。**
 
-DS検定では
-「LEFT JOINなのに全件出ないのはなぜか？」
-という判断をさせる問題がよく出ます。
+DS検定では、次の切り分けが重要です。
 
+| 条件を書く場所 | 役割 |
+|---|---|
+| `ON` | どの行を結合するか決める |
+| `WHERE` | 結合後の結果を絞り込む |
+
+> LEFT JOINなのに左側の全行が残らない → **WHEREの右テーブル条件を確認する**
 
 ## 直感的な説明
 
-「LEFT JOIN」は本来、
+LEFT JOINは、本来「左の表をすべて残す」結合です。
 
-> 左の表は全部残す
+たとえば、全従業員に進行中プロジェクトを付けたいとします。
 
-という操作です。
+- 従業員は全員表示したい
+- activeなプロジェクトだけ付けたい
 
-しかし、そのあとで
+ところが、結合後に `WHERE P.status = 'active'` と書くと、プロジェクトがない従業員では `P.status` がNULLになります。
 
-> “条件に合わない行を消す”
+NULLは `P.status = 'active'` を満たさないため、その行が消えます。
 
-というWHEREが実行されます。
-
-たとえば：
-
-従業員は全員出す（LEFT JOIN）
-
-でも「アクティブなプロジェクトだけ」に絞る（WHERE）
-
-とすると、
-
-👉 プロジェクトが無い人はNULLになる  
-👉 NULLは条件に合わないので消える
-
-結果として、
-
-**「アクティブな案件に参加している人だけ」**が残ります。
-
-つまり、LEFT JOINなのに全員は出ません。
-
+結果として、**LEFT JOINなのに「activeなプロジェクトを持つ人だけ」が残る**ことがあります。
 
 ## 定義・仕組み
 
-SQLの処理順は次のように考えます。
+### WHEREへ条件を書く場合
 
-1. FROM
-2. JOIN（ONで結合）
-3. WHERE（結合後の絞り込み）
-4. SELECT（表示）
-
-例：
-
+```sql
 SELECT E.name, P.project_name
 FROM Employees E
 LEFT JOIN Projects P
   ON E.id = P.employee_id
 WHERE P.status = 'active';
+```
 
-処理の流れ
+初学者向けには、次の順で考えると分かりやすいです。
 
-① まずLEFT JOINが実行される  
-→ 全従業員が残る  
-→ プロジェクトがない人はP側がNULLになる
+1. `LEFT JOIN` で左側の従業員を残す
+2. 結合できない右側はNULLになる
+3. `WHERE P.status = 'active'` で結合後の行を絞る
+4. `P.status` がNULLの行は残らない
 
-② そのあとWHEREがかかる
+| `P.status` | WHERE条件の結果 |
+|---|---|
+| `active` | 残る |
+| `inactive` | 消える |
+| `NULL` | 消える |
 
-P.status = 'active'
+### ONへ条件を書く場合
 
-- active → 残る
-- inactive → 消える
-- NULL → 消える（ここが重要）
+全従業員を残したまま、activeなプロジェクトだけ結合したい場合は、条件を `ON` に書きます。
 
-つまり、
-
-WHEREは「結合後の表」にかかる
-
-ため、NULL行が消えてしまいます。
-
-
-## ではどう書けばよいか？
-
-もし
-
-> 全従業員を表示しつつ、activeだけ結合したい
-
-なら、条件はONに書きます。
-
+```sql
+SELECT E.name, P.project_name
+FROM Employees E
 LEFT JOIN Projects P
   ON E.id = P.employee_id
- AND P.status = 'active'
+ AND P.status = 'active';
+```
 
-これなら、
+この場合は、
 
-- 従業員は全員残る
-- activeのみ結合
-- それ以外はNULL
+- 左側の従業員は全員残る
+- activeなプロジェクトだけ結合する
+- 該当しなければ右側がNULLになる
 
-になります。
-
+という結果になります。
 
 ## どんな場面で使う？
 
-### ✔ 実務での例
+### 左側を必ず残したい集計
 
-- 社員一覧を出す
-- 進行中プロジェクトだけを横に表示したい
+たとえば、
 
-このとき、WHEREに書いてしまうと
+- 社員一覧に担当案件を付ける
+- 全顧客に最新注文情報を付ける
+- 全商品に在庫情報を付ける
 
-「プロジェクト未所属社員が消える」
+といった場合です。
 
-というバグになります。
+右テーブル側の条件をWHEREへ書くと、**対応データがない左側の行まで消える**ことがあるため注意します。
 
+### SQLの結果を読み取る問題
 
-### ✔ DS検定で問われるポイント
-
-DS検定では
+DS検定では、
 
 - LEFT JOINとINNER JOINの違い
-- WHEREとONの違い
+- `ON` と `WHERE` の違い
 - NULLの扱い
 
-を理解しているかを問われます。
-
-計算問題ではなく、
-
-「このSQLはどんな結果になるか？」
-
-という判断問題が多いです。
-
+を組み合わせた判断問題として考えると整理しやすいです。
 
 ## よくある誤解・混同
 
-❌ 「LEFT JOINなら必ず左は全部出る」
+### ❌ LEFT JOINなら必ず左側は全部残る
 
-→ WHEREの書き方次第で消える
+LEFT JOIN直後は残りますが、その後のWHEREで消えることがあります。
 
+### ❌ ONとWHEREはどちらに条件を書いても同じ
 
-❌ 「WHEREもJOIN条件の一部」
+違います。
 
-→ 違う  
-ONは「結合の条件」  
-WHEREは「結合後のフィルタ」
+| 構文 | 判断ポイント |
+|---|---|
+| `ON` | 結合する相手を制限する |
+| `WHERE` | 結合後の行そのものを除外する |
 
+### ❌ `NULL = 'active'` はfalseとして扱えばよい
 
-❌ 「NULLは条件に合うこともある」
-
-→ 比較演算では基本的にNULLは成立しない  
-DS検定ではここがひっかけになります。
-
-
-## DS検定での典型問題
-
-> 次のSQLはどのような結果になるか？
-
-選択肢では：
-
-- 「すべての従業員が表示される」
-- 「アクティブ案件の人だけ表示される」
-
-のどちらかで迷わせてきます。
-
-判断基準は：
-
-👉 WHEREが右テーブル条件ならLEFTは崩れる
-
+SQLのNULL比較は通常の真偽値だけではなくUNKNOWNになります。WHEREではTRUEの行だけが残るため、結果としてNULL行は除外されます。
 
 ## まとめ（試験直前用）
 
-- WHEREはJOIN後にかかる
-- NULLはWHERE条件を通らない
-- 右テーブル条件をWHEREに書くとLEFTがINNER化する
-- 「LEFTなのに全件出ない」＝WHEREが原因
-
-DS検定では
-「JOINの種類」より
-「どこに条件が書いてあるか」を見抜くことが重要。
-
+- LEFT JOINは左側を残す結合
+- `ON` は**結合条件**
+- `WHERE` は**結合後の絞り込み**
+- 右テーブル条件をWHEREへ書くとNULL行が消える
+- **LEFTなのに全件出ない → WHEREを確認する**
 
 ## 対応スキル項目（データエンジニアリング力シート）
 
@@ -200,50 +145,4 @@ DS検定では
 - ★ SQLを用いてデータの抽出・結合・集計ができる
 - ★ データベースの基本構造と操作（SELECT、JOINなど）を理解している
 
-## 🔗 関連記事
-
-<ul style="padding-left: 20px;">
-{% assign current_tags = page.tags %}
-{% assign count = 0 %}
-
-{% for p in site.pages %}
-  {% if p.url != page.url and p.tags %}
-    {% assign matched = false %}
-
-    {% for tag in current_tags %}
-      {% if p.tags contains tag and tag != "ds" %}
-        {% assign matched = true %}
-      {% endif %}
-    {% endfor %}
-
-    {% if matched %}
-      <li style="margin-bottom: 6px;">
-        <a href="{{ p.url }}">{{ p.title }}</a>
-      </li>
-      {% assign count = count | plus: 1 %}
-    {% endif %}
-
-    {% if count >= 5 %}
-      {% break %}
-    {% endif %}
-  {% endif %}
-{% endfor %}
-</ul>
-
-<hr>
-
-<div style="margin-top: 16px;">
-  🏠 <a href="/ds/">DS検定トップに戻る</a>
-</div>
-
-<div style="display:flex;justify-content:space-between;margin-top:12px;">
-
-  {% if page.previous.url %}
-    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
-  {% endif %}
-
-  {% if page.next.url %}
-    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
-  {% endif %}
-
-</div>
+{% include ds_article_footer.html %}
