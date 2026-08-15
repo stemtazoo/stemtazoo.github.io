@@ -4,7 +4,7 @@ title: 情報セキュリティマネジメント試験 学習まとめ
 description: 情報セキュリティマネジメント試験の学習入口として、頻出テーマ、分野別まとめ、直前復習をたどれる索引ページです。用語暗記だけでなく、目的・対象・責任範囲から選択肢を切る学習ルートを確認できます。関連ページへの導線もまとめています。初学者が分野をまたいで復習するときの起点になります。
 permalink: /sg/
 categories: [business]
-last_modified_at: 2026-06-24
+last_modified_at: 2026-08-15
 
 ---
 
@@ -108,3 +108,7 @@ last_modified_at: 2026-06-24
 - [全記事一覧](/sg/all/)
 
 {% include sg_article_footer.html %}
+
+<footer style="margin-top:24px; text-align:right;">
+  <a href="{{ '/' | relative_url }}">🏠 AI・データサイエンス・IT学習ノート トップへ</a>
+</footer>

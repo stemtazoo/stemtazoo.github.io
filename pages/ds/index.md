@@ -5,6 +5,7 @@ description: DS検定リテラシー対策の学習まとめページです。�
 permalink: /ds/
 categories: [business]
 tags: [ds, index]
+last_modified_at: 2026-08-15
 ---
 
 <div class="portal-card-grid">
@@ -442,5 +443,5 @@ tags: [ds, index]
 ---
 
 <footer style="margin-top:24px; text-align:right;">
-  <a href="{{ '/' | relative_url }}">🏠 ルートの index へ戻る</a>
+  <a href="{{ '/' | relative_url }}">🏠 AI・データサイエンス・IT学習ノート トップへ</a>
 </footer>

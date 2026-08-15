@@ -529,7 +529,7 @@ gk_sections:
     items:
       - /gk/trick-questions-1/
       - /gk/trick-questions-xai-1/
-last_modified_at: 2026-05-15
+last_modified_at: 2026-08-15
 ---
 
 <div class="portal-card-grid">
@@ -652,5 +652,5 @@ last_modified_at: 2026-05-15
 ---
 
 <footer style="margin-top:24px; text-align:right;">
-  <a href="{{ '/' | relative_url }}">🏠 ルートの index へ戻る</a>
+  <a href="{{ '/' | relative_url }}">🏠 AI・データサイエンス・IT学習ノート トップへ</a>
 </footer>

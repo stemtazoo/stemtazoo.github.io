@@ -4,7 +4,7 @@ title: 基本情報技術者試験 学習まとめ
 description: 基本情報技術者試験（FE）の学習記事を、科目Aのテクノロジ・マネジメント・ストラテジ・情報セキュリティと、科目Bのアルゴリズム・データ構造・疑似言語・トレースに分けた総合索引です。用語の選択肢判断からプログラム読解へ進む学習順、分野別の頻出テーマ、苦手論点の関連記事を一覧から探し、試験対策に活用できます。
 permalink: /fe/
 tags: [fe]
-last_modified_at: 2026-08-13
+last_modified_at: 2026-08-15
 ---
 
 # 基本情報技術者試験 学習まとめ
@@ -243,3 +243,7 @@ SGで学んだリスク、認証、アクセス制御、ログ、インシデン
 - [IPA：試験要綱・シラバスについて](https://www.ipa.go.jp/shiken/syllabus/gaiyou.html)
 - [IPA：試験要綱 Ver.5.6（PDF）](https://www.ipa.go.jp/shiken/syllabus/rcu1hd00000141gq-att/youkou_ver5_6.pdf)
 - [IPA：基本情報技術者試験 シラバス Ver.9.2（PDF）](https://www.ipa.go.jp/shiken/syllabus/omgdg50000005kpe-att/syllabus_fe_ver9_2.pdf)
+
+<footer style="margin-top:24px; text-align:right;">
+  <a href="{{ '/' | relative_url }}">🏠 AI・データサイエンス・IT学習ノート トップへ</a>
+</footer>
