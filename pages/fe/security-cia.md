@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: セキュリティ
 fe_order: 64
 date: 2026-07-11
-last_modified_at: 2026-07-11
+last_modified_at: 2026-08-15
 ---
 
 ## まず結論
@@ -239,8 +239,6 @@ CIAでは、次のようなひっかけにも注意します。
 
 情報セキュリティの基本用語は、攻撃と守る性質をつなげて整理すると覚えやすくなります。
 
-- [DoS攻撃とは？サービスを使えなくする攻撃](/fe/dos-attack/)
 - [ハッシュ関数とは？改ざん検知と一方向性の考え方](/fe/hash-function/)
-- [アクセス制御とは？権限で利用できる範囲を制限する考え方](/fe/access-control/)
 
 {% include fe_article_footer.html %}

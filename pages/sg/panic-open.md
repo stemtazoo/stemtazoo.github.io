@@ -4,7 +4,6 @@ title: "パニックオープンとは？非常時に避難経路を確保する
 description: "パニックオープンは、火災や停電などの非常時に入退室ゲートを自動解錠し、利用者の避難経路を確保する仕組みです。共連れを防ぐアンチパスバックや二つの扉を同時に開けないインターロックとは目的が異なり、通常時の侵入防止より人命安全を優先する選択肢が正解です。"
 permalink: /sg/panic-open/
 prev: /sg/interlock-gate/
-next: /sg/mantrap/
 tags: [sg, sg-security-measures, access_control, physical_security]
 date: 2026-05-10
 last_modified_at: 2026-07-27

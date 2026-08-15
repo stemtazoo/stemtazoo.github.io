@@ -5,7 +5,6 @@ description: "オープンリゾルバは、不特定多数からのDNS再帰問
 permalink: /sg/open-resolver/
 tags: [sg, sg-security-measures, network, threat_vulnerability]
 prev: /sg/authoritative-dns-vs-cache-dns/
-next: /sg/primary-secondary-dns/
 last_modified_at: 2026-06-20
 ---
 

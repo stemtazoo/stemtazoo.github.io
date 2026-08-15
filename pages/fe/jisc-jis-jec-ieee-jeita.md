@@ -8,7 +8,7 @@ fe_section: ストラテジ系
 fe_subsection: 経営戦略・業務システム
 fe_order: 56
 date: 2026-07-10
-last_modified_at: 2026-07-25
+last_modified_at: 2026-08-15
 ---
 
 ## まず結論
@@ -194,13 +194,5 @@ JISC
 - IEEEは、電気・電子・情報通信系の国際的な団体
 - JEITAは、電子情報技術産業協会
 - 「JISの制定・改正を審議」ならJISCを疑う
-
-## 関連記事
-
-標準化や規格は、略称と役割をセットで整理すると覚えやすくなります。
-
-- [JISとは？日本産業規格の基本](/fe/jis/)
-- [IEEE 802.11とは？無線LAN規格の基本](/fe/ieee-80211/)
-- [標準化とは？共通のルールで品質と互換性をそろえる考え方](/fe/standardization/)
 
 {% include fe_article_footer.html %}
