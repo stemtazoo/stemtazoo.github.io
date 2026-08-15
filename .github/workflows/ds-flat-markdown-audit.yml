@@ -1,0 +1,32 @@
+name: DS flat Markdown audit
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/ds-flat-markdown-audit.yml'
+      - 'scripts/audit_ds_flat_markdown.py'
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run flat Markdown audit
+        run: python scripts/audit_ds_flat_markdown.py --output docs/audits/ds-flat-markdown-audit.md
+
+      - name: Upload audit report
+        uses: actions/upload-artifact@v4
+        with:
+          name: ds-flat-markdown-audit
+          path: docs/audits/ds-flat-markdown-audit.md
