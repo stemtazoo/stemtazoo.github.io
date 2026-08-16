@@ -37,7 +37,18 @@ jobs:
         run: python scripts/generate_agent_resources.py
 
       - name: Validate agent resources
-        run: python scripts/validate_agent_resources.py
+        id: validate_agent_resources
+        shell: bash
+        run: |
+          set -o pipefail
+          python scripts/validate_agent_resources.py 2>&1 | tee agent-resource-validation.log
+
+      - name: Upload agent validation log
+        if: failure() && steps.validate_agent_resources.outcome == 'failure'
+        uses: actions/upload-artifact@v4
+        with:
+          name: agent-resource-validation-log
+          path: agent-resource-validation.log
 
       - name: Audit agent-facing content
         run: python scripts/audit_agent_content.py
