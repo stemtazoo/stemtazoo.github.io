@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 日付形式の正規表現とは？形式チェックと妥当性の違い【DS検定】
-description: "日付形式の正規表現について、YYYY-MM-DDの形式チェックと、実在する日付かどうかを確認する妥当性チェックの違いを整理します。`\d{2}` は2桁を表すだけで月日の範囲までは保証しない点を、DS検定向けに確認します。"
+description: "日付形式の正規表現について、YYYY-MM-DDの形式チェックと、実在する日付かどうかを確認する妥当性チェックの違いを整理します。数字2桁の指定は月日の範囲までは保証しない点を、DS検定向けに確認します。"
 permalink: /ds/regular-expression-date/
 categories: [data-science]
 tags: [ds, data-processing, preprocessing]
