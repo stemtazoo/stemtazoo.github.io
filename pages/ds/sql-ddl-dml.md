@@ -1,13 +1,13 @@
 ---
 layout: page
-title: DDLとDMLの違いとは？CREATE・SELECTはどっち？【DS検定】
-description: DDLはデータベースの構造を定義し、DMLはデータを検索・追加・更新・削除します。CREATE・ALTER・DROPとSELECT・INSERT・UPDATE・DELETEを一覧で比較し、DS検定での見分け方を整理します。
+title: DDLとDMLの違い｜CREATE・SELECT・DELETEを一覧で比較【DS検定】
+description: DDLとDMLの違いを「入れ物」と「中身」でやさしく整理します。CREATE・ALTER・DROP、SELECT・INSERT・UPDATE・DELETEの分類を一覧で比較し、DELETEとDROPの違いや、DS検定で迷いやすいSELECTの扱い、問題での見分け方まで具体例とともに初心者向けに解説します。
 permalink: /ds/sql-ddl-dml/
 categories: [data-engineering]
 tags: [ds, sql, database]
 prev: /ds/sql-count-distinct/
 next: /ds/sql-distinct/
-last_modified_at: 2026-07-14
+last_modified_at: 2026-08-17
 ---
 
 ## まず結論
