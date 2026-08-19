@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: コンピュータシステム
 fe_order: 100
 date: 2026-07-02
-last_modified_at: 2026-08-14
+last_modified_at: 2026-08-19
 ---
 
 ## まず結論
@@ -28,6 +28,8 @@ FIFO
 LRU
 → 最後に使った時刻を見る
 ```
+
+LRUのページ参照列の追い方は、[LRUページ置換とは？最後に参照した時刻で置換ページを決める]({{ '/fe/lru-page-replacement/' | relative_url }})で確認できます。
 
 ## 直感的な説明
 
@@ -239,5 +241,11 @@ FIFOでは、
 - **FIFOは「参照された順」ではなく「入った順」を見る**
 - LRUは最後に使った時刻を見る
 - 計算問題では、参照列を左から順に追う
+
+## 関連記事
+
+- [LRUページ置換とは？最後に参照した時刻で置換ページを決める]({{ '/fe/lru-page-replacement/' | relative_url }}) — FIFOと対比してページ参照列を確認
+- [LRUとは？FIFO・LFU・NRUとの違い]({{ '/fe/lru/' | relative_url }}) — 置換方式全体の切り分け
+- [ページング方式とは？ページとフレームで主記憶を管理する考え方]({{ '/fe/paging/' | relative_url }})
 
 {% include fe_article_footer.html %}
