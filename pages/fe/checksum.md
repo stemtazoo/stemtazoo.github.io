@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 40
 date: 2026-06-25
-last_modified_at: 2026-07-25
+last_modified_at: 2026-08-19
 ---
 
 ## まず結論
@@ -218,6 +218,7 @@ FE試験では、チェックサム方式を **合計値を使った誤り検出
 誤り制御方式は、似た用語を並べて切り分けると覚えやすくなります。
 
 - [CRC方式とは？生成多項式で誤りを検出する方法](/fe/crc/)
+- [パリティチェックとは？偶数・奇数と垂直・水平パリティの考え方](/fe/parity-check/)
 - [ハミング符号方式とは？1ビット誤りを訂正できる考え方](/fe/hamming-code/)
 
 {% include fe_article_footer.html %}
