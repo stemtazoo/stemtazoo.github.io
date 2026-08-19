@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 20
 date: 2026-06-25
-last_modified_at: 2026-07-25
+last_modified_at: 2026-08-19
 ---
 
 ## まず結論
@@ -194,6 +194,7 @@ FE試験では、まず **1ビット誤りを訂正できる方式** として�
 誤り制御方式は、似た用語を並べて切り分けると覚えやすくなります。
 
 - [CRC方式とは？生成多項式で誤りを検出する方法](/fe/crc/)
+- [パリティチェックとは？偶数・奇数と垂直・水平パリティの考え方](/fe/parity-check/)
 - [チェックサム方式とは？合計値で誤りを検出する方法](/fe/checksum/)
 
 {% include fe_article_footer.html %}
