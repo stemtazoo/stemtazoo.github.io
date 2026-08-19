@@ -6,7 +6,7 @@ permalink: /gk/sim2real/
 tags: [gk, reinforcement_learning, robotics]
 gk_section: ディープラーニングの応用例/深層強化学習
 gk_order: 6
-last_modified_at: 2026-08-17
+last_modified_at: 2026-08-19
 ---
 
 ## まず結論
@@ -16,7 +16,7 @@ Sim2Real（Sim-to-Real）とは、**シミュレーション環境で学習し�
 Sim2Realは特定の一つのアルゴリズム名ではありません。**シミュレーションから現実へ知識を移す課題設定・技術群の総称**として捉えます。
 
 📌 **Instagramでも5枚のカルーセルで復習できます。**  
-[Sim-to-Real｜G検定対策カルーセルを見る](https://www.instagram.com/p/DcI8CLmmXcp/)
+[Sim-to-Real｜G検定対策カルーセルを見る](https://www.instagram.com/p/DcN-911GVFa/)
 
 ---
 
