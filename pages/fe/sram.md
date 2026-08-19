@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: コンピュータシステム
 fe_order: 53
 date: 2026-07-17
-last_modified_at: 2026-07-17
+last_modified_at: 2026-08-19
 ---
 
 ## まず結論
@@ -112,6 +112,8 @@ SRAMは、一般にフリップフロップ回路を使って1ビットの情報
 ```
 
 DRAMの仕組みやリフレッシュとの関係は、[DRAMとは？リフレッシュが必要な主記憶の仕組み]({{ '/fe/dram/' | relative_url }})で詳しく整理しています。
+
+キャッシュメモリの役割や、キャッシュヒット・ミス時のデータの流れは、[キャッシュメモリとは？ライトスルー・ライトバックの違い]({{ '/fe/cache-memory/' | relative_url }})で確認できます。
 
 電源を切っても内容を保持するメモリについては、[フラッシュメモリとは？EEPROM・SRAM・DRAMとの違い]({{ '/fe/flash-memory/' | relative_url }})で確認できます。
 
