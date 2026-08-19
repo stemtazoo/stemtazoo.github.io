@@ -6,12 +6,17 @@ permalink: /gk/human-centered-ai-principles/
 tags: [gk, ethics]
 gk_section: AIの法律と倫理/AIの法律と倫理
 gk_order: 23
-last_modified_at: 2026-07-14
+last_modified_at: 2026-08-19
 ---
 
 ## まず結論
 - **人間中心のAI社会原則とは、日本政府（内閣府）が示した、AIの開発・利用において人間の尊厳と社会的価値を守るための基本原則である。**
 - G検定では「**含まれる原則／含まれない主張**」を問われる。
+
+📌 **Instagramでも5枚のカルーセルで復習できます。**  
+[人間中心のAI社会原則｜G検定対策カルーセルを見る](https://www.instagram.com/p/DcNQSOiGQ11/)
+
+---
 
 ## 直感的な説明
 一言でいうと、
