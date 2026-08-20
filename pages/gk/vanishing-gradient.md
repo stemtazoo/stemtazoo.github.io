@@ -6,7 +6,7 @@ permalink: /gk/vanishing-gradient/
 tags: [gk, neural_network]
 gk_section: ディープラーニングの概要/ニューラルネットワークとディープラーニング
 gk_order: 11
-last_modified_at: 2026-08-16
+last_modified_at: 2026-08-20
 ---
 
 ## まず結論
@@ -24,7 +24,7 @@ last_modified_at: 2026-08-16
 G検定では、**「勾配が小さくなって学習が進まない」**と、過学習や勾配爆発を切り分けます。
 
 📌 **Instagramでも5枚のカルーセルで復習できます。**
-[勾配消失問題｜G検定対策カルーセルを見る](https://www.instagram.com/p/DcGhvwLma-A/)
+[勾配消失問題｜G検定対策カルーセルを見る](https://www.instagram.com/p/DcQsKEbmS4P/)
 
 ## 直感的な説明
 
