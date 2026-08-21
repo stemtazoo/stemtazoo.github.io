@@ -1,12 +1,12 @@
-﻿---
+---
 layout: page
 title: デュエリングネットワーク（Dueling Network）とは？G検定対策
 description: "デュエリングネットワーク（Dueling Network）について、G検定で問われるAI・機械学習分野の観点から、基本的な意味、代表モデル・手法との関係、試験で問われやすい判断軸を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/dueling-network/
 tags: [gk, reinforcement_learning, neural_network]
 gk_section: ディープラーニングの応用例/深層強化学習
-gk_order: 1
-last_modified_at: 2026-06-21
+gk_order: 2
+last_modified_at: 2026-08-21
 ---
 
 ## まず結論
