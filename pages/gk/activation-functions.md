@@ -5,7 +5,7 @@ description: "活性化関数の役割をニューラルネットワークへ非
 permalink: /gk/activation-functions/
 tags: [gk, neural_network, activation]
 gk_section: ディープラーニングの概要/活性化関数
-gk_order: 5
+gk_order: 1
 last_modified_at: 2026-08-21
 ---
 
