@@ -1,104 +1,18 @@
-﻿---
-layout: page
-title: 勾配消失・勾配爆発
-description: "勾配消失・勾配爆発について、G検定で問われる学習・最適化分野の観点から、学習が進む仕組み、更新の考え方、過学習対策や代表手法との違いを整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。具体例や典型的なひっかけも意識して、試験でどの知識として使うかを押さえます。"
+---
+layout: null
 permalink: /gk/vanishing-exploding-gradient/
-tags: [gk, neural_network, rnn, gradient]
-gk_section: ディープラーニングの要素技術/ネットワークの構成要素
-gk_order: 8
-last_modified_at: 2026-06-21
+sitemap: false
 ---
-
-## まず結論
-
-* **勾配消失・勾配爆発は学習がうまく進まなくなる問題**
-* 特に **RNNや深いネットワークで起こりやすい**
-* LSTMやGRUは、この問題を緩和するために生まれた
-
----
-
-## 直感的な説明
-
-学習とは、
-
-> 「間違いをどれくらい直せばいいか（勾配）を伝えること」
-
-です。
-
-* 勾配が **小さくなりすぎる** → ほとんど直せない
-* 勾配が **大きくなりすぎる** → 修正しすぎて不安定
-
-これが、
-**勾配消失・勾配爆発** です。
-
----
-
-## 定義・仕組み
-
-### 勾配消失（Vanishing Gradient）
-
-* 逆伝播を繰り返すうちに
-* 勾配がどんどん **0に近づく**
-
-**結果**
-
-* 初期層の重みが更新されない
-* 長期依存関係を学習できない
-
----
-
-### 勾配爆発（Exploding Gradient）
-
-* 逆伝播を繰り返すうちに
-* 勾配が **異常に大きくなる**
-
-**結果**
-
-* 学習が発散
-* 数値が不安定になる
-
----
-
-### なぜRNNで起きやすい？
-
-* 時間方向に同じ重みを何度も掛け算
-* 連鎖律により影響が増幅・減衰しやすい
-
----
-
-## 対策方法
-
-### 勾配消失への対策
-
-* ReLU系活性化関数
-* **LSTM / GRU** の利用
-* 適切な重み初期化
-
----
-
-### 勾配爆発への対策
-
-* **勾配クリッピング**
-* 学習率を小さくする
-
----
-
-## G検定ひっかけポイント
-
-* ❌「勾配消失は学習率が大きすぎると起こる」→ **誤り**
-* ❌「勾配爆発はRNNだけの問題」→ **誤り**
-* ✅ 深いNN・RNNで起きやすい
-* ✅ LSTM/GRUは勾配消失対策
-
----
-
-## まとめ（試験直前用）
-
-* 勾配消失：勾配が小さくなる
-* 勾配爆発：勾配が大きくなる
-* RNNで特に問題
-* LSTM / GRU が解決策
-
-👉 次は **LSTM（長短期記憶）** を見ていきます。
-
-{% include gk_article_footer.html %}
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex,follow">
+  <link rel="canonical" href="{{ '/gk/gradient-vanishing-exploding/' | relative_url }}">
+  <meta http-equiv="refresh" content="0; url={{ '/gk/gradient-vanishing-exploding/' | relative_url }}">
+  <title>移転しました</title>
+</head>
+<body>
+  <p><a href="{{ '/gk/gradient-vanishing-exploding/' | relative_url }}">勾配消失と勾配爆発の違い</a>へ移動します。</p>
+</body>
+</html>
