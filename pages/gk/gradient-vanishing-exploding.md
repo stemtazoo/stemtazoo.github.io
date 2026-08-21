@@ -5,7 +5,7 @@ description: "勾配消失と勾配爆発を、勾配が小さくなるか大き
 permalink: /gk/gradient-vanishing-exploding/
 tags: [gk, neural_network, cheatsheet]
 gk_section: ディープラーニングの概要/ニューラルネットワークとディープラーニング
-gk_order: 6
+gk_order: 5
 last_modified_at: 2026-08-21
 ---
 
@@ -22,7 +22,7 @@ G検定では、まず**「勾配が小さいのか、大きいのか」**を見
 
 ## 直感的な説明
 
-誤差逆伝播では、出力側から入力側へ勾配を伝えていきます。
+[誤差逆伝播法](/gk/backpropagation/)では、出力側から入力側へ勾配を伝えていきます。
 
 - 小さな値の影響が何度も重なる → **勾配消失**
 - 大きな値の影響が何度も重なる → **勾配爆発**
