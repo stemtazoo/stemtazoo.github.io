@@ -4,9 +4,9 @@ title: 二重降下現象（Double Descent）とは？過学習との違い【G�
 description: "二重降下現象を、モデル容量などを増やしたときにテスト誤差が一度悪化した後、再び改善することがある現象として整理します。古典的なU字型のバイアス・バリアンス像との違い、補間しきい値付近で性能が悪化しやすい考え方をG検定向けに確認します。"
 permalink: /gk/double-descent/
 tags: [gk, neural_network]
-gk_section: 機械学習の概要/モデルの選択・評価
-gk_order: 23
-last_modified_at: 2026-08-21
+gk_section: 機械学習の概要/よくあるつまずき（過学習など）
+gk_order: 7
+last_modified_at: 2026-08-22
 ---
 
 ## まず結論
