@@ -5,8 +5,8 @@ description: オッカムの剃刀は、複数の仮説が同程度に事象を�
 permalink: /gk/occams-razor/
 tags: [gk, model_selection, generalization]
 gk_section: 機械学習の概要/モデルの選択・評価
-gk_order: 20
-last_modified_at: 2026-08-14
+gk_order: 23
+last_modified_at: 2026-08-22
 ---
 
 ## まず結論
