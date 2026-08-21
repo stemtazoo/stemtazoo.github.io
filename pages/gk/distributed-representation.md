@@ -1,12 +1,12 @@
-﻿---
+---
 layout: page
 title: 分散表現とは？【One-hotとの比較で理解｜G検定対策】
 description: "分散表現について、G検定で問われる特徴量・教師なし学習分野の観点から、基本的な意味、代表モデル・手法との関係、試験で問われやすい判断軸を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/distributed-representation/
 tags: [gk, nlp, machine_learning]
 gk_section: ディープラーニングの応用例/自然言語処理
-gk_order: 7
-last_modified_at: 2026-06-21
+gk_order: 5
+last_modified_at: 2026-08-21
 ---
 
 ## まず結論
@@ -80,6 +80,6 @@ last_modified_at: 2026-06-21
 
 ### ⭕ 正しい判断基準
 - 「意味的な近さ」→ 分散表現
-- 「次元が語彙数と同じ」→ One-ho
+- 「次元が語彙数と同じ」→ One-hot
 
 {% include gk_article_footer.html %}
