@@ -1,94 +1,24 @@
-﻿---
-layout: page
-title: 単語分散表現とは？TF-IDFが含まれない理由【G検定対策】
-description: "単語分散表現TF-IDFが含まれない理由について、G検定で問われる特徴量・教師なし学習分野の観点から、系列データを扱う仕組み、学習目的、代表モデルとの関係を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
-permalink: /gk/word-embedding/
-tags: [gk, nlp, neural_network]
-gk_section: ディープラーニングの応用例/自然言語処理
-gk_order: 23
-last_modified_at: 2026-07-18
 ---
-
-## まず結論
-- **単語分散表現（Word Embedding）とは、単語を「意味を反映した連続値ベクトル」で表現する手法**である。
-- **TF-IDFは単語分散表現ではない**。これはG検定の超頻出ひっかけポイント。
-
-## 直感的な説明
-まず、言葉をどう数値にするかを考えます。
-
-### 単語分散表現のイメージ
-単語を **座標（ベクトル）として配置** します。
-
-- 「王」と「女王」は近い  
-- 「犬」と「猫」は近い  
-- 「犬」と「机」は遠い  
-
-👉 **意味が近い単語ほど、ベクトルも近くなる**  
-これが「分散表現」です。
-
-### TF-IDFはどう違う？
-TF-IDFは、
-
-- その文書に何回出たか
-- 他の文書ではどれくらい珍しいか
-
-だけを数値にします。
-
-👉 **意味の近さは一切考えません。**
-
-## 定義・仕組み
-### 単語分散表現（Word Embedding）
-- 単語を **低次元の連続値ベクトル** に変換
-- ベクトル間の距離や方向が **意味を表す**
-- 文脈や共起関係から学習
-
-代表例：
-- Word2Vec
-- FastText
-- GloVe
-
-### TF-IDF
-- 単語の出現頻度に基づく重み付け
-- 各次元は「単語そのもの」
-- ベクトルは **疎（スパース）**
-
-👉 **意味空間を作らない**
-
-## いつ使う？（得意・不得意）
-### 単語分散表現が向く場面
-- 意味類似度計算
-- 文書分類
-- 感情分析
-- 深層学習モデルの入力
-
-### TF-IDFが向く場面
-- 単純な文書分類
-- 高速なベースライン
-- 意味理解が不要なタスク
-
-## G検定ひっかけポイント
-G検定では、**意味を表すベクトルと頻度ベースの重み付けの違い**が重要です。
-
-### よくある誤解
-- ❌「単語を数値化していれば単語分散表現」
-- ❌「ベクトルなら全部Embedding」
-- ❌「TF-IDFも意味を表している」
-
-### 正しい判断基準
-- **意味の近さを表す → 単語分散表現**
-- **頻度だけ → TF-IDF**
-
-問題文に  
-「単語分散表現手法として最も不適切」  
-とあれば、
-
-👉 **TF-IDFを選ぶ**。
-
-## まとめ（試験直前用）
-- 単語分散表現＝意味を持つベクトル
-- Word2Vec / FastText / GloVe はOK
-- TF-IDFは頻度ベース
-- 意味空間を作らない
-- 「意味が近い？」で判断する
-
-{% include gk_article_footer.html %}
+layout: null
+permalink: /gk/word-embedding/
+sitemap: false
+last_modified_at: 2026-08-21
+---
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,follow">
+  <meta http-equiv="refresh" content="0; url=/gk/distributed-representation/">
+  <link rel="canonical" href="https://stemtazoo.github.io/gk/distributed-representation/">
+  <title>分散表現の記事へ移動します</title>
+</head>
+<body>
+  <p>
+    単語分散表現の記事を統合しました。
+    <a href="/gk/distributed-representation/">分散表現とは？One-hot・TF-IDFとの違い【G検定対策】</a>
+    へ移動します。
+  </p>
+</body>
+</html>
