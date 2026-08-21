@@ -1,86 +1,24 @@
-﻿---
-layout: page
-title: 最適化手法まとめ（SGD / AdaGrad / RMSprop / Adam）
-description: "SGD・AdaGrad・RMSprop・Adamを、勾配をそのまま使うか、パラメータごとに学習率を調整するか、移動平均や慣性を組み合わせるかで比較します。AdaGradで学習率が小さくなり続ける課題、RMSpropの指数移動平均、AdamがMomentumと適応的学習率を併用する点から選択肢を判定します。"
-permalink: /gk/optimization-cheatsheet-2/
-tags: [gk, neural_network, cheatsheet]
-gk_section: ディープラーニングの概要/最適化手法
-gk_order: 14
-last_modified_at: 2026-07-14
 ---
-
-## まず結論
-
-最適化手法は、**「勾配をどう使ってパラメータを更新するか」**の違いです。
-G検定では、**各手法の特徴と進化の流れ**を理解しているかが問われます。
-
-## 直感的な説明
-
-最適化手法の進化は、次の悩みを解決する流れです。
-
-1. SGD：不安定で揺れやすい
-2. Momentum：勢いをつけて安定させたい
-3. AdaGrad：場所ごとに学習率を変えたい
-4. RMSprop：学習が止まるのを防ぎたい
-5. Adam：**全部入りにしたい**
-
-👉 **問題点を1つずつ潰してきた歴史**として覚えると混乱しません。
-
-## 定義・仕組み
-
-主要な最適化手法をまとめます。
-
-| 手法       | 特徴                 | キーワード    |
-| -------- | ------------------ | -------- |
-| SGD      | 最も基本               | 勾配降下     |
-| Momentum | 勢いを持たせる            | 慣性       |
-| AdaGrad  | 勾配の二乗和を累積          | 過去を全部ためる |
-| RMSprop  | 勾配二乗の移動平均          | 過去を忘れる   |
-| Adam     | Momentum + RMSprop | 最終形      |
-
-## いつ使う？（得意・不得意）
-
-**SGD / Momentum**
-
-* シンプル
-* ハイパーパラメータ調整が必要
-
-**AdaGrad**
-
-* 疎な特徴量に強い
-* 学習率が極端に小さくなる
-
-**RMSprop**
-
-* 非定常な問題に強い
-* 減衰率の設定が必要
-
-**Adam**
-
-* 初期設定のままでも強い
-* 万能だが最良とは限らない
-
-## G検定ひっかけポイント
-
-G検定では、次の混同を狙われます。
-
-* **AdaGrad と RMSprop の違い**
-* **Adam の構成要素**
-* **AdaBoost との名前混同**
-
-**即切り判断ルール**
-
-* 過去すべての勾配 → AdaGrad
-* 過去を忘れる → RMSprop
-* 勢い + 忘却 → Adam
-* Boost → AdaBoost（別物）
-
-## まとめ（試験直前用）
-
-* 最適化手法は勾配の使い方の違い
-* AdaGrad：全部ためる
-* RMSprop：忘れる
-* Adam：勢い＋忘却
-* **Adamは最終形として覚える**
-
-{% include gk_article_footer.html %}
+layout: null
+permalink: /gk/optimization-cheatsheet-2/
+sitemap: false
+last_modified_at: 2026-08-21
+---
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,follow">
+  <meta http-equiv="refresh" content="0; url=/gk/optimization-cheatsheet/">
+  <link rel="canonical" href="https://stemtazoo.github.io/gk/optimization-cheatsheet/">
+  <title>最適化手法まとめの記事へ移動します</title>
+</head>
+<body>
+  <p>
+    SGD・Momentum・AdaGrad・RMSProp・Adamの比較記事を統合しました。
+    <a href="/gk/optimization-cheatsheet/">最適化手法まとめ（チートシート）</a>
+    へ移動します。
+  </p>
+</body>
+</html>
