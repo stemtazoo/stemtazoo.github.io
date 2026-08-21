@@ -5,12 +5,12 @@ description: Contrastive Lossは、埋め込み空間で類似データを近づ
 permalink: /gk/contrastive-loss/
 tags: [gk, neural_network, metrics]
 gk_section: ディープラーニングの概要/誤差関数
-gk_order: 1
-last_modified_at: 2026-08-15
+gk_order: 3
+last_modified_at: 2026-08-22
 ---
 
 ## まず結論
-Contrastive Loss（コントラスト損失）とは、**埋め込み空間で、類似したデータ同士の距離を小さくし、非類似のデータ同士の距離を大きくするように学習させる損失関数**です。
+Contrastive Loss（コントラスト損失）とは、**埋め込み空間で、類似したデータ同士の距離を小さくし、非類似データ同士の距離を大きくするように学習させる損失関数**です。
 
 G検定では、Contrastive Lossを「分類クラスを直接当てる損失」ではなく、**データ同士の関係や距離を学習する損失**として押さえます。
 
