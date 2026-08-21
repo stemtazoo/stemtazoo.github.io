@@ -5,8 +5,8 @@ description: "交差検証とグリッドサーチ・ランダムサーチ・ベ
 permalink: /gk/cross-validation-with-search/
 tags: [gk]
 gk_section: 機械学習の概要/モデルの選択・評価
-gk_order: 18
-last_modified_at: 2026-08-21
+gk_order: 21
+last_modified_at: 2026-08-22
 ---
 
 ## まず結論
