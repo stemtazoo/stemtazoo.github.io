@@ -5,8 +5,8 @@ description: BERTは、TransformerのEncoderを重ね、文の左右両方の文
 permalink: /gk/bert/
 tags: [gk, nlp, transformer, attention]
 gk_section: ディープラーニングの応用例/自然言語処理
-gk_order: 1
-last_modified_at: 2026-08-13
+gk_order: 20
+last_modified_at: 2026-08-21
 ---
 
 ## まず結論
