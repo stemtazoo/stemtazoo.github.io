@@ -1,178 +1,189 @@
-﻿---
+---
 layout: page
-title: G検定ひっかけ最適化問題10連発【SGD / Adam / RMSprop ほか｜解説付き】
-description: "SGD、Momentum、AdaGrad、RMSprop、Adamなど最適化手法の違いを、10問のひっかけ問題で確認します。勾配の向き、過去の更新を使う慣性、学習率の自動調整、二乗勾配の累積と移動平均という手掛かりを整理し、Adamなら学習率設定が不要、最適化手法が過学習を必ず防ぐといった誤答を外します。"
+title: G検定ひっかけ最適化問題10問｜SGD・Momentum・Adamほか
+description: "SGD、Momentum、AdaGrad、RMSprop、AdaDelta、Adam、AdaBound、AMSBoundの違いを10問で確認します。慣性、勾配二乗の累積と移動平均、1次・2次モーメント、動的な学習率境界という判断語から選択肢を切る練習問題です。"
 permalink: /gk/optimizer-trick-questions/
-tags: [gk, cheatsheet, neural_network]
+tags: [gk, cheatsheet, neural_network, optimization]
 gk_section: ディープラーニングの概要/最適化手法
-gk_order: 22
-last_modified_at: 2026-07-14
+gk_order: 13
+last_modified_at: 2026-08-21
 ---
 
 ## まず結論
-- G検定の最適化問題は **用語暗記ではなく「問題文のキーワード」**で切る。
-- この10問が判断できれば、最適化手法は落とさない。
 
----
+最適化手法は、名前ではなく**問題文に出る仕組みのキーワード**で切ります。
 
-## 問題1
-**学習率を固定して更新する、最も基本的な最適化手法はどれか。**
+先に[最適化手法まとめ](/gk/optimization-cheatsheet/)を確認してから、次の10問で判断できるか試してください。
 
-A. Adam  
-B. RMSprop  
-C. SGD  
-D. AdaGrad  
+## 直感的な説明
 
-**正解：C**
+試験では「どれが最強か」ではなく、
 
-👉 **「学習率固定」**が見えたら即SGD。
+- 慣性を使うのか
+- 勾配二乗をためるのか
+- 移動平均を使うのか
+- 1次・2次モーメントを使うのか
+- 学習率へ境界を設けるのか
 
----
+を見ます。
 
-## 問題2
-**勾配の二乗和を蓄積し、頻出特徴の学習率が小さくなりやすい手法はどれか。**
+## 定義・仕組み
 
-A. RMSprop  
-B. AdaGrad  
-C. Adam  
-D. SGD  
+### 問題1
 
-**正解：B**
-
-👉 **「二乗和を蓄積」＝ AdaGrad**
-
----
-
-## 問題3
-**AdaGradの「学習率が減りすぎる」欠点を改善した手法はどれか。**
-
-A. Adam  
-B. Adadelta  
-C. RMSprop  
-D. AMSGrad  
-
-**正解：C**
-
-👉 **AdaGradの改良 → RMSprop**
-
----
-
-## 問題4
-**学習率を明示的に設定せず、勾配の移動平均を利用する手法はどれか。**
-
-A. RMSprop  
-B. Adam  
-C. Adadelta  
-D. SGD  
-
-**正解：C**
-
-👉 **「学習率を設定しない」＝ Adadelta**
-
----
-
-## 問題5
-**モーメント法とRMSpropの考え方を組み合わせた手法はどれか。**
+**過去の更新方向を利用して慣性を持たせる手法はどれか。**
 
 A. AdaGrad  
-B. Adam  
-C. AMSGrad  
-D. SGD  
+B. Momentum  
+C. RMSprop  
+D. AdaBound
 
 **正解：B**
 
-👉 **「モーメント＋Adaptive」＝ Adam**
+「慣性」「速度」「振動抑制」なら[Momentum](/gk/momentum/)です。
 
----
+### 問題2
 
-## 問題6
-**Adamの収束性の問題を理論的に改善した手法はどれか。**
+**過去の勾配二乗を累積し続ける手法はどれか。**
 
-A. RMSprop  
-B. AdaBound  
-C. AMSGrad  
-D. SGD  
+A. AdaGrad  
+B. RMSprop  
+C. Adam  
+D. Momentum
+
+**正解：A**
+
+「二乗を累積」なら[AdaGrad](/gk/adagrad/)です。
+
+### 問題3
+
+**勾配二乗の指数移動平均を使い、古い情報の影響を弱める手法はどれか。**
+
+A. SGD  
+B. AdaGrad  
+C. RMSprop  
+D. Momentum
 
 **正解：C**
 
-👉 **Adamの安定版 → AMSGrad**
+「二乗の移動平均」なら[RMSprop](/gk/rmsprop/)です。
 
----
+### 問題4
 
-## 問題7
-**学習初期はAdamのように振る舞い、終盤はSGDに近づく手法はどれか。**
+**勾配だけでなく、更新量の移動平均も使って更新幅を調整する手法はどれか。**
 
-A. AMSGrad  
-B. AdaBound  
-C. RMSprop  
-D. Adadelta  
+A. AdaDelta  
+B. Momentum  
+C. AdaGrad  
+D. SGD
+
+**正解：A**
+
+[AdaDelta](/gk/adadelta/)はAdaGradの累積問題を補う系統です。
+
+### 問題5
+
+**勾配の1次モーメント推定と2次モーメント推定を使う手法はどれか。**
+
+A. RMSprop  
+B. Adam  
+C. AdaGrad  
+D. SGD
 
 **正解：B**
 
-👉 **Adam → SGD の流れ＝ AdaBound**
+「1次＋2次モーメント」なら[Adam](/gk/adam/)です。
 
----
+### 問題6
 
-## 問題8
-**学習初期はAMSGrad、終盤はSGDに近づく手法はどれか。**
+**Adam系の実効学習率に、時間とともに変化する上限・下限を設ける手法はどれか。**
+
+A. AdaDelta  
+B. AdaBound  
+C. RMSprop  
+D. Momentum
+
+**正解：B**
+
+「Adam基盤＋動的な境界」なら[AdaBound](/gk/adabound/)です。
+
+### 問題7
+
+**AMSGradを基盤に、動的な学習率境界を加える手法はどれか。**
 
 A. Adam  
 B. AdaBound  
 C. AMSBound  
-D. RMSprop  
+D. AdaGrad
 
 **正解：C**
 
-👉 **AMSGrad → SGD の流れ＝ AMSBound**
+「AMSGrad＋Bound」なら[AMSBound](/gk/amsbound/)です。
 
----
+### 問題8
 
-## 問題9
-**汎化性能が高いが、収束が遅くなりやすい手法はどれか。**
+**「Adamを使えば学習率を設定する必要がない」という説明は正しいか。**
 
-A. Adam  
-B. RMSprop  
-C. AdaGrad  
-D. SGD  
+A. 正しい  
+B. 誤り
 
-**正解：D**
+**正解：B**
 
-👉 **「汎化が良いが遅い」＝ SGD**
+Adamでも基本学習率などのハイパーパラメータを設定します。
 
----
+### 問題9
 
-## 問題10（超ひっかけ）
-**文章中の単語の重要度を数値化する手法として最も適切なものはどれか。**
+**「最適化手法をAdamに変えれば過学習を必ず防げる」という説明は正しいか。**
 
-A. RMSprop  
-B. Adam  
-C. TF-IDF  
-D. AdaGrad  
+A. 正しい  
+B. 誤り
+
+**正解：B**
+
+最適化と汎化・過学習対策は関連しますが、Adamへ変えるだけで過学習が必ず防げるわけではありません。
+
+### 問題10
+
+**弱学習器を逐次的に組み合わせる手法はどれか。**
+
+A. AdaGrad  
+B. AdaBound  
+C. AdaBoost  
+D. Adam
 
 **正解：C**
 
-👉 **TF-IDFは最適化手法ではない！**
+AdaBoostは最適化手法ではなく、**ブースティングによるアンサンブル学習**です。
 
----
+## いつ使う？（得意・不得意）
 
-## G検定での最終判断ルール（超重要）
-- **学習率固定 → SGD**
-- **二乗和 → AdaGrad**
-- **AdaGrad改良 → RMSprop**
-- **学習率不要 → Adadelta**
-- **モーメント＋Adaptive → Adam**
-- **Adam安定化 → AMSGrad**
-- **Adam → SGD → AdaBound**
-- **AMSGrad → SGD → AMSBound**
-- **最適化じゃない → TF-IDF**
+このページは個別手法の詳細説明ではなく、**選択肢を切る練習用**です。
 
----
+仕組みを確認したい場合は[最適化手法まとめ](/gk/optimization-cheatsheet/)や各個別記事へ戻ります。
+
+## G検定ひっかけポイント
+
+最終的には次の対応を即答できれば十分です。
+
+| キーワード | 手法 |
+|---|---|
+| 慣性 | Momentum |
+| 二乗を累積 | AdaGrad |
+| 二乗の移動平均 | RMSprop |
+| 更新量の移動平均 | AdaDelta |
+| 1次＋2次モーメント | Adam |
+| Adam＋動的境界 | AdaBound |
+| AMSGrad＋動的境界 | AMSBound |
+
+「Adam＝学習率不要」「Adam＝過学習防止」のような極端な説明は切ります。
 
 ## まとめ（試験直前用）
-- 名前を見て判断しない
-- 問題文のキーワードを拾う
-- 「Adam系」「Bound系」を見分ける
-- TF-IDFは最適化ではない
-- この10問が解ければ十分
+
+- 慣性＝Momentum
+- 累積＝AdaGrad、移動平均＝RMSprop
+- 更新量も見る＝AdaDelta
+- 1次＋2次＝Adam
+- 動的な上下限＝Bound系
+- AdaBoostは最適化ではない
 
 {% include gk_article_footer.html %}
