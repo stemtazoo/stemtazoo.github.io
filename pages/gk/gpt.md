@@ -5,8 +5,8 @@ description: "GPTを、Transformer Decoderの考え方を使う自己回帰型�
 permalink: /gk/gpt/
 tags: [gk, nlp, transformer, attention]
 gk_section: ディープラーニングの応用例/自然言語処理
-gk_order: 2
-last_modified_at: 2026-07-14
+gk_order: 21
+last_modified_at: 2026-08-21
 ---
 
 ## まず結論
