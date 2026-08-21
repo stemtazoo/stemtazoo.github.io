@@ -1,12 +1,12 @@
-﻿---
+---
 layout: page
 title: BERTとGPTの違い【比較チートシート｜G検定対策】
 description: "BERTとGPTの違いについて、G検定で問われる自然言語処理・系列データ分野の観点から、目的、前提、モデル構造、入力と出力、評価観点のどこが異なるかを比較します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/bert-vs-gpt/
 tags: [gk, nlp, transformer, cheatsheet]
 gk_section: ディープラーニングの応用例/自然言語処理
-gk_order: 3
-last_modified_at: 2026-06-21
+gk_order: 22
+last_modified_at: 2026-08-21
 ---
 
 ## まず結論
