@@ -5,8 +5,8 @@ description: "モデル選択・評価の流れを、候補決定、ハイパー
 permalink: /gk/model-selection-evaluation-cheatsheet/
 tags: [gk, cheatsheet]
 gk_section: 機械学習の概要/モデルの選択・評価
-gk_order: 25
-last_modified_at: 2026-08-21
+gk_order: 24
+last_modified_at: 2026-08-22
 ---
 
 ## まず結論
