@@ -1,12 +1,12 @@
-﻿---
+---
 layout: page
 title: FCN（Fully Convolutional Network）
 description: "FCNは、全結合層を畳み込み層に置き換え、画像全体に1ラベルを付けるのではなく、各画素が属するクラスを推定するセマンティックセグメンテーションモデルです。ダウンサンプリングした特徴マップをアップサンプリングして位置を復元する流れを押さえ、物体検出やインスタンス分割との出力の違いを判断します。"
 permalink: /gk/fcn/
 tags: [gk, neural_network, cnn]
 gk_section: ディープラーニングの応用例/画像認識/セグメンテーションタスク
-gk_order: 5
-last_modified_at: 2026-06-27
+gk_order: 1
+last_modified_at: 2026-08-21
 ---
 
 ## まず結論
