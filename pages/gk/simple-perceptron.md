@@ -1,82 +1,23 @@
-﻿---
-layout: page
-title: 単純パーセプトロン（Simple Perceptron）とは？G検定対策
-description: "単純パーセプトロン（Simple Perceptron）について、G検定で問われるAI・機械学習分野の観点から、基本的な意味、代表モデル・手法との関係、試験で問われやすい判断軸を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
-permalink: /gk/simple-perceptron/
-tags: [gk, neural_network]
-gk_section: 人工知能をめぐる動向/人工知能をめぐる動向
-gk_order: 6
-last_modified_at: 2026-06-21
 ---
-
-## まず結論
-
-* **単純パーセプトロン（Simple Perceptron）**は、**1950年代にフランク・ローゼンブラットが提案した、最も基本的なニューラルネットワークモデル**です。
-* G検定では「**ニューラルネットワークの元祖**」として誰が・いつ提案したかを問われます。
-
-## 直感的な説明
-
-* 単純パーセプトロンは、
-  **「いくつかの入力を重み付きで足し算して、しきい値を超えたらYES／NOを出す装置」**です。
-* 人間の脳のニューロンを、
-  とても単純化して数式で表したものと考えるとイメージしやすいです。
-
-👉 とてもシンプルですが、
-「機械が学習する」という考え方の出発点になりました。
-
-## 定義・仕組み
-
-* 入力：x₁, x₂, …
-
-* 重み：w₁, w₂, …
-
-* 出力：
-
-  * 重み付き和がしきい値を超える → 1
-  * 超えない → 0
-
-* **線形分離可能な問題のみ**を解くことができます。
-
-## いつ使う？（得意・不得意）
-
-### 得意なこと
-
-* 線形分離できる2値分類
-* ニューラルネットワークの理論理解
-
-### 不得意・注意点
-
-* XOR問題を解けない
-* 非線形問題には対応できない
-* 実用モデルとしては使われない
-
-## G検定ひっかけポイント
-
-* ❌ **オートエンコーダ**
-
-  * → 2006年以降、ヒントンら。深層学習の流れ
-
-* ❌ **ボルツマンマシン**
-
-  * → 1980年代、確率モデル
-
-* ❌ **ネオコグニトロン**
-
-  * → 1979年、福島邦彦。CNNの原型
-
-* ⭕ **単純パーセプトロン**
-
-  * → 1950年代、ローゼンブラット
-
-👉 「**1950年代 × 元祖**」が出たら即パーセプトロン。
-
-## まとめ（試験直前用）
-
-* 単純パーセプトロン＝ニューラルネットワークの元祖
-* 提案者：フランク・ローゼンブラット
-* 提案時期：1950年代
-* 線形分離のみ可能、XORは解けない
-* 他のモデルと年代で区別する
-*
-
-{% include gk_article_footer.html %}
+layout: null
+permalink: /gk/simple-perceptron/
+sitemap: false
+last_modified_at: 2026-08-21
+---
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,follow">
+  <meta http-equiv="refresh" content="0; url=/gk/perceptron/">
+  <link rel="canonical" href="https://stemtazoo.github.io/gk/perceptron/">
+  <title>単純パーセプトロンの記事へ移動します</title>
+</head>
+<body>
+  <p>
+    単純パーセプトロンの記事を統合しました。
+    <a href="/gk/perceptron/">単純パーセプトロンとは？線形分離とXORの限界【G検定対策】</a>
+  </p>
+</body>
+</html>
