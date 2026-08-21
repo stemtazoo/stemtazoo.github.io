@@ -5,8 +5,8 @@ description: Bag of Wordsを、文書を語彙ごとの出現回数ベクトル�
 permalink: /gk/bag-of-words/
 tags: [gk, nlp, machine_learning]
 gk_section: ディープラーニングの応用例/自然言語処理
-gk_order: 5
-last_modified_at: 2026-07-18
+gk_order: 3
+last_modified_at: 2026-08-21
 ---
 
 ## まず結論
