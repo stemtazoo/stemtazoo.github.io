@@ -5,7 +5,7 @@ description: "自然言語処理（NLP）の主要手法を、単語を数える
 permalink: /gk/nlp-cheatsheet/
 tags: [gk, nlp, cheatsheet]
 gk_section: ディープラーニングの応用例/自然言語処理
-gk_order: 10
+gk_order: 1
 last_modified_at: 2026-08-21
 ---
 
