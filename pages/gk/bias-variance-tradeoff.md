@@ -5,8 +5,8 @@ description: "バイアス・バリアンス トレードオフを、モデル�
 permalink: /gk/bias-variance-tradeoff/
 tags: [gk, machine_learning, evaluation]
 gk_section: 機械学習の概要/よくあるつまずき（過学習など）
-gk_order: 4
-last_modified_at: 2026-08-21
+gk_order: 5
+last_modified_at: 2026-08-22
 ---
 
 ## まず結論
