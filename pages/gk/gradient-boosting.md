@@ -5,8 +5,8 @@ description: "勾配ブースティングを、弱学習器を逐次追加して
 permalink: /gk/gradient-boosting/
 tags: [gk, ensemble]
 gk_section: 機械学習の概要/代表的な手法/教師あり学習
-gk_order: 6
-last_modified_at: 2026-08-21
+gk_order: 5
+last_modified_at: 2026-08-22
 ---
 
 ## まず結論
