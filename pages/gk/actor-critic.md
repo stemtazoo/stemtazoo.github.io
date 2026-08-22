@@ -1,79 +1,72 @@
-﻿---
+---
 layout: page
 title: Actor–Critic とは？（オン／オフポリシーの位置づけ）【G検定対策】
 description: "Actor–Criticを、行動を選ぶActorと、その行動を価値で評価するCriticを組み合わせる強化学習手法として整理します。方策ベースと価値ベース双方の役割、方策勾配の分散を抑える考え方、実装によってオンポリシーにもオフポリシーにもなる点をG検定向けに確認します。"
 permalink: /gk/actor-critic/
-tags: [gk, neural_network]
+tags: [gk, reinforcement_learning, neural_network]
 gk_section: 機械学習の概要/代表的な手法/強化学習
-gk_order: 7
-last_modified_at: 2026-07-01
+gk_order: 13
+last_modified_at: 2026-08-22
 ---
 
 ## まず結論
-- **Actor–Critic は、「行動を決める Actor」と「評価する Critic」を分けて学習する強化学習手法**。
-- G検定では **「オンポリシーにもオフポリシーにもなり得る」点**が重要。
+- **Actor–Critic は、「方策を更新する Actor」と「価値を推定する Critic」を組み合わせる強化学習の枠組み**です。
+- G検定では **Actor＝方策、Critic＝価値** と切り分け、さらに **オンポリシーにもオフポリシーにもなり得る**点を押さえます。
 
 ## 直感的な説明
 - Actor–Critic は「**プレイヤーとコーチの分業**」。
-- Actor（行動役）：
-  - 次に何をするか決める
-- Critic（評価役）：
-  - その行動がどれくらい良かったか評価
-- イメージ：
-  - Actor：プレイする人
-  - Critic：横でアドバイスするコーチ
-- DQN と違い、  
-  **行動決定と評価を分けて考える**のがポイント。
+- Actor：次に何をするか決める
+- Critic：その選択がどれくらい良いか評価する
+
+REINFORCEがエピソード収益をそのまま使う基本形なのに対し、Actor-CriticではCriticの価値推定を使ってActorの更新を助けます。
 
 ## 定義・仕組み
-- Actor–Critic の基本構造：
-  - **Actor**：方策（policy）を学習
-  - **Critic**：価値関数（V値やQ値）を学習
-- 学習の流れ：
-  1. Actor が行動を選択
-  2. 環境から報酬を受け取る
-  3. Critic が「良さ」を評価
-  4. その評価を使って Actor を更新
-- 特徴：
-  - Policy Gradient の不安定さを改善
-  - DQN のような価値関数学習も活用
+- **Actor**：方策 π(a|s) を更新
+- **Critic**：状態価値 V(s) や行動価値 Q(s,a) などを推定
+
+学習の流れは概ね次の通りです。
+
+1. Actor が行動を選ぶ
+2. 環境から報酬と次状態を得る
+3. Critic が価値を推定する
+4. Criticの評価を使ってActorを更新する
+
+Criticを使うことで、モンテカルロ収益だけに頼るREINFORCEより、方策勾配の分散を抑えやすくなります。
 
 ## いつ使う？（得意・不得意）
-**得意**
-- 連続行動空間
-- 方策を直接学習したい場合
-- 安定性と効率のバランスを取りたいとき
+### 向いている場面
+- 方策を直接学びたい
+- 価値推定も利用して更新を安定させたい
+- 連続行動を含む問題
 
-**不得意・注意**
-- 実装がやや複雑
-- Critic の精度に依存しやすい
+### 注意点
+- ActorとCriticの両方を学習するため設計が複雑になる
+- Criticの推定誤差がActorの更新に影響する
 
 ## オン／オフポリシーの位置づけ
-- **Actor–Critic は枠組みであって、学習方式は派生アルゴリズム次第**。
-- 代表例：
-  - **A2C / A3C**：オンポリシー
-  - **DDPG / SAC**：オフポリシー
-- 判断基準：
-  - Replay を使う → オフポリシー
-  - 今の方策だけ → オンポリシー
+Actor-Criticは1つの固定アルゴリズム名というより、**設計の枠組み**です。
+
+- **A2C / A3C**：代表的なオンポリシー系
+- **DDPG / SAC**：代表的なオフポリシー系
+
+したがって、**Actor-Critic＝必ずオンポリシー**ではありません。
 
 ## G検定ひっかけポイント
-- **「Actor–Critic ＝ オンポリシー」と決めつけさせる罠**
-- よくある誤解：
-  - ❌ Actor–Critic は 1 種類のアルゴリズム
-  - ❌ 必ずオンポリシー
-- 正しい理解：
-  - Actor–Critic は **設計思想**
-  - オン／オフは派生次第
-- 即断キーワード：
-  - 「Actor と Critic」→ Actor–Critic
-  - 「Replay」→ オフポリシー型 Actor–Critic
+- ❌ Actor-Criticは必ずオンポリシー
+- ❌ Actorが価値関数、Criticが方策を学ぶ
+- ❌ Actor-CriticはDQNの別名
+
+### 判断基準
+- 「Actor＝方策」→ 正しい
+- 「Critic＝価値」→ 正しい
+- 「ActorとCriticを分ける」→ Actor-Critic
+- 「オン／オフは派生アルゴリズム次第」→ 正しい
 
 ## まとめ（試験直前用）
-- Actor–Critic = **行動役と評価役を分離**
-- Actor：方策、Critic：価値
-- 安定性と効率を両立
-- オン／オフはアルゴリズム次第
-- **A2C/A3C＝オン、DDPG/SAC＝オフ**
+- Actor-Critic＝方策役と価値評価役を分ける
+- Actor：方策
+- Critic：価値
+- REINFORCEより価値推定を活用して分散を抑えやすい
+- オン／オフポリシーは派生アルゴリズム次第
 
 {% include gk_article_footer.html %}
