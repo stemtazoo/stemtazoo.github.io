@@ -4,9 +4,9 @@ title: AI倫理まとめ｜公平性・XAI・プライバシー・安全性【G�
 description: "AI倫理を公平性・説明可能性（XAI）・プライバシー・安全性の観点で整理し、透明性、説明責任、人間による監督まで含めて比較します。精度が高ければ倫理的、説明できれば常に安全、個人情報でなければ問題ない、といったG検定の誤った選択肢を切る判断基準を確認します。"
 permalink: /gk/ai-ethics/
 tags: [gk, ethics, cheatsheet]
-gk_section: AIの法律と倫理/AIの法律と倫理
-gk_order: 9
-last_modified_at: 2026-08-21
+gk_section: AIの法律と倫理/AI倫理・ガバナンス
+gk_order: 1
+last_modified_at: 2026-08-22
 ---
 
 ## まず結論
