@@ -1,70 +1,71 @@
-﻿---
+---
 layout: page
 title: REINFORCEとActor-Criticの違いとは？G検定対策
-description: "REINFORCEとActor-Criticの違いについて、G検定で問われる強化学習分野の観点から、目的、前提、モデル構造、入力と出力、評価観点のどこが異なるかを比較します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
+description: "REINFORCEとActor-Criticの違いを、方策更新に何を使うかという観点から比較します。モンテカルロ収益を使う基本形のREINFORCEと、Criticの価値推定を利用するActor-Criticを切り分けます。"
 permalink: /gk/reinforce-vs-actor-critic/
 tags: [gk, reinforcement_learning]
 gk_section: 機械学習の概要/代表的な手法/強化学習
-gk_order: 5
-last_modified_at: 2026-06-21
+gk_order: 14
+last_modified_at: 2026-08-22
 ---
 
 ## まず結論
 
-* **REINFORCE**は価値関数を使わず**方策（ポリシー）を直接勾配で更新**する手法、**Actor-Critic**は**方策（Actor）と価値関数（Critic）を併用**して学習を安定させる手法です。
-* G検定では「**価値関数を使うかどうか**」「**分散を下げる工夫があるか**」が判断ポイントになります。
+* **REINFORCE**は、基本形ではモンテカルロ収益を使って**方策を直接更新**します。
+* **Actor-Critic**は、**Actorが方策を更新し、Criticが価値を推定してその更新を助ける**枠組みです。
+* G検定では、**Criticによる価値推定を使うか**が大きな判断軸です。
 
 ## 直感的な説明
 
-* **REINFORCE**：行動して結果を見て、良ければクセを強め、悪ければ弱める“**一発反省型**”。
-* **Actor-Critic**：行動（Actor）に対して、その良し悪しを評価役（Critic）がすぐ教える“**コーチ付き**”。
-* コーチがいる分、Actor-Criticの方が**学習が安定**します。
+* **REINFORCE**：最後までやってみて、結果を見て方針を修正する
+* **Actor-Critic**：行動しながら、評価役のCriticから途中でフィードバックを受ける
+
+Actor-Criticでは価値推定を使うため、REINFORCEの基本形より勾配推定の分散を抑えやすくなります。
 
 ## 定義・仕組み
 
-* **REINFORCE（方策勾配法）**
+### REINFORCE
+- 方策 `π(a|s; θ)` を直接最適化
+- 基本形ではモンテカルロ収益を利用
+- 価値関数を学習するCriticは持たない
+- ベースラインを加えて分散を下げる拡張は可能
 
-  * 方策 (\pi(a|s;\theta)) を**直接最適化**
-  * **価値関数を使わない**（モンテカルロ報酬）
-  * 分散が大きくなりやすい
-
-* **Actor-Critic**
-
-  * **Actor**：方策を更新
-  * **Critic**：価値関数（VやQ）で評価
-  * **Advantage** 等を使い分散を低減
+### Actor-Critic
+- **Actor**：方策を更新
+- **Critic**：V値やQ値などを推定
+- Criticの評価を使ってActorの更新を助ける
 
 ## いつ使う？（得意・不得意）
 
 ### REINFORCE
-
-* 得意：実装がシンプル、理論が分かりやすい
-* 不得意：学習が不安定、サンプル効率が悪い
+- 方策勾配法の基本を理解しやすい
+- 実装が比較的単純
+- 一方で分散が大きくなりやすい
 
 ### Actor-Critic
-
-* 得意：学習が安定、実用向き
-* 不得意：構成が複雑
+- 価値推定を利用して更新を効率化・安定化しやすい
+- ActorとCriticの両方を学ぶため構成は複雑になる
 
 ## G検定ひっかけポイント
 
-* **最大のひっかけ**
+### よくある誤解
+- ❌ REINFORCEはQ値を直接学習する
+- ❌ Actor-Criticでは方策を学習しない
+- ❌ REINFORCEはどんな拡張でも価値情報を一切使わない
 
-  * 「REINFORCEは価値関数を最適化する」→ ❌
-* 正しい切り分け
+最後は強すぎる表現です。**基本形のREINFORCEにはCriticがありません**が、ベースラインとして価値推定を使う拡張はあります。
 
-  * 価値関数なしで方策更新 → **REINFORCE**
-  * 価値関数を使って方策更新 → **Actor-Critic**
-* 選択肢で
-
-  * 「分散を下げるためCriticを用いる」→ Actor-Critic
-  * 「モンテカルロで直接更新」→ REINFORCE
+### 判断基準
+- 「モンテカルロ収益で方策を直接更新」→ REINFORCE
+- 「Actor＋Critic」→ Actor-Critic
+- 「Criticが価値を推定」→ Actor-Critic
 
 ## まとめ（試験直前用）
 
-* REINFORCE：方策のみ、価値関数なし
-* Actor-Critic：Actor＋Criticの二役
-* 安定性重視ならActor-Critic
-* 「価値関数を使うか」が最短判断軸
+- REINFORCE＝基本形はモンテカルロ型の方策勾配法
+- Actor-Critic＝Actorが方策、Criticが価値
+- Criticを使うことで分散を抑えやすい
+- 「価値関数を絶対使わない」と一般化しすぎない
+- **Criticの有無**が最短の判断軸
 
 {% include gk_article_footer.html %}
