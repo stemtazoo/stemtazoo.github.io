@@ -3,10 +3,10 @@ layout: page
 title: 白色化（Whitening）とは？無相関化＋分散1で切り分ける【G検定】
 description: "白色化（Whitening）を、特徴量間の相関を取り除き、各成分の分散を1にそろえる前処理として整理します。標準化・正規化・正則化との違い、共分散行列、PCA WhiteningやZCA Whiteningの位置づけ、G検定で『無相関化』を見抜く判断基準を確認します。"
 permalink: /gk/whitening/
-tags: [gk, neural_network]
-gk_section: ディープラーニングの要素技術/ネットワークの構成要素
-gk_order: 14
-last_modified_at: 2026-08-21
+tags: [gk, machine_learning, preprocessing]
+gk_section: 機械学習の概要/特徴量・前処理
+gk_order: 3
+last_modified_at: 2026-08-22
 ---
 
 ## まず結論
