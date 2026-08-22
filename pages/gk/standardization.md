@@ -3,10 +3,10 @@ layout: page
 title: 標準化（Standardization）とは？平均0・分散1で切り分ける【G検定】
 description: "標準化（Standardization）を、各特徴量を平均0・分散1にそろえる前処理として整理します。正規化・白色化・正則化との違い、外れ値への注意、学習データの統計量を使う意味、G検定で『平均0・分散1』を見たときの判断基準を確認します。"
 permalink: /gk/standardization/
-tags: [gk, neural_network]
-gk_section: ディープラーニングの要素技術/ネットワークの構成要素
-gk_order: 15
-last_modified_at: 2026-08-21
+tags: [gk, machine_learning, preprocessing]
+gk_section: 機械学習の概要/特徴量・前処理
+gk_order: 2
+last_modified_at: 2026-08-22
 ---
 
 ## まず結論
