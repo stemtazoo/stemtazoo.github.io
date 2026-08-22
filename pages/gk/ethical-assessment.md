@@ -1,12 +1,12 @@
-﻿---
+---
 layout: page
 title: AIの開発における倫理アセスメントとは？【G検定対策】
 description: "倫理アセスメントは、AIの利用目的や影響を受ける人、公平性、プライバシー、安全性、人権、説明責任などを開発・導入・運用の各段階で評価する取組です。事故防止だけを目的とする一律の単一方式ではなく、導入後も継続的に見直す点を整理します。"
 permalink: /gk/ethical-assessment/
-tags: [gk]
-gk_section: AIの法律と倫理/AIの法律と倫理
-gk_order: 19
-last_modified_at: 2026-07-14
+tags: [gk, ethics, governance]
+gk_section: AIの法律と倫理/AI倫理・ガバナンス
+gk_order: 4
+last_modified_at: 2026-08-22
 ---
 
 ## まず結論
