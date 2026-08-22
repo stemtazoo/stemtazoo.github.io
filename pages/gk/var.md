@@ -1,12 +1,12 @@
-﻿---
+---
 layout: page
 title: ベクトル自己回帰モデル（VAR）とは？【G検定対策】
 description: "ベクトル自己回帰モデル（VAR）は、複数の時系列変数を互いの過去値から予測するモデルです。ラグと変数間の相互作用を押さえ、単変量のARや差分を使うARIMAとの違いをG検定向けに整理します。"
 permalink: /gk/var/
 tags: [gk, time_series]
 gk_section: 機械学習の概要/代表的な手法/教師あり学習
-gk_order: 5
-last_modified_at: 2026-07-14
+gk_order: 8
+last_modified_at: 2026-08-22
 ---
 
 ## まず結論
