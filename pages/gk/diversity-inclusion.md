@@ -1,12 +1,12 @@
-﻿---
+---
 layout: page
 title: ダイバーシティ＆インクルージョンとは？（AI開発における責任）【G検定対策】
 description: "AIにおけるダイバーシティ＆インクルージョンは、開発チーム、データ、利用者の多様性を考慮し、特定集団の不利益や排除を防ぐ取組です。バイアスの点検や利用者の意見反映は該当する一方、単なる予算増加や性能向上は該当しないというG検定の判断軸を整理します。"
 permalink: /gk/diversity-inclusion/
-tags: [gk]
-gk_section: AIの法律と倫理/AIの法律と倫理
-gk_order: 33
-last_modified_at: 2026-07-14
+tags: [gk, ethics, inclusion]
+gk_section: AIの法律と倫理/AI倫理・ガバナンス
+gk_order: 7
+last_modified_at: 2026-08-22
 ---
 
 ## まず結論
