@@ -67,11 +67,17 @@ gk_sections:
   - title: "AIの社会実装に向けて"
 
   - title: "AIの法律と倫理"
+    subsections:
+      - title: "AI倫理・ガバナンス"
+      - title: "プライバシー・個人情報保護"
+      - title: "AIセキュリティ・プライバシー攻撃"
+      - title: "知的財産・データ利用"
+      - title: "社会的影響・悪用"
 
   - title: "チートシート（試験直前）"
 
   - title: "ひっかけ問題集"
-last_modified_at: 2026-08-15
+last_modified_at: 2026-08-22
 ---
 
 <div class="portal-card-grid">
