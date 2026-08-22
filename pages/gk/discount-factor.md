@@ -1,12 +1,12 @@
-﻿---
+---
 layout: page
 title: 割引率（γ）とは？将来報酬をどう評価するか【G検定対策】
 description: "割引率（γ）将来報酬をどう評価するかについて、G検定で問われる強化学習分野の観点から、状態・行動・報酬・方策との関係、価値ベース手法や方策ベース手法との違いを整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/discount-factor/
 tags: [gk, reinforcement_learning]
 gk_section: 機械学習の概要/代表的な手法/強化学習
-gk_order: 10
-last_modified_at: 2026-06-21
+gk_order: 3
+last_modified_at: 2026-08-22
 ---
 
 ## まず結論
