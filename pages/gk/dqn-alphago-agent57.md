@@ -1,86 +1,20 @@
-﻿---
-layout: page
-title: DQN / AlphaGo / Agent57【強化学習の系譜まとめ】
-description: "DQN / AlphaGo / Agent57について、G検定で問われる強化学習分野の観点から、状態・行動・報酬・方策との関係、価値ベース手法や方策ベース手法との違いを整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
-permalink: /gk/dqn-alphago-agent57/
-tags: [gk, neural_network, cheatsheet]
-gk_section: ディープラーニングの応用例/深層強化学習
-gk_order: 22
-last_modified_at: 2026-06-21
 ---
-
-## まず結論
-- **DQN → AlphaGo → Agent57 は、強化学習が「単一タスク」から「汎用エージェント」へ進化した流れ**。
-- G検定では **「どの課題を解決したモデルか」**を時系列で整理できているかが問われる。
-
-## 直感的な説明
-- DQN：🎮 **1つのゲームを上手くなる**
-- AlphaGo：♟ **囲碁という難しい1ゲームを極める**
-- Agent57：🕹 **ゲームが変わっても人間超え**
-
-人間に例えると：
-- DQN：特定ゲームの猛特訓
-- AlphaGo：囲碁のプロ棋士
-- Agent57：どんなゲームでも強い万能プレイヤー
-
-## 定義・仕組み
-### DQN（Deep Q-Network）
-- **:contentReference[oaicite:1]{index=1} が開発**
-- Q学習にニューラルネットワークを導入
-- Atariゲームで人間レベルを達成
-- 特徴：
-  - 価値関数（Q値）を学習
-  - **単一タスク向け**
-
-### AlphaGo
-- 囲碁専用の強化学習システム
-- 特徴：
-  - 方策ネットワーク（Policy）
-  - 価値ネットワーク（Value）
-  - モンテカルロ木探索（MCTS）
-- 人間トップ棋士に勝利
-- **特定タスク特化型**
-
-### Agent57
-- Atari **57種類すべて**で人間平均超え
-- 特徴：
-  - 複数ポリシーの切り替え
-  - エピソディックメモリ
-  - 探索と活用の自動調整
-- **汎用強化学習エージェント**
-
-## いつ使う？（得意・不得意）
-**DQN**
-- 得意：シンプルなゲーム環境
-- 注意：タスクが変わると使えない
-
-**AlphaGo**
-- 得意：囲碁・将棋などの完全情報ゲーム
-- 注意：他タスクには転用不可
-
-**Agent57**
-- 得意：複数ゲーム・未知環境
-- 注意：計算資源が大きい
-
-## G検定ひっかけポイント
-- **「どこが進化したか」を聞かれる**
-- よくある誤解：
-  - ❌ AlphaGoは汎用AI
-  - ❌ Agent57はNLPモデル
-- 正しい整理：
-  - DQN：**深層強化学習の出発点**
-  - AlphaGo：**探索×学習の完成形（特化）**
-  - Agent57：**汎用性の到達点**
-- 選択肢の判断基準：
-  - 「Q学習」→ DQN
-  - 「囲碁・MCTS」→ AlphaGo
-  - 「57 Atari・汎用」→ Agent57
-
-## まとめ（試験直前用）
-- DQN：深層強化学習の始まり
-- AlphaGo：特定タスクで人間超え
-- Agent57：**複数タスクで人間超え**
-- 進化の軸は **汎用性**
-- 「Atari 57種」＝ Agent57
-
-{% include gk_article_footer.html %}
+layout: null
+permalink: /gk/dqn-alphago-agent57/
+sitemap: false
+last_modified_at: 2026-08-22
+---
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,follow">
+  <meta http-equiv="refresh" content="0; url=/gk/dqn-alphago-alphastar-agent57/">
+  <link rel="canonical" href="https://stemtazoo.github.io/gk/dqn-alphago-alphastar-agent57/">
+  <title>DQN・AlphaGo・AlphaStar・Agent57比較へ移動します</title>
+</head>
+<body>
+  <p>深層強化学習システムの比較記事は統合しました。<a href="/gk/dqn-alphago-alphastar-agent57/">DQN・AlphaGo・AlphaStar・Agent57の違い</a>をご覧ください。</p>
+</body>
+</html>
