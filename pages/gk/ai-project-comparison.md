@@ -1,83 +1,89 @@
-﻿---
+---
 layout: page
-title: AlphaGo・AlphaGo Zero・AlphaZeroほかの比較【G検定】
-description: "AlphaGo・AlphaGo Zero・AlphaZero・OpenAI Five・AlphaStarについて、G検定で問われる強化学習分野の観点から、目的、前提、モデル構造、入力と出力、評価観点のどこが異なるかを比較します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
+title: AlphaGo・AlphaGo Zero・AlphaZero・OpenAI Five・AlphaStar比較【G検定】
+description: "AlphaGo、AlphaGo Zero、AlphaZero、OpenAI Five、AlphaStarを、対象ゲーム・人間棋譜・自己対戦・探索の違いから比較します。G検定でゲーム名と特徴を正しく対応づけるための判断基準を整理します。"
 permalink: /gk/ai-project-comparison/
 tags: [gk, reinforcement_learning, cheatsheet]
 gk_section: ディープラーニングの応用例/深層強化学習
 gk_order: 16
-last_modified_at: 2026-08-13
+last_modified_at: 2026-08-23
 ---
 
 ## まず結論
-- これらはすべて **強化学習を用いたAI** だが、  
-  **対象ゲーム・学習方法・汎用性が明確に異なる**。
-- G検定では「**どのゲームか**」と「**人間知識を使ったか**」で切る。
 
-## 直感的な整理（まずは一言）
-- **AlphaGo**：人間知識あり囲碁AI  
-- **AlphaGo Zero**：人間知識なし囲碁AI  
-- **AlphaZero**：囲碁・将棋・チェス対応の汎用AI  
-- **OpenAI Five**：Dota 2（5対5）専用AI  
-- **AlphaStar**：StarCraft II 専用AI  
+これらは、ゲームを対象に深層学習・強化学習・自己対戦などを活用した著名なAIシステムですが、**対象ゲームと学習・探索の仕組みは同じではありません**。
 
-## 完全比較表（最重要）
+G検定では、まず**ゲーム名**、次に**人間棋譜・自己対戦・MCTSなどの特徴**で切り分けます。
 
-| 項目 | AlphaGo | AlphaGo Zero | AlphaZero | OpenAI Five | AlphaStar |
-|---|---|---|---|---|---|
-| 開発元 | DeepMind | DeepMind | DeepMind | OpenAI | DeepMind |
-| 対象ゲーム | 囲碁 | 囲碁 | 囲碁・将棋・チェス | Dota 2 | StarCraft II |
-| 人間棋譜 | 使用する | 使用しない | 使用しない | 使用しない | 使用しない |
-| 学習方法 | 強化学習＋教師あり | 強化学習（自己対戦） | 強化学習（自己対戦） | 強化学習（自己対戦） | 強化学習 |
-| 汎用性 | 低い | 低い | 高い | 低い | 低い |
-| 特徴 | 初の人間超え | 完全自己学習 | ルールだけで複数ゲーム | eスポーツAI | RTS対応AI |
-| G検定の要点 | 人間知識あり | 人間知識なし | 将棋も可 | Dota 2専用 | StarCraft II |
+## 直感的な説明
 
-## 各AIの要点整理
+- **AlphaGo**：囲碁。人間棋譜も利用し、方策・価値ネットワークとMCTSを組み合わせる
+- **AlphaGo Zero**：囲碁。人間棋譜を使わず自己対戦から学習
+- **AlphaZero**：囲碁・将棋・チェスへ同じ基本アルゴリズムを適用
+- **OpenAI Five**：Dota 2の5対5チーム戦
+- **AlphaStar**：StarCraft IIのリアルタイム戦略ゲーム
+
+「どれが一番汎用的か」という曖昧な軸より、**何を対象に、どう学んだか**で覚えます。
+
+## 定義・仕組み
+
+| システム | 対象 | 人間の対局データ | 自己対戦 | 代表的な判断キーワード |
+|---|---|---|---|---|
+| AlphaGo | 囲碁 | 使用 | 使用 | 囲碁、方策・価値、MCTS |
+| AlphaGo Zero | 囲碁 | 不使用 | 使用 | 囲碁、人間棋譜なし |
+| AlphaZero | 囲碁・将棋・チェス | 不使用 | 使用 | 3ゲーム、自己対戦、MCTS |
+| OpenAI Five | Dota 2 | 対局棋譜という形では使わない | 使用 | Dota 2、5対5 |
+| AlphaStar | StarCraft II | 人間のリプレイも利用 | 使用 | StarCraft II、RTS |
+
 ### AlphaGo
-- 初めて人間トップ棋士に勝利した囲碁AI
-- **人間棋譜（教師データ）を使用**
-- 強化学習＋教師あり学習の組み合わせ
+
+人間棋譜を使った教師あり学習を含み、その後に強化学習を行い、MCTSと組み合わせました。
 
 ### AlphaGo Zero
-- **人間棋譜を一切使わない**
-- ルールだけを与えて自己対戦で学習
-- AlphaGoを上回る性能
+
+人間棋譜を使わず、囲碁のルールから自己対戦で学習しました。
 
 ### AlphaZero
-- AlphaGo Zeroを一般化
-- **同一アルゴリズムで囲碁・将棋・チェスを制覇**
-- 真の意味での「汎用ゲームAI」
+
+AlphaGo Zeroの考え方を、囲碁だけでなく将棋・チェスにも適用したシステムです。
+
+**「汎用AI」ではなく、複数のボードゲームに同じ基本アルゴリズムを適用した**と理解するのが安全です。
 
 ### OpenAI Five
-- **Dota 2（5対5・不完全情報・リアルタイム）専用**
-- eスポーツ分野の代表例
-- 将棋・囲碁には使えない
+
+Dota 2の5対5チーム戦を対象に、大規模な自己対戦による強化学習を行いました。
 
 ### AlphaStar
-- **StarCraft II 専用AI**
-- リアルタイム戦略ゲーム（RTS）
-- 不完全情報・長期戦略に対応
+
+StarCraft IIを対象とし、不完全情報・リアルタイム・長期戦略を扱います。学習には自己対戦だけでなく、人間プレイヤーのリプレイも利用されています。
+
+## いつ使う？（得意・不得意）
+
+これらは一般-purposeのアルゴリズムを選ぶ問題というより、**著名AIシステムと対象ゲーム・特徴の対応**として覚えるのが実用的です。
 
 ## G検定ひっかけポイント
-### よくある混同
-- ❌「OpenAI Fiveは将棋もできる」
-- ❌「AlphaGo Zeroは将棋対応」
-- ❌「AlphaStarはDota 2」
-- ❌「全部汎用AI」
 
-### 正しい即断ルール
-- **囲碁＋人間棋譜 → AlphaGo**
-- **囲碁＋自己対戦 → AlphaGo Zero**
-- **囲碁・将棋・チェス → AlphaZero**
-- **Dota 2 → OpenAI Five**
-- **StarCraft II → AlphaStar**
+### よくある誤解
+
+- ❌ AlphaZero＝汎用AI
+- ❌ AlphaStarは人間データを一切使わない
+- ❌ AlphaGo Zeroは将棋・チェスにも対応
+- ❌ OpenAI Five＝StarCraft II
+
+### 選択肢を切る判断基準
+
+- 囲碁＋人間棋譜＋MCTS → **AlphaGo**
+- 囲碁＋人間棋譜なし＋自己対戦 → **AlphaGo Zero**
+- 囲碁・将棋・チェス → **AlphaZero**
+- Dota 2＋5対5 → **OpenAI Five**
+- StarCraft II＋RTS → **AlphaStar**
 
 ## まとめ（試験直前用）
-- 全部強化学習ベース
-- 違いは「ゲーム」と「人間知識」
-- 汎用なのは AlphaZero だけ
-- eスポーツ系は専用AI
-- ゲーム名で即切る
+
+- AlphaGo＝囲碁＋人間棋譜＋MCTS
+- AlphaGo Zero＝囲碁＋自己対戦
+- AlphaZero＝囲碁・将棋・チェス
+- OpenAI Five＝Dota 2
+- AlphaStar＝StarCraft II
 
 {% include gk_article_footer.html %}
