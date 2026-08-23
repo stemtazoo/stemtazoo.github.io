@@ -1,79 +1,69 @@
 ---
 layout: page
 title: Rainbow（強化学習アルゴリズム）とは？【G検定対策】
-description: "Rainbowを、DQNに複数の改良手法を統合した価値ベースの深層強化学習として整理します。Double DQN、Dueling Network、優先度付き経験再生、Noisy Nets、Distributional RL、Multi-step Learningの役割と、方策勾配法との違いを確認します。"
+description: "Rainbowを、DQNに複数の改良手法を統合した価値ベースの深層強化学習として整理します。Double DQN、Dueling Network、Prioritized Experience Replay、Noisy Nets、Distributional RL、Multi-step Learningの役割と、方策勾配法との違いを確認します。"
 permalink: /gk/rainbow/
 tags: [gk, reinforcement_learning]
 gk_section: ディープラーニングの応用例/深層強化学習
 gk_order: 19
-last_modified_at: 2026-07-18
+last_modified_at: 2026-08-22
 ---
 
 ## まず結論
 
-- **Rainbow**とは、DQNに複数の改良手法を組み合わせた、**価値ベース・モデルフリー型の深層強化学習アルゴリズム**です。
-- 1つの新しい仕組みだけでなく、DQNの異なる弱点を補う複数の工夫を統合している点が特徴です。
-- G検定では、**DQN系か、方策勾配系か**、また各構成要素が何を改善するかを切り分けます。
+- **Rainbow**は、DQNに複数の改良手法を組み合わせた**価値ベースの深層強化学習アルゴリズム**です。
+- 1つの新しい仕組みではなく、**異なる弱点を改善する複数の工夫を統合した手法**です。
+- G検定では、**各構成要素が何を改善するか**を切り分けるのが重要です。
 
 ## 直感的な説明
 
-Rainbowは、DQNという基本モデルに対して、
+Rainbowは、DQNに対して、
 
 - Q値の過大評価を抑える
 - 重要な経験を優先して学ぶ
 - 状態の良さと行動の良さを分ける
 - 探索しやすくする
-- 報酬を1つの平均値だけでなく分布として捉える
-- 数ステップ先までまとめて学ぶ
+- 将来リターンを期待値だけでなく分布として捉える
+- 数ステップ先までの報酬を学習へ使う
 
-という改良を一つにまとめたものです。
+という改良をまとめたものです。
 
-そのため、よく
-
-> DQN改良手法の「全部盛り」
-
-と説明されます。
-
-ただし、単に手法を多く入れたのではなく、**それぞれが別の弱点を担当している**と理解することが大切です。
+よく「DQN改良の全部盛り」と説明されますが、試験では**それぞれの役割が違う**ことを押さえる方が大切です。
 
 ## 定義・仕組み
 
 Rainbowは、DQNを土台に次の6つの代表的な改良を統合します。
 
-| 構成要素 | 改善する点 | 覚え方 |
+| 構成要素 | 主に改善する点 | 判断キーワード |
 |---|---|---|
-| Double DQN | Q値の過大評価を抑える | 選択と評価を分ける |
-| Prioritized Experience Replay | 学習効果の高い経験を優先する | 重要な経験を多く再生 |
-| Dueling Network | 状態価値と行動の優位性を分ける | 状態と行動を分離 |
-| Noisy Nets | パラメータにノイズを加えて探索する | ノイズで探索 |
-| Distributional RL | 期待値だけでなく報酬分布を学ぶ | 分布を学習 |
-| Multi-step Learning | 数ステップ先の報酬を利用する | n-step報酬 |
+| Double DQN | Q値の過大評価 | 選択と評価を分ける |
+| Prioritized Experience Replay | 経験の選び方 | 重要な経験を優先 |
+| Dueling Network | 価値表現 | V(s) と A(s,a) を分ける |
+| Noisy Nets | 探索 | パラメータにノイズ |
+| Distributional RL | 価値の表現 | リターンの分布を学ぶ |
+| Multi-step Learning | 学習目標 | n-stepの報酬を利用 |
 
 ### 価値ベース手法である
 
 Rainbowの中心はDQNです。
-DQNはニューラルネットワークで**Q値**を近似し、そのQ値が最大となる行動を選びます。
 
-したがってRainbowも、
+そのため、
 
-- 方策そのものを直接最適化する方策勾配法ではない
-- 環境モデルを学んで未来をシミュレーションするモデルベース手法ではない
+- **Q値を学ぶ価値ベース手法**
+- 方策そのものを直接更新するREINFORCEなどとは異なる
 
-という位置づけです。
+と整理します。
 
-### 各要素は同じ役割ではない
+### 各構成要素は同じ役割ではない
 
-たとえば、Double DQNとDueling Networkは名前が似ていますが、役割は異なります。
+たとえば、
 
-- Double DQN：**過大評価を抑える**
-- Dueling Network：**状態価値と行動の優位性を分ける**
+- Double DQN → **過大評価の緩和**
+- Dueling Network → **価値表現の分解**
+- Noisy Nets → **探索**
+- Prioritized Experience Replay → **再学習する経験の選び方**
 
-また、Noisy NetsとPrioritized Experience Replayも探索・学習効率に関係しますが、
-
-- Noisy Nets：行動選択の探索を改善
-- Prioritized Experience Replay：どの経験を再学習するかを改善
-
-という違いがあります。
+です。
 
 ## いつ使う？（得意・不得意）
 
@@ -81,14 +71,14 @@ DQNはニューラルネットワークで**Q値**を近似し、そのQ値が�
 
 - Atariなどのゲーム環境
 - 離散的な行動を選ぶ問題
-- DQNより安定性・学習効率・性能を高めたい場合
+- DQN系の性能や学習効率を高めたい場合
 
-### 不得意・注意点
+### 注意点
 
-- 連続行動空間にはそのまま適用しにくい
-- 構成要素が多く、実装と調整が複雑
-- すべての問題で各改良が同じ程度に効果を持つとは限らない
-- 実世界ではサンプル効率や安全性が課題になる
+- 基本的には離散行動を扱うDQN系の手法
+- 構成要素が多く、実装や調整が複雑
+- すべての問題で各改良が同じ程度に有効とは限らない
+- 方策勾配法を統合したアルゴリズムではない
 
 ## G検定ひっかけポイント
 
@@ -98,36 +88,34 @@ DQNはニューラルネットワークで**Q値**を近似し、そのQ値が�
 |---|---|---|
 | DQN | 価値ベース | Q値をニューラルネットワークで近似 |
 | Rainbow | 価値ベース | DQNの複数改良を統合 |
-| REINFORCE | 方策ベース | 方策を直接更新 |
+| REINFORCE | 方策勾配 | 方策を直接更新 |
 | Actor-Critic | 方策＋価値 | ActorとCriticを使う |
-| AlphaZero | モデルベース寄りの探索を利用 | MCTSとニューラルネットワーク |
 
 ### よくある誤解
 
-- ❌ **方策勾配法を統合したアルゴリズムである**
-  - RainbowはDQNを基礎とする価値ベース手法です。
-- ❌ **環境モデルを学習して計画する**
-  - モデルフリー型です。
-- ❌ **Double DQNだけを別名で呼んだもの**
-  - 複数のDQN改良を統合しています。
-- ❌ **連続行動空間向けの代表手法である**
-  -基本的には離散行動空間を対象とします。
+- ❌ Rainbow＝Double DQNの別名
+- ❌ Rainbow＝方策勾配法
+- ❌ Rainbow＝環境モデルを学習して計画する手法
+- ❌ Rainbow＝連続行動向けの代表手法
 
 ### 選択肢を切る判断基準
 
 - 「**DQNの複数改良を統合**」→ Rainbow
-- 「**Q値の過大評価を抑える**」→ Double DQN
-- 「**状態価値と行動の優位性を分離**」→ Dueling Network
-- 「**重要な経験を優先して再生**」→ Prioritized Experience Replay
-- 「**報酬分布を学ぶ**」→ Distributional RL
+- 「**Q値の過大評価**」→ Double DQN
+- 「**V(s) と A(s,a)**」→ Dueling Network
+- 「**重要な経験を優先**」→ Prioritized Experience Replay
+- 「**パラメータにノイズ**」→ Noisy Nets
+- 「**リターン分布**」→ Distributional RL
 - 「**方策を直接更新**」→ Rainbowではなく方策勾配系
+
+関連： [DQN](/gk/dqn/) / [DQN改良手法まとめ](/gk/dqn-advanced/) / [Noisy Nets](/gk/noisy-nets/) / [Dueling Network](/gk/dueling-network/)
 
 ## まとめ（試験直前用）
 
-- Rainbowは**DQNの複数改良を統合**した手法
-- 価値ベース・モデルフリー型
-- Double DQN、Dueling Network、優先度付き経験再生などを組み合わせる
-- 各構成要素は別々の弱点を改善する
-- 「DQN改良の統合」ならRainbow
+- Rainbow＝**DQNの複数改良を統合**
+- 価値ベースの深層強化学習
+- 各構成要素は**別の弱点を改善**
+- 方策を直接更新する手法ではない
+- 「DQN改良の統合」が見えたらRainbow
 
 {% include gk_article_footer.html %}
