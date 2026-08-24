@@ -1,13 +1,13 @@
 ---
 layout: page
-title: 機械学習の代表的なタスク6種類｜分類・予測・クラスタリングほか【DS検定】
+title: 機械学習の代表的な6タスク｜分類・回帰など【DS検定】
 description: "機械学習で解決する代表的なタスクとは、データからパターンを学習して問題を解決する処理の種類のことです。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。初学者が迷いやすい判断ポイントも確認します。"
 permalink: /ds/ml-tasks/
 categories: [data-science]
 tags: [ds, modeling]
 prev: /ds/market-basket-analysis/
 next: /ds/pooling/
-last_modified_at: 2026-08-16
+last_modified_at: 2026-08-24
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
