@@ -1,5 +1,12 @@
 User-agent: *
 Disallow: /exports/
 
+# Agent-readable Markdown mirrors are not search-result pages.
+# Keep them accessible by URL while preventing search crawlers from auditing/indexing them as HTML pages.
+Disallow: /ds/*/index.md
+Disallow: /gk/*/index.md
+Disallow: /sg/*/index.md
+Disallow: /fe/*/index.md
+
 Content-Signal: ai-train=no, search=yes, ai-input=yes
 Sitemap: https://stemtazoo.github.io/sitemap.xml
