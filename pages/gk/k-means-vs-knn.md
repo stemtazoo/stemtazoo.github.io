@@ -4,9 +4,9 @@ title: k-means法とk-NNの違いとは？名前ひっかけ完全対策【G検�
 description: "k-means法とk-NNを、教師なしのクラスタリングか、教師ありの分類・回帰かで比較します。kの意味がクラスタ数と近傍数で異なることを、G検定の名前ひっかけ対策として整理します。"
 permalink: /gk/k-means-vs-knn/
 tags: [gk, clustering]
-gk_section: 機械学習の概要/代表的な手法/教師なし学習
+gk_section: 機械学習の概要/代表的な手法/教師なし学習/クラスタリング
 gk_order: 5
-last_modified_at: 2026-08-22
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
