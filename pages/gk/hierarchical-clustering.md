@@ -4,9 +4,9 @@ title: 階層型クラスタリングとは？凝集型・分割型【G検定対
 description: "階層型クラスタリングを、データやクラスタを段階的に結合・分割して階層構造を作る教師なし学習として整理します。凝集型と分割型、デンドログラム、k-meansとの違いをG検定向けに確認します。"
 permalink: /gk/hierarchical-clustering/
 tags: [gk, unsupervised_learning, clustering]
-gk_section: 機械学習の概要/代表的な手法/教師なし学習
+gk_section: 機械学習の概要/代表的な手法/教師なし学習/クラスタリング
 gk_order: 2
-last_modified_at: 2026-08-22
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
