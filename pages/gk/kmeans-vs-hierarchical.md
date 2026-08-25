@@ -4,9 +4,9 @@ title: k-meansと階層型クラスタリングの違い【G検定頻出比較�
 description: "k-meansと階層型クラスタリングを、最初にクラスタ数kを指定して直接分割するか、階層構造を作って後から切る位置を選べるかで比較します。デンドログラムや計算量の違いをG検定向けに整理します。"
 permalink: /gk/kmeans-vs-hierarchical/
 tags: [gk, unsupervised_learning, clustering]
-gk_section: 機械学習の概要/代表的な手法/教師なし学習
+gk_section: 機械学習の概要/代表的な手法/教師なし学習/クラスタリング
 gk_order: 3
-last_modified_at: 2026-08-22
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
