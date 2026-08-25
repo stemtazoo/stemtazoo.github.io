@@ -2,11 +2,11 @@
 layout: page
 title: 最適化手法まとめ｜SGD・Momentum・AdaGrad・RMSprop・Adam【G検定】
 description: "ニューラルネットワークの最適化手法を、慣性、勾配二乗の累積、指数移動平均、1次・2次モーメント、動的な学習率境界という判断軸で比較します。SGDからAdam、AdaDelta、AdaBound、AMSBoundまでをG検定向けに整理します。"
-last_modified_at: 2026-08-21
+last_modified_at: 2026-08-26
 permalink: /gk/optimization-cheatsheet/
 tags: [gk, neural_network, optimization, cheatsheet]
 gk_section: ディープラーニングの概要/最適化手法
-gk_order: 12
+gk_order: 13
 ---
 
 ## まず結論
