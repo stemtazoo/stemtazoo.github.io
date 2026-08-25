@@ -4,9 +4,9 @@ title: ブースティングとは？AdaBoost・Gradient Boostingとの違い【
 description: "ブースティングを、学習器を逐次追加してアンサンブル全体を改善する手法として整理します。AdaBoostのサンプル重み付けとGradient Boostingの損失勾配による補正を分け、バギングとの違いをG検定向けに確認します。"
 permalink: /gk/boosting/
 tags: [gk, machine_learning, ensemble]
-gk_section: 機械学習の概要/代表的な手法/教師あり学習
+gk_section: 機械学習の概要/代表的な手法/教師あり学習/アンサンブル学習
 gk_order: 4
-last_modified_at: 2026-08-22
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
