@@ -4,9 +4,9 @@ title: t-SNEとは？高次元データを可視化する次元削減手法【G�
 description: "t-SNEを、高次元空間の近傍関係を低次元で表現することを重視した非線形次元削減手法として整理します。クラスタ間距離や軸の意味を過度に解釈しないこと、PCA・MDS・UMAPとの違いをG検定向けに確認します。"
 permalink: /gk/tsne/
 tags: [gk, unsupervised_learning]
-gk_section: 機械学習の概要/代表的な手法/教師なし学習
-gk_order: 12
-last_modified_at: 2026-08-22
+gk_section: 機械学習の概要/代表的な手法/教師なし学習/次元削減
+gk_order: 5
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
