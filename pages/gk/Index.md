@@ -24,6 +24,8 @@ gk_sections:
           - title: "教師なし学習"
           - title: "強化学習"
 
+      - title: "確率分布・統計モデル"
+
       - title: "特徴量・前処理"
 
       - title: "モデルの選択・評価"
