@@ -18,6 +18,9 @@ gk_sections:
         subsections:
           - title: "学習の種類"
           - title: "教師あり学習"
+            subsections:
+              - title: "アンサンブル学習"
+              - title: "時系列分析"
           - title: "教師なし学習"
           - title: "強化学習"
 
@@ -77,7 +80,7 @@ gk_sections:
   - title: "チートシート（試験直前）"
 
   - title: "ひっかけ問題集"
-last_modified_at: 2026-08-22
+last_modified_at: 2026-08-26
 ---
 
 <div class="portal-card-grid">
