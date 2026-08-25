@@ -4,9 +4,9 @@ title: 潜在的ディリクレ配分法（LDA）とは？G検定対策
 description: "LDA（Latent Dirichlet Allocation）を、各文書を複数トピックの混合、各トピックを単語の確率分布として表す代表的な確率的トピックモデルとして整理します。線形判別分析との略称混同もG検定向けに確認します。"
 permalink: /gk/lda/
 tags: [gk, nlp, unsupervised_learning]
-gk_section: 機械学習の概要/代表的な手法/教師なし学習
-gk_order: 15
-last_modified_at: 2026-08-23
+gk_section: 機械学習の概要/代表的な手法/教師なし学習/トピックモデル
+gk_order: 2
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
