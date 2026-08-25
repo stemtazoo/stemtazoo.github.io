@@ -4,9 +4,9 @@ title: 勾配ブースティング（Gradient Boosting）とは？G検定対策
 description: "勾配ブースティングを、弱学習器を逐次追加して前の誤りを補正するアンサンブル学習として整理します。分類・回帰の両方で使われること、勾配降下法や強化学習との違い、G検定での見分け方を確認できます。"
 permalink: /gk/gradient-boosting/
 tags: [gk, ensemble]
-gk_section: 機械学習の概要/代表的な手法/教師あり学習
+gk_section: 機械学習の概要/代表的な手法/教師あり学習/アンサンブル学習
 gk_order: 5
-last_modified_at: 2026-08-22
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
