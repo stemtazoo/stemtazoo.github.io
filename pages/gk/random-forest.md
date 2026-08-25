@@ -4,9 +4,9 @@ title: ランダムフォレストとは？バギングとの関係【G検定対
 description: "ランダムフォレストを、ブートストラップ標本と特徴量のランダム選択を使って多数の決定木を学習し、平均や多数決で統合する手法として整理します。バギングやブースティングとの違いをG検定向けに確認します。"
 permalink: /gk/random-forest/
 tags: [gk, machine_learning, ensemble]
-gk_section: 機械学習の概要/代表的な手法/教師あり学習
+gk_section: 機械学習の概要/代表的な手法/教師あり学習/アンサンブル学習
 gk_order: 3
-last_modified_at: 2026-08-22
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
