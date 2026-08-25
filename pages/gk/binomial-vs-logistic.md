@@ -4,9 +4,9 @@ title: 二項分布とロジスティック回帰の関係とは？G検定対策
 description: "二項分布を固定回数の成功数を表す確率分布、ロジスティック回帰を説明変数から二値・二項結果の成功確率をモデル化する手法として比較します。logitとsigmoidの役割を含め、G検定で分布とモデルを混同しない判断軸を整理します。"
 permalink: /gk/binomial-vs-logistic/
 tags: [gk, probability, machine_learning]
-gk_section: 機械学習の概要/代表的な手法/教師あり学習
-gk_order: 12
-last_modified_at: 2026-08-22
+gk_section: 機械学習の概要/確率分布・統計モデル
+gk_order: 2
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
