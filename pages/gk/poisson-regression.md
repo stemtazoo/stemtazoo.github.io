@@ -4,9 +4,9 @@ title: ポアソン回帰とは？カウントデータを扱う回帰【G検定
 description: "ポアソン回帰を、0以上の件数・回数を目的変数とし、対数リンクで平均発生回数を説明する一般化線形モデルとして整理します。ロジスティック回帰との違い、exposureやoffsetの考え方をG検定向けに確認します。"
 permalink: /gk/poisson-regression/
 tags: [gk, machine_learning, probability]
-gk_section: 機械学習の概要/代表的な手法/教師あり学習
-gk_order: 10
-last_modified_at: 2026-08-22
+gk_section: 機械学習の概要/確率分布・統計モデル
+gk_order: 3
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
