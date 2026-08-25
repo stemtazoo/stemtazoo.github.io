@@ -4,9 +4,9 @@ title: デンドログラムとは？次元削減との違い【G検定】
 description: "デンドログラムは、階層型クラスタリングでデータやクラスタが結合された順序と距離を木構造で表す図です。PCA・SVDなどの次元削減ではないこと、k-meansとの違い、縦軸と切る高さの読み方をG検定向けに整理します。"
 permalink: /gk/dendrogram/
 tags: [gk, unsupervised_learning, clustering]
-gk_section: 機械学習の概要/代表的な手法/教師なし学習
+gk_section: 機械学習の概要/代表的な手法/教師なし学習/クラスタリング
 gk_order: 4
-last_modified_at: 2026-08-22
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
