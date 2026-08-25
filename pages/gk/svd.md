@@ -4,9 +4,9 @@ title: SVD（特異値分解）とは？PCA・固有値分解との違い【G検
 description: "SVD（特異値分解）は、長方形を含む行列をU・Σ・Vᵀの3つに分解し、特異値の大きい成分から重要な構造を取り出す手法です。打切りSVDによる次元削減、中心化したデータでのPCAとの関係、正方行列を扱う固有値分解との違いをG検定向けに整理します。"
 permalink: /gk/svd/
 tags: [gk, linear_algebra, machine_learning]
-gk_section: 機械学習の概要/代表的な手法/教師なし学習
-gk_order: 8
-last_modified_at: 2026-08-22
+gk_section: 機械学習の概要/代表的な手法/教師なし学習/次元削減
+gk_order: 2
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
