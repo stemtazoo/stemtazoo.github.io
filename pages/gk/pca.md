@@ -4,9 +4,9 @@ title: 主成分分析（PCA：Principal Component Analysis）とは？G検定�
 description: "主成分分析（PCA）は、ラベルを使わず、データの分散が最大になる互いに直交した方向を主成分として求める線形次元削減手法です。情報をなるべく保ちながら特徴数を減らし、可視化や前処理に使う役割を確認し、教師ありの特徴選択や非線形な局所構造を重視するt-SNEとの違いを判断します。"
 permalink: /gk/pca/
 tags: [gk, unsupervised_learning]
-gk_section: 機械学習の概要/代表的な手法/教師なし学習
-gk_order: 7
-last_modified_at: 2026-08-22
+gk_section: 機械学習の概要/代表的な手法/教師なし学習/次元削減
+gk_order: 1
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
