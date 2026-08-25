@@ -4,9 +4,9 @@ title: 定常性とは？なぜ差分するのか【G検定対策】
 description: "定常性を、時系列の平均・分散・自己共分散などの統計的性質が時間に依存しない状態として整理します。差分がトレンドや単位根による非定常性への代表的な対策であること、ARIMAのIとの関係をG検定向けに確認します。"
 permalink: /gk/stationarity/
 tags: [gk, time_series]
-gk_section: 機械学習の概要/代表的な手法/教師あり学習
-gk_order: 6
-last_modified_at: 2026-08-22
+gk_section: 機械学習の概要/代表的な手法/教師あり学習/時系列分析
+gk_order: 1
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
