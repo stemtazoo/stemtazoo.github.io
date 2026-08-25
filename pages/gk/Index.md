@@ -22,6 +22,10 @@ gk_sections:
               - title: "アンサンブル学習"
               - title: "時系列分析"
           - title: "教師なし学習"
+            subsections:
+              - title: "クラスタリング"
+              - title: "次元削減"
+              - title: "トピックモデル"
           - title: "強化学習"
 
       - title: "確率分布・統計モデル"
