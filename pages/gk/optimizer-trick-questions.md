@@ -5,8 +5,8 @@ description: "SGD、Momentum、AdaGrad、RMSprop、AdaDelta、Adam、AdaBound、
 permalink: /gk/optimizer-trick-questions/
 tags: [gk, cheatsheet, neural_network, optimization]
 gk_section: ディープラーニングの概要/最適化手法
-gk_order: 13
-last_modified_at: 2026-08-21
+gk_order: 14
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
