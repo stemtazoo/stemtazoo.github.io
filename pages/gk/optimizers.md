@@ -5,7 +5,7 @@ description: "最適化手法まとめ（SGD / Adam など）について、G検
 permalink: /gk/optimizers/
 tags: [gk, neural_network, optimizer]
 gk_section: ディープラーニングの概要/最適化手法
-gk_order: 3
+gk_order: 0
 last_modified_at: 2026-08-26
 ---
 
