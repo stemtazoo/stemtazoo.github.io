@@ -5,7 +5,7 @@ description: "学習率スケジューリングについて、G検定で問わ�
 permalink: /gk/learning-rate-scheduling/
 tags: [gk, neural_network, cheatsheet]
 gk_section: ディープラーニングの概要/最適化手法
-gk_order: 7
+gk_order: 12
 last_modified_at: 2026-08-26
 ---
 
