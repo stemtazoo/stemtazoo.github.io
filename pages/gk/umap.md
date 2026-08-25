@@ -4,9 +4,9 @@ title: UMAPとは？t-SNEとの違い【G検定対策】
 description: "UMAPを、近傍グラフの構造を低次元で表現する非線形次元削減手法として整理します。局所構造を重視しつつ大域的な関係も反映されることがある点、t-SNEより高速な場合が多い点、距離を過度に解釈しない注意点をG検定向けに確認します。"
 permalink: /gk/umap/
 tags: [gk, unsupervised_learning]
-gk_section: 機械学習の概要/代表的な手法/教師なし学習
-gk_order: 13
-last_modified_at: 2026-08-22
+gk_section: 機械学習の概要/代表的な手法/教師なし学習/次元削減
+gk_order: 6
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
