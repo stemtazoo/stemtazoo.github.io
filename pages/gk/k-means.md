@@ -4,9 +4,9 @@ title: k-means法とは？教師なし学習とクラスタリングの基本【
 description: "k-means法を、ラベルを使わずデータをk個のクラスタへ分ける代表的な非階層型クラスタリングとして整理します。重心の更新、kを事前に決める点、階層型クラスタリングやk-NNとの違いをG検定の判断軸で確認します。"
 permalink: /gk/k-means/
 tags: [gk, clustering]
-gk_section: 機械学習の概要/代表的な手法/教師なし学習
+gk_section: 機械学習の概要/代表的な手法/教師なし学習/クラスタリング
 gk_order: 1
-last_modified_at: 2026-08-23
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
