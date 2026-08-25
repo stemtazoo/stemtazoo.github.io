@@ -4,9 +4,9 @@ title: 最適化手法まとめ（SGD / Adam など）
 description: "最適化手法まとめ（SGD / Adam など）について、G検定で問われる学習・最適化分野の観点から、学習が進む仕組み、更新の考え方、過学習対策や代表手法との違いを整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/optimizers/
 tags: [gk, neural_network, optimizer]
-gk_section: ディープラーニングの概要/ニューラルネットワークとディープラーニング
+gk_section: ディープラーニングの概要/最適化手法
 gk_order: 3
-last_modified_at: 2026-06-21
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
