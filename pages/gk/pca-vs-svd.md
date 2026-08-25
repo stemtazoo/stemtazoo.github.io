@@ -4,9 +4,9 @@ title: PCAとSVDの関係とは？数式なしで比較【G検定対策】
 description: "PCAを分散が大きい方向を求める統計的な次元削減手法、SVDを一般の行列をU・Σ・Vᵀへ分解する行列分解として比較します。中心化したデータ行列にSVDを使ってPCAを計算できる関係と、打切りSVD自体も次元削減に使える点を整理します。"
 permalink: /gk/pca-vs-svd/
 tags: [gk, unsupervised_learning, dimensionality_reduction]
-gk_section: 機械学習の概要/代表的な手法/教師なし学習
-gk_order: 9
-last_modified_at: 2026-08-22
+gk_section: 機械学習の概要/代表的な手法/教師なし学習/次元削減
+gk_order: 3
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
