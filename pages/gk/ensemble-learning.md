@@ -4,9 +4,9 @@ title: アンサンブル学習とは？バギング・ブースティング・�
 description: "アンサンブル学習を、複数モデルの予測を組み合わせる考え方として整理します。バギングは並列・平均化、ブースティングは逐次的な追加、スタッキングはメタモデルによる統合という違いを、G検定の判断軸で確認します。"
 permalink: /gk/ensemble-learning/
 tags: [gk, machine_learning, ensemble]
-gk_section: 機械学習の概要/代表的な手法/教師あり学習
+gk_section: 機械学習の概要/代表的な手法/教師あり学習/アンサンブル学習
 gk_order: 1
-last_modified_at: 2026-08-22
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
