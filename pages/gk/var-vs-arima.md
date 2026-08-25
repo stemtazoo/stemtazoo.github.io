@@ -4,9 +4,9 @@ title: VARとARIMAの違い｜多変量と単変量で切り分け【G検定対�
 description: "VARとARIMAを、複数時系列を相互にモデル化するか、主に単一時系列をAR・MA・差分でモデル化するかという軸で比較します。変数数だけで機械的に決めず、モデル構造と目的で判断するG検定の切り分けを整理します。"
 permalink: /gk/var-vs-arima/
 tags: [gk, time_series]
-gk_section: 機械学習の概要/代表的な手法/教師あり学習
-gk_order: 9
-last_modified_at: 2026-08-22
+gk_section: 機械学習の概要/代表的な手法/教師あり学習/時系列分析
+gk_order: 4
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
