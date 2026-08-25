@@ -4,9 +4,9 @@ title: AR / MA / ARMA / ARIMAの違いまとめ【G検定対策】
 description: "AR・MA・ARMA・ARIMAを、過去の値、過去の誤差、両方、差分を含むモデルという軸で比較します。ARIMAのIがIntegratedを表し、差分次数dと関係することをG検定の判断基準として整理します。"
 permalink: /gk/time-series-ar-arma-arima/
 tags: [gk, time_series]
-gk_section: 機械学習の概要/代表的な手法/教師あり学習
-gk_order: 7
-last_modified_at: 2026-08-22
+gk_section: 機械学習の概要/代表的な手法/教師あり学習/時系列分析
+gk_order: 2
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
