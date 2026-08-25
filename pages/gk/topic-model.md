@@ -4,9 +4,9 @@ title: トピックモデル（Topic Model）とは？G検定対策
 description: "トピックモデルを、各文書を複数トピックの混合、各トピックを単語の確率分布として表す教師なし学習として整理します。LDA、文書クラスタリング、文書分類、感情分析との違いをG検定の判断軸で確認します。"
 permalink: /gk/topic-model/
 tags: [gk, nlp, unsupervised_learning]
-gk_section: 機械学習の概要/代表的な手法/教師なし学習
-gk_order: 14
-last_modified_at: 2026-08-23
+gk_section: 機械学習の概要/代表的な手法/教師なし学習/トピックモデル
+gk_order: 1
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
