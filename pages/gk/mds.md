@@ -4,9 +4,9 @@ title: MDS（多次元尺度構成法）とは？G検定対策
 description: "MDS（多次元尺度構成法）は、データ間の距離や非類似度をできるだけ保ちながら低次元空間へ配置する次元削減・可視化手法です。PCAやt-SNE・UMAPとの違いを、G検定の判断軸で整理します。"
 permalink: /gk/mds/
 tags: [gk, unsupervised_learning]
-gk_section: 機械学習の概要/代表的な手法/教師なし学習
-gk_order: 11
-last_modified_at: 2026-08-22
+gk_section: 機械学習の概要/代表的な手法/教師なし学習/次元削減
+gk_order: 4
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
