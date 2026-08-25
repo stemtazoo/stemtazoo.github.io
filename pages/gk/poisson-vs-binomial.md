@@ -4,9 +4,9 @@ title: ポアソン分布と二項分布の違いとは？G検定対策
 description: "ポアソン分布と二項分布を、一定区間の発生回数か、固定回数のベルヌーイ試行における成功回数かで比較します。nが大きくpが小さいときのポアソン近似も含め、G検定の判断軸を整理します。"
 permalink: /gk/poisson-vs-binomial/
 tags: [gk, probability]
-gk_section: 機械学習の概要/代表的な手法/教師あり学習
-gk_order: 11
-last_modified_at: 2026-08-22
+gk_section: 機械学習の概要/確率分布・統計モデル
+gk_order: 1
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
