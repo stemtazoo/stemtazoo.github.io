@@ -4,9 +4,9 @@ title: XAIまとめ（LIME・SHAP・CAM・Grad-CAM）【G検定対策】
 description: "XAIをLIME・SHAP・CAM・Grad-CAMで整理し、局所近似、シャープレイ値に基づく特徴量寄与、元祖CAMの構造条件、勾配を使う可視化という違いを比較します。速度や精度を一律に決めつけず、対象モデルと説明対象から選択肢を切る基準をまとめます。"
 permalink: /gk/xai-summary/
 tags: [gk, xai, neural_network, cheatsheet]
-gk_section: ディープラーニングの応用例/モデルの解釈性
-gk_order: 6
-last_modified_at: 2026-08-22
+gk_section: ディープラーニングの応用例/モデルの解釈性/基礎・全体像
+gk_order: 2
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
