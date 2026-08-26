@@ -4,9 +4,9 @@ title: 赤池情報量基準（AIC）とは？小さいほどよい理由【G検
 description: "AIC（赤池情報量基準）を、尤度による当てはまりとパラメータ数による複雑さのペナルティを両立させるモデル選択基準として整理します。値は小さいほどよい、同じデータに当てた候補モデル同士で比較する、Accuracyなどの精度指標とは目的が違うというG検定の判断軸を確認できます。"
 permalink: /gk/aic/
 tags: [gk, metrics]
-gk_section: 機械学習の概要/モデルの選択・評価
-gk_order: 15
-last_modified_at: 2026-08-21
+gk_section: 機械学習の概要/モデルの選択・評価/情報量規準（AIC・BIC）
+gk_order: 1
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
