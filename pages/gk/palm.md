@@ -4,9 +4,9 @@ title: PaLMとは？Pathwaysで学習した大規模言語モデル【G検定】
 description: PaLMを、Pathwaysを用いて大規模に学習されたTransformerベースの言語モデルとして整理します。PaLM-E、PaLI、Flamingoとの違いと、G検定で選択肢を切る判断軸を初心者向けに解説します。
 permalink: /gk/palm/
 tags: [gk, neural_network, transformer]
-gk_section: ディープラーニングの応用例/マルチモーダル
-gk_order: 2
-last_modified_at: 2026-07-18
+gk_section: ディープラーニングの応用例/自然言語処理
+gk_order: 23
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
