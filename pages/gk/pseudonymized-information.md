@@ -4,9 +4,9 @@ title: 仮名加工情報とは？匿名加工情報との違い【G検定対策
 description: "仮名加工情報は、他の情報と照合しなければ個人を識別できないよう加工した情報です。作成した事業者では通常個人情報として扱われ、第三者提供が原則制限される点を押さえ、匿名加工情報との違いをG検定向けに整理します。"
 permalink: /gk/pseudonymized-information/
 tags: [gk, ethics, privacy]
-gk_section: AIの法律と倫理/プライバシー・個人情報保護
-gk_order: 5
-last_modified_at: 2026-08-22
+gk_section: AIの法律と倫理/プライバシー・個人情報保護/個人データの加工・提供
+gk_order: 2
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
