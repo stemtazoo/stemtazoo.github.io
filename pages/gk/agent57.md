@@ -4,9 +4,9 @@ title: Agent57とは？Atari 57ゲームを攻略した深層強化学習【G検
 description: "Agent57を、Atari 57ゲームすべてで標準的な人間ベンチマークを上回った深層強化学習エージェントとして整理します。内発的報酬による探索、複数の探索方策を使い分けるメタコントローラ、R2D2やNever Give Upから発展した位置づけをG検定向けに確認します。"
 permalink: /gk/agent57/
 tags: [gk, reinforcement_learning, neural_network]
-gk_section: ディープラーニングの応用例/深層強化学習
-gk_order: 10
-last_modified_at: 2026-08-22
+gk_section: ディープラーニングの応用例/深層強化学習/代表エージェント・プロジェクト
+gk_order: 1
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
