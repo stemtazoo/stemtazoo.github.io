@@ -5,8 +5,8 @@ description: "汎化性能を、学習に使っていない未知データに対
 permalink: /gk/generalization/
 tags: [gk, machine_learning, generalization]
 gk_section: 機械学習の概要/よくあるつまずき（過学習など）
-gk_order: 6
-last_modified_at: 2026-08-22
+gk_order: 1
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
