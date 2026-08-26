@@ -4,9 +4,9 @@ title: 混同行列とは？TP・TN・FP・FNを見分ける【G検定】
 description: "混同行列を、分類結果をTP・TN・FP・FNの4種類に分けて整理する表として解説します。特にFP＝誤検知、FN＝見逃しというG検定の判断軸を中心に、Accuracy・Precision・Recallなど多くの分類指標との関係や、表の向きに惑わされない読み方を確認します。"
 permalink: /gk/confusion-matrix/
 tags: [gk, 機械学習, 評価指標, 頻出]
-gk_section: 機械学習の概要/モデルの選択・評価
+gk_section: 機械学習の概要/モデルの選択・評価/分類の評価指標
 gk_order: 1
-last_modified_at: 2026-08-21
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
