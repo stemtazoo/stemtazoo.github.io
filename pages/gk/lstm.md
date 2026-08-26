@@ -5,8 +5,8 @@ description: "LSTM（長短期記憶）について、G検定で問われる自�
 permalink: /gk/lstm/
 tags: [gk, neural_network, rnn, lstm]
 gk_section: ディープラーニングの要素技術/リカレントニューラルネットワーク (RNN)
-gk_order: 2
-last_modified_at: 2026-06-21
+gk_order: 3
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
