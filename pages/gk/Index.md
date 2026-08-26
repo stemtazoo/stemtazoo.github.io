@@ -83,6 +83,10 @@ gk_sections:
       - title: "自然言語処理"
       - title: "深層強化学習"
       - title: "データ生成"
+        subsections:
+          - title: "GAN・派生モデル"
+          - title: "拡散モデル"
+          - title: "生成モデル比較"
       - title: "転移学習・ファインチューニング"
       - title: "マルチモーダル"
       - title: "モデルの解釈性"
