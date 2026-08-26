@@ -4,9 +4,9 @@ title: 差分プライバシー（Differential Privacy）とは？【G検定対�
 description: "差分プライバシーを、1人分のデータの有無によって出力分布が大きく変わらないよう制限するプライバシー保証として整理します。ノイズ付与との関係、εの意味、暗号化・匿名化・メンバーシップ推論攻撃との違いをG検定向けに確認します。"
 permalink: /gk/differential-privacy/
 tags: [gk, security, privacy]
-gk_section: AIの法律と倫理/プライバシー・個人情報保護
-gk_order: 11
-last_modified_at: 2026-08-22
+gk_section: AIの法律と倫理/プライバシー・個人情報保護/保護設計・技術
+gk_order: 2
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
