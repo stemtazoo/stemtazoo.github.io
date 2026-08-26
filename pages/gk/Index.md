@@ -80,6 +80,10 @@ gk_sections:
           - title: "マルチタスク学習"
 
       - title: "音声処理"
+        subsections:
+          - title: "デジタル化・前処理"
+          - title: "音響特徴・音素"
+          - title: "音声認識・系列モデル"
       - title: "自然言語処理"
         subsections:
           - title: "基礎・前処理"
