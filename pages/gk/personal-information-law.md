@@ -4,9 +4,9 @@ title: 個人情報保護法とは？個人情報・個人データ・第三者�
 description: "個人情報保護法について、生存する個人の識別可能性、個人識別符号、利用目的、安全管理、第三者提供、漏えい時対応をG検定向けに整理します。個人情報・個人データ・保有個人データの違いと、仮名加工情報・匿名加工情報を混同しない判断軸も確認します。"
 permalink: /gk/personal-information-law/
 tags: [gk, ethics, privacy, law]
-gk_section: AIの法律と倫理/プライバシー・個人情報保護
-gk_order: 3
-last_modified_at: 2026-08-22
+gk_section: AIの法律と倫理/プライバシー・個人情報保護/基礎・法制度
+gk_order: 2
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
