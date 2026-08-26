@@ -5,8 +5,8 @@ description: 教師強制（Teacher Forcing）は、系列モデルの学習中�
 permalink: /gk/teacher-forcing/
 tags: [gk, rnn, neural_network]
 gk_section: ディープラーニングの要素技術/リカレントニューラルネットワーク (RNN)
-gk_order: 14
-last_modified_at: 2026-06-24
+gk_order: 8
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
