@@ -4,9 +4,9 @@ title: Noisy Netsとは？重みにノイズを入れて探索する強化学習
 description: "Noisy Netsを、ニューラルネットワークの重みやバイアスへ学習可能なノイズを加えて探索を促す強化学習手法として整理します。行動を直接ランダム化するε-greedy、入力へノイズを加えるデータ拡張、Rainbowとの関係をG検定の判断軸として確認します。"
 permalink: /gk/noisy-nets/
 tags: [gk, reinforcement_learning]
-gk_section: ディープラーニングの応用例/深層強化学習
-gk_order: 18
-last_modified_at: 2026-08-21
+gk_section: ディープラーニングの応用例/深層強化学習/DQN・改良手法
+gk_order: 4
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
