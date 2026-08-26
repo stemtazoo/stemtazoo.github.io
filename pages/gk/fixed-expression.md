@@ -4,9 +4,9 @@ title: 固定表現とは？慣用句・定型表現をひとまとまりで扱�
 description: "固定表現を、慣用句や定型句など複数語がまとまって特定の意味・用法を持つ表現として整理します。ストップワード、n-gram、固有表現との違い、必ず1トークンとして扱うわけではない点をG検定向けに確認します。"
 permalink: /gk/fixed-expression/
 tags: [gk, nlp]
-gk_section: ディープラーニングの応用例/自然言語処理
-gk_order: 29
-last_modified_at: 2026-08-21
+gk_section: ディープラーニングの応用例/自然言語処理/基礎・前処理
+gk_order: 3
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
