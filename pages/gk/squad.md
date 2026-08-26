@@ -4,9 +4,9 @@ title: SQuADとは？抽出型質問応答データセット【G検定対策】
 description: "SQuAD（Stanford Question Answering Dataset）を、文章・質問・答えのスパンからなる抽出型質問応答データセットとして整理します。GLUEとの違い、画像データセットではない点、BERTなどの評価で使われる理由をG検定向けに確認します。"
 permalink: /gk/squad/
 tags: [gk, nlp, dataset]
-gk_section: ディープラーニングの応用例/自然言語処理
-gk_order: 26
-last_modified_at: 2026-08-21
+gk_section: ディープラーニングの応用例/自然言語処理/タスク・評価
+gk_order: 3
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
