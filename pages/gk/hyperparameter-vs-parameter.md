@@ -4,9 +4,9 @@ title: ハイパーパラメータとパラメータの違いとは？【G検定
 description: "パラメータとハイパーパラメータを、学習データから最適化される値か、学習方法を制御する設定値かで切り分けます。重み・バイアス、学習率、正則化係数、木の深さなどの代表例と、探索手法が扱う対象をG検定向けに整理します。"
 permalink: /gk/hyperparameter-vs-parameter/
 tags: [gk]
-gk_section: 機械学習の概要/モデルの選択・評価
-gk_order: 18
-last_modified_at: 2026-08-22
+gk_section: 機械学習の概要/モデルの選択・評価/ハイパーパラメータ探索
+gk_order: 1
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
