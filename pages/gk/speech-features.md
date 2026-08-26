@@ -4,9 +4,9 @@ title: 音声特徴量まとめ（フォルマント / MFCC / スペクトログ
 description: "音声特徴量まとめについて、G検定で問われる特徴量・教師なし学習分野の観点から、特徴の捉え方、データの分布、教師なし学習で何を判断するかを整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/speech-features/
 tags: [gk, speech, signal_processing]
-gk_section: ディープラーニングの応用例/音声処理
-gk_order: 4
-last_modified_at: 2026-06-21
+gk_section: ディープラーニングの応用例/音声処理/音響特徴・音素
+gk_order: 1
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
