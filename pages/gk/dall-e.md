@@ -4,9 +4,9 @@ title: DALL·E（テキストから画像を生成するモデル）とは？G�
 description: DALL-Eをテキストから画像を生成するマルチモーダル生成AIとして整理します。画像生成モデル、プロンプトとの関係、G検定で問われる代表例を確認できます。本文では、基本定義、代表例、関連用語との違い、G検定で問われやすい観点まで短時間で復習できます。
 permalink: /gk/dall-e/
 tags: [gk, neural_network, attention]
-gk_section: ディープラーニングの応用例/マルチモーダル
-gk_order: 7
-last_modified_at: 2026-05-15
+gk_section: ディープラーニングの応用例/マルチモーダル/代表タスク・生成
+gk_order: 2
+last_modified_at: 2026-08-27
 
 ---
 
