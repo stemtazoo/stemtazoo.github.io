@@ -134,6 +134,11 @@ gk_sections:
           - title: "公平性・包摂性"
           - title: "安全性・ロバスト性"
       - title: "プライバシー・個人情報保護"
+        subsections:
+          - title: "基礎・法制度"
+          - title: "個人データの加工・提供"
+          - title: "GDPRの本人権利"
+          - title: "保護設計・技術"
       - title: "AIセキュリティ・プライバシー攻撃"
       - title: "知的財産・データ利用"
       - title: "社会的影響・悪用"
