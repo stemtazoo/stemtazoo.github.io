@@ -4,9 +4,9 @@ title: MLOpsとは？DevOpsとの違い【G検定対策】
 description: "MLOpsを、機械学習モデルを継続的に開発・デプロイ・監視・改善するための実践として整理します。DevOpsとの違い、データ・モデル管理、再学習や監視の位置づけをG検定向けに確認します。"
 permalink: /gk/mlops/
 tags: [gk, mlops, devops]
-gk_section: AIの社会実装に向けて/AIの社会実装に向けて
-gk_order: 6
-last_modified_at: 2026-08-22
+gk_section: AIの社会実装に向けて/開発・運用（MLOps）
+gk_order: 2
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
