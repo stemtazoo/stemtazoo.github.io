@@ -4,9 +4,9 @@ title: CRISP-DMとは？6フェーズと機械学習パイプラインとの違�
 description: "CRISP-DMを、ビジネス理解から展開まで6フェーズで進めるデータマイニングのプロセスモデルとして整理します。モデル構築だけの手法ではないこと、機械学習パイプラインとの違いをG検定向けに確認します。"
 permalink: /gk/crisp-dm/
 tags: [gk, data_mining, process, crisp-dm]
-gk_section: AIの社会実装に向けて/AIの社会実装に向けて
-gk_order: 2
-last_modified_at: 2026-08-22
+gk_section: AIの社会実装に向けて/プロセス・方法論
+gk_order: 1
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
