@@ -4,9 +4,9 @@ title: 時系列データの交差検証｜通常のk-foldとの違い【G検定
 description: "時系列データの交差検証を、時間順序と未来情報の混入という観点から整理します。通常のランダムなk-foldが不向きな理由、Time Series Splitや拡大型・移動窓型の考え方、G検定でデータリーケージを見抜く判断基準を確認できます。"
 permalink: /gk/time-series-cross-validation/
 tags: [gk, machine_learning, evaluation]
-gk_section: 機械学習の概要/モデルの選択・評価
-gk_order: 14
-last_modified_at: 2026-08-21
+gk_section: 機械学習の概要/モデルの選択・評価/データ分割・交差検証
+gk_order: 3
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
