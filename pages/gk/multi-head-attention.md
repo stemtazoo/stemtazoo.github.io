@@ -5,8 +5,8 @@ description: "Multi-Head Attention複数視点で関係性を学ぶ仕組みに�
 permalink: /gk/multi-head-attention/
 tags: [gk, attention, transformer]
 gk_section: ディープラーニングの要素技術/トランスフォーマー (Transformer)
-gk_order: 6
-last_modified_at: 2026-06-21
+gk_order: 4
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
