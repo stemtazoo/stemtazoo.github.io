@@ -4,9 +4,9 @@ title: オートエンコーダ（AE）と変分オートエンコーダ（VAE�
 description: "AEとVAEを、入力を圧縮して復元するモデルと、潜在変数を確率分布として学習して新しいデータを生成できるモデルの違いで比較します。潜在空間の連続性、再パラメータ化、再構成誤差とKLダイバージェンスの役割を押さえ、異常検知と生成用途の選択肢を切り分けます。"
 permalink: /gk/ae-vs-vae/
 tags: [gk, neural_network]
-gk_section: ディープラーニングの要素技術/オートエンコーダ
-gk_order: 2
-last_modified_at: 2026-07-01
+gk_section: ディープラーニングの要素技術/オートエンコーダ/基本・派生モデル
+gk_order: 7
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
