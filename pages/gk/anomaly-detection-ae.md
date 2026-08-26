@@ -4,9 +4,9 @@ title: 異常検知でAE（オートエンコーダ）を使う理由とは？�
 description: "異常検知でAE（オートエンコーダ）を使う理由について、G検定で問われる特徴量・教師なし学習分野の観点から、特徴の捉え方、データの分布、教師なし学習で何を判断するかを整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/anomaly-detection-ae/
 tags: [gk, neural_network]
-gk_section: ディープラーニングの要素技術/オートエンコーダ
-gk_order: 3
-last_modified_at: 2026-06-21
+gk_section: ディープラーニングの要素技術/オートエンコーダ/異常検知
+gk_order: 1
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
