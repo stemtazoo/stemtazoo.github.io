@@ -4,9 +4,9 @@ title: プライバシー・バイ・デザインとは？設計段階から守�
 description: "プライバシー・バイ・デザインは、問題が起きてから対処するのではなく、製品・サービス・AIシステムの設計段階からプライバシー保護を組み込み、開発・運用まで継続して配慮する考え方です。後付け対策との違いをG検定向けに整理します。"
 permalink: /gk/privacy-by-design/
 tags: [gk, ethics, privacy]
-gk_section: AIの法律と倫理/プライバシー・個人情報保護
-gk_order: 2
-last_modified_at: 2026-08-22
+gk_section: AIの法律と倫理/プライバシー・個人情報保護/保護設計・技術
+gk_order: 1
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
