@@ -4,9 +4,9 @@ title: 個人情報保護法まとめ｜仮名加工情報・匿名加工情報�
 description: "個人情報保護法の試験直前まとめとして、個人情報・要配慮個人情報・仮名加工情報・匿名加工情報を比較します。特に仮名加工情報と匿名加工情報について、個人情報への該当性、識別行為、第三者提供の違いから選択肢を切る判断基準を整理します。"
 permalink: /gk/personal-information-protection-law-cheatsheet/
 tags: [gk, ethics, privacy, cheatsheet]
-gk_section: AIの法律と倫理/プライバシー・個人情報保護
-gk_order: 4
-last_modified_at: 2026-08-22
+gk_section: AIの法律と倫理/プライバシー・個人情報保護/個人データの加工・提供
+gk_order: 1
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
