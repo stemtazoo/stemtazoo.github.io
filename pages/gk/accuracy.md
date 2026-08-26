@@ -4,9 +4,9 @@ title: Accuracy（正解率）とは？クラス不均衡の注意点【G検定�
 description: Accuracy（正解率）は、全データのうち正しく分類できた割合を表す指標です。TP・TNを使う式、クラス不均衡で高く見える弱点、Precision・Recall・F1-scoreとの使い分けをG検定の選択肢判断に合わせて整理します。
 permalink: /gk/accuracy/
 tags: [gk, machine_learning, metrics, frequent]
-gk_section: 機械学習の概要/モデルの選択・評価
+gk_section: 機械学習の概要/モデルの選択・評価/分類の評価指標
 gk_order: 2
-last_modified_at: 2026-08-21
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
