@@ -4,9 +4,9 @@ title: AIの安全性とロバスト性（Safety / Robustness）
 description: "AIの安全性は人や社会への被害を防ぐ広い観点、ロバスト性はノイズや環境変化でも性能を保つ性質です。高精度や高ロバスト性だけでは安全とは限らず、データドリフトや攻撃を想定した運用後の監視も必要というG検定の判断軸を整理します。"
 permalink: /gk/safety-robustness/
 tags: [gk, ethics, safety]
-gk_section: AIの法律と倫理/AI倫理・ガバナンス
-gk_order: 8
-last_modified_at: 2026-08-22
+gk_section: AIの法律と倫理/AI倫理・ガバナンス/安全性・ロバスト性
+gk_order: 1
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
