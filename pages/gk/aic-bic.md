@@ -4,9 +4,9 @@ title: AICとBICの違い｜ペナルティ項で比較【G検定】
 description: "AICとBICをモデル選択の情報量基準として比較します。どちらも尤度と複雑さを評価し小さい方を選ぶ点は共通ですが、AICは2k、BICはk log nで複雑さを罰します。G検定で『nが入る→BIC』『同じデータの候補モデルを比較』と切る判断基準を整理します。"
 permalink: /gk/aic-bic/
 tags: [gk, metrics, cheatsheet]
-gk_section: 機械学習の概要/モデルの選択・評価
-gk_order: 17
-last_modified_at: 2026-08-21
+gk_section: 機械学習の概要/モデルの選択・評価/情報量規準（AIC・BIC）
+gk_order: 3
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
