@@ -5,8 +5,8 @@ description: "Dilated Convolution（Atrous Convolution・拡張畳み込み）�
 permalink: /gk/atrous-convolution/
 tags: [gk, cnn, image_recognition]
 gk_section: ディープラーニングの要素技術/ネットワークの構成要素
-gk_order: 12
-last_modified_at: 2026-08-13
+gk_order: 5
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
