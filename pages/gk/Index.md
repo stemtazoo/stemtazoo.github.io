@@ -101,6 +101,11 @@ gk_sections:
           - title: "事前学習・少数例学習"
           - title: "継続学習・忘却"
       - title: "マルチモーダル"
+        subsections:
+          - title: "基礎・全体像"
+          - title: "画像と言語の表現・理解"
+          - title: "汎用マルチモーダルモデル"
+          - title: "代表タスク・生成"
       - title: "モデルの解釈性"
         subsections:
           - title: "基礎・全体像"
