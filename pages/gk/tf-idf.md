@@ -4,9 +4,9 @@ title: TF-IDFとは？【単語の重要度指標｜G検定対策】
 description: "TF-IDFは、文書内での出現頻度TFと、文書集合での珍しさIDFを掛け、単語の重要度を数値化する手法です。どの文書にも現れる語の重みが下がる仕組みと、語の意味を学習するWord2Vecとの違いをG検定向けに整理します。"
 permalink: /gk/tf-idf/
 tags: [gk, nlp, machine_learning]
-gk_section: ディープラーニングの応用例/自然言語処理
-gk_order: 4
-last_modified_at: 2026-06-28
+gk_section: ディープラーニングの応用例/自然言語処理/基礎・前処理
+gk_order: 5
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
