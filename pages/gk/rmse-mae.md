@@ -4,9 +4,9 @@ title: RMSEとMAEの違い｜大きな誤差への敏感さで比較【G検定�
 description: "RMSEとMAEを回帰の評価指標として比較し、二乗誤差か絶対誤差か、大きな予測ミスをどれだけ重く扱うか、外れ値への敏感さ、単位の読み方を整理します。G検定で『二乗→RMSE』『絶対値→MAE』と選択肢を切る判断基準を確認できます。"
 permalink: /gk/rmse-mae/
 tags: [gk, metrics]
-gk_section: 機械学習の概要/モデルの選択・評価
-gk_order: 9
-last_modified_at: 2026-08-21
+gk_section: 機械学習の概要/モデルの選択・評価/回帰の評価指標
+gk_order: 1
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
