@@ -4,9 +4,9 @@ title: Rainbow（強化学習アルゴリズム）とは？【G検定対策】
 description: "Rainbowを、DQNに複数の改良手法を統合した価値ベースの深層強化学習として整理します。Double DQN、Dueling Network、Prioritized Experience Replay、Noisy Nets、Distributional RL、Multi-step Learningの役割と、方策勾配法との違いを確認します。"
 permalink: /gk/rainbow/
 tags: [gk, reinforcement_learning]
-gk_section: ディープラーニングの応用例/深層強化学習
-gk_order: 19
-last_modified_at: 2026-08-22
+gk_section: ディープラーニングの応用例/深層強化学習/DQN・改良手法
+gk_order: 5
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
