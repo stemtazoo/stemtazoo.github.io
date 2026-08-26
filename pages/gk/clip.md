@@ -4,9 +4,9 @@ title: CLIP（画像とテキストの対応付けモデル）とは？G検定�
 description: "CLIP（画像とテキストの対応付けモデル）について、G検定で問われる画像認識・CNN分野の観点から、画像タスクでの役割、特徴抽出の流れ、代表モデルとの関係を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/clip/
 tags: [gk, neural_network, attention]
-gk_section: ディープラーニングの応用例/マルチモーダル
-gk_order: 4
-last_modified_at: 2026-08-26
+gk_section: ディープラーニングの応用例/マルチモーダル/画像と言語の表現・理解
+gk_order: 1
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
