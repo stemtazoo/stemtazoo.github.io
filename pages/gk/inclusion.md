@@ -4,9 +4,9 @@ title: インクルージョン（包摂性）とは？AI開発で重視され�
 description: "AIにおけるインクルージョンは、年齢・性別・障害・文化などにかかわらず多様な人を排除せず、恩恵が一部に偏らないようにする考え方です。技術性能の向上手法ではなく、アクセシビリティや利用者視点の設計に関わること、ダイバーシティとの違いを整理します。"
 permalink: /gk/inclusion/
 tags: [gk, ethics, inclusion]
-gk_section: AIの法律と倫理/AI倫理・ガバナンス
-gk_order: 6
-last_modified_at: 2026-08-22
+gk_section: AIの法律と倫理/AI倫理・ガバナンス/公平性・包摂性
+gk_order: 2
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
