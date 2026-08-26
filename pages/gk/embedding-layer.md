@@ -4,9 +4,9 @@ title: Embedding層とは？単語IDをベクトルへ変換【G検定対策】
 description: "Embedding層を、単語IDなどの離散値を低次元の実数ベクトルへ変換する学習可能な層として整理します。One-hotとの関係、重み行列からベクトルを参照する仕組み、Word2Vecとの違いをG検定向けに確認します。"
 permalink: /gk/embedding-layer/
 tags: [gk, nlp, neural_network]
-gk_section: ディープラーニングの応用例/自然言語処理
-gk_order: 7
-last_modified_at: 2026-08-21
+gk_section: ディープラーニングの応用例/自然言語処理/分散表現
+gk_order: 1
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
