@@ -4,9 +4,9 @@ title: CBOWとは？周囲の単語から中心語を予測【G検定対策】
 description: "CBOWを、周囲の文脈語から中心語を予測して単語埋め込みを学ぶWord2Vecの方式として整理します。Skip-gramとの予測方向の違い、Bag of Wordsとの名前の混同、単語順序を直接使わない特徴をG検定向けに確認します。"
 permalink: /gk/cbow/
 tags: [gk, nlp, embedding]
-gk_section: ディープラーニングの応用例/自然言語処理
-gk_order: 10
-last_modified_at: 2026-08-21
+gk_section: ディープラーニングの応用例/自然言語処理/分散表現
+gk_order: 5
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
