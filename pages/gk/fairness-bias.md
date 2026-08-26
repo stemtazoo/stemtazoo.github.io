@@ -4,9 +4,9 @@ title: AIの公平性とバイアス（Fairness）とは？G検定対策
 description: AIの公平性とバイアスを、学習データや設計判断が特定集団に不利益を生むリスクとして整理します。精度向上だけでは解けない理由、説明可能性・プライバシー・人間による監督との違いをG検定向けに確認します。偏ったデータをそのまま使うひっかけにも注意します。
 permalink: /gk/fairness-bias/
 tags: [gk, ethics, fairness]
-gk_section: AIの法律と倫理/AI倫理・ガバナンス
-gk_order: 5
-last_modified_at: 2026-08-22
+gk_section: AIの法律と倫理/AI倫理・ガバナンス/公平性・包摂性
+gk_order: 1
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
