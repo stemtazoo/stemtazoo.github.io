@@ -4,9 +4,9 @@ title: Q学習（オフポリシー強化学習）とは？G検定対策
 description: "Q学習を、次状態で最大のQ値を使って行動価値を更新するオフポリシー型TD学習として整理します。SARSAとの違い、ε-greedyとの関係、G検定での判断基準を確認できます。"
 permalink: /gk/q-learning/
 tags: [gk, reinforcement_learning]
-gk_section: 機械学習の概要/代表的な手法/強化学習
-gk_order: 10
-last_modified_at: 2026-08-22
+gk_section: 機械学習の概要/代表的な手法/強化学習/価値ベース・TD学習
+gk_order: 2
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
