@@ -4,9 +4,9 @@ title: マルチモーダルモデル総まとめ【最終チートシート｜G
 description: "マルチモーダルモデルを、入力モダリティと出力、生成の有無、Few-shot対応、環境・ロボットとの接続という判断軸で比較します。CLIP、BLIP、Flamingo、PaLM、PaLM-E、DALL·Eの役割を切り分け、G検定でモデル名と用途を入れ替える選択肢に対応します。"
 permalink: /gk/multimodal-cheatsheet/
 tags: [gk, cheatsheet, neural_network, attention]
-gk_section: ディープラーニングの応用例/マルチモーダル
-gk_order: 8
-last_modified_at: 2026-07-14
+gk_section: ディープラーニングの応用例/マルチモーダル/基礎・全体像
+gk_order: 1
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
