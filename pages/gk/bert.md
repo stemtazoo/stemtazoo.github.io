@@ -4,9 +4,9 @@ title: BERT（双方向Transformer）とは？G検定対策
 description: BERTは、TransformerのEncoderを重ね、文の左右両方の文脈を使って単語表現を学ぶ自然言語処理モデルです。一部の語を隠して当てるMLMと文関係を学ぶNSPによる事前学習、分類や質問応答へのファインチューニングを整理します。左から右へ生成するGPT、次単語予測との違いからG検定の選択肢を見分けます。
 permalink: /gk/bert/
 tags: [gk, nlp, transformer, attention]
-gk_section: ディープラーニングの応用例/自然言語処理
-gk_order: 20
-last_modified_at: 2026-08-21
+gk_section: ディープラーニングの応用例/自然言語処理/Transformer・言語モデル
+gk_order: 1
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
