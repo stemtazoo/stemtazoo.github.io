@@ -4,9 +4,9 @@ title: CBOWとSkip-gramの違い｜予測方向で比較【G検定対策】
 description: "CBOWとSkip-gramを、周囲から中心を予測するか、中心から周囲を予測するかで比較します。どちらもWord2Vecの学習方式である点を押さえ、学習速度や低頻度語に関する一般的傾向を絶対視せず、G検定で予測方向から選択肢を切る基準を整理します。"
 permalink: /gk/cbow-vs-skipgram/
 tags: [gk, nlp]
-gk_section: ディープラーニングの応用例/自然言語処理
-gk_order: 12
-last_modified_at: 2026-08-21
+gk_section: ディープラーニングの応用例/自然言語処理/分散表現
+gk_order: 7
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
