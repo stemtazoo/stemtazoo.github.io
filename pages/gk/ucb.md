@@ -4,9 +4,9 @@ title: UCB方策（Upper Confidence Bound）とは？【G検定対策】
 description: "UCB方策を、平均報酬と不確実性を組み合わせて探索と活用を両立する多腕バンディット手法として整理します。ε-greedyやSoftmax方策との違い、試行回数が少ない選択肢が優遇される理由、G検定で選択肢を切る判断基準を確認します。"
 permalink: /gk/ucb/
 tags: [gk, reinforcement_learning]
-gk_section: 機械学習の概要/代表的な手法/強化学習
-gk_order: 7
-last_modified_at: 2026-08-22
+gk_section: 機械学習の概要/代表的な手法/強化学習/バンディット
+gk_order: 3
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
