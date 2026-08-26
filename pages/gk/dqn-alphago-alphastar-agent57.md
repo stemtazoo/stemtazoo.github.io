@@ -4,9 +4,9 @@ title: DQN・AlphaGo・AlphaStar・Agent57の違い【G検定対策】
 description: "DQN、AlphaGo、AlphaStar、Agent57を、対象環境と技術的な役割で比較します。DQNは価値ベース深層強化学習、AlphaGoは囲碁とMCTS、AlphaStarはStarCraft II、Agent57はAtari 57ゲームでの探索強化という違いをG検定の判断軸として整理します。"
 permalink: /gk/dqn-alphago-alphastar-agent57/
 tags: [gk, reinforcement_learning, cheatsheet]
-gk_section: ディープラーニングの応用例/深層強化学習
-gk_order: 11
-last_modified_at: 2026-08-22
+gk_section: ディープラーニングの応用例/深層強化学習/代表エージェント・プロジェクト
+gk_order: 4
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
