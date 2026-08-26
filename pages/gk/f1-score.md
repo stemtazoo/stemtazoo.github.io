@@ -4,9 +4,9 @@ title: F1-scoreとは？PrecisionとRecallの調和平均【G検定】
 description: "F1-scoreを、PrecisionとRecallの調和平均で誤検知と見逃しのバランスを見る分類指標として整理します。どちらか一方だけが高くてもF1は高くなりにくいこと、TNを式に直接含まないこと、クラス不均衡でも常に最適とは限らない点をG検定の判断軸で確認します。"
 permalink: /gk/f1-score/
 tags: [gk, 機械学習, 評価指標, 頻出]
-gk_section: 機械学習の概要/モデルの選択・評価
+gk_section: 機械学習の概要/モデルの選択・評価/分類の評価指標
 gk_order: 5
-last_modified_at: 2026-08-21
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
