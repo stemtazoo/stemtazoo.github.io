@@ -5,8 +5,8 @@ description: "Attention（注意機構）について、G検定で問われる�
 permalink: /gk/attention/
 tags: [gk, neural_network, attention]
 gk_section: ディープラーニングの要素技術/リカレントニューラルネットワーク (RNN)
-gk_order: 6
-last_modified_at: 2026-06-21
+gk_order: 8
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
