@@ -4,9 +4,9 @@ title: 交差検証とハイパーパラメータ探索の組み合わせ【G検
 description: "交差検証とグリッドサーチ・ランダムサーチ・ベイズ最適化の役割を分けて整理します。探索は候補を試し、交差検証は各候補を比較評価するという関係、最終評価にテストデータを残す理由、G検定で混同しやすい判断軸を確認できます。"
 permalink: /gk/cross-validation-with-search/
 tags: [gk]
-gk_section: 機械学習の概要/モデルの選択・評価
-gk_order: 21
-last_modified_at: 2026-08-22
+gk_section: 機械学習の概要/モデルの選択・評価/ハイパーパラメータ探索
+gk_order: 4
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
