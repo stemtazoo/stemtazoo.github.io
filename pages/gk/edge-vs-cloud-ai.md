@@ -4,9 +4,9 @@ title: エッジAI vs クラウドAI｜使い分け【G検定対策】
 description: "エッジAIとクラウドAIを、処理場所、遅延、通信依存、プライバシー、計算資源の違いで比較します。用途名で決めつけず、要件から選択肢を切る判断基準をG検定向けに整理します。"
 permalink: /gk/edge-vs-cloud-ai/
 tags: [gk, edge_ai, cloud_ai, comparison]
-gk_section: AIの社会実装に向けて/AIの社会実装に向けて
-gk_order: 10
-last_modified_at: 2026-08-22
+gk_section: AIの社会実装に向けて/エッジ・クラウド
+gk_order: 2
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
