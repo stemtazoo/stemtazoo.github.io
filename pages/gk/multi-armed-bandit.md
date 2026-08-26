@@ -4,9 +4,9 @@ title: 多腕バンディット（Multi-Armed Bandit）とは？【探索と活�
 description: "多腕バンディットを、標準的な設定では状態遷移を扱わず、各選択肢の報酬を試しながら探索と活用を両立する問題として整理します。ε-greedyやUCBとの関係、通常のMDP型強化学習との違いを確認できます。"
 permalink: /gk/multi-armed-bandit/
 tags: [gk, reinforcement_learning]
-gk_section: 機械学習の概要/代表的な手法/強化学習
-gk_order: 5
-last_modified_at: 2026-08-22
+gk_section: 機械学習の概要/代表的な手法/強化学習/バンディット
+gk_order: 1
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
