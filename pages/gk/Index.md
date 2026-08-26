@@ -27,6 +27,12 @@ gk_sections:
               - title: "次元削減"
               - title: "トピックモデル"
           - title: "強化学習"
+            subsections:
+              - title: "基礎概念"
+              - title: "価値ベース・TD学習"
+              - title: "方策勾配・Actor-Critic"
+              - title: "バンディット"
+              - title: "発展・大規模化"
 
       - title: "確率分布・統計モデル"
 
