@@ -4,9 +4,9 @@ title: AIを活用したフェイクニュースとは？【G検定対策】
 description: "AIを活用した偽・誤情報について、生成AIで事実らしい文章・画像・音声・動画を大量生成でき、推薦・拡散機能で広がりやすくなるリスクを整理します。AI生成物がすべて偽情報ではなく、検出技術だけでも解決できない点をG検定向けに確認します。"
 permalink: /gk/ai-fake-news/
 tags: [gk, ethics, social_issues]
-gk_section: AIの法律と倫理/社会的影響・悪用
+gk_section: AIの法律と倫理/社会的影響・悪用/偽・誤情報と合成コンテンツ
 gk_order: 1
-last_modified_at: 2026-08-22
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
