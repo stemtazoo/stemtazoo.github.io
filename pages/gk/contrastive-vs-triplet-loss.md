@@ -5,8 +5,8 @@ description: "Contrastive LossとTriplet Lossを、ペアで距離を調整す�
 permalink: /gk/contrastive-vs-triplet-loss/
 tags: [gk, neural_network, metrics]
 gk_section: ディープラーニングの概要/誤差関数
-gk_order: 4
-last_modified_at: 2026-08-22
+gk_order: 5
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
