@@ -4,9 +4,9 @@ title: 音声認識まとめ（CTC・Encoder-Decoder・RNN・Transformer・WaveN
 description: "音声認識を、音声から文字へ変換するASR、フレーム単位の正解位置を不要にするCTC、系列変換を行うEncoder-Decoder、RNN・Transformerなどのモデル構造、音声生成を行うWaveNetに分けて整理します。音声処理の用語を役割から切るG検定向けまとめです。"
 permalink: /gk/speech-recognition-cheatsheet/
 tags: [gk, speech, cheatsheet]
-gk_section: ディープラーニングの応用例/音声処理
-gk_order: 9
-last_modified_at: 2026-08-22
+gk_section: ディープラーニングの応用例/音声処理/音声認識・系列モデル
+gk_order: 2
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
