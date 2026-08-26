@@ -4,9 +4,9 @@ title: オンポリシーとオフポリシーの違い【G検定対策】
 description: "オンポリシーとオフポリシーの違いを、行動に使う方策（behavior policy）と学習対象の方策（target policy）の関係から整理します。SARSA、Q学習、DQN、REINFORCEとの対応をG検定向けに確認します。"
 permalink: /gk/on-policy-off-policy/
 tags: [gk, reinforcement_learning]
-gk_section: 機械学習の概要/代表的な手法/強化学習
-gk_order: 19
-last_modified_at: 2026-08-23
+gk_section: 機械学習の概要/代表的な手法/強化学習/基礎概念
+gk_order: 4
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
