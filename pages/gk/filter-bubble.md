@@ -4,9 +4,9 @@ title: フィルターバブル（Filter Bubble）とは？G検定対策
 description: "フィルターバブルを、検索・推薦のパーソナライズと利用者の行動によって接する情報の範囲が狭くなる現象として整理します。集団内で同じ意見が反復・強化されるエコーチェンバーとの違いをG検定向けに確認します。"
 permalink: /gk/filter-bubble/
 tags: [gk, ethics, personalization]
-gk_section: AIの法律と倫理/社会的影響・悪用
-gk_order: 4
-last_modified_at: 2026-08-22
+gk_section: AIの法律と倫理/社会的影響・悪用/推薦・情報環境への影響
+gk_order: 1
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
