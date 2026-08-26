@@ -5,8 +5,8 @@ description: "Instance Normalizationを、各サンプル・各チャネルご�
 permalink: /gk/instance-normalization/
 tags: [gk, neural_network, cnn]
 gk_section: ディープラーニングの要素技術/ネットワークの構成要素
-gk_order: 10
-last_modified_at: 2026-08-21
+gk_order: 9
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
