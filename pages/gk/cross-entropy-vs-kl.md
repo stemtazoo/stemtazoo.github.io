@@ -5,8 +5,8 @@ description: "交差エントロピーとKLダイバージェンスを、分類�
 permalink: /gk/cross-entropy-vs-kl/
 tags: [gk, metrics, neural_network]
 gk_section: ディープラーニングの概要/誤差関数
-gk_order: 2
-last_modified_at: 2026-08-22
+gk_order: 4
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
