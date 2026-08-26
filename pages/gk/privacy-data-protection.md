@@ -4,9 +4,9 @@ title: AIとプライバシー・個人情報保護【G検定対策】
 description: "AIでデータを利用するときのプライバシーと個人情報保護を整理します。個人情報は法律上の定義、プライバシーは個人への影響を含むより広い論点として区別し、必要性・利用目的・データ最小化・加工・安全管理をG検定の判断基準として確認します。"
 permalink: /gk/privacy-data-protection/
 tags: [gk, ethics, privacy]
-gk_section: AIの法律と倫理/プライバシー・個人情報保護
+gk_section: AIの法律と倫理/プライバシー・個人情報保護/基礎・法制度
 gk_order: 1
-last_modified_at: 2026-08-22
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
