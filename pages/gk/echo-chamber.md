@@ -4,9 +4,9 @@ title: エコーチェンバー（Echo Chamber）とは？G検定対策
 description: "エコーチェンバーを、似た意見を持つ人同士で同じ主張が反復され、信念が増幅・固定されやすくなる現象として整理します。検索・推薦などで接する情報範囲が狭くなるフィルターバブルとの違いをG検定向けに確認します。"
 permalink: /gk/echo-chamber/
 tags: [gk, ethics, personalization]
-gk_section: AIの法律と倫理/社会的影響・悪用
-gk_order: 5
-last_modified_at: 2026-08-22
+gk_section: AIの法律と倫理/社会的影響・悪用/推薦・情報環境への影響
+gk_order: 2
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
