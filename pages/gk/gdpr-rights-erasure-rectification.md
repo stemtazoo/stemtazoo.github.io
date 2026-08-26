@@ -4,9 +4,9 @@ title: GDPRの消去権・訂正権とは？【G検定対策】
 description: "GDPRの消去権と訂正権を、消す・直すという動詞で切り分けます。権利には成立要件や例外があり、請求すれば必ず消去・訂正されるわけではない点と、データを持ち運ぶデータポータビリティとの違いをG検定向けに整理します。"
 permalink: /gk/gdpr-rights-erasure-rectification/
 tags: [gk, privacy, law, gdpr]
-gk_section: AIの法律と倫理/プライバシー・個人情報保護
-gk_order: 9
-last_modified_at: 2026-08-22
+gk_section: AIの法律と倫理/プライバシー・個人情報保護/GDPRの本人権利
+gk_order: 1
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
