@@ -67,7 +67,18 @@ Multi-Head Attentionは一言で言うと、
 - **異なる表現空間 → Multi-Head Attention**
 - **関係性の多様性 → Multi-Head Attention**
 
-問題文に  
-「異なる
+問題文に
+- 「複数のヘッド」
+- 「異なる表現空間」
+- 「複数の視点でAttentionを計算」
+
+があれば、**Multi-Head Attention** を疑います。
+
+## まとめ（試験直前用）
+- Multi-Head Attention＝Attentionを複数のヘッドで並列に計算
+- 各ヘッドは異なる表現空間で関係性を見る
+- 目的は多様な特徴・関係を捉えること
+- パラメータ削減や単純な高速化が目的ではない
+- 「複数視点・複数ヘッド」ならMulti-Head Attention
 
 {% include gk_article_footer.html %}
