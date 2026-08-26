@@ -4,9 +4,9 @@ title: CAM と Grad-CAM（クラス活性化マップ）
 description: "CAM と Grad-CAM（クラス活性化マップ）について、G検定で問われるAI・機械学習分野の観点から、基本的な意味、代表モデル・手法との関係、試験で問われやすい判断軸を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/cam-grad-cam/
 tags: [gk, neural_network, cnn, xai]
-gk_section: ディープラーニングの応用例/モデルの解釈性
-gk_order: 2
-last_modified_at: 2026-06-21
+gk_section: ディープラーニングの応用例/モデルの解釈性/画像モデルの可視化
+gk_order: 1
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
