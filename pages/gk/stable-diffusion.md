@@ -4,9 +4,9 @@ title: Stable Diffusion（拡散モデルの代表例）
 description: "Stable Diffusion（拡散モデルの代表例）について、G検定で問われる生成モデル分野の観点から、生成や表現学習での役割、モデル構造、学習方法の違いを整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/stable-diffusion/
 tags: [gk, neural_network, generative_model, diffusion]
-gk_section: ディープラーニングの応用例/データ生成
-gk_order: 5
-last_modified_at: 2026-06-21
+gk_section: ディープラーニングの応用例/データ生成/拡散モデル
+gk_order: 2
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
