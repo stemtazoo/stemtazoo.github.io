@@ -4,9 +4,9 @@ title: 破壊的忘却（Catastrophic Forgetting）とは？【連続学習の�
 description: "破壊的忘却は、ニューラルネットワークを新しいタスクやデータで追加学習した結果、既に獲得した知識の性能が大きく低下する連続学習上の問題です。単なる過学習や勾配消失とは異なる原因を捉え、リプレイ、重要パラメータの保護、構造拡張といった代表的な緩和策が何を守るのかを確認します。"
 permalink: /gk/catastrophic-forgetting/
 tags: [gk, neural_network]
-gk_section: ディープラーニングの応用例/転移学習・ファインチューニング
-gk_order: 1
-last_modified_at: 2026-06-27
+gk_section: ディープラーニングの応用例/転移学習・ファインチューニング/継続学習・忘却
+gk_order: 2
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
