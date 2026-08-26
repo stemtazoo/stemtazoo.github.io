@@ -4,9 +4,9 @@ title: デュエリングネットワーク（Dueling Network）とは？【G検
 description: "Dueling Networkを、状態価値V(s)とアドバンテージA(s,a)を別々に推定してQ値を構成するDQN改良手法として整理します。報酬との違い、Double DQNとの切り分け、VとAをそのまま単純加算しない実装上の工夫をG検定向けに確認します。"
 permalink: /gk/dueling-network/
 tags: [gk, reinforcement_learning, neural_network]
-gk_section: ディープラーニングの応用例/深層強化学習
+gk_section: ディープラーニングの応用例/深層強化学習/DQN・改良手法
 gk_order: 2
-last_modified_at: 2026-08-22
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
