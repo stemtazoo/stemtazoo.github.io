@@ -4,9 +4,9 @@ title: GANは異常検知に使える？【超ひっかけ整理｜G検定対策
 description: "GANによる異常検知は、正常データの分布を生成モデルに学ばせ、入力の再構成誤差や識別器の特徴差が大きいものを異常候補とみなす考え方です。GAN自体が異常検知専用モデルではないこと、異常ラベルが少ない場面でも活用できる一方で学習不安定性があることを押さえ、単なる二値分類との違いを判断します。"
 permalink: /gk/gan-anomaly-detection/
 tags: [gk, neural_network]
-gk_section: ディープラーニングの応用例/データ生成
-gk_order: 11
-last_modified_at: 2026-06-27
+gk_section: ディープラーニングの応用例/データ生成/GAN・派生モデル
+gk_order: 7
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
