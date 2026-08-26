@@ -5,8 +5,8 @@ description: "勾配消失問題は、誤差逆伝播で小さな微分値が層
 permalink: /gk/vanishing-gradient/
 tags: [gk, neural_network]
 gk_section: ディープラーニングの概要/ニューラルネットワークとディープラーニング
-gk_order: 11
-last_modified_at: 2026-08-20
+gk_order: 5
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
