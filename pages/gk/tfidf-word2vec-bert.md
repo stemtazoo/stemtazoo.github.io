@@ -4,9 +4,9 @@ title: TF-IDF・Word2Vec・BERTの違いとは？【G検定対策】
 description: "TF-IDF・Word2Vec・BERTを、頻度にもとづく重み付け、静的な単語分散表現、文脈依存表現という役割で比較します。単純な優劣ではなく、何を表しているか・文脈で表現が変わるかという判断軸からG検定の選択肢を切れるように整理します。"
 permalink: /gk/tfidf-word2vec-bert/
 tags: [gk, nlp, neural_network]
-gk_section: ディープラーニングの応用例/自然言語処理
-gk_order: 19
-last_modified_at: 2026-08-21
+gk_section: ディープラーニングの応用例/自然言語処理/分散表現
+gk_order: 9
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
