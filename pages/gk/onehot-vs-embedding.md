@@ -4,9 +4,9 @@ title: One-hotとEmbeddingの違いとは？【G検定対策】
 description: "One-hot表現とEmbeddingを、疎なカテゴリ表現か、学習可能な密ベクトル表現かで比較します。語彙数と次元数、意味的類似性、Embedding層との関係を整理し、G検定で『1か0』『低次元実数ベクトル』のキーワードから選択肢を切る基準を確認します。"
 permalink: /gk/onehot-vs-embedding/
 tags: [gk, nlp]
-gk_section: ディープラーニングの応用例/自然言語処理
-gk_order: 6
-last_modified_at: 2026-08-21
+gk_section: ディープラーニングの応用例/自然言語処理/分散表現
+gk_order: 2
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
