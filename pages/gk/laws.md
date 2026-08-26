@@ -4,9 +4,9 @@ title: LAWS（自律型致死兵器システム）とは？G検定対策
 description: "LAWS（自律型致死兵器システム）について、国際的に統一された定義が確立していない点、人間の関与、目標の識別・選択、致死力の使用、国際人道法との関係をG検定向けに整理します。STRIPSなど似た略語との混同も防ぎます。"
 permalink: /gk/laws/
 tags: [gk, ethics, social_issues]
-gk_section: AIの法律と倫理/社会的影響・悪用
-gk_order: 7
-last_modified_at: 2026-08-22
+gk_section: AIの法律と倫理/社会的影響・悪用/自動化・自律化の社会的リスク
+gk_order: 2
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
