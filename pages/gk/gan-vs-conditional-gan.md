@@ -4,9 +4,9 @@ title: GANとConditional GANの違いとは？【1ページ比較・G検定対�
 description: "GANとConditional GANの違いについて、G検定で問われる生成モデル分野の観点から、目的、前提、モデル構造、入力と出力、評価観点のどこが異なるかを比較します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/gan-vs-conditional-gan/
 tags: [gk, neural_network, cheatsheet]
-gk_section: ディープラーニングの応用例/データ生成
-gk_order: 9
-last_modified_at: 2026-06-21
+gk_section: ディープラーニングの応用例/データ生成/GAN・派生モデル
+gk_order: 6
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
