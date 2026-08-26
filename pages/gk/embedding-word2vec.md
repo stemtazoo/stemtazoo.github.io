@@ -4,8 +4,8 @@ title: Embedding / Word2Vec
 description: "Embedding / Word2Vecについて、G検定で問われる自然言語処理・系列データ分野の観点から、系列データを扱う仕組み、学習目的、代表モデルとの関係を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/embedding-word2vec/
 tags: [gk, neural_network, nlp, embedding]
-gk_section: ディープラーニングの応用例/自然言語処理
-gk_order: 9
+gk_section: ディープラーニングの応用例/自然言語処理/分散表現
+gk_order: 3
 last_modified_at: 2026-08-26
 ---
 
