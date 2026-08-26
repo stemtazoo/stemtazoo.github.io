@@ -4,9 +4,9 @@ title: Few-shot・Zero-shot・転移学習の違い【少量データ学習の�
 description: "Few-shot・Zero-shot・転移学習の違いについて、G検定で問われるAI・機械学習分野の観点から、目的、前提、モデル構造、入力と出力、評価観点のどこが異なるかを比較します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/few-shot-vs-zero-shot-vs-transfer/
 tags: [gk, neural_network]
-gk_section: ディープラーニングの応用例/転移学習・ファインチューニング
-gk_order: 8
-last_modified_at: 2026-07-14
+gk_section: ディープラーニングの応用例/転移学習・ファインチューニング/事前学習・少数例学習
+gk_order: 5
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
