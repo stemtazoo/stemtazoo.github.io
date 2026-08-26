@@ -4,9 +4,9 @@ title: GLUEとは？NLPの評価ベンチマーク【G検定】
 description: "GLUEを、文分類・意味類似度・自然言語推論など複数の自然言語理解タスクをまとめた評価ベンチマークとして整理します。GLUE自体はモデルや学習アルゴリズムではない点、SQuADとの違いをG検定向けに確認します。"
 permalink: /gk/glue/
 tags: [gk, nlp]
-gk_section: ディープラーニングの応用例/自然言語処理
-gk_order: 25
-last_modified_at: 2026-08-21
+gk_section: ディープラーニングの応用例/自然言語処理/タスク・評価
+gk_order: 4
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
