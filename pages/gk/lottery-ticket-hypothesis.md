@@ -4,9 +4,9 @@ title: 宝くじ仮説とは？高性能サブネットの考え方【G検定】
 description: "宝くじ仮説は、大規模ニューラルネットワーク内に、元の初期値から学習すると高性能になる疎なサブネットワークが存在するという仮説です。剪定との関係、初期値へ戻す検証手順、単なるモデル圧縮との違いをG検定向けに整理します。"
 permalink: /gk/lottery-ticket-hypothesis/
 tags: [gk, neural_network]
-gk_section: ディープラーニングの応用例/モデルの軽量化
+gk_section: ディープラーニングの応用例/モデルの軽量化/関連理論・仮説
 gk_order: 1
-last_modified_at: 2026-08-24
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
