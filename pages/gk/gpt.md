@@ -4,9 +4,9 @@ title: GPT（自己回帰モデル）とは？G検定対策
 description: "GPTを、Transformer Decoder型の自己回帰言語モデルとして整理します。過去のトークンから次のトークンを予測する因果的な学習、文章生成で問われる特徴、BERTのMLMとの違いをG検定向けに確認します。"
 permalink: /gk/gpt/
 tags: [gk, nlp, transformer, attention]
-gk_section: ディープラーニングの応用例/自然言語処理
-gk_order: 22
-last_modified_at: 2026-08-21
+gk_section: ディープラーニングの応用例/自然言語処理/Transformer・言語モデル
+gk_order: 4
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
