@@ -4,9 +4,9 @@ title: 感情分析（Sentiment Analysis）とは？【NLP基本タスク｜G検
 description: "感情分析を、テキストからポジティブ・ネガティブなどの極性や感情カテゴリを推定するNLPタスクとして整理します。文章生成・要約・固有表現抽出との違い、BoW・TF-IDF・BERTなどが実装手段であることをG検定向けに確認します。"
 permalink: /gk/sentiment-analysis/
 tags: [gk, nlp, neural_network]
-gk_section: ディープラーニングの応用例/自然言語処理
-gk_order: 27
-last_modified_at: 2026-08-21
+gk_section: ディープラーニングの応用例/自然言語処理/タスク・評価
+gk_order: 1
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
