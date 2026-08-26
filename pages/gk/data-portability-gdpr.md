@@ -4,9 +4,9 @@ title: データポータビリティの権利とは？（GDPR）【G検定対�
 description: "GDPRのデータポータビリティについて、本人が提供した一定の個人データを構造化され一般的に利用される機械可読形式で受け取り、他の管理者へ移転できる権利として整理します。消去権・訂正権との違いをG検定向けに確認します。"
 permalink: /gk/data-portability-gdpr/
 tags: [gk, privacy, law, gdpr]
-gk_section: AIの法律と倫理/プライバシー・個人情報保護
-gk_order: 10
-last_modified_at: 2026-08-22
+gk_section: AIの法律と倫理/プライバシー・個人情報保護/GDPRの本人権利
+gk_order: 2
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
