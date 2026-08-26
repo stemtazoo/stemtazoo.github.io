@@ -4,9 +4,9 @@ title: SARSA（オンポリシー強化学習）とは？G検定対策
 description: SARSAを実際に選んだ次の行動に基づいてQ値を更新するオンポリシー型TD学習として整理します。Q学習との違い、探索方策の影響、G検定での見分け方を確認できます。
 permalink: /gk/sarsa/
 tags: [gk, reinforcement_learning]
-gk_section: 機械学習の概要/代表的な手法/強化学習
-gk_order: 9
-last_modified_at: 2026-08-22
+gk_section: 機械学習の概要/代表的な手法/強化学習/価値ベース・TD学習
+gk_order: 3
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
