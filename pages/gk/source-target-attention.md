@@ -5,8 +5,8 @@ description: "Source-Target Attentionについて、G検定で問われる自然
 permalink: /gk/source-target-attention/
 tags: [gk, attention, transformer]
 gk_section: ディープラーニングの要素技術/トランスフォーマー (Transformer)
-gk_order: 2
-last_modified_at: 2026-08-13
+gk_order: 5
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
