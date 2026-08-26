@@ -4,9 +4,9 @@ title: REINFORCEとは？（方策勾配法）G検定対策
 description: REINFORCEを、エピソード終了後の収益を使って確率的方策を直接更新するモンテカルロ型の方策勾配法として整理します。Q学習、Actor-Critic、ベースラインとの違いと、G検定での判断基準を確認できます。
 permalink: /gk/reinforce/
 tags: [gk, reinforcement_learning]
-gk_section: 機械学習の概要/代表的な手法/強化学習
-gk_order: 12
-last_modified_at: 2026-08-22
+gk_section: 機械学習の概要/代表的な手法/強化学習/方策勾配・Actor-Critic
+gk_order: 1
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
