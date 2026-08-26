@@ -4,9 +4,9 @@ title: 報酬成形（Reward Shaping）とは？【G検定対策】
 description: "報酬成形を、強化学習で元の目的を保ちながら学習を助ける追加報酬を設計する考え方として整理します。スパース報酬、報酬ハッキング、逆強化学習との違いをG検定向けに確認します。"
 permalink: /gk/reward-shaping/
 tags: [gk, reinforcement_learning]
-gk_section: 機械学習の概要/代表的な手法/強化学習
-gk_order: 20
-last_modified_at: 2026-08-23
+gk_section: 機械学習の概要/代表的な手法/強化学習/基礎概念
+gk_order: 3
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
