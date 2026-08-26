@@ -4,9 +4,9 @@ title: Sim2Realとは？（シミュレーションから現実へ）【G検定�
 description: "Sim2Realは、シミュレーションで学習した制御方策やモデルを現実環境へ移す考え方です。現実のセンサ誤差や摩擦、照明条件などのずれが性能低下を招く理由、ドメインランダム化や転移学習による対策、ロボット学習での出題ポイントをG検定向けに整理します。"
 permalink: /gk/sim2real/
 tags: [gk, reinforcement_learning, robotics]
-gk_section: ディープラーニングの応用例/深層強化学習
-gk_order: 6
-last_modified_at: 2026-08-19
+gk_section: ディープラーニングの応用例/深層強化学習/Sim-to-Real
+gk_order: 1
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
