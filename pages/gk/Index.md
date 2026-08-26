@@ -119,6 +119,11 @@ gk_sections:
           - title: "関連理論・仮説"
 
   - title: "AIの社会実装に向けて"
+    subsections:
+      - title: "プロジェクト全体・役割"
+      - title: "プロセス・方法論"
+      - title: "開発・運用（MLOps）"
+      - title: "エッジ・クラウド"
 
   - title: "AIの法律と倫理"
     subsections:
