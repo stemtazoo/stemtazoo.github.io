@@ -5,8 +5,8 @@ description: "GRUは、更新ゲートとリセットゲートで過去情報を
 permalink: /gk/gru/
 tags: [gk, neural_network, rnn, gru]
 gk_section: ディープラーニングの要素技術/リカレントニューラルネットワーク (RNN)
-gk_order: 3
-last_modified_at: 2026-06-27
+gk_order: 5
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
