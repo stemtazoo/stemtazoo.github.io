@@ -63,6 +63,9 @@ gk_sections:
       - title: "リカレントニューラルネットワーク (RNN)"
       - title: "トランスフォーマー (Transformer)"
       - title: "オートエンコーダ"
+        subsections:
+          - title: "基本・派生モデル"
+          - title: "異常検知"
 
   - title: "ディープラーニングの応用例"
     subsections:
