@@ -4,9 +4,9 @@ title: 差分学習（TD学習, Temporal Difference Learning）とは？G検定�
 description: "TD学習を、報酬と次状態の価値推定を使って現在の価値を更新する強化学習手法として整理します。モンテカルロ法との違い、ブートストラップ、Q学習・SARSAとの関係をG検定向けに確認できます。"
 permalink: /gk/td-learning/
 tags: [gk, reinforcement_learning]
-gk_section: 機械学習の概要/代表的な手法/強化学習
-gk_order: 8
-last_modified_at: 2026-08-22
+gk_section: 機械学習の概要/代表的な手法/強化学習/価値ベース・TD学習
+gk_order: 1
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
