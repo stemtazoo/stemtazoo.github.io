@@ -102,6 +102,12 @@ gk_sections:
           - title: "継続学習・忘却"
       - title: "マルチモーダル"
       - title: "モデルの解釈性"
+        subsections:
+          - title: "基礎・全体像"
+          - title: "特徴量の重要度・寄与"
+          - title: "画像モデルの可視化"
+          - title: "比較・使い分け"
+          - title: "ひっかけ問題"
       - title: "モデルの軽量化"
 
   - title: "AIの社会実装に向けて"
@@ -117,7 +123,7 @@ gk_sections:
   - title: "チートシート（試験直前）"
 
   - title: "ひっかけ問題集"
-last_modified_at: 2026-08-26
+last_modified_at: 2026-08-27
 ---
 
 <div class="portal-card-grid">
