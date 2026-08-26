@@ -4,9 +4,9 @@ title: MLOpsの流れとは？開発・デプロイ・監視・改善【G検定�
 description: "MLOpsの流れを、データ準備・学習・評価・デプロイ・監視・改善の循環として整理します。固定された唯一の手順ではないこと、事業課題との関係、再学習や監視の位置づけをG検定向けに確認します。"
 permalink: /gk/mlops-process/
 tags: [gk, mlops, lifecycle]
-gk_section: AIの社会実装に向けて/AIの社会実装に向けて
-gk_order: 7
-last_modified_at: 2026-08-22
+gk_section: AIの社会実装に向けて/開発・運用（MLOps）
+gk_order: 3
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
