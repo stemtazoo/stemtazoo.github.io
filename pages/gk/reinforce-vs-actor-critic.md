@@ -4,9 +4,9 @@ title: REINFORCEとActor-Criticの違いとは？G検定対策
 description: "REINFORCEとActor-Criticの違いを、方策更新に何を使うかという観点から比較します。モンテカルロ収益を使う基本形のREINFORCEと、Criticの価値推定を利用するActor-Criticを切り分けます。"
 permalink: /gk/reinforce-vs-actor-critic/
 tags: [gk, reinforcement_learning]
-gk_section: 機械学習の概要/代表的な手法/強化学習
-gk_order: 14
-last_modified_at: 2026-08-22
+gk_section: 機械学習の概要/代表的な手法/強化学習/方策勾配・Actor-Critic
+gk_order: 3
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
