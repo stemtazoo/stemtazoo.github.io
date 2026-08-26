@@ -4,9 +4,9 @@ title: 状態価値関数（State Value Function）とは？G検定対策
 description: "状態価値関数V(s)を、ある状態から方策に従ったときに将来得られる割引累積報酬の期待値として整理します。状態だけを評価するV(s)と、状態と行動を評価するQ(s,a)の違い、即時報酬との混同をG検定の判断軸で確認します。"
 permalink: /gk/state-value-function/
 tags: [gk, reinforcement_learning]
-gk_section: 機械学習の概要/代表的な手法/強化学習
-gk_order: 4
-last_modified_at: 2026-08-23
+gk_section: 機械学習の概要/代表的な手法/強化学習/基礎概念
+gk_order: 1
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
