@@ -140,6 +140,10 @@ gk_sections:
           - title: "GDPRの本人権利"
           - title: "保護設計・技術"
       - title: "AIセキュリティ・プライバシー攻撃"
+        subsections:
+          - title: "学習データを狙う攻撃"
+          - title: "モデルを狙う攻撃"
+          - title: "比較・まとめ"
       - title: "知的財産・データ利用"
       - title: "社会的影響・悪用"
 
