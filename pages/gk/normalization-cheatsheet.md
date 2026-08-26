@@ -5,8 +5,8 @@ description: "Batch Normalization・Layer Normalization・Instance Normalization
 permalink: /gk/normalization-cheatsheet/
 tags: [gk, neural_network, cnn, cheatsheet]
 gk_section: ディープラーニングの要素技術/ネットワークの構成要素
-gk_order: 11
-last_modified_at: 2026-08-21
+gk_order: 10
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
