@@ -5,8 +5,8 @@ description: "エルマンネットワークRNNの基本構造について、G�
 permalink: /gk/elman-network/
 tags: [gk, rnn]
 gk_section: ディープラーニングの要素技術/リカレントニューラルネットワーク (RNN)
-gk_order: 11
-last_modified_at: 2026-06-21
+gk_order: 10
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
