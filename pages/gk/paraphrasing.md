@@ -4,9 +4,9 @@ title: Paraphrasing（言い換え）とは？意味を保って表現を変え�
 description: "Paraphrasing（言い換え）を、意味を大きく変えずに別の表現へ書き換えるNLPタスクとして整理します。要約・翻訳・対比学習との違い、データ拡張として利用できること、意味ずれがノイズになる注意点をG検定向けに確認します。"
 permalink: /gk/paraphrasing/
 tags: [gk, nlp]
-gk_section: ディープラーニングの応用例/自然言語処理
-gk_order: 28
-last_modified_at: 2026-08-21
+gk_section: ディープラーニングの応用例/自然言語処理/タスク・評価
+gk_order: 2
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
