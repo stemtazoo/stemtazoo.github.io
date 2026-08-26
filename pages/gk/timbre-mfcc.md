@@ -4,9 +4,9 @@ title: 音色の違い（MFCC）
 description: "音色の違い（MFCC）について、G検定で問われる自然言語処理・系列データ分野の観点から、目的、前提、モデル構造、入力と出力、評価観点のどこが異なるかを比較します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/timbre-mfcc/
 tags: [gk, audio, mfcc, signal_processing]
-gk_section: ディープラーニングの応用例/音声処理
+gk_section: ディープラーニングの応用例/音声処理/音響特徴・音素
 gk_order: 2
-last_modified_at: 2026-06-21
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
