@@ -4,9 +4,9 @@ title: AlphaGo・AlphaGo Zero・AlphaZero・OpenAI Five・AlphaStar比較【G検
 description: "AlphaGo、AlphaGo Zero、AlphaZero、OpenAI Five、AlphaStarを、対象ゲーム・人間棋譜・自己対戦・探索の違いから比較します。G検定でゲーム名と特徴を正しく対応づけるための判断基準を整理します。"
 permalink: /gk/ai-project-comparison/
 tags: [gk, reinforcement_learning, cheatsheet]
-gk_section: ディープラーニングの応用例/深層強化学習
-gk_order: 16
-last_modified_at: 2026-08-23
+gk_section: ディープラーニングの応用例/深層強化学習/代表エージェント・プロジェクト
+gk_order: 5
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
