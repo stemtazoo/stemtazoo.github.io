@@ -5,8 +5,8 @@ description: "学習曲線を、訓練データと検証データに対する性
 permalink: /gk/learning-curve/
 tags: [gk, machine_learning, evaluation]
 gk_section: 機械学習の概要/よくあるつまずき（過学習など）
-gk_order: 3
-last_modified_at: 2026-08-21
+gk_order: 4
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
