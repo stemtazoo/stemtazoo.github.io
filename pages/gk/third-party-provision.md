@@ -4,9 +4,9 @@ title: 個人データの第三者提供とは？委託との違い【G検定対
 description: "個人情報保護法の第三者提供について、個人データを第三者へ提供する場合は原則本人同意が必要であること、同一法人内の利用や委託・事業承継・一定の共同利用では第三者に当たらない場合があることをG検定向けに整理します。"
 permalink: /gk/third-party-provision/
 tags: [gk, ethics, privacy, law]
-gk_section: AIの法律と倫理/プライバシー・個人情報保護
-gk_order: 7
-last_modified_at: 2026-08-22
+gk_section: AIの法律と倫理/プライバシー・個人情報保護/個人データの加工・提供
+gk_order: 4
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
