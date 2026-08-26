@@ -4,9 +4,9 @@ title: フォルマントとは？（音声スペクトルのピーク）【G検
 description: "フォルマント（音声スペクトルのピーク）について、G検定で問われる自然言語処理・系列データ分野の観点から、系列データを扱う仕組み、学習目的、代表モデルとの関係を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/formant/
 tags: [gk, speech, signal_processing]
-gk_section: ディープラーニングの応用例/音声処理
+gk_section: ディープラーニングの応用例/音声処理/音響特徴・音素
 gk_order: 3
-last_modified_at: 2026-06-21
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
