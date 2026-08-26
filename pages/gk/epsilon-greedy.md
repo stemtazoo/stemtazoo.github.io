@@ -4,9 +4,9 @@ title: ε-greedy方策（epsilon-greedy policy）とは？【G検定対策】
 description: "ε-greedy方策を、確率εでランダム探索し、確率1−εで現在もっとも価値が高い行動を選ぶ探索戦略として整理します。探索と活用のトレードオフ、UCBとの違い、εの確率を逆にするひっかけをG検定向けに確認します。"
 permalink: /gk/epsilon-greedy/
 tags: [gk, reinforcement_learning, policy]
-gk_section: 機械学習の概要/代表的な手法/強化学習
-gk_order: 6
-last_modified_at: 2026-08-23
+gk_section: 機械学習の概要/代表的な手法/強化学習/バンディット
+gk_order: 2
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
