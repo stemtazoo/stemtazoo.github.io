@@ -4,9 +4,9 @@ title: 形態素解析（Morphological Analysis）とは？【G検定対策】
 description: "形態素解析は、日本語などの文章を形態素に分割し、品詞・原形・活用形を付与する自然言語処理です。単なる文字分割、構文解析、意味解析との違いを具体例で整理し、Bag of WordsやTF-IDFの前処理として使われる点をG検定向けに確認します。"
 permalink: /gk/morphological-analysis/
 tags: [gk, nlp]
-gk_section: ディープラーニングの応用例/自然言語処理
-gk_order: 27
-last_modified_at: 2026-06-27
+gk_section: ディープラーニングの応用例/自然言語処理/基礎・前処理
+gk_order: 2
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
