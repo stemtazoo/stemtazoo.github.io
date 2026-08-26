@@ -81,6 +81,11 @@ gk_sections:
 
       - title: "音声処理"
       - title: "自然言語処理"
+        subsections:
+          - title: "基礎・前処理"
+          - title: "分散表現"
+          - title: "Transformer・言語モデル"
+          - title: "タスク・評価"
       - title: "深層強化学習"
       - title: "データ生成"
         subsections:
