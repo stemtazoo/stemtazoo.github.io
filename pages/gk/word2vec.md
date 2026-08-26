@@ -4,9 +4,9 @@ title: Word2Vec（CBOW / Skip-gram）とは？【分散表現の基本｜G検定
 description: "Word2Vecを、周囲の単語との共起関係から単語の静的な分散表現を学ぶ手法として整理します。CBOWとSkip-gramの予測方向、TF-IDFとの違い、BERTの文脈依存表現との違いをG検定向けに確認します。"
 permalink: /gk/word2vec/
 tags: [gk, nlp, machine_learning]
-gk_section: ディープラーニングの応用例/自然言語処理
-gk_order: 8
-last_modified_at: 2026-08-21
+gk_section: ディープラーニングの応用例/自然言語処理/分散表現
+gk_order: 4
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
