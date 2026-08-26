@@ -4,9 +4,9 @@ title: メンバーシップ推論攻撃とは？学習データに含まれた�
 description: "メンバーシップ推論攻撃を、特定のデータがモデルの学習データに含まれていたかを推定する攻撃として整理します。学習データそのものを復元するデータ窃取、モデルの挙動を模倣するモデル窃取との違いをG検定向けに確認します。"
 permalink: /gk/membership-inference-attack/
 tags: [gk, security, privacy]
-gk_section: AIの法律と倫理/AIセキュリティ・プライバシー攻撃
+gk_section: AIの法律と倫理/AIセキュリティ・プライバシー攻撃/学習データを狙う攻撃
 gk_order: 2
-last_modified_at: 2026-08-22
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
