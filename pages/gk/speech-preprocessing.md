@@ -4,9 +4,9 @@ title: 音声認識における前処理まとめ（PCMから特徴量まで）�
 description: "音声認識における前処理まとめ（PCMから特徴量まで）について、G検定で問われる特徴量・教師なし学習分野の観点から、特徴の捉え方、データの分布、教師なし学習で何を判断するかを整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/speech-preprocessing/
 tags: [gk, signal_processing, nlp]
-gk_section: ディープラーニングの応用例/音声処理
-gk_order: 5
-last_modified_at: 2026-05-06
+gk_section: ディープラーニングの応用例/音声処理/デジタル化・前処理
+gk_order: 3
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
