@@ -4,9 +4,9 @@ title: AlphaGoとAlphaStarの違い【比較チートシート｜G検定対策�
 description: "AlphaGoとAlphaStarを、対象ゲームと環境の違いから比較します。囲碁・MCTS・交互手番のAlphaGoと、StarCraft II・リアルタイム・不完全情報のAlphaStarをG検定で迷わない形に整理します。"
 permalink: /gk/alphago-vs-alphastar/
 tags: [gk, reinforcement_learning, cheatsheet]
-gk_section: ディープラーニングの応用例/深層強化学習
-gk_order: 4
-last_modified_at: 2026-08-23
+gk_section: ディープラーニングの応用例/深層強化学習/代表エージェント・プロジェクト
+gk_order: 3
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
