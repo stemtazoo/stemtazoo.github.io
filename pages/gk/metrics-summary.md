@@ -4,9 +4,9 @@ title: 分類の評価指標まとめ｜Accuracy・Precision・Recall・F1・ROC
 description: "分類の主要評価指標を、全体正解率・誤検知・見逃し・PrecisionとRecallのバランス・しきい値全体という観点で整理します。Accuracy、Precision、Recall、F1、ROC-AUC、PR曲線をG検定で選択肢から切り分ける判断基準を確認できます。"
 permalink: /gk/metrics-summary/
 tags: [gk, 機械学習, 評価指標, まとめ, 頻出]
-gk_section: 機械学習の概要/モデルの選択・評価
-gk_order: 8
-last_modified_at: 2026-08-21
+gk_section: 機械学習の概要/モデルの選択・評価/分類の評価指標
+gk_order: 0
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
