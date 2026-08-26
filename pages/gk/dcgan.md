@@ -4,9 +4,9 @@ title: DCGAN（Deep Convolutional GAN）
 description: "DCGANは、GANの生成器と識別器に畳み込みニューラルネットワークを導入し、画像生成を安定・高品質化したモデルです。生成器では転置畳み込みで空間サイズを広げ、識別器では畳み込みで真偽を判定する流れを押さえ、画像分類だけを行うCNNや確率分布を明示的に学ぶVAEとの違いを見極めます。"
 permalink: /gk/dcgan/
 tags: [gk, neural_network, cnn, gan]
-gk_section: ディープラーニングの応用例/データ生成
-gk_order: 1
-last_modified_at: 2026-06-27
+gk_section: ディープラーニングの応用例/データ生成/GAN・派生モデル
+gk_order: 2
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
