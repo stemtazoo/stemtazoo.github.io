@@ -146,6 +146,10 @@ gk_sections:
           - title: "比較・まとめ"
       - title: "知的財産・データ利用"
       - title: "社会的影響・悪用"
+        subsections:
+          - title: "偽・誤情報と合成コンテンツ"
+          - title: "推薦・情報環境への影響"
+          - title: "自動化・自律化の社会的リスク"
 
   - title: "チートシート（試験直前）"
 
