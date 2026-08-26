@@ -4,9 +4,9 @@ title: BERTとGPTの違い【比較チートシート｜G検定対策】
 description: "BERTとGPTを、Encoder型とDecoder型、MLMと次トークン予測、双方向文脈と因果的文脈という違いで比較します。『理解専用』『生成専用』と絶対視せず、G検定で構造と学習目的から選択肢を切る判断基準を整理します。"
 permalink: /gk/bert-vs-gpt/
 tags: [gk, nlp, transformer, cheatsheet]
-gk_section: ディープラーニングの応用例/自然言語処理
-gk_order: 23
-last_modified_at: 2026-08-21
+gk_section: ディープラーニングの応用例/自然言語処理/Transformer・言語モデル
+gk_order: 5
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
