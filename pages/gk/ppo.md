@@ -4,9 +4,9 @@ title: PPO（Proximal Policy Optimization）とは？【G検定対策】
 description: "PPOは、方策を直接最適化しつつ、クリッピングによって新旧方策の変化が大きくなりすぎないよう制限する方策勾配法です。急激な更新を抑えて学習を安定させる狙いと、Q学習やActor-Criticとの関係を整理します。"
 permalink: /gk/ppo/
 tags: [gk, reinforcement_learning, neural_network]
-gk_section: 機械学習の概要/代表的な手法/強化学習
-gk_order: 16
-last_modified_at: 2026-08-22
+gk_section: 機械学習の概要/代表的な手法/強化学習/方策勾配・Actor-Critic
+gk_order: 5
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
