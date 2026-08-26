@@ -4,9 +4,9 @@ title: DevOpsとは？MLOpsとの違い【G検定対策】
 description: "DevOpsを、ソフトウェア開発と運用の連携によって継続的に改善・提供する考え方として整理します。データ・モデル・再学習・性能監視を扱うMLOpsとの違いをG検定向けに確認します。"
 permalink: /gk/devops/
 tags: [gk, devops, mlops]
-gk_section: AIの社会実装に向けて/AIの社会実装に向けて
-gk_order: 5
-last_modified_at: 2026-08-22
+gk_section: AIの社会実装に向けて/開発・運用（MLOps）
+gk_order: 1
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
