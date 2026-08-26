@@ -5,7 +5,7 @@ description: "エッジAIを、端末や現場に近い場所でAI処理を行�
 permalink: /gk/edge-ai/
 tags: [gk, edge_ai]
 gk_section: AIの社会実装に向けて/エッジ・クラウド
- gk_order: 1
+gk_order: 1
 last_modified_at: 2026-08-27
 ---
 
