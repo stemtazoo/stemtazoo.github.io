@@ -4,9 +4,9 @@ title: DQN（Deep Q-Network）とは？Experience ReplayとTarget Network【G検
 description: "DQNを、Q学習のQ値をニューラルネットワークで近似する深層強化学習手法として整理します。Experience ReplayとTarget Networkが学習を安定させる役割、基本DQNが離散行動を扱う点、Double DQNなどの改良手法との違いをG検定向けに確認します。"
 permalink: /gk/dqn/
 tags: [gk, reinforcement_learning, neural_network]
-gk_section: ディープラーニングの応用例/深層強化学習
+gk_section: ディープラーニングの応用例/深層強化学習/DQN・改良手法
 gk_order: 1
-last_modified_at: 2026-08-22
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
