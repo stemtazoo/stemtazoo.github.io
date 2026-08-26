@@ -39,6 +39,12 @@ gk_sections:
       - title: "特徴量・前処理"
 
       - title: "モデルの選択・評価"
+        subsections:
+          - title: "分類の評価指標"
+          - title: "回帰の評価指標"
+          - title: "データ分割・交差検証"
+          - title: "ハイパーパラメータ探索"
+          - title: "情報量規準（AIC・BIC）"
 
       - title: "よくあるつまずき（過学習など）"
 
