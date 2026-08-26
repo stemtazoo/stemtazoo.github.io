@@ -4,9 +4,9 @@ title: Visual Question Answering（VQA）とは？画像に質問して答える
 description: "Visual Question Answering（VQA）画像に質問して答えるAIについて、G検定で問われる画像認識・CNN分野の観点から、画像タスクでの役割、特徴抽出の流れ、代表モデルとの関係を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/visual-question-answering/
 tags: [gk, vision, nlp]
-gk_section: ディープラーニングの応用例/マルチモーダル
-gk_order: 9
-last_modified_at: 2026-06-21
+gk_section: ディープラーニングの応用例/マルチモーダル/代表タスク・生成
+gk_order: 1
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
