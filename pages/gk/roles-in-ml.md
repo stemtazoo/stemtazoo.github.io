@@ -4,9 +4,9 @@ title: 機械学習プロジェクトの役割とは？ビジネス・データ�
 description: "機械学習プロジェクトでのビジネス担当、データサイエンティスト、エンジニアの主な役割を整理します。職種を固定的に分けすぎず、課題定義・モデル構築・実装運用をどう連携するかをG検定向けに確認します。"
 permalink: /gk/roles-in-ml/
 tags: [gk, mlops, cheatsheet]
-gk_section: AIの社会実装に向けて/AIの社会実装に向けて
-gk_order: 8
-last_modified_at: 2026-08-22
+gk_section: AIの社会実装に向けて/プロジェクト全体・役割
+gk_order: 2
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
