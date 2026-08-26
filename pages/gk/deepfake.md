@@ -4,9 +4,9 @@ title: ディープフェイク（Deepfake）とは？フェイクニュース�
 description: "ディープフェイクを、AIで人物の画像・音声・動画などを合成・改変する技術やコンテンツとして整理します。正当利用にも悪用にも使われる点と、虚偽・誤解を招く情報の流通問題であるフェイクニュースとは同じではないという判断軸を確認します。"
 permalink: /gk/deepfake/
 tags: [gk, ethics, social_issues]
-gk_section: AIの法律と倫理/社会的影響・悪用
+gk_section: AIの法律と倫理/社会的影響・悪用/偽・誤情報と合成コンテンツ
 gk_order: 2
-last_modified_at: 2026-08-22
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
