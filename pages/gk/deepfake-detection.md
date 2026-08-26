@@ -4,9 +4,9 @@ title: ディープフェイク検出技術とは？【G検定対策】
 description: "ディープフェイク検出を、画像・音声・動画に合成・改変の兆候があるかを調べる技術として整理します。検出だけで真偽を完全保証できない点と、来歴確認・出典照合・ファクトチェックとの違いをG検定向けに確認します。"
 permalink: /gk/deepfake-detection/
 tags: [gk, ethics, social_issues]
-gk_section: AIの法律と倫理/社会的影響・悪用
+gk_section: AIの法律と倫理/社会的影響・悪用/偽・誤情報と合成コンテンツ
 gk_order: 3
-last_modified_at: 2026-08-22
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
