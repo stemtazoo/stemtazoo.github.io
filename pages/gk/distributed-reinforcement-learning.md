@@ -4,9 +4,9 @@ title: 分散型強化学習とは？マルチエージェントとの違いを�
 description: "分散型強化学習を、複数の計算資源・環境・ワーカーを使って経験収集や学習を並列化する方法として整理します。マルチエージェント強化学習との違いと、G検定での判断基準を確認できます。"
 permalink: /gk/distributed-reinforcement-learning/
 tags: [gk, reinforcement_learning, machine_learning]
-gk_section: 機械学習の概要/代表的な手法/強化学習
-gk_order: 17
-last_modified_at: 2026-08-22
+gk_section: 機械学習の概要/代表的な手法/強化学習/発展・大規模化
+gk_order: 2
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
