@@ -4,9 +4,9 @@ title: OpenAI Fiveとは？Dota 2特化AI【G検定対策】
 description: "OpenAI Fiveを、Dota 2の5対5チーム戦を対象に自己対戦と大規模強化学習で訓練されたAIシステムとして整理します。AlphaGo・AlphaZero・AlphaStarとの違いをゲーム名と環境特性から切り分けます。"
 permalink: /gk/openai-five/
 tags: [gk, reinforcement_learning, deep_reinforcement_learning]
-gk_section: ディープラーニングの応用例/深層強化学習
-gk_order: 15
-last_modified_at: 2026-08-23
+gk_section: ディープラーニングの応用例/深層強化学習/代表エージェント・プロジェクト
+gk_order: 2
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
