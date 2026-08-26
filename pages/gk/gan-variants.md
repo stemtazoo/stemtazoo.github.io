@@ -4,9 +4,9 @@ title: GANの派生モデルまとめ
 description: "GANの代表的な派生モデルを、DCGANの畳み込み画像生成、条件付きGANの指定条件による生成、CycleGANの対応なし画像変換、StyleGANのスタイル制御など目的別に比較します。名称だけで暗記せず、入力に条件があるか、ペアデータが必要か、生成過程のどこを制御するかというG検定の識別軸を整理します。"
 permalink: /gk/gan-variants/
 tags: [gk, neural_network, gan, cheatsheet]
-gk_section: ディープラーニングの応用例/データ生成
-gk_order: 2
-last_modified_at: 2026-06-27
+gk_section: ディープラーニングの応用例/データ生成/GAN・派生モデル
+gk_order: 1
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
@@ -125,8 +125,11 @@ GAN派生は一言で覚える👇
 ## まとめ（試験直前用）
 
 * GAN派生は **用途で区別**
-* DCGAN：CNN導入
-* cGAN：条件付き
-* C*
+* DCGAN：CNNを導入した画像生成
+* Conditional GAN：条件を与えて生成を制御
+* CycleGAN：ペアなし画像変換
+* StyleGAN：スタイル制御と高品質生成
+
+👉 **「CNN・条件・ペア不要・スタイル」のどれかを見る**と切り分けやすいです。
 
 {% include gk_article_footer.html %}
