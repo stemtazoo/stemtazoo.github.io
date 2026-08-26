@@ -4,9 +4,9 @@ title: 交差検証とは？k分割とテストデータの違い【G検定対�
 description: 交差検証（Cross Validation）は、データを複数分割して学習と検証を入れ替え、評価のばらつきを抑える方法です。k-foldの流れ、テストデータとの違い、層化交差検証や時系列データでの注意点、データリーケージをG検定向けに整理します。
 permalink: /gk/cross-validation/
 tags: [gk, machine_learning, evaluation]
-gk_section: 機械学習の概要/モデルの選択・評価
-gk_order: 13
-last_modified_at: 2026-08-21
+gk_section: 機械学習の概要/モデルの選択・評価/データ分割・交差検証
+gk_order: 2
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
