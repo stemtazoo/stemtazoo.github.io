@@ -4,9 +4,9 @@ title: CRISP-MLとは？CRISP-DMとの違い【G検定対策】
 description: "CRISP-MLを、機械学習プロジェクトのライフサイクルを整理する考え方として説明します。CRISP-DMとの関係、運用・監視まで含めて考える点、MLOpsとの違いをG検定向けに整理します。"
 permalink: /gk/crisp-ml/
 tags: [gk, ml_process]
-gk_section: AIの社会実装に向けて/AIの社会実装に向けて
-gk_order: 4
-last_modified_at: 2026-08-22
+gk_section: AIの社会実装に向けて/プロセス・方法論
+gk_order: 2
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
