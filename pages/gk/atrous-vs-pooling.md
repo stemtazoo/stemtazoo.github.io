@@ -5,8 +5,8 @@ description: "Atrous ConvolutionとPoolingの違いについて、G検定で問�
 permalink: /gk/atrous-vs-pooling/
 tags: [gk, cnn]
 gk_section: ディープラーニングの要素技術/ネットワークの構成要素
-gk_order: 13
-last_modified_at: 2026-07-14
+gk_order: 7
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
