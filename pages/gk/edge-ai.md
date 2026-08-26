@@ -4,9 +4,9 @@ title: エッジAIとは？クラウドAIとの違い【G検定対策】
 description: "エッジAIを、端末や現場に近い場所でAI処理を行う方式として整理します。低遅延、通信量、プライバシー、計算資源の制約をクラウドAIと比較し、G検定での使い分けを確認します。"
 permalink: /gk/edge-ai/
 tags: [gk, edge_ai]
-gk_section: AIの社会実装に向けて/AIの社会実装に向けて
-gk_order: 9
-last_modified_at: 2026-08-22
+gk_section: AIの社会実装に向けて/エッジ・クラウド
+ gk_order: 1
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
