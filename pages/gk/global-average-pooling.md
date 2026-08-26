@@ -5,8 +5,8 @@ description: "グローバルアベレージプーリングについて、G検�
 permalink: /gk/global-average-pooling/
 tags: [gk, neural_network, cnn]
 gk_section: ディープラーニングの要素技術/ネットワークの構成要素
-gk_order: 7
-last_modified_at: 2026-06-21
+gk_order: 4
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
