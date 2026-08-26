@@ -4,9 +4,9 @@ title: 人間中心のAI社会原則とは？7つの原則とG検定ひっかけ
 description: "人間中心のAI社会原則は、人間の尊厳を守りながらAIを開発・利用するための7原則です。教育・リテラシー、プライバシー、セキュリティ、公正競争、公平性・説明責任・透明性、イノベーションを整理し、企業利益だけを目的とする考え方との違いを確認します。"
 permalink: /gk/human-centered-ai-principles/
 tags: [gk, ethics, governance]
-gk_section: AIの法律と倫理/AI倫理・ガバナンス
+gk_section: AIの法律と倫理/AI倫理・ガバナンス/基礎・原則
 gk_order: 2
-last_modified_at: 2026-08-22
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
