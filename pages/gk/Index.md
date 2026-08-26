@@ -87,6 +87,10 @@ gk_sections:
           - title: "Transformer・言語モデル"
           - title: "タスク・評価"
       - title: "深層強化学習"
+        subsections:
+          - title: "DQN・改良手法"
+          - title: "代表エージェント・プロジェクト"
+          - title: "Sim-to-Real"
       - title: "データ生成"
         subsections:
           - title: "GAN・派生モデル"
