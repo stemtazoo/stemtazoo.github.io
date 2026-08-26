@@ -4,9 +4,9 @@ title: データ窃取・メンバーシップ推論・モデル窃取 攻撃ま
 description: "G検定で混同しやすいデータ窃取、メンバーシップ推論、モデル窃取を、何を狙う攻撃かで比較します。学習データの内容、学習に含まれた事実、モデルの挙動という3つの対象から選択肢を切る判断基準を整理します。"
 permalink: /gk/privacy-attacks-cheatsheet/
 tags: [gk, security, privacy, cheatsheet]
-gk_section: AIの法律と倫理/AIセキュリティ・プライバシー攻撃
-gk_order: 4
-last_modified_at: 2026-08-22
+gk_section: AIの法律と倫理/AIセキュリティ・プライバシー攻撃/比較・まとめ
+gk_order: 1
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
