@@ -4,9 +4,9 @@ title: AIガバナンスとは？倫理との違いと運用の仕組み【G検�
 description: "AIガバナンスは、AIの開発から運用・廃棄までを技術、ルール、組織運用で管理し、社会実装に伴う責任を明確にする考え方です。AI倫理が重視する価値を、方針・役割・リスク評価・監視・改善として組織で実行する違いをG検定向けに整理します。"
 permalink: /gk/ai-governance/
 tags: [gk, ethics, governance]
-gk_section: AIの法律と倫理/AI倫理・ガバナンス
-gk_order: 3
-last_modified_at: 2026-08-22
+gk_section: AIの法律と倫理/AI倫理・ガバナンス/ガバナンス・評価
+gk_order: 1
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
