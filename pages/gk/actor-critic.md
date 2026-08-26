@@ -4,9 +4,9 @@ title: Actor–Critic とは？（オン／オフポリシーの位置づけ）�
 description: "Actor–Criticを、行動を選ぶActorと、その行動を価値で評価するCriticを組み合わせる強化学習手法として整理します。方策ベースと価値ベース双方の役割、方策勾配の分散を抑える考え方、実装によってオンポリシーにもオフポリシーにもなる点をG検定向けに確認します。"
 permalink: /gk/actor-critic/
 tags: [gk, reinforcement_learning, neural_network]
-gk_section: 機械学習の概要/代表的な手法/強化学習
-gk_order: 13
-last_modified_at: 2026-08-22
+gk_section: 機械学習の概要/代表的な手法/強化学習/方策勾配・Actor-Critic
+gk_order: 2
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
