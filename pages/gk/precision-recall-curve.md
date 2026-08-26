@@ -4,9 +4,9 @@ title: Precision–Recall曲線とは？ROC曲線との違い【G検定対策】
 description: Precision–Recall曲線は、しきい値を変えたときのPrecisionとRecallの関係を見る評価グラフです。陽性が少ないクラス不均衡でROC曲線より実態を捉えやすい理由、軸の違い、APとの関係をG検定向けに整理します。
 permalink: /gk/precision-recall-curve/
 tags: [gk, 機械学習, 評価指標, 頻出]
-gk_section: 機械学習の概要/モデルの選択・評価
+gk_section: 機械学習の概要/モデルの選択・評価/分類の評価指標
 gk_order: 7
-last_modified_at: 2026-08-21
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
