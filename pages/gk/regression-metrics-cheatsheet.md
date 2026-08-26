@@ -4,9 +4,9 @@ title: 回帰の評価指標まとめ｜MSE・RMSE・MAE・R²【G検定】
 description: "回帰の主要評価指標MSE・RMSE・MAE・R²を、二乗・平方根・絶対値・決定係数という違いで整理します。外れ値への感度、単位、R²が負になる場合、G検定で選択肢を切るための判断基準を確認できます。"
 permalink: /gk/regression-metrics-cheatsheet/
 tags: [gk, metrics, cheatsheet]
-gk_section: 機械学習の概要/モデルの選択・評価
-gk_order: 10
-last_modified_at: 2026-08-21
+gk_section: 機械学習の概要/モデルの選択・評価/回帰の評価指標
+gk_order: 2
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
