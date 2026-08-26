@@ -4,9 +4,9 @@ title: 機械学習プロジェクトの全体像（企画〜運用）【G検定
 description: "機械学習プロジェクトを、課題定義・データ準備・モデル構築・デプロイ・監視・改善まで続くサイクルとして整理します。モデルを作って終わりではない理由と、CRISP-DMやMLOpsとの違いをG検定向けに確認します。"
 permalink: /gk/ml-project-lifecycle/
 tags: [gk, mlops, cheatsheet]
-gk_section: AIの社会実装に向けて/AIの社会実装に向けて
+gk_section: AIの社会実装に向けて/プロジェクト全体・役割
 gk_order: 1
-last_modified_at: 2026-08-22
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
