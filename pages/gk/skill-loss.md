@@ -4,9 +4,9 @@ title: スキルの喪失（Skill Loss）とは？G検定対策
 description: "スキルの喪失を、AIや自動化に作業・判断を任せることで、人が技能を使い、学び、維持・継承する機会が減る問題として整理します。雇用喪失との違いと、人間の関与、訓練、役割再設計、リスキリングの必要性を確認します。"
 permalink: /gk/skill-loss/
 tags: [gk, ethics, social_issues]
-gk_section: AIの法律と倫理/社会的影響・悪用
-gk_order: 6
-last_modified_at: 2026-08-22
+gk_section: AIの法律と倫理/社会的影響・悪用/自動化・自律化の社会的リスク
+gk_order: 1
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
