@@ -4,9 +4,9 @@ title: 隠れマルコフモデル（HMM）とは？G検定対策
 description: "隠れマルコフモデル（HMM）について、隠れ状態と観測値の関係、状態遷移確率・出力確率、評価・復号・学習の3つの問題を整理します。マルコフ連鎖やRNN・LSTMとの違いも確認し、G検定で選択肢を切る判断軸を身につけます。"
 permalink: /gk/hmm/
 tags: [gk, nlp]
-gk_section: ディープラーニングの応用例/音声処理
-gk_order: 7
-last_modified_at: 2026-07-18
+gk_section: ディープラーニングの応用例/音声処理/音声認識・系列モデル
+gk_order: 1
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
