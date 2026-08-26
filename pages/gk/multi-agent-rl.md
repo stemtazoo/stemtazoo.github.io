@@ -4,9 +4,9 @@ title: マルチエージェント強化学習とは？【G検定対策】
 description: "マルチエージェント強化学習を、複数のエージェントが同じ環境で相互作用しながら学習する枠組みとして整理します。協調・競争・混合の違い、単一エージェント強化学習や分散強化学習との違いをG検定向けに確認します。"
 permalink: /gk/multi-agent-rl/
 tags: [gk, reinforcement_learning]
-gk_section: 機械学習の概要/代表的な手法/強化学習
-gk_order: 18
-last_modified_at: 2026-08-23
+gk_section: 機械学習の概要/代表的な手法/強化学習/発展・大規模化
+gk_order: 1
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
