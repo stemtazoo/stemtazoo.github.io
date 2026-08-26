@@ -4,9 +4,9 @@ title: VAD（音声区間検出）とは？G検定対策
 description: "VAD（音声区間検出）について、G検定で問われる自然言語処理・系列データ分野の観点から、系列データを扱う仕組み、学習目的、代表モデルとの関係を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/vad/
 tags: [gk, neural_network]
-gk_section: ディープラーニングの応用例/音声処理
-gk_order: 6
-last_modified_at: 2026-06-21
+gk_section: ディープラーニングの応用例/音声処理/デジタル化・前処理
+gk_order: 2
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
