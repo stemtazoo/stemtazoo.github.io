@@ -4,9 +4,9 @@ title: Pix2Pix（画像変換モデル）とは？G検定対策
 description: "Pix2Pix（画像変換モデル）について、G検定で問われる生成モデル分野の観点から、生成や表現学習での役割、モデル構造、学習方法の違いを整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/pix2pix/
 tags: [gk, cnn, neural_network]
-gk_section: ディープラーニングの応用例/データ生成
-gk_order: 7
-last_modified_at: 2026-06-21
+gk_section: ディープラーニングの応用例/データ生成/GAN・派生モデル
+gk_order: 4
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
