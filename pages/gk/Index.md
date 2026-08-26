@@ -109,6 +109,9 @@ gk_sections:
           - title: "比較・使い分け"
           - title: "ひっかけ問題"
       - title: "モデルの軽量化"
+        subsections:
+          - title: "モデル圧縮の基本・手法"
+          - title: "関連理論・仮説"
 
   - title: "AIの社会実装に向けて"
 
