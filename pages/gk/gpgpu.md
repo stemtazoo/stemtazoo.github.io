@@ -5,8 +5,8 @@ description: "GPGPUについて、GPUの多数のコアを画像処理以外の�
 permalink: /gk/gpgpu/
 tags: [gk]
 gk_section: ディープラーニングの概要/ニューラルネットワークとディープラーニング
-gk_order: 12
-last_modified_at: 2026-07-18
+gk_order: 7
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
