@@ -4,9 +4,9 @@ title: RLHFとは？人間の選好からモデルを調整【G検定対策】
 description: "RLHF（Reinforcement Learning from Human Feedback）を、人間の比較評価などから選好を学び、その信号を使ってモデルを調整する方法として整理します。教師あり微調整、報酬モデル、強化学習の役割を分け、G検定で『人間が直接パラメータを調整する』という誤解を防ぎます。"
 permalink: /gk/rlhf/
 tags: [gk, neural_network, nlp]
-gk_section: ディープラーニングの応用例/自然言語処理
-gk_order: 24
-last_modified_at: 2026-08-21
+gk_section: ディープラーニングの応用例/自然言語処理/Transformer・言語モデル
+gk_order: 7
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
