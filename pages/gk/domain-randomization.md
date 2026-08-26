@@ -4,9 +4,9 @@ title: ドメインランダム化とは？（リアリティギャップ対策�
 description: "ドメインランダム化を、シミュレーション内の見た目・物理パラメータ・センサ条件などを意図的に変化させ、Sim2Realでのリアリティギャップに強くする手法として整理します。データ拡張やドメイン適応との違いも確認します。"
 permalink: /gk/domain-randomization/
 tags: [gk, reinforcement_learning, robotics, sim2real]
-gk_section: ディープラーニングの応用例/深層強化学習
-gk_order: 17
-last_modified_at: 2026-08-23
+gk_section: ディープラーニングの応用例/深層強化学習/Sim-to-Real
+gk_order: 2
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
