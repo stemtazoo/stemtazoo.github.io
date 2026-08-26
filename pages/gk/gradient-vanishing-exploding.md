@@ -5,8 +5,8 @@ description: "勾配消失と勾配爆発を、勾配が小さくなるか大き
 permalink: /gk/gradient-vanishing-exploding/
 tags: [gk, neural_network, cheatsheet]
 gk_section: ディープラーニングの概要/ニューラルネットワークとディープラーニング
-gk_order: 5
-last_modified_at: 2026-08-21
+gk_order: 6
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
