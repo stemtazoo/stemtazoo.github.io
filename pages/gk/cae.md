@@ -4,9 +4,9 @@ title: CAE（畳み込みオートエンコーダ）とは？G検定対策
 description: "CAE（畳み込みオートエンコーダ）を、画像の特徴学習・圧縮・復元を行うモデルとして整理します。CNN、通常のAE、CAM/Grad-CAMとの違い、Encoder/Decoder構造、潜在表現や異常検知での使いどころ、G検定で「復元」か「可視化」かを見分けるひっかけポイントを確認できます。"
 permalink: /gk/cae/
 tags: [gk, neural_network, cnn]
-gk_section: ディープラーニングの要素技術/オートエンコーダ
-gk_order: 7
-last_modified_at: 2026-06-22
+gk_section: ディープラーニングの要素技術/オートエンコーダ/基本・派生モデル
+gk_order: 3
+last_modified_at: 2026-08-26
 
 ---
 
