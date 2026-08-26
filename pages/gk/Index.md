@@ -97,6 +97,9 @@ gk_sections:
           - title: "拡散モデル"
           - title: "生成モデル比較"
       - title: "転移学習・ファインチューニング"
+        subsections:
+          - title: "事前学習・少数例学習"
+          - title: "継続学習・忘却"
       - title: "マルチモーダル"
       - title: "モデルの解釈性"
       - title: "モデルの軽量化"
