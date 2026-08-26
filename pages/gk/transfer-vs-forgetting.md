@@ -4,9 +4,9 @@ title: 正の転移・負の転移・破壊的忘却の違いとは？【G検定
 description: "正の転移・負の転移・破壊的忘却の違いについて、G検定で問われるAI・機械学習分野の観点から、目的、前提、モデル構造、入力と出力、評価観点のどこが異なるかを比較します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/transfer-vs-forgetting/
 tags: [gk, neural_network]
-gk_section: ディープラーニングの応用例/転移学習・ファインチューニング
-gk_order: 3
-last_modified_at: 2026-06-21
+gk_section: ディープラーニングの応用例/転移学習・ファインチューニング/継続学習・忘却
+gk_order: 4
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
