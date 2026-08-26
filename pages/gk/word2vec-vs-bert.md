@@ -4,9 +4,9 @@ title: Word2VecとBERTの違いとは？静的表現と文脈表現【G検定対
 description: "Word2VecとBERTを、同じ単語に基本的に同じベクトルを使う静的表現か、文脈に応じて表現が変わる文脈依存表現かで比較します。学習時に文脈を使うWord2Vecと、Transformerで前後関係を扱うBERTの違いをG検定向けに整理します。"
 permalink: /gk/word2vec-vs-bert/
 tags: [gk, nlp, transformer]
-gk_section: ディープラーニングの応用例/自然言語処理
-gk_order: 18
-last_modified_at: 2026-08-21
+gk_section: ディープラーニングの応用例/自然言語処理/分散表現
+gk_order: 8
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
