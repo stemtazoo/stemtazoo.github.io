@@ -4,9 +4,9 @@ title: XAI ひっかけ問題集①【G検定対策】
 description: "LIME・SHAP・CAM・Grad-CAMを、局所説明、特徴量寄与、元祖CAMの構造条件、勾配を使う可視化という観点で切り分けます。速度や精度を一律に順位付けせず、対象モデルと説明対象から選択肢を判断するG検定向け問題集です。"
 permalink: /gk/trick-questions-xai-1/
 tags: [gk, xai, cheatsheet]
-gk_section: ディープラーニングの応用例/モデルの解釈性
-gk_order: 7
-last_modified_at: 2026-08-22
+gk_section: ディープラーニングの応用例/モデルの解釈性/ひっかけ問題
+gk_order: 1
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
