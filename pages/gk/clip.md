@@ -73,3 +73,5 @@ G検定では次の混同が頻出です。
 - コントラスト学習を使う
 - ゼロショット分類が得意
 - 「対応付け」ならCLIP
+
+{% include gk_article_footer.html %}
