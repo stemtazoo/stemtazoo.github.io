@@ -4,9 +4,9 @@ title: DQN改良手法まとめ（Double / Dueling / Noisy / Prioritized）【G�
 description: "DQNの代表的な改良手法を、何の弱点を改善するかで整理します。Double DQNはQ値の過大評価、Dueling Networkは価値表現、Noisy Netsは探索、Prioritized Experience Replayは経験の選び方を改善するという役割分担をG検定向けに確認します。"
 permalink: /gk/dqn-advanced/
 tags: [gk, reinforcement_learning, cheatsheet]
-gk_section: ディープラーニングの応用例/深層強化学習
-gk_order: 8
-last_modified_at: 2026-08-22
+gk_section: ディープラーニングの応用例/深層強化学習/DQN・改良手法
+gk_order: 3
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
