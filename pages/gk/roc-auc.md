@@ -4,9 +4,9 @@ title: ROC曲線・AUCとは？TPRとFPRで分類性能を比較【G検定】
 description: "ROC曲線を「しきい値を動かしたときのTPRとFPRの関係」として整理し、AUCがその曲線全体を1つの値で要約する指標であることをG検定向けに解説します。Precision-Recall曲線との使い分けや、AUCが高くても特定しきい値で誤検知が少ないとは限らない点も確認します。"
 permalink: /gk/roc-auc/
 tags: [gk, 機械学習, 評価指標, 頻出]
-gk_section: 機械学習の概要/モデルの選択・評価
+gk_section: 機械学習の概要/モデルの選択・評価/分類の評価指標
 gk_order: 6
-last_modified_at: 2026-08-21
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
