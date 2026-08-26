@@ -4,9 +4,9 @@ title: 学習・検証・テストデータの違い｜役割で切り分ける�
 description: "学習・検証・テストデータを、パラメータ更新・モデル選択・最終評価という役割で整理します。Early Stoppingやハイパーパラメータ調整、データリーケージとの関係も含め、G検定で『どのデータをいつ使うか』を切り分ける判断基準を確認できます。"
 permalink: /gk/train-validation-test/
 tags: [gk, machine_learning, evaluation]
-gk_section: 機械学習の概要/モデルの選択・評価
-gk_order: 12
-last_modified_at: 2026-08-21
+gk_section: 機械学習の概要/モデルの選択・評価/データ分割・交差検証
+gk_order: 1
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
