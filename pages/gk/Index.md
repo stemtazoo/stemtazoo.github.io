@@ -128,6 +128,11 @@ gk_sections:
   - title: "AIの法律と倫理"
     subsections:
       - title: "AI倫理・ガバナンス"
+        subsections:
+          - title: "基礎・原則"
+          - title: "ガバナンス・評価"
+          - title: "公平性・包摂性"
+          - title: "安全性・ロバスト性"
       - title: "プライバシー・個人情報保護"
       - title: "AIセキュリティ・プライバシー攻撃"
       - title: "知的財産・データ利用"
