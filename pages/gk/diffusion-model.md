@@ -4,9 +4,9 @@ title: Diffusion Model（拡散モデル）
 description: Diffusion Model（拡散モデル）の基本をG検定向けに整理します。ノイズを加える過程と除去して生成する過程、画像生成AIでの使われ方、GANやVAEとの違いを確認できます。本文では、用語の定義、代表例、似た概念との違い、G検定で迷いやすい選択肢の見分け方まで、短時間で復習できるようにまとめています。
 permalink: /gk/diffusion-model/
 tags: [gk, neural_network, generative_model]
-gk_section: ディープラーニングの応用例/データ生成
-gk_order: 4
-last_modified_at: 2026-05-01
+gk_section: ディープラーニングの応用例/データ生成/拡散モデル
+gk_order: 1
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
