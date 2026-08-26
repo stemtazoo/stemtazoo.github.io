@@ -4,9 +4,9 @@ title: CRISP-DMと機械学習パイプラインの違い【G検定対策】
 description: "CRISP-DMと機械学習パイプラインを、プロジェクト全体の進め方と処理手順の違いで比較します。ビジネス理解、前処理、学習、推論、自動化の位置づけをG検定の判断基準として整理します。"
 permalink: /gk/crisp-dm-vs-ml-pipeline/
 tags: [gk, crisp-dm, ml_pipeline, comparison]
-gk_section: AIの社会実装に向けて/AIの社会実装に向けて
+gk_section: AIの社会実装に向けて/プロセス・方法論
 gk_order: 3
-last_modified_at: 2026-08-22
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
