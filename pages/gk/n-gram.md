@@ -4,9 +4,9 @@ title: N-gramとは？文字・単語の連続列で整理【G検定対策】
 description: "N-gramを、連続するN個の文字や単語を1つのまとまりとして扱う表現として整理します。unigram・bigram・trigramの違い、BoWとの関係、局所的な語順を表せる一方で長距離文脈は扱いにくい点をG検定向けに確認します。"
 permalink: /gk/n-gram/
 tags: [gk, nlp]
-gk_section: ディープラーニングの応用例/自然言語処理
-gk_order: 9
-last_modified_at: 2026-08-21
+gk_section: ディープラーニングの応用例/自然言語処理/基礎・前処理
+gk_order: 4
+last_modified_at: 2026-08-26
 ---
 
 ## まず結論
