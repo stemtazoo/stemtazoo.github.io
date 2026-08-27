@@ -4,9 +4,9 @@ title: ネオコグニトロンからCNNへの進化の流れとは？G検定対
 description: "ネオコグニトロンからCNNへの進化の流れについて、G検定で問われる画像認識・CNN分野の観点から、画像タスクでの役割、特徴抽出の流れ、代表モデルとの関係を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/neocognitron-to-cnn/
 tags: [gk, cnn, neural_network]
-gk_section: 人工知能をめぐる動向/人工知能をめぐる動向
-gk_order: 10
-last_modified_at: 2026-06-21
+gk_section: 人工知能をめぐる動向/機械学習・深層学習の発展と代表プロジェクト
+gk_order: 2
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
