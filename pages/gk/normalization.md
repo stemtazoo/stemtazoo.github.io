@@ -4,9 +4,9 @@ title: 正規化（Normalization）とは？標準化・正則化との違い【
 description: "正規化（Normalization）を、G検定の前処理文脈で値のスケールをそろえる代表的な処理として整理します。0〜1のMin-Max正規化、平均0・分散1の標準化、過学習対策の正則化、Batch Normalizationとの違いを、選択肢を切る判断基準で確認します。"
 permalink: /gk/normalization/
 tags: [gk, machine_learning, preprocessing]
-gk_section: 機械学習の概要/特徴量・前処理
+gk_section: 機械学習の概要/特徴量・前処理/スケーリング・変換
 gk_order: 1
-last_modified_at: 2026-08-22
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
