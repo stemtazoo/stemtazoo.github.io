@@ -4,9 +4,9 @@ title: バイアス・バリアンス トレードオフとは？モデル複雑
 description: "バイアス・バリアンス トレードオフを、モデルを複雑にするとバイアスは下がりやすくバリアンスは上がりやすいという傾向から整理します。未学習・過学習、正則化、データ追加との関係をつなげ、G検定で対策の方向を切る判断軸を確認します。"
 permalink: /gk/bias-variance-tradeoff/
 tags: [gk, machine_learning, evaluation]
-gk_section: 機械学習の概要/よくあるつまずき（過学習など）
-gk_order: 6
-last_modified_at: 2026-08-26
+gk_section: 機械学習の概要/よくあるつまずき（過学習など）/バイアス・バリアンス
+gk_order: 2
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
