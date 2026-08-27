@@ -4,9 +4,9 @@ title: 相互情報量（Mutual Information）とは？独立・相関との違�
 description: "相互情報量を、2つの確率変数がどれだけ情報を共有しているかを表す量として整理します。MI=0と独立の関係、相関係数との違い、非線形な依存関係や特徴量選択で使われる理由を、G検定の判断基準で確認します。"
 permalink: /gk/mutual-information/
 tags: [gk, machine_learning, probability]
-gk_section: 機械学習の概要/特徴量・前処理
-gk_order: 4
-last_modified_at: 2026-08-22
+gk_section: 機械学習の概要/特徴量・前処理/特徴量選択・高次元
+gk_order: 1
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
