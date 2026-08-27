@@ -11,6 +11,8 @@ gk_sections:
   - title: "人工知能（AI）とは"
 
   - title: "人工知能をめぐる動向"
+    subsections:
+      - title: "AIブーム"
 
   - title: "機械学習の概要"
     subsections:
