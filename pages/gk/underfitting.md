@@ -4,9 +4,9 @@ title: 未学習（Underfitting）とは？過学習との違い【G検定対策
 description: "未学習（Underfitting）を、訓練データにも十分に適合できず、検証データでも性能が低い状態として整理します。モデルが単純すぎる、学習不足、正則化が強すぎるなどの原因と、過学習との違いをG検定の選択肢を切る判断基準で確認します。"
 permalink: /gk/underfitting/
 tags: [gk, machine_learning, underfitting]
-gk_section: 機械学習の概要/よくあるつまずき（過学習など）
+gk_section: 機械学習の概要/よくあるつまずき（過学習など）/過学習・未学習・汎化
 gk_order: 3
-last_modified_at: 2026-08-26
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
