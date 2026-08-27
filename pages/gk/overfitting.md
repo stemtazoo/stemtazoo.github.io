@@ -4,9 +4,9 @@ title: 過学習とは？汎化性能が落ちる原因と対策【G検定対策
 description: 過学習は、訓練データに合わせすぎて未知データで性能が落ちる状態です。訓練誤差と検証誤差の開き、モデル複雑度やデータ不足との関係、正則化・早期終了・Dropout・データ拡張などの対策をG検定向けに整理します。
 permalink: /gk/overfitting/
 tags: [gk, machine_learning, overfitting, regularization]
-gk_section: 機械学習の概要/よくあるつまずき（過学習など）
+gk_section: 機械学習の概要/よくあるつまずき（過学習など）/過学習・未学習・汎化
 gk_order: 2
-last_modified_at: 2026-08-26
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
