@@ -9,6 +9,10 @@ tags: [gk]
 # 記事一覧は _includes/gk_section.html が各記事の gk_section / gk_order から動的生成する。
 gk_sections:
   - title: "人工知能（AI）とは"
+    subsections:
+      - title: "AIの分類・捉え方"
+      - title: "知能・理解をめぐる議論"
+      - title: "AIの限界・課題"
 
   - title: "人工知能をめぐる動向"
     subsections:
