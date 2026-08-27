@@ -46,6 +46,9 @@ gk_sections:
       - title: "確率分布・統計モデル"
 
       - title: "特徴量・前処理"
+        subsections:
+          - title: "スケーリング・変換"
+          - title: "特徴量選択・高次元"
 
       - title: "モデルの選択・評価"
         subsections:
