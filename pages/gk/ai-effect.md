@@ -4,9 +4,9 @@ title: AI効果とは？（当たり前化するAI）【G検定対策】
 description: "AI効果を、かつて人工知能と見なされた技術が実用化され身近になると、単なる自動化や計算処理として扱われ、AIとは呼ばれにくくなる現象として整理します。技術の性能が低下する現象ではない点と、AIの定義が時代とともに変わる議論との関係をG検定向けに確認します。"
 permalink: /gk/ai-effect/
 tags: [gk]
-gk_section: 人工知能（AI）とは/人工知能（AI）とは
-gk_order: 6
-last_modified_at: 2026-07-01
+gk_section: 人工知能（AI）とは/AIの分類・捉え方
+gk_order: 2
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
