@@ -4,9 +4,9 @@ title: 古典AI vs 機械学習（最終比較チートシート）
 description: "古典AI vs 機械学習（最終比較）について、G検定で問われるAI・機械学習分野の観点から、目的、前提、モデル構造、入力と出力、評価観点のどこが異なるかを比較します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/classical-ai-vs-ml/
 tags: [gk, cheatsheet]
-gk_section: 人工知能をめぐる動向/人工知能をめぐる動向
-gk_order: 3
-last_modified_at: 2026-06-21
+gk_section: 人工知能をめぐる動向/古典AI・探索と知識表現
+gk_order: 5
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論（G検定での即断）
