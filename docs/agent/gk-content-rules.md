@@ -11,6 +11,7 @@ Always check the related rule files as needed:
 - Front matter: `docs/agent/gk-frontmatter-rules.md`
 - Tags: `docs/agent/gk-tag-rules.md`
 - GK navigation and `prev` / `next`: `docs/agent/gk-navigation-rules.md`
+- GK index structure, classification, and public rendering: `docs/agent/gk-index-rules.md`
 - Instagram carousel creation: `docs/agent/gk-carousel-rules.md`
 
 ## Basic Stance
