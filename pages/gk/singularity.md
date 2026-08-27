@@ -4,9 +4,9 @@ title: シンギュラリティ（技術的特異点）とは？G検定対策
 description: "シンギュラリティ（技術的特異点）について、G検定で問われるAI・機械学習分野の観点から、基本的な意味、代表モデル・手法との関係、試験で問われやすい判断軸を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/singularity/
 tags: [gk, ethics]
-gk_section: 人工知能（AI）とは/人工知能（AI）とは
-gk_order: 14
-last_modified_at: 2026-06-21
+gk_section: 人工知能（AI）とは/AIの分類・捉え方
+gk_order: 3
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
