@@ -4,9 +4,9 @@ title: ILSVRC（ImageNet Large Scale Visual Recognition Challenge）とは？G�
 description: "ILSVRCは、大規模画像データセットImageNetを用いて画像分類や物体検出の性能を競った国際コンペティションです。2012年にAlexNetが従来手法を大きく上回りCNN普及の転機となった歴史的位置付けを確認し、ILSVRCはデータセット名でも画像認識モデル名でもないというG検定の頻出区別を押さえます。"
 permalink: /gk/ilsvrc/
 tags: [gk, cnn]
-gk_section: 人工知能をめぐる動向/人工知能をめぐる動向
-gk_order: 12
-last_modified_at: 2026-06-27
+gk_section: 人工知能をめぐる動向/機械学習・深層学習の発展と代表プロジェクト
+gk_order: 3
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
