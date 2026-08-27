@@ -4,9 +4,9 @@ title: 学習曲線とは？過学習・未学習を見分ける読み方【G検
 description: "学習曲線を、訓練データと検証データに対する性能の推移から過学習・未学習を見分けるためのグラフとして整理します。横軸がエポック数の場合と学習データ量の場合の違い、誤差と精度で上下の読み方が逆になる点、G検定で選択肢を切る判断基準を確認します。"
 permalink: /gk/learning-curve/
 tags: [gk, machine_learning, evaluation]
-gk_section: 機械学習の概要/よくあるつまずき（過学習など）
-gk_order: 4
-last_modified_at: 2026-08-26
+gk_section: 機械学習の概要/よくあるつまずき（過学習など）/学習状態の診断・評価設計
+gk_order: 1
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
