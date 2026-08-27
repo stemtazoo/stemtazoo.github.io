@@ -4,9 +4,9 @@ title: 専門家システムの限界（なぜ衰退した？）【G検定対策
 description: "専門家システムの限界（なぜ衰退した？）について、G検定で問われるAI・機械学習分野の観点から、基本的な意味、代表モデル・手法との関係、試験で問われやすい判断軸を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
 permalink: /gk/expert-system-limitations/
 tags: [gk, neural_network]
-gk_section: 人工知能をめぐる動向/人工知能をめぐる動向
-gk_order: 16
-last_modified_at: 2026-06-21
+gk_section: 人工知能をめぐる動向/専門家システム
+gk_order: 3
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
