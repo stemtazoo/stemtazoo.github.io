@@ -4,9 +4,9 @@ title: データリーケージ（Data Leakage）とは？評価が不正に良�
 description: "データリーケージを、予測時には使えない情報や検証・テスト側の情報が学習やモデル選択へ混入する問題として整理します。分割前の前処理、目的変数リーク、テストデータでの調整、過学習との違いをG検定向けに確認します。"
 permalink: /gk/data-leakage/
 tags: [gk, machine_learning, evaluation]
-gk_section: 機械学習の概要/よくあるつまずき（過学習など）
-gk_order: 8
-last_modified_at: 2026-08-22
+gk_section: 機械学習の概要/よくあるつまずき（過学習など）/学習状態の診断・評価設計
+gk_order: 2
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
