@@ -4,9 +4,9 @@ title: 多層パーセプトロン（MLP）でなぜXOR問題が解けるのか�
 description: "多層パーセプトロン（MLP）は、中間層と非線形活性化関数により、単純パーセプトロンでは分離できないXOR問題を表現できます。線形分離、隠れ層、活性化関数、決定境界の変化を押さえ、重み更新の細部よりも、なぜ非線形性が必要かをG検定向けに整理します。"
 permalink: /gk/mlp-xor/
 tags: [gk, neural_network]
-gk_section: 人工知能をめぐる動向/人工知能をめぐる動向
-gk_order: 8
-last_modified_at: 2026-06-21
+gk_section: 人工知能をめぐる動向/機械学習・深層学習の発展と代表プロジェクト
+gk_order: 1
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
