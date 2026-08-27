@@ -4,9 +4,9 @@ title: G検定 概念系チートシート｜古典AI・機械学習・深層学
 description: "G検定の概念問題を、古典AI・機械学習・深層学習という枠組みで整理します。探索・推論・ルール、学習データ、特徴表現、多層ニューラルネットワークという手掛かりから選択肢を切り、AI三大ブームの年代整理とは役割を分けて確認できます。"
 permalink: /gk/concepts-final-cheatsheet/
 tags: [gk, cheatsheet]
-gk_section: 人工知能をめぐる動向/人工知能をめぐる動向
-gk_order: 4
-last_modified_at: 2026-08-21
+gk_section: チートシート（試験直前）
+gk_order: 5
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
