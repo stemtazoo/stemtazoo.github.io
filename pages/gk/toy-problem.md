@@ -4,9 +4,9 @@ title: トイプロブレム（Toy Problem）とは？【G検定対策】
 description: "トイプロブレム（Toy Problem）は、AIやアルゴリズムの性質を確認するために現実の複雑さを取り除いた単純化された問題設定です。G検定で迷いやすいフレーム問題やシンボルグラウンディング問題との違いを整理します。"
 permalink: /gk/toy-problem/
 tags: [gk]
-gk_section: 人工知能（AI）とは/人工知能（AI）とは
-gk_order: 9
-last_modified_at: 2026-06-29
+gk_section: 人工知能（AI）とは/AIの限界・課題
+gk_order: 2
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
