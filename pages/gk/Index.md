@@ -17,6 +17,9 @@ gk_sections:
   - title: "人工知能をめぐる動向"
     subsections:
       - title: "AIブーム"
+      - title: "古典AI・探索と知識表現"
+      - title: "専門家システム"
+      - title: "機械学習・深層学習の発展と代表プロジェクト"
 
   - title: "機械学習の概要"
     subsections:
