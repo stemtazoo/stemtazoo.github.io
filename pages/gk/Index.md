@@ -56,6 +56,10 @@ gk_sections:
           - title: "情報量規準（AIC・BIC）"
 
       - title: "よくあるつまずき（過学習など）"
+        subsections:
+          - title: "過学習・未学習・汎化"
+          - title: "バイアス・バリアンス"
+          - title: "学習状態の診断・評価設計"
 
   - title: "ディープラーニングの概要"
     subsections:
