@@ -1,35 +1,30 @@
-{%- assign sec = include.sec -%}
-{%- assign heading_level = include.heading_level | default: 3 -%}
-{%- assign max_heading_level = include.max_heading_level | default: 4 -%}
-{%- assign parent_path = include.parent_path | default: "" -%}
-
-{%- if parent_path == "" -%}
-  {%- assign current_path = sec.title -%}
-{%- else -%}
-  {%- capture current_path -%}{{ parent_path }}/{{ sec.title }}{%- endcapture -%}
-{%- endif -%}
-
 {%- assign gk_pages = site.pages | sort: "gk_order" -%}
 
 {%- comment -%}
-  FE index と同じく、個別URLの固定リストではなく各記事のメタデータを正とする。
-  GK は gk_section に「大分類/小分類/…」を保存しているため、
-  gk_sections は見出し構造だけに利用し、記事一覧は gk_section から動的生成する。
+  gk_sections は見出し構造だけを定義し、記事一覧は各記事の
+  gk_section / gk_order から動的生成する。
 
-  既存GK記事では、トップレベル直下の記事だけ
-  「分類名/分類名」（例: AIの法律と倫理/AIの法律と倫理）という形式を使う。
+  この include は再帰呼び出しされるため、親側で assign した変数を
+  子 include が上書きしても兄弟セクションのパスが壊れないように、
+  再帰に必要な値は include.* から各ループで再計算する。
 
-  サブセクション追加の途中でも既存記事が消えないよう、
-  親セクション自身に割り当てられた記事も先に表示する。
+  トップレベル直下の記事には、旧形式の
+  「分類名/分類名」も引き続き対応する。
 {%- endcomment -%}
 
-{%- if parent_path == "" -%}
-  {%- capture direct_path -%}{{ current_path }}/{{ sec.title }}{%- endcapture -%}
+{%- if include.parent_path and include.parent_path != "" -%}
+  {%- capture this_path -%}{{ include.parent_path }}/{{ include.sec.title }}{%- endcapture -%}
 {%- else -%}
-  {%- assign direct_path = current_path -%}
+  {%- assign this_path = include.sec.title -%}
 {%- endif -%}
 
-{%- if sec.subsections -%}
+{%- if include.parent_path == nil or include.parent_path == "" -%}
+  {%- capture direct_path -%}{{ include.sec.title }}/{{ include.sec.title }}{%- endcapture -%}
+{%- else -%}
+  {%- assign direct_path = this_path -%}
+{%- endif -%}
+
+{%- if include.sec.subsections -%}
   {%- assign direct_article_count = 0 -%}
   {%- for p in gk_pages -%}
     {%- if p.url != page.url and p.gk_section == direct_path -%}
@@ -51,20 +46,27 @@
 </ul>
   {%- endif -%}
 
-  {%- for sub in sec.subsections -%}
-<h{{ heading_level }}>{{ sub.title }}</h{{ heading_level }}>
-    {%- assign next_level = heading_level | plus: 1 -%}
+  {%- for sub in include.sec.subsections -%}
+    {%- assign this_heading_level = include.heading_level | default: 3 -%}
+<h{{ this_heading_level }}>{{ sub.title }}</h{{ this_heading_level }}>
+    {%- assign next_level = this_heading_level | plus: 1 -%}
+    {%- assign max_heading_level = include.max_heading_level | default: 4 -%}
     {%- if next_level > max_heading_level -%}
       {%- assign next_level = max_heading_level -%}
     {%- endif -%}
-    {% include gk_section.html sec=sub heading_level=next_level max_heading_level=max_heading_level parent_path=current_path %}
+
+    {%- if include.parent_path and include.parent_path != "" -%}
+      {%- capture child_parent_path -%}{{ include.parent_path }}/{{ include.sec.title }}{%- endcapture -%}
+    {%- else -%}
+      {%- assign child_parent_path = include.sec.title -%}
+    {%- endif -%}
+
+    {% include gk_section.html sec=sub heading_level=next_level max_heading_level=max_heading_level parent_path=child_parent_path %}
   {%- endfor -%}
 {%- else -%}
-  {%- assign leaf_path = direct_path -%}
-
   {%- assign article_count = 0 -%}
   {%- for p in gk_pages -%}
-    {%- if p.url != page.url and p.gk_section == leaf_path -%}
+    {%- if p.url != page.url and p.gk_section == direct_path -%}
       {%- if p.tags and p.tags contains "gk" -%}
         {%- assign article_count = article_count | plus: 1 -%}
       {%- endif -%}
@@ -74,7 +76,7 @@
   {%- if article_count > 0 -%}
 <ul>
     {%- for p in gk_pages -%}
-      {%- if p.url != page.url and p.gk_section == leaf_path -%}
+      {%- if p.url != page.url and p.gk_section == direct_path -%}
         {%- if p.tags and p.tags contains "gk" -%}
   <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
         {%- endif -%}
