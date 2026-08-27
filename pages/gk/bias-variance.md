@@ -4,9 +4,9 @@ title: バイアスとバリアンスとは？未学習・過学習との違い�
 description: "バイアスを『モデルの仮定による系統的なずれ』、バリアンスを『学習データの違いに対する予測のぶれ』として整理します。高バイアス＝未学習、高バリアンス＝過学習の対応と、モデル複雑度との関係をG検定の判断軸で確認します。"
 permalink: /gk/bias-variance/
 tags: [gk, machine_learning, evaluation]
-gk_section: 機械学習の概要/よくあるつまずき（過学習など）
-gk_order: 5
-last_modified_at: 2026-08-26
+gk_section: 機械学習の概要/よくあるつまずき（過学習など）/バイアス・バリアンス
+gk_order: 1
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
