@@ -4,9 +4,9 @@ title: STRIPS（計画問題）とは？G検定対策
 description: "STRIPSについて、初期状態・目標状態・前提条件・Add List・Delete Listを使って行動計画を表現する仕組みを整理します。探索問題や強化学習との違いも比較し、G検定で古典的プランニングを見分ける判断軸を確認します。"
 permalink: /gk/strips/
 tags: [gk, planning]
-gk_section: 人工知能をめぐる動向/人工知能をめぐる動向
-gk_order: 11
-last_modified_at: 2026-07-18
+gk_section: 人工知能をめぐる動向/古典AI・探索と知識表現
+gk_order: 4
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
