@@ -4,9 +4,9 @@ title: 汎化性能とは？未知データでの性能をどう見る？【G検
 description: "汎化性能を、学習に使っていない未知データに対してモデルがどれだけ適切に予測できるかという観点で整理します。訓練性能だけでは判断できない理由、検証データとテストデータの役割、過学習・未学習との違いをG検定の判断軸で確認します。"
 permalink: /gk/generalization/
 tags: [gk, machine_learning, generalization]
-gk_section: 機械学習の概要/よくあるつまずき（過学習など）
+gk_section: 機械学習の概要/よくあるつまずき（過学習など）/過学習・未学習・汎化
 gk_order: 1
-last_modified_at: 2026-08-26
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
