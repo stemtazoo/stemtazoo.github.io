@@ -18,9 +18,39 @@
 
   既存GK記事では、トップレベル直下の記事だけ
   「分類名/分類名」（例: AIの法律と倫理/AIの法律と倫理）という形式を使う。
+
+  サブセクション追加の途中でも既存記事が消えないよう、
+  親セクション自身に割り当てられた記事も先に表示する。
 {%- endcomment -%}
 
+{%- if parent_path == "" -%}
+  {%- capture direct_path -%}{{ current_path }}/{{ sec.title }}{%- endcapture -%}
+{%- else -%}
+  {%- assign direct_path = current_path -%}
+{%- endif -%}
+
 {%- if sec.subsections -%}
+  {%- assign direct_article_count = 0 -%}
+  {%- for p in gk_pages -%}
+    {%- if p.url != page.url and p.gk_section == direct_path -%}
+      {%- if p.tags and p.tags contains "gk" -%}
+        {%- assign direct_article_count = direct_article_count | plus: 1 -%}
+      {%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
+
+  {%- if direct_article_count > 0 -%}
+<ul>
+    {%- for p in gk_pages -%}
+      {%- if p.url != page.url and p.gk_section == direct_path -%}
+        {%- if p.tags and p.tags contains "gk" -%}
+  <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
+        {%- endif -%}
+      {%- endif -%}
+    {%- endfor -%}
+</ul>
+  {%- endif -%}
+
   {%- for sub in sec.subsections -%}
 <h{{ heading_level }}>{{ sub.title }}</h{{ heading_level }}>
     {%- assign next_level = heading_level | plus: 1 -%}
@@ -30,11 +60,7 @@
     {% include gk_section.html sec=sub heading_level=next_level max_heading_level=max_heading_level parent_path=current_path %}
   {%- endfor -%}
 {%- else -%}
-  {%- if parent_path == "" -%}
-    {%- capture leaf_path -%}{{ current_path }}/{{ sec.title }}{%- endcapture -%}
-  {%- else -%}
-    {%- assign leaf_path = current_path -%}
-  {%- endif -%}
+  {%- assign leaf_path = direct_path -%}
 
   {%- assign article_count = 0 -%}
   {%- for p in gk_pages -%}
