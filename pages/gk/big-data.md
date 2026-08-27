@@ -4,9 +4,9 @@ title: ビッグデータとは？G検定対策
 description: "ビッグデータは、従来の処理方式では扱いにくいデータをVolume・Velocity・Varietyの3Vなどで特徴づける概念です。単に容量が大きいだけではなく、生成速度や形式の多様性、必要に応じてVeracity・Valueも含む点を確認し、AIモデルや特定のデータベース製品そのものだとするG検定の選択肢を退けます。"
 permalink: /gk/big-data/
 tags: [gk]
-gk_section: 人工知能（AI）とは/人工知能（AI）とは
-gk_order: 4
-last_modified_at: 2026-06-27
+gk_section: 人工知能をめぐる動向/機械学習・深層学習の発展と代表プロジェクト
+gk_order: 5
+last_modified_at: 2026-08-27
 ---
 
 ## まず結論
