@@ -179,6 +179,11 @@ last_modified_at: 2026-08-27
 
 <div class="portal-card-grid">
   <section class="portal-card">
+    <h3>G検定 公式情報</h3>
+    <p>試験概要・受験案内・最新情報は、JDLA公式ページで確認できます。</p>
+    <a class="portal-card__button" href="https://www.jdla.org/certificate/general/" target="_blank" rel="noopener noreferrer">JDLA公式ページ</a>
+  </section>
+  <section class="portal-card">
     <h3>はじめてのG検定</h3>
     <p>AIの歴史、探索・推論、機械学習の全体像から順番に学びます。</p>
     <a class="portal-card__button" href="/gk/ai-booms-cheatsheet/">学習開始</a>
