@@ -171,4 +171,4 @@ OSそのものを考える場合は無体物なので、原則として対象外
 
 ---
 
-{% include fe-footer.md %}
+{% include fe_article_footer.html %}
