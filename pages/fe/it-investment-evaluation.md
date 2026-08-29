@@ -6,7 +6,9 @@ permalink: /fe/it-investment-evaluation/
 tags: [fe, fe-strategy, it-investment]
 fe_section: ストラテジ系
 fe_subsection: システム戦略
-last_modified_at: 2026-07-20
+fe_order: 16
+date: 2026-07-20
+last_modified_at: 2026-08-29
 ---
 
 ## まず結論

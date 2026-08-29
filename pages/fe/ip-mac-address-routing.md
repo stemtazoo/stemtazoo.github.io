@@ -3,12 +3,12 @@ layout: page
 title: IPアドレスとMACアドレスの違いとは？ルータ経由の宛先を切り分ける【基本情報技術者試験】
 description: IPアドレスを最終目的地、MACアドレスを同一LAN内の次の渡し先として整理し、ルータ経由でどの宛先が変わるか、ARPやデフォルトゲートウェイとの関係をFE試験向けに解説します。
 permalink: /fe/ip-mac-address-routing/
-tags: [fe, fe-technology, network, ip, mac, arp, routing]
+tags: [fe, fe-technology, network, routing, arp]
 fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 90
 date: 2026-07-28
-last_modified_at: 2026-07-28
+last_modified_at: 2026-08-29
 ---
 
 ## まず結論

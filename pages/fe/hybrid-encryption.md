@@ -3,10 +3,12 @@ layout: page
 title: ハイブリッド暗号方式とは？共通鍵暗号・公開鍵暗号の使い分け【基本情報技術者試験】
 description: ハイブリッド暗号方式を、データは共通鍵暗号、共通鍵は公開鍵暗号という判断軸で整理します。共通鍵暗号・公開鍵暗号・電子署名との違いも比較し、基本情報技術者試験で選択肢を切る方法を解説します。
 permalink: /fe/hybrid-encryption/
-tags: [fe, technology, security, cryptography]
+tags: [fe, fe-technology, security, cryptography]
 fe_section: テクノロジ系
 fe_subsection: セキュリティ
-last_modified_at: 2026-08-07
+fe_order: 71
+date: 2026-08-07
+last_modified_at: 2026-08-29
 ---
 
 ## まず結論
@@ -193,6 +195,20 @@ last_modified_at: 2026-08-07
 ```
 
 これにより、安全性と処理速度を両立できます。
+
+## 科目Aでどう出る？
+
+科目Aでは、暗号化する対象と鍵の役割を問われます。
+
+```text
+データ本体を高速に暗号化
+→ 共通鍵暗号方式
+
+データ暗号化用の共通鍵を保護
+→ 公開鍵暗号方式
+```
+
+**データ本体には共通鍵、共通鍵の配送には公開鍵**という役割分担で選択肢を切ります。
 
 ## どんな場面で使う？
 

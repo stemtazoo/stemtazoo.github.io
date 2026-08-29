@@ -7,7 +7,8 @@ tags: [fe, fe-technology, network, security, ipsec]
 fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 30
-last_modified_at: 2026-08-08
+date: 2026-08-08
+last_modified_at: 2026-08-29
 ---
 
 ## まず結論
@@ -67,6 +68,26 @@ IPv6ではIPsecを利用できるように設計されています。
 試験では、IPv6という語だけではなく、問題文に **「ネットワーク層で暗号化」** とあるかを見るのが重要です。
 
 公式の出題範囲やシラバスは、[IPA：基本情報技術者試験](https://www.ipa.go.jp/shiken/kubun/fe.html) から確認できます。
+
+## 科目Aでどう出る？
+
+科目Aでは、通信を保護する層や用途で切り分けます。
+
+```text
+ネットワーク層・IP通信を保護
+→ IPsec
+
+リモートログインを保護
+→ SSH
+
+Web通信を保護
+→ TLS（SSL）
+
+2点間を接続するデータリンク層のプロトコル
+→ PPP
+```
+
+単に「暗号化」という語だけで決めず、**ネットワーク層やIPパケットを守るならIPsec**と判断します。
 
 ## どんな場面で使う？
 
