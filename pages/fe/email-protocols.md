@@ -7,6 +7,7 @@ tags: [fe, fe-technology, network, email]
 fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 70
+date: 2026-07-23
 last_modified_at: 2026-08-29
 ---
 
