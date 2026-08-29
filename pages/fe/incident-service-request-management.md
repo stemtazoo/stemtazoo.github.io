@@ -7,7 +7,7 @@ tags: [fe, fe-management, service-management, incident-management]
 fe_section: マネジメント系
 fe_subsection: サービスマネジメント
 fe_order: 220
-date: 2026-08-27
+date: 2026-08-15
 last_modified_at: 2026-08-29
 ---
 

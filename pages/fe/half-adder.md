@@ -7,7 +7,7 @@ tags: [fe, fe-technology, hardware, logic-circuit]
 fe_section: テクノロジ系
 fe_subsection: コンピュータ構成要素
 fe_order: 610
-date: 2026-08-27
+date: 2026-08-07
 last_modified_at: 2026-08-29
 ---
 
