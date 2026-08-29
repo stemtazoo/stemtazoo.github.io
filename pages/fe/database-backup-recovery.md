@@ -7,6 +7,7 @@ tags: [fe, fe-technology, database, backup, recovery]
 fe_section: テクノロジ系
 fe_subsection: データベース
 fe_order: 60
+date: 2026-07-20
 last_modified_at: 2026-08-29
 ---
 

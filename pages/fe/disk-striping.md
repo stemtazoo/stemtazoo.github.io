@@ -7,6 +7,7 @@ tags: [fe, fe-technology, computer-architecture]
 fe_section: テクノロジ系
 fe_subsection: コンピュータ構成要素
 fe_order: 110
+date: 2026-07-20
 last_modified_at: 2026-08-29
 ---
 

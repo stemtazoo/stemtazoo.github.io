@@ -7,6 +7,7 @@ tags: [fe, fe-technology, software, quality-management]
 fe_section: テクノロジ系
 fe_subsection: ソフトウェア
 fe_order: 90
+date: 2026-08-02
 last_modified_at: 2026-08-29
 ---
 
