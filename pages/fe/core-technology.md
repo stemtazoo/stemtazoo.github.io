@@ -5,9 +5,10 @@ description: コア技術を「競争力の源となる独自技術」として�
 permalink: /fe/core-technology/
 tags: [fe, fe-strategy, business-strategy, technology-strategy]
 fe_section: ストラテジ系
-fe_subsection: 経営戦略マネジメント
+fe_subsection: 経営戦略
+fe_order: 125
 date: 2026-08-25
-last_modified_at: 2026-08-25
+last_modified_at: 2026-08-29
 ---
 
 ## まず結論

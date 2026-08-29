@@ -6,7 +6,9 @@ permalink: /fe/cpu-registers/
 tags: [fe, fe-technology, computer-architecture, cpu]
 fe_section: テクノロジ系
 fe_subsection: コンピュータ構成要素
-last_modified_at: 2026-08-10
+fe_order: 25
+date: 2026-08-27
+last_modified_at: 2026-08-29
 ---
 
 ## まず結論

@@ -6,7 +6,9 @@ permalink: /fe/database-backup-recovery/
 tags: [fe, fe-technology, database, backup, recovery]
 fe_section: テクノロジ系
 fe_subsection: データベース
-last_modified_at: 2026-07-20
+fe_order: 60
+date: 2026-08-27
+last_modified_at: 2026-08-29
 ---
 
 ## まず結論
