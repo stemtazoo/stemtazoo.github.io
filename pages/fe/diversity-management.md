@@ -6,8 +6,9 @@ permalink: /fe/diversity-management/
 tags: [fe, fe-strategy, business-strategy, human-resources]
 fe_section: ストラテジ系
 fe_subsection: 企業活動
+fe_order: 20
 date: 2026-08-25
-last_modified_at: 2026-08-25
+last_modified_at: 2026-08-29
 ---
 
 ## まず結論

@@ -6,7 +6,9 @@ permalink: /fe/cyber-physical-security-framework/
 tags: [fe, fe-strategy, security, supply-chain, cpsf]
 fe_section: ストラテジ系
 fe_subsection: システム戦略
-last_modified_at: 2026-07-20
+fe_order: 300
+date: 2026-07-20
+last_modified_at: 2026-08-29
 ---
 
 ## まず結論

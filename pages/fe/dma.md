@@ -3,10 +3,12 @@ layout: page
 title: DMAとは？CPUを介さないデータ転送と他の方式との違い【基本情報技術者試験】
 description: DMAの仕組みを、CPU・主記憶・入出力装置の関係から整理します。直接制御方式、メモリマップドI/O、パイプライン制御との違いを比較し、基本情報技術者試験で選択肢を切る判断軸を解説します。
 permalink: /fe/dma/
-tags: [fe, technology, computer-architecture, io-control]
+tags: [fe, fe-technology, computer-architecture, io-control]
 fe_section: テクノロジ系
 fe_subsection: コンピュータ構成要素
-last_modified_at: 2026-08-05
+fe_order: 70
+date: 2026-08-05
+last_modified_at: 2026-08-29
 ---
 
 ## まず結論
