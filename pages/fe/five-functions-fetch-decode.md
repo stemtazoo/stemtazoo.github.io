@@ -6,8 +6,9 @@ permalink: /fe/five-functions-fetch-decode/
 tags: [fe, fe-technology, computer-architecture]
 fe_section: テクノロジ系
 fe_subsection: コンピュータ構成要素
+fe_order: 5
 date: 2026-07-27
-last_modified_at: 2026-07-27
+last_modified_at: 2026-08-29
 ---
 
 ## まず結論

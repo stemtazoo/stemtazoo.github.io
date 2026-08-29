@@ -6,7 +6,9 @@ permalink: /fe/email-protocols/
 tags: [fe, fe-technology, network, email]
 fe_section: テクノロジ系
 fe_subsection: ネットワーク
-last_modified_at: 2026-07-23
+fe_order: 70
+date: 2026-08-27
+last_modified_at: 2026-08-29
 ---
 
 ## まず結論

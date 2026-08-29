@@ -6,8 +6,9 @@ permalink: /fe/elementary-row-operations/
 tags: [fe, fe-technology, basic-theory]
 fe_section: テクノロジ系
 fe_subsection: 基礎理論
+fe_order: 125
 date: 2026-08-25
-last_modified_at: 2026-08-25
+last_modified_at: 2026-08-29
 ---
 
 ## まず結論

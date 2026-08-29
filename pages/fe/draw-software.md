@@ -3,10 +3,12 @@ layout: page
 title: ドローソフトとは？ペイントソフトとベクター・ビットマップ画像の違い【基本情報技術者試験】
 description: ドローソフトの特徴を、ペイントソフト、ベクター画像、ビットマップ画像との違いから整理します。拡大・縮小、用途、アウトラインフォントとの関係まで、基本情報技術者試験の科目Aで選択肢を切る判断軸を解説します。
 permalink: /fe/draw-software/
-tags: [fe, technology, multimedia, graphics]
+tags: [fe, fe-technology, multimedia, graphics]
 fe_section: テクノロジ系
 fe_subsection: マルチメディア
-last_modified_at: 2026-08-06
+fe_order: 10
+date: 2026-08-27
+last_modified_at: 2026-08-29
 ---
 
 ## まず結論

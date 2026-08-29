@@ -7,7 +7,8 @@ tags: [fe, fe-technology, algorithm, trace]
 fe_section: 科目B対策
 fe_subsection: アルゴリズム
 fe_order: 140
-last_modified_at: 2026-08-27
+date: 2026-08-27
+last_modified_at: 2026-08-29
 ---
 
 ## まず結論
