@@ -3,12 +3,12 @@ layout: page
 title: 隣接行列とは？行列からグラフの辺を読み取る方法【基本情報技術者試験】
 description: 隣接行列を、行と列に対応する頂点同士の接続を0と1で表す行列として整理します。無向グラフで対称になる理由、自己ループ、辺の本数、有向グラフや隣接リストとの違いをFE科目A向けに解説します。
 permalink: /fe/adjacency-matrix/
-tags: [fe, technology, basic-theory, graph]
+tags: [fe, fe-technology, basic-theory, graph]
 fe_section: テクノロジ系
 fe_subsection: 基礎理論
 fe_order: 120
 date: 2026-08-05
-last_modified_at: 2026-08-05
+last_modified_at: 2026-08-29
 ---
 
 ## まず結論
