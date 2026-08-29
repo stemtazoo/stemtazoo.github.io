@@ -7,7 +7,6 @@ tags: [fe, fe-strategy, corporate-activity, cost-effectiveness]
 fe_section: ストラテジ系
 fe_subsection: 企業活動
 fe_order: 30
-date: 2026-08-27
 last_modified_at: 2026-08-29
 ---
 
