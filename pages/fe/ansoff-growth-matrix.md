@@ -5,9 +5,10 @@ description: アンゾフの成長マトリクスを、既存・新規の製品�
 permalink: /fe/ansoff-growth-matrix/
 tags: [fe, fe-strategy, business-strategy]
 fe_section: ストラテジ系
-fe_subsection: 経営戦略マネジメント
+fe_subsection: 経営戦略
+fe_order: 15
 date: 2026-08-06
-last_modified_at: 2026-08-06
+last_modified_at: 2026-08-29
 ---
 
 ## まず結論
