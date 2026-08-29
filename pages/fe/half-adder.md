@@ -3,10 +3,12 @@ layout: page
 title: 半加算器とは？AND・XORで和と桁上がりを求める仕組み【基本情報技術者試験】
 description: 半加算器の仕組みを、和SはXOR、桁上がりCはANDという判断軸で整理します。真理値表、論理式、全加算器との違いを比較し、基本情報技術者試験で選択肢を切る方法を解説します。
 permalink: /fe/half-adder/
-tags: [fe, technology, hardware, logic-circuit]
+tags: [fe, fe-technology, hardware, logic-circuit]
 fe_section: テクノロジ系
 fe_subsection: コンピュータ構成要素
-last_modified_at: 2026-08-07
+fe_order: 610
+date: 2026-08-27
+last_modified_at: 2026-08-29
 ---
 
 ## まず結論
@@ -162,6 +164,20 @@ A ─┬─ XOR ─→ S
     │
 B ─┘
 ```
+
+## 科目Aでどう出る？
+
+科目Aでは、半加算器の出力と論理回路の対応を問われます。
+
+```text
+桁上がり C
+→ AND
+
+和 S
+→ XOR
+```
+
+下位桁からの桁上がりも入力する回路は全加算器です。**半加算器は2入力、全加算器は3入力**と切り分けます。
 
 ## どんな場面で使う？
 

@@ -6,7 +6,9 @@ permalink: /fe/income-statement-profit-levels/
 tags: [fe, fe-strategy, accounting, financial-statements]
 fe_section: ストラテジ系
 fe_subsection: 企業活動
-last_modified_at: 2026-07-18
+fe_order: 50
+date: 2026-08-27
+last_modified_at: 2026-08-29
 ---
 
 ## まず結論
