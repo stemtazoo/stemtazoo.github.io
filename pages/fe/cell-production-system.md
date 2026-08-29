@@ -7,7 +7,8 @@ tags: [fe, fe-strategy, production-management, manufacturing]
 fe_section: ストラテジ系
 fe_subsection: 経営戦略
 fe_order: 80
-last_modified_at: 2026-07-31
+date: 2026-08-27
+last_modified_at: 2026-08-29
 ---
 
 ## まず結論

@@ -6,7 +6,9 @@ permalink: /fe/contract-for-work-vs-mandate/
 tags: [fe, fe-strategy, law, contract]
 fe_section: ストラテジ系
 fe_subsection: 法務
-last_modified_at: 2026-07-20
+fe_order: 90
+date: 2026-08-27
+last_modified_at: 2026-08-29
 ---
 
 ## まず結論

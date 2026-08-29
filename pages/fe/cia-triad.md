@@ -3,12 +3,12 @@ layout: page
 title: 情報セキュリティのCIAとは？機密性・完全性・可用性の見分け方【基本情報技術者試験】
 description: 情報セキュリティの3要素である機密性・完全性・可用性を、漏らさない・正しく保つ・使える状態を保つという判断軸で整理し、FE科目Aでの見分け方を解説します。
 permalink: /fe/cia-triad/
-tags: [fe, fe-security, information-security, cia]
+tags: [fe, fe-technology, information-security, cia]
 fe_section: テクノロジ系
 fe_subsection: セキュリティ
 fe_order: 260
 date: 2026-08-14
-last_modified_at: 2026-08-14
+last_modified_at: 2026-08-29
 ---
 
 ## まず結論
