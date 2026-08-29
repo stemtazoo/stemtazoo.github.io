@@ -7,7 +7,7 @@ tags: [fe, fe-technology, basic-theory, algorithm, numerical-analysis]
 fe_section: テクノロジ系
 fe_subsection: 基礎理論
 fe_order: 140
-date: 2026-08-15
+date: 2026-08-12
 last_modified_at: 2026-08-29
 ---
 
