@@ -1,14 +1,14 @@
 ---
 layout: page
-title: ストライピングとは？ミラーリング・ディスクキャッシュ・スワッピングとの違い【基本情報技術者試験】
-description: ストライピングを「複数ディスクへデータを分散して高速化する方式」として整理し、ミラーリング、ディスクキャッシュ、スワッピング、RAID 0・1・5との違いをFE試験向けに解説します。
+title: ストライピングとは？複数ディスクにデータを分散して高速化する仕組み【基本情報技術者試験】
+description: ストライピングを、データを複数ディスクへ分散して並行処理することで入出力を高速化する仕組みとして整理します。RAID 0やミラーリングとの違い、基本情報技術者試験での判断基準を解説します。
 permalink: /fe/disk-striping/
 tags: [fe, fe-technology, computer-architecture]
 fe_section: テクノロジ系
 fe_subsection: コンピュータ構成要素
 fe_order: 110
 date: 2026-07-20
-last_modified_at: 2026-08-29
+last_modified_at: 2026-08-30
 ---
 
 ## まず結論
