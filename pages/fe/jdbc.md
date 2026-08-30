@@ -1,7 +1,7 @@
 ---
 layout: page
-title: JDBCとは？SQL・JavaVM・HTMLとの違い【基本情報技術者試験】
-description: JDBCの役割を、Javaプログラムからデータベースへ接続し、SQLを実行するための標準APIという視点から整理します。SQL、JavaVM、HTMLとの違いを比較し、基本情報技術者試験で選択肢を切る判断軸を解説します。
+title: JDBCとは？Javaからデータベースへ接続する標準API【基本情報技術者試験】
+description: JDBCの役割を、Javaプログラムからデータベースへ接続し、SQLを実行するための標準APIとして整理します。JDBCドライバやSQLとの役割分担、基本情報技術者試験での判断基準を初心者向けに解説します。
 permalink: /fe/jdbc/
 tags: [fe, fe-technology, database, java]
 fe_section: テクノロジ系
