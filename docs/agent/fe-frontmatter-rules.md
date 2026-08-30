@@ -70,11 +70,21 @@ When repairing multiple files, verify each file independently even if several fi
 - Include `【基本情報技術者試験】` for normal FE articles unless nearby FE pages for the same article type intentionally use another convention.
 - Keep the title aligned with one term or one concept.
 
+### Title Scope And Example-Question Independence
+
+- The title must describe the article's main term or concept itself, not the set of answer choices from the example question that motivated the article.
+- Prefer the pattern `用語名とは？＋その用語の本質・役割【基本情報技術者試験】` when it fits naturally.
+- Do not mechanically list unrelated or weakly related distractor terms in the title merely because they appeared together in an example question.
+- Similar terms may appear in the title only when comparing them is an essential part of the article's learning objective and they are genuinely close concepts.
+- Put example-question distractors and broader comparison terms mainly in `科目Aでどう出る？` or `よくある誤解・混同`, not in the title.
+- Before saving, check whether the title would still make sense if the original example question were removed.
+
 Good patterns:
 
 ```yaml
 title: スタックとは？後入れ先出しをわかりやすく解説【基本情報技術者試験】
 title: 二分探索とは？整列済みデータを半分ずつ調べる考え方【基本情報技術者試験】
+title: JDBCとは？Javaからデータベースへ接続する標準API【基本情報技術者試験】
 ```
 
 ## Description
