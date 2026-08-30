@@ -228,6 +228,8 @@ Before saving an FE article, check that:
 - the body is Japanese unless the user explicitly requested another language;
 - the article has a clear role compared with similar FE and cross-theme pages;
 - the article focuses on one term or one concept;
+- the title describes the article's own concept and is not mechanically derived from distractors in the source example question;
+- the title would still make sense if the original example question were removed;
 - 科目A judgment is addressed;
 - 科目B reading/use is included only when it directly meets the official scope and provides a concrete solving skill;
 - weak or background-only Subject B references are omitted;
