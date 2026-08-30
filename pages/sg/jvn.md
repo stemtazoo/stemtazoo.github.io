@@ -1,12 +1,12 @@
 ---
 layout: page
-title: "JVNとは？脆弱性情報の見方とJVN iPediaとの違い【SG試験】"
-description: "JVNは、国内で利用されるソフトウェアなどの脆弱性情報と対策・回避策を確認するためのポータルです。JVN iPedia、IPA、JPCERT/CC、CVSSとの違いを、公開サイト・データベース・組織・評価指標という役割で切り分けます。"
+title: "JVNとは？JVN iPedia・IPAとの違いを整理【SG試験】"
+description: "JVNは、国内で利用されるソフトウェアなどの脆弱性情報と対策・回避策を確認するためのポータルです。JVN iPediaとの違い、IPA・JPCERT/CCとの役割分担、CVE・CVSSとの切り分けをSG試験向けに整理します。"
 permalink: /sg/jvn/
 prev: /sg/vulnerability-information-jvn-cve-cvss/
 next: /sg/cvss/
 tags: [sg, sg-security-management, incident_management, it_security_operations]
-last_modified_at: 2026-08-02
+last_modified_at: 2026-08-30
 ---
 
 ## まず結論
