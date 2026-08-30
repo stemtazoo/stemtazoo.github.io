@@ -7,7 +7,8 @@ tags: [fe, fe-technology, multimedia, computer-graphics]
 fe_section: テクノロジ系
 fe_subsection: マルチメディア
 fe_order: 20
-last_modified_at: 2026-08-02
+date: 2026-08-02
+last_modified_at: 2026-08-30
 ---
 
 ## まず結論

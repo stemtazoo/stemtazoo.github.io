@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 50
 date: 2026-08-19
-last_modified_at: 2026-08-19
+last_modified_at: 2026-08-30
 ---
 
 ## まず結論
@@ -143,6 +143,26 @@ NAS
 
 RAID
 → 複数ディスクをどう構成するか
+```
+
+---
+
+## 科目Aでどう出る？
+
+接続方法とアクセス単位を手掛かりに切り分けます。
+
+```text
+ネットワーク経由・ファイル単位・SMB/NFS
+→ NAS
+
+ブロック単位・iSCSI/Fibre Channel
+→ SAN
+
+機器へ直接接続
+→ DAS
+
+複数ディスクの構成
+→ RAID
 ```
 
 ---

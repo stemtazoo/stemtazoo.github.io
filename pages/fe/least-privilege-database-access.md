@@ -6,7 +6,9 @@ permalink: /fe/least-privilege-database-access/
 tags: [fe, fe-technology, security, database, access-control]
 fe_section: テクノロジ系
 fe_subsection: セキュリティ
-last_modified_at: 2026-07-18
+fe_order: 75
+date: 2026-07-18
+last_modified_at: 2026-08-30
 ---
 
 ## まず結論

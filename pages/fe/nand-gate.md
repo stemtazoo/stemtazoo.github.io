@@ -3,10 +3,12 @@ layout: page
 title: NANDとは？AND・OR・NOTを作れる万能ゲートの仕組み【基本情報技術者試験】
 description: NANDの仕組みを、11のときだけ0になる論理演算という判断軸で整理します。AND・OR・NOT・NOR・XORとの違い、NANDだけで基本ゲートを作れる理由を、基本情報技術者試験向けに解説します。
 permalink: /fe/nand-gate/
-tags: [fe, technology, hardware, logic-circuit]
+tags: [fe, fe-technology, hardware, logic-circuit]
 fe_section: テクノロジ系
 fe_subsection: コンピュータ構成要素
-last_modified_at: 2026-08-07
+fe_order: 89
+date: 2026-08-07
+last_modified_at: 2026-08-30
 ---
 
 ## まず結論
@@ -213,6 +215,21 @@ ANDを作れる
 ORを作れる
 
 → 他の論理回路も構成できる
+→ 万能ゲート
+```
+
+## 科目Aでどう出る？
+
+真理値表・論理式・回路構成の特徴を次のように結び付けます。
+
+```text
+11のときだけ0
+→ NAND
+
+ANDの出力を反転
+→ NAND
+
+NANDだけでNOT・AND・ORを構成できる
 → 万能ゲート
 ```
 

@@ -7,7 +7,8 @@ tags: [fe, fe-technology, system-architecture, virtualization, cloud]
 fe_section: テクノロジ系
 fe_subsection: システム構成要素
 fe_order: 80
-last_modified_at: 2026-08-02
+date: 2026-07-31
+last_modified_at: 2026-08-30
 ---
 
 ## まず結論

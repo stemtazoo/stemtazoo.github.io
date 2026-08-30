@@ -6,7 +6,9 @@ permalink: /fe/osi-reference-model/
 tags: [fe, fe-technology, network]
 fe_section: テクノロジ系
 fe_subsection: ネットワーク
-last_modified_at: 2026-08-18
+fe_order: 5
+date: 2026-07-20
+last_modified_at: 2026-08-30
 ---
 
 ## まず結論

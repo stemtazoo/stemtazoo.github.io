@@ -1,13 +1,14 @@
 ---
 layout: page
-title: MIPSとは？CPU処理時間とファイルアクセス時間の計算【FE試験】
+title: MIPSとは？CPU処理時間とファイルアクセス時間の計算【基本情報技術者試験】
 description: "基本情報技術者試験で問われやすいMIPSを、1秒間に実行できる命令数として整理し、命令数からCPU処理時間を求める方法を解説します。ファイルアクセス時間の加算、秒とミリ秒の単位変換、選択肢を切る判断軸も確認します。"
 permalink: /fe/mips-processing-time/
 tags: [fe, fe-technology, computer-system, cpu-performance, calculation]
 fe_section: テクノロジ系
 fe_subsection: コンピュータ構成要素
 fe_order: 15
-last_modified_at: 2026-08-15
+date: 2026-07-06
+last_modified_at: 2026-08-30
 ---
 
 ## まず結論
@@ -146,6 +147,17 @@ FE試験では、秒とミリ秒の変換でミスしやすいです。
 ```
 
 となります。
+
+---
+
+## 科目Aでどう出る？
+
+処理時間は、次の順に求めます。
+
+1. MIPSを1秒あたりの命令数へ直す
+2. 命令数 ÷ 命令/秒でCPU時間を求める
+3. I/O回数 × 1回の時間を求める
+4. 単位をそろえて加算する
 
 ---
 

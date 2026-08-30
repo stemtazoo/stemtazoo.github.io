@@ -6,7 +6,9 @@ permalink: /fe/legacy-interface-standards/
 tags: [fe, fe-technology, network, interface]
 fe_section: テクノロジ系
 fe_subsection: ネットワーク
-last_modified_at: 2026-08-28
+fe_order: 46
+date: 2026-07-20
+last_modified_at: 2026-08-30
 ---
 
 ## まず結論

@@ -3,10 +3,12 @@ layout: page
 title: JDBCとは？SQL・JavaVM・HTMLとの違い【基本情報技術者試験】
 description: JDBCの役割を、Javaプログラムからデータベースへ接続し、SQLを実行するための標準APIという視点から整理します。SQL、JavaVM、HTMLとの違いを比較し、基本情報技術者試験で選択肢を切る判断軸を解説します。
 permalink: /fe/jdbc/
-tags: [fe, technology, database, java]
+tags: [fe, fe-technology, database, java]
 fe_section: テクノロジ系
 fe_subsection: データベース
-last_modified_at: 2026-08-07
+fe_order: 69
+date: 2026-08-07
+last_modified_at: 2026-08-30
 ---
 
 ## まず結論
@@ -129,6 +131,24 @@ JDBCドライバは、JDBCの命令を各データベース製品が理解でき
 ```
 
 試験では、コードの書き方よりも、JDBCがJavaとデータベースの接続を担当することを押さえるのが重要です。
+
+## 科目Aでどう出る？
+
+選択肢では、処理の役割を次のように切り分けます。
+
+```text
+JavaからDBへ接続しSQLを実行
+→ JDBC
+
+DBへ命令する言語
+→ SQL
+
+Javaを実行する仮想マシン
+→ JavaVM
+
+Webページの構造
+→ HTML
+```
 
 ## どんな場面で使う？
 

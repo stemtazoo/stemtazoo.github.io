@@ -7,7 +7,8 @@ tags: [fe, fe-strategy, business-strategy, mrp, production-management]
 fe_section: ストラテジ系
 fe_subsection: 経営戦略
 fe_order: 30
-last_modified_at: 2026-08-24
+date: 2026-08-08
+last_modified_at: 2026-08-30
 ---
 
 ## まず結論

@@ -6,7 +6,9 @@ permalink: /fe/java-beans/
 tags: [fe, fe-technology, programming, java]
 fe_section: テクノロジ系
 fe_subsection: ソフトウェア
-last_modified_at: 2026-07-20
+fe_order: 21
+date: 2026-07-20
+last_modified_at: 2026-08-30
 ---
 
 ## まず結論
