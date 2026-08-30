@@ -1,10 +1,10 @@
 ---
 layout: page
-title: "排他制御とは？ロック・デッドロックとの違いを整理【SG試験】"
+title: "データベースの排他制御とは？ロック・デッドロックとの違い【SG試験】"
 description: "排他制御は、複数の処理が同じデータを同時に更新して不整合が起きないように制御する仕組みです。ロックとの関係、デッドロックとの違い、正規化・整合性制約との切り分けをSG試験向けに整理します。"
 permalink: /sg/exclusive-control/
 date: 2026-05-10
-last_modified_at: 2026-08-16
+last_modified_at: 2026-08-30
 tags: [sg, sg-technology, database]
 ---
 
