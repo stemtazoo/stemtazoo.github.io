@@ -7,7 +7,7 @@ prev: /sg/access-control-physical/
 next: /sg/clear-desk-screen/
 tags: [sg, sg-security-measures, access_control, it_security_operations]
 date: 2026-05-10
-last_modified_at: 2026-05-20
+last_modified_at: 2026-08-30
 ---
 
 ## まず結論
@@ -20,7 +20,7 @@ SG試験では、
 
 と判断できればOKです。
 
-カードの貸し借りや、共連れによる不自然な入退室を見つけやすくするために使われます。
+カードの使い回しを制限し、共連れなどによる入退室記録の矛盾を検知しやすくするために使われます。
 
 ---
 
