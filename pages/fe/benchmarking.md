@@ -1,14 +1,14 @@
 ---
 layout: page
-title: ベンチマーキングとは？BPR・TQC・コアコンピタンスとの違い【基本情報技術者試験】
-description: ベンチマーキングを、先進企業や優良企業との比較からギャップとベストプラクティスを把握し、自社改善につなげる手法として整理し、BPR、TQC、コアコンピタンスとの違いをFE試験向けに解説します。
+title: ベンチマーキングとは？優良企業との比較から改善につなげる手法【基本情報技術者試験】
+description: ベンチマーキングを、先進企業や優良企業との比較からギャップやベストプラクティスを把握し、自社改善につなげる手法として整理します。基本情報技術者試験での判断基準も解説します。
 permalink: /fe/benchmarking/
 tags: [fe, fe-strategy, business-strategy]
 fe_section: ストラテジ系
 fe_subsection: 経営戦略
 fe_order: 10
 date: 2026-07-27
-last_modified_at: 2026-08-29
+last_modified_at: 2026-08-30
 ---
 
 ## まず結論
