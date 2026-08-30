@@ -1,10 +1,10 @@
 ---
 layout: page
-title: ステートフルインスペクションとは？パケットフィルタリングとの違い【SG試験】
+title: ステートフルインスペクションとは？ファイアウォールとパケットフィルタリングの違い【SG試験】
 description: ステートフルインスペクションは、通信セッションの状態を記録し、通信の流れに合うパケットだけを通すファイアウォール方式です。パケットフィルタリングやWAFとの違い、戻り通信を許可できる理由をSG試験向けに整理します。
 permalink: /sg/stateful-inspection/
 tags: [sg, sg-security-measures, unauthorized_access, network, access_control]
-last_modified_at: 2026-08-02
+last_modified_at: 2026-08-30
 ---
 
 ## まず結論
