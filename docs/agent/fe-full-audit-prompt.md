@@ -37,7 +37,29 @@ Audit all Markdown files under:
 pages/fe/**/*.md
 ```
 
-Exclude index/navigation/helper pages only when their role clearly differs from a normal FE article. Record excluded files separately with the exclusion reason.
+### Classify special/non-normal pages before normal-article checks
+
+Do not assume every Markdown file under `pages/fe/` is a normal FE article.
+
+Before applying normal-article rules, inspect each file for evidence that it is an index, navigation page, redirect helper, compatibility page, or other intentional special page.
+
+Strong indicators of a redirect/helper page include one or more of:
+
+- `layout: null`
+- `sitemap: false`
+- `<meta name="robots" content="noindex...">`
+- `<meta http-equiv="refresh" ...>`
+- a canonical link pointing to another FE page
+- a body whose main purpose is redirecting or forwarding to another permalink
+
+When these signals clearly show an intentional special role:
+
+- exclude the file from normal FE article checks such as `layout: page`, normal headings, tags, `fe_order`, `date`, and footer requirements;
+- do **not** normalize it into a standard article;
+- verify the special page itself is internally coherent, for example that its redirect/canonical target exists;
+- record it under `Excluded files` with the concrete reason.
+
+If the role is uncertain, report it as a review candidate rather than forcing normal-article rules.
 
 ## Audit policy
 
@@ -63,6 +85,8 @@ Check every normal FE article for:
    - `last_modified_at`
    - valid `YYYY-MM-DD` dates
    - no accidental front-matter keys leaked into visible body text
+
+   For existing articles with a missing or suspicious `date`, do not infer the publication date from `last_modified_at`, the current date, or a batch-wide common date. Treat the missing/suspicious value as a candidate and, when validating provenance, use Git history as defined in `fe-frontmatter-rules.md`: identify the initial-add commit and verify that the exact path has status `A` before accepting its date.
 
 2. **Permalink rules**
    - `/fe/english-slug/` format
@@ -135,6 +159,7 @@ Check every normal FE article for:
 10. **Internal links**
     - inspect local links beginning with `/fe/`, `/sg/`, `/ds/`, `/gk/`, and relative Markdown links
     - flag destinations that do not appear to exist in the repository
+    - for special redirect/helper pages, also verify redirect and canonical targets
     - do not treat intentional external URLs as internal links
 
 11. **Description quality candidates**
@@ -302,7 +327,7 @@ Group likely overlapping articles and explain the suspected overlap in one or tw
 
 ### 8. Excluded files
 
-List files excluded from normal-article checks and why.
+List files excluded from normal-article checks and why. For redirect/helper pages, state the signals used for classification and the redirect/canonical target when available.
 
 ### 9. Clean articles
 
@@ -317,7 +342,7 @@ Group repair candidates into small batches of about 5 to 15 articles, prioritizi
 3. P2
 4. P3
 
-Keep semantically risky fixes separate from mechanical fixes.
+Keep semantically risky fixes separate from mechanical fixes. Do not mix temporary repair instructions into permanent authoring rules; repair-batch files are task artifacts and may be deleted after the repair series is completed and reusable lessons are incorporated into permanent rules.
 
 ## Important execution rules
 
@@ -326,6 +351,8 @@ Keep semantically risky fixes separate from mechanical fixes.
 - Do not infer missing classifications solely from filenames when the body gives better evidence.
 - Do not create new tags without checking existing tag vocabulary.
 - Do not remove unusual pages merely because they differ from normal articles.
+- Classify intentional redirect/helper pages before applying normal-article rules.
+- Do not infer an existing article's original `date` from `last_modified_at` or from a batch-wide common date.
 - When uncertain, report a candidate instead of making a confident error claim.
 - Include exact file paths in every finding.
 - Keep evidence concise and specific.
@@ -337,7 +364,9 @@ Before finishing the report, verify that:
 
 - no FE article content was edited;
 - no article was deleted or renamed;
+- special/non-normal pages were classified before normal-article checks;
 - the report distinguishes mechanical errors from semantic-review candidates;
 - all P0/P1 findings have concrete evidence;
+- suspicious or missing `date` values were not guessed from `last_modified_at`;
 - Subject B findings follow the current official-scope rules in `fe-content-rules.md`;
 - the report is useful for a second-stage reviewer to decide what to fix.
