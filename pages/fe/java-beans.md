@@ -1,7 +1,7 @@
 ---
 layout: page
-title: JavaBeansとは？JavaScript・Javaアプリケーション・Javaアプレットとの違い【基本情報技術者試験】
-description: JavaBeansを、Javaの再利用可能なソフトウェア部品として整理し、JavaScript・Javaアプリケーション・Javaアプレット・サーブレットとの違いを、基本情報技術者試験で選択肢を切れる形で解説します。
+title: JavaBeansとは？再利用可能なJava部品の仕組み【基本情報技術者試験】
+description: JavaBeansを、Javaで作られた再利用可能なソフトウェア部品として整理します。部品化の考え方やgetter・setter、Javaアプリケーションなどとの役割の違いを、基本情報技術者試験向けに解説します。
 permalink: /fe/java-beans/
 tags: [fe, fe-technology, programming, java]
 fe_section: テクノロジ系
