@@ -145,6 +145,8 @@ gk_sections:
       - title: "開発・運用（MLOps）"
       - title: "エッジ・クラウド"
 
+  - title: "AIに必要な数理・統計知識"
+
   - title: "AIの法律と倫理"
     subsections:
       - title: "AI倫理・ガバナンス"
@@ -174,7 +176,7 @@ gk_sections:
   - title: "チートシート（試験直前）"
 
   - title: "ひっかけ問題集"
-last_modified_at: 2026-08-27
+last_modified_at: 2026-08-30
 ---
 
 <div class="portal-card-grid">
@@ -223,6 +225,7 @@ last_modified_at: 2026-08-27
   - [ディープラーニングの要素技術](#ディープラーニングの要素技術)
   - [ディープラーニングの応用例](#ディープラーニングの応用例)
   - [AIの社会実装に向けて](#aiの社会実装に向けて)
+  - [AIに必要な数理・統計知識](#aiに必要な数理統計知識)
 - [法律・倫理分野](#法律倫理分野)
   - [AI倫理・AIガバナンス](#ai倫理aiガバナンス)
 - [試験対策](#試験対策)
@@ -259,6 +262,10 @@ last_modified_at: 2026-08-27
 
 ## AIの社会実装に向けて
 {% assign sec = page.gk_sections | where: "title", "AIの社会実装に向けて" | first %}
+{% include gk_section.html sec=sec %}
+
+## AIに必要な数理・統計知識
+{% assign sec = page.gk_sections | where: "title", "AIに必要な数理・統計知識" | first %}
 {% include gk_section.html sec=sec %}
 
 ---
