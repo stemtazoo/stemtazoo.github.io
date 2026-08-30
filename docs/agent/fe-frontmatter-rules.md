@@ -39,6 +39,31 @@ last_modified_at: YYYY-MM-DD
 - When meaningfully editing an existing normal FE article, update `last_modified_at`.
 - Do not allow `layout`, `title`, `description`, `permalink`, `tags`, `fe_section`, `fe_subsection`, `fe_order`, `date`, or `last_modified_at` to appear as accidental plain text in the body.
 
+## `date` And `last_modified_at`
+
+Treat these fields as different metadata with different meanings.
+
+- `date` is the article's original publication/addition date.
+- `last_modified_at` is the date of the latest meaningful content or metadata revision.
+- Never copy `last_modified_at` into `date` merely because `date` is missing.
+- Never fill a missing `date` with the current date or with one uniform date across a repair batch.
+
+For an existing article whose `date` is missing, determine the original date from Git history. Prefer:
+
+```bash
+git log --follow --diff-filter=A --format='%H %ad' --date=short -- pages/fe/<file>.md
+```
+
+Then verify the candidate commit path-by-path:
+
+```bash
+git show --name-status <candidate-sha> -- pages/fe/<file>.md
+```
+
+Use the commit date only when that exact file path is shown with status `A` (added). If renames or unusual history make the initial addition unclear, investigate further and do not invent a date.
+
+When repairing multiple files, verify each file independently even if several files appear to share the same candidate commit SHA.
+
 ## Title
 
 - Use a Japanese title that clearly names the concept.
