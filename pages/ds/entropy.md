@@ -5,6 +5,8 @@ description: "エントロピーとは、データの不確実さ（どれだけ
 permalink: /ds/entropy/
 categories: [data-science]
 tags: [ds, statistics]
+ds_area: datascience
+ds_section: statistics
 prev: /ds/causal-inference/
 next: /ds/z-score-method/
 last_modified_at: 2026-06-21
