@@ -16,6 +16,8 @@ description: （そのページ固有のmeta description）
 permalink: /ds/（英語スラッグ）/
 categories: [category-name]
 tags: [ds, 分類タグ1]
+ds_area: datascience
+ds_section: statistics
 prev: /ds/previous-article/
 next: /ds/next-article/
 last_modified_at: YYYY-MM-DD
@@ -24,12 +26,43 @@ last_modified_at: YYYY-MM-DD
 
 Existing DS files vary, so preserve existing valid conventions unless the requested change requires a metadata fix.
 
+## DS ver.6 classification metadata
+
+Use `ds_area` and `ds_section` to represent the current DS検定 skill-check structure without breaking the site's existing `categories` / `tags` behavior.
+
+Allowed `ds_area` values:
+
+```yaml
+foundation
+datascience
+dataengineering
+value-creation
+```
+
+Meaning:
+
+- `foundation`: 基盤
+- `datascience`: データサイエンス
+- `dataengineering`: データエンジニアリング
+- `value-creation`: 価値創造
+
+Rules:
+
+- Prefer adding `ds_area` when the article can be mapped confidently to one current ver.6 area.
+- Use `ds_section` for a stable lower-level learning grouping such as `statistics`, `data-understanding`, `security`, `sql`, or `business-design`.
+- During the migration period, do not remove or rewrite existing `categories` / `tags` only because `ds_area` was added.
+- Do not infer `value-creation` from `categories: [business]` alone. Old `business` metadata is broader than the current ver.6 area.
+- Do not auto-classify `security`, `design`, `ai-utilization`, `skillcheck`, or `cheatsheet`; inspect the article's role first.
+- Safe legacy tags that can normally map to `datascience` include `linear-algebra`, `calculus`, `set-theory`, `statistics`, `data-preparation`, `visualization`, `modeling`, and `unstructured-data`.
+- Safe legacy tags that can normally map to `dataengineering` include `environment-setup`, `data-collection`, `data-structure`, `data-storage`, `data-processing`, `sql`, and `database`.
+- If an article clearly spans multiple areas, choose the area that best matches the primary exam judgment point; record secondary relationships with existing tags rather than multiple `ds_area` values.
+
 ## Required Rules
 
 - The first line of the file must be `---`.
 - Front matter must end with `---` on its own line.
 - Do not compress front matter into a single line.
-- Do not allow `layout`, `title`, `description`, `permalink`, `categories`, `tags`, `prev`, `next`, or `last_modified_at` to appear as accidental plain text in the body.
+- Do not allow `layout`, `title`, `description`, `permalink`, `categories`, `tags`, `ds_area`, `ds_section`, `prev`, `next`, or `last_modified_at` to appear as accidental plain text in the body.
 - Use `layout: page` unless a nearby DS file for the same article type clearly uses a different layout.
 - Use the format `/ds/english-slug/` for `permalink`.
 - Preserve existing `categories` and `tags` conventions after checking nearby DS articles.
@@ -37,6 +70,7 @@ Existing DS files vary, so preserve existing valid conventions unless the reques
 - Normal individual DS articles should use `last_modified_at`.
 - For new normal DS articles, always include `last_modified_at` in `YYYY-MM-DD` format.
 - When meaningfully editing the body, title, description, or reader-facing metadata of an existing normal DS article, update `last_modified_at`.
+- Adding only migration metadata such as `ds_area` / `ds_section` does not require changing `last_modified_at`, because it is not reader-facing article content.
 - If an edited normal DS article does not yet have `last_modified_at`, add it.
 - Use the current date at the time of editing.
 - Do not write visible "last updated" text inside the body.
