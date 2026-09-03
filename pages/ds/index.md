@@ -1,27 +1,27 @@
-﻿---
+---
 layout: page
 title: DS検定 リテラシー 学習まとめ
-description: DS検定リテラシー対策の学習まとめページです。ビジネス力、データサイエンス力、データエンジニアリング力、AI利活用スキルの頻出論点を分野別に整理し、基礎用語、比較ポイント、試験直前の復習まで学習順を確認できます。関連する個別記事へ移動しながら弱点を見直せます。
+description: DS検定リテラシー対策の学習まとめページです。スキルチェックリストver.6と2026年の試験範囲に合わせ、基盤、データサイエンス、データエンジニアリング、価値創造の4領域を軸に、基礎用語、比較ポイント、試験直前の復習まで整理します。
 permalink: /ds/
 categories: [business]
 tags: [ds, index]
-last_modified_at: 2026-08-15
+last_modified_at: 2026-09-04
 ---
 
 <div class="portal-card-grid">
   <section class="portal-card">
-    <h3>はじめてのDS検定</h3>
-    <p>試験範囲の全体像と、データサイエンス・統計の基礎から学習を始めます。</p>
-    <a class="portal-card__button" href="/ds/statistics-overview/">学習開始</a>
+    <h3>DS検定 ver.6 の全体像</h3>
+    <p>2026年からの試験範囲である4領域を先に確認します。</p>
+    <a class="portal-card__button" href="#ds検定-ver6-の試験範囲">全体像を見る</a>
   </section>
   <section class="portal-card">
     <h3>データ分析の基礎</h3>
-    <p>前処理、可視化、統計、モデル化など、頻出分野を順番に確認します。</p>
+    <p>統計、前処理、可視化、モデル化などを順番に確認します。</p>
     <a class="portal-card__button" href="/ds/data-literacy/">学習開始</a>
   </section>
   <section class="portal-card">
     <h3>試験直前チェック</h3>
-    <p>チートシートとスキルチェックで、弱点を短時間で見直します。</p>
+    <p>チートシートと既存スキルチェックで、弱点を短時間で見直します。</p>
     <a class="portal-card__button" href="/ds/skillcheck/">学習開始</a>
   </section>
   <section class="portal-card">
@@ -31,14 +31,44 @@ last_modified_at: 2026-08-15
   </section>
 </div>
 
+## 🧭 DS検定 ver.6 の試験範囲
+
+2026年のDS検定は、**スキルチェックリスト ver.6 の★1（見習いレベル）**をもとに、次の4領域を中心に出題されます。
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:18px 0 24px;">
+  <div style="padding:16px;border:1px solid #e2e8f0;border-radius:12px;">
+    <b>🧱 基盤</b><br>
+    <span style="font-size:0.95em;">行動規範、論理的思考、課題の定義、データ理解、ITセキュリティなど</span>
+  </div>
+  <div style="padding:16px;border:1px solid #e2e8f0;border-radius:12px;">
+    <b>🧠 データサイエンス</b><br>
+    <span style="font-size:0.95em;">数学・統計、データ準備、可視化、モデル化、非構造化データ、LLMなど</span>
+  </div>
+  <div style="padding:16px;border:1px solid #e2e8f0;border-radius:12px;">
+    <b>🛠 データエンジニアリング</b><br>
+    <span style="font-size:0.95em;">環境構築、データ収集・蓄積・加工、SQL、セキュリティ、MLOpsなど</span>
+  </div>
+  <div style="padding:16px;border:1px solid #e2e8f0;border-radius:12px;">
+    <b>💡 価値創造</b><br>
+    <span style="font-size:0.95em;">課題の再定義、事業設計、AI設計、ガバナンス、PoC、効果測定など</span>
+  </div>
+</div>
+
+> **ver.5 からの大きな変更**：従来の「ビジネス力」の多くは「基盤」へ移り、「価値創造」が新しい試験領域として加わりました。サイト内の既存記事は順次 ver.6 の分類へ整理します。
+
+---
+
 ## 📚 学習の進め方
 
 <div style="padding:16px;border-radius:12px;background:#f8fafc;margin-bottom:20px;">
 <b>はじめての人</b><br>
-→ データサイエンスとは → 統計の基礎
+→ 基盤 → 統計・数学の基礎
 <br><br>
-<b>実務を意識</b><br>
-→ 前処理 → 可視化 → 分析
+<b>分析を学ぶ</b><br>
+→ データサイエンス → データエンジニアリング
+<br><br>
+<b>試験で差がつきやすい新領域</b><br>
+→ 価値創造 → ver.6で追加・変更された論点
 <br><br>
 <b>試験直前</b><br>
 → チートシート → スキルチェック
@@ -48,24 +78,36 @@ last_modified_at: 2026-08-15
 
 ## 🔗 公式リンク
 
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-bottom:24px;">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-bottom:24px;">
 
-  <a href="https://www.datascientist.or.jp/dscertification/what/#summary"
+  <a href="https://www.datascientist.or.jp/dscertification/what/"
      target="_blank"
+     rel="noopener noreferrer"
      style="display:block;padding:18px;border-radius:14px;
      background:linear-gradient(135deg,#1e293b,#3b82f6);
      color:#fff;text-decoration:none;">
     <b>DS検定とは</b><br>
-    試験概要・出題範囲
+    現在の試験概要・試験範囲
   </a>
 
-  <a href="https://www.datascientist.or.jp/news/n-pressrelease/post-1757/"
+  <a href="https://www.datascientist.or.jp/news/n-pressrelease/post-4959/"
      target="_blank"
+     rel="noopener noreferrer"
      style="display:block;padding:18px;border-radius:14px;
      background:linear-gradient(135deg,#065f46,#14b8a6);
      color:#fff;text-decoration:none;">
-    <b>スキルチェックリスト</b><br>
-    出題範囲の基準
+    <b>スキルチェックリスト ver.6</b><br>
+    2025年度版の改訂内容・Excel
+  </a>
+
+  <a href="https://www.datascientist.or.jp/news/n-dskentei/post-5204/"
+     target="_blank"
+     rel="noopener noreferrer"
+     style="display:block;padding:18px;border-radius:14px;
+     background:linear-gradient(135deg,#7c2d12,#c2410c);
+     color:#fff;text-decoration:none;">
+    <b>2026年の試験範囲</b><br>
+    ver.6対応で何が変わったか
   </a>
 
 </div>
@@ -73,6 +115,9 @@ last_modified_at: 2026-08-15
 ---
 
 ## スキルチェック
+
+> 現在のサイト内スキルチェックページには、ver.5の分類をもとに作成したものが含まれます。ver.6の4領域への再整理を進めています。
+
 <ul>
 {% for p in site.pages %}
   {% if p.tags contains "skillcheck" and p.url contains "/ds/" %}
@@ -96,7 +141,31 @@ last_modified_at: 2026-08-15
 
 ---
 
-## 🧠 データサイエンス力
+## 🧱 基盤
+
+現行の試験範囲では、従来のビジネス力の多くが基盤へ移っています。まずは、既存記事のうち基盤と重なる「データ理解」「ITセキュリティ」を確認できます。
+
+### データ理解・検証
+<ul>
+{% for p in site.pages %}
+  {% if p.tags contains "data-understanding" and p.url contains "/ds/" %}
+    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% endif %}
+{% endfor %}
+</ul>
+
+### ITセキュリティ
+<ul>
+{% for p in site.pages %}
+  {% if p.tags contains "security" and p.url contains "/ds/" %}
+    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% endif %}
+{% endfor %}
+</ul>
+
+---
+
+## 🧠 データサイエンス
 
 ### 線形代数
 <ul>
@@ -181,7 +250,7 @@ last_modified_at: 2026-08-15
 
 ---
 
-## 🛠 データエンジニアリング力
+## 🛠 データエンジニアリング
 
 ### 環境構築
 <ul>
@@ -255,10 +324,13 @@ last_modified_at: 2026-08-15
 {% endfor %}
 </ul>
 
-
 ---
 
-## 📊 ビジネス力
+## 💡 価値創造
+
+ver.6で新たに試験領域として加わった分野です。課題の再定義、事業・モデル設計、AI設計、ガバナンス、PoC、効果測定などが含まれます。
+
+> 既存の `business` 分類には、旧スキルチェックリストに基づく記事が多数含まれるため、現在はそのまま表示し、今後「基盤」と「価値創造」へ再分類します。
 
 <ul>
 {% for p in site.pages %}
@@ -270,7 +342,9 @@ last_modified_at: 2026-08-15
 
 ---
 
-## 🤖 AI利活用
+## 🤖 AI利活用・生成AI（補助学習）
+
+AI利活用はver.6全体にまたがるテーマです。現行の試験4領域とは別に、既存のAI利活用記事を補助学習用としてまとめています。
 
 <ul>
 {% for p in site.pages %}
