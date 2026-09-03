@@ -12,7 +12,7 @@ last_modified_at: 2026-09-04
   <section class="portal-card">
     <h3>DS検定 ver.6 の全体像</h3>
     <p>2026年からの試験範囲である4領域を先に確認します。</p>
-    <a class="portal-card__button" href="#ds検定-ver6-の試験範囲">全体像を見る</a>
+    <a class="portal-card__button" href="#ds-ver6">全体像を見る</a>
   </section>
   <section class="portal-card">
     <h3>データ分析の基礎</h3>
@@ -31,6 +31,7 @@ last_modified_at: 2026-09-04
   </section>
 </div>
 
+<a id="ds-ver6"></a>
 ## 🧭 DS検定 ver.6 の試験範囲
 
 2026年のDS検定は、**スキルチェックリスト ver.6 の★1（見習いレベル）**をもとに、次の4領域を中心に出題されます。
