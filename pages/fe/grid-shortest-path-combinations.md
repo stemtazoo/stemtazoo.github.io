@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: 基礎理論
 fe_order: 45
 date: 2026-07-02
-last_modified_at: 2026-07-25
+last_modified_at: 2026-09-03
 ---
 
 ## まず結論
@@ -37,6 +37,8 @@ last_modified_at: 2026-07-25
 ```
 
 です。
+
+順列・組合せそのものの使い分けを先に確認したい場合は、[順列と組合せの違いとは？nPr・nCrと「少なくとも」の考え方]({{ '/fe/permutations-combinations/' | relative_url }}) も参考にしてください。
 
 ## 直感的な説明
 
