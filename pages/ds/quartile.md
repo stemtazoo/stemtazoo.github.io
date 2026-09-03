@@ -5,6 +5,8 @@ description: "四分位とは、データを小さい順に並べたときに「
 permalink: /ds/quartile/
 categories: [data-science]
 tags: [ds, statistics]
+ds_area: datascience
+ds_section: statistics
 prev: /ds/population-sample-unbiased-variance/
 next: /ds/random-sampling-methods/
 last_modified_at: 2026-06-21
@@ -218,5 +220,6 @@ DS検定では、
   {% if page.next.url %}
     <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
   {% endif %}
+{% endfor %}
 
 </div>
