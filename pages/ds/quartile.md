@@ -220,6 +220,5 @@ DS検定では、
   {% if page.next.url %}
     <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
   {% endif %}
-{% endfor %}
 
 </div>
