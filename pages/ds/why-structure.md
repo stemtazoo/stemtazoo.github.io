@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: WHYの並び立てとは？ストーリー構築の基本【DS検定】
 description: WHYの並び立てをストーリー構築の基本として整理します。問題の背景、原因、目的を論理的につなげる考え方を押さえ、DS検定で問われる説明設計や提案資料の判断ポイントを確認できます。本文では、用語の定義、具体例、似た概念との違い、試験で迷いやすい選択肢の見分け方まで、短時間で復習できるようにまとめています。
 permalink: /ds/why-structure/
 categories: [business]
 tags: [ds, design]
+ds_area: foundation
+ds_section: logical-thinking
 prev: /ds/optional-math-algorithm/
 next: /ds/analysis-approach-design/
 last_modified_at: 2026-05-01

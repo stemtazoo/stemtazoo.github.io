@@ -5,6 +5,8 @@ description: "インシデント管理とは、システム障害・セキュリ
 permalink: /ds/incident-management/
 categories: [business]
 tags: [ds, design]
+ds_area: value-creation
+ds_section: governance-risk
 prev: /ds/compliance-risk/
 next: /ds/internal-control/
 last_modified_at: 2026-08-16
