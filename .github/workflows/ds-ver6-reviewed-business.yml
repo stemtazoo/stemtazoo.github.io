@@ -53,6 +53,10 @@ jobs:
               "feature.md": ("datascience", "data-preparation"),
               "estimator-properties.md": ("datascience", "statistics"),
               "power-law.md": ("datascience", "statistics"),
+              "inheritance.md": ("dataengineering", "programming"),
+              "encapsulation.md": ("dataengineering", "programming"),
+              "polymorphism.md": ("dataengineering", "programming"),
+              "dunning-kruger-effect.md": ("foundation", "logical-thinking"),
           }
           for name, (area, section) in expected.items():
               text = (Path("pages/ds") / name).read_text(encoding="utf-8-sig")
