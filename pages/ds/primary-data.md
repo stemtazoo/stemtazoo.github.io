@@ -5,6 +5,8 @@ description: "一次データは、調査目的に合わせて自分たちがア
 permalink: /ds/primary-data/
 categories: [business]
 tags: [ds, data-understanding, design]
+ds_area: foundation
+ds_section: data-understanding
 prev: /ds/power-law/
 next: /ds/primary-secondary-data/
 last_modified_at: 2026-06-28

@@ -5,6 +5,8 @@ description: "一次データは自分たちが調査目的に合わせて直接
 permalink: /ds/primary-secondary-data/
 categories: [business]
 tags: [ds, data-understanding, design]
+ds_area: foundation
+ds_section: data-understanding
 prev: /ds/primary-data/
 next: /ds/publickey-vs-symmetric/
 last_modified_at: 2026-08-16

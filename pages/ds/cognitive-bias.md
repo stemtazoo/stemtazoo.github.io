@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: 認知バイアスとは？データ分析で判断を誤らせる思い込み【DS検定】
 description: "認知バイアスは、データ分析で判断を誤らせる思い込みを理解するための基本テーマです。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。初学者が迷いやすい判断ポイントも確認します。"
 permalink: /ds/cognitive-bias/
 categories: [business]
 tags: [ds, design]
+ds_area: foundation
+ds_section: logical-thinking
 prev: /ds/categorical-variable/
 next: /ds/confirmation-bias/
 last_modified_at: 2026-06-21

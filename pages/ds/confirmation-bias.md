@@ -5,6 +5,8 @@ description: "確証バイアスを、自分の仮説を支持する情報ばか
 permalink: /ds/confirmation-bias/
 categories: [business]
 tags: [ds, design]
+ds_area: foundation
+ds_section: logical-thinking
 prev: /ds/cognitive-bias/
 next: /ds/cps/
 last_modified_at: 2026-07-18
