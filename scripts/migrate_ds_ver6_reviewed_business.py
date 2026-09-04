@@ -73,6 +73,10 @@ REVIEWED = {
     "human-centered-ai-principles.md": ("foundation", "action-norms"),
     "sora-ame-kasa.md": ("foundation", "logical-thinking"),
     "weak-strong-ai.md": ("foundation", "ai-fundamentals"),
+    "data-ai-precautions.md": ("foundation", "action-norms"),
+    "japan-personal-information-protection-act.md": ("foundation", "action-norms"),
+    "hallucination.md": ("foundation", "ai-fundamentals"),
+    "llm-temperature.md": ("foundation", "ai-fundamentals"),
 }
 
 
