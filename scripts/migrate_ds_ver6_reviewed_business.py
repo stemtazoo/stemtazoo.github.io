@@ -68,6 +68,11 @@ REVIEWED = {
     "personal-identifier-code.md": ("foundation", "action-norms"),
     "pseudonymized-information.md": ("foundation", "action-norms"),
     "sensitive-personal-information.md": ("foundation", "action-norms"),
+    "governance.md": ("value-creation", "governance-risk"),
+    "data-governance.md": ("value-creation", "governance-risk"),
+    "human-centered-ai-principles.md": ("foundation", "action-norms"),
+    "sora-ame-kasa.md": ("foundation", "logical-thinking"),
+    "weak-strong-ai.md": ("foundation", "ai-fundamentals"),
 }
 
 
