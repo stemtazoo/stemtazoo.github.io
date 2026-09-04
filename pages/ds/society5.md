@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: Society5.0とは？超スマート社会の本質を整理【DS検定】
 description: "Society5.0とは、「サイバー空間（データ）と現実空間を高度に融合させて社会課題を解決する未来社会の構想」です。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。"
 permalink: /ds/society5/
 categories: [ai-utilization]
 tags: [ds, ai-use]
+ds_area: value-creation
+ds_section: technology-social-trends
 prev: /ds/social-data-ai-utilization/
 next: /ds/aiops/
 last_modified_at: 2026-06-21

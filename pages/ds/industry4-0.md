@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: インダストリー4.0とは？第4次産業革命の本質とドイツ戦略【DS検定】
 description: "インダストリー4.0とは、ドイツ政府が提唱した、IoT・データ・AIを活用して製造業を高度化する第4次産業革命構想です。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。"
 permalink: /ds/industry4-0/
 categories: [business]
 tags: [ds, design]
+ds_area: value-creation
+ds_section: technology-social-trends
 prev: /ds/incremental-vs-differential-backup/
 next: /ds/inheritance/
 last_modified_at: 2026-06-21

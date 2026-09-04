@@ -5,6 +5,8 @@ description: "社会におけるデータ・AI利活用を、データ収集か�
 permalink: /ds/social-data-ai-utilization/
 categories: [ai-utilization]
 tags: [ds, ai-use, literacy, ai, data, society]
+ds_area: value-creation
+ds_section: technology-social-trends
 prev: /ds/human-centered-ai-principles/
 next: /ds/society5/
 last_modified_at: 2026-07-13
