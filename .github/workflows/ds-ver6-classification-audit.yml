@@ -1,0 +1,40 @@
+name: DS ver.6 classification audit
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/audit_ds_ver6_classification.py'
+      - '.github/workflows/ds-ver6-classification-audit.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Generate audit
+        run: python scripts/audit_ds_ver6_classification.py
+
+      - name: Commit audit report
+        run: |
+          if git diff --quiet -- docs/audits/ds-ver6-unclassified.md; then
+            echo 'No audit changes.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/audits/ds-ver6-unclassified.md
+          git commit -m 'Update DS ver.6 unclassified audit'
+          git push
