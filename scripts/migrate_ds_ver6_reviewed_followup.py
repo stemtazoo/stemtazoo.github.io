@@ -6,7 +6,10 @@ main reviewed migration script so existing metadata is never overwritten
 without an explicit expected source mapping.
 """
 
-from migrate_ds_ver6_reviewed_business import DS_DIR, migrate, correct
+try:
+    from scripts.migrate_ds_ver6_reviewed_business import DS_DIR, migrate, correct
+except ModuleNotFoundError:
+    from migrate_ds_ver6_reviewed_business import DS_DIR, migrate, correct
 
 REVIEWED = {
     "data-literacy.md": ("foundation", "data-understanding"),
