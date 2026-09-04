@@ -4,6 +4,20 @@
 - 対象: `pages/ds/`
 - 目的: スキルチェックリスト ver.6 と現行DS検定の4領域（基盤 / データサイエンス / データエンジニアリング / 価値創造）に合わせて、既存記事を安全に再分類するための方針を整理する。
 
+## 進捗スナップショット（2026-09-04）
+
+- 公式 ver.6 / 2026年試験範囲の確認: 完了
+- `pages/ds/index.md` の4領域化: 実施済み
+- index の `ds_area` 優先表示: 実施済み
+- 基盤の表示区分: 論理的思考 / 課題の定義・仮説 / 目標・指標 / データ理解・検証 / ITセキュリティまで拡張済み
+- 安全に自動判定できるデータサイエンス / データエンジニアリング記事: 移行済み
+- 旧 `business` 記事: 個別監査を進行中
+- `security`: 個別監査未着手
+- `ai-utilization`: 個別監査未着手
+- ver.6スキルチェックデータ基盤: 旧ver.5構造からの更新が残っている
+
+記事分類の進捗は、2026-09-04時点の保守的な集計で約6割。特殊ページ（index / skillcheck / cheatsheet等）を含むため、最終的な分類対象数は監査完了時に再確定する。
+
 ## 結論
 
 現時点では、既存記事の `categories` / `tags` を一括置換しない。
@@ -78,12 +92,20 @@ ds_section: data-understanding
 
 ## 代表例
 
-- `metacognition.md` → `foundation` 候補
+- `metacognition.md` → `foundation`
+- `kpi-kgi.md` → `foundation`
+- `hypothesis-thinking.md` → `foundation`
+- `mece.md` → `foundation`
+- `pest-analysis.md` → `value-creation`
+- `swot-analysis.md` → `value-creation`
+- `five-forces-analysis.md` → `value-creation`
+- `design-thinking.md` → `value-creation`
+- `poc-concept-proof.md` → `value-creation`
+- `project-management.md` / `wbs.md` / `scrum.md` / `critical-path.md` → `value-creation`
 - `key-stretching.md` → `foundation` 候補。ただし実装・運用中心なら `dataengineering`
 - `japanese-morphological-analysis-tools.md` → `datascience`
 - `morphological-dependency-parsing.md` → `datascience`
 - `nltk.md` → `datascience`
-- `pest-analysis.md` → `value-creation`
 - `inheritance.md` → `dataengineering` 第一候補
 
 ## 構造上の問題
@@ -98,7 +120,9 @@ ds_section: data-understanding
 2. `pages/ds/index.md` を `ds_area` 優先表示へ切り替える。
 3. 旧 `business` 記事を個別監査する。
 4. `security` 記事を個別監査する。
-5. 最後に未分類記事を再計測する。
+5. `ai-utilization` 記事を個別監査する。
+6. ver.6スキルチェックデータ基盤を更新する。
+7. 最後に未分類記事を再計測する。
 
 ## 自動移行してよいタグ
 
