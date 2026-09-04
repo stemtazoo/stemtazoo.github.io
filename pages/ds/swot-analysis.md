@@ -5,6 +5,8 @@ description: "SWOT分析を、企業や事業の状況を強み・弱み・機�
 permalink: /ds/swot-analysis/
 categories: [business]
 tags: [ds, design]
+ds_area: value-creation
+ds_section: business-design
 prev: /ds/rfm-analysis/
 next: /ds/bcp/
 last_modified_at: 2026-08-16
