@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - "scripts/migrate_ds_ver6_reviewed_business.py"
+      - "scripts/migrate_ds_ver6_reviewed_followup.py"
       - ".github/workflows/ds-ver6-reviewed-business.yml"
 
 permissions:
@@ -25,20 +26,24 @@ jobs:
           python-version: "3.12"
 
       - name: Migrate reviewed DS articles
-        run: python scripts/migrate_ds_ver6_reviewed_business.py
+        run: |
+          python scripts/migrate_ds_ver6_reviewed_business.py
+          python scripts/migrate_ds_ver6_reviewed_followup.py
 
       - name: Validate changes
         run: |
           git diff --check -- pages/ds
           python - <<'PY'
           from pathlib import Path
-          from scripts.migrate_ds_ver6_reviewed_business import EXPECTED
+          from scripts.migrate_ds_ver6_reviewed_business import EXPECTED as BASE_EXPECTED
+          from scripts.migrate_ds_ver6_reviewed_followup import EXPECTED as FOLLOWUP_EXPECTED
 
-          for name, (area, section) in EXPECTED.items():
+          expected = {**BASE_EXPECTED, **FOLLOWUP_EXPECTED}
+          for name, (area, section) in expected.items():
               text = (Path("pages/ds") / name).read_text(encoding="utf-8-sig")
               assert text.count(f"ds_area: {area}") == 1, name
               assert text.count(f"ds_section: {section}") == 1, name
-          print(f"Validated {len(EXPECTED)} reviewed articles.")
+          print(f"Validated {len(expected)} reviewed articles.")
           PY
 
       - name: Commit reviewed metadata
