@@ -5,6 +5,8 @@ description: "個人関連情報は、生存する個人に関する情報のう
 permalink: /ds/personally-related-information/
 categories: [business]
 tags: [ds, ethics]
+ds_area: foundation
+ds_section: action-norms
 prev: /ds/paper-structure/
 next: /ds/polymorphism/
 last_modified_at: 2026-08-16

@@ -5,6 +5,8 @@ description: "データリテラシー（Data Literacy）とは、データを�
 permalink: /ds/data-literacy/
 categories: [business]
 tags: [ds, data-understanding, design]
+ds_area: foundation
+ds_section: data-understanding
 next: /ds/data-literacy-practice/
 last_modified_at: 2026-08-16
 ---

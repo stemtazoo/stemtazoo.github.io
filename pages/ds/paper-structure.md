@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: 一般的な論文構成とは？流れを理解する【DS検定リテラシー】
 description: "一般的な論文構成とは、「何を明らかにしたいのか」から始まり、「どうやって検証し」「何が分かり」「どう解釈できるか」を順番に示す文章の型です。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。"
 permalink: /ds/paper-structure/
 categories: [business]
 tags: [ds, design]
+ds_area: foundation
+ds_section: logical-thinking
 prev: /ds/paired-vs-independent-data/
 next: /ds/personally-related-information/
 last_modified_at: 2026-06-21
