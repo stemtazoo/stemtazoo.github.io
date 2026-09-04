@@ -39,6 +39,12 @@ jobs:
               "agile-development.md": ("value-creation", "project-management"),
               "scrum.md": ("value-creation", "project-management"),
               "critical-path.md": ("value-creation", "project-management"),
+              "compliance-risk.md": ("foundation", "action-norms"),
+              "internal-control.md": ("value-creation", "governance-risk"),
+              "bcp.md": ("value-creation", "governance-risk"),
+              "operational-risk.md": ("value-creation", "governance-risk"),
+              "reputation-risk.md": ("value-creation", "governance-risk"),
+              "risk-management.md": ("value-creation", "governance-risk"),
           }
           for name, (area, section) in expected.items():
               text = (Path("pages/ds") / name).read_text(encoding="utf-8-sig")
