@@ -55,6 +55,10 @@ REVIEWED = {
     "least-privilege.md": ("foundation", "security"),
     "hash-vs-encryption.md": ("foundation", "security"),
     "rainbow-table-attack.md": ("foundation", "security"),
+    "key-stretching.md": ("foundation", "security"),
+    "access-control-list.md": ("foundation", "security"),
+    "authentication-authorization.md": ("foundation", "security"),
+    "authentication-vs-authorization.md": ("foundation", "security"),
 }
 
 
