@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Add DS ver.6 metadata to individually reviewed legacy DS articles.
+"""Add or correct DS ver.6 metadata for individually reviewed DS articles.
 
-Only exact filenames listed in REVIEWED are changed. Existing categories, tags,
+Only exact filenames listed below are changed. Existing categories, tags,
 prev/next, dates, and article bodies are preserved.
 """
 from pathlib import Path
@@ -82,10 +82,23 @@ REVIEWED = {
     "analysis-approach-design.md": ("foundation", "problem-definition"),
     "analysis-approach-selection.md": ("datascience", "data-understanding"),
     "analytics-4types.md": ("datascience", "data-understanding"),
+    "why-structure.md": ("foundation", "logical-thinking"),
+    "incident-management.md": ("value-creation", "governance-risk"),
 }
 
+# Explicit corrections for articles that were safely auto-classified by a legacy tag,
+# but whose article role is clearer in ver.6 after individual review.
+CORRECTIONS = {
+    "gantt-chart.md": (
+        ("datascience", "visualization"),
+        ("value-creation", "project-management"),
+    ),
+}
 
-def migrate(path: Path, area: str, section: str) -> bool:
+EXPECTED = {**REVIEWED, **{name: target for name, (_, target) in CORRECTIONS.items()}}
+
+
+def read_parts(path: Path):
     text = path.read_text(encoding="utf-8-sig")
     lines = text.splitlines()
     if not lines or lines[0].strip() != "---":
@@ -94,23 +107,50 @@ def migrate(path: Path, area: str, section: str) -> bool:
         end = next(i for i, line in enumerate(lines[1:], start=1) if line.strip() == "---")
     except StopIteration as exc:
         raise RuntimeError(f"{path}: missing front matter end") from exc
+    return lines, end
 
-    fm = lines[1:end]
-    existing_area = [line for line in fm if line.startswith("ds_area:")]
-    existing_section = [line for line in fm if line.startswith("ds_section:")]
-    if existing_area or existing_section:
-        expected_area = f"ds_area: {area}"
-        expected_section = f"ds_section: {section}"
-        if existing_area == [expected_area] and existing_section == [expected_section]:
-            return False
-        raise RuntimeError(f"{path}: existing DS metadata differs from reviewed mapping")
+
+def metadata(lines, end):
+    area = next((line.split(":", 1)[1].strip() for line in lines[1:end] if line.startswith("ds_area:")), None)
+    section = next((line.split(":", 1)[1].strip() for line in lines[1:end] if line.startswith("ds_section:")), None)
+    return area, section
+
+
+def write(path: Path, lines):
+    path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+
+def migrate(path: Path, area: str, section: str) -> bool:
+    lines, end = read_parts(path)
+    current = metadata(lines, end)
+    target = (area, section)
+    if current == target:
+        return False
+    if current != (None, None):
+        raise RuntimeError(f"{path}: existing DS metadata differs from reviewed mapping: {current}")
 
     tag_pos = next((i for i, line in enumerate(lines[:end]) if line.startswith("tags:")), None)
     if tag_pos is None:
         raise RuntimeError(f"{path}: tags line not found")
-
     lines[tag_pos + 1:tag_pos + 1] = [f"ds_area: {area}", f"ds_section: {section}"]
-    path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    write(path, lines)
+    return True
+
+
+def correct(path: Path, source, target) -> bool:
+    lines, end = read_parts(path)
+    current = metadata(lines, end)
+    if current == target:
+        return False
+    if current != source:
+        raise RuntimeError(f"{path}: correction source differs: expected {source}, found {current}")
+
+    for i in range(1, end):
+        if lines[i].startswith("ds_area:"):
+            lines[i] = f"ds_area: {target[0]}"
+        elif lines[i].startswith("ds_section:"):
+            lines[i] = f"ds_section: {target[1]}"
+    write(path, lines)
     return True
 
 
@@ -123,6 +163,15 @@ def main() -> int:
         if migrate(path, area, section):
             changed.append(filename)
             print(f"UPDATED {filename}: {area}/{section}")
+
+    for filename, (source, target) in CORRECTIONS.items():
+        path = DS_DIR / filename
+        if not path.exists():
+            raise RuntimeError(f"missing correction file: {path}")
+        if correct(path, source, target):
+            changed.append(filename)
+            print(f"CORRECTED {filename}: {source[0]}/{source[1]} -> {target[0]}/{target[1]}")
+
     print(f"Changed {len(changed)} reviewed article(s).")
     return 0
 
