@@ -36,7 +36,6 @@ SAFE_TAG_MAP: dict[str, tuple[str, str]] = {
 
 TAG_LINE = re.compile(r"^tags:\s*\[(.*?)\]\s*$")
 AREA_LINE = re.compile(r"^ds_area:\s*")
-SECTION_LINE = re.compile(r"^ds_section:\s*")
 
 
 def front_matter_bounds(lines: list[str]) -> tuple[int, int] | None:
@@ -53,6 +52,20 @@ def parse_tags(line: str) -> list[str]:
     if not m:
         return []
     return [x.strip().strip("'\"") for x in m.group(1).split(",") if x.strip()]
+
+
+def read_front_matter_tags(path: Path) -> list[str]:
+    text = path.read_text(encoding="utf-8-sig")
+    lines = text.splitlines()
+    bounds = front_matter_bounds(lines)
+    if bounds is None:
+        return []
+    _, end = bounds
+    for line in lines[1:end]:
+        tags = parse_tags(line)
+        if tags:
+            return tags
+    return []
 
 
 def classify(tags: list[str]) -> tuple[str, str, str] | None:
@@ -114,7 +127,7 @@ def update_file(path: Path, write: bool) -> tuple[str, str | None]:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--write", action="store_true", help="Apply changes. Default is dry-run.")
-    parser.add_argument("--tag", choices=sorted(SAFE_TAG_MAP), help="Only process files containing this safe tag.")
+    parser.add_argument("--tag", choices=sorted(SAFE_TAG_MAP), help="Only process files whose front matter contains this safe tag.")
     args = parser.parse_args()
 
     changed = 0
@@ -123,10 +136,8 @@ def main() -> int:
         if path.name == "index.md":
             continue
 
-        if args.tag:
-            text = path.read_text(encoding="utf-8-sig")
-            if args.tag not in text:
-                continue
+        if args.tag and args.tag not in read_front_matter_tags(path):
+            continue
 
         status, detail = update_file(path, args.write)
         rel = path.relative_to(ROOT)
