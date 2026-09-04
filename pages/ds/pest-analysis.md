@@ -5,6 +5,8 @@ description: "PEST分析は、企業を取り巻く外部のマクロ環境を�
 permalink: /ds/pest-analysis/
 categories: [business]
 tags: [ds, design]
+ds_area: value-creation
+ds_section: business-design
 prev: /ds/kpi-kgi/
 next: /ds/revenue-equation/
 last_modified_at: 2026-08-16
