@@ -18,7 +18,7 @@
 - 誤分類の再監査: 進行中
 - ver.6スキルチェックデータ基盤: 旧ver.5構造からの更新が残っている
 
-記事分類は、全303ページを暫定母数とした場合で約235ページ、約78%。ただし以下の特殊ページは4領域の通常記事分類から除外する方が自然なため、暫定除外11ページを差し引くと実質母数は292ページとなり、進捗は約80%となる。
+GitHub code searchで `pages/ds` の `ds_area:` を再集計した結果、直前時点で253ページに分類メタデータが存在した。今回 `ffp.md` / `olap.md` / `filter.md` の3ページを追加したため、分類済みは **256ページ**。特殊ページ11ページを4領域の通常記事分類から除外した実質母数292ページに対して、通常記事の分類進捗は **256 / 292 = 87.7%**。
 
 ## 分類母数から除外する特殊ページ（暫定）
 
@@ -130,7 +130,8 @@ ds_section: data-understanding
 - `poc-concept-proof.md` → `value-creation`
 - `project-management.md` / `wbs.md` / `scrum.md` / `critical-path.md` / `gantt-chart.md` → `value-creation`
 - `incident-management.md` / `report-line-risk-management.md` → `value-creation`
-- `contract-ukeoi-juninin.md` → `foundation`
+- `contract-ukeoi-juninin.md` / `ffp.md` → `foundation`
+- `olap.md` / `filter.md` → `datascience`
 - `key-stretching.md` → `foundation`
 - `japanese-morphological-analysis-tools.md` → `datascience`
 - `morphological-dependency-parsing.md` → `datascience`
