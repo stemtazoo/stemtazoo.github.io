@@ -84,6 +84,8 @@ REVIEWED = {
     "analytics-4types.md": ("datascience", "data-understanding"),
     "why-structure.md": ("foundation", "logical-thinking"),
     "incident-management.md": ("value-creation", "governance-risk"),
+    "report-line-risk-management.md": ("value-creation", "governance-risk"),
+    "contract-ukeoi-juninin.md": ("foundation", "action-norms"),
 }
 
 # Explicit corrections for articles that were safely auto-classified by a legacy tag,
