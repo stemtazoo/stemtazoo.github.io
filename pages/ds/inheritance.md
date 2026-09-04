@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: 継承とは？クラス設計の基本を整理【DS検定リテラシー】
 description: "継承は、クラス設計のを理解するための基本テーマです。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。初学者が迷いやすい判断ポイントも確認します。分析や業務での判断場面も確認します。"
 permalink: /ds/inheritance/
 categories: [business]
 tags: [ds, design]
+ds_area: dataengineering
+ds_section: programming
 prev: /ds/industry4-0/
 next: /ds/japanese-morphological-analysis-tools/
 last_modified_at: 2026-06-21

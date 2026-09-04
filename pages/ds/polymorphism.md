@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: ポリモーフィズムとは？（同じ呼び出しで動作が変わる仕組み）【DS検定】
 description: "ポリモーフィズム（多態性）を、同じメソッド名やインターフェースを呼び出しても、犬・猫など実際のオブジェクト型に応じて異なる処理が実行される仕組みとして整理します。既存クラスを引き継ぐ継承、内部状態を隠すカプセル化、部品を組み合わせるコンポジションとの違いを、コード変更への強さと責務から判断します。"
 permalink: /ds/polymorphism/
 categories: [business]
 tags: [ds, design]
+ds_area: dataengineering
+ds_section: programming
 prev: /ds/personally-related-information/
 next: /ds/power-law/
 last_modified_at: 2026-07-14
