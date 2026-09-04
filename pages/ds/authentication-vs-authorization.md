@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: 認証・認可・アクセス制御の関係を例で理解する【DS検定】
 description: "認証と認可の基本を押さえたうえで、社内システムやAPI利用の例からアクセス制御の流れを確認します。本人確認、権限判断、OAuthを混同しないための実践的な見分け方を整理します。"
 permalink: /ds/authentication-vs-authorization/
 categories: [business]
 tags: [ds, security, design]
+ds_area: foundation
+ds_section: security
 prev: /ds/authentication-authorization/
 next: /ds/constructor/
 last_modified_at: 2026-06-24

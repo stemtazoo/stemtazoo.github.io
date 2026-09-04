@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: アクセス制御リスト（ACL）とは？ファイル権限の基本を整理【DS検定】
 description: アクセス制御リスト（ACL）を、利用者や通信ごとに許可・拒否を定める規則の一覧として整理します。ファイルの読取り・書込み権限とネットワークの送信元・宛先制御を具体例で確認し、認証そのものや暗号化の仕組みと取り違えず、最小権限の観点から設定を判断できるようにします。
 permalink: /ds/access-control-list/
 categories: [business]
 tags: [ds, security, design]
+ds_area: foundation
+ds_section: security
 prev: /ds/rpo-rto/
 next: /ds/authentication-authorization/
 last_modified_at: 2026-07-01

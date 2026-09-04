@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: ストレッチングとは？（ハッシュ強化の仕組み）【DS検定】
 description: "ストレッチングとは、ハッシュ計算を何度も繰り返して、計算コストを意図的に高くすることで攻撃を困難にする技術です。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。"
 permalink: /ds/key-stretching/
 categories: [business]
 tags: [ds, security, design]
+ds_area: foundation
+ds_section: security
 prev: /ds/japanese-morphological-analysis-tools/
 next: /ds/managed-service/
 last_modified_at: 2026-06-21

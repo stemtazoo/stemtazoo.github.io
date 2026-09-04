@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: 認証と認可の違いとは？本人確認と権限付与で整理【DS検定】
 description: "認証は「誰かを確認すること」、認可は「何を許可するかを決めること」です。ログイン、権限、アクセス制御を混同しないために、DS検定で問われやすい本人確認と権限付与の違いを整理します。"
 permalink: /ds/authentication-authorization/
 categories: [business]
 tags: [ds, security, design]
+ds_area: foundation
+ds_section: security
 prev: /ds/access-control-list/
 next: /ds/authentication-vs-authorization/
 last_modified_at: 2026-06-24
