@@ -5,6 +5,8 @@ description: "リスクマネジメントとは、将来起こり得るリスク
 permalink: /ds/risk-management/
 categories: [business]
 tags: [ds, design]
+ds_area: value-creation
+ds_section: governance-risk
 prev: /ds/reputation-risk/
 next: /ds/rpo-rto/
 last_modified_at: 2026-08-16

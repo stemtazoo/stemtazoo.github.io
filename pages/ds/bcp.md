@@ -5,6 +5,8 @@ description: "BCP（事業継続計画）は、災害・事故・システム障
 permalink: /ds/bcp/
 categories: [business]
 tags: [ds, design]
+ds_area: value-creation
+ds_section: governance-risk
 prev: /ds/swot-analysis/
 next: /ds/compliance-risk/
 last_modified_at: 2026-08-16

@@ -5,6 +5,8 @@ description: "コンプライアンスリスクとは、法律・規則・社内
 permalink: /ds/compliance-risk/
 categories: [business]
 tags: [ds, design]
+ds_area: foundation
+ds_section: action-norms
 prev: /ds/bcp/
 next: /ds/incident-management/
 last_modified_at: 2026-08-16

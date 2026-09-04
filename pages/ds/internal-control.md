@@ -5,6 +5,8 @@ description: "内部統制とは、企業の業務が適切に行われるよう
 permalink: /ds/internal-control/
 categories: [business]
 tags: [ds, design]
+ds_area: value-creation
+ds_section: governance-risk
 prev: /ds/incident-management/
 next: /ds/operational-risk/
 last_modified_at: 2026-08-16

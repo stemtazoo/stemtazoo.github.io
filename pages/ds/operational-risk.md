@@ -5,6 +5,8 @@ description: "オペレーショナルリスクとは、人・業務プロセス
 permalink: /ds/operational-risk/
 categories: [business]
 tags: [ds, design]
+ds_area: value-creation
+ds_section: governance-risk
 prev: /ds/internal-control/
 next: /ds/report-line-risk-management/
 last_modified_at: 2026-08-16
