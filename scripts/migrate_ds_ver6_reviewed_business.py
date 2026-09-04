@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Add DS ver.6 metadata to individually reviewed legacy business articles.
+"""Add DS ver.6 metadata to individually reviewed legacy DS articles.
 
 Only exact filenames listed in REVIEWED are changed. Existing categories, tags,
 prev/next, dates, and article bodies are preserved.
@@ -22,6 +22,10 @@ REVIEWED = {
     "operational-risk.md": ("value-creation", "governance-risk"),
     "reputation-risk.md": ("value-creation", "governance-risk"),
     "risk-management.md": ("value-creation", "governance-risk"),
+    "cps.md": ("value-creation", "technology-social-trends"),
+    "industry4-0.md": ("value-creation", "technology-social-trends"),
+    "society5.md": ("value-creation", "technology-social-trends"),
+    "social-data-ai-utilization.md": ("value-creation", "technology-social-trends"),
 }
 
 
