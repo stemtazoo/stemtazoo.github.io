@@ -5,6 +5,8 @@ description: "OLAP（Online Analytical Processing）とは、多次元データ�
 permalink: /ds/olap/
 categories: [data-engineering]
 tags: [ds, visualization, database]
+ds_area: datascience
+ds_section: data-understanding
 prev: /ds/nosql-datastore/
 next: /ds/primary-key/
 last_modified_at: 2026-08-16

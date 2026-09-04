@@ -5,6 +5,8 @@ description: FFPとは、研究不正の代表例であるFabrication（捏造�
 permalink: /ds/ffp/
 categories: [business]
 tags: [ds, ethics, governance]
+ds_area: foundation
+ds_section: action-norms
 last_modified_at: 2026-07-06
 ---
 
