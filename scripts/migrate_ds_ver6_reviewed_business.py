@@ -39,6 +39,16 @@ REVIEWED = {
     "evidence-based.md": ("foundation", "data-understanding"),
     "primary-data.md": ("foundation", "data-understanding"),
     "primary-secondary-data.md": ("foundation", "data-understanding"),
+    "mfa.md": ("foundation", "security"),
+    "oauth.md": ("foundation", "security"),
+    "pki.md": ("foundation", "security"),
+    "rbac.md": ("foundation", "security"),
+    "malware.md": ("foundation", "security"),
+    "ssl-tls.md": ("foundation", "security"),
+    "vpn-ssh.md": ("foundation", "security"),
+    "zero-trust.md": ("foundation", "security"),
+    "iam-policy.md": ("foundation", "security"),
+    "hash-function.md": ("foundation", "security"),
 }
 
 
