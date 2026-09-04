@@ -5,6 +5,8 @@ description: 因果推論を単なる相関ではなく、原因と結果の関�
 permalink: /ds/causal-inference/
 categories: [data-science]
 tags: [ds, statistics]
+ds_area: datascience
+ds_section: statistics
 prev: /ds/z-test/
 next: /ds/entropy/
 last_modified_at: 2026-05-15

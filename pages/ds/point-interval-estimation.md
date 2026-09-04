@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: 点推定と区間推定の違いとは？（信頼区間まで整理）【DS検定】
 description: 点推定と区間推定の違いを統計の基本として整理します。母数を1つの値で推定する考え方と、信頼区間で幅を持って示す考え方を切り分け、DS検定での判断ポイントを確認できます。本文では、用語の定義、具体例、似た概念との違い、試験で迷いやすい選択肢の見分け方まで、短時間で復習できるようにまとめています。
 permalink: /ds/point-interval-estimation/
 categories: [data-science]
 tags: [ds, statistics]
+ds_area: datascience
+ds_section: statistics
 prev: /ds/pearson-correlation/
 next: /ds/population-sample-unbiased-variance/
 last_modified_at: 2026-05-01

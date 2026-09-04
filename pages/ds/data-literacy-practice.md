@@ -5,6 +5,8 @@ description: "データリテラシーを、数値やグラフを正しく読む
 permalink: /ds/data-literacy-practice/
 categories: [business]
 tags: [ds, data-understanding, design, literacy, statistics, visualization]
+ds_area: datascience
+ds_section: statistics
 prev: /ds/data-literacy/
 next: /ds/evidence-based/
 last_modified_at: 2026-08-13

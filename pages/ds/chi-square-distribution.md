@@ -5,6 +5,8 @@ description: "カイ二乗分布を、標準正規分布に従う変数の二乗
 permalink: /ds/chi-square-distribution/
 categories: [data-science]
 tags: [ds, statistics]
+ds_area: datascience
+ds_section: statistics
 prev: /ds/binomial-bernoulli/
 next: /ds/correlation-and-causation/
 last_modified_at: 2026-07-18

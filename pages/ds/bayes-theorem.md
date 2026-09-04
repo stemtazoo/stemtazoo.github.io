@@ -5,6 +5,8 @@ description: ベイズの定理を条件付き確率を逆向きに更新する�
 permalink: /ds/bayes-theorem/
 categories: [data-science]
 tags: [ds, statistics]
+ds_area: datascience
+ds_section: statistics
 prev: /ds/vector-dot-product/
 next: /ds/bernoulli-binomial/
 last_modified_at: 2026-06-23

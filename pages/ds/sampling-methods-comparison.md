@@ -5,6 +5,8 @@ description: "単純無作為抽出・系統抽出・層化無作為抽出・集
 permalink: /ds/sampling-methods-comparison/
 categories: [data-science]
 tags: [ds, data-preparation, statistics]
+ds_area: datascience
+ds_section: data-preparation
 prev: /ds/sample-variance-unbiased-variance/
 next: /ds/significance-level-and-pvalue/
 last_modified_at: 2026-08-16

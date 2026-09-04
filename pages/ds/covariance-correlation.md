@@ -5,6 +5,8 @@ description: "共分散は2変数が同じ方向に動くかを符号で表し�
 permalink: /ds/covariance-correlation/
 categories: [data-science]
 tags: [ds, statistics]
+ds_area: datascience
+ds_section: statistics
 prev: /ds/covariance-and-correlation/
 next: /ds/deviation-score/
 last_modified_at: 2026-08-15

@@ -5,6 +5,8 @@ description: "統計とは「データのばらつき」と「データ同士の
 permalink: /ds/statistics-overview/
 categories: [data-science]
 tags: [ds, data-understanding, statistics]
+ds_area: datascience
+ds_section: statistics
 prev: /ds/spearman-rank-correlation/
 next: /ds/statistics-summary/
 last_modified_at: 2026-08-15

@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: スチューデントの検定（t検定）とは？【DS検定リテラシー】
 description: "スチューデントの検定（t検定）とは、「平均の差が偶然かどうか」を判断するための検定です。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。初学者が迷いやすい判断ポイントも確認します。"
 permalink: /ds/student-t-test/
 categories: [data-science]
 tags: [ds, statistics]
+ds_area: datascience
+ds_section: statistics
 prev: /ds/statistics-summary/
 next: /ds/variance-and-standard-deviation/
 last_modified_at: 2026-06-21

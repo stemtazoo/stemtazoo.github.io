@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: 無作為抽出法とは？種類と違いを整理【DS検定リテラシー】
 description: "無作為抽出は、調査者の都合や主観を避け、確率的な手続で母集団から標本を選ぶ方法です。単純無作為・系統・多段・集落・層別抽出を、同確率、一定間隔、段階、グループ丸ごと、各層から一部という判断語で切り分けます。"
 permalink: /ds/random-sampling-methods/
 categories: [data-science]
 tags: [ds, data-preparation, statistics]
+ds_area: datascience
+ds_section: data-preparation
 prev: /ds/quartile/
 next: /ds/sample-variance-unbiased-variance/
 last_modified_at: 2026-06-28

@@ -5,6 +5,8 @@ description: "zスコアは、観測値が平均から標準偏差何個分離�
 permalink: /ds/z-score-method/
 categories: [data-science]
 tags: [ds, data-preparation, statistics]
+ds_area: datascience
+ds_section: data-preparation
 prev: /ds/entropy/
 next: /ds/annotation/
 last_modified_at: 2026-07-14

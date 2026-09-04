@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: 二項分布とは？ベルヌーイ試行をn回繰り返す成功回数の確率【DS検定】
 description: "二項分布は、成功確率が一定で互いに独立なベルヌーイ試行をn回行ったとき、成功回数Xが従う離散確率分布です。「n回中x回成功」という問題文から、組合せnCxと成功・失敗の確率を掛ける式を選ぶ手順を示します。1回だけのベルヌーイ試行、まれな事象を近似するポアソン分布との違いも判断し、計算問題に備えます。"
 permalink: /ds/binomial-bernoulli/
 categories: [data-science]
 tags: [ds, statistics]
+ds_area: datascience
+ds_section: statistics
 prev: /ds/bernoulli-binomial/
 next: /ds/chi-square-distribution/
 last_modified_at: 2026-08-13

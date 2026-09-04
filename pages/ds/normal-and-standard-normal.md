@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: 標準正規分布と正規分布の違いとは？【DS検定リテラシー】
 description: "正規分布を平均と標準偏差によって位置・広がりが変わる左右対称の分布、標準正規分布を平均0・標準偏差1の正規分布として比較します。観測値をZ＝（値－平均）÷標準偏差で標準化し、異なる尺度を共通基準で比べる意味を押さえ、すべての正規分布の平均が0、Z値そのものが確率という誤解を防ぎます。"
 permalink: /ds/normal-and-standard-normal/
 categories: [data-science]
 tags: [ds, statistics]
+ds_area: datascience
+ds_section: statistics
 prev: /ds/interpret-statistics/
 next: /ds/pearson-correlation/
 last_modified_at: 2026-07-14

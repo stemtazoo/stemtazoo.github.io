@@ -5,6 +5,8 @@ description: 偏差値は、得点が集団平均から何標準偏差離れて�
 permalink: /ds/deviation-score/
 categories: [data-science]
 tags: [ds, statistics]
+ds_area: datascience
+ds_section: statistics
 prev: /ds/covariance-correlation/
 next: /ds/discrete-continuous-distribution/
 last_modified_at: 2026-08-13

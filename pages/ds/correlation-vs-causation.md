@@ -5,6 +5,8 @@ description: "相関は2つの値が一緒に動く関係、因果は一方へ�
 permalink: /ds/correlation-vs-causation/
 categories: [data-science]
 tags: [ds, statistics]
+ds_area: datascience
+ds_section: statistics
 prev: /ds/correlation-coefficient-determination/
 next: /ds/covariance-and-correlation/
 last_modified_at: 2026-08-16

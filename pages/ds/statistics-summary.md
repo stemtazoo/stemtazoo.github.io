@@ -5,6 +5,8 @@ description: "DS検定の統計分野を、平均・中央値で中心を捉え�
 permalink: /ds/statistics-summary/
 categories: [data-science]
 tags: [ds, statistics]
+ds_area: datascience
+ds_section: statistics
 prev: /ds/statistics-overview/
 next: /ds/student-t-test/
 last_modified_at: 2026-08-15

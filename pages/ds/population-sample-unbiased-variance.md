@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: 母分散・標本分散・不偏分散の違いとは？【DS検定リテラシー】
 description: 母分散、標本分散、不偏分散の違いを統計の基本として整理します。母集団と標本、nで割る場合とn-1で割る場合の意味を押さえ、DS検定で問われる推定の考え方を確認できます。本文では、用語の定義、具体例、似た概念との違い、試験で迷いやすい選択肢の見分け方まで、短時間で復習できるようにまとめています。
 permalink: /ds/population-sample-unbiased-variance/
 categories: [data-science]
 tags: [ds, statistics]
+ds_area: datascience
+ds_section: statistics
 prev: /ds/point-interval-estimation/
 next: /ds/quartile/
 last_modified_at: 2026-05-01

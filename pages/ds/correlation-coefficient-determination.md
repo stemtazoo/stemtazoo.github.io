@@ -5,6 +5,8 @@ description: "相関係数は2つの変数の直線的な関係の強さと向�
 permalink: /ds/correlation-coefficient-determination/
 categories: [data-science]
 tags: [ds, statistics]
+ds_area: datascience
+ds_section: statistics
 prev: /ds/correlation-and-causation/
 next: /ds/correlation-vs-causation/
 last_modified_at: 2026-06-17

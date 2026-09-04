@@ -5,6 +5,8 @@ description: "数字やグラフの持つメッセージを理解するとは、
 permalink: /ds/interpret-statistics/
 categories: [data-science]
 tags: [ds, data-understanding, statistics]
+ds_area: datascience
+ds_section: statistics
 prev: /ds/f-test/
 next: /ds/normal-and-standard-normal/
 last_modified_at: 2026-08-15

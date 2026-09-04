@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: ベルヌーイ試行とは？成功・失敗の1回の試行を整理【DS検定】
 description: "ベルヌーイ試行は、結果が成功・失敗の2通りで、成功確率が一定の独立した1回の試行です。コイン投げや購入有無を例に、二項分布との違いを「1回の結果」か「n回中の成功回数」かで切り分け、確率が途中で変わる場合や2択というだけでは適用できない条件も確認します。DS検定で分布を選ぶ問題と確率計算にも備えます。"
 permalink: /ds/bernoulli-binomial/
 categories: [data-science]
 tags: [ds, statistics]
+ds_area: datascience
+ds_section: statistics
 prev: /ds/bayes-theorem/
 next: /ds/binomial-bernoulli/
 last_modified_at: 2026-08-13

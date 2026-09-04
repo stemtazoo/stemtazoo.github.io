@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: 離散型確率分布と連続型確率分布の違いとは？【DS検定】
 description: 離散型確率分布と連続型確率分布の違いを整理します。数えられる値と連続的な値、確率質量関数と確率密度関数の考え方を押さえ、DS検定で問われる分布の切り分けを確認できます。本文では、用語の定義、具体例、似た概念との違い、試験で迷いやすい選択肢の見分け方まで、短時間で復習できるようにまとめています。
 permalink: /ds/discrete-continuous-distribution/
 categories: [data-science]
 tags: [ds, statistics]
+ds_area: datascience
+ds_section: statistics
 prev: /ds/deviation-score/
 next: /ds/f-test/
 last_modified_at: 2026-05-01
