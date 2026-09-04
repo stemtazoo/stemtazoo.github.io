@@ -5,6 +5,8 @@ description: "データ・AI利活用における留意事項とは、データ�
 permalink: /ds/data-ai-precautions/
 categories: [ai-utilization]
 tags: [ds, ai-use, literacy, ethics, security, ai, gdpr, cheatsheet]
+ds_area: foundation
+ds_section: action-norms
 prev: /ds/weak-strong-ai/
 last_modified_at: 2026-06-28
 ---

@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: ハルシネーションとは？生成AIの限界と正しい向き合い方【DS検定】
 description: "ハルシネーションとは、生成AIが事実ではない内容を、あたかも正しいかのように出力してしまう現象です。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。初学者が迷いやすい判断ポイントも確認します。"
 permalink: /ds/hallucination/
 categories: [ai-utilization]
 tags: [ds, ai-use]
+ds_area: foundation
+ds_section: ai-fundamentals
 prev: /ds/aiops-mlops-cheatsheet/
 next: /ds/llm-temperature/
 last_modified_at: 2026-06-21
