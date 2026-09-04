@@ -4,7 +4,9 @@ on:
   workflow_dispatch:
   push:
     paths:
+      - 'pages/ds/*.md'
       - 'scripts/audit_ds_ver6_classification.py'
+      - 'scripts/migrate_ds_ver6_reviewed_business.py'
       - '.github/workflows/ds-ver6-classification-audit.yml'
 
 permissions:
