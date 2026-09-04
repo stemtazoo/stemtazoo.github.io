@@ -5,6 +5,8 @@ description: 個人識別符号は、指紋・顔・虹彩などの身体的特�
 permalink: /ds/personal-identifier-code/
 categories: [ai-utilization]
 tags: [ds, ethics]
+ds_area: foundation
+ds_section: action-norms
 prev: /ds/opt-out/
 next: /ds/sensitive-personal-information/
 last_modified_at: 2026-08-13

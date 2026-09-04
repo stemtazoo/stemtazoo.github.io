@@ -5,6 +5,8 @@ description: ELSIは、科学技術やAIの研究・活用によって生じる�
 permalink: /ds/elsi/
 categories: [ai-utilization]
 tags: [ds, ethics]
+ds_area: foundation
+ds_section: action-norms
 next: /ds/ccpa/
 last_modified_at: 2026-08-13
 ---

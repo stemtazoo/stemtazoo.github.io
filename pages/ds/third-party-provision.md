@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: 個人情報の第三者提供とは？同意とオプトアウトのルール【DS検定】
 description: "個人情報の第三者提供は、同意とオプトアウトのルールを理解するための基本テーマです。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。初学者が迷いやすい判断ポイントも確認します。"
 permalink: /ds/third-party-provision/
 categories: [ai-utilization]
 tags: [ds, ethics]
+ds_area: foundation
+ds_section: action-norms
 prev: /ds/sensitive-personal-information/
 next: /ds/anonymized-information/
 last_modified_at: 2026-06-28
