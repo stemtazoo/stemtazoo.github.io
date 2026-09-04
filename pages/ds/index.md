@@ -149,8 +149,14 @@ last_modified_at: 2026-09-04
 ### データ理解・検証
 <ul>
 {% for p in site.pages %}
-  {% if p.tags contains "data-understanding" and p.url contains "/ds/" %}
-    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% if p.url contains "/ds/" %}
+    {% if p.ds_area %}
+      {% if p.ds_area == "foundation" and p.ds_section == "data-understanding" %}
+        <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+      {% endif %}
+    {% elsif p.tags contains "data-understanding" %}
+      <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+    {% endif %}
   {% endif %}
 {% endfor %}
 </ul>
@@ -158,8 +164,14 @@ last_modified_at: 2026-09-04
 ### ITセキュリティ
 <ul>
 {% for p in site.pages %}
-  {% if p.tags contains "security" and p.url contains "/ds/" %}
-    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% if p.url contains "/ds/" %}
+    {% if p.ds_area %}
+      {% if p.ds_area == "foundation" and p.ds_section == "security" %}
+        <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+      {% endif %}
+    {% elsif p.tags contains "security" %}
+      <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+    {% endif %}
   {% endif %}
 {% endfor %}
 </ul>
@@ -171,8 +183,14 @@ last_modified_at: 2026-09-04
 ### 線形代数
 <ul>
 {% for p in site.pages %}
-  {% if p.tags contains "linear-algebra" and p.url contains "/ds/" %}
-    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% if p.url contains "/ds/" %}
+    {% if p.ds_area %}
+      {% if p.ds_area == "datascience" and p.ds_section == "linear-algebra" %}
+        <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+      {% endif %}
+    {% elsif p.tags contains "linear-algebra" %}
+      <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+    {% endif %}
   {% endif %}
 {% endfor %}
 </ul>
@@ -180,8 +198,14 @@ last_modified_at: 2026-09-04
 ### 微分・積分
 <ul>
 {% for p in site.pages %}
-  {% if p.tags contains "calculus" and p.url contains "/ds/" %}
-    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% if p.url contains "/ds/" %}
+    {% if p.ds_area %}
+      {% if p.ds_area == "datascience" and p.ds_section == "calculus" %}
+        <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+      {% endif %}
+    {% elsif p.tags contains "calculus" %}
+      <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+    {% endif %}
   {% endif %}
 {% endfor %}
 </ul>
@@ -189,8 +213,14 @@ last_modified_at: 2026-09-04
 ### 集合論
 <ul>
 {% for p in site.pages %}
-  {% if p.tags contains "set-theory" and p.url contains "/ds/" %}
-    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% if p.url contains "/ds/" %}
+    {% if p.ds_area %}
+      {% if p.ds_area == "datascience" and p.ds_section == "set-theory" %}
+        <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+      {% endif %}
+    {% elsif p.tags contains "set-theory" %}
+      <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+    {% endif %}
   {% endif %}
 {% endfor %}
 </ul>
@@ -198,8 +228,14 @@ last_modified_at: 2026-09-04
 ### 📊 統計
 <ul>
 {% for p in site.pages %}
-  {% if p.tags contains "statistics" and p.url contains "/ds/" %}
-    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% if p.url contains "/ds/" %}
+    {% if p.ds_area %}
+      {% if p.ds_area == "datascience" and p.ds_section == "statistics" %}
+        <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+      {% endif %}
+    {% elsif p.tags contains "statistics" %}
+      <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+    {% endif %}
   {% endif %}
 {% endfor %}
 </ul>
@@ -216,8 +252,14 @@ last_modified_at: 2026-09-04
 ### データ準備
 <ul>
 {% for p in site.pages %}
-  {% if p.tags contains "data-preparation" and p.url contains "/ds/" %}
-    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% if p.url contains "/ds/" %}
+    {% if p.ds_area %}
+      {% if p.ds_area == "datascience" and p.ds_section == "data-preparation" %}
+        <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+      {% endif %}
+    {% elsif p.tags contains "data-preparation" %}
+      <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+    {% endif %}
   {% endif %}
 {% endfor %}
 </ul>
@@ -225,8 +267,14 @@ last_modified_at: 2026-09-04
 ### データ可視化
 <ul>
 {% for p in site.pages %}
-  {% if p.tags contains "visualization" and p.url contains "/ds/" %}
-    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% if p.url contains "/ds/" %}
+    {% if p.ds_area %}
+      {% if p.ds_area == "datascience" and p.ds_section == "visualization" %}
+        <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+      {% endif %}
+    {% elsif p.tags contains "visualization" %}
+      <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+    {% endif %}
   {% endif %}
 {% endfor %}
 </ul>
@@ -234,8 +282,14 @@ last_modified_at: 2026-09-04
 ### ⚙️ モデル化
 <ul>
 {% for p in site.pages %}
-  {% if p.tags contains "modeling" and p.url contains "/ds/" %}
-    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% if p.url contains "/ds/" %}
+    {% if p.ds_area %}
+      {% if p.ds_area == "datascience" and p.ds_section == "modeling" %}
+        <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+      {% endif %}
+    {% elsif p.tags contains "modeling" %}
+      <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+    {% endif %}
   {% endif %}
 {% endfor %}
 </ul>
@@ -243,8 +297,14 @@ last_modified_at: 2026-09-04
 ### 非構造化データ処理
 <ul>
 {% for p in site.pages %}
-  {% if p.tags contains "unstructured-data" and p.url contains "/ds/" %}
-    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% if p.url contains "/ds/" %}
+    {% if p.ds_area %}
+      {% if p.ds_area == "datascience" and p.ds_section == "unstructured-data" %}
+        <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+      {% endif %}
+    {% elsif p.tags contains "unstructured-data" %}
+      <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+    {% endif %}
   {% endif %}
 {% endfor %}
 </ul>
@@ -256,8 +316,14 @@ last_modified_at: 2026-09-04
 ### 環境構築
 <ul>
 {% for p in site.pages %}
-  {% if p.tags contains "environment-setup" and p.url contains "/ds/" %}
-    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% if p.url contains "/ds/" %}
+    {% if p.ds_area %}
+      {% if p.ds_area == "dataengineering" and p.ds_section == "environment-setup" %}
+        <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+      {% endif %}
+    {% elsif p.tags contains "environment-setup" %}
+      <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+    {% endif %}
   {% endif %}
 {% endfor %}
 </ul>
@@ -265,8 +331,14 @@ last_modified_at: 2026-09-04
 ### データ収集
 <ul>
 {% for p in site.pages %}
-  {% if p.tags contains "data-collection" and p.url contains "/ds/" %}
-    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% if p.url contains "/ds/" %}
+    {% if p.ds_area %}
+      {% if p.ds_area == "dataengineering" and p.ds_section == "data-collection" %}
+        <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+      {% endif %}
+    {% elsif p.tags contains "data-collection" %}
+      <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+    {% endif %}
   {% endif %}
 {% endfor %}
 </ul>
@@ -274,8 +346,14 @@ last_modified_at: 2026-09-04
 ### データ構造
 <ul>
 {% for p in site.pages %}
-  {% if p.tags contains "data-structure" and p.url contains "/ds/" %}
-    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% if p.url contains "/ds/" %}
+    {% if p.ds_area %}
+      {% if p.ds_area == "dataengineering" and p.ds_section == "data-structure" %}
+        <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+      {% endif %}
+    {% elsif p.tags contains "data-structure" %}
+      <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+    {% endif %}
   {% endif %}
 {% endfor %}
 </ul>
@@ -283,8 +361,14 @@ last_modified_at: 2026-09-04
 ### データ蓄積
 <ul>
 {% for p in site.pages %}
-  {% if p.tags contains "data-storage" and p.url contains "/ds/" %}
-    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% if p.url contains "/ds/" %}
+    {% if p.ds_area %}
+      {% if p.ds_area == "dataengineering" and p.ds_section == "data-storage" %}
+        <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+      {% endif %}
+    {% elsif p.tags contains "data-storage" %}
+      <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+    {% endif %}
   {% endif %}
 {% endfor %}
 </ul>
@@ -292,8 +376,14 @@ last_modified_at: 2026-09-04
 ### データ加工
 <ul>
 {% for p in site.pages %}
-  {% if p.tags contains "data-processing" and p.url contains "/ds/" %}
-    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% if p.url contains "/ds/" %}
+    {% if p.ds_area %}
+      {% if p.ds_area == "dataengineering" and p.ds_section == "data-processing" %}
+        <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+      {% endif %}
+    {% elsif p.tags contains "data-processing" %}
+      <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+    {% endif %}
   {% endif %}
 {% endfor %}
 </ul>
@@ -301,8 +391,14 @@ last_modified_at: 2026-09-04
 ### 🧾 SQL
 <ul>
 {% for p in site.pages %}
-  {% if p.tags contains "sql" and p.url contains "/ds/" %}
-    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% if p.url contains "/ds/" %}
+    {% if p.ds_area %}
+      {% if p.ds_area == "dataengineering" and p.ds_section == "sql" %}
+        <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+      {% endif %}
+    {% elsif p.tags contains "sql" %}
+      <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+    {% endif %}
   {% endif %}
 {% endfor %}
 </ul>
@@ -310,8 +406,14 @@ last_modified_at: 2026-09-04
 ### 🗄 データベース
 <ul>
 {% for p in site.pages %}
-  {% if p.tags contains "database" and p.url contains "/ds/" %}
-    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% if p.url contains "/ds/" %}
+    {% if p.ds_area %}
+      {% if p.ds_area == "dataengineering" and p.ds_section == "database" %}
+        <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+      {% endif %}
+    {% elsif p.tags contains "database" %}
+      <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+    {% endif %}
   {% endif %}
 {% endfor %}
 </ul>
@@ -319,8 +421,14 @@ last_modified_at: 2026-09-04
 ### 🗄 ITセキュリティ
 <ul>
 {% for p in site.pages %}
-  {% if p.tags contains "security" and p.url contains "/ds/" %}
-    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% if p.url contains "/ds/" %}
+    {% if p.ds_area %}
+      {% if p.ds_area == "dataengineering" and p.ds_section == "security" %}
+        <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+      {% endif %}
+    {% elsif p.tags contains "security" %}
+      <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+    {% endif %}
   {% endif %}
 {% endfor %}
 </ul>
@@ -331,12 +439,18 @@ last_modified_at: 2026-09-04
 
 ver.6で新たに試験領域として加わった分野です。課題の再定義、事業・モデル設計、AI設計、ガバナンス、PoC、効果測定などが含まれます。
 
-> 既存の `business` 分類には、旧スキルチェックリストに基づく記事が多数含まれるため、現在はそのまま表示し、今後「基盤」と「価値創造」へ再分類します。
+> 既存の `business` 分類には、旧スキルチェックリストに基づく記事が多数含まれるため、未分類の記事だけを暫定表示しています。`ds_area` を付与した記事は、基盤・データサイエンス・データエンジニアリング・価値創造の各領域を優先します。
 
 <ul>
 {% for p in site.pages %}
-  {% if p.categories contains "business" and p.url contains "/ds/" %}
-    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% if p.url contains "/ds/" %}
+    {% if p.ds_area %}
+      {% if p.ds_area == "value-creation" %}
+        <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+      {% endif %}
+    {% elsif p.categories contains "business" %}
+      <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+    {% endif %}
   {% endif %}
 {% endfor %}
 </ul>
@@ -372,8 +486,15 @@ AI利活用はver.6全体にまたがるテーマです。現行の試験4領域
 {% assign shown_urls = "" | split: "" %}
 
 {%- comment -%}
-ここで「表示済み記事」を全部記録する
+ver.6 の分類済み記事は、旧タグに関係なく表示済みとして扱う。
+その後、未移行の記事を旧タグ・カテゴリで補完する。
 {%- endcomment -%}
+
+{% for p in site.pages %}
+  {% if p.ds_area and p.url contains "/ds/" %}
+    {% assign shown_urls = shown_urls | push: p.url %}
+  {% endif %}
+{% endfor %}
 
 {% for p in site.pages %}
   {% if p.tags contains "linear-algebra" and p.url contains "/ds/" %}
