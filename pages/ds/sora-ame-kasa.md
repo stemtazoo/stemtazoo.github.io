@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: 空・雨・傘とは？仮説思考の基本フレーム【DS検定】
 description: "空・雨・傘とは、「事実→解釈→行動」の順で考えるビジネス思考フレームです。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。初学者が迷いやすい判断ポイントも確認します。"
 permalink: /ds/sora-ame-kasa/
 categories: [ai-utilization]
 tags: [ds, ai-use]
+ds_area: foundation
+ds_section: logical-thinking
 prev: /ds/mlops/
 next: /ds/weak-strong-ai/
 last_modified_at: 2026-06-21

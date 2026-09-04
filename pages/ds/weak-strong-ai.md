@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: 弱いAIと強いAIの違いとは？【DS検定リテラシー】
 description: 弱いAIと強いAIの違いをDS検定向けに整理します。特定タスクをこなす現在のAIと、人間のような汎用的知能を持つAIという考え方を切り分け、関連する出題ポイントを確認できます。本文では、用語の定義、具体例、似た概念との違い、試験で迷いやすい選択肢の見分け方まで、短時間で復習できるようにまとめています。
 permalink: /ds/weak-strong-ai/
 categories: [ai-utilization]
 tags: [ds, ai-use]
+ds_area: foundation
+ds_section: ai-fundamentals
 prev: /ds/sora-ame-kasa/
 next: /ds/data-ai-precautions/
 last_modified_at: 2026-05-01

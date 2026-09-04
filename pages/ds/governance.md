@@ -5,6 +5,8 @@ description: "ガバナンスとは、組織が適切に運営されるよう監
 permalink: /ds/governance/
 categories: [ai-utilization]
 tags: [ds, ai-use]
+ds_area: value-creation
+ds_section: governance-risk
 prev: /ds/data-governance/
 next: /ds/human-centered-ai-principles/
 last_modified_at: 2026-08-16
