@@ -5,6 +5,8 @@ description: "仮説思考とは、課題に対する仮の答えを先に置き
 permalink: /ds/hypothesis-thinking/
 categories: [business]
 tags: [ds, design, hypothesis, problem-solving]
+ds_area: foundation
+ds_section: problem-definition
 prev: /ds/evidence-based/
 next: /ds/mece/
 last_modified_at: 2026-07-13
