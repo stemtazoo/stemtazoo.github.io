@@ -59,6 +59,15 @@ REVIEWED = {
     "access-control-list.md": ("foundation", "security"),
     "authentication-authorization.md": ("foundation", "security"),
     "authentication-vs-authorization.md": ("foundation", "security"),
+    "gdpr.md": ("foundation", "action-norms"),
+    "ccpa.md": ("foundation", "action-norms"),
+    "elsi.md": ("foundation", "action-norms"),
+    "opt-out.md": ("foundation", "action-norms"),
+    "third-party-provision.md": ("foundation", "action-norms"),
+    "anonymized-information.md": ("foundation", "action-norms"),
+    "personal-identifier-code.md": ("foundation", "action-norms"),
+    "pseudonymized-information.md": ("foundation", "action-norms"),
+    "sensitive-personal-information.md": ("foundation", "action-norms"),
 }
 
 
