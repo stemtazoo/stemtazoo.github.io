@@ -3,6 +3,7 @@
 
 The report separates ordinary article pages from known cross-area/index pages so
 progress is not understated by pages that should not receive a single ds_area.
+Run this script whenever reviewed mappings or exclusions change.
 """
 from pathlib import Path
 
