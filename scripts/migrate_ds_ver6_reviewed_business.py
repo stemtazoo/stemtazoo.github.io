@@ -30,6 +30,10 @@ REVIEWED = {
     "feature.md": ("datascience", "data-preparation"),
     "estimator-properties.md": ("datascience", "statistics"),
     "power-law.md": ("datascience", "statistics"),
+    "inheritance.md": ("dataengineering", "programming"),
+    "encapsulation.md": ("dataengineering", "programming"),
+    "polymorphism.md": ("dataengineering", "programming"),
+    "dunning-kruger-effect.md": ("foundation", "logical-thinking"),
 }
 
 
