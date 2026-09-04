@@ -1,0 +1,48 @@
+name: DS ver.6 index update
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "scripts/update_ds_index_ver6.py"
+      - ".github/workflows/ds-index-ver6-update.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  update-index:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Update DS index
+        run: python scripts/update_ds_index_ver6.py
+
+      - name: Validate diff
+        run: |
+          git diff --check -- pages/ds/index.md
+          grep -q '### 論理的思考' pages/ds/index.md
+          grep -q '### 課題の定義・仮説' pages/ds/index.md
+          grep -q '### 目標・指標' pages/ds/index.md
+          grep -q 'p.ds_area == "datascience" and p.ds_section == "data-understanding"' pages/ds/index.md
+
+      - name: Commit updated index
+        run: |
+          if git diff --quiet -- pages/ds/index.md; then
+            echo "No index changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add pages/ds/index.md
+          git commit -m "Expand DS ver.6 foundation sections"
+          git push
