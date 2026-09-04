@@ -11,7 +11,7 @@ permissions:
   contents: write
 
 jobs:
-  migrate-safe-datascience:
+  migrate-safe-dataengineering:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -24,10 +24,10 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Migrate safe data science metadata
+      - name: Migrate safe data engineering metadata
         shell: bash
         run: |
-          for tag in linear-algebra calculus set-theory statistics data-preparation visualization modeling unstructured-data; do
+          for tag in environment-setup data-collection data-structure data-storage data-processing sql database; do
             python scripts/migrate_ds_ver6_metadata.py --tag "$tag" --write
           done
 
@@ -40,8 +40,8 @@ jobs:
           import subprocess
 
           allowed_sections = {
-              "linear-algebra", "calculus", "set-theory", "statistics",
-              "data-preparation", "visualization", "modeling", "unstructured-data",
+              "environment-setup", "data-collection", "data-structure",
+              "data-storage", "data-processing", "sql", "database",
           }
 
           changed = subprocess.check_output(
@@ -72,12 +72,12 @@ jobs:
                   errors.append(f"{name}: ds_area/ds_section must each appear exactly once")
                   continue
 
-              if area != ["ds_area: datascience"]:
-                  errors.append(f"{name}: expected datascience area")
+              if area != ["ds_area: dataengineering"]:
+                  errors.append(f"{name}: expected dataengineering area")
 
               section_value = section[0].split(":", 1)[1].strip()
               if section_value not in allowed_sections:
-                  errors.append(f"{name}: unexpected datascience section {section_value!r}")
+                  errors.append(f"{name}: unexpected dataengineering section {section_value!r}")
 
           if errors:
               print("\n".join(errors))
@@ -95,5 +95,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add pages/ds
-          git commit -m "Migrate safe DS data science metadata to ver.6"
+          git commit -m "Migrate safe DS data engineering metadata to ver.6"
           git push
