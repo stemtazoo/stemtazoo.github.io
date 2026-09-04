@@ -5,6 +5,8 @@ description: "クリティカルパス（Critical Path）とは、プロジェ�
 permalink: /ds/critical-path/
 categories: [business]
 tags: [ds, design]
+ds_area: value-creation
+ds_section: project-management
 prev: /ds/agile-development/
 next: /ds/pdca-cycle/
 last_modified_at: 2026-08-16

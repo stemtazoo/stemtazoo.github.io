@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: アジャイル開発とは？ウォーターフォール開発との違いを整理【DS検定】
 description: "アジャイル開発を、短い期間で計画・実装・評価を反復し、利用者のフィードバックを取り込みながら価値を高める進め方として整理します。要件変更への対応と早期検証に向く理由、工程を順番に完了させるウォーターフォールとの違いを押さえ、開発手法の選択肢を判断します。"
 permalink: /ds/agile-development/
 categories: [business]
 tags: [ds, design]
+ds_area: value-creation
+ds_section: project-management
 prev: /ds/eda/
 next: /ds/critical-path/
 last_modified_at: 2026-07-01

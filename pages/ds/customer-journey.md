@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: カスタマージャーニーとは？顧客体験を理解するフレームワーク【DS検定】
 description: "カスタマージャーニー（Customer Journey）とは、顧客が商品やサービスを知ってから購入・利用するまでの一連の体験を時系列で整理したものです。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。"
 permalink: /ds/customer-journey/
 categories: [business]
 tags: [ds, design]
+ds_area: value-creation
+ds_section: business-design
 prev: /ds/wbs/
 next: /ds/five-forces-analysis/
 last_modified_at: 2026-06-23

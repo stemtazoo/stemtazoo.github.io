@@ -5,6 +5,8 @@ description: "5フォース分析は、業界の競争環境を既存企業、�
 permalink: /ds/five-forces-analysis/
 categories: [business]
 tags: [ds, design]
+ds_area: value-creation
+ds_section: business-design
 prev: /ds/customer-journey/
 next: /ds/kpi-kgi/
 last_modified_at: 2026-08-16
