@@ -26,6 +26,10 @@ REVIEWED = {
     "industry4-0.md": ("value-creation", "technology-social-trends"),
     "society5.md": ("value-creation", "technology-social-trends"),
     "social-data-ai-utilization.md": ("value-creation", "technology-social-trends"),
+    "rfm-analysis.md": ("datascience", "modeling"),
+    "feature.md": ("datascience", "data-preparation"),
+    "estimator-properties.md": ("datascience", "statistics"),
+    "power-law.md": ("datascience", "statistics"),
 }
 
 
