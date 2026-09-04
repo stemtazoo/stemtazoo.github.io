@@ -55,7 +55,7 @@ last_modified_at: 2026-09-04
   </div>
 </div>
 
-> **ver.5 からの大きな変更**：従来の「ビジネス力」の多くは「基盤」へ移り、「価値創造」が新しい試験領域として加わりました。サイト内の既存記事は順次 ver.6 の分類へ整理します。
+> **ver.5 からの大きな変更**：従来の「ビジネス力」の多くは「基盤」へ移り、「価値創造」が新しい試験領域として加わりました。通常記事の4領域への分類は完了しており、現在は旧スキルチェックページの ver.6 対応を進めています。
 
 ---
 
@@ -144,7 +144,16 @@ last_modified_at: 2026-09-04
 
 ## 🧱 基盤
 
-現行の試験範囲では、従来のビジネス力の多くが基盤へ移っています。論理的思考、課題の定義、目標・指標、データ理解、ITセキュリティの順に整理します。
+現行の試験範囲では、従来のビジネス力の多くが基盤へ移っています。行動規範・倫理、論理的思考、課題の定義、目標・指標、データ理解、AIの基礎、ITセキュリティの順に整理します。
+
+### 行動規範・倫理・権利
+<ul>
+{% for p in site.pages %}
+  {% if p.ds_area == "foundation" and p.ds_section == "action-norms" and p.url contains "/ds/" %}
+    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% endif %}
+{% endfor %}
+</ul>
 
 ### 論理的思考
 <ul>
@@ -184,6 +193,15 @@ last_modified_at: 2026-09-04
     {% elsif p.tags contains "data-understanding" %}
       <li><a href="{{ p.url }}">{{ p.title }}</a></li>
     {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>
+
+### AI・生成AIの基礎
+<ul>
+{% for p in site.pages %}
+  {% if p.ds_area == "foundation" and p.ds_section == "ai-fundamentals" and p.url contains "/ds/" %}
+    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
   {% endif %}
 {% endfor %}
 </ul>
@@ -447,6 +465,15 @@ last_modified_at: 2026-09-04
     {% elsif p.tags contains "database" %}
       <li><a href="{{ p.url }}">{{ p.title }}</a></li>
     {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>
+
+### プログラミング基礎
+<ul>
+{% for p in site.pages %}
+  {% if p.ds_area == "dataengineering" and p.ds_section == "programming" and p.url contains "/ds/" %}
+    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
   {% endif %}
 {% endfor %}
 </ul>
