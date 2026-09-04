@@ -5,6 +5,8 @@ description: "メタ認知思考を、自分が何を知り、どの前提や思
 permalink: /ds/metacognition/
 categories: [business]
 tags: [ds, data-understanding, design]
+ds_area: foundation
+ds_section: data-understanding
 prev: /ds/managed-service/
 next: /ds/morphological-dependency-parsing/
 last_modified_at: 2026-07-14
