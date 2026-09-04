@@ -86,6 +86,9 @@ REVIEWED = {
     "incident-management.md": ("value-creation", "governance-risk"),
     "report-line-risk-management.md": ("value-creation", "governance-risk"),
     "contract-ukeoi-juninin.md": ("foundation", "action-norms"),
+    "ffp.md": ("foundation", "action-norms"),
+    "olap.md": ("datascience", "data-understanding"),
+    "filter.md": ("datascience", "data-understanding"),
 }
 
 # Explicit corrections for articles that were safely auto-classified by a legacy tag,
