@@ -5,6 +5,8 @@ description: 利用可能性ヒューリスティックは、思い出しやす�
 permalink: /ds/availability-heuristic/
 categories: [business]
 tags: [ds, design]
+ds_area: foundation
+ds_section: logical-thinking
 prev: /ds/anchoring-effect/
 next: /ds/bi-operations-cheatsheet/
 last_modified_at: 2026-08-13

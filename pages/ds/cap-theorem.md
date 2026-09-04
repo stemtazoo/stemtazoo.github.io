@@ -5,6 +5,8 @@ description: CAP定理を、ネットワーク分断時に一貫性と可用性�
 permalink: /ds/cap-theorem/
 categories: [business]
 tags: [ds, design]
+ds_area: dataengineering
+ds_section: data-storage
 prev: /ds/business-logic-and-data-importance/
 next: /ds/categorical-variable/
 last_modified_at: 2026-07-18

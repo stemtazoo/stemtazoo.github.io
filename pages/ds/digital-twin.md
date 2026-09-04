@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: デジタルツインとは？CPSとの違いを整理【DS検定】
 description: デジタルツインの意味をCPSとの違いから整理します。現実世界のデータを仮想空間に再現してシミュレーションや予測に使う流れを押さえ、DS検定で問われる活用場面を確認できます。本文では、用語の定義、具体例、似た概念との違い、試験で迷いやすい選択肢の見分け方まで、短時間で復習できるようにまとめています。
 permalink: /ds/digital-twin/
 categories: [business]
 tags: [ds, design]
+ds_area: value-creation
+ds_section: technology-social-trends
 prev: /ds/digital-image-representation/
 next: /ds/dunning-kruger-effect/
 last_modified_at: 2026-05-01

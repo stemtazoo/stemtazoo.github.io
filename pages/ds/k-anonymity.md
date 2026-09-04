@@ -5,6 +5,8 @@ description: "k匿名性は、年齢・地域・性別などの準識別子の�
 permalink: /ds/k-anonymity/
 categories: [ai-utilization]
 tags: [ds, ethics]
+ds_area: foundation
+ds_section: action-norms
 prev: /ds/anonymized-information/
 next: /ds/pseudonymized-information/
 last_modified_at: 2026-06-17

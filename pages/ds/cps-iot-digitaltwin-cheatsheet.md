@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: CPS・IoT・デジタルツインの違いを一発整理【DS検定チートシート】
 description: "IoTはモノをネットワークにつないでデータを集め、デジタルツインは現実を仮想空間に再現し、CPSは分析結果を現実の制御へ戻す仕組みです。スマート工場の流れを例に、接続・再現・最適化という役割の違いと、DS検定で選択肢を見分ける判断軸を整理します。"
 permalink: /ds/cps-iot-digitaltwin-cheatsheet/
 categories: [business]
 tags: [ds, design]
+ds_area: value-creation
+ds_section: technology-social-trends
 prev: /ds/cps/
 next: /ds/data-driven/
 last_modified_at: 2026-06-27

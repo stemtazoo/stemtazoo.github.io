@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: マクロ平均・マイクロ平均・重み付き平均の違いとは？【DS検定】
 description: "マクロ平均は各クラスを平等に、マイクロ平均は全予測をまとめて、重み付き平均はクラス件数を反映して評価します。不均衡データで少数クラスの失敗が隠れる理由と、単一ラベル分類の再現率で各平均と正解率が一致する条件を整理します。"
 permalink: /ds/average-methods-comparison/
 categories: [data-science]
 tags: [ds, evaluation]
+ds_area: datascience
+ds_section: modeling
 prev: /ds/r-squared-adjusted-r-squared/
 last_modified_at: 2026-06-28
 ---

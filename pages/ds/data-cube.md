@@ -5,6 +5,8 @@ description: "データキューブは、商品・地域・時間など複数の
 permalink: /ds/data-cube/
 categories: [data-engineering]
 tags: [ds, visualization, database]
+ds_area: datascience
+ds_section: data-understanding
 prev: /ds/star-schema/
 next: /ds/data-lake/
 last_modified_at: 2026-06-18

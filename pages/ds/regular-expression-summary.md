@@ -5,6 +5,8 @@ description: "正規表現を、文字クラス、量指定子、行頭・行末
 permalink: /ds/regular-expression-summary/
 categories: [data-science]
 tags: [ds, preprocessing]
+ds_area: datascience
+ds_section: unstructured-data
 prev: /ds/regular-expression-postalcode/
 next: /ds/stemming-vs-lemmatization/
 last_modified_at: 2026-08-16

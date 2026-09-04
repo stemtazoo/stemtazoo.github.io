@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: アンカリング効果とは？最初の情報に判断が引きずられる心理【DS検定】
 description: "アンカリング効果を、最初に示された数値や情報が基準となり、その後の見積りや意思決定が引きずられる認知バイアスとして整理します。価格提示や需要予測の例から、都合のよい情報だけを集める確証バイアスとの違いを押さえ、独立した根拠や複数案で影響を減らす方法を確認します。"
 permalink: /ds/anchoring-effect/
 categories: [business]
 tags: [ds, design]
+ds_area: foundation
+ds_section: logical-thinking
 prev: /ds/activation-functions-hidden-layer/
 next: /ds/availability-heuristic/
 last_modified_at: 2026-07-01

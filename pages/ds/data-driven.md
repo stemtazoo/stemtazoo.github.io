@@ -5,6 +5,8 @@ description: "データドリブンとは、勘や経験だけでなく、目的
 permalink: /ds/data-driven/
 categories: [business]
 tags: [ds, design, data-literacy, decision-making]
+ds_area: foundation
+ds_section: data-understanding
 prev: /ds/cps-iot-digitaltwin-cheatsheet/
 next: /ds/data-driven-management/
 last_modified_at: 2026-07-13

@@ -5,6 +5,8 @@ description: "データドリブン経営（Data Driven Management）とは、�
 permalink: /ds/data-driven-management/
 categories: [business]
 tags: [ds, design]
+ds_area: value-creation
+ds_section: business-design
 prev: /ds/data-driven/
 next: /ds/data-transformation/
 last_modified_at: 2026-08-16

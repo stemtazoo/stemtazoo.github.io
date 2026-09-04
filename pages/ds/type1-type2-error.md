@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: 第一種の過誤と第二種の過誤の違いとは？【DS検定リテラシー】
 description: "第一種の過誤を、正しい帰無仮説を誤って棄却する偽陽性で確率は有意水準α、第二種の過誤を、誤った帰無仮説を棄却できない偽陰性で確率はβとして整理します。検定力が1－βである関係、有意水準を厳しくすると同じ標本数ではβが増えやすいトレードオフを押さえ、医療・品質管理の判断例から両者を切り分けます。"
 permalink: /ds/type1-type2-error/
 categories: [business]
 tags: [ds, design]
+ds_area: datascience
+ds_section: statistics
 prev: /ds/symmetric-difference/
 next: /ds/model-curriculum-summary/
 last_modified_at: 2026-07-14

@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: A/Bテストとは？データで施策を比較する方法【DS検定】
 description: "A/Bテストを、利用者を対照群と実験群に分けて施策の効果を比較する方法として整理します。評価指標を事前に決める理由、単なる前後比較との違い、統計的な差だけで施策を採用しない判断まで押さえ、DS検定と実務で因果関係を読み違えない観点を確認します。"
 permalink: /ds/ab-test/
 categories: [data-science]
 tags: [ds, evaluation]
+ds_area: datascience
+ds_section: statistics
 prev: /ds/predictive-analytics/
 next: /ds/bias-variance-tradeoff/
 last_modified_at: 2026-07-01
