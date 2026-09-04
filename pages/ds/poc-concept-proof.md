@@ -5,6 +5,8 @@ description: "PoC（Proof of Concept）は、新しい技術やアイデアが�
 permalink: /ds/poc-concept-proof/
 categories: [business]
 tags: [ds, design]
+ds_area: value-creation
+ds_section: poc
 prev: /ds/pdca-cycle/
 next: /ds/project-management/
 last_modified_at: 2026-08-16
