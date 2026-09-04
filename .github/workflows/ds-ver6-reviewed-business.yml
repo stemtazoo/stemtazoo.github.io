@@ -32,71 +32,13 @@ jobs:
           git diff --check -- pages/ds
           python - <<'PY'
           from pathlib import Path
-          expected = {
-              "five-forces-analysis.md": ("value-creation", "business-design"),
-              "customer-journey.md": ("value-creation", "business-design"),
-              "design-thinking.md": ("value-creation", "business-design"),
-              "agile-development.md": ("value-creation", "project-management"),
-              "scrum.md": ("value-creation", "project-management"),
-              "critical-path.md": ("value-creation", "project-management"),
-              "compliance-risk.md": ("foundation", "action-norms"),
-              "internal-control.md": ("value-creation", "governance-risk"),
-              "bcp.md": ("value-creation", "governance-risk"),
-              "operational-risk.md": ("value-creation", "governance-risk"),
-              "reputation-risk.md": ("value-creation", "governance-risk"),
-              "risk-management.md": ("value-creation", "governance-risk"),
-              "cps.md": ("value-creation", "technology-social-trends"),
-              "industry4-0.md": ("value-creation", "technology-social-trends"),
-              "society5.md": ("value-creation", "technology-social-trends"),
-              "social-data-ai-utilization.md": ("value-creation", "technology-social-trends"),
-              "rfm-analysis.md": ("datascience", "modeling"),
-              "feature.md": ("datascience", "data-preparation"),
-              "estimator-properties.md": ("datascience", "statistics"),
-              "power-law.md": ("datascience", "statistics"),
-              "inheritance.md": ("dataengineering", "programming"),
-              "encapsulation.md": ("dataengineering", "programming"),
-              "polymorphism.md": ("dataengineering", "programming"),
-              "dunning-kruger-effect.md": ("foundation", "logical-thinking"),
-              "cognitive-bias.md": ("foundation", "logical-thinking"),
-              "confirmation-bias.md": ("foundation", "logical-thinking"),
-              "evidence-based.md": ("foundation", "data-understanding"),
-              "primary-data.md": ("foundation", "data-understanding"),
-              "primary-secondary-data.md": ("foundation", "data-understanding"),
-              "mfa.md": ("foundation", "security"),
-              "oauth.md": ("foundation", "security"),
-              "pki.md": ("foundation", "security"),
-              "rbac.md": ("foundation", "security"),
-              "malware.md": ("foundation", "security"),
-              "ssl-tls.md": ("foundation", "security"),
-              "vpn-ssh.md": ("foundation", "security"),
-              "zero-trust.md": ("foundation", "security"),
-              "iam-policy.md": ("foundation", "security"),
-              "hash-function.md": ("foundation", "security"),
-              "publickey-vs-symmetric.md": ("foundation", "security"),
-              "digital-signature.md": ("foundation", "security"),
-              "digital-signature2.md": ("foundation", "security"),
-              "least-privilege.md": ("foundation", "security"),
-              "hash-vs-encryption.md": ("foundation", "security"),
-              "rainbow-table-attack.md": ("foundation", "security"),
-              "key-stretching.md": ("foundation", "security"),
-              "access-control-list.md": ("foundation", "security"),
-              "authentication-authorization.md": ("foundation", "security"),
-              "authentication-vs-authorization.md": ("foundation", "security"),
-              "gdpr.md": ("foundation", "action-norms"),
-              "ccpa.md": ("foundation", "action-norms"),
-              "elsi.md": ("foundation", "action-norms"),
-              "opt-out.md": ("foundation", "action-norms"),
-              "third-party-provision.md": ("foundation", "action-norms"),
-              "anonymized-information.md": ("foundation", "action-norms"),
-              "personal-identifier-code.md": ("foundation", "action-norms"),
-              "pseudonymized-information.md": ("foundation", "action-norms"),
-              "sensitive-personal-information.md": ("foundation", "action-norms"),
-          }
-          for name, (area, section) in expected.items():
+          from scripts.migrate_ds_ver6_reviewed_business import REVIEWED
+
+          for name, (area, section) in REVIEWED.items():
               text = (Path("pages/ds") / name).read_text(encoding="utf-8-sig")
               assert text.count(f"ds_area: {area}") == 1, name
               assert text.count(f"ds_section: {section}") == 1, name
-          print(f"Validated {len(expected)} reviewed articles.")
+          print(f"Validated {len(REVIEWED)} reviewed articles.")
           PY
 
       - name: Commit reviewed metadata
