@@ -5,6 +5,8 @@ description: "RFM分析は、Recency・Frequency・Monetaryの3指標で顧客�
 permalink: /ds/rfm-analysis/
 categories: [business]
 tags: [ds, design]
+ds_area: datascience
+ds_section: modeling
 prev: /ds/revenue-equation/
 next: /ds/swot-analysis/
 last_modified_at: 2026-08-16

@@ -5,6 +5,8 @@ description: "推定量の性質を、不偏性・一貫性・効率性を中心
 permalink: /ds/estimator-properties/
 categories: [business]
 tags: [ds, design]
+ds_area: datascience
+ds_section: statistics
 prev: /ds/encapsulation/
 next: /ds/feature/
 last_modified_at: 2026-08-16

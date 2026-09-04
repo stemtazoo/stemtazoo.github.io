@@ -5,6 +5,8 @@ description: 特徴量は、機械学習モデルが予測や分類に使う入�
 permalink: /ds/feature/
 categories: [business]
 tags: [ds, design]
+ds_area: datascience
+ds_section: data-preparation
 prev: /ds/estimator-properties/
 next: /ds/feature-engineering2/
 last_modified_at: 2026-06-24

@@ -5,6 +5,8 @@ description: "べき乗則とは、ある量が別の量のべき乗に比例す
 permalink: /ds/power-law/
 categories: [business]
 tags: [ds, design]
+ds_area: datascience
+ds_section: statistics
 prev: /ds/polymorphism/
 next: /ds/primary-data/
 last_modified_at: 2026-08-16
