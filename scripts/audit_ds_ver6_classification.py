@@ -23,6 +23,7 @@ EXCLUDED = {
     "skilllevel-2023-assistant-ds-business.md",
     "skilllevel-2023-assistant-ds-dataengineering.md",
     "skilllevel-2023-assistant-ds-datascience.md",
+    "file-transfer-protocol.md",
 }
 
 
