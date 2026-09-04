@@ -5,6 +5,8 @@ description: WBSは、プロジェクトの成果物や必要作業を漏れな�
 permalink: /ds/wbs/
 categories: [business]
 tags: [ds, design]
+ds_area: value-creation
+ds_section: project-management
 prev: /ds/scrum/
 next: /ds/customer-journey/
 last_modified_at: 2026-08-13
