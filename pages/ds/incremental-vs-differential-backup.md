@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: 増分バックアップと差分バックアップの違いとは？【DS検定リテラシー】
 description: "増分バックアップは「直前のバックアップからの差分だけ」を保存し、差分バックアップは「最初のフルバックアップからの差分」を毎回保存する方法です。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。"
 permalink: /ds/incremental-vs-differential-backup/
 categories: [business]
 tags: [ds, environment-setup, design]
+ds_area: dataengineering
+ds_section: environment-setup
 prev: /ds/hot-cool-archive/
 next: /ds/industry4-0/
 last_modified_at: 2026-06-21

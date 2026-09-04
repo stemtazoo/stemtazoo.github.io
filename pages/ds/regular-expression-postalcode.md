@@ -5,6 +5,8 @@ description: 郵便番号の正規表現を、桁数やハイフンの有無で�
 permalink: /ds/regular-expression-postalcode/
 categories: [data-science]
 tags: [ds, data-processing, preprocessing]
+ds_area: dataengineering
+ds_section: data-processing
 prev: /ds/regular-expression-email/
 next: /ds/regular-expression-summary/
 last_modified_at: 2026-05-15

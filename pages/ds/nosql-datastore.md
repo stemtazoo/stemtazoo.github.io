@@ -5,6 +5,8 @@ description: "NoSQLデータストアの特徴をRDBとの違いから整理し�
 permalink: /ds/nosql-datastore/
 categories: [data-engineering]
 tags: [ds, data-storage, database]
+ds_area: dataengineering
+ds_section: data-storage
 prev: /ds/nosql/
 next: /ds/olap/
 last_modified_at: 2026-08-16

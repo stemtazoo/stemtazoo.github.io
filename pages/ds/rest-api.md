@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: REST APIとは？SOAPとの違いを整理【DS検定】
 description: "REST APIとは、HTTPメソッドを使ってリソースを操作するWebサービスの設計スタイルです。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。初学者が迷いやすい判断ポイントも確認します。"
 permalink: /ds/rest-api/
 categories: [data-engineering]
 tags: [ds, data-collection, data-processing]
+ds_area: dataengineering
+ds_section: data-collection
 prev: /ds/mapreduce/
 next: /ds/rest-api-methods/
 last_modified_at: 2026-06-21

@@ -5,6 +5,8 @@ description: "データベースの制約をデータ品質と整合性を守る
 permalink: /ds/database-constraints/
 categories: [data-engineering]
 tags: [ds, database]
+ds_area: dataengineering
+ds_section: database
 prev: /ds/data-warehouse-vs-datamart/
 next: /ds/datalake-vs-nosql/
 last_modified_at: 2026-08-16

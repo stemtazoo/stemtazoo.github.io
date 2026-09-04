@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: データウェアハウス（DWH）とは？データマートとの違いを理解する【DS検定】
 description: "データウェアハウスDWHは、データマートとの違いを理解するための基本テーマです。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。初学者が迷いやすい判断ポイントも確認します。"
 permalink: /ds/data-warehouse-vs-datamart/
 categories: [data-engineering]
 tags: [ds, data-storage, data-structure, database]
+ds_area: dataengineering
+ds_section: data-storage
 prev: /ds/data-warehouse/
 next: /ds/database-constraints/
 last_modified_at: 2026-06-21

@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: 第2正規化と第3正規化の違いを整理（候補キーから考える）【DS検定】
 description: "第2正規化は複合候補キーの一部だけに依存する非キー属性を分離し、第3正規化は候補キーから非キー属性への推移的関数従属を分離します。学生・科目表の例を使い、部分関数従属と推移的関数従属を見分ける順序をDS検定向けに整理します。"
 permalink: /ds/normalization-2nf-3nf/
 categories: [data-engineering]
 tags: [ds, data-structure, database]
+ds_area: dataengineering
+ds_section: data-structure
 prev: /ds/foreign-key/
 next: /ds/nosql/
 last_modified_at: 2026-06-28

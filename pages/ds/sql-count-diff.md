@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: COUNT(*)・COUNT(列)・COUNT DISTINCTの違い【DS検定】
 description: "COUNT(*)は全行、COUNT(列)はNULLを除いた件数、COUNT(DISTINCT 列)はNULLを除き重複も除いたユニーク数を数えます。NULLと重複の扱いをDS検定向けに整理します。"
 permalink: /ds/sql-count-diff/
 categories: [data-engineering]
 tags: [ds, data-processing, sql]
+ds_area: dataengineering
+ds_section: data-processing
 prev: /ds/er-diagram/
 next: /ds/sql-count-distinct/
 last_modified_at: 2026-08-16

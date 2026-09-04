@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: EXISTSとは？サブクエリの存在判定を理解する【DS検定】
 description: "EXISTSは、サブクエリが1行でも結果を返すかどうかでTRUE/FALSEを判定するSQL構文です。値の一致を見るINとの違い、NOT EXISTS、相関サブクエリの読み方をDS検定向けに整理します。"
 permalink: /ds/sql-exists/
 categories: [data-engineering]
 tags: [ds, sql]
+ds_area: dataengineering
+ds_section: sql
 prev: /ds/sql-distinct/
 next: /ds/sql-filtering/
 last_modified_at: 2026-08-16

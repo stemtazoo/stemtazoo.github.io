@@ -5,6 +5,8 @@ description: "参照整合性を外部キーでテーブル間の矛盾を防ぐ
 permalink: /ds/referential-integrity/
 categories: [data-engineering]
 tags: [ds, database]
+ds_area: dataengineering
+ds_section: database
 prev: /ds/rdb-vs-nosql/
 next: /ds/star-schema/
 last_modified_at: 2026-08-16

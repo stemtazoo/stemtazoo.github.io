@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: INとEXISTSの違いとは？値比較と存在判定を整理【DS検定】
 description: SQLのINとEXISTSの違いを整理します。値の集合と比較する考え方、条件を満たす行の存在を判定する考え方、サブクエリでの使い分けを押さえ、DS検定のSQL問題に備えます。本文では、用語の定義、具体例、似た概念との違い、試験で迷いやすい選択肢の見分け方まで、短時間で復習できるようにまとめています。
 permalink: /ds/sql-in-exists/
 categories: [data-engineering]
 tags: [ds, sql]
+ds_area: dataengineering
+ds_section: sql
 prev: /ds/sql-having/
 next: /ds/sql-join/
 last_modified_at: 2026-06-28

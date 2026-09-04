@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: レプリケーションとバックアップの違いとは？【DS検定】
 description: "レプリケーションとバックアップの違いは似た概念との違いを比較して理解するテーマです。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。初学者が迷いやすい判断ポイントも確認します。"
 permalink: /ds/replication-vs-backup/
 categories: [business]
 tags: [ds, environment-setup, design]
+ds_area: dataengineering
+ds_section: environment-setup
 prev: /ds/rainbow-table-attack/
 next: /ds/sigmoid-function/
 last_modified_at: 2026-06-21

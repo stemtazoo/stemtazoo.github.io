@@ -5,6 +5,8 @@ description: "JOINを複数テーブルをキーで結合して必要なデー�
 permalink: /ds/sql-join/
 categories: [data-engineering]
 tags: [ds, data-processing, sql]
+ds_area: dataengineering
+ds_section: data-processing
 prev: /ds/sql-in-exists/
 next: /ds/sql-union/
 last_modified_at: 2026-08-16

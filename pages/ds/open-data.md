@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: オープンデータとは？公共データ活用の基本【DS検定】
 description: "オープンデータとは、誰でも自由に利用・再配布・加工できる形で公開されたデータのことです。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。初学者が迷いやすい判断ポイントも確認します。"
 permalink: /ds/open-data/
 categories: [business]
 tags: [ds, data-collection, environment-setup, design]
+ds_area: dataengineering
+ds_section: data-collection
 prev: /ds/nltk/
 next: /ds/paired-vs-independent-data/
 last_modified_at: 2026-06-28

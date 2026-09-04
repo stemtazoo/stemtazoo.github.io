@@ -5,6 +5,8 @@ description: DDLとDMLの違いを「入れ物」と「中身」でやさしく�
 permalink: /ds/sql-ddl-dml/
 categories: [data-engineering]
 tags: [ds, sql, database]
+ds_area: dataengineering
+ds_section: sql
 prev: /ds/sql-count-distinct/
 next: /ds/sql-distinct/
 last_modified_at: 2026-08-17

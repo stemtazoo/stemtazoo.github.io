@@ -5,6 +5,8 @@ description: "データ抽出と集計の違いを、行を選ぶ操作と複数
 permalink: /ds/data-extraction-vs-aggregation/
 categories: [data-science]
 tags: [ds, data-collection, preprocessing]
+ds_area: dataengineering
+ds_section: data-collection
 prev: /ds/stemming-vs-lemmatization/
 next: /ds/jupyter-r-usage/
 last_modified_at: 2026-08-16

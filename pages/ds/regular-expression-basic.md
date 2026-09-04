@@ -5,6 +5,8 @@ description: "正規表現とは、文字列の形式（パターン）を表現
 permalink: /ds/regular-expression-basic/
 categories: [data-science]
 tags: [ds, data-processing, preprocessing]
+ds_area: dataengineering
+ds_section: data-processing
 prev: /ds/preprocessing/
 next: /ds/regular-expression-date/
 last_modified_at: 2026-08-16

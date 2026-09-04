@@ -5,6 +5,8 @@ description: "HDFS（Hadoop Distributed File System）は、大量データを�
 permalink: /ds/hdfs/
 categories: [data-engineering]
 tags: [ds, data-storage, data-processing]
+ds_area: dataengineering
+ds_section: data-storage
 prev: /ds/hadoop-vs-spark/
 next: /ds/mapreduce/
 last_modified_at: 2026-08-16

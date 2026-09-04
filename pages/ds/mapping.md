@@ -5,6 +5,8 @@ description: "マッピング処理をデータ項目や値を別の表現へ対
 permalink: /ds/mapping/
 categories: [data-science]
 tags: [ds, data-processing, preprocessing]
+ds_area: dataengineering
+ds_section: data-processing
 prev: /ds/jupyter-r-usage/
 next: /ds/web-crawling-scraping/
 last_modified_at: 2026-08-16

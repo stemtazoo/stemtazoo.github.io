@@ -5,6 +5,8 @@ description: "SQLのGROUP BYをデータ集計の基本として整理します�
 permalink: /ds/sql-groupby/
 categories: [data-engineering]
 tags: [ds, data-processing, sql]
+ds_area: dataengineering
+ds_section: data-processing
 prev: /ds/sql-filtering/
 next: /ds/sql-having/
 last_modified_at: 2026-08-16

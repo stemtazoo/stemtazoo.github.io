@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: Hadoopとは？（ビッグデータ分散処理基盤）【DS検定リテラシー】
 description: "Hadoopとは、大量データを「分散して保存し、分散して処理する」ための基盤です。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。初学者が迷いやすい判断ポイントも確認します。"
 permalink: /ds/hadoop/
 categories: [data-engineering]
 tags: [ds, data-storage, data-processing]
+ds_area: dataengineering
+ds_section: data-storage
 prev: /ds/etl/
 next: /ds/hadoop-vs-spark/
 last_modified_at: 2026-06-21

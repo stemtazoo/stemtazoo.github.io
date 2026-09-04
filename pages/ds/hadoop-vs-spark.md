@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: HadoopとSparkの違いとは？（分散処理基盤の比較）【DS検定リテラシー】
 description: "Hadoopは「ディスク中心の分散処理基盤」、Sparkは「メモリ中心の高速分散処理基盤」です。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。初学者が迷いやすい判断ポイントも確認します。"
 permalink: /ds/hadoop-vs-spark/
 categories: [data-engineering]
 tags: [ds, data-storage, data-processing]
+ds_area: dataengineering
+ds_section: data-storage
 prev: /ds/hadoop/
 next: /ds/hdfs/
 last_modified_at: 2026-06-21

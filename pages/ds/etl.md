@@ -5,6 +5,8 @@ description: "ETLは、データをExtract（抽出）→Transform（変換）�
 permalink: /ds/etl/
 categories: [data-engineering]
 tags: [ds, data-collection, data-processing]
+ds_area: dataengineering
+ds_section: data-collection
 prev: /ds/batch-vs-stream/
 next: /ds/hadoop/
 last_modified_at: 2026-08-16

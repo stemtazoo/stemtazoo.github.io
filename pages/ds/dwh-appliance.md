@@ -5,6 +5,8 @@ description: DWHアプライアンスは、データウェアハウス向けに�
 permalink: /ds/dwh-appliance/
 categories: [data-engineering]
 tags: [ds, data-storage, database]
+ds_area: dataengineering
+ds_section: data-storage
 prev: /ds/data-lake/
 next: /ds/er-diagram/
 last_modified_at: 2026-06-17

@@ -5,6 +5,8 @@ description: "REST API のメソッドとは、API を通じてデータに対�
 permalink: /ds/rest-api-methods/
 categories: [data-engineering]
 tags: [ds, data-collection, data-processing]
+ds_area: dataengineering
+ds_section: data-collection
 prev: /ds/rest-api/
 next: /ds/soap/
 last_modified_at: 2026-08-16

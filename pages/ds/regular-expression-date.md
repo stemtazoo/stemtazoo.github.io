@@ -5,6 +5,8 @@ description: "日付形式の正規表現について、YYYY-MM-DDの形式チ�
 permalink: /ds/regular-expression-date/
 categories: [data-science]
 tags: [ds, data-processing, preprocessing]
+ds_area: dataengineering
+ds_section: data-processing
 prev: /ds/regular-expression-basic/
 next: /ds/regular-expression-email/
 last_modified_at: 2026-08-16

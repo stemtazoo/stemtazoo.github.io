@@ -5,6 +5,8 @@ description: "SQLのフィルタリング処理とは、条件を指定して必
 permalink: /ds/sql-filtering/
 categories: [data-engineering]
 tags: [ds, data-processing, sql]
+ds_area: dataengineering
+ds_section: data-processing
 prev: /ds/sql-exists/
 next: /ds/sql-groupby/
 last_modified_at: 2026-08-16

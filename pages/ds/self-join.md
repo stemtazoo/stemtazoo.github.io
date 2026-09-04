@@ -5,6 +5,8 @@ description: "自己結合（Self Join）とは、同じテーブルを2回使�
 permalink: /ds/self-join/
 categories: [data-engineering]
 tags: [ds, data-processing, sql]
+ds_area: dataengineering
+ds_section: data-processing
 prev: /ds/left-join-where/
 next: /ds/batch-vs-stream/
 last_modified_at: 2026-08-16

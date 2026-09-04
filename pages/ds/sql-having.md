@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: HAVINGとは？WHEREとの違いを整理【DS検定】
 description: "HAVINGは、GROUP BYで集計した結果に条件を付けるSQL構文です。WHEREとの処理順序の違い、集計前後の絞り込み、DS検定で迷いやすい集計条件の見分け方を整理します。"
 permalink: /ds/sql-having/
 categories: [data-engineering]
 tags: [ds, data-processing, sql]
+ds_area: dataengineering
+ds_section: data-processing
 prev: /ds/sql-groupby/
 next: /ds/sql-in-exists/
 last_modified_at: 2026-06-22

@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: データウェアハウス（DWH）とは？（データレイクとの違いも整理）【DS検定リテラシー】
 description: "データウェアハウス（DWH）は、複数システムのデータを分析しやすい形に整理・統合して蓄積する基盤です。データレイクや業務DBとの違い、Schema on Write、DS検定での判断ポイントを整理します。"
 permalink: /ds/data-warehouse/
 categories: [data-engineering]
 tags: [ds, data-storage, data-structure, database]
+ds_area: dataengineering
+ds_section: data-storage
 prev: /ds/data-mart/
 next: /ds/data-warehouse-vs-datamart/
 last_modified_at: 2026-06-22

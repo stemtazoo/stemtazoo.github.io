@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: スタースキーマとは？ファクトテーブルとディメンションテーブルを理解する【DS検定】
 description: "DS検定ではファクトテーブルとディメンションテーブルの違いを理解しているかがよく問われます。定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。初学者が迷いやすい判断ポイントも確認します。"
 permalink: /ds/star-schema/
 categories: [data-engineering]
 tags: [ds, data-structure, database]
+ds_area: dataengineering
+ds_section: data-structure
 prev: /ds/referential-integrity/
 next: /ds/data-cube/
 last_modified_at: 2026-06-21

@@ -5,6 +5,8 @@ description: "主キー（Primary Key）とは、テーブルの中で1つのレ
 permalink: /ds/primary-key/
 categories: [data-engineering]
 tags: [ds, database]
+ds_area: dataengineering
+ds_section: database
 prev: /ds/olap/
 next: /ds/rdb-vs-nosql/
 last_modified_at: 2026-08-16

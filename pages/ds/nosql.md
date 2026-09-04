@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: NoSQLとは？リレーショナルDBとの違いを整理【DS検定】
 description: "NoSQLとは、表（テーブル）形式に縛られずにデータを保存できるデータベースの総称です。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。初学者が迷いやすい判断ポイントも確認します。"
 permalink: /ds/nosql/
 categories: [data-engineering]
 tags: [ds, data-storage, database]
+ds_area: dataengineering
+ds_section: data-storage
 prev: /ds/normalization-2nf-3nf/
 next: /ds/nosql-datastore/
 last_modified_at: 2026-06-21

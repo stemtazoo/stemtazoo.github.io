@@ -5,6 +5,8 @@ description: "メールアドレスの正規表現を、文字列形式を確認
 permalink: /ds/regular-expression-email/
 categories: [data-science]
 tags: [ds, data-processing, preprocessing]
+ds_area: dataengineering
+ds_section: data-processing
 prev: /ds/regular-expression-date/
 next: /ds/regular-expression-postalcode/
 last_modified_at: 2026-08-16

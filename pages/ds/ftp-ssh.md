@@ -5,6 +5,8 @@ description: "FTPは暗号化されない標準的なファイル転送、SSHは
 permalink: /ds/ftp-ssh/
 categories: [data-engineering]
 tags: [ds, data-collection, data-processing]
+ds_area: dataengineering
+ds_section: data-collection
 prev: /ds/docker/
 last_modified_at: 2026-07-14
 ---

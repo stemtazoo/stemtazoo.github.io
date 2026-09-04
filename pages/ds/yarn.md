@@ -5,6 +5,8 @@ description: "YARNを、HadoopクラスタのCPU・メモリを管理し、複�
 permalink: /ds/yarn/
 categories: [data-engineering]
 tags: [ds, data-storage, data-processing]
+ds_area: dataengineering
+ds_section: data-storage
 prev: /ds/web-api/
 next: /ds/docker/
 last_modified_at: 2026-08-16

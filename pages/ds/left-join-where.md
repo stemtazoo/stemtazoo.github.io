@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: LEFT JOINとWHEREの関係とは？（SQLのひっかけ問題）【DS検定】
 description: "LEFT JOINのあとに右テーブルの条件をWHEREへ書くと、NULL行が除外され、結果としてINNER JOINに近い結果になることがあります。ONとWHEREの役割、NULLの扱い、DS検定での判断ポイントを整理します。"
 permalink: /ds/left-join-where/
 categories: [data-engineering]
 tags: [ds, data-processing, sql]
+ds_area: dataengineering
+ds_section: data-processing
 prev: /ds/sql-where/
 next: /ds/self-join/
 last_modified_at: 2026-08-16

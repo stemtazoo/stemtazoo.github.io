@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: Dockerとは？再現性が出る理由を整理【DS検定】
 description: "Dockerは「アプリが動く環境」をイメージとして固めて配れる仕組みです。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。初学者が迷いやすい判断ポイントも確認します。"
 permalink: /ds/docker/
 categories: [data-engineering]
 tags: [ds, environment-setup, data-processing]
+ds_area: dataengineering
+ds_section: environment-setup
 prev: /ds/yarn/
 next: /ds/ftp-ssh/
 last_modified_at: 2026-06-21

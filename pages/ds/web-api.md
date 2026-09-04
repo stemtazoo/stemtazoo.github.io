@@ -5,6 +5,8 @@ description: "Web APIとは、HTTP通信を使って外部のサービスやデ�
 permalink: /ds/web-api/
 categories: [data-engineering]
 tags: [ds, data-collection, data-processing]
+ds_area: dataengineering
+ds_section: data-collection
 prev: /ds/spark/
 next: /ds/yarn/
 last_modified_at: 2026-08-16

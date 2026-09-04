@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: RDBとNoSQLの違いを一発で整理【DS検定】
 description: "RDB（リレーショナルデータベース）は構造化データの管理に強く、NoSQLデータストアは大量データや非構造データの分散処理に強いデータベースです。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。"
 permalink: /ds/rdb-vs-nosql/
 categories: [data-engineering]
 tags: [ds, database]
+ds_area: dataengineering
+ds_section: database
 prev: /ds/primary-key/
 next: /ds/referential-integrity/
 last_modified_at: 2026-06-21

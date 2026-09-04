@@ -5,6 +5,8 @@ description: "Spark（Apache Spark）とは、大量データを複数のコン�
 permalink: /ds/spark/
 categories: [data-engineering]
 tags: [ds, data-storage, data-processing]
+ds_area: dataengineering
+ds_section: data-storage
 prev: /ds/soap/
 next: /ds/web-api/
 last_modified_at: 2026-08-16

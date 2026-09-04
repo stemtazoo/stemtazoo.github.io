@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: MapReduceとは？（分散処理の基本モデル）【DS検定リテラシー】
 description: "MapReduceとは、大量データを「分けて処理し、あとでまとめる」分散処理の仕組みです。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。初学者が迷いやすい判断ポイントも確認します。"
 permalink: /ds/mapreduce/
 categories: [data-engineering]
 tags: [ds, data-storage, data-processing]
+ds_area: dataengineering
+ds_section: data-storage
 prev: /ds/hdfs/
 next: /ds/rest-api/
 last_modified_at: 2026-06-21

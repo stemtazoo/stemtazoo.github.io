@@ -5,6 +5,8 @@ description: Webクローリングをページの巡回・収集、Webスクレ�
 permalink: /ds/web-crawling-scraping/
 categories: [data-science]
 tags: [ds, data-collection, preprocessing]
+ds_area: dataengineering
+ds_section: data-collection
 prev: /ds/mapping/
 next: /ds/boxplot/
 last_modified_at: 2026-07-18

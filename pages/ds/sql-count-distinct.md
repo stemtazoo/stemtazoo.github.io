@@ -5,6 +5,8 @@ description: COUNT DISTINCTは、重複を除いたユニークな値の件数�
 permalink: /ds/sql-count-distinct/
 categories: [data-engineering]
 tags: [ds, data-processing, sql]
+ds_area: dataengineering
+ds_section: data-processing
 prev: /ds/sql-count-diff/
 next: /ds/sql-ddl-dml/
 last_modified_at: 2026-06-17

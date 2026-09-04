@@ -5,6 +5,8 @@ description: "外部キー（Foreign Key）とは、別のテーブルの主キ�
 permalink: /ds/foreign-key/
 categories: [data-engineering]
 tags: [ds, database]
+ds_area: dataengineering
+ds_section: database
 prev: /ds/datalake-vs-nosql/
 next: /ds/normalization-2nf-3nf/
 last_modified_at: 2026-08-16

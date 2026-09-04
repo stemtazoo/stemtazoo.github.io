@@ -5,6 +5,8 @@ description: "WHERE句は、SQLで条件に合う行だけを抽出するため�
 permalink: /ds/sql-where/
 categories: [data-engineering]
 tags: [ds, data-processing, sql]
+ds_area: dataengineering
+ds_section: data-processing
 prev: /ds/sql-union/
 next: /ds/left-join-where/
 last_modified_at: 2026-06-22

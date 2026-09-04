@@ -5,6 +5,8 @@ description: "バッチ処理はデータをまとめて後から処理する方
 permalink: /ds/batch-vs-stream/
 categories: [data-engineering]
 tags: [ds, data-processing]
+ds_area: dataengineering
+ds_section: data-processing
 prev: /ds/self-join/
 next: /ds/etl/
 last_modified_at: 2026-06-18
