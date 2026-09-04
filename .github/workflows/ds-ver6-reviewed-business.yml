@@ -1,4 +1,4 @@
-name: DS ver.6 reviewed business migration
+name: DS ver.6 reviewed article migration
 
 on:
   workflow_dispatch:
@@ -11,7 +11,7 @@ permissions:
   contents: write
 
 jobs:
-  migrate-reviewed-business:
+  migrate-reviewed-articles:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -24,7 +24,7 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Migrate reviewed business articles
+      - name: Migrate reviewed DS articles
         run: python scripts/migrate_ds_ver6_reviewed_business.py
 
       - name: Validate changes
@@ -45,6 +45,10 @@ jobs:
               "operational-risk.md": ("value-creation", "governance-risk"),
               "reputation-risk.md": ("value-creation", "governance-risk"),
               "risk-management.md": ("value-creation", "governance-risk"),
+              "cps.md": ("value-creation", "technology-social-trends"),
+              "industry4-0.md": ("value-creation", "technology-social-trends"),
+              "society5.md": ("value-creation", "technology-social-trends"),
+              "social-data-ai-utilization.md": ("value-creation", "technology-social-trends"),
           }
           for name, (area, section) in expected.items():
               text = (Path("pages/ds") / name).read_text(encoding="utf-8-sig")
@@ -62,5 +66,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add pages/ds
-          git commit -m "Migrate reviewed DS business metadata to ver.6"
+          git commit -m "Migrate reviewed DS metadata to ver.6"
           git push
