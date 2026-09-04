@@ -32,13 +32,13 @@ jobs:
           git diff --check -- pages/ds
           python - <<'PY'
           from pathlib import Path
-          from scripts.migrate_ds_ver6_reviewed_business import REVIEWED
+          from scripts.migrate_ds_ver6_reviewed_business import EXPECTED
 
-          for name, (area, section) in REVIEWED.items():
+          for name, (area, section) in EXPECTED.items():
               text = (Path("pages/ds") / name).read_text(encoding="utf-8-sig")
               assert text.count(f"ds_area: {area}") == 1, name
               assert text.count(f"ds_section: {section}") == 1, name
-          print(f"Validated {len(REVIEWED)} reviewed articles.")
+          print(f"Validated {len(EXPECTED)} reviewed articles.")
           PY
 
       - name: Commit reviewed metadata
