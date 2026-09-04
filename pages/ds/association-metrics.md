@@ -5,6 +5,8 @@ description: "共起頻度・支持度（Support）・信頼度（Confidence）�
 permalink: /ds/association-metrics/
 categories: [data-science]
 tags: [ds, modeling]
+ds_area: datascience
+ds_section: modeling
 prev: /ds/association-analysis/
 next: /ds/basket-analysis/
 last_modified_at: 2026-08-16

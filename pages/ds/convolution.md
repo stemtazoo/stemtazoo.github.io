@@ -5,6 +5,8 @@ description: "畳み込み（Convolution）とは、画像上で小さなカー�
 permalink: /ds/convolution/
 categories: [data-science]
 tags: [ds, modeling]
+ds_area: datascience
+ds_section: modeling
 prev: /ds/cnn/
 next: /ds/curse-of-dimensionality/
 last_modified_at: 2026-08-16

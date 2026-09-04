@@ -5,6 +5,8 @@ description: "決定係数（R²）と寄与率は、回帰モデルがどれく
 permalink: /ds/coefficient-of-determination-contribution/
 categories: [data-science]
 tags: [ds, modeling, evaluation]
+ds_area: datascience
+ds_section: modeling
 prev: /ds/overfitting-tree-depth/
 next: /ds/evaluation-metrics-comparison/
 last_modified_at: 2026-08-15

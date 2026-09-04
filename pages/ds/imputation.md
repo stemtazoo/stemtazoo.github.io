@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: インプテーションとは？（欠損値補完の基本）【DS検定】
 description: "インプテーションとは、欠損しているデータを平均値・中央値・最頻値などで補う手法です。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。初学者が迷いやすい判断ポイントも確認します。"
 permalink: /ds/imputation/
 categories: [data-science]
 tags: [ds, data-preparation, preprocessing]
+ds_area: datascience
+ds_section: data-preparation
 prev: /ds/image-metadata/
 next: /ds/missing-value-handling/
 last_modified_at: 2026-06-21

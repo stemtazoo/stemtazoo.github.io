@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: 逆行列とは何か？求め方と意味をやさしく整理【DS検定】
 description: "逆行列を、行列Aに掛けると単位行列IになるA⁻¹として整理し、数の割り算に相当する操作として連立方程式や多変量解析で使う意味を確認します。2×2行列では行列式が0でないときだけ逆行列を持つ条件、成分を入れ替える転置行列との違いを押さえ、すべての正方行列に逆行列があるという誤答を防ぎます。"
 permalink: /ds/inverse-matrix/
 categories: [data-science]
 tags: [ds, linear-algebra, math]
+ds_area: datascience
+ds_section: linear-algebra
 prev: /ds/euclidean-norm/
 next: /ds/matrix-multiplication/
 last_modified_at: 2026-07-14

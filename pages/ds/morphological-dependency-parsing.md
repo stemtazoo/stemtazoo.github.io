@@ -5,6 +5,8 @@ description: "形態素解析は文章を形態素に分けて品詞や原形を
 permalink: /ds/morphological-dependency-parsing/
 categories: [business]
 tags: [ds, unstructured-data, design]
+ds_area: datascience
+ds_section: unstructured-data
 prev: /ds/metacognition/
 next: /ds/nltk/
 last_modified_at: 2026-06-17

@@ -5,6 +5,8 @@ description: グラフの種類と使い分けを、比較・推移・構成比�
 permalink: /ds/chart-types/
 categories: [data-science]
 tags: [ds, visualization]
+ds_area: datascience
+ds_section: visualization
 prev: /ds/boxplot/
 next: /ds/drilldown-drillup/
 last_modified_at: 2026-05-15

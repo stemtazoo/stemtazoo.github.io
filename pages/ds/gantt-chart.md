@@ -5,6 +5,8 @@ description: "ガントチャートの使い方をWBSとの違いから整理し
 permalink: /ds/gantt-chart/
 categories: [data-science]
 tags: [ds, visualization]
+ds_area: datascience
+ds_section: visualization
 prev: /ds/drillthrough/
 next: /ds/outlier-visualization/
 last_modified_at: 2026-08-16

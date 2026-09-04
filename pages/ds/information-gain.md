@@ -5,6 +5,8 @@ description: "情報利得とは、決定木で分岐したときに不確実性
 permalink: /ds/information-gain/
 categories: [data-science]
 tags: [ds, modeling, evaluation]
+ds_area: datascience
+ds_section: modeling
 prev: /ds/impurity/
 next: /ds/overfitting-tree-depth/
 last_modified_at: 2026-06-18

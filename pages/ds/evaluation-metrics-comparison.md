@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: 分類モデルの評価指標の比較とは？【DS検定リテラシー】
 description: "分類モデルの評価指標の比較とは、「何を減らしたいのか」という目的に応じて Accuracy・Precision・Recall・F1・ROC・PR を使い分けることです。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。"
 permalink: /ds/evaluation-metrics-comparison/
 categories: [data-science]
 tags: [ds, modeling, evaluation]
+ds_area: datascience
+ds_section: modeling
 prev: /ds/coefficient-of-determination-contribution/
 next: /ds/r-squared-adjusted-r-squared/
 last_modified_at: 2026-06-21

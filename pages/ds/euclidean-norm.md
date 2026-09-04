@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: ユーグリッドノルムとは？（ベクトルの長さの測り方）【DS検定】
 description: "ユーグリッドノルムは、ベクトルを「長さ（大きさ）」として1つの数にまとめるものです。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。初学者が迷いやすい判断ポイントも確認します。"
 permalink: /ds/euclidean-norm/
 categories: [data-science]
 tags: [ds, linear-algebra, math]
+ds_area: datascience
+ds_section: linear-algebra
 prev: /ds/eigenvalue/
 next: /ds/inverse-matrix/
 last_modified_at: 2026-06-21

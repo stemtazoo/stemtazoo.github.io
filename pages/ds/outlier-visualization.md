@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: 外れ値を見出すための適切な可視化手法とは？【DS検定】
 description: "外れ値は、外れ値を見出すための適切な可視化手法とは？を理解するための基本テーマです。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。初学者が迷いやすい判断ポイントも確認します。"
 permalink: /ds/outlier-visualization/
 categories: [data-science]
 tags: [ds, visualization]
+ds_area: datascience
+ds_section: visualization
 prev: /ds/gantt-chart/
 next: /ds/pivot/
 last_modified_at: 2026-06-21

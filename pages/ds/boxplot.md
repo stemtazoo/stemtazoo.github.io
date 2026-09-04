@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: 箱ひげ図とは？四分位数と外れ値の読み取り方【DS検定】
 description: "箱ひげ図は、四分位数と外れ値の読み取り方を理解するための基本テーマです。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。初学者が迷いやすい判断ポイントも確認します。"
 permalink: /ds/boxplot/
 categories: [data-science]
 tags: [ds, visualization]
+ds_area: datascience
+ds_section: visualization
 prev: /ds/web-crawling-scraping/
 next: /ds/chart-types/
 last_modified_at: 2026-06-21

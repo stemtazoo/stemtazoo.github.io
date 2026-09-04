@@ -5,6 +5,8 @@ description: アノテーションを、教師あり学習に必要な正解ラ�
 permalink: /ds/annotation/
 categories: [data-science]
 tags: [ds, modeling, preprocessing]
+ds_area: datascience
+ds_section: modeling
 prev: /ds/z-score-method/
 next: /ds/data-augmentation/
 last_modified_at: 2026-07-18

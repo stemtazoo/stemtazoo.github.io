@@ -5,6 +5,8 @@ description: "マーケットバスケット分析は、購買履歴から一緒
 permalink: /ds/market-basket-analysis/
 categories: [data-science]
 tags: [ds, modeling]
+ds_area: datascience
+ds_section: modeling
 prev: /ds/machine-learning-methods/
 next: /ds/ml-tasks/
 last_modified_at: 2026-06-18

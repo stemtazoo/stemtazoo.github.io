@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: eの微分・積分を最短で整理【DS検定リテラシー】
 description: "自然対数の底eを使う指数関数を、微分・積分しても指数関数の形を保つため、連続的な成長や減衰を表しやすい関数として整理します。e^xの微分・積分はe^x、e^(ax)の微分では係数aを掛け、積分ではaで割る関係を押さえ、人口増加・放射性減衰・機械学習の指数計算で式を読み取ります。"
 permalink: /ds/e-calculus/
 categories: [data-science]
 tags: [ds, calculus, math]
+ds_area: datascience
+ds_section: calculus
 next: /ds/eigenvalue/
 last_modified_at: 2026-07-14
 ---

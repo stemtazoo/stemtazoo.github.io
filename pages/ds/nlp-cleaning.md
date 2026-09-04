@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: 自然言語処理におけるクリーニングとは？（前処理の基本）【DS検定】
 description: "自然言語処理におけるクリーニングとは、テキストから不要な情報を取り除き、モデルが扱いやすい形に整える前処理のことです。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。"
 permalink: /ds/nlp-cleaning/
 categories: [data-science]
 tags: [ds, unstructured-data, preprocessing]
+ds_area: datascience
+ds_section: unstructured-data
 prev: /ds/missing-value-handling/
 next: /ds/preprocessing/
 last_modified_at: 2026-06-21

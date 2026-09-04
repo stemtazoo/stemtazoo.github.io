@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: ドリルダウンとドリルアップの違いとは？BIツールの基本操作【DS検定】
 description: "ドリルダウンは集計結果をより細かい粒度へ掘り下げ、ドリルアップは上位の集計単位へ戻るBI操作です。スライス・ダイスとの違い、地域別から店舗別へ見るような階層分析、カテゴリ・年月・組織などの階層をたどる判断ポイントをDS検定向けに整理します。"
 permalink: /ds/drilldown-drillup/
 categories: [data-science]
 tags: [ds, visualization]
+ds_area: datascience
+ds_section: visualization
 prev: /ds/chart-types/
 next: /ds/drillthrough/
 last_modified_at: 2026-06-21

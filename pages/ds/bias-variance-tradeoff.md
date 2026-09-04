@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: バイアス・バリアンスのトレードオフとは？過学習との関係【DS検定】
 description: "バイアス・バリアンスのトレードオフは、モデルを複雑にすると訓練データには合いやすい一方で汎化性能が下がる関係です。過学習・未学習、モデル複雑度、交差検証、正則化による調整、データ量が少ない場合の揺らぎやテストデータでの評価をDS検定向けに整理します。"
 permalink: /ds/bias-variance-tradeoff/
 categories: [data-science]
 tags: [ds, modeling, evaluation]
+ds_area: datascience
+ds_section: modeling
 prev: /ds/ab-test/
 next: /ds/gini-vs-entropy/
 last_modified_at: 2026-06-21

@@ -5,6 +5,8 @@ description: "アソシエーション分析を、購買履歴などから商品
 permalink: /ds/association-analysis/
 categories: [data-science]
 tags: [ds, modeling]
+ds_area: datascience
+ds_section: modeling
 prev: /ds/apriori-algorithm/
 next: /ds/association-metrics/
 last_modified_at: 2026-08-16

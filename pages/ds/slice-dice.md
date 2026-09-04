@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: スライスとダイスの違いとは？BIツールの基本操作を整理【DS検定】
 description: "スライスは特定条件で多次元データの一部を切り出し、ダイスは複数軸を組み替えて絞り込むBI操作です。ドリルダウン・ドリルアップ・フィルターとの違い、OLAPで集計粒度をどう見るか、集計表やピボットで迷いやすい操作名も含めてDS検定向けに整理します。"
 permalink: /ds/slice-dice/
 categories: [data-science]
 tags: [ds, visualization]
+ds_area: datascience
+ds_section: visualization
 prev: /ds/pivot/
 next: /ds/visualization-basic-perspectives/
 last_modified_at: 2026-06-21

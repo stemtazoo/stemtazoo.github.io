@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: 特徴量重要度とは？不純度ベースとPermutationの違い【DS検定】
 description: "特徴量重要度は、予測モデルで各特徴量が結果にどれだけ効いているかを示す指標です。ランダムフォレストの不純度ベース重要度、Permutation Importance、相関や因果との違い、過信しやすい注意点、説明可能性との関係をDS検定向けに整理します。"
 permalink: /ds/feature-importance/
 categories: [data-science]
 tags: [ds, modeling]
+ds_area: datascience
+ds_section: modeling
 prev: /ds/random-forest/
 next: /ds/hierarchical-distance-metrics/
 last_modified_at: 2026-06-21

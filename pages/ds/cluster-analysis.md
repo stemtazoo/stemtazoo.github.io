@@ -5,6 +5,8 @@ description: "クラスタ分析を、正解ラベルのないデータを特徴
 permalink: /ds/cluster-analysis/
 categories: [data-science]
 tags: [ds, modeling]
+ds_area: datascience
+ds_section: modeling
 prev: /ds/basket-analysis/
 next: /ds/cnn/
 last_modified_at: 2026-08-16

@@ -5,6 +5,8 @@ description: "画像のデジタル表現とは、画像を「標本化（サン
 permalink: /ds/digital-image-representation/
 categories: [business]
 tags: [ds, unstructured-data, design]
+ds_area: datascience
+ds_section: unstructured-data
 prev: /ds/design-of-experiments/
 next: /ds/digital-twin/
 last_modified_at: 2026-08-16

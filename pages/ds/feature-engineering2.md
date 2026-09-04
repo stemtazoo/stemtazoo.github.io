@@ -5,6 +5,8 @@ description: "特徴量エンジニアリングの具体例として、生年月
 permalink: /ds/feature-engineering2/
 categories: [business]
 tags: [ds, data-preparation, design]
+ds_area: datascience
+ds_section: data-preparation
 prev: /ds/feature/
 next: /ds/ffp/
 last_modified_at: 2026-08-16

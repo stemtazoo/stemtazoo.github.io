@@ -5,6 +5,8 @@ description: "CNNを、畳み込み層で画像の特徴を抽出し、プーリ
 permalink: /ds/cnn/
 categories: [data-science]
 tags: [ds, modeling]
+ds_area: datascience
+ds_section: modeling
 prev: /ds/cluster-analysis/
 next: /ds/convolution/
 last_modified_at: 2026-08-16

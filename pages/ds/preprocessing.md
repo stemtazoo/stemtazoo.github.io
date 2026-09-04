@@ -5,6 +5,8 @@ description: "データ前処理は、分析や機械学習の前に欠損値、
 permalink: /ds/preprocessing/
 categories: [data-science]
 tags: [ds, data-preparation, preprocessing]
+ds_area: datascience
+ds_section: data-preparation
 prev: /ds/nlp-cleaning/
 next: /ds/regular-expression-basic/
 last_modified_at: 2026-08-16

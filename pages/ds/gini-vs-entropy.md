@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: ジニ不純度とエントロピーの違いとは？分岐基準を整理【DS検定】
 description: "ジニ不純度とエントロピーは、どちらも「クラスの混ざり具合」を測る指標です。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。初学者が迷いやすい判断ポイントも確認します。"
 permalink: /ds/gini-vs-entropy/
 categories: [data-science]
 tags: [ds, modeling, evaluation]
+ds_area: datascience
+ds_section: modeling
 prev: /ds/bias-variance-tradeoff/
 next: /ds/impurity/
 last_modified_at: 2026-06-21

@@ -5,6 +5,8 @@ description: Aprioriアルゴリズムを、頻出する項目集合の部分集
 permalink: /ds/apriori-algorithm/
 categories: [data-science]
 tags: [ds, modeling]
+ds_area: datascience
+ds_section: modeling
 prev: /ds/dendrogram/
 next: /ds/association-analysis/
 last_modified_at: 2026-08-16

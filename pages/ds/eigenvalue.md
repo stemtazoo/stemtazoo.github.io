@@ -5,6 +5,8 @@ description: 行列の固有値を、変換しても方向が変わらないベ�
 permalink: /ds/eigenvalue/
 categories: [data-science]
 tags: [ds, linear-algebra, math]
+ds_area: datascience
+ds_section: linear-algebra
 prev: /ds/e-calculus/
 next: /ds/euclidean-norm/
 last_modified_at: 2026-05-15

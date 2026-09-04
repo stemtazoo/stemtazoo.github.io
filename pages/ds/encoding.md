@@ -5,6 +5,8 @@ description: "エンコーディングは、カテゴリ変数を数値化する
 permalink: /ds/encoding/
 categories: [data-science]
 tags: [ds, data-preparation, preprocessing]
+ds_area: datascience
+ds_section: data-preparation
 prev: /ds/data-transformation/
 next: /ds/feature-engineering/
 last_modified_at: 2026-08-16

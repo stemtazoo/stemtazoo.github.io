@@ -5,6 +5,8 @@ description: "機械学習アルゴリズムを、正解ラベルから分類・
 permalink: /ds/machine-learning-algorithms-cheatsheet/
 categories: [data-science]
 tags: [ds, modeling]
+ds_area: datascience
+ds_section: modeling
 prev: /ds/logistic-regression/
 next: /ds/machine-learning-methods/
 last_modified_at: 2026-08-16

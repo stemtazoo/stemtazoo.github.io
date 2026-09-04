@@ -5,6 +5,8 @@ description: "プーリング（Pooling）とは、CNNで特徴マップのサ�
 permalink: /ds/pooling/
 categories: [data-science]
 tags: [ds, modeling]
+ds_area: datascience
+ds_section: modeling
 prev: /ds/ml-tasks/
 next: /ds/random-forest/
 last_modified_at: 2026-08-16

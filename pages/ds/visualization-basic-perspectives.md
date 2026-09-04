@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: データ可視化における基本的な視点とは？（差・相関・分布・変化・構成）【DS検定】
 description: "データ可視化の目的を、項目間の差、2変数の相関、値の分布、時系列の変化、全体に対する構成の5つに整理します。差には棒グラフ、相関には散布図、分布にはヒストグラムや箱ひげ図、変化には折れ線グラフを対応させ、見栄えではなく分析目的から図を選ぶこと、相関する図だけで因果を断定できないことを押さえます。"
 permalink: /ds/visualization-basic-perspectives/
 categories: [data-science]
 tags: [ds, visualization]
+ds_area: datascience
+ds_section: visualization
 prev: /ds/slice-dice/
 next: /ds/dendrogram/
 last_modified_at: 2026-07-14

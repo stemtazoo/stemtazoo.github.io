@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: 中間層で使用される活性化関数とは？（ReLU・シグモイド・ソフトマックスの違い）【DS検定】
 description: "中間層の活性化関数は、ニューラルネットワークに非線形性を与え、直線だけでは表せない関係を学習可能にします。中間層でReLUがよく使われる理由、Sigmoidの勾配消失、Softmaxが主に多クラス分類の出力層で使われる点を比較し、層ごとの役割を判断します。"
 permalink: /ds/activation-functions-hidden-layer/
 categories: [business]
 tags: [ds, modeling, design]
+ds_area: datascience
+ds_section: modeling
 prev: /ds/zero-trust/
 next: /ds/anchoring-effect/
 last_modified_at: 2026-07-01

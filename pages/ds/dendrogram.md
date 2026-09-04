@@ -5,6 +5,8 @@ description: "デンドログラムは、階層クラスタリングで似た観
 permalink: /ds/dendrogram/
 categories: [data-science]
 tags: [ds, modeling, visualization]
+ds_area: datascience
+ds_section: modeling
 prev: /ds/visualization-basic-perspectives/
 next: /ds/apriori-algorithm/
 last_modified_at: 2026-08-13

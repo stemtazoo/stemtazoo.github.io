@@ -5,6 +5,8 @@ description: "カテゴリ変数とは、数値ではなく「分類（カテゴ
 permalink: /ds/categorical-variable/
 categories: [business]
 tags: [ds, data-preparation, design]
+ds_area: datascience
+ds_section: data-preparation
 prev: /ds/cap-theorem/
 next: /ds/cognitive-bias/
 last_modified_at: 2026-08-16

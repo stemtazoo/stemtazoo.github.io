@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: バスケット分析とは？（リフト値まで整理）【DS検定】
 description: "バスケット分析は、購買データから同時に買われやすい商品の組合せを見つける手法です。支持度・信頼度・リフト値の意味、アソシエーション分析やAprioriアルゴリズムとの関係、レコメンドや販促での読み取りポイントを具体例とともにDS検定向けに整理します。"
 permalink: /ds/basket-analysis/
 categories: [data-science]
 tags: [ds, modeling]
+ds_area: datascience
+ds_section: modeling
 prev: /ds/association-metrics/
 next: /ds/cluster-analysis/
 last_modified_at: 2026-06-23

@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: 係り受け解析とは？形態素解析との違いを整理【DS検定】
 description: "係り受け解析は、文中の語句同士がどの語を修飾し、どの語に依存しているかを調べる自然言語処理です。形態素解析との順序の違い、構文解析で分かる主語・述語関係、テキスト分析での活用場面、係り受け木の読み方、構文情報を特徴量に使う場面をDS検定向けに整理します。"
 permalink: /ds/dependency-parsing/
 categories: [business]
 tags: [ds, unstructured-data, design]
+ds_area: datascience
+ds_section: unstructured-data
 prev: /ds/data-transformation/
 next: /ds/design-of-experiments/
 last_modified_at: 2026-06-21

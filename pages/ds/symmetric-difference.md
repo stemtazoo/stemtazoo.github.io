@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: 対称差集合とは？意味と考え方をやさしく整理【DS検定】
 description: "対称差集合を、集合Aまたは集合Bのどちらか一方だけに含まれ、両方に共通する要素は除く集合として整理します。（A－B）∪（B－A）という表し方、排他的論理和XORとの対応を押さえ、少なくとも一方に含まれる和集合、AだけからBを除く差集合との違いを、2つのデータ一覧の不一致抽出例から判断します。"
 permalink: /ds/symmetric-difference/
 categories: [business]
 tags: [ds, set-theory, design]
+ds_area: datascience
+ds_section: set-theory
 prev: /ds/sigmoid-function/
 next: /ds/type1-type2-error/
 last_modified_at: 2026-07-14

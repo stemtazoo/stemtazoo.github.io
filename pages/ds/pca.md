@@ -5,6 +5,8 @@ description: "主成分分析（PCA）は、互いに相関する複数の特徴
 permalink: /ds/pca/
 categories: [data-science]
 tags: [ds, linear-algebra, math]
+ds_area: datascience
+ds_section: linear-algebra
 prev: /ds/matrix-multiplication/
 next: /ds/vector-dot-product/
 last_modified_at: 2026-07-18

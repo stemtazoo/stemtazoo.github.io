@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: ベクトルの内積とは？意味と使いどころを整理【DS検定】
 description: "ベクトルの内積の意味をDS検定向けに整理します。対応する要素同士を掛けて足す計算、類似度や射影との関係、機械学習や統計での利用場面を押さえ、計算と解釈を確認できます。定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。"
 permalink: /ds/vector-dot-product/
 categories: [data-science]
 tags: [ds, linear-algebra, math]
+ds_area: datascience
+ds_section: linear-algebra
 prev: /ds/pca/
 next: /ds/bayes-theorem/
 last_modified_at: 2026-06-21

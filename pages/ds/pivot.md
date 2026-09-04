@@ -5,6 +5,8 @@ description: "ピボットは、行・列の軸を入れ替えて集計表の見
 permalink: /ds/pivot/
 categories: [data-science]
 tags: [ds, visualization]
+ds_area: datascience
+ds_section: visualization
 prev: /ds/outlier-visualization/
 next: /ds/slice-dice/
 last_modified_at: 2026-06-22

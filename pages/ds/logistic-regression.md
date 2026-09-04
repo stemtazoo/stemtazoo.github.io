@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: ロジスティック回帰とは？（オッズ・対数オッズから理解する）【DS検定】
 description: "ロジスティック回帰とは、「ある事象が起こる確率」を予測するための分類手法です。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。初学者が迷いやすい判断ポイントも確認します。"
 permalink: /ds/logistic-regression/
 categories: [data-science]
 tags: [ds, modeling]
+ds_area: datascience
+ds_section: modeling
 prev: /ds/kernel/
 next: /ds/machine-learning-algorithms-cheatsheet/
 last_modified_at: 2026-06-21

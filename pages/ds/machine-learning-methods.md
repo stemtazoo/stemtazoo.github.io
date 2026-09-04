@@ -5,6 +5,8 @@ description: "機械学習の解析手法とは、データからパターンを
 permalink: /ds/machine-learning-methods/
 categories: [data-science]
 tags: [ds, modeling]
+ds_area: datascience
+ds_section: modeling
 prev: /ds/machine-learning-algorithms-cheatsheet/
 next: /ds/market-basket-analysis/
 last_modified_at: 2026-08-16

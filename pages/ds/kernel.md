@@ -5,6 +5,8 @@ description: "カーネル（Kernel）とは、画像の畳み込み処理で使
 permalink: /ds/kernel/
 categories: [data-science]
 tags: [ds, modeling]
+ds_area: datascience
+ds_section: modeling
 prev: /ds/hierarchical-clustering/
 next: /ds/logistic-regression/
 last_modified_at: 2026-08-16

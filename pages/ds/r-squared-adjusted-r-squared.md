@@ -5,6 +5,8 @@ description: "自由度調整済み決定係数は、回帰モデルの説明力
 permalink: /ds/r-squared-adjusted-r-squared/
 categories: [data-science]
 tags: [ds, modeling, evaluation]
+ds_area: datascience
+ds_section: modeling
 prev: /ds/evaluation-metrics-comparison/
 next: /ds/average-methods-comparison/
 last_modified_at: 2026-07-14

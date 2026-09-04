@@ -5,6 +5,8 @@ description: "機械学習で解決する代表的なタスクとは、データ
 permalink: /ds/ml-tasks/
 categories: [data-science]
 tags: [ds, modeling]
+ds_area: datascience
+ds_section: modeling
 prev: /ds/market-basket-analysis/
 next: /ds/pooling/
 last_modified_at: 2026-08-24

@@ -5,6 +5,8 @@ description: "データ拡張（Data Augmentation）とは、既存の画像デ�
 permalink: /ds/data-augmentation/
 categories: [data-science]
 tags: [ds, unstructured-data, preprocessing]
+ds_area: datascience
+ds_section: unstructured-data
 prev: /ds/annotation/
 next: /ds/data-transformation/
 last_modified_at: 2026-08-16

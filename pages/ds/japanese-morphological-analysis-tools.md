@@ -5,6 +5,8 @@ description: 日本語の形態素解析ツールを、文章を単語単位に�
 permalink: /ds/japanese-morphological-analysis-tools/
 categories: [business]
 tags: [ds, unstructured-data, design]
+ds_area: datascience
+ds_section: unstructured-data
 prev: /ds/inheritance/
 next: /ds/key-stretching/
 last_modified_at: 2026-05-15

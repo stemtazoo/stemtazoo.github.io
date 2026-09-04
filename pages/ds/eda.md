@@ -5,6 +5,8 @@ description: "EDA（探索的データ分析）とは、可視化や基本統計
 permalink: /ds/eda/
 categories: [business]
 tags: [ds, visualization, design]
+ds_area: datascience
+ds_section: visualization
 prev: /ds/design-thinking/
 next: /ds/agile-development/
 last_modified_at: 2026-08-16

@@ -5,6 +5,8 @@ description: 不純度は、決定木のノード内で複数クラスがどれ�
 permalink: /ds/impurity/
 categories: [data-science]
 tags: [ds, modeling, evaluation]
+ds_area: datascience
+ds_section: modeling
 prev: /ds/gini-vs-entropy/
 next: /ds/information-gain/
 last_modified_at: 2026-08-13

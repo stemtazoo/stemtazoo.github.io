@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: 行列の掛け算とは？（行列同士の掛け算）【DS検定リテラシー】
 description: "行列の掛け算の意味をDS検定向けに整理します。行と列の対応、内積による計算、次元の整合性、データ変換や機械学習での利用場面を押さえ、計算手順の混同を防ぎます。定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。"
 permalink: /ds/matrix-multiplication/
 categories: [data-science]
 tags: [ds, linear-algebra, math]
+ds_area: datascience
+ds_section: linear-algebra
 prev: /ds/inverse-matrix/
 next: /ds/pca/
 last_modified_at: 2026-06-21

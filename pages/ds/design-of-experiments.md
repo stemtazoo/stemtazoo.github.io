@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: 実験計画法とは？少ない実験で原因を見つける方法【DS検定】
 description: "実験計画法とは、「どの要因が結果に影響しているかを、できるだけ少ない実験回数で明らかにするための考え方」です。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。"
 permalink: /ds/design-of-experiments/
 categories: [business]
 tags: [ds, data-preparation, design]
+ds_area: datascience
+ds_section: data-preparation
 prev: /ds/dependency-parsing/
 next: /ds/digital-image-representation/
 last_modified_at: 2026-06-21

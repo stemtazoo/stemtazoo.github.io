@@ -5,6 +5,8 @@ description: "階層クラスター分析で使うユークリッド距離・マ
 permalink: /ds/hierarchical-distance-metrics/
 categories: [data-science]
 tags: [ds, modeling]
+ds_area: datascience
+ds_section: modeling
 prev: /ds/feature-importance/
 next: /ds/predictive-analytics/
 last_modified_at: 2026-08-16

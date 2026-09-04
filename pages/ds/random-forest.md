@@ -5,6 +5,8 @@ description: ランダムフォレストを複数の決定木を組み合わせ�
 permalink: /ds/random-forest/
 categories: [data-science]
 tags: [ds, modeling]
+ds_area: datascience
+ds_section: modeling
 prev: /ds/pooling/
 next: /ds/feature-importance/
 last_modified_at: 2026-05-15
