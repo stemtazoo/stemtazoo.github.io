@@ -5,6 +5,8 @@ description: "PDCAサイクルは、Plan・Do・Check・Actを繰り返して業
 permalink: /ds/pdca-cycle/
 categories: [business]
 tags: [ds, design]
+ds_area: value-creation
+ds_section: project-management
 prev: /ds/critical-path/
 next: /ds/poc-concept-proof/
 last_modified_at: 2026-08-16
