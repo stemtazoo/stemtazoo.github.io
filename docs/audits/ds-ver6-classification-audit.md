@@ -11,12 +11,38 @@
 - index の `ds_area` 優先表示: 実施済み
 - 基盤の表示区分: 論理的思考 / 課題の定義・仮説 / 目標・指標 / データ理解・検証 / ITセキュリティまで拡張済み
 - 安全に自動判定できるデータサイエンス / データエンジニアリング記事: 移行済み
-- 旧 `business` 記事: 個別監査を進行中
-- `security`: 個別監査未着手
-- `ai-utilization`: 個別監査未着手
+- 旧 `business` 記事: 個別監査は終盤
+- `security`: 主要記事の個別監査はほぼ完了
+- `ai-utilization`: 個別監査は終盤
+- 未分類記事の横断監査: 進行中
+- 誤分類の再監査: 進行中
 - ver.6スキルチェックデータ基盤: 旧ver.5構造からの更新が残っている
 
-記事分類の進捗は、2026-09-04時点の保守的な集計で約6割。特殊ページ（index / skillcheck / cheatsheet等）を含むため、最終的な分類対象数は監査完了時に再確定する。
+記事分類は、全303ページを暫定母数とした場合で約235ページ、約78%。ただし以下の特殊ページは4領域の通常記事分類から除外する方が自然なため、暫定除外11ページを差し引くと実質母数は292ページとなり、進捗は約80%となる。
+
+## 分類母数から除外する特殊ページ（暫定）
+
+次のページは、単一の `ds_area` を付ける通常記事ではなく、索引・横断ガイド・旧スキル体系のまとめとして扱う。
+
+- `index.md`
+- `optional-math-algorithm.md`
+- `business-skillcheck.md`
+- `engineering-skillcheck.md`
+- `skillcheck.md`
+- `ai-utilization-skillcheck.md`
+- `model-curriculum-summary.md`
+- `skilllevel-2023-summary.md`
+- `skilllevel-2023-assistant-ds-business.md`
+- `skilllevel-2023-assistant-ds-dataengineering.md`
+- `skilllevel-2023-assistant-ds-datascience.md`
+
+除外理由:
+
+- 4領域を横断して参照する索引・学習ガイドである
+- ver.5以前の「ビジネス力 / データサイエンス力 / データエンジニアリング力 / AI利活用」の旧体系そのものを説明するページが含まれる
+- 1つの `ds_area` に押し込むと、学習ページとしての役割を誤って表現する
+
+今後、同様のまとめページを見つけた場合はこの除外リストへ追加し、最終母数を確定する。
 
 ## 結論
 
@@ -96,23 +122,28 @@ ds_section: data-understanding
 - `kpi-kgi.md` → `foundation`
 - `hypothesis-thinking.md` → `foundation`
 - `mece.md` → `foundation`
+- `why-structure.md` → `foundation`
 - `pest-analysis.md` → `value-creation`
 - `swot-analysis.md` → `value-creation`
 - `five-forces-analysis.md` → `value-creation`
 - `design-thinking.md` → `value-creation`
 - `poc-concept-proof.md` → `value-creation`
-- `project-management.md` / `wbs.md` / `scrum.md` / `critical-path.md` → `value-creation`
-- `key-stretching.md` → `foundation` 候補。ただし実装・運用中心なら `dataengineering`
+- `project-management.md` / `wbs.md` / `scrum.md` / `critical-path.md` / `gantt-chart.md` → `value-creation`
+- `incident-management.md` / `report-line-risk-management.md` → `value-creation`
+- `contract-ukeoi-juninin.md` → `foundation`
+- `key-stretching.md` → `foundation`
 - `japanese-morphological-analysis-tools.md` → `datascience`
 - `morphological-dependency-parsing.md` → `datascience`
 - `nltk.md` → `datascience`
-- `inheritance.md` → `dataengineering` 第一候補
+- `inheritance.md` → `dataengineering`
 
 ## 構造上の問題
 
 1. `categories: [business]` が広すぎる。自然言語処理、プログラミング、セキュリティなどにも付いているため、ver.6 の「価値創造」の判定には使えない。
 2. `security` は基盤とデータエンジニアリングの両方にまたがる。
 3. `design` は多数の分野で使われており、ver.6 の領域判定キーには使えない。
+4. `skillcheck` や横断ガイドは、4領域の通常記事分類とは別管理にする必要がある。
+5. `visualization` など安全タグでも、ガントチャートのように記事の役割がプロジェクト管理の場合は個別訂正が必要。
 
 ## 推奨する移行手順
 
@@ -121,8 +152,10 @@ ds_section: data-understanding
 3. 旧 `business` 記事を個別監査する。
 4. `security` 記事を個別監査する。
 5. `ai-utilization` 記事を個別監査する。
-6. ver.6スキルチェックデータ基盤を更新する。
-7. 最後に未分類記事を再計測する。
+6. 未分類記事と安全タグ由来の誤分類を横断監査する。
+7. 特殊ページを通常記事の分類母数から除外して最終母数を確定する。
+8. ver.6スキルチェックデータ基盤を更新する。
+9. 最後に未分類記事を再計測する。
 
 ## 自動移行してよいタグ
 
