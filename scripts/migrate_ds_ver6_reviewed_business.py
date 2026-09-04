@@ -34,6 +34,11 @@ REVIEWED = {
     "encapsulation.md": ("dataengineering", "programming"),
     "polymorphism.md": ("dataengineering", "programming"),
     "dunning-kruger-effect.md": ("foundation", "logical-thinking"),
+    "cognitive-bias.md": ("foundation", "logical-thinking"),
+    "confirmation-bias.md": ("foundation", "logical-thinking"),
+    "evidence-based.md": ("foundation", "data-understanding"),
+    "primary-data.md": ("foundation", "data-understanding"),
+    "primary-secondary-data.md": ("foundation", "data-understanding"),
 }
 
 
