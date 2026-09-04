@@ -11,7 +11,7 @@ permissions:
   contents: write
 
 jobs:
-  migrate-statistics:
+  migrate-safe-datascience:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -24,8 +24,12 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Migrate statistics metadata
-        run: python scripts/migrate_ds_ver6_metadata.py --tag statistics --write
+      - name: Migrate safe data science metadata
+        shell: bash
+        run: |
+          for tag in linear-algebra calculus set-theory statistics data-preparation visualization modeling unstructured-data; do
+            python scripts/migrate_ds_ver6_metadata.py --tag "$tag" --write
+          done
 
       - name: Validate migration diff
         shell: bash
@@ -91,5 +95,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add pages/ds
-          git commit -m "Migrate DS statistics metadata to ver.6"
+          git commit -m "Migrate safe DS data science metadata to ver.6"
           git push
