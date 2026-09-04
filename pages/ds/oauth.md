@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: OAuthとは？仕組みとアクセストークンの流れを整理【DS検定リテラシー】
 description: "OAuth（オーオース）は、パスワードを渡さずに、外部サービスへアクセス権を安全に委任する仕組みです。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。初学者が迷いやすい判断ポイントも確認します。"
 permalink: /ds/oauth/
 categories: [business]
 tags: [ds, security, design]
+ds_area: foundation
+ds_section: security
 prev: /ds/mfa/
 next: /ds/pki/
 last_modified_at: 2026-06-21

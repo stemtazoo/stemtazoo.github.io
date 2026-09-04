@@ -5,6 +5,8 @@ description: "公開鍵認証基盤（PKI：Public Key Infrastructure）とは�
 permalink: /ds/pki/
 categories: [business]
 tags: [ds, security, design]
+ds_area: foundation
+ds_section: security
 prev: /ds/oauth/
 next: /ds/rbac/
 last_modified_at: 2026-08-16

@@ -5,6 +5,8 @@ description: "SSL/TLSとは、通信の最初に公開鍵暗号で安全に鍵�
 permalink: /ds/ssl-tls/
 categories: [business]
 tags: [ds, security, design]
+ds_area: foundation
+ds_section: security
 prev: /ds/rbac/
 next: /ds/vpn-ssh/
 last_modified_at: 2026-08-16

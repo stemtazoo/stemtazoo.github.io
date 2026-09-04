@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: ゼロトラストとは？考え方と従来型セキュリティとの違い【DS検定リテラシー】
 description: "ゼロトラスト（Zero Trust）とは、社内だから安全」とは考えず、すべてを疑って検証するセキュリティの考え方です。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。"
 permalink: /ds/zero-trust/
 categories: [business]
 tags: [ds, security, design]
+ds_area: foundation
+ds_section: security
 prev: /ds/vpn-ssh/
 next: /ds/activation-functions-hidden-layer/
 last_modified_at: 2026-06-21

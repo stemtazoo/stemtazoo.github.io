@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: ハッシュ関数とは？（コリジョン・ソルトとの違い）【DS検定】
 description: "ハッシュ関数とは、任意のデータを一定の長さの値（ハッシュ値）に変換する不可逆な関数です。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。初学者が迷いやすい判断ポイントも確認します。"
 permalink: /ds/hash-function/
 categories: [business]
 tags: [ds, security, design]
+ds_area: foundation
+ds_section: security
 prev: /ds/digital-signature2/
 next: /ds/hash-vs-encryption/
 last_modified_at: 2026-06-21
