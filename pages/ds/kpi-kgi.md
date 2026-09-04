@@ -5,6 +5,8 @@ description: "KGI（Key Goal Indicator）は最終的な目標を示す指標、
 permalink: /ds/kpi-kgi/
 categories: [business]
 tags: [ds, design]
+ds_area: foundation
+ds_section: goal-setting
 prev: /ds/five-forces-analysis/
 next: /ds/pest-analysis/
 last_modified_at: 2026-08-16
