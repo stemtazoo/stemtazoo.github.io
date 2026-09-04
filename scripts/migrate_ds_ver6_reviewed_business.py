@@ -49,6 +49,12 @@ REVIEWED = {
     "zero-trust.md": ("foundation", "security"),
     "iam-policy.md": ("foundation", "security"),
     "hash-function.md": ("foundation", "security"),
+    "publickey-vs-symmetric.md": ("foundation", "security"),
+    "digital-signature.md": ("foundation", "security"),
+    "digital-signature2.md": ("foundation", "security"),
+    "least-privilege.md": ("foundation", "security"),
+    "hash-vs-encryption.md": ("foundation", "security"),
+    "rainbow-table-attack.md": ("foundation", "security"),
 }
 
 
