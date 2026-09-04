@@ -5,6 +5,8 @@ description: "プロジェクトマネジメントは、プロジェクトを成
 permalink: /ds/project-management/
 categories: [business]
 tags: [ds, design]
+ds_area: value-creation
+ds_section: project-management
 prev: /ds/poc-concept-proof/
 next: /ds/scrum/
 last_modified_at: 2026-06-21
