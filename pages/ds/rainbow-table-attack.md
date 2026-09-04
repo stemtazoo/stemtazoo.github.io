@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: レインボーテーブル攻撃とは？（ソルトとの関係）【DS検定】
 description: "レインボーテーブル攻撃とは、事前に計算しておいたハッシュ値の一覧を使って、元のパスワードを推測する攻撃手法です。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。"
 permalink: /ds/rainbow-table-attack/
 categories: [business]
 tags: [ds, security, design]
+ds_area: foundation
+ds_section: security
 prev: /ds/publickey-vs-symmetric/
 next: /ds/replication-vs-backup/
 last_modified_at: 2026-06-21

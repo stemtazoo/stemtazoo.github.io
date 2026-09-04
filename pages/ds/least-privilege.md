@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: 最小権限の原則とは？ゼロトラストとの関係を整理【DS検定リテラシー】
 description: "最小権限の原則（Least Privilege Principle）とは、業務に必要な最小限の権限だけを与えるというセキュリティの基本原則です。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。"
 permalink: /ds/least-privilege/
 categories: [business]
 tags: [ds, security, design]
+ds_area: foundation
+ds_section: security
 prev: /ds/iam-policy/
 next: /ds/malware/
 last_modified_at: 2026-06-21

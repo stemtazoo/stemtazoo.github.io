@@ -5,6 +5,8 @@ description: "共通鍵暗号方式と公開鍵暗号方式を、使う鍵の数
 permalink: /ds/publickey-vs-symmetric/
 categories: [business]
 tags: [ds, security, design]
+ds_area: foundation
+ds_section: security
 prev: /ds/primary-secondary-data/
 next: /ds/rainbow-table-attack/
 last_modified_at: 2026-08-16

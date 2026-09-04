@@ -5,6 +5,8 @@ description: "電子署名と暗号化では秘密鍵・公開鍵の使い方が
 permalink: /ds/digital-signature2/
 categories: [business]
 tags: [ds, security, design]
+ds_area: foundation
+ds_section: security
 prev: /ds/digital-signature/
 next: /ds/hash-function/
 last_modified_at: 2026-08-16
