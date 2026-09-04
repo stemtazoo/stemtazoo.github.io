@@ -77,6 +77,11 @@ REVIEWED = {
     "japan-personal-information-protection-act.md": ("foundation", "action-norms"),
     "hallucination.md": ("foundation", "ai-fundamentals"),
     "llm-temperature.md": ("foundation", "ai-fundamentals"),
+    "rpo-rto.md": ("dataengineering", "environment-setup"),
+    "revenue-equation.md": ("foundation", "goal-setting"),
+    "analysis-approach-design.md": ("foundation", "problem-definition"),
+    "analysis-approach-selection.md": ("datascience", "data-understanding"),
+    "analytics-4types.md": ("datascience", "data-understanding"),
 }
 
 
