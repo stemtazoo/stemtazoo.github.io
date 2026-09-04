@@ -1,0 +1,60 @@
+name: DS ver.6 reviewed business migration
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "scripts/migrate_ds_ver6_reviewed_business.py"
+      - ".github/workflows/ds-ver6-reviewed-business.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  migrate-reviewed-business:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Migrate reviewed business articles
+        run: python scripts/migrate_ds_ver6_reviewed_business.py
+
+      - name: Validate changes
+        run: |
+          git diff --check -- pages/ds
+          python - <<'PY'
+          from pathlib import Path
+          expected = {
+              "five-forces-analysis.md": ("value-creation", "business-design"),
+              "customer-journey.md": ("value-creation", "business-design"),
+              "design-thinking.md": ("value-creation", "business-design"),
+              "agile-development.md": ("value-creation", "project-management"),
+              "scrum.md": ("value-creation", "project-management"),
+              "critical-path.md": ("value-creation", "project-management"),
+          }
+          for name, (area, section) in expected.items():
+              text = (Path("pages/ds") / name).read_text(encoding="utf-8-sig")
+              assert text.count(f"ds_area: {area}") == 1, name
+              assert text.count(f"ds_section: {section}") == 1, name
+          print(f"Validated {len(expected)} reviewed articles.")
+          PY
+
+      - name: Commit reviewed metadata
+        run: |
+          if git diff --quiet -- pages/ds; then
+            echo "No reviewed metadata changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add pages/ds
+          git commit -m "Migrate reviewed DS business metadata to ver.6"
+          git push
