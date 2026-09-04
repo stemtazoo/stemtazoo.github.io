@@ -5,6 +5,8 @@ description: "MECE（ミーシー）とは、「モレなく・ダブりなく�
 permalink: /ds/mece/
 categories: [business]
 tags: [ds, design]
+ds_area: foundation
+ds_section: logical-thinking
 prev: /ds/hypothesis-thinking/
 next: /ds/optional-math-algorithm/
 last_modified_at: 2026-06-21
