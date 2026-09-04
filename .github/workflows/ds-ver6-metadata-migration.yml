@@ -2,10 +2,6 @@ name: DS ver.6 metadata migration
 
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - "scripts/migrate_ds_ver6_metadata.py"
-      - ".github/workflows/ds-ver6-metadata-migration.yml"
 
 permissions:
   contents: write
