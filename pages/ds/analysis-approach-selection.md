@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: 必要なデータ・分析手法・可視化を適切に選択する力とは？【DS検定】
 description: "必要なデータ・分析手法・可視化は、必要なデータ・分析手法・可視化を適切に選択する力とは？を理解するための基本テーマです。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。"
 permalink: /ds/analysis-approach-selection/
 categories: [business]
 tags: [ds, design]
+ds_area: datascience
+ds_section: data-understanding
 prev: /ds/analysis-approach-design/
 next: /ds/analytics-4types/
 last_modified_at: 2026-06-23

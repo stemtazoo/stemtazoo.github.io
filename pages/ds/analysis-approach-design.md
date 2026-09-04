@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: 分析アプローチ設計とは？（分析プロジェクトを成功させる設計プロセス）【DS検定】
 description: 分析アプローチ設計を、ビジネス課題を分析可能な問いに変え、仮説・対象範囲・必要データ・手法・評価指標を実行前に定める工程として整理します。目的と指標がずれたまま分析を始める失敗を避け、予測・分類・原因探索などから課題に合う進め方を選ぶ判断軸を確認します。
 permalink: /ds/analysis-approach-design/
 categories: [business]
 tags: [ds, design]
+ds_area: foundation
+ds_section: problem-definition
 prev: /ds/why-structure/
 next: /ds/analysis-approach-selection/
 last_modified_at: 2026-07-01

@@ -1,10 +1,12 @@
-﻿---
+---
 layout: page
 title: 記述的・診断的・予測的・処方的分析の違いとは？4分類を整理【DS検定】
 description: 記述的・診断的・予測的・処方的分析を、「何が起きたか」「なぜ起きたか」「今後どうなるか」「何をすべきか」という問いで切り分けます。売上低下の集計、原因探索、需要予測、施策最適化の例を対応させ、分析手法名ではなく意思決定で果たす役割から選択肢を判断します。
 permalink: /ds/analytics-4types/
 categories: [business]
 tags: [ds, design]
+ds_area: datascience
+ds_section: data-understanding
 prev: /ds/analysis-approach-selection/
 next: /ds/design-thinking/
 last_modified_at: 2026-07-01

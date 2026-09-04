@@ -5,6 +5,8 @@ description: "収益方程式とは、企業の売上がどの要素の掛け合
 permalink: /ds/revenue-equation/
 categories: [business]
 tags: [ds, design]
+ds_area: foundation
+ds_section: goal-setting
 prev: /ds/pest-analysis/
 next: /ds/rfm-analysis/
 last_modified_at: 2026-08-16
