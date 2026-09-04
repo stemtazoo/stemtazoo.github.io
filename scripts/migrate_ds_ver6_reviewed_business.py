@@ -16,6 +16,12 @@ REVIEWED = {
     "agile-development.md": ("value-creation", "project-management"),
     "scrum.md": ("value-creation", "project-management"),
     "critical-path.md": ("value-creation", "project-management"),
+    "compliance-risk.md": ("foundation", "action-norms"),
+    "internal-control.md": ("value-creation", "governance-risk"),
+    "bcp.md": ("value-creation", "governance-risk"),
+    "operational-risk.md": ("value-creation", "governance-risk"),
+    "reputation-risk.md": ("value-creation", "governance-risk"),
+    "risk-management.md": ("value-creation", "governance-risk"),
 }
 
 
