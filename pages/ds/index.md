@@ -144,7 +144,34 @@ last_modified_at: 2026-09-04
 
 ## 🧱 基盤
 
-現行の試験範囲では、従来のビジネス力の多くが基盤へ移っています。まずは、既存記事のうち基盤と重なる「データ理解」「ITセキュリティ」を確認できます。
+現行の試験範囲では、従来のビジネス力の多くが基盤へ移っています。論理的思考、課題の定義、目標・指標、データ理解、ITセキュリティの順に整理します。
+
+### 論理的思考
+<ul>
+{% for p in site.pages %}
+  {% if p.ds_area == "foundation" and p.ds_section == "logical-thinking" and p.url contains "/ds/" %}
+    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% endif %}
+{% endfor %}
+</ul>
+
+### 課題の定義・仮説
+<ul>
+{% for p in site.pages %}
+  {% if p.ds_area == "foundation" and p.ds_section == "problem-definition" and p.url contains "/ds/" %}
+    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% endif %}
+{% endfor %}
+</ul>
+
+### 目標・指標
+<ul>
+{% for p in site.pages %}
+  {% if p.ds_area == "foundation" and p.ds_section == "goal-setting" and p.url contains "/ds/" %}
+    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% endif %}
+{% endfor %}
+</ul>
 
 ### データ理解・検証
 <ul>
@@ -243,8 +270,14 @@ last_modified_at: 2026-09-04
 ### データの理解・検証
 <ul>
 {% for p in site.pages %}
-  {% if p.tags contains "data-understanding" and p.url contains "/ds/" %}
-    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% if p.url contains "/ds/" %}
+    {% if p.ds_area %}
+      {% if p.ds_area == "datascience" and p.ds_section == "data-understanding" %}
+        <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+      {% endif %}
+    {% elsif p.tags contains "data-understanding" %}
+      <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+    {% endif %}
   {% endif %}
 {% endfor %}
 </ul>
