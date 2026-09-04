@@ -35,6 +35,11 @@ jobs:
           from pathlib import Path
           import subprocess
 
+          allowed_sections = {
+              "linear-algebra", "calculus", "set-theory", "statistics",
+              "data-preparation", "visualization", "modeling", "unstructured-data",
+          }
+
           changed = subprocess.check_output(
               ["git", "diff", "--name-only", "--", "pages/ds"], text=True
           ).splitlines()
@@ -55,14 +60,20 @@ jobs:
               except StopIteration:
                   errors.append(f"{name}: missing front matter end")
                   continue
+
               fm = lines[1:end]
               area = [line for line in fm if line.startswith("ds_area:")]
               section = [line for line in fm if line.startswith("ds_section:")]
               if len(area) != 1 or len(section) != 1:
                   errors.append(f"{name}: ds_area/ds_section must each appear exactly once")
-              if "statistics" in next((line for line in fm if line.startswith("tags:")), ""):
-                  if area != ["ds_area: datascience"] or section != ["ds_section: statistics"]:
-                      errors.append(f"{name}: statistics mapping is incorrect")
+                  continue
+
+              if area != ["ds_area: datascience"]:
+                  errors.append(f"{name}: expected datascience area")
+
+              section_value = section[0].split(":", 1)[1].strip()
+              if section_value not in allowed_sections:
+                  errors.append(f"{name}: unexpected datascience section {section_value!r}")
 
           if errors:
               print("\n".join(errors))
