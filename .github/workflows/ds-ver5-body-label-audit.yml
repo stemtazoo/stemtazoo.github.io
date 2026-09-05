@@ -1,0 +1,35 @@
+name: DS ver.5 body label audit
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/audit_ds_ver5_body_labels.py'
+      - '.github/workflows/ds-ver5-body-label-audit.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Generate audit
+        run: python scripts/audit_ds_ver5_body_labels.py
+      - name: Commit audit report
+        run: |
+          if [ -n "$(git status --porcelain docs/audits/ds-ver5-body-labels.md)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add docs/audits/ds-ver5-body-labels.md
+            git commit -m "Update DS ver.5 body label audit"
+            git push
+          else
+            echo "Audit report unchanged."
+          fi
