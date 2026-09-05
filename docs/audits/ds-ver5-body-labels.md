@@ -4,8 +4,8 @@
 
 ## 集計
 
-- 旧表記が残る通常記事: **248**
-- `ビジネス力シート`: **50記事**
+- 旧表記が残る通常記事: **246**
+- `ビジネス力シート`: **48記事**
 - `AI利活用スキルシート`: **59記事**
 - `データサイエンス力シート`: **79記事**
 - `データエンジニアリング力シート`: **60記事**
@@ -49,7 +49,6 @@
 | `bias-variance-tradeoff.md` | バイアス・バリアンスのトレードオフとは？過学習との関係【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
 | `binomial-bernoulli.md` | 二項分布とは？ベルヌーイ試行をn回繰り返す成功回数の確率【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `boxplot.md` | 箱ひげ図とは？四分位数と外れ値の読み取り方【DS検定】 | `datascience` | `visualization` | データサイエンス力シート |
-| `business-logic-and-data-importance.md` | ビジネスにおける「論理とデータの重要性」とは？【DS検定リテラシー】 | `foundation` | `logical-thinking` | ビジネス力シート |
 | `cap-theorem.md` | CAP定理とは？分断時の一貫性と可用性を整理【DS検定】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
 | `categorical-variable.md` | カテゴリ変数とは？数値データとの違いを整理【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
 | `causal-inference.md` | 因果推論とは？相関との違いを整理【DS検定リテラシー】 | `datascience` | `statistics` | データサイエンス力シート |
@@ -167,7 +166,6 @@
 | `mapreduce.md` | MapReduceとは？（分散処理の基本モデル）【DS検定リテラシー】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
 | `market-basket-analysis.md` | マーケットバスケット分析とは？購買パターン分析の基本【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
 | `matrix-multiplication.md` | 行列の掛け算とは？（行列同士の掛け算）【DS検定リテラシー】 | `datascience` | `linear-algebra` | データサイエンス力シート |
-| `mece.md` | MECEとは？モレなくダブりなく整理する思考法【DS検定リテラシー】 | `foundation` | `logical-thinking` | ビジネス力シート |
 | `mfa.md` | 多要素認証（MFA）とは？仕組みと必要性を整理【DS検定リテラシー】 | `foundation` | `security` | AI利活用スキルシート |
 | `missing-value-handling.md` | 欠損値の処理方法とは？代表的な手法と使い分け【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
 | `mlops.md` | MLOpsとは？AIOpsとの違いを一発整理【DS検定リテラシー】 | `dataengineering` | `environment-setup` | AI利活用スキルシート |
