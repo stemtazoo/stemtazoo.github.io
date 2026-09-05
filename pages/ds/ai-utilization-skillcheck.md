@@ -1,131 +1,29 @@
-﻿---
+---
 layout: page
-title: DS検定 リテラシー｜AI利活用スキル
-description: DS検定のAI利活用スキルを、既存サービスを使う段階から企画、技術的理解、人間による監督、倫理課題への対応までの流れで整理します。生成AIの出力を無検証で採用せず、精度・説明可能性・個人情報・著作権を確認し、利用者と提供者の責任を判断するための索引です。
+title: 旧『AI利活用スキル』について｜DS検定 ver.6
+description: "DS検定ver.5までのAI利活用スキルと、ver.6で複数領域へ統合された学習範囲を案内するページです。"
 permalink: /ds/ai-utilization-skillcheck/
 categories: [business]
-tags: [ds, skillcheck]
-prev: /ds/model-curriculum-summary/
-next: /ds/business-skillcheck/
-last_modified_at: 2026-07-01
+tags: [ds, skillcheck, ver6]
+last_modified_at: 2026-09-05
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
-  <a href="/ds/">DS検定トップ</a>
-  ＞ {{ page.title }}
+  <a href="/ds/">DS検定トップ</a> ＞ <a href="/ds/skillcheck/">ver.6スキルチェック</a> ＞ {{ page.title }}
 </div>
 
-## このページについて
-このページは、  
-**DS検定（リテラシーレベル）で求められている「AI利活用スキル」**を  
-一覧で確認するためのページです。
+## ver.6では「AI利活用」は独立した1領域ではありません
 
-モデルを作る力ではなく、  
-**AIを理解し、正しく使い、過信しない力**が重視されます。
+旧ver.5の「AI利活用スキル」は、ver.6では**基盤・価値創造・データサイエンス・データエンジニアリングなど複数領域へ統合**されています。
 
+生成AIの基礎だけを独立して覚えるのではなく、
 
-## ①使う
+- AIを安全・適切に使う → **基盤**
+- AIを事業へ適用する → **価値創造**
+- モデルや分析を理解する → **データサイエンス**
+- AIシステムを実装・運用する → **データエンジニアリング**
 
-| スキルレベル | チェック項目 |
-|---|---|
-| ★ | LLMを利用して、データ分析やサービス、システム開発のためのコードを作成、修正、改良できる |
-| ★ | LLMを利用して、開発した機能のテストや分析検証用のダミーデータを生成できる |
-| ★ | 画像生成AIに組み込まれた標準機能の利用（モデル選択）や、画像生成プロンプトルール（強調やネガティブプロンプトなど）を理解し、適切に入力することで、意図した画像を生成できる |
-| ★ | 既存の生成AIサービスやツールを活用し、自身の身の回りの業務・作業の効率化ができる |
-| ★ | 生成AIを活用する際、出力したい要件に合わせ、Few-shot PromptingやChain-of-Thoughtなどのプロンプト技法の利用や、各種APIパラメーター（Temperatureなど）の設定ができる |
+という役割で切り分けて学習してください。
 
-
-## ⑤企画
-
-| スキルレベル | チェック項目 |
-|---|---|
-| ★ | モデルの性能を改善するためには、モデルの改善よりもデータの質と量を向上させる方が効果的な場合があることを理解している |
-
-
-## ⑥技術的理解
-
-| スキルレベル | チェック項目 |
-|---|---|
-| ★ | 様々なサービスが登場する中で直感的にわくわくし、その裏にある技術に興味を持ち、リサーチできる |
-
-
-## 人間の関与と⑦技術課題対応責任
-
-| スキルレベル | チェック項目 |
-|---|---|
-| ★ | 大規模言語モデルにおいては、事実と異なる内容がさも正しいかのように生成されることがあること（Hallucination）、これらが根本的に避けることができないことを踏まえ、利用に際しては出力を鵜呑みにしない等の注意が必要であることを知っている大規模言語モデルにおいては、事実と異なる内容がさも正しいかのように生成されることがあること（Hallucination）、これらが根本的に避けることができないことを踏まえ、利用に際しては出力を鵜呑みにしない等の注意が必要であることを知っている |
-| ★ | 大規模言語モデル（LLM）でHallucinationが起こる理由を学習に使われているデータの観点から説明できる（学習用データが誤りや歪みを含んでいる場合や、入力された問いに対応する学習用データが存在しない場合など） |
-| ★ | Hallucinationが起きていることに気づくための適切なアクションをとることができる（検索等によるリサーチ結果との比較や、他LLMの出力結果との比較、正確な追加情報を入力データに付与することによる出力結果の変化比較など） |
-
-
-## ⑧倫理課題対応
-
-| スキルレベル | チェック項目 |
-|---|---|
-| ★ | データ、AI、機械学習の意図的な悪用（真偽の識別が困難なレベルの画像・音声作成、フェイク情報の作成、Botによる企業・国家への攻撃など）があり得ることを勘案し、技術に関する基礎的な知識と倫理を身につけている |
-| ★ | データ分析者・利活用者として、データの倫理的な活用上の許容される範囲や、ユーザサイドへの必要な許諾について概ね理解している（直近の個人情報に関する法令：個人情報保護法、EU一般データ保護規則、データポータビリティなど） |
-| ★ | AI・データを活用する際に、組織で規定された権利保護のガイドラインを説明できる |
-
-
-## 使い方のおすすめ
-- 学習前：  
-  **AIに何を期待してよいか／期待しすぎないかを確認**
-- 学習中：  
-  **記事がどのAI利活用スキルに対応しているかを意識**
-- 試験前：  
-  **「なぜ人の判断が必要か」を説明できるかで確認**
-
-※ 数理・分析面は  
-[データサイエンス力シート]({{ '/ds/skillcheck/' | relative_url }})  
-ビジネス面は  
-[ビジネス力シート]({{ '/ds/business-skillcheck/' | relative_url }})  
-エンジニアリング面は  
-[データエンジニアリング力シート]({{ '/ds/engineering-skillcheck/' | relative_url }})  
-を参照してください。
-
-## 🔗 関連記事
-
-<ul style="padding-left: 20px;">
-{% assign current_tags = page.tags %}
-{% assign count = 0 %}
-
-{% for p in site.pages %}
-  {% if p.url != page.url and p.tags %}
-    {% assign matched = false %}
-
-    {% for tag in current_tags %}
-      {% if p.tags contains tag and tag != "ds" %}
-        {% assign matched = true %}
-      {% endif %}
-    {% endfor %}
-
-    {% if matched %}
-      <li style="margin-bottom: 6px;">
-        <a href="{{ p.url }}">{{ p.title }}</a>
-      </li>
-      {% assign count = count | plus: 1 %}
-    {% endif %}
-
-    {% if count >= 5 %}
-      {% break %}
-    {% endif %}
-  {% endif %}
-{% endfor %}
-</ul>
-
-<hr>
-
-<div style="margin-top: 16px;">
-  🏠 <a href="/ds/">DS検定トップに戻る</a>
-</div>
-
-<div style="display:flex;justify-content:space-between;margin-top:12px;">
-
-  {% if page.previous.url %}
-    <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
-  {% endif %}
-
-  {% if page.next.url %}
-    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
-  {% endif %}
-
-</div>
+- [ver.6 ★1スキルチェック全体](/ds/skillcheck/)
+- [基盤 ★1スキルチェック](/ds/foundation-skillcheck/)
+- [価値創造 ★1スキルチェック](/ds/value-creation-skillcheck/)
