@@ -1,0 +1,70 @@
+name: DS skillcheck ver.6 build
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/build_skillcheck_data.py'
+      - 'data/skillcheck/README.md'
+      - '.github/workflows/ds-skillcheck-ver6-build.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  build-ver6:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Build official ver.6 datasets
+        run: |
+          python scripts/build_skillcheck_data.py \
+            --version 6.00 \
+            --source-url https://www.datascientist.or.jp/common/docs/skillcheck_ver6.00.xlsx
+
+      - name: Validate official ver.6 counts
+        run: |
+          python - <<'PY'
+          import json
+          from collections import Counter
+          from pathlib import Path
+
+          rows = json.loads(Path('data/skillcheck/versions/6.00/skillcheck.json').read_text(encoding='utf-8'))
+          exam = json.loads(Path('data/skillcheck/versions/6.00/exam_star1.json').read_text(encoding='utf-8'))
+
+          by_area = Counter(row['area'] for row in rows)
+          expected = {
+              'foundation': 33,
+              'value-creation': 153,
+              'datascience': 354,
+              'dataengineering': 180,
+              'fusion': 125,
+          }
+          assert len(rows) == 845, len(rows)
+          assert dict(by_area) == expected, by_area
+          assert len(exam) == 238, len(exam)
+          assert all(row['skill_level'] == '★' for row in exam)
+          assert all(row['area'] != 'fusion' for row in exam)
+          print('Validated ver.6: 845 total rows / 238 exam ★1 rows.')
+          PY
+
+      - name: Commit generated data
+        run: |
+          if [ -z "$(git status --porcelain -- data/skillcheck)" ]; then
+            echo 'No skillcheck data changes.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/skillcheck
+          git commit -m 'Build DS skillcheck ver.6 data'
+          git push
