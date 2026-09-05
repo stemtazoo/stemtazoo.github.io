@@ -157,12 +157,14 @@ DS検定では
 「どちらが適切か」を判断できるかが問われます。
 
 
-## 対応スキル項目（データエンジニアリング力シート）
+## 対応スキル項目（ver.6 データエンジニアリング）
 
-- データ蓄積
-- 分散技術
-- ★ NoSQLデータストア（HBase、Cassandra、Mongo DB、CouchDB、Amazon DynamoDB、Azure Cosmos DB、Google Cloud Firestoreなど）にAPIを介してアクセスし、新規データを登録できる
-
+- **分類**：データエンジニアリング
+- **スキルカテゴリ**：データ蓄積
+- **サブカテゴリ**：分散技術
+- **必須スキル**：—
+- ★ NoSQLデータストア（Cassandra、Mongo DB、CouchDB、Amazon DynamoDB、Azure Cosmos DB、Google Cloud Firestoreなど）にAPIを介してアクセスし、新規データを登録できる
+- [ver.6 ★1スキルチェックで確認する](/ds/engineering-skillcheck/)
 ## 🔗 関連記事
 
 <ul style="padding-left: 20px;">
