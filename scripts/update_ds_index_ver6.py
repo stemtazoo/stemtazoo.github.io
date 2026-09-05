@@ -8,9 +8,42 @@ old_intro = "現行の試験範囲では、従来のビジネス力の多くが�
 new_intro = "現行の試験範囲では、従来のビジネス力の多くが基盤へ移っています。行動規範・倫理、論理的思考、課題の定義、目標・指標、データ理解、AIの基礎、ITセキュリティの順に整理します。"
 text = text.replace(old_intro, new_intro)
 
-old_status = "> **ver.5 からの大きな変更**：従来の「ビジネス力」の多くは「基盤」へ移り、「価値創造」が新しい試験領域として加わりました。サイト内の既存記事は順次 ver.6 の分類へ整理します。"
-new_status = "> **ver.5 からの大きな変更**：従来の「ビジネス力」の多くは「基盤」へ移り、「価値創造」が新しい試験領域として加わりました。通常記事の4領域への分類は完了しており、現在は旧スキルチェックページの ver.6 対応を進めています。"
-text = text.replace(old_status, new_status)
+old_statuses = [
+    "> **ver.5 からの大きな変更**：従来の「ビジネス力」の多くは「基盤」へ移り、「価値創造」が新しい試験領域として加わりました。サイト内の既存記事は順次 ver.6 の分類へ整理します。",
+    "> **ver.5 からの大きな変更**：従来の「ビジネス力」の多くは「基盤」へ移り、「価値創造」が新しい試験領域として加わりました。通常記事の4領域への分類は完了しており、現在は旧スキルチェックページの ver.6 対応を進めています。",
+]
+new_status = "> **ver.5 からの大きな変更**：従来の「ビジネス力」の多くは「基盤」へ移り、「価値創造」が新しい試験領域として加わりました。通常記事の4領域分類と、★1・238項目の ver.6 スキルチェックへの更新は完了しています。"
+for old_status in old_statuses:
+    text = text.replace(old_status, new_status)
+
+old_skillcheck = '''## スキルチェック
+
+> 現在のサイト内スキルチェックページには、ver.5の分類をもとに作成したものが含まれます。ver.6の4領域への再整理を進めています。
+
+<ul>
+{% for p in site.pages %}
+  {% if p.tags contains "skillcheck" and p.url contains "/ds/" %}
+    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% endif %}
+{% endfor %}
+</ul>
+'''
+new_skillcheck = '''## ✅ ver.6 ★1スキルチェック
+
+2026年のDS検定で確認したい **★1・238項目**を、公式スキルチェックリスト ver.6 に沿って4領域に整理しています。
+
+- [4領域まとめ（238項目）](/ds/skillcheck/)
+- [基盤（21項目）](/ds/foundation-skillcheck/)
+- [価値創造（51項目）](/ds/value-creation-skillcheck/)
+- [データサイエンス（108項目）](/ds/datascience-skillcheck/)
+- [データエンジニアリング（58項目）](/ds/engineering-skillcheck/)
+
+旧「ビジネス力」「AI利活用スキル」のURLは、ver.6での読み替え方を案内するページとして残しています。
+'''
+if old_skillcheck in text:
+    text = text.replace(old_skillcheck, new_skillcheck, 1)
+elif "## ✅ ver.6 ★1スキルチェック\n" not in text:
+    raise SystemExit("skillcheck block not found")
 
 # Foundation: action norms / ethics
 logical_marker = "### 論理的思考\n"
@@ -129,4 +162,4 @@ if "### プログラミング基礎\n" not in text:
     text = text.replace(de_security_marker, programming + de_security_marker, 1)
 
 path.write_text(text, encoding="utf-8")
-print("Updated pages/ds/index.md for complete DS ver.6 section visibility.")
+print("Updated pages/ds/index.md for complete DS ver.6 section visibility and skillcheck navigation.")
