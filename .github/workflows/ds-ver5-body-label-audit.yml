@@ -4,6 +4,7 @@ on:
   workflow_dispatch:
   push:
     paths:
+      - 'pages/ds/*.md'
       - 'scripts/audit_ds_ver5_body_labels.py'
       - '.github/workflows/ds-ver5-body-label-audit.yml'
 
