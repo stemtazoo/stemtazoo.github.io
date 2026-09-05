@@ -1,0 +1,71 @@
+name: DS ver.6 reviewed similar migration
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/migrate_ds_ver6_reviewed_similar_items.py'
+      - '.github/workflows/ds-ver6-reviewed-similar-migration.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ds-ver6-reviewed-similar-migration-main
+  cancel-in-progress: false
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Dry run reviewed near matches
+        run: python scripts/migrate_ds_ver6_reviewed_similar_items.py
+      - name: Apply reviewed near matches
+        run: python scripts/migrate_ds_ver6_reviewed_similar_items.py --write
+      - name: Validate changed articles
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import subprocess
+          changed = []
+          for line in subprocess.check_output(['git','status','--porcelain'], text=True).splitlines():
+              path = line[3:]
+              if path.startswith('pages/ds/') and path.endswith('.md'):
+                  changed.append(Path(path))
+          assert len(changed) == 5, f'Expected 5 changed articles, got {len(changed)}'
+          legacy = ('ビジネス力シート','AI利活用スキルシート','データサイエンス力シート','データエンジニアリング力シート')
+          for path in changed:
+              text = path.read_text(encoding='utf-8')
+              assert '## 対応スキル項目（ver.6 ' in text, path
+              assert not any(label in text for label in legacy), path
+          print('Validated 5 reviewed near-match articles.')
+          PY
+      - name: Commit with concurrent-update retry
+        run: |
+          if [ -z "$(git status --porcelain pages/ds)" ]; then
+            echo "No reviewed near-match changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add pages/ds/*.md
+          git commit -m "Migrate reviewed DS skill mappings to ver.6"
+
+          for attempt in 1 2 3; do
+            git fetch origin main
+            if git rebase origin/main && git push origin HEAD:main; then
+              echo "Push succeeded on attempt ${attempt}."
+              exit 0
+            fi
+            git rebase --abort || true
+            echo "Push attempt ${attempt} failed; retrying..."
+            sleep $((attempt * 2))
+          done
+          echo "Failed to push after 3 attempts."
+          exit 1
