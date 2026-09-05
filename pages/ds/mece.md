@@ -1,4 +1,4 @@
-﻿---
+---
 layout: page
 title: MECEとは？モレなくダブりなく整理する思考法【DS検定リテラシー】
 description: "MECE（ミーシー）とは、「モレなく・ダブりなく」物事を整理する考え方です。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。初学者が迷いやすい判断ポイントも確認します。"
@@ -9,7 +9,7 @@ ds_area: foundation
 ds_section: logical-thinking
 prev: /ds/hypothesis-thinking/
 next: /ds/optional-math-algorithm/
-last_modified_at: 2026-06-21
+last_modified_at: 2026-09-05
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -148,10 +148,11 @@ DS検定では、
 - DS検定では分類の妥当性を問われる
 
 
-## 対応スキル項目（ビジネス力シート）
+## 対応スキル項目（ver.6 基盤）
 
-- 論理的思考
-- MECE
+- **スキルカテゴリ**：論理的思考
+- **サブカテゴリ**：MECE
+- **必須スキル**：○
 - ★ データや事象の重複に気づくことができる
 
 ## 🔗 関連記事
