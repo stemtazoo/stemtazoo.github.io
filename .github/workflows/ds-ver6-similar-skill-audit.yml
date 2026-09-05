@@ -1,0 +1,35 @@
+name: DS ver.6 similar skill audit
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/audit_ds_ver6_similar_skill_candidates.py'
+      - '.github/workflows/ds-ver6-similar-skill-audit.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Generate similar-skill audit
+        run: python scripts/audit_ds_ver6_similar_skill_candidates.py
+      - name: Commit audit report
+        run: |
+          if [ -n "$(git status --porcelain docs/audits/ds-ver6-similar-skill-candidates.md)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add docs/audits/ds-ver6-similar-skill-candidates.md
+            git commit -m "Update DS ver.6 similar skill audit"
+            git push
+          else
+            echo "Similar-skill audit unchanged."
+          fi
