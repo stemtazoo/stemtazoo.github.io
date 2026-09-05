@@ -1,0 +1,61 @@
+name: DS ver.6 exact skill migration
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/migrate_ds_ver6_exact_skill_items.py'
+      - '.github/workflows/ds-ver6-exact-skill-migration.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Dry run exact matches
+        run: python scripts/migrate_ds_ver6_exact_skill_items.py
+      - name: Apply exact ver.6 mappings
+        run: python scripts/migrate_ds_ver6_exact_skill_items.py --write
+      - name: Validate changed articles
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          legacy = (
+              'ビジネス力シート',
+              'AI利活用スキルシート',
+              'データサイエンス力シート',
+              'データエンジニアリング力シート',
+          )
+          changed = []
+          for line in __import__('subprocess').check_output(['git','status','--porcelain'], text=True).splitlines():
+              path = line[3:]
+              if path.startswith('pages/ds/') and path.endswith('.md'):
+                  changed.append(Path(path))
+          assert changed, 'No article changes produced by exact migration'
+          for path in changed:
+              text = path.read_text(encoding='utf-8')
+              assert '## 対応スキル項目（ver.6 ' in text, path
+              assert not any(label in text for label in legacy), path
+              assert re.search(r'^ds_area:\s*(foundation|value-creation|datascience|dataengineering)\s*$', text, re.M), path
+          print(f'Validated {len(changed)} changed articles.')
+          PY
+      - name: Commit migrated articles
+        run: |
+          if [ -n "$(git status --porcelain pages/ds)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add pages/ds/*.md
+            git commit -m "Migrate exact DS skill mappings to ver.6"
+            git push
+          else
+            echo "No exact mappings to migrate."
+          fi
