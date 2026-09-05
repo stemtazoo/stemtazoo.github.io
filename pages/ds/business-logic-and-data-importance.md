@@ -9,7 +9,7 @@ ds_area: foundation
 ds_section: logical-thinking
 prev: /ds/bi-tool-functions/
 next: /ds/cap-theorem/
-last_modified_at: 2026-06-21
+last_modified_at: 2026-09-05
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -140,10 +140,11 @@ DS検定では、
 - 「数字があるから正しい」という選択肢は疑う  
 
 
-## 対応スキル項目（ビジネス力シート）
+## 対応スキル項目（ver.6 基盤）
 
-- 行動規範
-- ビジネスマインド
+- **スキルカテゴリ**：行動規範
+- **サブカテゴリ**：ビジネスマインド
+- **必須スキル**：○
 - ★ ビジネスにおける「論理とデータの重要性」を認識し、分析的でデータドリブンな考え方に基づき行動できる
 
 ## 🔗 関連記事
