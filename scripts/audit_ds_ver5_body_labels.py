@@ -3,6 +3,8 @@
 
 This script does not modify articles. It reports ordinary DS articles that still
 contain legacy sheet labels so ver.6 replacements can be reviewed safely.
+Exact one-item matches are migrated separately by
+`scripts/migrate_ds_ver6_exact_skill_items.py`.
 """
 from pathlib import Path
 
@@ -91,6 +93,8 @@ def main() -> int:
         "## 修正方針",
         "",
         "旧見出しだけを機械的に名称変更しない。本文に列挙された旧チェック項目自体がver.6で移動・統合されている可能性があるため、`ds_area` / `ds_section` と公式ver.6の★1データを照合して記事単位で更新する。",
+        "",
+        "まず、★1文言が公式ver.6と完全一致し、かつ `ds_area` も一致する1項目記事は `scripts/migrate_ds_ver6_exact_skill_items.py` で自動移行する。残りは類似一致と記事内容を確認して個別に更新する。",
         "",
         "優先順は **基盤・価値創造（旧ビジネス/AI利活用からの再編）→ データサイエンス → データエンジニアリング** とする。",
         "",
