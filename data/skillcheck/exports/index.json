@@ -1,5 +1,5 @@
 {
-  "latest": "5.00",
+  "latest": "6.00",
   "versions": [
     {
       "version": "5.00",
@@ -9,6 +9,34 @@
       "rows": 719,
       "skilllevel_rows": 5,
       "generated_at": "2026-03-19T04:47:19.255735+00:00"
+    },
+    {
+      "version": "6.00",
+      "source_url": "https://www.datascientist.or.jp/common/docs/skillcheck_ver6.00.xlsx",
+      "raw_file": "data/skillcheck/raw/skillcheck_ver6.00.xlsx",
+      "sha256": "6b761969feb0304eb99870628e1025ac5553c74319186865079359998f046492",
+      "rows": 845,
+      "exam_star1_rows": 238,
+      "rows_by_area": {
+        "foundation": 33,
+        "value-creation": 153,
+        "datascience": 354,
+        "dataengineering": 180,
+        "fusion": 125
+      },
+      "star1_rows_by_area": {
+        "foundation": 21,
+        "value-creation": 51,
+        "datascience": 108,
+        "dataengineering": 58
+      },
+      "skilllevel_definition_year": "2025",
+      "skilllevel_rows": 5,
+      "mapping_rows": {
+        "datascience": 354,
+        "dataengineering": 191
+      },
+      "generated_at": "2026-09-05T07:29:49.208987+00:00"
     }
   ]
 }
