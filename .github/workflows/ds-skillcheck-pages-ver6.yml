@@ -1,0 +1,64 @@
+name: DS skillcheck ver.6 pages
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/build_ds_skillcheck_pages.py'
+      - 'data/skillcheck/exports/exam_star1_latest.json'
+      - '.github/workflows/ds-skillcheck-pages-ver6.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  build-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Generate ver.6 skillcheck pages
+        run: python scripts/build_ds_skillcheck_pages.py
+
+      - name: Validate generated pages
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          expected = {
+              'pages/ds/skillcheck.md': '/ds/skillcheck/',
+              'pages/ds/foundation-skillcheck.md': '/ds/foundation-skillcheck/',
+              'pages/ds/value-creation-skillcheck.md': '/ds/value-creation-skillcheck/',
+              'pages/ds/datascience-skillcheck.md': '/ds/datascience-skillcheck/',
+              'pages/ds/engineering-skillcheck.md': '/ds/engineering-skillcheck/',
+              'pages/ds/business-skillcheck.md': '/ds/business-skillcheck/',
+              'pages/ds/ai-utilization-skillcheck.md': '/ds/ai-utilization-skillcheck/',
+          }
+          for path, permalink in expected.items():
+              text = Path(path).read_text(encoding='utf-8')
+              assert f'permalink: {permalink}' in text, path
+              assert 'last_modified_at: 2026-09-05' in text, path
+          overview = Path('pages/ds/skillcheck.md').read_text(encoding='utf-8')
+          assert '**238**' in overview
+          assert '基盤' in overview and '価値創造' in overview
+          print('Validated generated DS ver.6 skillcheck pages.')
+          PY
+
+      - name: Commit generated pages
+        run: |
+          if [ -z "$(git status --porcelain -- pages/ds/skillcheck.md pages/ds/foundation-skillcheck.md pages/ds/value-creation-skillcheck.md pages/ds/datascience-skillcheck.md pages/ds/engineering-skillcheck.md pages/ds/business-skillcheck.md pages/ds/ai-utilization-skillcheck.md)" ]; then
+            echo 'No generated page changes.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add pages/ds/skillcheck.md pages/ds/foundation-skillcheck.md pages/ds/value-creation-skillcheck.md pages/ds/datascience-skillcheck.md pages/ds/engineering-skillcheck.md pages/ds/business-skillcheck.md pages/ds/ai-utilization-skillcheck.md
+          git commit -m 'Build DS ver.6 skillcheck pages'
+          git push
