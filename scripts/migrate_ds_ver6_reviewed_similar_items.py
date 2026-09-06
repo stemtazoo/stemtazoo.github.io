@@ -69,6 +69,9 @@ REVIEWED: dict[str, str | tuple[str, ...] | None] = {
     "dunning-kruger-effect.md": None,
     "compliance-risk.md": None,
     "contract-ukeoi-juninin.md": None,
+    "ab-test.md": None,
+    "bi-tool-functions.md": None,
+    "hot-cool-archive.md": None,
 }
 
 SUPPLEMENTAL: dict[str, tuple[str, str, str]] = {
@@ -86,6 +89,9 @@ SUPPLEMENTAL: dict[str, tuple[str, str, str]] = {
     "dunning-kruger-effect.md": ("foundation", "logical-thinking", "認知バイアスの補助学習"),
     "compliance-risk.md": ("foundation", "action-norms", "コンプライアンス・リスクの補助学習"),
     "contract-ukeoi-juninin.md": ("foundation", "action-norms", "契約形態の補助学習"),
+    "ab-test.md": ("datascience", "statistics", "実験・効果検証の補助学習"),
+    "bi-tool-functions.md": ("datascience", "data-understanding", "BI・データ活用の補助学習"),
+    "hot-cool-archive.md": ("dataengineering", "data-storage", "ストレージ階層設計の補助学習"),
 }
 
 LEGACY_LABELS = (
