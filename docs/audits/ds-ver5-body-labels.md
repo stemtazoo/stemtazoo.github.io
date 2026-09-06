@@ -4,8 +4,8 @@
 
 ## 集計
 
-- 旧表記が残る通常記事: **209**
-- `ビジネス力シート`: **35記事**
+- 旧表記が残る通常記事: **207**
+- `ビジネス力シート`: **33記事**
 - `AI利活用スキルシート`: **58記事**
 - `データサイエンス力シート`: **66記事**
 - `データエンジニアリング力シート`: **50記事**
@@ -140,7 +140,6 @@
 | `jupyter-r-usage.md` | Jupyter NotebookやRの使い所とは？（データ分析環境の役割）【DS検定】 | `dataengineering` | `environment-setup` | AI利活用スキルシート |
 | `kernel.md` | カーネル（Kernel）とは？画像フィルタ処理の計算ルール【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
 | `key-stretching.md` | ストレッチングとは？（ハッシュ強化の仕組み）【DS検定】 | `foundation` | `security` | AI利活用スキルシート |
-| `kpi-kgi.md` | KPIとKGIの違いとは？目標管理の基本を整理【DS検定】 | `foundation` | `goal-setting` | ビジネス力シート |
 | `least-privilege.md` | 最小権限の原則とは？ゼロトラストとの関係を整理【DS検定リテラシー】 | `foundation` | `security` | AI利活用スキルシート |
 | `left-join-where.md` | LEFT JOINとWHEREの関係とは？（SQLのひっかけ問題）【DS検定】 | `dataengineering` | `data-processing` | データエンジニアリング力シート |
 | `llm-temperature.md` | LLMのTemperatureとは？出力のランダム性を理解する【DS検定】 | `foundation` | `ai-fundamentals` | AI利活用スキルシート |
@@ -170,7 +169,6 @@
 | `pearson-correlation.md` | ピアソンの相関係数とは？関係の強さをどう読むか【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `pest-analysis.md` | PEST分析とは？マクロ環境を分析するフレームワーク【DS検定】 | `value-creation` | `business-design` | ビジネス力シート |
 | `pivot.md` | ピボットとは？クロス集計との違いを整理【DS検定】 | `datascience` | `visualization` | データサイエンス力シート |
-| `poc-concept-proof.md` | PoC（概念実証）とは？AIプロジェクトで重要な理由【DS検定】 | `value-creation` | `poc` | ビジネス力シート |
 | `point-interval-estimation.md` | 点推定と区間推定の違いとは？（信頼区間まで整理）【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `polymorphism.md` | ポリモーフィズムとは？（同じ呼び出しで動作が変わる仕組み）【DS検定】 | `dataengineering` | `programming` | AI利活用スキルシート |
 | `power-law.md` | べき乗則とは？両対数グラフが直線になる理由【DS検定リテラシー】 | `datascience` | `statistics` | データサイエンス力シート |
