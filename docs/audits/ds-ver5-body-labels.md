@@ -4,8 +4,8 @@
 
 ## 集計
 
-- 旧表記が残る通常記事: **203**
-- `ビジネス力シート`: **29記事**
+- 旧表記が残る通常記事: **200**
+- `ビジネス力シート`: **26記事**
 - `AI利活用スキルシート`: **58記事**
 - `データサイエンス力シート`: **66記事**
 - `データエンジニアリング力シート`: **50記事**
@@ -72,7 +72,6 @@
 | `data-cube.md` | データキューブとは？OLAP分析の基本をわかりやすく整理【DS検定】 | `datascience` | `data-understanding` | データエンジニアリング力シート |
 | `data-driven-management.md` | データドリブン経営とは？データにもとづいて意思決定する考え方【DS検定】 | `value-creation` | `business-design` | ビジネス力シート |
 | `data-extraction-vs-aggregation.md` | データ抽出と集計の違いとは？（SQL・BIで混同しやすい操作）【DS検定】 | `dataengineering` | `data-collection` | データエンジニアリング力シート |
-| `data-governance.md` | データガバナンスとは？データ活用に必要な管理の仕組み【DS検定】 | `value-creation` | `governance-risk` | ビジネス力シート |
 | `data-lake.md` | データレイクとは？（DWHとの違いも整理）【DS検定リテラシー】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
 | `data-literacy.md` | データリテラシーとは？データを読み解く力【DS検定】 | `foundation` | `data-understanding` | ビジネス力シート |
 | `data-transformation.md` | データトランスフォーメーションとは？（非構造化データの変換）【DS検定】 | `datascience` | `data-preparation` | データエンジニアリング力シート |
@@ -114,7 +113,6 @@
 | `gantt-chart.md` | ガントチャートとは？WBSとの違いとプロジェクト管理の基本【DS検定】 | `value-creation` | `project-management` | ビジネス力シート |
 | `gdpr.md` | GDPRとは？個人データ保護の基本を整理【DS検定】 | `foundation` | `action-norms` | AI利活用スキルシート |
 | `gini-vs-entropy.md` | ジニ不純度とエントロピーの違いとは？分岐基準を整理【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
-| `governance.md` | ガバナンスとは？企業統治とリスク管理の関係【DS検定】 | `value-creation` | `governance-risk` | ビジネス力シート |
 | `hadoop-vs-spark.md` | HadoopとSparkの違いとは？（分散処理基盤の比較）【DS検定リテラシー】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
 | `hadoop.md` | Hadoopとは？（ビッグデータ分散処理基盤）【DS検定リテラシー】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
 | `hash-function.md` | ハッシュ関数とは？（コリジョン・ソルトとの違い）【DS検定】 | `foundation` | `security` | AI利活用スキルシート |
@@ -133,7 +131,6 @@
 | `industry4-0.md` | インダストリー4.0とは？第4次産業革命の本質とドイツ戦略【DS検定】 | `value-creation` | `technology-social-trends` | AI利活用スキルシート |
 | `information-gain.md` | 情報利得とは？決定木で分岐の良さを判断する基準【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
 | `inheritance.md` | 継承とは？クラス設計の基本を整理【DS検定リテラシー】 | `dataengineering` | `programming` | AI利活用スキルシート |
-| `internal-control.md` | 内部統制とは？企業の不正やミスを防ぐ仕組み【DS検定】 | `value-creation` | `governance-risk` | ビジネス力シート |
 | `interpret-statistics.md` | 数字やグラフの持つメッセージを理解するとは？（統計情報の正しい読み取り）【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `japanese-morphological-analysis-tools.md` | 日本語の形態素解析ツールとは？代表例と違いを整理【DS検定】 | `datascience` | `unstructured-data` | AI利活用スキルシート |
 | `jupyter-r-usage.md` | Jupyter NotebookやRの使い所とは？（データ分析環境の役割）【DS検定】 | `dataengineering` | `environment-setup` | AI利活用スキルシート |
