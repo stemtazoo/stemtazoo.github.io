@@ -3,7 +3,8 @@
 
 Mappings are explicit filename -> official ver.6 item_id pairs. Before writing, the
 script verifies the article's ds_area matches the official item area and that the
-legacy block still contains exactly one ★ item. This avoids broad fuzzy auto-editing.
+legacy block still contains exactly one ★ item. Already-migrated mappings are
+accepted so the script remains idempotent.
 """
 from __future__ import annotations
 
@@ -22,6 +23,9 @@ REVIEWED = {
     "yarn.md": "dataengineering-0068",
     "visualization-basic-perspectives.md": "datascience-0153",
     "malware.md": "foundation-0032",
+    "rdb-vs-nosql.md": "dataengineering-0069",
+    "analysis-approach-selection.md": "datascience-0075",
+    "causal-inference.md": "datascience-0017",
 }
 
 LEGACY_LABELS = (
@@ -102,18 +106,11 @@ def main() -> int:
     rows = json.loads(DATA.read_text(encoding="utf-8"))
     by_id = {row["item_id"]: row for row in rows}
     changed: list[str] = []
+    already: list[str] = []
 
     for filename, item_id in REVIEWED.items():
         path = DS_DIR / filename
         text = path.read_text(encoding="utf-8-sig")
-        match = HEADING_RE.search(text)
-        if not match:
-            raise SystemExit(f"{filename}: legacy skill heading not found")
-        start, end = bounds(text, match)
-        block = text[start:end]
-        stars = re.findall(r"^-\s*★\s*(.+?)\s*$", block, re.MULTILINE)
-        if len(stars) != 1:
-            raise SystemExit(f"{filename}: expected exactly one legacy ★ item, got {len(stars)}")
         row = by_id.get(item_id)
         if not row:
             raise SystemExit(f"{filename}: official item not found: {item_id}")
@@ -122,6 +119,21 @@ def main() -> int:
             raise SystemExit(
                 f"{filename}: ds_area mismatch {meta.get('ds_area')} != {row.get('area')}"
             )
+
+        match = HEADING_RE.search(text)
+        if not match:
+            canonical_heading = f"## 対応スキル項目（ver.6 {AREA_LABEL[row['area']]}）"
+            canonical_item = f"- ★ {normalize(row['item'])}"
+            if canonical_heading in text and canonical_item in text:
+                already.append(filename)
+                continue
+            raise SystemExit(f"{filename}: neither legacy nor expected ver.6 skill block found")
+
+        start, end = bounds(text, match)
+        block = text[start:end]
+        stars = re.findall(r"^-\s*★\s*(.+?)\s*$", block, re.MULTILINE)
+        if len(stars) != 1:
+            raise SystemExit(f"{filename}: expected exactly one legacy ★ item, got {len(stars)}")
         new_text = text[:start] + canonical_block(row) + text[end:]
         if new_text != text:
             changed.append(filename)
@@ -129,9 +141,11 @@ def main() -> int:
                 path.write_text(new_text, encoding="utf-8")
 
     mode = "WRITE" if args.write else "DRY-RUN"
-    print(f"{mode}: reviewed similar migrations={len(changed)}")
+    print(f"{mode}: reviewed similar migrations={len(changed)}, already={len(already)}")
     for filename in changed:
         print(f"CHANGE {filename} -> {REVIEWED[filename]}")
+    for filename in already:
+        print(f"ALREADY {filename} -> {REVIEWED[filename]}")
     return 0
 
 
