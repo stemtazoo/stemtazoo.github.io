@@ -149,6 +149,7 @@ gk_sections:
 
   - title: "AIの法律と倫理"
     subsections:
+      - title: "AIに関する法律と契約"
       - title: "AI倫理・ガバナンス"
         subsections:
           - title: "基礎・原則"
@@ -176,7 +177,7 @@ gk_sections:
   - title: "チートシート（試験直前）"
 
   - title: "ひっかけ問題集"
-last_modified_at: 2026-08-30
+last_modified_at: 2026-09-06
 ---
 
 <div class="portal-card-grid">
@@ -227,7 +228,7 @@ last_modified_at: 2026-08-30
   - [AIの社会実装に向けて](#aiの社会実装に向けて)
   - [AIに必要な数理・統計知識](#aiに必要な数理統計知識)
 - [法律・倫理分野](#法律倫理分野)
-  - [AI倫理・AIガバナンス](#ai倫理aiガバナンス)
+  - [AIの法律と倫理](#aiの法律と倫理)
 - [試験対策](#試験対策)
   - [チートシート（試験直前）](#チートシート試験直前)
   - [ひっかけ問題集](#ひっかけ問題集)
@@ -272,7 +273,7 @@ last_modified_at: 2026-08-30
 
 ## 法律・倫理分野
 
-## AI倫理・AIガバナンス
+## AIの法律と倫理
 {% assign sec = page.gk_sections | where: "title", "AIの法律と倫理" | first %}
 {% include gk_section.html sec=sec %}
 
