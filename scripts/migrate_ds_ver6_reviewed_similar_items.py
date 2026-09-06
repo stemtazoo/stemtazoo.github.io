@@ -36,6 +36,8 @@ REVIEWED = {
     "analysis-approach-design.md": "foundation-0002",
     "revenue-equation.md": "foundation-0016",
     "hallucination.md": ("foundation-0017", "foundation-0018"),
+    "kpi-kgi.md": "foundation-0016",
+    "poc-concept-proof.md": "value-creation-0037",
 }
 
 LEGACY_LABELS = (
