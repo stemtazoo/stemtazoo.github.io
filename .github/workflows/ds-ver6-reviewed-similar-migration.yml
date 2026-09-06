@@ -28,6 +28,10 @@ jobs:
         run: python scripts/migrate_ds_ver6_reviewed_similar_items.py
       - name: Apply reviewed near matches
         run: python scripts/migrate_ds_ver6_reviewed_similar_items.py --write
+      - name: Refresh DS ver.5 and similarity audits
+        run: |
+          python scripts/audit_ds_ver5_body_labels.py
+          python scripts/audit_ds_ver6_similar_skill_candidates.py
       - name: Validate changed articles
         run: |
           python - <<'PY'
@@ -51,13 +55,13 @@ jobs:
           PY
       - name: Commit with concurrent-update retry
         run: |
-          if [ -z "$(git status --porcelain pages/ds)" ]; then
-            echo "No reviewed near-match changes."
+          if [ -z "$(git status --porcelain pages/ds docs/audits/ds-ver5-body-labels.md docs/audits/ds-ver6-similar-skill-candidates.md)" ]; then
+            echo "No reviewed migration or audit changes."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add pages/ds/*.md
+          git add pages/ds/*.md docs/audits/ds-ver5-body-labels.md docs/audits/ds-ver6-similar-skill-candidates.md
           git commit -m "Migrate reviewed DS skill mappings to ver.6"
 
           for attempt in 1 2 3; do
