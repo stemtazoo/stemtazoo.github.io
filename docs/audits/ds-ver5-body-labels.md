@@ -4,11 +4,11 @@
 
 ## 集計
 
-- 旧表記が残る通常記事: **214**
+- 旧表記が残る通常記事: **212**
 - `ビジネス力シート`: **37記事**
 - `AI利活用スキルシート`: **59記事**
 - `データサイエンス力シート`: **66記事**
-- `データエンジニアリング力シート`: **52記事**
+- `データエンジニアリング力シート`: **50記事**
 
 ## 修正方針
 
@@ -76,9 +76,7 @@
 | `data-governance.md` | データガバナンスとは？データ活用に必要な管理の仕組み【DS検定】 | `value-creation` | `governance-risk` | ビジネス力シート |
 | `data-lake.md` | データレイクとは？（DWHとの違いも整理）【DS検定リテラシー】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
 | `data-literacy.md` | データリテラシーとは？データを読み解く力【DS検定】 | `foundation` | `data-understanding` | ビジネス力シート |
-| `data-mart.md` | データマートとは？（DWHとの違いを整理）【DS検定リテラシー】 | `dataengineering` | `database` | データエンジニアリング力シート |
 | `data-transformation.md` | データトランスフォーメーションとは？（非構造化データの変換）【DS検定】 | `datascience` | `data-preparation` | データエンジニアリング力シート |
-| `data-warehouse-vs-datamart.md` | データウェアハウス（DWH）とは？データマートとの違いを理解する【DS検定】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
 | `data-warehouse.md` | データウェアハウス（DWH）とは？（データレイクとの違いも整理）【DS検定リテラシー】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
 | `database-constraints.md` | データベースの制約とは？NOT NULL・一意性・外部キーを整理【DS検定】 | `dataengineering` | `database` | データエンジニアリング力シート |
 | `datalake-vs-nosql.md` | データレイクとNoSQLの違いとは？役割の違いを整理【DS検定】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
