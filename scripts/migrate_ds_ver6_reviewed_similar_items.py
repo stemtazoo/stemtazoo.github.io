@@ -177,7 +177,7 @@ def main() -> int:
 
         start, end = bounds(text, match)
         block = text[start:end]
-        stars = re.findall(r"^-?\s*★\s*(.+?)\s*$", block, re.MULTILINE)
+        stars = re.findall(r"^(?:[-*+]\s*)?★\s*(.+?)\s*$", block, re.MULTILINE)
         if len(stars) < 1:
             raise SystemExit(f"{filename}: expected at least one legacy ★ item, got 0")
 
