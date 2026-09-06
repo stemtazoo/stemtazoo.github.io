@@ -4,8 +4,8 @@
 
 ## 集計
 
-- 旧表記が残る通常記事: **206**
-- `ビジネス力シート`: **32記事**
+- 旧表記が残る通常記事: **203**
+- `ビジネス力シート`: **29記事**
 - `AI利活用スキルシート`: **58記事**
 - `データサイエンス力シート`: **66記事**
 - `データエンジニアリング力シート`: **50記事**
@@ -109,7 +109,6 @@
 | `feature-importance.md` | 特徴量重要度とは？不純度ベースとPermutationの違い【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
 | `feature.md` | 特徴量（Feature）とは？機械学習で使う入力データを理解する【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
 | `filter.md` | フィルターとは？BIツールの基本操作をわかりやすく解説【DS検定】 | `datascience` | `data-understanding` | データサイエンス力シート |
-| `five-forces-analysis.md` | 5フォース分析とは？業界の競争環境を分析するフレームワーク【DS検定】 | `value-creation` | `business-design` | ビジネス力シート |
 | `foreign-key.md` | 外部キー（Foreign Key）とは？テーブルの関係を理解【DS検定】 | `dataengineering` | `database` | データエンジニアリング力シート |
 | `ftp-ssh.md` | FTP・SSH・SFTP・FTPSの違いとは？用途と暗号化を比較【DS検定】 | `dataengineering` | `data-collection` | データエンジニアリング力シート |
 | `gantt-chart.md` | ガントチャートとは？WBSとの違いとプロジェクト管理の基本【DS検定】 | `value-creation` | `project-management` | ビジネス力シート |
@@ -166,7 +165,6 @@
 | `paired-vs-independent-data.md` | 対応があるデータと対応がないデータの違いとは？【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `paper-structure.md` | 一般的な論文構成とは？流れを理解する【DS検定リテラシー】 | `foundation` | `logical-thinking` | ビジネス力シート |
 | `pearson-correlation.md` | ピアソンの相関係数とは？関係の強さをどう読むか【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
-| `pest-analysis.md` | PEST分析とは？マクロ環境を分析するフレームワーク【DS検定】 | `value-creation` | `business-design` | ビジネス力シート |
 | `pivot.md` | ピボットとは？クロス集計との違いを整理【DS検定】 | `datascience` | `visualization` | データサイエンス力シート |
 | `point-interval-estimation.md` | 点推定と区間推定の違いとは？（信頼区間まで整理）【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `polymorphism.md` | ポリモーフィズムとは？（同じ呼び出しで動作が変わる仕組み）【DS検定】 | `dataengineering` | `programming` | AI利活用スキルシート |
@@ -214,7 +212,6 @@
 | `statistics-summary.md` | DS検定でよく出る統計まとめ（平均・分散・相関を一気に整理） | `datascience` | `statistics` | データサイエンス力シート |
 | `stemming-vs-lemmatization.md` | ステミングとレンマ化の違いとは？（テキスト前処理の基本）【DS検定】 | `datascience` | `unstructured-data` | AI利活用スキルシート |
 | `student-t-test.md` | スチューデントの検定（t検定）とは？【DS検定リテラシー】 | `datascience` | `statistics` | データサイエンス力シート |
-| `swot-analysis.md` | SWOT分析とは？企業の強みと外部環境を整理するフレームワーク【DS検定】 | `value-creation` | `business-design` | ビジネス力シート |
 | `type1-type2-error.md` | 第一種の過誤と第二種の過誤の違いとは？【DS検定リテラシー】 | `datascience` | `statistics` | データサイエンス力シート |
 | `variance-and-standard-deviation.md` | 分散と標準偏差の違いとは？ばらつきをどう読むか【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `variance-standard-deviation.md` | 分散と標準偏差とは？ばらつきを理解する基本統計【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
