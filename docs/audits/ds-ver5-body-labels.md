@@ -4,10 +4,10 @@
 
 ## 集計
 
-- 旧表記が残る通常記事: **216**
+- 旧表記が残る通常記事: **214**
 - `ビジネス力シート`: **37記事**
 - `AI利活用スキルシート`: **59記事**
-- `データサイエンス力シート`: **68記事**
+- `データサイエンス力シート`: **66記事**
 - `データエンジニアリング力シート`: **52記事**
 
 ## 修正方針
@@ -96,7 +96,6 @@
 | `drilldown-drillup.md` | ドリルダウンとドリルアップの違いとは？BIツールの基本操作【DS検定】 | `datascience` | `visualization` | データサイエンス力シート |
 | `drillthrough.md` | ドリルスルーとは？ドリルダウンとの違いを整理【DS検定】 | `datascience` | `visualization` | データサイエンス力シート |
 | `dunning-kruger-effect.md` | ダニング＝クルーガー効果とは？能力が低いほど自信が高くなる心理【DS検定】 | `foundation` | `logical-thinking` | ビジネス力シート |
-| `e-calculus.md` | eの微分・積分を最短で整理【DS検定リテラシー】 | `datascience` | `calculus` | データサイエンス力シート |
 | `eda.md` | EDA（探索的データ分析）とは？分析の第一歩を理解する【DS検定】 | `datascience` | `visualization` | データサイエンス力シート |
 | `elsi.md` | ELSIとは？AI時代に重要な倫理・法・社会問題を理解する【DS検定】 | `foundation` | `action-norms` | AI利活用スキルシート |
 | `encapsulation.md` | カプセル化とは？情報隠蔽との違いを整理【DS検定リテラシー】 | `dataengineering` | `programming` | AI利活用スキルシート |
@@ -205,7 +204,6 @@
 | `scrum.md` | スクラムとは？アジャイル開発の代表的なフレームワーク【DS検定】 | `value-creation` | `project-management` | ビジネス力シート |
 | `self-join.md` | 自己結合とは？同じテーブルを結合する理由を理解する【DS検定】 | `dataengineering` | `data-processing` | データエンジニアリング力シート |
 | `sigmoid-function.md` | シグモイド関数とは？（確率に変換する関数）【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
-| `significance-level-and-pvalue.md` | 有意水準とp値の違いとは？【DS検定リテラシー】 | `datascience` | `statistics` | データサイエンス力シート |
 | `slice-dice.md` | スライスとダイスの違いとは？BIツールの基本操作を整理【DS検定】 | `datascience` | `visualization` | データサイエンス力シート |
 | `soap.md` | SOAPとは？RESTとの違いを整理【DS検定】 | `dataengineering` | `data-processing` | データエンジニアリング力シート |
 | `society5.md` | Society5.0とは？超スマート社会の本質を整理【DS検定】 | `value-creation` | `technology-social-trends` | AI利活用スキルシート |
