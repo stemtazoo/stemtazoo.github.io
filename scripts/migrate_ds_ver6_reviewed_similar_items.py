@@ -26,6 +26,10 @@ REVIEWED = {
     "rdb-vs-nosql.md": "dataengineering-0069",
     "analysis-approach-selection.md": "datascience-0075",
     "causal-inference.md": "datascience-0017",
+    "bcp.md": "value-creation-0049",
+    "risk-management.md": "value-creation-0049",
+    "operational-risk.md": "value-creation-0049",
+    "incident-management.md": "value-creation-0049",
 }
 
 LEGACY_LABELS = (
