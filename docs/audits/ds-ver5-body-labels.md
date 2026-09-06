@@ -4,8 +4,8 @@
 
 ## 集計
 
-- 旧表記が残る通常記事: **177**
-- `ビジネス力シート`: **3記事**
+- 旧表記が残る通常記事: **174**
+- `ビジネス力シート`: **0記事**
 - `AI利活用スキルシート`: **58記事**
 - `データサイエンス力シート`: **66記事**
 - `データエンジニアリング力シート`: **50記事**
@@ -22,7 +22,6 @@
 
 | ファイル | title | ds_area | ds_section | 旧表記 |
 |---|---|---|---|---|
-| `ab-test.md` | A/Bテストとは？データで施策を比較する方法【DS検定】 | `datascience` | `statistics` | ビジネス力シート |
 | `access-control-list.md` | アクセス制御リスト（ACL）とは？ファイル権限の基本を整理【DS検定】 | `foundation` | `security` | データエンジニアリング力シート |
 | `activation-functions-hidden-layer.md` | 中間層で使用される活性化関数とは？（ReLU・シグモイド・ソフトマックスの違い）【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
 | `aiops-mlops-cheatsheet.md` | AIOpsとMLOpsの違いを一発整理【DS検定チートシート】 | `dataengineering` | `environment-setup` | AI利活用スキルシート |
@@ -40,7 +39,6 @@
 | `bayes-theorem.md` | ベイズの定理とは？（条件付き確率の逆算）【DS検定リテラシー】 | `datascience` | `statistics` | データサイエンス力シート |
 | `bernoulli-binomial.md` | ベルヌーイ試行とは？成功・失敗の1回の試行を整理【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `bi-operations-cheatsheet.md` | BIツール操作チートシート｜スライス・ダイス・ドリルダウンの違い【DS検定】 | `datascience` | `visualization` | データサイエンス力シート |
-| `bi-tool-functions.md` | BIツールの基本機能とは？OLAP・データマイニングを整理【DS検定】 | `datascience` | `data-understanding` | ビジネス力シート |
 | `bias-variance-tradeoff.md` | バイアス・バリアンスのトレードオフとは？過学習との関係【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
 | `binomial-bernoulli.md` | 二項分布とは？ベルヌーイ試行をn回繰り返す成功回数の確率【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `boxplot.md` | 箱ひげ図とは？四分位数と外れ値の読み取り方【DS検定】 | `datascience` | `visualization` | データサイエンス力シート |
@@ -106,7 +104,6 @@
 | `hdfs.md` | HDFS（Hadoop分散ファイルシステム）とは？【DS検定リテラシー】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
 | `hierarchical-clustering.md` | 階層クラスター分析とは？手法の違いまで整理【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
 | `hierarchical-distance-metrics.md` | 階層クラスター分析における距離の測定方法の比較【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
-| `hot-cool-archive.md` | Hot・Cool・Archiveの違いとは？（クラウドストレージ階層の整理）【DS検定】 | `dataengineering` | `data-storage` | ビジネス力シート |
 | `human-centered-ai-principles.md` | 人間中心のAI社会原則とは？AIと社会のルールを理解する【DS検定】 | `foundation` | `action-norms` | AI利活用スキルシート |
 | `iam-policy.md` | クラウドサービスのIAMポリシーとは？（アクセス制御の基本）【DS検定】 | `foundation` | `security` | AI利活用スキルシート |
 | `image-filter-processing.md` | 画像のフィルタ処理とは？（ノイズ除去と特徴強調の基本）【DS検定】 | `datascience` | `unstructured-data` | AI利活用スキルシート |
