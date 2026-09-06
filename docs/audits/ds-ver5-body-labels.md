@@ -4,8 +4,8 @@
 
 ## 集計
 
-- 旧表記が残る通常記事: **188**
-- `ビジネス力シート`: **14記事**
+- 旧表記が残る通常記事: **187**
+- `ビジネス力シート`: **13記事**
 - `AI利活用スキルシート`: **58記事**
 - `データサイエンス力シート`: **66記事**
 - `データエンジニアリング力シート`: **50記事**
@@ -69,7 +69,6 @@
 | `data-cube.md` | データキューブとは？OLAP分析の基本をわかりやすく整理【DS検定】 | `datascience` | `data-understanding` | データエンジニアリング力シート |
 | `data-extraction-vs-aggregation.md` | データ抽出と集計の違いとは？（SQL・BIで混同しやすい操作）【DS検定】 | `dataengineering` | `data-collection` | データエンジニアリング力シート |
 | `data-lake.md` | データレイクとは？（DWHとの違いも整理）【DS検定リテラシー】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
-| `data-literacy.md` | データリテラシーとは？データを読み解く力【DS検定】 | `foundation` | `data-understanding` | ビジネス力シート |
 | `data-transformation.md` | データトランスフォーメーションとは？（非構造化データの変換）【DS検定】 | `datascience` | `data-preparation` | データエンジニアリング力シート |
 | `data-warehouse.md` | データウェアハウス（DWH）とは？（データレイクとの違いも整理）【DS検定リテラシー】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
 | `database-constraints.md` | データベースの制約とは？NOT NULL・一意性・外部キーを整理【DS検定】 | `dataengineering` | `database` | データエンジニアリング力シート |
