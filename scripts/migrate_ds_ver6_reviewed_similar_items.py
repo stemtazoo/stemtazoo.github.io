@@ -39,6 +39,9 @@ REVIEWED = {
     "kpi-kgi.md": "foundation-0016",
     "poc-concept-proof.md": "value-creation-0037",
     "pdca-cycle.md": "value-creation-0115",
+    "pest-analysis.md": "value-creation-0001",
+    "five-forces-analysis.md": "value-creation-0031",
+    "swot-analysis.md": "value-creation-0031",
 }
 
 LEGACY_LABELS = (
