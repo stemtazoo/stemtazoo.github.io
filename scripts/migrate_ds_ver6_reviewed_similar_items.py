@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """Migrate manually reviewed legacy DS skill blocks to official ver.6 items.
 
-Mappings are explicit filename -> official ver.6 item_id pairs. Before writing, the
-script verifies the article's ds_area matches the official item area and that the
-legacy block still contains at least one ★ item. Already-migrated mappings are
-accepted so the script remains idempotent.
+Mappings are explicit filename -> official ver.6 item_id (or item_id tuple) pairs.
+Before writing, the script verifies that every official item exists, all mapped
+items belong to the article's `ds_area`, and the legacy block still contains at
+least one ★ item. Already-migrated mappings are accepted so the script remains
+idempotent.
 """
 from __future__ import annotations
 
@@ -32,6 +33,9 @@ REVIEWED = {
     "incident-management.md": "value-creation-0049",
     "data-mart.md": "dataengineering-0080",
     "data-warehouse-vs-datamart.md": "dataengineering-0080",
+    "analysis-approach-design.md": "foundation-0002",
+    "revenue-equation.md": "foundation-0016",
+    "hallucination.md": ("foundation-0017", "foundation-0018"),
 }
 
 LEGACY_LABELS = (
@@ -83,25 +87,42 @@ def bounds(text: str, match: re.Match[str]) -> tuple[int, int]:
     return match.start(), end
 
 
-def canonical_block(row: dict[str, str]) -> str:
-    area = row["area"]
-    required = normalize(row.get("required_skill", "")) or "—"
+def canonical_block(rows: list[dict[str, str]]) -> str:
+    first = rows[0]
+    area = first["area"]
     lines = [f"## 対応スキル項目（ver.6 {AREA_LABEL[area]}）", ""]
-    if row.get("phase"):
-        lines.append(f"- **フェーズ**：{row['phase']}")
-    if row.get("section"):
-        lines.append(f"- **分類**：{row['section']}")
-    if row.get("category"):
-        lines.append(f"- **スキルカテゴリ**：{row['category']}")
-    if row.get("subcategory"):
-        lines.append(f"- **サブカテゴリ**：{row['subcategory']}")
+
+    common_fields = (
+        ("phase", "フェーズ"),
+        ("section", "分類"),
+        ("category", "スキルカテゴリ"),
+        ("subcategory", "サブカテゴリ"),
+    )
+    for key, label in common_fields:
+        values = {normalize(row.get(key, "")) for row in rows if normalize(row.get(key, ""))}
+        if len(values) == 1:
+            lines.append(f"- **{label}**：{next(iter(values))}")
+
+    if len(rows) == 1:
+        required = normalize(first.get("required_skill", "")) or "—"
+        lines.extend([
+            f"- **必須スキル**：{required}",
+            f"- ★ {normalize(first['item'])}",
+        ])
+    else:
+        for row in rows:
+            required = normalize(row.get("required_skill", "")) or "—"
+            lines.append(f"- ★ {normalize(row['item'])}（必須スキル：{required}）")
+
     lines.extend([
-        f"- **必須スキル**：{required}",
-        f"- ★ {normalize(row['item'])}",
         f"- [ver.6 ★1スキルチェックで確認する]({AREA_PAGE[area]})",
         "",
     ])
     return "\n".join(lines)
+
+
+def mapping_ids(value: str | tuple[str, ...]) -> tuple[str, ...]:
+    return (value,) if isinstance(value, str) else tuple(value)
 
 
 def main() -> int:
@@ -114,23 +135,31 @@ def main() -> int:
     changed: list[str] = []
     already: list[str] = []
 
-    for filename, item_id in REVIEWED.items():
+    for filename, mapping in REVIEWED.items():
         path = DS_DIR / filename
         text = path.read_text(encoding="utf-8-sig")
-        row = by_id.get(item_id)
-        if not row:
-            raise SystemExit(f"{filename}: official item not found: {item_id}")
+        item_ids = mapping_ids(mapping)
+        mapped_rows: list[dict[str, str]] = []
+        for item_id in item_ids:
+            row = by_id.get(item_id)
+            if not row:
+                raise SystemExit(f"{filename}: official item not found: {item_id}")
+            mapped_rows.append(row)
+
+        areas = {row.get("area") for row in mapped_rows}
+        if len(areas) != 1:
+            raise SystemExit(f"{filename}: mapped items span multiple areas: {sorted(areas)}")
+        area = mapped_rows[0]["area"]
+
         meta = front_matter(text)
-        if meta.get("ds_area") != row.get("area"):
-            raise SystemExit(
-                f"{filename}: ds_area mismatch {meta.get('ds_area')} != {row.get('area')}"
-            )
+        if meta.get("ds_area") != area:
+            raise SystemExit(f"{filename}: ds_area mismatch {meta.get('ds_area')} != {area}")
 
         match = HEADING_RE.search(text)
         if not match:
-            canonical_heading = f"## 対応スキル項目（ver.6 {AREA_LABEL[row['area']]}）"
-            canonical_item = f"- ★ {normalize(row['item'])}"
-            if canonical_heading in text and canonical_item in text:
+            canonical_heading = f"## 対応スキル項目（ver.6 {AREA_LABEL[area]}）"
+            expected_items = [f"★ {normalize(row['item'])}" for row in mapped_rows]
+            if canonical_heading in text and all(item in text for item in expected_items):
                 already.append(filename)
                 continue
             raise SystemExit(f"{filename}: neither legacy nor expected ver.6 skill block found")
@@ -140,18 +169,19 @@ def main() -> int:
         stars = re.findall(r"^-?\s*★\s*(.+?)\s*$", block, re.MULTILINE)
         if len(stars) < 1:
             raise SystemExit(f"{filename}: expected at least one legacy ★ item, got 0")
-        new_text = text[:start] + canonical_block(row) + text[end:]
+
+        new_text = text[:start] + canonical_block(mapped_rows) + text[end:]
         if new_text != text:
             changed.append(filename)
             if args.write:
                 path.write_text(new_text, encoding="utf-8")
 
     mode = "WRITE" if args.write else "DRY-RUN"
-    print(f"{mode}: reviewed similar migrations={len(changed)}, already={len(already)}")
+    print(f"{mode}: reviewed migrations={len(changed)}, already={len(already)}")
     for filename in changed:
-        print(f"CHANGE {filename} -> {REVIEWED[filename]}")
+        print(f"CHANGE {filename} -> {','.join(mapping_ids(REVIEWED[filename]))}")
     for filename in already:
-        print(f"ALREADY {filename} -> {REVIEWED[filename]}")
+        print(f"ALREADY {filename} -> {','.join(mapping_ids(REVIEWED[filename]))}")
     return 0
 
 
