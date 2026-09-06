@@ -4,8 +4,8 @@
 
 ## 集計
 
-- 旧表記が残る通常記事: **185**
-- `ビジネス力シート`: **11記事**
+- 旧表記が残る通常記事: **177**
+- `ビジネス力シート`: **3記事**
 - `AI利活用スキルシート`: **58記事**
 - `データサイエンス力シート`: **66記事**
 - `データエンジニアリング力シート`: **50記事**
@@ -28,14 +28,12 @@
 | `aiops-mlops-cheatsheet.md` | AIOpsとMLOpsの違いを一発整理【DS検定チートシート】 | `dataengineering` | `environment-setup` | AI利活用スキルシート |
 | `aiops.md` | AIOpsとは？MLOpsとの違いを整理【DS検定リテラシー】 | `dataengineering` | `environment-setup` | AI利活用スキルシート |
 | `analytics-4types.md` | 記述的・診断的・予測的・処方的分析の違いとは？4分類を整理【DS検定】 | `datascience` | `data-understanding` | AI利活用スキルシート |
-| `anchoring-effect.md` | アンカリング効果とは？最初の情報に判断が引きずられる心理【DS検定】 | `foundation` | `logical-thinking` | ビジネス力シート |
 | `annotation.md` | アノテーションとは？AI学習データの品質を決める作業【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
 | `apriori-algorithm.md` | Aprioriアルゴリズムとは？（アソシエーション分析の基本手法）【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
 | `association-analysis.md` | アソシエーション分析とは？購買データの関係性を見つける分析【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
 | `association-metrics.md` | 共起頻度・支持度・信頼度・リフト値の違いとは？【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
 | `authentication-authorization.md` | 認証と認可の違いとは？本人確認と権限付与で整理【DS検定】 | `foundation` | `security` | データエンジニアリング力シート |
 | `authentication-vs-authorization.md` | 認証・認可・アクセス制御の関係を例で理解する【DS検定】 | `foundation` | `security` | AI利活用スキルシート |
-| `availability-heuristic.md` | 利用可能性ヒューリスティックとは？代表性ヒューリスティックとの違い【DS検定】 | `foundation` | `logical-thinking` | ビジネス力シート |
 | `average-methods-comparison.md` | マクロ平均・マイクロ平均・重み付き平均の違いとは？【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
 | `basket-analysis.md` | バスケット分析とは？（リフト値まで整理）【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
 | `batch-vs-stream.md` | バッチ処理とストリーム処理の違いとは？リアルタイム性で切り分ける【DS検定】 | `dataengineering` | `data-processing` | データエンジニアリング力シート |
@@ -53,11 +51,7 @@
 | `cluster-analysis.md` | クラスタ分析とは？似たデータをグループ分けする分析手法【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
 | `cnn.md` | CNN（畳み込みニューラルネットワーク）とは？画像認識AIの基本【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
 | `coefficient-of-determination-contribution.md` | 決定係数と寄与率とは？回帰モデルの説明力を理解する【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
-| `cognitive-bias.md` | 認知バイアスとは？データ分析で判断を誤らせる思い込み【DS検定】 | `foundation` | `logical-thinking` | ビジネス力シート |
-| `compliance-risk.md` | コンプライアンスリスクとは？オペレーショナルリスクとの違い【DS検定】 | `foundation` | `action-norms` | ビジネス力シート |
-| `confirmation-bias.md` | 確証バイアスとは？自分に都合のよい情報だけ集めてしまう心理【DS検定】 | `foundation` | `logical-thinking` | ビジネス力シート |
 | `constructor.md` | コンストラクタとは？初期化処理の役割を整理【DS検定リテラシー】 | `dataengineering` | `programming` | AI利活用スキルシート |
-| `contract-ukeoi-juninin.md` | 請負契約と準委任契約の違いとは？成果責任と業務責任を整理【DS検定】 | `foundation` | `action-norms` | ビジネス力シート |
 | `convolution.md` | 畳み込み（Convolution）とは？画像フィルタ処理の基本【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
 | `correlation-and-causation.md` | 相関があっても因果とは限らない理由を例で理解する【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `correlation-vs-causation.md` | 相関と因果の違いとは？交絡と「原因とは限らない」を整理【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
@@ -85,7 +79,6 @@
 | `docker.md` | Dockerとは？再現性が出る理由を整理【DS検定】 | `dataengineering` | `environment-setup` | データエンジニアリング力シート |
 | `drilldown-drillup.md` | ドリルダウンとドリルアップの違いとは？BIツールの基本操作【DS検定】 | `datascience` | `visualization` | データサイエンス力シート |
 | `drillthrough.md` | ドリルスルーとは？ドリルダウンとの違いを整理【DS検定】 | `datascience` | `visualization` | データサイエンス力シート |
-| `dunning-kruger-effect.md` | ダニング＝クルーガー効果とは？能力が低いほど自信が高くなる心理【DS検定】 | `foundation` | `logical-thinking` | ビジネス力シート |
 | `eda.md` | EDA（探索的データ分析）とは？分析の第一歩を理解する【DS検定】 | `datascience` | `visualization` | データサイエンス力シート |
 | `elsi.md` | ELSIとは？AI時代に重要な倫理・法・社会問題を理解する【DS検定】 | `foundation` | `action-norms` | AI利活用スキルシート |
 | `encapsulation.md` | カプセル化とは？情報隠蔽との違いを整理【DS検定リテラシー】 | `dataengineering` | `programming` | AI利活用スキルシート |
@@ -150,7 +143,6 @@
 | `olap.md` | OLAPとは？BIツール分析の基本概念をわかりやすく解説【DS検定】 | `datascience` | `data-understanding` | データサイエンス力シート |
 | `overfitting-tree-depth.md` | 過学習と分岐の深さの関係とは？決定木の注意点【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
 | `paired-vs-independent-data.md` | 対応があるデータと対応がないデータの違いとは？【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
-| `paper-structure.md` | 一般的な論文構成とは？流れを理解する【DS検定リテラシー】 | `foundation` | `logical-thinking` | ビジネス力シート |
 | `pearson-correlation.md` | ピアソンの相関係数とは？関係の強さをどう読むか【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `pivot.md` | ピボットとは？クロス集計との違いを整理【DS検定】 | `datascience` | `visualization` | データサイエンス力シート |
 | `point-interval-estimation.md` | 点推定と区間推定の違いとは？（信頼区間まで整理）【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
