@@ -109,7 +109,7 @@ def main() -> int:
             raise SystemExit(f"{path.name}: expected ds_area foundation, got {meta.get('ds_area')}")
         start, end = block_bounds(text, heading_pos)
         block = text[start:end]
-        stars = [normalize(x) for x in re.findall(r"^-\s*★\s*(.+?)\s*$", block, re.MULTILINE)]
+        stars = [normalize(x) for x in re.findall(r"^-?\s*★\s*(.+?)\s*$", block, re.MULTILINE)]
         if stars != [LEGACY_ITEM]:
             raise SystemExit(f"{path.name}: unexpected legacy ★ items: {stars}")
         new_text = text[:start] + canonical_block(target) + text[end:]
