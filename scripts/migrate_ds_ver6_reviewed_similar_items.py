@@ -45,6 +45,8 @@ REVIEWED = {
     "internal-control.md": "value-creation-0052",
     "data-governance.md": "value-creation-0052",
     "governance.md": "value-creation-0094",
+    "customer-journey.md": "value-creation-0010",
+    "design-thinking.md": "value-creation-0016",
 }
 
 LEGACY_LABELS = (
