@@ -4,8 +4,8 @@
 
 ## 集計
 
-- 旧表記が残る通常記事: **200**
-- `ビジネス力シート`: **26記事**
+- 旧表記が残る通常記事: **198**
+- `ビジネス力シート`: **24記事**
 - `AI利活用スキルシート`: **58記事**
 - `データサイエンス力シート`: **66記事**
 - `データエンジニアリング力シート`: **50記事**
@@ -67,7 +67,6 @@
 | `cps-iot-digitaltwin-cheatsheet.md` | CPS・IoT・デジタルツインの違いを一発整理【DS検定チートシート】 | `value-creation` | `technology-social-trends` | AI利活用スキルシート |
 | `cps.md` | CPS（サイバーフィジカルシステム）とは？Society5.0の中核技術を理解する【DS検定】 | `value-creation` | `technology-social-trends` | AI利活用スキルシート |
 | `critical-path.md` | クリティカルパスとは？プロジェクト遅延を左右する重要な経路【DS検定】 | `value-creation` | `project-management` | ビジネス力シート |
-| `customer-journey.md` | カスタマージャーニーとは？顧客体験を理解するフレームワーク【DS検定】 | `value-creation` | `business-design` | ビジネス力シート |
 | `data-augmentation.md` | データ拡張（Data Augmentation）とは？画像AIの学習データを増やす方法【DS検定】 | `datascience` | `unstructured-data` | AI利活用スキルシート |
 | `data-cube.md` | データキューブとは？OLAP分析の基本をわかりやすく整理【DS検定】 | `datascience` | `data-understanding` | データエンジニアリング力シート |
 | `data-driven-management.md` | データドリブン経営とは？データにもとづいて意思決定する考え方【DS検定】 | `value-creation` | `business-design` | ビジネス力シート |
@@ -81,7 +80,6 @@
 | `dendrogram.md` | デンドログラムの見方とは？縦軸とクラスタ数【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
 | `dependency-parsing.md` | 係り受け解析とは？形態素解析との違いを整理【DS検定】 | `datascience` | `unstructured-data` | AI利活用スキルシート |
 | `design-of-experiments.md` | 実験計画法とは？少ない実験で原因を見つける方法【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
-| `design-thinking.md` | デザイン思考とは？ユーザー中心で課題を解決する考え方【DS検定】 | `value-creation` | `business-design` | ビジネス力シート |
 | `deviation-score.md` | 偏差値とは？zスコア・標準偏差との違いを整理【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `digital-image-representation.md` | 画像のデジタル表現とは？（標本化と量子化の基本）【DS検定】 | `datascience` | `unstructured-data` | AI利活用スキルシート |
 | `digital-signature.md` | 電子署名とは？本人性・完全性と公開鍵での検証を整理【DS検定】 | `foundation` | `security` | データエンジニアリング力シート |
