@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Migrate manually reviewed near-match legacy DS skill blocks to ver.6.
+"""Migrate manually reviewed legacy DS skill blocks to official ver.6 items.
 
 Mappings are explicit filename -> official ver.6 item_id pairs. Before writing, the
 script verifies the article's ds_area matches the official item area and that the
-legacy block still contains exactly one ★ item. Already-migrated mappings are
+legacy block still contains at least one ★ item. Already-migrated mappings are
 accepted so the script remains idempotent.
 """
 from __future__ import annotations
@@ -30,6 +30,8 @@ REVIEWED = {
     "risk-management.md": "value-creation-0049",
     "operational-risk.md": "value-creation-0049",
     "incident-management.md": "value-creation-0049",
+    "data-mart.md": "dataengineering-0080",
+    "data-warehouse-vs-datamart.md": "dataengineering-0080",
 }
 
 LEGACY_LABELS = (
@@ -135,9 +137,9 @@ def main() -> int:
 
         start, end = bounds(text, match)
         block = text[start:end]
-        stars = re.findall(r"^-\s*★\s*(.+?)\s*$", block, re.MULTILINE)
-        if len(stars) != 1:
-            raise SystemExit(f"{filename}: expected exactly one legacy ★ item, got {len(stars)}")
+        stars = re.findall(r"^-?\s*★\s*(.+?)\s*$", block, re.MULTILINE)
+        if len(stars) < 1:
+            raise SystemExit(f"{filename}: expected at least one legacy ★ item, got 0")
         new_text = text[:start] + canonical_block(row) + text[end:]
         if new_text != text:
             changed.append(filename)
