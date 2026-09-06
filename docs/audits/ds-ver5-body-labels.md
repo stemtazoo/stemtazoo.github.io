@@ -4,8 +4,8 @@
 
 ## 集計
 
-- 旧表記が残る通常記事: **207**
-- `ビジネス力シート`: **33記事**
+- 旧表記が残る通常記事: **206**
+- `ビジネス力シート`: **32記事**
 - `AI利活用スキルシート`: **58記事**
 - `データサイエンス力シート`: **66記事**
 - `データエンジニアリング力シート`: **50記事**
@@ -165,7 +165,6 @@
 | `overfitting-tree-depth.md` | 過学習と分岐の深さの関係とは？決定木の注意点【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
 | `paired-vs-independent-data.md` | 対応があるデータと対応がないデータの違いとは？【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `paper-structure.md` | 一般的な論文構成とは？流れを理解する【DS検定リテラシー】 | `foundation` | `logical-thinking` | ビジネス力シート |
-| `pdca-cycle.md` | PDCAサイクルとは？継続的改善の基本フレームワーク【DS検定】 | `value-creation` | `project-management` | ビジネス力シート |
 | `pearson-correlation.md` | ピアソンの相関係数とは？関係の強さをどう読むか【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `pest-analysis.md` | PEST分析とは？マクロ環境を分析するフレームワーク【DS検定】 | `value-creation` | `business-design` | ビジネス力シート |
 | `pivot.md` | ピボットとは？クロス集計との違いを整理【DS検定】 | `datascience` | `visualization` | データサイエンス力シート |
