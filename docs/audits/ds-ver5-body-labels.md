@@ -4,8 +4,8 @@
 
 ## 集計
 
-- 旧表記が残る通常記事: **189**
-- `ビジネス力シート`: **15記事**
+- 旧表記が残る通常記事: **188**
+- `ビジネス力シート`: **14記事**
 - `AI利活用スキルシート`: **58記事**
 - `データサイエンス力シート`: **66記事**
 - `データエンジニアリング力シート`: **50記事**
@@ -67,7 +67,6 @@
 | `cps.md` | CPS（サイバーフィジカルシステム）とは？Society5.0の中核技術を理解する【DS検定】 | `value-creation` | `technology-social-trends` | AI利活用スキルシート |
 | `data-augmentation.md` | データ拡張（Data Augmentation）とは？画像AIの学習データを増やす方法【DS検定】 | `datascience` | `unstructured-data` | AI利活用スキルシート |
 | `data-cube.md` | データキューブとは？OLAP分析の基本をわかりやすく整理【DS検定】 | `datascience` | `data-understanding` | データエンジニアリング力シート |
-| `data-driven-management.md` | データドリブン経営とは？データにもとづいて意思決定する考え方【DS検定】 | `value-creation` | `business-design` | ビジネス力シート |
 | `data-extraction-vs-aggregation.md` | データ抽出と集計の違いとは？（SQL・BIで混同しやすい操作）【DS検定】 | `dataengineering` | `data-collection` | データエンジニアリング力シート |
 | `data-lake.md` | データレイクとは？（DWHとの違いも整理）【DS検定リテラシー】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
 | `data-literacy.md` | データリテラシーとは？データを読み解く力【DS検定】 | `foundation` | `data-understanding` | ビジネス力シート |
