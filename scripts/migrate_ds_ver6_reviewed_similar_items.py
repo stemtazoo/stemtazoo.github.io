@@ -2,10 +2,9 @@
 """Migrate manually reviewed legacy DS skill blocks to official ver.6 items.
 
 Mappings are explicit filename -> official ver.6 item_id (or item_id tuple) pairs.
-Before writing, the script verifies that every official item exists, all mapped
-items belong to the article's `ds_area`, and the legacy block still contains at
-least one ★ item. Already-migrated mappings are accepted so the script remains
-idempotent.
+A small reviewed supplemental group is also supported for legacy topics that are
+still useful to learn but no longer have a direct ★1 item in ver.6. Already-
+migrated mappings are accepted so the script remains idempotent.
 """
 from __future__ import annotations
 
@@ -18,7 +17,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DS_DIR = ROOT / "pages" / "ds"
 DATA = ROOT / "data" / "skillcheck" / "exports" / "exam_star1_latest.json"
 
-REVIEWED = {
+REVIEWED: dict[str, str | tuple[str, ...] | None] = {
     "nosql.md": "dataengineering-0069",
     "spark.md": "dataengineering-0068",
     "yarn.md": "dataengineering-0068",
@@ -47,6 +46,14 @@ REVIEWED = {
     "governance.md": "value-creation-0094",
     "customer-journey.md": "value-creation-0010",
     "design-thinking.md": "value-creation-0016",
+    # ver.5では「プロジェクト推進／リソースマネジメント」に紐づいていたが、
+    # ver.6 ★1（238項目）には同内容の直接項目がないため補助学習として残す。
+    "agile-development.md": None,
+    "critical-path.md": None,
+    "gantt-chart.md": None,
+    "project-management.md": None,
+    "scrum.md": None,
+    "wbs.md": None,
 }
 
 LEGACY_LABELS = (
@@ -132,7 +139,21 @@ def canonical_block(rows: list[dict[str, str]]) -> str:
     return "\n".join(lines)
 
 
-def mapping_ids(value: str | tuple[str, ...]) -> tuple[str, ...]:
+def supplemental_block() -> str:
+    return "\n".join([
+        "## 対応スキル項目（ver.6 価値創造）",
+        "",
+        "- **位置づけ**：プロジェクト推進の補助学習",
+        "- **★1直接対応**：なし",
+        "- 旧ver.5の「プロジェクト推進／リソースマネジメント」にあった内容は、ver.6の★1一覧には同一内容の項目として掲載されていません。",
+        "- [ver.6 ★1スキルチェックで確認する](/ds/value-creation-skillcheck/)",
+        "",
+    ])
+
+
+def mapping_ids(value: str | tuple[str, ...] | None) -> tuple[str, ...]:
+    if value is None:
+        return ()
     return (value,) if isinstance(value, str) else tuple(value)
 
 
@@ -149,6 +170,31 @@ def main() -> int:
     for filename, mapping in REVIEWED.items():
         path = DS_DIR / filename
         text = path.read_text(encoding="utf-8-sig")
+        meta = front_matter(text)
+
+        if mapping is None:
+            if meta.get("ds_area") != "value-creation" or meta.get("ds_section") != "project-management":
+                raise SystemExit(
+                    f"{filename}: supplemental metadata mismatch "
+                    f"{meta.get('ds_area')}/{meta.get('ds_section')}"
+                )
+            match = HEADING_RE.search(text)
+            if not match:
+                if (
+                    "## 対応スキル項目（ver.6 価値創造）" in text
+                    and "**★1直接対応**：なし" in text
+                ):
+                    already.append(filename)
+                    continue
+                raise SystemExit(f"{filename}: neither legacy nor supplemental ver.6 block found")
+            start, end = bounds(text, match)
+            new_text = text[:start] + supplemental_block() + text[end:]
+            if new_text != text:
+                changed.append(filename)
+                if args.write:
+                    path.write_text(new_text, encoding="utf-8")
+            continue
+
         item_ids = mapping_ids(mapping)
         mapped_rows: list[dict[str, str]] = []
         for item_id in item_ids:
@@ -162,7 +208,6 @@ def main() -> int:
             raise SystemExit(f"{filename}: mapped items span multiple areas: {sorted(areas)}")
         area = mapped_rows[0]["area"]
 
-        meta = front_matter(text)
         if meta.get("ds_area") != area:
             raise SystemExit(f"{filename}: ds_area mismatch {meta.get('ds_area')} != {area}")
 
@@ -190,9 +235,13 @@ def main() -> int:
     mode = "WRITE" if args.write else "DRY-RUN"
     print(f"{mode}: reviewed migrations={len(changed)}, already={len(already)}")
     for filename in changed:
-        print(f"CHANGE {filename} -> {','.join(mapping_ids(REVIEWED[filename]))}")
+        ids = mapping_ids(REVIEWED[filename])
+        target = ",".join(ids) if ids else "supplemental-no-direct-star1"
+        print(f"CHANGE {filename} -> {target}")
     for filename in already:
-        print(f"ALREADY {filename} -> {','.join(mapping_ids(REVIEWED[filename]))}")
+        ids = mapping_ids(REVIEWED[filename])
+        target = ",".join(ids) if ids else "supplemental-no-direct-star1"
+        print(f"ALREADY {filename} -> {target}")
     return 0
 
 
