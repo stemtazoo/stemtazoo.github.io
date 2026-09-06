@@ -4,8 +4,8 @@
 
 ## 集計
 
-- 旧表記が残る通常記事: **187**
-- `ビジネス力シート`: **13記事**
+- 旧表記が残る通常記事: **185**
+- `ビジネス力シート`: **11記事**
 - `AI利活用スキルシート`: **58記事**
 - `データサイエンス力シート`: **66記事**
 - `データエンジニアリング力シート`: **50記事**
@@ -182,7 +182,6 @@
 | `slice-dice.md` | スライスとダイスの違いとは？BIツールの基本操作を整理【DS検定】 | `datascience` | `visualization` | データサイエンス力シート |
 | `soap.md` | SOAPとは？RESTとの違いを整理【DS検定】 | `dataengineering` | `data-processing` | データエンジニアリング力シート |
 | `society5.md` | Society5.0とは？超スマート社会の本質を整理【DS検定】 | `value-creation` | `technology-social-trends` | AI利活用スキルシート |
-| `sora-ame-kasa.md` | 空・雨・傘とは？仮説思考の基本フレーム【DS検定】 | `foundation` | `logical-thinking` | ビジネス力シート |
 | `spearman-rank-correlation.md` | スピアマンの順位相関とは？（Spearmanの順位相関係数）【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `sql-count-diff.md` | COUNT(*)・COUNT(列)・COUNT DISTINCTの違い【DS検定】 | `dataengineering` | `data-processing` | データエンジニアリング力シート |
 | `sql-distinct.md` | DISTINCTとは？重複データを除去する基本操作【DS検定】 | `dataengineering` | `data-processing` | データエンジニアリング力シート |
@@ -205,7 +204,6 @@
 | `web-api.md` | Web APIとは？HTTPでサービスとデータをやり取りする仕組み【DS検定】 | `dataengineering` | `data-collection` | データエンジニアリング力シート |
 | `web-crawling-scraping.md` | Webクローリングとスクレイピングの違いとは？【DS検定】 | `dataengineering` | `data-collection` | データエンジニアリング力シート |
 | `welch-t-test.md` | ウェルチのt検定とは？等分散でない場合の平均比較【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
-| `why-structure.md` | WHYの並び立てとは？ストーリー構築の基本【DS検定】 | `foundation` | `logical-thinking` | ビジネス力シート |
 | `z-score-method.md` | zスコアとは？標準化・偏差値・外れ値判定を整理【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
 | `z-test.md` | z検定とは？t検定との違いまで整理【DS検定リテラシー】 | `datascience` | `statistics` | データサイエンス力シート |
 | `zero-trust.md` | ゼロトラストとは？考え方と従来型セキュリティとの違い【DS検定リテラシー】 | `foundation` | `security` | AI利活用スキルシート |
