@@ -4,11 +4,11 @@
 
 ## 集計
 
-- 旧表記が残る通常記事: **235**
+- 旧表記が残る通常記事: **227**
 - `ビジネス力シート`: **48記事**
 - `AI利活用スキルシート`: **59記事**
-- `データサイエンス力シート`: **71記事**
-- `データエンジニアリング力シート`: **57記事**
+- `データサイエンス力シート`: **68記事**
+- `データエンジニアリング力シート`: **52記事**
 
 ## 修正方針
 
@@ -29,7 +29,6 @@
 | `aiops-mlops-cheatsheet.md` | AIOpsとMLOpsの違いを一発整理【DS検定チートシート】 | `dataengineering` | `environment-setup` | AI利活用スキルシート |
 | `aiops.md` | AIOpsとは？MLOpsとの違いを整理【DS検定リテラシー】 | `dataengineering` | `environment-setup` | AI利活用スキルシート |
 | `analysis-approach-design.md` | 分析アプローチ設計とは？（分析プロジェクトを成功させる設計プロセス）【DS検定】 | `foundation` | `problem-definition` | ビジネス力シート |
-| `analysis-approach-selection.md` | 必要なデータ・分析手法・可視化を適切に選択する力とは？【DS検定】 | `datascience` | `data-understanding` | データサイエンス力シート |
 | `analytics-4types.md` | 記述的・診断的・予測的・処方的分析の違いとは？4分類を整理【DS検定】 | `datascience` | `data-understanding` | AI利活用スキルシート |
 | `anchoring-effect.md` | アンカリング効果とは？最初の情報に判断が引きずられる心理【DS検定】 | `foundation` | `logical-thinking` | ビジネス力シート |
 | `annotation.md` | アノテーションとは？AI学習データの品質を決める作業【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
@@ -53,7 +52,6 @@
 | `boxplot.md` | 箱ひげ図とは？四分位数と外れ値の読み取り方【DS検定】 | `datascience` | `visualization` | データサイエンス力シート |
 | `cap-theorem.md` | CAP定理とは？分断時の一貫性と可用性を整理【DS検定】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
 | `categorical-variable.md` | カテゴリ変数とは？数値データとの違いを整理【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
-| `causal-inference.md` | 因果推論とは？相関との違いを整理【DS検定リテラシー】 | `datascience` | `statistics` | データサイエンス力シート |
 | `ccpa.md` | CCPAとは？GDPRとの違いとプライバシー保護の基本【DS検定】 | `foundation` | `action-norms` | ビジネス力シート |
 | `chart-types.md` | グラフの種類と使い分け（可視化の基本）【DS検定】 | `datascience` | `visualization` | データエンジニアリング力シート |
 | `chi-square-distribution.md` | カイ二乗分布とは？（χ²分布の使いどころを整理）【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
@@ -159,7 +157,6 @@
 | `logistic-regression.md` | ロジスティック回帰とは？（オッズ・対数オッズから理解する）【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
 | `machine-learning-algorithms-cheatsheet.md` | 機械学習アルゴリズム一覧チートシート（教師あり・教師なし・強化学習）【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
 | `machine-learning-methods.md` | 機械学習の解析手法とは？（代表的アルゴリズムを整理）【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
-| `malware.md` | マルウェアとは？代表的な種類と違いを整理【DS検定】 | `foundation` | `security` | データエンジニアリング力シート |
 | `managed-service.md` | マネージドサービスとは？クラウド環境構築の基本概念を整理【DS検定】 | `dataengineering` | `environment-setup` | ビジネス力シート |
 | `mapping.md` | マッピング処理とは？データを対応づける基本操作【DS検定】 | `dataengineering` | `data-processing` | データサイエンス力シート |
 | `mapreduce.md` | MapReduceとは？（分散処理の基本モデル）【DS検定リテラシー】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
@@ -172,7 +169,6 @@
 | `normal-and-standard-normal.md` | 標準正規分布と正規分布の違いとは？【DS検定リテラシー】 | `datascience` | `statistics` | データサイエンス力シート |
 | `normalization-2nf-3nf.md` | 第2正規化と第3正規化の違いを整理（候補キーから考える）【DS検定】 | `dataengineering` | `data-structure` | データエンジニアリング力シート |
 | `nosql-datastore.md` | NoSQLデータストアとは？RDBとの違いと使いどころを整理【DS検定】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
-| `nosql.md` | NoSQLとは？リレーショナルDBとの違いを整理【DS検定】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
 | `oauth.md` | OAuthとは？仕組みとアクセストークンの流れを整理【DS検定リテラシー】 | `foundation` | `security` | AI利活用スキルシート |
 | `olap.md` | OLAPとは？BIツール分析の基本概念をわかりやすく解説【DS検定】 | `datascience` | `data-understanding` | データサイエンス力シート |
 | `open-data.md` | オープンデータとは？公共データ活用の基本【DS検定】 | `dataengineering` | `data-collection` | ビジネス力シート |
@@ -202,7 +198,6 @@
 | `random-forest.md` | ランダムフォレストとは？（特徴量重要度の考え方まで理解する）【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
 | `random-sampling-methods.md` | 無作為抽出法とは？種類と違いを整理【DS検定リテラシー】 | `datascience` | `data-preparation` | データサイエンス力シート |
 | `rbac.md` | RBAC（ロールベースアクセス制御）とは？【DS検定リテラシー】 | `foundation` | `security` | データエンジニアリング力シート |
-| `rdb-vs-nosql.md` | RDBとNoSQLの違いを一発で整理【DS検定】 | `dataengineering` | `database` | データエンジニアリング力シート |
 | `referential-integrity.md` | 参照整合性とは？外部キーとデータ整合性を理解【DS検定】 | `dataengineering` | `database` | データエンジニアリング力シート |
 | `regular-expression-email.md` | メールアドレスの正規表現とは？なぜ難しいのかを整理【DS検定】 | `dataengineering` | `data-processing` | データエンジニアリング力シート |
 | `regular-expression-postalcode.md` | 郵便番号の正規表現とは？電話番号との違いで理解する【DS検定】 | `dataengineering` | `data-processing` | データエンジニアリング力シート |
@@ -225,7 +220,6 @@
 | `soap.md` | SOAPとは？RESTとの違いを整理【DS検定】 | `dataengineering` | `data-processing` | データエンジニアリング力シート |
 | `society5.md` | Society5.0とは？超スマート社会の本質を整理【DS検定】 | `value-creation` | `technology-social-trends` | AI利活用スキルシート |
 | `sora-ame-kasa.md` | 空・雨・傘とは？仮説思考の基本フレーム【DS検定】 | `foundation` | `logical-thinking` | ビジネス力シート |
-| `spark.md` | Sparkとは？ビッグデータを高速処理する分散処理エンジン【DS検定】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
 | `spearman-rank-correlation.md` | スピアマンの順位相関とは？（Spearmanの順位相関係数）【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `sql-count-diff.md` | COUNT(*)・COUNT(列)・COUNT DISTINCTの違い【DS検定】 | `dataengineering` | `data-processing` | データエンジニアリング力シート |
 | `sql-distinct.md` | DISTINCTとは？重複データを除去する基本操作【DS検定】 | `dataengineering` | `data-processing` | データエンジニアリング力シート |
@@ -245,7 +239,6 @@
 | `type1-type2-error.md` | 第一種の過誤と第二種の過誤の違いとは？【DS検定リテラシー】 | `datascience` | `statistics` | データサイエンス力シート |
 | `variance-and-standard-deviation.md` | 分散と標準偏差の違いとは？ばらつきをどう読むか【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `variance-standard-deviation.md` | 分散と標準偏差とは？ばらつきを理解する基本統計【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
-| `visualization-basic-perspectives.md` | データ可視化における基本的な視点とは？（差・相関・分布・変化・構成）【DS検定】 | `datascience` | `visualization` | データサイエンス力シート |
 | `vpn-ssh.md` | VPNとSSHの違いとは？（安全な通信の仕組みを整理）【DS検定】 | `foundation` | `security` | データエンジニアリング力シート |
 | `wbs.md` | WBSとは？作業分解とワークパッケージを整理【DS検定】 | `value-creation` | `project-management` | ビジネス力シート |
 | `weak-strong-ai.md` | 弱いAIと強いAIの違いとは？【DS検定リテラシー】 | `foundation` | `ai-fundamentals` | AI利活用スキルシート |
@@ -253,7 +246,6 @@
 | `web-crawling-scraping.md` | Webクローリングとスクレイピングの違いとは？【DS検定】 | `dataengineering` | `data-collection` | データエンジニアリング力シート |
 | `welch-t-test.md` | ウェルチのt検定とは？等分散でない場合の平均比較【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `why-structure.md` | WHYの並び立てとは？ストーリー構築の基本【DS検定】 | `foundation` | `logical-thinking` | ビジネス力シート |
-| `yarn.md` | YARNとは？Hadoopクラスタのリソース管理の仕組み【DS検定】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
 | `z-score-method.md` | zスコアとは？標準化・偏差値・外れ値判定を整理【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
 | `z-test.md` | z検定とは？t検定との違いまで整理【DS検定リテラシー】 | `datascience` | `statistics` | データサイエンス力シート |
 | `zero-trust.md` | ゼロトラストとは？考え方と従来型セキュリティとの違い【DS検定リテラシー】 | `foundation` | `security` | AI利活用スキルシート |
