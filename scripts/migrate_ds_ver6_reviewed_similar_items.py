@@ -2,9 +2,9 @@
 """Migrate manually reviewed legacy DS skill blocks to official ver.6 items.
 
 Mappings are explicit filename -> official ver.6 item_id (or item_id tuple) pairs.
-A small reviewed supplemental group is also supported for legacy topics that are
-still useful to learn but no longer have a direct ★1 item in ver.6. Already-
-migrated mappings are accepted so the script remains idempotent.
+Reviewed supplemental topics are also supported when the article remains useful
+but the ver.6 ★1 list has no direct item for the same theme. Already-migrated
+mappings are accepted so the script remains idempotent.
 """
 from __future__ import annotations
 
@@ -53,14 +53,39 @@ REVIEWED: dict[str, str | tuple[str, ...] | None] = {
     "data-literacy.md": "foundation-0001",
     "why-structure.md": "foundation-0012",
     "sora-ame-kasa.md": "foundation-0003",
-    # ver.5では「プロジェクト推進／リソースマネジメント」に紐づいていたが、
-    # ver.6 ★1（238項目）には同内容の直接項目がないため補助学習として残す。
+    # Reviewed supplemental topics: useful learning pages without a direct
+    # same-theme item in the ver.6 ★1 list.
     "agile-development.md": None,
     "critical-path.md": None,
     "gantt-chart.md": None,
     "project-management.md": None,
     "scrum.md": None,
     "wbs.md": None,
+    "paper-structure.md": None,
+    "anchoring-effect.md": None,
+    "availability-heuristic.md": None,
+    "cognitive-bias.md": None,
+    "confirmation-bias.md": None,
+    "dunning-kruger-effect.md": None,
+    "compliance-risk.md": None,
+    "contract-ukeoi-juninin.md": None,
+}
+
+SUPPLEMENTAL: dict[str, tuple[str, str, str]] = {
+    "agile-development.md": ("value-creation", "project-management", "プロジェクト推進の補助学習"),
+    "critical-path.md": ("value-creation", "project-management", "プロジェクト推進の補助学習"),
+    "gantt-chart.md": ("value-creation", "project-management", "プロジェクト推進の補助学習"),
+    "project-management.md": ("value-creation", "project-management", "プロジェクト推進の補助学習"),
+    "scrum.md": ("value-creation", "project-management", "プロジェクト推進の補助学習"),
+    "wbs.md": ("value-creation", "project-management", "プロジェクト推進の補助学習"),
+    "paper-structure.md": ("foundation", "logical-thinking", "論理的な文章構成の補助学習"),
+    "anchoring-effect.md": ("foundation", "logical-thinking", "認知バイアスの補助学習"),
+    "availability-heuristic.md": ("foundation", "logical-thinking", "認知バイアスの補助学習"),
+    "cognitive-bias.md": ("foundation", "logical-thinking", "認知バイアスの補助学習"),
+    "confirmation-bias.md": ("foundation", "logical-thinking", "認知バイアスの補助学習"),
+    "dunning-kruger-effect.md": ("foundation", "logical-thinking", "認知バイアスの補助学習"),
+    "compliance-risk.md": ("foundation", "action-norms", "コンプライアンス・リスクの補助学習"),
+    "contract-ukeoi-juninin.md": ("foundation", "action-norms", "契約形態の補助学習"),
 }
 
 LEGACY_LABELS = (
@@ -146,14 +171,14 @@ def canonical_block(rows: list[dict[str, str]]) -> str:
     return "\n".join(lines)
 
 
-def supplemental_block() -> str:
+def supplemental_block(area: str, position: str) -> str:
     return "\n".join([
-        "## 対応スキル項目（ver.6 価値創造）",
+        f"## 対応スキル項目（ver.6 {AREA_LABEL[area]}）",
         "",
-        "- **位置づけ**：プロジェクト推進の補助学習",
+        f"- **位置づけ**：{position}",
         "- **★1直接対応**：なし",
-        "- 旧ver.5の「プロジェクト推進／リソースマネジメント」にあった内容は、ver.6の★1一覧には同一内容の項目として掲載されていません。",
-        "- [ver.6 ★1スキルチェックで確認する](/ds/value-creation-skillcheck/)",
+        "- 旧ver.5では対応項目がありましたが、ver.6の★1一覧には同一テーマの直接項目として掲載されていません。試験理解を補う関連テーマとして整理します。",
+        f"- [ver.6 ★1スキルチェックで確認する]({AREA_PAGE[area]})",
         "",
     ])
 
@@ -180,22 +205,26 @@ def main() -> int:
         meta = front_matter(text)
 
         if mapping is None:
-            if meta.get("ds_area") != "value-creation" or meta.get("ds_section") != "project-management":
+            supplemental = SUPPLEMENTAL.get(filename)
+            if not supplemental:
+                raise SystemExit(f"{filename}: supplemental metadata is not configured")
+            area, section, position = supplemental
+            if meta.get("ds_area") != area or meta.get("ds_section") != section:
                 raise SystemExit(
                     f"{filename}: supplemental metadata mismatch "
-                    f"{meta.get('ds_area')}/{meta.get('ds_section')}"
+                    f"{meta.get('ds_area')}/{meta.get('ds_section')} != {area}/{section}"
                 )
             match = HEADING_RE.search(text)
             if not match:
                 if (
-                    "## 対応スキル項目（ver.6 価値創造）" in text
+                    f"## 対応スキル項目（ver.6 {AREA_LABEL[area]}）" in text
                     and "**★1直接対応**：なし" in text
                 ):
                     already.append(filename)
                     continue
                 raise SystemExit(f"{filename}: neither legacy nor supplemental ver.6 block found")
             start, end = bounds(text, match)
-            new_text = text[:start] + supplemental_block() + text[end:]
+            new_text = text[:start] + supplemental_block(area, position) + text[end:]
             if new_text != text:
                 changed.append(filename)
                 if args.write:
