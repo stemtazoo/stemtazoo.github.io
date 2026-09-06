@@ -4,8 +4,8 @@
 
 ## 集計
 
-- 旧表記が残る通常記事: **220**
-- `ビジネス力シート`: **41記事**
+- 旧表記が残る通常記事: **216**
+- `ビジネス力シート`: **37記事**
 - `AI利活用スキルシート`: **59記事**
 - `データサイエンス力シート`: **68記事**
 - `データエンジニアリング力シート`: **52記事**
@@ -42,7 +42,6 @@
 | `basket-analysis.md` | バスケット分析とは？（リフト値まで整理）【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
 | `batch-vs-stream.md` | バッチ処理とストリーム処理の違いとは？リアルタイム性で切り分ける【DS検定】 | `dataengineering` | `data-processing` | データエンジニアリング力シート |
 | `bayes-theorem.md` | ベイズの定理とは？（条件付き確率の逆算）【DS検定リテラシー】 | `datascience` | `statistics` | データサイエンス力シート |
-| `bcp.md` | BCP（事業継続計画）とは？災害時でも業務を止めない仕組み【DS検定】 | `value-creation` | `governance-risk` | ビジネス力シート |
 | `bernoulli-binomial.md` | ベルヌーイ試行とは？成功・失敗の1回の試行を整理【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `bi-operations-cheatsheet.md` | BIツール操作チートシート｜スライス・ダイス・ドリルダウンの違い【DS検定】 | `datascience` | `visualization` | データサイエンス力シート |
 | `bi-tool-functions.md` | BIツールの基本機能とは？OLAP・データマイニングを整理【DS検定】 | `datascience` | `data-understanding` | ビジネス力シート |
@@ -136,7 +135,6 @@
 | `image-metadata.md` | 画像データにおけるメタデータとは？意味と活用を整理【DS検定リテラシー】 | `datascience` | `unstructured-data` | AI利活用スキルシート |
 | `impurity.md` | 不純度とは？決定木の分岐基準を整理【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
 | `imputation.md` | インプテーションとは？（欠損値補完の基本）【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
-| `incident-management.md` | インシデント管理とは？障害対応と報告の基本【DS検定】 | `value-creation` | `governance-risk` | ビジネス力シート |
 | `incremental-vs-differential-backup.md` | 増分バックアップと差分バックアップの違いとは？【DS検定リテラシー】 | `dataengineering` | `environment-setup` | データエンジニアリング力シート |
 | `industry4-0.md` | インダストリー4.0とは？第4次産業革命の本質とドイツ戦略【DS検定】 | `value-creation` | `technology-social-trends` | AI利活用スキルシート |
 | `information-gain.md` | 情報利得とは？決定木で分岐の良さを判断する基準【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
@@ -169,7 +167,6 @@
 | `oauth.md` | OAuthとは？仕組みとアクセストークンの流れを整理【DS検定リテラシー】 | `foundation` | `security` | AI利活用スキルシート |
 | `olap.md` | OLAPとは？BIツール分析の基本概念をわかりやすく解説【DS検定】 | `datascience` | `data-understanding` | データサイエンス力シート |
 | `open-data.md` | オープンデータとは？公共データ活用の基本【DS検定】 | `dataengineering` | `data-collection` | ビジネス力シート |
-| `operational-risk.md` | オペレーショナルリスクとは？レピュテーションリスクとの違いを整理【DS検定】 | `value-creation` | `governance-risk` | ビジネス力シート |
 | `opt-out.md` | オプトアウトとは？個人情報提供の仕組みを整理【DS検定】 | `foundation` | `action-norms` | ビジネス力シート |
 | `overfitting-tree-depth.md` | 過学習と分岐の深さの関係とは？決定木の注意点【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
 | `paired-vs-independent-data.md` | 対応があるデータと対応がないデータの違いとは？【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
@@ -202,7 +199,6 @@
 | `rest-api.md` | REST APIとは？SOAPとの違いを整理【DS検定】 | `dataengineering` | `data-collection` | データエンジニアリング力シート |
 | `revenue-equation.md` | 収益方程式とは？KPI設計の基本となるビジネスモデル【DS検定】 | `foundation` | `goal-setting` | ビジネス力シート |
 | `rfm-analysis.md` | RFM分析とは？顧客価値を評価するマーケティング分析【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
-| `risk-management.md` | リスクマネジメントとは？企業がリスクを管理する基本【DS検定】 | `value-creation` | `governance-risk` | ビジネス力シート |
 | `rpo-rto.md` | RPOとRTOの違いとは？（障害復旧の判断基準）【DS検定】 | `dataengineering` | `environment-setup` | データエンジニアリング力シート |
 | `sample-variance-unbiased-variance.md` | 標本分散と不偏分散の違いとは？【DS検定リテラシー】 | `datascience` | `statistics` | データサイエンス力シート |
 | `sampling-methods-comparison.md` | 抽出方法の違いを整理（単純無作為・層化・集落・多段・系統）【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
