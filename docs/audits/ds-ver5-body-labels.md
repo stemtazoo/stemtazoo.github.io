@@ -4,8 +4,8 @@
 
 ## 集計
 
-- 旧表記が残る通常記事: **227**
-- `ビジネス力シート`: **48記事**
+- 旧表記が残る通常記事: **220**
+- `ビジネス力シート`: **41記事**
 - `AI利活用スキルシート`: **59記事**
 - `データサイエンス力シート`: **68記事**
 - `データエンジニアリング力シート`: **52記事**
@@ -32,7 +32,6 @@
 | `analytics-4types.md` | 記述的・診断的・予測的・処方的分析の違いとは？4分類を整理【DS検定】 | `datascience` | `data-understanding` | AI利活用スキルシート |
 | `anchoring-effect.md` | アンカリング効果とは？最初の情報に判断が引きずられる心理【DS検定】 | `foundation` | `logical-thinking` | ビジネス力シート |
 | `annotation.md` | アノテーションとは？AI学習データの品質を決める作業【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
-| `anonymized-information.md` | 匿名加工情報とは？個人情報との違いをわかりやすく整理【DS検定】 | `foundation` | `action-norms` | ビジネス力シート |
 | `apriori-algorithm.md` | Aprioriアルゴリズムとは？（アソシエーション分析の基本手法）【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
 | `association-analysis.md` | アソシエーション分析とは？購買データの関係性を見つける分析【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
 | `association-metrics.md` | 共起頻度・支持度・信頼度・リフト値の違いとは？【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
@@ -52,7 +51,6 @@
 | `boxplot.md` | 箱ひげ図とは？四分位数と外れ値の読み取り方【DS検定】 | `datascience` | `visualization` | データサイエンス力シート |
 | `cap-theorem.md` | CAP定理とは？分断時の一貫性と可用性を整理【DS検定】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
 | `categorical-variable.md` | カテゴリ変数とは？数値データとの違いを整理【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
-| `ccpa.md` | CCPAとは？GDPRとの違いとプライバシー保護の基本【DS検定】 | `foundation` | `action-norms` | ビジネス力シート |
 | `chart-types.md` | グラフの種類と使い分け（可視化の基本）【DS検定】 | `datascience` | `visualization` | データエンジニアリング力シート |
 | `chi-square-distribution.md` | カイ二乗分布とは？（χ²分布の使いどころを整理）【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `cluster-analysis.md` | クラスタ分析とは？似たデータをグループ分けする分析手法【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
@@ -145,7 +143,6 @@
 | `inheritance.md` | 継承とは？クラス設計の基本を整理【DS検定リテラシー】 | `dataengineering` | `programming` | AI利活用スキルシート |
 | `internal-control.md` | 内部統制とは？企業の不正やミスを防ぐ仕組み【DS検定】 | `value-creation` | `governance-risk` | ビジネス力シート |
 | `interpret-statistics.md` | 数字やグラフの持つメッセージを理解するとは？（統計情報の正しい読み取り）【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
-| `japan-personal-information-protection-act.md` | 改正個人情報保護法とは？日本のデータ保護ルール【DS検定】 | `foundation` | `action-norms` | ビジネス力シート |
 | `japanese-morphological-analysis-tools.md` | 日本語の形態素解析ツールとは？代表例と違いを整理【DS検定】 | `datascience` | `unstructured-data` | AI利活用スキルシート |
 | `jupyter-r-usage.md` | Jupyter NotebookやRの使い所とは？（データ分析環境の役割）【DS検定】 | `dataengineering` | `environment-setup` | AI利活用スキルシート |
 | `kernel.md` | カーネル（Kernel）とは？画像フィルタ処理の計算ルール【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
@@ -179,7 +176,6 @@
 | `paper-structure.md` | 一般的な論文構成とは？流れを理解する【DS検定リテラシー】 | `foundation` | `logical-thinking` | ビジネス力シート |
 | `pdca-cycle.md` | PDCAサイクルとは？継続的改善の基本フレームワーク【DS検定】 | `value-creation` | `project-management` | ビジネス力シート |
 | `pearson-correlation.md` | ピアソンの相関係数とは？関係の強さをどう読むか【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
-| `personal-identifier-code.md` | 個人識別符号とは？個人情報・個人関連情報との違い【DS検定】 | `foundation` | `action-norms` | ビジネス力シート |
 | `pest-analysis.md` | PEST分析とは？マクロ環境を分析するフレームワーク【DS検定】 | `value-creation` | `business-design` | ビジネス力シート |
 | `pivot.md` | ピボットとは？クロス集計との違いを整理【DS検定】 | `datascience` | `visualization` | データサイエンス力シート |
 | `poc-concept-proof.md` | PoC（概念実証）とは？AIプロジェクトで重要な理由【DS検定】 | `value-creation` | `poc` | ビジネス力シート |
@@ -190,7 +186,6 @@
 | `preprocessing.md` | データ前処理（Preprocessing）とは？分析前に行う重要ステップ【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
 | `primary-key.md` | 主キー（Primary Key）とは？データベースの基本ルールを理解【DS検定】 | `dataengineering` | `database` | データエンジニアリング力シート |
 | `project-management.md` | プロジェクトマネジメントとは？プロジェクトを成功させるための管理手法【DS検定】 | `value-creation` | `project-management` | ビジネス力シート |
-| `pseudonymized-information.md` | 仮名加工情報とは？匿名加工情報との違いを整理【DS検定】 | `foundation` | `action-norms` | ビジネス力シート |
 | `publickey-vs-symmetric.md` | 公開鍵暗号方式と共通鍵暗号方式の違いとは？【DS検定】 | `foundation` | `security` | データエンジニアリング力シート |
 | `quartile.md` | 四分位とは？値が複数の取り方になる理由まで整理【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `r-squared-adjusted-r-squared.md` | 自由度調整済み決定係数とは？決定係数との違い【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
@@ -213,7 +208,6 @@
 | `sampling-methods-comparison.md` | 抽出方法の違いを整理（単純無作為・層化・集落・多段・系統）【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
 | `scrum.md` | スクラムとは？アジャイル開発の代表的なフレームワーク【DS検定】 | `value-creation` | `project-management` | ビジネス力シート |
 | `self-join.md` | 自己結合とは？同じテーブルを結合する理由を理解する【DS検定】 | `dataengineering` | `data-processing` | データエンジニアリング力シート |
-| `sensitive-personal-information.md` | 要配慮個人情報とは？個人情報との違いと具体例【DS検定】 | `foundation` | `action-norms` | ビジネス力シート |
 | `sigmoid-function.md` | シグモイド関数とは？（確率に変換する関数）【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
 | `significance-level-and-pvalue.md` | 有意水準とp値の違いとは？【DS検定リテラシー】 | `datascience` | `statistics` | データサイエンス力シート |
 | `slice-dice.md` | スライスとダイスの違いとは？BIツールの基本操作を整理【DS検定】 | `datascience` | `visualization` | データサイエンス力シート |
@@ -235,7 +229,6 @@
 | `stemming-vs-lemmatization.md` | ステミングとレンマ化の違いとは？（テキスト前処理の基本）【DS検定】 | `datascience` | `unstructured-data` | AI利活用スキルシート |
 | `student-t-test.md` | スチューデントの検定（t検定）とは？【DS検定リテラシー】 | `datascience` | `statistics` | データサイエンス力シート |
 | `swot-analysis.md` | SWOT分析とは？企業の強みと外部環境を整理するフレームワーク【DS検定】 | `value-creation` | `business-design` | ビジネス力シート |
-| `third-party-provision.md` | 個人情報の第三者提供とは？同意とオプトアウトのルール【DS検定】 | `foundation` | `action-norms` | ビジネス力シート |
 | `type1-type2-error.md` | 第一種の過誤と第二種の過誤の違いとは？【DS検定リテラシー】 | `datascience` | `statistics` | データサイエンス力シート |
 | `variance-and-standard-deviation.md` | 分散と標準偏差の違いとは？ばらつきをどう読むか【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `variance-standard-deviation.md` | 分散と標準偏差とは？ばらつきを理解する基本統計【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
