@@ -38,6 +38,7 @@ REVIEWED = {
     "hallucination.md": ("foundation-0017", "foundation-0018"),
     "kpi-kgi.md": "foundation-0016",
     "poc-concept-proof.md": "value-creation-0037",
+    "pdca-cycle.md": "value-creation-0115",
 }
 
 LEGACY_LABELS = (
