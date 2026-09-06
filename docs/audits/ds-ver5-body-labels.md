@@ -4,9 +4,9 @@
 
 ## 集計
 
-- 旧表記が残る通常記事: **212**
-- `ビジネス力シート`: **37記事**
-- `AI利活用スキルシート`: **59記事**
+- 旧表記が残る通常記事: **209**
+- `ビジネス力シート`: **35記事**
+- `AI利活用スキルシート`: **58記事**
 - `データサイエンス力シート`: **66記事**
 - `データエンジニアリング力シート`: **50記事**
 
@@ -28,7 +28,6 @@
 | `agile-development.md` | アジャイル開発とは？ウォーターフォール開発との違いを整理【DS検定】 | `value-creation` | `project-management` | ビジネス力シート |
 | `aiops-mlops-cheatsheet.md` | AIOpsとMLOpsの違いを一発整理【DS検定チートシート】 | `dataengineering` | `environment-setup` | AI利活用スキルシート |
 | `aiops.md` | AIOpsとは？MLOpsとの違いを整理【DS検定リテラシー】 | `dataengineering` | `environment-setup` | AI利活用スキルシート |
-| `analysis-approach-design.md` | 分析アプローチ設計とは？（分析プロジェクトを成功させる設計プロセス）【DS検定】 | `foundation` | `problem-definition` | ビジネス力シート |
 | `analytics-4types.md` | 記述的・診断的・予測的・処方的分析の違いとは？4分類を整理【DS検定】 | `datascience` | `data-understanding` | AI利活用スキルシート |
 | `anchoring-effect.md` | アンカリング効果とは？最初の情報に判断が引きずられる心理【DS検定】 | `foundation` | `logical-thinking` | ビジネス力シート |
 | `annotation.md` | アノテーションとは？AI学習データの品質を決める作業【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
@@ -119,7 +118,6 @@
 | `governance.md` | ガバナンスとは？企業統治とリスク管理の関係【DS検定】 | `value-creation` | `governance-risk` | ビジネス力シート |
 | `hadoop-vs-spark.md` | HadoopとSparkの違いとは？（分散処理基盤の比較）【DS検定リテラシー】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
 | `hadoop.md` | Hadoopとは？（ビッグデータ分散処理基盤）【DS検定リテラシー】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
-| `hallucination.md` | ハルシネーションとは？生成AIの限界と正しい向き合い方【DS検定】 | `foundation` | `ai-fundamentals` | AI利活用スキルシート |
 | `hash-function.md` | ハッシュ関数とは？（コリジョン・ソルトとの違い）【DS検定】 | `foundation` | `security` | AI利活用スキルシート |
 | `hash-vs-encryption.md` | ハッシュと暗号化の違いとは？（復号できるかが分かれ目）【DS検定】 | `foundation` | `security` | AI利活用スキルシート |
 | `hdfs.md` | HDFS（Hadoop分散ファイルシステム）とは？【DS検定リテラシー】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
@@ -194,7 +192,6 @@
 | `replication-vs-backup.md` | レプリケーションとバックアップの違いとは？【DS検定】 | `dataengineering` | `environment-setup` | データエンジニアリング力シート |
 | `rest-api-methods.md` | REST API のメソッドとは？データ操作の役割を整理【DS検定】 | `dataengineering` | `data-collection` | データエンジニアリング力シート |
 | `rest-api.md` | REST APIとは？SOAPとの違いを整理【DS検定】 | `dataengineering` | `data-collection` | データエンジニアリング力シート |
-| `revenue-equation.md` | 収益方程式とは？KPI設計の基本となるビジネスモデル【DS検定】 | `foundation` | `goal-setting` | ビジネス力シート |
 | `rfm-analysis.md` | RFM分析とは？顧客価値を評価するマーケティング分析【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
 | `rpo-rto.md` | RPOとRTOの違いとは？（障害復旧の判断基準）【DS検定】 | `dataengineering` | `environment-setup` | データエンジニアリング力シート |
 | `sample-variance-unbiased-variance.md` | 標本分散と不偏分散の違いとは？【DS検定リテラシー】 | `datascience` | `statistics` | データサイエンス力シート |
