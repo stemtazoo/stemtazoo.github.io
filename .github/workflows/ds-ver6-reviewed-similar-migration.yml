@@ -33,18 +33,21 @@ jobs:
           python - <<'PY'
           from pathlib import Path
           import subprocess
+          from scripts.migrate_ds_ver6_reviewed_similar_items import REVIEWED
+
           changed = []
           for line in subprocess.check_output(['git','status','--porcelain'], text=True).splitlines():
               path = line[3:]
               if path.startswith('pages/ds/') and path.endswith('.md'):
                   changed.append(Path(path))
-          assert len(changed) == 5, f'Expected 5 changed articles, got {len(changed)}'
+
           legacy = ('ビジネス力シート','AI利活用スキルシート','データサイエンス力シート','データエンジニアリング力シート')
           for path in changed:
+              assert path.name in REVIEWED, path
               text = path.read_text(encoding='utf-8')
               assert '## 対応スキル項目（ver.6 ' in text, path
               assert not any(label in text for label in legacy), path
-          print('Validated 5 reviewed near-match articles.')
+          print(f'Validated {len(changed)} reviewed near-match articles.')
           PY
       - name: Commit with concurrent-update retry
         run: |
