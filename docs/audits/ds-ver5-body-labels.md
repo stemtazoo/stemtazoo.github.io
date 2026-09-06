@@ -4,8 +4,8 @@
 
 ## 集計
 
-- 旧表記が残る通常記事: **198**
-- `ビジネス力シート`: **24記事**
+- 旧表記が残る通常記事: **192**
+- `ビジネス力シート`: **18記事**
 - `AI利活用スキルシート`: **58記事**
 - `データサイエンス力シート`: **66記事**
 - `データエンジニアリング力シート`: **50記事**
@@ -25,7 +25,6 @@
 | `ab-test.md` | A/Bテストとは？データで施策を比較する方法【DS検定】 | `datascience` | `statistics` | ビジネス力シート |
 | `access-control-list.md` | アクセス制御リスト（ACL）とは？ファイル権限の基本を整理【DS検定】 | `foundation` | `security` | データエンジニアリング力シート |
 | `activation-functions-hidden-layer.md` | 中間層で使用される活性化関数とは？（ReLU・シグモイド・ソフトマックスの違い）【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
-| `agile-development.md` | アジャイル開発とは？ウォーターフォール開発との違いを整理【DS検定】 | `value-creation` | `project-management` | ビジネス力シート |
 | `aiops-mlops-cheatsheet.md` | AIOpsとMLOpsの違いを一発整理【DS検定チートシート】 | `dataengineering` | `environment-setup` | AI利活用スキルシート |
 | `aiops.md` | AIOpsとは？MLOpsとの違いを整理【DS検定リテラシー】 | `dataengineering` | `environment-setup` | AI利活用スキルシート |
 | `analytics-4types.md` | 記述的・診断的・予測的・処方的分析の違いとは？4分類を整理【DS検定】 | `datascience` | `data-understanding` | AI利活用スキルシート |
@@ -66,7 +65,6 @@
 | `covariance-correlation.md` | 共分散と相関係数の違いとは？単位の影響と-1〜1の意味で整理【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `cps-iot-digitaltwin-cheatsheet.md` | CPS・IoT・デジタルツインの違いを一発整理【DS検定チートシート】 | `value-creation` | `technology-social-trends` | AI利活用スキルシート |
 | `cps.md` | CPS（サイバーフィジカルシステム）とは？Society5.0の中核技術を理解する【DS検定】 | `value-creation` | `technology-social-trends` | AI利活用スキルシート |
-| `critical-path.md` | クリティカルパスとは？プロジェクト遅延を左右する重要な経路【DS検定】 | `value-creation` | `project-management` | ビジネス力シート |
 | `data-augmentation.md` | データ拡張（Data Augmentation）とは？画像AIの学習データを増やす方法【DS検定】 | `datascience` | `unstructured-data` | AI利活用スキルシート |
 | `data-cube.md` | データキューブとは？OLAP分析の基本をわかりやすく整理【DS検定】 | `datascience` | `data-understanding` | データエンジニアリング力シート |
 | `data-driven-management.md` | データドリブン経営とは？データにもとづいて意思決定する考え方【DS検定】 | `value-creation` | `business-design` | ビジネス力シート |
@@ -108,7 +106,6 @@
 | `filter.md` | フィルターとは？BIツールの基本操作をわかりやすく解説【DS検定】 | `datascience` | `data-understanding` | データサイエンス力シート |
 | `foreign-key.md` | 外部キー（Foreign Key）とは？テーブルの関係を理解【DS検定】 | `dataengineering` | `database` | データエンジニアリング力シート |
 | `ftp-ssh.md` | FTP・SSH・SFTP・FTPSの違いとは？用途と暗号化を比較【DS検定】 | `dataengineering` | `data-collection` | データエンジニアリング力シート |
-| `gantt-chart.md` | ガントチャートとは？WBSとの違いとプロジェクト管理の基本【DS検定】 | `value-creation` | `project-management` | ビジネス力シート |
 | `gdpr.md` | GDPRとは？個人データ保護の基本を整理【DS検定】 | `foundation` | `action-norms` | AI利活用スキルシート |
 | `gini-vs-entropy.md` | ジニ不純度とエントロピーの違いとは？分岐基準を整理【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
 | `hadoop-vs-spark.md` | HadoopとSparkの違いとは？（分散処理基盤の比較）【DS検定リテラシー】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
@@ -167,7 +164,6 @@
 | `predictive-analytics.md` | 予測的データ分析とは？将来を読む分析手法を整理【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
 | `preprocessing.md` | データ前処理（Preprocessing）とは？分析前に行う重要ステップ【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
 | `primary-key.md` | 主キー（Primary Key）とは？データベースの基本ルールを理解【DS検定】 | `dataengineering` | `database` | データエンジニアリング力シート |
-| `project-management.md` | プロジェクトマネジメントとは？プロジェクトを成功させるための管理手法【DS検定】 | `value-creation` | `project-management` | ビジネス力シート |
 | `publickey-vs-symmetric.md` | 公開鍵暗号方式と共通鍵暗号方式の違いとは？【DS検定】 | `foundation` | `security` | データエンジニアリング力シート |
 | `quartile.md` | 四分位とは？値が複数の取り方になる理由まで整理【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `r-squared-adjusted-r-squared.md` | 自由度調整済み決定係数とは？決定係数との違い【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
@@ -186,7 +182,6 @@
 | `rpo-rto.md` | RPOとRTOの違いとは？（障害復旧の判断基準）【DS検定】 | `dataengineering` | `environment-setup` | データエンジニアリング力シート |
 | `sample-variance-unbiased-variance.md` | 標本分散と不偏分散の違いとは？【DS検定リテラシー】 | `datascience` | `statistics` | データサイエンス力シート |
 | `sampling-methods-comparison.md` | 抽出方法の違いを整理（単純無作為・層化・集落・多段・系統）【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
-| `scrum.md` | スクラムとは？アジャイル開発の代表的なフレームワーク【DS検定】 | `value-creation` | `project-management` | ビジネス力シート |
 | `self-join.md` | 自己結合とは？同じテーブルを結合する理由を理解する【DS検定】 | `dataengineering` | `data-processing` | データエンジニアリング力シート |
 | `sigmoid-function.md` | シグモイド関数とは？（確率に変換する関数）【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
 | `slice-dice.md` | スライスとダイスの違いとは？BIツールの基本操作を整理【DS検定】 | `datascience` | `visualization` | データサイエンス力シート |
@@ -211,7 +206,6 @@
 | `variance-and-standard-deviation.md` | 分散と標準偏差の違いとは？ばらつきをどう読むか【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `variance-standard-deviation.md` | 分散と標準偏差とは？ばらつきを理解する基本統計【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `vpn-ssh.md` | VPNとSSHの違いとは？（安全な通信の仕組みを整理）【DS検定】 | `foundation` | `security` | データエンジニアリング力シート |
-| `wbs.md` | WBSとは？作業分解とワークパッケージを整理【DS検定】 | `value-creation` | `project-management` | ビジネス力シート |
 | `weak-strong-ai.md` | 弱いAIと強いAIの違いとは？【DS検定リテラシー】 | `foundation` | `ai-fundamentals` | AI利活用スキルシート |
 | `web-api.md` | Web APIとは？HTTPでサービスとデータをやり取りする仕組み【DS検定】 | `dataengineering` | `data-collection` | データエンジニアリング力シート |
 | `web-crawling-scraping.md` | Webクローリングとスクレイピングの違いとは？【DS検定】 | `dataengineering` | `data-collection` | データエンジニアリング力シート |
