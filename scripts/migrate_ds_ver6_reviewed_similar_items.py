@@ -42,6 +42,9 @@ REVIEWED = {
     "pest-analysis.md": "value-creation-0001",
     "five-forces-analysis.md": "value-creation-0031",
     "swot-analysis.md": "value-creation-0031",
+    "internal-control.md": "value-creation-0052",
+    "data-governance.md": "value-creation-0052",
+    "governance.md": "value-creation-0094",
 }
 
 LEGACY_LABELS = (
