@@ -49,6 +49,8 @@ REVIEWED: dict[str, str | tuple[str, ...] | None] = {
     "open-data.md": "dataengineering-0001",
     "managed-service.md": "dataengineering-0022",
     "opt-out.md": "foundation-0008",
+    "data-driven-management.md": "foundation-0001",
+    "data-literacy.md": "foundation-0001",
     # ver.5では「プロジェクト推進／リソースマネジメント」に紐づいていたが、
     # ver.6 ★1（238項目）には同内容の直接項目がないため補助学習として残す。
     "agile-development.md": None,
