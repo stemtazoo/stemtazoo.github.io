@@ -4,8 +4,8 @@
 
 ## 集計
 
-- 旧表記が残る通常記事: **192**
-- `ビジネス力シート`: **18記事**
+- 旧表記が残る通常記事: **189**
+- `ビジネス力シート`: **15記事**
 - `AI利活用スキルシート`: **58記事**
 - `データサイエンス力シート`: **66記事**
 - `データエンジニアリング力シート`: **50記事**
@@ -137,7 +137,6 @@
 | `logistic-regression.md` | ロジスティック回帰とは？（オッズ・対数オッズから理解する）【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
 | `machine-learning-algorithms-cheatsheet.md` | 機械学習アルゴリズム一覧チートシート（教師あり・教師なし・強化学習）【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
 | `machine-learning-methods.md` | 機械学習の解析手法とは？（代表的アルゴリズムを整理）【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
-| `managed-service.md` | マネージドサービスとは？クラウド環境構築の基本概念を整理【DS検定】 | `dataengineering` | `environment-setup` | ビジネス力シート |
 | `mapping.md` | マッピング処理とは？データを対応づける基本操作【DS検定】 | `dataengineering` | `data-processing` | データサイエンス力シート |
 | `mapreduce.md` | MapReduceとは？（分散処理の基本モデル）【DS検定リテラシー】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
 | `market-basket-analysis.md` | マーケットバスケット分析とは？購買パターン分析の基本【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
@@ -151,8 +150,6 @@
 | `nosql-datastore.md` | NoSQLデータストアとは？RDBとの違いと使いどころを整理【DS検定】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
 | `oauth.md` | OAuthとは？仕組みとアクセストークンの流れを整理【DS検定リテラシー】 | `foundation` | `security` | AI利活用スキルシート |
 | `olap.md` | OLAPとは？BIツール分析の基本概念をわかりやすく解説【DS検定】 | `datascience` | `data-understanding` | データサイエンス力シート |
-| `open-data.md` | オープンデータとは？公共データ活用の基本【DS検定】 | `dataengineering` | `data-collection` | ビジネス力シート |
-| `opt-out.md` | オプトアウトとは？個人情報提供の仕組みを整理【DS検定】 | `foundation` | `action-norms` | ビジネス力シート |
 | `overfitting-tree-depth.md` | 過学習と分岐の深さの関係とは？決定木の注意点【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
 | `paired-vs-independent-data.md` | 対応があるデータと対応がないデータの違いとは？【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `paper-structure.md` | 一般的な論文構成とは？流れを理解する【DS検定リテラシー】 | `foundation` | `logical-thinking` | ビジネス力シート |
