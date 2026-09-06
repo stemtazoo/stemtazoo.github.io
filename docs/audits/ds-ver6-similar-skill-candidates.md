@@ -4,19 +4,14 @@
 
 ## 集計
 
-- 1つの旧★項目を持つ残存記事: **151**
-- 高類似（0.85以上）: **5**
+- 1つの旧★項目を持つ残存記事: **146**
+- 高類似（0.85以上）: **0**
 - 中類似（0.70以上0.85未満）: **3**
 
 ## 高類似候補
 
 | 類似度 | ファイル | ds_area | 旧★項目 | ver.6候補 | item_id |
 |---:|---|---|---|---|---|
-| 0.975 | `nosql.md` | `dataengineering` | NoSQLデータストア（HBase、Cassandra、Mongo DB、CouchDB、Amazon DynamoDB、Azure Cosmos DB、Google Cloud Firestoreなど）にAPIを介してアクセスし、新規データを登録できる | NoSQLデータストア（Cassandra、Mongo DB、CouchDB、Amazon DynamoDB、Azure Cosmos DB、Google Cloud Firestoreなど）にAPIを介してアクセスし、新規データを登録できる | `dataengineering-0069` |
-| 0.971 | `spark.md` | `dataengineering` | Hadoop・Sparkの分散技術の基本的な仕組みと構成を理解している | HadoopやSparkの分散技術の基本的な仕組みと構成を理解している | `dataengineering-0068` |
-| 0.971 | `yarn.md` | `dataengineering` | Hadoop・Sparkの分散技術の基本的な仕組みと構成を理解している | HadoopやSparkの分散技術の基本的な仕組みと構成を理解している | `dataengineering-0068` |
-| 0.958 | `visualization-basic-perspectives.md` | `datascience` | データの可視化における基本的な視点を挙げることができる（特異点、相違性、傾向性、関連性など） | データの可視化における基本的な視点を挙げることができる（特異点、相違性、傾向性、関連性を見出すなど） | `datascience-0153` |
-| 0.932 | `malware.md` | `foundation` | マルウェアなどによる深刻なリスクの種類（消失・漏洩・サービスの停止など）を常に意識している | マルウェアなどによる深刻なリスクの種類（消失・漏洩・サービスの停止など）を理解している | `foundation-0032` |
 
 ## 中類似候補
 
