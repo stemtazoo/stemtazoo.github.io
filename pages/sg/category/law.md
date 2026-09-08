@@ -1,51 +1,61 @@
 ---
 layout: page
 title: 情報セキュリティ関連法規まとめ
-description: "個人情報保護法、不正アクセス禁止法、著作権法、電子署名法などを「何を守る法律か」と「どの行為が問題になるか」で比較し、SG試験の法律名ひっかけを避けるための索引です。保護対象・禁止行為・同意要否を先に押さえ、条文名の暗記ではなく事例から法律を選ぶ練習につなげます。"
+description: "個人情報保護法、不正アクセス禁止法、著作権法、電子署名法などを、何を守る法律か・どの行為が問題になるかという入口とタグ連動の全記事一覧で整理します。新規記事も主分類タグから自動で反映されます。"
 permalink: /sg/category/law/
-last_modified_at: 2026-06-30
-
+last_modified_at: 2026-09-09
 ---
 
 [SGトップへ戻る](/sg/)
 
 ## SG試験での見方
 
-- 法令名だけでなく、何を守る法律かで判断する
-- 似た制度の適用対象を切り分ける
-- 実務上の責任範囲とセットで理解する
+法規では、法律名を暗記するより、**何を守る制度か・どの行為を規制するか**で判断します。
 
-## 関連するまとめページ
+- 個人情報を守る → 個人情報保護法
+- 不正ログインや識別符号の不正利用を規制する → 不正アクセス禁止法
+- 著作物や権利帰属を見る → 著作権法
+- 電子署名の法的な扱いを見る → 電子署名法
+- 委託や契約上の責任を見る → 契約・法務関連
 
-このカテゴリに関連する学習まとめページです。  
-法令・知財・契約の全体像を先につかみたい場合は、こちらから読むと理解しやすくなります。
-
-- [委託契約の責任分界まとめ｜成果物・再委託・権利帰属を整理【SG試験】](/sg/legal-contract-ip-summary/)
-  委託契約での成果物責任、再委託管理、秘密保持、著作権の権利帰属を、試験での責任分界の判断軸で整理したまとめページです。
+## まず読むまとめ記事
 
 - [法令・知的財産・委託契約まとめ｜責任と保護対象で整理【SG試験】](/sg/law-ip-contract-summary/)
-  法令・知財・契約実務を「何を守る制度か」「誰が責任を負うか」で切り分け、試験で迷いやすい論点を一気に整理できます。
+- [委託契約の責任分界まとめ｜成果物・再委託・権利帰属を整理【SG試験】](/sg/legal-contract-ip-summary/)
 
-## 関連記事一覧
+## テーマ別の入口
 
-{% assign sg_pages = site.pages | sort: "title" %}
-{% assign has_items = false %}
-<ul>
-{% for p in sg_pages %}
-  {% if p.path contains "pages/sg/" %}
-    {% unless p.path contains "pages/sg/category/" %}
-      {% if p.url != "/sg/" and p.url != "/sg/all/" %}
-        {% if p.tags %}
-          {% if p.tags contains 'law' or p.tags contains 'security_law' or p.tags contains 'sg-security-law' or p.tags contains 'compliance' or p.tags contains 'personal_information' or p.tags contains 'privacy_law' or p.tags contains '法務' %}
-            {% assign has_items = true %}
-  <li><a href="{{ p.url }}">{{ p.title }}</a></li>
-          {% endif %}
-        {% endif %}
-      {% endif %}
-    {% endunless %}
+### 個人情報・プライバシー
+
+- [個人情報保護法とは？](/sg/personal-information-protection-law/)
+- [個人情報保護マネジメントシステム（PMS）とは？](/sg/personal-information-protection-management-system/)
+
+### 不正アクセス
+
+- [不正アクセス禁止法とは？禁止される行為を整理](/sg/unauthorized-access-law/)
+- [識別符号とは？ID・パスワードとの関係を整理](/sg/identification-code/)
+
+### 知的財産・契約
+
+- [著作権とは？](/sg/copyright/)
+- [委託先管理とは？](/sg/vendor-management/)
+
+## 全記事一覧（タグから自動更新）
+
+以下は、主分類タグ `sg-security-law` が付いた記事をタイトル順に自動表示しています。
+
+**今後は新規記事に正しい主分類タグを付ければ、このカテゴリページへの手動追記は不要です。**
+
+{% assign category_pages = site.pages | where: "tags", "sg-security-law" | sort: "title" %}
+{% assign category_count = 0 %}
+{% for p in category_pages %}
+  {% if p.permalink %}
+- [{{ p.title }}]({{ p.permalink }})
+    {% assign category_count = category_count | plus: 1 %}
   {% endif %}
 {% endfor %}
-</ul>
-{% if has_items == false %}
-該当記事は今後追加予定です。
+{% if category_count == 0 %}
+- 現在、該当記事はありません。
 {% endif %}
+
+{% include sg_article_footer.html %}
