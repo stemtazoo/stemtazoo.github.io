@@ -6,7 +6,7 @@ permalink: /sg/telnet/
 tags: [sg, technology, network, unauthorized_access, sg-technology]
 prev: /sg/targeted-attack/
 next: /sg/timestamp/
-last_modified_at: 2026-06-29
+last_modified_at: 2026-09-09
 ---
 
 ## まず結論
@@ -25,6 +25,8 @@ SG試験では「なぜ攻撃対象になるか（初期パスワード＋平文
 - SMTP：メール送信用で、TCP25番の論点
 
 > 迷ったら、**「遠隔操作のTelnetか、メール送信のSMTPか」**を先に見ます。
+
+IoT機器全体のセキュリティ対策は、[IoTセキュリティとは？IoT機器特有のリスクと対策を整理【SG試験】](/sg/iot-security/)でまとめています。
 
 ## SG試験で選択肢を切る判断軸（TCP23番/Telnet編）
 
