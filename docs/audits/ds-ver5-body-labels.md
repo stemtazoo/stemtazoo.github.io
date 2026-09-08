@@ -4,9 +4,9 @@
 
 ## 集計
 
-- 旧表記が残る通常記事: **167**
+- 旧表記が残る通常記事: **162**
 - `ビジネス力シート`: **0記事**
-- `AI利活用スキルシート`: **51記事**
+- `AI利活用スキルシート`: **46記事**
 - `データサイエンス力シート`: **66記事**
 - `データエンジニアリング力シート`: **50記事**
 
@@ -32,7 +32,6 @@
 | `association-analysis.md` | アソシエーション分析とは？購買データの関係性を見つける分析【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
 | `association-metrics.md` | 共起頻度・支持度・信頼度・リフト値の違いとは？【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
 | `authentication-authorization.md` | 認証と認可の違いとは？本人確認と権限付与で整理【DS検定】 | `foundation` | `security` | データエンジニアリング力シート |
-| `authentication-vs-authorization.md` | 認証・認可・アクセス制御の関係を例で理解する【DS検定】 | `foundation` | `security` | AI利活用スキルシート |
 | `average-methods-comparison.md` | マクロ平均・マイクロ平均・重み付き平均の違いとは？【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
 | `basket-analysis.md` | バスケット分析とは？（リフト値まで整理）【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
 | `batch-vs-stream.md` | バッチ処理とストリーム処理の違いとは？リアルタイム性で切り分ける【DS検定】 | `dataengineering` | `data-processing` | データエンジニアリング力シート |
@@ -98,8 +97,6 @@
 | `gini-vs-entropy.md` | ジニ不純度とエントロピーの違いとは？分岐基準を整理【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
 | `hadoop-vs-spark.md` | HadoopとSparkの違いとは？（分散処理基盤の比較）【DS検定リテラシー】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
 | `hadoop.md` | Hadoopとは？（ビッグデータ分散処理基盤）【DS検定リテラシー】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
-| `hash-function.md` | ハッシュ関数とは？（コリジョン・ソルトとの違い）【DS検定】 | `foundation` | `security` | AI利活用スキルシート |
-| `hash-vs-encryption.md` | ハッシュと暗号化の違いとは？（復号できるかが分かれ目）【DS検定】 | `foundation` | `security` | AI利活用スキルシート |
 | `hdfs.md` | HDFS（Hadoop分散ファイルシステム）とは？【DS検定リテラシー】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
 | `hierarchical-clustering.md` | 階層クラスター分析とは？手法の違いまで整理【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
 | `hierarchical-distance-metrics.md` | 階層クラスター分析における距離の測定方法の比較【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
@@ -116,7 +113,6 @@
 | `japanese-morphological-analysis-tools.md` | 日本語の形態素解析ツールとは？代表例と違いを整理【DS検定】 | `datascience` | `unstructured-data` | AI利活用スキルシート |
 | `jupyter-r-usage.md` | Jupyter NotebookやRの使い所とは？（データ分析環境の役割）【DS検定】 | `dataengineering` | `environment-setup` | AI利活用スキルシート |
 | `kernel.md` | カーネル（Kernel）とは？画像フィルタ処理の計算ルール【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
-| `key-stretching.md` | ストレッチングとは？（ハッシュ強化の仕組み）【DS検定】 | `foundation` | `security` | AI利活用スキルシート |
 | `left-join-where.md` | LEFT JOINとWHEREの関係とは？（SQLのひっかけ問題）【DS検定】 | `dataengineering` | `data-processing` | データエンジニアリング力シート |
 | `llm-temperature.md` | LLMのTemperatureとは？出力のランダム性を理解する【DS検定】 | `foundation` | `ai-fundamentals` | AI利活用スキルシート |
 | `logistic-regression.md` | ロジスティック回帰とは？（オッズ・対数オッズから理解する）【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
@@ -146,7 +142,6 @@
 | `publickey-vs-symmetric.md` | 公開鍵暗号方式と共通鍵暗号方式の違いとは？【DS検定】 | `foundation` | `security` | データエンジニアリング力シート |
 | `quartile.md` | 四分位とは？値が複数の取り方になる理由まで整理【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `r-squared-adjusted-r-squared.md` | 自由度調整済み決定係数とは？決定係数との違い【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
-| `rainbow-table-attack.md` | レインボーテーブル攻撃とは？（ソルトとの関係）【DS検定】 | `foundation` | `security` | AI利活用スキルシート |
 | `random-forest.md` | ランダムフォレストとは？（特徴量重要度の考え方まで理解する）【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
 | `random-sampling-methods.md` | 無作為抽出法とは？種類と違いを整理【DS検定リテラシー】 | `datascience` | `data-preparation` | データサイエンス力シート |
 | `rbac.md` | RBAC（ロールベースアクセス制御）とは？【DS検定リテラシー】 | `foundation` | `security` | データエンジニアリング力シート |
