@@ -53,6 +53,7 @@ REVIEWED: dict[str, str | tuple[str, ...] | None] = {
     "data-literacy.md": "foundation-0001",
     "why-structure.md": "foundation-0012",
     "sora-ame-kasa.md": "foundation-0003",
+    "gdpr.md": "foundation-0008",
     # Reviewed supplemental topics: useful learning pages without a direct
     # same-theme item in the ver.6 ★1 list.
     "agile-development.md": None,
@@ -72,6 +73,8 @@ REVIEWED: dict[str, str | tuple[str, ...] | None] = {
     "ab-test.md": None,
     "bi-tool-functions.md": None,
     "hot-cool-archive.md": None,
+    "elsi.md": None,
+    "human-centered-ai-principles.md": None,
 }
 
 SUPPLEMENTAL: dict[str, tuple[str, str, str]] = {
@@ -92,6 +95,8 @@ SUPPLEMENTAL: dict[str, tuple[str, str, str]] = {
     "ab-test.md": ("datascience", "statistics", "実験・効果検証の補助学習"),
     "bi-tool-functions.md": ("datascience", "data-understanding", "BI・データ活用の補助学習"),
     "hot-cool-archive.md": ("dataengineering", "data-storage", "ストレージ階層設計の補助学習"),
+    "elsi.md": ("foundation", "action-norms", "倫理・法・社会課題の補助学習"),
+    "human-centered-ai-principles.md": ("foundation", "action-norms", "人間中心のAI原則の補助学習"),
 }
 
 LEGACY_LABELS = (
