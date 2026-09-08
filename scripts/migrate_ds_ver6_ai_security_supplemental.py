@@ -23,6 +23,11 @@ FILES = {
     "digital-signature2.md": "電子署名・公開鍵暗号の補助学習",
     "least-privilege.md": "アクセス制御原則の補助学習",
     "zero-trust.md": "セキュリティ設計の補助学習",
+    "authentication-vs-authorization.md": "認証・認可・アクセス制御の補助学習",
+    "hash-function.md": "ハッシュ関数の補助学習",
+    "hash-vs-encryption.md": "ハッシュと暗号化の比較学習",
+    "key-stretching.md": "パスワード保護・ハッシュ強化の補助学習",
+    "rainbow-table-attack.md": "パスワード攻撃手法の補助学習",
 }
 
 HEADING_RE = re.compile(r"^## 対応スキル項目（AI利活用スキルシート）\s*$", re.MULTILINE)
