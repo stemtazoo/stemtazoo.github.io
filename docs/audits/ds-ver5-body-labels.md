@@ -4,9 +4,9 @@
 
 ## 集計
 
-- 旧表記が残る通常記事: **159**
+- 旧表記が残る通常記事: **150**
 - `ビジネス力シート`: **0記事**
-- `AI利活用スキルシート`: **43記事**
+- `AI利活用スキルシート`: **34記事**
 - `データサイエンス力シート`: **66記事**
 - `データエンジニアリング力シート`: **50記事**
 
@@ -46,7 +46,6 @@
 | `chart-types.md` | グラフの種類と使い分け（可視化の基本）【DS検定】 | `datascience` | `visualization` | データエンジニアリング力シート |
 | `chi-square-distribution.md` | カイ二乗分布とは？（χ²分布の使いどころを整理）【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `cluster-analysis.md` | クラスタ分析とは？似たデータをグループ分けする分析手法【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
-| `cnn.md` | CNN（畳み込みニューラルネットワーク）とは？画像認識AIの基本【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
 | `coefficient-of-determination-contribution.md` | 決定係数と寄与率とは？回帰モデルの説明力を理解する【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
 | `constructor.md` | コンストラクタとは？初期化処理の役割を整理【DS検定リテラシー】 | `dataengineering` | `programming` | AI利活用スキルシート |
 | `convolution.md` | 畳み込み（Convolution）とは？画像フィルタ処理の基本【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
@@ -78,7 +77,6 @@
 | `eda.md` | EDA（探索的データ分析）とは？分析の第一歩を理解する【DS検定】 | `datascience` | `visualization` | データサイエンス力シート |
 | `encapsulation.md` | カプセル化とは？情報隠蔽との違いを整理【DS検定リテラシー】 | `dataengineering` | `programming` | AI利活用スキルシート |
 | `encoding.md` | エンコーディングとは？カテゴリ変数を数値化する理由【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
-| `entropy.md` | エントロピーとは？不確実さを測る指標【DS検定】 | `datascience` | `statistics` | AI利活用スキルシート |
 | `er-diagram.md` | ER図とは？エンティティとリレーションを整理する図【DS検定】 | `dataengineering` | `data-structure` | データエンジニアリング力シート |
 | `estimator-properties.md` | 推定量の性質の違いとは？（不偏性・一貫性・効率性・信頼性）【DS検定リテラシー】 | `datascience` | `statistics` | データサイエンス力シート |
 | `etl.md` | ETLとは？（データ統合の基本プロセス）【DS検定リテラシー】 | `dataengineering` | `data-collection` | データエンジニアリング力シート |
@@ -92,7 +90,6 @@
 | `filter.md` | フィルターとは？BIツールの基本操作をわかりやすく解説【DS検定】 | `datascience` | `data-understanding` | データサイエンス力シート |
 | `foreign-key.md` | 外部キー（Foreign Key）とは？テーブルの関係を理解【DS検定】 | `dataengineering` | `database` | データエンジニアリング力シート |
 | `ftp-ssh.md` | FTP・SSH・SFTP・FTPSの違いとは？用途と暗号化を比較【DS検定】 | `dataengineering` | `data-collection` | データエンジニアリング力シート |
-| `gini-vs-entropy.md` | ジニ不純度とエントロピーの違いとは？分岐基準を整理【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
 | `hadoop-vs-spark.md` | HadoopとSparkの違いとは？（分散処理基盤の比較）【DS検定リテラシー】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
 | `hadoop.md` | Hadoopとは？（ビッグデータ分散処理基盤）【DS検定リテラシー】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
 | `hdfs.md` | HDFS（Hadoop分散ファイルシステム）とは？【DS検定リテラシー】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
@@ -100,16 +97,13 @@
 | `hierarchical-distance-metrics.md` | 階層クラスター分析における距離の測定方法の比較【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
 | `image-filter-processing.md` | 画像のフィルタ処理とは？（ノイズ除去と特徴強調の基本）【DS検定】 | `datascience` | `unstructured-data` | AI利活用スキルシート |
 | `image-metadata.md` | 画像データにおけるメタデータとは？意味と活用を整理【DS検定リテラシー】 | `datascience` | `unstructured-data` | AI利活用スキルシート |
-| `impurity.md` | 不純度とは？決定木の分岐基準を整理【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
 | `imputation.md` | インプテーションとは？（欠損値補完の基本）【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
 | `incremental-vs-differential-backup.md` | 増分バックアップと差分バックアップの違いとは？【DS検定リテラシー】 | `dataengineering` | `environment-setup` | データエンジニアリング力シート |
 | `industry4-0.md` | インダストリー4.0とは？第4次産業革命の本質とドイツ戦略【DS検定】 | `value-creation` | `technology-social-trends` | AI利活用スキルシート |
 | `information-gain.md` | 情報利得とは？決定木で分岐の良さを判断する基準【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
 | `inheritance.md` | 継承とは？クラス設計の基本を整理【DS検定リテラシー】 | `dataengineering` | `programming` | AI利活用スキルシート |
 | `interpret-statistics.md` | 数字やグラフの持つメッセージを理解するとは？（統計情報の正しい読み取り）【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
-| `japanese-morphological-analysis-tools.md` | 日本語の形態素解析ツールとは？代表例と違いを整理【DS検定】 | `datascience` | `unstructured-data` | AI利活用スキルシート |
 | `jupyter-r-usage.md` | Jupyter NotebookやRの使い所とは？（データ分析環境の役割）【DS検定】 | `dataengineering` | `environment-setup` | AI利活用スキルシート |
-| `kernel.md` | カーネル（Kernel）とは？画像フィルタ処理の計算ルール【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
 | `left-join-where.md` | LEFT JOINとWHEREの関係とは？（SQLのひっかけ問題）【DS検定】 | `dataengineering` | `data-processing` | データエンジニアリング力シート |
 | `llm-temperature.md` | LLMのTemperatureとは？出力のランダム性を理解する【DS検定】 | `foundation` | `ai-fundamentals` | AI利活用スキルシート |
 | `logistic-regression.md` | ロジスティック回帰とは？（オッズ・対数オッズから理解する）【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
@@ -120,8 +114,6 @@
 | `market-basket-analysis.md` | マーケットバスケット分析とは？購買パターン分析の基本【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
 | `missing-value-handling.md` | 欠損値の処理方法とは？代表的な手法と使い分け【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
 | `mlops.md` | MLOpsとは？AIOpsとの違いを一発整理【DS検定リテラシー】 | `dataengineering` | `environment-setup` | AI利活用スキルシート |
-| `nlp-cleaning.md` | 自然言語処理におけるクリーニングとは？（前処理の基本）【DS検定】 | `datascience` | `unstructured-data` | AI利活用スキルシート |
-| `nltk.md` | NLTKとは？自然言語処理ライブラリの役割を整理【DS検定】 | `datascience` | `unstructured-data` | AI利活用スキルシート |
 | `normal-and-standard-normal.md` | 標準正規分布と正規分布の違いとは？【DS検定リテラシー】 | `datascience` | `statistics` | データサイエンス力シート |
 | `normalization-2nf-3nf.md` | 第2正規化と第3正規化の違いを整理（候補キーから考える）【DS検定】 | `dataengineering` | `data-structure` | データエンジニアリング力シート |
 | `nosql-datastore.md` | NoSQLデータストアとは？RDBとの違いと使いどころを整理【DS検定】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
@@ -139,7 +131,6 @@
 | `publickey-vs-symmetric.md` | 公開鍵暗号方式と共通鍵暗号方式の違いとは？【DS検定】 | `foundation` | `security` | データエンジニアリング力シート |
 | `quartile.md` | 四分位とは？値が複数の取り方になる理由まで整理【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `r-squared-adjusted-r-squared.md` | 自由度調整済み決定係数とは？決定係数との違い【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
-| `random-forest.md` | ランダムフォレストとは？（特徴量重要度の考え方まで理解する）【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
 | `random-sampling-methods.md` | 無作為抽出法とは？種類と違いを整理【DS検定リテラシー】 | `datascience` | `data-preparation` | データサイエンス力シート |
 | `rbac.md` | RBAC（ロールベースアクセス制御）とは？【DS検定リテラシー】 | `foundation` | `security` | データエンジニアリング力シート |
 | `referential-integrity.md` | 参照整合性とは？外部キーとデータ整合性を理解【DS検定】 | `dataengineering` | `database` | データエンジニアリング力シート |
