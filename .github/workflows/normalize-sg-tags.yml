@@ -1,15 +1,13 @@
 name: Normalize SG primary tags
 
 on:
-  push:
-    paths:
-      - "scripts/finalize_sg_tags.py"
+  workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  normalize:
+  audit:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -20,24 +18,5 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Apply final reviewed tag cleanup
-        run: python scripts/finalize_sg_tags.py --apply
-
-      - name: Run audit
+      - name: Audit SG primary tags
         run: python scripts/audit_sg_primary_tags.py --strict
-
-      - name: Check diff
-        run: git diff --check
-
-      - name: Commit normalized tags
-        shell: bash
-        run: |
-          if git diff --quiet; then
-            echo "No final tag changes found."
-            exit 0
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add pages/sg
-          git commit -m "Finish SG primary tag normalization"
-          git push
