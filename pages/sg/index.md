@@ -4,7 +4,7 @@ title: 情報セキュリティマネジメント試験 学習まとめ
 description: 情報セキュリティマネジメント試験の学習入口として、頻出テーマ、分野別まとめ、直前復習をたどれる索引ページです。用語暗記だけでなく、目的・対象・責任範囲から選択肢を切る学習ルートを確認できます。関連ページへの導線もまとめています。初学者が分野をまたいで復習するときの起点になります。
 permalink: /sg/
 categories: [business]
-last_modified_at: 2026-08-15
+last_modified_at: 2026-09-09
 
 ---
 
@@ -68,6 +68,7 @@ last_modified_at: 2026-08-15
 2. [Webアプリ攻撃まとめ](/sg/web-application-attacks-summary/)
 3. [DNS・メールなりすまし対策まとめ](/sg/dns-mail-security-summary/)
 4. [セキュリティ対策の違いまとめ](/sg/security-measures-comparison/)
+5. [IoTセキュリティとは？IoT機器特有のリスクと対策を整理](/sg/iot-security/)
 
 ### 4. 科目B対策：文章問題の判断軸を作る
 ケース問題で問われる判断基準を確認し、過去問演習へ進みます。
