@@ -1,9 +1,7 @@
 name: Normalize SG primary tags
 
 on:
-  push:
-    paths:
-      - ".github/workflows/normalize-sg-tags.yml"
+  workflow_dispatch:
 
 permissions:
   contents: write
