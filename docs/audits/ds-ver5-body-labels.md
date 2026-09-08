@@ -4,9 +4,9 @@
 
 ## 集計
 
-- 旧表記が残る通常記事: **150**
+- 旧表記が残る通常記事: **144**
 - `ビジネス力シート`: **0記事**
-- `AI利活用スキルシート`: **34記事**
+- `AI利活用スキルシート`: **28記事**
 - `データサイエンス力シート`: **66記事**
 - `データエンジニアリング力シート`: **50記事**
 
@@ -23,11 +23,9 @@
 | ファイル | title | ds_area | ds_section | 旧表記 |
 |---|---|---|---|---|
 | `access-control-list.md` | アクセス制御リスト（ACL）とは？ファイル権限の基本を整理【DS検定】 | `foundation` | `security` | データエンジニアリング力シート |
-| `activation-functions-hidden-layer.md` | 中間層で使用される活性化関数とは？（ReLU・シグモイド・ソフトマックスの違い）【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
 | `aiops-mlops-cheatsheet.md` | AIOpsとMLOpsの違いを一発整理【DS検定チートシート】 | `dataengineering` | `environment-setup` | AI利活用スキルシート |
 | `aiops.md` | AIOpsとは？MLOpsとの違いを整理【DS検定リテラシー】 | `dataengineering` | `environment-setup` | AI利活用スキルシート |
 | `analytics-4types.md` | 記述的・診断的・予測的・処方的分析の違いとは？4分類を整理【DS検定】 | `datascience` | `data-understanding` | AI利活用スキルシート |
-| `annotation.md` | アノテーションとは？AI学習データの品質を決める作業【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
 | `apriori-algorithm.md` | Aprioriアルゴリズムとは？（アソシエーション分析の基本手法）【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
 | `association-analysis.md` | アソシエーション分析とは？購買データの関係性を見つける分析【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
 | `association-metrics.md` | 共起頻度・支持度・信頼度・リフト値の違いとは？【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
@@ -48,7 +46,6 @@
 | `cluster-analysis.md` | クラスタ分析とは？似たデータをグループ分けする分析手法【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
 | `coefficient-of-determination-contribution.md` | 決定係数と寄与率とは？回帰モデルの説明力を理解する【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
 | `constructor.md` | コンストラクタとは？初期化処理の役割を整理【DS検定リテラシー】 | `dataengineering` | `programming` | AI利活用スキルシート |
-| `convolution.md` | 畳み込み（Convolution）とは？画像フィルタ処理の基本【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
 | `correlation-and-causation.md` | 相関があっても因果とは限らない理由を例で理解する【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `correlation-vs-causation.md` | 相関と因果の違いとは？交絡と「原因とは限らない」を整理【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `covariance-and-correlation.md` | 共分散を相関係数に直す意味とは？単位の影響を外す考え方【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
@@ -64,10 +61,8 @@
 | `database-constraints.md` | データベースの制約とは？NOT NULL・一意性・外部キーを整理【DS検定】 | `dataengineering` | `database` | データエンジニアリング力シート |
 | `datalake-vs-nosql.md` | データレイクとNoSQLの違いとは？役割の違いを整理【DS検定】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
 | `dendrogram.md` | デンドログラムの見方とは？縦軸とクラスタ数【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
-| `dependency-parsing.md` | 係り受け解析とは？形態素解析との違いを整理【DS検定】 | `datascience` | `unstructured-data` | AI利活用スキルシート |
 | `design-of-experiments.md` | 実験計画法とは？少ない実験で原因を見つける方法【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
 | `deviation-score.md` | 偏差値とは？zスコア・標準偏差との違いを整理【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
-| `digital-image-representation.md` | 画像のデジタル表現とは？（標本化と量子化の基本）【DS検定】 | `datascience` | `unstructured-data` | AI利活用スキルシート |
 | `digital-signature.md` | 電子署名とは？本人性・完全性と公開鍵での検証を整理【DS検定】 | `foundation` | `security` | データエンジニアリング力シート |
 | `digital-twin.md` | デジタルツインとは？CPSとの違いを整理【DS検定】 | `value-creation` | `technology-social-trends` | AI利活用スキルシート |
 | `discrete-continuous-distribution.md` | 離散型確率分布と連続型確率分布の違いとは？【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
@@ -95,7 +90,6 @@
 | `hdfs.md` | HDFS（Hadoop分散ファイルシステム）とは？【DS検定リテラシー】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
 | `hierarchical-clustering.md` | 階層クラスター分析とは？手法の違いまで整理【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
 | `hierarchical-distance-metrics.md` | 階層クラスター分析における距離の測定方法の比較【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
-| `image-filter-processing.md` | 画像のフィルタ処理とは？（ノイズ除去と特徴強調の基本）【DS検定】 | `datascience` | `unstructured-data` | AI利活用スキルシート |
 | `image-metadata.md` | 画像データにおけるメタデータとは？意味と活用を整理【DS検定リテラシー】 | `datascience` | `unstructured-data` | AI利活用スキルシート |
 | `imputation.md` | インプテーションとは？（欠損値補完の基本）【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
 | `incremental-vs-differential-backup.md` | 増分バックアップと差分バックアップの違いとは？【DS検定リテラシー】 | `dataengineering` | `environment-setup` | データエンジニアリング力シート |
