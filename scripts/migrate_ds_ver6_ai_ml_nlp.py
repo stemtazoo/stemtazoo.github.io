@@ -19,9 +19,15 @@ DATA = ROOT / "data" / "skillcheck" / "exports" / "exam_star1_latest.json"
 DIRECT = {
     "cnn.md": ("datascience", "modeling", "datascience-0220"),
     "random-forest.md": ("datascience", "modeling", "datascience-0191"),
+    "activation-functions-hidden-layer.md": ("datascience", "modeling", "datascience-0190"),
+    "annotation.md": ("datascience", "modeling", "datascience-0185"),
     "nltk.md": ("datascience", "unstructured-data", "datascience-0289"),
     "japanese-morphological-analysis-tools.md": ("datascience", "unstructured-data", "datascience-0289"),
+    "dependency-parsing.md": ("datascience", "unstructured-data", "datascience-0289"),
     "nlp-cleaning.md": ("datascience", "unstructured-data", "datascience-0288"),
+    "digital-image-representation.md": ("datascience", "unstructured-data", "datascience-0301"),
+    "image-filter-processing.md": ("datascience", "unstructured-data", "datascience-0302"),
+    "convolution.md": ("datascience", "modeling", "datascience-0302"),
 }
 
 SUPPLEMENTAL = {
