@@ -1,61 +1,57 @@
 ---
 layout: page
 title: マネジメント系まとめ
-description: "サービスマネジメント、システム監査、プロジェクト管理をまとめ、SGのマネジメント系で問われる論点を学習順に確認できます。計画・実施・評価・改善のどこを問う用語かを整理し、管理分野の似た選択肢を切り分けます。"
+description: "サービスマネジメント、システム監査、プロジェクト管理を、管理プロセスの目的という入口とタグ連動の全記事一覧で整理します。新規記事も主分類タグから自動で反映されます。"
 permalink: /sg/category/management/
-last_modified_at: 2026-07-01
-
+last_modified_at: 2026-09-09
 ---
 
 [SGトップへ戻る](/sg/)
 
 ## SG試験での見方
 
-- 管理プロセスの目的と手順で判断する
-- 監査・運用・改善の流れを区別する
-- 現場運用に落ちるかどうかで理解する
+マネジメント系では、**どの管理プロセスの話か**を見ると切り分けやすくなります。
 
-## 関連するまとめページ
+- 計画・進捗・成果物を管理する → プロジェクトマネジメント
+- ITサービスを安定して提供する → サービスマネジメント
+- 運用や統制が適切か確認する → システム監査
 
-このカテゴリに関連する学習まとめページです。  
-はじめに全体像を確認したい場合は、まとめページから読むと理解しやすくなります。
+## まず読むまとめ記事
 
-- [プロジェクトマネジメントまとめ｜PMBOK・WBS・PERT図を整理【SG試験】](/sg/project-management-summary/)  
-  プロジェクトマネジメントの全体像、PMBOKの管理領域、WBS、アローダイアグラム、クリティカルパスを整理したまとめページです。
+- [プロジェクトマネジメントまとめ｜PMBOK・WBS・PERT図を整理【SG試験】](/sg/project-management-summary/)
 
-## 関連記事一覧
+## テーマ別の入口
 
-{% assign sg_pages = site.pages | sort: "title" %}
-{% assign has_items = false %}
-{% assign summary_page_urls = "/sg/project-management-summary/" | split: "," %}
-<ul>
-{% for p in sg_pages %}
-  {% if p.path contains "pages/sg/" %}
-    {% unless p.path contains "pages/sg/category/" %}
-      {% if p.url != "/sg/" and p.url != "/sg/all/" %}
-        {% if p.tags %}
-          {% assign is_summary_page = false %}
-          {% if p.url contains '-summary/' %}
-            {% assign is_summary_page = true %}
-          {% endif %}
-          {% if p.tags contains 'summary' or p.tags contains 'sg-summary' %}
-            {% assign is_summary_page = true %}
-          {% endif %}
+### プロジェクトマネジメント
 
-          {% if is_summary_page == false %}
-            {% unless summary_page_urls contains p.url %}
-            {% if p.tags contains 'management' or p.tags contains 'sg-management' or p.tags contains 'project_management' or p.tags contains 'service_management' or p.tags contains 'system_audit' %}
-              {% assign has_items = true %}
-  <li><a href="{{ p.url }}">{{ p.title }}</a></li>
-            {% endif %}
-            {% endunless %}
-          {% endif %}
-        {% endif %}
-      {% endif %}
-    {% endunless %}
+- [WBSとは？](/sg/wbs/)
+- [クリティカルパスとは？](/sg/critical-path/)
+
+### サービスマネジメント
+
+- [SLAとは？](/sg/sla/)
+- [サービスデスクとは？](/sg/service-desk/)
+
+### システム監査
+
+- [システム監査とは？](/sg/system-audit/)
+
+## 全記事一覧（タグから自動更新）
+
+以下は、主分類タグ `sg-management` が付いた記事をタイトル順に自動表示しています。
+
+**今後は新規記事に正しい主分類タグを付ければ、このカテゴリページへの手動追記は不要です。**
+
+{% assign category_pages = site.pages | where: "tags", "sg-management" | sort: "title" %}
+{% assign category_count = 0 %}
+{% for p in category_pages %}
+  {% if p.permalink %}
+- [{{ p.title }}]({{ p.permalink }})
+    {% assign category_count = category_count | plus: 1 %}
   {% endif %}
 {% endfor %}
-</ul>
-{% if has_items == false %}
-該当記事は今後追加予定です。
+{% if category_count == 0 %}
+- 現在、該当記事はありません。
 {% endif %}
+
+{% include sg_article_footer.html %}
