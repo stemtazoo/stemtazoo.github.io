@@ -4,9 +4,9 @@
 
 ## 集計
 
-- 旧表記が残る通常記事: **144**
+- 旧表記が残る通常記事: **139**
 - `ビジネス力シート`: **0記事**
-- `AI利活用スキルシート`: **28記事**
+- `AI利活用スキルシート`: **23記事**
 - `データサイエンス力シート`: **66記事**
 - `データエンジニアリング力シート`: **50記事**
 
@@ -50,8 +50,6 @@
 | `correlation-vs-causation.md` | 相関と因果の違いとは？交絡と「原因とは限らない」を整理【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `covariance-and-correlation.md` | 共分散を相関係数に直す意味とは？単位の影響を外す考え方【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `covariance-correlation.md` | 共分散と相関係数の違いとは？単位の影響と-1〜1の意味で整理【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
-| `cps-iot-digitaltwin-cheatsheet.md` | CPS・IoT・デジタルツインの違いを一発整理【DS検定チートシート】 | `value-creation` | `technology-social-trends` | AI利活用スキルシート |
-| `cps.md` | CPS（サイバーフィジカルシステム）とは？Society5.0の中核技術を理解する【DS検定】 | `value-creation` | `technology-social-trends` | AI利活用スキルシート |
 | `data-augmentation.md` | データ拡張（Data Augmentation）とは？画像AIの学習データを増やす方法【DS検定】 | `datascience` | `unstructured-data` | AI利活用スキルシート |
 | `data-cube.md` | データキューブとは？OLAP分析の基本をわかりやすく整理【DS検定】 | `datascience` | `data-understanding` | データエンジニアリング力シート |
 | `data-extraction-vs-aggregation.md` | データ抽出と集計の違いとは？（SQL・BIで混同しやすい操作）【DS検定】 | `dataengineering` | `data-collection` | データエンジニアリング力シート |
@@ -64,7 +62,6 @@
 | `design-of-experiments.md` | 実験計画法とは？少ない実験で原因を見つける方法【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
 | `deviation-score.md` | 偏差値とは？zスコア・標準偏差との違いを整理【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `digital-signature.md` | 電子署名とは？本人性・完全性と公開鍵での検証を整理【DS検定】 | `foundation` | `security` | データエンジニアリング力シート |
-| `digital-twin.md` | デジタルツインとは？CPSとの違いを整理【DS検定】 | `value-creation` | `technology-social-trends` | AI利活用スキルシート |
 | `discrete-continuous-distribution.md` | 離散型確率分布と連続型確率分布の違いとは？【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `docker.md` | Dockerとは？再現性が出る理由を整理【DS検定】 | `dataengineering` | `environment-setup` | データエンジニアリング力シート |
 | `drilldown-drillup.md` | ドリルダウンとドリルアップの違いとは？BIツールの基本操作【DS検定】 | `datascience` | `visualization` | データサイエンス力シート |
@@ -93,7 +90,6 @@
 | `image-metadata.md` | 画像データにおけるメタデータとは？意味と活用を整理【DS検定リテラシー】 | `datascience` | `unstructured-data` | AI利活用スキルシート |
 | `imputation.md` | インプテーションとは？（欠損値補完の基本）【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
 | `incremental-vs-differential-backup.md` | 増分バックアップと差分バックアップの違いとは？【DS検定リテラシー】 | `dataengineering` | `environment-setup` | データエンジニアリング力シート |
-| `industry4-0.md` | インダストリー4.0とは？第4次産業革命の本質とドイツ戦略【DS検定】 | `value-creation` | `technology-social-trends` | AI利活用スキルシート |
 | `information-gain.md` | 情報利得とは？決定木で分岐の良さを判断する基準【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
 | `inheritance.md` | 継承とは？クラス設計の基本を整理【DS検定リテラシー】 | `dataengineering` | `programming` | AI利活用スキルシート |
 | `interpret-statistics.md` | 数字やグラフの持つメッセージを理解するとは？（統計情報の正しい読み取り）【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
@@ -142,7 +138,6 @@
 | `sigmoid-function.md` | シグモイド関数とは？（確率に変換する関数）【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
 | `slice-dice.md` | スライスとダイスの違いとは？BIツールの基本操作を整理【DS検定】 | `datascience` | `visualization` | データサイエンス力シート |
 | `soap.md` | SOAPとは？RESTとの違いを整理【DS検定】 | `dataengineering` | `data-processing` | データエンジニアリング力シート |
-| `society5.md` | Society5.0とは？超スマート社会の本質を整理【DS検定】 | `value-creation` | `technology-social-trends` | AI利活用スキルシート |
 | `spearman-rank-correlation.md` | スピアマンの順位相関とは？（Spearmanの順位相関係数）【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `sql-count-diff.md` | COUNT(*)・COUNT(列)・COUNT DISTINCTの違い【DS検定】 | `dataengineering` | `data-processing` | データエンジニアリング力シート |
 | `sql-distinct.md` | DISTINCTとは？重複データを除去する基本操作【DS検定】 | `dataengineering` | `data-processing` | データエンジニアリング力シート |
