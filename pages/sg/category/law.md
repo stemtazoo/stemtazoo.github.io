@@ -27,8 +27,9 @@ last_modified_at: 2026-09-09
 
 ### 個人情報・プライバシー
 
-- [個人情報保護法とは？](/sg/personal-information-protection-law/)
-- [個人情報保護マネジメントシステム（PMS）とは？](/sg/personal-information-protection-management-system/)
+- [個人情報保護法とJIS Q 15001の違い【SG試験】](/sg/privacy-law-vs-jis-q-15001/)
+- [個人情報保護マネジメントシステムとは？JIS Q 15001の役割を整理【SG試験】](/sg/personal-information-protection-management-system/)
+- [個人情報保護法（要配慮個人情報）とは？同意要件と実務上の注意点【SG試験】](/sg/personal-information-protection-law-sensitive-data/)
 
 ### 不正アクセス
 
@@ -37,7 +38,8 @@ last_modified_at: 2026-09-09
 
 ### 知的財産・契約
 
-- [著作権とは？](/sg/copyright/)
+- [著作権の帰属とは？委託開発との違いを理解する【SG試験】](/sg/copyright-ownership/)
+- [著作者人格権とは？公表権・氏名表示権・同一性保持権を整理【SG試験】](/sg/copyright-moral-rights/)
 - [委託先管理とは？](/sg/vendor-management/)
 
 ## 全記事一覧（タグから自動更新）
