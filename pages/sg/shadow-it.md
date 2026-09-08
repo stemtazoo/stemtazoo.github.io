@@ -4,7 +4,7 @@ title: シャドーITとは？利用部門が勝手に使うクラウドのリ�
 description: シャドーITは、情報システム部門が把握していないIT機器やクラウドサービスを業務で使う状態です。SG試験で問われやすいリスク、管理方法、CASBとの関係を整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/shadow-it/
 tags: [sg, sg-security-management, asset_management, it_security_operations]
-last_modified_at: 2026-05-08
+last_modified_at: 2026-09-09
 ---
 
 ## まず結論
@@ -57,6 +57,8 @@ SG試験では、シャドーITは「便利だから使ってよいもの」で�
 
 IPAの「情報セキュリティ10大脅威 2025」でも、組織の悩みとしてIoT機器がシャドーIT化する問題が取り上げられており、管理外の機器やサービスがリスクになり得ることが分かります。  
 参考： [IPA｜情報セキュリティ10大脅威 2025](https://www.ipa.go.jp/security/10threats/10threats2025.html)
+
+IoT機器を含めた機器・通信・脆弱性・運用の考え方は、[IoTセキュリティとは？IoT機器特有のリスクと対策を整理【SG試験】](/sg/iot-security/)でまとめています。
 
 シャドーITで問題になりやすいポイントは、次のとおりです。
 
