@@ -3,7 +3,7 @@ name: Normalize SG primary tags
 on:
   push:
     paths:
-      - "scripts/resolve_sg_primary_tags.py"
+      - "scripts/finalize_sg_tags.py"
 
 permissions:
   contents: write
@@ -20,11 +20,11 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Apply reviewed primary-tag overrides
-        run: python scripts/resolve_sg_primary_tags.py --apply
+      - name: Apply final reviewed tag cleanup
+        run: python scripts/finalize_sg_tags.py --apply
 
       - name: Run audit
-        run: python scripts/audit_sg_primary_tags.py
+        run: python scripts/audit_sg_primary_tags.py --strict
 
       - name: Check diff
         run: git diff --check
@@ -33,11 +33,11 @@ jobs:
         shell: bash
         run: |
           if git diff --quiet; then
-            echo "No reviewed tag changes found."
+            echo "No final tag changes found."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add pages/sg
-          git commit -m "Resolve reviewed SG primary tags"
+          git commit -m "Finish SG primary tag normalization"
           git push
