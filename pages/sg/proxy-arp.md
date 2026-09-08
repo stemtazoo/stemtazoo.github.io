@@ -3,7 +3,7 @@ layout: page
 title: プロキシARPとは？ARP応答を代理する仕組み【SG試験】
 description: "プロキシARPは、ルータなどが別の端末に代わってARP要求へ応答し、異なるネットワーク上の端末同士を通信させる仕組みです。IPアドレスからMACアドレスを調べる通常のARPや、Web通信を代理するフォワード／リバースプロキシとは対象層と代理する情報が異なります。"
 permalink: /sg/proxy-arp/
-tags: [sg, network, arp, proxy]
+tags: [sg, sg-technology, network, arp, proxy]
 date: 2026-05-08
 last_modified_at: 2026-07-27
 ---

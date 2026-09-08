@@ -3,7 +3,7 @@ layout: page
 title: 監査調書とは？監査結果の裏付けになる記録を整理【SG試験】
 description: 監査調書を、監査人が実施した手続、確認した資料やログ、分析結果、判断過程を記録し、監査意見を裏付ける文書として整理します。利用者へ結論を伝える監査報告書、判断材料そのものの監査証拠、監査対象部門が作る改善計画との違いを押さえ、誰が何のために作成する文書かで選択肢を切り分けます。
 permalink: /sg/audit-working-papers/
-tags: [sg, sg-management, system_audit, sg-security-management]
+tags: [sg, sg-management, system_audit]
 last_modified_at: 2026-07-14
 ---
 

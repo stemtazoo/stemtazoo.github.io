@@ -3,7 +3,7 @@ layout: page
 title: 保証型監査と助言型監査の違い【SG試験】
 description: 保証型（アシュアランス型）監査と助言型（アドバイザリー型）監査を、基準への適合状況について信頼を与える目的か、問題点の改善を支援する目的かで比較します。保証は事故が起きないことの断言ではなく、助言は適切性の保証でもない点を押さえ、監査依頼の目的を示す設問から選び分けます。
 permalink: /sg/assurance-advisory-audit/
-tags: [sg, sg-management, system_audit, sg-security-management]
+tags: [sg, sg-management, system_audit]
 last_modified_at: 2026-07-14
 ---
 

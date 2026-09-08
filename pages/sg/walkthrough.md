@@ -3,7 +3,7 @@ layout: page
 title: ウォークスルーとは？開発者が説明しながら確認するレビュー手法【SG試験】
 description: ウォークスルーは、開発者が主体となって仕様書やプログラムを説明し、参加者と一緒に誤りを早期発見するレビュー手法です。インスペクション、ペネトレーションテスト、リグレッションテストとの違いを押さえ、SG試験向けに整理します。科目Aの用語理解と科目Bのケース判断で迷いやすい表現も確認します。
 permalink: /sg/walkthrough/
-tags: [sg, sg-system-development, software_review, quality_management, risk_assessment]
+tags: [sg, sg-technology, sg-system-development, software_review, quality_management, risk_assessment]
 last_modified_at: 2026-05-10
 ---
 

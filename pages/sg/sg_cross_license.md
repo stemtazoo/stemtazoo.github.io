@@ -5,7 +5,7 @@ description: "情報セキュリティマネジメント試験で問われるク
 permalink: /sg/cross-license/
 date: 2026-05-10
 last_modified_at: 2026-05-10
-tags: [SG, 情報セキュリティマネジメント, 法務, 知的財産権, 特許]
+tags: [sg, sg-security-law, SG, 情報セキュリティマネジメント, 法務, 知的財産権, 特許]
 ---
 
 # クロスライセンスとは？特許を相互に使えるようにする契約【SG試験】

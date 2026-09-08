@@ -3,7 +3,7 @@ layout: page
 title: ER図とDFDの違いとは？管理対象とデータの流れを切り分ける【SG試験】
 description: "ER図とDFDはどちらもシステム開発で使う図ですが、ER図はエンティティと関係、DFDはデータの流れと処理を表します。SG試験・情報セキュリティマネジメント試験で迷いやすい選択肢の切り分け方を整理します。"
 permalink: /sg/er-diagram-vs-dfd/
-tags: [sg, database, system_planning, data_modeling]
+tags: [sg, sg-technology, database, system_planning, data_modeling]
 prev: /sg/data-flow-diagram/
 next: /sg/data-model/
 last_modified_at: 2026-07-09

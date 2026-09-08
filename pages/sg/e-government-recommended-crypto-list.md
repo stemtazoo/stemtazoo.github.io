@@ -4,7 +4,7 @@ layout: page
 title: 電子政府推奨暗号リストとは？利用を推奨される暗号技術の考え方【SG試験】
 description: "電子政府推奨暗号リストは、CRYPTRECが安全性と実装性能を評価し、電子政府システムでの利用を推奨する暗号技術をまとめた一覧です。将来の推奨候補を載せる候補暗号リスト、互換性などから当面の利用を認めつつ安全性を監視する運用監視暗号リストと比較し、「掲載＝永久に安全」ではない点からSG試験の選択肢を判断します。"
 permalink: /sg/e-government-recommended-crypto-list/
-tags: [sg, sg-security-overview, crypto_auth, sg-security-measures]
+tags: [sg, sg-security-measures, crypto_auth]
 prev: /sg/cryptrec-list/
 next: /sg/recommended-candidate-crypto-list/
 last_modified_at: 2026-08-13

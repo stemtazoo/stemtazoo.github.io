@@ -5,7 +5,7 @@ description: 情報セキュリティマネジメント試験の範囲を、科�
 permalink: /sg/exam-scope/
 prev: /sg/information-security-management-exam/
 next: /sg/study-method/
-tags: [sg, sg-security-overview, sg-security-management, it_security_operations]
+tags: [sg, sg-security-overview, it_security_operations]
 last_modified_at: 2026-06-24
 ---
 

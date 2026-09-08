@@ -3,7 +3,7 @@ layout: page
 title: データモデルとは？概念・論理・物理モデルの違いを整理【SG試験】
 description: データモデルは、業務で扱うデータの項目、関係、制約を整理する考え方です。概念・論理・物理データモデルとER図の役割を分け、SG試験で設計段階や表現対象を問う選択肢を判断します。業務ルールを表に落とす流れも確認します。主キーや外部キーを決める前段階とのつながりも確認します。
 permalink: /sg/data-model/
-tags: [sg, database, system_planning, data_modeling]
+tags: [sg, sg-technology, database, system_planning, data_modeling]
 prev: /sg/er-diagram-vs-dfd/
 next: /sg/primary-key-foreign-key/
 last_modified_at: 2026-06-24

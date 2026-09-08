@@ -3,7 +3,7 @@ layout: page
 title: CSFとは｜KGI・KPIとの違いをやさしく整理【SG試験対策】
 description: CSFは、組織やプロジェクトの目標達成に不可欠な重要成功要因です。KGIが最終目標、KPIが進捗指標であるのに対し、CSFは成功のために重点的に満たすべき条件を表します。SG試験でKGI・KPI・MBOと切り分ける基準を整理します。科目Aの用語理解と科目Bのケース判断で迷いやすい表現も確認します。
 permalink: /sg/csf/
-tags: [sg, management, strategy, kgi, kpi]
+tags: [sg, sg-strategy, kgi, kpi]
 last_modified_at: 2026-05-18
 ---
 

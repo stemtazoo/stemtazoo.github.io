@@ -3,7 +3,7 @@ layout: page
 title: 内部監査とは？ISMSが有効に運用されているか確認する仕組み【SG試験】
 description: "ISMSの内部監査は、組織自身が定めた要求事項やJIS Q 27001への適合性と、管理策が有効に実施・維持されているかを独立した立場で確認する活動です。監査範囲・頻度を定める監査プログラム、第三者が認証を判断する認証審査との目的・実施主体の違いを押さえます。"
 permalink: /sg/internal-audit/
-tags: [sg, security-management, isms, audit]
+tags: [sg, sg-management, security-management, isms, audit]
 date: 2026-05-10
 last_modified_at: 2026-07-27
 ---

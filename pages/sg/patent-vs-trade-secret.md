@@ -3,7 +3,7 @@ layout: page
 title: 営業秘密と特許の違い【SG試験】
 description: 営業秘密と特許は、どちらも企業の技術やノウハウを守る考え方ですが、公開して権利で守るか、公開せず秘密管理で守るかが異なります。営業秘密の3要件、出願公開、権利期間の違いを押さえ、SG試験で選択肢を切る基準を整理します。科目Aの用語理解と科目Bのケース判断で迷いやすい表現も確認します。
 permalink: /sg/patent-vs-trade-secret/
-tags: [sg, law, intellectual_property, trade_secret, patent]
+tags: [sg, sg-security-law, law, intellectual_property, trade_secret, patent]
 last_modified_at: 2026-05-06
 ---
 

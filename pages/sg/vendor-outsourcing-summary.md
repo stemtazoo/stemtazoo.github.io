@@ -3,7 +3,7 @@ layout: page
 title: 委託先・契約・再委託管理まとめ｜主要用語を整理【SG試験】
 description: "委託先管理、請負・派遣契約、再委託を責任主体と指揮命令系統で整理し、契約前の確認、運用中の監督、再委託時の承認をどの立場が担うか判断します。派遣社員への指示、委託先監査、再委託承認など、ケース問題で誰が管理・承認・監督すべきかを確認できます。"
 permalink: /sg/vendor-outsourcing-summary/
-tags: [sg, sg-security-management, sg-management]
+tags: [sg, sg-security-management]
 last_modified_at: 2026-06-29
 ---
 

@@ -3,7 +3,7 @@ layout: page
 title: ITの統制目標とは？信頼性・準拠性・機密性の違い【SG試験】
 description: ITの統制目標は、情報システムで処理される情報を正しく、安全に、必要なときに使えるようにするための考え方です。SG試験で混同しやすい信頼性・準拠性・機密性・可用性を整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/it-control-objectives/
-tags: [sg, sg-management, system_audit, sg-security-management, it_security_operations]
+tags: [sg, sg-management, system_audit, it_security_operations]
 last_modified_at: 2026-06-03
 ---
 

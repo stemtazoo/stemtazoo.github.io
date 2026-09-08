@@ -3,7 +3,7 @@ layout: page
 title: DFDとは？データの流れと処理を表す図【SG試験】
 description: DFDは、データが外部実体、処理、データストアの間をどう流れるかを表す図です。ER図や業務フロー図との違いを押さえ、SG試験で「データの流れ」を問う選択肢を見分ける基準を整理します。保存場所や処理名だけで判断しない点も確認します。入力・処理・出力の対応関係を読み取る練習にもなります。
 permalink: /sg/data-flow-diagram/
-tags: [sg, database, system_planning, data_modeling]
+tags: [sg, sg-technology, database, system_planning, data_modeling]
 prev: /sg/er-diagram/
 next: /sg/er-diagram-vs-dfd/
 last_modified_at: 2026-06-24

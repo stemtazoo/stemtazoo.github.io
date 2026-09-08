@@ -5,7 +5,7 @@ description: "SG試験の勉強法を、科目Aの用語理解、科目Bのケ�
 permalink: /sg/study-method/
 prev: /sg/exam-scope/
 next: /sg/case-solving-template/
-tags: [sg, sg-security-overview, sg-security-management, it_security_operations]
+tags: [sg, sg-security-overview, it_security_operations]
 last_modified_at: 2026-06-24
 ---
 

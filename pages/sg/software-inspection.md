@@ -3,7 +3,7 @@ layout: page
 title: ソフトウェアインスペクションとは？人の目で誤りを見つけるレビュー手法【SG試験】
 description: ソフトウェアインスペクションを実行前に人の目で欠陥を見つけるレビュー手法として整理し、ウォークスルーやペネトレーションテスト、リグレッションテストとの違いを切り分けます。 プログラムを動かさない静的な確認である点に注目し、動的テストや攻撃者視点の診断を正解にするひっかけを避けます。
 permalink: /sg/software-inspection/
-tags: [sg, sg-system-development, software_review, quality_management, risk_assessment]
+tags: [sg, sg-technology, sg-system-development, software_review, quality_management, risk_assessment]
 last_modified_at: 2026-06-24
 ---
 

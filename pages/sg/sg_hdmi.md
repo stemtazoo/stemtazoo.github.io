@@ -3,7 +3,7 @@ layout: page
 title: HDMIとは？音声と映像を1本のケーブルで送る規格【SG試験】
 description: "HDMIを音声と映像を1本で送るデジタルインタフェースとして整理し、DVI・D端子・S端子・IEEE1394との用途差や著作権保護機能を見分けます。映像だけか、音声も扱うか、機器同士のデータ転送かという観点で選択肢を判断します。"
 permalink: /sg/hdmi/
-tags: [sg, テクノロジ, インタフェース, 映像, 音声]
+tags: [sg, sg-technology, テクノロジ, インタフェース, 映像, 音声]
 date: 2026-05-10
 last_modified_at: 2026-07-02
 ---

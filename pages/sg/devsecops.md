@@ -3,7 +3,7 @@ layout: page
 title: DevSecOpsとは？開発にセキュリティを組み込む考え方【SG試験】
 description: "DevSecOpsを、開発と運用の流れにセキュリティ確認を継続的に組み込む考え方として整理し、DevOps、シフトレフト、セキュアコーディングとの役割差から工程上の判断を行います。"
 permalink: /sg/devsecops/
-tags: [sg, sg-security-management, sg-security-measures, it_security_operations, threat_vulnerability]
+tags: [sg, sg-security-measures, it_security_operations, threat_vulnerability]
 last_modified_at: 2026-07-04
 ---
 

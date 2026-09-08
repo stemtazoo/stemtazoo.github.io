@@ -3,7 +3,7 @@ layout: page
 title: PDCAとは？DとAの違いを切り分ける【SG試験】
 description: PDCAは、計画・実行・評価・改善を繰り返して業務や管理策を継続的に改善する考え方です。DoとActの違い、ISMSやセキュリティ教育での使われ方、単なる実施で終わらせない改善サイクルとしての判断基準をSG試験向けに整理します。科目Aの用語理解と科目Bのケース判断で迷いやすい表現も確認します。
 permalink: /sg/pdca/
-tags: [sg, sg-management, business_management, sg-security-management, isms]
+tags: [sg, sg-security-management, business_management, isms]
 last_modified_at: 2026-05-19
 ---
 

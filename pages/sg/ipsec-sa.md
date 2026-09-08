@@ -5,7 +5,7 @@ description: "SAはIPsec通信で使う暗号方式や鍵、有効期間など�
 permalink: /sg/ipsec-sa/
 prev: /sg/ipsec-ike/
 next: /sg/ssl-tls/
-tags: [sg, sg-security-overview, crypto_auth, network, sg-technology]
+tags: [sg, sg-technology, crypto_auth, network]
 last_modified_at: 2026-05-08
 ---
 

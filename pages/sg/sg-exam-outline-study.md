@@ -6,7 +6,7 @@ permalink: /sg/sg-exam-outline-study/
 prev: /sg/session-hijacking/
 next: /sg/sla-summary/
 categories: [business]
-tags: [sg, sg-exam-outline]
+tags: [sg, sg-security-overview, sg-exam-outline]
 last_modified_at: 2026-06-24
 ---
 

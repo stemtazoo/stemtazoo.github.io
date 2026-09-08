@@ -3,7 +3,7 @@ layout: page
 title: CRYPTREC暗号リストとは？電子政府推奨・推奨候補・運用監視の違い【SG試験】
 description: CRYPTREC暗号リストの推奨暗号、推奨候補暗号、運用監視暗号を区別し、電子政府での利用可否や移行判断を問う選択肢で何を根拠に切るかを整理します。 安全性評価済みの方式を使う場面と、移行・監視が必要な方式を区別し、古い暗号を推奨と誤認しないようにします。
 permalink: /sg/cryptrec-list/
-tags: [sg, sg-security-overview, crypto_auth, sg-security-measures]
+tags: [sg, sg-security-measures, crypto_auth]
 prev: /sg/cryptrec/
 next: /sg/e-government-recommended-crypto-list/
 last_modified_at: 2026-06-24

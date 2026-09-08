@@ -3,7 +3,7 @@ layout: page
 title: バックドアの選択肢問題で迷わない判断ポイント【SG試験】
 description: バックドアを問う選択肢問題で、攻撃者が再侵入のために組み込む裏口かどうかを判断する練習ページです。基本定義ページと分けて、試験文の言い換えや誤答選択肢の切り方に焦点を当てます。
 permalink: /sg/backdoor-choice/
-tags: [sg, security, malware, unauthorized-access]
+tags: [sg, sg-security-measures, security, malware, unauthorized-access]
 date: 2026-05-07
 last_modified_at: 2026-06-24
 ---

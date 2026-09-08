@@ -3,7 +3,7 @@ layout: page
 title: 知的財産権とは？権利の種類と守る対象を整理【SG試験】
 description: "知的財産権は、発明・デザイン・ブランド・著作物などの知的な成果を保護する権利の総称です。SG試験で迷いやすい産業財産権や著作権との違いを整理します。"
 permalink: /sg/intellectual-property-rights/
-tags: [sg, sg-security-law, sg-strategy, business_management]
+tags: [sg, sg-security-law, business_management]
 last_modified_at: 2026-07-09
 ---
 

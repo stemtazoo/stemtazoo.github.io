@@ -3,7 +3,7 @@ layout: page
 title: "電子計算機損壊等業務妨害｜SG試験対策"
 description: "電子計算機損壊等業務妨害を、コンピュータやデータへの妨害で業務を止める犯罪として整理し、財産上の利益を得る電子計算機使用詐欺や、認証突破を問う不正アクセスとの違いを判断します。"
 permalink: /sg/denshi-keisanki-sonkai-gyomu-bogai/
-tags: [SG試験, 情報セキュリティマネジメント, 法務, サイバー犯罪, 業務妨害]
+tags: [sg, sg-security-law, SG試験, 情報セキュリティマネジメント, 法務, サイバー犯罪, 業務妨害]
 last_modified_at: 2026-07-04
 ---
 

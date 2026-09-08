@@ -5,7 +5,7 @@ description: "IPsecはネットワーク層でIPパケットを認証・暗号�
 permalink: /sg/ipsec/
 prev: /sg/vpn/
 next: /sg/ipsec-ah/
-tags: [sg, sg-security-overview, crypto_auth, network, sg-technology]
+tags: [sg, sg-technology, crypto_auth, network]
 last_modified_at: 2026-08-13
 ---
 

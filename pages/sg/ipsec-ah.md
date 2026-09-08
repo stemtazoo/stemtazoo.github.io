@@ -5,7 +5,7 @@ description: "IPsecのAHは通信データの認証と改ざん検知を行う�
 permalink: /sg/ipsec-ah/
 prev: /sg/ipsec/
 next: /sg/ipsec-esp/
-tags: [sg, sg-security-overview, crypto_auth, network, sg-technology]
+tags: [sg, sg-technology, crypto_auth, network]
 last_modified_at: 2026-05-08
 ---
 

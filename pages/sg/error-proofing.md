@@ -3,7 +3,7 @@ layout: page
 title: エラープルーフ化とは？人のミスを起こしにくくする仕組み【SG試験】
 description: "エラープルーフ化を人のミスが事故につながりにくい仕組みにする考え方として整理し、排除・代替化・容易化・異常検出・影響緩和と教育訓練の違いを示します。注意喚起だけでなく、入力制限や確認手順など仕組みでミスを抑える点を判断します。"
 permalink: /sg/error-proofing/
-tags: [sg, security-management, human-error, risk-management]
+tags: [sg, sg-security-management, security-management, human-error, risk-management]
 date: 2026-05-10
 last_modified_at: 2026-07-02
 ---

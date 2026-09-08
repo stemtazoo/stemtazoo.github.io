@@ -3,7 +3,7 @@ layout: page
 title: 政府機関等の情報セキュリティ対策のための統一基準とは？国の機関が守る共通ルール【SG試験】
 description: "政府機関等の情報セキュリティ対策のための統一基準は、国の機関などが守る情報セキュリティ対策の共通基準です。SG試験で問われやすい適用範囲、CIAによる格付、ひっかけポイントを整理します。"
 permalink: /sg/government-unified-security-standard/
-tags: [sg, sg-security-management, asset_management, risk_assessment, sg-security-law]
+tags: [sg, sg-security-management, asset_management, risk_assessment]
 last_modified_at: 2026-07-09
 ---
 

@@ -3,7 +3,7 @@ layout: page
 title: Wanna Cryptorとは？ランサムウェア型ワームの判断ポイント【SG試験】
 description: "Wanna CryptorをSMBv1脆弱性を悪用して自己拡散しファイルを暗号化するランサムウェアとして整理し、ワーム性、身代金要求、パッチ適用の判断ポイントを押さえます。通常のウイルス、スパイウェア、標的型攻撃との違いを、感染経路と被害内容から判断できるようにします。"
 permalink: /sg/wanna-cryptor/
-tags: [sg, threat_vulnerability, malware, incident_management]
+tags: [sg, sg-security-measures, threat_vulnerability, malware, incident_management]
 last_modified_at: 2026-06-29
 ---
 

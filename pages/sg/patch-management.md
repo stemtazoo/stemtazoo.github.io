@@ -3,7 +3,7 @@ layout: page
 title: パッチ管理とは？修正プログラムを適用する運用【SG試験】
 description: "パッチ管理は、脆弱性や不具合を修正する更新プログラムについて、情報収集、影響確認、検証、適用、記録を計画的に回す運用です。公開直後の無検証な全端末適用や放置を避け、緊急度と業務影響から優先順位や適用時期を決めるSG試験の判断軸を確認できます。"
 permalink: /sg/patch-management/
-tags: [sg, sg-security-management, sg-security-measures, threat_vulnerability, it_security_operations]
+tags: [sg, sg-security-management, threat_vulnerability, it_security_operations]
 last_modified_at: 2026-07-27
 ---
 

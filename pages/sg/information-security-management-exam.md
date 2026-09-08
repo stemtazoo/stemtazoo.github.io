@@ -6,7 +6,7 @@ permalink: /sg/information-security-management-exam/
 prev: /sg/incident-response/
 next: /sg/ip-spoofing/
 categories: [business]
-tags: [sg, sg-exam-outline]
+tags: [sg, sg-security-overview, sg-exam-outline]
 last_modified_at: 2026-08-13
 ---
 

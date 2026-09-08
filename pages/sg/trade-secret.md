@@ -3,7 +3,7 @@ layout: page
 title: 営業秘密とは？3要件で判断する【SG試験】
 description: "営業秘密を秘密管理性・有用性・非公知性の3要件で判断し、顧客名簿、設計書、手順書が保護対象になる条件と、単なる社内情報との違いを見分けます。不正競争防止法で守られる条件を満たすかを、情報の価値だけでなく管理状態、公知性、持ち出し時の扱いから判定します。"
 permalink: /sg/trade-secret/
-tags: [sg, law, sg-security-management, information_management, trade_secret]
+tags: [sg, sg-security-law, law, information_management, trade_secret]
 last_modified_at: 2026-06-29
 ---
 

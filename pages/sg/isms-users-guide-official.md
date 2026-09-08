@@ -3,7 +3,7 @@ layout: page
 title: ISMSユーザーズガイド
 description: "ISMSユーザーズガイドは、JIS Q 27001の要求事項を組織の構築・運用へ落とし込む際の手引です。認証基準そのものやCSIRTマテリアル、デジタル・フォレンジックの証拠保全ガイドラインと取り違えず、文書の利用目的からSG試験の選択肢を判別する視点が身につきます。"
 permalink: /sg/isms-users-guide/
-tags: [sg, security-management, isms, guideline]
+tags: [sg, sg-security-management, security-management, isms, guideline]
 last_modified_at: 2026-07-27
 ---
 

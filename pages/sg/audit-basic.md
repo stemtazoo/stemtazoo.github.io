@@ -3,7 +3,7 @@ layout: page
 title: 監査とは？証拠にもとづいて有効性を確認する考え方【SG試験】
 description: 監査を、法令・規程・契約などの基準に照らし、ログや承認記録などの証拠から業務・管理策の適切性や有効性を客観的に評価する活動として整理します。運用担当者による日常点検や対策の実施とは役割が異なること、担当者の説明や監査人の印象だけでは結論を出せないことをSG試験の判断軸として押さえます。
 permalink: /sg/audit-basic/
-tags: [sg, sg-management, system_audit, sg-security-management]
+tags: [sg, sg-management, system_audit]
 last_modified_at: 2026-07-14
 ---
 

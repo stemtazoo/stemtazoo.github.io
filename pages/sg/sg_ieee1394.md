@@ -3,7 +3,7 @@ layout: page
 title: IEEE1394とは？機器同士を接続してデータ転送できる規格【SG試験】
 description: "IEEE1394をPCを介さず機器同士を接続できる高速インタフェースとして整理し、映像音声向けのHDMIや周辺機器接続のUSBとの違いをSG試験で判断します。ケーブル規格の問題では、何を接続し、どのようなデータ転送を想定するかに注目します。"
 permalink: /sg/ieee1394/
-tags: [sg, テクノロジ, インタフェース, データ転送]
+tags: [sg, sg-technology, テクノロジ, インタフェース, データ転送]
 date: 2026-05-10
 last_modified_at: 2026-07-02
 ---

@@ -3,7 +3,7 @@ layout: page
 title: ER図とは？エンティティとリレーションシップで整理する図【SG試験】
 description: ER図は、管理対象をエンティティ、属性、リレーションシップとして整理し、データ構造を表す図です。関係データベースの表そのもの、DFD、業務フロー図との違いを押さえ、SG試験でデータモデルを見分ける判断基準を整理します。科目Aの用語理解と科目Bのケース判断で迷いやすい表現も確認します。
 permalink: /sg/er-diagram/
-tags: [sg, database, system_planning, data_modeling]
+tags: [sg, sg-technology, database, system_planning, data_modeling]
 prev: /sg/data-flow-diagram/
 next: /sg/database-normalization/
 last_modified_at: 2026-05-06

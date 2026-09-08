@@ -5,7 +5,7 @@ description: "IKEはIPsec通信で使う暗号方式や鍵を決めるための�
 permalink: /sg/ipsec-ike/
 prev: /sg/ipsec-esp/
 next: /sg/ipsec-sa/
-tags: [sg, sg-security-overview, crypto_auth, network, sg-technology]
+tags: [sg, sg-technology, crypto_auth, network]
 last_modified_at: 2026-05-08
 ---
 

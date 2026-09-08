@@ -3,7 +3,7 @@ layout: page
 title: "製造物責任法（PL法）｜欠陥製品による被害と製造業者の責任"
 description: "製造物責任法（PL法）は、製造物の欠陥で生命・身体・他の財産に損害が生じた場合に製造業者等の賠償責任を定める法律です。消費者・被害者とメーカー・輸入業者の立場を切り分け、欠陥と故障、民法や他の法律との混同を防ぎます。"
 permalink: /sg/product-liability-law/
-tags: [sg, law, product-liability, consumer-protection]
+tags: [sg, sg-security-law, law, product-liability, consumer-protection]
 last_modified_at: 2026-07-29
 ---
 

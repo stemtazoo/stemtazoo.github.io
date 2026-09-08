@@ -3,7 +3,7 @@ layout: page
 title: 不正競争防止法とは？営業秘密の3要件を整理【SG試験】
 description: 不正競争防止法は、公正な競争を守るため、営業秘密の不正取得・使用・開示などを規制する法律です。営業秘密の3要件である秘密管理性・有用性・非公知性、特許法や著作権法との違いを押さえ、SG試験向けに整理します。科目Aの用語理解と科目Bのケース判断で迷いやすい表現も確認します。
 permalink: /sg/unfair-competition-prevention-act/
-tags: [sg, law, sg-security-management, information_management, trade_secret]
+tags: [sg, sg-security-law, law, information_management, trade_secret]
 last_modified_at: 2026-05-14
 ---
 

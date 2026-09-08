@@ -3,7 +3,7 @@ layout: page
 title: MBOとは｜CSF・KGI・KPIとの違いをやさしく整理【SG試験対策】
 description: "MBOは、上司との合意の下で従業員が個人目標を設定し、達成度を評価につなげる目標管理制度です。組織の成功要因を示すCSF、最終目標のKGI、進捗を測るKPIとは役割が異なります。「誰の目標を何に使うか」から人事管理の選択肢を判別します。評価制度の文脈が決め手です。"
 permalink: /sg/mbo/
-tags: [sg, management, strategy, goal-management, kgi, kpi, csf]
+tags: [sg, sg-strategy, goal-management, kgi, kpi, csf]
 last_modified_at: 2026-07-27
 ---
 

@@ -3,7 +3,7 @@ layout: page
 title: CSIRTマテリアル
 description: "CSIRTマテリアルを、組織内CSIRTの構築・運用を支援するJPCERT/CCのガイドラインとして整理します。SG試験で混同しやすいISMSユーザーズガイド、証拠保全ガイドライン、内部不正防止ガイドラインとの違いも解説します。"
 permalink: /sg/csirt-material/
-tags: [sg, security-management, incident-response, csirt]
+tags: [sg, sg-security-management, security-management, incident-response, csirt]
 last_modified_at: 2026-06-30
 ---
 

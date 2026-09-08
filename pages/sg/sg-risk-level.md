@@ -3,7 +3,7 @@ layout: page
 title: リスクレベルとは？影響度と発生確率で考えるリスクの大きさ【SG試験】
 description: リスクレベルは、影響度と発生確率などを組み合わせて、リスクの大きさや対応優先度を表す考え方です。脅威、脆弱性、リスク基準、リスク対応との違いを押さえ、SG試験で表やマトリクスを読む判断基準を整理します。科目Aの用語理解と科目Bのケース判断で迷いやすい表現も確認します。
 permalink: /sg/risk-level/
-tags: [sg, risk, security-management]
+tags: [sg, sg-security-management, risk, security-management]
 date: 2026-05-10
 last_modified_at: 2026-05-15
 ---
