@@ -4,9 +4,9 @@
 
 ## 集計
 
-- 旧表記が残る通常記事: **174**
+- 旧表記が残る通常記事: **167**
 - `ビジネス力シート`: **0記事**
-- `AI利活用スキルシート`: **58記事**
+- `AI利活用スキルシート`: **51記事**
 - `データサイエンス力シート`: **66記事**
 - `データエンジニアリング力シート`: **50記事**
 
@@ -71,7 +71,6 @@
 | `deviation-score.md` | 偏差値とは？zスコア・標準偏差との違いを整理【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `digital-image-representation.md` | 画像のデジタル表現とは？（標本化と量子化の基本）【DS検定】 | `datascience` | `unstructured-data` | AI利活用スキルシート |
 | `digital-signature.md` | 電子署名とは？本人性・完全性と公開鍵での検証を整理【DS検定】 | `foundation` | `security` | データエンジニアリング力シート |
-| `digital-signature2.md` | 電子署名と暗号化の鍵の使い方の違い【DS検定】 | `foundation` | `security` | AI利活用スキルシート |
 | `digital-twin.md` | デジタルツインとは？CPSとの違いを整理【DS検定】 | `value-creation` | `technology-social-trends` | AI利活用スキルシート |
 | `discrete-continuous-distribution.md` | 離散型確率分布と連続型確率分布の違いとは？【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `docker.md` | Dockerとは？再現性が出る理由を整理【DS検定】 | `dataengineering` | `environment-setup` | データエンジニアリング力シート |
@@ -105,7 +104,6 @@
 | `hierarchical-clustering.md` | 階層クラスター分析とは？手法の違いまで整理【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
 | `hierarchical-distance-metrics.md` | 階層クラスター分析における距離の測定方法の比較【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
 | `human-centered-ai-principles.md` | 人間中心のAI社会原則とは？AIと社会のルールを理解する【DS検定】 | `foundation` | `action-norms` | AI利活用スキルシート |
-| `iam-policy.md` | クラウドサービスのIAMポリシーとは？（アクセス制御の基本）【DS検定】 | `foundation` | `security` | AI利活用スキルシート |
 | `image-filter-processing.md` | 画像のフィルタ処理とは？（ノイズ除去と特徴強調の基本）【DS検定】 | `datascience` | `unstructured-data` | AI利活用スキルシート |
 | `image-metadata.md` | 画像データにおけるメタデータとは？意味と活用を整理【DS検定リテラシー】 | `datascience` | `unstructured-data` | AI利活用スキルシート |
 | `impurity.md` | 不純度とは？決定木の分岐基準を整理【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
@@ -119,7 +117,6 @@
 | `jupyter-r-usage.md` | Jupyter NotebookやRの使い所とは？（データ分析環境の役割）【DS検定】 | `dataengineering` | `environment-setup` | AI利活用スキルシート |
 | `kernel.md` | カーネル（Kernel）とは？画像フィルタ処理の計算ルール【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
 | `key-stretching.md` | ストレッチングとは？（ハッシュ強化の仕組み）【DS検定】 | `foundation` | `security` | AI利活用スキルシート |
-| `least-privilege.md` | 最小権限の原則とは？ゼロトラストとの関係を整理【DS検定リテラシー】 | `foundation` | `security` | AI利活用スキルシート |
 | `left-join-where.md` | LEFT JOINとWHEREの関係とは？（SQLのひっかけ問題）【DS検定】 | `dataengineering` | `data-processing` | データエンジニアリング力シート |
 | `llm-temperature.md` | LLMのTemperatureとは？出力のランダム性を理解する【DS検定】 | `foundation` | `ai-fundamentals` | AI利活用スキルシート |
 | `logistic-regression.md` | ロジスティック回帰とは？（オッズ・対数オッズから理解する）【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
@@ -128,7 +125,6 @@
 | `mapping.md` | マッピング処理とは？データを対応づける基本操作【DS検定】 | `dataengineering` | `data-processing` | データサイエンス力シート |
 | `mapreduce.md` | MapReduceとは？（分散処理の基本モデル）【DS検定リテラシー】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
 | `market-basket-analysis.md` | マーケットバスケット分析とは？購買パターン分析の基本【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
-| `mfa.md` | 多要素認証（MFA）とは？仕組みと必要性を整理【DS検定リテラシー】 | `foundation` | `security` | AI利活用スキルシート |
 | `missing-value-handling.md` | 欠損値の処理方法とは？代表的な手法と使い分け【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
 | `mlops.md` | MLOpsとは？AIOpsとの違いを一発整理【DS検定リテラシー】 | `dataengineering` | `environment-setup` | AI利活用スキルシート |
 | `nlp-cleaning.md` | 自然言語処理におけるクリーニングとは？（前処理の基本）【DS検定】 | `datascience` | `unstructured-data` | AI利活用スキルシート |
@@ -136,7 +132,6 @@
 | `normal-and-standard-normal.md` | 標準正規分布と正規分布の違いとは？【DS検定リテラシー】 | `datascience` | `statistics` | データサイエンス力シート |
 | `normalization-2nf-3nf.md` | 第2正規化と第3正規化の違いを整理（候補キーから考える）【DS検定】 | `dataengineering` | `data-structure` | データエンジニアリング力シート |
 | `nosql-datastore.md` | NoSQLデータストアとは？RDBとの違いと使いどころを整理【DS検定】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
-| `oauth.md` | OAuthとは？仕組みとアクセストークンの流れを整理【DS検定リテラシー】 | `foundation` | `security` | AI利活用スキルシート |
 | `olap.md` | OLAPとは？BIツール分析の基本概念をわかりやすく解説【DS検定】 | `datascience` | `data-understanding` | データサイエンス力シート |
 | `overfitting-tree-depth.md` | 過学習と分岐の深さの関係とは？決定木の注意点【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
 | `paired-vs-independent-data.md` | 対応があるデータと対応がないデータの違いとは？【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
@@ -179,7 +174,6 @@
 | `sql-in-exists.md` | INとEXISTSの違いとは？値比較と存在判定を整理【DS検定】 | `dataengineering` | `sql` | データエンジニアリング力シート |
 | `sql-union.md` | UNIONとUNION ALLの違いとは？重複の扱いを整理【DS検定】 | `dataengineering` | `data-processing` | データエンジニアリング力シート |
 | `sql-where.md` | WHERE句とは？条件抽出の基本を理解する【DS検定】 | `dataengineering` | `data-processing` | データエンジニアリング力シート |
-| `ssl-tls.md` | SSL/TLSとは？公開鍵暗号と共通鍵暗号の役割を整理【DS検定】 | `foundation` | `security` | AI利活用スキルシート |
 | `star-schema.md` | スタースキーマとは？ファクトテーブルとディメンションテーブルを理解する【DS検定】 | `dataengineering` | `data-structure` | データエンジニアリング力シート |
 | `statistics-overview.md` | 統計の基本まとめ（平均・分散・相関・回帰の関係を整理）【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `statistics-summary.md` | DS検定でよく出る統計まとめ（平均・分散・相関を一気に整理） | `datascience` | `statistics` | データサイエンス力シート |
@@ -195,4 +189,3 @@
 | `welch-t-test.md` | ウェルチのt検定とは？等分散でない場合の平均比較【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `z-score-method.md` | zスコアとは？標準化・偏差値・外れ値判定を整理【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
 | `z-test.md` | z検定とは？t検定との違いまで整理【DS検定リテラシー】 | `datascience` | `statistics` | データサイエンス力シート |
-| `zero-trust.md` | ゼロトラストとは？考え方と従来型セキュリティとの違い【DS検定リテラシー】 | `foundation` | `security` | AI利活用スキルシート |
