@@ -4,9 +4,9 @@
 
 ## 集計
 
-- 旧表記が残る通常記事: **162**
+- 旧表記が残る通常記事: **159**
 - `ビジネス力シート`: **0記事**
-- `AI利活用スキルシート`: **46記事**
+- `AI利活用スキルシート`: **43記事**
 - `データサイエンス力シート`: **66記事**
 - `データエンジニアリング力シート`: **50記事**
 
@@ -76,7 +76,6 @@
 | `drilldown-drillup.md` | ドリルダウンとドリルアップの違いとは？BIツールの基本操作【DS検定】 | `datascience` | `visualization` | データサイエンス力シート |
 | `drillthrough.md` | ドリルスルーとは？ドリルダウンとの違いを整理【DS検定】 | `datascience` | `visualization` | データサイエンス力シート |
 | `eda.md` | EDA（探索的データ分析）とは？分析の第一歩を理解する【DS検定】 | `datascience` | `visualization` | データサイエンス力シート |
-| `elsi.md` | ELSIとは？AI時代に重要な倫理・法・社会問題を理解する【DS検定】 | `foundation` | `action-norms` | AI利活用スキルシート |
 | `encapsulation.md` | カプセル化とは？情報隠蔽との違いを整理【DS検定リテラシー】 | `dataengineering` | `programming` | AI利活用スキルシート |
 | `encoding.md` | エンコーディングとは？カテゴリ変数を数値化する理由【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
 | `entropy.md` | エントロピーとは？不確実さを測る指標【DS検定】 | `datascience` | `statistics` | AI利活用スキルシート |
@@ -93,14 +92,12 @@
 | `filter.md` | フィルターとは？BIツールの基本操作をわかりやすく解説【DS検定】 | `datascience` | `data-understanding` | データサイエンス力シート |
 | `foreign-key.md` | 外部キー（Foreign Key）とは？テーブルの関係を理解【DS検定】 | `dataengineering` | `database` | データエンジニアリング力シート |
 | `ftp-ssh.md` | FTP・SSH・SFTP・FTPSの違いとは？用途と暗号化を比較【DS検定】 | `dataengineering` | `data-collection` | データエンジニアリング力シート |
-| `gdpr.md` | GDPRとは？個人データ保護の基本を整理【DS検定】 | `foundation` | `action-norms` | AI利活用スキルシート |
 | `gini-vs-entropy.md` | ジニ不純度とエントロピーの違いとは？分岐基準を整理【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
 | `hadoop-vs-spark.md` | HadoopとSparkの違いとは？（分散処理基盤の比較）【DS検定リテラシー】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
 | `hadoop.md` | Hadoopとは？（ビッグデータ分散処理基盤）【DS検定リテラシー】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
 | `hdfs.md` | HDFS（Hadoop分散ファイルシステム）とは？【DS検定リテラシー】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
 | `hierarchical-clustering.md` | 階層クラスター分析とは？手法の違いまで整理【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
 | `hierarchical-distance-metrics.md` | 階層クラスター分析における距離の測定方法の比較【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
-| `human-centered-ai-principles.md` | 人間中心のAI社会原則とは？AIと社会のルールを理解する【DS検定】 | `foundation` | `action-norms` | AI利活用スキルシート |
 | `image-filter-processing.md` | 画像のフィルタ処理とは？（ノイズ除去と特徴強調の基本）【DS検定】 | `datascience` | `unstructured-data` | AI利活用スキルシート |
 | `image-metadata.md` | 画像データにおけるメタデータとは？意味と活用を整理【DS検定リテラシー】 | `datascience` | `unstructured-data` | AI利活用スキルシート |
 | `impurity.md` | 不純度とは？決定木の分岐基準を整理【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
