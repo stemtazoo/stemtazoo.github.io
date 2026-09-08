@@ -3,7 +3,7 @@ layout: page
 title: 特性要因図とは？結果と原因を魚の骨のように整理する図
 permalink: /sg/tokusei-youinzu/
 description: "特性要因図は、品質上の結果（特性）と考えられる原因（要因）を魚の骨状に分類し、原因候補を漏れなく洗い出す図です。時系列の異常を見る管理図、重点項目を選ぶパレート図、分布を見るヒストグラムとは目的が異なり、設問の「原因分析」という語から選べます。"
-tags: [sg, management, quality-control, qc-seven-tools]
+tags: [sg, sg-management, quality-control, qc-seven-tools]
 date: 2026-05-12
 last_modified_at: 2026-07-27
 ---

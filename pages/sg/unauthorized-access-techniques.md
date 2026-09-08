@@ -3,7 +3,7 @@ layout: page
 title: "不正アクセスの手法とは？攻撃パターンを整理して対策につなげる【SG試験】"
 description: 不正アクセスの手法は、認証情報の悪用、脆弱性攻撃、盗聴、踏み台利用など、アクセス制御を突破するための攻撃パターンです。辞書攻撃、リスト攻撃、セッションハイジャックなどを整理し、SG試験で対策を選ぶ基準を確認します。SG試験の出題文で迷いやすい判断ポイントも確認します。
 permalink: /sg/unauthorized-access-techniques/
-tags: [sg, security_measures, unauthorized_access, threat_vulnerability, risk_assessment, sg-security-measures]
+tags: [sg, unauthorized_access, threat_vulnerability, risk_assessment, sg-security-measures]
 prev: /sg/timestamp/
 next: /sg/unauthorized-access/
 last_modified_at: 2026-05-20

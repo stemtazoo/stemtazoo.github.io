@@ -3,7 +3,7 @@ layout: page
 title: "就業規則と個別合意の関係とは？優先順位を理解する【SG試験】"
 description: 就業規則と個別合意の関係では、労働条件を変更するときに、就業規則の合理性や周知、個別合意の有無が問題になります。不利益変更、労働契約法、優先順位の考え方を押さえ、SG試験で有効性を判断する基準を整理します。SG試験の出題文で迷いやすい判断ポイントも確認します。
 permalink: /sg/work-rules-vs-individual-agreement/
-tags: [sg, security_law, business_management, risk_assessment, sg-security-law]
+tags: [sg, business_management, risk_assessment, sg-security-law]
 prev: /sg/wifi-auth-wpa2-wpa3-8021x/
 next: /sg/xss/
 last_modified_at: 2026-05-06

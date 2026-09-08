@@ -3,7 +3,7 @@ layout: page
 title: "サイバーキルチェーンとは？攻撃の流れから対策を考える【SG試験】"
 description: サイバーキルチェーンは、攻撃者の行動を偵察、武器化、配送、攻撃、インストール、遠隔操作、目的実行といった段階で整理する考え方です。どの段階で検知・遮断するか、入口対策だけでは不十分な理由をSG試験向けに整理します。SG試験の出題文で迷いやすい判断ポイントも確認します。
 permalink: /sg/cyber-kill-chain/
-tags: [sg, security_measures, unauthorized_access, risk_assessment, incident_management, sg-security-measures]
+tags: [sg, unauthorized_access, risk_assessment, incident_management, sg-security-measures]
 prev: /sg/cyber-attack-cia/
 next: /sg/ddos-attack-summary/
 last_modified_at: 2026-05-20

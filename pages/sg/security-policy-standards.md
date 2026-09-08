@@ -3,7 +3,7 @@ layout: page
 title: "情報セキュリティ対策基準とは？ルールレベルの考え方【SG試験】"
 description: 情報セキュリティ対策基準は、基本方針を実現するために守るべき管理策やルールを定める文書です。基本方針より具体的で、実施手順より抽象的な位置づけを押さえ、ポリシー階層の選択肢をSG試験向けに整理します。SG試験の出題文で迷いやすい判断ポイントも確認します。
 permalink: /sg/security-policy-standards/
-tags: [sg, security_management, isms, access_control, it_security_operations, sg-security-management]
+tags: [sg, isms, access_control, it_security_operations, sg-security-management]
 prev: /sg/security-policy-procedures/
 next: /sg/security-policy/
 last_modified_at: 2026-05-06

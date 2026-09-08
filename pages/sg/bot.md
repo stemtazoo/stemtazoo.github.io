@@ -3,7 +3,7 @@ layout: page
 title: "ボットとは？遠隔操作されるマルウェアを理解する【SG試験】"
 description: ボットは、感染端末を外部から遠隔操作し、DDoS攻撃、迷惑メール送信、情報窃取などに悪用するマルウェアです。単体のウイルスやボットネットとの違い、感染後に可用性・機密性へ及ぶ影響を整理します。利用者本人が気づきにくい踏み台化にも注意します。
 permalink: /sg/bot/
-tags: [sg, security_measures, malware, unauthorized_access, sg-security-measures]
+tags: [sg, malware, unauthorized_access, sg-security-measures]
 prev: /sg/blacklist-whitelist/
 next: /sg/botnet/
 last_modified_at: 2026-06-24

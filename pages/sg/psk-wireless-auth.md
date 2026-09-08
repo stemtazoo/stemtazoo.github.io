@@ -3,7 +3,7 @@ layout: page
 title: "事前共有鍵（PSK）とは？無線LANの接続制御の基本【SG試験】"
 description: "事前共有鍵（PSK）方式は、無線LANのアクセスポイントと利用端末に同じ秘密情報を設定し、接続を認証する仕組みです。全利用者で鍵を共有すると退職者や紛失端末だけを個別に無効化しにくい点を押さえ、端末ごとの認証が必要な場面ではIEEE 802.1Xを選べます。"
 permalink: /sg/psk-wireless-auth/
-tags: [sg, security_measures, access_control, network, sg-security-measures]
+tags: [sg, access_control, network, sg-security-measures]
 prev: /sg/project-lifecycle-characteristics/
 next: /sg/ransomware/
 last_modified_at: 2026-07-27

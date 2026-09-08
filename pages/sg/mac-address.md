@@ -3,7 +3,7 @@ layout: page
 title: "MACアドレスとは？機器を識別する番号の役割【SG試験】"
 description: "MACアドレスをネットワーク機器に割り当てられる識別番号として整理し、IPアドレスとの階層・役割の違い、機器単位の識別を問う選択肢を見分けます。LAN内のデータリンク層で使うアドレスであり、経路制御やネットワーク間通信の宛先とは分けて考えます。"
 permalink: /sg/mac-address/
-tags: [sg, technology, network, access_control, sg-technology]
+tags: [sg, network, access_control, sg-technology]
 prev: /sg/labor-law-difference/
 next: /sg/macro-virus/
 last_modified_at: 2026-07-02

@@ -3,7 +3,7 @@ layout: page
 title: "ビッシングとは？電話でだます詐欺手口【SG試験】"
 description: ビッシングは、電話や音声通話で利用者をだまし、ID・パスワード、認証コード、個人情報などを聞き出す詐欺手口です。フィッシング、スミッシングとの違い、折り返し確認や教育の重要性を押さえ、SG試験向けに整理します。SG試験の出題文で迷いやすい判断ポイントも確認します。
 permalink: /sg/vishing/
-tags: [sg, security_measures, unauthorized_access, data_leakage, sg-security-measures]
+tags: [sg, unauthorized_access, data_leakage, sg-security-measures]
 prev: /sg/vendor-management/
 last_modified_at: 2026-06-10
 ---

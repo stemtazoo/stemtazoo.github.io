@@ -3,7 +3,7 @@ layout: page
 title: "Telnetとは？安全でない遠隔操作の仕組み【SG試験】"
 description: "Telnetをネットワーク機器へ遠隔ログインする平文通信のプロトコルとして整理し、SSHとの違い、盗聴リスク、管理接続で暗号化方式を選ぶ判断ポイントを押さえます。管理用プロトコルを選ぶ問題で、便利さではなく通信経路上の秘匿性を優先する理由まで確認します。"
 permalink: /sg/telnet/
-tags: [sg, technology, network, unauthorized_access, sg-technology]
+tags: [sg, network, unauthorized_access, sg-technology]
 prev: /sg/targeted-attack/
 next: /sg/timestamp/
 last_modified_at: 2026-09-09

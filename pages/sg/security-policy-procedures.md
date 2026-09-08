@@ -3,7 +3,7 @@ layout: page
 title: "情報セキュリティ実施手順とは？現場でのやり方を理解する【SG試験】"
 description: 情報セキュリティ実施手順は、対策基準を現場で実行するための具体的な手順や作業方法です。基本方針、対策基準、手順書の階層の違い、誰が何をどの順で行うかまで定める点をSG試験向けに整理します。SG試験の出題文で迷いやすい判断ポイントも確認します。
 permalink: /sg/security-policy-procedures/
-tags: [sg, security_management, isms, it_security_operations, security_training, sg-security-management]
+tags: [sg, isms, it_security_operations, security_training, sg-security-management]
 prev: /sg/security-policy-basic/
 next: /sg/security-policy-standards/
 last_modified_at: 2026-05-06

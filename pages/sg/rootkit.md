@@ -3,7 +3,7 @@ layout: page
 title: "ルートキットとは？管理者権限で隠蔽する仕組み【SG試験】"
 description: ルートキットは、不正侵入後にOSなどへ組み込まれ、不正プログラム、プロセス、ファイル、ログなどの存在を隠蔽するツール群です。侵入そのものではなく痕跡隠しに使われる点、ウイルス対策や脆弱性検査との違いをSG試験向けに整理します。科目Aの用語理解と科目Bのケース判断で迷いやすい表現も確認します。
 permalink: /sg/rootkit/
-tags: [sg, security_measures, malware, unauthorized_access, sg-security-measures]
+tags: [sg, malware, unauthorized_access, sg-security-measures]
 prev: /sg/risk-treatment/
 next: /sg/safety-control-measures/
 last_modified_at: 2026-06-12

@@ -3,7 +3,7 @@ layout: page
 title: "SG試験 ケース問題の解き方テンプレ【SG試験】"
 description: "SGのケース問題で本文条件、登場人物の責任、時系列、設問の要求を分けて読む手順を整理します。知識の暗記だけで解かず、業務上の制約や承認権限を根拠に「誰が何をすべきか」を選ぶ力につなげます。"
 permalink: /sg/case-solving-template/
-tags: [sg, risk_assessment, it_security_operations, security_management, security_training, sg-security-management]
+tags: [sg, risk_assessment, it_security_operations, security_training, sg-security-management]
 prev: /sg/brute-force-attack/
 next: /sg/case-study-approach/
 last_modified_at: 2026-06-30

@@ -3,7 +3,7 @@ layout: page
 title: "情報セキュリティ基本方針とは？経営者の宣言を理解する【SG試験】"
 description: 情報セキュリティ基本方針は、組織が情報セキュリティに取り組む目的や基本姿勢を経営者が示す上位方針です。対策基準や実施手順との階層の違い、経営層の責任、全社的な方針である点をSG試験向けに整理します。SG試験の出題文で迷いやすい判断ポイントも確認します。
 permalink: /sg/security-policy-basic/
-tags: [sg, security_management, isms, asset_management, it_security_operations, sg-security-management]
+tags: [sg, isms, asset_management, it_security_operations, sg-security-management]
 prev: /sg/security-measures-cia/
 next: /sg/security-policy-procedures/
 last_modified_at: 2026-05-20

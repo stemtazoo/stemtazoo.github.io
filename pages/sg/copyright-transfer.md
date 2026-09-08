@@ -5,7 +5,7 @@ description: "著作権譲渡契約を、著作権そのものを相手へ移す
 permalink: /sg/copyright-transfer/
 prev: /sg/audit-log/
 next: /sg/pci-dss/
-tags: [sg, security_law, vendor_management, system_strategy, sg-security-law]
+tags: [sg, vendor_management, system_strategy, sg-security-law]
 last_modified_at: 2026-07-14
 ---
 

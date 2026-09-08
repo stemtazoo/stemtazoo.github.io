@@ -3,7 +3,7 @@ layout: page
 title: "標的型攻撃とは？狙われる組織の特徴と対策【SG試験】"
 description: 標的型攻撃は、特定の組織や個人を狙い、業務メールや取引先を装って侵入する攻撃です。ばらまき型攻撃との違い、入口対策、教育、ログ監視、インシデント対応を押さえ、SG試験で攻撃目的と対策を切り分ける基準を整理します。SG試験の出題文で迷いやすい判断ポイントも確認します。
 permalink: /sg/targeted-attack/
-tags: [sg, security_measures, unauthorized_access, risk_assessment, security_training, sg-security-measures]
+tags: [sg, unauthorized_access, risk_assessment, security_training, sg-security-measures]
 prev: /sg/stepping-stone-attack/
 next: /sg/telnet/
 last_modified_at: 2026-06-21

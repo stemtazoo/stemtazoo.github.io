@@ -3,7 +3,7 @@ layout: page
 title: "中間者攻撃とは？通信の間に割り込む攻撃【SG試験】"
 description: 中間者攻撃は、通信する二者の間に攻撃者が入り込み、盗聴や改ざんを行う攻撃です。公開鍵証明書で相手の正当性を確認する理由、フィッシングやマルウェアとの違いをSG試験向けに整理します。通信経路上の介入かどうかが判断の軸です。証明書警告を無視する危険性も読み取れるようにします。
 permalink: /sg/man-in-the-middle-attack/
-tags: [sg, security_measures, unauthorized_access, network, crypto_auth, sg-security-measures]
+tags: [sg, unauthorized_access, network, crypto_auth, sg-security-measures]
 prev: /sg/man-in-the-browser/
 next: /sg/mtbf/
 date: 2026-05-06

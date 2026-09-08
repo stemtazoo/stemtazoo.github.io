@@ -3,7 +3,7 @@ layout: page
 title: "ランサムウェアとは？身代金要求型攻撃の仕組み【SG試験】"
 description: "ランサムウェアは、端末やデータを暗号化・ロックして利用不能にし、復旧と引き換えに身代金を要求するマルウェアです。情報を密かに収集するスパイウェアや、遠隔操作するボットとは感染後の目的が異なります。「可用性の侵害」と「金銭要求」が組み合わされた事例を見抜けます。"
 permalink: /sg/ransomware/
-tags: [sg, security_measures, malware, data_leakage, sg-security-measures]
+tags: [sg, malware, data_leakage, sg-security-measures]
 prev: /sg/psk-wireless-auth/
 next: /sg/residual-risk/
 last_modified_at: 2026-07-27

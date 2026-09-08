@@ -3,7 +3,7 @@ layout: page
 title: "IPスプーフィングとは？送信元IPアドレスの偽装と対策【SG試験】"
 description: IPスプーフィングは、送信元IPアドレスを偽装して通信元を別の相手に見せかける攻撃です。認証回避、DoS攻撃、踏み台との関係を押さえ、ファイアウォールや入口・出口フィルタリングでの対策、SG試験でのひっかけポイントを整理します。科目Aの用語理解と科目Bのケース判断で迷いやすい表現も確認します。
 permalink: /sg/ip-spoofing/
-tags: [sg, security_measures, unauthorized_access, network, threat_vulnerability, firewall, sg-security-measures]
+tags: [sg, unauthorized_access, network, threat_vulnerability, firewall, sg-security-measures]
 prev: /sg/information-security-management-exam/
 next: /sg/jpcert-cc/
 last_modified_at: 2026-05-20

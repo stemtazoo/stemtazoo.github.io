@@ -3,7 +3,7 @@ layout: page
 title: 暗号化とハッシュの違いとは？元に戻せるかで整理【SG試験】
 description: 暗号化とハッシュはどちらもデータ保護で使われますが、暗号化は鍵で元に戻せる秘匿、ハッシュは原則元に戻せない要約値です。AES、RSA、SHA-1、改ざん検知、パスワード保存の違いを押さえ、SG試験で用途を切り分ける基準を整理します。SG試験の出題文で迷いやすい判断ポイントも確認します。
 permalink: /sg/encryption-vs-hash/
-tags: [sg, cryptography, hash_function, security_measures, authentication]
+tags: [sg, cryptography, hash_function, sg-security-measures, authentication]
 last_modified_at: 2026-05-06
 ---
 

@@ -3,7 +3,7 @@ layout: page
 title: "DDoS攻撃とは？サービス停止を狙う攻撃の仕組み【SG試験】"
 description: DDoS攻撃は、多数の端末から大量通信を送り、サービスを利用不能にする可用性への攻撃です。DoSとの違い、ボットネットとの関係、通信遮断や負荷分散などの対策をSG試験の判断軸で整理します。情報漏えい対策と混同しない点も押さえます。復旧や継続提供の観点で読む問題にも対応します。
 permalink: /sg/ddos/
-tags: [sg, security_measures, unauthorized_access, it_security_operations, sg-security-measures]
+tags: [sg, unauthorized_access, it_security_operations, sg-security-measures]
 prev: /sg/ddos-attack-summary/
 next: /sg/dhcp/
 last_modified_at: 2026-06-24

@@ -3,7 +3,7 @@ layout: page
 title: ケース問題の解き方！CIAとリスク対応で考える実践手順【SG試験】
 description: "SGのケース問題を、守る対象とCIAへの影響を特定し、回避・低減・移転・保有のどのリスク対応が必要かへ落とし込む手順で整理します。本文の事実と推測を分け、原因・影響・対策の対応を確認してから選択肢を消去する、科目Bで再現しやすい解法を身につけます。"
 permalink: /sg/case-study-approach/
-tags: [sg, risk_assessment, it_security_operations, security_management, sg-security-management]
+tags: [sg, risk_assessment, it_security_operations, sg-security-management]
 prev: /sg/case-solving-template/
 next: /sg/clickjacking/
 last_modified_at: 2026-07-01

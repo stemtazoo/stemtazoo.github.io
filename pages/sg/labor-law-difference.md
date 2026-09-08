@@ -3,7 +3,7 @@ layout: page
 title: "労働基準法と労働契約法の違いとは？試験での切り分け方【SG試験】"
 description: "労働基準法は国が定める最低労働条件を使用者に守らせる公法、労働契約法は労働者と使用者の契約ルールを定める私法として整理します。時間外労働、就業規則、解雇・懲戒の事例で、どちらを根拠に判断するかを切り分けられる内容です。罰則を伴う最低基準か、合意の適正化かも見極めます。"
 permalink: /sg/labor-law-difference/
-tags: [sg, security_law, business_management, risk_assessment, sg-security-law]
+tags: [sg, business_management, risk_assessment, sg-security-law]
 prev: /sg/labor-contract-disadvantageous-change/
 next: /sg/mac-address/
 last_modified_at: 2026-07-27
