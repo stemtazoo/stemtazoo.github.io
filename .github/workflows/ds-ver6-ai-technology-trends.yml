@@ -1,0 +1,76 @@
+name: DS ver.6 AI technology trends migration
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/migrate_ds_ver6_ai_technology_trends.py'
+      - '.github/workflows/ds-ver6-ai-technology-trends.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ds-ver6-ai-technology-trends-main
+  cancel-in-progress: false
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Dry run
+        run: python scripts/migrate_ds_ver6_ai_technology_trends.py
+      - name: Apply reviewed technology trend mappings
+        run: python scripts/migrate_ds_ver6_ai_technology_trends.py --write
+      - name: Refresh audits
+        run: |
+          python scripts/audit_ds_ver5_body_labels.py
+          python scripts/audit_ds_ver6_similar_skill_candidates.py
+      - name: Validate changed articles
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import subprocess
+          from scripts.migrate_ds_ver6_ai_technology_trends import FILES
+
+          changed = []
+          for line in subprocess.check_output(['git','status','--porcelain'], text=True).splitlines():
+              path = line[3:]
+              if path.startswith('pages/ds/') and path.endswith('.md'):
+                  changed.append(Path(path))
+          for path in changed:
+              assert path.name in FILES, path
+              text = path.read_text(encoding='utf-8')
+              assert '## 対応スキル項目（ver.6 価値創造）' in text, path
+              assert '主要な技術・社会トレンドを理解し、基本的な因果関係を説明できる' in text, path
+              assert 'AI利活用スキルシート' not in text, path
+          print(f'Validated {len(changed)} AI technology trend articles.')
+          PY
+      - name: Commit with concurrent-update retry
+        run: |
+          if [ -z "$(git status --porcelain pages/ds docs/audits/ds-ver5-body-labels.md docs/audits/ds-ver6-similar-skill-candidates.md)" ]; then
+            echo "No migration or audit changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add pages/ds/*.md docs/audits/ds-ver5-body-labels.md docs/audits/ds-ver6-similar-skill-candidates.md
+          git commit -m "Migrate reviewed AI technology trend pages to ver.6"
+
+          for attempt in 1 2 3; do
+            git fetch origin main
+            if git rebase origin/main && git push origin HEAD:main; then
+              echo "Push succeeded on attempt ${attempt}."
+              exit 0
+            fi
+            git rebase --abort || true
+            echo "Push attempt ${attempt} failed; retrying..."
+            sleep $((attempt * 2))
+          done
+          exit 1
