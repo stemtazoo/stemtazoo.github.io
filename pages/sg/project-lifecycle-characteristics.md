@@ -3,7 +3,7 @@ layout: page
 title: "プロジェクトライフサイクルの特性とは？頻出パターンを整理【SG試験】"
 description: プロジェクトライフサイクルの特性を、人員投入・リスク・変更コスト・ステークホルダ影響力が時期でどう変わるかとして整理します。SG試験で「開始時」「終盤」などの時点から選択肢を切る判断軸を確認します。計画と実行のどちらの局面かも見分けます。変更要求の影響度を問う問題にもつなげます。
 permalink: /sg/project-lifecycle-characteristics/
-tags: [sg, management, project_management, risk_assessment, sg-strategy]
+tags: [sg, sg-management, project_management, risk_assessment]
 prev: /sg/privacy-separator/
 next: /sg/psk-wireless-auth/
 last_modified_at: 2026-06-24

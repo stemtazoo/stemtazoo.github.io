@@ -3,7 +3,7 @@ layout: page
 title: "請負契約と準委任契約の違いとは？成果物か作業かで判断【SG試験】"
 description: "請負契約と準委任契約を、成果物を完成させる責任を負うか、専門的な業務を適切に遂行する善管注意義務を負うかで比較します。報酬の対象、契約不適合責任、再委託の扱いを押さえ、作業時間や常駐の有無だけで契約類型を決めるSG試験のひっかけを避けます。"
 permalink: /sg/contract-types/
-tags: [sg, management, vendor_management, system_strategy, sg-strategy]
+tags: [sg, sg-strategy, vendor_management, system_strategy]
 prev: /sg/contract-nonconformity/
 next: /sg/copyright-ownership/
 last_modified_at: 2026-07-01

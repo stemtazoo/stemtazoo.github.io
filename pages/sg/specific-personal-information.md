@@ -3,7 +3,7 @@ layout: page
 title: 特定個人情報とは？個人番号の利用目的と禁止例【SG試験】
 description: "特定個人情報は、個人番号（マイナンバー）を内容に含む個人情報です。社会保障・税・災害対策で法令が認める事務に利用範囲が限定され、本人同意があっても自由な目的外利用はできません。従業員の業績管理や顧客分析に転用する選択肢を、通常の個人情報より厳しい制限から退けます。"
 permalink: /sg/specific-personal-information/
-tags: [sg, law, security_law, privacy_law, personal_information, sg-security-management]
+tags: [sg, sg-security-law, law, privacy_law, personal_information]
 last_modified_at: 2026-07-27
 ---
 

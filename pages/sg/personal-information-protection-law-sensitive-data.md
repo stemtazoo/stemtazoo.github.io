@@ -3,7 +3,7 @@ layout: page
 title: 個人情報保護法（要配慮個人情報）とは？同意要件と実務上の注意点【SG試験】
 description: "要配慮個人情報は、人種、信条、病歴など、不当な差別や偏見が生じないよう特に慎重な取扱いを要する情報です。原則として本人同意なく取得できず、第三者提供のオプトアウトも使えない点を、通常の個人情報やマイナンバーを含む特定個人情報と区別して判断できます。"
 permalink: /sg/personal-information-protection-law-sensitive-data/
-tags: [sg, law, security_law, personal_information, privacy_law, sg-security-management]
+tags: [sg, sg-security-law, law, personal_information, privacy_law]
 last_modified_at: 2026-07-27
 ---
 
