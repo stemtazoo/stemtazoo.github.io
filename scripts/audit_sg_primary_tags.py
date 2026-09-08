@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 """Audit SG primary-category tags.
 
-This script checks Markdown files under pages/sg and reports:
+This script checks normal Markdown articles under pages/sg and reports:
 - missing primary category tags
 - multiple primary category tags
 - deprecated broad tags that should be migrated
 
-It intentionally does not rewrite files because some legacy articles need
-human judgment when choosing their single primary category.
+Redirect-only pages and non-article index/category/past pages are excluded.
+It intentionally does not rewrite files because classification can require
+human judgment.
 """
 
 from __future__ import annotations
@@ -41,14 +42,21 @@ SKIP_FILENAMES = {"index.md", "all.md"}
 
 FRONT_MATTER_RE = re.compile(r"\A---\s*\n(.*?)\n---\s*\n", re.DOTALL)
 TAGS_RE = re.compile(r"^tags:\s*\[(.*?)\]\s*$", re.MULTILINE)
+LAYOUT_NULL_RE = re.compile(r"^layout:\s*null\s*$", re.MULTILINE)
+SITEMAP_FALSE_RE = re.compile(r"^sitemap:\s*false\s*$", re.MULTILINE)
+
+
+def front_matter(text: str) -> str | None:
+    match = FRONT_MATTER_RE.search(text)
+    return match.group(1) if match else None
 
 
 def parse_tags(text: str) -> list[str] | None:
-    front_matter_match = FRONT_MATTER_RE.search(text)
-    if not front_matter_match:
+    front = front_matter(text)
+    if front is None:
         return None
 
-    tags_match = TAGS_RE.search(front_matter_match.group(1))
+    tags_match = TAGS_RE.search(front)
     if not tags_match:
         return None
 
@@ -57,6 +65,13 @@ def parse_tags(text: str) -> list[str] | None:
         for item in tags_match.group(1).split(",")
         if item.strip()
     ]
+
+
+def is_redirect_or_nonarticle(text: str) -> bool:
+    front = front_matter(text)
+    if front is None:
+        return False
+    return bool(LAYOUT_NULL_RE.search(front) and SITEMAP_FALSE_RE.search(front))
 
 
 def should_skip(path: Path, root: Path) -> bool:
@@ -76,6 +91,9 @@ def audit(root: Path) -> tuple[list[str], list[str]]:
 
         rel = path.as_posix()
         text = path.read_text(encoding="utf-8")
+        if is_redirect_or_nonarticle(text):
+            continue
+
         tags = parse_tags(text)
 
         if tags is None:
@@ -94,9 +112,7 @@ def audit(root: Path) -> tuple[list[str], list[str]]:
                 suggestion = f" -> candidates: {', '.join(mapped)}"
             errors.append(f"NO_PRIMARY    {rel}{suggestion}")
         elif len(primary) > 1:
-            errors.append(
-                f"MULTI_PRIMARY {rel} -> {', '.join(primary)}"
-            )
+            errors.append(f"MULTI_PRIMARY {rel} -> {', '.join(primary)}")
 
         legacy_present = [tag for tag in tags if tag in LEGACY_TAGS]
         if legacy_present:
