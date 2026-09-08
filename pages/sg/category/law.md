@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 情報セキュリティ関連法規まとめ
-description: "個人情報保護法、不正アクセス禁止法、著作権法、電子署名法などを、何を守る法律か・どの行為が問題になるかという入口とタグ連動の全記事一覧で整理します。新規記事も主分類タグから自動で反映されます。"
+description: "個人情報保護法、不正アクセス禁止法、著作権法、電子署名法などを、何を守る法律か・どの行為が問題になるかという入口とタグ連動の全記事一覧で整理します。新規記事は主分類タグから自動反映し、旧タグの記事も移行期間中は拾います。"
 permalink: /sg/category/law/
 last_modified_at: 2026-09-09
 ---
@@ -42,16 +42,18 @@ last_modified_at: 2026-09-09
 
 ## 全記事一覧（タグから自動更新）
 
-以下は、主分類タグ `sg-security-law` が付いた記事をタイトル順に自動表示しています。
+新規記事では主分類タグ `sg-security-law` を正とします。既存記事には旧タグだけのものが残っているため、移行期間中は `law`、`security_law`、`compliance`、`personal_information`、`privacy_law`、`法務` も自動的に拾います。
 
-**今後は新規記事に正しい主分類タグを付ければ、このカテゴリページへの手動追記は不要です。**
-
-{% assign category_pages = site.pages | where: "tags", "sg-security-law" | sort: "title" %}
+{% assign sg_pages = site.pages | sort: "title" %}
 {% assign category_count = 0 %}
-{% for p in category_pages %}
-  {% if p.permalink %}
-- [{{ p.title }}]({{ p.permalink }})
-    {% assign category_count = category_count | plus: 1 %}
+{% for p in sg_pages %}
+  {% if p.path contains "pages/sg/" and p.tags %}
+    {% unless p.path contains "pages/sg/category/" %}
+      {% if p.tags contains "sg-security-law" or p.tags contains "law" or p.tags contains "security_law" or p.tags contains "compliance" or p.tags contains "personal_information" or p.tags contains "privacy_law" or p.tags contains "法務" %}
+- [{{ p.title }}]({{ p.url }})
+        {% assign category_count = category_count | plus: 1 %}
+      {% endif %}
+    {% endunless %}
   {% endif %}
 {% endfor %}
 {% if category_count == 0 %}
