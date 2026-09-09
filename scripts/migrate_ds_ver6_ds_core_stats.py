@@ -14,6 +14,11 @@ DATA = ROOT / "data" / "skillcheck" / "exports" / "exam_star1_latest.json"
 DIRECT = {
     "bayes-theorem.md": ("statistics", "datascience-0024"),
     "design-of-experiments.md": ("data-preparation", "datascience-0102"),
+    "correlation-and-causation.md": ("statistics", "datascience-0017"),
+    "correlation-vs-causation.md": ("statistics", "datascience-0017"),
+    "covariance-and-correlation.md": ("statistics", "datascience-0019"),
+    "covariance-correlation.md": ("statistics", "datascience-0019"),
+    "coefficient-of-determination-contribution.md": ("modeling", "datascience-0158"),
 }
 
 HEADING_RE = re.compile(r"^## 対応スキル項目（データサイエンス力シート）\s*$", re.MULTILINE)
