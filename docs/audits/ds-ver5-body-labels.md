@@ -4,9 +4,9 @@
 
 ## 集計
 
-- 旧表記が残る通常記事: **134**
+- 旧表記が残る通常記事: **127**
 - `ビジネス力シート`: **0記事**
-- `AI利活用スキルシート`: **18記事**
+- `AI利活用スキルシート`: **11記事**
 - `データサイエンス力シート`: **66記事**
 - `データエンジニアリング力シート`: **50記事**
 
@@ -23,7 +23,6 @@
 | ファイル | title | ds_area | ds_section | 旧表記 |
 |---|---|---|---|---|
 | `access-control-list.md` | アクセス制御リスト（ACL）とは？ファイル権限の基本を整理【DS検定】 | `foundation` | `security` | データエンジニアリング力シート |
-| `analytics-4types.md` | 記述的・診断的・予測的・処方的分析の違いとは？4分類を整理【DS検定】 | `datascience` | `data-understanding` | AI利活用スキルシート |
 | `apriori-algorithm.md` | Aprioriアルゴリズムとは？（アソシエーション分析の基本手法）【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
 | `association-analysis.md` | アソシエーション分析とは？購買データの関係性を見つける分析【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
 | `association-metrics.md` | 共起頻度・支持度・信頼度・リフト値の違いとは？【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
@@ -34,7 +33,6 @@
 | `bayes-theorem.md` | ベイズの定理とは？（条件付き確率の逆算）【DS検定リテラシー】 | `datascience` | `statistics` | データサイエンス力シート |
 | `bernoulli-binomial.md` | ベルヌーイ試行とは？成功・失敗の1回の試行を整理【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `bi-operations-cheatsheet.md` | BIツール操作チートシート｜スライス・ダイス・ドリルダウンの違い【DS検定】 | `datascience` | `visualization` | データサイエンス力シート |
-| `bias-variance-tradeoff.md` | バイアス・バリアンスのトレードオフとは？過学習との関係【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
 | `binomial-bernoulli.md` | 二項分布とは？ベルヌーイ試行をn回繰り返す成功回数の確率【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `boxplot.md` | 箱ひげ図とは？四分位数と外れ値の読み取り方【DS検定】 | `datascience` | `visualization` | データサイエンス力シート |
 | `cap-theorem.md` | CAP定理とは？分断時の一貫性と可用性を整理【DS検定】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
@@ -87,11 +85,9 @@
 | `imputation.md` | インプテーションとは？（欠損値補完の基本）【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
 | `incremental-vs-differential-backup.md` | 増分バックアップと差分バックアップの違いとは？【DS検定リテラシー】 | `dataengineering` | `environment-setup` | データエンジニアリング力シート |
 | `information-gain.md` | 情報利得とは？決定木で分岐の良さを判断する基準【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
-| `inheritance.md` | 継承とは？クラス設計の基本を整理【DS検定リテラシー】 | `dataengineering` | `programming` | AI利活用スキルシート |
 | `interpret-statistics.md` | 数字やグラフの持つメッセージを理解するとは？（統計情報の正しい読み取り）【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `jupyter-r-usage.md` | Jupyter NotebookやRの使い所とは？（データ分析環境の役割）【DS検定】 | `dataengineering` | `environment-setup` | AI利活用スキルシート |
 | `left-join-where.md` | LEFT JOINとWHEREの関係とは？（SQLのひっかけ問題）【DS検定】 | `dataengineering` | `data-processing` | データエンジニアリング力シート |
-| `llm-temperature.md` | LLMのTemperatureとは？出力のランダム性を理解する【DS検定】 | `foundation` | `ai-fundamentals` | AI利活用スキルシート |
 | `logistic-regression.md` | ロジスティック回帰とは？（オッズ・対数オッズから理解する）【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
 | `machine-learning-algorithms-cheatsheet.md` | 機械学習アルゴリズム一覧チートシート（教師あり・教師なし・強化学習）【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
 | `machine-learning-methods.md` | 機械学習の解析手法とは？（代表的アルゴリズムを整理）【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
@@ -108,7 +104,6 @@
 | `pearson-correlation.md` | ピアソンの相関係数とは？関係の強さをどう読むか【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `pivot.md` | ピボットとは？クロス集計との違いを整理【DS検定】 | `datascience` | `visualization` | データサイエンス力シート |
 | `point-interval-estimation.md` | 点推定と区間推定の違いとは？（信頼区間まで整理）【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
-| `polymorphism.md` | ポリモーフィズムとは？（同じ呼び出しで動作が変わる仕組み）【DS検定】 | `dataengineering` | `programming` | AI利活用スキルシート |
 | `power-law.md` | べき乗則とは？両対数グラフが直線になる理由【DS検定リテラシー】 | `datascience` | `statistics` | データサイエンス力シート |
 | `predictive-analytics.md` | 予測的データ分析とは？将来を読む分析手法を整理【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
 | `preprocessing.md` | データ前処理（Preprocessing）とは？分析前に行う重要ステップ【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
@@ -130,7 +125,6 @@
 | `sample-variance-unbiased-variance.md` | 標本分散と不偏分散の違いとは？【DS検定リテラシー】 | `datascience` | `statistics` | データサイエンス力シート |
 | `sampling-methods-comparison.md` | 抽出方法の違いを整理（単純無作為・層化・集落・多段・系統）【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
 | `self-join.md` | 自己結合とは？同じテーブルを結合する理由を理解する【DS検定】 | `dataengineering` | `data-processing` | データエンジニアリング力シート |
-| `sigmoid-function.md` | シグモイド関数とは？（確率に変換する関数）【DS検定】 | `datascience` | `modeling` | AI利活用スキルシート |
 | `slice-dice.md` | スライスとダイスの違いとは？BIツールの基本操作を整理【DS検定】 | `datascience` | `visualization` | データサイエンス力シート |
 | `soap.md` | SOAPとは？RESTとの違いを整理【DS検定】 | `dataengineering` | `data-processing` | データエンジニアリング力シート |
 | `spearman-rank-correlation.md` | スピアマンの順位相関とは？（Spearmanの順位相関係数）【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
@@ -150,7 +144,6 @@
 | `variance-and-standard-deviation.md` | 分散と標準偏差の違いとは？ばらつきをどう読むか【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `variance-standard-deviation.md` | 分散と標準偏差とは？ばらつきを理解する基本統計【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `vpn-ssh.md` | VPNとSSHの違いとは？（安全な通信の仕組みを整理）【DS検定】 | `foundation` | `security` | データエンジニアリング力シート |
-| `weak-strong-ai.md` | 弱いAIと強いAIの違いとは？【DS検定リテラシー】 | `foundation` | `ai-fundamentals` | AI利活用スキルシート |
 | `web-api.md` | Web APIとは？HTTPでサービスとデータをやり取りする仕組み【DS検定】 | `dataengineering` | `data-collection` | データエンジニアリング力シート |
 | `web-crawling-scraping.md` | Webクローリングとスクレイピングの違いとは？【DS検定】 | `dataengineering` | `data-collection` | データエンジニアリング力シート |
 | `welch-t-test.md` | ウェルチのt検定とは？等分散でない場合の平均比較【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
