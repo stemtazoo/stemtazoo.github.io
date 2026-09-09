@@ -4,10 +4,10 @@
 
 ## 集計
 
-- 旧表記が残る通常記事: **99**
+- 旧表記が残る通常記事: **94**
 - `ビジネス力シート`: **0記事**
 - `AI利活用スキルシート`: **0記事**
-- `データサイエンス力シート`: **49記事**
+- `データサイエンス力シート`: **44記事**
 - `データエンジニアリング力シート`: **50記事**
 
 ## 修正方針
@@ -32,11 +32,6 @@
 | `categorical-variable.md` | カテゴリ変数とは？数値データとの違いを整理【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
 | `chart-types.md` | グラフの種類と使い分け（可視化の基本）【DS検定】 | `datascience` | `visualization` | データエンジニアリング力シート |
 | `chi-square-distribution.md` | カイ二乗分布とは？（χ²分布の使いどころを整理）【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
-| `coefficient-of-determination-contribution.md` | 決定係数と寄与率とは？回帰モデルの説明力を理解する【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
-| `correlation-and-causation.md` | 相関があっても因果とは限らない理由を例で理解する【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
-| `correlation-vs-causation.md` | 相関と因果の違いとは？交絡と「原因とは限らない」を整理【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
-| `covariance-and-correlation.md` | 共分散を相関係数に直す意味とは？単位の影響を外す考え方【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
-| `covariance-correlation.md` | 共分散と相関係数の違いとは？単位の影響と-1〜1の意味で整理【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `data-cube.md` | データキューブとは？OLAP分析の基本をわかりやすく整理【DS検定】 | `datascience` | `data-understanding` | データエンジニアリング力シート |
 | `data-extraction-vs-aggregation.md` | データ抽出と集計の違いとは？（SQL・BIで混同しやすい操作）【DS検定】 | `dataengineering` | `data-collection` | データエンジニアリング力シート |
 | `data-lake.md` | データレイクとは？（DWHとの違いも整理）【DS検定リテラシー】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
