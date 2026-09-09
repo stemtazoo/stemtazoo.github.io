@@ -4,10 +4,10 @@
 
 ## 集計
 
-- 旧表記が残る通常記事: **105**
+- 旧表記が残る通常記事: **99**
 - `ビジネス力シート`: **0記事**
 - `AI利活用スキルシート`: **0記事**
-- `データサイエンス力シート`: **55記事**
+- `データサイエンス力シート`: **49記事**
 - `データエンジニアリング力シート`: **50記事**
 
 ## 修正方針
@@ -26,9 +26,7 @@
 | `authentication-authorization.md` | 認証と認可の違いとは？本人確認と権限付与で整理【DS検定】 | `foundation` | `security` | データエンジニアリング力シート |
 | `average-methods-comparison.md` | マクロ平均・マイクロ平均・重み付き平均の違いとは？【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
 | `batch-vs-stream.md` | バッチ処理とストリーム処理の違いとは？リアルタイム性で切り分ける【DS検定】 | `dataengineering` | `data-processing` | データエンジニアリング力シート |
-| `bernoulli-binomial.md` | ベルヌーイ試行とは？成功・失敗の1回の試行を整理【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `bi-operations-cheatsheet.md` | BIツール操作チートシート｜スライス・ダイス・ドリルダウンの違い【DS検定】 | `datascience` | `visualization` | データサイエンス力シート |
-| `binomial-bernoulli.md` | 二項分布とは？ベルヌーイ試行をn回繰り返す成功回数の確率【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `boxplot.md` | 箱ひげ図とは？四分位数と外れ値の読み取り方【DS検定】 | `datascience` | `visualization` | データサイエンス力シート |
 | `cap-theorem.md` | CAP定理とは？分断時の一貫性と可用性を整理【DS検定】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
 | `categorical-variable.md` | カテゴリ変数とは？数値データとの違いを整理【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
@@ -76,7 +74,6 @@
 | `mapping.md` | マッピング処理とは？データを対応づける基本操作【DS検定】 | `dataengineering` | `data-processing` | データサイエンス力シート |
 | `mapreduce.md` | MapReduceとは？（分散処理の基本モデル）【DS検定リテラシー】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
 | `missing-value-handling.md` | 欠損値の処理方法とは？代表的な手法と使い分け【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
-| `normal-and-standard-normal.md` | 標準正規分布と正規分布の違いとは？【DS検定リテラシー】 | `datascience` | `statistics` | データサイエンス力シート |
 | `normalization-2nf-3nf.md` | 第2正規化と第3正規化の違いを整理（候補キーから考える）【DS検定】 | `dataengineering` | `data-structure` | データエンジニアリング力シート |
 | `nosql-datastore.md` | NoSQLデータストアとは？RDBとの違いと使いどころを整理【DS検定】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
 | `olap.md` | OLAPとは？BIツール分析の基本概念をわかりやすく解説【DS検定】 | `datascience` | `data-understanding` | データサイエンス力シート |
@@ -88,7 +85,6 @@
 | `preprocessing.md` | データ前処理（Preprocessing）とは？分析前に行う重要ステップ【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
 | `primary-key.md` | 主キー（Primary Key）とは？データベースの基本ルールを理解【DS検定】 | `dataengineering` | `database` | データエンジニアリング力シート |
 | `publickey-vs-symmetric.md` | 公開鍵暗号方式と共通鍵暗号方式の違いとは？【DS検定】 | `foundation` | `security` | データエンジニアリング力シート |
-| `quartile.md` | 四分位とは？値が複数の取り方になる理由まで整理【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `r-squared-adjusted-r-squared.md` | 自由度調整済み決定係数とは？決定係数との違い【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
 | `random-sampling-methods.md` | 無作為抽出法とは？種類と違いを整理【DS検定リテラシー】 | `datascience` | `data-preparation` | データサイエンス力シート |
 | `rbac.md` | RBAC（ロールベースアクセス制御）とは？【DS検定リテラシー】 | `foundation` | `security` | データエンジニアリング力シート |
@@ -119,8 +115,6 @@
 | `statistics-summary.md` | DS検定でよく出る統計まとめ（平均・分散・相関を一気に整理） | `datascience` | `statistics` | データサイエンス力シート |
 | `student-t-test.md` | スチューデントの検定（t検定）とは？【DS検定リテラシー】 | `datascience` | `statistics` | データサイエンス力シート |
 | `type1-type2-error.md` | 第一種の過誤と第二種の過誤の違いとは？【DS検定リテラシー】 | `datascience` | `statistics` | データサイエンス力シート |
-| `variance-and-standard-deviation.md` | 分散と標準偏差の違いとは？ばらつきをどう読むか【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
-| `variance-standard-deviation.md` | 分散と標準偏差とは？ばらつきを理解する基本統計【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `vpn-ssh.md` | VPNとSSHの違いとは？（安全な通信の仕組みを整理）【DS検定】 | `foundation` | `security` | データエンジニアリング力シート |
 | `web-api.md` | Web APIとは？HTTPでサービスとデータをやり取りする仕組み【DS検定】 | `dataengineering` | `data-collection` | データエンジニアリング力シート |
 | `web-crawling-scraping.md` | Webクローリングとスクレイピングの違いとは？【DS検定】 | `dataengineering` | `data-collection` | データエンジニアリング力シート |
