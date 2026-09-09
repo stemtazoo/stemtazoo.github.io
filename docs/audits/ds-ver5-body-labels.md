@@ -4,9 +4,9 @@
 
 ## 集計
 
-- 旧表記が残る通常記事: **139**
+- 旧表記が残る通常記事: **134**
 - `ビジネス力シート`: **0記事**
-- `AI利活用スキルシート`: **23記事**
+- `AI利活用スキルシート`: **18記事**
 - `データサイエンス力シート`: **66記事**
 - `データエンジニアリング力シート`: **50記事**
 
@@ -23,8 +23,6 @@
 | ファイル | title | ds_area | ds_section | 旧表記 |
 |---|---|---|---|---|
 | `access-control-list.md` | アクセス制御リスト（ACL）とは？ファイル権限の基本を整理【DS検定】 | `foundation` | `security` | データエンジニアリング力シート |
-| `aiops-mlops-cheatsheet.md` | AIOpsとMLOpsの違いを一発整理【DS検定チートシート】 | `dataengineering` | `environment-setup` | AI利活用スキルシート |
-| `aiops.md` | AIOpsとは？MLOpsとの違いを整理【DS検定リテラシー】 | `dataengineering` | `environment-setup` | AI利活用スキルシート |
 | `analytics-4types.md` | 記述的・診断的・予測的・処方的分析の違いとは？4分類を整理【DS検定】 | `datascience` | `data-understanding` | AI利活用スキルシート |
 | `apriori-algorithm.md` | Aprioriアルゴリズムとは？（アソシエーション分析の基本手法）【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
 | `association-analysis.md` | アソシエーション分析とは？購買データの関係性を見つける分析【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
@@ -45,7 +43,6 @@
 | `chi-square-distribution.md` | カイ二乗分布とは？（χ²分布の使いどころを整理）【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `cluster-analysis.md` | クラスタ分析とは？似たデータをグループ分けする分析手法【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
 | `coefficient-of-determination-contribution.md` | 決定係数と寄与率とは？回帰モデルの説明力を理解する【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
-| `constructor.md` | コンストラクタとは？初期化処理の役割を整理【DS検定リテラシー】 | `dataengineering` | `programming` | AI利活用スキルシート |
 | `correlation-and-causation.md` | 相関があっても因果とは限らない理由を例で理解する【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `correlation-vs-causation.md` | 相関と因果の違いとは？交絡と「原因とは限らない」を整理【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `covariance-and-correlation.md` | 共分散を相関係数に直す意味とは？単位の影響を外す考え方【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
@@ -67,7 +64,6 @@
 | `drilldown-drillup.md` | ドリルダウンとドリルアップの違いとは？BIツールの基本操作【DS検定】 | `datascience` | `visualization` | データサイエンス力シート |
 | `drillthrough.md` | ドリルスルーとは？ドリルダウンとの違いを整理【DS検定】 | `datascience` | `visualization` | データサイエンス力シート |
 | `eda.md` | EDA（探索的データ分析）とは？分析の第一歩を理解する【DS検定】 | `datascience` | `visualization` | データサイエンス力シート |
-| `encapsulation.md` | カプセル化とは？情報隠蔽との違いを整理【DS検定リテラシー】 | `dataengineering` | `programming` | AI利活用スキルシート |
 | `encoding.md` | エンコーディングとは？カテゴリ変数を数値化する理由【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
 | `er-diagram.md` | ER図とは？エンティティとリレーションを整理する図【DS検定】 | `dataengineering` | `data-structure` | データエンジニアリング力シート |
 | `estimator-properties.md` | 推定量の性質の違いとは？（不偏性・一貫性・効率性・信頼性）【DS検定リテラシー】 | `datascience` | `statistics` | データサイエンス力シート |
@@ -103,7 +99,6 @@
 | `mapreduce.md` | MapReduceとは？（分散処理の基本モデル）【DS検定リテラシー】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
 | `market-basket-analysis.md` | マーケットバスケット分析とは？購買パターン分析の基本【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
 | `missing-value-handling.md` | 欠損値の処理方法とは？代表的な手法と使い分け【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
-| `mlops.md` | MLOpsとは？AIOpsとの違いを一発整理【DS検定リテラシー】 | `dataengineering` | `environment-setup` | AI利活用スキルシート |
 | `normal-and-standard-normal.md` | 標準正規分布と正規分布の違いとは？【DS検定リテラシー】 | `datascience` | `statistics` | データサイエンス力シート |
 | `normalization-2nf-3nf.md` | 第2正規化と第3正規化の違いを整理（候補キーから考える）【DS検定】 | `dataengineering` | `data-structure` | データエンジニアリング力シート |
 | `nosql-datastore.md` | NoSQLデータストアとは？RDBとの違いと使いどころを整理【DS検定】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
