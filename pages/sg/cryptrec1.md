@@ -6,7 +6,7 @@ permalink: /sg/cryptrec1/
 prev: /sg/compromise-crypto/
 next: /sg/salt/
 tags: [sg, sg-security-overview, crypto_auth, risk_assessment]
-last_modified_at: 2026-06-28
+last_modified_at: 2026-09-09
 ---
 
 ## まず結論
@@ -44,6 +44,8 @@ CRYPTOREC（クリプトレック）は、
 
 で参照されます。
 
+IPAの[暗号技術](https://www.ipa.go.jp/security/crypto/index.html)ページは、暗号技術に関する公式情報の入口として利用できます。個別の方式を確認するときは、[AES](/sg/aes/)や[RSA](/sg/rsa/)の記事から、IPAのJCMVP確認リストも参照できます。
+
 ---
 
 ### 主な暗号技術（CRYPTORECリストの例）
@@ -63,6 +65,7 @@ CRYPTOREC（クリプトレック）は、
 ---
 
 ### 参照資料（公式）
+- [IPA：暗号技術](https://www.ipa.go.jp/security/crypto/index.html)
 - [電子政府における調達のために参照すべき暗号のリスト](https://www.cryptrec.go.jp/list/cryptrec-ls-0001-2012r5.pdf)
 
 ---
