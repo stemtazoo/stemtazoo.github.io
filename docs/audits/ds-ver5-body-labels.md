@@ -4,10 +4,10 @@
 
 ## 集計
 
-- 旧表記が残る通常記事: **116**
+- 旧表記が残る通常記事: **107**
 - `ビジネス力シート`: **0記事**
 - `AI利活用スキルシート`: **0記事**
-- `データサイエンス力シート`: **66記事**
+- `データサイエンス力シート`: **57記事**
 - `データエンジニアリング力シート`: **50記事**
 
 ## 修正方針
@@ -23,12 +23,8 @@
 | ファイル | title | ds_area | ds_section | 旧表記 |
 |---|---|---|---|---|
 | `access-control-list.md` | アクセス制御リスト（ACL）とは？ファイル権限の基本を整理【DS検定】 | `foundation` | `security` | データエンジニアリング力シート |
-| `apriori-algorithm.md` | Aprioriアルゴリズムとは？（アソシエーション分析の基本手法）【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
-| `association-analysis.md` | アソシエーション分析とは？購買データの関係性を見つける分析【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
-| `association-metrics.md` | 共起頻度・支持度・信頼度・リフト値の違いとは？【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
 | `authentication-authorization.md` | 認証と認可の違いとは？本人確認と権限付与で整理【DS検定】 | `foundation` | `security` | データエンジニアリング力シート |
 | `average-methods-comparison.md` | マクロ平均・マイクロ平均・重み付き平均の違いとは？【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
-| `basket-analysis.md` | バスケット分析とは？（リフト値まで整理）【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
 | `batch-vs-stream.md` | バッチ処理とストリーム処理の違いとは？リアルタイム性で切り分ける【DS検定】 | `dataengineering` | `data-processing` | データエンジニアリング力シート |
 | `bayes-theorem.md` | ベイズの定理とは？（条件付き確率の逆算）【DS検定リテラシー】 | `datascience` | `statistics` | データサイエンス力シート |
 | `bernoulli-binomial.md` | ベルヌーイ試行とは？成功・失敗の1回の試行を整理【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
@@ -39,7 +35,6 @@
 | `categorical-variable.md` | カテゴリ変数とは？数値データとの違いを整理【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
 | `chart-types.md` | グラフの種類と使い分け（可視化の基本）【DS検定】 | `datascience` | `visualization` | データエンジニアリング力シート |
 | `chi-square-distribution.md` | カイ二乗分布とは？（χ²分布の使いどころを整理）【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
-| `cluster-analysis.md` | クラスタ分析とは？似たデータをグループ分けする分析手法【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
 | `coefficient-of-determination-contribution.md` | 決定係数と寄与率とは？回帰モデルの説明力を理解する【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
 | `correlation-and-causation.md` | 相関があっても因果とは限らない理由を例で理解する【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `correlation-vs-causation.md` | 相関と因果の違いとは？交絡と「原因とは限らない」を整理【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
@@ -52,7 +47,6 @@
 | `data-warehouse.md` | データウェアハウス（DWH）とは？（データレイクとの違いも整理）【DS検定リテラシー】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
 | `database-constraints.md` | データベースの制約とは？NOT NULL・一意性・外部キーを整理【DS検定】 | `dataengineering` | `database` | データエンジニアリング力シート |
 | `datalake-vs-nosql.md` | データレイクとNoSQLの違いとは？役割の違いを整理【DS検定】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
-| `dendrogram.md` | デンドログラムの見方とは？縦軸とクラスタ数【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
 | `design-of-experiments.md` | 実験計画法とは？少ない実験で原因を見つける方法【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
 | `deviation-score.md` | 偏差値とは？zスコア・標準偏差との違いを整理【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `digital-signature.md` | 電子署名とは？本人性・完全性と公開鍵での検証を整理【DS検定】 | `foundation` | `security` | データエンジニアリング力シート |
@@ -77,15 +71,12 @@
 | `hadoop-vs-spark.md` | HadoopとSparkの違いとは？（分散処理基盤の比較）【DS検定リテラシー】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
 | `hadoop.md` | Hadoopとは？（ビッグデータ分散処理基盤）【DS検定リテラシー】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
 | `hdfs.md` | HDFS（Hadoop分散ファイルシステム）とは？【DS検定リテラシー】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
-| `hierarchical-clustering.md` | 階層クラスター分析とは？手法の違いまで整理【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
-| `hierarchical-distance-metrics.md` | 階層クラスター分析における距離の測定方法の比較【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
 | `imputation.md` | インプテーションとは？（欠損値補完の基本）【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
 | `incremental-vs-differential-backup.md` | 増分バックアップと差分バックアップの違いとは？【DS検定リテラシー】 | `dataengineering` | `environment-setup` | データエンジニアリング力シート |
 | `interpret-statistics.md` | 数字やグラフの持つメッセージを理解するとは？（統計情報の正しい読み取り）【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `left-join-where.md` | LEFT JOINとWHEREの関係とは？（SQLのひっかけ問題）【DS検定】 | `dataengineering` | `data-processing` | データエンジニアリング力シート |
 | `mapping.md` | マッピング処理とは？データを対応づける基本操作【DS検定】 | `dataengineering` | `data-processing` | データサイエンス力シート |
 | `mapreduce.md` | MapReduceとは？（分散処理の基本モデル）【DS検定リテラシー】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
-| `market-basket-analysis.md` | マーケットバスケット分析とは？購買パターン分析の基本【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
 | `missing-value-handling.md` | 欠損値の処理方法とは？代表的な手法と使い分け【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
 | `normal-and-standard-normal.md` | 標準正規分布と正規分布の違いとは？【DS検定リテラシー】 | `datascience` | `statistics` | データサイエンス力シート |
 | `normalization-2nf-3nf.md` | 第2正規化と第3正規化の違いを整理（候補キーから考える）【DS検定】 | `dataengineering` | `data-structure` | データエンジニアリング力シート |
