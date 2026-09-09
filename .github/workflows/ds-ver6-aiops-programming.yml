@@ -1,0 +1,78 @@
+name: DS ver.6 AIOps programming migration
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/migrate_ds_ver6_aiops_programming.py'
+      - '.github/workflows/ds-ver6-aiops-programming.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ds-ver6-aiops-programming-main
+  cancel-in-progress: false
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Dry run
+        run: python scripts/migrate_ds_ver6_aiops_programming.py
+      - name: Apply reviewed AIOps and programming mappings
+        run: python scripts/migrate_ds_ver6_aiops_programming.py --write
+      - name: Refresh audits
+        run: |
+          python scripts/audit_ds_ver5_body_labels.py
+          python scripts/audit_ds_ver6_similar_skill_candidates.py
+      - name: Validate changed articles
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import subprocess
+          from scripts.migrate_ds_ver6_aiops_programming import DIRECT, SUPPLEMENTAL
+
+          allowed = set(DIRECT) | set(SUPPLEMENTAL)
+          changed = []
+          for line in subprocess.check_output(['git','status','--porcelain'], text=True).splitlines():
+              path = line[3:]
+              if path.startswith('pages/ds/') and path.endswith('.md'):
+                  changed.append(Path(path))
+          for path in changed:
+              assert path.name in allowed, path
+              text = path.read_text(encoding='utf-8')
+              assert 'AI利活用スキルシート' not in text, path
+              assert '## 対応スキル項目（ver.6 データエンジニアリング）' in text, path
+              if path.name in SUPPLEMENTAL:
+                  assert '**★1直接対応**：なし' in text, path
+          print(f'Validated {len(changed)} AIOps/programming articles.')
+          PY
+      - name: Commit with concurrent-update retry
+        run: |
+          if [ -z "$(git status --porcelain pages/ds docs/audits/ds-ver5-body-labels.md docs/audits/ds-ver6-similar-skill-candidates.md)" ]; then
+            echo "No migration or audit changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add pages/ds/*.md docs/audits/ds-ver5-body-labels.md docs/audits/ds-ver6-similar-skill-candidates.md
+          git commit -m "Migrate reviewed AIOps and programming pages to ver.6"
+
+          for attempt in 1 2 3; do
+            git fetch origin main
+            if git rebase origin/main && git push origin HEAD:main; then
+              echo "Push succeeded on attempt ${attempt}."
+              exit 0
+            fi
+            git rebase --abort || true
+            echo "Push attempt ${attempt} failed; retrying..."
+            sleep $((attempt * 2))
+          done
+          exit 1
