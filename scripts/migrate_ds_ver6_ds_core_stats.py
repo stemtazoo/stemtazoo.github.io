@@ -21,9 +21,14 @@ DIRECT = {
     "coefficient-of-determination-contribution.md": ("modeling", "datascience-0158"),
     "boxplot.md": ("visualization", "datascience-0014"),
     "power-law.md": ("statistics", "datascience-0023"),
+    "chart-types.md": ("visualization", "datascience-0141"),
+    "chi-square-distribution.md": ("statistics", "datascience-0020"),
+    "discrete-continuous-distribution.md": ("statistics", "datascience-0020"),
+    "evaluation-metrics-comparison.md": ("modeling", "datascience-0173"),
+    "interpret-statistics.md": ("statistics", "datascience-0033"),
 }
 
-HEADING_RE = re.compile(r"^## 対応スキル項目（データサイエンス力シート）\s*$", re.MULTILINE)
+HEADING_RE = re.compile(r"^## 対応スキル項目（データ(?:サイエンス|エンジニアリング)力シート）\s*$", re.MULTILINE)
 
 
 def front_matter(text: str) -> dict[str, str]:
