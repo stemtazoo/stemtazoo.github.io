@@ -98,6 +98,26 @@ REVIEWED: dict[str, str | tuple[str, ...] | None] = {
     "rfm-analysis.md": None,
     "sampling-methods-comparison.md": None,
     "mapping.md": None,
+    "data-extraction-vs-aggregation.md": "dataengineering-0135",
+    "left-join-where.md": "dataengineering-0135",
+    "regular-expression-email.md": "dataengineering-0086",
+    "regular-expression-postalcode.md": "dataengineering-0086",
+    "rest-api-methods.md": "dataengineering-0096",
+    "self-join.md": "dataengineering-0135",
+    "sql-count-diff.md": "dataengineering-0135",
+    "sql-distinct.md": "dataengineering-0135",
+    "sql-exists.md": "dataengineering-0135",
+    "sql-filtering.md": "dataengineering-0135",
+    "sql-in-exists.md": "dataengineering-0135",
+    "sql-union.md": "dataengineering-0135",
+    "sql-where.md": "dataengineering-0135",
+    "batch-vs-stream.md": None,
+    "etl.md": None,
+    "ftp-ssh.md": None,
+    "rest-api.md": None,
+    "soap.md": None,
+    "web-api.md": None,
+    "web-crawling-scraping.md": None,
 }
 
 SUPPLEMENTAL: dict[str, tuple[str, str, str]] = {
@@ -137,6 +157,13 @@ SUPPLEMENTAL: dict[str, tuple[str, str, str]] = {
     "rfm-analysis.md": ("datascience", "modeling", "顧客分析手法の補助学習"),
     "sampling-methods-comparison.md": ("datascience", "data-preparation", "標本抽出法の補助学習"),
     "mapping.md": ("dataengineering", "data-processing", "値の対応付け・変換の補助学習"),
+    "batch-vs-stream.md": ("dataengineering", "data-processing", "バッチ処理・ストリーム処理の補助学習"),
+    "etl.md": ("dataengineering", "data-collection", "ETL・データ統合の補助学習"),
+    "ftp-ssh.md": ("dataengineering", "data-collection", "ファイル転送・安全な通信の補助学習"),
+    "rest-api.md": ("dataengineering", "data-collection", "REST API設計概念の補助学習"),
+    "soap.md": ("dataengineering", "data-processing", "SOAP・Webサービス通信の補助学習"),
+    "web-api.md": ("dataengineering", "data-collection", "Web API基礎概念の補助学習"),
+    "web-crawling-scraping.md": ("dataengineering", "data-collection", "Webデータ収集手法の補助学習"),
 }
 
 METADATA_CORRECTIONS: dict[str, tuple[tuple[str, str], tuple[str, str]]] = {
