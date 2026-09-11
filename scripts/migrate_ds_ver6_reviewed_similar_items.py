@@ -84,6 +84,19 @@ REVIEWED: dict[str, str | tuple[str, ...] | None] = {
     "olap.md": None,
     "pivot.md": None,
     "slice-dice.md": None,
+    "deviation-score.md": "datascience-0109",
+    "random-sampling-methods.md": "datascience-0101",
+    "regular-expression-summary.md": "dataengineering-0086",
+    "statistics-overview.md": ("datascience-0013", "datascience-0017"),
+    "statistics-summary.md": ("datascience-0013", "datascience-0017"),
+    "average-methods-comparison.md": None,
+    "categorical-variable.md": None,
+    "data-transformation.md": None,
+    "estimator-properties.md": None,
+    "euclidean-norm.md": None,
+    "feature.md": None,
+    "rfm-analysis.md": None,
+    "sampling-methods-comparison.md": None,
 }
 
 SUPPLEMENTAL: dict[str, tuple[str, str, str]] = {
@@ -114,6 +127,21 @@ SUPPLEMENTAL: dict[str, tuple[str, str, str]] = {
     "olap.md": ("datascience", "data-understanding", "OLAP・多次元分析の補助学習"),
     "pivot.md": ("datascience", "visualization", "BI・集計操作の補助学習"),
     "slice-dice.md": ("datascience", "visualization", "BI・OLAP操作の補助学習"),
+    "average-methods-comparison.md": ("datascience", "modeling", "分類評価指標の補助学習"),
+    "categorical-variable.md": ("datascience", "data-preparation", "カテゴリ変数理解の補助学習"),
+    "data-transformation.md": ("datascience", "data-preparation", "データ変換全般の補助学習"),
+    "estimator-properties.md": ("datascience", "statistics", "推定量の性質の補助学習"),
+    "euclidean-norm.md": ("datascience", "linear-algebra", "ベクトルのノルムの補助学習"),
+    "feature.md": ("datascience", "data-preparation", "特徴量の基礎概念の補助学習"),
+    "rfm-analysis.md": ("datascience", "modeling", "顧客分析手法の補助学習"),
+    "sampling-methods-comparison.md": ("datascience", "data-preparation", "標本抽出法の補助学習"),
+}
+
+METADATA_CORRECTIONS: dict[str, tuple[tuple[str, str], tuple[str, str]]] = {
+    "regular-expression-summary.md": (
+        ("datascience", "unstructured-data"),
+        ("dataengineering", "data-processing"),
+    ),
 }
 
 LEGACY_LABELS = (
@@ -231,6 +259,26 @@ def main() -> int:
         path = DS_DIR / filename
         text = path.read_text(encoding="utf-8-sig")
         meta = front_matter(text)
+
+        correction = METADATA_CORRECTIONS.get(filename)
+        if correction:
+            source, target = correction
+            current = (meta.get("ds_area", ""), meta.get("ds_section", ""))
+            if current == source:
+                text = re.sub(
+                    r"^ds_area:\s*.*$", f"ds_area: {target[0]}", text,
+                    count=1, flags=re.MULTILINE,
+                )
+                text = re.sub(
+                    r"^ds_section:\s*.*$", f"ds_section: {target[1]}", text,
+                    count=1, flags=re.MULTILINE,
+                )
+                meta = front_matter(text)
+            elif current != target:
+                raise SystemExit(
+                    f"{filename}: unexpected metadata {current}; "
+                    f"expected {source} or {target}"
+                )
 
         if mapping is None:
             supplemental = SUPPLEMENTAL.get(filename)
