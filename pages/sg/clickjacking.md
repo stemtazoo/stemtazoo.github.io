@@ -6,7 +6,7 @@ permalink: /sg/clickjacking/
 tags: [sg, threat_vulnerability, unauthorized_access, web_security, sg-security-overview]
 prev: /sg/case-study-approach/
 next: /sg/client-server-system/
-last_modified_at: 2026-07-01
+last_modified_at: 2026-09-11
 ---
 
 ## まず結論
@@ -123,5 +123,8 @@ last_modified_at: 2026-07-01
 
 👉 判断基準：  
 **見えている画面と、実際の操作がズレているか？**
+
+## 公式情報・参考リンク
+- [IPA｜安全なウェブサイトの作り方 - 1.9 クリックジャッキング](https://www.ipa.go.jp/security/vuln/websecurity/clickjacking.html)
 
 {% include sg_article_footer.html %}
