@@ -6,7 +6,7 @@ permalink: /sg/mail-header-injection/
 tags: [sg, threat_vulnerability, unauthorized_access, data_leakage, sg-security-overview]
 prev: /sg/macro-virus/
 next: /sg/malware/
-last_modified_at: 2026-05-27
+last_modified_at: 2026-09-11
 ---
 
 ## まず結論
@@ -123,5 +123,9 @@ last_modified_at: 2026-05-27
 - 入力値をそのまま使う設計ミスが原因  
 - フィッシングは人、インジェクションはシステムを狙う  
 - 「改行コード」「ヘッダー追加」が出たら即判断
+
+## 公式情報・参考リンク
+- [IPA｜安全なウェブサイトの作り方 - 1.8 メールヘッダ・インジェクション](https://www.ipa.go.jp/security/vuln/websecurity/mail-header.html)
+- [JVN iPedia｜脆弱性対策情報データベース](https://jvndb.jvn.jp/)
 
 {% include sg_article_footer.html %}
