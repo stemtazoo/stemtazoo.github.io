@@ -4,10 +4,10 @@
 
 ## 集計
 
-- 旧表記が残る通常記事: **86**
+- 旧表記が残る通常記事: **81**
 - `ビジネス力シート`: **0記事**
 - `AI利活用スキルシート`: **0記事**
-- `データサイエンス力シート`: **37記事**
+- `データサイエンス力シート`: **32記事**
 - `データエンジニアリング力シート`: **49記事**
 
 ## 修正方針
@@ -47,7 +47,6 @@
 | `estimator-properties.md` | 推定量の性質の違いとは？（不偏性・一貫性・効率性・信頼性）【DS検定リテラシー】 | `datascience` | `statistics` | データサイエンス力シート |
 | `etl.md` | ETLとは？（データ統合の基本プロセス）【DS検定リテラシー】 | `dataengineering` | `data-collection` | データエンジニアリング力シート |
 | `euclidean-norm.md` | ユーグリッドノルムとは？（ベクトルの長さの測り方）【DS検定】 | `datascience` | `linear-algebra` | データサイエンス力シート |
-| `f-test.md` | F検定とは？t検定との違いを整理【DS検定リテラシー】 | `datascience` | `statistics` | データサイエンス力シート |
 | `feature-engineering.md` | 特徴量エンジニアリングとは？モデルに効くデータ加工を整理【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
 | `feature-engineering2.md` | 特徴量エンジニアリングの具体例：年齢化・カテゴリ変換・リーク防止【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
 | `feature.md` | 特徴量（Feature）とは？機械学習で使う入力データを理解する【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
@@ -69,7 +68,6 @@
 | `paired-vs-independent-data.md` | 対応があるデータと対応がないデータの違いとは？【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `pearson-correlation.md` | ピアソンの相関係数とは？関係の強さをどう読むか【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `pivot.md` | ピボットとは？クロス集計との違いを整理【DS検定】 | `datascience` | `visualization` | データサイエンス力シート |
-| `point-interval-estimation.md` | 点推定と区間推定の違いとは？（信頼区間まで整理）【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `preprocessing.md` | データ前処理（Preprocessing）とは？分析前に行う重要ステップ【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
 | `primary-key.md` | 主キー（Primary Key）とは？データベースの基本ルールを理解【DS検定】 | `dataengineering` | `database` | データエンジニアリング力シート |
 | `publickey-vs-symmetric.md` | 公開鍵暗号方式と共通鍵暗号方式の違いとは？【DS検定】 | `foundation` | `security` | データエンジニアリング力シート |
@@ -101,10 +99,7 @@
 | `star-schema.md` | スタースキーマとは？ファクトテーブルとディメンションテーブルを理解する【DS検定】 | `dataengineering` | `data-structure` | データエンジニアリング力シート |
 | `statistics-overview.md` | 統計の基本まとめ（平均・分散・相関・回帰の関係を整理）【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `statistics-summary.md` | DS検定でよく出る統計まとめ（平均・分散・相関を一気に整理） | `datascience` | `statistics` | データサイエンス力シート |
-| `student-t-test.md` | スチューデントの検定（t検定）とは？【DS検定リテラシー】 | `datascience` | `statistics` | データサイエンス力シート |
 | `vpn-ssh.md` | VPNとSSHの違いとは？（安全な通信の仕組みを整理）【DS検定】 | `foundation` | `security` | データエンジニアリング力シート |
 | `web-api.md` | Web APIとは？HTTPでサービスとデータをやり取りする仕組み【DS検定】 | `dataengineering` | `data-collection` | データエンジニアリング力シート |
 | `web-crawling-scraping.md` | Webクローリングとスクレイピングの違いとは？【DS検定】 | `dataengineering` | `data-collection` | データエンジニアリング力シート |
-| `welch-t-test.md` | ウェルチのt検定とは？等分散でない場合の平均比較【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `z-score-method.md` | zスコアとは？標準化・偏差値・外れ値判定を整理【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
-| `z-test.md` | z検定とは？t検定との違いまで整理【DS検定リテラシー】 | `datascience` | `statistics` | データサイエンス力シート |
