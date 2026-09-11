@@ -4,10 +4,10 @@
 
 ## 集計
 
-- 旧表記が残る通常記事: **94**
+- 旧表記が残る通常記事: **92**
 - `ビジネス力シート`: **0記事**
 - `AI利活用スキルシート`: **0記事**
-- `データサイエンス力シート`: **44記事**
+- `データサイエンス力シート`: **42記事**
 - `データエンジニアリング力シート`: **50記事**
 
 ## 修正方針
@@ -27,7 +27,6 @@
 | `average-methods-comparison.md` | マクロ平均・マイクロ平均・重み付き平均の違いとは？【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
 | `batch-vs-stream.md` | バッチ処理とストリーム処理の違いとは？リアルタイム性で切り分ける【DS検定】 | `dataengineering` | `data-processing` | データエンジニアリング力シート |
 | `bi-operations-cheatsheet.md` | BIツール操作チートシート｜スライス・ダイス・ドリルダウンの違い【DS検定】 | `datascience` | `visualization` | データサイエンス力シート |
-| `boxplot.md` | 箱ひげ図とは？四分位数と外れ値の読み取り方【DS検定】 | `datascience` | `visualization` | データサイエンス力シート |
 | `cap-theorem.md` | CAP定理とは？分断時の一貫性と可用性を整理【DS検定】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
 | `categorical-variable.md` | カテゴリ変数とは？数値データとの違いを整理【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
 | `chart-types.md` | グラフの種類と使い分け（可視化の基本）【DS検定】 | `datascience` | `visualization` | データエンジニアリング力シート |
@@ -76,7 +75,6 @@
 | `pearson-correlation.md` | ピアソンの相関係数とは？関係の強さをどう読むか【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `pivot.md` | ピボットとは？クロス集計との違いを整理【DS検定】 | `datascience` | `visualization` | データサイエンス力シート |
 | `point-interval-estimation.md` | 点推定と区間推定の違いとは？（信頼区間まで整理）【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
-| `power-law.md` | べき乗則とは？両対数グラフが直線になる理由【DS検定リテラシー】 | `datascience` | `statistics` | データサイエンス力シート |
 | `preprocessing.md` | データ前処理（Preprocessing）とは？分析前に行う重要ステップ【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
 | `primary-key.md` | 主キー（Primary Key）とは？データベースの基本ルールを理解【DS検定】 | `dataengineering` | `database` | データエンジニアリング力シート |
 | `publickey-vs-symmetric.md` | 公開鍵暗号方式と共通鍵暗号方式の違いとは？【DS検定】 | `foundation` | `security` | データエンジニアリング力シート |
