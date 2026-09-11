@@ -26,6 +26,12 @@ DIRECT = {
     "discrete-continuous-distribution.md": ("statistics", "datascience-0020"),
     "evaluation-metrics-comparison.md": ("modeling", "datascience-0173"),
     "interpret-statistics.md": ("statistics", "datascience-0033"),
+    "point-interval-estimation.md": ("statistics", "datascience-0050"),
+    "type1-type2-error.md": ("statistics", "datascience-0052"),
+    "student-t-test.md": ("statistics", "datascience-0054"),
+    "welch-t-test.md": ("statistics", "datascience-0054"),
+    "z-test.md": ("statistics", "datascience-0054"),
+    "f-test.md": ("statistics", "datascience-0054"),
 }
 
 HEADING_RE = re.compile(r"^## 対応スキル項目（データ(?:サイエンス|エンジニアリング)力シート）\s*$", re.MULTILINE)
