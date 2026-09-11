@@ -32,6 +32,12 @@ DIRECT = {
     "welch-t-test.md": ("statistics", "datascience-0054"),
     "z-test.md": ("statistics", "datascience-0054"),
     "f-test.md": ("statistics", "datascience-0054"),
+    # Individually reviewed multi-item legacy blocks retain only items supported by the article body.
+    "paired-vs-independent-data.md": ("statistics", "datascience-0054"),
+    "sample-variance-unbiased-variance.md": ("statistics", "datascience-0015"),
+    "pearson-correlation.md": ("statistics", "datascience-0019"),
+    "r-squared-adjusted-r-squared.md": ("modeling", "datascience-0159"),
+    "spearman-rank-correlation.md": ("statistics", "datascience-0022"),
 }
 
 HEADING_RE = re.compile(r"^## 対応スキル項目（データ(?:サイエンス|エンジニアリング)力シート）\s*$", re.MULTILINE)
