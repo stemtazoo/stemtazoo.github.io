@@ -4,7 +4,7 @@ title: セキュリティテストの種類まとめ【SG試験】
 description: "セキュリティテストは、開発・運用の中で脆弱性や設定不備を見つける確認活動です。SG試験で迷いやすいSAST、DAST、ファジング、脆弱性診断、ペネトレーションテストの違いを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/security-testing-types/
 tags: [sg, sg-security-measures, threat_vulnerability, unauthorized_access]
-last_modified_at: 2026-05-19
+last_modified_at: 2026-09-11
 ---
 
 ## まず結論
@@ -44,7 +44,21 @@ SG試験では、名前よりも、**検査の目的と方法**を見て判断�
 | 脆弱性診断 | 既知の脆弱性や設定不備を広く洗い出す | 一覧化・危険度・修正案 |
 | ペネトレーションテスト | 攻撃者視点で侵入や被害拡大を検証する | 攻撃シナリオ・侵入可能性 |
 
-IPAでは、Webアプリケーションの脆弱性対策や安全な実装に関する資料が公開されています。セキュリティテストの前提となる脆弱性対策を確認する場合は、IPAの[安全なウェブサイトの作り方](https://www.ipa.go.jp/security/vuln/websecurity/about.html)や[セキュア・プログラミング講座](https://www.ipa.go.jp/archive/security/vuln/programming/)が参考になります。
+IPAの「情報セキュリティサービス基準適合サービスリスト」では、**脆弱性診断サービス**と**ペネトレーションテスト（侵入試験）サービス**が別のサービス区分として整理されています。
+
+ペネトレーションテストは、攻撃者が実際に侵入などを行う際に用いる手法と同様の方法で、セキュリティ機能を回避し、攻撃目的を達成できるかを確認する試験として扱われています。
+
+SG試験では、次のように切り分けると判断しやすくなります。
+
+```text
+弱点を広く洗い出す
+→ 脆弱性診断
+
+実際に攻撃が成立するか試す
+→ ペネトレーションテスト
+```
+
+また、Webアプリケーションの脆弱性対策や安全な実装を確認する資料として、IPAの[安全なウェブサイトの作り方](https://www.ipa.go.jp/security/vuln/websecurity/about.html)や[セキュア・プログラミング講座](https://www.ipa.go.jp/archive/security/vuln/programming/)も参考になります。
 
 大切なのは、これらの手法は競合するものではなく、目的に応じて組み合わせるものだという点です。
 
@@ -140,6 +154,7 @@ SG試験では、次の表現に注意します。
 - 「**弱点の洗い出し**」は**脆弱性診断**、
   「**侵入できるかの実証**」は**ペネトレーションテスト**。
 - 迷ったら、**開発中に欠陥を減らす活動か／運用環境で攻撃成立を確かめる活動か**で切る。
+
 ### 確認問題
 
 セキュリティテストの種類と説明の組合せとして、最も適切なものはどれか。
@@ -160,5 +175,11 @@ SG試験では、次の表現に注意します。
 エは検疫ネットワークに近い説明であり、ペネトレーションテストではありません。
 
 </details>
+
+## 公式情報・参考リンク
+- [IPA｜情報セキュリティサービス基準適合サービスリスト](https://www.ipa.go.jp/security/service_list.html)
+- [IPA｜ペネトレーションテスト（侵入試験）サービス](https://www.ipa.go.jp/security/ug65p90000019fc0-att/20260406_6.pdf)
+- [IPA｜安全なウェブサイトの作り方](https://www.ipa.go.jp/security/vuln/websecurity/about.html)
+- [IPA｜セキュア・プログラミング講座](https://www.ipa.go.jp/archive/security/vuln/programming/)
 
 {% include sg_article_footer.html %}
