@@ -4,11 +4,11 @@
 
 ## 集計
 
-- 旧表記が残る通常記事: **92**
+- 旧表記が残る通常記事: **87**
 - `ビジネス力シート`: **0記事**
 - `AI利活用スキルシート`: **0記事**
-- `データサイエンス力シート`: **42記事**
-- `データエンジニアリング力シート`: **50記事**
+- `データサイエンス力シート`: **38記事**
+- `データエンジニアリング力シート`: **49記事**
 
 ## 修正方針
 
@@ -29,8 +29,6 @@
 | `bi-operations-cheatsheet.md` | BIツール操作チートシート｜スライス・ダイス・ドリルダウンの違い【DS検定】 | `datascience` | `visualization` | データサイエンス力シート |
 | `cap-theorem.md` | CAP定理とは？分断時の一貫性と可用性を整理【DS検定】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
 | `categorical-variable.md` | カテゴリ変数とは？数値データとの違いを整理【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
-| `chart-types.md` | グラフの種類と使い分け（可視化の基本）【DS検定】 | `datascience` | `visualization` | データエンジニアリング力シート |
-| `chi-square-distribution.md` | カイ二乗分布とは？（χ²分布の使いどころを整理）【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `data-cube.md` | データキューブとは？OLAP分析の基本をわかりやすく整理【DS検定】 | `datascience` | `data-understanding` | データエンジニアリング力シート |
 | `data-extraction-vs-aggregation.md` | データ抽出と集計の違いとは？（SQL・BIで混同しやすい操作）【DS検定】 | `dataengineering` | `data-collection` | データエンジニアリング力シート |
 | `data-lake.md` | データレイクとは？（DWHとの違いも整理）【DS検定リテラシー】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
@@ -40,7 +38,6 @@
 | `datalake-vs-nosql.md` | データレイクとNoSQLの違いとは？役割の違いを整理【DS検定】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
 | `deviation-score.md` | 偏差値とは？zスコア・標準偏差との違いを整理【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `digital-signature.md` | 電子署名とは？本人性・完全性と公開鍵での検証を整理【DS検定】 | `foundation` | `security` | データエンジニアリング力シート |
-| `discrete-continuous-distribution.md` | 離散型確率分布と連続型確率分布の違いとは？【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `docker.md` | Dockerとは？再現性が出る理由を整理【DS検定】 | `dataengineering` | `environment-setup` | データエンジニアリング力シート |
 | `drilldown-drillup.md` | ドリルダウンとドリルアップの違いとは？BIツールの基本操作【DS検定】 | `datascience` | `visualization` | データサイエンス力シート |
 | `drillthrough.md` | ドリルスルーとは？ドリルダウンとの違いを整理【DS検定】 | `datascience` | `visualization` | データサイエンス力シート |
@@ -50,7 +47,6 @@
 | `estimator-properties.md` | 推定量の性質の違いとは？（不偏性・一貫性・効率性・信頼性）【DS検定リテラシー】 | `datascience` | `statistics` | データサイエンス力シート |
 | `etl.md` | ETLとは？（データ統合の基本プロセス）【DS検定リテラシー】 | `dataengineering` | `data-collection` | データエンジニアリング力シート |
 | `euclidean-norm.md` | ユーグリッドノルムとは？（ベクトルの長さの測り方）【DS検定】 | `datascience` | `linear-algebra` | データサイエンス力シート |
-| `evaluation-metrics-comparison.md` | 分類モデルの評価指標の比較とは？【DS検定リテラシー】 | `datascience` | `modeling` | データサイエンス力シート |
 | `f-test.md` | F検定とは？t検定との違いを整理【DS検定リテラシー】 | `datascience` | `statistics` | データサイエンス力シート |
 | `feature-engineering.md` | 特徴量エンジニアリングとは？モデルに効くデータ加工を整理【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
 | `feature-engineering2.md` | 特徴量エンジニアリングの具体例：年齢化・カテゴリ変換・リーク防止【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
@@ -63,7 +59,6 @@
 | `hdfs.md` | HDFS（Hadoop分散ファイルシステム）とは？【DS検定リテラシー】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
 | `imputation.md` | インプテーションとは？（欠損値補完の基本）【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
 | `incremental-vs-differential-backup.md` | 増分バックアップと差分バックアップの違いとは？【DS検定リテラシー】 | `dataengineering` | `environment-setup` | データエンジニアリング力シート |
-| `interpret-statistics.md` | 数字やグラフの持つメッセージを理解するとは？（統計情報の正しい読み取り）【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `left-join-where.md` | LEFT JOINとWHEREの関係とは？（SQLのひっかけ問題）【DS検定】 | `dataengineering` | `data-processing` | データエンジニアリング力シート |
 | `mapping.md` | マッピング処理とは？データを対応づける基本操作【DS検定】 | `dataengineering` | `data-processing` | データサイエンス力シート |
 | `mapreduce.md` | MapReduceとは？（分散処理の基本モデル）【DS検定リテラシー】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
