@@ -4,10 +4,10 @@
 
 ## 集計
 
-- 旧表記が残る通常記事: **81**
+- 旧表記が残る通常記事: **76**
 - `ビジネス力シート`: **0記事**
 - `AI利活用スキルシート`: **0記事**
-- `データサイエンス力シート`: **32記事**
+- `データサイエンス力シート`: **27記事**
 - `データエンジニアリング力シート`: **49記事**
 
 ## 修正方針
@@ -65,13 +65,10 @@
 | `normalization-2nf-3nf.md` | 第2正規化と第3正規化の違いを整理（候補キーから考える）【DS検定】 | `dataengineering` | `data-structure` | データエンジニアリング力シート |
 | `nosql-datastore.md` | NoSQLデータストアとは？RDBとの違いと使いどころを整理【DS検定】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
 | `olap.md` | OLAPとは？BIツール分析の基本概念をわかりやすく解説【DS検定】 | `datascience` | `data-understanding` | データサイエンス力シート |
-| `paired-vs-independent-data.md` | 対応があるデータと対応がないデータの違いとは？【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
-| `pearson-correlation.md` | ピアソンの相関係数とは？関係の強さをどう読むか【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `pivot.md` | ピボットとは？クロス集計との違いを整理【DS検定】 | `datascience` | `visualization` | データサイエンス力シート |
 | `preprocessing.md` | データ前処理（Preprocessing）とは？分析前に行う重要ステップ【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
 | `primary-key.md` | 主キー（Primary Key）とは？データベースの基本ルールを理解【DS検定】 | `dataengineering` | `database` | データエンジニアリング力シート |
 | `publickey-vs-symmetric.md` | 公開鍵暗号方式と共通鍵暗号方式の違いとは？【DS検定】 | `foundation` | `security` | データエンジニアリング力シート |
-| `r-squared-adjusted-r-squared.md` | 自由度調整済み決定係数とは？決定係数との違い【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
 | `random-sampling-methods.md` | 無作為抽出法とは？種類と違いを整理【DS検定リテラシー】 | `datascience` | `data-preparation` | データサイエンス力シート |
 | `rbac.md` | RBAC（ロールベースアクセス制御）とは？【DS検定リテラシー】 | `foundation` | `security` | データエンジニアリング力シート |
 | `referential-integrity.md` | 参照整合性とは？外部キーとデータ整合性を理解【DS検定】 | `dataengineering` | `database` | データエンジニアリング力シート |
@@ -83,12 +80,10 @@
 | `rest-api.md` | REST APIとは？SOAPとの違いを整理【DS検定】 | `dataengineering` | `data-collection` | データエンジニアリング力シート |
 | `rfm-analysis.md` | RFM分析とは？顧客価値を評価するマーケティング分析【DS検定】 | `datascience` | `modeling` | データサイエンス力シート |
 | `rpo-rto.md` | RPOとRTOの違いとは？（障害復旧の判断基準）【DS検定】 | `dataengineering` | `environment-setup` | データエンジニアリング力シート |
-| `sample-variance-unbiased-variance.md` | 標本分散と不偏分散の違いとは？【DS検定リテラシー】 | `datascience` | `statistics` | データサイエンス力シート |
 | `sampling-methods-comparison.md` | 抽出方法の違いを整理（単純無作為・層化・集落・多段・系統）【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
 | `self-join.md` | 自己結合とは？同じテーブルを結合する理由を理解する【DS検定】 | `dataengineering` | `data-processing` | データエンジニアリング力シート |
 | `slice-dice.md` | スライスとダイスの違いとは？BIツールの基本操作を整理【DS検定】 | `datascience` | `visualization` | データサイエンス力シート |
 | `soap.md` | SOAPとは？RESTとの違いを整理【DS検定】 | `dataengineering` | `data-processing` | データエンジニアリング力シート |
-| `spearman-rank-correlation.md` | スピアマンの順位相関とは？（Spearmanの順位相関係数）【DS検定】 | `datascience` | `statistics` | データサイエンス力シート |
 | `sql-count-diff.md` | COUNT(*)・COUNT(列)・COUNT DISTINCTの違い【DS検定】 | `dataengineering` | `data-processing` | データエンジニアリング力シート |
 | `sql-distinct.md` | DISTINCTとは？重複データを除去する基本操作【DS検定】 | `dataengineering` | `data-processing` | データエンジニアリング力シート |
 | `sql-exists.md` | EXISTSとは？サブクエリの存在判定を理解する【DS検定】 | `dataengineering` | `sql` | データエンジニアリング力シート |
