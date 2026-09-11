@@ -19,6 +19,8 @@ DIRECT = {
     "covariance-and-correlation.md": ("statistics", "datascience-0019"),
     "covariance-correlation.md": ("statistics", "datascience-0019"),
     "coefficient-of-determination-contribution.md": ("modeling", "datascience-0158"),
+    "boxplot.md": ("visualization", "datascience-0014"),
+    "power-law.md": ("statistics", "datascience-0023"),
 }
 
 HEADING_RE = re.compile(r"^## 対応スキル項目（データサイエンス力シート）\s*$", re.MULTILINE)
