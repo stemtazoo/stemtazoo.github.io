@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Migrate reviewed DS core statistics pages to official ver.6 ★1 items."""
+"""Migrate reviewed DS statistics, visualization, and evaluation pages to ver.6 ★1."""
 from __future__ import annotations
 
 import argparse
