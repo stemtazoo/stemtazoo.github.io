@@ -38,6 +38,13 @@ DIRECT = {
     "pearson-correlation.md": ("statistics", "datascience-0019"),
     "r-squared-adjusted-r-squared.md": ("modeling", "datascience-0159"),
     "spearman-rank-correlation.md": ("statistics", "datascience-0022"),
+    "encoding.md": ("data-preparation", "datascience-0110"),
+    "feature-engineering.md": ("data-preparation", "datascience-0113"),
+    "feature-engineering2.md": ("data-preparation", "datascience-0113"),
+    "imputation.md": ("data-preparation", "datascience-0106"),
+    "missing-value-handling.md": ("data-preparation", "datascience-0106"),
+    "preprocessing.md": ("data-preparation", "datascience-0106"),
+    "z-score-method.md": ("data-preparation", "datascience-0109"),
 }
 
 HEADING_RE = re.compile(r"^## 対応スキル項目（データ(?:サイエンス|エンジニアリング)力シート）\s*$", re.MULTILINE)
