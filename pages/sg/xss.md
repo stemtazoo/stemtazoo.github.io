@@ -5,7 +5,7 @@ description: "クロスサイトスクリプティングはWebサイトに不正
 permalink: /sg/xss/
 prev: /sg/work-rules-vs-individual-agreement/
 tags: [sg, security_general, threat_vulnerability, unauthorized_access, data_leakage, sg-security-overview]
-last_modified_at: 2026-06-11
+last_modified_at: 2026-09-11
 ---
 
 ## まず結論
@@ -129,7 +129,7 @@ SG試験では「スクリプトが実行されるかどうか」で見分ける
 - 選択肢で「スクリプト」「ブラウザ実行」があればXSSを疑う
 
 ## 公式情報・参考リンク
+- [IPA｜安全なウェブサイトの作り方 - 1.5 クロスサイト・スクリプティング](https://www.ipa.go.jp/security/vuln/websecurity/cross-site-scripting.html)
 - [OWASP｜Cross Site Scripting (XSS)](https://owasp.org/www-community/attacks/xss/)
-- [IPA｜安全なウェブサイトの作り方](https://www.ipa.go.jp/security/vuln/websecurity/about.html)
 
 {% include sg_article_footer.html %}
