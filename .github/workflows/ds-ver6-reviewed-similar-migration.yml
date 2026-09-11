@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - 'scripts/migrate_ds_ver6_reviewed_similar_items.py'
+      - 'scripts/audit_ds_ver6_skill_blocks.py'
       - '.github/workflows/ds-ver6-reviewed-similar-migration.yml'
 
 permissions:
@@ -32,6 +33,8 @@ jobs:
         run: |
           python scripts/audit_ds_ver5_body_labels.py
           python scripts/audit_ds_ver6_similar_skill_candidates.py
+      - name: Validate all ver.6 skill blocks
+        run: python scripts/audit_ds_ver6_skill_blocks.py
       - name: Validate changed articles
         run: |
           python - <<'PY'
