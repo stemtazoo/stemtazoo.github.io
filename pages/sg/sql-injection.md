@@ -6,7 +6,7 @@ permalink: /sg/sql-injection/
 tags: [sg, threat_vulnerability, unauthorized_access, database, sg-security-overview]
 prev: /sg/spyware/
 next: /sg/ssh/
-last_modified_at: 2026-06-14
+last_modified_at: 2026-09-11
 ---
 
 ## まず結論
@@ -195,7 +195,7 @@ SQLインジェクションは「入力値がSQL文として実行される」�
   → 「入力値をSQL文として解釈させない対策」と「被害拡大を抑える対策」を分けて判断する
 
 ## 公式情報・参考リンク
+- [IPA｜安全なウェブサイトの作り方 - 1.1 SQLインジェクション](https://www.ipa.go.jp/security/vuln/websecurity/sql.html)
 - [OWASP｜SQL Injection](https://owasp.org/www-community/attacks/SQL_Injection)
-- [IPA｜安全なウェブサイトの作り方](https://www.ipa.go.jp/security/vuln/websecurity/about.html)
 
 {% include sg_article_footer.html %}
