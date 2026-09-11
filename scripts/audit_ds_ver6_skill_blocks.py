@@ -25,7 +25,7 @@ AREA_LABEL = {
     "datascience": "データサイエンス",
     "dataengineering": "データエンジニアリング",
 }
-HEADING_RE = re.compile(r"^## 対応スキル項目（ver\.6 ([^)]+)）\s*$", re.MULTILINE)
+HEADING_RE = re.compile(r"^## 対応スキル項目（ver\.6 ([^）]+)）\s*$", re.MULTILINE)
 DIRECT_RE = re.compile(r"^- ★ (.+?)\s*$", re.MULTILINE)
 REQUIRED_SUFFIX_RE = re.compile(r"（必須スキル：[^）]*）$")
 
