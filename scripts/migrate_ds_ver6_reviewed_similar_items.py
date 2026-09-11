@@ -97,6 +97,7 @@ REVIEWED: dict[str, str | tuple[str, ...] | None] = {
     "feature.md": None,
     "rfm-analysis.md": None,
     "sampling-methods-comparison.md": None,
+    "mapping.md": None,
 }
 
 SUPPLEMENTAL: dict[str, tuple[str, str, str]] = {
@@ -135,6 +136,7 @@ SUPPLEMENTAL: dict[str, tuple[str, str, str]] = {
     "feature.md": ("datascience", "data-preparation", "特徴量の基礎概念の補助学習"),
     "rfm-analysis.md": ("datascience", "modeling", "顧客分析手法の補助学習"),
     "sampling-methods-comparison.md": ("datascience", "data-preparation", "標本抽出法の補助学習"),
+    "mapping.md": ("dataengineering", "data-processing", "値の対応付け・変換の補助学習"),
 }
 
 METADATA_CORRECTIONS: dict[str, tuple[tuple[str, str], tuple[str, str]]] = {
