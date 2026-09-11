@@ -102,10 +102,11 @@ NoSQLは「SQL禁止」という意味ではありません。SQL風の問い合
 
 DS検定では、**「大量・分散・柔軟」ならNoSQL、「厳密な整合性・取引」ならRDB**と切り分けると判断しやすくなります。
 
-## 対応スキル項目（データエンジニアリング力シート）
+## 対応スキル項目（ver.6 データエンジニアリング）
 
-- スキルカテゴリ名：データ蓄積
-- サブカテゴリ名：分散技術
-- ★ NoSQLデータストアの基本的な種類と用途を理解している
-
-{% include ds_article_footer.html %}
+- **分類**：データエンジニアリング
+- **スキルカテゴリ**：データ蓄積
+- **サブカテゴリ**：分散技術
+- **必須スキル**：—
+- ★ NoSQLデータストア（Cassandra、Mongo DB、CouchDB、Amazon DynamoDB、Azure Cosmos DB、Google Cloud Firestoreなど）にAPIを介してアクセスし、新規データを登録できる
+- [ver.6 ★1スキルチェックで確認する](/ds/engineering-skillcheck/)
