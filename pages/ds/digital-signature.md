@@ -5,7 +5,7 @@ description: "電子署名は、文書のハッシュ値を送信者の秘密鍵
 permalink: /ds/digital-signature/
 categories: [business]
 tags: [ds, security, design]
-ds_area: foundation
+ds_area: dataengineering
 ds_section: security
 prev: /ds/contract-ukeoi-juninin/
 next: /ds/digital-signature2/
@@ -152,12 +152,14 @@ DS検定ではここが最頻出です。
 この2点を思い出せれば選択肢は切れます。
 
 
-## 対応スキル項目（データエンジニアリング力シート）
+## 対応スキル項目（ver.6 データエンジニアリング）
 
-- データ基盤
-- セキュリティ
-- ★ 情報セキュリティの基本的な仕組み（暗号化、認証、アクセス制御など）を理解している
-
+- **分類**：ITエンジニアリング
+- **スキルカテゴリ**：ITセキュリティ
+- **サブカテゴリ**：暗号化技術
+- **必須スキル**：◯
+- ★ なりすましや改ざんされた文書でないことを証明するために、電子署名が用いられることを理解している
+- [ver.6 ★1スキルチェックで確認する](/ds/engineering-skillcheck/)
 ## 🔗 関連記事
 
 <ul style="padding-left: 20px;">

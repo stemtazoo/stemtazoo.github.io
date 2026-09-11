@@ -5,7 +5,7 @@ description: "RBAC（ロールベースアクセス制御）とは、ユーザ�
 permalink: /ds/rbac/
 categories: [business]
 tags: [ds, security, design]
-ds_area: foundation
+ds_area: dataengineering
 ds_section: security
 prev: /ds/pki/
 next: /ds/ssl-tls/
@@ -133,11 +133,14 @@ DS検定では
 **選択肢を切るときは「何で制御しているか」を見る。**
 
 
-## 対応スキル項目（データエンジニアリング力シート）
-- データ基盤
-- セキュリティ
-- ★ データのセキュリティ管理の基本的な考え方を理解している
+## 対応スキル項目（ver.6 データエンジニアリング）
 
+- **分類**：ITエンジニアリング
+- **スキルカテゴリ**：ITセキュリティ
+- **サブカテゴリ**：攻撃と防御手法
+- **必須スキル**：—
+- ★ OS、ネットワーク、アプリケーション、データなどの各レイヤーに対して、ユーザーごとのアクセスレベルを設定する必要性を理解している
+- [ver.6 ★1スキルチェックで確認する](/ds/engineering-skillcheck/)
 ## 🔗 関連記事
 
 <ul style="padding-left: 20px;">

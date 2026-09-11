@@ -5,7 +5,7 @@ description: アクセス制御リスト（ACL）を、利用者や通信ごと�
 permalink: /ds/access-control-list/
 categories: [business]
 tags: [ds, security, design]
-ds_area: foundation
+ds_area: dataengineering
 ds_section: security
 prev: /ds/rpo-rto/
 next: /ds/authentication-authorization/
@@ -124,10 +124,11 @@ DS検定では「リソース単位」という言葉がヒントになります
 - 問題文に「OSレベル」「ファイル単位」とあればACLを疑う
 
 
-## 対応スキル項目（データエンジニアリング力シート）
+## 対応スキル項目（ver.6 データエンジニアリング）
 
-- IT・データ基盤理解
-- セキュリティ
-- ★ 情報セキュリティの基本的な概念（認証・認可・アクセス制御など）を理解している
-
-{% include ds_article_footer.html %}
+- **分類**：ITエンジニアリング
+- **スキルカテゴリ**：ITセキュリティ
+- **サブカテゴリ**：攻撃と防御手法
+- **必須スキル**：—
+- ★ OS、ネットワーク、アプリケーション、データなどの各レイヤーに対して、ユーザーごとのアクセスレベルを設定する必要性を理解している
+- [ver.6 ★1スキルチェックで確認する](/ds/engineering-skillcheck/)

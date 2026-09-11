@@ -5,7 +5,7 @@ description: "認証は「誰かを確認すること」、認可は「何を許
 permalink: /ds/authentication-authorization/
 categories: [business]
 tags: [ds, security, design]
-ds_area: foundation
+ds_area: dataengineering
 ds_section: security
 prev: /ds/access-control-list/
 next: /ds/authentication-vs-authorization/
@@ -255,11 +255,11 @@ DS検定では次のような形で出題されます。
 - DS検定では **本人確認と権限管理の違い**を問う問題がよく出る
 
 
-## 対応スキル項目（データエンジニアリング力シート）
+## 対応スキル項目（ver.6 データエンジニアリング）
 
-- スキルカテゴリ名：ITセキュリティ  
-- サブカテゴリ名：攻撃と防御手法  
-
-★ OS、ネットワーク、アプリケーション、データに対するユーザーごとのアクセスレベルを手順に従い設定できる
-
-{% include ds_article_footer.html %}
+- **分類**：ITエンジニアリング
+- **スキルカテゴリ**：ITセキュリティ
+- **サブカテゴリ**：攻撃と防御手法
+- **必須スキル**：—
+- ★ OS、ネットワーク、アプリケーション、データなどの各レイヤーに対して、ユーザーごとのアクセスレベルを設定する必要性を理解している
+- [ver.6 ★1スキルチェックで確認する](/ds/engineering-skillcheck/)

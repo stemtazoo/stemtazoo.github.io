@@ -5,7 +5,7 @@ description: "共通鍵暗号方式と公開鍵暗号方式を、使う鍵の数
 permalink: /ds/publickey-vs-symmetric/
 categories: [business]
 tags: [ds, security, design]
-ds_area: foundation
+ds_area: dataengineering
 ds_section: security
 prev: /ds/primary-secondary-data/
 next: /ds/rainbow-table-attack/
@@ -129,10 +129,11 @@ DS検定では、**高速な通信 = 共通鍵暗号 / 安全な鍵共有や認�
 - TLSでは両方式を組み合わせる
 - **「高速」なら共通鍵、「鍵共有・署名・認証」なら公開鍵系**と切り分ける
 
-## 対応スキル項目（データエンジニアリング力シート）
+## 対応スキル項目（ver.6 データエンジニアリング）
 
-- ITセキュリティ
-- 暗号化技術
-- ★ 共通鍵暗号方式と公開鍵暗号方式の違いを理解している
-
-{% include ds_article_footer.html %}
+- **分類**：ITエンジニアリング
+- **スキルカテゴリ**：ITセキュリティ
+- **サブカテゴリ**：暗号化技術
+- **必須スキル**：◯
+- ★ 公開鍵暗号化方式において、受信者の公開鍵で暗号化されたデータを復号化するためには受信者の秘密鍵が必要であることを知っている
+- [ver.6 ★1スキルチェックで確認する](/ds/engineering-skillcheck/)
