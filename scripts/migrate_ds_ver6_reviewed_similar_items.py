@@ -118,6 +118,22 @@ REVIEWED: dict[str, str | tuple[str, ...] | None] = {
     "soap.md": None,
     "web-api.md": None,
     "web-crawling-scraping.md": None,
+    "er-diagram.md": "dataengineering-0056",
+    "normalization-2nf-3nf.md": "dataengineering-0059",
+    "hadoop-vs-spark.md": "dataengineering-0068",
+    "hadoop.md": "dataengineering-0068",
+    "hdfs.md": "dataengineering-0068",
+    "mapreduce.md": "dataengineering-0068",
+    "nosql-datastore.md": "dataengineering-0069",
+    "cap-theorem.md": None,
+    "data-lake.md": None,
+    "data-warehouse.md": None,
+    "database-constraints.md": None,
+    "datalake-vs-nosql.md": None,
+    "foreign-key.md": None,
+    "primary-key.md": None,
+    "referential-integrity.md": None,
+    "star-schema.md": None,
 }
 
 SUPPLEMENTAL: dict[str, tuple[str, str, str]] = {
@@ -164,6 +180,15 @@ SUPPLEMENTAL: dict[str, tuple[str, str, str]] = {
     "soap.md": ("dataengineering", "data-processing", "SOAP・Webサービス通信の補助学習"),
     "web-api.md": ("dataengineering", "data-collection", "Web API基礎概念の補助学習"),
     "web-crawling-scraping.md": ("dataengineering", "data-collection", "Webデータ収集手法の補助学習"),
+    "cap-theorem.md": ("dataengineering", "data-storage", "分散システム設計の補助学習"),
+    "data-lake.md": ("dataengineering", "data-storage", "データレイク・DWH比較の補助学習"),
+    "data-warehouse.md": ("dataengineering", "data-storage", "DWH・データレイク比較の補助学習"),
+    "database-constraints.md": ("dataengineering", "database", "データベース制約の補助学習"),
+    "datalake-vs-nosql.md": ("dataengineering", "data-storage", "データレイク・NoSQL比較の補助学習"),
+    "foreign-key.md": ("dataengineering", "database", "外部キー・参照関係の補助学習"),
+    "primary-key.md": ("dataengineering", "database", "主キーの補助学習"),
+    "referential-integrity.md": ("dataengineering", "database", "参照整合性の補助学習"),
+    "star-schema.md": ("dataengineering", "data-structure", "スタースキーマの補助学習"),
 }
 
 METADATA_CORRECTIONS: dict[str, tuple[tuple[str, str], tuple[str, str]]] = {
