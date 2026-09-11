@@ -54,6 +54,7 @@ REVIEWED: dict[str, str | tuple[str, ...] | None] = {
     "why-structure.md": "foundation-0012",
     "sora-ame-kasa.md": "foundation-0003",
     "gdpr.md": "foundation-0008",
+    "eda.md": "datascience-0153",
     # Reviewed supplemental topics: useful learning pages without a direct
     # same-theme item in the ver.6 ★1 list.
     "agile-development.md": None,
@@ -75,6 +76,14 @@ REVIEWED: dict[str, str | tuple[str, ...] | None] = {
     "hot-cool-archive.md": None,
     "elsi.md": None,
     "human-centered-ai-principles.md": None,
+    "bi-operations-cheatsheet.md": None,
+    "data-cube.md": None,
+    "drilldown-drillup.md": None,
+    "drillthrough.md": None,
+    "filter.md": None,
+    "olap.md": None,
+    "pivot.md": None,
+    "slice-dice.md": None,
 }
 
 SUPPLEMENTAL: dict[str, tuple[str, str, str]] = {
@@ -97,6 +106,14 @@ SUPPLEMENTAL: dict[str, tuple[str, str, str]] = {
     "hot-cool-archive.md": ("dataengineering", "data-storage", "ストレージ階層設計の補助学習"),
     "elsi.md": ("foundation", "action-norms", "倫理・法・社会課題の補助学習"),
     "human-centered-ai-principles.md": ("foundation", "action-norms", "人間中心のAI原則の補助学習"),
+    "bi-operations-cheatsheet.md": ("datascience", "visualization", "BI・OLAP操作の補助学習"),
+    "data-cube.md": ("datascience", "data-understanding", "OLAP・多次元分析の補助学習"),
+    "drilldown-drillup.md": ("datascience", "visualization", "BI・OLAP操作の補助学習"),
+    "drillthrough.md": ("datascience", "visualization", "BI・OLAP操作の補助学習"),
+    "filter.md": ("datascience", "data-understanding", "BI・データ抽出操作の補助学習"),
+    "olap.md": ("datascience", "data-understanding", "OLAP・多次元分析の補助学習"),
+    "pivot.md": ("datascience", "visualization", "BI・集計操作の補助学習"),
+    "slice-dice.md": ("datascience", "visualization", "BI・OLAP操作の補助学習"),
 }
 
 LEGACY_LABELS = (
