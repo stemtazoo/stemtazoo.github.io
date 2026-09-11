@@ -5,7 +5,7 @@ description: "クロスサイトリクエストフォージェリは利用者の
 permalink: /sg/csrf/
 tags: [sg, security_general, threat_vulnerability, unauthorized_access, data_leakage, sg-security-overview]
 prev: /sg/soc-csirt-jpcert/
-last_modified_at: 2026-06-10
+last_modified_at: 2026-09-11
 ---
 
 ## まず結論
@@ -128,7 +128,7 @@ CSRFについての説明として、次のうち、最も適切なものはど�
 - 選択肢で「本人の意思でない操作」があればCSRFを疑う
 
 ## 公式情報・参考リンク
+- [IPA｜安全なウェブサイトの作り方 - 1.6 CSRF（クロスサイト・リクエスト・フォージェリ）](https://www.ipa.go.jp/security/vuln/websecurity/csrf.html)
 - [OWASP｜Cross-Site Request Forgery (CSRF)](https://owasp.org/www-community/attacks/csrf)
-- [IPA｜安全なウェブサイトの作り方](https://www.ipa.go.jp/security/vuln/websecurity/about.html)
 
 {% include sg_article_footer.html %}
