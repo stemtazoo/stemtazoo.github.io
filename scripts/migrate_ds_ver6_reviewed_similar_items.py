@@ -134,6 +134,16 @@ REVIEWED: dict[str, str | tuple[str, ...] | None] = {
     "primary-key.md": None,
     "referential-integrity.md": None,
     "star-schema.md": None,
+    "access-control-list.md": "dataengineering-0141",
+    "authentication-authorization.md": "dataengineering-0141",
+    "digital-signature.md": "dataengineering-0150",
+    "docker.md": "dataengineering-0021",
+    "publickey-vs-symmetric.md": "dataengineering-0151",
+    "rbac.md": "dataengineering-0141",
+    "incremental-vs-differential-backup.md": None,
+    "replication-vs-backup.md": None,
+    "rpo-rto.md": None,
+    "vpn-ssh.md": None,
 }
 
 SUPPLEMENTAL: dict[str, tuple[str, str, str]] = {
@@ -189,12 +199,36 @@ SUPPLEMENTAL: dict[str, tuple[str, str, str]] = {
     "primary-key.md": ("dataengineering", "database", "主キーの補助学習"),
     "referential-integrity.md": ("dataengineering", "database", "参照整合性の補助学習"),
     "star-schema.md": ("dataengineering", "data-structure", "スタースキーマの補助学習"),
+    "incremental-vs-differential-backup.md": ("dataengineering", "environment-setup", "バックアップ方式の補助学習"),
+    "replication-vs-backup.md": ("dataengineering", "environment-setup", "可用性・データ保全の補助学習"),
+    "rpo-rto.md": ("dataengineering", "environment-setup", "障害復旧目標の補助学習"),
+    "vpn-ssh.md": ("foundation", "security", "安全なネットワーク通信の補助学習"),
 }
 
 METADATA_CORRECTIONS: dict[str, tuple[tuple[str, str], tuple[str, str]]] = {
     "regular-expression-summary.md": (
         ("datascience", "unstructured-data"),
         ("dataengineering", "data-processing"),
+    ),
+    "access-control-list.md": (
+        ("foundation", "security"),
+        ("dataengineering", "security"),
+    ),
+    "authentication-authorization.md": (
+        ("foundation", "security"),
+        ("dataengineering", "security"),
+    ),
+    "digital-signature.md": (
+        ("foundation", "security"),
+        ("dataengineering", "security"),
+    ),
+    "publickey-vs-symmetric.md": (
+        ("foundation", "security"),
+        ("dataengineering", "security"),
+    ),
+    "rbac.md": (
+        ("foundation", "security"),
+        ("dataengineering", "security"),
     ),
 }
 
