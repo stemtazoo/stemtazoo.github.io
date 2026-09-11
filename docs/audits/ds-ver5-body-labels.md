@@ -4,10 +4,10 @@
 
 ## 集計
 
-- 旧表記が残る通常記事: **76**
+- 旧表記が残る通常記事: **69**
 - `ビジネス力シート`: **0記事**
 - `AI利活用スキルシート`: **0記事**
-- `データサイエンス力シート`: **27記事**
+- `データサイエンス力シート`: **20記事**
 - `データエンジニアリング力シート`: **49記事**
 
 ## 修正方針
@@ -42,13 +42,10 @@
 | `drilldown-drillup.md` | ドリルダウンとドリルアップの違いとは？BIツールの基本操作【DS検定】 | `datascience` | `visualization` | データサイエンス力シート |
 | `drillthrough.md` | ドリルスルーとは？ドリルダウンとの違いを整理【DS検定】 | `datascience` | `visualization` | データサイエンス力シート |
 | `eda.md` | EDA（探索的データ分析）とは？分析の第一歩を理解する【DS検定】 | `datascience` | `visualization` | データサイエンス力シート |
-| `encoding.md` | エンコーディングとは？カテゴリ変数を数値化する理由【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
 | `er-diagram.md` | ER図とは？エンティティとリレーションを整理する図【DS検定】 | `dataengineering` | `data-structure` | データエンジニアリング力シート |
 | `estimator-properties.md` | 推定量の性質の違いとは？（不偏性・一貫性・効率性・信頼性）【DS検定リテラシー】 | `datascience` | `statistics` | データサイエンス力シート |
 | `etl.md` | ETLとは？（データ統合の基本プロセス）【DS検定リテラシー】 | `dataengineering` | `data-collection` | データエンジニアリング力シート |
 | `euclidean-norm.md` | ユーグリッドノルムとは？（ベクトルの長さの測り方）【DS検定】 | `datascience` | `linear-algebra` | データサイエンス力シート |
-| `feature-engineering.md` | 特徴量エンジニアリングとは？モデルに効くデータ加工を整理【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
-| `feature-engineering2.md` | 特徴量エンジニアリングの具体例：年齢化・カテゴリ変換・リーク防止【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
 | `feature.md` | 特徴量（Feature）とは？機械学習で使う入力データを理解する【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
 | `filter.md` | フィルターとは？BIツールの基本操作をわかりやすく解説【DS検定】 | `datascience` | `data-understanding` | データサイエンス力シート |
 | `foreign-key.md` | 外部キー（Foreign Key）とは？テーブルの関係を理解【DS検定】 | `dataengineering` | `database` | データエンジニアリング力シート |
@@ -56,17 +53,14 @@
 | `hadoop-vs-spark.md` | HadoopとSparkの違いとは？（分散処理基盤の比較）【DS検定リテラシー】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
 | `hadoop.md` | Hadoopとは？（ビッグデータ分散処理基盤）【DS検定リテラシー】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
 | `hdfs.md` | HDFS（Hadoop分散ファイルシステム）とは？【DS検定リテラシー】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
-| `imputation.md` | インプテーションとは？（欠損値補完の基本）【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
 | `incremental-vs-differential-backup.md` | 増分バックアップと差分バックアップの違いとは？【DS検定リテラシー】 | `dataengineering` | `environment-setup` | データエンジニアリング力シート |
 | `left-join-where.md` | LEFT JOINとWHEREの関係とは？（SQLのひっかけ問題）【DS検定】 | `dataengineering` | `data-processing` | データエンジニアリング力シート |
 | `mapping.md` | マッピング処理とは？データを対応づける基本操作【DS検定】 | `dataengineering` | `data-processing` | データサイエンス力シート |
 | `mapreduce.md` | MapReduceとは？（分散処理の基本モデル）【DS検定リテラシー】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
-| `missing-value-handling.md` | 欠損値の処理方法とは？代表的な手法と使い分け【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
 | `normalization-2nf-3nf.md` | 第2正規化と第3正規化の違いを整理（候補キーから考える）【DS検定】 | `dataengineering` | `data-structure` | データエンジニアリング力シート |
 | `nosql-datastore.md` | NoSQLデータストアとは？RDBとの違いと使いどころを整理【DS検定】 | `dataengineering` | `data-storage` | データエンジニアリング力シート |
 | `olap.md` | OLAPとは？BIツール分析の基本概念をわかりやすく解説【DS検定】 | `datascience` | `data-understanding` | データサイエンス力シート |
 | `pivot.md` | ピボットとは？クロス集計との違いを整理【DS検定】 | `datascience` | `visualization` | データサイエンス力シート |
-| `preprocessing.md` | データ前処理（Preprocessing）とは？分析前に行う重要ステップ【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
 | `primary-key.md` | 主キー（Primary Key）とは？データベースの基本ルールを理解【DS検定】 | `dataengineering` | `database` | データエンジニアリング力シート |
 | `publickey-vs-symmetric.md` | 公開鍵暗号方式と共通鍵暗号方式の違いとは？【DS検定】 | `foundation` | `security` | データエンジニアリング力シート |
 | `random-sampling-methods.md` | 無作為抽出法とは？種類と違いを整理【DS検定リテラシー】 | `datascience` | `data-preparation` | データサイエンス力シート |
@@ -97,4 +91,3 @@
 | `vpn-ssh.md` | VPNとSSHの違いとは？（安全な通信の仕組みを整理）【DS検定】 | `foundation` | `security` | データエンジニアリング力シート |
 | `web-api.md` | Web APIとは？HTTPでサービスとデータをやり取りする仕組み【DS検定】 | `dataengineering` | `data-collection` | データエンジニアリング力シート |
 | `web-crawling-scraping.md` | Webクローリングとスクレイピングの違いとは？【DS検定】 | `dataengineering` | `data-collection` | データエンジニアリング力シート |
-| `z-score-method.md` | zスコアとは？標準化・偏差値・外れ値判定を整理【DS検定】 | `datascience` | `data-preparation` | データサイエンス力シート |
