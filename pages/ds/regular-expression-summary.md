@@ -5,8 +5,8 @@ description: "正規表現を、文字クラス、量指定子、行頭・行末
 permalink: /ds/regular-expression-summary/
 categories: [data-science]
 tags: [ds, preprocessing]
-ds_area: datascience
-ds_section: unstructured-data
+ds_area: dataengineering
+ds_section: data-processing
 prev: /ds/regular-expression-postalcode/
 next: /ds/stemming-vs-lemmatization/
 last_modified_at: 2026-08-16
@@ -115,12 +115,14 @@ DS検定では、記号の意味だけでなく、**その正規表現が何を�
 
 DS検定では、「何に一致するか」だけでなく、**何までは保証できないか**を見ると選択肢を切りやすくなります。
 
-## 対応スキル項目（データエンジニアリング力シート）
+## 対応スキル項目（ver.6 データエンジニアリング）
 
-- データ収集・加工
-- データ前処理
-- ★ データの前処理（クレンジング・加工）ができる
-
+- **分類**：データエンジニアリング
+- **スキルカテゴリ**：データ加工
+- **サブカテゴリ**：フィルタリング処理
+- **必須スキル**：—
+- ★ 正規表現を活用して条件に合致するデータを抽出できる（メールアドレスの書式を満たしているか判定をするなど）
+- [ver.6 ★1スキルチェックで確認する](/ds/engineering-skillcheck/)
 ## 🔗 関連記事
 
 <ul style="padding-left: 20px;">
