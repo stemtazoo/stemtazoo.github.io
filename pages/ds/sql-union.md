@@ -1,7 +1,7 @@
 ---
 layout: page
-title: UNIONとUNION ALLの違いとは？重複の扱いを整理【DS検定】
-description: "UNIONは複数のSELECT結果を結合するときに重複行を除き、UNION ALLは重複もそのまま残します。件数・重複・処理コストの違いをDS検定向けに整理します。"
+title: SQLのUNIONとUNION ALLの違いとは？重複・速度・使い分けを整理【DS検定】
+description: "SQLのUNIONは複数のSELECT結果を結合するときに重複行を除き、UNION ALLは重複もそのまま残します。重複・件数・処理コスト・使い分けの違いをDS検定向けに整理します。"
 permalink: /ds/sql-union/
 categories: [data-engineering]
 tags: [ds, data-processing, sql]
@@ -9,7 +9,7 @@ ds_area: dataengineering
 ds_section: data-processing
 prev: /ds/sql-join/
 next: /ds/sql-where/
-last_modified_at: 2026-08-16
+last_modified_at: 2026-09-13
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
