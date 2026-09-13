@@ -1,7 +1,7 @@
 ---
 layout: page
-title: RPOとRTOの違いとは？（障害復旧の判断基準）【DS検定】
-description: "RPOとRTOの違いは、障害復旧の判断基準を理解するための基本テーマです。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。初学者が迷いやすい判断ポイントも確認します。"
+title: RPOとRTOの違いとは？データ損失と復旧時間で整理【DS検定】
+description: "RPOは『どこまでデータを失ってよいか』、RTOは『どれだけ業務を止めてよいか』を表す障害復旧の指標です。バックアップ・レプリケーション・BCPとの関係や、DS検定で迷いやすい判断基準を整理します。"
 permalink: /ds/rpo-rto/
 categories: [business]
 tags: [ds, design]
@@ -9,7 +9,7 @@ ds_area: dataengineering
 ds_section: environment-setup
 prev: /ds/risk-management/
 next: /ds/access-control-list/
-last_modified_at: 2026-06-21
+last_modified_at: 2026-09-13
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -19,6 +19,7 @@ last_modified_at: 2026-06-21
 ## まず結論
 
 - **RPOとRTOは「どこまで失ってよいか」と「どれだけ止めてよいか」を決める指標。**
+- RPOは**データ損失**、RTOは**復旧までの時間**を見る。
 - DS検定では「最強構成を選ぶ問題」ではなく、「業務に照らして妥当な設計を判断させる問題」として問われることが多い。
 
 
