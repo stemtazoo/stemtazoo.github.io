@@ -1,7 +1,7 @@
 ---
 layout: page
-title: 障害・遅延の報告とレポートラインとは？（リスクマネジメントの基本）【DS検定】
-description: "レポートラインとは、障害・遅延・異常などを発見したときに、上司や責任者へ報告する正式な経路です。DS検定では、自分だけで抱え込まず、問題を早期に共有して組織として対応する判断が重要です。インシデント管理やリスクマネジメントとの関係も整理します。"
+title: レポートラインとは？ビジネスでの意味と報告経路を整理【DS検定】
+description: "レポートラインとは、問題・障害・異常などを発見したときに、上司や責任者へ報告する正式な経路です。ビジネスでの意味、インシデント管理やリスクマネジメントとの違い、DS検定での判断基準を整理します。"
 permalink: /ds/report-line-risk-management/
 categories: [business]
 tags: [ds, design]
@@ -9,7 +9,7 @@ ds_area: value-creation
 ds_section: governance-risk
 prev: /ds/operational-risk/
 next: /ds/reputation-risk/
-last_modified_at: 2026-08-16
+last_modified_at: 2026-09-13
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -19,6 +19,8 @@ last_modified_at: 2026-08-16
 ## まず結論
 
 **レポートラインとは、問題や障害を発見したときに報告する正式な経路**です。
+
+ビジネスでは、「誰に・どの順番で報告するか」をあらかじめ決めておくことで、問題を早く共有し、組織として対応しやすくします。
 
 DS検定では、問題を見つけたら自分だけで抱え込まず、**早い段階で上司・リーダー・責任者へ共有する**という判断が重要です。
 
