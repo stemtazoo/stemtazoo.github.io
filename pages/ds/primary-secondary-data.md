@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 一次データと二次データの違いとは？具体例と見分け方【DS検定】
+title: 一次データと二次データの違い｜政府統計・アンケートはどっち？【DS検定】
 description: "一次データは自分たちが調査目的に合わせて直接収集したデータ、二次データは他者が収集・加工・公開した既存データです。政府統計、アンケート、スクレイピング、自社ログなどの具体例から、DS検定での見分け方を整理します。"
 permalink: /ds/primary-secondary-data/
 categories: [business]
@@ -9,7 +9,7 @@ ds_area: foundation
 ds_section: data-understanding
 prev: /ds/primary-data/
 next: /ds/publickey-vs-symmetric/
-last_modified_at: 2026-08-16
+last_modified_at: 2026-09-14
 ---
 
 ## まず結論
