@@ -209,7 +209,9 @@ OSSは、広く使えることを前提にした考え方です。
 
 また、OSSの基礎を理解しておくと、個別のOSSライセンスも理解しやすくなります。
 
-まずは、[Apache License 2.0の特徴と再配布条件](/fe/apache-license-2/)を確認すると、OSSの基本ルールが実際のライセンスでどのように定められているかを具体的に学べます。
+- [GPLの改変・配布・ソースコード公開の判断基準](/fe/gpl-license/)
+- [GPL・MIT・BSDライセンスの違い](/fe/gpl-mit-bsd-license-comparison/)
+- [Apache License 2.0の特徴と再配布条件](/fe/apache-license-2/)
 
 ```text
 OSSの基本
