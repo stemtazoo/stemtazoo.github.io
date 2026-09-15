@@ -8,7 +8,7 @@ fe_section: ストラテジ系
 fe_subsection: 企業と法務
 fe_order: 40
 date: 2026-07-13
-last_modified_at: 2026-07-25
+last_modified_at: 2026-09-15
 ---
 
 ## まず結論
@@ -25,6 +25,8 @@ Apache License 2.0
 ```
 
 GPLのように、改変版を配布するときに同じライセンスでのソースコード提供を広く求めるタイプではありません。
+
+OSSそのものの基本を先に確認したい場合は、[オープンソースソフトウェア（OSS）の特徴と著作権・改変・再配布](/fe/open-source-software/)を先に読むと整理しやすくなります。
 
 ## 直感的な説明
 
@@ -128,7 +130,6 @@ Apache License 2.0は、GPLのような強いコピーレフト型ではあり�
 Apache License 2.0では、ライセンス文、変更表示、帰属表示、NOTICE、特許条項を見る方が適切です。
 
 ## どんな場面で使う？
-
 
 問題文にApache License 2.0のOSSが出てきたら、次の順番で整理します。
 
