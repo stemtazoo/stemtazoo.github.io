@@ -8,12 +8,14 @@ fe_section: ストラテジ系
 fe_subsection: 企業と法務
 fe_order: 20
 date: 2026-07-12
-last_modified_at: 2026-09-05
+last_modified_at: 2026-09-15
 ---
 
 ## まず結論
 
 GPL（GNU General Public License）は、**GPLのプログラムやその改変版を外部へ配布するとき、利用者が対応するソースコードを入手できるようにすることなどを求めるOSSライセンス**です。
+
+OSSそのものの基本的な特徴を先に確認したい場合は、[オープンソースソフトウェア（OSS）の基本](/fe/open-source-software/)を参考にしてください。
 
 基本情報技術者試験では、次の順で考えると選択肢を切りやすくなります。
 
