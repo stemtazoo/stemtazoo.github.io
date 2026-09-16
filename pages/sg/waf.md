@@ -5,7 +5,7 @@ description: WAFは、Webアプリケーションへの攻撃を検知・遮断�
 permalink: /sg/waf/
 tags: [sg, unauthorized_access, network, sg-security-measures]
 next: /sg/wifi-auth-wpa2-wpa3-8021x/
-last_modified_at: 2026-09-13
+last_modified_at: 2026-09-16
 ---
 
 ## まず結論
@@ -62,6 +62,45 @@ IPAの「Web Application Firewall（WAF）読本」では、WAFはWebアプリ�
 
 👉 SG試験では、
 **「脆弱性を修正する」対策と「脆弱性を悪用した攻撃を遮断する」対策を区別する**のがポイントです。
+
+### HTTPS通信では「復号後・Webアプリ到達前」が判断ポイント
+
+WAFは通信内容を検査するため、HTTPSで暗号化されたままでは、WAF自身に復号機能がない場合はHTTPの中身を確認できません。
+
+たとえば、次のような構成では、
+
+```text
+利用者
+↓ HTTPS
+ファイアウォール
+↓ HTTPS
+SSL/TLS終端装置
+↓ HTTP
+WAF
+↓
+Webサーバ
+```
+
+**SSL/TLS終端装置で復号された後、Webサーバへ届く前**がWAFの配置候補になります。
+
+試験では、次の順で見ると切り分けやすくなります。
+
+1. WAFは通信内容を検査する必要があるか  
+2. その位置では通信が暗号化されたままか  
+3. Webアプリケーションへ届く前に遮断できるか  
+
+したがって、
+
+- 暗号化されたまま → 中身を見られないので不適切  
+- 復号後・Webサーバ到達前 → **適切**  
+- Webサーバ処理後 → 遅すぎる  
+
+と考えます。
+
+なお、IPAの「Web Application Firewall（WAF）読本」では、ネットワーク設置型WAFについて、**WAFがHTTPS通信に対応していればHTTPS通信も検査できる**と説明されています。また、サーバインストール型WAFでは、Webサーバ側でHTTPSの復号・暗号化が行われるため、WAF自身がHTTPSに対応していなくても検査できる場合があると説明されています。
+
+👉 つまり、実務ではWAF製品の機能や構成によって配置方法は変わります。  
+試験問題で「WAF自身には暗号化・復号機能がない」と条件が付いている場合は、**復号後の位置を選ぶ**のがポイントです。
 
 ---
 
@@ -180,12 +219,15 @@ WAFは「Webアプリケーション層」、ファイアウォールは主に�
 - 通信の「中身」を見て判断するのが特徴
 - SQLインジェクション・XSS対策に使う
 - WAFは脆弱性そのものを修正するのではなく、脆弱性を悪用した攻撃を防ぐ補完的な対策
+- HTTPSの配置問題では、条件を確認し、**復号後・Webアプリ到達前**を判断軸にする
 - PCI DSSでは、Webアプリケーションを安全に保つ要件と結びつけて読む
 - SG試験では
   → サンドボックス・ハニーポットとの違いで出題されやすい
 
 ## 公式情報・参考リンク
 - [IPA｜安全なウェブサイトの作り方](https://www.ipa.go.jp/security/vuln/websecurity/about.html)
-- [IPA｜Web Application Firewall（WAF）](https://www.ipa.go.jp/archive/security/vuln/waf.html)
+- [IPA｜Web Application Firewall（WAF）読本](https://www.ipa.go.jp/archive/security/vuln/waf.html)
+- [IPA｜Web Application Firewall（WAF）読本 改訂第2版 PDF](https://www.ipa.go.jp/archive/files/000017312.pdf)
+- [IPA｜Web Application Firewallの導入に向けた検討項目 PDF](https://www.ipa.go.jp/archive/files/000072484.pdf)
 
 {% include sg_article_footer.html %}
