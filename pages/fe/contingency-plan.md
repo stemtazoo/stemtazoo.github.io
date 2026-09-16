@@ -8,7 +8,7 @@ fe_section: マネジメント系
 fe_subsection: プロジェクトマネジメント
 fe_order: 80
 date: 2026-08-27
-last_modified_at: 2026-08-29
+last_modified_at: 2026-09-16
 ---
 
 ## まず結論
@@ -250,5 +250,10 @@ last_modified_at: 2026-08-29
 最後に、試験中の切り分けを一文で確認します。
 
 > **条件付きで発動する予備対応が、コンティンジェンシー計画。**
+
+## 参考資料
+
+- [IPA：NIST SP 800-34 ITシステムにおける緊急時対応計画ガイド（日本語訳）](https://www.ipa.go.jp/security/reports/oversea/nist/ug65p90000019cp4-att/000025327.pdf)
+- [NIST：SP 800-34 Rev.1 Contingency Planning Guide for Federal Information Systems](https://csrc.nist.gov/pubs/sp/800/34/r1/upd1/final)
 
 {% include fe_article_footer.html %}
