@@ -58,4 +58,83 @@ document.addEventListener("DOMContentLoaded", () => {
       render(buttons[0].dataset.order.split(","));
     }
   });
+
+  document.querySelectorAll("[data-fe-binary-demo]").forEach((demo) => {
+    const values = (demo.dataset.values || "").split(",").map(Number);
+    const target = Number(demo.dataset.target);
+    const cells = Array.from(demo.querySelectorAll("[data-binary-cell]"));
+    const nextButton = demo.querySelector("[data-binary-next]");
+    const resetButton = demo.querySelector("[data-binary-reset]");
+    const status = demo.querySelector("[data-binary-status]");
+    const leftLabel = demo.querySelector("[data-binary-left]");
+    const midLabel = demo.querySelector("[data-binary-mid]");
+    const rightLabel = demo.querySelector("[data-binary-right]");
+    const countLabel = demo.querySelector("[data-binary-count]");
+
+    let left;
+    let right;
+    let comparisons;
+    let finished;
+
+    function paint(mid = null, found = false) {
+      cells.forEach((cell, index) => {
+        const active = index >= left && index <= right;
+        cell.classList.toggle("is-discarded", !active);
+        cell.classList.toggle("is-mid", index === mid);
+        cell.classList.toggle("is-found", found && index === mid);
+      });
+
+      if (leftLabel) leftLabel.textContent = String(left);
+      if (rightLabel) rightLabel.textContent = String(right);
+      if (midLabel) midLabel.textContent = mid === null ? "-" : String(mid);
+      if (countLabel) countLabel.textContent = `${comparisons}回`;
+    }
+
+    function reset() {
+      left = 0;
+      right = values.length - 1;
+      comparisons = 0;
+      finished = false;
+      paint();
+      if (status) status.textContent = `探す値は ${target}。まず探索範囲の中央を確認します。`;
+      if (nextButton) {
+        nextButton.disabled = false;
+        nextButton.textContent = "次の比較";
+      }
+    }
+
+    function step() {
+      if (finished || left > right) return;
+
+      const mid = Math.floor((left + right) / 2);
+      const value = values[mid];
+      comparisons += 1;
+
+      if (value === target) {
+        finished = true;
+        paint(mid, true);
+        if (status) status.innerHTML = `<strong>${comparisons}回目：</strong> a[${mid}] = ${value}。探している ${target} と一致したので発見です。`;
+        if (nextButton) {
+          nextButton.disabled = true;
+          nextButton.textContent = "見つかりました";
+        }
+        return;
+      }
+
+      if (target > value) {
+        if (status) status.innerHTML = `<strong>${comparisons}回目：</strong> a[${mid}] = ${value}。${target} は ${value} より大きいので、左側を捨てます。`;
+        left = mid + 1;
+      } else {
+        if (status) status.innerHTML = `<strong>${comparisons}回目：</strong> a[${mid}] = ${value}。${target} は ${value} より小さいので、右側を捨てます。`;
+        right = mid - 1;
+      }
+
+      paint(mid);
+      window.setTimeout(() => paint(), 180);
+    }
+
+    if (nextButton) nextButton.addEventListener("click", step);
+    if (resetButton) resetButton.addEventListener("click", reset);
+    reset();
+  });
 });
