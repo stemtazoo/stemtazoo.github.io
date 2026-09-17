@@ -12,6 +12,7 @@ Always check the related rule files as needed:
 - Tags: `docs/agent/fe-tag-rules.md`
 - GitHub Pages / Liquid compatibility: `docs/agent/github-pages-compat.md`
 - Theme and layout consistency: `docs/agent/theme-consistency.md`
+- Interactive learning / visualizers: `docs/agent/interactive-learning-rules.md`
 
 ## FE Article Scope
 
@@ -235,5 +236,7 @@ Before saving an FE article, check that:
 - weak or background-only Subject B references are omitted;
 - official links are Markdown links and are not generic copy-paste boilerplate;
 - `fe_section`, `fe_subsection`, and `fe_order` are present for normal FE articles;
+- interactive / visual learning value has been considered according to `docs/agent/interactive-learning-rules.md`;
+- if changing values, states, order, or conditions would materially improve understanding, an interactive aid has been implemented or proposed;
 - the footer include is present on normal FE articles;
 - front matter is valid YAML and metadata is not visible in the body.
