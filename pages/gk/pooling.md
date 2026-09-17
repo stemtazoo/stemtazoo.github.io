@@ -1,4 +1,4 @@
-﻿---
+---
 layout: page
 title: プーリング（Pooling）
 description: "プーリング（Pooling）について、G検定で問われる画像認識・CNN分野の観点から、画像タスクでの役割、特徴抽出の流れ、代表モデルとの関係を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
@@ -6,7 +6,7 @@ permalink: /gk/pooling/
 tags: [gk, neural_network, cnn, pooling]
 gk_section: ディープラーニングの要素技術/ネットワークの構成要素
 gk_order: 3
-last_modified_at: 2026-06-21
+last_modified_at: 2026-09-17
 ---
 
 ## まず結論
@@ -30,6 +30,59 @@ last_modified_at: 2026-06-21
 
 ことで、
 **安定した認識** ができるようになります。
+
+<link rel="stylesheet" href="{{ '/assets/css/gk-visualizer.css' | relative_url }}">
+
+<div class="gk-learning-demo" data-gk-pooling-demo>
+  <p class="gk-learning-demo__title">触って確認：4×4の特徴マップを2×2に縮小する</p>
+  <p class="gk-learning-demo__lead">Max PoolingとAverage Poolingを切り替えて、残る値の違いを比べてみてください。</p>
+
+  <div class="gk-learning-demo__controls">
+    <button type="button" class="gk-learning-demo__button" data-pooling-mode="max" aria-pressed="true">Max Pooling</button>
+    <button type="button" class="gk-learning-demo__button" data-pooling-mode="average" aria-pressed="false">Average Pooling</button>
+  </div>
+
+  <div class="gk-pooling-demo__stage">
+    <div>
+      <strong>入力：4×4</strong>
+      <div class="gk-pooling-demo__grid" aria-label="入力特徴マップ">
+        <div class="gk-pooling-demo__cell" data-block="a">1</div>
+        <div class="gk-pooling-demo__cell" data-block="a">3</div>
+        <div class="gk-pooling-demo__cell" data-block="b">2</div>
+        <div class="gk-pooling-demo__cell" data-block="b">4</div>
+        <div class="gk-pooling-demo__cell" data-block="a">5</div>
+        <div class="gk-pooling-demo__cell" data-block="a">6</div>
+        <div class="gk-pooling-demo__cell" data-block="b">1</div>
+        <div class="gk-pooling-demo__cell" data-block="b">2</div>
+        <div class="gk-pooling-demo__cell" data-block="c">0</div>
+        <div class="gk-pooling-demo__cell" data-block="c">2</div>
+        <div class="gk-pooling-demo__cell" data-block="d">7</div>
+        <div class="gk-pooling-demo__cell" data-block="d">3</div>
+        <div class="gk-pooling-demo__cell" data-block="c">4</div>
+        <div class="gk-pooling-demo__cell" data-block="c">1</div>
+        <div class="gk-pooling-demo__cell" data-block="d">5</div>
+        <div class="gk-pooling-demo__cell" data-block="d">8</div>
+      </div>
+    </div>
+
+    <div class="gk-pooling-demo__arrow" aria-hidden="true">→</div>
+
+    <div>
+      <strong>出力：2×2</strong>
+      <div class="gk-pooling-demo__grid is-output" aria-label="プーリング後の特徴マップ">
+        <div class="gk-pooling-demo__cell is-result" data-pooling-output>6</div>
+        <div class="gk-pooling-demo__cell is-result" data-pooling-output>4</div>
+        <div class="gk-pooling-demo__cell is-result" data-pooling-output>4</div>
+        <div class="gk-pooling-demo__cell is-result" data-pooling-output>8</div>
+      </div>
+    </div>
+  </div>
+
+  <p class="gk-pooling-demo__summary" data-pooling-summary>Max Pooling：各2×2領域の最大値だけを残し、強い特徴を拾います。</p>
+  <p class="gk-learning-demo__hint">見るポイント：4個の値が1個にまとまり、位置の細かさと引き換えに特徴マップが小さくなります。</p>
+</div>
+
+<script src="{{ '/assets/js/gk-visualizer.js' | relative_url }}" defer></script>
 
 ---
 
