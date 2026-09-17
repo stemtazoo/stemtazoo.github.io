@@ -9,7 +9,7 @@ ds_area: datascience
 ds_section: statistics
 prev: /ds/chi-square-distribution/
 next: /ds/correlation-coefficient-determination/
-last_modified_at: 2026-08-13
+last_modified_at: 2026-09-17
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -18,13 +18,11 @@ last_modified_at: 2026-08-13
 
 ## まず結論
 
-
 **相関とは「一緒に変化する関係」、因果とは「原因と結果の関係」です。**
 
 このページでは、相関と因果の網羅的な整理ではなく、アイス売上や広告費のような具体例から「相関があっても因果とは限らない」理由を理解します。
 
 DS検定では、「相関がある＝原因である」と早合点していないかを問われることが多いです。
-
 
 ## 直感的な説明
 
@@ -48,6 +46,34 @@ DS検定では、「相関がある＝原因である」と早合点していな
 「売上と広告費に相関がある」からといって、  
 必ずしも広告が原因とは限らないのです。
 
+<link rel="stylesheet" href="{{ '/assets/css/ds-visualizer.css' | relative_url }}">
+
+<div class="ds-learning-demo" data-ds-causal-demo>
+  <p class="ds-learning-demo__title">触って確認：同じ「一緒に増える」でも、意味は違う</p>
+  <p class="ds-learning-demo__lead">観察データ・交絡・ランダム化比較を切り替えて、どこまで言えるかを比べます。</p>
+
+  <div class="ds-learning-demo__controls">
+    <button type="button" class="ds-learning-demo__button" data-causal-mode="correlation" aria-pressed="true">相関だけ</button>
+    <button type="button" class="ds-learning-demo__button" data-causal-mode="confounder" aria-pressed="false">交絡あり</button>
+    <button type="button" class="ds-learning-demo__button" data-causal-mode="randomized" aria-pressed="false">ランダム化比較</button>
+  </div>
+
+  <div class="ds-causal-demo__diagram">
+    <div class="ds-causal-demo__node" data-causal-left>広告費が多い</div>
+    <div class="ds-causal-demo__arrow" data-causal-arrow aria-hidden="true">↔</div>
+    <div class="ds-causal-demo__node" data-causal-right>売上が高い</div>
+    <div class="ds-causal-demo__node ds-causal-demo__third is-source" data-causal-third>観察データでは、一緒に増えていることまでは分かる</div>
+  </div>
+
+  <div class="ds-causal-demo__result">
+    <span class="ds-causal-demo__verdict" data-causal-verdict>相関あり / 因果は未確定</span>
+    <span data-causal-note>売上が高い会社ほど広告費を増やしている可能性もあり、向きまでは決められません。</span>
+  </div>
+
+  <p class="ds-learning-demo__hint">見るポイント：「一緒に動く」ことと「AがBを起こす」ことを分けて考えます。</p>
+</div>
+
+<script src="{{ '/assets/js/ds-visualizer.js' | relative_url }}" defer></script>
 
 ## 定義・仕組み
 
@@ -63,7 +89,6 @@ DS検定では、「相関がある＝原因である」と早合点していな
 > 相関は「同時変化」を示すだけで、原因までは示さない
 
 という点です。
-
 
 ### 因果（causation）
 
@@ -81,7 +106,6 @@ DS検定では、
 「観察データから相関が確認された」と書かれているだけなら、  
 因果を断定するのは危険です。
 
-
 ## どんな場面で使う？
 
 ### 使うべき場面
@@ -95,7 +119,6 @@ DS検定では、
 > 「相関を因果と誤解していないか」
 
 が非常に重要です。
-
 
 ### 誤解しやすい場面
 
@@ -111,7 +134,6 @@ DS検定では、
 
 であれば、基本は「因果の可能性」にとどまります。
 
-
 ## よくある誤解・混同
 
 ### ① 相関が高い＝原因である
@@ -124,7 +146,6 @@ DS検定では、
 
 と書かれていたら要注意です。
 
-
 ### ② 交絡因子を入れた＝因果と断定できる
 
 → これも基本は誤りです。
@@ -135,7 +156,6 @@ DS検定では、
 - サンプル数が十分でない可能性
 
 があります。
-
 
 ### ③ ランダム化すれば何でも断定できる
 
@@ -148,7 +168,6 @@ DS検定では、
 
 によって結論の強さは変わります。
 
-
 ## まとめ（試験直前用）
 
 - 相関＝一緒に変化する関係  
@@ -158,7 +177,6 @@ DS検定では、
 
 DS検定では、  
 「言い過ぎている選択肢」を見抜けるかが勝負です。
-
 
 ## 対応スキル項目（ver.6 データサイエンス）
 
