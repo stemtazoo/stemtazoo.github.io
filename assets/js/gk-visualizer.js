@@ -4,6 +4,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const slider = demo.querySelector("[data-activation-x]");
     const curve = demo.querySelector("[data-activation-curve]");
     const point = demo.querySelector("[data-activation-point]");
+    const axes = Array.from(demo.querySelectorAll(".gk-activation-demo__axis"));
+    const xAxis = axes[0];
+    const yAxis = axes[1];
     const inputLabel = demo.querySelector("[data-activation-input]");
     const outputLabel = demo.querySelector("[data-activation-output]");
     const note = demo.querySelector("[data-activation-note]");
@@ -13,21 +16,25 @@ document.addEventListener("DOMContentLoaded", () => {
     const margin = 30;
     const xMin = -6;
     const xMax = 6;
-    const yMin = -1.2;
-    const yMax = 6.2;
     let current = "relu";
 
     const functions = {
       relu: {
         fn: (x) => Math.max(0, x),
+        yMin: -0.5,
+        yMax: 6.2,
         note: "ReLU：負の入力は0、正の入力はそのまま。中間層で使われやすい。",
       },
       sigmoid: {
         fn: (x) => 1 / (1 + Math.exp(-x)),
+        yMin: -0.1,
+        yMax: 1.1,
         note: "Sigmoid：出力は0〜1。二値分類の出力層で使われやすい。",
       },
       tanh: {
         fn: (x) => Math.tanh(x),
+        yMin: -1.2,
+        yMax: 1.2,
         note: "tanh：出力は-1〜1で0中心。端では傾きが小さくなりやすい。",
       },
     };
@@ -37,7 +44,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function sy(y) {
-      return height - margin - ((y - yMin) / (yMax - yMin)) * (height - margin * 2);
+      const setting = functions[current];
+      return height - margin - ((y - setting.yMin) / (setting.yMax - setting.yMin)) * (height - margin * 2);
     }
 
     function drawCurve() {
@@ -48,6 +56,20 @@ document.addEventListener("DOMContentLoaded", () => {
         points.push(`${i === 0 ? "M" : "L"}${sx(x).toFixed(1)},${sy(fn(x)).toFixed(1)}`);
       }
       curve.setAttribute("d", points.join(" "));
+      if (xAxis) {
+        const y0 = sy(0);
+        xAxis.setAttribute("x1", margin);
+        xAxis.setAttribute("x2", width - margin);
+        xAxis.setAttribute("y1", y0);
+        xAxis.setAttribute("y2", y0);
+      }
+      if (yAxis) {
+        const x0 = sx(0);
+        yAxis.setAttribute("x1", x0);
+        yAxis.setAttribute("x2", x0);
+        yAxis.setAttribute("y1", margin);
+        yAxis.setAttribute("y2", height - margin);
+      }
       updatePoint();
     }
 
@@ -92,7 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
         labels[index].textContent = `${(probability * 100).toFixed(1)}%`;
         scoreLabels[index].textContent = scores[index].toFixed(1);
       });
-      total.textContent = `${probabilities.reduce((acc, value) => acc + value, 0).toFixed(2)}`;
+      total.textContent = probabilities.reduce((acc, value) => acc + value, 0).toFixed(2);
     }
 
     sliders.forEach((slider) => slider.addEventListener("input", render));
