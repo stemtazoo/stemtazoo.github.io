@@ -11,6 +11,8 @@ date: 2026-09-17
 last_modified_at: 2026-09-17
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/fe-visualizer.css' | relative_url }}">
+
 ## まず結論
 
 複数の条件を順番に判定する処理では、**出現頻度が高いケースを先に判定すると、平均の比較回数を少なくできる**ことがあります。
@@ -64,6 +66,48 @@ A区分は全体の60%なので、60%のデータは最初の1回の比較だけ
 反対に、出現率10%のC区分から調べると、最初の1回で終わるのは10%だけです。残り90%は次の比較まで進みます。
 
 つまり、**よく出るケースを先に置いた方が、早く処理を終えられるデータが多くなる**ということです。
+
+### 動かして確認してみる
+
+次の教材では、最初に判定する区分を変えられます。100件のデータを処理すると考えて、平均比較回数がどう変わるかを確認してみてください。
+
+<div class="fe-learning-demo" data-fe-branch-demo data-rate-a="60" data-rate-b="30" data-rate-c="10">
+  <p class="fe-learning-demo__title">3つの処理区分をどの順番で判定する？</p>
+  <p class="fe-learning-demo__lead">最初に判定する区分を選んでください。</p>
+
+  <div class="fe-learning-demo__rates" aria-label="各処理区分の出現比率">
+    <div class="fe-learning-demo__rate">A区分<strong>60%</strong></div>
+    <div class="fe-learning-demo__rate">B区分<strong>30%</strong></div>
+    <div class="fe-learning-demo__rate">C区分<strong>10%</strong></div>
+  </div>
+
+  <div class="fe-learning-demo__controls" aria-label="判定順序を選ぶ">
+    <button type="button" class="fe-learning-demo__button" data-order="A,B,C" aria-pressed="true">Aを先にする</button>
+    <button type="button" class="fe-learning-demo__button" data-order="B,A,C" aria-pressed="false">Bを先にする</button>
+    <button type="button" class="fe-learning-demo__button" data-order="C,A,B" aria-pressed="false">Cを先にする</button>
+  </div>
+
+  <div class="fe-learning-demo__flow" aria-live="polite">
+    <div class="fe-learning-demo__step" data-step></div>
+    <div class="fe-learning-demo__step" data-step></div>
+    <div class="fe-learning-demo__step" data-step></div>
+  </div>
+
+  <div class="fe-learning-demo__result" aria-live="polite">
+    <span>100件を処理したときの比較回数</span>
+    <strong data-total-comparisons>140回</strong>
+    <span>1件あたりの平均比較回数</span>
+    <strong data-average>1.4回</strong>
+    <ul class="fe-learning-demo__breakdown" data-breakdown>
+      <li>A区分 60件 × 1回 = 60回</li>
+      <li>残り 40件 × 2回 = 80回</li>
+    </ul>
+  </div>
+
+  <p class="fe-learning-demo__hint">ポイント：最初の判定で終わるデータが多いほど、平均比較回数は小さくなります。</p>
+</div>
+
+この図で見ると、期待値の式を覚える前に、**「100件のうち何件が1回で終わるのか」**を考えればよいことが分かります。
 
 ## 定義・仕組み
 
@@ -281,5 +325,7 @@ else C
 - 期待値は「1件あたり平均何回比較するか」と考える
 - `if → elseif → else` では、真になった時点で後続条件を評価しない
 - 最後が `else` なら、最後の区分そのものを追加で比較しない
+
+<script src="{{ '/assets/js/fe-visualizer.js' | relative_url }}" defer></script>
 
 {% include fe_article_footer.html %}
