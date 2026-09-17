@@ -137,4 +137,52 @@ document.addEventListener("DOMContentLoaded", () => {
     if (resetButton) resetButton.addEventListener("click", reset);
     reset();
   });
+
+  document.querySelectorAll("[data-fe-adj-demo]").forEach((demo) => {
+    const buttons = Array.from(demo.querySelectorAll("[data-adj-edge]"));
+    const lines = Array.from(demo.querySelectorAll("[data-graph-edge]"));
+    const status = demo.querySelector("[data-adj-status]");
+    const initial = new Set(["12", "13", "24", "34"]);
+    const active = new Set(initial);
+
+    function render() {
+      buttons.forEach((button) => {
+        const edge = button.dataset.adjEdge;
+        const on = active.has(edge);
+        button.textContent = on ? "1" : "0";
+        button.setAttribute("aria-pressed", String(on));
+      });
+
+      lines.forEach((line) => {
+        line.classList.toggle("is-off", !active.has(line.dataset.graphEdge));
+      });
+
+      if (status) {
+        const edges = Array.from(active).sort().map((edge) => `V${edge[0]}―V${edge[1]}`);
+        status.innerHTML = edges.length
+          ? `<strong>現在の辺：</strong> ${edges.join("、")}`
+          : "現在、辺はありません。";
+      }
+    }
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const edge = button.dataset.adjEdge;
+        if (active.has(edge)) active.delete(edge);
+        else active.add(edge);
+        render();
+      });
+    });
+
+    const reset = demo.querySelector("[data-adj-reset]");
+    if (reset) {
+      reset.addEventListener("click", () => {
+        active.clear();
+        initial.forEach((edge) => active.add(edge));
+        render();
+      });
+    }
+
+    render();
+  });
 });
