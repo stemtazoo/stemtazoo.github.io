@@ -6,7 +6,7 @@ permalink: /gk/activation-functions/
 tags: [gk, neural_network, activation]
 gk_section: ディープラーニングの概要/活性化関数
 gk_order: 1
-last_modified_at: 2026-08-21
+last_modified_at: 2026-09-17
 ---
 
 ## まず結論
@@ -29,6 +29,52 @@ G検定では、まず**「なぜ必要か」→ 非線形性**、次に**「ど
 つまり、層を増やしただけでは複雑な境界を表現できません。
 
 活性化関数を入れることで出力に「曲がり」を作り、XORのような**線形分離できない関係**も表現できるようになります。
+
+<link rel="stylesheet" href="{{ '/assets/css/gk-visualizer.css' | relative_url }}">
+
+<div class="gk-learning-demo" data-gk-activation-demo>
+  <p class="gk-learning-demo__title">触って比較：入力を動かすと出力はどう変わる？</p>
+  <p class="gk-learning-demo__lead">関数を切り替えて、同じ入力に対する出力の違いを確認できます。</p>
+
+  <div class="gk-learning-demo__controls" aria-label="活性化関数を選択">
+    <button type="button" class="gk-learning-demo__button" data-function="relu" aria-pressed="true">ReLU</button>
+    <button type="button" class="gk-learning-demo__button" data-function="sigmoid" aria-pressed="false">Sigmoid</button>
+    <button type="button" class="gk-learning-demo__button" data-function="tanh" aria-pressed="false">tanh</button>
+  </div>
+
+  <svg class="gk-activation-demo__chart" viewBox="0 0 600 260" role="img" aria-label="選択した活性化関数のグラフ">
+    <line class="gk-activation-demo__axis" x1="30" y1="227.6" x2="570" y2="227.6"></line>
+    <line class="gk-activation-demo__axis" x1="300" y1="30" x2="300" y2="230"></line>
+    <path class="gk-activation-demo__curve" data-activation-curve></path>
+    <circle class="gk-activation-demo__point" data-activation-point r="6"></circle>
+  </svg>
+
+  <label for="gk-activation-x">入力 x：<strong data-activation-input>0.0</strong></label>
+  <input id="gk-activation-x" class="gk-activation-demo__slider" data-activation-x type="range" min="-6" max="6" step="0.1" value="0">
+
+  <p class="gk-activation-demo__readout">出力：<strong data-activation-output>0</strong><br><span data-activation-note>ReLU：負の入力は0、正の入力はそのまま。中間層で使われやすい。</span></p>
+  <p class="gk-learning-demo__hint">見るポイント：関数の「形」より、出力範囲と使う場所を結び付けます。</p>
+</div>
+
+<div class="gk-learning-demo" data-gk-softmax-demo>
+  <p class="gk-learning-demo__title">Softmaxは「複数のスコアをまとめて確率にする」</p>
+  <p class="gk-learning-demo__lead">3クラスのスコアを動かしても、変換後の確率の合計は1になります。</p>
+
+  <label>クラスAのスコア：<strong data-softmax-score-label>2.0</strong><input class="gk-activation-demo__slider" data-softmax-score type="range" min="-2" max="4" step="0.1" value="2"></label>
+  <label>クラスBのスコア：<strong data-softmax-score-label>1.0</strong><input class="gk-activation-demo__slider" data-softmax-score type="range" min="-2" max="4" step="0.1" value="1"></label>
+  <label>クラスCのスコア：<strong data-softmax-score-label>0.0</strong><input class="gk-activation-demo__slider" data-softmax-score type="range" min="-2" max="4" step="0.1" value="0"></label>
+
+  <div class="gk-activation-demo__softmax">
+    <div class="gk-activation-demo__bar-row"><span>A</span><div class="gk-activation-demo__bar-track"><div class="gk-activation-demo__bar" data-softmax-bar></div></div><strong data-softmax-prob></strong></div>
+    <div class="gk-activation-demo__bar-row"><span>B</span><div class="gk-activation-demo__bar-track"><div class="gk-activation-demo__bar" data-softmax-bar></div></div><strong data-softmax-prob></strong></div>
+    <div class="gk-activation-demo__bar-row"><span>C</span><div class="gk-activation-demo__bar-track"><div class="gk-activation-demo__bar" data-softmax-bar></div></div><strong data-softmax-prob></strong></div>
+  </div>
+
+  <p class="gk-activation-demo__readout">確率の合計 = <strong data-softmax-total>1.00</strong></p>
+  <p class="gk-learning-demo__hint">Softmaxは1個の値を変換する曲線としてではなく、複数クラスをまとめて見るのがポイントです。</p>
+</div>
+
+<script src="{{ '/assets/js/gk-visualizer.js' | relative_url }}" defer></script>
 
 ## 定義・仕組み
 
