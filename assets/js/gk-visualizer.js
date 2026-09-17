@@ -120,4 +120,46 @@ document.addEventListener("DOMContentLoaded", () => {
     sliders.forEach((slider) => slider.addEventListener("input", render));
     render();
   });
+
+  document.querySelectorAll("[data-gk-pooling-demo]").forEach((demo) => {
+    const buttons = Array.from(demo.querySelectorAll("[data-pooling-mode]"));
+    const outputs = Array.from(demo.querySelectorAll("[data-pooling-output]"));
+    const summary = demo.querySelector("[data-pooling-summary]");
+    const blocks = [
+      [1, 3, 5, 6],
+      [2, 4, 1, 2],
+      [0, 2, 4, 1],
+      [7, 3, 5, 8],
+    ];
+
+    function render(mode) {
+      const values = blocks.map((block) => {
+        if (mode === "average") {
+          return block.reduce((sum, value) => sum + value, 0) / block.length;
+        }
+        return Math.max(...block);
+      });
+
+      outputs.forEach((output, index) => {
+        const value = values[index];
+        output.textContent = Number.isInteger(value) ? String(value) : value.toFixed(2);
+      });
+
+      buttons.forEach((button) => {
+        button.setAttribute("aria-pressed", String(button.dataset.poolingMode === mode));
+      });
+
+      if (summary) {
+        summary.textContent = mode === "average"
+          ? "Average Pooling：各2×2領域の平均を1つの値にして、全体の傾向を残します。"
+          : "Max Pooling：各2×2領域の最大値だけを残し、強い特徴を拾います。";
+      }
+    }
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => render(button.dataset.poolingMode));
+    });
+
+    render("max");
+  });
 });
