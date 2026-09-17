@@ -1,0 +1,118 @@
+.fe-learning-demo {
+  border: 1px solid rgba(11, 111, 174, 0.28);
+  border-radius: 12px;
+  margin: 1.5rem 0;
+  padding: 1rem;
+}
+
+.fe-learning-demo__title {
+  font-weight: 700;
+  margin: 0 0 0.35rem;
+}
+
+.fe-learning-demo__lead {
+  margin: 0 0 1rem;
+}
+
+.fe-learning-demo__rates {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-bottom: 1rem;
+}
+
+.fe-learning-demo__rate {
+  border: 1px solid rgba(11, 111, 174, 0.2);
+  border-radius: 8px;
+  padding: 0.65rem 0.5rem;
+  text-align: center;
+}
+
+.fe-learning-demo__rate strong,
+.fe-learning-demo__result strong {
+  display: block;
+  font-size: 1.2rem;
+}
+
+.fe-learning-demo__controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.75rem 0 1rem;
+}
+
+.fe-learning-demo__button {
+  background: transparent;
+  border: 1px solid #0b6fae;
+  border-radius: 999px;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  padding: 0.5rem 0.85rem;
+}
+
+.fe-learning-demo__button:hover,
+.fe-learning-demo__button:focus-visible {
+  background: rgba(11, 111, 174, 0.1);
+}
+
+.fe-learning-demo__button[aria-pressed="true"] {
+  background: #0b6fae;
+  color: #fff;
+  font-weight: 700;
+}
+
+.fe-learning-demo__flow {
+  align-items: stretch;
+  display: grid;
+  gap: 0.45rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 1rem 0;
+}
+
+.fe-learning-demo__step {
+  border: 1px solid rgba(11, 111, 174, 0.24);
+  border-radius: 8px;
+  padding: 0.7rem 0.45rem;
+  text-align: center;
+}
+
+.fe-learning-demo__step.is-first {
+  background: rgba(11, 111, 174, 0.12);
+  border-color: #0b6fae;
+  font-weight: 700;
+}
+
+.fe-learning-demo__result {
+  background: rgba(11, 111, 174, 0.07);
+  border-radius: 10px;
+  margin-top: 1rem;
+  padding: 0.85rem 1rem;
+}
+
+.fe-learning-demo__breakdown {
+  margin: 0.75rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.fe-learning-demo__hint {
+  font-size: 0.92em;
+  margin: 0.8rem 0 0;
+  opacity: 0.82;
+}
+
+@media (max-width: 520px) {
+  .fe-learning-demo__rates,
+  .fe-learning-demo__flow {
+    grid-template-columns: 1fr;
+  }
+
+  .fe-learning-demo__controls {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .fe-learning-demo__button {
+    width: 100%;
+  }
+}
