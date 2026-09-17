@@ -8,7 +8,7 @@ fe_section: ストラテジ系
 fe_subsection: 経営戦略
 fe_order: 50
 date: 2026-07-05
-last_modified_at: 2026-09-01
+last_modified_at: 2026-09-18
 ---
 
 ## まず結論
@@ -151,6 +151,19 @@ Scorecard = 成績表・評価表
 
 公式の出題範囲やシラバスは、[IPA：基本情報技術者試験](https://www.ipa.go.jp/shiken/kubun/fe.html) から確認できます。バランススコアカードは、経営戦略や業績評価の考え方として出題されることがあります。
 
+
+### 一次情報
+
+BSCの原典・提唱者による説明を確認する資料として、次の情報が有効です。
+
+- [Harvard Business Review「The Balanced Scorecard—Measures That Drive Performance」](https://hbr.org/1992/01/the-balanced-scorecard-measures-that-drive-performance-2)
+- [Harvard Business School「Conceptual Foundations of the Balanced Scorecard」PDF](https://www.hbs.edu/ris/Publication%20Files/10-074_0bf3c151-f82b-4592-b885-cdde7f5d97a6.pdf)
+- [Harvard Business Review「Using the Balanced Scorecard as a Strategic Management System」](https://hbr.org/2007/07/using-the-balanced-scorecard-as-a-strategic-management-system)
+
+特にHarvard Business Schoolの資料では、**Financial / Customer / Internal Business Process / Learning and Growth** の4つの視点が明示されています。
+
+試験対策では文献名の暗記は不要ですが、BSCが「財務だけを見る手法」ではなく、**非財務の視点も含めて戦略を実行・管理するための枠組み**であることを理解しておくと、選択肢を切りやすくなります。
+
 ## 科目Aでどう出る？
 
 科目Aでは、バランススコアカードの4つの視点と、戦略目標・評価指標の組合せを選ぶ問題が出やすいです。
@@ -261,6 +274,29 @@ FE試験では、用語を暗記するだけでなく、**何を分類してい�
 顧客・価値提案・経営資源などから事業モデルを整理する
 → ビジネスモデルキャンバス
 ```
+
+
+### PPM・コアコンピタンス・セグメンテーションとの違い
+
+今回のような選択肢では、BSC以外の経営戦略用語との切り分けも重要です。
+
+| 用語 | 判断ポイント |
+|---|---|
+| バランススコアカード | 財務・顧客・内部ビジネスプロセス・学習と成長の4視点 |
+| コアコンピタンス | 他社がまねしにくい企業独自の強み |
+| セグメンテーション | 市場や顧客を属性などで分ける |
+| PPM | 市場成長率と相対的市場占有率で事業を分類する |
+
+特にBSCとPPMは、どちらも経営戦略で使うため混同しやすいですが、見るものが違います。
+
+```text
+戦略を4つの視点から目標・指標に落とす
+→ BSC
+
+事業や製品を市場成長率と市場占有率で見る
+→ PPM
+```
+
 
 ## まとめ（試験直前用）
 
