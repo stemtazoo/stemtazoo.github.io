@@ -13,6 +13,7 @@ Always check the related rule files as needed:
 - GK navigation and `prev` / `next`: `docs/agent/gk-navigation-rules.md`
 - GK index structure, classification, and public rendering: `docs/agent/gk-index-rules.md`
 - Instagram carousel creation: `docs/agent/gk-carousel-rules.md`
+- Interactive learning / visualizers: `docs/agent/interactive-learning-rules.md`
 
 ## Basic Stance
 
@@ -72,6 +73,8 @@ Before saving a GK article, check that:
 - the article has a clear role compared with similar GK pages;
 - `## G検定ひっかけポイント` helps readers eliminate wrong choices;
 - the article does not over-explain mathematics beyond what helps G検定 judgment;
+- interactive / visual learning value has been considered according to `docs/agent/interactive-learning-rules.md`;
+- if changing values, states, comparisons, or model roles would materially improve understanding, an interactive aid has been implemented or proposed;
 - the footer include is present when expected;
 - `last_modified_at` is present and updated for normal individual articles when the article is meaningfully edited;
 - front matter is valid YAML and metadata is not visible in the body.
