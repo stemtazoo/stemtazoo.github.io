@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: 基礎理論
 fe_order: 120
 date: 2026-08-05
-last_modified_at: 2026-08-29
+last_modified_at: 2026-09-17
 ---
 
 ## まず結論
@@ -63,6 +63,48 @@ A12 = A21
 ```
 
 そのため、行列は主対角線をはさんで左右対称になります。
+
+<link rel="stylesheet" href="{{ '/assets/css/fe-visualizer.css' | relative_url }}">
+
+<div class="fe-learning-demo" data-fe-adj-demo>
+  <p class="fe-learning-demo__title">触って確認：行列の0/1とグラフの辺を対応させる</p>
+  <p class="fe-learning-demo__lead">行列の0/1を押すと、対応する辺が右のグラフで消えたり現れたりします。</p>
+
+  <div class="fe-adj-demo__stage">
+    <div>
+      <table class="fe-adj-demo__matrix" aria-label="4頂点の隣接行列">
+        <tr><th></th><th>V1</th><th>V2</th><th>V3</th><th>V4</th></tr>
+        <tr><th>V1</th><td class="is-diagonal">0</td><td><button type="button" data-adj-edge="12">1</button></td><td><button type="button" data-adj-edge="13">1</button></td><td><button type="button" data-adj-edge="14">0</button></td></tr>
+        <tr><th>V2</th><td><button type="button" data-adj-edge="12">1</button></td><td class="is-diagonal">0</td><td><button type="button" data-adj-edge="23">0</button></td><td><button type="button" data-adj-edge="24">1</button></td></tr>
+        <tr><th>V3</th><td><button type="button" data-adj-edge="13">1</button></td><td><button type="button" data-adj-edge="23">0</button></td><td class="is-diagonal">0</td><td><button type="button" data-adj-edge="34">1</button></td></tr>
+        <tr><th>V4</th><td><button type="button" data-adj-edge="14">0</button></td><td><button type="button" data-adj-edge="24">1</button></td><td><button type="button" data-adj-edge="34">1</button></td><td class="is-diagonal">0</td></tr>
+      </table>
+    </div>
+
+    <div class="fe-adj-demo__graph" aria-label="隣接行列に対応する無向グラフ">
+      <svg viewBox="0 0 100 100" aria-hidden="true">
+        <line class="fe-adj-demo__edge" data-graph-edge="12" x1="18" y1="20" x2="82" y2="20"></line>
+        <line class="fe-adj-demo__edge" data-graph-edge="13" x1="18" y1="20" x2="18" y2="80"></line>
+        <line class="fe-adj-demo__edge is-off" data-graph-edge="14" x1="18" y1="20" x2="82" y2="80"></line>
+        <line class="fe-adj-demo__edge is-off" data-graph-edge="23" x1="82" y1="20" x2="18" y2="80"></line>
+        <line class="fe-adj-demo__edge" data-graph-edge="24" x1="82" y1="20" x2="82" y2="80"></line>
+        <line class="fe-adj-demo__edge" data-graph-edge="34" x1="18" y1="80" x2="82" y2="80"></line>
+      </svg>
+      <span class="fe-adj-demo__node n1">V1</span>
+      <span class="fe-adj-demo__node n2">V2</span>
+      <span class="fe-adj-demo__node n3">V3</span>
+      <span class="fe-adj-demo__node n4">V4</span>
+    </div>
+  </div>
+
+  <p class="fe-adj-demo__status" data-adj-status><strong>現在の辺：</strong> V1―V2、V1―V3、V2―V4、V3―V4</p>
+  <div class="fe-learning-demo__controls">
+    <button type="button" class="fe-learning-demo__button" data-adj-reset>最初の状態に戻す</button>
+  </div>
+  <p class="fe-learning-demo__hint">見るポイント：無向グラフではA12とA21が同時に変わります。1本の辺を行列では対称な2か所で表します。</p>
+</div>
+
+<script src="{{ '/assets/js/fe-visualizer.js' | relative_url }}" defer></script>
 
 ## 定義・仕組み
 
