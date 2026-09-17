@@ -11,6 +11,7 @@ Always check the related rule files as needed:
 - Front matter: `docs/agent/ds-frontmatter-rules.md`
 - Tags: `docs/agent/ds-tag-rules.md`
 - DS navigation and `prev` / `next`: `docs/agent/ds-navigation-rules.md`
+- Interactive learning / visualizers: `docs/agent/interactive-learning-rules.md`
 
 ## Basic Stance
 
@@ -78,5 +79,7 @@ Before saving a DS article, check that:
 - practical examples are accurate and beginner-friendly;
 - `## よくある誤解・混同` helps readers avoid exam and practical mistakes;
 - `## 対応スキル項目（...）` is present when useful and consistent with nearby pages;
+- interactive / visual learning value has been considered according to `docs/agent/interactive-learning-rules.md`;
+- if changing values, states, scenarios, or interpretation conditions would materially improve understanding, an interactive aid has been implemented or proposed;
 - `last_modified_at` is present and updated for normal individual articles when the article is meaningfully edited;
 - front matter is valid YAML and metadata is not visible in the body.
