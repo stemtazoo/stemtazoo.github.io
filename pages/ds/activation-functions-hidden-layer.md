@@ -9,7 +9,7 @@ ds_area: datascience
 ds_section: modeling
 prev: /ds/zero-trust/
 next: /ds/anchoring-effect/
-last_modified_at: 2026-07-01
+last_modified_at: 2026-09-17
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -42,6 +42,32 @@ DS検定では「どの関数が中間層向きか」を判断させる問題が
 
 だからこそ、中間層には  
 **曲がった関数（非線形関数）**が必要になります。
+
+<link rel="stylesheet" href="{{ '/assets/css/ds-visualizer.css' | relative_url }}">
+
+<div class="ds-learning-demo" data-ds-layer-demo>
+  <p class="ds-learning-demo__title">触って確認：問題の種類で出力層を切り替える</p>
+  <p class="ds-learning-demo__lead">中間層と出力層では、活性化関数の役割が違います。</p>
+
+  <div class="ds-learning-demo__controls" aria-label="問題の種類を選択">
+    <button type="button" class="ds-learning-demo__button" data-task="binary" aria-pressed="true">二値分類</button>
+    <button type="button" class="ds-learning-demo__button" data-task="multiclass" aria-pressed="false">多クラス分類</button>
+    <button type="button" class="ds-learning-demo__button" data-task="regression" aria-pressed="false">回帰</button>
+  </div>
+
+  <div class="ds-layer-demo__flow">
+    <div class="ds-layer-demo__box"><strong>入力層</strong><span class="ds-layer-demo__role">データを受け取る</span></div>
+    <div class="ds-layer-demo__arrow" aria-hidden="true">→</div>
+    <div class="ds-layer-demo__box is-focus"><strong>中間層</strong><span class="ds-layer-demo__role">代表：<b data-hidden-activation>ReLU</b></span></div>
+    <div class="ds-layer-demo__arrow" aria-hidden="true">→</div>
+    <div class="ds-layer-demo__box is-focus"><strong>出力層</strong><span class="ds-layer-demo__role">代表：<b data-output-activation>Sigmoid</b></span></div>
+  </div>
+
+  <p class="ds-layer-demo__result" data-layer-result>二値分類：中間層で特徴を非線形に変換し、出力層では0〜1に収めるSigmoidを使う組合せが代表的です。</p>
+  <p class="ds-learning-demo__hint">判断のコツ：「中間層か出力層か」→「分類か回帰か」の順で考えます。</p>
+</div>
+
+<script src="{{ '/assets/js/ds-visualizer.js' | relative_url }}" defer></script>
 
 
 ## 定義・仕組み
