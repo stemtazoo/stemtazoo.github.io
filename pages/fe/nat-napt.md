@@ -3,12 +3,14 @@ layout: page
 title: NAPTとは？NATとの違いとIPマスカレードの仕組み【基本情報技術者試験】
 description: NAPTを、複数の端末が一つのグローバルIPアドレスを共有する仕組みとして整理します。NATとの違い、ポート番号の役割、IPマスカレードとの関係に加え、DHCP・DNS・RADIUS・PPPoE・パケットフィルタリングとの切り分けを科目A向けに解説します。
 permalink: /fe/nat-napt/
+redirect_from:
+  - /fe/napt/
 tags: [fe, fe-technology, network]
 fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 60
 date: 2026-08-05
-last_modified_at: 2026-08-05
+last_modified_at: 2026-09-18
 ---
 
 ## まず結論
