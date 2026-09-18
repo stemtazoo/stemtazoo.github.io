@@ -65,15 +65,18 @@ C：3秒
   <p class="fe-learning-demo__lead">「次の判断」を押すと、その時点で待っているジョブを比較し、処理順が時間軸に追加されます。</p>
 
   <div class="fe-sjf-demo__table">
-
-| ジョブ | 到着 | 処理時間 |
-|---|---:|---:|
-| A | 0 | 2 |
-| B | 1 | 4 |
-| C | 2 | 3 |
-| D | 3 | 2 |
-| E | 4 | 1 |
-
+    <table>
+      <thead>
+        <tr><th>ジョブ</th><th>到着</th><th>処理時間</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>A</td><td>0</td><td>2</td></tr>
+        <tr><td>B</td><td>1</td><td>4</td></tr>
+        <tr><td>C</td><td>2</td><td>3</td></tr>
+        <tr><td>D</td><td>3</td><td>2</td></tr>
+        <tr><td>E</td><td>4</td><td>1</td></tr>
+      </tbody>
+    </table>
   </div>
 
   <div class="fe-sjf-demo__scroll" aria-label="処理時間順方式の時間軸">
