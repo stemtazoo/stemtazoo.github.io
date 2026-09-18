@@ -271,3 +271,98 @@
     padding: 0.55rem 0.1rem;
   }
 }
+
+
+/* FE: shortest-job-first / turnaround timeline */
+.fe-sjf-demo__table {
+  margin: 1rem 0;
+}
+
+.fe-sjf-demo__scroll {
+  overflow-x: auto;
+  padding-bottom: 0.35rem;
+}
+
+.fe-sjf-demo__timeline {
+  min-width: 420px;
+}
+
+.fe-sjf-demo__axis {
+  display: flex;
+  font-size: 0.78rem;
+  justify-content: space-between;
+  margin-bottom: 0.35rem;
+  padding: 0 0.15rem;
+}
+
+.fe-sjf-demo__track {
+  display: grid;
+  gap: 2px;
+  grid-template-columns: repeat(12, minmax(28px, 1fr));
+}
+
+.fe-sjf-demo__segment {
+  align-items: center;
+  background: rgba(11, 111, 174, 0.12);
+  border: 1px solid rgba(11, 111, 174, 0.35);
+  border-radius: 6px;
+  display: flex;
+  font-weight: 700;
+  justify-content: center;
+  min-height: 3rem;
+  transition: opacity 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.fe-sjf-demo__segment.job-a { grid-column: 1 / span 2; }
+.fe-sjf-demo__segment.job-c { grid-column: 3 / span 3; }
+.fe-sjf-demo__segment.job-e { grid-column: 6 / span 1; }
+.fe-sjf-demo__segment.job-d { grid-column: 7 / span 2; }
+.fe-sjf-demo__segment.job-b { grid-column: 9 / span 4; }
+
+.fe-sjf-demo.is-js .fe-sjf-demo__segment.is-future {
+  background: rgba(150, 160, 170, 0.08);
+  border-color: rgba(120, 130, 140, 0.18);
+  color: transparent;
+}
+
+.fe-sjf-demo__segment.is-current {
+  background: rgba(11, 111, 174, 0.22);
+  border-color: #0b6fae;
+  outline: 2px solid rgba(11, 111, 174, 0.18);
+  outline-offset: 2px;
+}
+
+.fe-sjf-demo__status,
+.fe-sjf-demo__decision,
+.fe-sjf-demo__completion {
+  border-radius: 8px;
+  margin: 0.65rem 0;
+  padding: 0.7rem 0.85rem;
+}
+
+.fe-sjf-demo__status {
+  background: rgba(11, 111, 174, 0.07);
+}
+
+.fe-sjf-demo__decision {
+  border: 1px solid rgba(11, 111, 174, 0.2);
+}
+
+.fe-sjf-demo__completion {
+  background: rgba(11, 111, 174, 0.04);
+  font-size: 0.92rem;
+}
+
+@media (max-width: 520px) {
+  .fe-sjf-demo__timeline {
+    min-width: 380px;
+  }
+
+  .fe-sjf-demo__track {
+    grid-template-columns: repeat(12, minmax(24px, 1fr));
+  }
+
+  .fe-sjf-demo__segment {
+    min-height: 2.7rem;
+  }
+}
