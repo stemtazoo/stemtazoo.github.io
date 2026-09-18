@@ -3,12 +3,12 @@ layout: page
 title: ターンアラウンドタイムとは？到着時刻・待ち時間・処理時間の計算方法【基本情報技術者試験】
 description: ターンアラウンドタイムを、ジョブの到着から完了までに要する時間として整理します。到着時刻・開始時刻・完了時刻・待ち時間・処理時間の関係と、到着順実行の計算手順を科目A向けに解説します。
 permalink: /fe/turnaround-time/
-tags: [fe, fe-technology, computer-system]
+tags: [fe, fe-technology, computer-system, scheduling]
 fe_section: テクノロジ系
 fe_subsection: コンピュータシステム
 fe_order: 70
 date: 2026-08-05
-last_modified_at: 2026-08-05
+last_modified_at: 2026-09-18
 ---
 
 ## まず結論
@@ -230,7 +230,7 @@ A → B → C
 例えば、次のような方式があります。
 
 - 到着順
-- 処理時間の短い順
+- [処理時間の短い順（処理時間順方式）](/fe/shortest-job-first-scheduling/)
 - 優先度順
 - ラウンドロビン
 
