@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 52
 date: 2026-07-11
-last_modified_at: 2026-07-25
+last_modified_at: 2026-09-18
 ---
 
 ## まず結論
@@ -198,7 +198,7 @@ NATは、すでにあるIPアドレスを、別のIPアドレスへ変換する�
 
 - [DNSとは？ドメイン名とIPアドレスを対応付ける名前解決の仕組み](/fe/dns/)
 - [DHCPとは？IPアドレスを自動で割り当てる仕組み](/fe/dhcp/)
-- [NAPTとは？IPアドレスとポート番号を変換する仕組み](/fe/napt/)
+- [NAPTとは？NATとの違いとIPマスカレードの仕組み](/fe/nat-napt/)
 - [RPCとは？離れたプログラムを呼び出す仕組み](/fe/rpc/)
 
 {% include fe_article_footer.html %}
