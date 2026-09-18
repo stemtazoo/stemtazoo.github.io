@@ -8,12 +8,16 @@ fe_section: マネジメント系
 fe_subsection: プロジェクトマネジメント
 fe_order: 20
 date: 2026-07-10
-last_modified_at: 2026-08-20
+last_modified_at: 2026-09-18
 ---
 
 ## まず結論
 
-EVMとは、**プロジェクトの作業を金額の価値に置き換えて、進捗とコストを定量的に管理する手法**です。
+EVMとは、**プロジェクトで完了した作業を価値として捉え、計画・実績・コストを比較して、進捗とコストを定量的に管理する手法**です。
+
+PMIでは、EVMをプロジェクトのパフォーマンスを客観的に測定するための標準として体系化しています。また、米国エネルギー省（DOE）でも、作業スコープの実績と、それに対応するコスト・スケジュールを承認済みのベースラインと比較する管理手法としてEVMを扱っています。
+
+FEでは、この考え方を **「スケジュールとコストを一緒に管理する」** と押さえると十分です。
 
 基本情報技術者試験では、まず次の対応を押さえると選択肢を切りやすくなります。
 
@@ -34,6 +38,8 @@ EVMが管理する中心対象
 ## 直感的な説明
 
 EVMでは、次の3つを比べます。
+
+この3つを同じ金額ベースの指標で比較することで、**予定どおり進んでいるか**と**費用を使い過ぎていないか**を同時に確認できます。
 
 ```text
 PV：計画ではどこまで進む予定だったか
@@ -253,5 +259,11 @@ EVMでは、PV・EV・ACを比較して、**スケジュールとコスト**を�
 - SPI、CPIは1未満なら効率が悪い
 - 差異は0、効率指数は1を基準に判断する
 - 品質・リスクはEVMの直接の管理対象ではない
+
+## 参考資料
+
+- [PMI：The Standard for Earned Value Management](https://www.pmi.org/standards/earned-value-management)
+- [U.S. Department of Energy：Earned Value Management](https://www.energy.gov/projectmanagement/earned-value-management)
+- [IPA：プロジェクトマネージャ試験](https://www.ipa.go.jp/shiken/kubun/pm.html)
 
 {% include fe_article_footer.html %}
