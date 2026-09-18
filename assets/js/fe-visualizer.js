@@ -185,4 +185,98 @@ document.addEventListener("DOMContentLoaded", () => {
 
     render();
   });
+
+  document.querySelectorAll("[data-fe-sjf-demo]").forEach((demo) => {
+    const segments = Array.from(demo.querySelectorAll("[data-sjf-segment]"));
+    const nextButton = demo.querySelector("[data-sjf-next]");
+    const resetButton = demo.querySelector("[data-sjf-reset]");
+    const status = demo.querySelector("[data-sjf-status]");
+    const decision = demo.querySelector("[data-sjf-decision]");
+    const completion = demo.querySelector("[data-sjf-completion]");
+
+    const steps = [
+      {
+        time: 0,
+        job: "A",
+        text: "時刻0：到着済みはAだけなので、Aを実行します。",
+        decision: "候補：A(2秒) → Aを選択",
+        completion: "A：0〜2秒"
+      },
+      {
+        time: 2,
+        job: "C",
+        text: "時刻2：Aが完了。待っているB(4秒)とC(3秒)を比べ、短いCを選びます。",
+        decision: "候補：B(4秒)、C(3秒) → Cを選択",
+        completion: "A：0〜2秒 / C：2〜5秒"
+      },
+      {
+        time: 5,
+        job: "E",
+        text: "時刻5：Cが完了。B(4秒)、D(2秒)、E(1秒)の中で最短のEを選びます。",
+        decision: "候補：B(4秒)、D(2秒)、E(1秒) → Eを選択",
+        completion: "A：0〜2秒 / C：2〜5秒 / E：5〜6秒"
+      },
+      {
+        time: 6,
+        job: "D",
+        text: "時刻6：Eが完了。B(4秒)とD(2秒)を比べ、Dを選びます。",
+        decision: "候補：B(4秒)、D(2秒) → Dを選択",
+        completion: "A：0〜2秒 / C：2〜5秒 / E：5〜6秒 / D：6〜8秒"
+      },
+      {
+        time: 8,
+        job: "B",
+        text: "時刻8：残っているのはBだけなので、Bを実行します。",
+        decision: "候補：B(4秒) → Bを選択",
+        completion: "A：0〜2秒 / C：2〜5秒 / E：5〜6秒 / D：6〜8秒 / B：8〜12秒"
+      },
+      {
+        time: 12,
+        job: "完了",
+        text: "時刻12：すべてのジョブが完了しました。処理順は A → C → E → D → B です。",
+        decision: "すべて完了",
+        completion: "処理順：A → C → E → D → B"
+      }
+    ];
+
+    let currentStep = 0;
+
+    function render() {
+      demo.classList.add("is-js");
+
+      segments.forEach((segment, index) => {
+        const visibleCount = Math.min(currentStep + 1, steps.length - 1);
+        segment.classList.toggle("is-future", index >= visibleCount);
+        segment.classList.toggle("is-current", index === currentStep && currentStep < steps.length - 1);
+      });
+
+      const step = steps[currentStep];
+      if (status) status.textContent = step.text;
+      if (decision) decision.textContent = step.decision;
+      if (completion) completion.textContent = step.completion;
+
+      if (nextButton) {
+        nextButton.disabled = currentStep >= steps.length - 1;
+        nextButton.textContent = currentStep >= steps.length - 1 ? "完了" : "次の判断";
+      }
+    }
+
+    if (nextButton) {
+      nextButton.addEventListener("click", () => {
+        if (currentStep < steps.length - 1) {
+          currentStep += 1;
+          render();
+        }
+      });
+    }
+
+    if (resetButton) {
+      resetButton.addEventListener("click", () => {
+        currentStep = 0;
+        render();
+      });
+    }
+
+    render();
+  });
 });
