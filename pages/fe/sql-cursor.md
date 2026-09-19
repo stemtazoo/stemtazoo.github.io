@@ -6,7 +6,7 @@ permalink: /fe/sql-cursor/
 tags: [fe, fe-technology, database, sql]
 fe_section: テクノロジ系
 fe_subsection: データベース
-last_modified_at: 2026-07-28
+last_modified_at: 2026-09-19
 ---
 
 ## まず結論
@@ -170,6 +170,22 @@ CLOSE employee_cursor;
 → FETCH
 ```
 
+### CURSORとFETCHの違いを最優先で切る
+
+今回のような問題では、`CURSOR` と `FETCH` を混同しないことが最重要です。
+
+```text
+CURSOR
+→ 複数行の検索結果を順番に扱う「仕組み」
+
+FETCH
+→ カーソルから1行を取り出す「操作」
+```
+
+問題文が「導出表を1行ずつ親プログラムへ引き渡す**操作・仕組み全体**」を聞いているなら、`CURSOR` を選びます。
+
+一方、「カーソルから次の1行を取得する命令」を聞かれたら、`FETCH` です。
+
 ### 問題文の目印
 
 次の表現があれば、カーソルを疑います。
@@ -290,6 +306,25 @@ DBMSによっては検索結果の重複排除に似た表現が使われる場�
 SQLで一括処理できるなら、カーソルを使わずにまとめて処理した方が効率的なことがあります。
 
 カーソルは、1行ずつ個別に処理する必要がある場合に使います。
+
+## 一次情報
+
+IBM Db2の公式ドキュメントでは、埋込みSQLで複数行を取得する場合にカーソルを使用し、結果表から各行を順番に取得すると説明されています。また、1行ずつ取得する操作には `FETCH` を使います。
+
+Oracleの公式ドキュメントでも、埋込みSQLのカーソル制御として `DECLARE`、`OPEN`、`FETCH`、`CLOSE` が示されています。
+
+- [IBM Db2：Selecting multiple rows using a cursor in embedded SQL applications](https://public.dhe.ibm.com/ps/products/db2/info/vr121/pdf/en_US/db2_dev_embed_SQL_121.pdf)
+- [Oracle Database：Embedded SQL](https://docs.oracle.com/en/database/oracle/oracle-database/26/lnpcc/embedded-SQL.html)
+
+この2つの一次情報からも、試験では次のように整理できます。
+
+```text
+複数行の結果を順番に扱う
+→ CURSOR
+
+その中から1行を取得する
+→ FETCH
+```
 
 ## まとめ（試験直前用）
 
