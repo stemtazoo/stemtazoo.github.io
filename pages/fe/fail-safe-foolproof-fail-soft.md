@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: システム構成要素
 fe_order: 100
 date: 2026-07-31
-last_modified_at: 2026-08-29
+last_modified_at: 2026-09-19
 ---
 
 ## まず結論
@@ -64,6 +64,11 @@ last_modified_at: 2026-08-29
 
 フェールセーフは、故障や異常が起きたときに、危険な状態にならないよう**安全側へ移行する設計**です。
 
+厚生労働省の「職場のあんぜんサイト」では、故障が起きても労働災害につながらないよう、安全側の状態になるようにする考え方としてフェールセーフを説明しています。
+
+- [厚生労働省：フェールセーフ](https://anzeninfo.mhlw.go.jp/yougo/yougo38_1.html)
+- [厚生労働省：工作機械等の制御機構のフェールセーフ化に関するガイドライン](https://www.mhlw.go.jp/web/t_doc?dataId=00tb2092&dataType=1&pageNo=1)
+
 安全側は、装置によって異なります。
 
 | 対象 | 安全側の例 |
@@ -74,6 +79,11 @@ last_modified_at: 2026-08-29
 | 燃料供給装置 | 燃料供給を止める |
 
 ポイントは、故障を直すことではなく、**故障時の被害を最小限にすること**です。
+
+ソフトウェアでのフェールセーフの考え方は、IPAのセキュア・プログラミング講座でも確認できます。
+
+- [IPA：セキュア・プログラミング講座 C/C++言語編 第6章 フェイルセーフ](https://www.ipa.go.jp/archive/security/vuln/programming/cc/chapter6/index.html)
+- [NITE：フェイル・セーフとは](https://www.nite.go.jp/jiko/chuikanki/mailmagazin/2005fy/psm_vol17_0224.html)
 
 ### フールプルーフ
 
@@ -86,6 +96,10 @@ last_modified_at: 2026-08-29
 ↓
 正しい操作を促す
 ```
+
+厚生労働省の「職場のあんぜんサイト」でも、人のうっかり、思い違い、判断ミスなどがあっても事故につながりにくくする考え方としてフールプルーフを説明しています。
+
+- [厚生労働省：フールプルーフ](https://anzeninfo.mhlw.go.jp/yougo/yougo39_1.html)
 
 例としては、次のようなものがあります。
 
