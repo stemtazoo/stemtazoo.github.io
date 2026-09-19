@@ -28,6 +28,17 @@ When making changes, use this order of priority:
 8. Preserve or improve reader usefulness and original value.
 9. Keep navigation clear across themes and category pages.
 
+## Current Official Source Rule
+
+For laws, regulations, standards, public guidelines, official criteria, and similar normative sources:
+
+- Treat the latest official version currently published by the responsible authority as the default source of truth.
+- Do not rewrite an article to match an obsolete version only because an older past exam question used it.
+- When an old exam question depends on an older version, explain the historical version only when needed to understand that question, and clearly distinguish it from the current rule.
+- Prefer primary official sources from the responsible public body or standards organization.
+- When updating an article, check whether a newer official version has superseded the version already cited.
+- Explain past questions from the current rule whenever possible, and call out material differences only when they affect answer-choice judgment.
+
 ## Sitewide Editorial Governance
 
 This site should be managed as a coherent study site, not just as a set of independent Markdown articles.
