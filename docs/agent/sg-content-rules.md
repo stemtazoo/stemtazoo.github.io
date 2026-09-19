@@ -90,6 +90,30 @@ Example:
 ```
 
 
+### Latest Official Version Policy
+
+For laws, regulations, standards, public guidelines, security criteria, and other official normative documents used in SG articles:
+
+- Use the **latest official version currently published by the responsible authority** as the default basis for the article.
+- Do not rewrite the main explanation to match an obsolete version only because an older past question used that version.
+- If a past question relies on an older rule, explain the historical wording only when it is necessary to understand why that question was answered that way.
+- Clearly separate historical notes from the current rule, for example with wording such as `当時の基準では〜`.
+- Before adding or refreshing an official link, check whether the cited document has been revised, replaced, renamed, archived, or superseded.
+- Prefer the current primary source from the responsible authority over archived summaries or secondary explanations.
+- Explain old questions from the current framework whenever possible. Mention old/new differences only when they affect SG answer-choice judgment.
+- If the current official rule has changed materially, update the article body and judgment criteria first, then retain a concise historical note only if it helps past-question interpretation.
+
+Preferred handling:
+
+```text
+Past question: old guideline / old law
+        ↓
+Article body: latest official version
+        ↓
+Only when necessary:
+"この過去問は当時の旧版を前提としている"
+```
+
 ## SG Markdown Rendering Rules
 
 When creating or editing SG articles under `pages/sg`, always ensure that Markdown renders correctly on GitHub Pages.
