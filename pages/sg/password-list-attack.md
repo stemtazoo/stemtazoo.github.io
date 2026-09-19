@@ -6,7 +6,7 @@ permalink: /sg/password-list-attack/
 tags: [sg, unauthorized_access, threat_vulnerability, access_control, sg-security-measures]
 prev: /sg/outsourcing-contract-difference/
 next: /sg/phishing/
-last_modified_at: 2026-05-20
+last_modified_at: 2026-09-19
 ---
 
 ## まず結論
@@ -49,6 +49,12 @@ last_modified_at: 2026-05-20
 - 正しい組み合わせなので成功率が高い
 
 👉 推測ではなく「再利用」がポイント
+
+IPAも、**複数サービスで同じパスワードを使い回すと、一つのサービスから認証情報が漏えいした際に、他サービスへの不正ログインにつながるおそれがある**と注意喚起しています。
+
+- [IPA：不正ログイン被害の原因となるパスワードの使い回しはNG](https://www.ipa.go.jp/security/anshin/attention/2016/mgdayori20160803.html)
+- [IPA：不正ログイン対策特集ページ](https://www.ipa.go.jp/security/anshin/measures/account_security.html)
+- [IPA：「情報セキュリティ10大脅威 2026」解説書［組織編］](https://www.ipa.go.jp/security/10threats/omgdg50000008fi8-att/kaisetsu_2026_soshiki.pdf)
 
 ---
 
