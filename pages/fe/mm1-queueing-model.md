@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: システムの評価指標
 fe_order: 95
 date: 2026-08-02
-last_modified_at: 2026-08-02
+last_modified_at: 2026-09-19
 ---
 
 ## まず結論
@@ -356,6 +356,207 @@ W = 1 ÷ (μ - λ)
 ```text
 Wq = λ ÷ {μ(μ - λ)}
 ```
+
+回線利用率を \(\rho\)、平均伝送時間を \(T\) とすると、同じ関係を次の形でも表せます。
+
+\[
+W_q = T \times \frac{\rho}{1-\rho}
+\]
+
+この式を見ると、回線利用率が高くなるほど待ち時間が急に増えることが分かります。
+
+### 「待ち時間が伝送時間を超える境目」を求める
+
+平均回線待ち時間が平均伝送時間より長くなる条件を考えます。
+
+\[
+T \times \frac{\rho}{1-\rho} > T
+\]
+
+\(T\) は正の値なので、両辺を \(T\) で割ると、
+
+\[
+\frac{\rho}{1-\rho} > 1
+\]
+
+です。
+
+したがって、
+
+\[
+\rho > 1-\rho
+\]
+
+\[
+2\rho > 1
+\]
+
+\[
+\rho > 0.5
+\]
+
+となります。
+
+つまり、
+
+```text
+回線利用率 0.5
+→ 待ち時間 = 伝送時間
+
+回線利用率 0.5未満
+→ 待ち時間 < 伝送時間
+
+回線利用率 0.5超
+→ 待ち時間 > 伝送時間
+```
+
+試験では、**「0.5が境目」**と分かれば、選択肢を素早く切れます。
+
+### 動かして確認してみる
+
+回線利用率をスライダで変えて、平均伝送時間と平均回線待ち時間の大きさを比べてみましょう。
+
+ここでは比較しやすいように、**平均伝送時間を1**として固定しています。棒の長さは実際の値に比例し、0〜10の同じ尺度で表示しています。
+
+<div class="mm1-visualizer" aria-label="M/M/1待ち時間の可視化">
+  <div class="mm1-control">
+    <label for="mm1-rho"><strong>回線利用率 ρ：</strong><span id="mm1-rho-value">0.50</span></label>
+    <input id="mm1-rho" type="range" min="0.05" max="0.90" step="0.01" value="0.50" aria-label="回線利用率">
+    <div class="mm1-scale-labels"><span>0.05</span><span>0.50</span><span>0.90</span></div>
+  </div>
+
+  <div class="mm1-row">
+    <div class="mm1-label">平均伝送時間 T</div>
+    <div class="mm1-track"><div id="mm1-bar-t" class="mm1-bar"></div></div>
+    <div id="mm1-val-t" class="mm1-value">1.00</div>
+  </div>
+
+  <div class="mm1-row">
+    <div class="mm1-label">平均待ち時間 Wq</div>
+    <div class="mm1-track"><div id="mm1-bar-wq" class="mm1-bar"></div></div>
+    <div id="mm1-val-wq" class="mm1-value">1.00</div>
+  </div>
+
+  <div class="mm1-row">
+    <div class="mm1-label">合計時間 W</div>
+    <div class="mm1-track"><div id="mm1-bar-w" class="mm1-bar"></div></div>
+    <div id="mm1-val-w" class="mm1-value">2.00</div>
+  </div>
+
+  <p id="mm1-message" class="mm1-message">ρ = 0.50では、平均待ち時間と平均伝送時間が同じです。</p>
+</div>
+
+<style>
+.mm1-visualizer {
+  border: 1px solid rgba(127, 127, 127, 0.35);
+  border-radius: 10px;
+  padding: 16px;
+  margin: 18px 0;
+}
+.mm1-control {
+  margin-bottom: 18px;
+}
+#mm1-rho {
+  width: 100%;
+  margin: 10px 0 4px;
+}
+.mm1-scale-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85em;
+  opacity: 0.75;
+}
+.mm1-row {
+  display: grid;
+  grid-template-columns: 150px minmax(120px, 1fr) 56px;
+  gap: 10px;
+  align-items: center;
+  margin: 12px 0;
+}
+.mm1-label {
+  font-size: 0.95em;
+}
+.mm1-track {
+  height: 22px;
+  background: rgba(127, 127, 127, 0.18);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.mm1-bar {
+  height: 100%;
+  width: 0;
+  background: currentColor;
+  opacity: 0.72;
+  border-radius: 999px;
+  transition: width 0.15s ease;
+}
+.mm1-value {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.mm1-message {
+  margin: 16px 0 0;
+  font-weight: 600;
+}
+@media (max-width: 600px) {
+  .mm1-row {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+  .mm1-value {
+    text-align: left;
+  }
+}
+</style>
+
+<script>
+(function () {
+  const slider = document.getElementById("mm1-rho");
+  if (!slider) return;
+
+  const rhoValue = document.getElementById("mm1-rho-value");
+  const valT = document.getElementById("mm1-val-t");
+  const valWq = document.getElementById("mm1-val-wq");
+  const valW = document.getElementById("mm1-val-w");
+  const barT = document.getElementById("mm1-bar-t");
+  const barWq = document.getElementById("mm1-bar-wq");
+  const barW = document.getElementById("mm1-bar-w");
+  const message = document.getElementById("mm1-message");
+
+  const scaleMax = 10;
+
+  function barWidth(value) {
+    return Math.min(value / scaleMax * 100, 100) + "%";
+  }
+
+  function update() {
+    const rho = Number(slider.value);
+    const T = 1;
+    const Wq = T * rho / (1 - rho);
+    const W = T + Wq;
+
+    rhoValue.textContent = rho.toFixed(2);
+    valT.textContent = T.toFixed(2);
+    valWq.textContent = Wq.toFixed(2);
+    valW.textContent = W.toFixed(2);
+
+    barT.style.width = barWidth(T);
+    barWq.style.width = barWidth(Wq);
+    barW.style.width = barWidth(W);
+
+    if (Math.abs(rho - 0.5) < 0.005) {
+      message.textContent = "ρ = 0.50では、平均待ち時間と平均伝送時間が同じです。";
+    } else if (rho > 0.5) {
+      message.textContent = "ρ > 0.50なので、平均待ち時間の方が長くなります。";
+    } else {
+      message.textContent = "ρ < 0.50なので、平均待ち時間の方が短いです。";
+    }
+  }
+
+  slider.addEventListener("input", update);
+  update();
+})();
+</script>
 
 ### 平均系内要求数
 
