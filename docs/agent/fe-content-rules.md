@@ -164,6 +164,29 @@ For algorithm and data-structure articles:
 - Mention `データ構造` when relevant.
 - Keep the official-link paragraph short.
 
+### Latest Official Version Policy
+
+For laws, regulations, standards, public guidelines, audit criteria, and other official normative documents used in FE articles:
+
+- Use the **latest official version currently published by the responsible authority** as the default basis for the article.
+- Do not align the main article body to an obsolete version solely because a past exam question was written under that version.
+- If a past question explicitly depends on an older version, keep the article current and add a short historical note only when the difference is necessary to understand the question.
+- Clearly distinguish phrases such as `当時の基準では〜` from the current rule so readers do not mistake an old requirement for the present one.
+- Before adding or refreshing an official reference, check whether a newer edition, revision, replacement page, or successor document exists.
+- Prefer explaining why the old past question can still be solved under the current framework. Mention version differences only when they materially change the answer or the exam judgment criterion.
+- When a newer official version changes terminology, scope, procedure, or obligations, update the article body first; do not preserve outdated wording merely to mirror old answer choices.
+
+Preferred handling:
+
+```text
+Past question: old standard / old law
+        ↓
+Article body: latest official version
+        ↓
+Only if needed:
+"この過去問は当時の旧版を前提としている"
+```
+
 ## FE Index Listing
 
 The FE index page `/fe/` uses `fe_section`, `fe_subsection`, and `fe_order` to list pages.
