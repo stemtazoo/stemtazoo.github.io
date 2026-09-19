@@ -6,7 +6,7 @@ permalink: /sg/multi-factor-authentication/
 prev: /sg/password-hash-authentication/
 next: /sg/mfa-vs-step-auth/
 tags: [sg, sg-security-measures, crypto_auth, access_control]
-last_modified_at: 2026-07-27
+last_modified_at: 2026-09-19
 ---
 
 ## まず結論
@@ -77,6 +77,12 @@ last_modified_at: 2026-07-27
 
 👉 SG試験では  
 「これは多要素認証か？」と問われます。
+
+IPAも、不正ログイン対策としてMFAの利用を推奨しており、**ID・パスワードが不正利用されても、それだけではログインできない**点を利点として説明しています。
+
+- [IPA：不正ログイン対策特集ページ](https://www.ipa.go.jp/security/anshin/measures/account_security.html)
+- [IPA：インターネットサービスへの不正ログインによる被害が増加中](https://www.ipa.go.jp/security/anshin/attention/2025/mgdayori20250828.html)
+- [IPA：「情報セキュリティ10大脅威 2026」解説書［組織編］](https://www.ipa.go.jp/security/10threats/omgdg50000008fi8-att/kaisetsu_2026_soshiki.pdf)
 
 ---
 
