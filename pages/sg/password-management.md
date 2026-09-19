@@ -6,7 +6,7 @@ permalink: /sg/password-management/
 prev: /sg/authentication-methods/
 next: /sg/password-hash-authentication/
 tags: [sg, sg-security-measures, access_control, it_security_operations]
-last_modified_at: 2026-07-27
+last_modified_at: 2026-09-19
 ---
 
 ## まず結論
@@ -37,10 +37,18 @@ last_modified_at: 2026-07-27
 ---
 
 ### ■ 主な管理項目
-- パスワードの長さ・複雑さ
-- 有効期限（定期変更）
+- 推測されにくく十分な長さのパスワード
 - 使い回しの禁止
+- 漏えい・侵害が疑われる場合の変更
 - 入力回数制限（ロックアウト）
+- 多要素認証（MFA）の併用
+
+IPAは、不正ログイン対策として、**パスワードを使い回さないこと**や**多要素認証を利用すること**を推奨しています。
+
+- [IPA：不正ログイン対策特集ページ](https://www.ipa.go.jp/security/anshin/measures/account_security.html)
+- [IPA：不正ログイン被害の原因となるパスワードの使い回しはNG](https://www.ipa.go.jp/security/anshin/attention/2016/mgdayori20160803.html)
+- [IPA：日常における情報セキュリティ対策](https://www.ipa.go.jp/security/anshin/measures/everyday.html)
+- [IPA：「情報セキュリティ10大脅威 2026」解説書［組織編］](https://www.ipa.go.jp/security/10threats/omgdg50000008fi8-att/kaisetsu_2026_soshiki.pdf)
 
 ---
 
