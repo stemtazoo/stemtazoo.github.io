@@ -6,7 +6,7 @@ permalink: /sg/reverse-brute-force-attack/
 tags: [sg, unauthorized_access, threat_vulnerability, access_control, sg-security-measures]
 prev: /sg/residual-risk/
 next: /sg/risk-response-cia/
-last_modified_at: 2026-05-20
+last_modified_at: 2026-09-19
 ---
 
 ## まず結論
@@ -70,6 +70,14 @@ last_modified_at: 2026-05-20
 - パスワードの使い回し禁止
 - 異常ログイン検知（IP・挙動分析）
 - パスワードポリシーの強化
+
+IPAも、不正ログイン対策として、**推測されにくいパスワード、使い回しの回避、多要素認証（MFA）**を推奨しています。
+
+- [IPA：不正ログイン対策特集ページ](https://www.ipa.go.jp/security/anshin/measures/account_security.html)
+- [IPA：インターネットサービスへの不正ログインによる被害が増加中](https://www.ipa.go.jp/security/anshin/attention/2025/mgdayori20250828.html)
+- [IPA：「情報セキュリティ10大脅威 2026」解説書［組織編］](https://www.ipa.go.jp/security/10threats/omgdg50000008fi8-att/kaisetsu_2026_soshiki.pdf)
+
+これらはリバースブルートフォース攻撃そのものの定義資料ではありませんが、**認証攻撃に対する実務上の対策根拠**として有効です。
 
 ---
 
