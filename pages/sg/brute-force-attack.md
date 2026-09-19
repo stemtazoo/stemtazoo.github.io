@@ -6,7 +6,7 @@ permalink: /sg/brute-force-attack/
 tags: [sg, unauthorized_access, threat_vulnerability, access_control, sg-security-measures]
 prev: /sg/botnet/
 next: /sg/case-solving-template/
-last_modified_at: 2026-06-24
+last_modified_at: 2026-09-19
 ---
 
 ## まず結論
@@ -66,8 +66,14 @@ last_modified_at: 2026-06-24
 ### 防ぐ場面（対策）
 - アカウントロック（一定回数失敗で停止）
 - 多要素認証（MFA）
-- パスワードの複雑化・長文化
+- パスワードの長文化・推測されにくい設定
 - ログイン試行の制限（レート制限）
+
+IPAの不正ログイン対策でも、**長く推測されにくいパスワード、パスワードの使い回し回避、多要素認証**が推奨されています。
+
+- [IPA：不正ログイン対策特集ページ](https://www.ipa.go.jp/security/anshin/measures/account_security.html)
+- [IPA：SNSで公開している誕生日などの情報を使ったパスワード設定は推測されやすくNG](https://www.ipa.go.jp/security/anshin/attention/2016/mgdayori20161221.html)
+- [IPA：「情報セキュリティ10大脅威 2026」解説書［組織編］](https://www.ipa.go.jp/security/10threats/omgdg50000008fi8-att/kaisetsu_2026_soshiki.pdf)
 
 ---
 
