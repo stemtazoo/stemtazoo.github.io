@@ -5,7 +5,7 @@ description: "著作物は、思想または感情を創作的に表現し、文
 permalink: /sg/copyrighted-work/
 tags: [sg, sg-security-law, intellectual_property, business_management]
 date: 2026-06-15
-last_modified_at: 2026-08-13
+last_modified_at: 2026-09-19
 ---
 
 ## まず結論
@@ -42,7 +42,11 @@ SG試験では、**「作った人の権利か」「法律上、権利の目的�
 著作権法では、講演、音楽、舞踊、美術、建築、図形、映画、写真、プログラムなどが著作物の例として挙げられています。
 
 参考：
-[e-Gov法令検索｜著作権法](https://laws.e-gov.go.jp/law/345AC0000000048)
+
+- [e-Gov法令検索｜著作権法](https://laws.e-gov.go.jp/law/345AC0000000048)
+- [文化庁：令和2年通常国会 著作権法改正について](https://www.bunka.go.jp/seisaku/chosakuken/hokaisei/r02_hokaisei/)
+
+現行法の条文はe-Gov、法改正の内容や新旧対照表、説明資料は文化庁の公式ページで確認すると、役割を分けて使えます。
 
 SG試験で特に押さえたいのは、次の表です。
 
@@ -149,5 +153,6 @@ SG試験では、**「著作物になるか」と「誰に権利が帰属する�
 ## 公式情報・参考リンク
 
 - [e-Gov法令検索｜著作権法](https://laws.e-gov.go.jp/law/345AC0000000048)
+- [文化庁：令和2年通常国会 著作権法改正について](https://www.bunka.go.jp/seisaku/chosakuken/hokaisei/r02_hokaisei/)
 
 {% include sg_article_footer.html %}
