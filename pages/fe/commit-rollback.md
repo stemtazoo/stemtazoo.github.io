@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: データベース
 fe_order: 50
 date: 2026-06-29
-last_modified_at: 2026-07-15
+last_modified_at: 2026-09-19
 ---
 
 ## まず結論
@@ -153,9 +153,11 @@ B020の行は元に戻る
 → データ1の解除待ち
 ```
 
-DBMSは通常、どちらかのトランザクションを中止してデッドロックを解消します。中止された側の未確定の更新はロールバックされます。
+DBMSは通常、デッドロックに関係するトランザクションのうち一部を中止して、循環待ちを解消します。中止された側の未確定の更新はロールバックされます。
 
-試験では、**デッドロックが起きたら、異常終了した側の更新は残らない**と判断します。
+試験では、**デッドロックが起きたら、中止された側の未確定更新は残らない**と判断します。
+
+なお、「必ず両方のトランザクションをロールバックする」とは限りません。PostgreSQL公式ドキュメントでは、デッドロックを自動検出し、関係するトランザクションの一つを中止して他を続行できるようにすると説明されています。
 
 ## どんな場面で使う？
 
@@ -233,6 +235,20 @@ SQLを実行しても、コミット前なら未確定です。
 → 未確定更新は確定しない
 → 処理前へ戻る
 ```
+
+## 関連記事・一次情報
+
+- [トランザクション]({{ '/fe/transaction/' | relative_url }})
+- [ロールバックとロールフォワード]({{ '/fe/rollback-rollforward/' | relative_url }})
+- [デッドロック]({{ '/fe/deadlock/' | relative_url }})
+- [ACID特性]({{ '/fe/acid-properties/' | relative_url }})
+
+一次情報では、PostgreSQL公式ドキュメントが `COMMIT` をトランザクションの確定、`ROLLBACK` をトランザクションの中止として説明しています。
+
+- [PostgreSQL公式：Transactions](https://www.postgresql.org/docs/current/tutorial-transactions.html)
+- [PostgreSQL公式：COMMIT](https://www.postgresql.org/docs/current/sql-commit.html)
+- [PostgreSQL公式：ROLLBACK](https://www.postgresql.org/docs/current/sql-rollback.html)
+- [PostgreSQL公式：Explicit Locking - Deadlocks](https://www.postgresql.org/docs/current/explicit-locking.html#LOCKING-DEADLOCKS)
 
 ## まとめ（試験直前用）
 
