@@ -5,7 +5,7 @@ description: ソフトウェア使用許諾契約を所有権の売買ではな�
 permalink: /sg/software-license-agreement/
 tags: [sg, sg-strategy, business_management, it_security_operations]
 prev: /sg/click-wrap-contract/
-last_modified_at: 2026-06-24
+last_modified_at: 2026-09-19
 ---
 
 ## まず結論
@@ -58,6 +58,12 @@ SG試験では、ここを誤解している選択肢が出やすいです。
 
 利用者は、契約で許可された範囲でソフトウェアを使います。  
 その範囲を超えると、ライセンス違反や契約違反になる可能性があります。
+
+ソフトウェアの複製・インストール・利用と著作権の関係を具体例で確認したい場合は、著作権情報センター（CRIC）のQ&Aが理解の補助になります。
+
+- [CRIC：コンピュータ・ソフトウェアに関するQ&A](https://www.cric.or.jp/qa/shigoto/sigoto10_qa.html)
+
+ただし、**契約で何が許されるかは実際の使用許諾条件で確認し、著作権法上の根拠はe-Govや文化庁などの一次情報を優先**します。
 
 ## どんな場面で使う？
 
@@ -126,6 +132,10 @@ SG試験では、**技術的に可能か**ではなく、**契約上許可され
 また、OSSでもライセンス条件に従う必要があります。
 
 「無料＝何でも自由」ではありません。
+
+著作権制度の改正や公式資料を確認する場合は、文化庁の次のページも参考になります。
+
+- [文化庁：令和2年通常国会 著作権法改正について](https://www.bunka.go.jp/seisaku/chosakuken/hokaisei/r02_hokaisei/)
 
 ### 誤解4：使用許諾契約と購入契約を同じものと考える
 
