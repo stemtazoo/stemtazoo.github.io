@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: セキュリティ
 fe_order: 120
 date: 2026-07-19
-last_modified_at: 2026-08-29
+last_modified_at: 2026-09-19
 ---
 
 ## まず結論
@@ -92,6 +92,12 @@ last_modified_at: 2026-08-29
 | 大文字・小文字・数字・記号を組み合わせる | 強くなりやすい |
 
 ただし、単に文字種類を増やすだけでなく、十分な長さを確保することが重要です。
+
+IPAも、推測されやすいパスワードを避け、パスワードを使い回さず、多要素認証（MFA）やパスキーなどを利用することを推奨しています。
+
+- [IPA：SNSで公開している誕生日などの情報を使ったパスワード設定は推測されやすくNG](https://www.ipa.go.jp/security/anshin/attention/2016/mgdayori20161221.html)
+- [IPA：不正ログイン被害の原因となるパスワードの使い回しはNG](https://www.ipa.go.jp/security/anshin/attention/2016/mgdayori20160803.html)
+- [IPA：「情報セキュリティ10大脅威 2026」解説書［組織編］](https://www.ipa.go.jp/security/10threats/omgdg50000008fi8-att/kaisetsu_2026_soshiki.pdf)
 
 ## 科目Aでどう出る？
 
