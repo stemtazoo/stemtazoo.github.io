@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: セキュリティ
 fe_order: 55
 date: 2026-07-18
-last_modified_at: 2026-08-29
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
@@ -26,6 +26,8 @@ last_modified_at: 2026-08-29
 試験では、次の一文を判断軸にします。
 
 > **IDSは見つけて知らせる。IPSは見つけて止める。**
+
+このページでは、**IDS・IPS・ファイアウォールの違い**を中心に扱います。脅威と対策を広く横断して整理したい場合は、[脅威とセキュリティ対策の対応](/fe/security-threat-countermeasures/) を参照してください。
 
 ## 直感的な説明
 
