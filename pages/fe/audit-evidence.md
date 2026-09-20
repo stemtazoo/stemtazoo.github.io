@@ -8,7 +8,7 @@ fe_section: マネジメント系
 fe_subsection: システム監査
 fe_order: 425
 date: 2026-09-08
-last_modified_at: 2026-09-08
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
@@ -30,6 +30,8 @@ last_modified_at: 2026-09-08
 監査結果を伝える
 → 監査報告書
 ```
+
+このページでは、**監査判断の根拠になるログ・記録・帳票などの監査証拠**に絞って扱います。監査全体の流れは[システム監査とは？](/fe/system-audit/)、証拠や判断過程を記録する文書は[監査調書とは？](/fe/audit-working-papers/)で確認できます。
 
 特に重要なのは、
 
