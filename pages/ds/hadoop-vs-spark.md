@@ -1,7 +1,7 @@
 ---
 layout: page
 title: HadoopとSparkの違いとは？（分散処理基盤の比較）【DS検定リテラシー】
-description: "Hadoopは「ディスク中心の分散処理基盤」、Sparkは「メモリ中心の高速分散処理基盤」です。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。初学者が迷いやすい判断ポイントも確認します。"
+description: "HadoopとSparkの違いを、Hadoop MapReduceの分散バッチ処理と、Sparkのデータ再利用・インメモリ処理の特徴から整理します。DS検定で問われる用途、反復処理、HDFSとの関係、選択肢の見分け方を解説します。"
 permalink: /ds/hadoop-vs-spark/
 categories: [data-engineering]
 tags: [ds, data-storage, data-processing]
@@ -9,7 +9,7 @@ ds_area: dataengineering
 ds_section: data-storage
 prev: /ds/hadoop/
 next: /ds/hdfs/
-last_modified_at: 2026-06-21
+last_modified_at: 2026-09-20
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -17,8 +17,19 @@ last_modified_at: 2026-06-21
 </div>
 
 ## まず結論
-Hadoopは「ディスク中心の分散処理基盤」、Sparkは「メモリ中心の高速分散処理基盤」です。  
-DS検定では「どちらが高速か」「どの用途に向くか」を判断させる問題が出ます。
+
+DS検定では、**Hadoop MapReduceは大規模なバッチ処理、Sparkはデータを保持・再利用する反復処理や高速な分散処理に強い**と整理すると判断しやすくなります。
+
+ただし、
+
+```text
+Hadoop ＝ ディスクだけ
+Spark ＝ メモリだけ
+```
+
+と覚えるのは正確ではありません。
+
+Sparkはデータをメモリに保持して再利用できますが、ストレージも利用できます。また、SparkはHDFS上のデータを読み込んで処理することもできます。
 
 
 ## 直感的な説明
@@ -26,53 +37,60 @@ DS検定では「どちらが高速か」「どの用途に向くか」を判断
 イメージで考えましょう。
 
 ### Hadoop（MapReduce）
-毎回ノートに書いて、終わったら机にしまう。  
-次の処理でまた取り出して書く。
-
-→ 安定しているが、やや遅い。
-
+処理の区切りごとに結果を受け渡しながら、大量データを複数台で処理するイメージです。
 
 ### Spark
-ホワイトボードに書いたまま次の計算を続ける。
+一度作った分散データを保持して、次の処理でも再利用できるイメージです。
 
-→ 速い。特に何度も繰り返す処理に強い。
+たとえるなら、
 
-この「保存場所の違い」が最大のポイントです。
+```text
+MapReduce
+→ 処理のたびに資料を棚へ戻しながら進める
+
+Spark
+→ よく使う資料を机に置いたまま次の作業へ進める
+```
+
+という違いです。
+
+DS検定では、**反復して同じデータを使う処理かどうか**に注目すると切り分けやすくなります。
 
 
 ## 定義・仕組み
 
 ### Hadoop（MapReduce）
 
-- データをHDFSに保存
-- 処理ごとにディスクに書き込み
-- 安価なサーバを多数使う設計
-
-特徴：
-- 安定
-- 大規模バッチ処理向き
-- ディスクI/Oが多い
-
+- HDFSなどに保存された大量データを分散処理する
+- MapとReduceの段階で処理を分ける
+- 大規模なバッチ処理に向く
 
 ### Spark
 
-- データをメモリに保持して処理
-- 反復計算が高速
-- 機械学習処理と相性が良い
+- 分散データを複数ノードで並列処理する
+- RDDなどをメモリへ保持して再利用できる
+- 同じデータを何度も使う反復処理に向く
+- HDFSなど、Hadoopが対応するストレージのデータも扱える
 
-特徴：
-- 高速
-- インメモリ処理
-- リアルタイム処理にも対応
+Apache Sparkの公式RDD Programming Guideでも、RDDはクラスタ上に分散されたデータ集合であり、メモリへ保持して効率よく再利用できることが説明されています。
+
+### 1次情報
+
+- [Apache Hadoop：MapReduce Tutorial](https://hadoop.apache.org/docs/current/hadoop-mapreduce-client/hadoop-mapreduce-client-core/MapReduceTutorial.html)
+- [Apache Hadoop：HDFS Architecture](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsDesign.html)
+- [Apache Spark：RDD Programming Guide](https://spark.apache.org/docs/latest/rdd-programming-guide.html)
+- [Apache Spark：Structured Streaming Programming Guide](https://spark.apache.org/docs/latest/streaming/index.html)
+
+この公式資料からも、Sparkは単純に「Hadoopの代わりの保存基盤」ではなく、HDFSなどの外部ストレージ上のデータを処理できる分散処理エンジンとして理解する方が安全です。
 
 
 ## どんな場面で使う？
 
-### Hadoopが向く場面
+### Hadoop MapReduceが向く場面
 
 - 夜間の大量ログ一括集計
-- バッチ処理
-- コストを抑えた大規模基盤
+- 大規模なバッチ処理
+- MapとReduceで表現しやすい集計処理
 
 
 ### Sparkが向く場面
@@ -82,16 +100,16 @@ DS検定では「どちらが高速か」「どの用途に向くか」を判断
 - ストリーミング処理
 - 低レイテンシ処理
 
-DS検定では  
-「高速」「インメモリ」「機械学習」と書いてあればSpark寄りです。
+DS検定では、**「反復計算」「インメモリ」「データを保持して再利用」**と書いてあればSpark寄りです。
 
 
 ## よくある誤解・混同
 
 ### ① Hadoop＝古いから使われない？
 
-現在も利用されています。  
-ただし、新規基盤ではSparkが選ばれることが多いです。
+そうとは限りません。
+
+HadoopはHDFSやYARNなども含むエコシステムです。SparkはHDFS上のデータを扱ったり、YARN上で動作したりすることもできるため、「HadoopかSparkか」の二者択一だけで考えない方が安全です。
 
 
 ### ② HadoopとSparkは競合？
@@ -100,22 +118,29 @@ DS検定では
 HDFS上でSparkを動かすことも可能です。
 
 
-### ③ MapReduceとSparkを同じ処理方式と思う
+### ③ MapReduceとSparkを「ディスク対メモリ」だけで覚える
 
-MapReduceはディスク中心。  
-Sparkはメモリ中心。
+試験では分かりやすい対比ですが、厳密には単純化しすぎです。
 
-DS検定では  
-「高速な分散処理基盤はどれか？」と聞かれたらSparkを選びます。
+```text
+MapReduce
+→ MapとReduceを中心に段階的に処理する
+
+Spark
+→ 分散データを保持・再利用しながら処理できる
+```
+
+**何を保存するかではなく、処理の進め方とデータ再利用のしやすさ**を見ると混同しにくくなります。
 
 
 ## まとめ（試験直前用）
 
-- Hadoop＝ディスク中心の分散処理基盤  
-- Spark＝メモリ中心の高速分散処理基盤  
-- 反復計算や機械学習はSpark向き  
-- バッチ処理中心ならHadoop  
-- 「インメモリ」「高速」→ Spark
+- Hadoop MapReduceは、大規模なバッチ処理で使われる分散処理モデル  
+- Sparkは、分散データを保持・再利用しやすい分散処理エンジン  
+- 反復計算やデータ再利用が多い処理はSparkと相性が良い  
+- HDFSとSparkは組み合わせて使える  
+- **「Hadoop＝ディスクだけ、Spark＝メモリだけ」と丸暗記しない**  
+- 「反復」「インメモリ」「再利用」→ Sparkを疑う
 
 
 ## 対応スキル項目（ver.6 データエンジニアリング）
