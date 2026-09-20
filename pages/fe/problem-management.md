@@ -6,7 +6,7 @@ permalink: /fe/problem-management/
 tags: [fe, fe-management, service-management]
 fe_section: マネジメント系
 fe_subsection: サービスマネジメント
-last_modified_at: 2026-07-20
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
@@ -18,6 +18,8 @@ last_modified_at: 2026-07-20
 > **今すぐ戻すのがインシデント管理、二度と起こさないのが問題管理。**
 
 「根本原因」「恒久対策」「再発防止」という言葉が出たら、問題管理を疑います。
+
+このページでは、**問題管理そのものの目的・活動・既知の誤り**を中心に扱います。インシデント管理との違いを横並びで確認したい場合は、[インシデント管理と問題管理の違い](/fe/incident-management-vs-problem-management/) を参照してください。
 
 ## 直感的な説明
 
