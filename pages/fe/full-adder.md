@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: コンピュータ構成要素
 fe_order: 620
 date: 2026-08-24
-last_modified_at: 2026-08-24
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
@@ -186,7 +186,19 @@ C S
 
 半加算器の仕組みは、[半加算器とは？AND・XORで和と桁上がりを求める仕組み](/fe/half-adder/)で整理しています。
 
-このテーマは、基本情報技術者試験のコンピュータ構成要素や論理回路と関係する内容です。公式の出題範囲やシラバスは、[IPA：基本情報技術者試験](https://www.ipa.go.jp/shiken/kubun/fe.html) から確認できます。
+このテーマは、基本情報技術者試験のコンピュータ構成要素や論理回路と関係する内容です。
+
+IPAの最新の基本情報技術者試験シラバス Ver.9.2 では、**AND回路、OR回路、NOT回路などの基本論理回路の組合せによって半加算器・全加算器が実現され、演算が行われることを理解する**内容が示されています。
+
+- [IPA：基本情報技術者試験](https://www.ipa.go.jp/shiken/kubun/fe.html)
+- [IPA：試験要綱・シラバス](https://www.ipa.go.jp/shiken/syllabus/gaiyou.html)
+- [IPA：基本情報技術者試験（レベル2）シラバス Ver.9.2](https://www.ipa.go.jp/shiken/syllabus/omgdg50000005kpe-att/syllabus_fe_ver9_2.pdf)
+
+また、IPAの過去の基本情報技術者試験でも、**半加算器・全加算器、真理値表、複数ビット加算**を組み合わせた出題が確認できます。
+
+- [IPA：平成21年度秋期 基本情報技術者試験 解答例](https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000f3yi-att/2009h21a_fe_pm_ans.pdf)
+- [IPA：平成21年度秋期 基本情報技術者試験 採点講評](https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000f3yi-att/2009h21a_fe_pm_cmnt.pdf)
+- [IPA：平成25年度秋期 基本情報技術者試験 採点講評](https://www.ipa.go.jp/shiken/mondai-kaiotu/ug65p900000027za-att/2013h25a_fe_pm_cmnt.pdf)
 
 ## 科目Aでどう出る？
 
@@ -239,6 +251,17 @@ S = 0
 2個 → 10
 3個 → 11
 ```
+
+今回のように入力が `1, 0, 1` なら、1は2個です。
+
+```text
+1 + 0 + 1 = 2
+2 = 10（2進数）
+        ↓
+      C=1, S=0
+```
+
+したがって、**C=1、S=0** と判断できます。
 
 ## どんな場面で使う？
 
@@ -334,6 +357,39 @@ A + B + Cin
 ```
 
 ここまで理解しておくと、複数桁の加算とのつながりも見えやすくなります。
+
+## 確認問題（基本情報技術者試験対策）
+
+全加算器に次の3ビットを入力した。
+
+```text
+1, 1, 1
+```
+
+出力CとSの組合せとして正しいものはどれか。
+
+1. C=0, S=0
+2. C=0, S=1
+3. C=1, S=0
+4. C=1, S=1
+
+<details markdown="1">
+<summary>▶ クリックして答えと解説を見る（ここを開く）</summary>
+
+**正解：4. C=1, S=1**
+
+```text
+1 + 1 + 1 = 3
+3 = 11（2進数）
+
+11
+↑↑
+C S
+```
+
+したがって、C=1、S=1です。
+
+</details>
 
 ## まとめ（試験直前用）
 
