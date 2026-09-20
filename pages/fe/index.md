@@ -4,7 +4,7 @@ title: 基本情報技術者試験 学習まとめ
 description: 基本情報技術者試験（FE）の学習記事を、科目Aのテクノロジ・マネジメント・ストラテジ・情報セキュリティと、科目Bのアルゴリズム・データ構造・疑似言語・トレースに分けた総合索引です。用語の選択肢判断からプログラム読解へ進む学習順、分野別の頻出テーマ、苦手論点の関連記事を一覧から探し、試験対策に活用できます。
 permalink: /fe/
 tags: [fe]
-last_modified_at: 2026-08-15
+last_modified_at: 2026-09-20
 ---
 
 # 基本情報技術者試験 学習まとめ
@@ -48,6 +48,59 @@ last_modified_at: 2026-08-15
 - 科目Aは、似た用語の違いを説明できることを目標にします。
 - 科目Bは、疑似言語の文法暗記だけでなく、変数の値、条件分岐、繰返し、配列の変化を表や図で追う練習を重視します。
 - SG試験やITパスポートからステップアップする人は、情報セキュリティで重なる部分を活用しつつ、FEで問われるシステム開発・ネットワーク・アルゴリズムの文脈に慣れていきます。
+
+## まずここから｜おすすめ学習ルート
+
+記事数が多いため、最初から一覧を上から読む必要はありません。  
+まずは各分野の**入口記事**を読み、そこから個別記事・比較記事・計算記事へ進むと整理しやすくなります。
+
+<div class="portal-card-grid">
+  <section class="portal-card">
+    <h3>テクノロジ系</h3>
+    <p><strong>仕組み → 個別 → 計算</strong>の順で進みます。</p>
+    <ol>
+      <li><a href="{{ '/fe/memory-types/' | relative_url }}">メモリの種類</a></li>
+      <li><a href="{{ '/fe/memory-management-methods/' | relative_url }}">主記憶管理方式</a></li>
+      <li><a href="{{ '/fe/database-schema/' | relative_url }}">データベース設計</a></li>
+      <li><a href="{{ '/fe/osi-reference-model/' | relative_url }}">OSI基本参照モデル</a></li>
+    </ol>
+  </section>
+
+  <section class="portal-card">
+    <h3>マネジメント系</h3>
+    <p><strong>何を管理するか → 現場の流れ</strong>で整理します。</p>
+    <ol>
+      <li><a href="{{ '/fe/project-management-subject-groups/' | relative_url }}">プロジェクト管理の対象群</a></li>
+      <li><a href="{{ '/fe/wbs/' | relative_url }}">WBS</a></li>
+      <li><a href="{{ '/fe/service-desk-structure/' | relative_url }}">サービスデスク</a></li>
+      <li><a href="{{ '/fe/system-audit/' | relative_url }}">システム監査</a></li>
+    </ol>
+  </section>
+
+  <section class="portal-card">
+    <h3>ストラテジ系</h3>
+    <p><strong>経営 → IT活用 → 法務</strong>の順で見ます。</p>
+    <ol>
+      <li><a href="{{ '/fe/information-strategy/' | relative_url }}">情報戦略</a></li>
+      <li><a href="{{ '/fe/enterprise-architecture/' | relative_url }}">エンタープライズアーキテクチャ</a></li>
+      <li><a href="{{ '/fe/swot-analysis/' | relative_url }}">SWOT分析</a></li>
+      <li><a href="{{ '/fe/contract-types-outsourcing/' | relative_url }}">外部委託契約の違い</a></li>
+    </ol>
+  </section>
+
+  <section class="portal-card">
+    <h3>情報セキュリティ</h3>
+    <p><strong>脅威 → 対策 → 暗号・認証</strong>で整理します。</p>
+    <ol>
+      <li><a href="{{ '/fe/security-threat-countermeasures/' | relative_url }}">脅威と対策の対応</a></li>
+      <li><a href="{{ '/fe/ids-ips-firewall/' | relative_url }}">IDS・IPS・ファイアウォール</a></li>
+      <li><a href="{{ '/fe/cryptographic-algorithm-types/' | relative_url }}">暗号アルゴリズムの種類</a></li>
+      <li><a href="{{ '/fe/email-security-measures/' | relative_url }}">電子メールのセキュリティ対策</a></li>
+    </ol>
+  </section>
+</div>
+
+> 迷ったときは、**総論 → 個別 → 比較 → 計算**の順で読むと、似た用語を切り分けやすくなります。
 
 ## 科目A対策
 
