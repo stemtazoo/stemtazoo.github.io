@@ -6,7 +6,7 @@ permalink: /fe/qr-code/
 tags: [fe, fe-technology, computer-system]
 fe_section: テクノロジ系
 fe_subsection: コンピュータシステム
-last_modified_at: 2026-08-19
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
@@ -18,6 +18,8 @@ QRコードは、縦方向と横方向の両方に情報を持たせる**二次�
 > **3隅で向きを見分け、縦横に情報を持ち、誤り訂正で一部の汚れにも対応する。**
 
 FE試験では、この3点を押さえると選択肢を切りやすくなります。
+
+このページでは、**QRコードそのものの位置検出パターン・2次元コード・誤り訂正**を中心に扱います。JAN・ITF・Code128など他のコードとの違いは、[QRコードとバーコードの違い](/fe/qr-code-barcode/) で整理しています。
 
 ## 直感的な説明
 
