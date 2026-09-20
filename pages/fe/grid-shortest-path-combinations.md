@@ -3,12 +3,14 @@ layout: page
 title: 格子状の最短経路の数え方とは？右と上の並べ方で考える組合せ問題【基本情報技術者試験】
 description: 格子状の最短経路を「右へ進む回数と上へ進む回数の並べ方」として整理し、組合せ nCr の使いどころ、経由点がある場合の考え方、FE試験でのひっかけを解説します。
 permalink: /fe/grid-shortest-path-combinations/
+redirect_from:
+  - /fe/grid-shortest-path-combination/
 tags: [fe, fe-technology, algorithm]
 fe_section: テクノロジ系
 fe_subsection: 基礎理論
 fe_order: 45
 date: 2026-07-02
-last_modified_at: 2026-09-03
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
@@ -182,6 +184,22 @@ R → Q：10通り
 ```
 
 経由点がある場合は、**区間ごとに数えて、最後に掛ける** と考えます。
+
+### 試験中の判断フロー
+
+```text
+格子状の最短経路
+↓
+必要な右・上の回数を数える
+↓
+合計移動回数から片方の位置を選ぶ
+↓
+nCr
+↓
+途中の指定点あり？
+  Yes → 区間ごとに求めて掛ける
+  No  → そのまま答え
+```
 
 ## どんな場面で使う？
 
