@@ -8,7 +8,7 @@ fe_section: ストラテジ系
 fe_subsection: 法務
 fe_order: 90
 date: 2026-08-27
-last_modified_at: 2026-08-29
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
@@ -21,6 +21,8 @@ last_modified_at: 2026-08-29
 試験では、次のように切り分けます。
 
 > **成果物の完成を約束するなら請負、業務の適切な遂行を約束するなら準委任。**
+
+このページは、**請負と準委任の違いに絞った比較記事**です。派遣まで含めた外部委託契約全体は[請負・準委任・派遣契約の違い](/fe/contract-types-outsourcing/)、請負で納品物が契約に合わない場合は[契約不適合責任](/fe/contract-nonconformity-liability/)を参照してください。
 
 ## 直感的な説明
 
