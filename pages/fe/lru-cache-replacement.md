@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: コンピュータシステム
 fe_order: 85
 date: 2026-08-15
-last_modified_at: 2026-08-15
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
@@ -32,6 +32,8 @@ LRU（Least Recently Used）方式とは、**最後に参照されてから最�
 ```
 
 特に、**LRUとFIFOの違い**を混同しないことが重要です。
+
+このページでは、**LRUそのものの判断基準と、FIFO・LFU・NRUとの比較**を中心に扱います。仮想記憶のページ参照列を実際に追う問題は、[LRUページ置換とは？](/fe/lru-page-replacement/) で整理しています。
 
 ## 直感的な説明
 
