@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: コンピュータシステム
 fe_order: 58
 date: 2026-07-10
-last_modified_at: 2026-07-25
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
@@ -34,6 +34,8 @@ last_modified_at: 2026-07-25
 ```
 
 ただし、**各部分のビット数や指数の表し方は、問題文で指定された形式に従います**。
+
+このページでは、**符号部・指数部・仮数部のビット列を読む問題**を中心に扱います。仮数・指数・基数の基本は[浮動小数点表示](/fe/floating-point-representation/)、正規化は[浮動小数点数の正規化](/fe/floating-point-normalization/)、誤差の種類は[浮動小数点の誤差](/fe/floating-point-errors/)を参照してください。
 
 ## 直感的な説明
 
