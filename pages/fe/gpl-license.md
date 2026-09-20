@@ -8,7 +8,7 @@ fe_section: ストラテジ系
 fe_subsection: 企業と法務
 fe_order: 20
 date: 2026-07-12
-last_modified_at: 2026-09-15
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
@@ -26,6 +26,8 @@ GPLのコードを改変したか
 ```
 
 特に重要なのは、**改変しただけで直ちに一般公開が必要になるわけではない**ことです。
+
+このページでは、**GPL単体の配布条件・ソースコード提供・社内利用との違い**を中心に扱います。MIT・BSDとの違いを横並びで確認したい場合は、[GPL・MIT・BSDライセンスの違い](/fe/gpl-mit-bsd-license-comparison/) を参照してください。
 
 ```text
 社内だけで利用する
