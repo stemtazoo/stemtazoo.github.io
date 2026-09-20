@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 61
 date: 2026-08-17
-last_modified_at: 2026-08-17
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
@@ -34,6 +34,8 @@ TCP/IP階層モデルは、ネットワーク通信の役割を**4つの層**に
 特に重要なのは、**TCPはトランスポート層、IPはインターネット層**という違いです。
 
 > **TCPは通信の届け方を管理し、IPは宛先まで運ぶためのアドレスと経路を扱う。**
+
+このページでは、**TCP/IPの4階層と代表プロトコルの対応**を中心に扱います。7層で整理するOSI基本参照モデルは[OSI基本参照モデル](/fe/osi-reference-model/)、IPとMACの使い分けは[IPアドレスとMACアドレスの違い](/fe/ip-mac-address-routing/)で確認できます。
 
 ## 直感的な説明
 
