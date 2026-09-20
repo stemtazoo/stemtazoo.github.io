@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 221
 date: 2026-09-10
-last_modified_at: 2026-09-10
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
@@ -28,6 +28,8 @@ last_modified_at: 2026-09-10
 ```
 
 ポイントは、**CA = Collision Avoidance（衝突回避）**です。
+
+このページでは、**無線LANで衝突をできるだけ避けるCSMA/CA**を中心に扱います。共有型Ethernetで衝突を検出して再送する方式は、[CSMA/CDとは？](/fe/csma-cd/) を参照してください。
 
 ## 直感的な説明
 
