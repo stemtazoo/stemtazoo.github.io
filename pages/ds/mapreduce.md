@@ -9,7 +9,7 @@ ds_area: dataengineering
 ds_section: data-storage
 prev: /ds/hdfs/
 next: /ds/rest-api/
-last_modified_at: 2026-06-21
+last_modified_at: 2026-09-20
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -75,6 +75,15 @@ MapReduceは、Hadoopで使われる分散処理モデルです。
 
 という流れです。
 
+Apache Hadoopの公式「MapReduce Tutorial」では、入力を複数のまとまりに分けてMapタスクで並列処理し、出力をReduceタスクへ渡して結果をまとめる流れが説明されています。
+
+### 1次情報
+
+- [Apache Hadoop：MapReduce Tutorial](https://hadoop.apache.org/docs/current/hadoop-mapreduce-client/hadoop-mapreduce-client-core/MapReduceTutorial.html)
+- [Apache Hadoop：MapReduce公式ドキュメント](https://hadoop.apache.org/docs/current/hadoop-mapreduce-client/hadoop-mapreduce-client-core/)
+
+DS検定では実装の細部よりも、**「Mapで分散処理し、Reduceで集約する」**という役割分担を押さえましょう。
+
 
 ## どんな場面で使う？
 
@@ -123,15 +132,13 @@ MapReduceはその中の「処理モデル」。
 
 ### ③ Sparkとの混同
 
-Sparkも分散処理基盤ですが、
+Sparkも分散処理基盤ですが、処理モデルが異なります。
 
-- MapReduceはディスク中心
-- Sparkはメモリ中心
+Hadoop MapReduceでは処理段階の間でストレージへの読み書きが発生しやすいのに対し、SparkはRDDなどのデータをメモリへ保持して再利用できます。
 
-という違いがあります。
+ただし、**Spark＝必ずメモリだけ、MapReduce＝必ずディスクだけ**と覚えるのは単純化しすぎです。
 
-DS検定では  
-「高速」「インメモリ」という言葉が出たらSpark寄りです。
+DS検定では、**「反復処理」「データを保持して再利用」「インメモリ」**といった表現があればSpark寄り、と判断するのが安全です。
 
 
 ## まとめ（試験直前用）
