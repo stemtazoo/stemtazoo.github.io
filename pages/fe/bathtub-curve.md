@@ -9,7 +9,7 @@ fe_subsection: サービスマネジメント
 tags_note: reliability
 fe_order: 67
 date: 2026-07-11
-last_modified_at: 2026-07-25
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
@@ -26,6 +26,8 @@ last_modified_at: 2026-07-25
 ```
 
 曲線の形が浴槽に似ているため、バスタブ曲線と呼ばれます。
+
+このページでは、**時間経過に伴う故障率の変化**を中心に扱います。故障せずに動いた時間と修理時間から信頼性を整理する場合は、[MTBF・MTTRとは？](/fe/mtbf-mttr/) を参照してください。直列・並列構成の稼働率計算は、[直列・並列システムの稼働率](/fe/series-parallel-system-availability/) で確認できます。
 
 ## 直感的な説明
 
