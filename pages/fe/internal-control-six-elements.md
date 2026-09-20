@@ -3,12 +3,14 @@ layout: page
 title: 内部統制の6つの基本的要素とは？具体例から見分ける方法【基本情報技術者試験】
 description: 内部統制の6つの基本的要素である統制環境、リスクの評価と対応、統制活動、情報と伝達、モニタリング、ITへの対応を、具体例から見分ける判断基準で解説します。
 permalink: /fe/internal-control-six-elements/
+redirect_from:
+  - /fe/internal-control-elements/
 tags: [fe, fe-strategy, management, internal-control]
 fe_section: ストラテジ系
 fe_subsection: 企業と法務
 fe_order: 40
 date: 2026-09-15
-last_modified_at: 2026-09-15
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
