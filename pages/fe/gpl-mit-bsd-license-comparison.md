@@ -8,7 +8,7 @@ fe_section: ストラテジ系
 fe_subsection: 企業と法務
 fe_order: 30
 date: 2026-07-13
-last_modified_at: 2026-09-15
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
@@ -29,6 +29,8 @@ MIT・BSD
 ```
 
 つまり、**ソースコード提供まで求める方向ならGPL、表示を残して広く再利用できる方向ならMIT・BSD**と考えます。
+
+このページは、**GPL・MIT・BSDを試験で見分けるための比較記事**です。GPL単体の社内利用・配布・ソースコード提供の詳しい判断は、[GPLとは？](/fe/gpl-license/) で整理しています。
 
 ## 直感的な説明
 
