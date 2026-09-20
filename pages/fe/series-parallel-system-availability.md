@@ -3,12 +3,14 @@ layout: page
 title: 直列・並列システムの稼働率とは？信頼度の計算と見分け方【基本情報技術者試験】
 description: 直列システムと並列システムの稼働率を、全て正常である必要がある場合と少なくとも一つ正常ならよい場合に分け、故障確率を使う計算手順と判断基準を解説します。
 permalink: /fe/series-parallel-system-availability/
+redirect_from:
+  - /fe/system-availability-calculation/
 tags: [fe, fe-technology, system-configuration, reliability]
 fe_section: テクノロジ系
 fe_subsection: コンピュータシステム
 fe_order: 120
 date: 2026-07-17
-last_modified_at: 2026-07-17
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
@@ -80,6 +82,19 @@ AとBのどちらか一方でも停止すると、製品を完成させられま
 = 1 - 0.9
 = 0.1
 ```
+
+### MTBF・MTTRから稼働率を求める
+
+装置単体の稼働率が直接与えられず、MTBFとMTTRから求める場合は、次の式を使います。
+
+```text
+稼働率
+= MTBF ÷ (MTBF + MTTR)
+```
+
+MTBFは平均故障間隔、MTTRは平均修復時間です。
+
+MTBF・MTTRそのものの意味や使い分けは、[MTBF・MTTRとは？](/fe/mtbf-mttr/) で整理しています。
 
 ### 直列システムの計算
 
@@ -204,6 +219,17 @@ R^n
 ```
 
 となります。
+
+### 近い値を比較するとき
+
+選択肢が `0.992` と `0.9919` のように近い場合は、桁をそろえて比較します。
+
+```text
+0.9920
+0.9919
+```
+
+このように書くと、どちらが大きいかを判断しやすくなります。
 
 ## どんな場面で使う？
 
