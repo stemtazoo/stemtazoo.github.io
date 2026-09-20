@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: セキュリティ
 fe_order: 99
 date: 2026-09-10
-last_modified_at: 2026-09-10
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
@@ -20,6 +20,8 @@ last_modified_at: 2026-09-10
 - ECCは**公開鍵暗号方式**
 - RSAと比べて、**同程度の安全性をより短い鍵長で実現しやすい**
 - AESなどの**共通鍵暗号方式とは別物**
+
+なお、FEでは `ECC` が **Error Correcting Code（誤り訂正符号）** を指す場合もあります。暗号のECCとは別物です。メモリの誤り訂正については、[ECCメモリとは？](/fe/ecc-memory/) で整理しています。
 
 試験中は、次のように覚えると切り分けやすくなります。
 
