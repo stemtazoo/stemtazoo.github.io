@@ -7,7 +7,7 @@ tags: [fe, fe-management, service-management, service-desk]
 fe_section: マネジメント系
 fe_subsection: サービスマネジメント
 fe_order: 30
-last_modified_at: 2026-08-25
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
@@ -24,6 +24,8 @@ last_modified_at: 2026-08-25
 | フォロー・ザ・サン | 時差のある拠点で引き継ぎ、継続対応する |
 
 迷ったら、**「近い・集中・仮想的に一つ・時差」** の4語で切り分けます。
+
+このページでは、**サービスデスクをどこに配置し、どう連携させるか**を中心に扱います。利用者から受け付けたインシデントやサービス要求をどう記録・分類・優先度設定するかは、[インシデント及びサービス要求管理](/fe/incident-service-request-management/) を参照してください。
 
 ## 直感的な説明
 
