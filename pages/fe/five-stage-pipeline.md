@@ -3,12 +3,14 @@ layout: page
 title: 5段パイプラインとは？IF・ID・EX・MEM・WBの順番を整理【基本情報技術者試験】
 description: 5段パイプラインを、IF・ID・EX・MEM・WBの順に命令を分割して処理する仕組みとして整理し、命令フェッチとデータメモリアクセスの違い、EXでのアドレス生成、科目Aの並べ替え問題を切る判断軸を解説します。
 permalink: /fe/five-stage-pipeline/
+redirect_from:
+  - /fe/risc-five-stage-pipeline/
 tags: [fe, fe-technology, computer-architecture, cpu]
 fe_section: テクノロジ系
 fe_subsection: コンピュータ構成要素
 fe_order: 30
 date: 2026-08-16
-last_modified_at: 2026-08-16
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
