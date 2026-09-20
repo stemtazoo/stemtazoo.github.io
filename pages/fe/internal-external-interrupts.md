@@ -3,12 +3,14 @@ layout: page
 title: 内部割込みと外部割込みとは？発生原因の見分け方【基本情報技術者試験】
 description: 内部割込みと外部割込みの違いを、0除算・未定義命令・不正メモリアクセス・タイマー・入出力・ウォッチドッグタイマーの例から整理し、FE試験で選択肢を切る判断基準を解説します。
 permalink: /fe/internal-external-interrupts/
+redirect_from:
+  - /fe/internal-external-interrupt/
 tags: [fe, fe-technology, computer-architecture]
 fe_section: テクノロジ系
 fe_subsection: コンピュータ構成要素
 fe_order: 180
 date: 2026-08-04
-last_modified_at: 2026-08-04
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
