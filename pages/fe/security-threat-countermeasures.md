@@ -8,7 +8,7 @@ fe_section: 情報セキュリティ
 fe_subsection: セキュリティ対策
 fe_order: 20
 date: 2026-06-25
-last_modified_at: 2026-06-25
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
@@ -29,6 +29,8 @@ last_modified_at: 2026-06-25
 | Webアプリケーションへの攻撃 | WAF |
 
 試験では、**脅威と対策の目的が合っているか** を見ると、選択肢を切りやすくなります。
+
+このページは、**脅威から適切な対策を選ぶためのセキュリティ総論記事**です。不正侵入対策は[IDS・IPS・ファイアウォール](/fe/ids-ips-firewall/)、暗号方式の分類は[暗号アルゴリズムの種類](/fe/cryptographic-algorithm-types/)、メール対策は[電子メールのセキュリティ対策](/fe/email-security-measures/)で詳しく確認できます。
 
 ## 直感的な説明
 
