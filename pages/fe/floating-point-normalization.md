@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: 基礎理論
 fe_order: 20
 date: 2026-07-04
-last_modified_at: 2026-07-25
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
@@ -26,6 +26,8 @@ last_modified_at: 2026-07-25
 このような操作を、浮動小数点数の正規化といいます。
 
 データ分析の正規化とは意味が少し違うので、**何の分野の正規化か** を先に見ることが大切です。
+
+このページは、**値を変えずに仮数部と指数部を整える操作**に絞った記事です。浮動小数点表示の基本は[浮動小数点表示](/fe/floating-point-representation/)、ビット列の読み方は[浮動小数点形式](/fe/floating-point-format/)で確認できます。
 
 ## 直感的な説明
 
