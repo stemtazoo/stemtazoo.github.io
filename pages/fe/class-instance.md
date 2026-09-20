@@ -8,7 +8,7 @@ fe_section: 科目B対策
 fe_subsection: プログラミング
 fe_order: 60
 date: 2026-07-07
-last_modified_at: 2026-07-07
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
@@ -18,6 +18,8 @@ last_modified_at: 2026-07-07
 インスタンスとは、**クラスという設計図をもとに作られた具体的な実体**です。
 
 基本情報技術者試験では、まず **クラスが先、インスタンスが後** と押さえると分かりやすいです。
+
+このページでは、**クラスとインスタンスそのものの基本関係**を中心に扱います。`is-a`・`part-of`・`instance-of` を横並びで見分ける問題は、[is-a関係・part-of関係とは？](/fe/is-a-part-of-instance-class/) で整理しています。
 
 ```text
 クラス = 設計図・型
