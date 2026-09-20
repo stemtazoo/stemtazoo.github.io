@@ -3,12 +3,14 @@ layout: page
 title: 検証と妥当性確認の違い｜仕様どおりか・利用目的に合うかで判断【基本情報技術者試験】
 description: 検証は成果物が仕様や要求どおりに作られているか、妥当性確認は利用者の意図や利用目的を満たしているかを確認します。使用性向上や監査との違いも含め、FE試験での切り分け方を整理します。
 permalink: /fe/verification-validation/
+redirect_from:
+  - /fe/verification-vs-validation/
 tags: [fe, fe-technology, system-development]
 fe_section: テクノロジ系
 fe_subsection: システム開発技術
 fe_order: 40
 date: 2026-08-17
-last_modified_at: 2026-08-17
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
