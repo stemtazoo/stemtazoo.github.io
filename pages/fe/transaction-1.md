@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: データベース
 fe_order: 25
 date: 2026-06-29
-last_modified_at: 2026-09-19
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
@@ -26,6 +26,8 @@ last_modified_at: 2026-09-19
 
 そのため、出金と入金をまとめて1つのトランザクションとして扱い、  
 **全部成功したら確定、途中で失敗したら取り消し** にします。
+
+このページは、**トランザクション全体の総論**として、処理をひとまとまりに扱う考え方を中心に扱います。ACIDの原子性やデッドロックまで深掘りする場合は[トランザクションの原子性](/fe/transaction-atomicity-rollback/)、確定・取消の操作に絞る場合は[COMMITとROLLBACK](/fe/commit-rollback/)を参照してください。
 
 ## 直感的な説明
 
