@@ -6,7 +6,7 @@ permalink: /gk/gradient-descent/
 tags: [gk, neural_network, optimization]
 gk_section: ディープラーニングの概要/最適化手法
 gk_order: 1
-last_modified_at: 2026-08-21
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
@@ -41,6 +41,52 @@ Backprop → 勾配を計算
 - 大きすぎる → 最小値を飛び越え、振動・発散することがある
 - 小さすぎる → 更新が小さく、収束が遅くなる
 
+### 操作して確認：学習率で進み方はどう変わる？
+
+**見るポイント：同じ場所から始めても、学習率によって最小点への近づき方が変わります。** 学習率を選び、「1回更新」を数回押してください。学習率を切り替えると、同じ開始位置に戻ります。
+
+この教材では、パラメータを1個の値 **w**、損失を **L = w² / 2** とした単純な例を使います。勾配はwなので、更新は **次のw = 現在のw − 学習率 × 現在のw** です。開始位置はw = 3、最小点はw = 0です。
+
+<link rel="stylesheet" href="{{ '/assets/css/gk-visualizer.css' | relative_url }}">
+
+<div class="gk-learning-demo gk-gradient-demo" data-gk-gradient-demo>
+  <p class="gk-learning-demo__title">学習率を変えて、1回ずつ更新</p>
+  <div class="gk-learning-demo__controls" role="group" aria-label="学習率を選ぶ">
+    <button type="button" class="gk-learning-demo__button" data-gd-rate="0.1" aria-pressed="false" disabled>0.1：小さい</button>
+    <button type="button" class="gk-learning-demo__button" data-gd-rate="0.5" aria-pressed="true" disabled>0.5：中くらい</button>
+    <button type="button" class="gk-learning-demo__button" data-gd-rate="2.2" aria-pressed="false" disabled>2.2：大きい</button>
+  </div>
+  <svg class="gk-gradient-demo__chart" viewBox="0 0 600 300" role="img" aria-label="横軸はパラメータw、縦軸は損失L。曲線の最小点はwが0の位置。点と破線で更新の経路を表示">
+    <defs><clipPath id="gk-gradient-clip"><rect x="50" y="35" width="500" height="225"></rect></clipPath></defs>
+    <path class="gk-gradient-demo__axis" d="M50 255 H550 M300 35 V255"></path>
+    <path class="gk-gradient-demo__curve" d="M50 45 Q300 465 550 45"></path>
+    <g clip-path="url(#gk-gradient-clip)">
+      <polyline class="gk-gradient-demo__trail" data-gd-trail points="425,202.5"></polyline>
+      <circle class="gk-gradient-demo__point" data-gd-point cx="425" cy="202.5" r="7"></circle>
+    </g>
+    <g class="gk-gradient-demo__labels"><text x="50" y="280">−6</text><text x="290" y="280">0</text><text x="540" y="280">6</text><text x="310" y="30">損失 L</text><text x="535" y="298">w</text><text x="310" y="55">18</text></g>
+  </svg>
+  <p class="gk-learning-demo__hint">実線：損失の曲線 ／ ●：現在地 ／ 破線：更新の経路。図の目盛りは固定です。</p>
+  <div class="gk-learning-demo__controls">
+    <button type="button" class="gk-learning-demo__button" data-gd-step disabled>1回更新</button>
+    <button type="button" class="gk-learning-demo__button" data-gd-reset disabled>最初に戻す</button>
+  </div>
+  <p class="gk-activation-demo__readout" data-gd-values>更新0回 ／ w = 3.000 ／ 損失 L = 4.500</p>
+  <p class="gk-activation-demo__readout" data-gd-status role="status" aria-live="polite" aria-atomic="true">学習率0.5、w = 3から開始します。</p>
+  <noscript><p>操作にはJavaScriptが必要です。下の表でも学習率による違いを確認できます。</p></noscript>
+</div>
+
+<script src="{{ '/assets/js/gk-visualizer.js' | relative_url }}" defer></script>
+
+| 学習率 | 開始時 → 1回目 → 2回目のw | この例での動き |
+|---|---|---|
+| 0.1 | 3 → 2.7 → 2.43 | 最小点に近づくが、進み方が遅い |
+| 0.5 | 3 → 1.5 → 0.75 | 0.1より速く最小点に近づく |
+| 2.2 | 3 → −3.6 → 4.32 | 最小点を飛び越え、左右に振れながら遠ざかる |
+
+**勾配と逆向きに進んでも、歩幅が大きすぎると更新後の損失は増えます。** 「学習率は大きいほどよい」という選択肢を切る判断軸です。図の範囲外に出た場合、最小点に十分近づいた場合、または20回更新した場合に教材を停止します。
+
+0.5が常に適切という意味ではありません。適切な学習率は損失曲面などによって変わり、実際の学習ではこの単純な曲線のように進むとは限りません。
 ### データをどれだけ使って勾配を求めるか
 
 - 全データ → バッチ勾配降下法

@@ -96,3 +96,49 @@ document.addEventListener("DOMContentLoaded", () => {
     render("correlation");
   });
 });
+
+// Keep scores and actual labels fixed; only the prediction threshold changes.
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("[data-ds-threshold-demo]").forEach((demo) => {
+    const find = (name) => demo.querySelector(`[data-dt-${name}]`);
+    const slider = find("slider");
+    const samples = Array.from(demo.querySelectorAll("[data-dt-score]"));
+    const presets = Array.from(demo.querySelectorAll("[data-dt-preset]"));
+    const percentage = (numerator, denominator) => denominator
+      ? `${(100 * numerator / denominator).toFixed(1)}%` : "算出不可（陽性判定0件）";
+
+    function render() {
+      const threshold = Number(slider.value);
+      const label = (threshold / 100).toFixed(2);
+      const counts = { tp: 0, fp: 0, fn: 0, tn: 0 };
+      samples.forEach((sample) => {
+        const predicted = Number(sample.dataset.dtScore) >= threshold;
+        const actual = sample.dataset.dtActual === "positive";
+        const kind = predicted ? (actual ? "tp" : "fp") : (actual ? "fn" : "tn");
+        counts[kind] += 1;
+        sample.classList.toggle("is-error", kind === "fp" || kind === "fn");
+        sample.querySelector("[data-dt-prediction]").textContent = `判定：${predicted ? "陽性" : "陰性"}（${kind.toUpperCase()}）`;
+      });
+      Object.keys(counts).forEach((key) => { find(key).textContent = String(counts[key]); });
+      const { tp, fp, fn } = counts;
+      const precision = percentage(tp, tp + fp);
+      const recall = percentage(tp, tp + fn);
+      find("value").textContent = label;
+      slider.setAttribute("aria-valuetext", label);
+      find("precision").textContent = `${tp} / (${tp} + ${fp}) = ${precision}`;
+      find("recall").textContent = `${tp} / (${tp} + ${fn}) = ${recall}`;
+      find("status").textContent = `しきい値${label}：見逃し（FN）${fn}件、誤検出（FP）${fp}件。適合率${precision}、再現率${recall}。`;
+    }
+
+    slider.disabled = false;
+    slider.addEventListener("input", render);
+    presets.forEach((button) => {
+      button.disabled = false;
+      button.addEventListener("click", () => {
+        slider.value = button.dataset.dtPreset;
+        render();
+      });
+    });
+    render();
+  });
+});

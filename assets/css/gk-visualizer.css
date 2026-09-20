@@ -268,3 +268,25 @@
     max-width: 8rem;
   }
 }
+
+/* GK: learning rate and gradient descent */
+.gk-gradient-demo__chart {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 1rem 0;
+  border: 1px solid rgba(75, 94, 128, 0.28);
+  border-radius: 10px;
+}
+.gk-gradient-demo__axis { fill: none; stroke: currentColor; stroke-opacity: 0.35; }
+.gk-gradient-demo__curve { fill: none; stroke: #526987; stroke-width: 3; }
+.gk-gradient-demo__trail { fill: none; stroke: #a04418; stroke-width: 2; stroke-dasharray: 6 4; }
+.gk-gradient-demo__point { fill: #a04418; stroke: white; stroke-width: 2; }
+.gk-gradient-demo__labels { fill: currentColor; font-size: 20px; }
+.gk-gradient-demo .gk-learning-demo__button { min-height: 44px; }
+.gk-gradient-demo .gk-learning-demo__button:disabled { opacity: 0.5; cursor: default; }
+.gk-gradient-demo .gk-learning-demo__button:focus-visible { outline: 2px solid #526987; outline-offset: 3px; }
+.gk-gradient-demo .gk-activation-demo__readout { overflow-wrap: anywhere; }
+@media (max-width: 520px) {
+  .gk-gradient-demo .gk-learning-demo__controls { grid-template-columns: 1fr; }
+}

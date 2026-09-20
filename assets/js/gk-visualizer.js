@@ -163,3 +163,61 @@ document.addEventListener("DOMContentLoaded", () => {
     render("max");
   });
 });
+
+// One-dimensional quadratic loss: L(w) = w^2 / 2, gradient = w.
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("[data-gk-gradient-demo]").forEach((demo) => {
+    const find = (name) => demo.querySelector(`[data-gd-${name}]`);
+    const rates = Array.from(demo.querySelectorAll("[data-gd-rate]"));
+    const step = find("step");
+    let rate = 0.5;
+    let weight, count, trail;
+    const format = (value) => Math.abs(value) > 0 && Math.abs(value) < 0.001
+      ? value.toExponential(2) : value.toFixed(3);
+    const position = (w) => `${300 + w * 500 / 12},${255 - w * w * 210 / 36}`;
+
+    function render(message) {
+      const outside = Math.abs(weight) > 6;
+      const close = Math.abs(weight) < 0.001;
+      step.disabled = outside || close || count >= 20;
+      find("trail").setAttribute("points", trail.map(position).join(" "));
+      const [x, y] = position(weight).split(",");
+      find("point").setAttribute("cx", x);
+      find("point").setAttribute("cy", y);
+      find("values").textContent = `更新${count}回 ／ w = ${format(weight)} ／ 損失 L = ${format(weight * weight / 2)}`;
+      let ending = "";
+      if (outside) ending = " 損失が増え、現在地が図の範囲外に出たため停止しました。最小点への収束ではありません。";
+      else if (close) ending = " 最小点に十分近づいたため停止しました（|w| < 0.001）。";
+      else if (count >= 20) ending = " 比較用の上限20回で停止しました。最小点に到達したという意味ではありません。";
+      find("status").textContent = message + ending;
+    }
+
+    function reset() {
+      weight = 3;
+      count = 0;
+      trail = [weight];
+      rates.forEach((button) => {
+        button.disabled = false;
+        button.setAttribute("aria-pressed", String(Number(button.dataset.gdRate) === rate));
+      });
+      find("reset").disabled = false;
+      render(`学習率${rate}、w = 3から開始します。`);
+    }
+
+    step.addEventListener("click", () => {
+      if (step.disabled) return;
+      const previous = weight;
+      weight = previous - rate * previous;
+      count += 1;
+      trail.push(weight);
+      const change = weight * weight < previous * previous ? "減りました" : "増えました";
+      render(`勾配${format(previous)}と逆向きに更新：${format(previous)} − ${rate} × (${format(previous)}) = ${format(weight)}。損失は${change}。`);
+    });
+    rates.forEach((button) => button.addEventListener("click", () => {
+      rate = Number(button.dataset.gdRate);
+      reset();
+    }));
+    find("reset").addEventListener("click", reset);
+    reset();
+  });
+});
