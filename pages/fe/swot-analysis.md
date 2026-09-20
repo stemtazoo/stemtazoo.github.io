@@ -7,7 +7,7 @@ tags: [fe, fe-strategy, business-strategy]
 fe_section: ストラテジ系
 fe_subsection: 経営戦略マネジメント
 date: 2026-07-27
-last_modified_at: 2026-08-05
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
@@ -43,6 +43,8 @@ T：Threat
 > **良い要因か悪い要因かだけでなく、内部か外部かも確認する**
 
 ことがポイントです。
+
+このページは、**自社の内部要因と外部環境を整理する経営分析の入口記事**です。市場での立ち位置に応じた戦い方は[競争地位別戦略](/fe/competitive-position-strategy/)、新しい市場そのものを創る考え方は[ブルーオーシャン戦略](/fe/blue-ocean-strategy/)で確認できます。
 
 ---
 
