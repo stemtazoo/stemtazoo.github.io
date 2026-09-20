@@ -8,7 +8,7 @@ fe_section: ストラテジ系
 fe_subsection: 企業と法務
 fe_order: 100
 date: 2026-08-27
-last_modified_at: 2026-08-29
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
@@ -17,6 +17,8 @@ last_modified_at: 2026-08-29
 
 請負契約は、完成した成果物に責任を負う契約です。  
 そのため、成果物が契約どおりでないときは、受注側が **契約不適合責任** を負うことがあります。
+
+このページは、**請負・準委任・派遣など外部委託契約を横断して見分ける総論記事**です。請負と準委任だけを詳しく比較する場合は[請負契約と準委任契約の違い](/fe/contract-for-work-vs-mandate/)、納品物の不具合責任は[契約不適合責任](/fe/contract-nonconformity-liability/)、雇用関係と指揮命令は[派遣・出向・請負の違い](/fe/dispatch-secondment-contract/)で確認できます。
 
 FE試験では、細かい法律の条文よりも、次の切り分けが大事です。
 
