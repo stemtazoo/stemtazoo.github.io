@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: データベース
 fe_order: 40
 date: 2026-06-29
-last_modified_at: 2026-07-25
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
@@ -26,6 +26,8 @@ last_modified_at: 2026-07-25
 
 試験では、ACID特性の選択肢として出た場合、  
 **「矛盾を残さない」「整合性を保つ」** とあれば、**一貫性**を選びます。
+
+このページでは、**データベースの一貫性・整合性と、ACIDのConsistencyの意味**を中心に扱います。ACID全体や原子性との違いは、[トランザクションの原子性](/fe/transaction-atomicity-rollback/) を参照してください。
 
 ## 直感的な説明
 
