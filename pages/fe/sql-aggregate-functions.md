@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: データベース
 fe_order: 90
 date: 2026-08-30
-last_modified_at: 2026-08-30
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
@@ -31,6 +31,8 @@ WHEREで対象行を絞る
 ↓
 残った行に集計関数を使う
 ```
+
+このページでは、**COUNT・SUM・AVG・MAXなど、集計関数そのものとWHEREでの絞り込み**を中心に扱います。グループごとに集計する `GROUP BY` と、集計後を絞る `HAVING` は、[SQLのGROUP BYとは？](/fe/sql-group-by-aggregate-functions/) で整理しています。
 
 試験中は、
 
