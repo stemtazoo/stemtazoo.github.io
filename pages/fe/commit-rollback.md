@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: データベース
 fe_order: 50
 date: 2026-06-29
-last_modified_at: 2026-09-19
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
@@ -33,6 +33,8 @@ last_modified_at: 2026-09-19
 途中で失敗した
 → ROLLBACK
 ```
+
+このページでは、**更新を確定するCOMMITと、未確定の更新を取り消すROLLBACK**に絞って扱います。トランザクション全体の考え方は[トランザクションとは？](/fe/transaction/)、ACIDの原子性まで含めた整理は[トランザクションの原子性](/fe/transaction-atomicity-rollback/)を参照してください。
 
 ## 直感的な説明
 
