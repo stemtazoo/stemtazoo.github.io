@@ -9,7 +9,7 @@ ds_area: dataengineering
 ds_section: data-storage
 prev: /ds/etl/
 next: /ds/hadoop-vs-spark/
-last_modified_at: 2026-06-21
+last_modified_at: 2026-09-20
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -45,7 +45,9 @@ DS検定では
 
 Hadoopは、ビッグデータを扱うための分散処理フレームワークです。
 
-主な構成は次の2つです。
+Hadoopには複数の主要コンポーネントがあります。
+
+DS検定でまず押さえたいのは、次の3つです。
 
 ### ① HDFS
 データを分散して保存する仕組み
@@ -53,7 +55,10 @@ Hadoopは、ビッグデータを扱うための分散処理フレームワー�
 ### ② MapReduce
 データを分散して処理する仕組み
 
-流れとしては、
+### ③ YARN
+クラスタ上の計算資源やジョブ実行を管理する仕組み
+
+流れを単純化すると、
 
 1. データをHDFSに保存  
 2. 各サーバで同時に処理（Map）  
@@ -67,6 +72,17 @@ Hadoopは、ビッグデータを扱うための分散処理フレームワー�
 - レプリケーションで耐障害性を確保
 
 ここがDS検定で狙われやすいポイントです。
+
+なお、Hadoopは「HDFS＋MapReduceだけ」で構成されるわけではありません。Apache Hadoopの公式ドキュメントでは、HDFS、MapReduce、YARN、Hadoop Commonなどが主要な構成要素として案内されています。
+
+### 1次情報
+
+- [Apache Hadoop：公式ドキュメント](https://hadoop.apache.org/docs/current/)
+- [Apache Hadoop：HDFS Architecture](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsDesign.html)
+- [Apache Hadoop：MapReduce Tutorial](https://hadoop.apache.org/docs/current/hadoop-mapreduce-client/hadoop-mapreduce-client-core/MapReduceTutorial.html)
+- [Apache Hadoop：YARN](https://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-site/)
+
+DS検定では、公式ドキュメントのすべてを覚える必要はありません。まずは **HDFS＝保存、MapReduce＝処理、YARN＝資源管理** と役割を分けておくと判断しやすくなります。
 
 
 ## どんな場面で使う？
@@ -120,8 +136,8 @@ Hadoopは非構造データも含む大量データ処理が得意。
 
 ## まとめ（試験直前用）
 
-- Hadoopは分散保存＋分散処理の基盤  
-- HDFSは保存、MapReduceは処理  
+- Hadoopは大規模データを分散して扱う基盤  
+- HDFSは保存、MapReduceは処理、YARNは資源管理  
 - ビッグデータ対応が目的  
 - 安価なサーバを多数並べる設計  
 - 「大量・分散」がキーワード
