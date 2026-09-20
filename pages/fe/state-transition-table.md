@@ -6,7 +6,7 @@ permalink: /fe/state-transition-table/
 tags: [fe, technology, basic-theory, state-transition]
 fe_section: テクノロジ系
 fe_subsection: 基礎理論
-last_modified_at: 2026-09-02
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
@@ -40,6 +40,8 @@ last_modified_at: 2026-09-02
 ```
 
 一番大切なのは、**状態が変わったら、次の入力は新しい状態から読む**ことです。
+
+このページでは、**現在状態と入力の交点を順番に追って最終状態を求める表形式の問題**を中心に扱います。状態・イベント・遷移の概念を図で理解したい場合は、[状態遷移図とは？](/fe/state-transition-diagram/) を参照してください。
 
 ## 直感的な説明
 
