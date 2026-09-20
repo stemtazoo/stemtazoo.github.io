@@ -9,7 +9,7 @@ ds_area: dataengineering
 ds_section: data-storage
 prev: /ds/hadoop-vs-spark/
 next: /ds/mapreduce/
-last_modified_at: 2026-08-16
+last_modified_at: 2026-09-20
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -55,6 +55,15 @@ HDFSでは、
 例えばレプリケーション係数が3なら、同じブロックを3つ保持します。
 
 1台が故障しても別のコピーから読み出せるため、**耐障害性が高まります**。
+
+Apache Hadoopの公式「HDFS Architecture」でも、HDFSは大規模なデータセットを扱う分散ファイルシステムとして説明され、データのレプリケーションによって障害に対応する設計が示されています。
+
+### 1次情報
+
+- [Apache Hadoop：HDFS Architecture](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsDesign.html)
+- [Apache Hadoop：HDFS公式ドキュメント](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/)
+
+DS検定では細かな設定値よりも、**「ブロックに分割 → 複数ノードへ分散 → レプリケーションで耐障害性」**という流れを押さえるのが重要です。
 
 ## どんな場面で使う？
 
