@@ -82,7 +82,24 @@ last_modified_at: 2026-09-20
 
 ナッシュ均衡とは、**他のプレイヤーの戦略が変わらないとしたとき、自分だけ戦略を変えても得にならない状態**です。
 
+MIT OpenCourseWareでも、ナッシュ均衡を、各プレイヤーが他のプレイヤーの選択に対する最適反応を選んでおり、単独で戦略を変更しても得をしない状態として説明しています。
+
 FE試験では、まず複雑な計算よりも、ゲーム理論がどのような場面に向くのかを見分けられることが重要です。
+
+### 1次情報・大学講義資料
+
+ゲーム理論は特定企業の製品や制度ではないため、法律や公式仕様のような「唯一の一次情報」はありません。
+
+そのため、この記事では**大学の公式講義資料**を一次資料に近い信頼性の高い情報源として参照します。
+
+- [MIT OpenCourseWare：Game Theory](https://ocw.mit.edu/courses/14-126-game-theory-spring-2016/)
+- [MIT OpenCourseWare：Lecture Notes - Game Theory](https://ocw.mit.edu/courses/14-126-game-theory-spring-2016/pages/lecture-notes/)
+- [MIT OpenCourseWare：Nash Equilibrium](https://ocw.mit.edu/courses/14-12-economic-applications-of-game-theory-fall-2025/resources/mit14_12f25_lec05_1080p_mp4/)
+- [Stanford Encyclopedia of Philosophy：Game Theory](https://plato.stanford.edu/entries/game-theory/)
+
+MITの講義では、戦略形ゲーム、合理化可能性、ナッシュ均衡などがゲーム理論の基本概念として扱われています。
+
+FE対策では、これらの理論を深く証明する必要はありません。まずは、**複数の主体が互いの行動を考慮して意思決定する**という中心的な考え方を押さえます。
 
 経営戦略との関係では、[ブルーオーシャン戦略とは？差別化戦略との違い]({{ '/fe/blue-ocean-strategy/' | relative_url }})もあわせて確認すると、競争を前提に考える場合と、競争そのものを避ける戦略の違いを整理できます。
 
