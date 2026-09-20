@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: 基礎理論
 fe_order: 10
 date: 2026-06-24
-last_modified_at: 2026-07-25
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
@@ -32,6 +32,8 @@ e：指数
 です。
 
 つまり、**f が仮数、e が指数、r が基数**です。
+
+このページでは、**仮数・指数・基数という基本概念**を中心に扱います。ビット列の符号部・指数部・仮数部を読む問題は[浮動小数点形式](/fe/floating-point-format/)、表し方を整える操作は[浮動小数点数の正規化](/fe/floating-point-normalization/)、計算誤差は[浮動小数点の誤差](/fe/floating-point-errors/)で整理しています。
 
 ## 直感的な説明
 
