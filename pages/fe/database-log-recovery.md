@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: データベース
 fe_order: 80
 date: 2026-08-03
-last_modified_at: 2026-08-03
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
@@ -39,6 +39,8 @@ last_modified_at: 2026-08-03
 ↓
 障害回復
 ```
+
+このページでは、**ログファイル・コミット・更新前情報・更新後情報・チェックポイント**を中心に扱います。バックアップ運用全体は[データベースのバックアップと復旧](/fe/database-backup-recovery/)、媒体障害の回復手順は[データベースのロールフォワードとロールバック](/fe/database-recovery-rollforward-rollback/)を参照してください。
 
 ## 直感的な説明
 
