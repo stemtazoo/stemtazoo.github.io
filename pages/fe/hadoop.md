@@ -72,13 +72,14 @@ FEでは、まずこのイメージが持てれば十分です。
 
 Hadoopは、大規模データを分散環境で扱うためのソフトウェア基盤です。
 
-代表的な要素として、次の2つを押さえておきます。
+FEで特に押さえたい代表的な要素は、HDFSとMapReduceです。
 
 | 用語 | 主な役割 |
 |---|---|
 | Hadoop | 大規模データを分散して扱う基盤全体 |
 | HDFS | データを複数台へ分散して保存する |
 | MapReduce | データを複数台で分散して処理する |
+| YARN | クラスタ上の計算資源やジョブ実行を管理する |
 
 一番短く整理すると、次の関係です。
 
@@ -86,14 +87,23 @@ Hadoopは、大規模データを分散環境で扱うためのソフトウェ�
 Hadoop
 ├─ HDFS
 │   → 保存
-│
-└─ MapReduce
-    → 処理
+├─ MapReduce
+│   → 処理
+└─ YARN
+    → 資源・ジョブ管理
 ```
+
+ここで注意したいのは、**現在のHadoopを「HDFS＋MapReduceだけ」と考えないこと**です。Apache Hadoopの公式ドキュメントでは、HDFS、MapReduce、YARNなどがそれぞれ主要な機能として案内されています。
+
+FEではYARNの細部まで覚えるより、まず **「HDFS＝保存」「MapReduce＝処理」** を判断できれば十分です。
 
 ### HDFS
 
 HDFS（Hadoop Distributed File System）は、**大きなデータを複数のコンピュータへ分散して保存する仕組み**です。
+
+Apache Hadoopの公式「HDFS Architecture」では、HDFSを低コストなハードウェア上で動作する分散ファイルシステムとして説明し、大規模データセット、高スループット、耐障害性を重視した設計であることが示されています。
+
+- [Apache Hadoop：HDFS Architecture](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsDesign.html)
 
 FEでHDFSそのものの細部まで問われない場合でも、
 
@@ -107,6 +117,10 @@ HDFS
 ### MapReduce
 
 MapReduceは、**大規模なデータ処理を複数台へ分けて実行し、最後に結果をまとめる考え方**です。
+
+Apache Hadoopの公式「MapReduce Tutorial」では、MapReduceを大規模なデータを大規模クラスタ上で並列処理するためのソフトウェアフレームワークとして説明しています。入力データを複数のまとまりに分け、Mapタスクで並列処理し、その結果をReduceタスクへ渡す流れも確認できます。
+
+- [Apache Hadoop：MapReduce Tutorial](https://hadoop.apache.org/docs/current/hadoop-mapreduce-client/hadoop-mapreduce-client-core/MapReduceTutorial.html)
 
 ```text
 Map
@@ -124,7 +138,17 @@ FEでは、Hadoopの説明を選ぶ問題で、HDFSやMapReduceの名前が判�
 
 という大きな分類です。
 
-公式の出題範囲やシラバスは、[IPA：基本情報技術者試験](https://www.ipa.go.jp/shiken/kubun/fe.html)から確認できます。
+### 1次情報
+
+Hadoopそのものを確認するときは、Apache Software Foundationの公式ドキュメントを基準にできます。
+
+- [Apache Hadoop：公式ドキュメント](https://hadoop.apache.org/docs/current/)
+- [Apache Hadoop：HDFS Architecture](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsDesign.html)
+- [Apache Hadoop：MapReduce Tutorial](https://hadoop.apache.org/docs/current/hadoop-mapreduce-client/hadoop-mapreduce-client-core/MapReduceTutorial.html)
+
+Apache Hadoopの公式ドキュメントでは、HDFS、MapReduce、YARNなどが個別の主要機能として案内されています。この記事ではFE対策として、その中でも選択肢の切り分けに直結するHDFSとMapReduceを中心に整理しています。
+
+基本情報技術者試験の公式の出題範囲やシラバスは、[IPA：基本情報技術者試験](https://www.ipa.go.jp/shiken/kubun/fe.html)から確認できます。
 
 ## 科目Aでどう出る？
 
