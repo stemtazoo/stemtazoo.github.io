@@ -3,12 +3,14 @@ layout: page
 title: データ転送時間の求め方｜ビット・バイトと伝送効率の計算【基本情報技術者試験】
 description: データ転送時間を「単位をそろえる→伝送効率を反映する→データ量÷実効転送速度」の順で整理し、ビットとバイトの変換やFE試験での計算ミスを防ぐ判断軸を解説します。
 permalink: /fe/data-transfer-time/
+redirect_from:
+  - /fe/data-transmission-time/
 tags: [fe, fe-technology, network]
 fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 140
 date: 2026-08-11
-last_modified_at: 2026-08-11
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
