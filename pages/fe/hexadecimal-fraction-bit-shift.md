@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: 基礎理論
 fe_order: 60
 date: 2026-08-03
-last_modified_at: 2026-08-03
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
@@ -32,6 +32,8 @@ last_modified_at: 2026-08-03
 ```
 
 判断の中心は、**2ⁿ倍なら2進数の小数点を右へnビット動かす**ことです。
+
+このページでは、**16進小数を2倍・4倍・8倍など、2のべき乗倍する計算**に絞って扱います。16進小数の桁の重みは[16進小数とは？](/fe/hexadecimal-fraction/)、16進数と2進数の変換手順は[16進小数の変換とは？](/fe/hexadecimal-fraction-conversion/)を参照してください。
 
 ## 直感的な説明
 
