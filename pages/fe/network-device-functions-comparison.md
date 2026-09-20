@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 125
 date: 2026-07-02
-last_modified_at: 2026-07-02
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
@@ -23,6 +23,8 @@ DHCP、NAPT、PPPoE、パケットフィルタリングは、どれもネット�
 | NAPT | 1つのグローバルIPで複数PCを外へ出す |
 | PPPoE | Ethernet上でPPP接続を使う |
 | パケットフィルタリング | 条件に合う通信だけ通す |
+
+このページは、**DHCP・NAPT・PPPoE・パケットフィルタリングの機能を横並びで見分ける比較記事**です。NAPT単体は[NAPTとは？](/fe/nat-napt/)、パケットフィルタリング単体は[パケットフィルタリングとは？](/fe/packet-filtering/)で詳しく確認できます。
 
 迷ったら、次のように考えます。
 
