@@ -8,12 +8,14 @@ fe_section: テクノロジ系
 fe_subsection: コンピュータ構成要素
 fe_order: 65
 date: 2026-08-31
-last_modified_at: 2026-08-31
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
 
 ECC（Error Correcting Code）は、**データに冗長なビットを付加して、メモリ上のビット誤りを検出・訂正するための仕組み**です。
+
+ここでのECCは **Error Correcting Code（誤り訂正符号）** です。楕円曲線暗号の **Elliptic Curve Cryptography** もECCと略されますが、別の用語です。暗号側は[楕円曲線暗号（ECC）とは？](/fe/ecc/)で確認できます。
 
 基本情報技術者試験では、ECCの細かな方式を暗記するより、まず次の2点を押さえます。
 
