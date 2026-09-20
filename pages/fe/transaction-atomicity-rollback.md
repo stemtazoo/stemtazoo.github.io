@@ -7,7 +7,7 @@ tags: [fe, fe-technology, database, transaction]
 fe_section: テクノロジ系
 fe_subsection: データベース
 fe_order: 120
-last_modified_at: 2026-08-11
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
@@ -31,6 +31,8 @@ ROLLBACK
 ```
 
 SQL文だけを見て結果を決めず、**正常終了したか、異常終了したか**まで確認します。
+
+このページでは、**ACIDの原子性と、COMMIT・ROLLBACK・デッドロックとの関係**を中心に扱います。トランザクション全体の基本は[トランザクションとは？](/fe/transaction/)、確定・取消操作だけを整理したい場合は[COMMITとROLLBACK](/fe/commit-rollback/)を参照してください。
 
 ## 直感的な説明
 
