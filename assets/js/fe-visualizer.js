@@ -280,3 +280,69 @@ document.addEventListener("DOMContentLoaded", () => {
     render();
   });
 });
+
+// Compare identical operations while keeping each structure's removal order.
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("[data-fe-stack-queue-demo]").forEach((demo) => {
+    const find = (name) => demo.querySelector(`[data-sq-${name}]`);
+    const add = find("add");
+    const remove = find("remove");
+    const reset = find("reset");
+    let stack, queue, nextValue;
+
+    function paintItems(name, values, nextIndex) {
+      const container = find(name);
+      container.replaceChildren();
+      if (!values.length) {
+        container.textContent = "空です";
+        return;
+      }
+      values.forEach((value, index) => {
+        const cell = document.createElement("span");
+        cell.textContent = `${value}${index === nextIndex ? "（次）" : ""}`;
+        cell.classList.toggle("is-next", index === nextIndex);
+        container.appendChild(cell);
+      });
+    }
+
+    function render(message) {
+      paintItems("stack", stack, stack.length - 1);
+      paintItems("queue", queue, 0);
+      add.textContent = `${nextValue}を追加`;
+      add.disabled = stack.length >= 6;
+      remove.disabled = stack.length === 0;
+      const next = stack.length
+        ? `次に出るのはスタックが${stack[stack.length - 1]}、キューが${queue[0]}です。`
+        : "両方とも空なので取り出せません。追加すると再開できます。";
+      find("status").textContent = `${message} ${next}${add.disabled ? " 表示上限の6個です。追加するには1個取り出してください。" : ""}`;
+    }
+
+    function initialize() {
+      stack = [1, 2, 3];
+      queue = [1, 2, 3];
+      nextValue = 4;
+      find("stack-out").textContent = "まだありません";
+      find("queue-out").textContent = "まだありません";
+      reset.disabled = false;
+      render("1、2、3の順に入れた状態です。");
+    }
+
+    add.addEventListener("click", () => {
+      if (stack.length >= 6) return;
+      const value = nextValue++;
+      stack.push(value);
+      queue.push(value);
+      render(`${value}をスタックの上とキューの末尾に追加しました。`);
+    });
+    remove.addEventListener("click", () => {
+      if (!stack.length) return;
+      const stackValue = stack.pop();
+      const queueValue = queue.shift();
+      find("stack-out").textContent = String(stackValue);
+      find("queue-out").textContent = String(queueValue);
+      render(`スタックの上から${stackValue}、キューの先頭から${queueValue}を取り出しました。`);
+    });
+    reset.addEventListener("click", initialize);
+    initialize();
+  });
+});

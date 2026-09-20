@@ -1,69 +1,94 @@
 # stemtazoo.github.io
 
-`stemtazoo.github.io` は、Jekyll / GitHub Pages で公開している日本語の学習ノートサイトです。
+`stemtazoo.github.io` は、Jekyll / GitHub Pages で公開している日本語の学習ノートサイトです。現在は DS・GK・SG・FE の4テーマを `pages/` 配下で管理しています。
 
-現在は主に、次の 3 テーマを `pages/` 配下で管理しています。
+記事、テーマ別索引、サイト内検索のほか、DS スキルチェックデータ、NotebookLM 向けエクスポート、AI 向け Markdown・索引の生成と検証、公開後の IndexNow 送信も扱います。
 
-- `pages/ds`: DS検定リテラシー、データサイエンス、統計、データエンジニアリング、AI利活用
-- `pages/gk`: G検定、AI、機械学習、深層学習、画像認識、自然言語処理、強化学習、法律・倫理
-- `pages/sg`: 情報セキュリティマネジメント試験、セキュリティ用語、カテゴリ別まとめ、過去問演習
+## 公開ページとテーマ
 
-記事本文だけでなく、テーマ別インデックス、前後ナビゲーション、NotebookLM 向けエクスポート、DS スキルチェックデータ、公開後の IndexNow 送信もこのリポジトリで扱います。
+| テーマ | 主な内容 | 入口ソース | 公開ページ |
+| --- | --- | --- | --- |
+| DS | DS検定リテラシー、統計、Python、SQL、データ分析・エンジニアリング、AI利活用 | `pages/ds/index.md` | [DS学習まとめ](https://stemtazoo.github.io/ds/) |
+| GK | G検定、機械学習、深層学習、AIの社会実装・法律・倫理 | `pages/gk/index.md` | [G検定学習まとめ](https://stemtazoo.github.io/gk/) |
+| SG | 情報セキュリティマネジメント試験、実務判断、カテゴリ別まとめ、過去問演習 | `pages/sg/index.md` | [SG学習まとめ](https://stemtazoo.github.io/sg/) |
+| FE | 基本情報技術者試験、科目Aの知識整理、科目Bのアルゴリズム・疑似言語読解 | `pages/fe/index.md` | [FE学習まとめ](https://stemtazoo.github.io/fe/) |
 
-## 公開ページ
-
-- DS検定: <https://stemtazoo.github.io/ds/>
-- G検定: <https://stemtazoo.github.io/gk/>
-- 情報セキュリティマネジメント試験: <https://stemtazoo.github.io/sg/>
-- SG公式過去問: <https://stemtazoo.github.io/sg/past/>
-- SG全記事一覧: <https://stemtazoo.github.io/sg/all/>
+- [サイト内検索](https://stemtazoo.github.io/search/)
+- [SG公式過去問](https://stemtazoo.github.io/sg/past/)
+- [SG全記事一覧](https://stemtazoo.github.io/sg/all/)
 
 ## リポジトリ構成
 
-- `_layouts/`: 共通レイアウト
-- `_includes/`: テーマ別・共通の Liquid 部品
-- `pages/ds/`: DS検定・データサイエンス系の記事
-- `pages/gk/`: G検定・AI系の記事
-- `pages/sg/`: SG試験・情報セキュリティ系の記事
-- `pages/sg/category/`: SG の分野別カテゴリページ
-- `pages/sg/past/`: SG 公式過去問演習ページ
-- `data/skillcheck/`: DS協会スキルチェックリストのバージョン管理データ
-- `scripts/`: データ生成、メタデータ補完、NotebookLM エクスポート、IndexNow 送信用スクリプト
-- `.github/workflows/`: GitHub Actions
-- `f0977966c6644641ae35df01652658c4.txt`: IndexNow のルート検証ファイル
-- `AGENTS.md`: AIエージェント・共同編集者向けの入口ルール
-- `docs/agent/`: GitHub Pages互換性、IndexNow、テーマ設計、SG記事ルールなどの詳細な運用メモ
+| パス | 用途 |
+| --- | --- |
+| `_config.yml` / `Gemfile` / `Gemfile.lock` | サイト設定と Jekyll の依存関係 |
+| `_layouts/` / `_includes/` | 共通レイアウトとテーマ別・共通の Liquid 部品 |
+| `assets/` | CSS、JavaScript、画像など |
+| `pages/ds/` / `pages/gk/` / `pages/sg/` / `pages/fe/` | テーマ別の記事・索引 |
+| `pages/sg/category/` / `pages/sg/past/` | SG分野別カテゴリと公式過去問演習 |
+| `_data/` | 入口ページの導線や SG 過去問の構造化データ |
+| `search.md` / `search-index.json` | サイト内検索ページと検索用データ |
+| `data/skillcheck/` | DS協会スキルチェックリストの版別データ・エクスポート |
+| `exports/notebooklm/` | DS・SG の NotebookLM 向け出力 |
+| `llms.txt` / `.well-known/agent-skills/` | AI 向けのサイト案内・読解ガイド |
+| `scripts/` | データ生成、メタデータ補完、監査、移行、IndexNow 送信など |
+| `.github/workflows/` | Pages 公開、データ生成、監査、移行などの GitHub Actions |
+| `docs/agent/` / `project_rules/` | 編集・運用ルールと補助方針 |
+| `docs/audits/` | 記事・分類・Markdown の監査記録 |
+| `artifacts/` | AI 向けコンテンツ監査などの出力（公開対象外） |
+| `_site/` | Jekyll と後処理による公開用生成物 |
 
 ## テーマ別の運用
 
 ### DS検定 / データサイエンス
 
-`pages/ds/` は DS検定リテラシーを中心に、統計、SQL、分析手法、AI利活用、データエンジニアリング、セキュリティ基礎などを扱います。
+記事は `ds_area` / `ds_section` で分類します。リポジトリ内のスキルチェックデータは **ver.6.00** を基準にしています。
 
-主な入口は `pages/ds/index.md` です。スキルチェックリスト関連のデータは `data/skillcheck/` に保持し、表示側では原則 `data/skillcheck/exports/latest.json` を参照します。
+- 全項目: `data/skillcheck/exports/latest.json`
+- DS検定対象の4領域の★1項目: `data/skillcheck/exports/exam_star1_latest.json`
+- 過去版・新旧対応表: `data/skillcheck/versions/`
+
+公式スキル項目の分類とブログ独自の `ds_area` / `ds_section` は区別して管理します。詳細は [データ運用ガイド](data/skillcheck/README.md) を参照してください。
 
 ### G検定 / AI
 
-`pages/gk/` は G検定対策向けの記事群です。`pages/gk/index.md` の `gk_sections` で表示順と章立てを管理しています。
-
-個別記事の前後ナビゲーションは `gk_section` / `gk_order` と `_includes/gk_article_footer.html` に依存します。GitHub Pages の古い Liquid でも動くよう、include 側の条件式は保守的に書く方針です。
+`pages/gk/index.md` の `gk_sections` で章立てを管理しています。個別記事の前後ナビゲーションは `gk_section` / `gk_order` と `_includes/gk_article_footer.html` に依存します。索引の変更時は [GK索引ルール](docs/agent/gk-index-rules.md) も参照してください。
 
 ### SG試験 / 情報セキュリティ
 
-`pages/sg/` は情報セキュリティマネジメント試験向けの記事群です。通常記事に加えて、分野別カテゴリページ、全記事一覧、過去問ページ、ケース問題・総合演習系の記事があります。
+通常記事のほか、分野別カテゴリ、全記事一覧、公式過去問、ケース問題・総合演習を管理します。科目Aの知識と科目Bの実務判断をつなぎ、選択肢を切り分ける判断軸を重視します。
 
-主な入口は次の通りです。
+確認問題の追加時は [SG例題・確認問題ルール](docs/agent/sg-example-question-rules.md)、導線の変更時は [SGナビゲーションルール](docs/agent/sg-navigation-rules.md) を参照してください。
 
-- `pages/sg/index.md`: 学習まとめトップ
-- `pages/sg/all.md`: 全記事一覧
-- `pages/sg/category/*.md`: 分野別カテゴリ
-- `pages/sg/past/*.md`: 公式過去問演習
+### FE試験 / 基本情報技術者
 
-SG の通常記事に確認問題を追加するときの細かいルールは `docs/agent/sg-content-rules.md` を参照してください。
+科目Aの選択肢判断と科目Bのプログラム読解・トレースを重視します。通常記事には `tags`、`fe_section`、`fe_subsection`、`fe_order` を設定し、末尾で `fe_article_footer.html` を include します。
+
+関連記事は FE 内に限定し、`prev` / `next` は明示的な依頼がある場合のみ追加します。
+
+## ローカル確認
+
+コマンドはリポジトリのルートで実行します。Ruby / Bundler と Python を用意してください。Python のデータ生成・監査環境は、関連 Actions に合わせて Python 3.12 を基準にすると確認しやすくなります。
+
+`Gemfile` は `github-pages` を **232** に固定し、`_config.yml` は Cayman リモートテーマを指定しています。
+
+```bash
+bundle install
+bundle exec jekyll build
+python scripts/generate_agent_resources.py
+python scripts/validate_agent_resources.py
+python scripts/audit_agent_content.py
+```
+
+AI 向けデータの生成・検証は Jekyll ビルド後に実行します。通常の HTML 表示をブラウザで確認する場合は `bundle exec jekyll serve` を使います。
+
+最終的な互換性確認は GitHub Actions / GitHub Pages 側の結果を優先します。Liquid は基本的なループ・条件分岐を使い、複雑な `where_exp` や新しい構文への依存を避けます。詳細は [GitHub Pages互換性ルール](docs/agent/github-pages-compat.md) を参照してください。
 
 ## よく使うスクリプト
 
-### DS スキルチェックデータを生成する
+### DS スキルチェックデータ・ページの生成
+
+既定の公式 ver.6 データを取得して生成します。
 
 ```bash
 python scripts/build_skillcheck_data.py
@@ -72,172 +97,91 @@ python scripts/build_skillcheck_data.py
 ローカルの xlsx を使う場合:
 
 ```bash
-python scripts/build_skillcheck_data.py --xlsx ./data/skillcheck/raw/skillcheck_ver5.00_simple.xlsx --version 5.00
+python scripts/build_skillcheck_data.py --xlsx ./data/skillcheck/raw/skillcheck_ver6.00.xlsx --version 6.00
 ```
 
-詳細は `data/skillcheck/README.md` を参照してください。
+生成した★1データから総合・分野別スキルチェックページを更新する場合:
 
-### DS 記事を NotebookLM 向けに出力する
+```bash
+python scripts/build_ds_skillcheck_pages.py
+```
+
+### NotebookLM 向けエクスポート
 
 ```bash
 python scripts/export_ds_notebooklm.py
-```
-
-出力先:
-
-- `exports/notebooklm/ds/sections/*.md`
-- `exports/notebooklm/ds/all.md`
-
-外部のグループ定義を使う場合:
-
-```bash
-python scripts/export_ds_notebooklm.py --groups-file exports/notebooklm/ds/groups.template.json
-```
-
-### SG 記事を NotebookLM 向けに出力する
-
-```bash
 python scripts/export_sg_notebooklm.py
 ```
 
-出力先:
+それぞれ `exports/notebooklm/ds/`、`exports/notebooklm/sg/` の `sections/*.md` と `all.md` に出力します。外部のグループ定義を使う場合は `--groups-file path/to/groups.json` を指定します。
 
-- `exports/notebooklm/sg/sections/*.md`
-- `exports/notebooklm/sg/all.md`
+### メタデータと front matter の確認
 
-外部のグループ定義を使う場合:
-
-```bash
-python scripts/export_sg_notebooklm.py --groups-file path/to/sg-groups.json
-```
-
-### ページのメタデータを確認・補完する
-
-まずは report モードで確認します。
+まず report モードで確認します。対象は SG・GK・DS の直下の Markdown ファイルです（FE は対象外）。
 
 ```bash
 python scripts/fix_page_metadata.py pages/sg
 python scripts/fix_page_metadata.py pages/gk
 python scripts/fix_page_metadata.py pages/ds
-```
-
-安全に補完できるものを書き戻す場合:
-
-```bash
-python scripts/fix_page_metadata.py pages/sg --apply
-```
-
-このスクリプトは、テーマごとに `prev` / `next`、`gk_section` / `gk_order`、footer include などの不足を確認します。
-
-### DS front matter を確認する
-
-```bash
 python scripts/lint_ds_frontmatter.py
 ```
 
-### IndexNow に URL を送信する
+`fix_page_metadata.py` は前後ナビゲーション・footer などの不足を確認します。安全に推定できる修正を書き戻す場合は `--apply` を追加し、差分を確認してください。
 
-通常は GitHub Actions が GitHub Pages のデプロイ成功後に実行します。手元で動作確認する場合は、送信対象やキーを明示して実行します。
+### IndexNow の送信内容の確認
 
-```bash
-python scripts/submit_indexnow.py --all-known --key-file f0977966c6644641ae35df01652658c4.txt
-```
-
-## GitHub Pages 互換性
-
-このサイトは GitHub Pages でのビルド成功を最優先します。ローカル環境では通っても、GitHub Pages 側の Jekyll / Liquid が古くて失敗することがあります。
-
-Liquid を編集するときは、次を優先します。
-
-- 複雑な `where_exp` より、明示的な `{% for %}` と `{% if %}`
-- 複雑な boolean 条件より、段階的な分岐
-- 新しい Liquid 構文より、GitHub Pages で確実に動く書き方
-- きれいさより、ビルド安定性
-
-より詳しい互換性ルールや既知の失敗例は `docs/agent/github-pages-compat.md` を参照してください。
-
-## AIエージェント・共同編集者向けルール（役割整理）
-
-このリポジトリの運用ルールは、**「入口（AGENTS.md）→ 分野別詳細（docs/agent）→ SG補助方針（project_rules）」** の3層で管理します。
-
-### 1) 入口: `AGENTS.md`
-
-- 役割: リポジトリ全体で必ず最初に読む「総合ガイド」
-- 含む内容:
-  - サイト全体の優先順位（Pages互換性、内容正確性、テーマ整合など）
-  - 新規記事作成の判断フロー（重複・近似重複の扱い）
-  - 編集前に確認すべき詳細ルールへのリンク
-- 使い方: まず `AGENTS.md` を読んで、対象作業に必要な詳細ファイルへ進む
-
-### 2) 分野別の正式ルール: `docs/agent/*.md`
-
-`AGENTS.md` から参照する詳細ルールです。実作業時は、変更対象に応じて次を参照します。
-
-- `docs/agent/github-pages-compat.md`
-  - 役割: GitHub Pages で壊れない Liquid / Jekyll 記法の基準
-  - 主な用途: include / layout / Liquid 条件分岐を編集するとき
-- `docs/agent/indexnow.md`
-  - 役割: IndexNow 送信とワークフロー運用の基準
-  - 主な用途: URL変更、送信対象、運用確認
-- `docs/agent/theme-consistency.md`
-  - 役割: DS/GK/SG のテーマ間で見た目・構造を揃える基準
-  - 主な用途: レイアウト、ナビ、カテゴリ導線の調整
-- `docs/agent/sg-content-rules.md`
-  - 役割: SG通常記事の執筆・改善方針（試験判断軸重視）
-- `docs/agent/sg-article-template.md`
-  - 役割: SG記事のテンプレート構造
-- `docs/agent/sg-frontmatter-rules.md`
-  - 役割: SG front matter の定義・更新ルール
-- `docs/agent/sg-tag-rules.md`
-  - 役割: SGタグ設計と一貫性ルール
-- `docs/agent/sg-example-question-rules.md`
-  - 役割: SGの例題・確認問題ブロック追加ルール
-- `docs/agent/sg-series-summary-rules.md`
-  - 役割: SGのまとめ・シリーズ系ページ構成ルール
-
-### 3) SG補助ルール: `project_rules/*.md`
-
-- `project_rules/sg_article_ai_search_improvement.md`
-  - 役割: SG記事で「読者の切り分け判断」を強化するための追加ガイド
-  - 位置づけ: `docs/agent/` の正式ルールを補助する実践ガイド
-  - 主な用途: 「このページで切り分けること」「判断軸」「関連記事との役割分担」ブロックを追加・調整するとき
-
-### ルール参照の実務フロー（最短）
-
-1. `AGENTS.md` で優先順位と作業方針を確認  
-2. 変更箇所に対応する `docs/agent/*.md` を確認  
-3. SG記事で必要な場合のみ `project_rules/sg_article_ai_search_improvement.md` を追加参照  
-4. 変更後は GitHub Pages 互換性を意識して最小修正で反映
-
-新しい運用メモを追加する場合は、`AGENTS.md` には概要のみを書き、詳細は原則 `docs/agent/`（または補助方針なら `project_rules/`）へ分離してください。
-
-## デプロイと IndexNow
-
-GitHub Pages の公開後、`.github/workflows/indexnow.yml` が IndexNow 送信を行います。
-
-- post-deploy の `deployment_status` 成功時に動く
-- 通常は前回成功デプロイとの差分 URL だけを送信する
-- 差分範囲が取れない場合は、全件バッチ送信を避けるため送信をスキップする
-- 手動実行 `workflow_dispatch` に対応し、明示的に `all-known` を選んだ場合だけ全既知 URL を送信する
-
-IndexNow キーファイル `f0977966c6644641ae35df01652658c4.txt` はリポジトリルートに置き、ファイル名 stem と中身を一致させる必要があります。移動したり front matter を付けたりしないでください。
-
-## 編集時の注意
-
-- 日本語本文は UTF-8 で扱う
-- 端末表示が文字化けしても、ファイル自体が壊れているとは限らない
-- front matter の `layout`、`title`、`description`、`permalink`、`tags` は慎重に変更する
-- G検定記事では `gk_section` / `gk_order` を崩さない
-- SG や DS の前後ナビゲーションでは `prev` / `next` と footer include の整合性を見る
-- Index / 一覧 / 比較 / まとめページと、通常の1用語記事を混同しない
-- 大きな構造変更の前後では、NotebookLM エクスポートや IndexNow 対象 URL への影響も確認する
-
-## ローカル確認
-
-可能であれば、レイアウト・include・front matter・インデックスを触った後に Jekyll ビルドを確認します。
+次の例は全既知 URL を確認する dry run で、実際の送信は行いません。
 
 ```bash
-bundle exec jekyll build
+python scripts/submit_indexnow.py --all-known --key-file f0977966c6644641ae35df01652658c4.txt --allow-large-batch --dry-run
 ```
 
-ただし、最終的な互換性確認は GitHub Actions / GitHub Pages 側の結果を優先します。特に `Liquid syntax error`、`Liquid Exception`、`_includes/...`、`_layouts/...` に関するエラーはブロッカーとして扱います。
+通常の送信は公開後の Actions が担当します。全件の実送信は、意図的な手動更新時に限ります。
+
+## デプロイと公開後の処理
+
+[pages.yml](.github/workflows/pages.yml) は `main` への push または手動実行で、次の順序で公開します。
+
+1. `actions/jekyll-build-pages@v1` で `_site/` に Jekyll ビルド
+2. `generate_agent_resources.py` で記事 Markdown、テーマ別 `llms.txt`、生成マニフェストを追加
+3. `validate_agent_resources.py` で生成物と HTML の参照整合性を検証
+4. `audit_agent_content.py` でコンテンツ監査レポートを `artifacts/` に出力
+5. `_site/` をアップロードし、GitHub Pages にデプロイ
+
+記事 Markdown は HTML 記事の URL 配下の `index.md`、テーマ別索引は `/ds/llms.txt` などで公開します。修正は `_site/` の生成物ではなく元記事や生成スクリプトに対して行います。
+
+公開後は [indexnow.yml](.github/workflows/indexnow.yml) が IndexNow 送信を行います。
+
+- `github-pages` 環境の `deployment_status` 成功時に実行
+- 通常は前回成功デプロイとの差分 URL のみ送信
+- 差分範囲を取得できない場合、または100 URL の上限を超える場合は送信をスキップ
+- 手動実行の `auto` は差分範囲がないためスキップし、`all-known` を明示的に選ぶと全既知 URL を送信
+
+検証ファイル `f0977966c6644641ae35df01652658c4.txt` はルートに保持し、ファイル名の拡張子を除いた文字列と内容を一致させます。移動や front matter の追加はしないでください。詳細は [IndexNow運用ルール](docs/agent/indexnow.md) を参照してください。
+
+Pages 公開とは別に、DS ver.6 データ・ページ生成、分類・Markdown監査、記事移行、SGタグ監査、DS/GK更新日の補完用ワークフローがあります。一部は結果を自動コミットするため、実行条件と書き込み対象は [.github/workflows/](.github/workflows/) の各定義を確認してください。
+
+## 編集・共同作業のルール
+
+運用ルールは **[AGENTS.md](AGENTS.md) → [docs/agent/](docs/agent/) → 必要に応じて [project_rules/](project_rules/)** の順に参照します。README は概要と作業の入口で、詳細な判断基準は各ガイドにまとめています。
+
+| テーマ | 執筆方針 | 記事テンプレート |
+| --- | --- | --- |
+| DS | [DS記事ルール](docs/agent/ds-content-rules.md) | [DSテンプレート](docs/agent/ds-article-template.md) |
+| GK | [GK記事ルール](docs/agent/gk-content-rules.md) | [GKテンプレート](docs/agent/gk-article-template.md) |
+| SG | [SG記事ルール](docs/agent/sg-content-rules.md) | [SGテンプレート](docs/agent/sg-article-template.md) |
+| FE | [FE記事ルール](docs/agent/fe-content-rules.md) | [FEテンプレート](docs/agent/fe-article-template.md) |
+
+front matter・タグ・ナビゲーションの詳細は `AGENTS.md` の参照一覧から確認できます。共通の変更では [テーマ整合性](docs/agent/theme-consistency.md)、[AI検索・読者理解](docs/agent/ai-search-content-rules.md)、教材を追加する場合は [インタラクティブ教材ルール](docs/agent/interactive-learning-rules.md) も参照してください。
+
+SG記事で判断軸や関連記事との役割分担を強化する場合は、補助方針 [SG記事改善ルール](project_rules/sg_article_ai_search_improvement.md) を必要に応じて参照します。
+
+編集時は次を確認してください。
+
+- 4テーマの既存記事を検索し、新規記事・既存記事更新・比較・まとめ・導線改善のどれが適切か判断する
+- 通常記事と索引・カテゴリ・まとめの役割を区別し、近似重複を増やさない
+- 日本語は UTF-8 で扱い、front matter とテーマ別の分類・並び順・footer の整合性を保つ
+- 新規記事には `last_modified_at` を設定し、既存記事で使用している更新日も内容変更時に更新する
+- 法令・規格・公的基準は現在の公式版を確認し、過去問の歴史的な前提と区別する
+- URL・構造変更時は内部リンク、カテゴリ・索引、NotebookLM 出力、AI 向け生成物、IndexNow への影響を確認する
+- レイアウト・include・front matter・索引の変更後はビルドを確認し、Pages の Liquid エラーを解消してから公開する

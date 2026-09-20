@@ -8,7 +8,7 @@ fe_section: 科目B対策
 fe_subsection: データ構造
 fe_order: 25
 date: 2026-08-09
-last_modified_at: 2026-08-09
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
@@ -115,6 +115,52 @@ dequeue() → C
 ```
 
 この違いが分かれば、LIFO・FIFOという英字を忘れても判断できます。
+
+### 操作して比べる：途中で追加すると次に何が出る？
+
+まず1、2、3の順に入れた状態から始めます。「取り出す → 4を追加 → 取り出す」と操作してみてください。
+
+**見るポイント：追加した値が、すぐ次に取り出されるのはどちらでしょうか。**
+
+<link rel="stylesheet" href="{{ '/assets/css/fe-visualizer.css' | relative_url }}">
+
+<div class="fe-learning-demo fe-stack-queue-demo" data-fe-stack-queue-demo>
+  <p class="fe-learning-demo__title">同じ操作をスタックとキューで比較</p>
+  <p class="fe-learning-demo__lead">両方に同じ値を追加し、両方から1個ずつ取り出します。表示は左から右へ読みます。</p>
+  <div class="fe-learning-demo__controls">
+    <button type="button" class="fe-learning-demo__button" data-sq-add disabled>4を追加</button>
+    <button type="button" class="fe-learning-demo__button" data-sq-remove disabled>取り出す</button>
+    <button type="button" class="fe-learning-demo__button" data-sq-reset disabled>最初に戻す</button>
+  </div>
+  <div class="fe-stack-queue-demo__panels">
+    <section class="fe-stack-queue-demo__panel" aria-label="スタックの状態">
+      <p><strong>スタック（LIFO）</strong><br>左が底、右が上（追加・取り出し口）</p>
+      <div class="fe-stack-queue-demo__items" data-sq-stack><span>1</span><span>2</span><span class="is-next">3（次）</span></div>
+      <p>直前に取り出した値：<strong data-sq-stack-out>まだありません</strong></p>
+    </section>
+    <section class="fe-stack-queue-demo__panel" aria-label="キューの状態">
+      <p><strong>キュー（FIFO）</strong><br>左が先頭（取り出し口）、右が末尾（追加口）</p>
+      <div class="fe-stack-queue-demo__items" data-sq-queue><span class="is-next">1（次）</span><span>2</span><span>3</span></div>
+      <p>直前に取り出した値：<strong data-sq-queue-out>まだありません</strong></p>
+    </section>
+  </div>
+  <p class="fe-learning-demo__result" data-sq-status role="status" aria-live="polite" aria-atomic="true">1、2、3の順に入れた状態です。次に出るのはスタックが3、キューが1です。</p>
+  <p class="fe-learning-demo__hint">この教材では見やすさのため、中に置ける値を各6個までにしています。データ構造そのものの上限ではありません。</p>
+  <noscript><p>操作にはJavaScriptが必要です。下の表でも同じ操作の結果を確認できます。</p></noscript>
+</div>
+
+<script src="{{ '/assets/js/fe-visualizer.js' | relative_url }}" defer></script>
+
+操作例の結果は次のとおりです。スタックの中身は左が底・右が上、キューの中身は左が先頭・右が末尾です。
+
+| 操作 | スタックの中身 | スタックから出た値 | キューの中身 | キューから出た値 |
+|---|---|---|---|---|
+| 1、2、3を入れる | [1, 2, 3] | — | [1, 2, 3] | — |
+| 取り出す | [1, 2] | 3 | [2, 3] | 1 |
+| 4を追加する | [1, 2, 4] | — | [2, 3, 4] | — |
+| 取り出す | [1, 2] | 4 | [3, 4] | 2 |
+
+**スタックでは後から追加した4が先に出ます。キューでは先に待っていた2が出て、4は末尾で待ちます。** 科目Bでも、追加と取り出しが混ざったら「今、残っている値」を操作ごとに更新して追います。
 
 このテーマは、基本情報技術者試験のデータ構造やアルゴリズムと関係します。公式の出題範囲は、[IPA：基本情報技術者試験](https://www.ipa.go.jp/shiken/kubun/fe.html) から確認できます。
 
