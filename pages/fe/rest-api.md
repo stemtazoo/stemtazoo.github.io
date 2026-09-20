@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 55
 date: 2026-07-10
-last_modified_at: 2026-07-25
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
@@ -36,6 +36,8 @@ URL
 HTTPメソッド
 → その対象に何をするかを表す
 ```
+
+このページでは、**Web APIの中でも、資源をURLで表しHTTPメソッドで操作するRESTの考え方**に絞って扱います。Web API全般は、[Web APIとは？](/fe/web-api/) を参照してください。
 
 ## 直感的な説明
 
