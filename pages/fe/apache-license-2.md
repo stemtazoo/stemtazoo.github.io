@@ -8,7 +8,7 @@ fe_section: ストラテジ系
 fe_subsection: 企業と法務
 fe_order: 40
 date: 2026-07-13
-last_modified_at: 2026-09-15
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
@@ -27,6 +27,8 @@ Apache License 2.0
 GPLのように、改変版を配布するときに同じライセンスでのソースコード提供を広く求めるタイプではありません。
 
 OSSそのものの基本を先に確認したい場合は、[オープンソースソフトウェア（OSS）の特徴と著作権・改変・再配布](/fe/open-source-software/)を先に読むと整理しやすくなります。
+
+このページでは、**Apache License 2.0単体の再配布条件と特許条項**を中心に扱います。OSS全体の特徴は[オープンソースソフトウェア（OSS）とは？](/fe/open-source-software/)、GPL・MIT・BSDとの比較は[GPL・MIT・BSDライセンスの違い](/fe/gpl-mit-bsd-license-comparison/)を参照してください。
 
 ## 直感的な説明
 
