@@ -8,7 +8,7 @@ fe_section: ストラテジ系
 fe_subsection: 法務
 fe_order: 10
 date: 2026-07-17
-last_modified_at: 2026-09-19
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
@@ -32,6 +32,8 @@ last_modified_at: 2026-09-19
 ```
 
 > **原則は許諾が必要。例外を使うなら、条件まで確認する。**
+
+このページでは、**引用・私的使用など、著作権者の許諾がなくても認められる利用条件**を中心に扱います。プログラム自体の保護範囲は[プログラムの著作権とは？](/fe/program-copyright-scope/)、職務著作は[職務著作とは？](/fe/work-made-for-hire-copyright/)を参照してください。
 
 ## 直感的な説明
 
