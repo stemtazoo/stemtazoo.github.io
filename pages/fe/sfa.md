@@ -3,12 +3,14 @@ layout: page
 title: SFAとは？CRM・ERPとの違いと営業支援の役割【基本情報技術者試験】
 description: SFAを営業活動や商談の進捗をITで管理・共有する仕組みとして整理し、CRM・ERP・EC・リテールサポートとの違いを解説します。
 permalink: /fe/sfa/
+redirect_from:
+  - /fe/sfa-crm/
 tags: [fe, fe-strategy, business-strategy, sales-support]
 fe_section: ストラテジ系
 fe_subsection: 経営戦略マネジメント
 fe_order: 70
 date: 2026-08-02
-last_modified_at: 2026-08-02
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
@@ -247,10 +249,21 @@ SFAとCRMは近い用語ですが、重点が異なります。
 → CRM
 ```
 
+CRMでは、購買履歴、問い合わせ履歴、契約状況、顧客満足度などを蓄積し、顧客ごとの対応改善に使います。
+
+また、ワントゥワンマーケティングは、顧客ごとの属性・嗜好・購買履歴に応じて提案を変える考え方です。
+
+```text
+顧客ごとの個別対応という考え方
+→ ワントゥワンマーケティング
+
+その個別対応を支える顧客管理
+→ CRM
+```
+
 実際のシステムでは、SFAとCRMの機能が一体化していることもあります。
 
 試験では、どこに重点があるかで判断します。
-
 ## ERPとの違い
 
 ERPは、Enterprise Resource Planningの略です。
