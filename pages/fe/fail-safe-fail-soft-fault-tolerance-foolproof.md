@@ -3,12 +3,14 @@ layout: page
 title: フェールセーフ・フェールソフト・フォールトトレランス・フールプルーフの違い【基本情報技術者試験】
 description: フェールセーフ、フェールソフト、フォールトトレランス、フールプルーフを、安全側への移行、縮退運転、冗長化、誤操作防止の違いで整理し、科目Aの選択肢を切る判断基準を解説します。
 permalink: /fe/fail-safe-fail-soft-fault-tolerance-foolproof/
+redirect_from:
+  - /fe/fail-safe-foolproof-fail-soft/
 tags: [fe, fe-technology, computer-system]
 fe_section: テクノロジ系
 fe_subsection: システム構成要素
 fe_order: 40
 date: 2026-07-13
-last_modified_at: 2026-09-19
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
