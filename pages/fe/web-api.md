@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 54
 date: 2026-07-10
-last_modified_at: 2026-07-25
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
@@ -29,6 +29,8 @@ APIは、Application Programming Interface の略です。
 | URL | Web上の資源の場所 | アドレス、リソースの位置 |
 
 問題文に **「他システムと連携」**、**「Web経由でデータを取得」**、**「JSONを返す」** が出たら、Web APIを疑います。
+
+このページでは、**HTTPなどを使ってWeb上でシステム同士がデータや機能をやり取りするWeb API全般**を中心に扱います。RESTの考え方やGET・POST・PUT・DELETEは、[REST APIとは？](/fe/rest-api/) を参照してください。OS機能をアプリケーションから呼び出すAPIは、[OSにおけるAPIとは？](/fe/os-api/) で整理しています。
 
 ## 直感的な説明
 
