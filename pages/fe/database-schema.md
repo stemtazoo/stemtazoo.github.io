@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: データベース
 fe_order: 160
 date: 2026-08-14
-last_modified_at: 2026-08-14
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
@@ -39,6 +39,8 @@ last_modified_at: 2026-08-14
 ```
 
 の3つに分けて考えます。
+
+このページは、**データベース構造をどう定義するかという設計の入口記事**です。実体・属性・関連を図で整理する場合は[E-R図](/fe/er-diagram/)、表の重複や更新時異状を減らす場合は[データベース正規化](/fe/database-normalization/)を参照してください。
 
 ## 直感的な説明
 
