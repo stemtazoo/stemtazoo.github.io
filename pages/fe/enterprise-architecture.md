@@ -8,7 +8,7 @@ fe_section: ストラテジ系
 fe_subsection: システム戦略
 fe_order: 95
 date: 2026-08-14
-last_modified_at: 2026-08-14
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
@@ -30,6 +30,8 @@ Application
 Technology
 → テクノロジアーキテクチャ
 ```
+
+このページでは、**企業全体の業務・データ・アプリケーション・技術基盤を4体系で整理するEA**を中心に扱います。EAを考える上位方針となる情報戦略は[情報戦略とは？](/fe/information-strategy/)、IT全体を経営目標に沿って統制する考え方は[ITガバナンス](/fe/it-governance/)で確認できます。
 
 一言でまとめると、
 
