@@ -3,12 +3,14 @@ layout: page
 title: 開発部門と運用部門の連携とは？要件定義から運用を参加させる理由【基本情報技術者試験】
 description: システム開発における開発部門と運用部門の連携について、要件定義・運用テスト・移行の各段階で何を協力するのかを、基本情報技術者試験で選択肢を切る判断基準として整理します。
 permalink: /fe/development-operations-collaboration/
+redirect_from:
+  - /fe/development-to-operations-transition/
 tags: [fe, fe-management, service-management, system-development]
 fe_section: マネジメント系
 fe_subsection: サービスマネジメント
 fe_order: 82
 date: 2026-09-16
-last_modified_at: 2026-09-16
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
@@ -119,6 +121,23 @@ last_modified_at: 2026-09-16
 運用部門がシステムの仕様や運用方法を理解するのは、運用テストが終わった後では遅すぎます。
 
 テストに参加するためにも、事前に仕様や運用方法を理解しておく必要があります。
+
+### 本番移行・引継ぎで確認すること
+
+開発から運用へ移るときは、単にシステムを渡すだけではありません。
+
+```text
+運用手順
+監視方法
+バックアップ・復旧
+権限管理
+障害時の連絡体制
+運用マニュアル
+```
+
+を事前に共有し、運用部門が本番環境で安定して扱える状態にしておきます。
+
+つまり、**早期から連携すること**と、**本番移行時に必要な情報・手順を確実に引き継ぐこと**の両方が重要です。
 
 ## 科目Aでどう出る？
 
