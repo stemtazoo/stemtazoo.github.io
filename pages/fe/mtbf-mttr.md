@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: システム構成要素
 fe_order: 20
 date: 2026-08-12
-last_modified_at: 2026-08-12
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
@@ -35,6 +35,8 @@ MTTR = 修理時間 r の平均
 ```
 
 です。
+
+MTBFそのものの計算を、複数台の総稼働時間まで含めて詳しく確認したい場合は、[MTBFとは？](/fe/mtbf/) を参照してください。
 
 ## 直感的な説明
 
