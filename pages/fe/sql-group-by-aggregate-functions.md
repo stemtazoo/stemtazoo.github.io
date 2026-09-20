@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: データベース
 fe_order: 120
 date: 2026-08-03
-last_modified_at: 2026-08-03
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
@@ -35,6 +35,8 @@ SELECTに通常列と集計関数がある
 集計後のグループを絞る
 → HAVING
 ```
+
+このページでは、**GROUP BY・WHERE・HAVINGを使ってグループ単位で集計するSQL**を中心に扱います。`COUNT`・`SUM`・`AVG`・`MAX` など集計関数そのものの基本は、[SQLの集計関数とは？](/fe/sql-aggregate-functions/) を参照してください。
 
 ## 直感的な説明
 
