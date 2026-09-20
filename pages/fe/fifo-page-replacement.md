@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: コンピュータシステム
 fe_order: 100
 date: 2026-07-02
-last_modified_at: 2026-08-19
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
@@ -30,6 +30,8 @@ LRU
 ```
 
 LRUのページ参照列の追い方は、[LRUページ置換とは？最後に参照した時刻で置換ページを決める]({{ '/fe/lru-page-replacement/' | relative_url }})で確認できます。
+
+このページでは、**最初に読み込まれたページから追い出すFIFO方式**を中心に扱います。最後に参照した時刻で判断する方式は、[LRUページ置換とは？](/fe/lru-page-replacement/) を参照してください。
 
 ## 直感的な説明
 
