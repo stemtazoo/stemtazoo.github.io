@@ -8,7 +8,7 @@ fe_section: ストラテジ系
 fe_subsection: システム戦略
 fe_order: 80
 date: 2026-07-17
-last_modified_at: 2026-08-17
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
@@ -36,6 +36,8 @@ FE試験では、次の切り分けが重要です。
 - 付帯作業
 
 > **何をするかが機能要件、品質・制約・開発方法・運用条件が非機能要件。**
+
+このページでは、**機能要件・非機能要件・業務要件など、要件の種類の見分け方**を中心に扱います。要件を識別・評価し、関係者と合意する流れは、[要件定義プロセスとは？](/fe/requirements-definition-process/) を参照してください。
 
 英語でイメージすると、**What does it do?** が機能要件、**How well? / Under what conditions?** が非機能要件です。
 
