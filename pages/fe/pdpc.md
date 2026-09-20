@@ -3,12 +3,14 @@ layout: page
 title: PDPCとは？不測の事態に備えて対応策を考える計画手法【基本情報技術者試験】
 description: PDPCを「計画途中で起こり得る問題を事前に想定し、代替策や対応策まで含めて進行経路を整理する手法」として整理し、PERT・親和図法・系統図法との違いを科目A向けに解説します。
 permalink: /fe/pdpc/
+redirect_from:
+  - /fe/pdpc-method/
 tags: [fe, fe-management, quality-management, project-management]
 fe_section: マネジメント系
 fe_subsection: プロジェクトマネジメント
 fe_order: 220
 date: 2026-09-09
-last_modified_at: 2026-09-09
+last_modified_at: 2026-09-20
 ---
 
 ## まず結論
