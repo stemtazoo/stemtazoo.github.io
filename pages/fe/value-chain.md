@@ -8,7 +8,7 @@ fe_section: ストラテジ系
 fe_subsection: 経営戦略
 fe_order: 150
 date: 2026-08-27
-last_modified_at: 2026-08-27
+last_modified_at: 2026-09-23
 ---
 
 ## まず結論
@@ -226,6 +226,14 @@ FE試験では、分析手法そのものを深く考えるより、まず **各
 ```
 
 と切り分けると分かりやすいです。
+
+## 原典で確認する
+
+バリューチェーンは、Michael E. Porterが競争優位を分析する枠組みとして体系化した考え方です。原典は1985年の著書 *Competitive Advantage* です。
+
+- [Harvard Business School：Michael E. Porter](https://www.hbs.edu/faculty/Pages/profile.aspx?facId=6532)
+
+FE試験では原典の詳細を覚える必要はありません。**企業活動を価値を生み出す活動へ分解して見る**ことと、**主活動と支援活動を区別する**ことを優先します。
 
 ## まとめ（試験直前用）
 
