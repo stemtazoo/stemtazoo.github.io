@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: システム開発技術
 fe_order: 44
 date: 2026-07-15
-last_modified_at: 2026-07-25
+last_modified_at: 2026-09-22
 ---
 
 ## まず結論
@@ -147,6 +147,16 @@ last_modified_at: 2026-07-25
 試作品で要求を確認する
 → プロトタイピング
 ```
+
+## 原典をたどる
+
+ウォーターフォールモデルの歴史をたどるときによく参照される資料が、Winston W. Royceが1970年に発表した **“Managing the Development of Large Software Systems”** です。
+
+- [国立国会図書館サーチ：Managing the Development of Large Software Systems](https://ndlsearch.ndl.go.jp/books/R100000136-I1572824500140562816)
+
+ただし、Royceの論文を単純に「現在教科書で説明されるウォーターフォールモデルを提唱した論文」と覚えるのは注意が必要です。論文では、大規模ソフトウェア開発を単純な一方向の工程だけで進めることの問題も論じられています。
+
+FE試験では歴史そのものより、**工程を上流から下流へ順番に進めるモデル**という出題上の特徴を判断できれば十分です。
 
 ## まとめ（試験直前用）
 
