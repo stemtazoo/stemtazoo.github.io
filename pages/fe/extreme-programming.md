@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ソフトウェア開発
 fe_order: 45
 date: 2026-08-12
-last_modified_at: 2026-08-25
+last_modified_at: 2026-09-22
 ---
 
 ## まず結論
@@ -228,6 +228,19 @@ XPは、要求変更が起こりやすく、短いサイクルで改善しなが
 ユースケースは、利用者とシステムのやり取りを整理する考え方です。
 
 XP固有の代表的プラクティスではありません。
+
+## 原典・一次資料で確認する
+
+XPはKent Beckらによって発展したアジャイル開発手法です。XPの公式サイトでは、Values・Practicesなどが整理されています。
+
+- [Extreme Programming公式サイト](https://www.extremeprogramming.org/)
+
+また、XPはアジャイルソフトウェア開発宣言につながる代表的な開発手法の一つです。
+
+- [Manifesto for Agile Software Development](https://agilemanifesto.org/)
+- [アジャイルソフトウェア開発宣言（日本語）](https://agilemanifesto.org/iso/ja/manifesto.html)
+
+FE試験ではXPの歴史を覚えるより、**ペアプログラミング・テスト・リファクタリング・継続的インテグレーションなど、具体的なプラクティスを見てXPを判断する**ことを優先します。
 
 ## まとめ（試験直前用）
 
