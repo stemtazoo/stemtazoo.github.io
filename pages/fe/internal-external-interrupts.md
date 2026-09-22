@@ -10,7 +10,7 @@ fe_section: テクノロジ系
 fe_subsection: コンピュータ構成要素
 fe_order: 180
 date: 2026-08-04
-last_modified_at: 2026-09-20
+last_modified_at: 2026-09-23
 ---
 
 ## まず結論
@@ -357,6 +357,38 @@ FE試験では、命令実行に同期して発生するか、命令とは独立
 外部割込みには、一定周期のタイマー割込みのように発生時刻をある程度予測できるものもあります。
 
 重要なのは、発生原因が実行中の命令そのものではないことです。
+
+## 一次情報で確認する
+
+### IPAの基本情報技術者試験シラバス
+
+FEで学ぶ知識・技能の範囲を確認する一次情報は、IPAの「基本情報技術者試験（レベル2）シラバス」です。現行版は **Ver.9.2** です。
+
+- [IPA：試験要綱・シラバスについて](https://www.ipa.go.jp/shiken/syllabus/gaiyou.html)
+
+### CPUアーキテクチャの公式資料で確認する
+
+内部割込み・外部割込みというFE向けの分類を理解する補助として、CPUベンダーの公式アーキテクチャ資料も参考になります。
+
+Intelの **Intel 64 and IA-32 Architectures Software Developer's Manual Volume 3A** は、割込みと例外処理を扱っています。例えば、0除算はDivide Error、ページフォールトはPage Faultとして、命令実行やメモリアクセスに伴う例外に整理されています。一方、外部から受け取るハードウェア割込みについても別に説明されています。
+
+- [Intel：Intel 64 and IA-32 Architectures Software Developer Manuals](https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html)
+
+Armのアーキテクチャ資料でも、命令実行に関連して起こるものを **synchronous exception（同期例外）**、現在の命令列とは同期せず外部から発生する割込みなどを **asynchronous exception（非同期例外）** として整理しています。
+
+- [Arm：Exception model](https://developer.arm.com/-/media/Arm%20Developer%20Community/PDF/Learn%20the%20Architecture/Exception%20model.pdf)
+
+CPUごとに用語や分類方法の細部は異なります。そのためFE対策では、特定CPUの例外名を暗記するのではなく、
+
+```text
+実行中の命令がきっかけ
+→ 内部割込み
+
+命令とは独立した装置・タイマーなどの通知
+→ 外部割込み
+```
+
+というシラバス・過去問レベルの判断基準を優先します。
 
 ## まとめ（試験直前用）
 
