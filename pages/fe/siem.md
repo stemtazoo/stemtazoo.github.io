@@ -8,7 +8,7 @@ fe_section: 情報セキュリティ
 fe_subsection: セキュリティ運用
 fe_order: 10
 date: 2026-06-25
-last_modified_at: 2026-06-25
+last_modified_at: 2026-09-22
 ---
 
 ## まず結論
@@ -186,6 +186,34 @@ SIEMは、ログやイベントを集めて、異常を見つけやすくする�
 検知結果をもとに管理者が対応したり、他の仕組みと連携したりすることはありますが、SIEMの中心機能はログ分析です。
 
 FE試験では、**ログ・イベント・相関分析** が出たらSIEMを疑う、という判断が有効です。
+
+## 一次情報で確認する
+
+SIEMの基本的な役割は、NIST（米国国立標準技術研究所）の資料でも確認できます。
+
+NISTの用語集では、SIEMを、さまざまな種類のログを集中管理する機能を提供するアプリケーションとして説明しています。
+
+- [NIST CSRC Glossary：Security Information and Event Management](https://csrc.nist.gov/glossary/term/security_information_and_event_management)
+
+また、NIST SP 800-92では、SIEMを含む集中ログ管理基盤について、複数のログ生成元から情報を集め、フィルタリング、集約、正規化、分析などを行う考え方が整理されています。
+
+- [NIST SP 800-92：Guide to Computer Security Log Management](https://csrc.nist.gov/pubs/sp/800/92/final)
+
+FE試験では細かな製品機能まで覚える必要はありません。一次情報からも、次の軸を押さえておけば十分です。
+
+```text
+複数の機器・システム
+        ↓
+      ログ収集
+        ↓
+   集約・相関分析
+        ↓
+   異常の発見・対応支援
+        ↓
+       SIEM
+```
+
+ここでも、**通信を直接遮断する装置ではなく、ログを集めて分析する仕組み**という切り分けが重要です。
 
 ## まとめ（試験直前用）
 
