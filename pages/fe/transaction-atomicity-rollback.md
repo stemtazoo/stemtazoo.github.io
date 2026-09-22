@@ -7,7 +7,7 @@ tags: [fe, fe-technology, database, transaction]
 fe_section: テクノロジ系
 fe_subsection: データベース
 fe_order: 120
-last_modified_at: 2026-09-20
+last_modified_at: 2026-09-22
 ---
 
 ## まず結論
@@ -398,6 +398,17 @@ ROLLBACK
 | 一貫性 | データの整合性を維持 | 制約・矛盾を防ぐ |
 | 独立性 | 同時処理が互いに不当に影響しない | 排他制御・ロック |
 | 永続性 | 確定した更新を失わない | COMMIT後・障害後も保持 |
+
+## 標準仕様・公式ドキュメントで確認する
+
+SQLのトランザクションはISO/IEC 9075シリーズで標準化されています。公開されている実装例として、PostgreSQLの公式ドキュメントでも、トランザクションの開始、COMMIT、ROLLBACK、分離レベルを確認できます。
+
+- [ISO/IEC 9075-1:2023：Database languages SQL — Framework](https://www.iso.org/standard/76583.html)
+- [PostgreSQL：START TRANSACTION](https://www.postgresql.org/docs/current/sql-start-transaction.html)
+- [PostgreSQL：COMMIT](https://www.postgresql.org/docs/current/sql-commit.html)
+- [PostgreSQL：ROLLBACK](https://www.postgresql.org/docs/current/sql-rollback.html)
+
+FE試験ではDBMSごとの差異を覚えるより、**COMMITは更新を確定し、ROLLBACKは現在のトランザクションで行った更新を取り消す**という役割で判断します。
 
 ## まとめ（試験直前用）
 
