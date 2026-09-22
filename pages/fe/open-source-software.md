@@ -8,7 +8,7 @@ fe_section: ストラテジ系
 fe_subsection: 企業と法務
 fe_order: 39
 date: 2026-09-15
-last_modified_at: 2026-09-20
+last_modified_at: 2026-09-22
 ---
 
 ## まず結論
@@ -315,6 +315,31 @@ OSS
 
 パブリックドメインは、著作権が消滅している、または権利主張がされない状態を指すことがあります。  
 OSSは、著作権が存在したまま、条件付きで利用を許す仕組みです。
+
+## 一次資料で確認する
+
+OSSの基本的な判断基準は、Open Source Initiative（OSI）の **The Open Source Definition** で確認できます。
+
+- [Open Source Initiative：The Open Source Definition](https://opensource.org/osd)
+- [Open Source Initiative：Approved Licenses](https://opensource.org/licenses)
+
+OSIは、オープンソースを単に「ソースコードを見ることができるソフトウェア」とはしていません。自由な再配布、ソースコードへのアクセス、派生物の作成を認めることに加え、個人・団体や利用分野を差別しないことなど、複数の条件を示しています。
+
+FE試験では、この原則から次のひっかけを切れます。
+
+```text
+ソースコードを見られるだけ
+→ OSSとは限らない
+
+無料で使えるだけ
+→ OSSとは限らない
+
+特定の業種では使用禁止
+→ OSSの考え方と合わない
+
+ライセンス条件の下で利用・改変・再配布できる
+→ OSSを判断する重要な材料
+```
 
 ## まとめ
 
