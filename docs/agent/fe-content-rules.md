@@ -13,6 +13,7 @@ Always check the related rule files as needed:
 - GitHub Pages / Liquid compatibility: `docs/agent/github-pages-compat.md`
 - Theme and layout consistency: `docs/agent/theme-consistency.md`
 - Interactive learning / visualizers: `docs/agent/interactive-learning-rules.md`
+- Existing-content audits / source and freshness reviews: `docs/agent/fe-audit-rules.md`
 
 ## FE Article Scope
 
@@ -122,6 +123,19 @@ Before adding a Subject B section, check the following:
 4. Would the section still be useful without relying on a hypothetical statement such as `this may appear in a long question`?
 
 If the answer to questions 2 and 3 is no, omit the Subject B section and use `## どんな場面で使う？` or strengthen `## 科目Aでどう出る？` instead.
+
+## Source Quality Principle
+
+Primary and official sources support FE articles, but adding references is not itself a content goal.
+
+- Prefer primary or official sources when they materially improve correctness, freshness, authority, or exam judgment.
+- For current laws, standards, specifications, public guidance, and examination scope, prefer the latest official version.
+- For the historical origin of a method or concept, use the original paper, book, proposer, or responsible organization when that provenance is useful.
+- Do not add specialist source detail that makes a beginner article harder to understand.
+- Do not create a dedicated source heading mechanically; integrate references in the lightest form that supports the article.
+- Do not create a new article merely because a source review reveals a related term.
+- When reviewing multiple existing articles, checking source freshness, duplicates, syllabus alignment, internal links, structure, or content gaps, read `docs/agent/fe-audit-rules.md` before editing.
+- An audit-driven edit must still follow this file, the FE article template, front-matter rules, tag rules, and all relevant repository-wide rules. The audit rules never override article-quality requirements.
 
 ## Official Links
 
