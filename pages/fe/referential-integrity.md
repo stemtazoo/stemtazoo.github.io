@@ -7,7 +7,7 @@ tags: [fe, fe-technology, database, sql]
 fe_section: テクノロジ系
 fe_subsection: データベース
 fe_order: 40
-last_modified_at: 2026-08-17
+last_modified_at: 2026-09-23
 ---
 
 ## まず結論
@@ -385,6 +385,17 @@ CHECK
 **子表へ追加するときは、その外部キーの値が親表に存在するか確認する。**
 
 </details>
+
+## 標準仕様・公式ドキュメントで確認する
+
+主キー・外部キー・参照制約を含むSQLの基本仕様は、**ISO/IEC 9075** シリーズで標準化されています。具体的な制約の動作は、PostgreSQLの公式ドキュメントでも確認できます。
+
+- [ISO/IEC 9075-2:2023：SQL — Part 2: Foundation](https://www.iso.org/standard/76584.html)
+- [PostgreSQL：Constraints](https://www.postgresql.org/docs/current/ddl-constraints.html)
+
+PostgreSQLの公式資料では、外部キーは「ある列（または列の組）の値が、別の表の行に現れる値と一致しなければならない」という形で説明されています。また、外部キーが参照できるのは主キーだけに限定されず、一意性が保証された列なども対象になり得ます。
+
+FE試験では細かなDBMS差より、**子表の外部キー → 親表の参照先が存在する**という関係をまず確認します。
 
 ## まとめ（試験直前用）
 
