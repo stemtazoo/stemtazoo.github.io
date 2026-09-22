@@ -234,14 +234,34 @@ MEM
 
 5段パイプラインを、1マス＝1サイクルとして並べると次のようになります。
 
-| 命令＼サイクル | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
-|---|---|---|---|---|---|---|---|---|---|---|
-| 命令1 | IF | ID | EX | MEM | WB |  |  |  |  |  |
-| 命令2 |  | IF | ID | EX | MEM | WB |  |  |  |  |
-| 命令3 |  |  | IF | ID | EX | MEM | WB |  |  |  |
-| 命令4 |  |  |  | IF | ID | EX | MEM | WB |  |  |
-| 命令5 |  |  |  |  | IF | ID | EX | MEM | WB |  |
-| 命令6 |  |  |  |  |  | IF | ID | EX | MEM | WB |
+<div class="fe-pipeline-chart" aria-label="5段パイプラインのタイムチャート">
+  <div class="fe-pipeline-chart__scroll">
+    <table class="fe-pipeline-chart__table">
+      <thead>
+        <tr>
+          <th>命令＼サイクル</th>
+          <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th>
+          <th>6</th><th>7</th><th>8</th><th>9</th><th>10</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><th>命令1</th><td class="stage-if">IF</td><td class="stage-id">ID</td><td class="stage-ex">EX</td><td class="stage-mem">MEM</td><td class="stage-wb">WB</td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><th>命令2</th><td></td><td class="stage-if">IF</td><td class="stage-id">ID</td><td class="stage-ex">EX</td><td class="stage-mem">MEM</td><td class="stage-wb">WB</td><td></td><td></td><td></td><td></td></tr>
+        <tr><th>命令3</th><td></td><td></td><td class="stage-if">IF</td><td class="stage-id">ID</td><td class="stage-ex">EX</td><td class="stage-mem">MEM</td><td class="stage-wb">WB</td><td></td><td></td><td></td></tr>
+        <tr><th>命令4</th><td></td><td></td><td></td><td class="stage-if">IF</td><td class="stage-id">ID</td><td class="stage-ex">EX</td><td class="stage-mem">MEM</td><td class="stage-wb">WB</td><td></td><td></td></tr>
+        <tr><th>命令5</th><td></td><td></td><td></td><td></td><td class="stage-if">IF</td><td class="stage-id">ID</td><td class="stage-ex">EX</td><td class="stage-mem">MEM</td><td class="stage-wb">WB</td><td></td></tr>
+        <tr><th>命令6</th><td></td><td></td><td></td><td></td><td></td><td class="stage-if">IF</td><td class="stage-id">ID</td><td class="stage-ex">EX</td><td class="stage-mem">MEM</td><td class="stage-wb">WB</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="fe-pipeline-chart__legend" aria-label="ステージの凡例">
+    <span class="stage-if">IF</span><small>フェッチ</small>
+    <span class="stage-id">ID</span><small>デコード</small>
+    <span class="stage-ex">EX</span><small>実行</small>
+    <span class="stage-mem">MEM</span><small>メモリ</small>
+    <span class="stage-wb">WB</span><small>書戻し</small>
+  </div>
+</div>
 
 この図で見ると、**最初の命令が完成するのは5サイクル目**です。
 
