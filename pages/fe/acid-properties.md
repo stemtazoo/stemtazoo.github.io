@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: データベース
 fe_order: 30
 date: 2026-06-29
-last_modified_at: 2026-09-18
+last_modified_at: 2026-09-22
 ---
 
 ## まず結論
@@ -291,6 +291,17 @@ ACIDは、頭文字の順番を覚えるだけでは試験で迷います。
 ```
 
 問題文に「何度実行しても同じ結果」とあれば、ACIDの原子性と混同しないようにします。
+
+## 原典・標準仕様で確認する
+
+ACIDの4つの性質を明示した古典的な一次研究として、Theo HärderとAndreas Reuterによる1983年の論文 **“Principles of Transaction-Oriented Database Recovery”** があります。
+
+- [DOI：Principles of Transaction-Oriented Database Recovery](https://doi.org/10.1145/289.291)
+- [ISO/IEC 9075-1:2023：Database languages SQL — Framework](https://www.iso.org/standard/76583.html)
+
+この論文では、トランザクションに必要な性質としてAtomicity・Consistency・Isolation・Durabilityが整理されています。
+
+FE試験では歴史を覚える必要はなく、**全部か何もなしか＝Atomicity、整合性＝Consistency、同時実行＝Isolation、確定後も失わない＝Durability**という判断軸を優先します。
 
 ## まとめ（試験直前用）
 
