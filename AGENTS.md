@@ -227,6 +227,7 @@ Read the relevant detailed guide before changing each area:
 - FE article template: `docs/agent/fe-article-template.md`
 - FE front matter rules: `docs/agent/fe-frontmatter-rules.md`
 - FE tag rules: `docs/agent/fe-tag-rules.md`
+- FE existing-content audit rules: `docs/agent/fe-audit-rules.md`
 
 - SG Markdown rendering safety (must-read before creating or editing SG articles):
   - `docs/agent/sg-article-template.md` (standard article structure and Markdown layout)
@@ -268,6 +269,8 @@ SG記事を新規作成・改善・横展開する場合は、必要に応じて
 When creating or editing `pages/fe` articles, write them as study articles for the 基本情報技術者試験 (FE).
 
 - Read `docs/agent/fe-content-rules.md`, `docs/agent/fe-article-template.md`, `docs/agent/fe-frontmatter-rules.md`, and `docs/agent/fe-tag-rules.md` before creating or editing FE articles.
+- When the task is primarily an audit of existing FE content (for example primary-source/freshness, duplicate-content, syllabus-alignment, structure, internal-link, or content-gap review), also read `docs/agent/fe-audit-rules.md` before editing. For a small isolated correction, the audit rules are not mandatory.
+- Audit findings do not override FE article-quality rules. Any article changed because of an audit must still preserve beginner readability, exam judgment value, heading/template consistency, front matter, tags, and current official-source requirements.
 - Write in Japanese unless the user explicitly requests otherwise.
 - Normal FE articles should focus on one term or one concept per page.
 - Prioritize 科目A answer-choice judgment and 科目B reading/use over broad textbook-style explanations.
