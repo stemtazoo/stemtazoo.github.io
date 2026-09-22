@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: コンピュータ構成要素
 fe_order: 181
 date: 2026-08-04
-last_modified_at: 2026-08-04
+last_modified_at: 2026-09-23
 ---
 
 ## まず結論
@@ -347,6 +347,14 @@ CPUチップ
 高クロックの単一コアより
 複数コアの方が省電力化しやすい
 ```
+
+## 公式技術資料で確認する
+
+マルチコアプロセッサの具体的なコア構成やキャッシュ共有方式は製品によって異なります。Intelの公式Software Developer's Manualでは、複数の論理プロセッサやプロセッサトポロジなど、実際のx86プロセッサの構成を確認できます。
+
+- [Intel：Intel 64 and IA-32 Architectures Software Developer Manuals](https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html)
+
+FE試験では製品固有の構成を覚える必要はありません。**複数コアで並列処理できるが、並列化できない部分や共有資源・同期の影響があるため、コア数どおりに必ず高速化するわけではない**という判断軸を優先します。
 
 ## まとめ（試験直前用）
 
