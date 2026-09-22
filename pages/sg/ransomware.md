@@ -6,7 +6,7 @@ permalink: /sg/ransomware/
 tags: [sg, malware, data_leakage, sg-security-measures]
 prev: /sg/psk-wireless-auth/
 next: /sg/residual-risk/
-last_modified_at: 2026-07-27
+last_modified_at: 2026-09-22
 ---
 
 ## まず結論
@@ -151,5 +151,8 @@ SG試験では、**「データ利用不能化＋金銭要求」だけでなく�
 
 ## 公式情報・参考リンク
 - [IPA｜情報セキュリティ10大脅威](https://www.ipa.go.jp/security/10threats/)
+- [IPA｜情報セキュリティ対策の基本と共通対策](https://www.ipa.go.jp/security/10threats/ps6vr70000009r3e-att/kihontokyoutsuu_2023.pdf)
+
+IPAの共通対策資料では、バックアップの適切な運用が基本的な対策として示されています。ランサムウェア対策では、**感染を防ぐ対策だけでなく、被害後に復旧できるようバックアップを運用する視点**も押さえます。
 
 {% include sg_article_footer.html %}
