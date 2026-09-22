@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: データベース
 fe_order: 40
 date: 2026-07-09
-last_modified_at: 2026-09-20
+last_modified_at: 2026-09-23
 ---
 
 ## まず結論
@@ -156,6 +156,17 @@ WHERE employee_id = 'A001';
 ```
 
 DBによっては一意インデックスという仕組みもありますが、FE試験で単にインデックスの目的を聞かれたら、まず検索速度の向上を選びます。
+
+## 公式ドキュメントで確認する
+
+インデックスはDBMSによって実装や利用できる種類が異なるため、ここでは具体的な実装例としてPostgreSQLの公式ドキュメントを確認します。
+
+- [PostgreSQL：Indexes](https://www.postgresql.org/docs/current/indexes.html)
+- [PostgreSQL：CREATE INDEX](https://www.postgresql.org/docs/current/sql-createindex.html)
+
+PostgreSQLの公式資料でも、インデックスは検索条件に合う行を表全体を走査せずに見つけるために利用できる一方、システム全体のオーバーヘッドも増やすため、適切に使う必要があると説明されています。
+
+FE試験ではDBMS固有のインデックス方式を細かく覚えるより、**検索を速くする代わりに、追加・更新などではインデックスを維持する負担が増える**というトレードオフを押さえます。
 
 ## まとめ（試験直前用）
 
