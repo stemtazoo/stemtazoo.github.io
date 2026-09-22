@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 56
 date: 2026-07-10
-last_modified_at: 2026-07-25
+last_modified_at: 2026-09-22
 ---
 
 ## まず結論
@@ -195,6 +195,17 @@ JSONでは、次の混同がよく起こります。
 | CSV | `name,score` | 表形式データ、表計算ソフトとの相性 |
 
 試験では、**キーと値ならJSON、タグならXML、カンマ区切りならCSV** と切り分けると安全です。
+
+## 標準仕様で確認する
+
+JSONの仕様は、IETFの **RFC 8259「The JavaScript Object Notation (JSON) Data Interchange Format」** とECMA Internationalの **ECMA-404** で確認できます。
+
+- [RFC 8259：The JavaScript Object Notation (JSON) Data Interchange Format](https://www.rfc-editor.org/info/rfc8259)
+- [ECMA-404：The JSON Data Interchange Syntax](https://ecma-international.org/publications-and-standards/standards/ecma-404/)
+
+RFC 8259では、JSONを構造化データを表現するための軽量でテキストベース、言語非依存のデータ交換形式として説明しています。
+
+FE試験では細かな文法より、**オブジェクト・配列・名前と値の組**を見分けられることを優先します。
 
 ## まとめ（試験直前用）
 
