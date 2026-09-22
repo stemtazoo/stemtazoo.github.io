@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: データベース
 fe_order: 80
 date: 2026-08-09
-last_modified_at: 2026-08-28
+last_modified_at: 2026-09-23
 ---
 
 ## まず結論
@@ -307,6 +307,17 @@ FE試験では、**主キーを含むかどうかだけで更新可能性を決�
 ビュー
 → 元の表から得た結果を表のように見せる
 ```
+
+## 標準仕様・公式ドキュメントで確認する
+
+ビューを含むSQLの基本仕様は **ISO/IEC 9075** シリーズで標準化されています。具体的なビュー定義や更新可能性は、PostgreSQLの公式ドキュメントでも確認できます。
+
+- [ISO/IEC 9075-2:2023：SQL — Part 2: Foundation](https://www.iso.org/standard/76584.html)
+- [PostgreSQL：CREATE VIEW](https://www.postgresql.org/docs/current/sql-createview.html)
+
+PostgreSQLでは、単純なビューが自動更新可能になるための条件が示されており、トップレベルにDISTINCT、GROUP BY、HAVING、集約関数などを含まないことが条件に含まれます。
+
+ただし更新可能ビューの細かな条件はDBMSによって異なるため、FE試験では既存記事どおり **「元の表の行と対応づけられるか」「集約・グループ化されていないか」** を判断軸にします。
 
 ## まとめ（試験直前用）
 
