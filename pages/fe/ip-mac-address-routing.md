@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 90
 date: 2026-07-28
-last_modified_at: 2026-09-20
+last_modified_at: 2026-09-23
 ---
 
 ## まず結論
@@ -205,6 +205,48 @@ ARPで直接調べられるのは、基本的に同一LAN内の相手です。
 ルータはインターフェースごとにMACアドレスを持ちます。
 
 そのため、LAN1側とLAN2側では異なるMACアドレスになる点に注意します。
+
+## 一次情報で確認する
+
+### IPAの基本情報技術者試験シラバス
+
+FEで学ぶ知識・技能の範囲は、IPAの「基本情報技術者試験（レベル2）シラバス」で確認できます。現行版は **Ver.9.2** です。
+
+- [IPA：試験要綱・シラバスについて](https://www.ipa.go.jp/shiken/syllabus/gaiyou.html)
+
+### IPデータグラムの宛先
+
+IPv4の基本仕様である **RFC 791（Internet Protocol）** では、IPヘッダにSource AddressとDestination Addressが定義されています。
+
+- [RFC Editor：RFC 791 - Internet Protocol](https://www.rfc-editor.org/rfc/rfc791.html)
+
+FEでは細かなヘッダ構造を暗記するより、IPデータグラムの宛先IPアドレスは**最終的な通信相手を示す**と理解することが重要です。
+
+### ARPでIPアドレスからEthernetアドレスを求める
+
+**RFC 826（An Ethernet Address Resolution Protocol）** は、IPアドレスなどのプロトコルアドレスを、Ethernetで送信するための48ビットのEthernetアドレスへ対応付ける仕組みを定めています。
+
+- [RFC Editor：RFC 826 - An Ethernet Address Resolution Protocol](https://www.rfc-editor.org/rfc/rfc826.html)
+
+別LANへ送信するとき、送信元ホストが最終端末のMACアドレスを直接使うのではなく、同一LAN上の次の渡し先であるデフォルトゲートウェイのMACアドレスを使う、という理解につながります。
+
+### EthernetのMAC
+
+Ethernetそのものは **IEEE 802.3** で標準化され、共通のMAC（Media Access Control）仕様を使用します。
+
+- [IEEE：IEEE 802.3-2022 Standard for Ethernet](https://standards.ieee.org/ieee/802.3/10422/)
+
+規格の細部まで覚える必要はありません。FEでは、
+
+```text
+IP
+→ 最終目的地
+
+MAC
+→ 今いるLANで次に渡す相手
+```
+
+という役割の違いを優先して押さえます。
 
 ## まとめ（試験直前用）
 
