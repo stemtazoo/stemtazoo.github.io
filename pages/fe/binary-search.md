@@ -8,7 +8,7 @@ fe_section: 科目B対策
 fe_subsection: アルゴリズム
 fe_order: 50
 date: 2026-06-23
-last_modified_at: 2026-09-20
+last_modified_at: 2026-09-23
 ---
 
 ## まず結論
@@ -241,6 +241,16 @@ a[mid] が目的の値より大きい
 二分探索は効率よく範囲を絞る方法ですが、目的の値が存在しない場合もあります。
 
 その場合は、探索範囲がなくなった時点で「見つからない」と判断します。
+
+## 専門リファレンスで確認する
+
+アルゴリズムやデータ構造の用語を確認できる専門的な資料として、米国NISTの **Dictionary of Algorithms and Data Structures** があります。
+
+- [NIST DADS：binary search](https://xlinux.nist.gov/dads/HTML/binarySearch.html)
+
+NISTでは二分探索を、整列された配列の中央付近の要素と比較しながら探索範囲を繰り返し半分にする探索として整理しています。
+
+FE試験では、**整列済み＋中央と比較＋半分ずつ範囲を捨てる**の3点を判断軸にします。
 
 ## まとめ（試験直前用）
 
