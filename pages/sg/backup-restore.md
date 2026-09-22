@@ -4,7 +4,7 @@ title: "バックアップと復元とは？RTO・RPOとの違いを整理【SG�
 description: "バックアップは障害や誤操作に備えてデータのコピーを保存し、復元はそのコピーからデータやシステムを戻すことです。SG試験で迷いやすいRTO・RPOや冗長化との違い、復元確認の重要性を整理します。"
 permalink: /sg/backup-restore/
 tags: [sg, risk_assessment, it_security_operations, sg-security-management]
-last_modified_at: 2026-09-14
+last_modified_at: 2026-09-22
 ---
 
 ## まず結論
@@ -177,6 +177,10 @@ RTOとRPOの詳しい切り分けは、[RTOとRPOとは？復旧目標の違い�
 ## 公式情報・参考リンク
 
 - [IPA｜ITサービス継続（アーカイブ）](https://www.ipa.go.jp/archive/digital/iot-en-ci/kousinrai/ent04-d.html)
+- [IPA｜ITシステム緊急時対応計画ガイド（NIST SP 800-34 日本語版）](https://www.ipa.go.jp/security/reports/oversea/nist/ug65p90000019cp4-att/000025327.pdf)
+- [IPA｜情報セキュリティ対策の基本と共通対策](https://www.ipa.go.jp/security/10threats/ps6vr70000009r3e-att/kihontokyoutsuu_2023.pdf)
+
+NIST文書の日本語版では、バックアップ方法や復旧に必要な媒体の考え方が整理されています。古い文書のため最新製品の運用根拠ではなく、**バックアップと復旧の基本概念を確認する資料**として参照します。IPAの共通対策資料は、バックアップを情報セキュリティ対策として位置付ける際の参考になります。
 
 ---
 
