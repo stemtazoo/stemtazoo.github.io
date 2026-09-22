@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 50
 date: 2026-06-26
-last_modified_at: 2026-09-20
+last_modified_at: 2026-09-22
 ---
 
 ## まず結論
@@ -185,6 +185,17 @@ DNSは、すでに対応付けられた名前とIPアドレスを調べる仕組
 
 また、DNSは通信先を調べる仕組みであり、通信内容を秘密にする仕組みではありません。  
 通信内容を守る場合は、HTTPSやVPNなどの暗号化技術が関係します。
+
+## 標準仕様で確認する
+
+DNSの基本仕様は、RFC EditorがInternet Standard（STD 13）として示している **RFC 1034** と **RFC 1035** で確認できます。
+
+- [RFC 1034：Domain Names - Concepts and Facilities](https://www.rfc-editor.org/info/rfc1034/)
+- [RFC 1035：Domain Names - Implementation and Specification](https://www.rfc-editor.org/info/rfc1035/)
+
+RFC 1034はDNSの概念や仕組み、RFC 1035はプロトコルや実装上の仕様を扱います。
+
+FE試験では詳細な仕様よりも、**「名前に対応する情報をDNSから調べる」** という役割を押さえることが重要です。
 
 ## まとめ（試験直前用）
 
