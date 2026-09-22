@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: コンピュータシステム
 fe_order: 62
 date: 2026-07-11
-last_modified_at: 2026-09-20
+last_modified_at: 2026-09-23
 ---
 
 ## まず結論
@@ -417,6 +417,28 @@ last_modified_at: 2026-09-20
 ```
 
 </details>
+
+## 国際標準で確認する
+
+浮動小数点演算の丸めや例外処理などを定める代表的な国際標準が **IEEE 754** です。
+
+- [IEEE：IEEE 754-2019 - Standard for Floating-Point Arithmetic](https://standards.ieee.org/ieee/754/6210/)
+
+FE試験では規格の細かな丸めモードなどを暗記する必要はありません。まず、誤差の原因を見て切り分けます。
+
+```text
+近い値を引く
+→ 桁落ち
+
+大きい値と小さい値を演算
+→ 情報落ち
+
+有限桁へ丸める
+→ 丸め誤差
+
+表現範囲を超える
+→ オーバーフロー／アンダーフロー
+```
 
 ## まとめ（試験直前用）
 
