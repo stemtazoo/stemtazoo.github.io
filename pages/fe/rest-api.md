@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 55
 date: 2026-07-10
-last_modified_at: 2026-09-20
+last_modified_at: 2026-09-22
 ---
 
 ## まず結論
@@ -215,6 +215,21 @@ REST API
 JSON
 → データを表す形式
 ```
+
+## 原典・標準仕様で確認する
+
+RESTというアーキテクチャスタイルは、Roy Thomas Fieldingの2000年の博士論文で体系的に説明されています。
+
+- [Roy T. Fielding：Architectural Styles and the Design of Network-based Software Architectures](https://ics.uci.edu/~fielding/pubs/dissertation/top.htm)
+- [Chapter 5：Representational State Transfer (REST)](https://ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)
+
+また、REST APIで利用するHTTPの意味論はIETFのRFC 9110で確認できます。
+
+- [RFC 9110：HTTP Semantics](https://www.rfc-editor.org/info/rfc9110)
+
+ここで注意したいのは、RESTそのものを単純に **「GET・POST・PUT・DELETEを使うAPI」だけで定義しない** ことです。Fieldingの原典では、RESTはクライアント・サーバ、ステートレス、キャッシュ、統一インタフェースなど複数の制約からなるアーキテクチャスタイルとして整理されています。
+
+FE試験ではその全てを暗記する必要はなく、既存記事の **「リソース」「URI/URL」「HTTPメソッド」** を中心に選択肢を切れば十分です。
 
 ## まとめ（試験直前用）
 
