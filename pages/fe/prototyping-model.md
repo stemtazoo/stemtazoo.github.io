@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: システム開発技術
 fe_order: 46
 date: 2026-07-15
-last_modified_at: 2026-07-25
+last_modified_at: 2026-09-22
 ---
 
 ## まず結論
@@ -149,6 +149,18 @@ last_modified_at: 2026-07-25
 開発工程全体を反復
 → スパイラルモデル
 ```
+
+## 原典・研究資料で確認する
+
+ソフトウェア開発におけるプロトタイピングの効果を扱った初期の代表的研究として、Barry W. Boehm、Terence E. Gray、Thomas Seewaldtによる1984年の論文 **“Prototyping Versus Specifying: A Multiproject Experiment”** があります。
+
+- [IEEE DOI：Prototyping Versus Specifying: A Multiproject Experiment](https://doi.org/10.1109/TSE.1984.5010238)
+
+この研究では、同じ小規模ソフトウェアを仕様中心の方法とプロトタイピング中心の方法で開発した複数チームを比較しています。
+
+これは「プロトタイピングモデル」という試験用語の唯一の原典という意味ではありませんが、**試作品を用いる開発アプローチを当時のソフトウェア工学で実証的に比較した代表的な一次研究**として参考になります。
+
+FE試験では研究結果の数値を覚える必要はなく、既存記事どおり **「試作品を利用者に示し、要求を確認・明確化する」** という判断基準を優先します。
 
 ## まとめ（試験直前用）
 
