@@ -8,7 +8,7 @@ fe_section: ストラテジ系
 fe_subsection: 企業と法務
 fe_order: 20
 date: 2026-07-12
-last_modified_at: 2026-09-20
+last_modified_at: 2026-09-22
 ---
 
 ## まず結論
@@ -239,6 +239,18 @@ OSSライセンスにはさまざまな種類があります。
 委託先から自社への受渡しがGPL上の配布に当たるかなどは、契約関係や具体的な状況によって判断が複雑になります。
 
 FE試験では、まず **社内利用か、社外配布か** を中心に判断します。
+
+## 原典・公式資料で確認する
+
+GPLの条件は、GNU Project / Free Software Foundationが公開しているライセンス本文とFAQで確認できます。
+
+- [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.html)
+- [GNU General Public License v2.0](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
+- [GNU GPL FAQ](https://www.gnu.org/licenses/gpl-faq.html)
+
+GPLには複数の版があるため、実務では **GPLだから一律に同じ条件** と考えず、適用されているバージョンを確認する必要があります。
+
+FE試験では条文番号の暗記より、既存記事どおり **「利用・改変しただけか」「外部へ配布したか」「受領者が対応するソースコードを入手できるか」** を判断軸にします。
 
 ## まとめ（試験直前用）
 
