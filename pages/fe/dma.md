@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: コンピュータ構成要素
 fe_order: 70
 date: 2026-08-05
-last_modified_at: 2026-08-29
+last_modified_at: 2026-09-23
 ---
 
 ## まず結論
@@ -311,6 +311,14 @@ CPUとDMAが同じバスを利用するときは、CPUが一時的に待つ場�
 DMAはCPU内部で命令処理を高速化する技術ではありません。
 
 CPU内部の命令実行を効率化する代表例は、パイプライン制御です。
+
+## 公式技術資料で確認する
+
+DMAの具体的な制御方法はハードウェアによって異なります。実装例として、Intelの公式Software Developer's Manualでは、プロセッサとメモリ・入出力の関係を含むシステムアーキテクチャを確認できます。
+
+- [Intel：Intel 64 and IA-32 Architectures Software Developer Manuals](https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html)
+
+FE試験では特定CPUの実装を覚える必要はありません。DMAで重要なのは、**CPUが転送条件を設定し、実際の入出力装置と主記憶の間のデータ転送を専用の制御機構に任せる**という役割です。
 
 ## まとめ（試験直前用）
 
