@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 10
 date: 2026-07-27
-last_modified_at: 2026-09-18
+last_modified_at: 2026-09-22
 ---
 
 ## まず結論
@@ -272,6 +272,22 @@ localhost
 そのため、実務ではアドレスの用途を個別に確認します。
 
 ---
+
+## 標準仕様で確認する
+
+IPv4のプライベートアドレスは、IETFの **RFC 1918「Address Allocation for Private Internets」** で確認できます。
+
+- [RFC 1918：Address Allocation for Private Internets](https://www.rfc-editor.org/info/rfc1918/)
+
+RFC 1918では、プライベート利用のために次の3つのアドレスブロックを予約しています。
+
+```text
+10.0.0.0/8
+172.16.0.0/12
+192.168.0.0/16
+```
+
+この3範囲は、そのままFE試験の選択肢を切る基準として使えます。
 
 ## まとめ（試験直前用）
 
