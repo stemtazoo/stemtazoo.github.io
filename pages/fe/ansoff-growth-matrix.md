@@ -8,7 +8,7 @@ fe_section: ストラテジ系
 fe_subsection: 経営戦略
 fe_order: 15
 date: 2026-08-06
-last_modified_at: 2026-08-29
+last_modified_at: 2026-09-22
 ---
 
 ## まず結論
@@ -315,6 +315,26 @@ M&Aは手段です。買収対象や進出先によって、どの戦略に当�
 ```
 
 ---
+
+## 原典で確認する
+
+アンゾフの成長戦略の原典として確認したいのが、H. Igor Ansoff が1957年に *Harvard Business Review* に発表した **“Strategies for Diversification”** です。
+
+この論文では、企業の成長機会を製品と市場の組合せで考え、**market penetration（市場浸透）、market development（市場開拓）、product development（製品開発）、diversification（多角化）** を区別しています。
+
+- [CiNii Research：Strategies for Diversification](https://cir.nii.ac.jp/crid/1572824501055236352?lang=en)
+- [Google Books：Strategies for Diversification](https://books.google.com/books/about/Strategies_for_Diversification.html?id=_opJvwEACAAJ)
+
+CiNii Researchでは、論文が1957年の *Harvard Business Review* 35巻5号、113–124ページに掲載されたことを確認できます。
+
+FE試験では原典の細かな議論を覚える必要はありません。原典につながる考え方を、次の2軸に落とせれば十分です。
+
+```text
+製品：既存 / 新規
+市場：既存 / 新規
+        ↓
+2 × 2 で成長戦略を判断
+```
 
 ## まとめ（試験直前用）
 
