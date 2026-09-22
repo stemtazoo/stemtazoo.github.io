@@ -8,7 +8,7 @@ fe_section: マネジメント系
 fe_subsection: サービスマネジメント
 fe_order: 45
 date: 2026-07-05
-last_modified_at: 2026-07-05
+last_modified_at: 2026-09-22
 ---
 
 ## まず結論
@@ -106,6 +106,57 @@ MTDは、事業が耐えられる最大の停止時間です。
 MTDは、ビジネスインパクト分析で整理される重要な値です。
 
 公式の出題範囲やシラバスは、[IPA：基本情報技術者試験](https://www.ipa.go.jp/shiken/kubun/fe.html) から確認できます。RTO・RPO・MTDは、BCPやサービス継続、システム復旧の考え方と関係が深い内容です。
+
+## 科目Aでどう出る？
+
+RTO・RPOに、MTBF・MTTRを混ぜた選択肢が出ることがあります。
+
+この場合は、まず **信頼性の指標なのか、事業継続・復旧目標なのか** を分けます。
+
+```text
+信頼性を見る
+├─ 稼働時間 → MTBF
+└─ 修理時間 → MTTR
+
+事業継続を見る
+├─ データの復旧時点 → RPO
+└─ 業務の復旧時間   → RTO
+```
+
+特にRTOとMTTRは、どちらも障害発生後の「時間」に見えるため注意します。
+
+```text
+故障した機器・システムを直す時間
+→ MTTR
+
+重要業務・サービスをいつまでに復旧するか
+→ RTO
+```
+
+問題文に「事業継続計画」「重要業務」「業務再開」「目標復旧」といった表現があれば、RTOを強く疑います。
+
+MTBF・MTTRそのものは、[MTBF・MTTRとは？](/fe/mtbf-mttr/)で整理しています。
+
+### 公的資料で確認する
+
+内閣府の「事業継続ガイドライン」では、重要業務について **どれくらいの時間で復旧させるかをRTO（目標復旧時間）** として決定すると整理されています。
+
+- [内閣府：事業継続ガイドライン（令和5年3月）](https://www.bousai.go.jp/kyoiku/kigyou/pdf/guideline202303.pdf)
+
+デジタル庁の「政府情報システムにおけるセキュリティリスク分析ガイドライン」でも、情報システム運用継続計画の復旧優先度として、**システムをどのくらいの時間で復旧させるかというRTO** が示されています。
+
+- [デジタル庁：政府情報システムにおけるセキュリティリスク分析ガイドライン](https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/e2a06143-ed29-4f1d-9c31-0f06fca67afc/1b65a1dc/20230411_resources_standard_guidelines_guideline_01.pdf)
+
+英語の一次資料としては、NIST SP 800-34 Rev.1 がRTOとRPOを明確に区別しています。
+
+- [NIST SP 800-34 Rev.1：Contingency Planning Guide for Federal Information Systems](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-34r1.pdf)
+
+```text
+RTO → 復旧までの時間
+RPO → 復旧するデータの時点
+```
+
+この2方向を先に確認すると、略語が並ぶ問題でも判断しやすくなります。
 
 ## どんな場面で使う？
 
