@@ -369,6 +369,26 @@ SQLのSELECT句
 
 > **Selection selects rows. Projection picks columns.**
 
+## 原典で確認する
+
+選択・射影・結合などの土台になる関係モデルは、E. F. Coddの1970年の論文 **“A Relational Model of Data for Large Shared Data Banks”** で示されています。
+
+- [IBM Research：A Relational Model of Data for Large Shared Data Banks](https://research.ibm.com/publications/a-relational-model-of-data-for-large-shared-data-banks)
+- [DOI：10.1145/362384.362685](https://doi.org/10.1145/362384.362685)
+
+原典では関係に対する操作が数学的に扱われていますが、FE試験では次の視覚的な切り分けを優先します。
+
+```text
+行を取り出す
+→ 選択
+
+列を取り出す
+→ 射影
+
+表を関連付ける
+→ 結合
+```
+
 ## まとめ（試験直前用）
 
 - **属性 → 列 → 射影（projection）**
