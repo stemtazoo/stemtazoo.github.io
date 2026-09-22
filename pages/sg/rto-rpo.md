@@ -4,7 +4,7 @@ title: "RTOとRPOとは？復旧目標の違いを整理【SG試験】"
 description: "RTOは「いつまでに復旧するか」、RPOは「どの時点までデータを戻すか」を示す復旧目標です。SG試験で混同しやすいRTOとRPOの違いを、バックアップとの関係や判断基準とあわせて整理します。"
 permalink: /sg/rto-rpo/
 tags: [sg, risk_assessment, it_security_operations, sg-security-management]
-last_modified_at: 2026-09-14
+last_modified_at: 2026-09-22
 ---
 
 ## まず結論
@@ -179,6 +179,14 @@ SG試験では「バックアップを取得しているから安全」と言い
 
 ## 公式情報・参考リンク
 
+RTO・RPOは、国内外の公的な事業継続・情報システム復旧の資料でも確認できます。
+
+- [内閣府｜事業継続ガイドライン（令和5年3月）](https://www.bousai.go.jp/kyoiku/kigyou/pdf/guideline202303.pdf)
+  - 重要業務の継続・復旧を考えるBCPの資料として、SGとの相性がよい資料です。
+- [デジタル庁｜政府情報システムにおけるセキュリティリスク分析ガイドライン](https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/e2a06143-ed29-4f1d-9c31-0f06fca67afc/1b65a1dc/20230411_resources_standard_guidelines_guideline_01.pdf)
+  - 情報システムの運用継続と復旧優先度を考える資料として参照できます。
+- [NIST SP 800-34 Rev.1｜Contingency Planning Guide for Federal Information Systems](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-34r1.pdf)
+  - RTOとRPOを区別して確認できる英語の公的資料です。
 - [IPA｜ITサービス継続（アーカイブ）](https://www.ipa.go.jp/archive/digital/iot-en-ci/kousinrai/ent04-d.html)
 
 ---
