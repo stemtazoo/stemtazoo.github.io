@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 75
 date: 2026-08-17
-last_modified_at: 2026-08-17
+last_modified_at: 2026-09-22
 ---
 
 ## まず結論
@@ -262,6 +262,29 @@ IMAPは、メールをサーバ上に置いたまま管理・閲覧するため�
 **送るならSMTP、受信ならPOP3/IMAP、複数端末で共有するならIMAP**です。
 
 </details>
+
+## 標準仕様で確認する
+
+SMTP・POP3・IMAPの基本仕様は、IETFのRFCで確認できます。
+
+- [RFC 5321：Simple Mail Transfer Protocol](https://www.rfc-editor.org/info/rfc5321)
+- [RFC 1939：Post Office Protocol - Version 3](https://www.rfc-editor.org/info/rfc1939)
+- [RFC 9051：Internet Message Access Protocol (IMAP) - Version 4rev2](https://www.rfc-editor.org/info/rfc9051)
+
+ここで注意したいのは、IMAPについて古い資料ではRFC 3501（IMAP4rev1）がよく参照されることです。RFC 9051（IMAP4rev2）はRFC 3501をobsolete（廃止・置換）しています。
+
+FE試験ではRFCの世代を暗記する必要はなく、次の役割で切り分けます。
+
+```text
+送信・転送
+→ SMTP
+
+メールを取り出す
+→ POP3
+
+サーバ上のメールを操作・管理
+→ IMAP
+```
 
 ## まとめ（試験直前用）
 
