@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: コンピュータ構成要素
 fe_order: 42
 date: 2026-09-16
-last_modified_at: 2026-09-16
+last_modified_at: 2026-09-23
 ---
 
 ## まず結論
@@ -274,6 +274,17 @@ RAID
 バックアップ
 → 失ったデータを戻すためのコピー
 ```
+
+## 標準資料で確認する
+
+RAIDの用語や各レベルの定義を確認する一次資料として、Storage Networking Industry Association（SNIA）の技術資料があります。
+
+- [SNIA：Dictionary](https://www.snia.org/education/online-dictionary)
+- [SNIA：Common RAID Disk Data Format (DDF)](https://www.snia.org/tech_activities/standards/curr_standards/ddf)
+
+RAIDはレベルによってデータ配置・冗長性・性能特性が異なります。また、RAIDはバックアップそのものではありません。
+
+FE試験では実装仕様まで追わず、**RAID0＝ストライピング、RAID1＝ミラーリング、RAID5＝分散パリティ**という切り分けを優先します。
 
 ## まとめ（試験直前用）
 
