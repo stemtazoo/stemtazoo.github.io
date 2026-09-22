@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: セキュリティ
 fe_order: 50
 date: 2026-07-13
-last_modified_at: 2026-09-18
+last_modified_at: 2026-09-22
 ---
 
 ## まず結論
@@ -277,6 +277,18 @@ HTTPSの主な機能として、最も適切なものはどれか。
 **通信内容を暗号化するならHTTPS、Webアプリ攻撃ならWAF、IPアドレスやポート番号で制御するならファイアウォール**と切り分けます。
 
 </details>
+
+## 標準仕様で確認する
+
+HTTPSとTLSの現在の標準仕様は、IETFのRFCで確認できます。
+
+- [RFC 9110：HTTP Semantics](https://www.rfc-editor.org/info/rfc9110)
+- [RFC 9112：HTTP/1.1](https://www.rfc-editor.org/info/rfc9112)
+- [RFC 8446：The Transport Layer Security (TLS) Protocol Version 1.3](https://www.rfc-editor.org/info/rfc8446)
+
+RFC 9110ではHTTPS URIについてTLSで保護された接続を用いることが示され、RFC 8446ではTLS 1.3の目的として、盗聴・改ざん・メッセージ偽造を防ぐための通信保護が定められています。
+
+FE試験ではRFC番号の暗記は不要です。**HTTPをTLSで保護する → HTTPS** という役割を判断できれば十分です。
 
 ## まとめ（試験直前用）
 
