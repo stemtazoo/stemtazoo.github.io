@@ -8,7 +8,7 @@ fe_section: ストラテジ系
 fe_subsection: 経営戦略
 fe_order: 40
 date: 2026-08-11
-last_modified_at: 2026-08-11
+last_modified_at: 2026-09-23
 ---
 
 ## まず結論
@@ -252,6 +252,16 @@ PPMで市場成長率を見るため、市場予測の手法に見えること�
 ```
 
 **二つの軸を両方見る**ことが大切です。
+
+## 原典で確認する
+
+PPMで使われる成長率・相対的市場シェアのマトリクスは、Boston Consulting Group（BCG）が普及させたポートフォリオ分析です。
+
+- [BCG：What Is the Growth Share Matrix?](https://www.bcg.com/about/overview/our-history/growth-share-matrix)
+
+BCGの説明でも、事業を**市場成長率と相対的市場シェア**の2軸で捉え、資源配分を考える枠組みとして整理されています。
+
+FE試験では歴史を覚える必要はなく、**市場成長率 × 相対的市場シェア → 事業分類 → 経営資源の配分**という流れを優先します。
 
 ## まとめ（試験直前用）
 
