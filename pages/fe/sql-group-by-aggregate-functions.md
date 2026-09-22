@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: データベース
 fe_order: 120
 date: 2026-08-03
-last_modified_at: 2026-09-20
+last_modified_at: 2026-09-22
 ---
 
 ## まず結論
@@ -353,6 +353,18 @@ COUNT(列名)
 ```
 
 NULLを含む可能性がある問題では、この違いに注意します。
+
+## 標準仕様・公式ドキュメントで確認する
+
+SQLは **ISO/IEC 9075** シリーズとして標準化されています。現在公開されている2023年版では、Part 1がSQL全体の枠組み、Part 2がSQL/Foundationを扱います。
+
+- [ISO/IEC 9075-1:2023：SQL — Part 1: Framework](https://www.iso.org/standard/76583.html)
+- [ISO/IEC 9075-2:2023：SQL — Part 2: Foundation](https://www.iso.org/standard/76584.html)
+- [PostgreSQL：Table Expressions — GROUP BY and HAVING](https://www.postgresql.org/docs/current/queries-table-expressions.html)
+
+PostgreSQLの公式ドキュメントでも、WHEREで行を絞った後にGROUP BYでグループ化し、HAVINGでグループを絞る流れを確認できます。
+
+FE試験では、**WHERE＝グループ化前の行、GROUP BY＝グループ化、HAVING＝グループ化後のグループ**という処理対象の違いを優先します。
 
 ## まとめ（試験直前用）
 
