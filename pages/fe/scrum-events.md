@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ソフトウェア開発
 fe_order: 42
 date: 2026-09-16
-last_modified_at: 2026-09-16
+last_modified_at: 2026-09-22
 ---
 
 ## まず結論
@@ -247,6 +247,31 @@ last_modified_at: 2026-09-16
 ```
 
 「いつ行うか」を先に見ると切り分けやすいです。
+
+## 原典で確認する
+
+Scrumの定義は、共同考案者のKen SchwaberとJeff Sutherlandが公開している **The Scrum Guide** で確認できます。
+
+- [The Scrum Guide（公式）](https://scrumguides.org/scrum-guide.html)
+- [Scrum Guide ダウンロードページ](https://scrumguides.org/download.html)
+
+2020年版Scrum Guideでは、Sprintを他のイベントを含むコンテナとして位置付け、Sprint Planning、Daily Scrum、Sprint Review、Sprint Retrospectiveの目的をそれぞれ定義しています。
+
+FE試験では、原典の細かな説明を暗記するより、**イベントの目的**で切り分けるのが重要です。
+
+```text
+計画を立てる
+→ Sprint Planning
+
+Sprint Goalに向けた進捗を確認し、今後の作業を調整
+→ Daily Scrum
+
+成果と環境の変化を確認し、次を検討
+→ Sprint Review
+
+品質と有効性を高める改善を計画
+→ Sprint Retrospective
+```
 
 ## まとめ（試験直前用）
 
