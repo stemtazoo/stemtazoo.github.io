@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 80
 date: 2026-08-31
-last_modified_at: 2026-08-31
+last_modified_at: 2026-09-23
 ---
 
 ## まず結論
@@ -86,7 +86,20 @@ SNMPでは、たとえば次のような情報を扱います。
 - エラー数
 - 障害情報
 
-FE試験では、MIBやOIDなどの細かな実装を深追いするよりも、**SNMPはネットワーク機器の監視・管理**と押さえることを優先します。
+SNMPで管理する情報は、**MIB（Management Information Base）**として体系的に扱われます。
+
+また、管理側から問い合わせるだけでなく、機器側から管理側へイベントを通知する仕組みもあります。代表的なものが **Trap** です。
+
+```text
+通常の確認
+マネージャ → 問い合わせ → エージェント
+マネージャ ← 状態情報   ← エージェント
+
+異常などの通知
+マネージャ ← Trap       ← エージェント
+```
+
+FE試験では細かな実装を深追いするよりも、まず **SNMPはネットワーク機器の監視・管理** と押さえ、その次に **管理情報＝MIB、機器側からの通知＝Trap** と整理します。
 
 ## 科目Aでどう出る？
 
@@ -131,7 +144,7 @@ SNMPを使えば、管理システムから複数の機器の状態をまとめ�
 
 ### 機器から異常を通知する
 
-SNMPでは、管理側から問い合わせるだけでなく、機器側から異常を通知する仕組みもあります。
+SNMPでは、管理側から問い合わせるだけでなく、機器側から異常などを通知する **Trap** もあります。
 
 FE試験では、まず
 
@@ -189,12 +202,23 @@ SNMPは、ルータのようにパケットを転送したり、ネットワー�
 
 と、対象まで確認します。
 
+## 標準仕様で確認する
+
+SNMPの基本的なアーキテクチャやプロトコル操作は、IETFのRFCで確認できます。
+
+- [RFC 3411：An Architecture for Describing Simple Network Management Protocol (SNMP) Management Frameworks](https://www.rfc-editor.org/info/rfc3411/)
+- [RFC 3416：Version 2 of the Protocol Operations for the Simple Network Management Protocol (SNMP)](https://www.rfc-editor.org/info/rfc3416/)
+
+FE試験ではRFCの詳細を暗記するより、**マネージャとエージェント、MIB、Trapの役割を切り分けること**を優先します。
+
 ## まとめ（試験直前用）
 
 - **ネットワーク機器の監視・管理 → SNMP**
 - **時刻同期 → NTP**
 - **メール送信 → SMTP**
 - SNMPでは、管理側の**マネージャ**と機器側の**エージェント**が情報をやり取りする
+- SNMPで扱う管理情報は**MIB**
+- 機器側から管理側への代表的な通知は**Trap**
 - 「情報収集」だけでなく、**何の情報を集めるのか**を見る
 
 試験中は、
