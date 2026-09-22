@@ -8,7 +8,7 @@ fe_section: ストラテジ系
 fe_subsection: 企業と法務
 fe_order: 30
 date: 2026-07-13
-last_modified_at: 2026-09-20
+last_modified_at: 2026-09-22
 ---
 
 ## まず結論
@@ -174,6 +174,29 @@ MITライセンスにも条件があります。
 3条項BSDライセンスには、著作権者や貢献者の名前を許可なく宣伝に使わない条件があります。
 
 試験では細かな版の違いまで問われない場合でも、**MIT・BSDはGPLより制約が緩やかだが、表示条件は残る**と整理しておくと判断しやすくなります。
+
+## 公式ライセンスで確認する
+
+各ライセンスの条件は、GNU Project / Free Software FoundationやOpen Source Initiative（OSI）の公式資料で確認できます。
+
+- [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.html)
+- [OSI：The MIT License](https://opensource.org/license/mit)
+- [OSI：The 3-Clause BSD License](https://opensource.org/license/bsd-3-clause)
+
+OSIの3条項BSDライセンスでは、ソース・バイナリ形式での再配布を認める一方、著作権表示などの保持に加え、著作権者や貢献者の名前を許可なく派生製品の推奨・宣伝に使わない条件が明記されています。
+
+FE試験では細かな条文より、次の違いを優先します。
+
+```text
+配布時にコピーレフトと対応するソースコードを意識
+→ GPL
+
+著作権表示・許諾表示を残して広く利用
+→ MIT
+
+表示保持＋名称を無断で宣伝に使わない
+→ 3条項BSD
+```
 
 ## まとめ（試験直前用）
 
