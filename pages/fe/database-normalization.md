@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: データベース
 fe_order: 165
 date: 2026-07-02
-last_modified_at: 2026-09-20
+last_modified_at: 2026-09-22
 ---
 
 ## まず結論
@@ -543,6 +543,17 @@ B → C
 非正規化は、性能上の理由などで意図的に重複を持たせる設計です。目的と影響を理解して行います。
 
 正規化によって更新・追加・削除時の不整合がなぜ減るのかまで確認したい場合は、[SG：正規化とは？データの重複を減らして整合性を保つ考え方](/sg/database-normalization/)も参考になります。
+
+## 原典で確認する
+
+正規化の理論的な出発点も、E. F. Coddによる関係モデルの研究にあります。1970年の論文では、関係をより単純な形にするnormalizationの考え方が扱われています。
+
+- [IBM Research：A Relational Model of Data for Large Shared Data Banks](https://research.ibm.com/publications/a-relational-model-of-data-for-large-shared-data-banks)
+- [DOI：10.1145/362384.362685](https://doi.org/10.1145/362384.362685)
+
+ただし、現在学ぶ第1・第2・第3正規形などの体系を1970年論文だけですべて説明できるわけではありません。
+
+FE試験では歴史を暗記するより、**部分関数従属・推移的関数従属を見て、どの正規形まで進んでいるかを判断する**ことを優先します。
 
 ## まとめ（試験直前用）
 
