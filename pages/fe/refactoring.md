@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ソフトウェア開発管理技術
 fe_order: 50
 date: 2026-08-16
-last_modified_at: 2026-09-15
+last_modified_at: 2026-09-23
 ---
 
 ## まず結論
@@ -223,6 +223,15 @@ A・B・Cから呼び出す
 TDD（Test Driven Development）は、テストを先に作り、そのテストを満たすコードを書いていく開発方法です。
 
 TDDの開発サイクルの中でリファクタリングを行うことはありますが、同じ意味ではありません。
+
+## 原典で確認する
+
+リファクタリングという考え方を体系化した代表的な原典として、Martin Fowlerの **Refactoring** があります。Fowlerの公式サイトでは、リファクタリングをソフトウェアの観察可能な振る舞いを保ちながら内部構造を改善するものとして整理しています。
+
+- [Martin Fowler：Refactoring](https://refactoring.com/)
+- [Martin Fowler：Refactoring（定義と解説）](https://martinfowler.com/bliki/DefinitionOfRefactoring.html)
+
+FE試験では個々のリファクタリング手法を暗記する必要はありません。**外から見た振る舞いは変えず、中の構造を改善する**という一点をまず判断基準にします。
 
 ## まとめ（試験直前用）
 
