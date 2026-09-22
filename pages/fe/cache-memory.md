@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: コンピュータ構成要素
 fe_order: 120
 date: 2026-08-02
-last_modified_at: 2026-09-22
+last_modified_at: 2026-09-23
 ---
 
 ## まず結論
@@ -388,6 +388,16 @@ CPU
 **CPU用キャッシュがミスしたら「主記憶 → キャッシュ」**と覚えると、転送方向の選択肢を切りやすくなります。
 
 </details>
+
+## 公式技術資料で確認する
+
+CPUキャッシュの具体的な構成やキャッシュ制御はプロセッサによって異なります。x86系の具体例はIntelの公式Software Developer's Manualで確認できます。
+
+- [Intel：Intel 64 and IA-32 Architectures Software Developer Manuals](https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html)
+
+実際のCPUでは複数レベルのキャッシュ、キャッシュライン、書込み方式など多くの実装要素があります。
+
+FE試験では製品固有の詳細を覚えるのではなく、**CPUと主記憶の速度差を埋める、キャッシュライン単位で扱う、ライトスルーとライトバックを区別する**という既存記事の判断軸を優先します。
 
 ## まとめ（試験直前用）
 
