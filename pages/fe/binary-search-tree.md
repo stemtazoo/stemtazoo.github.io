@@ -8,7 +8,7 @@ fe_section: 科目B対策
 fe_subsection: データ構造
 fe_order: 40
 date: 2026-07-13
-last_modified_at: 2026-09-20
+last_modified_at: 2026-09-23
 ---
 
 ## まず結論
@@ -153,6 +153,16 @@ last_modified_at: 2026-09-20
 ヒープは、親と子の間で大小関係を保つ構造です。
 
 一方、2分探索木は、左部分木と右部分木全体に大小関係があります。
+
+## 専門リファレンスで確認する
+
+二分探索木の用語と性質は、米国NISTの **Dictionary of Algorithms and Data Structures** でも確認できます。
+
+- [NIST DADS：binary search tree](https://xlinux.nist.gov/dads/HTML/binarySearchTree.html)
+
+二分探索木では、ある節点より小さいキーを持つ節点が左部分木、大きいキーを持つ節点が右部分木に配置されます。
+
+FE試験では、単なる「子が最大2個」の二分木と区別し、**左は小さい・右は大きいという大小関係があるか**を優先して判断します。
 
 ## まとめ（試験直前用）
 
