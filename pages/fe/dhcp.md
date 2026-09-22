@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 118
 date: 2026-07-02
-last_modified_at: 2026-07-25
+last_modified_at: 2026-09-22
 ---
 
 ## まず結論
@@ -173,6 +173,16 @@ NAT
 ```
 
 つまり、DHCPは **内側で設定を配る**、NATやNAPTは **外側へ出る通信を変換する** と考えると分かりやすいです。
+
+## 標準仕様で確認する
+
+DHCPの基本仕様は、IETFの **RFC 2131「Dynamic Host Configuration Protocol」** で確認できます。
+
+- [RFC 2131：Dynamic Host Configuration Protocol](https://www.rfc-editor.org/info/rfc2131/)
+
+RFC 2131では、DHCPを、ホストへ設定情報を渡す仕組みとネットワークアドレスを割り当てる仕組みから成るプロトコルとして説明しています。
+
+FE試験では仕様の細部まで覚える必要はなく、**「端末へIPアドレスなどの設定情報を自動で配る」** という役割を押さえれば十分です。
 
 ## まとめ（試験直前用）
 
