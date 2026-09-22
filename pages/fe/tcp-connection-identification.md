@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 230
 date: 2026-08-12
-last_modified_at: 2026-08-12
+last_modified_at: 2026-09-22
 ---
 
 ## まず結論
@@ -237,6 +237,23 @@ IPアドレス
 ```
 
 この役割の違いを押さえます。
+
+## 標準仕様で確認する
+
+TCPの現在の基本仕様は、IETFの **RFC 9293「Transmission Control Protocol (TCP)」** で確認できます。
+
+- [RFC 9293：Transmission Control Protocol (TCP)](https://www.rfc-editor.org/info/rfc9293)
+
+RFC 9293は従来のRFC 793を置き換えた現在のTCP仕様です。TCPでは接続の両端をIPアドレスとポート番号で表すため、FE試験では次の4つを組み合わせて通信を識別すると整理できます。
+
+```text
+送信元IPアドレス
+送信元ポート番号
+宛先IPアドレス
+宛先ポート番号
+```
+
+古いRFC番号ではなく、**IPアドレス＋ポート番号で通信の端点を識別する**という仕組みを押さえることが重要です。
 
 ## まとめ（試験直前用）
 
