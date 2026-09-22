@@ -1022,3 +1022,105 @@
   margin: 0;
   padding: 0.75rem 1rem 0.9rem 2.2rem;
 }
+
+
+/* FE: five-stage pipeline timing chart */
+.fe-pipeline-chart {
+  margin: 1.25rem 0 1.5rem;
+}
+
+.fe-pipeline-chart__scroll {
+  overflow-x: auto;
+  padding-bottom: 0.4rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+.fe-pipeline-chart__table {
+  border-collapse: separate;
+  border-spacing: 3px;
+  font-size: 0.88rem;
+  margin: 0;
+  min-width: 720px;
+  text-align: center;
+  width: 100%;
+}
+
+.fe-pipeline-chart__table th,
+.fe-pipeline-chart__table td {
+  border: 1px solid rgba(8, 60, 90, 0.12);
+  border-radius: 5px;
+  min-width: 48px;
+  padding: 0.45rem 0.3rem;
+}
+
+.fe-pipeline-chart__table thead th,
+.fe-pipeline-chart__table tbody th {
+  background: #f6f8fa;
+  color: #34495e;
+  font-weight: 700;
+}
+
+.fe-pipeline-chart__table thead th:first-child,
+.fe-pipeline-chart__table tbody th {
+  min-width: 92px;
+  position: sticky;
+  left: 0;
+  z-index: 1;
+}
+
+.fe-pipeline-chart .stage-if,
+.fe-pipeline-chart .stage-id,
+.fe-pipeline-chart .stage-ex,
+.fe-pipeline-chart .stage-mem,
+.fe-pipeline-chart .stage-wb {
+  color: #173042;
+  font-weight: 700;
+}
+
+.fe-pipeline-chart .stage-if { background: #e8f1f7; }
+.fe-pipeline-chart .stage-id { background: #f4eee2; }
+.fe-pipeline-chart .stage-ex { background: #edf3e6; }
+.fe-pipeline-chart .stage-mem { background: #e7f2ef; }
+.fe-pipeline-chart .stage-wb { background: #eeeaf4; }
+
+.fe-pipeline-chart__legend {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.5rem;
+  margin-top: 0.55rem;
+}
+
+.fe-pipeline-chart__legend span {
+  border: 1px solid rgba(8, 60, 90, 0.14);
+  border-radius: 5px;
+  min-width: 2.8rem;
+  padding: 0.18rem 0.4rem;
+  text-align: center;
+}
+
+.fe-pipeline-chart__legend small {
+  margin-right: 0.55rem;
+}
+
+@media (max-width: 520px) {
+  .fe-pipeline-chart__table {
+    font-size: 0.8rem;
+    min-width: 650px;
+  }
+
+  .fe-pipeline-chart__table th,
+  .fe-pipeline-chart__table td {
+    min-width: 42px;
+    padding: 0.4rem 0.2rem;
+  }
+
+  .fe-pipeline-chart__table thead th:first-child,
+  .fe-pipeline-chart__table tbody th {
+    min-width: 78px;
+  }
+
+  .fe-pipeline-chart__legend {
+    font-size: 0.85rem;
+  }
+}
