@@ -8,7 +8,7 @@ fe_section: マネジメント系
 fe_subsection: プロジェクトマネジメント
 fe_order: 20
 date: 2026-07-10
-last_modified_at: 2026-09-18
+last_modified_at: 2026-09-23
 ---
 
 ## まず結論
@@ -260,10 +260,28 @@ EVMでは、PV・EV・ACを比較して、**スケジュールとコスト**を�
 - 差異は0、効率指数は1を基準に判断する
 - 品質・リスクはEVMの直接の管理対象ではない
 
-## 参考資料
+## 一次情報で確認する
 
-- [PMI：The Standard for Earned Value Management](https://www.pmi.org/standards/earned-value-management)
-- [U.S. Department of Energy：Earned Value Management](https://www.energy.gov/projectmanagement/earned-value-management)
-- [IPA：プロジェクトマネージャ試験](https://www.ipa.go.jp/shiken/kubun/pm.html)
+### IPAの基本情報技術者試験シラバス
+
+IPAの現行「基本情報技術者試験（レベル2）シラバス Ver.9.2」は、FEで学ぶ知識・技能の範囲を確認する一次情報です。EVMはプロジェクトマネジメント分野の学習と結び付けて整理します。
+
+- [IPA：試験要綱・シラバスについて](https://www.ipa.go.jp/shiken/syllabus/gaiyou.html)
+
+### EVMの国際規格
+
+EVMそのものについては、**ISO 21508:2026**「Project, programme and portfolio management — Earned value management」が現行の国際規格です。
+
+ISOは、EVMをプロジェクト・プログラム・ポートフォリオの管理で用いる実務として位置付け、目的と利点、他のマネジメントとの関係、プロセス、EVMシステムの基本的な必要事項などについて指針を示しています。
+
+- [ISO 21508:2026：Earned value management](https://www.iso.org/standard/87899.html)
+
+なお、旧版の **ISO 21508:2018 は2026年版への改訂に伴って廃止**されています。参考資料を探すと2018年版が見つかる場合がありますが、現在の記事では2026年版を参照します。
+
+EVMシステムの導入・運用については、**ISO 21512:2024** が実装ガイダンスを提供しています。
+
+- [ISO 21512:2024：Earned value management implementation guidance](https://www.iso.org/standard/63584.html)
+
+FE対策では規格の詳細を暗記する必要はありません。まず、**EVとPVなら進捗、EVとACならコスト**という判断を優先します。
 
 {% include fe_article_footer.html %}
