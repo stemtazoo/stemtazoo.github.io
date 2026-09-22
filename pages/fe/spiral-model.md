@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: システム開発技術
 fe_order: 45
 date: 2026-07-15
-last_modified_at: 2026-07-15
+last_modified_at: 2026-09-22
 ---
 
 ## まず結論
@@ -150,6 +150,23 @@ last_modified_at: 2026-07-15
 
 試作品を見せて要求確認を繰り返す
 → プロトタイピングモデル
+```
+
+## 原典で確認する
+
+スパイラルモデルは、Barry W. Boehmが1988年にIEEEの *Computer* 誌で発表した論文 **“A Spiral Model of Software Development and Enhancement”** で体系的に示されています。
+
+- [IEEE：A Spiral Model of Software Development and Enhancement](https://doi.org/10.1109/2.59)
+
+この原著で重要なのは、スパイラルモデルが単なる「工程を何度も繰り返す方法」ではなく、**リスクを評価しながら次の開発活動を決めていく risk-driven（リスク駆動）のアプローチ**として説明されている点です。
+
+FE試験では、まず既存記事の「開発工程を反復する」という判断軸を使い、さらに次の特徴を知っておくと理解が深まります。
+
+```text
+反復する
+＋
+各サイクルでリスクを検討する
+→ スパイラルモデル
 ```
 
 ## まとめ（試験直前用）
