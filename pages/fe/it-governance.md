@@ -8,7 +8,7 @@ fe_section: ストラテジ系
 fe_subsection: システム戦略
 fe_order: 10
 date: 2026-06-24
-last_modified_at: 2026-09-20
+last_modified_at: 2026-09-23
 ---
 
 ## まず結論
@@ -115,6 +115,14 @@ ITガバナンスは、**経営とITをつなぐ統制**に注目します。
 ITマネジメントは、ITサービスやシステムを日々管理する活動として出てくることがあります。
 
 英語で言うと、IT governance は “controlling IT for business goals” のイメージです。
+
+## 公式資料で確認する
+
+日本企業のデジタル経営とガバナンスを考える公式資料として、経済産業省の**デジタルガバナンス・コード**があります。
+
+- [経済産業省：デジタルガバナンス・コード](https://www.meti.go.jp/policy/it_policy/investment/dgc/dgc.html)
+
+FE試験では個別制度の詳細を覚える必要はありません。**経営目標とITを結び付け、組織全体として統制・活用する**というITガバナンスの判断軸を優先します。
 
 ## まとめ（試験直前用）
 
