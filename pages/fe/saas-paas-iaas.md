@@ -8,7 +8,7 @@ fe_section: ストラテジ系
 fe_subsection: システム戦略
 fe_order: 40
 date: 2026-07-13
-last_modified_at: 2026-07-25
+last_modified_at: 2026-09-22
 ---
 
 ## まず結論
@@ -195,6 +195,27 @@ IaaSでは、サーバやストレージなどの基盤を借り、OSやミド�
 ただし、クラウドを使えばすべての管理が不要になるわけではありません。
 
 SaaSでも、利用者アカウント、権限設定、データの扱いなどは利用者側で管理する必要があります。
+
+## 一次情報で確認する
+
+クラウドコンピューティングの代表的な定義として、NIST（米国国立標準技術研究所）の **SP 800-145「The NIST Definition of Cloud Computing」** があります。
+
+- [NIST SP 800-145：The NIST Definition of Cloud Computing](https://csrc.nist.gov/pubs/sp/800/145/final)
+
+NIST SP 800-145では、クラウドのサービスモデルを **SaaS・PaaS・IaaS** の3つに分類しています。
+
+FE試験では、NISTの細かな定義を暗記するより、次の切り分けに使うと効果的です。
+
+```text
+完成したアプリケーションを使う
+→ SaaS
+
+アプリケーションを開発・実行する環境を使う
+→ PaaS
+
+処理・ストレージ・ネットワークなどの基盤を使う
+→ IaaS
+```
 
 ## まとめ（試験直前用）
 
