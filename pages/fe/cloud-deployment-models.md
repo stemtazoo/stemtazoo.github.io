@@ -8,7 +8,7 @@ fe_section: ストラテジ系
 fe_subsection: システム戦略
 fe_order: 41
 date: 2026-08-12
-last_modified_at: 2026-08-12
+last_modified_at: 2026-09-22
 ---
 
 ## まず結論
@@ -228,6 +228,31 @@ SaaS・PaaS・IaaS
 ```
 
 例えば、SaaSをパブリッククラウドとして提供する場合もあれば、組織専用の環境として提供する場合もあります。
+
+## 一次情報で確認する
+
+クラウドの利用形態（deployment models）も、NISTの **SP 800-145「The NIST Definition of Cloud Computing」** で定義されています。
+
+- [NIST SP 800-145：The NIST Definition of Cloud Computing](https://csrc.nist.gov/pubs/sp/800/145/final)
+
+NISTでは、deployment modelを **Private cloud・Community cloud・Public cloud・Hybrid cloud** の4つに分類しています。
+
+この記事ではFE試験で特に切り分けやすいパブリック・プライベート・ハイブリッドを中心にしていますが、一次資料では **コミュニティクラウド** も含む4分類である点に注意してください。
+
+またNISTの定義では、Hybrid cloudは単に複数の環境を使うだけではなく、異なるクラウド基盤が標準技術や独自技術によって結び付けられ、データやアプリケーションの可搬性を可能にする構成として整理されています。
+
+FE試験では、まず次の軸で十分です。
+
+```text
+広く利用される環境
+→ パブリック
+
+特定組織専用
+→ プライベート
+
+異なるクラウド基盤を組み合わせる
+→ ハイブリッド
+```
 
 ## まとめ（試験直前用）
 
