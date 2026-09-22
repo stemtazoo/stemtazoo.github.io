@@ -330,6 +330,19 @@ Webサーバ側 = 80
 
 と与えられているなら、重要なのは番号そのものではなく**通信方向**です。
 
+## 標準仕様で確認する
+
+TCP・UDPのポート番号と割当ての考え方は、IETF/IANAの一次資料で確認できます。
+
+- [RFC 6335：Service Name and Transport Protocol Port Number Registry](https://www.rfc-editor.org/info/rfc6335)
+- [IANA：Service Name and Transport Protocol Port Number Registry](https://www.iana.org/assignments/service-names-port-numbers/)
+
+RFC 6335では、ポート番号空間を **System Ports（0～1023）・User Ports（1024～49151）・Dynamic Ports（49152～65535）** に分けています。
+
+代表的なサービスの現在の登録状況を確認するときは、IANAのレジストリが一次情報です。
+
+FE試験では全ポート番号を覚える必要はなく、HTTP 80、HTTPS 443などの代表例と、**送信元・宛先のどちらのポートか**を見分けることを優先します。
+
 ## まとめ（試験直前用）
 
 - IPアドレス → **どのコンピュータか**
