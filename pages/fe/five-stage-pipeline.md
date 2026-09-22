@@ -10,7 +10,7 @@ fe_section: テクノロジ系
 fe_subsection: コンピュータ構成要素
 fe_order: 30
 date: 2026-08-16
-last_modified_at: 2026-09-20
+last_modified_at: 2026-09-23
 ---
 
 ## まず結論
@@ -306,6 +306,16 @@ WB
 [CPUの命令実行サイクル](/fe/cpu-instruction-cycle/)では、命令を取り出して解読し、必要なデータを用意して実行するという基本の流れを扱います。
 
 5段パイプラインでは、その流れを**IF・ID・EX・MEM・WBという段階に分けて並列的に進める構成**として捉えます。
+
+## 公式技術資料で確認する
+
+命令パイプラインの具体的な構成はCPUアーキテクチャによって異なります。実際のプロセッサの命令実行や最適化に関する公式資料として、IntelのOptimization Reference Manualがあります。
+
+- [Intel：Optimization Reference Manual](https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html)
+
+実際のCPUは、FEで扱う単純な5段構成より複雑です。そのため、この記事の **IF → ID → EX → MEM → WB** は、CPU一般に必ずこの5段階が実装されるという意味ではなく、命令処理を理解するための代表的なモデルとして扱います。
+
+FE試験では、**フェッチ → デコード → 実行 → メモリアクセス → 書戻し**という役割と順序を優先します。
 
 ## まとめ（試験直前用）
 
