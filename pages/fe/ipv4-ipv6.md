@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 100
 date: 2026-09-01
-last_modified_at: 2026-09-01
+last_modified_at: 2026-09-22
 ---
 
 ## まず結論
@@ -238,6 +238,20 @@ IPv4でIPアドレスからMACアドレスを調べる代表的な仕組みがAR
 IPv6ではARPをそのまま使わず、近隣探索（Neighbor Discovery）の仕組みを利用します。
 
 ネットワーク機器とIPアドレスの関係も整理したい場合は、[ルータ・リピータ・ブリッジ・スイッチングハブの違いとは？OSI参照モデルで見分ける方法](/fe/network-devices-router-repeater-bridge-switch/)も参考になります。
+
+## 標準仕様で確認する
+
+IPv6の基本仕様は、IETFのInternet Standardである **RFC 8200「Internet Protocol, Version 6 (IPv6) Specification」** で確認できます。
+
+- [RFC 8200：Internet Protocol, Version 6 (IPv6) Specification](https://www.rfc-editor.org/info/rfc8200/)
+
+RFC 8200では、IPv6がIPv4の後継として設計され、IPアドレスの大きさを **32ビットから128ビットへ拡張**したことが説明されています。
+
+なお、IPv6アドレスの形式や表記規則そのものは、別の仕様であるRFC 4291で定義されています。
+
+- [RFC 4291：IP Version 6 Addressing Architecture](https://www.rfc-editor.org/info/rfc4291/)
+
+FE試験では、まず **IPv4＝32ビット、IPv6＝128ビット** を判断軸にします。
 
 ## まとめ（試験直前用）
 
