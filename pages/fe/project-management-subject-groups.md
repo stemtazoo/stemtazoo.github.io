@@ -8,7 +8,7 @@ fe_section: マネジメント系
 fe_subsection: プロジェクトマネジメント
 fe_order: 10
 date: 2026-08-30
-last_modified_at: 2026-09-20
+last_modified_at: 2026-09-23
 ---
 
 ## まず結論
@@ -282,6 +282,14 @@ last_modified_at: 2026-09-20
 機会を活かす
 → リスク
 ```
+
+## 現行の国際規格で確認する
+
+プロジェクトマネジメントの一般的な指針として、現在は **ISO 21502:2020** が公開されています。
+
+- [ISO 21502:2020：Project, programme and portfolio management — Guidance on project management](https://www.iso.org/standard/74947.html)
+
+過去問題や旧規格に基づく用語と、現在の規格体系が完全に同じとは限りません。そのためFE対策では、旧版の名称だけを固定的に暗記するのではなく、この記事のように **「何を管理している説明か」** を判断することを優先します。
 
 ## まとめ（試験直前用）
 
