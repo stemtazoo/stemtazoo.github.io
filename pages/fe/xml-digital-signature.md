@@ -8,7 +8,7 @@ fe_section: 情報セキュリティ
 fe_subsection: 暗号と認証
 fe_order: 190
 date: 2026-08-04
-last_modified_at: 2026-08-04
+last_modified_at: 2026-09-22
 ---
 
 ## まず結論
@@ -406,6 +406,17 @@ Enveloping
 XML署名では、URIによって外部データを参照する形式もあります。
 
 試験では、XML文書の要素に柔軟に署名できる点を中心に押さえれば十分です。
+
+## 標準仕様で確認する
+
+XML署名の仕様は、W3Cの **XML Signature Syntax and Processing Version 2.0** などで確認できます。
+
+- [W3C：XML Signature Syntax and Processing Version 2.0](https://www.w3.org/TR/xmldsig-core2/)
+- [W3C：XML Signature Syntax and Processing Version 1.1](https://www.w3.org/TR/xmldsig-core1/)
+
+仕様では、署名対象を `Reference` のURIによって参照する仕組みや、XML文書内外のデータを署名対象にできることが定義されています。
+
+FE試験では仕様の要素をすべて覚える必要はなく、**「XML全体だけでなく、一部分や複数の対象にも署名できる」** という特徴を判断できれば十分です。
 
 ## まとめ（試験直前用）
 
