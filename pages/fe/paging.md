@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: コンピュータシステム
 fe_order: 49
 date: 2026-07-10
-last_modified_at: 2026-09-20
+last_modified_at: 2026-09-23
 ---
 
 ## まず結論
@@ -252,6 +252,16 @@ CPUが必要とするページが主記憶に存在しないと、**ページフ
 | セグメント方式 | プログラムを意味のある単位に分ける | 手続き、データ、スタックなどの単位 |
 
 試験では、**固定長ならページング、意味のある単位ならセグメント、空き領域を順に割り当てるなら可変区画方式** と切り分けます。
+
+## 公式技術資料で確認する
+
+ページングやページテーブルはCPUアーキテクチャとOSの双方に関係します。x86-64での具体的なページ変換機構は、Intelの公式Software Developer's Manualで確認できます。
+
+- [Intel：Intel 64 and IA-32 Architectures Software Developer Manuals](https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html)
+
+Intelの資料では、線形アドレスをページング構造によって物理アドレスへ変換する仕組みが定義されています。
+
+FE試験ではCPU固有のページテーブル階層を覚える必要はなく、**仮想記憶側をページ、物理メモリ側をページ枠に分け、対応表を使って変換する**という基本を優先します。
 
 ## まとめ（試験直前用）
 
