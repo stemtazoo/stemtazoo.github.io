@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: データベース
 fe_order: 30
 date: 2026-07-30
-last_modified_at: 2026-09-22
+last_modified_at: 2026-09-23
 ---
 
 ## まず結論
@@ -285,6 +285,41 @@ SQLなどの処理をDBMS側に保存して呼び出す
 ```
 
 複数のSQLを扱う点は似ていますが、判断する観点が違います。トランザクションの基本は、[トランザクションとは？](/fe/transaction/)で整理しています。
+
+## 一次情報で確認する
+
+### IPAの基本情報技術者試験シラバス
+
+FEで学ぶ知識・技能の範囲は、IPAの「基本情報技術者試験（レベル2）シラバス」で確認できます。現行版は **Ver.9.2** です。
+
+- [IPA：試験要綱・シラバスについて](https://www.ipa.go.jp/shiken/syllabus/gaiyou.html)
+
+### DBMSの公式ドキュメントで実装例を確認する
+
+ストアドプロシージャの具体的な構文や機能はDBMS製品によって異なります。ここでは一般的な仕組みを確認するための**実装例**として、DBMSベンダー・プロジェクトの公式ドキュメントを参照します。
+
+PostgreSQLでは、`CREATE PROCEDURE` でprocedureを定義し、`CALL` でprocedureを実行します。
+
+- [PostgreSQL：CREATE PROCEDURE](https://www.postgresql.org/docs/current/sql-createprocedure.html)
+- [PostgreSQL：CALL](https://www.postgresql.org/docs/current/sql-call.html)
+
+Oracle Databaseでも、`CREATE PROCEDURE` によって名前を指定して呼び出せるprocedureを作成できます。
+
+- [Oracle Database：CREATE PROCEDURE](https://docs.oracle.com/en/database/oracle/oracle-database/26/sqlrf/CREATE-PROCEDURE.html)
+
+これらは製品ごとの実装例なので、FEでは構文を暗記する必要はありません。
+
+```text
+処理手順をDBMS側に用意する
+↓
+クライアントから名前を指定して呼び出す
+↓
+DBMS側で一連の処理を実行する
+```
+
+という共通する仕組みを押さえます。
+
+なお、**通信回数・通信量を減らせることは、複数の要求をDBMS側の処理へまとめられる場合に期待できる効果**です。ストアドプロシージャを使えば必ず通信量や処理時間が減る、と一般化しないようにします。
 
 ## まとめ（試験直前用）
 
