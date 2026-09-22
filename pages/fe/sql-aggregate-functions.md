@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: データベース
 fe_order: 90
 date: 2026-08-30
-last_modified_at: 2026-09-20
+last_modified_at: 2026-09-22
 ---
 
 ## まず結論
@@ -394,6 +394,15 @@ COUNT(列名)
 そのため、`NULL` を含む表では、単純に `SUM(列名) ÷ COUNT(*)` とすると一致しない場合があります。
 
 FE試験では、`NULL` が明示されていない基本問題なら、まず通常の平均計算として考えれば十分です。
+
+## 標準仕様・公式ドキュメントで確認する
+
+SQLの基本仕様は **ISO/IEC 9075** シリーズで標準化されています。集計関数の具体的な動作は、PostgreSQLなどのDBMS公式ドキュメントでも確認できます。
+
+- [ISO/IEC 9075-2:2023：SQL — Part 2: Foundation](https://www.iso.org/standard/76584.html)
+- [PostgreSQL：Aggregate Functions](https://www.postgresql.org/docs/current/functions-aggregate.html)
+
+FE試験では仕様書の文法を暗記する必要はありません。**COUNT＝件数、SUM＝合計、AVG＝平均、MAX＝最大値**という役割と、NULLを含む場合の違いを判断できれば十分です。
 
 ## まとめ（試験直前用）
 
