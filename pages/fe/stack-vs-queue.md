@@ -8,7 +8,7 @@ fe_section: 科目B対策
 fe_subsection: データ構造
 fe_order: 25
 date: 2026-08-09
-last_modified_at: 2026-09-20
+last_modified_at: 2026-09-23
 ---
 
 ## まず結論
@@ -295,6 +295,23 @@ dequeue()
 
 - 最後に保存したものから使う → スタック
 - 最初に保存したものから使う → キュー
+
+## 専門リファレンスで確認する
+
+スタックとキューの基本的な用語は、米国NISTの **Dictionary of Algorithms and Data Structures** でも確認できます。
+
+- [NIST DADS：stack](https://xlinux.nist.gov/dads/HTML/stack.html)
+- [NIST DADS：queue](https://xlinux.nist.gov/dads/HTML/queue.html)
+
+FE試験では実装方法よりも、取り出す順番で切り分けます。
+
+```text
+最後に入れたものが先に出る
+→ スタック（LIFO）
+
+最初に入れたものが先に出る
+→ キュー（FIFO）
+```
 
 ## まとめ（試験直前用）
 
