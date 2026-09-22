@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: データベース
 fe_order: 20
 date: 2026-07-27
-last_modified_at: 2026-08-11
+last_modified_at: 2026-09-22
 ---
 
 ## まず結論
@@ -358,6 +358,17 @@ SQLの結果では列や行が順に表示されますが、関係モデル上�
 ```
 
 のように、複数の属性が同じ定義域を共有できます。
+
+## 原典で確認する
+
+関係モデルの原典は、E. F. Coddが1970年に発表した論文 **“A Relational Model of Data for Large Shared Data Banks”** です。
+
+- [IBM Research：A Relational Model of Data for Large Shared Data Banks](https://research.ibm.com/publications/a-relational-model-of-data-for-large-shared-data-banks)
+- [DOI：10.1145/362384.362685](https://doi.org/10.1145/362384.362685)
+
+Coddは、データの関係を数学的なrelationとして扱うモデルを示しました。
+
+FE試験では論文の数式を読む必要はありません。既存記事のとおり、**関係＝表、属性＝列、組＝行**という対応から判断できれば十分です。
 
 ## まとめ（試験直前用）
 
