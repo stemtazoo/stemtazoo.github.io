@@ -3,10 +3,10 @@ layout: page
 title: 正則化・データ拡張・正規化の違いとは？作用する場所で比較【G検定対策】
 description: "正則化・データ拡張・正規化を、何に作用するかで比較します。重みへの罰則やDropout、入力データの多様化、0〜1などのスケール調整、Batch Normalizationとの違いを整理し、G検定で似た用語を目的と作用対象から切り分ける判断基準を確認します。"
 permalink: /gk/regularization-vs-augmentation-vs-normalization/
-tags: [gk, neural_network, cnn]
-gk_section: ディープラーニングの応用例/画像認識/データ拡張
-gk_order: 7
-last_modified_at: 2026-08-21
+tags: [gk, neural_network, regularization]
+gk_section: ディープラーニングの概要/正則化
+gk_order: 5
+last_modified_at: 2026-09-23
 ---
 
 ## まず結論
