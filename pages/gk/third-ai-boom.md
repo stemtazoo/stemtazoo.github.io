@@ -3,7 +3,7 @@ layout: page
 title: 第三次AIブームとは？機械学習・深層学習が広がった背景【G検定】
 description: "第三次AIブームを、2000年代以降の機械学習の広がりと2010年代の深層学習の躍進を中心に整理します。大量データ、GPUなどの計算資源、アルゴリズム改善が組み合わさった背景を押さえ、「深層学習だけが原因」という誤解を防ぎます。"
 permalink: /gk/third-ai-boom/
-tags: [gk, ai_history]
+tags: [gk]
 gk_section: 人工知能をめぐる動向/AIブーム
 gk_order: 3
 last_modified_at: 2026-09-23
