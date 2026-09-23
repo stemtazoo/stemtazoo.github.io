@@ -5,8 +5,8 @@ description: Conditional GANは、ラベルや画像などの条件情報を生�
 permalink: /gk/conditional-gan/
 tags: [gk, neural_network, cnn]
 gk_section: ディープラーニングの応用例/データ生成/GAN・派生モデル
-gk_order: 3
-last_modified_at: 2026-08-26
+gk_order: 4
+last_modified_at: 2026-09-23
 ---
 
 ## まず結論
