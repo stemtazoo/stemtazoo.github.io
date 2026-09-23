@@ -1,78 +1,20 @@
-﻿---
-layout: page
-title: 多層パーセプトロン（MLP）でなぜXOR問題が解けるのか？G検定対策
-description: "多層パーセプトロン（MLP）は、中間層と非線形活性化関数により、単純パーセプトロンでは分離できないXOR問題を表現できます。線形分離、隠れ層、活性化関数、決定境界の変化を押さえ、重み更新の細部よりも、なぜ非線形性が必要かをG検定向けに整理します。"
-permalink: /gk/mlp-xor/
-tags: [gk, neural_network]
-gk_section: 人工知能をめぐる動向/機械学習・深層学習の発展と代表プロジェクト
-gk_order: 1
-last_modified_at: 2026-08-27
 ---
-
-## まず結論
-
-* **多層パーセプトロン（MLP）は、中間層と非線形活性化関数を持つため、XOR問題を解けます。**
-* G検定では「**単純パーセプトロンとの決定的な違い**」として問われます。
-
-## 直感的な説明
-
-* 単純パーセプトロンは「直線1本」でデータを分けます。
-* MLPは、
-
-  * 直線を**組み合わせる**
-  * 曲がった境界を**段階的に作る**
-    ことができます。
-
-👉 **直線を2本以上使える**イメージを持つと分かりやすいです。
-
-## 定義・仕組み
-
-* 多層パーセプトロンは、
-
-  * 入力層
-  * **中間層（隠れ層）**
-  * 出力層
-    から構成されます。
-
-* 各層で
-
-  * 重み付き和
-  * **非線形活性化関数（ReLU, sigmoid など）**
-    を適用します。
-
-* この**非線形変換**により、
-  **線形分離不可能な問題も解ける**ようになります。
-
-## いつ使う？（得意・不得意）
-
-### 得意
-
-* XORのような非線形問題
-* 複雑な分類問題
-
-### 不得意・注意点
-
-* 層を増やすと学習が難しくなる（勾配消失など）
-* CNNやRNNほど構造的な特化はない
-
-## G検定ひっかけポイント
-
-* ❌ **中間層が増えたから解ける** → 不十分
-
-* ⭕ **中間層＋非線形活性化関数があるから解ける** → 正解
-
-* ❌ **パラメータ数が増えたから** → 誤り
-
-👉 キーワードは必ず
-**「非線形」**です。
-
-## まとめ（試験直前用）
-
-* MLPは中間層を持つ
-* 非線形活性化関数を使う
-* 直線を組み合わせて複雑な境界を表現できる
-* XORは非線形分離問題
-* G検定では「非線形変換」が判断軸
-*
-
-{% include gk_article_footer.html %}
+layout: null
+permalink: /gk/mlp-xor/
+sitemap: false
+last_modified_at: 2026-09-24
+---
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,follow">
+  <meta http-equiv="refresh" content="0; url=/gk/xor-problem/">
+  <link rel="canonical" href="https://stemtazoo.github.io/gk/xor-problem/">
+  <title>XOR問題の記事へ移動します</title>
+</head>
+<body>
+  <p>XORとMLPの記事は統合しました。<a href="/gk/xor-problem/">XOR問題とは？単純パーセプトロンで解けない理由</a>をご覧ください。</p>
+</body>
+</html>
