@@ -3,7 +3,7 @@ layout: page
 title: MYCINとは？感染症診断とCertainty Factor【G検定対策】
 description: "MYCINを、細菌感染症について原因菌の推定や抗菌薬選択を支援した1970年代のルールベース型エキスパートシステムとして整理します。不確実性を扱うCertainty Factor（確信度）を押さえ、化学のDENDRALとの違いをG検定向けに確認します。"
 permalink: /gk/mycin/
-tags: [gk, classical_ai, expert_system]
+tags: [gk]
 gk_section: 人工知能をめぐる動向/専門家システム
 gk_order: 2
 last_modified_at: 2026-09-23
