@@ -6,7 +6,7 @@ permalink: /gk/speech-recognition-cheatsheet/
 tags: [gk, speech, cheatsheet]
 gk_section: ディープラーニングの応用例/音声処理/音声認識・系列モデル
 gk_order: 2
-last_modified_at: 2026-08-27
+last_modified_at: 2026-09-24
 ---
 
 ## まず結論
@@ -49,7 +49,7 @@ Automatic Speech Recognition は、**音声を文字列へ変換するタスク*
 
 現在はTransformerやConformerなども利用されます。
 
-### CTC（Connectionist Temporal Classification）
+### [CTC（Connectionist Temporal Classification）](/gk/ctc/)
 
 CTCは、入力系列より短いラベル系列を学習するときに、**各音声フレームへ正解文字を割り当てた教師ラベルを用意しなくても学習できる**仕組みです。
 
