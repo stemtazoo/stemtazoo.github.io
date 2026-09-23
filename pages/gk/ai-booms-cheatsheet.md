@@ -3,7 +3,7 @@ layout: page
 title: AI三大ブームまとめ｜第一次・第二次・第三次を切り分ける【G検定】
 description: "AI三大ブームを、第一次は探索・推論、第二次は知識工学・エキスパートシステム、第三次は機械学習・深層学習という主役で比較します。トイ・プロブレム、知識獲得のボトルネック、データと計算資源を限界・背景と対応させて整理します。"
 permalink: /gk/ai-booms-cheatsheet/
-tags: [gk, cheatsheet, ai_history]
+tags: [gk, cheatsheet]
 gk_section: チートシート（試験直前）
 gk_order: 4
 last_modified_at: 2026-09-23
