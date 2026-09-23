@@ -6,13 +6,15 @@ permalink: /gk/binomial-vs-logistic/
 tags: [gk, probability, machine_learning]
 gk_section: 機械学習の概要/確率分布・統計モデル
 gk_order: 2
-last_modified_at: 2026-09-04
+last_modified_at: 2026-09-23
 ---
 
 ## まず結論
 
 - **二項分布**：固定回数の試行で成功が何回起こるかを表す**確率分布**
 - **ロジスティック回帰**：説明変数から二値・二項結果の**成功確率をモデル化する一般化線形モデル（GLM）**
+
+ロジスティック回帰単独の仕組みは[ロジスティック回帰](/gk/logistic-regression/)で整理しています。
 
 G検定では、
 
