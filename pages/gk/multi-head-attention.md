@@ -1,84 +1,94 @@
-﻿---
+---
 layout: page
-title: Multi-Head Attentionとは？複数視点で関係性を学ぶ仕組み【G検定対策】
-description: "Multi-Head Attention複数視点で関係性を学ぶ仕組みについて、G検定で問われる自然言語処理・系列データ分野の観点から、系列データを扱う仕組み、学習目的、代表モデルとの関係を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
+title: Multi-Head Attentionとは？複数の射影でAttentionを並列計算【G検定】
+description: "Multi-Head Attentionを、Query・Key・Valueを複数の表現部分空間へ線形射影し、それぞれでAttentionを並列計算して結合する仕組みとして整理します。各ヘッドが必ず特定の文法役割を学ぶとは限らない点も含め、Single-Headとの違いを確認します。"
 permalink: /gk/multi-head-attention/
 tags: [gk, attention, transformer]
 gk_section: ディープラーニングの要素技術/トランスフォーマー (Transformer)
 gk_order: 4
-last_modified_at: 2026-08-26
+last_modified_at: 2026-09-24
 ---
 
 ## まず結論
-- **Multi-Head Attentionとは、異なる表現空間で注意機構を並列に適用し、入力情報の多様な関係性を同時に学習できる仕組みである。**
-- G検定では「**なぜヘッドを複数にするのか**」が問われる。
+
+**Multi-Head Attention**は、Query・Key・Valueを複数の表現部分空間へ射影し、**複数のAttentionを並列に計算して、その結果を結合する仕組み**です。
+
+G検定では、
+
+- 複数head
+- Q / K / V
+- 異なる線形射影
+- concat
+
+を押さえます。
 
 ## 直感的な説明
-Multi-Head Attentionは一言で言うと、
 
-> **「同じ文章を、複数の視点で同時に見る」**
+1つのAttentionだけで表現するのではなく、複数の小さなAttentionを同時に計算し、その結果をまとめます。
 
-仕組みです。
+「複数の視点」と説明されることがありますが、
 
-例：
-- あるヘッドは「主語と動詞の関係」に注目
-- 別のヘッドは「長距離の単語関係」に注目
-- さらに別のヘッドは「文法構造」に注目
+> あるheadは必ず主語、別のheadは必ず目的語
 
-👉 **1つの注意だけでは見落とす関係を拾える**  
-これが最大の強みです。
+のように、**各headの意味的役割が事前に決まっているわけではありません。**
 
 ## 定義・仕組み
-### 定義
-- Attention機構を複数（Head）用意し、それぞれ異なる線形変換後の空間で注意を計算する手法
-- Transformerの中核技術
 
-### 仕組みのポイント
-1. 入力を複数の低次元空間に射影
-2. 各空間で Attention を計算
-3. 結果を結合（concat）
-4. 最終的な表現を生成
+代表的な流れは次の通りです。
 
-重要：
-- **各ヘッドは異なる関係性を学習**
-- **1ヘッドでは表現力が不足**
+1. Q・K・Vをheadごとに異なる線形変換へ射影
+2. 各headでScaled Dot-Product Attentionを計算
+3. headの出力をconcat
+4. 最終線形変換を適用
+
+原典Transformerでは、モデル全体の次元を複数headへ分割してAttentionを計算します。
+
+そのため、
+
+> head数を増やせば計算量やパラメータが単純にhead数倍になる
+
+とは限りません。
 
 ## いつ使う？（得意・不得意）
-### 得意な点
-- 文脈理解の向上
-- 長距離依存関係の把握
-- 多様な特徴の同時抽出
 
-### 注意点
-- 計算量は減らない（むしろ増える）
-- パラメータ削減が目的ではない
-- 並列＝高速化が本質ではない
+Multi-Head AttentionはTransformerの主要構成要素です。
+
+- Self-Attention
+- Encoder-Decoder Attention
+- Vision Transformerなど
+
+で利用されます。
+
+目的は単純な高速化ではなく、**複数の表現部分空間でAttentionを計算できるようにすること**です。
 
 ## G検定ひっかけポイント
-ここが頻出です。
 
-### よくある誤解
-- ❌「入力系列を削除して高速化する」
-- ❌「1つのヘッドですべて処理する」
-- ❌「パラメータ数を削減する仕組み」
+### 各headの役割
 
-### 正しい判断基準
-- **複数の視点 → Multi-Head Attention**
-- **異なる表現空間 → Multi-Head Attention**
-- **関係性の多様性 → Multi-Head Attention**
+❌ headごとに文法役割が固定されている  
+⭕ **異なる射影空間でAttentionを学習する**
 
-問題文に
-- 「複数のヘッド」
-- 「異なる表現空間」
-- 「複数の視点でAttentionを計算」
+### head数
 
-があれば、**Multi-Head Attention** を疑います。
+❌ 多いほど必ず高性能  
+⭕ **適切なhead数はモデル設計・タスク依存**
+
+### パラメータ削減
+
+❌ Multi-Head Attentionの主目的  
+⭕ **複数の表現部分空間で関係を捉えること**
 
 ## まとめ（試験直前用）
-- Multi-Head Attention＝Attentionを複数のヘッドで並列に計算
-- 各ヘッドは異なる表現空間で関係性を見る
-- 目的は多様な特徴・関係を捉えること
-- パラメータ削減や単純な高速化が目的ではない
-- 「複数視点・複数ヘッド」ならMulti-Head Attention
+
+- Multi-Head＝**複数headでAttention**
+- Q / K / Vをheadごとに射影
+- 各headを並列計算
+- 出力をconcat
+- headの役割は固定されていない
+- 多いほど必ず良いわけではない
+
+## 参考資料
+
+- [Attention Is All You Need｜arXiv](https://arxiv.org/abs/1706.03762)
 
 {% include gk_article_footer.html %}
