@@ -158,6 +158,11 @@ gk_sections:
           - title: "ガバナンス・評価"
           - title: "公平性・包摂性"
           - title: "安全性・ロバスト性"
+          - title: "透明性"
+          - title: "民主主義"
+          - title: "環境保護"
+          - title: "労働政策"
+          - title: "その他の重要な価値"
       - title: "プライバシー・個人情報保護"
         subsections:
           - title: "基礎・法制度"
