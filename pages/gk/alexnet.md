@@ -1,78 +1,91 @@
-﻿---
+---
 layout: page
-title: AlexNet（ディープラーニング革命の起点）とは？G検定対策
-description: "AlexNet（ディープラーニング革命の起点）について、G検定で問われる画像認識・CNN分野の観点から、画像タスクでの役割、特徴抽出の流れ、代表モデルとの関係を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
+title: AlexNetとは？2012年ImageNetと深層CNNの転機【G検定対策】
+description: "AlexNetを、2012年ILSVRCで高い画像分類性能を示し、深層CNNの有効性を広く認識させた歴史的モデルとして整理します。ReLU、GPU学習、Dropout、データ拡張を押さえ、VGG・ResNetなど後続CNNとの違いをG検定向けに確認します。"
 permalink: /gk/alexnet/
 tags: [gk, cnn]
 gk_section: ディープラーニングの応用例/画像認識/物体認識タスク
 gk_order: 1
-last_modified_at: 2026-06-21
+last_modified_at: 2026-09-23
 ---
 
 ## まず結論
 
-* **AlexNet**とは、2012年のImageNetコンペ（ILSVRC）で圧勝し、**ディープラーニングブームの引き金**となった畳み込みニューラルネットワーク（CNN）。
-* G検定では**「歴史的意義」と「初めて実用的に効いた工夫」**が問われる。
+**AlexNet**は、2012年のILSVRCで高い画像分類性能を示し、**深層CNNが大規模画像認識で有効であることを強く印象付けた歴史的モデル**です。
+
+G検定では、
+
+- 2012年 ILSVRC
+- CNN
+- ReLU
+- GPU学習
+- Dropout
+- データ拡張
+
+を関連付けて覚えます。
 
 ## 直感的な説明
 
-* AlexNet以前の画像認識は、
+AlexNet以前にもCNNは存在していました。
 
-  * 特徴量は人が設計
-  * ネットワークは浅い
-    というのが主流でした。
-* AlexNetは、
-  👉 **深いCNNをGPUで学習させ、特徴抽出から分類までを一気通貫で学習**した点が画期的でした。
+AlexNetの重要性は、
+
+> **CNNを初めて発明したことではなく、大規模データ・GPU・深いCNNを組み合わせて画像認識で大きな成果を示したこと**
+
+です。
+
+この成功が、その後の深層学習ブームを加速させました。
 
 ## 定義・仕組み
 
-* AlexNetの主な特徴：
+AlexNetは、畳み込み層と全結合層を組み合わせたCNNです。
 
-  * **ReLU活性化関数**の導入
-  * **GPUによる大規模学習**
-  * **Dropout**による過学習対策
-  * データ拡張（Data Augmentation）
+代表的な工夫として、
 
-* ネットワーク構成（概要）：
+- **ReLU**
+- **GPUを使った学習**
+- **Dropout**
+- **データ拡張**
 
-  * 畳み込み層＋プーリング層
-  * 全結合層
-  * Softmaxによる分類
+などがあります。
+
+当時の大規模画像分類で、深いニューラルネットワークを実用的に学習するうえで重要な組合せでした。
 
 ## いつ使う？（得意・不得意）
 
-### 使われる場面（得意）
+現在ではAlexNetそのものより、**CNN発展史を理解するための基準点**として重要です。
 
-* 現代では教育・比較用
-* CNNの基本構造理解
+学習順としては、
 
-### 注意点・不得意
+AlexNet → VGG / GoogLeNet → ResNet
 
-* パラメータ数が多く計算量が大きい
-* 現代のモデル（ResNet等）より性能は劣る
+と追うと、CNNが深層化・効率化されていく流れを理解しやすくなります。
 
 ## G検定ひっかけポイント
 
-* よくある誤り表現：
+### AlexNet＝最初のCNN？
 
-  * ❌ 「残差接続を導入したモデル」
-  * ❌ 「Attention機構を持つ」
+❌ CNNを初めて発明したモデル  
+⭕ **CNNの歴史はより古く、AlexNetは2012年に深層CNNの有効性を強く示した代表例**
 
-* 正しい理解：
+### AlexNet＝残差接続？
 
-  * **ReLU・Dropout・GPU学習**
-  * **2012年ImageNet優勝**
+❌ skip connection  
+⭕ それは**ResNet**
 
-* 判断基準：
+### AlexNet＝Attention？
 
-  * **2012年・ImageNet・CNNブーム → AlexNet**
+❌ Self-Attention中心  
+⭕ それは**Transformer系**
 
 ## まとめ（試験直前用）
 
-* AlexNet＝DLブームの起点
-* 2012年ImageNetで圧勝
-* ReLU・Dropout・GPU学習
-* 深いCNNを実用化
-* 「最初に当たったCNN」と覚える
+- AlexNet＝**2012年ILSVRC**
+- 深層CNNの成功を広く示した
+- ReLU
+- GPU学習
+- Dropout
+- データ拡張
+- **「最初のCNN」とは覚えない**
 
 {% include gk_article_footer.html %}
