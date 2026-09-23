@@ -6,7 +6,7 @@ permalink: /gk/curse-of-dimensionality/
 tags: [gk, machine_learning, dimensionality_reduction]
 gk_section: 機械学習の概要/特徴量・前処理/特徴量選択・高次元
 gk_order: 2
-last_modified_at: 2026-08-27
+last_modified_at: 2026-09-23
 ---
 
 ## まず結論
@@ -65,7 +65,7 @@ G検定では、次の対応を押さえます。
 - **特徴量選択**：必要な特徴量だけ残す
 - **次元削減**：少ない次元へ情報をまとめる
 
-特徴量選択では、[相互情報量](/gk/mutual-information/)などを利用する方法があります。
+特徴量選択の全体像は[特徴量選択](/gk/feature-selection/)で整理しています。[相互情報量](/gk/mutual-information/)などを利用する方法もあります。
 
 次元削減の代表例としては、[PCA](/gk/pca/)があります。PCAは高次元データを低次元表現へ変換する**手法**なので、記事分類としては教師なし学習側に置いています。
 
