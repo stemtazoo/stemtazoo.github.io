@@ -121,6 +121,7 @@ gk_sections:
         subsections:
           - title: "事前学習・少数例学習"
           - title: "継続学習・忘却"
+      - title: "基盤モデル・生成AI"
       - title: "マルチモーダル"
         subsections:
           - title: "基礎・全体像"
