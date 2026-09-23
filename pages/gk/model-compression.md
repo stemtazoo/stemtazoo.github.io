@@ -1,121 +1,111 @@
-﻿---
+---
 layout: page
-title: モデル圧縮まとめ（Pruning・Quantization・Distillation）
-description: "モデル圧縮まとめについて、G検定で問われるAI・機械学習分野の観点から、基本的な意味、代表モデル・手法との関係、試験で問われやすい判断軸を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
+title: モデル圧縮まとめ｜Pruning・Quantization・Knowledge Distillation【G検定】
+description: "モデル圧縮を、Pruningは重みや構造を削る、Quantizationは数値表現のbit幅を下げる、Knowledge DistillationはTeacherの出力情報をStudentへ移すという役割で整理します。圧縮しても実機速度が必ず上がるとは限らない点も確認します。"
 permalink: /gk/model-compression/
-tags: [gk, model_compression, pruning, quantization, distillation]
+tags: [gk, model_compression]
 gk_section: ディープラーニングの応用例/モデルの軽量化/モデル圧縮の基本・手法
 gk_order: 1
-last_modified_at: 2026-08-27
+last_modified_at: 2026-09-24
 ---
 
 ## まず結論
 
-* **モデル圧縮**は「軽く・速く・省メモリ」にするための技術群
-* G検定で重要なのは **目的・手法・違い** を区別できること
-* 代表的な手法は **Pruning / Quantization / Knowledge Distillation**
+モデル圧縮は、モデルの
 
----
+- サイズ
+- メモリ使用量
+- 計算量
+- 消費電力・遅延
+
+などを抑えるための技術群です。
+
+代表的には、
+
+- [Pruning](/gk/pruning/) → **不要・重要度の低い重みや構造を削る**
+- [Quantization](/gk/quantization/) → **数値表現を低精度化**
+- [Knowledge Distillation](/gk/knowledge-distillation/) → **Teacherの知識をStudentへ移す**
+
+で整理します。
 
 ## 直感的な説明
 
-モデル圧縮は、
+- 削る → Pruning
+- 数値を粗くする → Quantization
+- 大きな教師から小さな生徒へ学ばせる → Distillation
 
-> 「頭のいい人の考え方を、ムダを削ってコンパクトにする」
+と覚えると切り分けやすくなります。
 
-イメージです。
+## 定義・仕組み
 
-* 使っていない部分を削る → **Pruning**
-* 数字をざっくり扱う → **Quantization**
-* 賢い先生から学ばせる → **Distillation**
+### Pruning
 
----
+重み・チャネル・フィルタなどを削減します。
 
-## 手法① Pruning（プルーニング）
+- 非構造化Pruning → 個々の重みを0にする
+- 構造化Pruning → チャネル・フィルタ単位で削る
 
-### 何をする？
+### Quantization
 
-* **重要度の低い重み・ニューロンを削除**
-* ネットワーク構造そのものを簡素化
+FP32などの数値をINT8など低bit表現へ変換します。
 
-### 特徴
+モデルサイズ・メモリ帯域・対応ハードウェアでの演算効率改善が期待できます。
 
-* パラメータ数削減
-* モデルサイズ削減
-* 推論高速化が期待できる
+### Knowledge Distillation
 
-### 注意点（ひっかけ）
+Teacherの出力分布や中間表現などをStudentの学習へ利用します。
 
-* ❌ Dropoutではない（学習時のみ無効化）
-* ❌ 正則化そのものではない
+必ずしもTeacherのパラメータをコピーするわけではありません。
 
----
+## いつ使う？（得意・不得意）
 
-## 手法② Quantization（量子化）
+- モバイル・エッジ
+- 低遅延推論
+- メモリ制約
+- 消費電力制約
 
-### 何をする？
+などで重要です。
 
-* 重みや活性値の **数値表現を低精度化**
+ただし、
 
-  * 例：32bit浮動小数点 → 8bit整数
+> パラメータ数を減らせば必ず実機で高速化する
 
-### 特徴
+とは限りません。
 
-* メモリ使用量が大幅に減る
-* エッジAI・組込み機器で重要
+実際の速度は、
 
-### 注意点（ひっかけ）
+- ハードウェア
+- ランタイム
+- 演算形式
+- メモリアクセス
+- 疎行列サポート
 
-* ❌ 構造は変えない
-* ❌ 学習アルゴリズムではない
-
----
-
-## 手法③ Knowledge Distillation（蒸留）
-
-### 何をする？
-
-* **大きなモデル（Teacher）** の出力を
-* **小さなモデル（Student）** に学習させる
-
-### 特徴
-
-* 精度を保ちつつ軽量化
-* 出力の「確率分布」も学習
-
-### 注意点（ひっかけ）
-
-* ❌ モデルの単純コピーではない
-* ❌ 教師あり学習とは異なる概念
-
----
-
-## 手法の比較まとめ
-
-| 手法           | 主な目的   | 構造変更 | G検定ポイント           |
-| ------------ | ------ | ---- | ----------------- |
-| Pruning      | 不要部分削除 | あり   | 重み・ニューロン削除        |
-| Quantization | 数値低精度化 | なし   | bit数削減            |
-| Distillation | 知識移転   | あり   | Teacher / Student |
-
----
+などにも依存します。
 
 ## G検定ひっかけポイント
 
-* ❌ Dropout＝モデル圧縮 → **誤り**
-* ❌ 正則化＝モデル軽量化 → **誤り**
-* ✅ Pruningは構造削減
-* ✅ Quantizationは数値表現削減
+### Dropout
 
----
+❌ 推論時モデルの重みを恒久的に削除する圧縮  
+⭕ **学習時の正則化手法**
+
+### Quantization
+
+❌ 必ずネットワーク構造を変更する  
+⭕ **主に数値表現を低精度化**
+
+### Distillation
+
+❌ Teacherの重みをそのままStudentへコピー  
+⭕ **Teacherの出力情報などを学習信号として利用**
 
 ## まとめ（試験直前用）
 
-* モデル圧縮 = **軽量・高速・省メモリ**
-* Pruning：不要な重みを削る
-* Quantization：bit数を減らす
-* Distillation：教師モデルから学ぶ
-
-👉 次は **エッジAIとモデル圧縮の関係** を見ると理解が深まります。
+- Pruning＝**削る**
+- Quantization＝**bit幅を下げる**
+- Distillation＝**知識を移す**
+- 圧縮＝必ず精度低下ではない
+- 圧縮＝必ず実機高速化でもない
+- ハードウェアとの組合せも重要
 
 {% include gk_article_footer.html %}
