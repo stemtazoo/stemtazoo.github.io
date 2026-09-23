@@ -1,205 +1,88 @@
 ---
 layout: page
-title: ジョルダンネットワークとは？Elman Networkとの違いを整理【G検定対策】
-description: "ジョルダンネットワークElman Networkとの違いを整理について、G検定で問われるAI・機械学習分野の観点から、目的、前提、モデル構造、入力と出力、評価観点のどこが異なるかを比較します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
+title: Jordan Networkとは？出力側の情報を状態へ戻すRNN【G検定対策】
+description: "Jordan Networkを、前時刻の出力側情報をState Unitへ戻し、その状態を次時刻の隠れ層計算へ使う初期RNNとして整理します。隠れ層をContext UnitへコピーするElman Networkとの違いを、outputとhiddenという判断軸で確認します。"
 permalink: /gk/jordan-network/
 tags: [gk, neural_network, rnn]
 gk_section: ディープラーニングの要素技術/リカレントニューラルネットワーク (RNN)
 gk_order: 12
-last_modified_at: 2026-08-26
+last_modified_at: 2026-09-23
 ---
 
 ## まず結論
 
-ジョルダンネットワーク（Jordan Network）とは、**前時刻の出力を、次時刻の隠れ層への入力としてフィードバックするRNNの一種**です。
+**Jordan Network**は、前時刻の**出力側の情報をState Unitへ戻し、その状態を次時刻の隠れ層計算へ使う**初期RNNです。
 
-G検定では、特に **Elman Networkとの違い** が問われやすいです。
+G検定では、
 
-| 用語 | フィードバックするもの |
-|---|---|
-| Jordan Network | 前時刻の出力 |
-| Elman Network | 前時刻の隠れ層の状態 |
-| 通常のRNN | 過去の状態を再利用する系列モデル |
-| LSTM / GRU | 長期依存に対応しやすいRNN派生 |
-| Transformer | 再帰ではなくAttentionを使う |
+- output → state → **Jordan**
+- hidden → context → **Elman**
 
-問題文に **「前回の出力を次の入力に使う」** とあれば、Jordan Networkを疑います。
-
----
+で切り分けます。
 
 ## 直感的な説明
 
-ジョルダンネットワークは、ひとことで言うと、
+Jordan Networkは、
 
-> **前回の“答え”を、次の判断材料にするRNN**
+> **前回どんな出力をしたかを手掛かりに、次の内部状態を作る**
 
-です。
+イメージです。
 
-たとえば、文章を順番に処理するモデルを考えます。
-
-ある時刻で出した出力を、次の時刻でまた使います。
-
-```text
-入力
-↓
-隠れ層
-↓
-出力
-↓
-次の時刻の隠れ層へ戻す
-```
-
-このように、前回の出力を覚えておき、次の処理に活かすのがジョルダンネットワークです。
-
-ポイントは、戻しているのが **隠れ層ではなく出力層** という点です。
-
----
+単純に出力値を入力層へそのまま戻すだけではなく、**状態ユニットを介して系列文脈を保持する**点を押さえます。
 
 ## 定義・仕組み
 
-ジョルダンネットワークは、RNN（Recurrent Neural Network：再帰型ニューラルネットワーク）の一種です。
+JordanのSequential Networkでは、出力パターンをState Unitへコピーし、次時刻の処理で利用します。
 
-RNNは、時系列データや系列データを扱うために、過去の情報を次の時刻へ引き継ぐ構造を持ちます。
+また原典では、State Unit自身の前状態も次状態へ影響します。
 
-ジョルダンネットワークでは、前時刻の出力を次時刻の隠れ層へ戻します。
+したがってG検定向けには、
 
-### Elman Networkとの違い
+> **Jordan＝出力側の情報を状態へフィードバックするRNN**
 
-G検定では、Jordan NetworkとElman Networkの違いがよく問われます。
-
-| 比較 | Jordan Network | Elman Network |
-|---|---|---|
-| 戻すもの | 出力層の値 | 隠れ層の状態 |
-| 戻す先 | 次時刻の隠れ層 | 次時刻の隠れ層 |
-| 覚え方 | 前回の答えを戻す | 前回の内部状態を戻す |
-| 試験でのキーワード | 出力をフィードバック | 隠れ層をフィードバック |
-
-つまり、
-
-- **Jordan Network：出力を戻す**
-- **Elman Network：隠れ層を戻す**
-
-と覚えると切りやすいです。
-
-### 通常のRNNとの関係
-
-Jordan NetworkもElman Networkも、広い意味ではRNNの一種です。
-
-どちらも過去の情報を次の時刻に渡すことで、系列データを扱います。
-
-ただし、G検定では細かい式よりも、**どの層の情報をフィードバックするか**が重要です。
-
----
+と覚えるのが安全です。
 
 ## いつ使う？（得意・不得意）
 
-### 得意な場面
+Jordan Networkも現在の主流モデルというより、
 
-ジョルダンネットワークは、系列データや時系列データを扱う文脈で出てきます。
+- 初期RNN
+- 時系列状態の保持
+- Elman Networkとの構造比較
 
-例：
+を理解するためのモデルです。
 
-- 時系列予測
-- 音声データ
-- 文章などの系列データ
-- 過去の出力が次の予測に関係する問題
-
-ただし、現在の実務で主流というより、RNNの基本構造を理解するための古典的なモデルとして押さえることが多いです。
-
-### 注意が必要な場面
-
-ジョルダンネットワークは、長期依存関係の学習が得意なモデルではありません。
-
-RNNには、長い系列で勾配消失が起こりやすいという弱点があります。
-
-その弱点に対応するために、LSTMやGRUが使われます。
-
-| 目的 | 疑う用語 |
-|---|---|
-| 出力を次へ戻す | Jordan Network |
-| 隠れ層を次へ戻す | Elman Network |
-| 長期依存に対応したい | LSTM / GRU |
-| Attentionで系列を扱う | Transformer |
-| 画像の局所特徴を扱う | CNN |
-
----
+長期依存を扱うためのゲート構造は持たないため、LSTMやGRUとは別です。
 
 ## G検定ひっかけポイント
 
-### 誤解1：Jordan NetworkはCNNである
+### Jordan＝隠れ層を戻す？
 
-これは誤りです。
+❌ hidden → context  
+⭕ それは**Elman**
 
-Jordan Networkは、画像の畳み込みを行うCNNではありません。
+### Jordan＝出力をそのまま入力層へ戻すだけ？
 
-系列データを扱うRNNの一種です。
+❌ 単純コピーのみ  
+⭕ **出力側情報をState Unitへ戻し、状態として次時刻に利用**
 
-### 誤解2：Jordan NetworkはTransformerである
+### LSTMとの違い
 
-これも誤りです。
-
-Transformerは、Attentionを使って系列を扱うモデルです。
-
-Jordan Networkは、再帰的に過去の出力を戻すRNN系のモデルです。
-
-### 誤解3：Jordan Networkは自己符号化器である
-
-Jordan Networkは、入力を圧縮して復元するオートエンコーダではありません。
-
-RNNの構造に関する用語です。
-
-### 誤解4：Elman Networkと同じ
-
-Jordan NetworkとElman Networkは似ていますが、フィードバックする場所が違います。
-
-| 問題文の表現 | 判断 |
-|---|---|
-| 前回の出力を戻す | Jordan Network |
-| 前回の隠れ層を戻す | Elman Network |
-| 長期記憶セル | LSTM |
-| ゲートで情報を制御 | LSTM / GRU |
-| Self-Attention | Transformer |
-
-**「どこから戻すか」  
-出力ならJordan、隠れ層ならElmanです。**
-
----
+❌ ゲート付き長期記憶RNN  
+⭕ **初期の再帰構造**
 
 ## まとめ（試験直前用）
 
-- Jordan Network = RNNの一種
-- 前時刻の出力を次時刻の隠れ層へ戻す
-- Elman Networkは前時刻の隠れ層を戻す
-- CNN、Transformer、オートエンコーダではない
-- G検定では「どこをフィードバックするか」で切る
+- Jordan＝初期RNN
+- **output側 → state**
+- 状態を次時刻の隠れ層へ利用
+- Elman＝**hidden → context**
+- LSTM / GRUとは別構造
+- **outputならJordan、hiddenならElman**
 
-**判断基準：前回の出力を戻すRNNなら、Jordan Network。**
+## 参考資料
 
----
-
-## 確認問題（G検定対策）
-
-ジョルダンネットワークの説明として、最も適切なものはどれか。
-
-- ア. 前時刻の出力を、次時刻の隠れ層への入力としてフィードバックするRNN
-- イ. 前時刻の隠れ層の状態を、次時刻の隠れ層へフィードバックするRNN
-- ウ. Self-Attentionを用いて系列データを並列に処理するモデル
-- エ. 画像の局所特徴を抽出する畳み込みニューラルネットワーク
-
-<details markdown="1">
-<summary>▶ クリックして答えと解説を見る（ここを開く）</summary>
-
-**正解：ア**
-
-### 解説
-
-- ア：適切です。Jordan Networkは、前時刻の出力を次時刻の隠れ層へ戻します。
-- イ：Elman Networkの説明です。
-- ウ：Transformerの説明です。
-- エ：CNNの説明です。
-
-判断ポイントは、**出力を戻すならJordan、隠れ層を戻すならElman**です。
-
-</details>
+- Jordan, M. I. (1986), *Serial Order: A Parallel Distributed Processing Approach*
+- [Parallel Distributed Processing Handbook Chapter 5｜Stanford](https://web.stanford.edu/group/pdplab/originalpdphandbook/Chapter%205.pdf)
 
 {% include gk_article_footer.html %}
