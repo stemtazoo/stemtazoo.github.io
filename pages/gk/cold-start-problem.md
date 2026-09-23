@@ -6,7 +6,7 @@ permalink: /gk/cold-start-problem/
 tags: [gk, recommendation, machine_learning]
 gk_section: 機械学習の概要/代表的な手法/推薦システム
 gk_order: 8
-last_modified_at: 2026-07-14
+last_modified_at: 2026-09-23
 ---
 
 ## まず結論
