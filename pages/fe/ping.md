@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 82
 date: 2026-09-02
-last_modified_at: 2026-09-02
+last_modified_at: 2026-09-23
 ---
 
 ## まず結論
@@ -139,6 +139,7 @@ ping
 | 用語 | 役割 | 問題文の手掛かり |
 |---|---|---|
 | ping | 相手まで通信できるか確認する | 疎通確認、到達確認 |
+| BOOTP | 起動時などにIPアドレスなどの設定情報を取得する | DHCPより前からある設定取得方式 |
 | DHCP | IPアドレスなどを自動設定する | 自動割当て、ネットワーク設定 |
 | MIB | SNMPで参照する管理情報 | 機器の状態情報、管理情報 |
 | SNMP | ネットワーク機器を監視・管理する | 状態監視、障害情報、管理 |
@@ -146,7 +147,10 @@ ping
 この切り分けは、そのまま選択肢を切る判断基準になります。
 
 ```text
-設定を配る？
+比較的古い設定取得方式？
+→ BOOTP
+
+IPアドレスなどを自動設定？
 → DHCP
 
 管理情報そのもの？
@@ -223,6 +227,22 @@ Webサービスが正常
 → 別途確認が必要
 ```
 
+### BOOTPとDHCPはどう違う？
+
+BOOTP（Bootstrap Protocol）も、端末がネットワーク設定情報を取得するためのプロトコルです。DHCPはBOOTPを基礎として発展し、IPアドレスの動的な割当てやリースなどの機能を備えています。
+
+試験では細部よりも、どちらも**疎通確認を行うものではない**と切り分けることが重要です。
+
+~~~text
+BOOTP / DHCP
+→ ネットワーク設定を取得・割当て
+
+ping
+→ 疎通確認
+~~~
+
+DHCPについては、[DHCPとは？IPアドレスを自動で割り当てる仕組み](/fe/dhcp/)で詳しく整理しています。
+
 ### pingはIPアドレスを設定する？
 
 違います。
@@ -261,12 +281,23 @@ ping
 
 **プロトコルがICMP、コマンドがping**と整理すると混同しにくくなります。
 
+## 標準仕様で確認する
+
+pingが利用するICMP Echoの基本仕様は、IETFのRFCで確認できます。
+
+- [RFC 792：Internet Control Message Protocol](https://www.rfc-editor.org/info/rfc792/)
+- [RFC 1122：Requirements for Internet Hosts - Communication Layers](https://www.rfc-editor.org/info/rfc1122/)
+- [RFC 951：Bootstrap Protocol (BOOTP)](https://www.rfc-editor.org/info/rfc951/)
+- [RFC 2131：Dynamic Host Configuration Protocol](https://www.rfc-editor.org/info/rfc2131/)
+
+FEではRFCの細部を暗記する必要はありません。**疎通確認→ping→ICMP Echo**という役割のつながりを優先します。
+
 ## まとめ（試験直前用）
 
 - pingは、**ネットワークの疎通確認**に使う
 - 主にICMPの**Echo Request / Echo Reply**を利用する
 - 「つながるか確認」ならpingを疑う
-- DHCPはIP設定、SNMPは機器監視、MIBは管理情報
+- BOOTP・DHCPはネットワーク設定、SNMPは機器監視、MIBは管理情報
 - pingが失敗しても、相手の停止とは限らない
 
 ```text
