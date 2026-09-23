@@ -6,7 +6,7 @@ permalink: /gk/k-means-vs-knn/
 tags: [gk, clustering]
 gk_section: 機械学習の概要/代表的な手法/教師なし学習/クラスタリング
 gk_order: 5
-last_modified_at: 2026-08-26
+last_modified_at: 2026-09-23
 ---
 
 ## まず結論
