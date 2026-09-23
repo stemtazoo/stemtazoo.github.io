@@ -1,113 +1,85 @@
-﻿---
+---
 layout: page
-title: CycleGAN（Pix2Pixとの違い）とは？G検定対策
-description: "CycleGAN（Pix2Pixとの違い）について、G検定で問われる生成モデル分野の観点から、目的、前提、モデル構造、入力と出力、評価観点のどこが異なるかを比較します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
+title: CycleGANとは？ペアなし画像変換とCycle Consistency【G検定】
+description: "CycleGANを、対応する画像ペアがなくても2つのドメイン間の画像変換を学習できるGANとして整理します。A→BとB→Aの2方向変換、Cycle Consistency Lossを押さえ、ペア画像を使うPix2Pixとの違いをG検定向けに確認します。"
 permalink: /gk/cyclegan/
-tags: [gk, cnn, neural_network]
+tags: [gk, cnn, neural_network, gan]
 gk_section: ディープラーニングの応用例/データ生成/GAN・派生モデル
-gk_order: 5
-last_modified_at: 2026-08-26
+gk_order: 6
+last_modified_at: 2026-09-23
 ---
 
 ## まず結論
 
-CycleGANは**対応する画像ペアがなくても画像→画像変換ができる生成モデル**で、G検定ではPix2Pixとの「教師あり／なし」の違いが最重要ポイントとして問われる。
+**CycleGAN**は、入力と出力が1対1で対応した画像ペアを用意しなくても、2つの画像ドメイン間の変換を学習できるモデルです。
+
+最大のキーワードは、**Cycle Consistency（循環一貫性）**です。
 
 ## 直感的な説明
 
-CycleGANは「**答え合わせなしで画像変換を覚える**」モデルです。
+写真の集合Aと絵画の集合Bはあるけれど、
 
-Pix2Pixが
+> この写真に対応する正解の絵画
 
-> この入力には、この正解画像
+というペアはない状況を考えます。
 
-という**ペア付き学習**なのに対し、CycleGANは
+CycleGANは、
 
-> 写真はいろいろある
-> 絵画もいろいろある
-> でも1対1の対応はない
+- A → B
+- B → A
 
-という状態から学習します。
-
-例えるなら、
-
-* 写真集A（風景写真）
-* 写真集B（ゴッホ風の絵）
-
-を見比べながら、
-「写真っぽさ ↔ 絵画っぽさ」を変換できるようになるイメージです。
+の両方向を学び、変換して戻したときに元の画像へ近づくよう制約します。
 
 ## 定義・仕組み
 
-CycleGANは **教師なし（正確には非対応データ）で学習できるGAN** の一種です。
+CycleGANでは主に、
 
-### 最大の特徴
+- A→BのGenerator
+- B→AのGenerator
+- 各ドメインのDiscriminator
+- Cycle Consistency Loss
 
-* **入力と出力の画像ペアが不要**
-* 2つの変換を同時に学習
+を使います。
 
-  * A → B
-  * B → A
-
-### Cycle Consistency（循環一貫性）
-
-CycleGANでは、
-
-* A → B → A
-* B → A → B
-
-と戻したときに、
-「**元の画像に戻るべき**」という制約を課します。
-
-これにより、
-
-* 対応データがなくても
-* 意味のある変換
-
-が可能になります。
+たとえば A→B→A と戻したとき、元のAへ近づくように学習します。
 
 ## いつ使う？（得意・不得意）
 
-### 得意なケース
+代表例は、
 
-* 対応する正解画像が用意できない
-* スタイル変換（写真 ↔ 絵画）
-* 季節変換（夏 ↔ 冬）
+- 馬 ↔ シマウマ
+- 夏 ↔ 冬
+- 写真 ↔ 絵画風
 
-### 苦手・注意点
+などの**unpaired image-to-image translation**です。
 
-* 1対1で厳密な変換が必要なタスク
-* 正確な対応関係が重要な問題（→ Pix2Pix向き）
+「教師なし」とだけ覚えるより、**対応ペアが不要**と覚える方が誤解が少なくなります。
 
 ## G検定ひっかけポイント
 
-G検定では、**Pix2Pixとの違いを言語で区別できるか**を狙ってきます。
+### Pix2Pix
 
-### よくある混同
+→ 対応する入力・正解画像の**ペアあり**
 
-* CycleGAN と Pix2Pix
-* CycleGAN と 通常のGAN
+### CycleGAN
 
-### 判断基準（ここで切る）
+→ **ペアなし＋Cycle Consistency**
 
-* **画像ペアがある？** → Pix2Pix
-* **画像ペアがない？** → CycleGAN
-* **image-to-image translation（教師あり）** → Pix2Pix
-* **style transfer / 対応なし変換** → CycleGAN
+### Cycle Consistency
 
-選択肢で
-
-> 「対応する画像ペアを必要としない」
-> 「教師なしで画像変換」
-
-とあれば、CycleGANを選びます。
+❌ 同じ画像を2回生成する  
+⭕ **A→B→Aのように戻したとき元へ近づける**
 
 ## まとめ（試験直前用）
 
-* CycleGANは**画像ペアなし**で画像→画像変換
-* Pix2Pixは**画像ペアあり**で画像→画像変換
-* CycleGANはCycle Consistencyが核
-* G検定では「ペアの有無」で即判断
-* Pix2Pixとの対比で覚えるのが最短
+- CycleGAN＝**ペアなし画像変換**
+- A→BとB→A
+- Cycle Consistency Loss
+- Pix2Pix＝ペアあり
+- 「教師なし」より**unpaired**で覚える
+
+## 参考資料
+
+- [Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks｜ICCV 2017](https://arxiv.org/abs/1703.10593)
 
 {% include gk_article_footer.html %}
