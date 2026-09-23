@@ -1,99 +1,117 @@
-﻿---
+---
 layout: page
-title: Transformerの全体構造（Encoder / Decoder）とは？【BERT・GPTとの関係｜G検定対策】
-description: "Transformerの全体構造（Encoder / Decoder）について、G検定で問われる自然言語処理・系列データ分野の観点から、系列データを扱う仕組み、学習目的、代表モデルとの関係を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
+title: TransformerのEncoder・Decoderとは？BERT・GPTとの関係【G検定】
+description: "TransformerのEncoder・Decoderを、入力から文脈表現を作るEncoder、過去の出力などを条件に系列を生成するDecoderとして整理します。BERTはEncoder系、GPTはDecoder型という代表的関係と、Encoder＝理解専用・Decoder＝生成専用と決めつけない判断軸を確認します。"
 permalink: /gk/transformer-architecture/
 tags: [gk, transformer, attention]
 gk_section: ディープラーニングの要素技術/トランスフォーマー (Transformer)
 gk_order: 2
-last_modified_at: 2026-08-26
+last_modified_at: 2026-09-23
 ---
 
 ## まず結論
-- **Transformer**は、Self-Attentionを中核としたニューラルネットワーク構造である。
-- **Encoder**は「入力を理解する役割」、**Decoder**は「出力を生成する役割」を担う。
-- G検定では「**EncoderかDecoderか**」を見抜けるかが最大のポイント。
+
+Transformerの基本構造では、**Encoder**と**Decoder**が異なる役割を持ちます。
+
+- **Encoder**：入力系列から文脈を含む表現を作る
+- **Decoder**：これまでの出力などを条件に次の出力を作る
+
+G検定では、代表例として、
+
+- BERT → Encoder系
+- GPT → Decoder型
+- 原典の機械翻訳Transformer → Encoder + Decoder
+
+を切り分けます。
 
 ## 直感的な説明
-Transformerは、文章処理を  
-**「読むパート」と「書くパート」**に分けた構造です。
 
-- Encoder：  
-  👉 文章を読んで、意味を理解する
-- Decoder：  
-  👉 理解した内容をもとに、文章を生成する
+機械翻訳を例にすると、
 
-👉 **読む＝Encoder、書く＝Decoder**
+- Encoder → 翻訳元の文章を表現に変換する
+- Decoder → その表現と、これまでに生成した語を使って翻訳文を作る
+
+という役割です。
+
+「読む＝Encoder、書く＝Decoder」という覚え方は入口として便利ですが、**Encoderは理解専用、Decoderは生成以外に使えない**と絶対視しないようにします。
 
 ## 定義・仕組み
-### Transformerの基本構成
-- Embedding層
-- Self-Attention
-- Feed Forward Network
-- 残差接続＋正規化
-
-これらを  
-- **Encoderブロック**
-- **Decoderブロック**  
-として積み重ねる。
-
----
 
 ### Encoder
-- 入力文全体を同時に処理
-- 双方向に文脈を考慮
-- 出力は「文脈情報を含んだ表現」
 
-👉 **意味理解が得意**
+Encoderでは、主に、
 
----
+- Self-Attention
+- Feed Forward Network
+- 残差接続
+- Layer Normalization
+
+などを使って入力系列を文脈化します。
+
+BERTは代表的なEncoder系モデルです。
 
 ### Decoder
-- これまでの出力をもとに次の単語を予測
-- 一方向（未来は見ない）
-- Encoderの出力を参照する場合もある
 
-👉 **文章生成が得意**
+原典TransformerのDecoderでは、
+
+- 未来を見ないMasked Self-Attention
+- Encoder出力を参照するAttention
+- Feed Forward Network
+
+などを使って出力系列を生成します。
+
+GPT系は、EncoderとのCross-Attentionを持たない**Decoder-only Transformer**として考えるのが基本です。
+
+### マスクの役割
+
+文章生成では、まだ生成していない未来のトークンを答えとして見てしまわないようにします。
+
+そのためDecoder型の自己回帰モデルでは、未来側を隠す**Causal Mask**が重要です。
 
 ## いつ使う？（得意・不得意）
-### Encoder系が向く
-- 文書分類
-- 感情分析
-- 質問応答（理解側）
 
-### Decoder系が向く
-- 文章生成
-- 要約
-- 対話システム
+代表的な整理は次のとおりです。
+
+| 構成 | 代表例 | 典型的な用途 |
+|---|---|---|
+| Encoder-only | BERT | 分類、抽出、文脈表現 |
+| Decoder-only | GPT | 自己回帰生成 |
+| Encoder-Decoder | 原典Transformer、T5系など | 翻訳、入力から出力系列を作るタスク |
+
+これは代表的な傾向であり、**用途を完全に固定する分類ではありません。**
 
 ## G検定ひっかけポイント
-ここが超重要 👇
 
-### ❌ Encoderは文章を生成する
-- **誤り**
-- Encoderは理解専用
+### Encoder＝生成できない？
 
-### ❌ Decoderは双方向に文脈を見る
-- **誤り**
-- Decoderは一方向
+❌ Encoderは生成に一切使えない  
+⭕ **Encoderは主に表現を作り、生成システムの一部として使われることもある**
 
-### ⭕ 正しい判断基準
-- 「双方向」「理解」→ Encoder
-- 「一方向」「生成」→ Decoder
+### Decoder＝必ずEncoderを見る？
 
-## BERT・GPTとの関係
-- **BERT**：Transformer **Encoderのみ**
-- **GPT**：Transformer **Decoderのみ**
-- **翻訳モデル**：Encoder + Decoder
+❌ Decoderは常にEncoder出力を参照する  
+⭕ **GPTのようなDecoder-onlyモデルもある**
 
-👉 **どの部分を使うかがモデルの性格を決める**
+### Decoder＝双方向？
+
+❌ 自己回帰生成で未来のトークンも参照する  
+⭕ **Causal Maskで未来側を見ないようにする**
+
+### BERT / GPT
+
+- BERT → Encoder系
+- GPT → Decoder型
+
+ただし、これは**代表的な構造の違い**として覚えます。
 
 ## まとめ（試験直前用）
-- TransformerはAttention中心構造
-- Encoder＝理解（双方向）
-- Decoder＝生成（一方向）
-- BERT＝Encoderのみ
-- GPT＝Decoderのみ
-- 「理解か生成か」で切る
+
+- Encoder＝**入力から文脈表現を作る**
+- Decoder＝**条件に基づいて出力系列を作る**
+- BERT＝Encoder系
+- GPT＝Decoder-only系
+- 原典Transformer＝Encoder + Decoder
+- Decoder-onlyではEncoderは不要
+- 自己回帰生成ではCausal Maskに注意
 
 {% include gk_article_footer.html %}
