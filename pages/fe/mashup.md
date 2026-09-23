@@ -8,7 +8,7 @@ fe_section: ストラテジ系
 fe_subsection: 経営戦略・業務システム
 fe_order: 65
 date: 2026-07-11
-last_modified_at: 2026-09-11
+last_modified_at: 2026-09-23
 ---
 
 ## まず結論
@@ -278,6 +278,51 @@ Web画面の一部だけを更新する説明は、マッシュアップでは�
 | 複数サービスのデータを統合する | データマッシュアップ |
 | サービス同士の入出力をつなぐ | ロジックマッシュアップ |
 | ページの一部だけを再読込みする | Ajaxの説明 |
+
+## 一次情報で確認する
+
+### IPAのマッシュアップ解説
+
+IPAの「セキュア・プログラミング講座」では、マッシュアップについて、主催者の異なる**複数のWebサービスを利用する形態**として説明しています。
+
+- [IPA：マッシュアップにおけるセキュアプログラミング](https://www.ipa.go.jp/archive/security/vuln/programming/web/chapter1/1-5.html)
+- [IPA：WebサービスとマッシュアップAPI](https://www.ipa.go.jp/archive/security/vuln/programming/web/chapter8/8-1.html)
+
+IPAの資料はアーカイブ資料ですが、今回のようなFE問題で必要な、
+
+```text
+複数のWebサービスを利用する
+↓
+取得した機能やデータを組み合わせる
+↓
+新しいサービスとして利用する
+```
+
+という基本的な考え方を確認する一次情報として有効です。
+
+なお、現在のFEの出題範囲は、IPAの「基本情報技術者試験（レベル2）シラバス」で確認します。
+
+- [IPA：試験要綱・シラバスについて](https://www.ipa.go.jp/shiken/syllabus/gaiyou.html)
+
+### 実装例としてのAPIマッシュアップ
+
+IBMの公式ドキュメントでは、複数のAPIを連結・集約し、一つのサービスとして公開する「API Mashup」が説明されています。
+
+- [IBM：API Mashups](https://www.ibm.com/docs/en/wam/wm-api-gateway/10.11.0?topic=apis-api-mashups)
+
+これは製品の実装例ですが、
+
+```text
+API A
++
+API B
+↓
+まとめて一つのサービスとして提供
+```
+
+というマッシュアップのイメージを確認するのに役立ちます。
+
+FEでは製品固有の機能を覚える必要はありません。**「公開された複数のサービスを組み合わせて、新しいサービスを提供する」**という判断軸を優先します。
 
 ## まとめ（試験直前用）
 
