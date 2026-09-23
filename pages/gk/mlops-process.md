@@ -6,7 +6,7 @@ permalink: /gk/mlops-process/
 tags: [gk, mlops, lifecycle]
 gk_section: AIの社会実装に向けて/開発・運用（MLOps）
 gk_order: 3
-last_modified_at: 2026-09-04
+last_modified_at: 2026-09-24
 ---
 
 ## まず結論
@@ -49,6 +49,7 @@ MLOpsは、モデルを一度作って配置して終わりではありません
 - CI/CD
 - **Continuous Training（継続学習）**
 - モデル監視
+- [データドリフトとコンセプトドリフト](/gk/data-drift-vs-concept-drift/)の確認
 
 などがあります。
 
