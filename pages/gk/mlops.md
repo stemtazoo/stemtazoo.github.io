@@ -6,7 +6,7 @@ permalink: /gk/mlops/
 tags: [gk, mlops, devops]
 gk_section: AIの社会実装に向けて/開発・運用（MLOps）
 gk_order: 2
-last_modified_at: 2026-09-04
+last_modified_at: 2026-09-24
 ---
 
 ## まず結論
@@ -43,6 +43,7 @@ MLOpsでは、たとえば次のような要素を扱います。
 - モデルのデプロイ
 - 本番環境の監視
 - データドリフト・性能変化の確認
+- [データドリフトとコンセプトドリフト](/gk/data-drift-vs-concept-drift/)の監視
 - 必要に応じた再学習・再デプロイ
 
 重要なのは、MLOpsが**固定された1つの工程表ではない**ことです。
