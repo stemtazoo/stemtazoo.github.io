@@ -3,7 +3,7 @@ layout: page
 title: エキスパートシステムの限界とは？知識獲得と保守のボトルネック【G検定】
 description: "エキスパートシステムの限界を、専門家の暗黙知をルール化する知識獲得ボトルネック、ルール増加による矛盾・保守負担、対象領域外への弱さという観点で整理します。DENDRAL・MYCINが成功しても汎用化が難しかった理由をG検定向けに確認します。"
 permalink: /gk/expert-system-limitations/
-tags: [gk, classical_ai, expert_system]
+tags: [gk]
 gk_section: 人工知能をめぐる動向/専門家システム
 gk_order: 3
 last_modified_at: 2026-09-23
