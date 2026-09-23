@@ -1,78 +1,102 @@
-﻿---
+---
 layout: page
-title: Seq2SeqからTransformerへの進化【Attention登場の理由】
-description: "Seq2SeqからTransformerへの進化について、G検定で問われる自然言語処理・系列データ分野の観点から、系列データを扱う仕組み、学習目的、代表モデルとの関係を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
+title: Seq2Seq・Attention・Transformerの違い｜何を解決した？【G検定】
+description: "RNN型Seq2Seq、Attention、Transformerを、固定長ベクトルのボトルネック、入力系列への動的参照、再帰を使わないAttention中心の構造という流れで比較します。「Transformer＝Self-Attentionだけ」「生成時も完全並列」という誤解を避けて整理します。"
 permalink: /gk/seq2seq-attention-transformer/
 tags: [gk, rnn, attention, transformer, nlp]
 gk_section: ディープラーニングの要素技術/リカレントニューラルネットワーク (RNN)
 gk_order: 10
-last_modified_at: 2026-08-26
+last_modified_at: 2026-09-23
 ---
 
 ## まず結論
-- **Seq2Seq → Attention → Transformer** は、  
-  **「長文が苦手」「並列処理できない」というRNNの限界を克服するための進化の流れ**である。
-- G検定では **「何が問題で、何が解決されたか」** が問われる。
+
+Seq2Seq・Attention・Transformerは、次のように整理します。
+
+- **初期RNN Seq2Seq**：入力を固定長表現へまとめる
+- **Attention付きSeq2Seq**：必要な入力位置を動的に参照
+- **Transformer**：再帰を使わずAttentionを中心に系列を処理
+
+G検定では、**何を改善したか**を見るのが重要です。
 
 ## 直感的な説明
-- Seq2Seq：  
-  👉「全文を一度丸暗記してから話す」
-- Attention：  
-  👉「話すときに、必要な部分を見返しながら話す」
-- Transformer：  
-  👉「最初から全部を見渡し、同時に処理する」
 
-つまり  
-**記憶頼り → 参照可能 → 並列処理** への進化。
+### 初期Seq2Seq
 
-## 定義・仕組み
-### Seq2Seq（RNNエンコーダ・デコーダ）
-- 入力系列を **1つの固定長ベクトル** に圧縮
-- 長文になるほど情報が欠落
-- 処理は **時系列順（並列不可）**
+全文を1つのメモへまとめてから出力するイメージです。
 
 ### Attention
-- デコーダが **入力系列の各部分を重み付きで参照**
-- 長文でも重要部分を使える
-- ただし **RNN構造自体は残る**
+
+出力するときに、元の入力の必要な箇所を見返します。
 
 ### Transformer
-- RNNを完全に廃止
-- **Self-Attentionのみ**で系列を処理
-- 全トークンを **並列処理** 可能
-- 長距離依存関係に強い
+
+RNNで前から順に隠れ状態を渡す代わりに、Attentionで要素間の関係を直接計算します。
+
+## 定義・仕組み
+
+### 初期RNN Seq2Seq
+
+Encoderが入力系列を固定次元ベクトルへ変換し、Decoderがそのベクトルから出力を生成します。
+
+長い入力ほど1つの固定長表現がボトルネックになりやすい点が問題でした。
+
+### Attention
+
+Decoderが出力時刻ごとに、Encoderの複数の状態へ異なる重みを付けて参照します。
+
+これにより、入力全体を単一ベクトルだけで表す必要がなくなります。
+
+### Transformer
+
+Transformerは、RNNの再帰を使わず、
+
+- Self-Attention
+- Encoder-Decoder Attention（構成による）
+- Feed Forward Network
+- 位置情報
+
+などで構成されます。
+
+学習時には系列内の多くの位置をまとめて計算しやすい一方、GPTのような自己回帰生成では出力は通常1トークンずつ生成します。
 
 ## いつ使う？（得意・不得意）
-**Seq2Seq**
-- 短文の翻訳
-- 小規模タスク
 
-**Attention付きSeq2Seq**
-- 長文翻訳
-- 音声認識・要約
+このページでは性能順位ではなく、技術の役割を整理します。
 
-**Transformer**
-- 大規模言語モデル（BERT, GPT）
-- 高速学習・高精度が必要な場面
+- 固定長表現 → 初期Seq2Seqの制約
+- 入力の各位置を参照 → Attention
+- 再帰なし・Attention中心 → Transformer
 
 ## G検定ひっかけポイント
-- ❌「Seq2SeqはAttentionを前提としている」
-- ❌「TransformerはSeq2Seqの一種」
-- ❌「Attention = Transformer」
 
-👉 **Attentionは仕組み**  
-👉 **Transformerはモデル構造**
+### Transformer＝Self-Attentionだけ？
 
-### 判断基準
-- 固定長ベクトル → Seq2Seq
-- 重み付き参照 → Attention
-- RNNなし・並列処理 → Transformer
+❌ Self-Attentionしか使わない  
+⭕ **FFNや位置情報、構成によってCross-Attentionなども使う**
+
+### Transformer＝完全並列？
+
+❌ 自己回帰生成時も全出力トークンを同時生成  
+⭕ **学習時は並列化しやすいが、自己回帰生成は逐次的**
+
+### Attention＝Transformer？
+
+❌ 同義  
+⭕ **Attentionは仕組み、Transformerはアーキテクチャ**
 
 ## まとめ（試験直前用）
-- Seq2Seq：RNNで系列→系列
-- 問題：長文に弱い・並列不可
-- Attention：必要部分を参照
-- Transformer：RNNを捨てて完全並列
-- 「何を解決したか」を見る
+
+- 初期Seq2Seq＝固定長ベクトル
+- Attention＝必要な入力位置を重み付き参照
+- Transformer＝再帰なし・Attention中心
+- AttentionとTransformerは同義ではない
+- TransformerにはFFN・位置情報などもある
+- **学習時の並列化と生成時の逐次性を分ける**
+
+## 参考資料
+
+- [Neural Machine Translation by Jointly Learning to Align and Translate｜arXiv](https://arxiv.org/abs/1409.0473)
+- [Attention Is All You Need｜arXiv](https://arxiv.org/abs/1706.03762)
 
 {% include gk_article_footer.html %}
