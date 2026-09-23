@@ -1,111 +1,131 @@
 ---
 layout: page
-title: Transformer（概要）
-description: "Transformer（概要）について、G検定で問われる自然言語処理・系列データ分野の観点から、系列データを扱う仕組み、学習目的、代表モデルとの関係を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
+title: Transformerとは？Self-AttentionとBERT・GPTの関係【G検定対策】
+description: "Transformerを、RNNの再帰処理を使わずAttentionを中心に系列を扱うニューラルネットワークとして整理します。Self-Attention、位置情報、Encoder / Decoder、マスク、学習時の並列化を押さえ、BERT・GPTとの関係をG検定向けに切り分けます。"
 permalink: /gk/transformer/
-tags: [gk, neural_network, transformer]
+tags: [gk, neural_network, transformer, attention]
 gk_section: ディープラーニングの要素技術/トランスフォーマー (Transformer)
 gk_order: 1
-last_modified_at: 2026-07-14
+last_modified_at: 2026-09-23
 ---
 
 ## まず結論
 
-* **TransformerはRNNを使わない系列モデル**
-* **Self-Attentionを中心に構成** されている
-* **並列計算が可能** で、長期依存関係に強い
+**Transformer**は、RNNのような再帰処理を使わず、**Attentionを中心に系列中の要素同士の関係を扱うニューラルネットワーク構造**です。
 
----
+G検定では次を押さえます。
+
+- 中核は **Self-Attention**
+- RNNのように1時刻ずつ隠れ状態を渡さない
+- 系列の順番は **位置情報**で補う
+- Encoder / Decoder の組合せがある
+- BERTやGPTの土台になっている
+
+特に、**Transformer＝必ず文章生成モデル**ではありません。
 
 ## 直感的な説明
 
-Transformerは、
+RNNは、文章を前から順に読みながら情報を受け渡すイメージです。
 
-> 「順番に読むのではなく、全体を一気に見て関係を判断する」
+Transformerは、各トークンが他のトークンとの関係をAttentionで計算し、
 
-モデルです。
+> **どの情報をどれくらい参照するか**
 
-[RNN](/gk/rnn/)のように
+を直接決めます。
 
-* 前から順に処理する
+ただし、「いつでも未来の単語まで全部見られる」わけではありません。
 
-のではなく、
-**系列全体を同時に処理** します。
-
----
+GPTのような自己回帰モデルでは、**未来側を見ないようにマスク**します。
 
 ## 定義・仕組み
 
-### Transformerの基本構成
+### Self-Attention
 
-Transformerは主に次の要素で構成されます。
+Self-Attentionでは、同じ系列から Query・Key・Value を作り、要素同士の関連度を計算します。
 
-* **Self-Attention**
-* **Feed Forward Network（全結合層）**
-* **残差接続（Skip Connection）**
-* **Layer Normalization**
+詳しくは[Attention](/gk/attention/)で整理しています。
 
-これらをブロックとして積み重ねます。
+### 位置情報
 
----
+Attentionだけでは、入力の並び順そのものは自動では分かりません。
 
-### Encoder / Decoder（概要）
+そのためTransformerでは、**Positional Encoding / Positional Embedding**などを使って位置情報を与えます。
 
-* **Encoder**：入力系列を理解・特徴抽出
-* **Decoder**：出力系列を生成
+### Encoder / Decoder
 
-機械翻訳などでは、
+原論文のTransformerは、EncoderとDecoderを組み合わせた構造です。
 
-* Encoder：入力文（翻訳元）
-* Decoder：出力文（翻訳先）
+- **Encoder**：入力系列から文脈表現を作る
+- **Decoder**：これまでの出力やEncoder側の情報を使って出力系列を生成する
 
-という役割分担になります。
+その後、
 
-この構造をもとに、Encoder側を中心に使う代表例が[BERT](/gk/bert/)、Decoder側の考え方を使う代表例が[GPT](/gk/gpt/)です。
+- BERT → Encoder中心
+- GPT → Decoder型
+- 翻訳モデル → Encoder + Decoder
 
----
+のような派生が広く使われています。
 
-### なぜRNNを使わない？
+詳しくは[Transformerの全体構造](/gk/transformer-architecture/)で確認できます。
 
-* 時系列処理による **計算の直列化** を避けたい
-* 長期依存関係を直接捉えたい
+### 並列計算
 
-Self-Attentionにより、
-**遠く離れた要素同士も直接関連付け** できます。
+RNNでは、前の時刻の隠れ状態が次の計算に必要なため、系列方向の処理が直列になりやすくなります。
 
----
+Transformerでは、**学習時に系列中の複数位置をまとめて計算しやすい**ことが大きな利点です。
+
+ただし、GPTのように次トークンを1つずつ生成する**自己回帰推論では、出力生成そのものは逐次的**です。
 
 ## いつ使う？（得意・不得意）
 
-### 得意なこと
+Transformer系は、
 
-* 機械翻訳・文章理解
-* 長距離依存関係のあるタスク
-* GPUによる高速学習
+- 自然言語処理
+- 画像
+- 音声
+- マルチモーダル
 
-### 注意点
+など幅広い分野で使われています。
 
-* 計算量・メモリ使用量が大きい
-* 非常に長い系列では工夫が必要
+注意点は、標準的なSelf-Attentionでは系列長が伸びると計算量・メモリ使用量が大きくなりやすいことです。
 
----
+そのため、長い系列を効率よく扱うためのさまざまな改良もあります。
 
 ## G検定ひっかけポイント
 
-* ❌「TransformerはRNNの一種」→ **誤り**
-* ❌「Attentionは補助的要素」→ **誤り**
-* ✅ Transformerの中核は **Self-Attention**
-* ✅ 並列計算が可能
-* ✅ [BERT](/gk/bert/)はEncoder側、[GPT](/gk/gpt/)はDecoder側の特徴で見分ける
+### Transformer＝RNN？
 
----
+❌ RNNの一種  
+⭕ **再帰処理を使わずAttentionを中心に構成する**
+
+### Attentionなら未来も見える？
+
+❌ 常に系列全体を無制限に参照する  
+⭕ **参照範囲はマスクや構造に依存する**
+
+GPT系では未来側をマスクします。
+
+### Transformer＝常に並列？
+
+❌ 生成時も全トークンを一度に出せる  
+⭕ **学習時は並列化しやすいが、自己回帰生成は逐次的**
+
+### Transformer＝GPT？
+
+❌ Transformerという1つの言語モデルがGPT  
+⭕ **Transformerは構造、GPTはその構造を使う代表的モデル系列**
 
 ## まとめ（試験直前用）
 
-* Transformerは **RNN不要の系列モデル**
-* Self-Attentionが中心
-* 並列化・長期依存に強い
+- Transformer＝**Attention中心のニューラルネットワーク構造**
+- RNNの再帰処理を使わない
+- Self-Attentionで要素間の関係を扱う
+- 位置情報を別途与える
+- BERT＝Encoder系、GPT＝Decoder系
+- **学習時の並列化と自己回帰生成時の逐次処理を混同しない**
 
-次は、意味理解に強い[BERT](/gk/bert/)、文章生成に強い[GPT](/gk/gpt/)、単語の分散表現を学ぶ[Word2Vec](/gk/word2vec/)を確認すると、NLP分野のつながりが見えやすくなります。
+## 参考資料
+
+- [Attention Is All You Need｜arXiv](https://arxiv.org/abs/1706.03762)
 
 {% include gk_article_footer.html %}
