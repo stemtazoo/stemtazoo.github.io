@@ -3,7 +3,7 @@ layout: page
 title: 第二次AIブームとは？エキスパートシステムと知識獲得【G検定】
 description: "第二次AIブームを、1980年代を中心に知識工学とエキスパートシステムが注目された時期として整理します。知識ベース・推論エンジン、DENDRAL・MYCINなどとの関係、知識獲得と保守がボトルネックになった理由をG検定向けに確認します。"
 permalink: /gk/second-ai-boom/
-tags: [gk, ai_history, expert_system]
+tags: [gk]
 gk_section: 人工知能をめぐる動向/AIブーム
 gk_order: 2
 last_modified_at: 2026-09-23
