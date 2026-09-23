@@ -3,7 +3,7 @@ layout: page
 title: 第一次AIブームとは？探索・推論とトイ・プロブレム【G検定対策】
 description: "第一次AIブームを、1950〜1960年代を中心に探索・推論や記号処理が注目された時期として整理します。1956年ダートマス会議、限定された問題での成功、現実問題での組合せ爆発や期待とのギャップを押さえ、第二次AIブームとの違いを確認します。"
 permalink: /gk/first-ai-boom/
-tags: [gk, ai_history]
+tags: [gk]
 gk_section: 人工知能をめぐる動向/AIブーム
 gk_order: 1
 last_modified_at: 2026-09-23
