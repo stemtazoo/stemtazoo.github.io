@@ -1,135 +1,86 @@
-﻿---
+---
 layout: page
-title: GANの派生モデルまとめ
-description: "GANの代表的な派生モデルを、DCGANの畳み込み画像生成、条件付きGANの指定条件による生成、CycleGANの対応なし画像変換、StyleGANのスタイル制御など目的別に比較します。名称だけで暗記せず、入力に条件があるか、ペアデータが必要か、生成過程のどこを制御するかというG検定の識別軸を整理します。"
+title: GAN派生モデルまとめ｜DCGAN・Conditional GAN・Pix2Pix・CycleGAN【G検定】
+description: "GANの代表的派生を、DCGANは畳み込み構造、Conditional GANは条件付き生成、Pix2Pixはペアあり画像変換、CycleGANはペアなし画像変換という判断軸で比較します。画質順位ではなく、条件・データの対応関係・学習構造でG検定の選択肢を切ります。"
 permalink: /gk/gan-variants/
 tags: [gk, neural_network, gan, cheatsheet]
 gk_section: ディープラーニングの応用例/データ生成/GAN・派生モデル
-gk_order: 1
-last_modified_at: 2026-08-26
+gk_order: 2
+last_modified_at: 2026-09-23
 ---
 
 ## まず結論
 
-* **GANは派生モデル名と用途を結びつける問題が多い**
-* G検定では  
-  👉「条件付き？」「変換？」「高品質？」  
-  のどれかで切る
-* **DCGAN / Conditional GAN / CycleGAN / StyleGAN** が頻出
+GAN派生モデルは、**性能順位ではなく「何を追加したか」**で切り分けます。
 
----
+| モデル | 判断軸 |
+|---|---|
+| GAN | GeneratorとDiscriminatorの敵対的学習 |
+| DCGAN | GANにCNN系構造 |
+| Conditional GAN | 条件を与えて生成 |
+| Pix2Pix | ペアあり画像→画像変換 |
+| CycleGAN | ペアなし画像→画像変換 |
 
-## 直感的な整理（超重要）
+## 直感的な説明
 
-GAN派生は一言で覚える👇
+- DCGAN → **画像向けの畳み込み構造**
+- Conditional GAN → **条件を指定する**
+- Pix2Pix → **正解ペアを見て変換**
+- CycleGAN → **正解ペアなしで変換**
 
-* **DCGAN** → 画像をきれいに
-* **Conditional GAN** → 条件をつけて
-* **CycleGAN** → 変換する
-* **StyleGAN** → 超高品質
+と整理します。
 
----
+## 定義・仕組み
 
-## 主要GAN派生モデル
+### DCGAN
 
-### DCGAN（Deep Convolutional GAN）
+[DCGAN](/gk/dcgan/)はGANへCNN系アーキテクチャを導入した代表モデルです。
 
-* GANに **CNNを導入**
-* 画像の空間構造を保持
-* 高解像度な画像生成が可能
+### Conditional GAN
 
-👉  
-**GAN × CNN**
+[Conditional GAN](/gk/conditional-gan/)はラベル・属性・画像などの条件を与えて生成を制御します。
 
----
+### Pix2Pix
 
-### Conditional GAN（cGAN）
-
-* 入力に **条件ラベル** を追加
-* 特定クラスの画像を生成可能
-
-例：
-* 「数字3の画像を生成」
-* 「犬の画像だけ生成」
-
-👉  
-**条件付き生成**
-
----
+[Pix2Pix](/gk/pix2pix/)は入力画像を条件とし、対応する出力画像ペアから画像変換を学びます。
 
 ### CycleGAN
 
-* **画像から画像への変換**
-* ペアデータ不要
-* 逆変換の一貫性（Cycle Consistency）を利用
+[CycleGAN](/gk/cyclegan/)は対応ペアなしで画像変換を学び、Cycle Consistencyを利用します。
 
-例：
-* 写真 ↔ 絵画
-* 夏 ↔ 冬
+## いつ使う？（得意・不得意）
 
-👉  
-**Image-to-Image Translation**
+問題文で、
 
----
+- CNNをGANへ導入 → DCGAN
+- ラベルで生成制御 → Conditional GAN
+- ペア画像あり → Pix2Pix
+- ペア画像なし → CycleGAN
 
-### StyleGAN
-
-* スタイルを制御した画像生成
-* 非常に高品質
-* 顔画像生成で有名
-
-👉  
-**リアルすぎる画像**
-
----
-
-## 試験向け比較表（ここだけ見ればOK）
-
-| モデル | 主目的 | キーワード |
-|---|---|---|
-| DCGAN | 高品質生成 | CNN |
-| Conditional GAN | 条件付き生成 | ラベル |
-| CycleGAN | 画像変換 | ペア不要 |
-| StyleGAN | 超高品質 | スタイル |
-
----
+を探します。
 
 ## G検定ひっかけポイント
 
-### ❌ よくある誤解
+### 「高品質」だけで判定しない
 
-* ❌ 「YOLOはGANの一種」
-* ❌ 「GANは分類モデル」
-* ❌ 「CycleGANはペア画像が必要」
+❌ 高品質画像ならDCGAN / StyleGANと即断  
+⭕ **モデル構造・条件・データ要件を見る**
 
----
+### Pix2PixとConditional GAN
 
-### ✅ 正しい切り方
+Pix2PixはConditional GANの考え方を画像変換へ使った具体例です。
 
-* 生成？ → GAN
-* 条件付き？ → Conditional GAN
-* 変換？ → CycleGAN
-* 画質重視？ → StyleGAN
+### CycleGAN
 
----
-
-## 試験での即断フレーズ
-
-* 「条件付き生成」 → Conditional GAN
-* 「ペアなし画像変換」 → CycleGAN
-* 「高解像度画像生成」 → DCGAN / StyleGAN
-* 「物体検出」 → ❌ GANではない
-
----
+重要なのは単なる「スタイル変換」ではなく、**対応ペア不要＋循環一貫性**です。
 
 ## まとめ（試験直前用）
 
-* GAN派生は **用途で区別**
-* DCGAN：CNNを導入した画像生成
-* Conditional GAN：条件を与えて生成を制御
-* CycleGAN：ペアなし画像変換
-* StyleGAN：スタイル制御と高品質生成
-
-👉 **「CNN・条件・ペア不要・スタイル」のどれかを見る**と切り分けやすいです。
+- GAN＝敵対的学習
+- DCGAN＝CNN
+- Conditional GAN＝条件付き
+- Pix2Pix＝ペアあり
+- CycleGAN＝ペアなし＋Cycle Consistency
+- **画質ランキングで覚えない**
 
 {% include gk_article_footer.html %}
