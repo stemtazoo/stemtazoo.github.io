@@ -3,7 +3,7 @@ layout: page
 title: DENDRALとは？化学の分子構造を推定した初期エキスパートシステム【G検定】
 description: "DENDRALを、質量分析などの情報と化学者の専門知識を使い、候補となる分子構造を生成・評価する初期のエキスパートシステムとして整理します。医療のMYCINとの違い、ルール・知識表現・探索を使う古典AIという位置付けをG検定向けに確認します。"
 permalink: /gk/dendral/
-tags: [gk, classical_ai, expert_system]
+tags: [gk]
 gk_section: 人工知能をめぐる動向/専門家システム
 gk_order: 1
 last_modified_at: 2026-09-23
