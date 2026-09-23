@@ -1,10 +1,10 @@
 ---
 layout: page
 title: 相互牽制（相互けん制）とは？職務分掌で不正・ミスを防ぐ【SG試験】
-description: 相互けん制は、複数の人や部門が互いに確認し合うことで、不正やミスを防ぎやすくする管理策です。SG試験で問われやすい職務分掌、承認、ログ確認との関係を整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
+description: 相互牽制（相互けん制）とは、一人に権限や重要業務を集中させず、複数の担当者が互いに確認することで不正やミスを防ぐ仕組みです。職務分掌、承認、ログ確認との違いとSG試験での見分け方を整理します。
 permalink: /sg/mutual-check/
 tags: [sg, sg-security-management, risk_assessment, access_control, it_security_operations]
-last_modified_at: 2026-09-14
+last_modified_at: 2026-09-23
 ---
 
 ## まず結論
