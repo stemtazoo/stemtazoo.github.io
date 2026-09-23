@@ -6,7 +6,7 @@ permalink: /gk/ai-governance/
 tags: [gk, ethics, governance]
 gk_section: AIの法律と倫理/AI倫理・ガバナンス/ガバナンス・評価
 gk_order: 1
-last_modified_at: 2026-08-27
+last_modified_at: 2026-09-23
 ---
 
 ## まず結論
