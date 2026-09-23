@@ -57,6 +57,16 @@
       title: One-shot学習とは？
       reason: 類似度を使って少ない例から識別する考え方を確認する
 
+- page: /gk/contrastive-vs-triplet-loss/
+  intro: Contrastive LossとTriplet Lossを切り分けたら、それぞれの損失と少数例学習へのつながりを確認します。
+  items:
+    - url: /gk/contrastive-loss/
+      title: Contrastive Loss（コントラスト損失）とは？
+      reason: 類似ペア・非類似ペアとmarginの考え方を詳しく確認する
+    - url: /gk/one-shot-learning/
+      title: One-shot学習とは？
+      reason: 距離や類似度を使って少ない例から識別する考え方を確認する
+
 - page: /gk/teacher-forcing/
   intro: 教師強制で「学習時は正解を次の入力に使う」と理解したら、系列モデルの構造と推論時との違いをつなげて確認します。
   items:
