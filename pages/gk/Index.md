@@ -179,7 +179,7 @@ gk_sections:
   - title: "チートシート（試験直前）"
 
   - title: "ひっかけ問題集"
-last_modified_at: 2026-09-08
+last_modified_at: 2026-09-23
 ---
 
 <div class="portal-card-grid">
