@@ -3,7 +3,7 @@ layout: page
 title: PaLM-Eとは？ロボットのセンサ情報を言語モデルへ統合【G検定対策】
 description: "PaLM-Eを、画像やロボット状態などの連続的なセンサ入力を言語モデルへ取り込むEmbodied Multimodal Language Modelとして整理します。PaLMとの違い、ロボット計画・視覚質問応答などのタスク、EはEnvironmentではなくEmbodiedと捉える点を確認します。"
 permalink: /gk/palm-e/
-tags: [gk, multimodal, transformer, embodied_ai]
+tags: [gk, multimodal, transformer]
 gk_section: ディープラーニングの応用例/マルチモーダル/汎用マルチモーダルモデル
 gk_order: 2
 last_modified_at: 2026-09-23
