@@ -1,87 +1,94 @@
-﻿---
+---
 layout: page
-title: Permutation Importance vs SHAP【G検定頻出比較】
-description: "Permutation Importance vs SHAPについて、G検定で問われるAI・機械学習分野の観点から、目的、前提、モデル構造、入力と出力、評価観点のどこが異なるかを比較します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
+title: Permutation ImportanceとSHAPの違い【G検定対策】
+description: "Permutation ImportanceとSHAPを、特徴量を並び替えたときのモデル性能低下を見る手法と、Shapley値に基づいて個々の予測を特徴量寄与へ分解する手法として比較します。相関特徴量への注意と、グローバル・ローカルの違いを整理します。"
 permalink: /gk/permutation-importance-vs-shap/
-tags: [gk, metrics, cheatsheet]
+tags: [gk, xai, cheatsheet]
 gk_section: ディープラーニングの応用例/モデルの解釈性/比較・使い分け
 gk_order: 2
-last_modified_at: 2026-08-27
+last_modified_at: 2026-09-24
 ---
 
 ## まず結論
-- **Permutation Importance は「特徴量をシャッフルして性能低下を見る」手法**。
-- **SHAP（SHapley Additive exPlanations）は「予測結果を各特徴量の貢献に分解する」手法**。
-- G検定では **「何を評価しているか」**を区別できるかが問われる。
+
+- **Permutation Importance**：特徴量をシャッフルし、**モデル性能がどれだけ低下するか**を見る
+- **SHAP**：予測を**特徴量ごとの寄与**へ分解する
+
+G検定では、
+
+> シャッフル＋性能低下 → Permutation Importance  
+> Shapley値＋寄与 → SHAP
+
+で切ります。
 
 ## 直感的な説明
-- **Permutation Importance**
-  - 特徴量を1つ壊す
-  - モデルがどれだけ困るかを見る
-  - 👉「この特徴がなくなると困る？」
-- **SHAP（SHapley Additive exPlanations）**
-  - 1つの予測を分解
-  - どの特徴がどれだけ押し上げ／押し下げたかを見る
-  - 👉「この予測は誰のせい？」
 
-たとえ話：
-- Permutation Importance：🧪 **部品を壊して性能テスト**
-- SHAP：🧩 **結果を原因ごとに分解**
+Permutation Importanceは、
+
+> この特徴を壊したら、モデルはどれくらい困る？
+
+を見る方法です。
+
+SHAPは、
+
+> この予測値を作るのに、各特徴がどれくらい寄与した？
+
+を見る方法です。
 
 ## 定義・仕組み
-### Permutation Importance
-- 学習済みモデルに対して使用
-- 特徴量の値を **ランダムに並び替える**
-- 性能低下量を重要度とする
-- 特徴：
-  - モデル非依存
-  - グローバルな重要度評価
 
-### SHAP（SHapley Additive exPlanations）
-- **Shapley値（協力ゲーム理論）**が基礎
-- 予測値を **各特徴量の寄与の和**として表現
-- 特徴：
-  - 個々の予測を説明可能
-  - ローカル／グローバル両対応
-  - 理論的に厳密
+### Permutation Importance
+
+学習済みモデルに対し、ある特徴量だけをランダムに並び替え、評価指標がどれだけ悪化するかを測ります。
+
+モデル内部構造に依存しない方法です。
+
+一般には検証データなどでモデル全体の重要度を見る用途に使われます。
+
+### SHAP
+
+Shapley値を基礎に、ある予測と基準値との差を特徴量寄与として表します。
+
+個別予測を説明でき、複数サンプルを集約して全体傾向を見ることもできます。
 
 ## いつ使う？（得意・不得意）
-### Permutation Importance
-**得意**
-- モデル全体で重要な特徴量を知りたい
-- 手軽に重要度を確認したい
 
-**注意**
-- 相関の強い特徴量があると誤解しやすい
-- 個々の予測理由は分からない
+### 相関特徴量に注意
 
-### SHAP（SHapley Additive exPlanations）
-**得意**
-- なぜその予測になったかを説明したい
-- 個別サンプルの説明（XAI）
+Permutation Importanceでは、強く相関した特徴量があると、一方をシャッフルしても他方が情報を補い、重要度が低く見えることがあります。
 
-**注意**
-- 計算コストが高い
-- 実装がやや複雑
+SHAPも、特徴量依存関係の扱い方によって解釈が変わる場合があります。
+
+したがって、
+
+> 数値が出たらそのまま因果的重要度
+
+とは考えません。
 
 ## G検定ひっかけポイント
-- **略語の意味を知らないと不安になるが、意味理解は必須ではない**
-- よくある誤解：
-  - ❌ SHAP は性能低下を見る手法
-  - ❌ Permutation Importance は予測理由を説明できる
-- 正しい判断基準：
-  - 「シャッフル」「性能劣化」→ **Permutation Importance**
-  - 「Shapley」「寄与の分解」→ **SHAP**
-- 選択肢での即断ワード：
-  - 「並び替え」→ Permutation Importance
-  - 「Shapley値」→ SHAP
-  - 「個々の予測」→ SHAP
+
+### Permutation Importance
+
+❌ 特徴量を学習データから削除して再学習するのが必須  
+⭕ **学習済みモデルで特徴量を並び替え、性能変化を見る**
+
+### SHAP
+
+❌ モデル性能の低下量そのもの  
+⭕ **予測の特徴量寄与**
+
+### 因果
+
+❌ 重要度が高い＝因果原因  
+⭕ **予測への依存・寄与と因果は別**
 
 ## まとめ（試験直前用）
-- Permutation Importance：**壊して測る**
-- SHAP（SHapley Additive exPlanations）：**分解して説明する**
-- グローバル重要度 → Permutation Importance
-- 個別予測の理由 → SHAP
-- **シャッフルか？ 分解か？で切る**
+
+- Permutation＝**シャッフル→性能低下**
+- SHAP＝**Shapley値→寄与**
+- Permutationは全体重要度を見る用途が代表的
+- SHAPは個別説明＋集約が可能
+- 相関特徴量に注意
+- 重要度と因果を混同しない
 
 {% include gk_article_footer.html %}
