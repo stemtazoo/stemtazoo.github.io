@@ -36,6 +36,7 @@ gk_sections:
               - title: "クラスタリング"
               - title: "次元削減"
               - title: "トピックモデル"
+          - title: "推薦システム"
           - title: "強化学習"
             subsections:
               - title: "基礎概念"
