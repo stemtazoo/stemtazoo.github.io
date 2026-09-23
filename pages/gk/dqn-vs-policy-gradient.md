@@ -1,132 +1,110 @@
-﻿---
+---
 layout: page
-title: DQNとPolicy Gradientの違い【強化学習体系図・G検定対策】
-description: "DQNとPolicy Gradientの違いについて、G検定で問われる学習・最適化分野の観点から、目的、前提、モデル構造、入力と出力、評価観点のどこが異なるかを比較します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
+title: DQNとPolicy Gradientの違い｜Q値か方策か【G検定対策】
+description: "DQNとPolicy Gradientを、DQNはQ値をニューラルネットワークで近似する価値ベース、Policy Gradientは方策を直接最適化する方策ベースとして比較します。離散・連続行動を絶対的な分類にせず、何を直接学ぶかというG検定の判断軸で整理します。"
 permalink: /gk/dqn-vs-policy-gradient/
-tags: [gk]
+tags: [gk, reinforcement_learning, cheatsheet]
 gk_section: ディープラーニングの応用例/深層強化学習/DQN・改良手法
 gk_order: 7
-last_modified_at: 2026-08-26
+last_modified_at: 2026-09-23
 ---
 
 ## まず結論
 
-* **DQN** は「価値（Q値）を学習して行動を選ぶ」手法
-* **Policy Gradient** は「行動方針（方策）そのものを直接学習する」手法
-* G検定では「**Q値か？方策か？**」で即切り分ける
+DQNとPolicy Gradientの最大の違いは、**何を直接学ぶか**です。
 
----
+- **DQN**：行動価値 Q(s,a) を学ぶ
+- **Policy Gradient**：方策 π(a|s) を直接最適化する
+
+G検定では、まず
+
+> **Q値？ → DQN系**  
+> **方策？ → Policy Gradient系**
+
+で切ります。
 
 ## 直感的な説明
 
-強化学習の考え方は大きく2つある。
+### DQN
 
-* **DQN系**：
+「この状態で、この行動をしたらどれくらい得か？」という**点数表（Q値）**を学び、その値から行動を選びます。
 
-  * 「この行動はどれくらい得か？」を全部計算して
-  * 一番よさそうな行動を選ぶ
+### Policy Gradient
 
-* **Policy Gradient系**：
-
-  * 「この状況では、この行動を取りやすくしよう」と
-  * 行動の出やすさ（確率）を直接調整する
-
-イメージ：
-
-* DQN：点数表（Q値）を見て決める
-* Policy Gradient：クセ・傾向（方策）を育てる
-
----
+「この状態では、この行動をどれくらい選びやすくするか」という**行動方針そのもの**を学びます。
 
 ## 定義・仕組み
 
-### DQN（Deep Q-Network）
+### DQN
 
-* ベース：**Q学習（価値ベース手法）**
-* 学習対象：
+[DQN](/gk/dqn/)はQ学習を深層学習へ拡張し、Q値をニューラルネットワークで近似します。
 
-  * Q値（状態 × 行動）
-* 特徴：
+代表的な要素は、
 
-  * Experience Replay
-  * Target Network
-* 行動選択：
+- Experience Replay
+- Target Network
 
-  * Q値が最大の行動
+です。
 
----
+基本的なDQNは、各行動に対応するQ値を出力して最大値を選ぶため、**離散行動空間で使われる代表手法**です。
 
 ### Policy Gradient
 
-* ベース：**方策勾配法（ポリシー勾配法）**
-* 学習対象：
+Policy Gradientは、期待収益が大きくなる方向へ**方策パラメータを直接更新**します。
 
-  * 方策（Policy）そのもの
-* 特徴：
+代表例には、
 
-  * 行動を確率的に選択
-  * 勾配で方策を更新
-* 行動選択：
+- REINFORCE
+- PPO
 
-  * 方策が出す確率に従う
+などがあります。
 
----
+Actor-Criticでは、方策を直接更新しながらCriticの価値推定も利用します。
 
 ## いつ使う？（得意・不得意）
 
-### DQN
+行動空間については、次のように整理します。
 
-* **得意**：
+- 基本DQN → 離散行動に自然に対応
+- Policy Gradient → 連続行動を表現しやすい場合がある
 
-  * 行動が離散的
-  * ゲームAI（Atariなど）
-* **不得意**：
+ただし、
 
-  * 連続行動空間
+> 離散行動なら必ずDQN  
+> 連続行動なら必ずPolicy Gradient
 
-### Policy Gradient
+という絶対ルールではありません。
 
-* **得意**：
-
-  * 連続行動空間
-  * ロボット制御
-* **不得意**：
-
-  * 分散が大きく学習が不安定になりやすい
-
----
+方策勾配法は離散行動にも使えます。モデル選択は、行動空間だけでなく学習方式や問題設定によって変わります。
 
 ## G検定ひっかけポイント
 
-### ひっかけ①：強化学習＝DQN
+### DQN＝方策を直接学ぶ？
 
-* ❌ 強化学習はDQNだけ
-* ✅ **DQNは価値ベースの一種**
+❌ 方策 π を直接最適化する  
+⭕ **Q値を学び、Q値から行動を選ぶ**
 
----
+### Policy Gradient＝価値関数を使わない？
 
-### ひっかけ②：経験再生は必須？
+❌ 価値推定は一切使えない  
+⭕ **Actor-CriticではCriticの価値推定を利用できる**
 
-* ❌ 強化学習なら必ず経験再生
-* ✅ **経験再生はDQN系の特徴**
+### 離散 / 連続
 
----
+❌ 離散＝DQN、連続＝Policy Gradientと完全固定  
+⭕ **代表的な得意領域ではあるが、分類の本質は「Q値か方策か」**
 
-### 選択肢の判断基準
+### Experience Replay
 
-* 「**Q値を学習**」→ DQN
-* 「**経験再生（Experience Replay）**」→ DQN
-* 「**方策を直接学習**」→ Policy Gradient
-* 「**行動を確率的に選択**」→ Policy Gradient
-
----
+DQNで代表的ですが、**強化学習全体に必須の仕組みではありません。**
 
 ## まとめ（試験直前用）
 
-* DQN＝**価値ベース（Q値）**
-* Policy Gradient＝**方策ベース**
-* 離散行動→DQN
-* 連続行動→Policy Gradient
-* 迷ったら「QかPolicyか」で切る
+- DQN＝**Q値を学ぶ価値ベース**
+- Policy Gradient＝**方策を直接学ぶ**
+- DQN＝Experience Replay＋Target Networkが代表的
+- Policy Gradient＝REINFORCE・PPOなど
+- Actor-Critic＝方策＋価値
+- **離散 / 連続より「何を直接学ぶか」を優先して判断**
 
 {% include gk_article_footer.html %}
