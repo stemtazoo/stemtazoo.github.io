@@ -1,134 +1,20 @@
-﻿---
-layout: page
-title: GAN と VAE の違い（生成モデル比較）
-description: "GAN と VAE の違い（生成モデル比較）について、G検定で問われる生成モデル分野の観点から、目的、前提、モデル構造、入力と出力、評価観点のどこが異なるかを比較します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
+---
+layout: null
 permalink: /gk/gan-vs-vae/
-tags: [gk, neural_network, generative_model, cheatsheet]
-gk_section: ディープラーニングの応用例/データ生成/生成モデル比較
-gk_order: 1
-last_modified_at: 2026-08-26
+sitemap: false
+last_modified_at: 2026-09-23
 ---
-
-## まず結論
-
-* **GAN**：リアルな画像生成が得意（対戦学習）
-* **VAE**：安定した学習・潜在空間の扱いやすさが強み
-* **画質重視 → GAN / 理論・安定性 → VAE**
-
-👉 G検定では  
-**「対戦か？確率モデルか？」** で切る。
-
----
-
-## 直感的な説明
-
-### GAN
-
-> **偽物を作る人（Generator）と見破る人（Discriminator）の対決**
-
-* だんだん騙すのが上手くなる
-* 見た目がリアルになりやすい
-
----
-
-### VAE
-
-> **データを一度圧縮して、そこから再構成する**
-
-* 「似たもの」を連続的に生成できる
-* 理論的に整理されている
-
----
-
-## 定義・仕組み
-
-### GAN（Generative Adversarial Network）
-
-* Generator：偽データを生成
-* Discriminator：本物か偽物か判定
-* **ミニマックス問題（対戦学習）**
-
-👉  
-確率分布を **暗黙的に学習**
-
----
-
-### VAE（Variational Autoencoder）
-
-* Encoder：データ → 潜在変数
-* Decoder：潜在変数 → データ
-* **確率モデル + 変分推論**
-
-👉  
-潜在空間を **明示的に学習**
-
----
-
-## 最大の違い（ここが狙われる）
-
-| 観点 | GAN | VAE |
-|---|---|---|
-| 学習方法 | 対戦学習 | 確率モデル |
-| 学習安定性 | 不安定 | **安定** |
-| 生成画像 | **高品質** | ややぼやける |
-| 潜在空間 | 扱いにくい | **連続的で扱いやすい** |
-| 理論的保証 | 弱い | **強い** |
-
----
-
-## いつ使う？（得意・不得意）
-
-### GAN が向く場面
-
-* 写真のようにリアルな画像生成
-* 高品質な見た目が重要
-* アート・顔生成・画像拡張
-
----
-
-### VAE が向く場面
-
-* 潜在空間の操作
-* 異常検知
-* データ生成の安定性重視
-
----
-
-## G検定ひっかけポイント
-
-### ❌ よくある誤解
-
-* ❌ 「GANは確率モデル」
-* ❌ 「VAEは対戦学習」
-* ❌ 「VAEの方が画質が良い」
-
----
-
-### ✅ 正しい理解
-
-* GAN：対戦・高画質・不安定
-* VAE：確率・安定・ぼやけやすい
-
----
-
-## 試験での即断フレーズ
-
-* 「対戦学習」 → **GAN**
-* 「確率モデル」 → **VAE**
-* 「高品質画像生成」 → **GAN**
-* 「潜在変数・変分推論」 → **VAE**
-
----
-
-## まとめ（試験直前用）
-
-* GANとVAEは **生成モデル**
-* 仕組みが根本的に違う
-* 画質重視：GAN
-* 理論・安定性：VAE
-
-👉 次は  
-**Diffusion Model（拡散モデル）**  
-を押さえると、最新トレンドまでカバーできます。
-
-{% include gk_article_footer.html %}
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,follow">
+  <meta http-equiv="refresh" content="0; url=/gk/vae-vs-gan/">
+  <link rel="canonical" href="https://stemtazoo.github.io/gk/vae-vs-gan/">
+  <title>VAEとGANの違いへ移動します</title>
+</head>
+<body>
+  <p>比較記事は統合しました。<a href="/gk/vae-vs-gan/">VAEとGANの違い</a>をご覧ください。</p>
+</body>
+</html>
