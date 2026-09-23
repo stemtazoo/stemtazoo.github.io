@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: データベース
 fe_order: 180
 date: 2026-08-24
-last_modified_at: 2026-08-24
+last_modified_at: 2026-09-23
 ---
 
 ## まず結論
@@ -226,6 +226,61 @@ FEでは、優劣ではなく、**保存形式と用途の違い**として整�
 NoSQLは、関係データベース以外のデータモデルを広く指す言葉です。
 
 名前だけを見て「SQLを絶対に使わない」と覚えるよりも、FEでは **「表形式以外の柔軟なデータモデル」** と押さえる方が安全です。
+
+## 一次情報で確認する
+
+### IPA｜基本情報技術者試験シラバス
+
+IPAの基本情報技術者試験シラバスでは、データベースの種類と特徴として、**ドキュメント指向データベース、列指向データベース、グラフデータベース、キーバリュー型データベース**が用語例に挙げられています。
+
+- [IPA｜試験要綱・シラバスについて](https://www.ipa.go.jp/shiken/syllabus/gaiyou.html)
+- [IPA｜基本情報技術者試験（レベル2）シラバス Ver.9.2](https://www.ipa.go.jp/shiken/syllabus/omgdg50000005kpe-att/syllabus_fe_ver9_2.pdf)
+
+まずは、この4種類を**保存形式の違い**で切り分けられるようにしておくのがFE対策として重要です。
+
+### Redis｜キーと値
+
+Redisの公式ドキュメントでは、データベースに保存する各データオブジェクトには一意のキーがあり、そのキーに対応するデータオブジェクトを値（value）とし、両者を**key-value pair**と説明しています。
+
+- [Redis Docs｜Keys and values](https://redis.io/docs/latest/develop/using-commands/keyspace/)
+
+試験では、製品名を覚えることよりも、
+
+```text
+一意に識別するキー
+＋
+対応する値
+
+→ キーバリュー型
+```
+
+と判断できることが大切です。
+
+### MongoDB｜ドキュメント
+
+MongoDBの公式ドキュメントでは、ドキュメントをデータの基本単位とし、BSONドキュメントを**フィールドと値の組**で構成すると説明しています。また、同じコレクション内のドキュメントが必ずしも同一のフィールド構成を持つ必要はありません。
+
+- [MongoDB Docs｜Documents](https://www.mongodb.com/docs/manual/core/document/)
+
+そのためFEでは、**「ドキュメント」「JSON・BSONのような構造」「柔軟な項目構成」**が判断の合図になります。
+
+### Neo4j｜ノードと関係
+
+Neo4jの公式ドキュメントでは、プロパティグラフを、**ノード・リレーションシップ・プロパティ**を中心に説明しています。ノードは対象を表し、リレーションシップはノード同士のつながりを表します。
+
+- [Neo4j Docs｜Graph database concepts](https://neo4j.com/docs/getting-started/appendix/graphdb-concepts/)
+
+```text
+ノード
+＋
+リレーションシップ
+＋
+プロパティ
+
+→ グラフ型
+```
+
+という切り分けは、公式ドキュメントの考え方とも一致します。
 
 ## まとめ（試験直前用）
 
