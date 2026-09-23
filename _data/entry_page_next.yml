@@ -57,6 +57,19 @@
       title: One-shot学習とは？
       reason: 類似度を使って少ない例から識別する考え方を確認する
 
+- page: /gk/teacher-forcing/
+  intro: 教師強制で「学習時は正解を次の入力に使う」と理解したら、系列モデルの構造と推論時との違いをつなげて確認します。
+  items:
+    - url: /gk/rnn-encoder-decoder/
+      title: RNNエンコーダ・デコーダ（Seq2Seq）とは？
+      reason: 教師強制が使われる代表的な系列生成の構造を確認する
+    - url: /gk/rnn/
+      title: RNN（再帰型ニューラルネットワーク）
+      reason: 前時刻の情報を次へ引き継ぐ系列モデルの基本を整理する
+    - url: /gk/lstm/
+      title: LSTM（長短期記憶）
+      reason: RNNの長期依存を改善する代表的な系列モデルを確認する
+
 - page: /gk/elman-network/
   intro: エルマンネットワークの構造を理解したら、RNN全体と類似構造を比較します。
   items:
