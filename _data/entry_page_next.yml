@@ -118,3 +118,17 @@
     - url: /sg/digital-signature/
       title: 電子署名とは？
       reason: ハッシュ値が本人証明と改ざん検知に使われる流れを理解する
+
+- page: /ds/primary-data/
+  intro: 一次データの意味と集め方を押さえたら、二次データとの違いを具体例で切り分けます。
+  items:
+    - url: /ds/primary-secondary-data/
+      title: 一次データと二次データの違い
+      reason: 政府統計・アンケート・スクレイピング・自社ログを判断基準で見分ける
+
+- page: /ds/primary-secondary-data/
+  intro: 一次データと二次データを見分けられたら、一次データの収集方法と注意点を詳しく確認します。
+  items:
+    - url: /ds/primary-data/
+      title: 一次データとは？
+      reason: アンケート・実験・自社ログなど、直接収集する方法と品質上の注意点を確認する
