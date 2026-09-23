@@ -1,100 +1,79 @@
-﻿---
+---
 layout: page
-title: Pix2Pix（画像変換モデル）とは？G検定対策
-description: "Pix2Pix（画像変換モデル）について、G検定で問われる生成モデル分野の観点から、生成や表現学習での役割、モデル構造、学習方法の違いを整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
+title: Pix2Pixとは？ペア画像を使う条件付き画像変換【G検定対策】
+description: "Pix2Pixを、入力画像と対応する正解画像のペアを使って画像から画像への変換を学習するConditional GANとして整理します。入力画像を条件とするGenerator、PatchGAN Discriminator、L1損失を押さえ、ペア不要のCycleGANとの違いを確認します。"
 permalink: /gk/pix2pix/
-tags: [gk, cnn, neural_network]
+tags: [gk, cnn, neural_network, gan]
 gk_section: ディープラーニングの応用例/データ生成/GAN・派生モデル
-gk_order: 4
-last_modified_at: 2026-08-26
+gk_order: 5
+last_modified_at: 2026-09-23
 ---
 
 ## まず結論
 
-Pix2Pixは**入力画像を別の画像に変換するための生成モデル**で、G検定では「画像→画像変換（image-to-image translation）」ができるかどうかを問われる。
+**Pix2Pix**は、対応する**入力画像と出力画像のペア**を使って、画像→画像変換を学習するConditional GANです。
+
+G検定では、
+
+- ペアあり → Pix2Pix
+- ペアなし → CycleGAN
+
+で切り分けます。
 
 ## 直感的な説明
 
-Pix2Pixは「**お手本付きの画像変換**」が得意なモデルです。
+Pix2Pixは、
 
-例えば、
+> この入力画像なら、この完成画像
 
-* 手書きの線画 → 写真風の画像
-* 建物の輪郭図 → 実際の建物画像
-* 白黒画像 → カラー画像
-
-のように、「**この入力には、この出力**」という**ペアの例**を大量に見せて学習します。
-
-人に例えると、
-
-> この下書きには、この完成図を書いてね
-> と、正解例をセットで教えてもらうイメージです。
+という正解ペアを見ながら画像変換を学ぶモデルです。
 
 ## 定義・仕組み
 
-Pix2Pixは **条件付きGAN（Conditional GAN）** の一種です。
+Generatorは入力画像を条件として出力画像を生成します。
 
-特徴は次の2点です。
+Discriminatorは、入力画像と出力画像の組合せが本物のペアか生成されたペアかを判定します。
 
-* **入力画像と出力画像のペア**を使った教師あり学習
-* GAN構造（Generator と Discriminator）を利用
+原論文では、敵対的損失に加えて**L1損失**を使い、出力を正解画像へ近づけます。
 
-### ざっくり構成
-
-* Generator：入力画像から出力画像を生成
-* Discriminator：生成画像が本物か偽物かを判定
-
-ここで重要なのは、
-
-* **ランダムノイズだけから生成するわけではない**
-* **必ず入力画像が条件として与えられる**
-
-という点です。
+また、局所領域ごとの真偽を判定する**PatchGAN** Discriminatorが使われます。
 
 ## いつ使う？（得意・不得意）
 
-### 得意なケース
+代表例は、
 
-* 入力と出力が**1対1で対応する**問題
-* 正解画像が用意できるタスク
-* 画像→画像変換（image-to-image translation）
+- ラベル画像 → 写真
+- 輪郭 → 物体画像
+- 画像の外観変換
 
-### 苦手・注意点
+などです。
 
-* 正解となる画像ペアが用意できない場合
-* 完全にランダムな画像生成（→ VAEや通常のGANの領域）
+最大の条件は、**対応する教師画像ペアが必要**なことです。
 
 ## G検定ひっかけポイント
 
-G検定では、**「生成モデル＝何でもPix2Pix」ではない**点を狙ってきます。
+### Pix2Pix＝通常GAN？
 
-### よくある混同
+❌ ノイズだけから自由生成する基本GAN  
+⭕ **入力画像を条件とするConditional GAN**
 
-* Pix2Pix と VAE
-* Pix2Pix と 通常のGAN
-* Pix2Pix と WaveNet
+### CycleGANとの違い
 
-### 判断基準（超重要）
-
-* **入力画像を別の画像に変換？** → Pix2Pix
-* **画像ペアを使う教師あり学習？** → Pix2Pix
-* **ランダムノイズから新しい画像生成？** → VAE / GAN
-* **音声生成・音声処理？** → WaveNet
-* **単語をベクトル化？** → word2vec
-
-選択肢で
-
-> 「入力画像を別の画像に変換する」
-> 「画像と画像のペアを用いる」
-
-と書かれていたら、Pix2Pixを疑います。
+- Pix2Pix → **対応ペアあり**
+- CycleGAN → **対応ペアなし**
 
 ## まとめ（試験直前用）
 
-* Pix2Pixは**画像→画像変換**の生成モデル
-* **画像ペアを使う教師あり学習**が特徴
-* Conditional GAN の一種
-* ランダム生成ではなく「変換」が目的
-* G検定では **VAE・WaveNet・word2vec との違い**を意識
+- Pix2Pix＝**paired image-to-image translation**
+- Conditional GAN
+- 入力画像が条件
+- 対応する正解画像ペアを使う
+- L1損失
+- PatchGAN
+- ペアなしならCycleGAN
+
+## 参考資料
+
+- [Image-to-Image Translation with Conditional Adversarial Networks｜CVPR 2017](https://arxiv.org/abs/1611.07004)
 
 {% include gk_article_footer.html %}
