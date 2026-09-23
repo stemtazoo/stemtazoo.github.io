@@ -1,91 +1,115 @@
-﻿---
+---
 layout: page
-title: Embedding と ELMo・BERT の違いとは？G検定対策
-description: "Embedding と ELMo・BERT の違いについて、G検定で問われる自然言語処理・系列データ分野の観点から、目的、前提、モデル構造、入力と出力、評価観点のどこが異なるかを比較します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
+title: 静的Embeddingと文脈依存Embeddingの違い｜Word2Vec・ELMo・BERT【G検定】
+description: "静的Embeddingと文脈依存Embeddingを、学習後に単語ごとに固定ベクトルを使うWord2Vecなどと、文脈に応じて各位置の表現が変わるELMo・BERTで比較します。Word2Vecも学習時には周辺語を使うため、「文脈を使わない」と単純化しない判断軸を確認します。"
 permalink: /gk/embedding-vs-contextual-embedding/
 tags: [gk, nlp, attention]
 gk_section: ディープラーニングの応用例/自然言語処理
 gk_order: 17
-last_modified_at: 2026-06-21
+last_modified_at: 2026-09-23
 ---
 
 ## まず結論
 
-* **Embedding（Word2Vec など）**は単語ごとに1つの固定ベクトルを割り当てるのに対し、**ELMo や BERT**は文脈に応じてベクトルが変わる**文脈依存型Embedding**です。
-* G検定では「**静的か文脈依存か**」「**同じ単語でも意味が変わるか**」が問われます。
+Embeddingの大きな違いは、**同じ単語の表現が文脈によって変わるか**です。
+
+- **静的Embedding**：単語ごとに基本的に1つの固定ベクトル
+- **文脈依存Embedding**：文章中の位置・前後関係によって表現が変わる
+
+代表例は、
+
+- Word2Vec / GloVe → 静的
+- ELMo / BERT → 文脈依存
+
+です。
 
 ## 直感的な説明
 
-* 通常の Embedding は「**辞書の意味**」です。単語に1つの意味しかありません。
-* ELMo や BERT は「**会話の中の意味**」です。同じ単語でも、前後の文で意味が変わります。
-* 例：「**bank**」
+「bank」という単語は、
 
-  * Embedding：金融機関 or 川岸を区別できない
-  * ELMo / BERT：文脈から意味を判断できる
+- 銀行
+- 川岸
+
+のように文脈で意味が変わります。
+
+静的Embeddingでは、学習後は基本的に同じ単語へ同じベクトルを使います。
+
+文脈依存Embeddingでは、**周囲の文章を見て、その位置の表現を変えます。**
 
 ## 定義・仕組み
 
-* **Embedding（静的Embedding）**
+### 静的Embedding
 
-  * Word2Vec / GloVe など
-  * 単語ごとに1つのベクトル
-  * 文脈を考慮しない
+Word2Vecなどでは、周囲の単語との関係を使って単語ベクトルを学習します。
 
-* **ELMo**
+したがって、
 
-  * 双方向RNN（LSTM）を使用
-  * 文全体の文脈を考慮して単語表現を生成
+> **Word2Vecは文脈を使わない**
 
-* **BERT**
+という説明は不正確です。
 
-  * Transformer（Attention）を使用
-  * 双方向に文脈を考慮
-  * より強力な文脈表現が可能
+正しくは、
+
+- 学習時 → 周辺文脈を利用する
+- 学習後 → 単語ごとの表現は基本的に固定
+
+です。
+
+### ELMo
+
+ELMoは双方向LSTMを使い、文章中の文脈に応じた表現を作ります。
+
+### BERT
+
+BERTはTransformer Encoderを使い、各位置の表現を前後の文脈から作ります。
+
+同じトークンでも文脈が違えば内部表現が変わります。
 
 ## いつ使う？（得意・不得意）
 
 ### 静的Embedding
 
-* 得意：
+- 軽量な単語ベクトルがほしい
+- 単語類似度を扱いたい
+- 文脈ごとの意味分けが不要
 
-  * 計算が軽い
-  * 実装が簡単
-* 不得意：
+### 文脈依存Embedding
 
-  * 多義語を区別できない
+- 多義語を文脈で区別したい
+- 文書分類・質問応答・抽出
+- 文全体の意味関係を使いたい
 
-### 文脈依存Embedding（ELMo / BERT）
-
-* 得意：
-
-  * 多義語を区別できる
-  * 高精度なNLPタスクに有効
-* 不得意：
-
-  * 計算コストが高い
+ただし、文脈依存モデルの方が常に最適とは限りません。計算量・データ量・用途によって静的Embeddingが適する場合もあります。
 
 ## G検定ひっかけポイント
 
-* **最大のひっかけ**
+### Word2Vec＝文脈を使わない？
 
-  * 「ELMo や BERT は単語ごとに1つのベクトルを持つ」→ ❌
-* 正しい理解
+❌ 周辺語を一切利用しない  
+⭕ **学習時には周辺語を使うが、学習後の表現は静的**
 
-  * 同じ単語でも文脈によってEmbeddingが変わる
-* よくある混同
+### BERT＝単語ごとに固定ベクトル？
 
-  * ELMo = Word2Vec の改良版 → ❌
-  * BERT = 単なるEmbedding → ❌
-* 選択肢で
+❌ どの文章でも同じ表現  
+⭕ **文脈に応じて各位置の表現が変わる**
 
-  * 「文脈を考慮しない」→ 静的Embedding
-  * 「文脈を考慮する」→ ELMo / BERT
+### ELMo＝Transformer？
+
+❌ Self-Attention中心  
+⭕ **双方向LSTMを使う文脈依存表現**
 
 ## まとめ（試験直前用）
 
-* Embedding：固定ベクトル（静的）
-* ELMo / BERT：文脈依存ベクトル
-* 多義語を扱えるのは文脈依存型
-* 文脈という言葉が出たら要注意
+- Word2Vec / GloVe＝**静的Embedding**
+- ELMo / BERT＝**文脈依存Embedding**
+- Word2Vecも学習時には文脈を使う
+- 判断軸は**最終表現が固定か、文脈で変わるか**
+- 新しい手法ほど常に優れるわけではない
+
+## 参考資料
+
+- [Efficient Estimation of Word Representations in Vector Space｜arXiv](https://arxiv.org/abs/1301.3781)
+- [Deep contextualized word representations｜arXiv](https://arxiv.org/abs/1802.05365)
+- [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding｜arXiv](https://arxiv.org/abs/1810.04805)
 
 {% include gk_article_footer.html %}
