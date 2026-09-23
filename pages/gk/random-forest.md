@@ -6,12 +6,14 @@ permalink: /gk/random-forest/
 tags: [gk, machine_learning, ensemble]
 gk_section: 機械学習の概要/代表的な手法/教師あり学習/アンサンブル学習
 gk_order: 3
-last_modified_at: 2026-08-26
+last_modified_at: 2026-09-23
 ---
 
 ## まず結論
 
 ランダムフォレスト（Random Forest）は、**多数の決定木を作り、その予測を多数決や平均で統合するバギング系のアンサンブル学習**です。
+
+1本の木の仕組みは[決定木](/gk/decision-tree/)で確認できます。
 
 G検定では、次の2つをセットで押さえます。
 
