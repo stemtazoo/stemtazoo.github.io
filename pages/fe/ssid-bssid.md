@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 63
 date: 2026-09-08
-last_modified_at: 2026-09-08
+last_modified_at: 2026-09-23
 ---
 
 ## まず結論
@@ -262,18 +262,22 @@ SSIDが識別するのは無線LANネットワークです。
 - SSIDは**最大32オクテット**
 - BSSIDは、個々のアクセスポイント側を識別する**48ビット**の値
 - SSIDはMACアドレスそのものではない
+- **ホスト識別子**という説明ならSSIDではない
 - 「ネットワーク名」ならSSID、「APを個別識別」ならBSSIDと判断する
 
 ```text
-SSID
-→ ネットワーク
-→ 32オクテット
+最大32オクテット
+＋ 無線LANのネットワーク識別子
+→ SSID
 
-BSSID
-→ AP側
-→ 48ビット
+48ビット
+＋ APを個別に識別
+→ BSSID
+
+ホスト識別子
+→ SSIDではない
 ```
 
-> **32オクテットはSSID、48ビットはBSSID。**
+> **「32オクテット＋ネットワーク」ならSSID。「48ビット＋AP」ならBSSID。**
 
 {% include fe_article_footer.html %}
