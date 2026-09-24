@@ -4,9 +4,9 @@ title: 探索と機械学習の違い（どっちを使う？）
 description: "探索・推論と機械学習を、解き方をルールや状態遷移から導くのか、データから規則性を学ぶのかで切り分けます。両者は排他的ではなく組み合わせられる点も含め、G検定でロボット・画像認識・経路探索などの選択肢を判断する基準を整理します。"
 permalink: /gk/search-vs-ml-cheatsheet/
 tags: [gk, cheatsheet]
-gk_section: チートシート（試験直前）/チートシート（試験直前）
+gk_section: チートシート（試験直前）
 gk_order: 1
-last_modified_at: 2026-08-22
+last_modified_at: 2026-09-25
 ---
 
 ## まず結論
