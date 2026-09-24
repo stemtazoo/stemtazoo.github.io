@@ -5,8 +5,8 @@ description: "音声認識を、音声から文字へ変換するASR、フレー
 permalink: /gk/speech-recognition-cheatsheet/
 tags: [gk, speech, cheatsheet]
 gk_section: ディープラーニングの応用例/音声処理/音声認識・系列モデル
-gk_order: 2
-last_modified_at: 2026-09-24
+gk_order: 3
+last_modified_at: 2026-09-25
 ---
 
 ## まず結論
