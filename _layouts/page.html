@@ -20,22 +20,7 @@ layout: default
         {% include mathjax.html %}
       </header>
       <div class="post-content">
-        {% if page.url contains "/gk/" and page.url != "/gk/" %}
-          <div style="font-size: 14px; margin-bottom: 12px;">
-            <a href="{{ '/gk/' | relative_url }}">G検定トップ</a>
-            ＞ {{ page.title }}
-          </div>
-        {% endif %}
-        {% assign is_sg_page = false %}
-        {% if page.dir == "/pages/sg/" %}
-          {% assign is_sg_page = true %}
-        {% endif %}
-        {% if is_sg_page and page.name != "index.md" %}
-          <div style="font-size: 14px; margin-bottom: 12px;">
-            <a href="{{ '/sg/' | relative_url }}">SGトップ</a>
-            ＞ {{ page.title }}
-          </div>
-        {% endif %}
+        {% include study_breadcrumb.html %}
         <div class="pagefind-content" data-pagefind-body>
           {{ content | replace: "<h1", "<h2" | replace: "</h1>", "</h2>" }}
         </div>
