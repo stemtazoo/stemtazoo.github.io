@@ -4,9 +4,9 @@ title: ニューラルネットワーク総まとめ｜構造・学習・汎化�
 description: "ニューラルネットワークを、モデル構造・学習の仕組み・汎化の3軸で整理します。MLP、CNN、RNN、LSTM、GRU、Transformerの役割、誤差逆伝播と最適化、活性化関数、過学習対策を対応させ、G検定で似た用語を切り分ける判断基準を1ページで確認できます。"
 permalink: /gk/nn-cheatsheet/
 tags: [gk, neural_network, cheatsheet]
-gk_section: チートシート（試験直前）/チートシート（試験直前）
+gk_section: チートシート（試験直前）
 gk_order: 3
-last_modified_at: 2026-08-22
+last_modified_at: 2026-09-25
 ---
 
 ## まず結論
