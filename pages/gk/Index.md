@@ -173,6 +173,7 @@ gk_sections:
       - title: "AIセキュリティ・プライバシー攻撃"
         subsections:
           - title: "学習データを狙う攻撃"
+          - title: "推論時の攻撃"
           - title: "モデルを狙う攻撃"
           - title: "比較・まとめ"
       - title: "知的財産・データ利用"
