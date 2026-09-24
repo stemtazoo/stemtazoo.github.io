@@ -5,8 +5,8 @@ description: "CTC（Connectionist Temporal Classification）を、音声フレ�
 permalink: /gk/ctc/
 tags: [gk, speech, neural_network]
 gk_section: ディープラーニングの応用例/音声処理/音声認識・系列モデル
-gk_order: 1
-last_modified_at: 2026-09-24
+gk_order: 2
+last_modified_at: 2026-09-25
 ---
 
 ## まず結論
