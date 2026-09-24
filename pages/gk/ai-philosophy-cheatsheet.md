@@ -4,9 +4,9 @@ title: AI哲学4概念まとめ（オッカム・ノーフリーランチ・み�
 description: "オッカムの剃刀、ノーフリーランチ定理、みにくいアヒルの子定理、フレーム問題を、仮説選択・万能性・類似性・行動後の変化という観点で切り分けます。G検定で哲学系の似た選択肢を判断するための基準を1ページで整理します。"
 permalink: /gk/ai-philosophy-cheatsheet/
 tags: [gk, cheatsheet]
-gk_section: チートシート（試験直前）/チートシート（試験直前）
+gk_section: チートシート（試験直前）
 gk_order: 2
-last_modified_at: 2026-08-22
+last_modified_at: 2026-09-25
 ---
 
 ## まず結論
