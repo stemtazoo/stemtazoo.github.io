@@ -22,6 +22,73 @@
   min-width: 0;
 }
 
+/* Compact study links stay available when the desktop sidebar is hidden. */
+.mobile-study-nav {
+  display: none;
+}
+
+@media (max-width: 1023px) {
+  .mobile-study-nav {
+    background: #fff;
+    border: 1px solid #dfe5eb;
+    border-radius: 8px;
+    display: block;
+    margin: 1rem 1rem 0;
+    padding: 0.7rem;
+  }
+
+  .mobile-study-nav__links {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .mobile-study-nav__links a {
+    align-items: center;
+    border: 1px solid #d3e6ff;
+    border-radius: 6px;
+    color: #0b6fae;
+    display: flex;
+    font-size: 0.9rem;
+    font-weight: 600;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0.35rem 0.5rem;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .mobile-study-nav__links a:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .mobile-study-nav__links a[aria-current="location"] {
+    background: #eef6ff;
+    border-color: #0b6fae;
+  }
+
+  .mobile-study-nav__links a:focus-visible {
+    outline: 2px solid #0b6fae;
+    outline-offset: 2px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1023px) {
+  .mobile-study-nav {
+    margin: 1rem auto 0;
+    max-width: 760px;
+    width: calc(100% - 2rem);
+  }
+
+  .mobile-study-nav__links {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .mobile-study-nav__links a:last-child {
+    grid-column: auto;
+  }
+}
+
 .sidebar {
   display: grid;
   gap: 1rem;
