@@ -1,89 +1,96 @@
-﻿---
+---
 layout: page
-title: BERTはなぜRNNではなくTransformerなのか？G検定対策
-description: "BERTはなぜRNNではなくTransformerなのかについて、G検定で問われる自然言語処理・系列データ分野の観点から、系列データを扱う仕組み、学習目的、代表モデルとの関係を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
+title: BERTはなぜTransformer Encoderを使う？RNNとの違い【G検定】
+description: "BERTがTransformer Encoderを用いる理由を、Self-Attentionで各位置間の関係を直接扱えること、系列方向の再帰を使わず学習時に並列化しやすいこと、左右の文脈を利用するMLMとの相性から整理します。RNNが長文を扱えないという絶対表現は避けます。"
 permalink: /gk/bert-why-transformer/
 tags: [gk, attention, transformer]
 gk_section: ディープラーニングの応用例/自然言語処理/Transformer・言語モデル
 gk_order: 3
-last_modified_at: 2026-08-26
+last_modified_at: 2026-09-24
 ---
 
 ## まず結論
 
-* **BERTは、長距離の文脈依存を効率よく学習するために、RNNではなくTransformerを採用しています。**
-* G検定では「**なぜRNNでは不十分なのか**」「**Transformerの利点は何か**」が問われます。
+BERTは**Transformer Encoder**を使い、Self-Attentionによって各トークン位置の関係を直接扱います。
+
+G検定では、
+
+- 再帰なし
+- Self-Attention
+- 学習時に並列化しやすい
+- 左右の文脈を利用
+
+を押さえます。
 
 ## 直感的な説明
 
-* **RNN**は、単語を**左から順番に読む**モデルです。
-* **Transformer**は、文全体を**一度に見渡す**モデルです。
-* 長い文章になるほど、
+RNNは隠れ状態を時刻順に渡します。
 
-  * RNN：前の情報が後ろに届きにくい
-  * Transformer：どの単語同士の関係も一気に見られる
-    という違いが出ます。
+Transformer Encoderは、系列内の各位置から他の位置へAttentionを計算します。
+
+そのため、あるトークンが離れたトークンを参照するとき、RNNのように多数の再帰ステップを経由する必要がありません。
 
 ## 定義・仕組み
 
-* **RNN系モデル**
+### RNN
 
-  * 時系列に沿って順番に処理
-  * BPTTによる学習が必要
-  * 長文では勾配消失が起きやすい
+前時刻の隠れ状態から次時刻を計算するため、系列方向に依存関係があります。
 
-* **Transformer**
+LSTMやGRUは長期依存を扱いやすくする工夫を持ちます。
 
-  * Attention（自己注意機構）を使用
-  * 単語間の関係を直接計算
-  * 並列計算が可能
+したがって、
 
-* **BERT**
+> RNNは長文を扱えない
 
-  * Transformerエンコーダのみを使用
-  * 双方向に文脈を考慮
+とは言いません。
+
+### Transformer Encoder
+
+Self-Attentionにより、各位置間の関係を直接計算します。
+
+学習時には系列内の多くの位置をまとめて計算しやすい一方、Attentionの計算量は系列長に応じて大きくなるという別の課題があります。
+
+### BERT
+
+原版BERTはTransformer Encoderを重ね、MLMなどで事前学習します。
+
+MLMでは左右の文脈を利用してマスク位置を予測します。
 
 ## いつ使う？（得意・不得意）
 
-### RNN
+BERT系は文脈表現、分類、抽出、質問応答などで利用されます。
 
-* 得意：
-
-  * 短い時系列データ
-* 不得意：
-
-  * 長距離依存
-  * 並列処理ができない
-
-### Transformer（BERT）
-
-* 得意：
-
-  * 長文の理解
-  * 文脈依存表現
-* 不得意：
-
-  * 計算量が大きい
+RNNとTransformerは単純な優劣ではなく、計算資源・系列長・タスクによって使い分けます。
 
 ## G検定ひっかけポイント
 
-* **最大のひっかけ**
+### BERT＝RNN改良版？
 
-  * 「BERTはRNNを改良したモデルである」→ ❌
-* 正しい理解
+❌ 再帰型ネットワーク  
+⭕ **Transformer Encoderベース**
 
-  * BERTはTransformerベース
-* 選択肢で
+### Transformer＝完全に計算量が少ない？
 
-  * 「順番に処理」→ RNN
-  * 「Attentionで単語間関係を直接扱う」→ Transformer
-* **文全体を一度に見る**がキーワード
+❌ 系列が長くても常に軽量  
+⭕ **並列化しやすいがAttention計算量は別論点**
+
+### RNN＝長距離依存を一切扱えない？
+
+❌ 不可能  
+⭕ **難しさがあり、LSTM/GRUなどで改善されてきた**
 
 ## まとめ（試験直前用）
 
-* RNNは順次処理、長距離が苦手
-* TransformerはAttentionで一括処理
-* BERTはTransformerエンコーダ
-* 長文・文脈重視ならTransformer
+- BERT＝**Transformer Encoder**
+- Self-Attention
+- 再帰なし
+- 学習時に並列化しやすい
+- MLMで左右文脈を利用
+- RNNとの比較は固定順位で覚えない
+
+## 参考資料
+
+- [BERT｜arXiv](https://arxiv.org/abs/1810.04805)
+- [Attention Is All You Need｜arXiv](https://arxiv.org/abs/1706.03762)
 
 {% include gk_article_footer.html %}
