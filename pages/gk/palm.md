@@ -5,8 +5,8 @@ description: PaLMを、Pathwaysを用いて大規模に学習されたTransforme
 permalink: /gk/palm/
 tags: [gk, neural_network, transformer]
 gk_section: ディープラーニングの応用例/自然言語処理/Transformer・言語モデル
-gk_order: 6
-last_modified_at: 2026-08-26
+gk_order: 7
+last_modified_at: 2026-09-25
 ---
 
 ## まず結論
