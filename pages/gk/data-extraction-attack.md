@@ -5,8 +5,8 @@ description: "データ窃取攻撃を、学習済みモデルから学習デー
 permalink: /gk/data-extraction-attack/
 tags: [gk, security, privacy]
 gk_section: AIの法律と倫理/AIセキュリティ・プライバシー攻撃/学習データを狙う攻撃
-gk_order: 1
-last_modified_at: 2026-08-27
+gk_order: 2
+last_modified_at: 2026-09-24
 ---
 
 ## まず結論
