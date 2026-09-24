@@ -5,8 +5,8 @@ description: "古典AIと機械学習を、古典AIは探索・推論・知識�
 permalink: /gk/classical-ai-vs-ml/
 tags: [gk, cheatsheet]
 gk_section: 人工知能をめぐる動向/古典AI・探索と知識表現
-gk_order: 5
-last_modified_at: 2026-09-24
+gk_order: 6
+last_modified_at: 2026-09-25
 ---
 
 ## まず結論
