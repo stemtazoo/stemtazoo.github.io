@@ -145,6 +145,31 @@
   outline-offset: 3px;
 }
 
+.study-breadcrumb {
+  color: #526476;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  overflow-wrap: anywhere;
+}
+
+.study-breadcrumb a {
+  color: #0b6fae;
+}
+
+.study-breadcrumb span[aria-hidden="true"] {
+  margin: 0 0.35rem;
+}
+
+.study-breadcrumb [aria-current="page"] {
+  color: #1c2d3a;
+}
+
+.study-breadcrumb a:focus-visible {
+  outline: 2px solid #0b6fae;
+  outline-offset: 2px;
+}
+
 .sidebar-list--compact li {
   border-bottom: 1px solid #eef2f6;
   padding-bottom: 0.55rem;
