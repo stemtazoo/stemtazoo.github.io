@@ -67,6 +67,17 @@
   text-decoration: underline;
 }
 
+.sidebar-list a[aria-current="location"] {
+  border-left: 3px solid #0b6fae;
+  display: block;
+  padding-left: 0.55rem;
+}
+
+.sidebar-list a:focus-visible {
+  outline: 2px solid #0b6fae;
+  outline-offset: 3px;
+}
+
 .sidebar-list--compact li {
   border-bottom: 1px solid #eef2f6;
   padding-bottom: 0.55rem;
