@@ -5,8 +5,8 @@ description: "RLHF（Reinforcement Learning from Human Feedback）を、人間�
 permalink: /gk/rlhf/
 tags: [gk, neural_network, nlp]
 gk_section: ディープラーニングの応用例/自然言語処理/Transformer・言語モデル
-gk_order: 7
-last_modified_at: 2026-08-26
+gk_order: 8
+last_modified_at: 2026-09-25
 ---
 
 ## まず結論
