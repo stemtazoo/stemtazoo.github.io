@@ -4,9 +4,9 @@ title: G検定の数理・統計まとめ｜確率・分布・相関の判断基
 description: "G検定の数理・統計を、代表値とばらつき、確率・確率分布、変数間の関係、推定・検定、距離・類似度に分けて整理します。相関と共分散、二項分布とポアソン分布など、選択肢を切る判断基準を確認します。"
 permalink: /gk/math-statistics-cheatsheet/
 tags: [gk, probability, machine_learning, cheatsheet]
-gk_section: AIに必要な数理・統計知識/AIに必要な数理・統計知識
-gk_order: 1
-last_modified_at: 2026-08-30
+gk_section: AIに必要な数理・統計知識
+gk_order: 8
+last_modified_at: 2026-09-25
 ---
 
 ## まず結論
@@ -24,6 +24,8 @@ G検定の数理・統計は、複雑な計算よりも、**用語が何を表�
 | データ同士がどれくらい近いか | 距離・類似度 |
 
 迷ったら、**中心・ばらつき・関係・確率・近さのどれを問う問題か**を最初に見ます。
+
+期待値・分散からベイズ推定、MLE/MAPまで順に復習する場合は、[確率・統計まとめ](/gk/probability-statistics-cheatsheet/)を参照してください。このページでは代表値、分布、相関、距離・類似度まで広く見渡します。
 
 ## 直感的な説明
 
