@@ -1,0 +1,23 @@
+{% assign study_section_url = nil %}
+{% if page.url contains '/gk/' %}
+  {% assign study_section_url = '/gk/' %}
+  {% assign study_section_name = 'G検定' %}
+{% elsif page.url contains '/ds/' %}
+  {% assign study_section_url = '/ds/' %}
+  {% assign study_section_name = 'DS検定' %}
+{% elsif page.url contains '/sg/' %}
+  {% assign study_section_url = '/sg/' %}
+  {% assign study_section_name = 'SG試験' %}
+{% elsif page.url contains '/fe/' %}
+  {% assign study_section_url = '/fe/' %}
+  {% assign study_section_name = '基本情報技術者試験' %}
+{% endif %}
+{% if study_section_url and page.url != study_section_url %}
+<nav class="study-breadcrumb" aria-label="現在地">
+  <a href="{{ '/' | relative_url }}">ホーム</a>
+  <span aria-hidden="true">›</span>
+  <a href="{{ study_section_url | relative_url }}">{{ study_section_name }}</a>
+  <span aria-hidden="true">›</span>
+  <span aria-current="page">{{ page.title }}</span>
+</nav>
+{% endif %}
