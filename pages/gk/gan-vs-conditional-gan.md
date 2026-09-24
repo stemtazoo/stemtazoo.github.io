@@ -5,8 +5,8 @@ description: "GANとConditional GANの違いについて、G検定で問われ�
 permalink: /gk/gan-vs-conditional-gan/
 tags: [gk, neural_network, cheatsheet]
 gk_section: ディープラーニングの応用例/データ生成/GAN・派生モデル
-gk_order: 7
-last_modified_at: 2026-09-23
+gk_order: 8
+last_modified_at: 2026-09-25
 ---
 
 ## まず結論
