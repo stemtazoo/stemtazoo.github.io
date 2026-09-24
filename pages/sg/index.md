@@ -4,7 +4,7 @@ title: 情報セキュリティマネジメント試験 学習まとめ
 description: 情報セキュリティマネジメント試験の学習入口として、頻出テーマ、分野別まとめ、直前復習をたどれる索引ページです。用語暗記だけでなく、目的・対象・責任範囲から選択肢を切る学習ルートを確認できます。関連ページへの導線もまとめています。初学者が分野をまたいで復習するときの起点になります。
 permalink: /sg/
 categories: [business]
-last_modified_at: 2026-09-09
+last_modified_at: 2026-09-24
 
 ---
 
@@ -12,22 +12,22 @@ last_modified_at: 2026-09-09
   <section class="portal-card">
     <h3>はじめてのSG試験</h3>
     <p>試験の位置づけ、出題範囲、学習方法を確認してから学習を始めます。</p>
-    <a class="portal-card__button" href="/sg/information-security-management-exam/">学習開始</a>
+    <a class="portal-card__button" href="/sg/information-security-management-exam/">SG試験の概要を見る</a>
   </section>
   <section class="portal-card">
     <h3>基礎から固める</h3>
     <p>情報セキュリティ管理、対策、認証・アクセス制御をまとめて確認します。</p>
-    <a class="portal-card__button" href="/sg/security-management-overview/">学習開始</a>
+    <a class="portal-card__button" href="/sg/security-management-overview/">セキュリティ管理の基礎を見る</a>
   </section>
   <section class="portal-card">
     <h3>試験直前まとめ</h3>
     <p>ケース問題の判断軸、NG選択肢、過去問演習へすぐ移動できます。</p>
-    <a class="portal-card__button" href="/sg/case-solving-template/">学習開始</a>
+    <a class="portal-card__button" href="/sg/case-solving-template/">ケース問題の解き方を見る</a>
   </section>
   <section class="portal-card">
     <h3>サイト内検索</h3>
-    <p>SG試験、G検定、DS検定の記事をキーワードで横断検索できます。</p>
-    <a class="portal-card__button" href="{{ '/search/' | relative_url }}">検索する</a>
+    <p>SG試験、FE試験、G検定、DS検定の記事をキーワードで横断検索できます。</p>
+    <a class="portal-card__button" href="{{ '/search/' | relative_url }}">サイト内の記事を検索する</a>
   </section>
 </div>
 
