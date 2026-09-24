@@ -4,7 +4,7 @@ title: 基本情報技術者試験 学習まとめ
 description: 基本情報技術者試験（FE）の学習記事を、科目Aのテクノロジ・マネジメント・ストラテジ・情報セキュリティと、科目Bのアルゴリズム・データ構造・疑似言語・トレースに分けた総合索引です。用語の選択肢判断からプログラム読解へ進む学習順、分野別の頻出テーマ、苦手論点の関連記事を一覧から探し、試験対策に活用できます。
 permalink: /fe/
 tags: [fe]
-last_modified_at: 2026-09-20
+last_modified_at: 2026-09-24
 ---
 
 # 基本情報技術者試験 学習まとめ
@@ -13,22 +13,22 @@ last_modified_at: 2026-09-20
   <section class="portal-card">
     <h3>はじめてのFE試験</h3>
     <p>試験の全体像をつかみ、科目Aと科目Bで何を意識して学ぶかを整理します。</p>
-    <a class="portal-card__button" href="#基本情報技術者試験とは">学習開始</a>
+    <a class="portal-card__button" href="#基本情報技術者試験とは">FE試験の概要を見る</a>
   </section>
   <section class="portal-card">
     <h3>科目Aの基礎固め</h3>
     <p>用語を丸暗記するのではなく、テクノロジ・マネジメント・ストラテジの違いを切り分けます。</p>
-    <a class="portal-card__button" href="#科目a対策">科目Aを見る</a>
+    <a class="portal-card__button" href="#科目a対策">科目Aの基礎を見る</a>
   </section>
   <section class="portal-card">
     <h3>科目Bの考え方</h3>
     <p>アルゴリズムや疑似言語は、いきなりコードを書く前に処理の流れを追う練習から始めます。</p>
-    <a class="portal-card__button" href="#科目b対策">科目Bを見る</a>
+    <a class="portal-card__button" href="#科目b対策">科目Bの考え方を見る</a>
   </section>
   <section class="portal-card">
     <h3>サイト内検索</h3>
     <p>FE、SG試験、G検定、DS検定の記事をキーワードで横断検索できます。</p>
-    <a class="portal-card__button" href="{{ '/search/' | relative_url }}">検索する</a>
+    <a class="portal-card__button" href="{{ '/search/' | relative_url }}">サイト内の記事を検索する</a>
   </section>
 </div>
 
