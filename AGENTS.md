@@ -204,6 +204,7 @@ Read the relevant detailed guide before changing each area:
 - GitHub Pages / Liquid compatibility: `docs/agent/github-pages-compat.md`
 - IndexNow deployment automation: `docs/agent/indexnow.md`
 - Theme and layout consistency: `docs/agent/theme-consistency.md`
+- Homepage learning updates: `docs/agent/home-updates-rules.md` (read when editing the homepage update list)
 - AI search / grounding-oriented readability: `docs/agent/ai-search-content-rules.md`
 - SG article writing policy: `docs/agent/sg-content-rules.md`
 - SG article template: `docs/agent/sg-article-template.md`
