@@ -1,0 +1,9 @@
+<nav class="mobile-study-nav" aria-label="学習分野とサイト内検索">
+  <div class="mobile-study-nav__links">
+    <a href="{{ '/gk/' | relative_url }}"{% if page.url contains '/gk/' %} aria-current="location"{% endif %}>G検定</a>
+    <a href="{{ '/ds/' | relative_url }}"{% if page.url contains '/ds/' %} aria-current="location"{% endif %}>DS検定</a>
+    <a href="{{ '/sg/' | relative_url }}"{% if page.url contains '/sg/' %} aria-current="location"{% endif %}>SG試験</a>
+    <a href="{{ '/fe/' | relative_url }}"{% if page.url contains '/fe/' %} aria-current="location"{% endif %}>FE試験</a>
+    <a href="{{ '/search/' | relative_url }}">サイト内検索</a>
+  </div>
+</nav>
