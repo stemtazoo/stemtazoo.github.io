@@ -1,0 +1,59 @@
+# ホームに載せる、読者に役立つ新規・主な更新記事。
+# date は記事の公開日または内容を大きく更新した日付に合わせる。
+# category は G検定 / DS検定 / SG試験 / FE試験 のいずれか。
+# 各分野から少なくとも1件を選び、軽微な修正だけの記事は追加しない。
+- date: "2026-09-25"
+  category: "G検定"
+  kind: "更新"
+  title: "画像タスク総まとめ（分類・検出・セグメンテーション）"
+  url: "/gk/image-tasks-summary/"
+  summary: "画像分類・物体検出・セグメンテーションを、出力の違いで見分けられるように整理。"
+
+- date: "2026-09-25"
+  category: "DS検定"
+  kind: "更新"
+  title: "DS検定 リテラシー 学習まとめ"
+  url: "/ds/"
+  summary: "ver.6の4領域とスキルチェックから、学びたい分野の記事を探せる入口を整理。"
+
+- date: "2026-09-23"
+  category: "G検定"
+  kind: "更新"
+  title: "教師強制とは？RNNで正解を次の入力にする理由"
+  url: "/gk/teacher-forcing/"
+  summary: "学習時は正解を使う一方、推論時は使えないという違いを整理。"
+
+- date: "2026-09-23"
+  category: "FE試験"
+  kind: "新規"
+  title: "スクラムの役割とは？"
+  url: "/fe/scrum-roles/"
+  summary: "プロダクトオーナー・スクラムマスター・開発者を責任の違いで整理。"
+
+- date: "2026-09-23"
+  category: "FE試験"
+  kind: "新規"
+  title: "ドライブバイダウンロード攻撃とは？"
+  url: "/fe/drive-by-download/"
+  summary: "Web閲覧が感染のきっかけになる攻撃を、水飲み場攻撃と比較。"
+
+- date: "2026-09-22"
+  category: "SG試験"
+  kind: "更新"
+  title: "バックアップと復元とは？"
+  url: "/sg/backup-restore/"
+  summary: "バックアップ・復元と、復旧目標であるRTO・RPOの役割を切り分け。"
+
+- date: "2026-09-22"
+  category: "SG試験"
+  kind: "更新"
+  title: "SEOポイズニングとは？"
+  url: "/sg/seo-poisoning/"
+  summary: "検索結果から不正サイトへ誘導する攻撃と、似た用語との違いを整理。"
+
+- date: "2026-09-22"
+  category: "FE試験"
+  kind: "新規"
+  title: "オートマトンと状態遷移図の読み方"
+  url: "/fe/automaton-state-transition/"
+  summary: "入力を1文字ずつ追い、出力と次の状態を判断する手順を解説。"
