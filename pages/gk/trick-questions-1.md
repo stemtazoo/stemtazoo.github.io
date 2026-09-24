@@ -4,9 +4,9 @@ title: G検定 ひっかけ問題集（考え方付き）
 description: "G検定で混同しやすいAIブーム、古典AIと機械学習、ReLU系、LSTM、エッジAIを横断して問題形式で確認します。用語名だけで決めず、年代・ルールと学習・構造と学習法・処理場所と要件を切り分ける思考手順を整理します。"
 permalink: /gk/trick-questions-1/
 tags: [gk, cheatsheet]
-gk_section: ひっかけ問題集/ひっかけ問題集
+gk_section: ひっかけ問題集
 gk_order: 1
-last_modified_at: 2026-08-22
+last_modified_at: 2026-09-25
 ---
 
 ## まず結論
