@@ -132,3 +132,13 @@
     - url: /ds/primary-data/
       title: 一次データとは？
       reason: アンケート・実験・自社ログなど、直接収集する方法と品質上の注意点を確認する
+
+- page: /sg/dummy-activity/
+  intro: ダミー作業の役割を押さえたら、図全体の読み方と日数計算へ進みます。
+  items:
+    - url: /sg/arrow-diagram/
+      title: アローダイアグラムとは？
+      reason: 仮の矢印を含む作業の順序と依存関係を図で読む
+    - url: /sg/critical-path/
+      title: クリティカルパスとは？
+      reason: 所要日数0のダミー作業を含む経路で全体期間を判断する
