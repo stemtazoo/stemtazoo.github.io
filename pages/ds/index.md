@@ -5,29 +5,29 @@ description: DS検定リテラシー対策の学習まとめページです。�
 permalink: /ds/
 categories: [business]
 tags: [ds, index]
-last_modified_at: 2026-09-04
+last_modified_at: 2026-09-24
 ---
 
 <div class="portal-card-grid">
   <section class="portal-card">
     <h3>DS検定 ver.6 の全体像</h3>
     <p>2026年からの試験範囲である4領域を先に確認します。</p>
-    <a class="portal-card__button" href="#ds-ver6">全体像を見る</a>
+    <a class="portal-card__button" href="#ds-ver6">DS検定 ver.6 の試験範囲を見る</a>
   </section>
   <section class="portal-card">
     <h3>データ分析の基礎</h3>
     <p>統計、前処理、可視化、モデル化などを順番に確認します。</p>
-    <a class="portal-card__button" href="/ds/data-literacy/">学習開始</a>
+    <a class="portal-card__button" href="/ds/data-literacy/">データ分析の基礎を学ぶ</a>
   </section>
   <section class="portal-card">
     <h3>試験直前チェック</h3>
     <p>チートシートと既存スキルチェックで、弱点を短時間で見直します。</p>
-    <a class="portal-card__button" href="/ds/skillcheck/">学習開始</a>
+    <a class="portal-card__button" href="/ds/skillcheck/">スキルチェックで復習する</a>
   </section>
   <section class="portal-card">
     <h3>サイト内検索</h3>
-    <p>SG試験、G検定、DS検定の記事をキーワードで横断検索できます。</p>
-    <a class="portal-card__button" href="{{ '/search/' | relative_url }}">検索する</a>
+    <p>SG試験、FE試験、G検定、DS検定の記事をキーワードで横断検索できます。</p>
+    <a class="portal-card__button" href="{{ '/search/' | relative_url }}">サイト内の記事を検索する</a>
   </section>
 </div>
 
