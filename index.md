@@ -126,63 +126,62 @@ permalink: /
   </p>
 </section>
 
-<section>
-  <h2>最新記事</h2>
+<section class="home-updates" aria-labelledby="home-updates-title">
+  <h2 id="home-updates-title">新着・更新した学習記事</h2>
+  <p>新規記事と、内容を大きく見直した記事を紹介します。読みたい分野で絞り込めます。</p>
   <div class="tag-filter">
-    <p class="tag-filter__label">タグで絞り込む:</p>
-    <div class="tag-filter__buttons">
-      <button class="tag-button active" data-tag="all">すべて</button>
-
-      {% assign tag_list = site.posts | map: "tags" | join: "," | split: "," | uniq | sort_natural %}
-      {% assign tag_list = tag_list | reject: "" %}
-      {% for tag_name in tag_list %}
-        <button class="tag-button" data-tag="{{ tag_name }}">{{ tag_name }}</button>
-      {% endfor %}
+    <p class="tag-filter__label">分野で絞り込む:</p>
+    <div class="tag-filter__buttons" role="group" aria-label="学習記事の分野">
+      <button type="button" class="tag-button active" data-category="all" aria-pressed="true">すべて</button>
+      <button type="button" class="tag-button" data-category="G検定" aria-pressed="false">G検定</button>
+      <button type="button" class="tag-button" data-category="DS検定" aria-pressed="false">DS検定</button>
+      <button type="button" class="tag-button" data-category="SG試験" aria-pressed="false">SG試験</button>
+      <button type="button" class="tag-button" data-category="FE試験" aria-pressed="false">FE試験</button>
     </div>
   </div>
+  <p class="post-filter-status" role="status" aria-live="polite">{{ site.data.home_updates.size }}件を表示中</p>
   <ul class="post-list">
-    {% for post in site.posts limit: 5 %}
-      <li class="post-item" data-tags="{{ post.tags | join: ',' }}">
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        <span>（{{ post.date | date: "%Y-%m-%d" }}）</span>
-        {% if post.tags %}
-          <span class="post-tags">
-            {% for tag in post.tags %}
-              <span class="post-tag">{{ tag }}</span>
-            {% endfor %}
-          </span>
-        {% endif %}
+    {% for update in site.data.home_updates %}
+      <li class="post-item" data-category="{{ update.category }}">
+        <a href="{{ update.url | relative_url }}">{{ update.title }}</a>
+        <span class="post-update-meta">{{ update.category }}・{{ update.kind }} {{ update.date }}</span>
+        <p class="post-update-summary">{{ update.summary }}</p>
       </li>
     {% endfor %}
   </ul>
-  <p><a href="{{ "/posts/" | relative_url }}">すべての記事を見る</a></p>
+  <p><a href="{{ '/search/' | relative_url }}">学習記事をサイト内検索で探す</a></p>
 </section>
 
 <section>
-  <h2>更新情報</h2>
-  <p>このサイトはGitHub PagesとJekyllで構築しています。気になる点や改善案があれば、Issuesまでお知らせください。</p>
+  <h2>制作記録・お知らせ</h2>
+  <p>学習ページの公開や、これまでの更新告知をまとめています。</p>
+  <p><a href="{{ '/posts/' | relative_url }}">制作記録・お知らせを見る</a></p>
 </section>
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const buttons = document.querySelectorAll(".tag-button");
-    const items = document.querySelectorAll(".post-item");
+    const section = document.querySelector(".home-updates");
+    if (!section) return;
+
+    const buttons = section.querySelectorAll(".tag-button");
+    const items = section.querySelectorAll(".post-item");
+    const status = section.querySelector(".post-filter-status");
 
     buttons.forEach((button) => {
       button.addEventListener("click", () => {
-        buttons.forEach((btn) => btn.classList.remove("active"));
-        button.classList.add("active");
-
-        const selected = button.dataset.tag;
-        items.forEach((item) => {
-          if (selected === "all") {
-            item.style.display = "list-item";
-            return;
-          }
-
-          const tags = item.dataset.tags.split(",").filter(Boolean);
-          item.style.display = tags.includes(selected) ? "list-item" : "none";
+        buttons.forEach((btn) => {
+          const active = btn === button;
+          btn.classList.toggle("active", active);
+          btn.setAttribute("aria-pressed", String(active));
         });
+
+        const selected = button.dataset.category;
+        let shown = 0;
+        items.forEach((item) => {
+          item.hidden = selected !== "all" && item.dataset.category !== selected;
+          if (!item.hidden) shown += 1;
+        });
+        status.textContent = shown + "件を表示中";
       });
     });
   });
