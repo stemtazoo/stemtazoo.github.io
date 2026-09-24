@@ -5,8 +5,8 @@ description: "STRIPSについて、初期状態・目標状態・前提条件・
 permalink: /gk/strips/
 tags: [gk, planning]
 gk_section: 人工知能をめぐる動向/古典AI・探索と知識表現
-gk_order: 4
-last_modified_at: 2026-08-27
+gk_order: 5
+last_modified_at: 2026-09-25
 ---
 
 ## まず結論
