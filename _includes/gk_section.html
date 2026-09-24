@@ -8,7 +8,7 @@
   子 include が上書きしても兄弟セクションのパスが壊れないように、
   再帰に必要な値は include.* から各ループで再計算する。
 
-  トップレベル直下の記事には、旧形式の
+  トップレベル直下の記事には、階層名そのものに加えて旧形式の
   「分類名/分類名」も引き続き対応する。
 {%- endcomment -%}
 
@@ -27,7 +27,11 @@
 {%- if include.sec.subsections -%}
   {%- assign direct_article_count = 0 -%}
   {%- for p in gk_pages -%}
-    {%- if p.url != page.url and p.gk_section == direct_path -%}
+    {%- assign p_section = p.gk_section -%}
+    {%- if p_section == this_path -%}
+      {%- assign p_section = direct_path -%}
+    {%- endif -%}
+    {%- if p.url != page.url and p_section == direct_path -%}
       {%- if p.tags and p.tags contains "gk" -%}
         {%- assign direct_article_count = direct_article_count | plus: 1 -%}
       {%- endif -%}
@@ -37,7 +41,11 @@
   {%- if direct_article_count > 0 -%}
 <ul>
     {%- for p in gk_pages -%}
-      {%- if p.url != page.url and p.gk_section == direct_path -%}
+      {%- assign p_section = p.gk_section -%}
+    {%- if p_section == this_path -%}
+      {%- assign p_section = direct_path -%}
+    {%- endif -%}
+    {%- if p.url != page.url and p_section == direct_path -%}
         {%- if p.tags and p.tags contains "gk" -%}
   <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
         {%- endif -%}
@@ -66,7 +74,11 @@
 {%- else -%}
   {%- assign article_count = 0 -%}
   {%- for p in gk_pages -%}
-    {%- if p.url != page.url and p.gk_section == direct_path -%}
+    {%- assign p_section = p.gk_section -%}
+    {%- if p_section == this_path -%}
+      {%- assign p_section = direct_path -%}
+    {%- endif -%}
+    {%- if p.url != page.url and p_section == direct_path -%}
       {%- if p.tags and p.tags contains "gk" -%}
         {%- assign article_count = article_count | plus: 1 -%}
       {%- endif -%}
@@ -76,7 +88,11 @@
   {%- if article_count > 0 -%}
 <ul>
     {%- for p in gk_pages -%}
-      {%- if p.url != page.url and p.gk_section == direct_path -%}
+      {%- assign p_section = p.gk_section -%}
+    {%- if p_section == this_path -%}
+      {%- assign p_section = direct_path -%}
+    {%- endif -%}
+    {%- if p.url != page.url and p_section == direct_path -%}
         {%- if p.tags and p.tags contains "gk" -%}
   <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
         {%- endif -%}
