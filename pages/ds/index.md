@@ -5,7 +5,7 @@ description: DS検定リテラシー対策の学習まとめページです。�
 permalink: /ds/
 categories: [business]
 tags: [ds, index]
-last_modified_at: 2026-09-24
+last_modified_at: 2026-09-25
 ---
 
 <div class="portal-card-grid">
@@ -15,9 +15,9 @@ last_modified_at: 2026-09-24
     <a class="portal-card__button" href="#ds-ver6">DS検定 ver.6 の試験範囲を見る</a>
   </section>
   <section class="portal-card">
-    <h3>データ分析の基礎</h3>
-    <p>統計、前処理、可視化、モデル化などを順番に確認します。</p>
-    <a class="portal-card__button" href="/ds/data-literacy/">データ分析の基礎を学ぶ</a>
+    <h3>データ活用の入口</h3>
+    <p>数字の背景や偏りを考え、判断につなげるデータリテラシーから学びます。</p>
+    <a class="portal-card__button" href="/ds/data-literacy/">データリテラシーを学ぶ</a>
   </section>
   <section class="portal-card">
     <h3>試験直前チェック</h3>
@@ -126,19 +126,6 @@ last_modified_at: 2026-09-24
 - [データエンジニアリング（58項目）](/ds/engineering-skillcheck/)
 
 旧「ビジネス力」「AI利活用スキル」のURLは、ver.6での読み替え方を案内するページとして残しています。
-
----
-
-## ⭐ まず読む3記事
-
-<ul>
-{% assign rec = site.pages | where_exp: "p", "p.tags contains 'statistics'" %}
-{% for p in rec limit:3 %}
-  {% if p.url contains "/ds/" %}
-    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
-  {% endif %}
-{% endfor %}
-</ul>
 
 ---
 
