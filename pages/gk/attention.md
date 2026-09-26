@@ -6,7 +6,7 @@ permalink: /gk/attention/
 tags: [gk, neural_network, attention]
 gk_section: ディープラーニングの要素技術/リカレントニューラルネットワーク (RNN)
 gk_order: 9
-last_modified_at: 2026-09-23
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -113,5 +113,12 @@ Attentionは、
 - Self-Attention＝同じ系列内の関係
 - Transformerの中核技術
 - **参照範囲はマスク・構造に依存する**
+
+## 参考資料（原論文）
+
+- [Neural Machine Translation by Jointly Learning to Align and Translate｜arXiv](https://arxiv.org/abs/1409.0473)
+  - Bahdanau・Cho・Bengioによる初期の代表的なAttention論文です。出力時に入力系列の関連部分へ重みを付ける仕組みを提案しています。
+- [Attention Is All You Need｜NeurIPS](https://proceedings.neurips.cc/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html)
+  - Vaswaniら（2017）。Query・Key・Valueを用いるScaled Dot-Product AttentionとMulti-Head Attentionを中核にTransformerを提案しています。
 
 {% include gk_article_footer.html %}
