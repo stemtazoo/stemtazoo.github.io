@@ -9,7 +9,7 @@ ds_area: dataengineering
 ds_section: data-collection
 prev: /ds/spark/
 next: /ds/yarn/
-last_modified_at: 2026-08-16
+last_modified_at: 2026-09-26
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -127,6 +127,11 @@ RESTはWeb APIでよく使われる設計スタイルです。
 - **REST ≠ 通信プロトコル**
 
 DS検定では、**「JSONしか扱えない」「画像は取得できない」などの断定は誤り**と判断できるようにしておきましょう。
+
+## 公式情報・参考リンク
+
+- [RFC 9110 - HTTP Semantics](https://www.rfc-editor.org/rfc/rfc9110.html)
+  - Web APIで広く利用されるHTTPの意味論を定義するInternet Standardです。request / response、HTTP method、status codeなどの基礎を確認できます。
 
 ## 対応スキル項目（ver.6 データエンジニアリング）
 
