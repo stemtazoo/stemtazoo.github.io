@@ -6,7 +6,7 @@ permalink: /gk/gan-vs-conditional-gan/
 tags: [gk, neural_network, cheatsheet]
 gk_section: ディープラーニングの応用例/データ生成/GAN・派生モデル
 gk_order: 8
-last_modified_at: 2026-09-25
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -96,5 +96,12 @@ G検定では、**「GAN＝全部同じ」だと思わせる選択肢**が出ま
 * 条件はラベル・属性・画像など
 * Pix2PixはConditional GANの一種
 * G検定では「条件の有無」で即判断
+
+## 参考資料（原論文）
+
+- [Generative Adversarial Nets｜NeurIPS](https://proceedings.neurips.cc/paper/2014/hash/f033ed80deb0234979a61f95710dbe25-Abstract.html)
+  - Goodfellowら（2014）によるGANの原論文です。
+- [Conditional Generative Adversarial Nets｜arXiv](https://arxiv.org/abs/1411.1784)
+  - Mirza・Osindero（2014）によるConditional GANの原論文です。条件情報をGeneratorとDiscriminatorへ入力する点が通常のGANとの違いです。
 
 {% include gk_article_footer.html %}
