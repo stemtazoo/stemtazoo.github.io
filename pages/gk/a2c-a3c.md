@@ -6,7 +6,7 @@ permalink: /gk/a2c-a3c/
 tags: [gk, reinforcement_learning, neural_network]
 gk_section: 機械学習の概要/代表的な手法/強化学習/方策勾配・Actor-Critic
 gk_order: 4
-last_modified_at: 2026-08-26
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -67,5 +67,10 @@ last_modified_at: 2026-08-26
 - A3C：非同期
 - A2C：同期
 - **違いは主に更新・並列化の方式**
+
+## 参考資料（原論文）
+
+- [Asynchronous Methods for Deep Reinforcement Learning｜PMLR](https://proceedings.mlr.press/v48/mniha16.html)
+  - Mnihら（ICML 2016）によるA3Cの原論文です。複数のActor-Learnerを非同期に動かして学習を安定化・高速化する枠組みを示しています。A2Cはこの考え方を同期更新にした実装として整理すると切り分けやすいです。
 
 {% include gk_article_footer.html %}
