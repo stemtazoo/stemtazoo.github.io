@@ -9,7 +9,7 @@ ds_area: datascience
 ds_section: statistics
 prev: /ds/predictive-analytics/
 next: /ds/bias-variance-tradeoff/
-last_modified_at: 2026-07-01
+last_modified_at: 2026-09-26
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -215,6 +215,13 @@ DS検定では
 **A/Bテストと判断するのがポイントです。**
 
 ---
+
+## 公式情報・参考リンク
+
+- [NIST/SEMATECH e-Handbook｜Completely randomized designs](https://www.itl.nist.gov/div898/handbook/pri/section3/pri331.htm)
+  - 比較対象を実験単位へランダムに割り当てる完全無作為化計画を説明しています。A/Bテストで交絡を減らす考え方の基礎になります。
+- [NIST/SEMATECH e-Handbook｜Critical values and p values](https://www.itl.nist.gov/div898/handbook/prc/section1/prc131.htm)
+  - A/Bテスト結果を統計的に判断するときの有意水準とp値の関係を確認できます。
 
 ## 対応スキル項目（ver.6 データサイエンス）
 
