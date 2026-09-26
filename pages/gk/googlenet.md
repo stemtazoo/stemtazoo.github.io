@@ -6,7 +6,7 @@ permalink: /gk/googlenet/
 tags: [gk, cnn]
 gk_section: ディープラーニングの応用例/画像認識/物体認識タスク
 gk_order: 3
-last_modified_at: 2026-06-28
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -88,5 +88,10 @@ last_modified_at: 2026-06-28
 * 1×1畳み込みで計算削減
 * VGGより軽量
 * 「並列」がキーワード
+
+## 参考資料（原論文）
+
+- [Going Deeper with Convolutions｜CVF Open Access](https://openaccess.thecvf.com/content_cvpr_2015/html/Szegedy_Going_Deeper_With_2015_CVPR_paper.html)
+  - SzegedyらによるInception / GoogLeNetの原論文です。異なるサイズの畳み込みなどを並列に組み合わせ、計算量を抑えながら深さと幅を広げる設計を示しています。
 
 {% include gk_article_footer.html %}
