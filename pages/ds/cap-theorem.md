@@ -9,7 +9,7 @@ ds_area: dataengineering
 ds_section: data-storage
 prev: /ds/business-logic-and-data-importance/
 next: /ds/categorical-variable/
-last_modified_at: 2026-07-18
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -122,6 +122,11 @@ PACELCはさらに、分断がない通常時でも、遅延（Latency）と一�
 - CAPのConsistencyとACIDのConsistencyは意味が異なる
 - APでも最終的な同期を目指す
 - PACELCは通常時の遅延と一貫性も扱う
+
+## 公式情報・参考リンク
+
+- [Gilbert & Lynch｜Brewer's Conjecture and the Feasibility of Consistent, Available, Partition-Tolerant Web Services](https://doi.org/10.1145/564585.564601)
+  - CAPの議論を形式化した代表的な原論文です。ネットワーク分断下で、一貫性と可用性を同時に完全保証できないことを扱っています。
 
 ## 対応スキル項目（ver.6 データエンジニアリング）
 
