@@ -57,6 +57,24 @@ Normal individual articles under `pages/gk` should cover one term or one concept
 - Summarize the key points in 3-5 lines or bullets.
 - Prioritize recall cues for exam judgment.
 
+## Optional Primary-Source Block
+
+When `docs/agent/primary-source-audit-rules.md` determines that an original / canonical paper materially improves the article, place a short source block near the end:
+
+```md
+## 参考資料（原論文）
+
+- [Paper title｜publisher / venue](canonical URL)
+  - この論文が記事のどの判断ポイントを裏付けるかを1〜2文で説明。
+```
+
+This block is optional.
+
+- Use it naturally for named models, architectures, algorithms, losses, and training techniques.
+- For comparison articles, include only the core papers needed to support the distinction.
+- Do not force it onto generic mathematical or broad conceptual articles.
+- Keep the explanation beginner-friendly and do not copy abstracts.
+
 ## Footer
 
 At the end of normal GK article bodies, use the existing GK footer convention when nearby normal articles do so:
