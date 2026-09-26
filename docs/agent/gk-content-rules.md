@@ -14,6 +14,7 @@ Always check the related rule files as needed:
 - GK index structure, classification, and public rendering: `docs/agent/gk-index-rules.md`
 - Instagram carousel creation: `docs/agent/gk-carousel-rules.md`
 - Interactive learning / visualizers: `docs/agent/interactive-learning-rules.md`
+- Primary sources, original papers, and freshness audits: `docs/agent/primary-source-audit-rules.md`
 
 ## Basic Stance
 
@@ -35,6 +36,20 @@ GK articles should help readers understand AI, machine learning, deep learning, 
 - Emphasize differences between similar terms such as model families, architectures, training methods, evaluation metrics, and datasets.
 - Use exam-facing phrases naturally when they fit, such as `G検定では〜と問われやすい`, `選択肢では〜と書かれていたら注意`, `〜と〜を混同しない`, and `判断するときは〜を見る`.
 - Do not force official links when they are not natural for GK topics.
+
+## Primary Sources And Original Papers
+
+Follow `docs/agent/primary-source-audit-rules.md` when deciding whether to add an original paper or other primary source.
+
+For GK content:
+
+- Prefer an original / canonical paper when the article is centered on a specifically named research model, architecture, algorithm, loss, or training technique and the source materially improves traceability.
+- For comparison articles, use primary papers only when they help verify the distinction being taught; do not turn the page into a bibliography.
+- Do not force an original-paper section onto broad mathematical or generic concepts that do not have one clean canonical source for the article's scope.
+- A research paper supports origin / design claims; it does not automatically define current operational behavior, laws, standards, or exam scope.
+- When a source block is useful, prefer `## 参考資料（原論文）` near the end of the article, before the GK footer.
+- Keep source annotations short and explain the G検定-relevant takeaway rather than reproducing abstracts.
+- Update `last_modified_at` when a source-driven edit meaningfully changes the article.
 
 ## Confusion Prevention
 
