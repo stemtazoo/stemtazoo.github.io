@@ -6,7 +6,7 @@ permalink: /gk/normalization-cheatsheet/
 tags: [gk, neural_network, cnn, cheatsheet]
 gk_section: ディープラーニングの要素技術/ネットワークの構成要素
 gk_order: 10
-last_modified_at: 2026-08-26
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -73,5 +73,14 @@ G検定では、次の3点で切り分けます。
 - LN：**1サンプル内の特徴**
 - IN：**1サンプル・1チャネルごと**
 - 迷ったら「平均・分散をどの単位で取る？」を見る
+
+## 参考資料（原論文）
+
+- [Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift｜PMLR](https://proceedings.mlr.press/v37/ioffe15.html)
+  - Ioffe・Szegedy（ICML 2015）。Mini-batch単位の平均・分散を使うBatch Normalizationを提案しています。
+- [Layer Normalization｜arXiv](https://arxiv.org/abs/1607.06450)
+  - Ba・Kiros・Hinton（2016）。各サンプル内の層方向で統計量を計算するLayer Normalizationを提案しています。
+- [Instance Normalization: The Missing Ingredient for Fast Stylization｜arXiv](https://arxiv.org/abs/1607.08022)
+  - Ulyanov・Vedaldi・Lempitsky（2016）。画像インスタンスごと・チャネルごとに正規化するInstance Normalizationを示しています。
 
 {% include gk_article_footer.html %}
