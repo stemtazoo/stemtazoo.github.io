@@ -9,7 +9,7 @@ ds_area: dataengineering
 ds_section: data-collection
 prev: /ds/mapreduce/
 next: /ds/rest-api-methods/
-last_modified_at: 2026-06-21
+last_modified_at: 2026-09-26
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -136,6 +136,13 @@ DS検定ではよく
 - 「XML」と書いてあればSOAPの可能性が高い
 - 「CRUDをHTTPで実行」と書いてあればREST
 
+
+## 公式情報・参考リンク
+
+- [Roy Fielding｜Architectural Styles and the Design of Network-based Software Architectures](https://ics.uci.edu/~fielding/pubs/dissertation/top.htm)
+  - RESTを提案したFieldingの博士論文です。RESTは特定の通信プロトコルではなく、分散ハイパーメディアシステムのためのアーキテクチャスタイルとして整理されています。
+- [RFC 9110 - HTTP Semantics](https://www.rfc-editor.org/rfc/rfc9110.html)
+  - REST APIで広く使われるHTTPのmethod、request / response、status codeなどの意味論を定義するInternet Standardです。
 
 ## 対応スキル項目（ver.6 データエンジニアリング）
 
