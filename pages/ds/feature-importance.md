@@ -9,7 +9,7 @@ ds_area: datascience
 ds_section: modeling
 prev: /ds/random-forest/
 next: /ds/hierarchical-distance-metrics/
-last_modified_at: 2026-06-21
+last_modified_at: 2026-09-26
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -137,6 +137,11 @@ DS検定では、
 - 因果を示す指標ではない
 - 「直接予測への影響を測る」のはPermutation
 
+
+## 公式情報・参考リンク
+
+- [scikit-learn｜Permutation feature importance](https://scikit-learn.org/stable/modules/permutation_importance.html)
+  - 特徴量をシャッフルしたときの評価指標の低下から重要度を測る方法を説明しています。不純度ベース重要度との違い、高カーディナリティ特徴への偏り、相関特徴量の注意点も確認できます。
 
 ## 対応スキル項目（ver.6 データサイエンス）
 
