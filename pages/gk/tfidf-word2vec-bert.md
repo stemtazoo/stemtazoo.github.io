@@ -6,7 +6,7 @@ permalink: /gk/tfidf-word2vec-bert/
 tags: [gk, nlp, neural_network]
 gk_section: ディープラーニングの応用例/自然言語処理/分散表現
 gk_order: 9
-last_modified_at: 2026-08-26
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -123,5 +123,14 @@ Word2Vecとの違いは、[Word2VecとBERTの違い](/gk/word2vec-vs-bert/)も�
 - BERT＝文脈依存表現
 - 「新旧」ではなく**何を表しているか**で切る
 - 文脈で表現が変わるかどうかが大きな判断軸
+
+## 参考資料（原論文）
+
+- [Term-Weighting Approaches in Automatic Text Retrieval｜ScienceDirect](https://doi.org/10.1016/0306-4573(88)90021-0)
+  - Salton・Buckley（1988）。TF-IDFを含む代表的なterm weightingを比較した一次資料です。
+- [Efficient Estimation of Word Representations in Vector Space｜arXiv](https://arxiv.org/abs/1301.3781)
+  - MikolovらによるWord2Vecの代表的な原論文です。
+- [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding｜ACL Anthology](https://aclanthology.org/N19-1423/)
+  - DevlinらによるBERTの原論文です。
 
 {% include gk_article_footer.html %}
