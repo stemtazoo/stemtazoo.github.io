@@ -9,7 +9,7 @@ ds_area: dataengineering
 ds_section: data-processing
 prev: /ds/preprocessing/
 next: /ds/regular-expression-date/
-last_modified_at: 2026-08-16
+last_modified_at: 2026-09-26
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -126,3 +126,9 @@ abc123-4567xyz
 DS検定では、正規表現を見たら「何を許していて、何を保証していないか」を確認します。
 
 {% include ds_article_footer.html %}
+
+
+## 公式情報・参考リンク
+
+- [Python Documentation｜re — Regular expression operations](https://docs.python.org/3/library/re.html)
+  - Python標準ライブラリの正規表現リファレンスです。文字クラス、量指定子、アンカー、エスケープ、match / search / fullmatchなどを確認できます。
