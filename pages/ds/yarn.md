@@ -9,7 +9,7 @@ ds_area: dataengineering
 ds_section: data-storage
 prev: /ds/web-api/
 next: /ds/docker/
-last_modified_at: 2026-08-16
+last_modified_at: 2026-09-26
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -103,6 +103,11 @@ YARNは実行資源を管理します。実際の処理を担当するのはSpar
 - HDFSはデータ保存
 - Spark / MapReduceはデータ処理
 - 問題文に「資源割当て」「ジョブ管理」があればYARNを疑う
+
+## 公式情報・参考リンク
+
+- [Apache Hadoop YARN](https://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-site/YARN.html)
+  - Apache Hadoopの公式YARN資料です。クラスタ資源の管理とアプリケーション実行を分離するYARNの構成を確認できます。
 
 ## 対応スキル項目（ver.6 データエンジニアリング）
 
