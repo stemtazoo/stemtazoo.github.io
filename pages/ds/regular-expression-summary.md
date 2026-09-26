@@ -9,7 +9,7 @@ ds_area: dataengineering
 ds_section: data-processing
 prev: /ds/regular-expression-postalcode/
 next: /ds/stemming-vs-lemmatization/
-last_modified_at: 2026-08-16
+last_modified_at: 2026-09-26
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -114,6 +114,11 @@ DS検定では、記号の意味だけでなく、**その正規表現が何を�
 - **形式の一致 ≠ 意味や実在性の保証**
 
 DS検定では、「何に一致するか」だけでなく、**何までは保証できないか**を見ると選択肢を切りやすくなります。
+
+## 公式情報・参考リンク
+
+- [Python Documentation｜re — Regular expression operations](https://docs.python.org/3/library/re.html)
+  - 正規表現の記号とPythonでのマッチング動作を確認できる公式リファレンスです。部分一致と全体一致の違いを確認するときにも有用です。
 
 ## 対応スキル項目（ver.6 データエンジニアリング）
 
