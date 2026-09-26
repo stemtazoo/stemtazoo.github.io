@@ -6,7 +6,7 @@ permalink: /gk/vq-vae/
 tags: [gk, generative_model, neural_network]
 gk_section: ディープラーニングの要素技術/オートエンコーダ/基本・派生モデル
 gk_order: 6
-last_modified_at: 2026-08-26
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -237,5 +237,10 @@ VQ-VAEの説明として、最も適切なものはどれか。
 - 通常のVAEは連続潜在変数、VQ-VAEは離散潜在表現
 - β-VAEはKL項の重み、CVAEは条件情報、GANは敵対的学習
 - G検定では「離散」「コードブック」「量子化」がキーワード
+
+## 参考資料（原論文）
+
+- [Neural Discrete Representation Learning｜NeurIPS](https://proceedings.neurips.cc/paper/2017/hash/7a98af17e63a0ac09ce2e96d03992fbc-Abstract.html)
+  - van den Oord・Vinyals・Kavukcuoglu（2017）によるVQ-VAEの原論文です。連続潜在変数ではなく離散的なコードブックを使う点が通常のVAEとの大きな違いです。
 
 {% include gk_article_footer.html %}
