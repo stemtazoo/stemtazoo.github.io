@@ -6,7 +6,7 @@ permalink: /gk/vae-vs-gan-vs-pix2pix/
 tags: [gk, neural_network, cheatsheet]
 gk_section: ディープラーニングの応用例/データ生成/生成モデル比較
 gk_order: 3
-last_modified_at: 2026-09-23
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -80,5 +80,14 @@ Generatorは入力画像を条件として画像を変換します。学習に�
 - Pix2Pixはペアデータを使う
 - VAE学習時は実データをEncoderへ入力
 - **性能順位より仕組みで切る**
+
+## 参考資料（原論文）
+
+- [Auto-Encoding Variational Bayes｜arXiv](https://arxiv.org/abs/1312.6114)
+  - VAEの原論文です。
+- [Generative Adversarial Nets｜NeurIPS](https://proceedings.neurips.cc/paper/2014/hash/f033ed80deb0234979a61f95710dbe25-Abstract.html)
+  - GANの原論文です。
+- [Image-to-Image Translation with Conditional Adversarial Networks｜CVF](https://openaccess.thecvf.com/content_cvpr_2017/html/Isola_Image-To-Image_Translation_With_CVPR_2017_paper.html)
+  - Pix2Pixの原論文です。ペア画像を用いる条件付き画像変換を提案しています。
 
 {% include gk_article_footer.html %}
