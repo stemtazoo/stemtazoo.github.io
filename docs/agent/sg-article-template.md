@@ -53,6 +53,26 @@ Normal articles under `pages/sg` must cover one term or one concept per page and
 - Summarize the key points in 3-5 lines.
 - Make the summary help readers recall judgment criteria, not just memorize wording.
 
+## Optional Official / Reference Block
+
+When reliable official or primary information materially improves correctness, freshness, or exam judgment, follow `docs/agent/primary-source-audit-rules.md` and `docs/agent/sg-content-rules.md`.
+
+Normally place the block near the end:
+
+```md
+## 公式情報・参考リンク
+
+- [Official / RFC title](canonical URL)
+  - SG試験で重要なポイントとの対応を短く説明。
+```
+
+This block is optional when no suitable official source exists.
+
+- For Internet protocols, check current RFC status before citing it.
+- Do not present an obsolete RFC as the current specification.
+- When an RFC / standard is superseded, search related SG pages for stale references.
+- Keep this section short; the article must remain an exam-study page, not a standards bibliography.
+
 ## Footer
 
 At the end of the article body, always add this single line:
