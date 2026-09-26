@@ -6,7 +6,7 @@ permalink: /gk/bagging/
 tags: [gk, machine_learning, ensemble]
 gk_section: 機械学習の概要/代表的な手法/教師あり学習/アンサンブル学習
 gk_order: 2
-last_modified_at: 2026-08-26
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -66,5 +66,10 @@ Baggingは **Bootstrap Aggregating** の略です。
 - 学習は主に独立・並列化しやすい
 - 予測は平均・多数決で統合
 - **逐次ならBoosting、並列ならBagging**
+
+## 参考資料（原論文）
+
+- [Bagging Predictors｜Machine Learning](https://doi.org/10.1007/BF00058655)
+  - Breiman（1996）によるBaggingの原論文です。Bootstrapで複数の学習データを作り、予測を平均・多数決で統合する考え方を提案しています。
 
 {% include gk_article_footer.html %}
