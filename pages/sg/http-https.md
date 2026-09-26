@@ -6,7 +6,7 @@ permalink: /sg/http-https/
 tags: [sg, network, data_leakage, sg-technology]
 prev: /sg/honeypot/
 next: /sg/incident-response/
-last_modified_at: 2026-07-09
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -161,5 +161,13 @@ HTTPが選択肢にあれば「危険」と判断することが多いです。
 - ポート：80（HTTP）／443（HTTPS）
 - SG試験では「暗号化されているか」で判断
 - HTTPSでもサイト自体の安全性は別問題
+
+## 公式情報・参考リンク
+
+- [RFC 9110 - HTTP Semantics](https://www.rfc-editor.org/rfc/rfc9110.html)
+  - HTTPの基本的な意味付けと、`http` / `https` URIスキームを定義するIETFのInternet Standardです。
+- [RFC 9846 - The Transport Layer Security (TLS) Protocol Version 1.3](https://www.rfc-editor.org/rfc/rfc9846.html)
+  - HTTPSで通信を保護するTLS 1.3の現行仕様です。
+
 
 {% include sg_article_footer.html %}
