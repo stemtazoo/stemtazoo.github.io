@@ -6,7 +6,7 @@ permalink: /gk/adam/
 tags: [gk, neural_network, optimization]
 gk_section: ディープラーニングの概要/最適化手法
 gk_order: 9
-last_modified_at: 2026-08-21
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -72,5 +72,10 @@ Adamは、MomentumとRMSpropの考え方を組み合わせたものとして理�
 - パラメータごとに更新幅を調整
 - 基本学習率は必要
 - 常に最良とは限らない
+
+## 参考資料（原論文）
+
+- [Adam: A Method for Stochastic Optimization｜arXiv](https://arxiv.org/abs/1412.6980)
+  - Kingma・BaによるAdamの原論文です。勾配の1次モーメントと2次モーメントの推定値を利用してパラメータを更新します。
 
 {% include gk_article_footer.html %}
