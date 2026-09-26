@@ -6,7 +6,7 @@ permalink: /sg/crl/
 tags: [sg, security_general, crypto_auth, risk_assessment, sg-security-overview]
 prev: /sg/cracker/
 next: /sg/cryptojacking/
-last_modified_at: 2026-06-24
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -165,5 +165,10 @@ CRLは「期限切れ」ではなく「途中で使ってはいけなくなっ�
 - 「期限内＝安全」は誤り
 - CRLは“ブラックリスト”と覚える
 - SG試験では「期限」と「失効の違い」を見抜く
+
+## 公式情報・参考リンク
+
+- [RFC 5280 - Internet X.509 Public Key Infrastructure Certificate and CRL Profile](https://www.rfc-editor.org/rfc/rfc5280.html)
+  - X.509証明書とCertificate Revocation List（CRL）の基本プロファイルを定義するIETFの仕様です。
 
 {% include sg_article_footer.html %}
