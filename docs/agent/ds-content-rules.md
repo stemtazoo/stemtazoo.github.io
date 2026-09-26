@@ -12,6 +12,7 @@ Always check the related rule files as needed:
 - Tags: `docs/agent/ds-tag-rules.md`
 - DS navigation and `prev` / `next`: `docs/agent/ds-navigation-rules.md`
 - Interactive learning / visualizers: `docs/agent/interactive-learning-rules.md`
+- Primary / official sources and freshness audits: `docs/agent/primary-source-audit-rules.md`
 
 ## Basic Stance
 
@@ -33,6 +34,21 @@ DS articles should help readers connect exam knowledge with practical data work.
 - For ethics, law, governance, and security topics, explain the business or data-management decision point.
 - Avoid deep academic explanations that do not help DS検定 judgment or beginner practice.
 - Use article-facing Japanese phrases naturally when they fit, such as `DS検定では〜が問われやすい`, `実務では〜で使う`, `選択肢では〜に注意`, and `〜と〜を混同しない`.
+
+## Official And Primary Sources
+
+Follow `docs/agent/primary-source-audit-rules.md` when deciding whether to add or refresh a source.
+
+For DS content:
+
+- Prioritize current official documentation for software, libraries, data platforms, APIs, protocols, and operational tools.
+- Prioritize current legal / public authority sources for privacy, governance, security, and compliance topics.
+- Use Data Scientist Society / データサイエンティスト協会 materials for current DS検定 scope and skill-item claims.
+- Use original research papers selectively for named ML / statistical methods when the original design materially helps understanding.
+- Do not force old papers onto general statistics, mathematics, or business concepts merely to create a reference section.
+- When a current official source reveals that a simplified explanation is inaccurate, correct the body first and then add the source.
+- Keep source notes short and focused on practical judgment.
+- When a source block is useful, prefer `## 公式情報・参考リンク` before `## 対応スキル項目（...）` or the DS footer / related block.
 
 ## Confusion Prevention
 
@@ -77,6 +93,7 @@ Before saving a DS article, check that:
 - the article has a clear role compared with similar DS pages;
 - intuition appears before formulas or code-heavy details;
 - practical examples are accurate and beginner-friendly;
+- the source-selection decision in `docs/agent/primary-source-audit-rules.md` has been consciously applied when the article depends on current software behavior, a law, a protocol, an official skill item, or a named method;
 - `## よくある誤解・混同` helps readers avoid exam and practical mistakes;
 - `## 対応スキル項目（...）` is present when useful and consistent with nearby pages;
 - interactive / visual learning value has been considered according to `docs/agent/interactive-learning-rules.md`;
