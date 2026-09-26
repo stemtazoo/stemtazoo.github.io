@@ -6,7 +6,7 @@ permalink: /gk/q-learning/
 tags: [gk, reinforcement_learning]
 gk_section: 機械学習の概要/代表的な手法/強化学習/価値ベース・TD学習
 gk_order: 2
-last_modified_at: 2026-08-26
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -77,5 +77,10 @@ Q学習では、状態と行動の組み合わせの価値であるQ値を学び
 - 次状態の最大Q値で更新する
 - 探索方策と更新目標は分けて考えられる
 - SARSAとの違いは「最大Qか、実際の次行動か」
+
+## 参考資料（原論文）
+
+- [Q-learning｜Machine Learning](https://doi.org/10.1007/BF00992698)
+  - Watkins・Dayan（1992）によるQ-learningの代表的な原論文です。行動価値Q(s,a)を反復更新し、最適行動価値へ収束する条件を示しています。
 
 {% include gk_article_footer.html %}
