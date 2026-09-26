@@ -5,7 +5,7 @@ description: "ダイナミックDNSは、IPアドレスが変わる環境でも�
 permalink: /sg/dynamic-dns/
 tags: [sg, sg-security-measures, network_security, dns]
 prev: /sg/dnssec-vs-https-tls/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -232,5 +232,10 @@ SG試験では、ダイナミックDNSを「動的IPアドレスにDNS情報を�
 SG試験では、「DNSに関係する技術」としてまとめて覚えると混同しやすくなります。
 
 **ダイナミックDNS＝IPアドレス変更に合わせてDNS情報を更新する仕組み**と覚えておきましょう。
+
+## 公式情報・参考リンク
+
+- [RFC 2136 - Dynamic Updates in the Domain Name System (DNS UPDATE)](https://www.rfc-editor.org/rfc/rfc2136.html)
+  - DNSのゾーン情報を動的に更新する仕組みを定義するIETFの仕様です。
 
 {% include sg_article_footer.html %}
