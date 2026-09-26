@@ -6,7 +6,7 @@ permalink: /gk/activation-functions/
 tags: [gk, neural_network, activation]
 gk_section: ディープラーニングの概要/活性化関数
 gk_order: 1
-last_modified_at: 2026-09-17
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -139,5 +139,12 @@ ReLU系の違いは、[ReLU / Leaky ReLU / PReLU比較](/gk/relu-family-cheatshe
 - Sigmoid / tanh → **飽和による勾配消失に注意**
 
 **「なぜ必要？」と聞かれたら、まず非線形性を思い出します。**
+
+## 参考資料（原論文）
+
+- [Understanding the difficulty of training deep feedforward neural networks｜PMLR](https://proceedings.mlr.press/v9/glorot10a.html)
+  - Glorot・Bengio（2010）。Sigmoidの飽和と深いネットワークの学習難易度を分析しており、活性化関数と勾配の関係を理解する一次資料として有用です。
+- [Rectified Linear Units Improve Restricted Boltzmann Machines｜ICML](https://icml.cc/2010/papers/432.pdf)
+  - Nair・Hinton（2010）。Rectified Linear Unit（ReLU）を扱った初期の代表的な原論文です。
 
 {% include gk_article_footer.html %}
