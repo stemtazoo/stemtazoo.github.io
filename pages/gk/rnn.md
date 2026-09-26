@@ -6,7 +6,7 @@ permalink: /gk/rnn/
 tags: [gk, neural_network, rnn]
 gk_section: ディープラーニングの要素技術/リカレントニューラルネットワーク (RNN)
 gk_order: 1
-last_modified_at: 2026-09-23
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -97,5 +97,12 @@ RNNは、
 - 長系列で勾配消失・爆発
 - LSTM / GRUはRNN系の改良
 - Transformerは再帰を使わない
+
+## 参考資料（原論文）
+
+- [Finding Structure in Time｜Cognitive Science](https://doi.org/10.1207/s15516709cog1402_1)
+  - Elman（1990）。再帰結合を使って時間的な文脈を内部状態へ持たせるSimple Recurrent Networkの代表的な一次資料です。
+- [Backpropagation Through Time: What It Does and How to Do It｜IEEE](https://doi.org/10.1109/5.58337)
+  - Werbos（1990）。時間方向へ展開したネットワークで誤差逆伝播を行うBPTTを整理した代表的な一次資料です。
 
 {% include gk_article_footer.html %}
