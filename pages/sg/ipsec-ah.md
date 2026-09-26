@@ -6,7 +6,7 @@ permalink: /sg/ipsec-ah/
 prev: /sg/ipsec/
 next: /sg/ipsec-esp/
 tags: [sg, sg-technology, crypto_auth, network]
-last_modified_at: 2026-05-08
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -162,5 +162,10 @@ AHは、データの暗号化は行わない
 暗号化が出てきたら、ESPやIKEとの混同に注意する
 
 SG試験では、AH＝暗号化しない認証と改ざん検知 と判断する
+
+## 公式情報・参考リンク
+
+- [RFC 4302 - IP Authentication Header](https://www.rfc-editor.org/rfc/rfc4302.html)
+  - IPsecのAHについて、認証と完全性保護を提供する仕組みとして定義するIETFの仕様です。
 
 {% include sg_article_footer.html %}
