@@ -88,6 +88,7 @@ Before saving a GK article, check that:
 - the article has a clear role compared with similar GK pages;
 - `## G検定ひっかけポイント` helps readers eliminate wrong choices;
 - the article does not over-explain mathematics beyond what helps G検定 judgment;
+- for a named model / method / architecture / loss / training technique, the primary-source decision in `docs/agent/primary-source-audit-rules.md` was consciously applied (add, already sufficient, or intentionally unnecessary);
 - interactive / visual learning value has been considered according to `docs/agent/interactive-learning-rules.md`;
 - if changing values, states, comparisons, or model roles would materially improve understanding, an interactive aid has been implemented or proposed;
 - the footer include is present when expected;
