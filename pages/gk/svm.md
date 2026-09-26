@@ -6,7 +6,7 @@ permalink: /gk/svm/
 tags: [gk, machine_learning, supervised_learning]
 gk_section: 機械学習の概要/代表的な手法/教師あり学習/分類・回帰
 gk_order: 4
-last_modified_at: 2026-09-23
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -99,6 +99,9 @@ SVMは、
 - SVRとして回帰にも利用
 
 ## 参考資料
+
+- [Support-Vector Networks｜Machine Learning](https://doi.org/10.1007/BF00994018)
+  - Cortes・Vapnik（1995）によるSVMの原論文です。高次元特徴空間で最大マージンの分離面を構成し、非線形分類にも拡張します。
 
 - [Support Vector Machines｜scikit-learn](https://scikit-learn.org/stable/modules/svm.html)
 
