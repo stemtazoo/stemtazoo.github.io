@@ -6,7 +6,7 @@ permalink: /gk/cutmix/
 tags: [gk, cnn, neural_network]
 gk_section: ディープラーニングの応用例/画像認識/データ拡張
 gk_order: 10
-last_modified_at: 2026-06-21
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -79,5 +79,10 @@ CutMixは、名前の通り
 - ラベルも混合する
 - Cropとは別物
 - 「切る＋混ぜる」で即判断
+
+## 参考資料（原論文）
+
+- [CutMix: Regularization Strategy to Train Strong Classifiers With Localizable Features｜CVF](https://openaccess.thecvf.com/content_ICCV_2019/html/Yun_CutMix_Regularization_Strategy_to_Train_Strong_Classifiers_With_Localizable_Features_ICCV_2019_paper.html)
+  - Yunら（ICCV 2019）によるCutMixの原論文です。画像の領域を切り貼りし、その面積比に応じてラベルも混合します。
 
 {% include gk_article_footer.html %}
