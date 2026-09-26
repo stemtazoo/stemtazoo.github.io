@@ -6,7 +6,7 @@ permalink: /sg/ssl-tls/
 tags: [sg, security_general, crypto_auth, network, sg-security-overview]
 prev: /sg/ssh/
 next: /sg/stepping-stone-attack/
-last_modified_at: 2026-06-13
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -303,5 +303,11 @@ SG試験では、古い仕様を丸暗記させるより、現在の安全な運
 - デジタル証明書で正当性を確認
 - SG試験では「なぜ安全か」で問われる
 - HTTPとの違いは「SSL/TLSの有無」
+
+## 公式情報・参考リンク
+
+- [RFC 9846 - The Transport Layer Security (TLS) Protocol Version 1.3](https://www.rfc-editor.org/rfc/rfc9846.html)
+  - TLS 1.3の現行仕様です。TLSが盗聴・改ざん・メッセージ偽造を防ぐための通信保護プロトコルであることを確認できます。
+
 
 {% include sg_article_footer.html %}
