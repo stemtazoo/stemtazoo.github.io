@@ -8,7 +8,7 @@ tags: [ds, data-collection, data-processing]
 ds_area: dataengineering
 ds_section: data-collection
 prev: /ds/docker/
-last_modified_at: 2026-07-14
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -170,6 +170,15 @@ FTP、SSH、SFTP、FTPSの説明として、最も適切なものはどれか。
 判断ポイントは、**SFTPはSSH、FTPSはFTP + TLS**です。
 
 </details>
+
+## 公式情報・参考リンク
+
+- [RFC 959 - File Transfer Protocol (FTP)](https://www.rfc-editor.org/rfc/rfc959.html)
+  - FTPの基本仕様です。
+- [RFC 4251 - The Secure Shell (SSH) Protocol Architecture](https://www.rfc-editor.org/rfc/rfc4251.html)
+  - SSHを、安全でないネットワーク上で安全なリモートログインなどを行うためのプロトコルとして定義しています。
+- [RFC 4217 - Securing FTP with TLS](https://www.rfc-editor.org/rfc/rfc4217.html)
+  - FTPをTLSで保護するFTPSの仕組みを定義する仕様です。
 
 ## 対応スキル項目（ver.6 データエンジニアリング）
 
