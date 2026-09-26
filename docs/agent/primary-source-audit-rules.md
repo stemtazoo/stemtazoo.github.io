@@ -2,7 +2,7 @@
 
 This file defines shared rules for selecting, adding, refreshing, and auditing primary / official sources across study content in this repository.
 
-Use it especially for `pages/gk` and `pages/sg`, and also as a shared baseline when another section-specific rule does not define a stricter source policy.
+Use it especially for `pages/gk`, `pages/sg`, and `pages/ds`, and also as a shared baseline when another section-specific rule does not define a stricter source policy.
 
 This file does **not** replace article-writing rules. When an audit results in an article edit, the edited page must still comply with its section-specific content, template, front-matter, tag, navigation, and GitHub Pages rules.
 
@@ -20,7 +20,7 @@ Read this file before work whose main purpose includes one or more of the follow
 
 For a small wording correction that does not affect factual authority, provenance, or freshness, this file does not need to drive the edit.
 
-For new GK / SG articles, apply this file when a natural primary source exists for the article topic.
+For new GK / SG / DS articles, apply this file when a natural primary or official source exists for the article topic.
 
 ## Rule Precedence
 
@@ -281,6 +281,75 @@ Normally place official / reference links in:
 near the end of the article, before the SG footer.
 
 Do not turn an SG page into a standards bibliography.
+
+## DS-Specific Decision Rules
+
+For `pages/ds`, prioritize **current practical authority** over historical provenance when the article is about tools, systems, data handling, law, security, or implementation.
+
+### DS source-priority rule
+
+Use the source type that best matches the practical role of the article:
+
+1. **DS検定 scope / skill items**
+   - Prefer the current official materials from the Data Scientist Society / データサイエンティスト協会.
+2. **Law / privacy / governance**
+   - Prefer the current responsible authority or legal text, such as 個人情報保護委員会, e-Gov, EU / EUR-Lex, or the responsible U.S. state authority.
+3. **Data engineering / software / libraries**
+   - Prefer maintained official project documentation, such as Apache Hadoop / Spark, Docker, Jupyter, Python, pandas, scikit-learn, NLTK, database or cloud project documentation.
+4. **Internet / security protocols**
+   - Prefer the current RFC / IETF, NIST, IPA, or other defining current authority.
+5. **Named ML / statistical methods**
+   - Use an original / canonical paper when origin or model design materially helps understanding, but prefer official implementation documentation when the article's main value is practical use.
+6. **Generic statistics / mathematics / business concepts**
+   - Do not force historical papers merely to create a citation. Add a source only when it improves interpretation, currentness, practical implementation, or exam judgment.
+
+### Practical-documentation-over-origin rule
+
+For DS articles, the question is often:
+
+> **What should a learner use or verify today?**
+
+Therefore:
+
+- Spark article → current Apache Spark docs usually matter more than the original Spark paper.
+- Docker article → current Docker docs matter more than Docker's historical origin.
+- Jupyter / pandas / scikit-learn article → current official docs are normally the primary practical source.
+- Random Forest / PCA article → an original paper can be useful, but if the article focuses on implementation or parameter behavior, official library docs may be more valuable.
+- t-test / correlation / variance article → do not add an old historical paper unless it directly improves a specific interpretation or misconception.
+
+### DS law and privacy rule
+
+For privacy / law articles:
+
+- check whether the law has been amended or complemented by newer rules;
+- keep the article body aligned with the current legal framework;
+- avoid simplified comparisons that imply one law is universally “stricter” than another;
+- prefer concrete rights, scope, duties, and decision criteria over broad ranking language;
+- when a named amendment changes the current framework, mention it when material to the learner.
+
+### DS protocol / security rule
+
+For OAuth, TLS, SSH, API / HTTP, FTP, zero trust, PKI, and similar practical-security topics:
+
+- use current RFC / NIST / official sources;
+- distinguish a base specification from a current Best Current Practice when both matter;
+- when the current specification changes the simplified teaching model, correct the body rather than merely adding a link;
+- do not present a historical implementation shortcut as the current protocol design.
+
+### Placement
+
+When a source block is useful, prefer:
+
+```md
+## 公式情報・参考リンク
+
+- [Official source](canonical URL)
+  - DS検定・実務で確認したいポイントを1〜2文で説明。
+```
+
+Place it before `## 対応スキル項目（...）` when that section exists, or near the end before the DS footer / related-article block.
+
+This heading is optional. Do not add it when the source would not improve the page.
 
 ## Freshness And Supersession Check
 
