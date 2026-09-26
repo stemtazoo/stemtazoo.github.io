@@ -6,7 +6,7 @@ permalink: /gk/autoencoder-cheatsheet/
 tags: [gk, neural_network, cheatsheet]
 gk_section: ディープラーニングの要素技術/オートエンコーダ/基本・派生モデル
 gk_order: 1
-last_modified_at: 2026-08-26
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -81,5 +81,16 @@ last_modified_at: 2026-08-26
 * DAE：ノイズ除去
 * VAE：確率的生成
 * CAMとは役割が別
+
+## 参考資料（原論文）
+
+- [Reducing the Dimensionality of Data with Neural Networks｜Science](https://doi.org/10.1126/science.1127647)
+  - Hinton・Salakhutdinov（2006）。入力を再構成しながら低次元コードを学習する深いAutoencoderの代表的な一次資料です。
+- [Extracting and Composing Robust Features with Denoising Autoencoders｜ACM](https://doi.org/10.1145/1390156.1390294)
+  - Vincentら（ICML 2008）。入力を意図的に破損させ、元の入力を復元するDenoising Autoencoderを提案しています。
+- [Stacked Convolutional Auto-Encoders for Hierarchical Feature Extraction｜Springer](https://link.springer.com/chapter/10.1007/978-3-642-21735-7_7)
+  - Masciら（2011）。畳み込みを用いるConvolutional Autoencoderを扱った代表的な一次資料です。
+- [Auto-Encoding Variational Bayes｜arXiv](https://arxiv.org/abs/1312.6114)
+  - Kingma・WellingによるVAEの原論文です。確率的潜在変数と再パラメータ化を使う点が通常のAEとの重要な違いです。
 
 {% include gk_article_footer.html %}
