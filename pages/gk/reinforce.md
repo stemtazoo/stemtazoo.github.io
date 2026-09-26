@@ -6,7 +6,7 @@ permalink: /gk/reinforce/
 tags: [gk, reinforcement_learning]
 gk_section: 機械学習の概要/代表的な手法/強化学習/方策勾配・Actor-Critic
 gk_order: 1
-last_modified_at: 2026-08-26
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -98,5 +98,10 @@ REINFORCEでは、収益からベースラインを引くことで分散を小�
 * 基本形はモンテカルロ型
 * 分散が大きくなりやすい
 * Actor-Criticは価値推定で更新を補助する
+
+## 参考資料（原論文）
+
+- [Simple Statistical Gradient-Following Algorithms for Connectionist Reinforcement Learning｜Machine Learning](https://doi.org/10.1007/BF00992696)
+  - Williams（1992）によるREINFORCEの原論文です。期待報酬の勾配方向へ方策パラメータを更新する方策勾配法を示しています。
 
 {% include gk_article_footer.html %}
