@@ -6,7 +6,7 @@ permalink: /sg/dns-cache-poisoning/
 tags: [sg, unauthorized_access, network, sg-security-measures]
 prev: /sg/dns-attack-difference/
 next: /sg/dns-poisoning-vs-pharming/
-last_modified_at: 2026-06-24
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -233,5 +233,10 @@ DNSキャッシュポイズニングは、**DNSキャッシュに偽の名前解
 - 書き換えるのは「DNSサーバ名」ではなく「名前解決情報」
 - ワーム感染やメールアドレス改ざんとは別物
 - 「DNS」「キャッシュ」「偽の名前解決」「偽サイト誘導」がそろえば正解候補
+
+## 公式情報・参考リンク
+
+- [RFC 5452 - Measures for Making DNS More Resilient against Forged Answers](https://www.rfc-editor.org/rfc/rfc5452.html)
+  - 偽のDNS応答を再帰DNSサーバが受け入れにくくするための対策を整理したIETFの仕様です。
 
 {% include sg_article_footer.html %}
