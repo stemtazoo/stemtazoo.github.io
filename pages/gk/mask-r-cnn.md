@@ -6,7 +6,7 @@ permalink: /gk/mask-r-cnn/
 tags: [gk, cnn, neural_network]
 gk_section: ディープラーニングの応用例/画像認識/マルチタスク学習
 gk_order: 1
-last_modified_at: 2026-06-21
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -87,5 +87,10 @@ G検定では「**RoI Align が Mask R-CNN の特徴**」と分かれば十分�
 - RoI Align が重要キーワード
 - セマンティックセグメンテーションとは別物
 - 「ピクセル単位で個体を区別」できたら Mask R-CNN
+
+## 参考資料（原論文）
+
+- [Mask R-CNN｜CVF Open Access](https://openaccess.thecvf.com/content_iccv_2017/html/He_Mask_R-CNN_ICCV_2017_paper.html)
+  - He・Gkioxari・Dollár・Girshick（2017）による原論文です。Faster R-CNNに各インスタンスのマスクを予測する分岐を追加しています。
 
 {% include gk_article_footer.html %}
