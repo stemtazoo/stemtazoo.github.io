@@ -9,7 +9,7 @@ ds_area: dataengineering
 ds_section: data-processing
 prev: /ds/left-join-where/
 next: /ds/batch-vs-stream/
-last_modified_at: 2026-08-16
+last_modified_at: 2026-09-26
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -102,6 +102,11 @@ LEFT JOIN employees e2
 - 特別なJOIN構文ではない
 
 DS検定では、**「同じテーブル内の別行を対応づける」なら自己結合**と判断しましょう。
+
+## 公式情報・参考リンク
+
+- [PostgreSQL Documentation｜Table Expressions](https://www.postgresql.org/docs/current/queries-table-expressions.html)
+  - 同じテーブルを別名で扱うtable aliasと通常のJOINを組み合わせる考え方を確認できます。Self Joinは専用構文ではなく、通常の結合の応用です。
 
 ## 対応スキル項目（ver.6 データエンジニアリング）
 
