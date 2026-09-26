@@ -9,7 +9,7 @@ ds_area: datascience
 ds_section: statistics
 prev: /ds/symmetric-difference/
 next: /ds/model-curriculum-summary/
-last_modified_at: 2026-07-14
+last_modified_at: 2026-09-26
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -184,6 +184,13 @@ DS検定ではここをよく混同させてきます。
 
 この判断軸で選択肢を切れます。
 
+
+## 公式情報・参考リンク
+
+- [NIST/SEMATECH e-Handbook｜What are statistical tests?](https://www.itl.nist.gov/div898/handbook/prc/section1/prc13.htm)
+  - 帰無仮説、有意水準、第1種の過誤に関わる仮説検定の基本を確認できます。
+- [NIST/SEMATECH e-Handbook｜Choosing an experimental design](https://www.itl.nist.gov/div898/handbook/pri/section3/pri33.htm)
+  - 実験設計を選ぶ際に、第1種・第2種の過誤を含む誤判断リスクを考える必要があることを確認できます。
 
 ## 対応スキル項目（ver.6 データサイエンス）
 
