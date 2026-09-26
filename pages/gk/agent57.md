@@ -6,7 +6,7 @@ permalink: /gk/agent57/
 tags: [gk, reinforcement_learning, neural_network]
 gk_section: ディープラーニングの応用例/深層強化学習/代表エージェント・プロジェクト
 gk_order: 1
-last_modified_at: 2026-08-26
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -110,5 +110,10 @@ G検定では細かな実装を覚えるより、
 - **複数方策をメタコントローラで使い分ける**
 - R2D2・Never Give Upから発展した流れ
 - 「Atari 57 × 探索 × 内発的報酬」で判断する
+
+## 参考資料（原論文）
+
+- [Agent57: Outperforming the Atari Human Benchmark｜PMLR](https://proceedings.mlr.press/v119/badia20a.html)
+  - Badiaら（ICML 2020）によるAgent57の原論文です。Atari 57ゲームすべてで人間ベンチマークを上回った分散深層強化学習エージェントです。
 
 {% include gk_article_footer.html %}
