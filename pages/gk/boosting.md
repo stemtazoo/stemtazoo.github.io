@@ -6,7 +6,7 @@ permalink: /gk/boosting/
 tags: [gk, machine_learning, ensemble]
 gk_section: 機械学習の概要/代表的な手法/教師あり学習/アンサンブル学習
 gk_order: 4
-last_modified_at: 2026-08-26
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -66,5 +66,10 @@ Boostingはアンサンブル学習の一種です。
 - Gradient Boosting＝**損失の勾配に基づく補正**
 - Bagging＝主に独立・並列、Boosting＝逐次
 - **AdaBoostの仕組みをBoosting全体の定義にしない**
+
+## 参考資料（原論文）
+
+- [A Decision-Theoretic Generalization of On-Line Learning and an Application to Boosting｜Journal of Computer and System Sciences](https://doi.org/10.1006/jcss.1997.1504)
+  - Freund・Schapire（1997）によるAdaBoostの代表的な原論文です。誤分類したサンプルへ重みを置きながら弱学習器を逐次組み合わせます。
 
 {% include gk_article_footer.html %}
