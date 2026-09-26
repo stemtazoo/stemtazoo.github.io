@@ -6,7 +6,7 @@ permalink: /gk/lstm/
 tags: [gk, neural_network, rnn, lstm]
 gk_section: ディープラーニングの要素技術/リカレントニューラルネットワーク (RNN)
 gk_order: 3
-last_modified_at: 2026-09-23
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -104,5 +104,10 @@ LSTMは、
 - 勾配消失を緩和
 - CECは原典LSTMの重要概念
 - GRUより構造が複雑な傾向
+
+## 参考資料（原論文）
+
+- [Long Short-Term Memory｜MIT Press / Neural Computation](https://doi.org/10.1162/neco.1997.9.8.1735)
+  - Hochreiter・Schmidhuber（1997）によるLSTMの原論文です。長期依存の学習で起きる誤差信号の減衰を背景に、長期間情報を保持する仕組みを提案しています。
 
 {% include gk_article_footer.html %}
