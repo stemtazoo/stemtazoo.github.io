@@ -6,7 +6,7 @@ permalink: /gk/source-target-attention/
 tags: [gk, attention, transformer]
 gk_section: ディープラーニングの要素技術/トランスフォーマー (Transformer)
 gk_order: 5
-last_modified_at: 2026-08-26
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -79,5 +79,12 @@ last_modified_at: 2026-08-26
 * 翻訳・要約で使用
 * TransformerではEncoder-Decoder Attention
 * Self-Attentionとは別概念
+
+## 参考資料（原論文）
+
+- [Neural Machine Translation by Jointly Learning to Align and Translate｜arXiv](https://arxiv.org/abs/1409.0473)
+  - Bahdanau・Cho・Bengioによる代表的なEncoder-Decoder Attention論文です。Decoderが出力時にEncoder側の関連部分を参照する考え方を示しています。
+- [Attention Is All You Need｜NeurIPS](https://proceedings.neurips.cc/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html)
+  - TransformerではDecoderがEncoder出力を参照するEncoder-Decoder Attention（cross-attention）を利用します。
 
 {% include gk_article_footer.html %}
