@@ -4,6 +4,8 @@ This file defines the workflow for auditing existing 基本情報技術者試験
 
 Use it for repository-wide or multi-article reviews such as source audits, freshness audits, duplicate-content audits, syllabus-alignment audits, internal-link audits, structure audits, and content-gap audits.
 
+For primary-source selection, current-vs-original authority, RFC / standards freshness, and supersession sweeps, also read `docs/agent/primary-source-audit-rules.md`. That shared file is the baseline for source-selection mechanics; this FE audit file remains authoritative for FE-specific scope, syllabus, Subject B relevance, and FE audit workflow.
+
 This file does **not** replace the FE article-writing rules. When an audit results in an article edit, the edited article must still comply with:
 
 - `AGENTS.md`
