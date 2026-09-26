@@ -6,7 +6,7 @@ permalink: /sg/smtp-auth/
 prev: /sg/mail-header-injection/
 next: /sg/spf/
 tags: [sg, sg-security-measures, unauthorized_access, network]
-last_modified_at: 2026-05-31
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -147,5 +147,10 @@ SMTP-AUTHの基本は、SMTP接続時にID・パスワードなどで送信者�
 - 受信側ではなく送信側の対策  
 - SPF/DKIMとは役割が違う  
 - 「誰が送るか」を確認する仕組み
+
+## 公式情報・参考リンク
+
+- [RFC 4954 - SMTP Service Extension for Authentication](https://www.rfc-editor.org/rfc/rfc4954.html)
+  - SMTPクライアントが認証方式を示し、サーバとの間で認証を行うSMTP拡張を定義するIETFの仕様です。
 
 {% include sg_article_footer.html %}
