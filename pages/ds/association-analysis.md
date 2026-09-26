@@ -9,7 +9,7 @@ ds_area: datascience
 ds_section: modeling
 prev: /ds/apriori-algorithm/
 next: /ds/association-metrics/
-last_modified_at: 2026-08-16
+last_modified_at: 2026-09-26
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -127,6 +127,13 @@ RFM分析は、
 - **RFM分析 = 顧客価値の評価**
 
 DS検定では、**「商品の同時購入関係」**と書かれていたらアソシエーション分析を疑いましょう。
+
+## 公式情報・参考リンク
+
+- [Agrawal, Imieliński & Swami｜Mining Association Rules between Sets of Items in Large Databases](https://doi.org/10.1145/170036.170072)
+  - アソシエーションルールマイニングの代表的な原典です。購買トランザクションから項目間の関連ルールを発見する問題設定を示しています。
+- [Agrawal & Srikant｜Fast Algorithms for Mining Association Rules in Large Databases](https://www.vldb.org/conf/1994/P487.PDF)
+  - Aprioriを提案した原論文です。支持度を利用した候補の枝刈りによって、関連ルール探索を効率化します。
 
 ## 対応スキル項目（ver.6 データサイエンス）
 
