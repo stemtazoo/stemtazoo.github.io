@@ -9,7 +9,7 @@ ds_area: dataengineering
 ds_section: data-storage
 prev: /ds/soap/
 next: /ds/web-api/
-last_modified_at: 2026-08-16
+last_modified_at: 2026-09-26
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -111,6 +111,13 @@ Sparkの中心的な役割は**データ処理**です。
 - **HDFS = 保存 / YARN = 管理 / Spark = 処理**
 
 DS検定では、特に**保存・管理・処理の役割分担**で選択肢を切りましょう。
+
+## 公式情報・参考リンク
+
+- [Apache Spark Documentation](https://spark.apache.org/docs/latest/)
+  - Apache Sparkの公式ドキュメントです。Spark全体の構成と各APIへの入口を確認できます。
+- [Apache Spark RDD Programming Guide](https://spark.apache.org/docs/latest/rdd-programming-guide)
+  - RDDを、クラスタの複数ノードへ分割して並列処理する分散コレクションとして説明しています。
 
 ## 対応スキル項目（ver.6 データエンジニアリング）
 
