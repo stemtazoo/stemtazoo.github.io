@@ -6,7 +6,7 @@ permalink: /gk/cnn-architectures-comparison/
 tags: [gk, cnn, neural_network, cheatsheet]
 gk_section: ディープラーニングの応用例/画像認識/ネオコグニトロンとLeNet
 gk_order: 10
-last_modified_at: 2026-06-21
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論（試験はここだけ見ればOK）
@@ -104,5 +104,14 @@ last_modified_at: 2026-06-21
 * EfficientNet → 効率よく強くする
 
 👉 次は **画像タスク総まとめ（分類・検出・セグメンテーション）** に進むと全体像が完成
+
+## 参考資料（原論文）
+
+- [Deep Residual Learning for Image Recognition｜CVF](https://openaccess.thecvf.com/content_cvpr_2016/html/He_Deep_Residual_Learning_CVPR_2016_paper.html)
+  - Heら（CVPR 2016）によるResNetの原論文です。Residual connectionで深層化時の劣化問題へ対応します。
+- [Densely Connected Convolutional Networks｜CVF](https://openaccess.thecvf.com/content_cvpr_2017/html/Huang_Densely_Connected_Convolutional_CVPR_2017_paper.html)
+  - Huangら（CVPR 2017）によるDenseNetの原論文です。各層を後続層へ密に接続して特徴再利用を促します。
+- [EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks｜PMLR](https://proceedings.mlr.press/v97/tan19a.html)
+  - Tan・Le（ICML 2019）。深さ・幅・解像度をまとめて調整するCompound Scalingを提案しています。
 
 {% include gk_article_footer.html %}
