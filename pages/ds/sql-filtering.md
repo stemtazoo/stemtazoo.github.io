@@ -9,7 +9,7 @@ ds_area: dataengineering
 ds_section: data-processing
 prev: /ds/sql-exists/
 next: /ds/sql-groupby/
-last_modified_at: 2026-08-16
+last_modified_at: 2026-09-26
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -126,6 +126,11 @@ WHERE 店舗 = '東京'
 - データ削除とは別の操作
 
 DS検定では、**「条件を指定して必要なデータだけを取り出す」なら `WHERE`** と判断しましょう。
+
+## 公式情報・参考リンク
+
+- [PostgreSQL Documentation｜SELECT](https://www.postgresql.org/docs/current/sql-select.html)
+  - SQLでWHERE句を使って入力行を条件抽出する基本動作を確認できます。
 
 ## 対応スキル項目（ver.6 データエンジニアリング）
 
