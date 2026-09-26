@@ -6,7 +6,7 @@ permalink: /gk/random-forest/
 tags: [gk, machine_learning, ensemble]
 gk_section: 機械学習の概要/代表的な手法/教師あり学習/アンサンブル学習
 gk_order: 3
-last_modified_at: 2026-09-23
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -65,5 +65,10 @@ G検定では、次の2つをセットで押さえます。
 - データと特徴量をランダム化
 - 木同士の相関を下げ、分散を抑える方向に働く
 - **逐次補正ならBoosting、並列統合ならRandom Forest**
+
+## 参考資料（原論文）
+
+- [Random Forests｜Machine Learning](https://doi.org/10.1023/A:1010933404324)
+  - Breiman（2001）によるRandom Forestの原論文です。複数の決定木とランダムな特徴選択を組み合わせ、木同士の相関を抑えながら予測を統合します。
 
 {% include gk_article_footer.html %}
