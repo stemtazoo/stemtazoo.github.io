@@ -4,7 +4,7 @@ title: NTPリフレクション攻撃とは？踏み台化の仕組み【SG試�
 description: NTPリフレクション攻撃は、NTPサーバの応答を悪用して攻撃対象に大量通信を送るDDoS攻撃です。SG試験で迷いやすい踏み台化の仕組みと対策を整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/ntp-reflection-attack/
 tags: [sg, sg-security-measures, threat_vulnerability, network]
-last_modified_at: 2026-05-19
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -127,5 +127,10 @@ SG試験では、**攻撃の原因に効く対策か**を見て判断します�
 - 古いntpdのmonlist機能は、大きな応答を返すため悪用されやすい。
 - 対策は、修正済みバージョンへの更新、monlist機能の無効化、外部からの不要なNTPアクセス制限。
 - SG試験では「NTPを止める」ではなく、**踏み台化を防ぐ対策かどうか**で選択肢を切る。
+
+## 公式情報・参考リンク
+
+- [RFC 8633 - Network Time Protocol Best Current Practices](https://www.rfc-editor.org/rfc/rfc8633.html)
+  - NTPの安全な運用に関するBest Current Practiceで、送信元IPアドレス偽装への対策なども扱っています。
 
 {% include sg_article_footer.html %}
