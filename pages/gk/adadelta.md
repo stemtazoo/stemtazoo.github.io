@@ -6,7 +6,7 @@ permalink: /gk/adadelta/
 tags: [gk, neural_network, optimization]
 gk_section: ディープラーニングの概要/最適化手法
 gk_order: 8
-last_modified_at: 2026-08-21
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -62,5 +62,10 @@ AdaDelta
 - 勾配と更新量の移動平均を使う
 - RMSprop・Adamとは仕組みが異なる
 - 「更新量の移動平均」ならAdaDelta
+
+## 参考資料（原論文）
+
+- [ADADELTA: An Adaptive Learning Rate Method｜arXiv](https://arxiv.org/abs/1212.5701)
+  - Zeiler（2012）によるAdaDeltaの原論文です。AdaGradの単調に減少する学習率を改善するため、勾配二乗と更新量の指数移動平均を利用します。
 
 {% include gk_article_footer.html %}
