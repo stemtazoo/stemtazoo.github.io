@@ -6,7 +6,7 @@ permalink: /gk/actor-critic/
 tags: [gk, reinforcement_learning, neural_network]
 gk_section: 機械学習の概要/代表的な手法/強化学習/方策勾配・Actor-Critic
 gk_order: 2
-last_modified_at: 2026-08-26
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -68,5 +68,10 @@ Actor-Criticは1つの固定アルゴリズム名というより、**設計の�
 - Critic：価値
 - REINFORCEより価値推定を活用して分散を抑えやすい
 - オン／オフポリシーは派生アルゴリズム次第
+
+## 参考資料（原論文）
+
+- [Actor-Critic Algorithms｜NeurIPS](https://papers.neurips.cc/paper/1786-actor-critic-algorithms)
+  - Konda・Tsitsiklis（NIPS 1999）。Actorが方策を更新し、CriticがTD学習で評価するActor-Criticアルゴリズムを解析した代表的な一次資料です。
 
 {% include gk_article_footer.html %}
