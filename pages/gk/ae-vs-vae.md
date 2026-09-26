@@ -6,7 +6,7 @@ permalink: /gk/ae-vs-vae/
 tags: [gk, neural_network]
 gk_section: ディープラーニングの要素技術/オートエンコーダ/基本・派生モデル
 gk_order: 7
-last_modified_at: 2026-08-26
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -85,5 +85,12 @@ G検定では、次の混同を狙ってきます。
 - VAEは生成が可能
 - 最大の違いは「確率かどうか」
 - 「確率モデル」→ VAE
+
+## 参考資料（原論文）
+
+- [Reducing the Dimensionality of Data with Neural Networks｜Science](https://doi.org/10.1126/science.1127647)
+  - Hinton・Salakhutdinov（2006）。Autoencoderを用いた非線形な次元削減の代表的な一次資料です。
+- [Auto-Encoding Variational Bayes｜arXiv](https://arxiv.org/abs/1312.6114)
+  - Kingma・WellingによるVAEの原論文です。確率分布として潜在変数を扱う点が通常のAEとの重要な違いです。
 
 {% include gk_article_footer.html %}
