@@ -5,7 +5,7 @@ description: DNSアンプ攻撃は、DNSキャッシュサーバの応答を攻�
 permalink: /sg/dns-amplification-attack/
 tags: [sg, sg-security-measures, threat_vulnerability, network]
 date: 2026-05-06
-last_modified_at: 2026-05-19
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -164,5 +164,10 @@ SG試験では、全部止めるよりも、**悪用される設定や公開範�
 - オープンリゾルバは、外部からの再帰問い合わせを誰からでも受け付けるため踏み台にされやすい。
 - 対策は、DNSキャッシュサーバの再帰問い合わせを制限し、インターネット側から使えないようにすること。
 - SG試験では「DNSSEC」「Whois」「負荷分散」ではなく、**キャッシュサーバの外部利用を防ぐ対策かどうか**で判断する。
+
+## 公式情報・参考リンク
+
+- [RFC 5358 - Preventing Use of Recursive Nameservers in Reflector Attacks](https://www.rfc-editor.org/rfc/rfc5358.html)
+  - オープンな再帰DNSサーバが反射型攻撃に悪用される問題と、その抑止策を整理したIETFのBest Current Practiceです。
 
 {% include sg_article_footer.html %}
