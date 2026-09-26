@@ -6,7 +6,7 @@ permalink: /gk/reward-shaping/
 tags: [gk, reinforcement_learning]
 gk_section: 機械学習の概要/代表的な手法/強化学習/基礎概念
 gk_order: 3
-last_modified_at: 2026-08-26
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -69,5 +69,10 @@ G検定では、**報酬を設計して学習を誘導する手法**であり、
 - 逆強化学習とは別
 - 設計を誤ると目的がずれる
 - 「報酬をどう与えるか」の問題として覚える
+
+## 参考資料（原論文）
+
+- [Policy Invariance under Reward Transformations: Theory and Application to Reward Shaping｜ICML 1999](https://ai.stanford.edu/~ang/papers/shaping-icml99.pdf)
+  - Ng・Harada・Russell（1999）。最適方策を変えずに報酬を追加する条件としてPotential-based Reward Shapingを理論的に整理した代表的な原論文です。
 
 {% include gk_article_footer.html %}
