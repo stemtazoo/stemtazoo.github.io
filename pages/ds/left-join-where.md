@@ -9,7 +9,7 @@ ds_area: dataengineering
 ds_section: data-processing
 prev: /ds/sql-where/
 next: /ds/self-join/
-last_modified_at: 2026-08-16
+last_modified_at: 2026-09-26
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -139,6 +139,11 @@ SQLのNULL比較は通常の真偽値だけではなくUNKNOWNになります。
 - `WHERE` は**結合後の絞り込み**
 - 右テーブル条件をWHEREへ書くとNULL行が消える
 - **LEFTなのに全件出ない → WHEREを確認する**
+
+## 公式情報・参考リンク
+
+- [PostgreSQL Documentation｜Table Expressions](https://www.postgresql.org/docs/current/queries-table-expressions.html)
+  - JOIN条件とWHERE条件の適用位置を確認できる公式ドキュメントです。外部結合では、ONでの条件付けと結合後のWHERE絞り込みで結果が変わる点が重要です。
 
 ## 対応スキル項目（ver.6 データエンジニアリング）
 
