@@ -6,7 +6,7 @@ permalink: /gk/attention-transformer-bert/
 tags: [gk, neural_network, attention, transformer]
 gk_section: ディープラーニングの応用例/自然言語処理
 gk_order: 22
-last_modified_at: 2026-09-24
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -89,5 +89,14 @@ Self-Attentionを中心に系列要素間の関係を扱います。
 - AttentionはTransformer以外でも利用可能
 - 単純な包含関係で覚えない
 - **役割の粒度で切る**
+
+## 参考資料（原論文）
+
+- [Neural Machine Translation by Jointly Learning to Align and Translate｜arXiv](https://arxiv.org/abs/1409.0473)
+  - Attentionの代表的な初期論文です。
+- [Attention Is All You Need｜NeurIPS](https://proceedings.neurips.cc/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html)
+  - Vaswaniら（2017）によるTransformerの原論文です。Self-AttentionとMulti-Head Attentionを中核にしています。
+- [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding｜ACL Anthology](https://aclanthology.org/N19-1423/)
+  - Devlinら（NAACL 2019）によるBERTの原論文です。Transformer Encoderを使った双方向の事前学習モデルを提案しています。
 
 {% include gk_article_footer.html %}
