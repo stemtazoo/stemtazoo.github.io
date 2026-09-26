@@ -6,7 +6,7 @@ permalink: /gk/encoder-decoder/
 tags: [gk, neural_network, rnn]
 gk_section: ディープラーニングの要素技術/リカレントニューラルネットワーク (RNN)
 gk_order: 6
-last_modified_at: 2026-08-26
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -132,5 +132,12 @@ G検定では、
 👉 迷ったら
 
 > **入力も出力も文章？ → Encoder-Decoder**
+
+## 参考資料（原論文）
+
+- [Learning Phrase Representations using RNN Encoder–Decoder for Statistical Machine Translation｜ACL Anthology](https://aclanthology.org/D14-1179/)
+  - Choら（EMNLP 2014）。Encoderで入力系列を表現へ変換し、Decoderで出力系列を生成するRNN Encoder-Decoderを提案しています。
+- [Sequence to Sequence Learning with Neural Networks｜NeurIPS](https://proceedings.neurips.cc/paper_files/paper/2014/hash/5a18e133cbf9f257297f410bb7eca942-Abstract.html)
+  - Sutskever・Vinyals・Le（2014）。LSTMを用いたEncoder-Decoder型のSeq2Seq学習を示した代表的な原論文です。
 
 {% include gk_article_footer.html %}
