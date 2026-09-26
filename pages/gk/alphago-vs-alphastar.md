@@ -6,7 +6,7 @@ permalink: /gk/alphago-vs-alphastar/
 tags: [gk, reinforcement_learning, cheatsheet]
 gk_section: ディープラーニングの応用例/深層強化学習/代表エージェント・プロジェクト
 gk_order: 3
-last_modified_at: 2026-08-26
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -69,5 +69,12 @@ G検定では、**「囲碁＋MCTS → AlphaGo」「StarCraft II＋リアルタ�
 - 単純な単一／マルチ分類で覚えない
 - 対象ゲームと環境特性で切る
 - 「StarCraft II」ならAlphaStar
+
+## 参考資料（原論文）
+
+- [Mastering the game of Go with deep neural networks and tree search｜Nature](https://doi.org/10.1038/nature16961)
+  - Silverら（2016）によるAlphaGoの代表的な原論文です。Policy Network・Value Network・Monte Carlo Tree Searchを組み合わせています。
+- [Grandmaster level in StarCraft II using multi-agent reinforcement learning｜Nature](https://doi.org/10.1038/s41586-019-1724-z)
+  - Vinyalsら（2019）によるAlphaStarの論文です。StarCraft IIという複雑な多エージェント環境で高い性能を示しています。
 
 {% include gk_article_footer.html %}
