@@ -6,7 +6,7 @@ permalink: /gk/word2vec/
 tags: [gk, nlp, machine_learning]
 gk_section: ディープラーニングの応用例/自然言語処理/分散表現
 gk_order: 4
-last_modified_at: 2026-08-26
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -113,5 +113,10 @@ Word2Vecは、同じ単語なら基本的に同じベクトルです。
 - Skip-gram＝中心語 → 周囲
 - 学習時には周囲の文脈を使う
 - **文脈ごとに表現が変わるのはBERTなど**
+
+## 参考資料（原論文）
+
+- [Efficient Estimation of Word Representations in Vector Space｜arXiv](https://arxiv.org/abs/1301.3781)
+  - Mikolovら（2013）。CBOWとSkip-gramという2つのモデル構造を示し、大規模コーパスから連続的な単語ベクトルを効率よく学習する方法を提案しています。
 
 {% include gk_article_footer.html %}
