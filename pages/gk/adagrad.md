@@ -6,7 +6,7 @@ permalink: /gk/adagrad/
 tags: [gk, neural_network, optimization]
 gk_section: ディープラーニングの概要/最適化手法
 gk_order: 6
-last_modified_at: 2026-08-21
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -76,5 +76,10 @@ AdaGradは、過去の勾配二乗を足し続けます。
 - 疎な特徴量に向くことがある
 - 学習率が小さくなりすぎる弱点がある
 - 「累積」ならAdaGrad
+
+## 参考資料（原論文）
+
+- [Adaptive Subgradient Methods for Online Learning and Stochastic Optimization｜JMLR](https://www.jmlr.org/papers/v12/duchi11a.html)
+  - Duchi・Hazan・Singer（2011）によるAdaGradの原論文です。各パラメータについて過去の勾配二乗を累積し、学習率を適応的に調整します。
 
 {% include gk_article_footer.html %}
