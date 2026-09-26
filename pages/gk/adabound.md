@@ -6,7 +6,7 @@ permalink: /gk/adabound/
 tags: [gk, neural_network, optimization]
 gk_section: ディープラーニングの概要/最適化手法
 gk_order: 10
-last_modified_at: 2026-08-21
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -58,5 +58,10 @@ AdaBoundでは、パラメータごとの実効学習率に**時間とともに�
 - 学習後半はSGDに近い更新を狙う
 - AMSBoundはAMSGrad基盤
 - 「Bound＝動的な境界」で切る
+
+## 参考資料（原論文）
+
+- [Adaptive Gradient Methods with Dynamic Bound of Learning Rate｜arXiv](https://arxiv.org/abs/1902.09843)
+  - Luoら（2019）によるAdaBound / AMSBoundの原論文です。適応的学習率に動的な上下限を設け、学習が進むにつれてSGDに近い更新へ移行します。
 
 {% include gk_article_footer.html %}
