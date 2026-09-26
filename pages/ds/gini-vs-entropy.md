@@ -9,7 +9,7 @@ ds_area: datascience
 ds_section: modeling
 prev: /ds/bias-variance-tradeoff/
 next: /ds/impurity/
-last_modified_at: 2026-06-21
+last_modified_at: 2026-09-26
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -135,6 +135,11 @@ DS検定では「どちらも分岐基準」と整理できれば十分です。
 - エントロピーは情報利得とセット
 - どちらも分岐基準として使われる
 
+
+## 公式情報・参考リンク
+
+- [scikit-learn｜Decision Trees](https://scikit-learn.org/stable/modules/tree.html)
+  - 決定木の分類基準としてGini不純度とEntropy / Log Lossを扱う公式ドキュメントです。どちらもノードのクラス混在度を評価する基準として確認できます。
 
 ## 対応スキル項目（ver.6 データサイエンス）
 
