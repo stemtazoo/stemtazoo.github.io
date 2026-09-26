@@ -9,7 +9,7 @@ ds_area: dataengineering
 ds_section: environment-setup
 prev: /ds/aiops/
 next: /ds/hallucination/
-last_modified_at: 2026-07-14
+last_modified_at: 2026-09-26
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -115,6 +115,13 @@ AIを「使う対象」が違います。
 
 この2択で考えれば正解に近づけます。
 
+
+## 公式情報・参考リンク
+
+- [データサイエンティスト スキルチェックリスト ver.6.00](https://www.datascientist.or.jp/common/docs/skillcheck_ver6.00.xlsx)
+  - 現行DS検定スキル体系では、MLOpsはAIモデル性能の維持管理、AIOpsはITシステム運用の文脈でそれぞれ扱われています。
+- [Google Cloud Architecture Center｜MLOps: Continuous delivery and automation pipelines in machine learning](https://docs.cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning)
+  - MLOps側の実務的な役割として、MLパイプラインのCI・CD・継続的トレーニング・監視を確認できます。
 
 ## 対応スキル項目（ver.6 データエンジニアリング）
 
