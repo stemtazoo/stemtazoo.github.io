@@ -9,7 +9,7 @@ ds_area: dataengineering
 ds_section: data-collection
 prev: /ds/rest-api/
 next: /ds/soap/
-last_modified_at: 2026-08-16
+last_modified_at: 2026-09-26
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -113,6 +113,11 @@ RESTは**API設計の考え方**です。HTTPは通信プロトコルです。
 - RESTは設計の考え方、HTTPは通信プロトコル
 
 試験で「外部システムからデータを取得する」とあれば、まず `GET` を疑いましょう。
+
+## 公式情報・参考リンク
+
+- [RFC 9110 - HTTP Semantics](https://www.rfc-editor.org/rfc/rfc9110.html)
+  - GET・POST・PUT・DELETEなどのHTTP methodの意味を確認できるInternet Standardです。REST APIではこれらをリソース操作へ対応づけて使います。
 
 ## 対応スキル項目（ver.6 データエンジニアリング）
 
