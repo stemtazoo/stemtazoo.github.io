@@ -6,7 +6,7 @@ permalink: /gk/teacher-forcing/
 tags: [gk, rnn, neural_network]
 gk_section: ディープラーニングの要素技術/リカレントニューラルネットワーク (RNN)
 gk_order: 8
-last_modified_at: 2026-09-23
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -135,5 +135,10 @@ G検定では、教師強制そのものを細かい数式で問うよりも、*
 > モデルの出力ではなく、正解を入れる
 
 と判断できれば、教師強制を選びやすくなります。
+
+## 参考資料（原論文）
+
+- [A Learning Algorithm for Continually Running Fully Recurrent Neural Networks｜Neural Computation](https://doi.org/10.1162/neco.1989.1.2.270)
+  - Williams・Zipser（1989）。RNN学習で、学習中に正解出力を次時刻の入力として与えるteacher forcingを扱った初期の代表的な一次資料です。
 
 {% include gk_article_footer.html %}
