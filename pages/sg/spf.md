@@ -4,7 +4,7 @@ title: "SPFとは？送信元IPでなりすましを防ぐ仕組み【SG試験�
 description: "SPFは、送信元ドメインのDNSに登録されたSPFレコードと送信元IPアドレスを照合し、正規のメールサーバから送られたかを確認する仕組みです。DKIM、メールアーカイブ、上長承認との違いもSG試験向けに整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/spf/
 tags: [sg, sg-security-measures, unauthorized_access, network, mail-security]
-last_modified_at: 2026-06-21
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -263,8 +263,8 @@ SPFやメール認証の仕組みをもう少し確認したい場合は、次�
 - [RFC 6376 - DomainKeys Identified Mail (DKIM) Signatures](https://datatracker.ietf.org/doc/html/rfc6376)  
   DKIMの仕様を定義しているIETFのRFCです。SPFとの違いを確認したいときに役立ちます。SPFはIPアドレス、DKIMは電子署名で切り分けます。
 
-- [RFC 7489 - DMARC](https://datatracker.ietf.org/doc/html/rfc7489)  
-  DMARCの仕様を定義しているIETFのRFCです。DMARCは、SPFやDKIMの認証結果を使って、受信側での扱い方を決める仕組みです。
+- [RFC 9989 - Domain-Based Message Authentication, Reporting, and Conformance (DMARC)](https://www.rfc-editor.org/rfc/rfc9989.html)  
+  2026年5月に公開されたDMARCの現行仕様です。RFC 7489を置き換えています。DMARCは、SPFやDKIMの認証結果を使って、受信側での扱い方を決める仕組みです。
 
 - [IPA：情報セキュリティ安心相談窓口の相談状況［2024年第4四半期］](https://www.ipa.go.jp/security/anshin/reports/2024q4outline.html)  
   なりすましメールへの対策として、SPF、DKIM、DMARCの設定に触れられています。実務上の対策イメージを確認するのに向いています。
