@@ -6,7 +6,7 @@ permalink: /gk/segnet/
 tags: [gk, neural_network, cnn]
 gk_section: ディープラーニングの応用例/画像認識/セグメンテーションタスク
 gk_order: 2
-last_modified_at: 2026-08-21
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -94,5 +94,10 @@ SegNetは、道路・建物・人物などを**画素単位で分類するセマ
 - Decoderでそのインデックスを使ってアップサンプリングする
 - U-Netは特徴マップをスキップ接続で渡す
 - **「位置ならSegNet、特徴マップならU-Net」**で切る
+
+## 参考資料（原論文）
+
+- [SegNet: A Deep Convolutional Encoder-Decoder Architecture for Image Segmentation｜IEEE](https://doi.org/10.1109/TPAMI.2016.2644615)
+  - Badrinarayanan・Kendall・CipollaによるSegNetの原論文です。EncoderのMax Poolingで得たインデックスをDecoderのアップサンプリングに利用する構造を示しています。
 
 {% include gk_article_footer.html %}
