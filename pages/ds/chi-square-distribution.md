@@ -9,7 +9,7 @@ ds_area: datascience
 ds_section: statistics
 prev: /ds/binomial-bernoulli/
 next: /ds/correlation-and-causation/
-last_modified_at: 2026-07-18
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -143,6 +143,13 @@ DS検定では、次の切り分けが重要です。
 - 平均の差ならt検定
 - 分散比ならF検定
 - カイ二乗値が大きいほど、期待値とのズレが大きい
+
+## 公式情報・参考リンク
+
+- [NIST/SEMATECH e-Handbook｜Chi-Square Goodness-of-Fit Test](https://www.itl.nist.gov/div898/handbook/eda/section3/eda35f.htm)
+  - 観測度数と期待度数の差からカイ二乗統計量を作る適合度検定を確認できます。
+- [NIST/SEMATECH e-Handbook｜Chi-Square Test for the Variance](https://www.itl.nist.gov/div898/handbook/eda/section3/eda358.htm)
+  - カイ二乗分布がカテゴリデータだけでなく、正規母集団の分散に関する検定にも使われることを確認できます。
 
 ## 対応スキル項目（ver.6 データサイエンス）
 
