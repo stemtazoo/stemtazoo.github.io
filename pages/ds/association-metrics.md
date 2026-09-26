@@ -9,7 +9,7 @@ ds_area: datascience
 ds_section: modeling
 prev: /ds/association-analysis/
 next: /ds/basket-analysis/
-last_modified_at: 2026-08-16
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -118,6 +118,13 @@ Y自体が非常によく起こる場合、信頼度は高くなりやすいで�
 - **「信頼度が高いだけ」で強い関係と断定しない**
 
 DS検定では、**分母が何か**を考えると支持度・信頼度・リフト値を切り分けやすくなります。
+
+## 公式情報・参考リンク
+
+- [Agrawal, Imieliński & Swami｜Mining Association Rules between Sets of Items in Large Databases](https://doi.org/10.1145/170036.170072)
+  - アソシエーションルールの問題設定を示した代表的な原典です。支持度や信頼度を理解する背景資料として有用です。
+- [Agrawal & Srikant｜Fast Algorithms for Mining Association Rules in Large Databases](https://www.vldb.org/conf/1994/P487.PDF)
+  - 支持度と信頼度のしきい値を用いてルールを生成する枠組みを確認できます。リフト値は、ここで扱う支持度・信頼度とは別の評価軸として記事本文で切り分けます。
 
 ## 対応スキル項目（ver.6 データサイエンス）
 
