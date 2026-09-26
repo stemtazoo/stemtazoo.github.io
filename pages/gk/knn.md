@@ -6,7 +6,7 @@ permalink: /gk/knn/
 tags: [gk, machine_learning, supervised_learning]
 gk_section: 機械学習の概要/代表的な手法/教師あり学習/分類・回帰
 gk_order: 20
-last_modified_at: 2026-09-23
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -114,6 +114,9 @@ k-NNは、線形回帰の係数のような複雑なモデルパラメータを�
 名前の違いを重点復習するなら、[k-means法とk-NNの違い](/gk/k-means-vs-knn/)も確認してください。
 
 ## 参考資料
+
+- [Nearest Neighbor Pattern Classification｜IEEE](https://doi.org/10.1109/TIT.1967.1053964)
+  - Cover・Hart（1967）によるNearest Neighbor法の代表的な原論文です。近傍サンプルのラベルを利用する分類則と誤り率を分析しています。
 
 - [Nearest Neighbors｜scikit-learn](https://scikit-learn.org/stable/modules/neighbors.html)
 
