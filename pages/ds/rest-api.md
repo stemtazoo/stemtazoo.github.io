@@ -1,7 +1,7 @@
 ---
 layout: page
 title: REST APIとは？SOAPとの違いを整理【DS検定】
-description: "REST APIとは、HTTPメソッドを使ってリソースを操作するWebサービスの設計スタイルです。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。初学者が迷いやすい判断ポイントも確認します。"
+description: "REST APIを、RESTの設計制約を意識しながらHTTPでリソースを扱うWeb APIとして整理します。RESTは通信プロトコルではなくアーキテクチャスタイルであり、HTTPメソッドとの関係やSOAPとの違いをDS検定向けに確認します。"
 permalink: /ds/rest-api/
 categories: [data-engineering]
 tags: [ds, data-collection, data-processing]
@@ -18,14 +18,14 @@ last_modified_at: 2026-09-26
 
 ## まず結論
 
-REST APIとは、**HTTPメソッドを使ってリソースを操作するWebサービスの設計スタイル**です。  
+REST APIとは、**RESTの設計制約を意識して、HTTPなどを使いリソースを扱うWeb API**です。  
 DS検定では「RESTとSOAPの違いを判断できるか」が問われます。
 
 
 ## 直感的な説明
 
 REST APIは、  
-**「Web上のデータを、URLとHTTPメソッドで操作する仕組み」**です。
+**「Web上のリソースをURIで識別し、HTTPの仕組みを活用して扱うAPI」**と考えると理解しやすいです。
 
 たとえば、
 
@@ -52,12 +52,14 @@ REST APIは、
 ## 定義・仕組み
 
 REST（Representational State Transfer）は、  
-**Webの仕組み（HTTP）をそのまま活用する設計原則**です。
+**分散システムのためのアーキテクチャスタイル**です。
+
+Web APIではHTTPと組み合わせて実装されることが多いですが、**RESTそのものがHTTPという意味ではありません**。
 
 特徴は次の通りです。
 
-- リソース（データ）をURLで表す
-- HTTPメソッドで操作する
+- リソースをURIで識別する
+- HTTPを使うREST APIでは、HTTPメソッドで操作の意味を表す
   - GET（取得）
   - POST（作成）
   - PUT/PATCH（更新）
@@ -75,8 +77,8 @@ REST（Representational State Transfer）は、
 という特徴があります。
 
 DS検定では  
-**REST＝HTTP中心の軽量な仕組み**  
-**SOAP＝XMLベースで厳密な通信仕様**  
+**REST＝アーキテクチャスタイル**  
+**SOAP＝XMLベースのメッセージ交換仕様**  
 という切り分けができるかがポイントです。
 
 
@@ -96,7 +98,7 @@ DS検定では
   → RESTでもXMLを返すことはあります。
 
 重要なのは  
-**設計思想がHTTP中心かどうか**です。
+**RESTの制約を意識したリソース指向の設計かどうか**です。
 
 
 ## よくある誤解・混同
@@ -114,9 +116,9 @@ DS検定ではよく
 
 | 特徴 | REST | SOAP |
 |------|------|------|
-| 通信の考え方 | HTTPを活用 | 独自仕様 |
-| メッセージ形式 | 自由（JSONなど） | XML固定 |
-| 設計思想 | 軽量 | 厳格 |
+| 位置づけ | アーキテクチャスタイル | XMLベースのメッセージ交換仕様 |
+| Web APIでよく使う仕組み | HTTP | HTTPなど複数の転送方式を利用可能 |
+| メッセージ形式 | JSONなどをよく利用 | XML |
 
 選択肢で  
 「XMLベースのメッセージ通信」と書かれていたら  
@@ -130,9 +132,9 @@ DS検定ではよく
 
 ## まとめ（試験直前用）
 
-- RESTはHTTPメソッドでリソースを操作する設計思想
-- SOAPはXMLベースの通信プロトコル
-- RESTは軽量、SOAPは厳格
+- RESTは通信プロトコルではなくアーキテクチャスタイル
+- REST APIではHTTPを使ってリソースを扱う実装が一般的
+- SOAPはXMLベースのメッセージ交換仕様
 - 「XML」と書いてあればSOAPの可能性が高い
 - 「CRUDをHTTPで実行」と書いてあればREST
 
