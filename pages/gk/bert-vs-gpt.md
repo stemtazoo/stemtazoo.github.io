@@ -6,7 +6,7 @@ permalink: /gk/bert-vs-gpt/
 tags: [gk, nlp, transformer, cheatsheet]
 gk_section: ディープラーニングの応用例/自然言語処理/Transformer・言語モデル
 gk_order: 5
-last_modified_at: 2026-08-26
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -69,5 +69,12 @@ GPTは、**それまでの文脈から次のトークンを順に予測する**�
 - GPT：Decoder型・因果的文脈・次トークン予測
 - 用途だけでなく**構造と学習目的**を見る
 - 「双方向 vs 自己回帰」で切り分ける
+
+## 参考資料（原論文）
+
+- [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding｜ACL Anthology](https://aclanthology.org/N19-1423/)
+  - DevlinらによるBERTの原論文です。Transformer Encoderを使った双方向の文脈表現を学習します。
+- [Improving Language Understanding by Generative Pre-Training｜OpenAI](https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf)
+  - Radfordらによる初期GPTの原論文です。Transformer Decoder型の自己回帰言語モデルを事前学習し、下流タスクへ転移します。
 
 {% include gk_article_footer.html %}
