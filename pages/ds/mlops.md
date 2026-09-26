@@ -9,7 +9,7 @@ ds_area: dataengineering
 ds_section: environment-setup
 prev: /ds/llm-temperature/
 next: /ds/sora-ame-kasa/
-last_modified_at: 2026-06-21
+last_modified_at: 2026-09-26
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -136,6 +136,13 @@ AIOpsは「システムの異常監視」です。
 
 これがDS検定での切り分け基準です。
 
+
+## 公式情報・参考リンク
+
+- [Google Cloud Architecture Center｜MLOps: Continuous delivery and automation pipelines in machine learning](https://docs.cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning)
+  - MLOpsを、MLシステム開発と運用を統合し、CI・CD・継続的トレーニング・監視などを自動化する実務的な枠組みとして整理しています。
+- [データサイエンティスト スキルチェックリスト ver.6.00](https://www.datascientist.or.jp/common/docs/skillcheck_ver6.00.xlsx)
+  - DS検定の現行スキル体系で、MLOpsの概要とAIモデル性能の維持管理が学習対象に含まれることを確認できます。
 
 ## 対応スキル項目（ver.6 データエンジニアリング）
 
