@@ -9,7 +9,7 @@ ds_area: foundation
 ds_section: security
 prev: /ds/vpn-ssh/
 next: /ds/activation-functions-hidden-layer/
-last_modified_at: 2026-06-21
+last_modified_at: 2026-09-26
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -127,6 +127,12 @@ DS検定では
 > 「これは境界を信用していないか？」
 
 で判断してください。
+
+
+## 公式情報・参考リンク
+
+- [NIST SP 800-207 - Zero Trust Architecture](https://csrc.nist.gov/pubs/sp/800/207/final)
+  - NISTによるゼロトラストアーキテクチャの基礎文書です。ネットワーク上の場所だけを理由に暗黙の信頼を与えず、ユーザー・端末・資源ごとにアクセスを評価する考え方を整理しています。
 
 
 ## 対応スキル項目（ver.6 基盤）
