@@ -9,7 +9,7 @@ ds_area: datascience
 ds_section: modeling
 prev: /ds/dendrogram/
 next: /ds/association-analysis/
-last_modified_at: 2026-08-16
+last_modified_at: 2026-09-26
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -106,6 +106,11 @@ Aprioriの特徴は、**支持度が低い候補を枝刈りして探索量を�
 - **予測モデルではなく、パターン発見**
 
 DS検定では、**「支持度による枝刈り」**を思い出せると選択肢を切りやすくなります。
+
+## 公式情報・参考リンク
+
+- [Agrawal & Srikant｜Fast Algorithms for Mining Association Rules in Large Databases](https://www.vldb.org/conf/1994/P487.PDF)
+  - AprioriとAprioriTidを提案した原論文です。最小支持度を使って候補集合を絞り込み、頻出アイテム集合を効率的に探索する考え方を確認できます。
 
 ## 対応スキル項目（ver.6 データサイエンス）
 
