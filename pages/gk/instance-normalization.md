@@ -6,7 +6,7 @@ permalink: /gk/instance-normalization/
 tags: [gk, neural_network, cnn]
 gk_section: ディープラーニングの要素技術/ネットワークの構成要素
 gk_order: 9
-last_modified_at: 2026-08-26
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -64,5 +64,12 @@ INは特に、**スタイル変換や画像生成**などでよく知られて�
 - スタイル変換・画像生成でよく使われる
 
 [BN・LN・INの比較](/gk/normalization-cheatsheet/)もあわせて確認すると整理しやすいです。
+
+## 参考資料（原論文）
+
+- [Instance Normalization: The Missing Ingredient for Fast Stylization｜arXiv](https://arxiv.org/abs/1607.08022)
+  - Ulyanov・Vedaldi・Lempitsky（2016）によるInstance Normalizationの原論文です。Batch NormalizationをInstance Normalizationへ置き換えることで画像スタイル変換の品質改善を示しています。
+- [Layer Normalization｜arXiv](https://arxiv.org/abs/1607.06450)
+  - Layer Normalizationとの正規化軸の違いを確認する比較資料として有用です。
 
 {% include gk_article_footer.html %}
