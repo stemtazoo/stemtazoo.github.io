@@ -6,7 +6,7 @@ permalink: /gk/noisy-nets/
 tags: [gk, reinforcement_learning]
 gk_section: ディープラーニングの応用例/深層強化学習/DQN・改良手法
 gk_order: 4
-last_modified_at: 2026-08-26
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -96,5 +96,12 @@ RainbowではNoisy Netsが主に**探索**を担当し、Double DQNやPrioritize
 - ノイズに関するパラメータも学習する
 - ε-greedyとはランダム性を入れる場所が違う
 - Rainbowの構成要素の1つ
+
+## 参考資料（原論文）
+
+- [Noisy Networks for Exploration｜Google Research](https://research.google/pubs/noisy-networks-for-exploration/)
+  - FortunatoらによるNoisyNetの原論文です。ネットワークの重みへパラメータ化されたノイズを加え、そのノイズのパラメータも勾配降下で学習します。
+- [Noisy Networks for Exploration｜arXiv](https://arxiv.org/abs/1706.10295)
+  - 原論文のプレプリント版です。ε-greedyなどの外部的な探索則との違いも確認できます。
 
 {% include gk_article_footer.html %}
