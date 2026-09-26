@@ -6,7 +6,7 @@ permalink: /gk/vae-variants-cheatsheet/
 tags: [gk, generative_model, neural_network, cheatsheet]
 gk_section: ディープラーニングの要素技術/オートエンコーダ/基本・派生モデル
 gk_order: 5
-last_modified_at: 2026-08-26
+last_modified_at: 2026-09-26
 
 ---
 
@@ -105,5 +105,14 @@ G検定では
 - infoVAE＝学習安定性重視
 - VQ-VAE＝潜在空間の離散化
 - 「何を改善した？」で即切り
+
+## 参考資料（原論文）
+
+- [beta-VAE: Learning Basic Visual Concepts with a Constrained Variational Framework｜OpenReview](https://openreview.net/forum?id=Sy2fzU9gl)
+  - Higginsら（ICLR 2017）。KL項の重みβを調整し、潜在表現のdisentanglementを促すβ-VAEを提案しています。
+- [InfoVAE: Information Maximizing Variational Autoencoders｜arXiv](https://arxiv.org/abs/1706.02262)
+  - ZhaoらによるInfoVAEの論文です。潜在変数と観測データの情報量を保ちながら分布整合を改善する枠組みを示しています。
+- [Neural Discrete Representation Learning｜NeurIPS](https://proceedings.neurips.cc/paper/2017/hash/7a98af17e63a0ac09ce2e96d03992fbc-Abstract.html)
+  - van den Oordら（2017）によるVQ-VAEの原論文です。離散的な潜在コードを使います。
 
 {% include gk_article_footer.html %}
