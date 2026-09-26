@@ -9,7 +9,7 @@ ds_area: dataengineering
 ds_section: data-processing
 prev: /ds/sql-count-diff/
 next: /ds/sql-ddl-dml/
-last_modified_at: 2026-06-17
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
