@@ -6,7 +6,7 @@ permalink: /sg/dns-reflector-attack/
 tags: [sg, threat_vulnerability, unauthorized_access, network, sg-security-overview]
 prev: /sg/dns-poisoning-vs-pharming/
 next: /sg/dns/
-last_modified_at: 2026-08-13
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -123,5 +123,10 @@ DNSリフレクタ攻撃は「送信元偽装」と「応答の反射・増幅�
 - DNSサーバは攻撃対象ではなく**踏み台**
 - 「直接攻撃か／間接攻撃か」で切り分ける
 - 選択肢では「応答を利用しているか」に注目
+
+## 公式情報・参考リンク
+
+- [RFC 5358 - Preventing Use of Recursive Nameservers in Reflector Attacks](https://www.rfc-editor.org/rfc/rfc5358.html)
+  - 再帰DNSサーバがDoS/DDoSのリフレクタとして悪用されることを防ぐためのBest Current Practiceです。
 
 {% include sg_article_footer.html %}
