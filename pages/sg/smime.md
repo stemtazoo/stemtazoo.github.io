@@ -6,7 +6,7 @@ permalink: /sg/smime/
 prev: /sg/spf-dkim/
 next: /sg/secure-protocol/
 tags: [sg, sg-security-measures, crypto_auth, network]
-last_modified_at: 2026-06-13
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -160,5 +160,10 @@ SG試験では、次のように切り分けます。
 - SPF/DKIMとは「受信側検証」で別  
 - 「誰が／どこから／中身」の切り分けが重要
 - 署名付きメールは送信者の証明書、暗号化メールは受信者の証明書に注目する
+
+## 公式情報・参考リンク
+
+- [RFC 8551 - Secure/Multipurpose Internet Mail Extensions (S/MIME) Version 4.0 Message Specification](https://www.rfc-editor.org/rfc/rfc8551.html)
+  - S/MIME 4.0を定義し、電子署名による認証・完全性と、暗号化による機密性を扱うIETFの仕様です。
 
 {% include sg_article_footer.html %}
