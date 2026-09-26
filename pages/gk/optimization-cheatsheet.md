@@ -2,7 +2,7 @@
 layout: page
 title: 最適化手法まとめ｜SGD・Momentum・AdaGrad・RMSprop・Adam【G検定】
 description: "ニューラルネットワークの最適化手法を、慣性、勾配二乗の累積、指数移動平均、1次・2次モーメント、動的な学習率境界という判断軸で比較します。SGDからAdam、AdaDelta、AdaBound、AMSBoundまでをG検定向けに整理します。"
-last_modified_at: 2026-08-26
+last_modified_at: 2026-09-26
 permalink: /gk/optimization-cheatsheet/
 tags: [gk, neural_network, optimization, cheatsheet]
 gk_section: ディープラーニングの概要/最適化手法
@@ -141,5 +141,16 @@ AdaBoundやAMSBoundは、パラメータごとの実効学習率に**時間と�
 - AdaDelta＝勾配＋更新量の移動平均
 - Adam＝1次＋2次モーメント
 - Bound系＝実効学習率へ動的な境界
+
+## 参考資料（原論文）
+
+- [Adaptive Subgradient Methods for Online Learning and Stochastic Optimization｜JMLR](https://jmlr.org/papers/v12/duchi11a.html)
+  - Duchi・Hazan・Singer（2011）。AdaGradの基礎となる適応的な勾配法を提案しています。
+- [ADADELTA: An Adaptive Learning Rate Method｜arXiv](https://arxiv.org/abs/1212.5701)
+  - Zeiler（2012）。過去の勾配を指数移動平均で扱うAdaDeltaを提案しています。
+- [Adam: A Method for Stochastic Optimization｜arXiv](https://arxiv.org/abs/1412.6980)
+  - Kingma・Ba（2015）。勾配の1次・2次モーメントの推定を利用するAdamを提案しています。
+- [Adaptive Gradient Methods with Dynamic Bound of Learning Rate｜OpenReview](https://openreview.net/references/pdf?id=SJAQc1sHE)
+  - Luoら（ICLR 2019）。学習率に動的な上下限を設けるAdaBound / AMSBoundを提案しています。
 
 {% include gk_article_footer.html %}
