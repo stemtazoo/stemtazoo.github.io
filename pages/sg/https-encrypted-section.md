@@ -4,7 +4,7 @@ title: HTTPSで暗号化される区間とは？プロキシがある場合の�
 description: HTTPSで暗号化される区間は、基本的にブラウザとWebサーバ間ですが、プロキシやSSL-VPNが入ると終端点の見方が重要になります。どこで復号されるか、途中装置が何を見られるかを押さえ、SG試験で通信経路図を判断する基準を整理します。科目Aの用語理解と科目Bのケース判断で迷いやすい表現も確認します。
 permalink: /sg/https-encrypted-section/
 tags: [sg, sg-technology, network, crypto_auth]
-last_modified_at: 2026-05-21
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -145,5 +145,12 @@ SG試験では、
 - 「プロキシまで」「ルータまで」と区切る選択肢は要注意
 - HTTPSは通信経路の盗聴・改ざん対策であり、サイト自体の安全性までは保証しない
 - 例外として、企業のHTTPS検査ではプロキシで復号する構成もある
+
+## 公式情報・参考リンク
+
+- [RFC 9110 - HTTP Semantics](https://www.rfc-editor.org/rfc/rfc9110.html)
+  - `https` URIでは、HTTP通信を安全な接続上で行うことを定めるIETFのInternet Standardです。
+- [RFC 9846 - The Transport Layer Security (TLS) Protocol Version 1.3](https://www.rfc-editor.org/rfc/rfc9846.html)
+  - TLS 1.3の現行仕様です。通信経路の盗聴・改ざん・メッセージ偽造を防ぐための仕組みを定義しています。
 
 {% include sg_article_footer.html %}
