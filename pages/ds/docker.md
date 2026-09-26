@@ -9,7 +9,7 @@ ds_area: dataengineering
 ds_section: environment-setup
 prev: /ds/yarn/
 next: /ds/ftp-ssh/
-last_modified_at: 2026-06-21
+last_modified_at: 2026-09-26
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -80,6 +80,13 @@ Dockerの再現性は「イメージで環境を固定できる」から。
 「OSに依存しない」と断言していたら言い過ぎを疑う。  
 Dockerfileはソースではなく、環境構築の手順を固定するもの。
 
+
+## 公式情報・参考リンク
+
+- [Docker Docs｜What is Docker?](https://docs.docker.com/get-started/docker-overview/)
+  - Dockerの公式概要です。ImageとContainerの役割を確認できます。
+- [Dockerfile reference](https://docs.docker.com/reference/dockerfile/)
+  - Dockerfileを、Docker imageを組み立てるための命令を記述するテキストとして定義している公式リファレンスです。
 
 ## 対応スキル項目（ver.6 データエンジニアリング）
 
