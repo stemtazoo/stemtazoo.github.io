@@ -9,7 +9,7 @@ ds_area: foundation
 ds_section: action-norms
 prev: /ds/anonymized-information/
 next: /ds/pseudonymized-information/
-last_modified_at: 2026-06-17
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -218,3 +218,12 @@ k匿名性の説明として、最も適切なものはどれか。
 - l多様性やt近接性は、k匿名性の限界を補う考え方
 - 匿名加工情報・仮名加工情報は法律上の概念、k匿名性は技術的手法
 - DS検定では「準識別子」「再識別リスク」「完全匿名ではない」を押さえる
+
+
+## 公式情報・参考リンク
+
+- [Sweeney｜k-Anonymity: A Model for Protecting Privacy](https://doi.org/10.1142/S0218488502001648)
+  - k匿名性を形式化した代表的な原論文です。各人の情報が、少なくとも他のk−1人と区別できない状態を保護モデルとして定義しています。
+- [個人情報保護委員会｜仮名加工情報・匿名加工情報編](https://www.ppc.go.jp/personalinfo/legal/guidelines_anonymous/)
+  - 日本の匿名加工情報・仮名加工情報に関する公式ガイドラインです。k匿名性そのものは法律上の情報区分ではないため、技術的匿名化と法制度を切り分ける資料として使います。
+
