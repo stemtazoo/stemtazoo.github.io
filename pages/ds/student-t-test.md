@@ -9,7 +9,7 @@ ds_area: datascience
 ds_section: statistics
 prev: /ds/statistics-summary/
 next: /ds/variance-and-standard-deviation/
-last_modified_at: 2026-06-21
+last_modified_at: 2026-09-26
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -127,6 +127,13 @@ DS検定ではこの点を混同させる選択肢がよく出ます。
 
 この2点で判断します。
 
+
+## 公式情報・参考リンク
+
+- [NIST/SEMATECH e-Handbook｜Two-Sample t-Test for Equal Means](https://www.itl.nist.gov/div898/handbook/eda/section3/eda353.htm)
+  - 2標本t検定について、対応あり／なし、等分散／不等分散の違いを整理しています。
+- [NIST/SEMATECH e-Handbook｜Analysis of paired observations](https://www.itl.nist.gov/div898/handbook/prc/section3/prc311.htm)
+  - 同一対象の前後比較など、対応のあるt検定の考え方を確認できます。
 
 ## 対応スキル項目（ver.6 データサイエンス）
 
