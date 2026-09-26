@@ -9,7 +9,7 @@ ds_area: datascience
 ds_section: linear-algebra
 prev: /ds/matrix-multiplication/
 next: /ds/vector-dot-product/
-last_modified_at: 2026-07-18
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -143,6 +143,13 @@ PCAは分散が大きい特徴量を重視します。
 - 寄与率で残す主成分数を判断する
 - 尺度が違う場合は標準化を検討する
 - 目的変数は使わない
+
+## 公式情報・参考リンク
+
+- [Pearson｜On Lines and Planes of Closest Fit to Systems of Points in Space](https://doi.org/10.1080/14786440109462720)
+  - PCAの源流となる原典です。多次元の点群を、情報をよく表す低次元の直線・平面で近似する考え方を示しています。
+- [scikit-learn｜PCA](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html)
+  - PCAの現在の代表的な実装です。中心化、成分数、説明分散比など、実務で確認したい項目を確認できます。
 
 ## 対応スキル項目（データサイエンス力）
 
