@@ -9,7 +9,7 @@ ds_area: datascience
 ds_section: statistics
 prev: /ds/variance-standard-deviation/
 next: /ds/z-test/
-last_modified_at: 2026-06-21
+last_modified_at: 2026-09-26
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -136,6 +136,11 @@ DS検定ではここをよく混同させてきます。
 DS検定では  
 「分散を等しいと仮定するかどうか」が最大の判断ポイントです。
 
+
+## 公式情報・参考リンク
+
+- [NIST/SEMATECH e-Handbook｜Two-Sample t-Test for Equal Means](https://www.itl.nist.gov/div898/handbook/eda/section3/eda353.htm)
+  - 2群の分散を等しいと仮定しない場合のt統計量と、Welch-Satterthwaite自由度近似を確認できます。
 
 ## 対応スキル項目（ver.6 データサイエンス）
 
