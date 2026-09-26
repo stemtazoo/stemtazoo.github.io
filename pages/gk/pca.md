@@ -6,7 +6,7 @@ permalink: /gk/pca/
 tags: [gk, unsupervised_learning]
 gk_section: 機械学習の概要/代表的な手法/教師なし学習/次元削減
 gk_order: 1
-last_modified_at: 2026-09-23
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -87,5 +87,10 @@ PCAは「分散が大きい方向」を重視するため、単位や桁が大�
 * ラベルは使わない
 * 特徴量スケールが大きく違う場合は標準化を検討
 * **選ぶ＝特徴量選択、変換する＝PCA**
+
+## 参考資料（原論文）
+
+- [On Lines and Planes of Closest Fit to Systems of Points in Space｜Philosophical Magazine](https://doi.org/10.1080/14786440109462720)
+  - Pearson（1901）によるPCAの源流となる原論文です。点群に最もよく適合する低次元の直線・平面を求める考え方を示しています。
 
 {% include gk_article_footer.html %}
