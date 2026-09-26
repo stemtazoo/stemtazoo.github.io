@@ -6,7 +6,7 @@ permalink: /gk/dqn-advanced/
 tags: [gk, reinforcement_learning, cheatsheet]
 gk_section: ディープラーニングの応用例/深層強化学習/DQN・改良手法
 gk_order: 3
-last_modified_at: 2026-08-26
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -114,5 +114,18 @@ Replay Bufferの経験をすべて同じ確率で選ぶのではなく、**学�
 - Noisy Nets＝**探索を改善**
 - Prioritized Replay＝**重要経験を優先**
 - 「何の弱点を改善？」で選択肢を切る
+
+## 参考資料（原論文）
+
+- [Deep Reinforcement Learning with Double Q-Learning｜AAAI](https://ojs.aaai.org/index.php/AAAI/article/view/10295)
+  - van Hasselt・Guez・Silver（2016）。DQNで生じるQ値の過大評価を抑えるDouble DQNを提案しています。
+- [Dueling Network Architectures for Deep Reinforcement Learning｜PMLR](https://proceedings.mlr.press/v48/wangf16.html)
+  - Wangら（2016）。状態価値 V(s) とAdvantage A(s,a) を分けて推定するDueling Networkを提案しています。
+- [Prioritized Experience Replay｜arXiv](https://arxiv.org/abs/1511.05952)
+  - Schaulら（2016）。重要度の高い経験を優先的に再生するPrioritized Experience Replayを提案しています。
+- [Noisy Networks for Exploration｜Google Research](https://research.google/pubs/noisy-networks-for-exploration/)
+  - Fortunatoら（ICLR 2018）。ネットワークの重みへ学習可能なノイズを加えて探索を促すNoisyNetを提案しています。
+- [Rainbow: Combining Improvements in Deep Reinforcement Learning｜AAAI](https://ojs.aaai.org/index.php/AAAI/article/view/11796)
+  - Hesselら（2018）。複数のDQN改良手法を組み合わせ、その効果を検証した論文です。
 
 {% include gk_article_footer.html %}
