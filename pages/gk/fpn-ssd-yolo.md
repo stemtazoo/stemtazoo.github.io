@@ -6,7 +6,7 @@ permalink: /gk/fpn-ssd-yolo/
 tags: [gk, cnn, object_detection, cheatsheet]
 gk_section: ディープラーニングの応用例/画像認識/物体検出タスク
 gk_order: 8
-last_modified_at: 2026-09-23
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -105,10 +105,13 @@ FPNはFaster R-CNNなどの2段階検出器とも組み合わせられます。
 - 速度・精度の固定順位で判断しない
 - **構造か検出器か**を先に見る
 
-## 参考資料
+## 参考資料（原論文）
 
-- [Feature Pyramid Networks for Object Detection｜arXiv](https://arxiv.org/abs/1612.03144)
-- [SSD](/gk/ssd/)
-- [YOLO](/gk/yolo/)
+- [Feature Pyramid Networks for Object Detection｜CVF](https://openaccess.thecvf.com/content_cvpr_2017/html/Lin_Feature_Pyramid_Networks_CVPR_2017_paper.html)
+  - Linら（CVPR 2017）によるFPNの原論文です。Top-down経路とlateral connectionでマルチスケール特徴を構成します。
+- [SSD: Single Shot MultiBox Detector｜arXiv](https://arxiv.org/abs/1512.02325)
+  - LiuらによるSSDの原論文です。複数解像度の特徴マップ上でDefault Boxを使い、1段階で物体検出します。
+- [You Only Look Once: Unified, Real-Time Object Detection｜CVF](https://openaccess.thecvf.com/content_cvpr_2016/html/Redmon_You_Only_Look_CVPR_2016_paper.html)
+  - Redmonら（CVPR 2016）によるYOLOの原論文です。物体検出を単一ネットワークによる回帰問題として扱います。
 
 {% include gk_article_footer.html %}
