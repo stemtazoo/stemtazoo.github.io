@@ -6,7 +6,7 @@ permalink: /gk/distributed-representation/
 tags: [gk, nlp, machine_learning]
 gk_section: ディープラーニングの応用例/自然言語処理
 gk_order: 5
-last_modified_at: 2026-08-21
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -131,5 +131,14 @@ One-hotは単語を別々の軸に割り当てるため、意味的類似性を�
 - TF-IDF＝頻度にもとづく重み付けで、通常は分散表現と区別
 - Word2Vec・GloVe・FastTextは代表的な単語分散表現
 - **静的表現か、文脈で変わる表現か**も確認する
+
+## 参考資料（原論文）
+
+- [Efficient Estimation of Word Representations in Vector Space｜arXiv](https://arxiv.org/abs/1301.3781)
+  - Mikolovら（2013）。Word2Vecにつながる連続的な単語ベクトル表現を提案した代表的な原論文です。
+- [GloVe: Global Vectors for Word Representation｜ACL Anthology](https://aclanthology.org/D14-1162/)
+  - Pennington・Socher・Manning（2014）。単語共起統計を利用するGloVeを提案しています。
+- [Enriching Word Vectors with Subword Information｜ACL Anthology](https://aclanthology.org/Q17-1010/)
+  - Bojanowskiら（2017）。文字n-gramを利用して単語表現を構成するFastTextの考え方を示しています。
 
 {% include gk_article_footer.html %}
