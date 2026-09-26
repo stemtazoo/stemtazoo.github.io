@@ -6,7 +6,7 @@ permalink: /gk/contrastive-loss/
 tags: [gk, neural_network, metrics]
 gk_section: ディープラーニングの概要/誤差関数
 gk_order: 3
-last_modified_at: 2026-08-22
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -211,5 +211,10 @@ Contrastive Lossの説明として、最も適切なものはどれか。
 - Cross Entropy Lossはクラス確率、Contrastive Lossは距離
 - Triplet Lossはanchor、positive、negativeの3つを使う
 - G検定では「距離」「類似・非類似」「埋め込み」がキーワード
+
+## 参考資料（原論文）
+
+- [Dimensionality Reduction by Learning an Invariant Mapping｜CVPR 2006](https://doi.org/10.1109/CVPR.2006.100)
+  - Hadsell・Chopra・LeCunによるContrastive Lossの代表的な原論文です。類似ペアは近づけ、非類似ペアは一定のマージン以上離す学習を行います。
 
 {% include gk_article_footer.html %}
