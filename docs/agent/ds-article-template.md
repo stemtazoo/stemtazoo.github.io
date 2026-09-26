@@ -54,6 +54,27 @@ Normal individual articles under `pages/ds` should cover one term, method, opera
 - Summarize the key points in 3-5 lines or bullets.
 - Focus on recall cues and judgment criteria.
 
+## Optional Official / Primary Source Block
+
+When `docs/agent/primary-source-audit-rules.md` determines that a source materially improves correctness, currentness, practical understanding, or exam judgment, add a short block after the summary and before the skill-item section:
+
+```md
+## 公式情報・参考リンク
+
+- [Official / primary source](canonical URL)
+  - DS検定や実務で確認したいポイントを1〜2文で説明。
+```
+
+Typical choices:
+
+- DS検定 scope → データサイエンティスト協会
+- law / privacy → responsible public authority or legal text
+- Spark / Hadoop / Docker / Jupyter / Python libraries → maintained official documentation
+- OAuth / TLS / HTTP / SSH → current RFC / NIST / official specification
+- named ML method → original paper when origin / design matters; official implementation docs when practical use matters
+
+Do not force this block onto general mathematical or statistical concepts when no source materially improves the article.
+
 ## Optional Skill Item Section
 
 When useful and consistent with nearby DS articles, add this after the summary:
