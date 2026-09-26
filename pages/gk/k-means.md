@@ -6,7 +6,7 @@ permalink: /gk/k-means/
 tags: [gk, clustering]
 gk_section: 機械学習の概要/代表的な手法/教師なし学習/クラスタリング
 gk_order: 1
-last_modified_at: 2026-08-26
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -74,5 +74,10 @@ k-meansでは、各データ点と所属クラスタの重心との距離が小�
 - 各クラスタの**重心**を更新して分割する
 - k-NNのkは近傍数、k-meansのkはクラスタ数
 - **「ラベルなし＋k個＋重心」ならk-means**
+
+## 参考資料（原論文）
+
+- [Some Methods for Classification and Analysis of Multivariate Observations｜UC Berkeley](https://digicoll.lib.berkeley.edu/record/113015)
+  - MacQueen（1967）によるk-meansの代表的な原典です。データをk個のクラスタへ分け、クラスタ中心を反復更新する考え方を示しています。
 
 {% include gk_article_footer.html %}
