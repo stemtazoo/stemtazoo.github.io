@@ -6,7 +6,7 @@ permalink: /gk/umap/
 tags: [gk, unsupervised_learning]
 gk_section: 機械学習の概要/代表的な手法/教師なし学習/次元削減
 gk_order: 6
-last_modified_at: 2026-08-26
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -67,5 +67,10 @@ UMAPは、データが低次元多様体上にあるという考え方を背景�
 - t-SNEより高速な場合が多い
 - 大域構造も反映しやすいが完全保存ではない
 - **局所 vs 大域の単純二分で覚えない**
+
+## 参考資料（原論文）
+
+- [UMAP: Uniform Manifold Approximation and Projection for Dimension Reduction｜arXiv](https://arxiv.org/abs/1802.03426)
+  - McInnes・Healy・MelvilleによるUMAPの原論文です。多様体学習に基づいて高次元データを低次元へ埋め込みます。
 
 {% include gk_article_footer.html %}
