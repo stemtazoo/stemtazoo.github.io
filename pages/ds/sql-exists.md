@@ -9,7 +9,7 @@ ds_area: dataengineering
 ds_section: sql
 prev: /ds/sql-distinct/
 next: /ds/sql-filtering/
-last_modified_at: 2026-08-16
+last_modified_at: 2026-09-26
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -117,6 +117,11 @@ NOT EXISTSは、条件を満たす行が**存在しないこと**を確認しま
 - 値ではなく「行があるか」を見る
 - `NOT EXISTS` = 該当行が存在しない
 - **EXISTS = 存在 / IN = 値**で切り分ける
+
+## 公式情報・参考リンク
+
+- [PostgreSQL Documentation｜Subquery Expressions](https://www.postgresql.org/docs/current/functions-subquery.html)
+  - EXISTSがサブクエリから1行以上返るかどうかで真偽を判定することを確認できる公式リファレンスです。
 
 ## 対応スキル項目（ver.6 データエンジニアリング）
 
