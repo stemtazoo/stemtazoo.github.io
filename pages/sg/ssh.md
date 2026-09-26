@@ -5,7 +5,7 @@ description: SSHは、暗号化と認証の仕組みを使って、遠隔地の�
 permalink: /sg/ssh/
 tags: [sg, sg-technology, network, crypto_auth, unauthorized_access]
 date: 2026-05-08
-last_modified_at: 2026-05-10
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -196,5 +196,11 @@ SSHは安全な通信路を作る技術ですが、次のような状態では�
 - ポートフォワーディングで、別の通信をSSHの暗号化経路に通せる
 - IPsecはIP層の保護、L2TPはトンネリング、RADIUSは認証の集中管理
 - SSHを使っていても、鍵管理や権限管理が不十分ならリスクは残る
+
+## 公式情報・参考リンク
+
+- [RFC 4251 - The Secure Shell (SSH) Protocol Architecture](https://www.rfc-editor.org/rfc/rfc4251.html)
+  - SSHを、安全でないネットワーク上で安全なリモートログインなどを行うためのプロトコルとして定義するIETFの仕様です。
+
 
 {% include sg_article_footer.html %}
