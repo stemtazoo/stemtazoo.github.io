@@ -6,7 +6,7 @@ permalink: /gk/self-attention/
 tags: [gk, attention, transformer]
 gk_section: ディープラーニングの要素技術/トランスフォーマー (Transformer)
 gk_order: 3
-last_modified_at: 2026-05-15
+last_modified_at: 2026-09-26
 
 ---
 
@@ -85,5 +85,10 @@ Self-Attentionは、
 - 距離に依存しない
 - 並列処理が可能
 - RNNとは処理方式が違う
+
+## 参考資料（原論文）
+
+- [Attention Is All You Need｜NeurIPS](https://proceedings.neurips.cc/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html)
+  - Vaswaniら（2017）によるTransformerの原論文です。同じ系列内の要素同士をQuery・Key・Valueで関連付けるSelf-Attentionを中核として扱っています。
 
 {% include gk_article_footer.html %}
