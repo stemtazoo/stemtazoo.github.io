@@ -9,7 +9,7 @@ ds_area: dataengineering
 ds_section: environment-setup
 prev: /ds/data-extraction-vs-aggregation/
 next: /ds/mapping/
-last_modified_at: 2026-06-21
+last_modified_at: 2026-09-26
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -119,6 +119,13 @@ DS検定ではここがよく出ます👇
 - 本番環境とは別（ここが重要な切り分け）
 - DS検定では「開発・実験・共有の役割」を問われる
 
+
+## 公式情報・参考リンク
+
+- [Project Jupyter Documentation](https://docs.jupyter.org/en/latest/)
+  - Jupyter Notebook / JupyterLabを、コード・説明・可視化を組み合わせる対話的な計算環境として確認できます。
+- [The R Project｜What is R?](https://www.r-project.org/about.html)
+  - Rを、統計計算とグラフィックスのための言語・環境として説明するR Project公式情報です。
 
 ## 対応スキル項目（ver.6 データエンジニアリング）
 
