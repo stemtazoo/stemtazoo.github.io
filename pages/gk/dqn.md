@@ -6,7 +6,7 @@ permalink: /gk/dqn/
 tags: [gk, reinforcement_learning, neural_network]
 gk_section: ディープラーニングの応用例/深層強化学習/DQN・改良手法
 gk_order: 1
-last_modified_at: 2026-08-26
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -110,5 +110,10 @@ DQNでは、更新中のネットワークだけを使って学習目標まで�
 - Target Network＝**学習目標を安定化**
 - 基本DQNは主に**離散行動**向け
 - 改良手法は「何を改善するか」で切り分ける
+
+## 参考資料（原論文）
+
+- [Human-level control through deep reinforcement learning｜Nature](https://doi.org/10.1038/nature14236)
+  - Mnihら（2015）によるDQNの代表的な原論文です。画像入力から行動価値を学習し、Experience ReplayとTarget Networkを使って学習を安定化します。
 
 {% include gk_article_footer.html %}
