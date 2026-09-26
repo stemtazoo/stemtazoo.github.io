@@ -9,7 +9,7 @@ ds_area: datascience
 ds_section: unstructured-data
 prev: /ds/morphological-dependency-parsing/
 next: /ds/open-data/
-last_modified_at: 2026-06-21
+last_modified_at: 2026-09-26
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -147,6 +147,13 @@ DS検定では、
 DS検定では  
 **ツールの役割と対象を区別できるか** が重要です。
 
+
+## 公式情報・参考リンク
+
+- [NLTK｜Natural Language Toolkit](https://www.nltk.org/)
+  - NLTKの公式サイトです。自然言語処理のためのPythonライブラリとして、コーパス・分類・トークナイズ・構文解析などの機能を確認できます。
+- [Natural Language Processing with Python｜NLTK Book](https://www.nltk.org/book/)
+  - NLTK公式サイトで公開されている教材です。NLTKが自然言語処理の学習・実装に使われることを具体的に確認できます。
 
 ## 対応スキル項目（ver.6 データサイエンス）
 
