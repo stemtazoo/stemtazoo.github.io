@@ -6,7 +6,7 @@ permalink: /gk/contrastive-vs-triplet-loss/
 tags: [gk, neural_network, metrics]
 gk_section: ディープラーニングの概要/誤差関数
 gk_order: 5
-last_modified_at: 2026-08-26
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -112,5 +112,12 @@ Positive ← Anchor → Negative
 - どちらも埋め込み・距離学習
 - Tripletは相対距離が中心
 - 「Anchor」が出たらTripletを疑う
+
+## 参考資料（原論文）
+
+- [Dimensionality Reduction by Learning an Invariant Mapping｜CVPR 2006](https://doi.org/10.1109/CVPR.2006.100)
+  - Contrastive Lossの代表的な原論文です。2つのサンプルのペアを使って距離を学習します。
+- [FaceNet: A Unified Embedding for Face Recognition and Clustering｜CVF](https://openaccess.thecvf.com/content_cvpr_2015/html/Schroff_FaceNet_A_Unified_2015_CVPR_paper.html)
+  - Schroffら（CVPR 2015）。Anchor・Positive・Negativeの3サンプルを使うTriplet Lossを大規模顔認識へ適用した代表的な原論文です。
 
 {% include gk_article_footer.html %}
