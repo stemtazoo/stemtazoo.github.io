@@ -9,7 +9,7 @@ ds_area: foundation
 ds_section: action-norms
 prev: /ds/ccpa/
 next: /ds/japan-personal-information-protection-act/
-last_modified_at: 2026-06-21
+last_modified_at: 2026-09-26
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -123,6 +123,14 @@ GDPRは「技術」ではありません。
 
 DS検定では  
 「個人データの扱い方の原則」を問う問題として出題されます。
+
+
+## 公式情報・参考リンク
+
+- [EUR-Lex｜Regulation (EU) 2016/679（GDPR）](https://eur-lex.europa.eu/eli/reg/2016/679/oj)
+  - GDPRの法令本文です。個人データの保護、データ主体の権利、管理者・処理者の義務などを定めています。
+- [European Commission｜Data protection](https://commission.europa.eu/law/law-topic/data-protection_en)
+  - GDPRの適用範囲や個人の権利、企業・組織の義務を確認できるEU公式情報です。
 
 
 ## 対応スキル項目（ver.6 基盤）
