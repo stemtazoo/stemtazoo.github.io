@@ -9,7 +9,7 @@ ds_area: dataengineering
 ds_section: environment-setup
 prev: /ds/society5/
 next: /ds/aiops-mlops-cheatsheet/
-last_modified_at: 2026-07-01
+last_modified_at: 2026-09-26
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -139,6 +139,11 @@ DS検定では、
 
 この基準で判断できます。
 
+
+## 公式情報・参考リンク
+
+- [データサイエンティスト スキルチェックリスト ver.6.00](https://www.datascientist.or.jp/common/docs/skillcheck_ver6.00.xlsx)
+  - DS検定の現行スキル体系で、ITシステム運用におけるAIOpsの概要とメリットが学習対象に含まれることを確認できます。
 
 ## 対応スキル項目（ver.6 データエンジニアリング）
 
