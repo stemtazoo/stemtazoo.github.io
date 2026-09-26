@@ -6,7 +6,7 @@ permalink: /sg/dns-attack-difference/
 tags: [sg, threat_vulnerability, network, unauthorized_access, sg-security-overview]
 prev: /sg/disciplinary-action/
 next: /sg/dns-cache-poisoning/
-last_modified_at: 2026-06-24
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -100,5 +100,12 @@ SG試験では「**止めるのか／だますのか**」で切り分けます�
 - 「なりすまし＋増幅」ならリフレクター攻撃
 - 「偽のIPを返す」ならキャッシュポイズニング
 - SG試験では「攻撃の目的」で切り分ける
+
+## 公式情報・参考リンク
+
+- [RFC 5358 - Preventing Use of Recursive Nameservers in Reflector Attacks](https://www.rfc-editor.org/rfc/rfc5358.html)
+  - DNSサーバが反射型DoS攻撃の踏み台になることを防ぐためのBest Current Practiceです。
+- [RFC 5452 - Measures for Making DNS More Resilient against Forged Answers](https://www.rfc-editor.org/rfc/rfc5452.html)
+  - 偽のDNS応答を受け入れにくくする対策を整理したIETFの仕様です。
 
 {% include sg_article_footer.html %}
