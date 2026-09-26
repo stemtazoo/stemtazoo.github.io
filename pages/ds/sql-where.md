@@ -9,7 +9,7 @@ ds_area: dataengineering
 ds_section: data-processing
 prev: /ds/sql-union/
 next: /ds/left-join-where/
-last_modified_at: 2026-06-22
+last_modified_at: 2026-09-26
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -161,6 +161,11 @@ WHERE total_amount >= 100000;
 - WHEREは集計前、HAVINGは集計後の条件
 - SELECTだけでなくUPDATEやDELETEでも対象行の指定に使う
 - DS検定では「何を絞る条件か」を見れば選択肢を切りやすい
+
+## 公式情報・参考リンク
+
+- [PostgreSQL Documentation｜SELECT](https://www.postgresql.org/docs/current/sql-select.html)
+  - WHERE句によって条件を満たさない行がSELECT結果から除外される処理を確認できます。
 
 ## 対応スキル項目（ver.6 データエンジニアリング）
 
