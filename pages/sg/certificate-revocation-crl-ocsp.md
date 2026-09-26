@@ -6,7 +6,7 @@ permalink: /sg/certificate-revocation-crl-ocsp/
 prev: /sg/self-signed-certificate/
 next: /sg/secure-protocol/
 tags: [sg, crypto_auth, sg-security-overview, network]
-last_modified_at: 2026-07-18
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -206,5 +206,12 @@ OCSPは、**証明書が今も有効か、失効していないかをオンラ�
 - 「有効期限＋失効確認」で判断する
 
 ---
+
+## 公式情報・参考リンク
+
+- [RFC 5280 - Internet X.509 Public Key Infrastructure Certificate and CRL Profile](https://www.rfc-editor.org/rfc/rfc5280.html)
+  - X.509証明書とCRLの基本プロファイルを定義するIETFの仕様です。
+- [RFC 6960 - X.509 Internet Public Key Infrastructure Online Certificate Status Protocol - OCSP](https://www.rfc-editor.org/rfc/rfc6960.html)
+  - CRLを取得せずに証明書の現在の状態を確認するOCSPを定義するIETFの仕様です。
 
 {% include sg_article_footer.html %}
