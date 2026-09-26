@@ -9,7 +9,7 @@ ds_area: datascience
 ds_section: modeling
 prev: /ds/pooling/
 next: /ds/feature-importance/
-last_modified_at: 2026-05-15
+last_modified_at: 2026-09-26
 
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
@@ -108,6 +108,13 @@ DS検定ではここを逆にした選択肢がよく出ます。
 - 「情報利得が小さいほど重要」は誤り
 - DS検定では「1本だけ見る系の選択肢」は基本NG
 
+
+## 公式情報・参考リンク
+
+- [Breiman｜Random Forests](https://doi.org/10.1023/A:1010933404324)
+  - Random Forestの原論文です。複数の木とランダムな特徴選択を組み合わせる考え方、変数重要度などを扱っています。
+- [scikit-learn｜RandomForestClassifier](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)
+  - 現在の代表的な実装で、木の本数、特徴量サンプリング、`feature_importances_`などを確認できます。
 
 ## 対応スキル項目（ver.6 データサイエンス）
 
