@@ -6,7 +6,7 @@ permalink: /gk/relu-family-cheatsheet/
 tags: [gk, cheatsheet, neural_network, activation]
 gk_section: ディープラーニングの概要/活性化関数
 gk_order: 4
-last_modified_at: 2026-09-24
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -100,5 +100,14 @@ Leaky ReLU・PReLUは、ReLUの負領域で勾配が0になる問題を緩和す
 - PReLU＝負側の傾きを**学習**
 - Dying ReLU対策としてLeaky/PReLUを考える
 - **固定か学習か**で切る
+
+## 参考資料（原論文）
+
+- [Rectified Linear Units Improve Restricted Boltzmann Machines｜ICML 2010](https://www.cs.toronto.edu/~fritz/absps/reluICML.pdf)
+  - Nair・Hinton（2010）。ReLUを扱った初期の代表的な一次資料です。
+- [Rectifier Nonlinearities Improve Neural Network Acoustic Models｜Stanford](https://ai.stanford.edu/~amaas/papers/relu_hybrid_icml2013_final.pdf)
+  - Maas・Hannun・Ng（2013）。負の領域に小さな傾きを残すLeaky ReLU系のrectifierを検討しています。
+- [Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification｜CVF](https://openaccess.thecvf.com/content_iccv_2015/html/He_Delving_Deep_into_ICCV_2015_paper.html)
+  - Heら（ICCV 2015）。負の傾きを学習可能にするPReLUを提案しています。
 
 {% include gk_article_footer.html %}
