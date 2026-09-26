@@ -6,7 +6,7 @@ permalink: /gk/dropout/
 tags: [gk, neural_network, regularization]
 gk_section: ディープラーニングの概要/正則化
 gk_order: 3
-last_modified_at: 2026-08-21
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -90,5 +90,10 @@ Dropoutは過学習対策の1つであり、[正則化](/gk/regularization/)や�
 - **「ランダムにノードを落とす」ならDropout**
 
 次に読むなら、[正則化の全体像](/gk/regularization/)と[Early Stopping](/gk/early-stopping/)を比較すると整理しやすくなります。
+
+## 参考資料（原論文）
+
+- [Dropout: A Simple Way to Prevent Neural Networks from Overfitting｜JMLR](https://www.jmlr.org/papers/v15/srivastava14a.html)
+  - Srivastavaら（2014）によるDropoutの代表的な原論文です。学習時にユニットとその接続をランダムに無効化し、過学習を抑える考え方を示しています。
 
 {% include gk_article_footer.html %}
