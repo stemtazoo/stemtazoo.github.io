@@ -6,7 +6,7 @@ permalink: /gk/amsbound/
 tags: [gk, neural_network, optimization]
 gk_section: ディープラーニングの概要/最適化手法
 gk_order: 11
-last_modified_at: 2026-08-21
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -72,5 +72,10 @@ AMSBound
 - AdaBoundはAdam基盤
 - AMSBoundはAMSGrad基盤
 - **AMSGrad＋BoundならAMSBound**
+
+## 参考資料（原論文）
+
+- [Adaptive Gradient Methods with Dynamic Bound of Learning Rate｜arXiv](https://arxiv.org/abs/1902.09843)
+  - Luoら（2019）によるAdaBound / AMSBoundの原論文です。AMSGradを基礎に、学習率へ動的な境界を加えるAMSBoundを提案しています。
 
 {% include gk_article_footer.html %}
