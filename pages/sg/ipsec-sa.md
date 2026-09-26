@@ -6,7 +6,7 @@ permalink: /sg/ipsec-sa/
 prev: /sg/ipsec-ike/
 next: /sg/ssl-tls/
 tags: [sg, sg-technology, crypto_auth, network]
-last_modified_at: 2026-05-08
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -213,5 +213,10 @@ IKEは、鍵や暗号方式を交渉してSAを作る
 ESPやAHは、SAの設定に従って通信を保護する
 
 選択肢で「暗号方式・鍵・ライフタイム・管理テーブル」が出たらSAを候補にする
+
+## 公式情報・参考リンク
+
+- [RFC 4301 - Security Architecture for the Internet Protocol](https://www.rfc-editor.org/rfc/rfc4301.html)
+  - IPsecのSecurity Association（SA）を含む全体アーキテクチャを定義するIETFの仕様です。
 
 {% include sg_article_footer.html %}
