@@ -5,7 +5,7 @@ description: "IMAPは、メールをサーバ上に置いたままフォルダ�
 permalink: /sg/imap/
 tags: [sg, sg-technology, network]
 date: 2026-05-07
-last_modified_at: 2026-07-27
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -106,5 +106,10 @@ IMAP4は、IMAPのバージョン4です。SG試験では、どちらも受信�
 - IMAP4はサーバ上のメールを見に行く方式
 - 複数端末で同じメールボックスを扱いやすい
 - 選択肢では「送信ならSMTP、受信ならPOP3またはIMAP4」で切る
+
+## 公式情報・参考リンク
+
+- [RFC 9051 - Internet Message Access Protocol (IMAP) - Version 4rev2](https://www.rfc-editor.org/rfc/rfc9051.html)
+  - IMAP4rev2を、サーバ上のメールやメールボックスへアクセスして操作するためのプロトコルとして定義するIETFの仕様です。
 
 {% include sg_article_footer.html %}
