@@ -6,7 +6,7 @@ permalink: /gk/tsne/
 tags: [gk, unsupervised_learning]
 gk_section: 機械学習の概要/代表的な手法/教師なし学習/次元削減
 gk_order: 5
-last_modified_at: 2026-08-26
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -73,5 +73,10 @@ t-SNEは、高次元空間で「ご近所だった点」が、低次元でもな
 - 分類器ではない
 - クラスタ間距離や軸をそのまま解釈しない
 - **近所関係を見せる地図**と覚える
+
+## 参考資料（原論文）
+
+- [Visualizing Data using t-SNE｜JMLR](https://www.jmlr.org/papers/v9/vandermaaten08a.html)
+  - van der Maaten・Hinton（2008）によるt-SNEの原論文です。高次元空間の近傍関係を低次元の可視化空間で保つことを目的とします。
 
 {% include gk_article_footer.html %}
