@@ -6,7 +6,7 @@ permalink: /sg/ipsec-esp/
 prev: /sg/ipsec-ah/
 next: /sg/ipsec-ike/
 tags: [sg, sg-technology, crypto_auth, network]
-last_modified_at: 2026-07-09
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -215,5 +215,10 @@ ESPは必要に応じて認証や改ざん検知も行える
 IKEは暗号方式や鍵を決める仕組み
 
 選択肢で「IPsecの暗号化」が出たら、まずESPを候補にする
+
+## 公式情報・参考リンク
+
+- [RFC 4303 - IP Encapsulating Security Payload (ESP)](https://www.rfc-editor.org/rfc/rfc4303.html)
+  - IPsecのESPについて、機密性に加えて認証・完全性などを提供できる仕組みとして定義するIETFの仕様です。
 
 {% include sg_article_footer.html %}
