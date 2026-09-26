@@ -6,7 +6,7 @@ permalink: /sg/spf-dkim/
 prev: /sg/spf/
 next: /sg/smime/
 tags: [sg, sg-security-measures, unauthorized_access, network]
-last_modified_at: 2026-05-15
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -116,5 +116,12 @@ SPF・DKIMはどちらも、
 - DKIM＝電子署名で改ざん検知  
 - SMTP-AUTHとは役割が違う  
 - 「送信か受信か」で判断する
+
+## 公式情報・参考リンク
+
+- [RFC 7208 - Sender Policy Framework (SPF)](https://www.rfc-editor.org/rfc/rfc7208.html)
+  - SPFで、ドメインが送信を許可するホストを公開し、受信側が確認する仕組みを定義しています。
+- [RFC 6376 - DomainKeys Identified Mail (DKIM) Signatures](https://www.rfc-editor.org/rfc/rfc6376.html)
+  - DKIMで、ドメインとメールを暗号学的署名で結び付けて検証する仕組みを定義するInternet Standardです。
 
 {% include sg_article_footer.html %}
