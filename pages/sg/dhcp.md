@@ -4,7 +4,7 @@ title: DHCPとは？IPアドレスを自動で割り当てる仕組み【SG試�
 description: DHCPは、ネットワークに接続した端末へIPアドレス、サブネットマスク、デフォルトゲートウェイ、DNSサーバなどの通信設定を自動で割り当てる仕組みです。固定IPとの併用、DHCPサーバ探索、リース期間など、SG試験で問われやすい判断ポイントを整理します。
 permalink: /sg/dhcp/
 tags: [sg, sg-technology, network, it_security_operations]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -231,5 +231,10 @@ DHCPのIPアドレスにはリース期間があります。
 - DHCP利用端末と固定IP端末は、割り当て範囲を分ければ混在できます。
 - DHCPで一度割り当てられたIPアドレスが、次回も必ず同じになるとは限りません。
 - DNSは名前解決、NATはアドレス変換、DHCPは設定の自動割り当てです。
+
+## 公式情報・参考リンク
+
+- [RFC 2131 - Dynamic Host Configuration Protocol](https://www.rfc-editor.org/rfc/rfc2131.html)
+  - DHCPによるIPアドレスや各種ネットワーク設定の自動構成を定義するIETFの仕様です。
 
 {% include sg_article_footer.html %}
