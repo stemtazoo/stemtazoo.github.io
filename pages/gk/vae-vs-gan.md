@@ -6,7 +6,7 @@ permalink: /gk/vae-vs-gan/
 tags: [gk, neural_network, generative_model, cheatsheet]
 gk_section: ディープラーニングの応用例/データ生成/生成モデル比較
 gk_order: 2
-last_modified_at: 2026-09-23
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -86,5 +86,12 @@ VAEは潜在表現を明示的に扱いたい場面、GANは敵対的学習を�
 - GAN：Generator / Discriminator
 - モード崩壊 → GAN
 - **性能順位ではなく学習機構で判断する**
+
+## 参考資料（原論文）
+
+- [Auto-Encoding Variational Bayes｜arXiv](https://arxiv.org/abs/1312.6114)
+  - Kingma・WellingによるVAEの原論文です。再パラメータ化と変分下限を使う学習法を提案しています。
+- [Generative Adversarial Nets｜NeurIPS](https://proceedings.neurips.cc/paper/2014/hash/f033ed80deb0234979a61f95710dbe25-Abstract.html)
+  - GoodfellowらによるGANの原論文です。GeneratorとDiscriminatorを競わせる敵対的学習を提案しています。
 
 {% include gk_article_footer.html %}
