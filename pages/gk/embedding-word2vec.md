@@ -6,7 +6,7 @@ permalink: /gk/embedding-word2vec/
 tags: [gk, neural_network, nlp, embedding]
 gk_section: ディープラーニングの応用例/自然言語処理/分散表現
 gk_order: 3
-last_modified_at: 2026-08-26
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -125,5 +125,10 @@ Word2Vecは、
 * CBOWとSkip-gramの違いを押さえる
 
 👉 これで **NLP系トピックは完成** です。
+
+## 参考資料（原論文）
+
+- [Efficient Estimation of Word Representations in Vector Space｜arXiv](https://arxiv.org/abs/1301.3781)
+  - Mikolovら（2013）によるWord2Vecの代表的な原論文です。CBOWとSkip-gramによって単語を低次元の連続ベクトルとして学習します。
 
 {% include gk_article_footer.html %}
