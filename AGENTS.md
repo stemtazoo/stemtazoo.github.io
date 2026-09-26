@@ -303,6 +303,8 @@ When creating or editing `pages/gk` articles, write them as G検定 study articl
 
 When creating or editing `pages/ds` articles, write them as DS検定 and beginner-friendly data-analysis study articles.
 
+- For source selection and freshness checks, use `docs/agent/primary-source-audit-rules.md`. In DS, prefer current official documentation for practical tools / platforms and current responsible authorities for law / security; use original papers selectively when a named method's origin or design materially helps understanding.
+
 - Prioritize intuition, practical use, and exam judgment.
 - Explain formulas, statistics, Python, SQL, and data-engineering topics from the viewpoint of how they are used.
 - Match the structure, granularity, and wording style of existing `pages/ds` articles.
