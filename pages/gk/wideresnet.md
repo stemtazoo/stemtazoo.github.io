@@ -6,7 +6,7 @@ permalink: /gk/wideresnet/
 tags: [gk, cnn]
 gk_section: ディープラーニングの応用例/画像認識/物体認識タスク
 gk_order: 5
-last_modified_at: 2026-06-21
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -76,5 +76,10 @@ last_modified_at: 2026-06-21
 * 深さではなくチャネル数で勝負
 * 学習が安定しやすい
 * 「Wide」がキーワード
+
+## 参考資料（原論文）
+
+- [Wide Residual Networks｜BMVC](https://www.bmva-archive.org.uk/bmvc/2016/papers/paper087/index.html)
+  - Zagoruyko・Komodakis（BMVC 2016）によるWideResNetの原論文です。ResNetを単純に深くするだけでなく、層の幅を広げることで性能と学習効率を改善する設計を示しています。
 
 {% include gk_article_footer.html %}
