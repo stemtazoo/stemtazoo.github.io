@@ -6,7 +6,7 @@ permalink: /gk/perceptron/
 tags: [gk, neural_network, perceptron]
 gk_section: ディープラーニングの概要/ニューラルネットワークとディープラーニング
 gk_order: 1
-last_modified_at: 2026-08-21
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -100,5 +100,12 @@ XORの詳しい理由は[XOR問題](/gk/xor-problem/)で確認できます。
 - XORは線形分離できないので扱えない
 - ローゼンブラットが1950年代に提案
 - XORの限界から多層化へつながる
+
+## 参考資料（原論文）
+
+- [The Perceptron: A Probabilistic Model for Information Storage and Organization in the Brain｜APA](https://doi.org/10.1037/h0042519)
+  - Rosenblatt（1958）によるパーセプトロンの原論文です。入力の重み付き和に基づいて分類する初期の学習モデルを示しています。
+- [Perceptrons: An Introduction to Computational Geometry｜MIT Press](https://mitpress.mit.edu/9780262130431/perceptrons/)
+  - Minsky・Papert（1969）。単層パーセプトロンの表現能力と限界を体系的に扱った一次資料です。
 
 {% include gk_article_footer.html %}
