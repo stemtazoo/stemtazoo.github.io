@@ -9,7 +9,7 @@ ds_area: dataengineering
 ds_section: data-processing
 prev: /ds/sql-ddl-dml/
 next: /ds/sql-exists/
-last_modified_at: 2026-06-22
+last_modified_at: 2026-09-26
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -104,6 +104,11 @@ GROUP BYは、同じ値を持つ行をグループにまとめ、COUNTやSUMな�
 - GROUP BYは集計、DISTINCTは重複のない一覧作成が中心
 - 件数や売上回数を知りたいときに使うと、必要な重複を消すことがある
 - DS検定では「種類を知りたいのか、件数を知りたいのか」を読む
+
+## 公式情報・参考リンク
+
+- [PostgreSQL Documentation｜SELECT](https://www.postgresql.org/docs/current/sql-select.html)
+  - SELECT DISTINCTが結果から重複行を除くことを確認できる公式リファレンスです。
 
 ## 対応スキル項目（ver.6 データエンジニアリング）
 
