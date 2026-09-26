@@ -9,7 +9,7 @@ ds_area: dataengineering
 ds_section: data-processing
 prev: /ds/sql-in-exists/
 next: /ds/sql-union/
-last_modified_at: 2026-08-16
+last_modified_at: 2026-09-26
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -125,6 +125,11 @@ JOIN C ON ...
 - JOINはデータ変更そのものではない
 
 DS検定では、**「複数テーブルの情報を組み合わせる」ならJOIN**と判断しましょう。
+
+## 公式情報・参考リンク
+
+- [PostgreSQL Documentation｜Table Expressions](https://www.postgresql.org/docs/current/queries-table-expressions.html)
+  - JOIN、ON、外部結合などを含むテーブル結合の公式ドキュメントです。INNER JOINとLEFT / RIGHT / FULL OUTER JOINの動作を確認できます。
 
 ## 対応スキル項目（ver.6 データエンジニアリング）
 
