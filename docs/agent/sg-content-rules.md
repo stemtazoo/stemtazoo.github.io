@@ -153,6 +153,7 @@ Do not place headings, lists, tables, or horizontal rules immediately after norm
 Before saving any SG article, check the following:
 
 - front matter is valid multi-line YAML (`---` start and end)
+- when the topic depends on an official / versioned specification, the current source and supersession status have been checked
 - `description` and `tags` are not visible in the article body
 - internal SG links are clickable Markdown links
 - tables have separator rows
@@ -180,7 +181,7 @@ Do not fix articles by blind global replacement.
 5. Create `pages/sg/英語スラッグ.md`.
 6. Write front matter in the standard format.
 7. Write the body with the fixed six-heading structure.
-8. For terms that need official links, confirm and add reliable official information.
+8. For terms that need official links, apply `docs/agent/primary-source-audit-rules.md`, confirm the current authoritative source, and add it only when useful. For RFC-backed topics, check RFC status / supersession before citing it.
 9. Add `{% include sg_article_footer.html %}` at the end.
 10. Confirm that the Markdown is not broken.
 11. Confirm that `tags` has roughly 3-5 values and includes both `sg` and one primary category tag.
