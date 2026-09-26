@@ -6,7 +6,7 @@ permalink: /gk/segnet-vs-unet/
 tags: [gk, cnn, cheatsheet]
 gk_section: ディープラーニングの応用例/画像認識/セグメンテーションタスク
 gk_order: 4
-last_modified_at: 2026-06-21
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -72,5 +72,12 @@ last_modified_at: 2026-06-21
 - メモリ重視 → SegNet
 - この二択は **G検定の定番ひっかけ**
 -
+
+## 参考資料（原論文）
+
+- [SegNet: A Deep Convolutional Encoder-Decoder Architecture for Image Segmentation｜IEEE](https://doi.org/10.1109/TPAMI.2016.2644615)
+  - SegNetの原論文です。Max PoolingのインデックスをDecoder側で再利用する設計を示しています。
+- [U-Net: Convolutional Networks for Biomedical Image Segmentation｜Springer](https://doi.org/10.1007/978-3-319-24574-4_28)
+  - U-Netの原論文です。Encoder側の特徴マップをDecoder側へ直接渡すskip connectionを用います。
 
 {% include gk_article_footer.html %}
