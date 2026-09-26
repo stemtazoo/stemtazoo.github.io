@@ -6,7 +6,7 @@ permalink: /gk/gru/
 tags: [gk, neural_network, rnn, gru]
 gk_section: ディープラーニングの要素技術/リカレントニューラルネットワーク (RNN)
 gk_order: 5
-last_modified_at: 2026-09-23
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -88,5 +88,10 @@ LSTMよりパラメータ数が少ない傾向がありますが、
 - 独立したセル状態を持たない
 - LSTMより構造が単純な傾向
 - **性能順位で覚えない**
+
+## 参考資料（原論文）
+
+- [Learning Phrase Representations using RNN Encoder–Decoder for Statistical Machine Translation｜ACL Anthology](https://aclanthology.org/D14-1179/)
+  - Choら（2014）。更新ゲートとリセットゲートを持つGRUとして知られるRNN Encoder-Decoderの構造を提案した原論文です。
 
 {% include gk_article_footer.html %}
