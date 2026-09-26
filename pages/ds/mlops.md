@@ -1,7 +1,7 @@
 ---
 layout: page
 title: MLOpsとは？AIOpsとの違いを一発整理【DS検定リテラシー】
-description: "MLOpsは、AIOpsとの違いを一発整理を理解するための基本テーマです。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。初学者が迷いやすい判断ポイントも確認します。"
+description: "MLOpsを、機械学習モデルの開発・配備・監視・再学習を継続的に運用する仕組みとして整理します。AIOpsとの違い、モデル性能の維持管理、CI/CD・継続的トレーニングの役割をDS検定向けに確認します。"
 permalink: /ds/mlops/
 categories: [ai-utilization]
 tags: [ds, environment-setup, ai-use]
