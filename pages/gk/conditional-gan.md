@@ -6,7 +6,7 @@ permalink: /gk/conditional-gan/
 tags: [gk, neural_network, cnn]
 gk_section: ディープラーニングの応用例/データ生成/GAN・派生モデル
 gk_order: 4
-last_modified_at: 2026-09-23
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -72,5 +72,10 @@ Pix2Pixでは、条件として「入力画像」を与えます。そのため�
 - Pix2Pixは **入力画像を条件にしたConditional GANの具体例**
 - CycleGANは **ペアなし画像変換** で区別する
 - G検定では「条件付きか」「ペアありか」で選択肢を切る
+
+## 参考資料（原論文）
+
+- [Conditional Generative Adversarial Nets｜arXiv](https://arxiv.org/abs/1411.1784)
+  - Mirza・Osindero（2014）によるConditional GANの原論文です。GeneratorとDiscriminatorの双方へ条件情報を与え、条件付き生成を行う枠組みを提案しています。
 
 {% include gk_article_footer.html %}
