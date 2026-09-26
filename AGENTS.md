@@ -30,6 +30,8 @@ When making changes, use this order of priority:
 
 ## Current Official Source Rule
 
+For source-selection, primary-source audits, original-paper decisions, RFC freshness checks, and supersession sweeps, also read `docs/agent/primary-source-audit-rules.md`.
+
 For laws, regulations, standards, public guidelines, official criteria, and similar normative sources:
 
 - Treat the latest official version currently published by the responsible authority as the default source of truth.
@@ -206,6 +208,7 @@ Read the relevant detailed guide before changing each area:
 - Theme and layout consistency: `docs/agent/theme-consistency.md`
 - Homepage learning updates: `docs/agent/home-updates-rules.md` (read when editing the homepage update list)
 - AI search / grounding-oriented readability: `docs/agent/ai-search-content-rules.md`
+- Shared primary-source / official-source / freshness audits: `docs/agent/primary-source-audit-rules.md`
 - SG article writing policy: `docs/agent/sg-content-rules.md`
 - SG article template: `docs/agent/sg-article-template.md`
 - SG front matter rules: `docs/agent/sg-frontmatter-rules.md`
@@ -240,6 +243,8 @@ Read the relevant detailed guide before changing each area:
 ## SG Article Policy
 
 When creating or editing `pages/sg` articles, write them as study articles for the Information Security Management Examination (SG試験).
+
+- For official-source, RFC, standards-version, or freshness work, use `docs/agent/primary-source-audit-rules.md` together with the SG content rules. When an RFC or standard is superseded, search related repository pages for stale references rather than updating only one page.
 
 ### SG記事のAI検索・読者理解向け改善
 
@@ -285,6 +290,8 @@ When creating or editing `pages/fe` articles, write them as study articles for t
 ## GK Article Policy
 
 When creating or editing `pages/gk` articles, write them as G検定 study articles.
+
+- For named AI / machine-learning models, methods, architectures, losses, or training techniques, use `docs/agent/primary-source-audit-rules.md` to decide whether an original paper should be added. Do not force original-paper sections onto broad concepts with no useful canonical source.
 
 - Prioritize conceptual understanding, similar-term confusion prevention, and answer-choice judgment.
 - Avoid deep mathematical derivations unless they directly help exam judgment.
