@@ -5,7 +5,7 @@ description: "SSL-VPNは、SSL/TLSを使ってリモートアクセス用の安�
 permalink: /sg/ssl-vpn/
 tags: [sg, sg-technology, network, vpn, crypto_auth]
 date: 2026-06-01
-last_modified_at: 2026-06-01
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -122,7 +122,8 @@ SSL-VPN装置はTLS通信のサーバ側として見ます。**接続先名を�
 
 ## 公式情報・参考リンク
 
-- [RFC 8446 - The Transport Layer Security (TLS) Protocol Version 1.3](https://www.rfc-editor.org/rfc/rfc8446.html)
+- [RFC 9846 - The Transport Layer Security (TLS) Protocol Version 1.3](https://www.rfc-editor.org/rfc/rfc9846.html)
+  - 2026年7月に公開されたTLS 1.3の現行仕様です。RFC 8446を置き換えています。
 - [IPA｜テレワークにおけるセキュリティ対策](https://www.ipa.go.jp/security/guide/telework.html)
 
 {% include sg_article_footer.html %}
