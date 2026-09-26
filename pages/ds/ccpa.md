@@ -1,7 +1,7 @@
 ---
 layout: page
 title: CCPAとは？GDPRとの違いとプライバシー保護の基本【DS検定】
-description: "CCPAは、GDPRとの違いとプライバシー保護のを理解するための基本テーマです。DS検定で問われる定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。初学者が迷いやすい判断ポイントも確認します。"
+description: "CCPAを、カリフォルニア州の消費者プライバシー法として整理します。CPRAによる改正、知る権利・削除権・販売や共有からのオプトアウト権、GDPRとの地域・制度上の違いをDS検定向けに確認します。"
 permalink: /ds/ccpa/
 categories: [ai-utilization]
 tags: [ds, ethics]
@@ -18,7 +18,7 @@ last_modified_at: 2026-09-26
 
 ## まず結論
 
-- **CCPA（California Consumer Privacy Act）とは、アメリカ・カリフォルニア州の個人情報保護法です。**
+- **CCPA（California Consumer Privacy Act）は、アメリカ・カリフォルニア州の消費者プライバシー法です。**
 - DS検定では **「GDPRとの違い」や「個人データの利用に対する消費者の権利」** が問われることが多いです。
 
 つまり、
