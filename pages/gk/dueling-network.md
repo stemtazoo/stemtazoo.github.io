@@ -6,7 +6,7 @@ permalink: /gk/dueling-network/
 tags: [gk, reinforcement_learning, neural_network]
 gk_section: ディープラーニングの応用例/深層強化学習/DQN・改良手法
 gk_order: 2
-last_modified_at: 2026-08-26
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -98,5 +98,10 @@ G検定では数式を暗記するより、**「VとAを別々に推定してQ�
 - 報酬を予測する手法ではない
 - Double DQNとは改善するポイントが違う
 - 「状態価値＋アドバンテージ」が見えたらDueling Network
+
+## 参考資料（原論文）
+
+- [Dueling Network Architectures for Deep Reinforcement Learning｜PMLR](https://proceedings.mlr.press/v48/wangf16.html)
+  - Wangら（ICML 2016）によるDueling Networkの原論文です。状態価値V(s)とAdvantage A(s,a)を別々に推定する構造を提案しています。
 
 {% include gk_article_footer.html %}
