@@ -6,7 +6,7 @@ permalink: /gk/gan-variants/
 tags: [gk, neural_network, gan, cheatsheet]
 gk_section: ディープラーニングの応用例/データ生成/GAN・派生モデル
 gk_order: 2
-last_modified_at: 2026-09-23
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -82,5 +82,18 @@ Pix2PixはConditional GANの考え方を画像変換へ使った具体例です�
 - Pix2Pix＝ペアあり
 - CycleGAN＝ペアなし＋Cycle Consistency
 - **画質ランキングで覚えない**
+
+## 参考資料（原論文）
+
+- [Generative Adversarial Nets｜NeurIPS](https://proceedings.neurips.cc/paper/2014/hash/f033ed80deb0234979a61f95710dbe25-Abstract.html)
+  - GANの原論文です。
+- [Conditional Generative Adversarial Nets｜arXiv](https://arxiv.org/abs/1411.1784)
+  - Conditional GANの原論文です。
+- [Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks｜arXiv](https://arxiv.org/abs/1511.06434)
+  - DCGANの原論文です。
+- [Image-to-Image Translation with Conditional Adversarial Networks｜CVF](https://openaccess.thecvf.com/content_cvpr_2017/html/Isola_Image-To-Image_Translation_With_CVPR_2017_paper.html)
+  - Pix2Pixの原論文です。
+- [Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks｜CVF](https://openaccess.thecvf.com/content_iccv_2017/html/Zhu_Unpaired_Image-To-Image_Translation_ICCV_2017_paper.html)
+  - CycleGANの原論文です。
 
 {% include gk_article_footer.html %}
