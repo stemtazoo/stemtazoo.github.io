@@ -6,7 +6,7 @@ permalink: /gk/distributed-reinforcement-learning/
 tags: [gk, reinforcement_learning, machine_learning]
 gk_section: 機械学習の概要/代表的な手法/強化学習/発展・大規模化
 gk_order: 2
-last_modified_at: 2026-08-26
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -111,5 +111,12 @@ G検定では、特に **マルチエージェント強化学習との違い** �
 - マルチエージェントは「主体が複数」
 - 分散型は「計算・環境・ワーカーが複数」
 - **何が複数か**で切り分ける
+
+## 参考資料（原論文）
+
+- [IMPALA: Scalable Distributed Deep-RL with Importance Weighted Actor-Learner Architectures｜PMLR](https://proceedings.mlr.press/v80/espeholt18a.html)
+  - Espeholtら（ICML 2018）。ActorとLearnerを分離した分散強化学習アーキテクチャIMPALAを提案しています。
+- [Distributed Prioritized Experience Replay｜arXiv](https://arxiv.org/abs/1803.00933)
+  - Horganら（2018）。多数のActorが経験を集め、中央LearnerがPrioritized Experience Replayで学習するApe-Xを提案しています。
 
 {% include gk_article_footer.html %}
