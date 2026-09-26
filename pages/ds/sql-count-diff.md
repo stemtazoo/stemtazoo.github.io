@@ -9,7 +9,7 @@ ds_area: dataengineering
 ds_section: data-processing
 prev: /ds/er-diagram/
 next: /ds/sql-count-distinct/
-last_modified_at: 2026-08-16
+last_modified_at: 2026-09-26
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -115,6 +115,11 @@ NULLも数えません。
 - `COUNT(DISTINCT 列)` = **NULLと重複を除く**
 - 「NULL」と「重複」の扱いを見る
 - **何を数えているか**で選択肢を切る
+
+## 公式情報・参考リンク
+
+- [PostgreSQL Documentation｜Aggregate Functions](https://www.postgresql.org/docs/current/functions-aggregate.html)
+  - COUNT(*)やCOUNT(expression)などの集計関数の動作を確認できます。COUNT(expression)はNULLでない入力を数える点が重要です。
 
 ## 対応スキル項目（ver.6 データエンジニアリング）
 
