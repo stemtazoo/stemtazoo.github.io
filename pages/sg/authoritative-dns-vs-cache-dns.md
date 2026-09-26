@@ -6,7 +6,7 @@ permalink: /sg/authoritative-dns-vs-cache-dns/
 tags: [sg, sg-security-measures, network_security, dns]
 prev: /sg/dns-cache-poisoning/
 next: /sg/open-resolver/
-last_modified_at: 2026-05-20
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -269,5 +269,10 @@ SG試験では、権威DNSサーバを「正式情報の管理」、キャッシ
 SG試験では、「DNSサーバ」という言葉だけで判断せず、**正式な情報を持つ話なのか、利用者の問い合わせを代理する話なのか**を確認することが大切です。
 
 **権威DNSサーバ＝公式情報、キャッシュDNSサーバ＝代理問い合わせと一時保存**と覚えておきましょう。
+
+## 公式情報・参考リンク
+
+- [RFC 1034 - Domain Names - Concepts and Facilities](https://www.rfc-editor.org/rfc/rfc1034.html)
+  - DNSの名前空間、権威情報、ネームサーバ、リゾルバなどの基本概念を定義するInternet Standardです。
 
 {% include sg_article_footer.html %}
