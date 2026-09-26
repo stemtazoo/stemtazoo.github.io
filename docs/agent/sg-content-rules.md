@@ -13,6 +13,7 @@ Always check the related rule files as needed:
 - Past questions, examples, and confirmation questions: `docs/agent/sg-example-question-rules.md`
 - Series summary pages: `docs/agent/sg-series-summary-rules.md`
 - SG navigation and `prev` / `next`: `docs/agent/sg-navigation-rules.md`
+- Primary / official sources, RFC freshness, and supersession audits: `docs/agent/primary-source-audit-rules.md`
 
 ## Basic Stance
 
@@ -58,6 +59,8 @@ In particular, `## よくある誤解・混同` should help readers judge that a
 
 ## Official And Reference Links
 
+Use `docs/agent/primary-source-audit-rules.md` for source-selection, RFC status, current-vs-historical authority, and repository-wide supersession checks.
+
 For SG articles, add at least one official link when reliable official information exists for the term.
 
 Preferred source examples:
@@ -69,6 +72,7 @@ Preferred source examples:
 - 個人情報保護委員会
 - e-Gov法令検索
 - Official information related to JIS / ISO / IEC
+- IETF / RFC Editor for Internet protocols and protocol-security specifications
 
 Link placement rules:
 
@@ -99,6 +103,7 @@ For laws, regulations, standards, public guidelines, security criteria, and othe
 - If a past question relies on an older rule, explain the historical wording only when it is necessary to understand why that question was answered that way.
 - Clearly separate historical notes from the current rule, for example with wording such as `当時の基準では〜`.
 - Before adding or refreshing an official link, check whether the cited document has been revised, replaced, renamed, archived, or superseded.
+- For RFCs and other versioned protocol specifications, do not assume a familiar identifier is still current. Check status / obsolescence, and when a cited identifier is superseded, search related SG pages for stale references before finishing the update.
 - Prefer the current primary source from the responsible authority over archived summaries or secondary explanations.
 - Explain old questions from the current framework whenever possible. Mention old/new differences only when they affect SG answer-choice judgment.
 - If the current official rule has changed materially, update the article body and judgment criteria first, then retain a concise historical note only if it helps past-question interpretation.
