@@ -9,7 +9,7 @@ ds_area: datascience
 ds_section: statistics
 prev: /ds/pearson-correlation/
 next: /ds/population-sample-unbiased-variance/
-last_modified_at: 2026-05-01
+last_modified_at: 2026-09-26
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -128,6 +128,11 @@ DS検定では、
 👉 DS検定では  
 「確率の意味」と「幅の解釈」を切り分けられるかがポイント。
 
+
+## 公式情報・参考リンク
+
+- [NIST/SEMATECH e-Handbook｜What are confidence intervals?](https://www.itl.nist.gov/div898/handbook/prc/section1/prc14.htm)
+  - 信頼区間を「同じ手順で標本抽出と区間推定を繰り返したとき、一定割合の区間が真の母数を含む」という頻度論的な意味で説明しています。
 
 ## 対応スキル項目（ver.6 データサイエンス）
 
