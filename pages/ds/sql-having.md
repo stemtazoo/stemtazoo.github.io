@@ -9,7 +9,7 @@ ds_area: dataengineering
 ds_section: data-processing
 prev: /ds/sql-groupby/
 next: /ds/sql-in-exists/
-last_modified_at: 2026-06-22
+last_modified_at: 2026-09-26
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -111,6 +111,11 @@ GROUP BY customer;
 - `SUM` や `COUNT` などの集計条件はHAVINGで判断する
 - GROUP BYとセットで読むと理解しやすい
 - DS検定では「条件の対象が行か、集計結果か」を見る
+
+## 公式情報・参考リンク
+
+- [PostgreSQL Documentation｜Aggregate Functions Tutorial](https://www.postgresql.org/docs/current/tutorial-agg.html)
+  - WHEREは集計前の入力行、HAVINGはGROUP BY後のグループを絞る、という違いを公式例で確認できます。
 
 ## 対応スキル項目（ver.6 データエンジニアリング）
 
