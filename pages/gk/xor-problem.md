@@ -6,7 +6,7 @@ permalink: /gk/xor-problem/
 tags: [gk, neural_network, perceptron]
 gk_section: ディープラーニングの概要/ニューラルネットワークとディープラーニング
 gk_order: 2
-last_modified_at: 2026-08-21
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -88,5 +88,14 @@ XOR問題そのものを実務で解くことより、**ニューラルネット
 - AND・ORは線形分離できる
 - 多層化＋非線形活性化で扱える
 - 原因は学習率やデータ数ではなく**表現力**
+
+## 参考資料（原論文）
+
+- [The perceptron: A probabilistic model for information storage and organization in the brain｜APA](https://doi.org/10.1037/h0042519)
+  - Rosenblatt（1958）によるパーセプトロンの原論文です。
+- [Perceptrons: An Introduction to Computational Geometry｜MIT Press](https://mitpress.mit.edu/9780262130431/perceptrons/)
+  - Minsky・Papert（1969）。単純なパーセプトロンの表現能力と限界を体系的に分析した一次資料です。
+- [Learning representations by back-propagating errors｜Nature](https://doi.org/10.1038/323533a0)
+  - Rumelhart・Hinton・Williams（1986）。隠れ層を持つニューラルネットワークを誤差逆伝播で学習する代表的な原論文で、多層化による表現力を理解する背景資料になります。
 
 {% include gk_article_footer.html %}
