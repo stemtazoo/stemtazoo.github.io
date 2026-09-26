@@ -4,7 +4,7 @@ title: DMARCとは？なりすましメール対策をSPF・DKIMと整理【SG�
 description: "DMARCをSPF・DKIMの認証結果を使ってなりすましメールの扱いを送信側ドメインが示す仕組みとして整理し、3方式の役割分担を見分けます。送信元IPの確認、電子署名による確認、失敗時ポリシーの指定を分けて選択肢を切ります。"
 permalink: /sg/dmarc/
 tags: [sg, sg-security-measures, data_leakage, crypto_auth, network]
-last_modified_at: 2026-07-02
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -57,7 +57,7 @@ DMARCでは、送信側ドメインの管理者がDNSにポリシーを設定し
 - `quarantine`：疑わしいメールを迷惑メール扱いなどで隔離する
 - `reject`：認証に失敗したメールを拒否する
 
-DMARCの仕様は、インターネット標準である [RFC 7489](https://www.rfc-editor.org/rfc/rfc7489) として公開されています。
+DMARCの仕様は、インターネット標準である [RFC 9989](https://www.rfc-editor.org/rfc/rfc9989.html) として公開されています。
 
 ただし、SG試験では細かいDNSレコードの書き方を深掘りするよりも、**SPF・DKIM・DMARCの役割分担**を押さえることが重要です。
 
@@ -112,5 +112,10 @@ SG試験では、次のように切り分けると分かりやすいです。
 - DMARCはメール本文を暗号化する仕組みではない
 - `none`、`quarantine`、`reject` の方針がある
 - SG試験では、SPF・DKIM・DMARCの役割入れ替えに注意する
+
+## 公式情報・参考リンク
+
+- [RFC 9989 - Domain-Based Message Authentication, Reporting, and Conformance (DMARC)](https://www.rfc-editor.org/rfc/rfc9989.html)
+  - 2026年5月に公開されたDMARCの現行仕様です。RFC 7489を置き換えています。
 
 {% include sg_article_footer.html %}
