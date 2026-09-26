@@ -6,7 +6,7 @@ permalink: /gk/u-net/
 tags: [gk, neural_network, cnn]
 gk_section: ディープラーニングの応用例/画像認識/セグメンテーションタスク
 gk_order: 3
-last_modified_at: 2026-06-21
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -122,5 +122,10 @@ Encoder-Decoder は
 * SegNet の「プーリング位置保存」との違いを即答できるようにする
 
 👉 **「特徴マップをそのまま渡す」＝ U-Net**
+
+## 参考資料（原論文）
+
+- [U-Net: Convolutional Networks for Biomedical Image Segmentation｜Springer](https://doi.org/10.1007/978-3-319-24574-4_28)
+  - Ronneberger・Fischer・Brox（2015）によるU-Netの原論文です。Encoder側の特徴をDecoder側へ渡すskip connectionを使うU字型構造を提案しています。
 
 {% include gk_article_footer.html %}
