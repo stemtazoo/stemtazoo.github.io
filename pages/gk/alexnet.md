@@ -6,7 +6,7 @@ permalink: /gk/alexnet/
 tags: [gk, cnn]
 gk_section: ディープラーニングの応用例/画像認識/物体認識タスク
 gk_order: 1
-last_modified_at: 2026-09-23
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -87,5 +87,10 @@ AlexNet → VGG / GoogLeNet → ResNet
 - Dropout
 - データ拡張
 - **「最初のCNN」とは覚えない**
+
+## 参考資料（原論文）
+
+- [ImageNet Classification with Deep Convolutional Neural Networks｜NeurIPS](https://proceedings.neurips.cc/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html)
+  - Krizhevsky・Sutskever・Hinton（2012）。AlexNetとして知られる深層CNNをImageNetで評価し、ReLU、GPU学習、Dropoutなどを組み合わせた代表的な原論文です。
 
 {% include gk_article_footer.html %}
