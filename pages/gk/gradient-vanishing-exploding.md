@@ -6,7 +6,7 @@ permalink: /gk/gradient-vanishing-exploding/
 tags: [gk, neural_network, cheatsheet]
 gk_section: ディープラーニングの概要/ニューラルネットワークとディープラーニング
 gk_order: 6
-last_modified_at: 2026-08-26
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -88,5 +88,12 @@ RNNでは時刻方向にも同じような計算を繰り返すため、長い�
 - 勾配クリッピングは主に勾配爆発対策
 
 **「小さい？ 大きい？」→「どの対策？」の順で切る**のが最短です。
+
+## 参考資料（原論文）
+
+- [Learning long-term dependencies with gradient descent is difficult｜IEEE](https://doi.org/10.1109/72.279181)
+  - Bengio・Simard・Frasconi（1994）。RNNで長期依存関係を勾配法で学習する難しさを分析した代表的な原論文です。
+- [On the Difficulty of Training Recurrent Neural Networks｜PMLR](https://proceedings.mlr.press/v28/pascanu13.html)
+  - Pascanu・Mikolov・Bengio（2013）。勾配消失・勾配爆発を分析し、勾配クリッピングを含む対策を議論しています。
 
 {% include gk_article_footer.html %}
