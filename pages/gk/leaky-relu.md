@@ -6,7 +6,7 @@ permalink: /gk/leaky-relu/
 tags: [gk, neural_network]
 gk_section: ディープラーニングの概要/活性化関数
 gk_order: 3
-last_modified_at: 2026-07-18
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -134,5 +134,12 @@ Leaky ReLU関数は次のように定義されます。
 👉 迷ったら
 
 > **Leaky = 漏れる → 0にならない**
+
+## 参考資料（原論文）
+
+- [Rectifier Nonlinearities Improve Neural Network Acoustic Models｜Stanford](https://ai.stanford.edu/~amaas/papers/relu_hybrid_icml2013_final.pdf)
+  - Maas・Hannun・Ng（2013）。ReLUの負の領域にも小さな勾配を残すrectifierを検討した代表的な一次資料です。
+- [Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification｜CVF](https://openaccess.thecvf.com/content_iccv_2015/html/He_Delving_Deep_into_ICCV_2015_paper.html)
+  - Heら（2015）。Leaky ReLUと近い考え方を発展させ、負側の傾きを学習するPReLUを提案しています。
 
 {% include gk_article_footer.html %}
