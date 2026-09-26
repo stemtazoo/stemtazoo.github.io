@@ -6,7 +6,7 @@ permalink: /gk/rcnn-fast-rcnn/
 tags: [gk, image_recognition, object_detection]
 gk_section: ディープラーニングの応用例/画像認識/物体検出タスク
 gk_order: 6
-last_modified_at: 2026-09-23
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -81,5 +81,14 @@ G検定では、モデル名と改善点の対応を見ます。
 - Fast R-CNNでも候補領域は外部
 - Faster R-CNN＝**RPN**
 - 発展の軸は「何を共有・統合したか」
+
+## 参考資料（原論文）
+
+- [Rich Feature Hierarchies for Accurate Object Detection and Semantic Segmentation｜CVF](https://openaccess.thecvf.com/content_cvpr_2014/html/Girshick_Rich_Feature_Hierarchies_2014_CVPR_paper.html)
+  - Girshickら（CVPR 2014）によるR-CNNの原論文です。Region ProposalごとにCNN特徴を計算する方式を提案しています。
+- [Fast R-CNN｜CVF](https://openaccess.thecvf.com/content_iccv_2015/html/Girshick_Fast_R-CNN_ICCV_2015_paper.html)
+  - Girshick（ICCV 2015）によるFast R-CNNの原論文です。画像全体のCNN特徴を共有し、RoI単位で分類・回帰する方式へ改善しています。
+- [Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks｜arXiv](https://arxiv.org/abs/1506.01497)
+  - RenらによるFaster R-CNNの原論文です。Region Proposal Network（RPN）によって候補領域生成もネットワーク化しています。
 
 {% include gk_article_footer.html %}
