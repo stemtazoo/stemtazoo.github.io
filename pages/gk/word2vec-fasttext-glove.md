@@ -6,7 +6,7 @@ permalink: /gk/word2vec-fasttext-glove/
 tags: [gk, nlp, neural_network]
 gk_section: ディープラーニングの応用例/自然言語処理
 gk_order: 24
-last_modified_at: 2026-06-21
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -98,5 +98,14 @@ last_modified_at: 2026-06-21
 - FastText：文字情報も使う
 - GloVe：全体の共起統計
 - 見る範囲で切り分ける
+
+## 参考資料（原論文）
+
+- [Efficient Estimation of Word Representations in Vector Space｜arXiv](https://arxiv.org/abs/1301.3781)
+  - Word2Vec（CBOW / Skip-gram）の代表的な原論文です。
+- [GloVe: Global Vectors for Word Representation｜ACL Anthology](https://aclanthology.org/D14-1162/)
+  - Pennington・Socher・Manning（2014）によるGloVeの原論文です。
+- [Enriching Word Vectors with Subword Information｜ACL Anthology](https://aclanthology.org/Q17-1010/)
+  - Bojanowskiら（2017）によるFastText系の単語表現の原論文です。文字n-gramを使って単語ベクトルを構成します。
 
 {% include gk_article_footer.html %}
