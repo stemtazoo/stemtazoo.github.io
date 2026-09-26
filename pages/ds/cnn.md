@@ -9,7 +9,7 @@ ds_area: datascience
 ds_section: modeling
 prev: /ds/cluster-analysis/
 next: /ds/convolution/
-last_modified_at: 2026-08-16
+last_modified_at: 2026-09-26
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -107,6 +107,11 @@ CNNでは、畳み込みによって局所的な特徴を抽出してから後�
 - **カーネル = ルール / 畳み込み = 計算 / CNN = モデル**
 
 DS検定では、**「画像の局所的な特徴を畳み込みで抽出する」**と書かれていたらCNNを疑いましょう。
+
+## 公式情報・参考リンク
+
+- [LeCun et al.｜Gradient-Based Learning Applied to Document Recognition](https://doi.org/10.1109/5.726791)
+  - CNNを文字・画像認識へ適用した代表的な原典です。局所受容野、重み共有、畳み込みとサブサンプリングを組み合わせるCNNの基本的な考え方を確認できます。
 
 ## 対応スキル項目（ver.6 データサイエンス）
 
