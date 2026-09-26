@@ -4,7 +4,7 @@ title: EAP-MD5とは？チャレンジレスポンスで認証する方式【SG�
 description: "EAP-MD5を、チャレンジレスポンスで利用者を認証するEAP方式として整理し、クライアント証明書による相互認証を行うEAP-TLSや、TLSトンネルを使うPEAP・EAP-TTLSとの違いを確認します。"
 permalink: /sg/eap-md5/
 tags: [sg, sg-security-overview, crypto_auth, network, access_control]
-last_modified_at: 2026-07-04
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -102,5 +102,10 @@ SG試験では、次のようなひっかけに注意します。
 - EAP-TLSは、証明書でサーバとクライアントを相互認証する
 - PEAPやEAP-TTLSは、TLSトンネル内で別の認証を行う
 - SG試験では「チャレンジレスポンス＝EAP-MD5」と判断する
+
+## 公式情報・参考リンク
+
+- [RFC 3748 - Extensible Authentication Protocol (EAP)](https://www.rfc-editor.org/rfc/rfc3748.html)
+  - EAP全体の認証フレームワークと、EAP-MD5（MD5-Challenge）を含む基本方式を定義するIETFの仕様です。
 
 {% include sg_article_footer.html %}
