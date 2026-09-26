@@ -6,7 +6,7 @@ permalink: /gk/vgg/
 tags: [gk, cnn]
 gk_section: ディープラーニングの応用例/画像認識/物体認識タスク
 gk_order: 2
-last_modified_at: 2026-06-27
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -90,5 +90,10 @@ VGG16やVGG19の数字は、主に**重みを持つ層の深さ**を表します
 * 構造が分かりやすい
 * パラメータ数が多い
 * 軽量モデルではない
+
+## 参考資料（原論文）
+
+- [Very Deep Convolutional Networks for Large-Scale Image Recognition｜arXiv](https://arxiv.org/abs/1409.1556)
+  - Simonyan・ZissermanによるVGGの原論文です。小さな3×3畳み込みを重ね、16〜19層へ深くする設計を検証しています。
 
 {% include gk_article_footer.html %}
