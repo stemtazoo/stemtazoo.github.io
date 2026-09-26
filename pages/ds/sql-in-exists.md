@@ -9,7 +9,7 @@ ds_area: dataengineering
 ds_section: sql
 prev: /ds/sql-having/
 next: /ds/sql-join/
-last_modified_at: 2026-06-28
+last_modified_at: 2026-09-26
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -133,6 +133,11 @@ INとEXISTSの性能は、データ量だけで一律には決まりません。
 * 「値か存在か」で判断する
 
 ---
+
+## 公式情報・参考リンク
+
+- [PostgreSQL Documentation｜Subquery Expressions](https://www.postgresql.org/docs/current/functions-subquery.html)
+  - EXISTS・IN・NOT INなどのサブクエリ式を扱う公式ドキュメントです。特にNULLを含むNOT INの三値論理も確認できます。
 
 ## 対応スキル項目（ver.6 データエンジニアリング）
 
