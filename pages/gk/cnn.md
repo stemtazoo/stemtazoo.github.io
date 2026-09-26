@@ -6,7 +6,7 @@ permalink: /gk/cnn/
 tags: [gk, neural_network, cnn]
 gk_section: ディープラーニングの要素技術/ネットワークの構成要素
 gk_order: 1
-last_modified_at: 2026-09-24
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -85,5 +85,10 @@ G検定では、
 - 画像で代表的
 - Poolingや全結合層は必須ではない
 - **画像専用と決めつけない**
+
+## 参考資料（原論文）
+
+- [Gradient-Based Learning Applied to Document Recognition｜IEEE](https://doi.org/10.1109/5.726791)
+  - LeCunら（1998）。畳み込みニューラルネットワークを文字認識へ適用した代表的な一次資料です。局所受容野や重み共有を使うCNNの基本的な考え方を確認できます。
 
 {% include gk_article_footer.html %}
