@@ -6,7 +6,7 @@ permalink: /sg/ipsec-ike/
 prev: /sg/ipsec-esp/
 next: /sg/ipsec-sa/
 tags: [sg, sg-technology, crypto_auth, network]
-last_modified_at: 2026-05-08
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -187,5 +187,10 @@ ESPは、通信データを暗号化できる仕組み
 AHは、暗号化せず、認証・完全性確認を行う仕組み
 
 選択肢で「鍵交換」「暗号化鍵を動的に生成」と出たらIKEを候補にする
+
+## 公式情報・参考リンク
+
+- [RFC 7296 - Internet Key Exchange Protocol Version 2 (IKEv2)](https://www.rfc-editor.org/rfc/rfc7296.html)
+  - IKEv2を、相互認証とSecurity Association（SA）の確立・維持を行うIPsecの構成要素として定義するInternet Standardです。
 
 {% include sg_article_footer.html %}
