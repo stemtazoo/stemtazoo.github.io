@@ -6,7 +6,7 @@ permalink: /sg/dns/
 tags: [sg, sg-technology, network, unauthorized_access]
 prev: /sg/dns-reflector-attack/
 next: /sg/domain-hijacking/
-last_modified_at: 2026-05-20
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -162,5 +162,12 @@ DNSは「通信内容を守る」ものではなく、「どこに接続する�
   👉 偽サイトに誘導される
 - 試験では  
   👉 「名前解決か通信か」を切り分ける
+
+## 公式情報・参考リンク
+
+- [RFC 1034 - Domain Names - Concepts and Facilities](https://www.rfc-editor.org/rfc/rfc1034.html)
+  - DNSの概念、名前空間、ネームサーバなどの基本を定義するInternet Standardです。
+- [RFC 1035 - Domain Names - Implementation and Specification](https://www.rfc-editor.org/rfc/rfc1035.html)
+  - DNSメッセージや問い合わせなど、実装上の基本仕様を定義するInternet Standardです。
 
 {% include sg_article_footer.html %}
