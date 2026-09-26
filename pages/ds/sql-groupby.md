@@ -9,7 +9,7 @@ ds_area: dataengineering
 ds_section: data-processing
 prev: /ds/sql-filtering/
 next: /ds/sql-having/
-last_modified_at: 2026-08-16
+last_modified_at: 2026-09-26
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -125,6 +125,11 @@ GROUP BYは、カテゴリごとに数値をまとめたい場面で使います
 - **WHERE = 行を絞る**
 - **GROUP BY = グループ化**
 - **集計関数と組み合わせる**
+
+## 公式情報・参考リンク
+
+- [PostgreSQL Documentation｜Aggregate Functions Tutorial](https://www.postgresql.org/docs/current/tutorial-agg.html)
+  - GROUP BYで行をグループ化し、COUNT・SUMなどの集計関数をグループ単位で計算する流れを確認できます。
 
 ## 対応スキル項目（ver.6 データエンジニアリング）
 
