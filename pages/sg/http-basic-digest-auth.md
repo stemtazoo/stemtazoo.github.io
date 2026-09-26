@@ -5,7 +5,7 @@ description: "HTTPのBasic認証とDigest認証について、401応答、WWW-Au
 permalink: /sg/http-basic-digest-auth/
 tags: [sg, sg-technology, access_control, network, crypto_auth]
 date: 2026-06-01
-last_modified_at: 2026-07-18
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -203,5 +203,12 @@ HTTP認証に関する説明として、最も適切なものはどれか。
 - Digest認証も通信全体を暗号化しない
 - Basic・Digestのどちらでも実務ではHTTPSを使う
 - 判断軸は**認証情報の送り方か、通信路全体の保護か**
+
+## 公式情報・参考リンク
+
+- [RFC 7617 - The 'Basic' HTTP Authentication Scheme](https://www.rfc-editor.org/rfc/rfc7617.html)
+  - HTTP Basic認証を定義するIETFの仕様です。利用者IDとパスワードの組をBase64で表現して送る方式です。
+- [RFC 7616 - HTTP Digest Access Authentication](https://www.rfc-editor.org/rfc/rfc7616.html)
+  - HTTP Digest認証のチャレンジレスポンス方式を定義するIETFの仕様です。
 
 {% include sg_article_footer.html %}
