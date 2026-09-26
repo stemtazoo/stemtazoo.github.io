@@ -6,7 +6,7 @@ permalink: /sg/smtp-port-packet-filtering/
 tags: [sg, sg-security-measures, network, it_security_operations]
 prev: /sg/smishing/
 next: /sg/spyware/
-last_modified_at: 2026-07-27
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -137,5 +137,12 @@ SMTPのポート番号は、**メール送信で使う25番**です。
 ただし試験では、番号の丸暗記だけでなく、**クライアント側は1024以上の動的ポートを使う**と理解しているかが問われます。
 選択肢では **SMTPとPOP3の混同**、**送信元ポートとあて先ポートの入れ替え**、**応答方向の逆転ミス** に注意です。
 迷ったら、**サーバ側が固定ポート、クライアント側が動的ポート、応答は逆向き** で判断すると切りやすくなります。
+
+## 公式情報・参考リンク
+
+- [RFC 5321 - Simple Mail Transfer Protocol](https://www.rfc-editor.org/rfc/rfc5321.html)
+  - SMTPの基本仕様を定義するIETFの仕様です。
+- [RFC 6409 - Message Submission for Mail](https://www.rfc-editor.org/rfc/rfc6409.html)
+  - メール投稿（submission）を中継用SMTPと分け、通常587番ポートを利用する仕組みを定義しています。
 
 {% include sg_article_footer.html %}
