@@ -6,7 +6,7 @@ permalink: /gk/rainbow/
 tags: [gk, reinforcement_learning]
 gk_section: ディープラーニングの応用例/深層強化学習/DQN・改良手法
 gk_order: 5
-last_modified_at: 2026-08-26
+last_modified_at: 2026-09-26
 ---
 
 ## まず結論
@@ -117,5 +117,10 @@ Rainbowの中心はDQNです。
 - 各構成要素は**別の弱点を改善**
 - 方策を直接更新する手法ではない
 - 「DQN改良の統合」が見えたらRainbow
+
+## 参考資料（原論文）
+
+- [Rainbow: Combining Improvements in Deep Reinforcement Learning｜AAAI](https://ojs.aaai.org/index.php/AAAI/article/view/11796)
+  - Hesselら（AAAI 2018）によるRainbowの原論文です。DQNの複数の改良手法を組み合わせ、各要素の寄与も検証しています。
 
 {% include gk_article_footer.html %}
