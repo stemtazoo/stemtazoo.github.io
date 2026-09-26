@@ -9,7 +9,7 @@ ds_area: datascience
 ds_section: data-preparation
 prev: /ds/dependency-parsing/
 next: /ds/digital-image-representation/
-last_modified_at: 2026-06-21
+last_modified_at: 2026-09-26
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -181,6 +181,13 @@ DS検定では、
 
 と書かれていれば正解方向です。
 
+
+## 公式情報・参考リンク
+
+- [NIST/SEMATECH e-Handbook｜What is experimental design?](https://www.itl.nist.gov/div898/handbook/pri/section1/pri11.htm)
+  - 実験計画法を、要因を意図的に変化させて応答への影響を調べ、限られた実験回数から有効な情報を得るための計画として説明しています。
+- [NIST/SEMATECH e-Handbook｜Choosing an experimental design](https://www.itl.nist.gov/div898/handbook/pri/section3/pri3.htm)
+  - 無作為化、ブロック化、完全実施要因計画、部分実施要因計画などの代表的な設計を確認できます。
 
 ## 対応スキル項目（ver.6 データサイエンス）
 
