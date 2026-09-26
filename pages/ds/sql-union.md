@@ -9,7 +9,7 @@ ds_area: dataengineering
 ds_section: data-processing
 prev: /ds/sql-join/
 next: /ds/sql-where/
-last_modified_at: 2026-09-13
+last_modified_at: 2026-09-26
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -107,6 +107,11 @@ SELECT name FROM customers_b;
 - 重複があれば件数が変わる
 - 重複除去が不要なら `UNION ALL` の方が処理を減らしやすい
 - **「重複を消すか？」で選択肢を切る**
+
+## 公式情報・参考リンク
+
+- [PostgreSQL Documentation｜Combining Queries](https://www.postgresql.org/docs/current/queries-union.html)
+  - UNION・UNION ALL・INTERSECT・EXCEPTによる結果集合の結合を扱う公式ドキュメントです。UNIONは重複を除き、UNION ALLは重複を保持します。
 
 ## 対応スキル項目（ver.6 データエンジニアリング）
 
