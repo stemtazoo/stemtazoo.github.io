@@ -7,7 +7,7 @@ tags: [fe, fe-technology, system-development, software-testing, integration-test
 fe_section: テクノロジ系
 fe_subsection: システム開発技術
 fe_order: 30
-last_modified_at: 2026-08-17
+last_modified_at: 2026-09-27
 ---
 
 ## まず結論
@@ -220,6 +220,7 @@ FE試験では、次のように切り分けます。
 
 ## 関連記事
 
+- [テスト支援ツールとは？静的・動的・テスト環境設定ツールの違い【基本情報技術者試験】](/fe/test-support-tools/)
 - [トップダウンテストとは？上位モジュールから結合して確認する方法【基本情報技術者試験】](/fe/top-down-testing/)
 - [ボトムアップテストとは？下位モジュールから結合して確認する方法【基本情報技術者試験】](/fe/bottom-up-testing/)
 
