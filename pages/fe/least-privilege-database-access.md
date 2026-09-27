@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: セキュリティ
 fe_order: 75
 date: 2026-07-18
-last_modified_at: 2026-08-30
+last_modified_at: 2026-09-27
 ---
 
 ## まず結論
@@ -61,6 +61,8 @@ last_modified_at: 2026-08-30
 ## 定義・仕組み
 
 最小権限の原則は、英語で **Principle of Least Privilege** といいます。
+
+この考え方は、不正アクセス対策全体でも重要です。ID共有の禁止やネットワーク分離とあわせた判断は、[コンピュータ不正アクセス対策基準とは？](/fe/computer-unauthorized-access-countermeasure-standard/)で整理しています。
 
 利用者、アプリケーション、プロセスなどに対し、業務や処理を実行するために必要な範囲だけ権限を与えます。
 
