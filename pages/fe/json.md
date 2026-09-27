@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 56
 date: 2026-07-10
-last_modified_at: 2026-09-22
+last_modified_at: 2026-09-27
 ---
 
 ## まず結論
@@ -187,6 +187,8 @@ JSONでは、次の混同がよく起こります。
 | JSONは必ず人が見る画面を表す | 主にプログラムが扱うデータを表す |
 
 特に、JSON・XML・CSVは次のように分けます。
+
+XMLの文書構造を定義するDTDや、XML宣言との違いは、[DTDとは？XML宣言・XML Schemaとの違い](/fe/xml-dtd/)で整理しています。
 
 | 形式 | 見た目 | 得意なこと |
 |---|---|---|
