@@ -8,12 +8,14 @@ fe_section: 情報セキュリティ
 fe_subsection: 暗号と認証
 fe_order: 190
 date: 2026-08-04
-last_modified_at: 2026-09-22
+last_modified_at: 2026-09-27
 ---
 
 ## まず結論
 
 XML署名とは、**XML文書やその一部分にデジタル署名を付け、改ざんの有無や署名者を確認する仕組み**です。
+
+XML宣言・XML本文・DTDの役割を先に整理したい場合は、[DTDとは？XML宣言・XML Schemaとの違い](/fe/xml-dtd/)を参照してください。
 
 基本情報技術者試験では、次の特徴を押さえると判断しやすくなります。
 
