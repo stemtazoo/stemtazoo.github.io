@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: コンピュータシステム
 fe_order: 50
 date: 2026-07-22
-last_modified_at: 2026-09-20
+last_modified_at: 2026-09-27
 ---
 
 ## まず結論
@@ -76,7 +76,7 @@ SRAMも揮発性メモリですが、リフレッシュは不要です。DRAMよ
 - デジタルカメラ
 - スマートフォン
 
-詳しくは、[フラッシュメモリとは？EEPROM・SRAM・DRAMとの違い]({{ '/fe/flash-memory/' | relative_url }})で整理しています。
+詳しくは、[フラッシュメモリとは？EEPROM・SRAM・DRAMとの違い]({{ '/fe/flash-memory/' | relative_url }})で整理しています。SDカードのSD・SDHC・SDXC・SDUCの容量規格は、[SD・SDHC・SDXC・SDUCの違い](/fe/sd-sdhc-sdxc-sduc/)で確認できます。
 
 ### マスクROM
 
