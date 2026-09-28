@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ソフトウェア
 fe_order: 22
 date: 2026-09-01
-last_modified_at: 2026-09-28
+last_modified_at: 2026-09-29
 ---
 
 ## まず結論
@@ -45,7 +45,7 @@ Servletが処理
 
 ## 定義・仕組み
 
-Java Servletは、JavaでWebアプリケーションのサーバ側処理を実装するための仕組みです。
+Java Servletは、JavaでWebアプリケーションのサーバ側処理を実装するためのAPIです。ServletコンテナがHTTPリクエストをServletに渡し、Servletが処理結果をレスポンスとして返します。現在のJakarta Servlet仕様も、HTTPリクエストとレスポンスを扱うサーバ側APIとして定義しています。
 
 代表的な役割は次のとおりです。
 
@@ -60,14 +60,14 @@ Java Servletは、JavaでWebアプリケーションのサーバ側処理を実�
 ```text
 クライアントから要求
         ↓
-Servletが受け取る
+Servletコンテナが要求をServletへ渡す
         ↓
-サーバ側で処理
+Servletがサーバ側で処理
         ↓
 結果をクライアントへ返す
 ```
 
-Servletは通常、Webサーバやアプリケーションサーバ上のServletコンテナによって実行されます。
+Servletは通常、Webサーバやアプリケーションサーバに組み込まれたServletコンテナによって実行されます。
 
 ### Servletはどこで動く？
 
@@ -75,13 +75,13 @@ Servletは通常、Webサーバやアプリケーションサーバ上のServlet
 
 ```text
 Java Servlet
-→ サーバ側
+→ サーバ側（Servletコンテナ上）
 
 Javaアプレット
-→ クライアント側
+→ クライアント側（旧来の技術）
 ```
 
-名前やJavaという共通点だけで判断せず、**実行される場所**を見るのがポイントです。
+名前やJavaという共通点だけで判断せず、**実行される場所と役割**を見るのがポイントです。
 
 ## 科目Aでどう出る？
 
@@ -97,42 +97,44 @@ Servletを示す代表的な表現です。
 - Javaで記述
 - サーバサイド
 
-特に、古い過去問で
+過去問には、次のように「Webサーバ上だけで動作するもの」を問う設問があります。
 
-> **Webサーバ上だけで動作する**
+> **Web環境での動的処理を実現するプログラムであって、Webサーバ上だけで動作するものはどれか。**
 
-のように実行場所を限定している場合は、Servletを強く疑います。
+こうした**過去問の選択肢の中では**、Servletを選ぶ手掛かりになります。ただし、この文言だけを現代のWeb技術全般に通用する判定基準として覚えるのではなく、選択肢と問題の時代背景を含めて判断します。実際にJavaScriptはNode.jsなどで、VBScriptも旧来のClassic ASPでサーバ側実行が可能でした。
 
 ### 選択肢の切り分け
 
 | 用語 | 判断基準 |
 |---|---|
-| Java Servlet | Webサーバ側で動くJavaプログラム |
+| Java Servlet | JavaでWebアプリケーションのサーバ側処理を実装するAPI。Servletコンテナ上で実行 |
 | Javaアプレット | クライアント側で動く旧来のJavaプログラム |
-| JavaScript | Webページの処理に使われるスクリプト言語。現在はサーバ側でも実行できる |
-| VBScript | 旧来、クライアント側・サーバ側の両方で利用されたスクリプト言語 |
+| JavaScript | ブラウザで広く使われる。Node.jsなどの実行環境ではサーバ側でも動く |
+| VBScript | 旧来、Internet Explorerのクライアント側スクリプトやClassic ASPのサーバ側スクリプトで使われた |
 | JavaBeans | Javaの機能を部品化して再利用する仕組み |
 | JVM | Javaバイトコードを実行する仮想マシン |
 
-試験中は次の対応で切り分けます。
+試験中は、説明文に出てくる**言語・役割・実行場所**を組み合わせて切り分けます。
 
 ```text
-Webサーバ側で動くJavaプログラム
+JavaでWeb要求をサーバ側処理
 → Servlet
 
-クライアント側で動く旧来のJavaプログラム
+旧来のJavaプログラムをブラウザ側で実行
 → Applet
 
-Webページのスクリプト
+ブラウザ上でページに動きを加えるスクリプト（代表的な使い方）
 → JavaScript
+  ※Node.jsなどを使えばサーバ側でも実行できる
 
 旧来のMicrosoft系スクリプト
 → VBScript
+  ※クライアント側・Classic ASPのサーバ側の両方で使われた
 
-再利用できる部品
+再利用できるJava部品
 → JavaBeans
 
-バイトコードを実行
+Javaバイトコードを実行
 → JVM
 ```
 
@@ -142,19 +144,15 @@ JavaBeansについては、[JavaBeansとは？再利用可能なJava部品の仕
 
 過去問では、JavaScriptを**ブラウザ側で動く技術**としてServletと対比することがあります。
 
-ただし現在のJavaScriptは、Node.jsなどを使ってサーバ側でも実行できます。
-
-そのため、現在の技術としては
+JavaScriptはブラウザで広く使われますが、実行場所は言語だけでは決まりません。Node.jsのようなJavaScript実行環境をサーバ側に置けば、JavaScriptを使ったサーバ処理もできます。
 
 ```text
 JavaScript
-→ ブラウザ側だけとは限らない
+→ ブラウザでも、Node.jsなどの環境でも実行できる
 
 Servlet
-→ Javaで作るサーバ側Webプログラム
+→ JavaでWebアプリケーションのサーバ側処理を実装するAPI
 ```
-
-と理解しておくのが安全です。
 
 試験では、**問題が作られた時代の技術背景**と、現在の技術事情を分けて考えます。
 
@@ -180,7 +178,7 @@ Servletが検索条件を受け取る
 結果をブラウザへ返す
 ```
 
-FEでは具体的な実装方法よりも、**「サーバ側で処理するJavaプログラム」**という役割を押さえることが重要です。
+FEでは具体的な実装方法よりも、**「JavaでWeb要求をサーバ側処理する」**という役割を押さえることが重要です。
 
 ## よくある誤解・混同
 
@@ -190,23 +188,23 @@ FEでは具体的な実装方法よりも、**「サーバ側で処理するJava
 
 ブラウザ側で動くJavaプログラムとして出てくるのは、旧来のJavaアプレットです。
 
-Servletは**サーバ側で実行**されます。
+Servletは**Servletコンテナ上でサーバ側実行**されます。
 
 ### JavaScriptは必ずブラウザ側で動く
 
 現在はそうとは限りません。
 
-JavaScriptはブラウザで広く使われますが、Node.jsなどを利用してサーバ側で実行することもできます。
+JavaScriptはブラウザで広く使われますが、Node.jsなどの実行環境を使ってサーバ側で実行することもできます。
 
 ただし、過去のFE問題ではJavaScriptをブラウザ側、Servletをサーバ側として対比している場合があります。
 
-### VBScriptならWebサーバ上だけで動く
+### VBScriptはサーバ側だけで動く、またはクライアント側だけで動く
 
-違います。
+どちらも正確ではありません。
 
-VBScriptは、旧来のInternet Explorerでクライアント側スクリプトとして使われたほか、ASPなどでサーバ側処理にも使われました。
+旧来、VBScriptはInternet Explorerのクライアント側スクリプトとして使われたほか、Classic ASPではサーバ側スクリプトとしても使われました。どこで動くかは、そのスクリプトを実行する環境によります。
 
-したがって、**「Webサーバ上だけ」**という説明からVBScriptを選ぶのは適切ではありません。
+したがって、**「Webサーバ上だけ」**という表現は、VBScriptがサーバ側で動かなかったという意味ではありません。過去問では、提示された選択肢の中で、クライアント側でも使われた技術とServletを区別する材料として読まれています。
 
 ### ServletはJavaBeansと同じ
 
@@ -214,7 +212,7 @@ VBScriptは、旧来のInternet Explorerでクライアント側スクリプト�
 
 JavaBeansは、Javaの機能を再利用しやすい部品として扱うための仕組みです。
 
-Servletは、**Webサーバ側で要求を処理するプログラム**です。
+Servletは、**Webサーバ側で要求を処理するためのAPIと、そのAPIを使ったプログラム**です。
 
 ### ServletはJavaを実行する仮想マシン
 
@@ -222,7 +220,7 @@ Servletは、**Webサーバ側で要求を処理するプログラム**です。
 
 Javaバイトコードを実行するのはJVM（Java Virtual Machine）です。
 
-ServletはJVM上で実行されるJavaプログラムの一種です。
+ServletはJVM上で動作するJavaプログラムであり、ServletのライフサイクルやHTTP処理はServletコンテナが扱います。
 
 ### 動的Webページなら何でもServlet
 
@@ -234,19 +232,26 @@ FEでは、説明文に**「Java」「サーバ側」「クライアントの要
 
 ## まとめ（試験直前用）
 
-- Java ServletはWebサーバ側で動くJavaプログラム
-- クライアントからの要求を受け取り、処理結果を返す
-- **「Webサーバ上だけ」**はServletを疑う強い判断ワード
+- Java ServletはJavaでWebアプリケーションのサーバ側処理を実装するAPI
+- Servletコンテナ上でHTTPリクエストを処理し、レスポンスを返す
+- 過去問の**「Webサーバ上だけ」**は、その設問の選択肢内でServletを選ぶ手掛かりになる
+- この表現だけで現代の技術全般を分類しない。JavaScriptやVBScriptもサーバ側で実行できる
 - Javaアプレットはクライアント側で動く旧来の技術
-- JavaScriptは現在ではブラウザ側だけとは限らない
-- VBScriptは旧来、クライアント側・サーバ側の両方で使われた
-- JavaBeansは再利用できるJava部品
-- JVMはJavaバイトコードを実行する仕組み
+- JavaScriptはブラウザのほか、Node.jsなどの環境でも実行できる
+- VBScriptは旧来、クライアント側・Classic ASPのサーバ側の両方で使われた
+- JavaBeansは再利用できるJava部品、JVMはJavaバイトコードを実行する仮想マシン
 
 試験直前は、次の一文で整理します。
 
 > **Servlet runs on the server.**
 
-参考： [IPA：試験要綱・シラバスについて](https://www.ipa.go.jp/shiken/syllabus/index.html)
+### 参考資料
+
+- [Jakarta Servlet 6.1：サーバ側HTTPリクエスト・レスポンスAPI](https://jakarta.ee/specifications/servlet/6.1/)
+- [Node.js公式サイト：JavaScriptランタイム](https://nodejs.org/en/download/current)
+- [Microsoft Learn：VBScriptとクライアント側アプリケーション](https://learn.microsoft.com/en-us/windows/win32/com/translating-to-vbscript)
+- [Microsoft Learn：ASP Overview（VBScriptとサーバ側スクリプト）](https://learn.microsoft.com/en-us/previous-versions/iis/6.0-sdk/ms524929(v=vs.90))
+- [IPA掲載：基本情報技術者試験問題（Webサーバ上だけで動作するプログラムの設問例）](https://www.ipa.go.jp/shiken/about/ug65p90000001bq0-att/tokurei_Mondai_20180610_FE.pdf)
+- [IPA：試験要綱・シラバスについて](https://www.ipa.go.jp/shiken/syllabus/index.html)
 
 {% include fe_article_footer.html %}
