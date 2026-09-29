@@ -504,3 +504,72 @@
     min-height: 2rem;
   }
 }
+
+/* FE: main memory vs secondary storage comparison */
+.fe-memory-role-demo__grid {
+  align-items: stretch;
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  margin: 1rem 0 0.5rem;
+}
+
+.fe-memory-role-demo__card {
+  border: 1px solid rgba(11, 111, 174, 0.24);
+  border-radius: 10px;
+  min-width: 0;
+  padding: 0.9rem;
+}
+
+.fe-memory-role-demo__card.is-main {
+  background: rgba(11, 111, 174, 0.08);
+}
+
+.fe-memory-role-demo__card.is-storage {
+  background: rgba(8, 60, 90, 0.04);
+}
+
+.fe-memory-role-demo__card > strong {
+  display: block;
+  font-size: 1.1rem;
+  margin: 0.45rem 0 0.25rem;
+}
+
+.fe-memory-role-demo__card p {
+  margin: 0.35rem 0 0.65rem;
+}
+
+.fe-memory-role-demo__badge {
+  border: 1px solid rgba(11, 111, 174, 0.28);
+  border-radius: 999px;
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+}
+
+.fe-memory-role-demo__examples {
+  border-top: 1px solid rgba(11, 111, 174, 0.16);
+  font-size: 0.92rem;
+  line-height: 1.65;
+  padding-top: 0.6rem;
+}
+
+.fe-memory-role-demo__arrow {
+  align-self: center;
+  color: #0b6fae;
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding: 0 0.1rem;
+}
+
+@media (max-width: 520px) {
+  .fe-memory-role-demo__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fe-memory-role-demo__arrow {
+    justify-self: center;
+    transform: rotate(90deg);
+  }
+}
