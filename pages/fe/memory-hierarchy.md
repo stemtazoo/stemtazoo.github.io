@@ -1,15 +1,17 @@
 ---
 layout: page
 title: 記憶階層とは？レジスタ・キャッシュ・主記憶・SSD/HDDの速度順【基本情報技術者試験】
-description: 記憶階層を、CPUレジスタ・L1/L2/L3キャッシュ・主記憶・SSD/HDDの速度と容量の違いから整理し、FE科目Aで「最もアクセス時間が短い記憶装置」を判断する基準を解説します。
+description: 記憶階層を、CPUレジスタ・L1/L2/L3キャッシュ・主記憶・SSD/HDDの速度と容量の違いから整理し、主記憶と補助記憶を操作から切り分ける判断基準も解説します。
 permalink: /fe/memory-hierarchy/
 tags: [fe, fe-technology, computer-architecture, memory]
 fe_section: テクノロジ系
 fe_subsection: コンピュータ構成要素
 fe_order: 24
 date: 2026-09-20
-last_modified_at: 2026-09-20
+last_modified_at: 2026-09-30
 ---
+
+<link rel="stylesheet" href="{{ '/assets/css/fe-visualizer.css' | relative_url }}">
 
 ## まず結論
 
@@ -61,6 +63,31 @@ HDD
 よく使うものほど近くに置いておけば、すぐ取り出せます。
 
 同じようにコンピュータでも、CPUが頻繁に使う情報ほど高速な記憶領域に置くことで、処理を速くしています。
+
+<div class="fe-learning-demo fe-memory-role-demo" aria-label="主記憶と補助記憶の役割比較">
+  <p class="fe-learning-demo__title">主記憶と補助記憶を「作業机」と「倉庫」で分ける</p>
+  <p class="fe-learning-demo__lead"><strong>見るポイント：</strong>「実行中のもの」なら主記憶、「保存しておくもの」なら補助記憶をまず疑います。</p>
+
+  <div class="fe-memory-role-demo__grid">
+    <section class="fe-memory-role-demo__card is-main" aria-label="主記憶">
+      <span class="fe-memory-role-demo__badge">主記憶（RAM）</span>
+      <strong>作業机</strong>
+      <p>実行中のプログラムや、処理中のデータを置く。</p>
+      <div class="fe-memory-role-demo__examples">アプリを開く<br>常駐プログラムを動かす</div>
+    </section>
+
+    <div class="fe-memory-role-demo__arrow" aria-hidden="true">⇄</div>
+
+    <section class="fe-memory-role-demo__card is-storage" aria-label="補助記憶">
+      <span class="fe-memory-role-demo__badge">補助記憶（SSD / HDD）</span>
+      <strong>倉庫</strong>
+      <p>ファイルやプログラムを、電源を切った後も保存する。</p>
+      <div class="fe-memory-role-demo__examples">ファイルを保存<br>アーカイブ・ディスク管理</div>
+    </section>
+  </div>
+
+  <p class="fe-learning-demo__hint">試験では、操作名そのものより「実行中の領域を空けたいのか」「保存領域を整理したいのか」で切り分けると迷いにくくなります。</p>
+</div>
 
 ## 定義・仕組み
 
@@ -222,6 +249,38 @@ L3
 | 実行中のプログラムやデータを保持 | 主記憶 |
 | 電源断後も長期保存 | SSD / HDD |
 
+### 「主記憶」か「補助記憶」かを操作から切り分ける
+
+古い過去問では、主記憶の効率的な利用について、ディスク操作と混ぜて問われることがあります。
+
+このときは、まず **その操作が主記憶を直接使う話か、補助記憶を扱う話か** を確認します。
+
+| 問題文に出る操作 | まず結び付けるもの | 判断 |
+|---|---|---|
+| 不要なアプリやウィンドウを閉じる | 主記憶 | 実行中のプログラムが使う領域を減らす |
+| 常駐プログラムを減らす | 主記憶 | RAMの使用量を減らす |
+| ファイルをアーカイブする | 補助記憶 | 保存ファイルを整理・保管する |
+| デフラグを行う | 補助記憶 | HDD上のファイル配置を整理する |
+| ディスクのエラーを検査する | 補助記憶 | ファイルシステムやディスク側を確認する |
+
+試験中は、次のように短く置き換えると判断しやすくなります。
+
+```text
+実行中・アプリ・常駐・RAM
+→ 主記憶
+
+保存・ファイル・アーカイブ・ディスク
+→ 補助記憶
+```
+
+なお、古い問題では「デスクトップ上の利用頻度の少ないアイコンを削除する」といった表現が、主記憶の利用を軽くする選択肢として扱われることがあります。
+
+現在のPCで主記憶を空ける方法としては、**ショートカットアイコンを削除することより、不要なアプリやブラウザタブを閉じる、不要な常駐プログラムを減らす**と考える方が直接的です。
+
+そのため古い過去問では、表現をそのまま実務のベストプラクティスとして覚えるより、**ほかの選択肢が補助記憶の操作かどうかを先に切る**のがおすすめです。
+
+アーカイブとの違いは、[アーカイブとは？](/fe/archive/)でも整理しています。
+
 ## どんな場面で使う？
 
 記憶階層の考え方は、コンピュータの処理を高速化するために使われます。
@@ -303,6 +362,8 @@ SSDはHDDより高速ですが、主記憶とは役割も速度も異なりま�
 - L1 → L2 → L3の順に一般に遅く・大容量になる
 - 主記憶はキャッシュより遅く、SSD/HDDより速い
 - SSD/HDDは長期保存向け
+- **実行中のアプリ・常駐 → 主記憶、保存ファイル・ディスク操作 → 補助記憶**で切り分ける
+- 古い過去問の表現は、現在の実務上の操作と分けて読む
 - FEでは、**レジスタ → キャッシュ → 主記憶 → SSD/HDD**の順をまず押さえる
 
 \`\`\`text
