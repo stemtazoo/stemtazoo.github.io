@@ -264,6 +264,11 @@ last_modified_at: 2026-09-30
     fill.setAttribute('points', pts.join(' '));
   }
 
+  function isGuideActive(k){
+    if(mode === 'center') return Math.abs(k) === sigma;
+    return k === 0 || k === sigma;
+  }
+
   function makeGuides(){
     guides.innerHTML = '';
     [-3,-2,-1,0,1,2,3].forEach(function(k){
@@ -273,13 +278,13 @@ last_modified_at: 2026-09-30
       line.setAttribute('x2',x);
       line.setAttribute('y1',k === 0 ? 52 : 92);
       line.setAttribute('y2',baseY);
-      line.setAttribute('class','sigma-viz__guide' + (Math.abs(k) === sigma || (mode !== 'center' && k === 0) ? ' sigma-viz__guide--active' : ''));
+      line.setAttribute('class','sigma-viz__guide' + (isGuideActive(k) ? ' sigma-viz__guide--active' : ''));
       guides.appendChild(line);
 
       const text = document.createElementNS('http://www.w3.org/2000/svg','text');
       text.setAttribute('x',x);
       text.setAttribute('y',268);
-      text.setAttribute('class','sigma-viz__text' + (Math.abs(k) === sigma || k === 0 ? ' sigma-viz__text--active' : ''));
+      text.setAttribute('class','sigma-viz__text' + (isGuideActive(k) || k === 0 ? ' sigma-viz__text--active' : ''));
       text.textContent = k === 0 ? '平均' : (k > 0 ? '+' + k + 'σ' : k + 'σ');
       guides.appendChild(text);
     });
@@ -303,10 +308,14 @@ last_modified_at: 2026-09-30
 
   function updateButtons(){
     root.querySelectorAll('[data-sigma]').forEach(function(btn){
-      btn.classList.toggle('is-active', Number(btn.dataset.sigma) === sigma);
+      const active = Number(btn.dataset.sigma) === sigma;
+      btn.classList.toggle('is-active', active);
+      btn.setAttribute('aria-pressed', active ? 'true' : 'false');
     });
     root.querySelectorAll('[data-mode]').forEach(function(btn){
-      btn.classList.toggle('is-active', btn.dataset.mode === mode);
+      const active = btn.dataset.mode === mode;
+      btn.classList.toggle('is-active', active);
+      btn.setAttribute('aria-pressed', active ? 'true' : 'false');
     });
   }
 
