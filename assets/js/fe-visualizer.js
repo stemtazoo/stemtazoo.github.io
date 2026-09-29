@@ -346,3 +346,45 @@ document.addEventListener("DOMContentLoaded", () => {
     initialize();
   });
 });
+
+// FE: alternating-bit right-shift visualizer
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("[data-fe-alternating-bits-demo]").forEach((demo) => {
+    const slider = demo.querySelector("[data-alt-n]");
+    const nLabel = demo.querySelector("[data-alt-n-label]");
+    const xContainer = demo.querySelector("[data-alt-x]");
+    const halfContainer = demo.querySelector("[data-alt-half]");
+    const sumContainer = demo.querySelector("[data-alt-sum]");
+    const result = demo.querySelector("[data-alt-result]");
+
+    if (!slider || !xContainer || !halfContainer || !sumContainer || !result) return;
+
+    function renderBits(container, bits) {
+      container.replaceChildren();
+      bits.split("").forEach((bit) => {
+        const cell = document.createElement("span");
+        cell.className = "fe-alt-bits-demo__bit";
+        cell.textContent = bit;
+        container.appendChild(cell);
+      });
+    }
+
+    function render() {
+      const n = Number(slider.value);
+      const length = n * 2;
+      const xBits = Array.from({ length }, (_, index) => index % 2 === 0 ? "1" : "0").join("");
+      const halfBits = "0" + xBits.slice(0, -1);
+      const sumBits = "1".repeat(length);
+      const sumValue = (2 ** length) - 1;
+
+      if (nLabel) nLabel.textContent = String(n);
+      renderBits(xContainer, xBits);
+      renderBits(halfContainer, halfBits);
+      renderBits(sumContainer, sumBits);
+      result.textContent = `${length}ビットすべてが1なので、合計は 2^${length} - 1 = ${sumValue} です。`;
+    }
+
+    slider.addEventListener("input", render);
+    render();
+  });
+});
