@@ -38,6 +38,11 @@ last_modified_at: 2026-09-30
 
 分散と標準偏差そのものの定義や単位の違いは、[分散と標準偏差の違いとは？ばらつきをどう読むか](/ds/variance-and-standard-deviation/)で整理しています。
 
+一次情報として、NISTの Engineering Statistics Handbook でも、正規分布では μ±1σ に68.27%、μ±2σ に95.45%、μ±3σ に99.73%が入ることが示されています。
+
+- [NIST: What do we mean by “Normal” data?](https://www.itl.nist.gov/div898/handbook/pmc/section5/pmc51.htm)
+- [NIST: Standard Normal Distribution Table](https://www.itl.nist.gov/div898/handbook/eda/section3/eda3671.htm)
+
 ---
 
 ## 直感的な説明
