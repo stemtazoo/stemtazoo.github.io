@@ -1,14 +1,14 @@
 ---
 layout: page
 title: シフト演算とは？左シフト・右シフトと2進数の乗算【基本情報技術者試験】
-description: シフト演算を「ビット列を左または右にずらす操作」として整理し、左シフトは2倍、右シフトは半分、論理シフトと算術シフトの違い、16進数と2進数を行き来する計算手順、ビット取り出しや乗算での使い方をFE試験向けに解説します。
+description: シフト演算を「ビット列を左または右にずらす操作」として整理し、左シフト・右シフト、論理シフトと算術シフト、交互ビット列を右シフトして足す問題、16進数との変換をFE試験向けに解説します。
 permalink: /fe/shift-operation/
 tags: [fe, fe-technology, algorithm]
 fe_section: テクノロジ系
 fe_subsection: 基礎理論
 fe_order: 35
 date: 2026-07-02
-last_modified_at: 2026-08-12
+last_modified_at: 2026-09-29
 ---
 
 ## まず結論
@@ -77,6 +77,91 @@ last_modified_at: 2026-08-12
 ```
 
 とすると、`12` が `6` になります。
+
+### 交互に並ぶ `1010...10` を右シフトすると？
+
+FEでは、シフト演算と **`2^m - 1`** を組み合わせて考える問題もあります。
+
+例えば、1と0が交互に並ぶ6ビットの値を考えます。
+
+```text
+x     = 101010₂
+x / 2 = 010101₂
+        --------
+合計  = 111111₂
+```
+
+この `x` は末尾が0なので偶数です。したがって `x / 2` は、2進数では **右に1ビットずらした値**として読めます。
+
+すると、`x` の1がある位置と `x / 2` の1がある位置がちょうど交互に埋まり、足した結果は **すべてのビットが1** になります。
+
+```text
+111111₂
+= 2⁵ + 2⁴ + 2³ + 2² + 2¹ + 2⁰
+= 2⁶ - 1
+```
+
+一般に、`2n` ビットすべてが1なら、
+
+```text
+111...111₂
+  ↑ 2nビット
+
+= 2^(2n) - 1
+```
+
+です。
+
+<link rel="stylesheet" href="{{ '/assets/css/fe-visualizer.css' | relative_url }}">
+
+<div class="fe-learning-demo fe-alt-bits-demo" data-fe-alternating-bits-demo>
+  <p class="fe-learning-demo__title">動かして確認：nを変えると、なぜ全部1になる？</p>
+  <p class="fe-learning-demo__lead">nを動かすと、xの桁数が2nビットに変わります。x/2との1の位置がどう埋まるかを見てください。</p>
+
+  <label class="fe-alt-bits-demo__slider-row">
+    <span>n = <strong data-alt-n-label>3</strong></span>
+    <input type="range" min="1" max="5" value="3" step="1" data-alt-n aria-label="nの値">
+  </label>
+
+  <div class="fe-alt-bits-demo__scroll" aria-label="交互ビット列と右シフトの比較">
+    <div class="fe-alt-bits-demo__row">
+      <span class="fe-alt-bits-demo__label">x</span>
+      <div class="fe-alt-bits-demo__bits" data-alt-x><code>101010</code></div>
+    </div>
+    <div class="fe-alt-bits-demo__row">
+      <span class="fe-alt-bits-demo__label">x / 2</span>
+      <div class="fe-alt-bits-demo__bits" data-alt-half><code>010101</code></div>
+    </div>
+    <div class="fe-alt-bits-demo__row is-result">
+      <span class="fe-alt-bits-demo__label">合計</span>
+      <div class="fe-alt-bits-demo__bits" data-alt-sum><code>111111</code></div>
+    </div>
+  </div>
+
+  <p class="fe-learning-demo__result" data-alt-result role="status" aria-live="polite">
+    6ビットすべてが1なので、合計は 2^6 - 1 = 63 です。
+  </p>
+  <p class="fe-learning-demo__hint">見るポイント：xの1とx/2の1が重ならず、0だった位置をちょうど埋めます。だから桁上がりなしで全部1になります。</p>
+  <noscript><p>操作にはJavaScriptが必要です。上の n=3 の例だけでも同じ仕組みを確認できます。</p></noscript>
+</div>
+
+<script src="{{ '/assets/js/fe-visualizer.js' | relative_url }}" defer></script>
+
+この形を見抜ければ、試験では長い式変形をしなくても、
+
+```text
+1010...10
+↓ 2で割る（右へ1ビット）
+0101...01
+↓ 足す
+1111...11
+↓
+2^(2n) - 1
+```
+
+と判断できます。
+
+「nビットすべてが1なら最大値は `2^n - 1`」という考え方は、[nビットで表せるパターン数](/fe/bit-pattern-count/)でも整理しています。
 
 ### 論理右シフトは「左から0を入れる」
 
@@ -344,6 +429,27 @@ A    B    C    D
 
 と処理すると、桁またぎのミスを減らせます。
 
+### 交互ビット列を足す問題
+
+`1010...10` のように1と0が交互に並ぶ値が出たら、次の順で確認します。
+
+```text
+末尾が0
+→ 2で割ると右へ1ビット
+
+x     = 1010...10
+x / 2 = 0101...01
+→ 1の位置が互い違い
+
+足す
+→ 1111...11
+
+2nビット全部1
+→ 2^(2n) - 1
+```
+
+選択肢問題なら、一般式を最後まで導く前に `n = 1` や `n = 2` を代入して候補を切る方法も使えます。ただし、理解するときは **「右シフトで1の位置が互い違いになり、足すと全部1になる」** ところまで押さえておくと、数字が変わっても対応できます。
+
 ### 倍率を問う問題
 
 | 問題文の表現 | 判断 |
@@ -449,6 +555,21 @@ x >> 1
 
 2ビット左シフトは、倍率のイメージでは `2² = 4倍` です。
 
+### ❌ `1010...10 + 0101...01` では桁上がりが起きる
+
+この2つは、1が立っている位置が重なりません。
+
+```text
+101010
+010101
+------
+111111
+```
+
+各桁で `1 + 1` が発生しないため、桁上がりは起きません。
+
+ここから **「2nビット全部1 → 2^(2n) - 1」** と判断できます。
+
 ### ❌ 右シフトで押し出されたビットも残る
 
 固定ビット長では、右端から押し出されたビットは失われます。
@@ -477,6 +598,7 @@ x >> 1
 - **論理右シフトは左を0で埋める**
 - **算術右シフトは符号を保つ**
 - 16進数1桁は4ビット
+- `1010...10` を2で割ると `0101...01` になり、足すと **2nビット全部1 = 2^(2n) - 1**
 - 16進数の2ビットシフトなど、桁境界と合わない問題は **16進 → 2進 → シフト → 16進** で処理する
 - 右へ押し出されたビットは失われる
 - ビット取り出しでは、ANDで取り出してから右シフトで次のビットを下位へ持ってくる
