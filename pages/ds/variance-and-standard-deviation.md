@@ -9,7 +9,7 @@ ds_area: datascience
 ds_section: statistics
 prev: /ds/student-t-test/
 next: /ds/variance-standard-deviation/
-last_modified_at: 2026-06-21
+last_modified_at: 2026-09-30
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -97,6 +97,8 @@ $$
 
 そこで平方根をとることで、  
 **元の単位に戻して解釈しやすくしたものが標準偏差**です。
+
+ここでは「標準偏差とは何か」に重点を置いています。正規分布で **±1σ・±2σ・±3σ が何%に対応するか、片側ではどう読むか**は、[標準偏差の読み方とは？±1σ・±2σ・±3σと正規分布](/ds/variance-standard-deviation/)で図解しています。
 
 
 ## どんな場面で使う？
