@@ -7,7 +7,7 @@ tags: [fe, fe-technology, algorithm, programming]
 fe_section: テクノロジ系
 fe_subsection: アルゴリズムとプログラミング
 fe_order: 110
-last_modified_at: 2026-08-11
+last_modified_at: 2026-10-02
 ---
 
 ## まず結論
@@ -142,6 +142,8 @@ f(3) = 3 + 3 = 6
 f(4) = 4 + 6 = 10
 f(5) = 5 + 10 = 15
 ```
+
+呼出し元の変数・仮引数・戻り値の区別は、[値呼出しと呼出し元への影響](/fe/call-by-value/)で確認できます。再帰でも、呼出しごとの値を分けて記録することが大切です。
 
 ### 1回の呼出しから二つに枝分かれする再帰
 

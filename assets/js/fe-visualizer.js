@@ -388,3 +388,41 @@ document.addEventListener("DOMContentLoaded", () => {
     render();
   });
 });
+
+// FE: scalar argument passing, shown at four call stages.
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("[data-fe-arg-demo]").forEach((demo) => {
+    const buttons = Array.from(demo.querySelectorAll("[data-arg-stage]"));
+    const find = (name) => demo.querySelector("[data-arg-" + name + "]");
+    const labels = ["value-x", "value-p", "value-note", "ref-x", "ref-p", "ref-note", "status"];
+    const outputs = labels.map(find);
+    if (!buttons.length || outputs.some((node) => !node)) return;
+    const stages = [
+      ["x = 10", "p はまだありません", "値のコピーを渡します。",
+       "x = 10", "p はまだありません", "元の変数への参照を渡します。",
+       "呼出し前：どちらも x = 10 です。"],
+      ["x = 10", "p = 10", "x と p は、同じ値を持つ別々の変数です。",
+       "x = 10", "p から見ても10", "p は x と同じ変数を参照します。",
+       "受渡し直後：値呼出しは10をコピー。参照呼出しは元の x を参照します。"],
+      ["x = 10", "p = 99", "変わるのはコピーの p だけです。",
+       "x = 99", "p から見ても99", "p を通して、元の x が変わりました。",
+       "p ← 99 の直後：値呼出しの x は10のまま。参照呼出しの x は99になります。"],
+      ["x = 10", "p の役割は終了", "p の99は x に書き戻されません。",
+       "x = 99", "p の役割は終了", "元の x に行った変更が残ります。",
+       "終了後：値呼出しは x = 10、参照呼出しは x = 99 です。"]
+    ];
+    function render(index) {
+      outputs.forEach((node, i) => { node.textContent = stages[index][i]; });
+      buttons.forEach((button) => {
+        button.setAttribute("aria-pressed", String(Number(button.dataset.argStage) === index));
+      });
+    }
+    buttons.forEach((button) => {
+      const index = Number(button.dataset.argStage);
+      if (!Number.isInteger(index) || !stages[index]) return;
+      button.disabled = false;
+      button.addEventListener("click", () => render(index));
+    });
+    render(0);
+  });
+});
