@@ -426,3 +426,48 @@ document.addEventListener("DOMContentLoaded", () => {
     render(0);
   });
 });
+
+// FE: compaction changes the largest free extent, not total free capacity.
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("[data-fe-compaction-demo]").forEach((demo) => {
+    const buttons = Array.from(demo.querySelectorAll("[data-compact-state]"));
+    const memory = demo.querySelector("[data-compact-memory]");
+    const status = demo.querySelector("[data-compact-status]");
+    if (!memory || !status || !buttons.length) return;
+    const layouts = {
+      before: [["A", 60], ["空き", 40], ["B", 80], ["空き", 30], ["C", 40], ["空き", 50]],
+      after: [["A", 60], ["B", 80], ["C", 40], ["空き", 120]]
+    };
+    function render(state) {
+      const layout = layouts[state];
+      if (!layout) return;
+      memory.replaceChildren();
+      layout.forEach(([name, size]) => {
+        const block = document.createElement("span");
+        block.className = "fe-compaction-demo__block" + (name === "空き" ? " is-free" : "");
+        block.style.flexGrow = String(size);
+        block.setAttribute("aria-label", name + (name === "空き" ? "" : " 使用中") + size + "KB");
+        block.textContent = name;
+        const number = document.createElement("strong");
+        number.textContent = String(size);
+        block.appendChild(number);
+        memory.appendChild(block);
+      });
+      const free = layout.filter(([name]) => name === "空き").map(([, size]) => size);
+      const total = free.reduce((sum, size) => sum + size, 0);
+      const largest = Math.max(...free);
+      status.textContent = (state === "before" ? "整理前" : "整理後") +
+        "：空きの合計は" + total + "KB、最大の連続した空きは" + largest + "KBです。" +
+        (largest >= 80 ? "80KBを連続配置できます。空きの合計は増えていません。" : "80KBを連続配置できません。");
+      buttons.forEach((button) => {
+        button.setAttribute("aria-pressed", String(button.dataset.compactState === state));
+      });
+    }
+    buttons.forEach((button) => {
+      if (!layouts[button.dataset.compactState]) return;
+      button.disabled = false;
+      button.addEventListener("click", () => render(button.dataset.compactState));
+    });
+    render("before");
+  });
+});

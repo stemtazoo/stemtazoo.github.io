@@ -1,14 +1,14 @@
 ---
 layout: page
 title: 可変区画方式とは？主記憶の空き領域を追う問題の考え方【基本情報技術者試験】
-description: 可変区画方式を「プログラムの大きさに合わせて主記憶を割り当てる方式」として整理し、ロードと解放で空き領域が分かれる考え方、ファーストフィット、固定区画方式、フラグメンテーションとの違いをFE試験向けに解説します。
+description: 可変区画方式のロードと解放を順番に追い、空き領域の個数と容量を区別します。外部フラグメンテーションで合計容量が足りても配置できない理由と、コンパクション前後で連続した空きが変わる様子を、具体例・比較表・操作できる図解で確認できます。
 permalink: /fe/variable-partition-memory-allocation/
 tags: [fe, fe-technology, computer-system]
 fe_section: テクノロジ系
 fe_subsection: コンピュータシステム
 fe_order: 48
 date: 2026-07-10
-last_modified_at: 2026-09-20
+last_modified_at: 2026-10-02
 ---
 
 ## まず結論
@@ -75,6 +75,53 @@ last_modified_at: 2026-09-20
 このように、空き領域が分かれてしまう現象は、**外部フラグメンテーション** と関係します。
 
 外部フラグメンテーションでは、空き容量の合計は足りていても、連続した空き領域が足りずに、大きなプログラムを置けないことがあります。
+
+
+### 外部フラグメンテーションとコンパクション
+
+**フラグメンテーション（断片化）**は、記憶領域に細切れの空きや未使用部分が生じる現象です。可変区画方式で、使用中の領域の間に空きが分散する場合は、**外部フラグメンテーション**と呼びます。
+
+例えば、連続した領域にプログラムを配置する方式で、離れた場所に40KB・30KB・50KBの空きがあるとします。空きの合計は120KBですが、最大の連続した空きは50KBなので、80KBのプログラムをそのまま置くことはできません。
+
+**コンパクション**は、使用中の領域を移動して詰め、分散した空きを連続した領域にまとめる処理です。移動できる仕組みがあることを前提とし、データの移動などの処理負荷がかかります。
+
+| 状態 | 空き容量の合計 | 最大の連続した空き | 80KBを連続配置できる？ |
+|---|---:|---:|---|
+| 整理前：40KB・30KB・50KBに分断 | 120KB | 50KB | できない |
+| 整理後：空きを1か所に集める | 120KB | 120KB | できる |
+
+**コンパクションで空き容量そのものが増えるわけではありません。** 使用中の領域の位置が変わり、大きな連続領域を確保できるようになります。
+
+外部フラグメンテーションと、使用中の領域の移動によるコンパクションは、著者公開の[Operating Systems: Three Easy Pieces：Segmentation](https://pages.cs.wisc.edu/~remzi/OSTEP/vm-segmentation.pdf)でも確認できます。
+
+### 操作して確認：空きの合計と連続した空き
+
+主記憶は300KBで、Aが60KB、Bが80KB、Cが40KBを使用しているとします。空きは40KB・30KB・50KBに分かれています。ここではOSの使用分などは考えません。
+
+「整理前」「整理後」を切り替えてください。**見るポイント：空きの合計は変わらず、最大の連続した空きだけが変わること。** この図では新しいプログラムの割当ては行わず、80KBを配置できるかを比較します。
+
+<link rel="stylesheet" href="{{ '/assets/css/fe-visualizer.css' | relative_url }}">
+
+<div class="fe-learning-demo fe-compaction-demo" data-fe-compaction-demo>
+  <p class="fe-learning-demo__title">同じ300KBの主記憶を整理する</p>
+  <p class="fe-learning-demo__lead">青い領域は使用中、破線の領域は空きです。数字の単位はKBです。</p>
+  <div class="fe-learning-demo__controls" aria-label="コンパクションの前後">
+    <button type="button" class="fe-learning-demo__button" data-compact-state="before" aria-pressed="true" disabled>整理前</button>
+    <button type="button" class="fe-learning-demo__button" data-compact-state="after" aria-pressed="false" disabled>整理後</button>
+  </div>
+  <div class="fe-compaction-demo__memory" data-compact-memory aria-label="主記憶の配置">
+    <span class="fe-compaction-demo__block" style="flex-grow:60" aria-label="A 使用中60KB">A<strong>60</strong></span>
+    <span class="fe-compaction-demo__block is-free" style="flex-grow:40" aria-label="空き40KB">空き<strong>40</strong></span>
+    <span class="fe-compaction-demo__block" style="flex-grow:80" aria-label="B 使用中80KB">B<strong>80</strong></span>
+    <span class="fe-compaction-demo__block is-free" style="flex-grow:30" aria-label="空き30KB">空き<strong>30</strong></span>
+    <span class="fe-compaction-demo__block" style="flex-grow:40" aria-label="C 使用中40KB">C<strong>40</strong></span>
+    <span class="fe-compaction-demo__block is-free" style="flex-grow:50" aria-label="空き50KB">空き<strong>50</strong></span>
+  </div>
+  <p class="fe-learning-demo__result" data-compact-status role="status" aria-live="polite" aria-atomic="true">整理前：空きの合計は120KB、最大の連続した空きは50KBです。80KBを連続配置できません。</p>
+  <noscript><p>JavaScriptが無効の場合は、本文の比較表で整理前後の違いを確認できます。</p></noscript>
+</div>
+
+<script src="{{ '/assets/js/fe-visualizer.js' | relative_url }}" defer></script>
 
 このテーマは、基本情報技術者試験の「コンピュータシステム」や「主記憶管理」と関係する内容です。公式の出題範囲やシラバスは、[IPA：基本情報技術者試験](https://www.ipa.go.jp/shiken/kubun/fe.html) から確認できます。
 
@@ -152,6 +199,18 @@ Eロード
 
 しかし、問題で聞かれているのが **空き領域の個数** なら、答えるのは **3** です。
 
+### 現象と対処方法を取り違えない
+
+| 説明の合図 | 判断 |
+|---|---|
+| 割当てと解放を繰り返し、空きが細切れになる | 外部フラグメンテーション |
+| 使用中の領域を詰め、連続した空きを作る | コンパクション |
+| 割当て済み区画の中に余りが残る | 内部フラグメンテーション |
+| プロセスを主記憶と補助記憶の間で退避・復帰する | スワッピング |
+| 固定長のページとページ枠で管理する | ページング |
+
+フラグメンテーションは**現象**、コンパクションは外部の断片化への**対処方法**です。内部の余りは区画内にあるため、使用中の区画を移動して詰めるだけでは解消しません。
+
 ## どんな場面で使う？
 
 
@@ -211,7 +270,8 @@ Eロード
 - 空き容量の合計と、空き領域の個数は別
 - D80を100Kの空きに入れると、20Kの空きが残るように、小さな空きを見落とさない
 - 隣り合っていない空き領域は、別々に数える
-- 空き領域が分かれることは、外部フラグメンテーションと関係する
+- 空き領域が分断される現象は外部フラグメンテーション
+- コンパクションは使用中の領域を詰めて連続した空きを作る。空きの合計は増えない
 - 固定区画方式はあらかじめ区画を分ける、可変区画方式は必要な大きさに合わせて区画を作る
 
 {% include fe_article_footer.html %}

@@ -607,3 +607,34 @@
 @media (max-width: 520px) {
   .fe-arg-demo__panels { grid-template-columns: 1fr; }
 }
+
+/* FE: compaction, with block widths proportional to their capacity */
+.fe-compaction-demo__memory {
+  display: flex;
+  margin: 1rem 0;
+  width: 100%;
+}
+.fe-compaction-demo__block {
+  background: rgba(11, 111, 174, 0.13);
+  border: 1px solid #0b6fae;
+  box-sizing: border-box;
+  flex-basis: 0;
+  font-size: 0.85rem;
+  min-width: 0;
+  padding: 0.6rem 0;
+  text-align: center;
+}
+.fe-compaction-demo__block strong { display: block; }
+.fe-compaction-demo__block.is-free {
+  background: transparent;
+  border-style: dashed;
+}
+.fe-compaction-demo .fe-learning-demo__button { min-height: 44px; }
+.fe-compaction-demo .fe-learning-demo__button:disabled { cursor: default; opacity: 0.55; }
+.fe-compaction-demo .fe-learning-demo__button:focus-visible {
+  outline: 2px solid #0b6fae;
+  outline-offset: 3px;
+}
+@media (max-width: 520px) {
+  .fe-compaction-demo__block { font-size: 0.75rem; }
+}
