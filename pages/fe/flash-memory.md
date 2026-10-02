@@ -1,14 +1,14 @@
 ---
 layout: page
 title: フラッシュメモリとは？EEPROM・SRAM・DRAMとの違い【基本情報技術者試験】
-description: フラッシュメモリを「不揮発性で、電気的に消去・書換えできる半導体メモリ」として整理し、EEPROM、UV-EPROM、SRAM、DRAM、ROM、RAM、リフレッシュ、キャッシュメモリとの違いをFE試験で切れるように解説します。
+description: フラッシュメモリの不揮発性と電気的な書換えを、NORのビット変化を切り替える図で確認します。消去が必要な理由、消去単位と書込み単位の違い、耐久性の限界、DRAMのリフレッシュやEEPROMとの区別を整理し、FE科目Aで特徴を判断できます。
 permalink: /fe/flash-memory/
 tags: [fe, fe-technology, computer-system]
 fe_section: テクノロジ系
 fe_subsection: コンピュータシステム
 fe_order: 51
 date: 2026-07-10
-last_modified_at: 2026-09-29
+last_modified_at: 2026-10-03
 ---
 
 ## まず結論
@@ -74,6 +74,58 @@ SDカードの容量規格（SD・SDHC・SDXC・SDUC）とファイルシステ�
 
 このテーマは、基本情報技術者試験の「コンピュータシステム」や「メモリ」と関係する内容です。公式の出題範囲やシラバスは、[IPA：基本情報技術者試験](https://www.ipa.go.jp/shiken/kubun/fe.html) から確認できます。
 
+### なぜ消去してから書き換える？
+
+フラッシュメモリは、RAMのように任意の値をそのまま上書きする仕組みではありません。**同じ記憶領域を再利用するには、消去して書込み可能な状態に戻す必要があります。**
+
+NORフラッシュの例では、消去済みのビットは1で、書込みは1を0にする操作です。0を1に戻すには、セクタというまとまった範囲を消去します。消去は一部のビットだけを対象にする操作ではありません。
+
+次は仕組みを理解するため、**一つの消去範囲を4ビットに縮めた模式図**です。実際のセクタサイズや書込み単位を示したものではありません。
+
+| 段階 | ビットの状態 | 操作の意味 |
+|---|---|---|
+| 1. 消去済み | `1111` | 書込みできる状態 |
+| 2. 書込み | `1010` | 必要な1を0にする |
+| 3. `1110`に変更したい | `1010`のまま | 左から2番目の0を1に戻すには、消去が必要 |
+| 4. セクタを消去 | `1111` | 範囲全体が消去済みの状態に戻る |
+| 5. 再書込み | `1110` | 必要なビットを再び0にする |
+
+**見るポイント：0を1に戻すとき、対象のビットだけでなく消去範囲全体が1に戻ること。** ボタンで各段階を確認できます。
+
+<link rel="stylesheet" href="{{ '/assets/css/fe-visualizer.css' | relative_url }}">
+
+<div class="fe-learning-demo fe-flash-demo" data-fe-flash-demo>
+  <p class="fe-learning-demo__title">NORフラッシュの消去・書込み（4ビットの模式図）</p>
+  <div class="fe-learning-demo__controls" aria-label="消去・書込みの段階">
+    <button type="button" class="fe-learning-demo__button" data-flash-stage="0" aria-pressed="true" disabled>1. 消去済み</button>
+    <button type="button" class="fe-learning-demo__button" data-flash-stage="1" aria-pressed="false" disabled>2. 書込み</button>
+    <button type="button" class="fe-learning-demo__button" data-flash-stage="2" aria-pressed="false" disabled>3. 上書きできる？</button>
+    <button type="button" class="fe-learning-demo__button" data-flash-stage="3" aria-pressed="false" disabled>4. 全体を消去</button>
+    <button type="button" class="fe-learning-demo__button" data-flash-stage="4" aria-pressed="false" disabled>5. 再書込み</button>
+  </div>
+  <p>一つの消去範囲（セクタ）の模式図</p>
+  <div class="fe-flash-demo__sector" data-flash-bits aria-label="ビットの状態：1111">
+    <span class="fe-flash-demo__bit">1</span><span class="fe-flash-demo__bit">1</span><span class="fe-flash-demo__bit">1</span><span class="fe-flash-demo__bit">1</span>
+  </div>
+  <p class="fe-learning-demo__result" data-flash-status aria-live="polite">消去済み：1111。ここから必要なビットを0に書き込みます。</p>
+</div>
+
+<script src="{{ '/assets/js/fe-visualizer.js' | relative_url }}" defer></script>
+
+このビットの説明はNORフラッシュの例です。NANDフラッシュを含め、実際の消去・書込み単位や操作制限は製品仕様によります。**消去単位と書込み単位を同じものとして覚えない**ようにします。
+
+また、SSDやUSBメモリでファイルを更新するたびに、必ず同じ物理領域を直ちに消去するわけではありません。制御装置が別の消去済み領域へ書き込むなどして管理します。利用者のファイル更新と、メモリ内部の消去・書込みを分けて考えてください。
+
+メーカーの説明は、[Infineon：NORフラッシュの消去操作](https://community.infineon.com/t5/Knowledge-Base-Articles/How-Erase-Operation-Works-in-NOR-Flash/ta-p/251756)で確認できます。
+
+### 書換え回数は無制限ではない
+
+消去・書込みの繰返しには耐久性の限界があります。許容される回数は製品や使用条件によるため、すべてのフラッシュメモリに同じ上限を当てはめません。
+
+不揮発性でも、永久にデータを保持できるという意味ではありません。保持特性は温度や消去・書込み回数などに影響されます。[Infineon：NOR Flash FAQ](https://community.infineon.com/t5/Knowledge-Base-Articles/NOR-Flash-FAQs/ta-p/255345)では、その関係が説明されています。
+
+DRAMのように、電源供給中に記憶を保つための定期的なリフレッシュを必要とする仕組みとは区別します。SSDなどが信頼性のために内部でデータを再書込みする場合があることと、DRAMのリフレッシュが必須であることは別の話です。
+
 ## 科目Aでどう出る？
 
 科目Aでは、メモリの特徴から用語を選ぶ問題が出やすいです。
@@ -95,6 +147,17 @@ SDカードの容量規格（SD・SDHC・SDXC・SDUC）とファイルシステ�
 ＋
 電気的に消去・書換え
 ```
+
+### 書換えに関する説明を見分ける
+
+| 説明 | 判断するポイント |
+|---|---|
+| 消去してから再び書き込む | フラッシュメモリの再書換えの基本 |
+| 書換え回数が無制限 | 誤り。消去・書込みには耐久性の限界がある |
+| 必ず基板から外して書き込む | 誤り。実装したまま更新できる構成もある |
+| 定期的なリフレッシュが必須 | DRAMの特徴と混同している |
+
+**「電気的に書換え可能」でも、「消去不要」「無制限に書換え可能」ではありません。**
 
 ### 2段階で判断する
 
@@ -170,6 +233,8 @@ SDカードの容量規格（SD・SDHC・SDXC・SDUC）とファイルシステ�
 | フラッシュメモリはキャッシュメモリに使う | キャッシュメモリは高速なSRAMが代表的 |
 | フラッシュメモリはリフレッシュが必要 | リフレッシュが必要なのはDRAM |
 | フラッシュメモリは紫外線で消去する | 紫外線で消去するのはUV-EPROM |
+| フラッシュは何度でも無制限に書き換えられる | 消去・書込みの耐久性には限界があり、製品仕様による |
+| フラッシュを書き換えるには必ず基板から外す | 実装したまま更新できる構成もある。具体的な方法は機器の仕様による |
 | 不揮発性ならすべて書換え不可 | EEPROMやフラッシュメモリは電気的に書換え可能 |
 
 | 用語 | 主な用途 | 覚え方 |
@@ -183,10 +248,9 @@ SDカードの容量規格（SD・SDHC・SDXC・SDUC）とファイルシステ�
 ## まとめ（試験直前用）
 
 - フラッシュメモリは、不揮発性で電気的に消去・書換えできる半導体メモリ
-- USBメモリ、SDカード、SSDなどに使われる
-- 紫外線で消去するのはUV-EPROM
-- EEPROMは電気的に書換えでき、フラッシュメモリは大容量用途で使われやすい
-- キャッシュメモリに使われる代表はSRAM
-- 主記憶に広く使われ、リフレッシュが必要なのはDRAM
+- 同じ記憶領域の再書換えでは消去が必要。消去単位と書込み単位は別
+- 消去・書込み回数は無制限ではなく、DRAMのようなリフレッシュは不要
+- SSD・USBメモリ・SDカードや、組込み機器のプログラム保存に使われる
+- 紫外線で消去するのはUV-EPROM、主記憶はDRAM、キャッシュはSRAMが代表的
 
 {% include fe_article_footer.html %}

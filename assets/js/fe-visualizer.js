@@ -471,3 +471,43 @@ document.addEventListener("DOMContentLoaded", () => {
     render("before");
   });
 });
+
+// FE: NOR flash erase/program states; sector size is a teaching abstraction.
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("[data-fe-flash-demo]").forEach((demo) => {
+    const buttons = Array.from(demo.querySelectorAll("[data-flash-stage]"));
+    const bits = demo.querySelector("[data-flash-bits]");
+    const status = demo.querySelector("[data-flash-status]");
+    if (!bits || !status || !buttons.length) return;
+    const stages = [
+      ["1111", "消去済み：1111。ここから必要なビットを0に書き込みます。"],
+      ["1010", "書込み後：1010。左から2番目と4番目を1から0にしました。"],
+      ["1010", "1110に変更したい：左から2番目の0を1に戻す必要があります。書込みだけではできないため、1010のままです。"],
+      ["1111", "消去後：範囲全体が1111に戻りました。変更したかったビット以外も消去されます。"],
+      ["1110", "再書込み後：1110。消去済みの状態から、左から4番目を0に書き込みました。"]
+    ];
+    function render(index) {
+      const [value, note] = stages[index];
+      bits.replaceChildren();
+      Array.from(value).forEach((bit, position) => {
+        const cell = document.createElement("span");
+        cell.className = "fe-flash-demo__bit" + (bit === "0" ? " is-zero" : "") +
+          (index === 2 && position === 1 ? " is-blocked" : "");
+        cell.textContent = bit;
+        bits.appendChild(cell);
+      });
+      bits.setAttribute("aria-label", "ビットの状態：" + value);
+      status.textContent = note;
+      buttons.forEach((button) => {
+        button.setAttribute("aria-pressed", String(Number(button.dataset.flashStage) === index));
+      });
+    }
+    buttons.forEach((button) => {
+      const index = Number(button.dataset.flashStage);
+      if (!Number.isInteger(index) || !stages[index]) return;
+      button.disabled = false;
+      button.addEventListener("click", () => render(index));
+    });
+    render(0);
+  });
+});

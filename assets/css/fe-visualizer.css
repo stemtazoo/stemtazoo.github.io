@@ -638,3 +638,31 @@
 @media (max-width: 520px) {
   .fe-compaction-demo__block { font-size: 0.75rem; }
 }
+
+/* FE: NOR flash sector, shown as four conceptual bits. */
+.fe-flash-demo__sector {
+  border: 2px dashed #0b6fae;
+  border-radius: 10px;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  max-width: 22rem;
+  padding: 0.65rem;
+}
+.fe-flash-demo__bit {
+  border: 1px solid #0b6fae;
+  border-radius: 6px;
+  font-family: ui-monospace, monospace;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 0.5rem 0;
+  text-align: center;
+}
+.fe-flash-demo__bit.is-zero { background: rgba(11, 111, 174, 0.16); }
+.fe-flash-demo__bit.is-blocked { outline: 3px dashed #0b6fae; outline-offset: 2px; }
+.fe-flash-demo .fe-learning-demo__button { min-height: 44px; }
+.fe-flash-demo .fe-learning-demo__button:disabled { cursor: default; opacity: 0.55; }
+.fe-flash-demo .fe-learning-demo__button:focus-visible {
+  outline: 2px solid #0b6fae;
+  outline-offset: 3px;
+}
