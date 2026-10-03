@@ -749,3 +749,31 @@
   .fe-smart-meter-flow__grid { grid-template-columns: 1fr; }
   .fe-smart-meter-flow__arrow::before { content: "↓"; }
 }
+
+/* FE: work sharing; each bar represents one person's hours on an 8-hour scale. */
+.fe-work-sharing__panels {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.fe-work-sharing__panel {
+  border: 1px solid rgba(11, 111, 174, 0.3);
+  border-radius: 8px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  padding: 0.8rem;
+}
+.fe-work-sharing__panel h3 { font-size: 1.05rem; margin: 0 0 0.75rem; }
+.fe-work-sharing__track {
+  border: 1px dashed #0b6fae;
+  border-radius: 4px;
+  height: 1.1rem;
+  overflow: hidden;
+}
+.fe-work-sharing__bar { background: #0b6fae; display: block; height: 100%; }
+.fe-work-sharing__bar.is-eight { width: 100%; }
+.fe-work-sharing__bar.is-six { width: 75%; }
+.fe-work-sharing__bar.is-four { width: 50%; }
+@media (max-width: 700px) {
+  .fe-work-sharing__panels { grid-template-columns: 1fr; }
+}
