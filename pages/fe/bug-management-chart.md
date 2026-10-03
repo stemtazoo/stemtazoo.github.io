@@ -8,7 +8,7 @@ fe_section: マネジメント系
 fe_subsection: プロジェクトマネジメント
 fe_order: 70
 date: 2026-07-23
-last_modified_at: 2026-08-28
+last_modified_at: 2026-10-03
 ---
 
 ## まず結論
@@ -175,6 +175,35 @@ last_modified_at: 2026-08-28
 > **「バグが増えていない」だけでは、品質が良いとは判断できない**
 
 ということです。
+
+### 3本とも横ばいになったときの読み方
+
+この形は、1本ずつ意味に戻すと迷いません。
+
+<div class="bug-stop-flow">
+  <div><b>バグ摘出数</b><span>横ばい</span><small>新しいバグを発見していない</small></div>
+  <div><b>未消化テスト項目数</b><span>横ばい</span><small>テストを消化していない</small></div>
+  <div><b>未解決バグ数</b><span>横ばい</span><small>バグを解決できていない</small></div>
+  <p><b>3つを合わせる</b><br>→ テスト工程が停滞している可能性</p>
+</div>
+
+```text
+発見していない
+＋ テストしていない
+＋ 解決していない
+↓
+「収束」ではなく「停滞」を疑う
+```
+
+特に、**バグ摘出数が横ばいだからテストが収束した**と即断しないことが重要です。未消化テスト項目数がまだ残ったまま横ばいなら、テストそのものが進んでいません。
+
+<style>
+.bug-stop-flow{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem;margin:1.3rem 0}
+.bug-stop-flow div,.bug-stop-flow p{border:1px solid #ccc;border-radius:9px;padding:.8rem;text-align:center;margin:0}
+.bug-stop-flow span,.bug-stop-flow small{display:block;margin-top:.35rem}
+.bug-stop-flow p{grid-column:1/-1}
+@media(max-width:600px){.bug-stop-flow{grid-template-columns:1fr}.bug-stop-flow p{grid-column:auto}}
+</style>
 
 テストそのものが止まっていれば、新しいバグが見つからないのは当然だからです。
 
