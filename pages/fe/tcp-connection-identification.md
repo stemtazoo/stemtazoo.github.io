@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 230
 date: 2026-08-12
-last_modified_at: 2026-09-22
+last_modified_at: 2026-10-03
 ---
 
 ## まず結論
@@ -163,6 +163,30 @@ MACアドレスとIPアドレスをネットワーク機器の役割とあわせ
 | IPは両側あるがポートが片側だけ | 情報不足 |
 | 送信元・宛先のIPとポートが全てある | 正解候補 |
 
+### 「IPアドレス＋ポート番号」という選択肢の読み方
+
+問題によっては、4つの値をすべて列挙せず、「TCPコネクションを識別するために必要な**情報の種類**」を問うことがあります。
+
+その場合は、
+
+```text
+必要な情報の種類
+IPアドレス ＋ ポート番号
+        ↓
+実際の1本のTCPコネクション
+送信元IP ＋ 送信元ポート ＋ 宛先IP ＋ 宛先ポート
+```
+
+と読み分けます。
+
+つまり、選択肢が「IPアドレス、ポート番号」なら、**IPとポートの組合せが必要**という意味です。「2項目だけでTCPコネクションを一意に識別する」と覚えないようにします。
+
+<div class="tcp-four-tuple" aria-label="TCPコネクションを識別する4タプル">
+  <div class="tcp-endpoint"><strong>送信元</strong><span>IPアドレス</span><span>ポート番号</span></div>
+  <div class="tcp-link">TCPコネクション<br>⇄</div>
+  <div class="tcp-endpoint"><strong>宛先</strong><span>IPアドレス</span><span>ポート番号</span></div>
+</div>
+
 ### 「宛先だけ分かればよい」に注意
 
 パケットを宛先へ届けることと、TCPコネクションを識別することは別です。
@@ -237,6 +261,16 @@ IPアドレス
 ```
 
 この役割の違いを押さえます。
+
+<style>
+.tcp-four-tuple{display:flex;align-items:center;justify-content:center;gap:1rem;margin:1.5rem 0}
+.tcp-endpoint{min-width:150px;text-align:center;border:1px solid #bbb;border-radius:8px;overflow:hidden}
+.tcp-endpoint strong,.tcp-endpoint span{display:block;padding:.55rem}
+.tcp-endpoint strong{background:#f3f3f3}
+.tcp-endpoint span+span{border-top:1px solid #ddd}
+.tcp-link{text-align:center;font-weight:700}
+@media(max-width:560px){.tcp-four-tuple{flex-direction:column}.tcp-link{padding:.25rem 0}}
+</style>
 
 ## 標準仕様で確認する
 
