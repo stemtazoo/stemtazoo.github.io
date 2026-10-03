@@ -8,7 +8,7 @@ fe_section: ストラテジ系
 fe_subsection: 法務
 fe_order: 80
 date: 2026-08-08
-last_modified_at: 2026-10-01
+last_modified_at: 2026-10-03
 ---
 
 ## まず結論
@@ -98,6 +98,25 @@ last_modified_at: 2026-10-01
 ### 労働者派遣
 
 労働者派遣では、**派遣元が労働者を雇用し、その労働者が派遣先の指揮命令を受けて働きます。**
+
+さらに、会社同士では**派遣元事業主と派遣先事業主の間に労働者派遣契約**があります。
+
+<div class="dispatch-rel">
+  <div class="dispatch-company source"><strong>派遣元</strong><small>労働者を雇用</small></div>
+  <div class="dispatch-company dest"><strong>派遣先</strong><small>仕事を指示</small></div>
+  <div class="dispatch-worker"><strong>派遣労働者</strong></div>
+  <div class="dispatch-contract">派遣元 ↔ 派遣先<br><b>労働者派遣契約</b></div>
+  <div class="dispatch-employ">派遣元 ↔ 労働者<br><b>雇用関係</b></div>
+  <div class="dispatch-command">派遣先 → 労働者<br><b>指揮命令関係</b></div>
+</div>
+
+試験では、次の3本を分けて考えると安定します。
+
+```text
+派遣元 ↔ 派遣先   → 労働者派遣契約
+派遣元 ↔ 労働者   → 雇用関係
+派遣先 → 労働者   → 指揮命令関係
+```
 
 したがって、次の2つを分けて覚えます。
 
@@ -194,6 +213,7 @@ Q2. 日々の仕事を指示するのは誰か？
 
 | 問題文の表現 | 判断 |
 |---|---|
+| 派遣元事業主と派遣先事業主が労働者派遣契約を結ぶ | ○ |
 | 派遣先が派遣労働者へ業務指示をする | ○ |
 | 派遣先と派遣労働者に雇用関係が生じる | × |
 | 出向先が出向者へ業務指示をする | ○ |
@@ -284,8 +304,19 @@ FE試験では法律の細部を暗記するより、**契約形態ごとの基�
 
 そのため、問題文に「在籍」「転籍」などの条件があれば、その条件を優先します。
 
+<style>
+.dispatch-rel{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin:1.4rem 0;padding:1rem;border:1px solid #d7d7d7;border-radius:10px}
+.dispatch-company,.dispatch-worker,.dispatch-contract,.dispatch-employ,.dispatch-command{padding:.7rem;border:1px solid #bbb;border-radius:8px;text-align:center}
+.dispatch-company small{display:block;margin-top:.25rem}
+.dispatch-worker{grid-column:1 / -1}
+.dispatch-contract,.dispatch-employ,.dispatch-command{font-size:.92rem}
+.dispatch-contract{grid-column:1 / -1}
+@media(max-width:560px){.dispatch-rel{grid-template-columns:1fr}.dispatch-worker,.dispatch-contract{grid-column:auto}}
+</style>
+
 ## まとめ（試験直前用）
 
+- **労働者派遣契約＝派遣元と派遣先の会社同士**
 - 派遣は、**雇用＝派遣元、指揮命令＝派遣先**
 - 在籍出向では、出向元との関係を残しつつ、**出向先が指揮命令**する
 - 請負では、**請負会社が自社の労働者へ指揮命令**する
