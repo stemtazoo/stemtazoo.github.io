@@ -822,3 +822,10 @@
 .fe-control-flow__step--prevent { border-color: #0b6fae; background: rgba(11, 111, 174, 0.06); }
 .fe-control-flow__step--detect { border-style: dashed; border-color: #a13b25; background: rgba(161, 59, 37, 0.06); }
 @media (max-width: 700px) { .fe-control-flow { grid-template-columns: 1fr; } }
+
+/* FE: boot stages distinguish persistent storage from working memory. */
+.fe-memory-boot { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.8rem; margin: 1.2rem 0; }
+.fe-memory-boot__step { min-width: 0; padding: 1rem; border: 2px solid #0b6fae; border-radius: 8px; background: rgba(11, 111, 174, 0.06); overflow-wrap: anywhere; }
+.fe-memory-boot__step p { margin: 0.4rem 0; }
+.fe-memory-boot__label { font-weight: 700; }
+@media (max-width: 700px) { .fe-memory-boot { grid-template-columns: 1fr; } }
