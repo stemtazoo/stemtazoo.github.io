@@ -30,6 +30,8 @@ last_modified_at: 2026-10-03
 
 それでも、数量を取り違えたり、伝票を入力し忘れたりする可能性があります。そこで入力後に、元の伝票と入力結果の一覧を突き合わせます。これは発見統制です。
 
+<link rel="stylesheet" href="{{ '/assets/css/fe-visualizer.css' | relative_url }}">
+
 <div class="fe-control-flow" role="group" aria-label="受注入力における予防統制と発見統制">
   <div class="fe-control-flow__step fe-control-flow__step--prevent">
     <p class="fe-control-flow__label">1．入力に備える：予防統制</p>
