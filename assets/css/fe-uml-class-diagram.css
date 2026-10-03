@@ -1,0 +1,39 @@
+.fe-uml-diagrams {
+  margin: 1.25rem 0;
+  color: #253e50;
+}
+.fe-uml-diagrams__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+.fe-uml-diagrams figure {
+  min-width: 0;
+  margin: 0;
+  padding: 0.8rem;
+  border: 1px solid #b9cedb;
+  border-radius: 10px;
+  background: #f6fbff;
+}
+.fe-uml-diagrams figcaption {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.fe-uml-diagrams svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.fe-uml-diagrams svg text {
+  font-family: sans-serif;
+  fill: #253e50;
+}
+.fe-uml-diagrams figure p {
+  margin: 0.5rem 0 0;
+  font-size: 0.95rem;
+}
+@media (max-width: 640px) {
+  .fe-uml-diagrams__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
