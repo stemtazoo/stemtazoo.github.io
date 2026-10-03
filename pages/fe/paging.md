@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: コンピュータシステム
 fe_order: 49
 date: 2026-07-10
-last_modified_at: 2026-10-02
+last_modified_at: 2026-10-03
 ---
 
 ## まず結論
@@ -25,6 +25,20 @@ last_modified_at: 2026-10-02
 | ページフォールト | 必要なページが主記憶にない状態 | 補助記憶から読み込む |
 
 ページング方式のポイントは、**プログラムを連続した領域に置かなくてもよい**ことです。
+
+<div class="paging-map" aria-label="ページとページフレームの対応">
+  <div class="paging-side">
+    <strong>仮想アドレス空間</strong>
+    <span>ページ0</span><span>ページ1</span><span>ページ2</span>
+  </div>
+  <div class="paging-arrow">ページテーブル<br>→ 対応付け →</div>
+  <div class="paging-side">
+    <strong>主記憶</strong>
+    <span>フレーム0</span><span>フレーム1</span><span>フレーム2</span>
+  </div>
+</div>
+
+この図では、**左の固定長領域が「ページ」／右の固定長領域が「フレーム」**です。
 
 また、必要なページが主記憶にないときは、まずページフォールトが発生します。
 
@@ -181,6 +195,10 @@ CPUが必要とするページが主記憶に存在しないと、**ページフ
 
 です。
 
+今回のように「仮想アドレス空間を固定長の領域に分割して管理する。その領域名は？」と問われたら、**ページ**を選びます。
+
+一方、「主記憶を固定長に分割した領域」を問われたら、**ページ枠（フレーム）**です。
+
 つまり試験では、
 
 ```text
@@ -254,6 +272,18 @@ CPUが必要とするページが主記憶に存在しないと、**ページフ
 | セグメント方式 | プログラムを意味のある単位に分ける | 手続き、データ、スタックなどの単位 |
 
 試験では、**固定長ならページング、意味のある単位ならセグメント、空き領域を順に割り当てるなら可変区画方式** と切り分けます。
+
+<style>
+.paging-map { display:flex; align-items:center; justify-content:center; gap:1rem; margin:1.5rem 0; }
+.paging-side { min-width:145px; text-align:center; }
+.paging-side strong, .paging-side span { display:block; padding:.55rem; border:1px solid #bbb; }
+.paging-side strong { background:#f3f3f3; }
+.paging-arrow { text-align:center; font-size:.9rem; }
+@media (max-width:560px) {
+  .paging-map { flex-direction:column; }
+  .paging-arrow { transform:rotate(90deg); margin:.5rem 0; }
+}
+</style>
 
 ## 公式技術資料で確認する
 
