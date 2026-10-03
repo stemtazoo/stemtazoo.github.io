@@ -10,7 +10,7 @@ fe_section: テクノロジ系
 fe_subsection: システム構成要素
 fe_order: 40
 date: 2026-07-13
-last_modified_at: 2026-09-23
+last_modified_at: 2026-10-03
 ---
 
 ## まず結論
@@ -24,7 +24,17 @@ last_modified_at: 2026-09-23
 | フォールトトレランス | 冗長化などで機能を維持して継続する |
 | フールプルーフ | 人の誤操作を防ぐ |
 
-科目Aでは、まず **止めるのか、続けるのか、誤操作を防ぐのか** を見ると判断しやすくなります。
+科目Aでは、まず **「原因が人の誤操作か、装置の故障か」** を見ると判断しやすくなります。
+
+```text
+人の誤操作
+└─ 異常を起こさない → フールプルーフ
+
+装置の故障
+├─ 安全側へ移行     → フェールセーフ
+├─ 縮退して継続     → フェールソフト
+└─ 機能を維持       → フォールトトレランス
+```
 
 ## 直感的な説明
 
@@ -117,10 +127,22 @@ last_modified_at: 2026-09-23
 
 ### 判断の順番
 
-1. 人の誤操作を防いでいるか
-2. 異常時に安全側へ移行しているか
-3. 性能や機能を落として継続しているか
-4. 冗長化により機能を維持しているか
+まず、**誰・何が失敗したのか**を確認します。
+
+<div class="reliability-flow">
+  <div class="rf-start"><strong>問題の原因は？</strong></div>
+  <div class="rf-card"><strong>人の誤操作</strong><span>→ フールプルーフ</span></div>
+  <div class="rf-card"><strong>装置の故障</strong><span>→ その後の動作を見る</span></div>
+  <div class="rf-sub"><b>安全側へ</b><br>フェールセーフ</div>
+  <div class="rf-sub"><b>性能を落として継続</b><br>フェールソフト</div>
+  <div class="rf-sub"><b>冗長化で機能維持</b><br>フォールトトレランス</div>
+</div>
+
+1. 「利用者」「誤操作」「入力ミス」ならフールプルーフを疑う
+2. 「故障」「障害」なら残り3つを考える
+3. 安全側へ移行するならフェールセーフ
+4. 性能や機能を落として続けるならフェールソフト
+5. 冗長化などで機能を維持するならフォールトトレランス
 
 この順番で見ると、似た選択肢を切りやすくなります。
 
@@ -278,6 +300,15 @@ reboot
 必ずしも停止だけとは限りません。
 
 フェールセーフの本質は、故障時に安全側へ移行することです。安全側が停止である場合は多いですが、装置によっては警報や安全な状態への切替えが適切な場合もあります。
+
+<style>
+.reliability-flow{display:grid;grid-template-columns:repeat(6,1fr);gap:.65rem;margin:1.4rem 0}
+.rf-start{grid-column:1/-1;padding:.75rem;text-align:center;border:2px solid #888;border-radius:9px}
+.rf-card{grid-column:span 3;padding:.8rem;text-align:center;border:1px solid #bbb;border-radius:9px}
+.rf-card span{display:block;margin-top:.35rem}
+.rf-sub{grid-column:span 2;padding:.7rem;text-align:center;border:1px solid #ccc;border-radius:9px;font-size:.94rem}
+@media(max-width:600px){.reliability-flow{grid-template-columns:1fr}.rf-start,.rf-card,.rf-sub{grid-column:auto}}
+</style>
 
 ## まとめ（試験直前用）
 
