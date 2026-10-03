@@ -620,3 +620,91 @@ document.addEventListener("DOMContentLoaded", () => {
     render();
   });
 });
+
+// FE: preview an UPDATE and validate the primary key before showing a saved result.
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("[data-fe-pk-demo]").forEach(demo => {
+    const cases = Array.from(demo.querySelectorAll("[data-pk-case]"));
+    const next = demo.querySelector("[data-pk-next]");
+    const status = demo.querySelector("[data-pk-status]");
+    const sql = demo.querySelector("[data-pk-sql]");
+    const preview = demo.querySelector("[data-pk-preview]");
+    const result = demo.querySelector("[data-pk-result]");
+    const originals = Array.from(demo.querySelectorAll("[data-pk-original]"));
+    if (!next || !status || !sql || !preview || !result || originals.length !== 4) return;
+    const base = [
+      {id:1001,name:"山田",department:"設計"},
+      {id:1002,name:"鈴木",department:"営業"},
+      {id:1003,name:"佐藤",department:"設計"},
+      {id:1004,name:"高橋",department:"品質"}
+    ];
+    const scenarios = [
+      {sql:"UPDATE 社員 SET 社員番号 = 1001 WHERE 社員番号 = 1002;",
+        match:r=>r.id===1002, key:"id", value:1001},
+      {sql:"UPDATE 社員 SET 社員番号 = 1010 WHERE 部署 = '設計';",
+        match:r=>r.department==="設計", key:"id", value:1010},
+      {sql:"UPDATE 社員 SET 社員番号 = NULL WHERE 社員番号 = 1002;",
+        match:r=>r.id===1002, key:"id", value:null},
+      {sql:"UPDATE 社員 SET 部署 = '企画' WHERE 社員番号 = 1002;",
+        match:r=>r.id===1002, key:"department", value:"企画"},
+      {sql:"UPDATE 社員 SET 社員番号 = 1010 WHERE 社員番号 = 1002;",
+        match:r=>r.id===1002, key:"id", value:1010}
+    ];
+    let selected = 0;
+    let stage = 0;
+    function fill(body, rows, targets, badIds) {
+      body.replaceChildren();
+      rows.forEach((row,i) => {
+        const tr = document.createElement("tr");
+        if (targets.includes(i)) tr.classList.add("is-target");
+        if (badIds.includes(row.id)) tr.classList.add("is-invalid");
+        const marker = (targets.includes(i) ? "対象" : "対象外") +
+          (badIds.includes(row.id) ? "・制約違反" : "");
+        [row.id===null?"NULL":String(row.id),row.name,row.department,marker].forEach(value=>{
+          const td=document.createElement("td");td.textContent=value;tr.appendChild(td);
+        });
+        body.appendChild(tr);
+      });
+    }
+    function render() {
+      const scenario = scenarios[selected];
+      const targets = base.map((r,i)=>scenario.match(r)?i:-1).filter(i=>i>=0);
+      const proposed = base.map((r,i)=>targets.includes(i)?{...r,[scenario.key]:scenario.value}:{...r});
+      const badIds = proposed.filter((r,i,rows)=>r.id===null ||
+        rows.some((other,j)=>i!==j && r.id===other.id)).map(r=>r.id);
+      const invalid = badIds.length>0;
+      sql.textContent = scenario.sql;
+      originals.forEach((row,i)=>{
+        row.classList.toggle("is-target",targets.includes(i));
+        const marker=row.querySelector("[data-pk-marker]");
+        if(marker) marker.textContent=targets.includes(i)?"対象":"対象外";
+      });
+      if(stage===0) {
+        preview.replaceChildren();
+        const tr=document.createElement("tr"),td=document.createElement("td");
+        td.colSpan=4;td.textContent="まだ候補を作っていません。";
+        tr.appendChild(td);preview.appendChild(tr);
+      } else fill(preview,proposed,targets,badIds);
+      fill(result,stage===2&&!invalid?proposed:base,[],[]);
+      const messages = [
+        "① WHERE：対象は"+targets.length+"行です。更新前の表で「対象」の行を確認します。",
+        "② SET：変更後の候補です。まだ保存していません。次に主キーの重複とNULLを確認します。",
+        invalid ? "③ 制約確認："+(badIds.includes(null)?"主キーがNULLになります。":"主キーが重複します。")+
+          "更新不可。保存結果は更新前の表のままです。" :
+          "③ 制約確認：主キーの重複もNULLもありません。更新でき、保存結果に反映されます。"
+      ];
+      status.textContent=messages[stage];
+      next.disabled=stage===2;
+      next.textContent=stage===0?"SETの候補を見る":stage===1?"制約と保存結果を見る":"確認完了";
+      cases.forEach(button=>button.setAttribute("aria-pressed",String(Number(button.dataset.pkCase)===selected)));
+    }
+    cases.forEach(button=>{
+      const index=Number(button.dataset.pkCase);
+      if(!Number.isInteger(index)||!scenarios[index])return;
+      button.disabled=false;
+      button.addEventListener("click",()=>{selected=index;stage=0;render();});
+    });
+    next.addEventListener("click",()=>{if(stage<2){stage++;render();}});
+    render();
+  });
+});

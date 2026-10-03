@@ -797,3 +797,19 @@
 .fe-bst-demo .fe-learning-demo__button { min-height: 44px; }
 .fe-bst-demo .fe-learning-demo__button:disabled { cursor: default; opacity: 0.55; }
 .fe-bst-demo .fe-learning-demo__button:focus-visible { outline: 2px solid #0b6fae; outline-offset: 3px; }
+
+/* FE: UPDATE target, proposed values and saved result are separate tables. */
+.fe-pk-demo__tables { display: grid; gap: 0.8rem; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.fe-pk-demo__panel { min-width: 0; }
+.fe-pk-demo__panel h3 { font-size: 1rem; margin: 0.5rem 0; }
+.fe-pk-demo__scroll { overflow-x: auto; }
+.fe-pk-demo table { border-collapse: collapse; font-size: 0.85rem; width: 100%; }
+.fe-pk-demo th, .fe-pk-demo td { border: 1px solid #a6b8c2; padding: 0.4rem; }
+.fe-pk-demo .is-target { background: rgba(11, 111, 174, 0.1); }
+.fe-pk-demo .is-invalid td { border-bottom: 3px dashed #a13b25; }
+.fe-pk-demo__status { background: rgba(11, 111, 174, 0.07); border-radius: 8px; padding: 0.8rem; }
+.fe-pk-demo pre { overflow-x: auto; }
+.fe-pk-demo .fe-learning-demo__button { min-height: 44px; }
+.fe-pk-demo .fe-learning-demo__button:disabled { cursor: default; opacity: 0.55; }
+.fe-pk-demo .fe-learning-demo__button:focus-visible { outline: 2px solid #0b6fae; outline-offset: 3px; }
+@media (max-width: 1000px) { .fe-pk-demo__tables { grid-template-columns: 1fr; } }
