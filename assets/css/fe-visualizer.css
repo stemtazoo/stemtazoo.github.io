@@ -666,3 +666,23 @@
   outline: 2px solid #0b6fae;
   outline-offset: 3px;
 }
+
+/* FE: address length comparison, with equal 32-bit cells on both rows. */
+.fe-ip-length__track {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  max-width: 38rem;
+}
+.fe-ip-length__part {
+  background: rgba(11, 111, 174, 0.12);
+  border: 1px solid #0b6fae;
+  box-sizing: border-box;
+  font-weight: 700;
+  min-width: 0;
+  padding: 0.75rem 0;
+  text-align: center;
+}
+.fe-ip-length__note {
+  font-size: 0.9rem;
+  overflow-wrap: anywhere;
+}
