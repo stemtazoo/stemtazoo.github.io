@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: コンピュータ構成要素
 fe_order: 115
 date: 2026-08-30
-last_modified_at: 2026-08-30
+last_modified_at: 2026-10-03
 ---
 
 ## まず結論
@@ -116,6 +116,29 @@ DVD系の書換え媒体
 → DVD-RAM
 ```
 
+### 記録方式の特徴語で選択肢を切る
+
+CD-Rの記録方式を問われたら、説明文の中から**何を変化させて記録するのか**を探します。
+
+| 特徴語 | 判断したい媒体 |
+|---|---|
+| 有機色素＋レーザ | **CD-R** |
+| レーザで加熱＋磁化方向を変える | MO（光磁気ディスク） |
+| 磁性体＋磁気ヘッド | HDDなどの磁気ディスク |
+| 相変化 | 書換え型の光ディスクなど |
+
+特に、**「レーザ」という単語だけではCD-Rと判断できない**ことがポイントです。
+
+```text
+レーザ ＋ 磁気
+→ MO
+
+有機色素 ＋ レーザ
+→ CD-R
+```
+
+MOや磁気ディスクとの違いは、[磁気ディスク・光磁気ディスク・光ディスクの違い](/fe/storage-media-read-write-methods/)でも整理しています。
+
 ### 「レーザを使う」だけでは決めない
 
 CD-RもCD-RWも、光ディスクなのでレーザを使います。
@@ -196,6 +219,19 @@ CD-Rは、利用者がデータを書き込める媒体です。
 単純な大容量版ではありません。
 
 DVD-RAMは書換え可能なDVD系媒体で、記録方式や利用方法がCD-Rとは異なります。
+
+<style>
+.media-keywords{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem;margin:1.4rem 0}
+.media-keywords>div{border:1px solid #ccc;border-radius:8px;padding:.8rem;text-align:center}
+.media-keywords strong{display:block;margin-bottom:.35rem}
+@media(max-width:560px){.media-keywords{grid-template-columns:1fr}}
+</style>
+
+<div class="media-keywords" aria-label="記録媒体の特徴語">
+  <div><strong>CD-R</strong>有機色素<br>＋レーザ</div>
+  <div><strong>MO</strong>レーザ<br>＋磁気</div>
+  <div><strong>磁気ディスク</strong>磁性体<br>＋磁気ヘッド</div>
+</div>
 
 ## まとめ（試験直前用）
 
