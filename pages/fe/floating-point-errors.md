@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: コンピュータシステム
 fe_order: 62
 date: 2026-07-11
-last_modified_at: 2026-09-27
+last_modified_at: 2026-10-03
 ---
 
 ## まず結論
@@ -223,6 +223,32 @@ last_modified_at: 2026-09-27
 近い値 − 近い値
 → 桁落ち
 ```
+
+#### 「同符号の加算・減算」で迷ったら
+
+絶対値がほぼ等しい**同符号**の2数なら、加算では上位桁は打ち消されません。減算すると上位桁が相殺されるため、桁落ちが起こりやすくなります。
+
+<div class="cancellation-compare">
+  <div>
+    <b>同符号・近い値を加算</b>
+    <code>1.234567 + 1.234561</code>
+    <span>→ 上位桁は残る</span>
+  </div>
+  <div>
+    <b>同符号・近い値を減算</b>
+    <code>1.234567 − 1.234561</code>
+    <span>→ 上位桁が相殺 → 桁落ち</span>
+  </div>
+</div>
+
+<style>
+.cancellation-compare{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin:1.2rem 0}
+.cancellation-compare div{border:1px solid #ccc;border-radius:9px;padding:.8rem}
+.cancellation-compare code,.cancellation-compare span{display:block;margin-top:.45rem}
+@media(max-width:600px){.cancellation-compare{grid-template-columns:1fr}}
+</style>
+
+> **「ほぼ等しい」だけで決めず、最後に「引いているか」を確認する。**
 
 ### 桁あふれを選ぶ目印
 
