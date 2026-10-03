@@ -544,3 +544,79 @@ document.addEventListener("DOMContentLoaded", () => {
     render("both");
   });
 });
+
+// FE: ordinary BST insertion, one comparison or insertion per step.
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("[data-fe-bst-demo]").forEach((demo) => {
+    const next = demo.querySelector("[data-bst-next]");
+    const reset = demo.querySelector("[data-bst-reset]");
+    const status = demo.querySelector("[data-bst-status]");
+    const svg = demo.querySelector("svg");
+    const nodes = Array.from(demo.querySelectorAll("[data-bst-value]"));
+    const edges = Array.from(demo.querySelectorAll("[data-bst-child]"));
+    const values = (demo.dataset.bstValues || "").split(",").map(Number);
+    if (!next || !reset || !status || !svg || !nodes.length ||
+        values.some(v => !Number.isFinite(v)) || new Set(values).size !== values.length ||
+        values.length !== nodes.length) return;
+    const events = [];
+    const tree = new Map();
+    const visible = [];
+    let root = null;
+    values.forEach(value => {
+      if (root === null) {
+        root = value;
+        tree.set(value, { left: null, right: null });
+        visible.push(value);
+        events.push({ visible: visible.slice(), current: value, added: true,
+          note: value + "を根に追加しました。" });
+        return;
+      }
+      let current = root;
+      while (true) {
+        const side = value < current ? "left" : "right";
+        const child = tree.get(current)[side];
+        const direction = side === "left" ? "左" : "右";
+        events.push({ visible: visible.slice(), current, child,
+          note: value + (side === "left" ? " < " : " > ") + current + " → " + direction +
+            (child === null ? "の子が空なので、次の操作で追加します。" : "の子" + child + "へ進みます。") });
+        if (child === null) {
+          tree.get(current)[side] = value;
+          tree.set(value, { left: null, right: null });
+          visible.push(value);
+          events.push({ visible: visible.slice(), current: value, added: true, child: value,
+            note: value + "を" + current + "の" + direction + "の子に追加しました。" });
+          break;
+        }
+        current = child;
+      }
+    });
+    let index = -1;
+    function render() {
+      const event = events[index];
+      const shown = event ? event.visible : [];
+      nodes.forEach(node => {
+        const value = Number(node.dataset.bstValue);
+        node.classList.toggle("is-hidden", !shown.includes(value));
+        node.classList.toggle("is-current", !!event && !event.added && event.current === value);
+        node.classList.toggle("is-new", !!event && !!event.added && event.current === value);
+      });
+      edges.forEach(edge => {
+        const child = Number(edge.dataset.bstChild);
+        edge.classList.toggle("is-hidden", !shown.includes(child));
+        edge.classList.toggle("is-path", !!event && event.child === child);
+      });
+      const done = index === events.length - 1;
+      status.textContent = event ? event.note + (done ? " 全" + values.length + "個の挿入が完了しました。" : "") :
+        "木は空です。「次の比較・追加」で" + values[0] + "を根に入れます。各値の比較は毎回根から始まります。";
+      svg.setAttribute("aria-label", "挿入済み：" + (shown.length ? shown.join("、") : "なし") +
+        "。" + status.textContent);
+      next.disabled = done;
+      reset.disabled = false;
+    }
+    next.addEventListener("click", () => {
+      if (index < events.length - 1) { index += 1; render(); }
+    });
+    reset.addEventListener("click", () => { index = -1; render(); });
+    render();
+  });
+});

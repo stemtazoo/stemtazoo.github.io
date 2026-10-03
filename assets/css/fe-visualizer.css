@@ -777,3 +777,23 @@
 @media (max-width: 700px) {
   .fe-work-sharing__panels { grid-template-columns: 1fr; }
 }
+
+/* FE: BST insertion; solid nodes compare, dashed nodes were just inserted. */
+.fe-bst-demo__tree {
+  display: block;
+  height: auto;
+  margin: 1rem auto;
+  max-width: 36rem;
+  width: 100%;
+}
+.fe-bst-demo__edge { stroke: #637786; stroke-width: 2; }
+.fe-bst-demo__edge.is-path { stroke: #0b6fae; stroke-width: 5; }
+.fe-bst-demo__node circle { fill: #fff; stroke: #0b6fae; stroke-width: 2; }
+.fe-bst-demo__node text { fill: #153d56; font: bold 18px sans-serif; text-anchor: middle; }
+.fe-bst-demo__node.is-current circle { fill: #d7edf9; stroke-width: 5; }
+.fe-bst-demo__node.is-new circle { fill: #d7edf9; stroke-width: 4; stroke-dasharray: 5 3; }
+.fe-bst-demo .is-hidden { display: none; }
+.fe-bst-demo__status { background: rgba(11, 111, 174, 0.07); border-radius: 8px; min-height: 4.5em; padding: 0.8rem; }
+.fe-bst-demo .fe-learning-demo__button { min-height: 44px; }
+.fe-bst-demo .fe-learning-demo__button:disabled { cursor: default; opacity: 0.55; }
+.fe-bst-demo .fe-learning-demo__button:focus-visible { outline: 2px solid #0b6fae; outline-offset: 3px; }
