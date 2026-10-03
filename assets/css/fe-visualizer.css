@@ -719,3 +719,33 @@
 @media (max-width: 520px) {
   .fe-boundary-demo__classes { grid-template-columns: 1fr; }
 }
+
+/* FE: information and control flow; arrows do not represent electricity. */
+.fe-smart-meter-flow__grid {
+  align-items: stretch;
+  display: grid;
+  gap: 0.6rem;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr);
+}
+.fe-smart-meter-flow__card {
+  background: rgba(11, 111, 174, 0.06);
+  border: 1px solid rgba(11, 111, 174, 0.3);
+  border-radius: 8px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  padding: 0.8rem;
+}
+.fe-smart-meter-flow__card strong { display: block; }
+.fe-smart-meter-flow__card p { margin: 0.5rem 0 0; }
+.fe-smart-meter-flow__link {
+  align-self: center;
+  font-size: 0.85rem;
+  text-align: center;
+}
+.fe-smart-meter-flow__arrow { display: block; font-size: 1.6rem; }
+.fe-smart-meter-flow__arrow::before { content: "→"; }
+.fe-smart-meter-flow__note { margin: 1rem 0 0; }
+@media (max-width: 700px) {
+  .fe-smart-meter-flow__grid { grid-template-columns: 1fr; }
+  .fe-smart-meter-flow__arrow::before { content: "↓"; }
+}
