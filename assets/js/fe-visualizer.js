@@ -511,3 +511,36 @@ document.addEventListener("DOMContentLoaded", () => {
     render(0);
   });
 });
+
+// FE: show representatives and boundary values for a fixed integer specification.
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("[data-fe-boundary-demo]").forEach((demo) => {
+    const buttons = Array.from(demo.querySelectorAll("[data-boundary-mode]"));
+    const values = Array.from(demo.querySelectorAll("[data-boundary-kind]"));
+    const status = demo.querySelector("[data-boundary-status]");
+    const modes = ["representative", "boundary", "both"];
+    if (!status || !values.length || !buttons.length) return;
+    function render(mode) {
+      if (!modes.includes(mode)) return;
+      values.forEach((value) => {
+        value.hidden = mode !== "both" && value.dataset.boundaryKind !== mode;
+      });
+      const visible = values.filter((value) => !value.hidden);
+      const representatives = visible.filter((value) => value.dataset.boundaryKind === "representative").length;
+      const boundaries = visible.filter((value) => value.dataset.boundaryKind === "boundary").length;
+      const messages = {
+        representative: "代表値だけ：" + representatives + "個。境界ではない20と120を、有効クラスから1個ずつ選びます。",
+        boundary: "境界値だけ：" + boundaries + "個。0と1、40と41、200と201で、3か所の境目を確認します。",
+        both: "両方：代表値" + representatives + "個＋境界値" + boundaries + "個＝" + visible.length + "個。代表値は境界値と重ならない値を選んでいます。"
+      };
+      status.textContent = messages[mode];
+      buttons.forEach((button) => button.setAttribute("aria-pressed", String(button.dataset.boundaryMode === mode)));
+    }
+    buttons.forEach((button) => {
+      if (!modes.includes(button.dataset.boundaryMode)) return;
+      button.disabled = false;
+      button.addEventListener("click", () => render(button.dataset.boundaryMode));
+    });
+    render("both");
+  });
+});
