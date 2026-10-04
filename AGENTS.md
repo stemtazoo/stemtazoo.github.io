@@ -201,6 +201,9 @@ When creating or editing pages, agents should check:
 - Does the page avoid thin content, copied content, or unnecessary duplication?
 - If external references are used, are they used as support rather than as the main content?
 - Can readers quickly find what they need?
+- Can readers reach the answer-choice judgment criteria early enough to use them before reading the full explanation?
+
+For study articles, do not require a dedicated heading such as `先に判断基準` on every page. If the judgment criteria already appear clearly near the beginning, leave the structure as-is. If useful criteria exist only in later sections such as traps, misconceptions, or the final summary, consider surfacing a short version near `まず結論` without duplicating or padding the article.
 
 For study articles, original value means:
 
