@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 61
 date: 2026-08-17
-last_modified_at: 2026-09-20
+last_modified_at: 2026-10-04
 ---
 
 ## まず結論
@@ -176,6 +176,72 @@ TCPは、TCP/IPでもOSI参照モデルでも**トランスポート層に相当
 | IP | インターネット層 |
 | ICMP | インターネット層 |
 | Ethernet | ネットワークインタフェース層 |
+
+### イーサネットフレームでは、MAC → IP → ポートの順に見える
+
+送信データは、上位層から下位層へ渡されるたびにヘッダーで包まれます。
+
+<div class="fe-encap-flow" aria-label="TCP IP Ethernetのカプセル化">
+  <div><strong>① TCP</strong><span>ポート番号を付ける</span></div>
+  <div><strong>② IP</strong><span>IPアドレスを付ける</span></div>
+  <div><strong>③ Ethernet</strong><span>MACアドレスを付ける</span></div>
+</div>
+
+```text
+送信データ
+↓ TCPヘッダーを追加
+[TCP][データ]
+
+↓ IPヘッダーを追加
+[IP][TCP][データ]
+
+↓ Ethernetのヘッダーを追加
+[MAC][IP][TCP][データ]
+```
+
+そのため、**ヘッダーを付ける順番**と、完成したフレームを**先頭から見る順番**は逆向きに見えます。
+
+```text
+付ける順番
+ポート → IP → MAC
+
+完成したフレームを先頭から見る
+MAC → IP → ポート
+```
+
+科目Aでは、次の対応を先に決めると選択肢を切りやすくなります。
+
+| 宛先情報 | 主に含まれる場所 | 判断のイメージ |
+|---|---|---|
+| ポート番号 | TCPヘッダー | どのアプリ・サービス？ |
+| IPアドレス | IPヘッダー | 最終的にどのホスト？ |
+| MACアドレス | Ethernetヘッダー | このLANで次に誰へ渡す？ |
+
+> **ポート → アプリ、IP → 最終目的地、MAC → 次の渡し先。**
+
+なお、別ネットワークへ送る場合、宛先MACアドレスは最終ホストではなく、通常は同一LAN上のデフォルトゲートウェイになります。詳しくは[IPアドレスとMACアドレスの違い](/fe/ip-mac-address-routing/)で整理しています。
+
+<style>
+.fe-encap-flow {
+  display: grid;
+  gap: .65rem;
+  margin: 1rem 0;
+}
+.fe-encap-flow div {
+  display: flex;
+  gap: .8rem;
+  align-items: center;
+  padding: .75rem 1rem;
+  border: 1px solid #d8dee4;
+  border-radius: .6rem;
+}
+.fe-encap-flow strong {
+  min-width: 6.5rem;
+}
+.fe-encap-flow span {
+  font-size: .95rem;
+}
+</style>
 
 ### TCPとIPを名前だけで混同しない
 
