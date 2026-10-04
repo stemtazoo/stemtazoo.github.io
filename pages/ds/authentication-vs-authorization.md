@@ -1,141 +1,20 @@
 ---
-layout: page
-title: 認証・認可・アクセス制御の関係を例で理解する【DS検定】
-description: "認証と認可の基本を押さえたうえで、社内システムやAPI利用の例からアクセス制御の流れを確認します。本人確認、権限判断、OAuthを混同しないための実践的な見分け方を整理します。"
+layout: null
 permalink: /ds/authentication-vs-authorization/
-categories: [business]
-tags: [ds, security, design]
-ds_area: foundation
-ds_section: security
-prev: /ds/authentication-authorization/
-next: /ds/constructor/
-last_modified_at: 2026-06-24
+sitemap: false
+last_modified_at: 2026-10-04
 ---
-<div style="font-size: 14px; margin-bottom: 12px;">
-  <a href="/ds/">DS検定トップ</a>
-  ＞ {{ page.title }}
-</div>
-
-## まず結論
-
-
-認証（Authentication）は「あなたは誰かを確認すること」、認可（Authorization）は「あなたに何を許可するかを決めること」です。
-
-このページでは、認証と認可の定義だけでなく、社内システム・クラウド・API利用の例から、アクセス制御の流れを理解します。
-
-DS検定では、この2つを**明確に切り分けたうえで、OAuthなどの具体例を判断できるか**がよく問われます。
-
-
-## 直感的な説明
-
-会社のオフィスをイメージしてください。
-
-- 受付で社員証を見せて本人確認 → **認証**
-- 会議室に入れるかどうかを判断 → **認可**
-
-つまり、
-
-> 認証＝本人確認  
-> 認可＝アクセス権の判断  
-
-順番も重要で、  
-**認証 → 認可** の流れになります。
-
-
-## 定義・仕組み
-
-### 認証（Authentication）
-
-- ID・パスワード
-- 生体認証
-- ワンタイムパスワード
-
-などを使い、
-
-> 「その人が本人かどうか」を確認する仕組み。
-
-
-### 認可（Authorization）
-
-本人確認ができたあと、
-
-> 「どのデータ・機能にアクセスできるか」を決める仕組み。
-
-例：
-- 一般社員は閲覧のみ
-- 管理者は編集可能
-
-OAuthはこの「認可」の仕組みです。
-
-
-## どんな場面で使う？
-
-### ビジネス現場での例
-
-- 社内システムのアクセス制御
-- クラウドサービスの権限設定
-- API利用制御
-
-### データ活用の文脈
-
-データサイエンス業務では、
-
-- 誰がデータを見られるのか
-- 誰が編集できるのか
-
-を明確に分けることが重要です。
-
-セキュリティ設計やガバナンスの基礎知識として出題されやすいポイントです。
-
-
-## よくある誤解・混同
-
-### ① OAuth＝認証だと思ってしまう
-
-DS検定では  
-「OAuthは認証の仕組みである」という選択肢が出やすいです。
-
-→ 正しくは「認可の仕組み」です。
-
-
-### ② ログイン＝認可と考えてしまう
-
-ログインは基本的に**認証**です。
-
-その後に、
-「この人はどの画面を見られるか」
-が決まるのが認可です。
-
-
-### ③ セキュリティ全般をごちゃ混ぜにする
-
-- 暗号化
-- 公開鍵
-- セッション管理
-
-これらは技術要素であり、  
-認証・認可そのものではありません。
-
-
-## まとめ（試験直前用）
-
-- 認証＝本人確認
-- 認可＝アクセス許可
-- 順番は「認証 → 認可」
-- OAuthは認可の仕組み
-
-迷ったら、
-
-> 「これは“誰か”を確認しているのか？」  
-> 「それとも“何ができるか”を決めているのか？」
-
-と考えると切り分けられます。
-
-
-## 対応スキル項目（ver.6 基盤）
-
-- **位置づけ**：認証・認可・アクセス制御の補助学習
-- **関連領域**：ITセキュリティ
-- **★1直接対応**：なし
-- ver.6 基盤の★1ではマルウェア等による深刻なリスク理解が直接項目ですが、この用語自体は★1の直接項目ではありません。セキュリティ判断を補う関連テーマとして整理します。
-- [ver.6 ★1スキルチェックで確認する](/ds/foundation-skillcheck/)
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,follow">
+  <meta http-equiv="refresh" content="0; url=/ds/authentication-authorization/">
+  <link rel="canonical" href="https://stemtazoo.github.io/ds/authentication-authorization/">
+  <title>認証と認可の記事へ移動します</title>
+</head>
+<body>
+  <p>この記事は統合しました。<a href="/ds/authentication-authorization/">認証と認可の違いとは？</a>をご覧ください。</p>
+</body>
+</html>
