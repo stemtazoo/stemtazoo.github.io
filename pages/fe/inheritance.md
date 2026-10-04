@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: アルゴリズムとプログラミング
 fe_order: 60
 date: 2026-08-24
-last_modified_at: 2026-08-24
+last_modified_at: 2026-10-05
 ---
 
 ## まず結論
@@ -27,7 +27,9 @@ last_modified_at: 2026-08-24
 変更箇所を局所化しやすい
 ```
 
-特に、**「上位クラスの性質を引き継ぐ」「共通部分をまとめる」「変更箇所を減らす」**という表現があれば、継承を疑います。
+特に、**「上位クラスの性質を引き継ぐ」「サブクラスで利用できる」「共通部分をまとめる」**という表現があれば、継承を疑います。
+
+> **最短の判断基準：上位クラス → 下位クラスへ「引き継ぐ」なら継承です。**
 
 ## 直感的な説明
 
@@ -130,6 +132,8 @@ Car / Truck / Bus が共通機能を引き継ぐ
 |---|---|
 | 上位クラスの性質を引き継ぐ | 継承 |
 | 共通部分をまとめて再利用する | 継承 |
+| 上位クラスの属性・機能をサブクラスで利用する | 継承 |
+| 上位クラスのメソッドをサブクラスで再定義する | オーバーライド |
 | 変更箇所を局所化しやすい | 継承 |
 | 内部のデータや実装を隠す | カプセル化 |
 | 同じ呼び出しで動作が変わる | ポリモーフィズム |
@@ -198,6 +202,48 @@ Vehicle
 共通機能は引き継ぎ、追加する種類に必要な機能だけを定義できます。
 
 ## よくある誤解・混同
+
+### 継承・オーバーライド・多相性を一続きで考える
+
+この3語は別々に暗記するより、同じ例でつなげると切り分けやすくなります。
+
+<div class="oop-flow">
+  <div><strong>① 継承</strong><span>親の属性・機能を<br>子が引き継ぐ</span></div>
+  <b>→</b>
+  <div><strong>② オーバーライド</strong><span>親のメソッドを<br>子で再定義</span></div>
+  <b>→</b>
+  <div><strong>③ 多相性</strong><span>同じ呼び出しでも<br>動作が変わる</span></div>
+</div>
+
+```text
+Animal
+└─ speak()
+      ↓ 継承
+
+Dog
+└─ speak() → ワン   ← 再定義（オーバーライド）
+
+Cat
+└─ speak() → ニャー ← 再定義（オーバーライド）
+
+同じ speak() を呼ぶ
+↓
+Dog と Cat で動作が変わる
+→ 多相性
+```
+
+試験では、問題文が**どの段階を説明しているか**を見ます。
+
+| 問題文の中心 | 選ぶ用語 |
+|---|---|
+| 上位クラスの属性・機能を下位クラスで使える | **継承** |
+| 上位クラスのメソッドを下位クラスで再定義 | **オーバーライド** |
+| 同じ呼び出しでも対象によって動作が変わる | **多相性** |
+| 内部のデータや実装を外部から隠す | **カプセル化** |
+
+**「機能」「メソッド」という語があるだけでオーバーライドを選ばない**ことが重要です。再定義すると書かれていなければ、上位から下位へ利用できるという説明は継承です。
+
+詳しくは、[オーバーライドとは？オーバーロード・多相性との違い](/fe/override/)と[ポリモーフィズム（多相性）とは？](/fe/polymorphism/)も確認してください。
 
 ### 継承とカプセル化は同じ？
 
@@ -276,5 +322,13 @@ Vehicle
 - カプセル化は「内部を隠す」、継承は「引き継ぐ」
 - ポリモーフィズムは「同じ呼び出しで動作が変わる」
 - 「親の性質を引き継ぐ」「共通部分をまとめる」「変更箇所を局所化」が継承の判断ワード
+
+<style>
+.oop-flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:center;gap:.55rem;margin:1.3rem 0}
+.oop-flow div{border:1px solid #d7dee3;border-radius:10px;padding:.8rem;text-align:center;background:#f8fafb}
+.oop-flow strong,.oop-flow span{display:block}
+.oop-flow span{margin-top:.35rem;font-size:.9rem}
+@media(max-width:650px){.oop-flow{grid-template-columns:1fr}.oop-flow>b{transform:rotate(90deg);text-align:center}.oop-flow div{padding:.65rem}}
+</style>
 
 {% include fe_article_footer.html %}
