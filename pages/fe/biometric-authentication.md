@@ -8,7 +8,7 @@ fe_section: 情報セキュリティ
 fe_subsection: 認証
 fe_order: 32
 date: 2026-10-03
-last_modified_at: 2026-10-03
+last_modified_at: 2026-10-05
 ---
 
 ## まず結論
@@ -113,6 +113,40 @@ FE試験では、まず次の2つに分けます。
 
 もちろん実際の方式にはさまざまな特徴量がありますが、FEの選択肢を切るときの最初の判断軸として使えます。
 
+## 本人拒否率（FRR）と他人受入率（FAR）
+
+生体認証では、登録した特徴と入力された特徴が完全に一致するとは限りません。そこで、どの程度似ていれば本人と判定するかという**しきい値**を設定します。
+
+このとき重要なのが、次の2種類の誤りです。
+
+| 指標 | 意味 | 試験でのイメージ |
+|---|---|---|
+| FRR（本人拒否率） | 本人なのに拒否する割合 | 厳しすぎて本人までNG |
+| FAR（他人受入率） | 他人なのに本人として受け入れる割合 | 緩すぎて他人までOK |
+
+<div class="bio-threshold">
+  <div><strong>判定を厳しくする</strong><br><span>FRR ↑</span><br><small>本人も拒否されやすい</small><br><span>FAR ↓</span><br><small>他人は通りにくい</small></div>
+  <div class="bio-arrow">⇄</div>
+  <div><strong>判定を緩くする</strong><br><span>FRR ↓</span><br><small>本人は通りやすい</small><br><span>FAR ↑</span><br><small>他人も通りやすい</small></div>
+</div>
+
+つまり、**FRRだけを下げればよい、FARだけを下げればよい、という関係ではありません**。認証システムを導入するときは、用途に応じて両方を考慮しながらしきい値を調整します。
+
+試験では次のように切り分けます。
+
+```text
+本人なのに拒否
+→ FRR（本人拒否率）
+
+他人なのに通過
+→ FAR（他人受入率）
+
+FRRとFARを両方考慮して調整
+→ 適切
+```
+
+「生体認証システムを導入するときに考慮すべきこと」と聞かれたら、**FRRとFARのトレードオフ**は強い候補です。
+
 ## どんな場面で使う？
 
 バイオメトリクス認証は、本人確認が必要な場面で利用されます。
@@ -172,6 +206,7 @@ FE試験では、まず次の2つに分けます。
 - 署名の速度・筆圧、キーストロークは行動的特徴
 - マニューシャは指紋の特徴点
 - 方式名ではなく、**何を測っているか**を見る
+- FRR＝本人を拒否、FAR＝他人を受入れ。**両方を考慮してしきい値を調整する**
 
 {% include fe_article_footer.html %}
 
@@ -206,5 +241,27 @@ FE試験では、まず次の2つに分けます。
   .bio-split {
     grid-template-columns:1fr;
   }
+}
+.bio-threshold {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:1rem;
+  margin:1.5rem auto;
+  max-width:680px;
+}
+.bio-threshold > div:not(.bio-arrow) {
+  flex:1;
+  padding:1rem;
+  border:1px solid #bbb;
+  border-radius:10px;
+  text-align:center;
+  background:#fafafa;
+}
+.bio-threshold span {font-weight:bold;}
+.bio-arrow {font-size:1.5rem;font-weight:bold;}
+@media (max-width:520px) {
+  .bio-threshold {flex-direction:column;}
+  .bio-arrow {transform:rotate(90deg);}
 }
 </style>
