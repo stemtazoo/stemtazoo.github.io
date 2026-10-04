@@ -52,6 +52,15 @@ The sidebar is a compact route to a reader's next useful page, not a list of eve
 
 Reference: [Google Search Central: link best practices](https://developers.google.com/search/docs/crawling-indexing/links-crawlable?hl=ja) and [Google Search Central: site structure (e-commerce example)](https://developers.google.com/search/docs/specialty/ecommerce/help-google-understand-your-ecommerce-site-structure?hl=ja).
 
+## SEO Rendering Checks
+
+When editing layouts, includes, page metadata, or shared templates:
+
+- Check the final rendered HTML, not only the Markdown/front matter source.
+- Keep one `<h1>` per normal page. Remember that the remote theme or parent layout may already render the page title as `<h1>`.
+- When setting `title`, consider the final HTML `<title>` including any site-name suffix added by `jekyll-seo-tag` or the theme. Avoid relying on the front matter title length alone.
+- After layout or metadata changes, verify representative rendered pages before assuming the source-level markup is sufficient.
+
 ## Expectations For Future Edits
 
 - Keep shared page behavior conceptually aligned across themes.
