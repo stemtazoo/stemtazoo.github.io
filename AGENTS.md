@@ -114,6 +114,13 @@ For SG content, use Japanese section names consistent with the existing site sty
 ## Content Portfolio And Duplicate Content Management
 
 Duplicate content does not only mean identical text.
+
+For study content, prefer **one clear learning purpose per article** over mechanically enforcing one keyword or one term per page. The key audit question is:
+
+> Can the reason for reading each overlapping page be explained in one sentence?
+
+Pages about the same term may remain separate when they teach materially different judgments, comparisons, mechanisms, or learning steps. Conversely, pages with different titles or URLs should be considered for consolidation when their learning purpose is effectively the same.
+
 Agents must also watch for near-duplicate pages where the following are too similar:
 
 - search intent
@@ -123,6 +130,16 @@ Agents must also watch for near-duplicate pages where the following are too simi
 - metadata
 - target reader
 - category placement
+
+When duplicate or near-duplicate content is found, evaluate it in this order:
+
+1. Compare the actual content and overlap.
+2. Identify the learning purpose of each page.
+3. When available, use search performance and AI citation / grounding data only as supporting evidence, not as an automatic deletion rule.
+4. Check whether a page has a distinct role in another exam area or learning path.
+5. Consolidate only when the learning purposes are genuinely redundant.
+
+Low traffic alone is not a reason to delete or merge a useful learning page. When consolidation is appropriate, prefer the page with the clearer current learning role and preserve useful material from the other page. If an old URL may already be used or indexed, preserve a safe path to the preferred page using redirect, canonical, sitemap exclusion, and `noindex,follow` handling when compatible with the site.
 
 When duplicate or near-duplicate content is found, agents should consider:
 
