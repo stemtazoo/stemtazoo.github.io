@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ソフトウェア開発
 fe_order: 40
 date: 2026-08-12
-last_modified_at: 2026-09-20
+last_modified_at: 2026-10-05
 ---
 
 ## まず結論
@@ -57,6 +57,16 @@ last_modified_at: 2026-09-20
 
 まずソフトウェア全体を、どのような部品や構造に分けて実現するかを決めます。
 
+<div class="design-level-flow">
+  <div><strong>要件定義</strong><span>何を実現する？</span></div>
+  <b>↓</b>
+  <div class="design-focus"><strong>方式設計</strong><span>どんな部品で構成する？</span></div>
+  <b>↓</b>
+  <div><strong>詳細設計</strong><span>各部品の中をどう作る？</span></div>
+  <b>↓</b>
+  <div><strong>コード作成</strong><span>実際に書く</span></div>
+</div>
+
 ## 定義・仕組み
 
 ### ソフトウェア要件定義
@@ -90,6 +100,8 @@ last_modified_at: 2026-09-20
 - コンポーネント間のインタフェース
 - 外部インタフェース
 - データベースの上位レベル設計
+
+試験では、**「最上位レベルの構造」や「ソフトウェアコンポーネントを識別する」**という表現が、方式設計を見抜く強い手掛かりになります。要件を満たすために、ソフトウェアをどんな部品に分けるかを決める段階だからです。
 
 イメージは次のとおりです。
 
@@ -150,6 +162,19 @@ last_modified_at: 2026-09-20
 | 決定済み要件をどんな構造で実現するか決める | ソフトウェア方式設計 |
 | 各部品の内部処理を具体化する | ソフトウェア詳細設計 |
 | 実際の命令やプログラムを記述する | コード作成 |
+
+### 「コンポーネント」が出たら方式設計を疑う
+
+選択肢に次のような表現があれば、方式設計を強く疑います。
+
+```text
+最上位レベルの構造
+コンポーネントを識別
+コンポーネント間のインタフェース
+→ ソフトウェア方式設計
+```
+
+ただし、「コンポーネント」という単語だけで機械的に決めるのではなく、**ソフトウェア全体を部品へ分ける話か**を確認します。
 
 ### 「既に要件が決まっている」が重要な合図
 
@@ -250,6 +275,24 @@ last_modified_at: 2026-09-20
 
 実際にプログラミング言語で命令を書くのはコード作成です。
 
+### 「顧客に意見を求める」は方式設計ではない
+
+顧客や利用者から要求を聞き、必要な仕様を決めているなら、方式設計より前の要件定義側です。
+
+```text
+顧客・利用者に何が必要か確認する
+→ 要件定義
+
+決まった要件をどんな構造で実現するか決める
+→ 方式設計
+```
+
+### 「1行ごとの処理まで明確にする」は方式設計ではない
+
+コードの1行レベルまで具体化する説明は、全体構造を決める方式設計よりもはるかに細かい粒度です。
+
+試験では、**全体 → 部品 → 内部処理 → コード**と、どこまで細かくなっているかを確認します。
+
 ### 図表を使ったら必ず方式設計
 
 図を使うかどうかだけでは判断できません。
@@ -265,6 +308,7 @@ last_modified_at: 2026-09-20
 ## まとめ（試験直前用）
 
 - 要件定義は「何を実現するか」
+- 方式設計は「どんな構造で実現するか」。**最上位構造・コンポーネント**が強い合図
 - 方式設計は「どんな構造で実現するか」
 - 詳細設計は「各部品の中をどう作るか」
 - コード作成は「実際のプログラムを書く」
@@ -275,3 +319,7 @@ last_modified_at: 2026-09-20
 関連して、開発プロセス全体の位置づけは[共通フレーム](/fe/common-frame/)で整理できます。
 
 {% include fe_article_footer.html %}
+
+<style>
+.design-level-flow{max-width:620px;margin:1.5rem auto;text-align:center}.design-level-flow div{border:1px solid #bbb;border-radius:10px;padding:.7rem 1rem;background:#fafafa}.design-level-flow div strong,.design-level-flow div span{display:block}.design-level-flow div span{margin-top:.25rem;font-size:.92em}.design-level-flow b{display:block;padding:.2rem}.design-level-flow .design-focus{border-width:2px;background:#f3f7f3}
+</style>
