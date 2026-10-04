@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ソフトウェア
 fe_order: 40
 date: 2026-07-13
-last_modified_at: 2026-09-20
+last_modified_at: 2026-10-05
 ---
 
 ## まず結論
@@ -101,6 +101,98 @@ CPUの処理順は次のようになります。
 
 となります。
 
+## 優先度とI/Oが同時に出るタイムチャートの解き方
+
+優先度付きの問題では、**「最初に優先度順へ並べて終わり」ではありません**。
+
+I/Oの開始・終了のたびに、CPUを使えるタスクが変わるため、その時点で実行可能なタスクを確認し直します。
+
+例えば、3タスクが同時に実行可能になり、次の条件だったとします。
+
+| タスク | 優先度 | 処理順序 |
+|---|---|---|
+| A | 高 | CPU 2 → I/O 2 → CPU 2 |
+| B | 中 | CPU 3 → I/O 5 → CPU 2 |
+| C | 低 | CPU 2 → I/O 2 → CPU 3 |
+
+開始時刻を0として追うと、最初はAがCPUを使います。
+
+<div class="sched-flow">
+  <div><b>0〜2</b><span>A：CPU</span><small>B・Cは実行可能状態で待つ</small></div>
+  <div><b>2〜4</b><span>A：I/O ／ B：CPU</span><small>AがCPUを手放すのでBを実行</small></div>
+  <div><b>4〜6</b><span>A：CPU</span><small>AのI/O完了。AはBより高優先度なのでBを中断</small></div>
+  <div><b>6〜7</b><span>B：CPU</span><small>A完了後、Bの残り1msを実行</small></div>
+  <div><b>7〜9</b><span>B：I/O ／ C：CPU</span><small>BがI/Oへ進むのでCを実行</small></div>
+</div>
+
+ここで重要なのが **4ms時点** です。
+
+```text
+B：CPU実行中
+A：I/O完了 → 実行可能状態へ戻る
+
+優先度 A > B
+        ↓
+Bを中断
+        ↓
+AへCPUを割り当てる
+```
+
+つまり、I/Oが終わったタスクは「そのままCPU処理を再開する」のではなく、まず**実行可能状態へ戻ります**。その後、優先度に従ってCPUが割り当てられます。
+
+このように実行中の低優先度タスクからCPUを取り上げ、高優先度タスクへ切り替える動作は、[プリエンプティブスケジューリング](/fe/preemptive-scheduling/)の考え方です。
+
+### CPUとI/Oを別のレーンとして考える
+
+タイムチャート問題では、CPUとI/Oを同じ処理装置だと思わないことが重要です。
+
+<div class="cpu-io-lanes">
+  <div class="lane-label">CPU</div>
+  <div class="lane-cell">A</div><div class="lane-cell">B</div><div class="lane-cell">A</div><div class="lane-cell">B</div><div class="lane-cell">C</div>
+  <div class="lane-label">I/O</div>
+  <div class="lane-cell lane-empty">—</div><div class="lane-cell">A</div><div class="lane-cell lane-empty">—</div><div class="lane-cell lane-empty">—</div><div class="lane-cell">B</div>
+</div>
+
+```text
+CPU中 → CPUを占有する
+I/O中 → CPUを手放す
+I/O終了 → 実行可能状態へ戻る
+高優先度タスクが戻る → 必要なら実行中タスクを中断
+```
+
+問題文に**「I/Oは競合しない」**とあれば、I/O装置同士の取り合いは考えません。CPUの割当てとI/Oの進行を分けて追います。
+
+### 試験中は「イベントが起きた時刻」だけ見る
+
+1msごとに全タスクを書き直す必要はありません。次のイベントが起きた時刻だけ確認します。
+
+```text
+CPU処理が終了した
+I/Oを開始した
+I/Oが終了した
+タスクが完了した
+        ↓
+実行可能なタスクを確認
+        ↓
+最も優先度の高いタスクへCPUを割り当てる
+```
+
+この手順なら、長いタイムチャートでも追いやすくなります。
+
+<style>
+.sched-flow{display:grid;gap:.65rem;margin:1.2rem 0}
+.sched-flow>div{display:grid;grid-template-columns:5rem 1fr;gap:.2rem .8rem;border:1px solid #d6dde2;border-radius:10px;padding:.75rem 1rem;background:#f8fafb}
+.sched-flow b{grid-row:1/3}
+.sched-flow span{font-weight:600}
+.sched-flow small{line-height:1.5}
+.cpu-io-lanes{display:grid;grid-template-columns:4rem repeat(5,1fr);gap:.3rem;margin:1.2rem 0;overflow-x:auto}
+.lane-label,.lane-cell{min-width:4.5rem;padding:.65rem .4rem;text-align:center;border-radius:7px}
+.lane-label{font-weight:700;background:#eef1f3}
+.lane-cell{border:1px solid #cbd5da;background:#f8fafb}
+.lane-empty{opacity:.55}
+@media(max-width:600px){.sched-flow>div{grid-template-columns:4rem 1fr}.cpu-io-lanes{font-size:.9rem}}
+</style>
+
 ## どんな場面で使う？
 
 複数タスクの実行順を追い、I/O待ちのタスクをCPUの実行候補から除外して、CPUの遊休時間や処理順を求めるタイムチャート問題で使います。
@@ -111,7 +203,8 @@ CPUの処理順は次のようになります。
 2. その中から最も優先度が高いものを実行する
 3. I/Oに入ったタスクを待ち状態にする
 4. 残りの実行可能タスクを探す
-5. 実行可能タスクがなければ遊休時間として記録する
+5. I/O完了で高優先度タスクが戻ったら、実行中タスクを中断するか確認する
+6. 実行可能タスクがなければ遊休時間として記録する
 
 この順番で追えば、複雑な問題でも整理しやすくなります。
 
@@ -138,6 +231,8 @@ CPU処理とI/O処理は並行して進むため、単純な合計では求め�
 - CPUは、実行可能なタスクの中から次に実行するものを選ぶ
 - 優先度方式では、実行可能な中で最も優先度が高いタスクを選ぶ
 - I/O待ちのタスクはCPUを使えない
+- I/Oが終わったタスクは実行可能状態へ戻る
+- 高優先度タスクが戻れば、プリエンプティブ方式では低優先度タスクを中断する
 - 全タスクがI/O待ちの時間がCPUの遊休時間
 - タイムチャートを書いて、CPU処理とI/O処理を分けて追う
 
