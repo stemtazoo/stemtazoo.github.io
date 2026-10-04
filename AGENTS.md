@@ -205,6 +205,19 @@ When creating or editing pages, agents should check:
 
 For study articles, do not require a dedicated heading such as `先に判断基準` on every page. If the judgment criteria already appear clearly near the beginning, leave the structure as-is. If useful criteria exist only in later sections such as traps, misconceptions, or the final summary, consider surfacing a short version near `まず結論` without duplicating or padding the article.
 
+### Learning Path Guidance
+
+For study articles that act as an entry point, overview, basics page, or summary, check whether readers can tell what to study next and why.
+
+- Prefer a learning path expressed as **reader need or question → next article**, rather than a bare list of related links.
+- Make the reason for the next step clear, such as moving from a basic concept to a comparison, mechanism, failure pattern, or deeper method.
+- Add a short section such as `次に読むなら` only when the learning path is otherwise unclear.
+- Do not add the section mechanically to every article.
+- If the page already provides a clear learning map, role-based related links, or an equivalent path in the body, leave it as-is.
+- Avoid duplicating the generic related-articles block. The purpose is to explain **why the reader should continue to a specific page**, not merely to increase internal links.
+
+Apply this across SG, FE, DS, and GK while preserving each area’s existing structure and wording style.
+
 For study articles, original value means:
 
 - beginner-friendly explanations
