@@ -1,6 +1,6 @@
 ---
 layout: page
-title: NASとは？SAN・DAS・RAIDとの違いをファイル単位とブロック単位で切り分ける【基本情報技術者試験】
+title: NASとは？SAN・DAS・RAIDとの違い【基本情報技術者試験】
 description: NASを「ネットワークに直接接続してファイル単位で共有するストレージ」として整理し、SAN・DAS・RAIDとの違い、SMBやNFSなどのファイル共有プロトコル、FE科目Aでの判断基準を解説します。
 permalink: /fe/nas/
 tags: [fe, fe-technology, network, storage]
@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 50
 date: 2026-08-19
-last_modified_at: 2026-08-30
+last_modified_at: 2026-10-04
 ---
 
 ## まず結論
