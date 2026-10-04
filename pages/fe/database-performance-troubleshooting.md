@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: データベース
 fe_order: 170
 date: 2026-08-24
-last_modified_at: 2026-10-01
+last_modified_at: 2026-10-04
 ---
 
 ## まず結論
@@ -358,6 +358,56 @@ DBバッファ不足
 
 ただし、DBMSによってはインデックス自体の断片化が性能へ影響することもあります。FE試験では、まず「検索を速くする仕組み」と「格納状態の問題」を分けて考えます。
 
+## 再編成・再構成・バックアップ・DBダンプの違い
+
+データベースの運用では、似た名前の処理でも目的が異なります。科目Aでは、**「何のために行う処理か」**で切り分けると判断しやすくなります。
+
+<div class="fe-db-maintenance">
+  <div><strong>再編成</strong><span>配置を整える</span><small>断片化・空き領域を整理し、アクセス効率を維持・回復</small></div>
+  <div><strong>再構成</strong><span>構造を見直す</span><small>表やインデックスなど、データベースの構成・設計を変更</small></div>
+  <div><strong>DBダンプ</strong><span>内容を出力する</span><small>データベースの内容をファイルなどへ書き出す</small></div>
+  <div><strong>バックアップ</strong><span>障害に備える</span><small>データを復旧できるようコピーを保存</small></div>
+</div>
+
+<style>
+.fe-db-maintenance { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.7rem; margin:1rem 0 1.4rem; }
+.fe-db-maintenance div { border:1px solid #d9dee3; border-radius:10px; padding:.85rem; }
+.fe-db-maintenance strong,.fe-db-maintenance span,.fe-db-maintenance small { display:block; }
+.fe-db-maintenance span { margin:.25rem 0; font-weight:600; }
+.fe-db-maintenance small { line-height:1.6; }
+@media (max-width:600px) { .fe-db-maintenance { grid-template-columns:1fr; } }
+</style>
+
+### 「定期的に実施する」だけでは決めない
+
+バックアップも再編成も、運用上は定期的に行うことがあります。したがって、**「定期的」という言葉だけでバックアップを選ばない**ことが重要です。
+
+```text
+アクセス効率を維持・回復したい
+→ 再編成
+
+障害・データ消失に備えたい
+→ バックアップ
+```
+
+長期間の追加・更新・削除でデータの格納状態が乱れ、アクセス効率が低下するという文脈なら、再編成を考えます。
+
+### 一番迷いやすい「再構成」と「再編成」
+
+```text
+再構成
+→ 棚そのものの作りを変える
+
+再編成
+→ 棚の中を並べ直す
+```
+
+**構造を変えるなら再構成、配置を整えるなら再編成**です。
+
+なお、実際のDBMSでは製品ごとに用語や保守機能の名称・動作が異なります。FE試験では、まず上の「目的」の違いを判断軸にします。
+
+バックアップからの復旧やジャーナルとの関係は、[データベースのバックアップと復旧](/fe/database-backup-recovery/)で整理しています。
+
 ## まとめ（試験直前用）
 
 - 性能低下は、症状だけでなく原因ごとに調査項目を変える
@@ -365,6 +415,9 @@ DBバッファ不足
 - 外部負荷の増加 → 利用者数、通信量、共有サーバ負荷などを確認する
 - DBバッファ不足 → キャッシュ・バッファのヒット率を見る
 - フラグメンテーション → データの格納状況、断片化の状態を見る
+- 断片化などを整理してアクセス効率を維持・回復 → 再編成
+- 構造・設計を見直す → 再構成
+- 障害に備えてコピーを保存 → バックアップ
 - 「I/Oが多い」は結果の場合があるので、原因まで切り分ける
 
 ```text
