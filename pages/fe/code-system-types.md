@@ -1,6 +1,6 @@
 ---
 layout: page
-title: コード体系の種類とは？シーケンスコード・デシマルコード・ニモニックコード・ブロックコードの違い【基本情報技術者試験】
+title: コード体系の種類｜シーケンス・デシマル・ニモニック・ブロック【FE】
 description: コード体系の種類を、連番で付けるシーケンスコード、10進階層で分類するデシマルコード、意味を連想できるニモニックコード、範囲で分けるブロックコードとして整理し、FE試験の選択肢を切る視点を解説します。
 permalink: /fe/code-system-types/
 tags: [fe, fe-technology, basic-theory]
@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: 基礎理論
 fe_order: 35
 date: 2026-07-05
-last_modified_at: 2026-10-03
+last_modified_at: 2026-10-04
 ---
 
 ## まず結論
