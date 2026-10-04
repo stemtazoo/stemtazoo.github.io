@@ -1,6 +1,6 @@
 ---
 layout: page
-title: IrDAとは？Bluetooth・IEEE 1394・RS-232Cとの違いと見分け方【基本情報技術者試験】
+title: IrDAとは？Bluetooth・IEEE 1394・RS-232Cとの違い【FE】
 description: IrDAを中心に、Bluetooth、IEEE 1394、RS-232C、PIAFSの違いを、通信媒体・接続方法・用途の3点から整理し、基本情報技術者試験で選択肢を切る判断軸を解説します。
 permalink: /fe/legacy-interface-standards/
 tags: [fe, fe-technology, network, interface]
@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 46
 date: 2026-07-20
-last_modified_at: 2026-08-30
+last_modified_at: 2026-10-04
 ---
 
 ## まず結論
