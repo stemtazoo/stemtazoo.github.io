@@ -6,7 +6,7 @@ permalink: /gk/bert/
 tags: [gk, nlp, transformer, attention]
 gk_section: ディープラーニングの応用例/自然言語処理/Transformer・言語モデル
 gk_order: 1
-last_modified_at: 2026-09-23
+last_modified_at: 2026-10-04
 ---
 
 ## まず結論
@@ -21,6 +21,14 @@ G検定では、
 - 事前学習→下流タスクへ適応
 
 を押さえます。
+
+### 先に判断基準
+
+- **Transformer Encoder＋MLM＋左右の文脈** → BERT
+- **左から右へ次トークンを生成** → BERTの代表的な事前学習ではない
+- **NSP** → 原版BERTでは使用。ただしBERT系すべての必須条件ではない
+
+迷ったら、**「Encoder型か」「何を予測して学習するか」**を先に見ます。
 
 ## 直感的な説明
 
