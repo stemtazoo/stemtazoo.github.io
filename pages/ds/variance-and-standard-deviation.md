@@ -9,7 +9,7 @@ ds_area: datascience
 ds_section: statistics
 prev: /ds/student-t-test/
 next: /ds/variance-standard-deviation/
-last_modified_at: 2026-09-30
+last_modified_at: 2026-10-04
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -21,6 +21,14 @@ last_modified_at: 2026-09-30
 分散と標準偏差はどちらも「データのばらつきの大きさ」を表す指標で、標準偏差は分散の平方根です。
 
 DS検定では、「ばらつきの意味を理解しているか」と「単位の違いを説明できるか」が問われます。
+
+### 先に判断基準
+
+- **平均からのズレを二乗して平均** → 分散
+- **分散の平方根** → 標準偏差
+- **元データと同じ単位でばらつきを読む** → 標準偏差
+
+迷ったら、**「二乗された単位のままか、元の単位に戻っているか」**で切り分けます。
 
 
 ## 直感的な説明
