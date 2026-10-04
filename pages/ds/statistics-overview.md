@@ -9,7 +9,7 @@ ds_area: datascience
 ds_section: statistics
 prev: /ds/spearman-rank-correlation/
 next: /ds/statistics-summary/
-last_modified_at: 2026-08-15
+last_modified_at: 2026-10-04
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -246,6 +246,19 @@ DS検定では、**相関の強さと予測性能を同じものとして扱わ�
 
 データの種類と、それぞれに適したグラフや分析方法の基礎は、総務省統計局の[データ・データセットの種類](https://www.stat.go.jp/naruhodo/4_graph/data.html)で確認できます。
 
+
+## 次に読むなら
+
+このページは**統計分野の入口**です。次は、迷っている内容に合わせて進みます。
+
+- **ばらつきの意味と、分散・標準偏差の違いを整理したい**  
+  → [分散と標準偏差の違い](/ds/variance-and-standard-deviation/)
+- **2変数が一緒に動く関係を整理したい**  
+  → [共分散と相関係数](/ds/covariance-correlation/)
+- **回帰モデルがどれくらい説明できているか知りたい**  
+  → [決定係数](/ds/coefficient-of-determination-contribution/)
+
+単に統計用語を順番に読むのではなく、**「ばらつき」「2変数の関係」「モデルの説明力」のどこで迷っているか**で次の記事を選びます。
 
 ## まとめ（試験直前用）
 
