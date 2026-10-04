@@ -1,12 +1,12 @@
 ---
 layout: page
-title: 次元の呪い（Curse of Dimensionality）とは？特徴量が増える難しさ【G検定対策】
+title: 次元の呪いとは？特徴量が増えると何が難しい？【G検定対策】
 description: "次元の呪いを、特徴量が増えるほど高次元空間でデータが疎になり、距離の差が判別しにくくなる問題として整理します。k-NNやクラスタリングへの影響、特徴量選択とPCAなどの次元削減による対策をG検定向けに確認します。"
 permalink: /gk/curse-of-dimensionality/
 tags: [gk, machine_learning, dimensionality_reduction]
 gk_section: 機械学習の概要/特徴量・前処理/特徴量選択・高次元
 gk_order: 2
-last_modified_at: 2026-09-23
+last_modified_at: 2026-10-04
 ---
 
 ## まず結論
