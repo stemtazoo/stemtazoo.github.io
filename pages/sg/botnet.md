@@ -6,12 +6,22 @@ permalink: /sg/botnet/
 tags: [sg, threat_vulnerability, malware, unauthorized_access, sg-security-overview]
 prev: /sg/bot/
 next: /sg/brute-force-attack/
-last_modified_at: 2026-07-01
+last_modified_at: 2026-10-04
 ---
 
 ## まず結論
 ボットネットとは、**マルウェアに感染した多数の端末を遠隔操作し、攻撃に利用する仕組み**です。  
 SG試験では「**DDoSの攻撃元になる仕組み**」として理解できているかが問われます。
+
+### 先に判断基準
+
+問題文では、次の3つを分けて読みます。
+
+- **感染した1台の端末** → ボット
+- **多数の感染端末をまとめて遠隔操作する仕組み** → ボットネット
+- **多数の端末から一斉に大量通信を送る攻撃** → DDoS
+
+迷ったら、**「端末そのもの・端末を束ねる仕組み・実行される攻撃」のどれを聞いているか**で切り分けます。
 
 ---
 
