@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 有意水準とp値の違いとは？【DS検定リテラシー】
-description: "DS検定では、p値と有意水準を比較して、帰無仮説を棄却できるかを判断できるかが問われます。定義、具体例、似た概念との違い、選択肢の見分け方を整理します。主要な混同パターンや実務での読み取り方も確認します。初学者が迷いやすい判断ポイントも確認します。"
+description: 有意水準は分析前に決める判断基準、p値は帰無仮説の下で観測結果以上に極端な結果が出る確率です。広告効果やA/Bテストの結果を読む場面で、棄却できないことと効果がないこと、有意差と効果の大きさを区別。分析結果を報告するときに避けたい解釈を確認します。
 permalink: /ds/significance-level-and-pvalue/
 categories: [data-science]
 tags: [ds, statistics]
@@ -9,7 +9,7 @@ ds_area: datascience
 ds_section: statistics
 prev: /ds/sampling-methods-comparison/
 next: /ds/spearman-rank-correlation/
-last_modified_at: 2026-09-26
+last_modified_at: 2026-10-04
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -26,7 +26,7 @@ DS検定では、
 が問われます。
 
 👉 判断ルールはシンプルです。  
-**p値が有意水準より小さいとき、帰無仮説を棄却する。**
+**このページでは、p値が有意水準以下のとき、帰無仮説を棄却する、とします。**
 
 ここを迷わないことが最重要です。
 
@@ -88,10 +88,10 @@ DS検定では
 
 | 比較 | 判断 |
 |------|------|
-| p値 < 有意水準 | 帰無仮説を棄却 |
-| p値 ≥ 有意水準 | 棄却できない |
+| p値 ≤ 有意水準 | 帰無仮説を棄却 |
+| p値 > 有意水準 | 棄却できない |
 
-DS検定ではこの大小関係を問われます。
+資料によっては「p値 < 有意水準」を棄却の条件とします。このページは等号を含む基準で説明しますが、p値が有意水準と等しい場合の扱いが設問で明示されていれば、その定義に従います。
 
 
 ## どんな場面で使う？
@@ -161,7 +161,7 @@ DS検定では
 
 - 有意水準＝事前に決める基準
 - p値＝帰無仮説のもとで「観測結果以上に極端な結果」が出る確率
-- p値 < 有意水準 → 帰無仮説を棄却
+- このページの基準はp値 ≤ 有意水準 → 帰無仮説を棄却。等号の扱いが設問で指定されていれば従う
 - p値は「帰無仮説が正しい確率」ではない
 
 迷ったら：
@@ -173,6 +173,8 @@ DS検定では
 
 ## 公式情報・参考リンク
 
+- [Penn State：Hypothesis Testing (P-Value Approach)](https://online.stat.psu.edu/statprogram/book/export/html/529)
+  - p値が有意水準以下なら棄却する判断手順と、棄却できない場合の結論を確認できます。
 - [NIST/SEMATECH e-Handbook｜Critical values and p values](https://www.itl.nist.gov/div898/handbook/prc/section1/prc131.htm)
   - 有意水準αとp値の関係を説明するNISTの統計リファレンスです。p値を「帰無仮説が正しい確率」と解釈しないための確認に使えます。
 - [NIST/SEMATECH e-Handbook｜What are statistical tests?](https://www.itl.nist.gov/div898/handbook/prc/section1/prc13.htm)
