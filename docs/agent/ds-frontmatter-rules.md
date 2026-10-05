@@ -92,21 +92,12 @@ title: LEFT JOINでWHERE句を使うときの注意点【SQL・DS検定】
 
 ## Description
 
-When creating or revising the `description` field in front matter:
+Follow `docs/agent/metadata-rules.md` for the shared description-writing policy. Theme-specific guidance:
 
-- Do not use boilerplate descriptions that could fit any article.
-- Avoid generic phrases such as `初心者向けにわかりやすく解説します`, `基本から整理します`, `試験対策として重要なポイントを解説します`, or `この記事では〜について説明します`.
-- The description must summarize the article-specific learning value.
-- Include at least one concrete element from the article, such as the main judgment criterion, a common misunderstanding, a distinction from a similar term, a typical exam trap, a practical use case, or the type of question where the concept appears.
-- Prefer roughly 120-160 Japanese characters when natural, especially for pages that were previously flagged for short descriptions. Do not simply lengthen the description by adding filler.
-- Do not repeat the title with minor wording changes.
-- Make each description unique enough that it could not be reused for another article without editing.
 - For DS articles, prioritize descriptions that show what data literacy judgment the reader will be able to make, what practical misunderstanding the article prevents, and how the concept appears in analysis, statistics, visualization, business use, or data handling.
 - Start with a clear definition or role of the concept when possible.
 - Include exam context such as `DS検定` only when it fits naturally.
 - Avoid keyword stuffing.
-- Do not make the description look like a bullet list.
-- Do not contradict the page title or page scope.
 - Do not duplicate the same sentence as visible body text unless intentionally rewritten.
 
 Bad / good examples:

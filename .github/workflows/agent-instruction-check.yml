@@ -1,0 +1,38 @@
+name: Agent instruction references
+
+on:
+  push:
+    paths:
+      - 'AGENTS.md'
+      - 'README.md'
+      - 'docs/agent/**'
+      - 'project_rules/**'
+      - 'scripts/check_agent_instructions.py'
+      - 'tests/test_agent_instructions.py'
+      - '.github/workflows/agent-instruction-check.yml'
+  pull_request:
+    paths:
+      - 'AGENTS.md'
+      - 'README.md'
+      - 'docs/agent/**'
+      - 'project_rules/**'
+      - 'scripts/check_agent_instructions.py'
+      - 'tests/test_agent_instructions.py'
+      - '.github/workflows/agent-instruction-check.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  references:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check rule references
+        run: python scripts/check_agent_instructions.py
+      - name: Test reference checker
+        run: python -m unittest discover -s tests -p 'test_agent_instructions.py'

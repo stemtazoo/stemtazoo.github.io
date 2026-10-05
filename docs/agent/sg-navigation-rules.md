@@ -10,6 +10,16 @@ SG pages should guide readers through study paths without forcing every article 
 
 The existing SG footer already displays `page.prev` and `page.next` as attractive previous / next links. Preserve that display style unless the user explicitly asks for a design change. The main editorial task is to decide the learning order.
 
+## Authorization Boundary
+
+This is the canonical authorization policy for SG prev/next changes.
+
+- Routine article creation, corrections, and source audits do not authorize adding or reorganizing prev/next.
+- An explicit request to create or reorganize a series/learning sequence, or to fix navigation, authorizes the agent to choose suitable individual-article neighbors after verifying article roles and actual permalinks. The user need not supply every target URL.
+- A request only to create a summary page authorizes its body learning map, not prev/next edits on other articles.
+- New hub summary pages normally have no prev/next. A next-only footer on a summary requires an explicit request for that footer-style entry link; being the apparent first stop alone is insufficient.
+- If the user supplies exact targets, use them after verification and flag a material mismatch rather than silently substituting a different sequence.
+
 ## Core Policy
 
 - Manage `prev` / `next` by small theme-based series, not by one sitewide order.
@@ -189,10 +199,10 @@ A non-reciprocal link can be acceptable at a series boundary or when a summary p
 ### Good: summary starts a series with `next` only
 
 ```text
-/sg/auth-access-control-summary/ → /sg/identification/ → /sg/authentication/ → /sg/authorization/
+/sg/auth-access-control-summary/ → /sg/authentication-methods/ → /sg/authorization/
 ```
 
-Use only when the user wants the footer-style start link or when the summary clearly functions as the first stop.
+Use only when the user explicitly requests the footer-style start link and the summary clearly functions as the first stop; follow Authorization Boundary above.
 
 ### Good: comparison near the end
 

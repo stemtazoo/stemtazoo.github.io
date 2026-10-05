@@ -9,7 +9,7 @@
 | テーマ | 主な内容 | 入口ソース | 公開ページ |
 | --- | --- | --- | --- |
 | DS | DS検定リテラシー、統計、Python、SQL、データ分析・エンジニアリング、AI利活用 | `pages/ds/index.md` | [DS学習まとめ](https://stemtazoo.github.io/ds/) |
-| GK | G検定、機械学習、深層学習、AIの社会実装・法律・倫理 | `pages/gk/index.md` | [G検定学習まとめ](https://stemtazoo.github.io/gk/) |
+| GK | G検定、機械学習、深層学習、AIの社会実装・法律・倫理 | `pages/gk/Index.md` | [G検定学習まとめ](https://stemtazoo.github.io/gk/) |
 | SG | 情報セキュリティマネジメント試験、実務判断、カテゴリ別まとめ、過去問演習 | `pages/sg/index.md` | [SG学習まとめ](https://stemtazoo.github.io/sg/) |
 | FE | 基本情報技術者試験、科目Aの知識整理、科目Bのアルゴリズム・疑似言語読解 | `pages/fe/index.md` | [FE学習まとめ](https://stemtazoo.github.io/fe/) |
 
@@ -52,7 +52,7 @@
 
 ### G検定 / AI
 
-`pages/gk/index.md` の `gk_sections` で章立てを管理しています。個別記事の前後ナビゲーションは `gk_section` / `gk_order` と `_includes/gk_article_footer.html` に依存します。索引の変更時は [GK索引ルール](docs/agent/gk-index-rules.md) も参照してください。
+`pages/gk/Index.md` の `gk_sections` で章立てを管理しています。個別記事の前後ナビゲーションは `gk_section` / `gk_order` と `_includes/gk_article_footer.html` に依存します。索引の変更時は [GK索引ルール](docs/agent/gk-index-rules.md) も参照してください。
 
 ### SG試験 / 情報セキュリティ
 
@@ -172,16 +172,8 @@ Pages 公開とは別に、DS ver.6 データ・ページ生成、分類・Markd
 | SG | [SG記事ルール](docs/agent/sg-content-rules.md) | [SGテンプレート](docs/agent/sg-article-template.md) |
 | FE | [FE記事ルール](docs/agent/fe-content-rules.md) | [FEテンプレート](docs/agent/fe-article-template.md) |
 
-front matter・タグ・ナビゲーションの詳細は `AGENTS.md` の参照一覧から確認できます。共通の変更では [テーマ整合性](docs/agent/theme-consistency.md)、[AI検索・読者理解](docs/agent/ai-search-content-rules.md)、教材を追加する場合は [インタラクティブ教材ルール](docs/agent/interactive-learning-rules.md) も参照してください。
+front matter・タグ・ナビゲーションの詳細は [作業別ルール一覧](docs/agent/README.md) から確認できます。共通の変更では [テーマ整合性](docs/agent/theme-consistency.md)、[AI検索・読者理解](docs/agent/ai-search-content-rules.md)、教材を追加する場合は [インタラクティブ教材ルール](docs/agent/interactive-learning-rules.md) も参照してください。
 
 SG記事で判断軸や関連記事との役割分担を強化する場合は、補助方針 [SG記事改善ルール](project_rules/sg_article_ai_search_improvement.md) を必要に応じて参照します。
 
-編集時は次を確認してください。
-
-- 4テーマの既存記事を検索し、新規記事・既存記事更新・比較・まとめ・導線改善のどれが適切か判断する
-- 通常記事と索引・カテゴリ・まとめの役割を区別し、近似重複を増やさない
-- 日本語は UTF-8 で扱い、front matter とテーマ別の分類・並び順・footer の整合性を保つ
-- 新規記事には `last_modified_at` を設定し、既存記事で使用している更新日も内容変更時に更新する
-- 法令・規格・公的基準は現在の公式版を確認し、過去問の歴史的な前提と区別する
-- URL・構造変更時は内部リンク、カテゴリ・索引、NotebookLM 出力、AI 向け生成物、IndexNow への影響を確認する
-- レイアウト・include・front matter・索引の変更後はビルドを確認し、Pages の Liquid エラーを解消してから公開する
+編集の共通判断は [編集方針](docs/agent/editorial-rules.md)、description は [共通メタデータ方針](docs/agent/metadata-rules.md)、作業別の参照先は [ルール一覧](docs/agent/README.md) を正本とします。ルール更新後は [回帰確認](docs/agent/instruction-regression.md) を実施してください。

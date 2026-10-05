@@ -89,20 +89,11 @@ title: JDBCとは？Javaからデータベースへ接続する標準API【基�
 
 ## Description
 
-When creating or revising the `description` field in front matter:
+Follow `docs/agent/metadata-rules.md` for the shared description-writing policy. Theme-specific guidance:
 
-- Do not use boilerplate descriptions that could fit any article.
-- Avoid generic phrases such as `初心者向けにわかりやすく解説します`, `基本から整理します`, `試験対策として重要なポイントを解説します`, or `この記事では〜について説明します`.
-- The description must summarize the article-specific learning value.
-- Include at least one concrete element from the article, such as the main judgment criterion, a common misunderstanding, a distinction from a similar term, a typical exam trap, a practical use case, or the type of question where the concept appears.
-- Prefer roughly 120-160 Japanese characters when natural, especially for pages that were previously flagged for short descriptions. Do not simply lengthen the description by adding filler.
-- Do not repeat the title with minor wording changes.
-- Make each description unique enough that it could not be reused for another article without editing.
 - For FE articles, prioritize descriptions that show what technical or exam judgment the reader will be able to make, what similar term, formula, mechanism, or process the article helps distinguish, how the concept appears in FE-style questions, and whether the article helps with calculation, terminology, algorithm, database, network, security, management, or strategy questions.
 - Mention 科目A or 科目B naturally when it helps clarify the article role.
 - Avoid generic boilerplate endings reused across many FE pages.
-- Do not make the description look like a bullet list.
-- Do not contradict the page title or page scope.
 - Do not duplicate the same sentence as visible body text.
 
 Bad / good examples:

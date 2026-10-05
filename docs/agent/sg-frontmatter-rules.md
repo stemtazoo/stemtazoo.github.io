@@ -34,9 +34,7 @@ last_modified_at: YYYY-MM-DD
 - For new articles, use the creation date as `last_modified_at`.
 - When editing the body of an existing article, update `last_modified_at` when appropriate.
 - Do not write "last updated" text inside the body.
-- As a rule, do not add `prev` / `next`.
-- Add `prev` / `next` only when the user explicitly specifies the previous and next articles.
-- Do not guess unknown previous or next articles.
+- For whether prev/next changes are authorized and how targets are selected, follow `docs/agent/sg-navigation-rules.md`. This file specifies field formatting, not a separate authorization policy.
 
 ## Title
 
@@ -49,22 +47,13 @@ title: リスクアセスメントの手順をやさしく整理【情報セキ�
 
 ## Description
 
-When creating or revising the `description` field in front matter:
+Follow `docs/agent/metadata-rules.md` for the shared description-writing policy. Theme-specific guidance:
 
-- Do not use boilerplate descriptions that could fit any article.
-- Avoid generic phrases such as `初心者向けにわかりやすく解説します`, `基本から整理します`, `試験対策として重要なポイントを解説します`, or `この記事では〜について説明します`.
-- The description must summarize the article-specific learning value.
-- Include at least one concrete element from the article, such as the main judgment criterion, a common misunderstanding, a distinction from a similar term, a typical exam trap, a practical use case, or the type of question where the concept appears.
-- Prefer roughly 120-160 Japanese characters when natural, especially for pages that were previously flagged for short descriptions. Do not simply lengthen the description by adding filler.
-- Do not repeat the title with minor wording changes.
-- Make each description unique enough that it could not be reused for another article without editing.
 - For SG articles, prioritize descriptions that show what business/security judgment the reader will be able to make, what confusing term or exam trap the article helps distinguish, and how the concept appears in SG-style questions.
 - Start with a clear definition or role of the concept when possible.
 - Explain what the reader can distinguish, judge, or understand after reading.
 - Include exam context such as `SG試験` or `情報セキュリティマネジメント` only when it fits naturally.
 - Avoid keyword stuffing.
-- Do not make the description look like a bullet list.
-- Do not contradict the page title or page scope.
 
 Bad / good examples:
 

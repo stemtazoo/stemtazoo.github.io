@@ -27,7 +27,7 @@ Read this file before work whose main purpose is to evaluate existing FE content
 - checking whether important FE topics are missing;
 - deciding which existing articles should be updated and which should remain unchanged.
 
-Do not require a full audit for a small typo fix or a narrowly requested wording change. For a new article, use the normal new-article decision workflow in `AGENTS.md` and the FE content rules first. If the request also asks for a broader review of existing content, use this audit file as well.
+Do not require a full audit for a small typo fix or a narrowly requested wording change. For a new article, use the new-article decision workflow in `docs/agent/editorial-rules.md` and the FE content rules first. If the request also asks for a broader review of existing content, use this audit file as well.
 
 ## Rule Precedence And Quality Guardrail
 
@@ -73,104 +73,9 @@ Do not treat every finding as an article edit.
 
 ## Primary And Official Source Audit
 
-### Source Priority
+Use `docs/agent/primary-source-audit-rules.md` as the canonical workflow for matching sources to claims, distinguishing original sources from current authority, checking freshness/supersession, and classifying findings as add/update, sufficient, or unnecessary.
 
-Choose the source that best matches the claim being supported.
-
-Typical priority:
-
-1. Japanese official authorities for Japanese exams, laws, public systems, and government guidance:
-   - IPA;
-   - ministries and agencies;
-   - e-Gov or other responsible public bodies.
-2. International standards organizations:
-   - ISO / IEC;
-   - IEEE;
-   - ITU.
-3. Internet and web standards organizations:
-   - IETF / RFC Editor;
-   - W3C / WHATWG;
-   - ECMA where applicable.
-4. Technology originators, maintainers, or official projects:
-   - OMG;
-   - Apache;
-   - GNU;
-   - other responsible project or vendor documentation when it defines the technology.
-5. Original papers or books by the proposer when the historical origin or original model matters.
-
-Secondary explanations may be used for discovery or context, but they should not displace a stronger available primary source for normative or origin claims.
-
-### Original Source And Current Source Are Different Roles
-
-Do not confuse historical origin with current authority.
-
-Use:
-
-- an original paper or book to support who proposed a concept or how it was originally formulated;
-- the latest standard or official documentation to support current specifications, requirements, terminology, or rules;
-- the latest IPA material to support current FE examination scope.
-
-An article may need one, both, or neither.
-
-Example:
-
-```text
-History / origin
-→ original paper or original book
-
-Current specification
-→ latest official standard or documentation
-
-Current FE scope
-→ latest IPA syllabus / examination guidelines
-```
-
-### Latest-Version Check
-
-For laws, standards, official guidelines, audit criteria, specifications, and other versioned normative material:
-
-- verify whether the cited version is still current;
-- check for a successor, revision, replacement page, or superseding standard;
-- keep the article body based on the current official rule by default;
-- retain historical material only when it is necessary to understand a past question or the development of the concept;
-- label historical rules clearly so they cannot be mistaken for current requirements.
-
-This audit rule supplements, and never weakens, the Latest Official Version Policy in `fe-content-rules.md` and `AGENTS.md`.
-
-## Source-Addition Decision
-
-Classify each source finding before editing.
-
-### 1. Add / Update Recommended
-
-Update the article when the source materially improves at least one of:
-
-- factual correctness;
-- currentness;
-- authority or traceability;
-- an FE answer-choice judgment criterion;
-- distinction from a commonly confused term;
-- clarification of a material misconception.
-
-### 2. Existing Article Is Sufficient
-
-Do not edit when:
-
-- an appropriate current primary source is already present;
-- the proposed source would only duplicate an existing authority;
-- the existing explanation is correct and sufficiently supported.
-
-### 3. Source Exists But Addition Is Unnecessary
-
-Do not edit when:
-
-- the source is historically interesting but does not help FE learning;
-- the source would add specialist detail beyond FE scope;
-- adding it would make a concise article harder to read;
-- the source does not improve the article's judgment criteria or correctness;
-- a generic mathematical or computer-science fact does not need an origin citation to be useful.
-
-The default is **not** "find a source, then add it." The default is "add only when it improves the article."
+For FE, prioritize IPA for FE examination scope and the responsible authority for the specific legal, technical, normative, or origin claim. Do not add specialist detail beyond the page's FE learning role. Keep source auditing separate from syllabus/Subject B and content-gap decisions below.
 
 ## Source Placement And Writing
 
@@ -232,7 +137,7 @@ Before proposing a new article:
 2. determine whether the concept is already sufficiently explained;
 3. check whether an existing article should be expanded instead;
 4. confirm that a new page has a distinct search intent and learning role;
-5. apply the New Article Decision Workflow in `AGENTS.md`.
+5. apply the New Article Decision Workflow in `docs/agent/editorial-rules.md`.
 
 Keep source auditing and content-gap decisions separate.
 

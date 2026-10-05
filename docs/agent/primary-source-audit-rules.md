@@ -2,7 +2,7 @@
 
 This file defines shared rules for selecting, adding, refreshing, and auditing primary / official sources across study content in this repository.
 
-Use it especially for `pages/gk`, `pages/sg`, and `pages/ds`, and also as a shared baseline when another section-specific rule does not define a stricter source policy.
+This is the canonical source-selection and freshness workflow for `pages/gk`, `pages/sg`, `pages/ds`, and `pages/fe`. FE examination scope and audit reporting remain in `docs/agent/fe-audit-rules.md`; source mechanics are not duplicated there.
 
 This file does **not** replace article-writing rules. When an audit results in an article edit, the edited page must still comply with its section-specific content, template, front-matter, tag, navigation, and GitHub Pages rules.
 
@@ -20,7 +20,7 @@ Read this file before work whose main purpose includes one or more of the follow
 
 For a small wording correction that does not affect factual authority, provenance, or freshness, this file does not need to drive the edit.
 
-For new GK / SG / DS articles, apply this file when a natural primary or official source exists for the article topic.
+For new GK / SG / DS / FE articles, apply this file when a natural primary or official source exists for the article topic. For FE, select the authority defining the actual claim (IPA for exam scope; the responsible authority, standards body, maintainer, or originator for other claims), and use the lightest useful source placement specified in the FE audit guide.
 
 ## Rule Precedence
 

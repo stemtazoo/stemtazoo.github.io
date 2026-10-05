@@ -19,6 +19,8 @@ Create only the audit report described below.
 Before auditing, read the latest versions of:
 
 - `AGENTS.md`
+- `docs/agent/fe-audit-rules.md`
+- `docs/agent/editorial-rules.md`
 - `docs/agent/fe-content-rules.md`
 - `docs/agent/fe-article-template.md`
 - `docs/agent/fe-frontmatter-rules.md`
