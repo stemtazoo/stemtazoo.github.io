@@ -6,7 +6,7 @@ permalink: /fe/sql-cursor/
 tags: [fe, fe-technology, database, sql]
 fe_section: テクノロジ系
 fe_subsection: データベース
-last_modified_at: 2026-09-19
+last_modified_at: 2026-10-05
 ---
 
 ## まず結論
@@ -145,6 +145,41 @@ CLOSE employee_cursor;
 ```
 
 不要になったカーソルを閉じることで、使用していた資源を解放します。
+
+## WHERE CURRENT OFとは？
+
+更新可能なカーソルでは、次のような記述が使われることがあります。
+
+```sql
+UPDATE employee
+SET salary = salary * 1.1
+WHERE CURRENT OF employee_cursor;
+```
+
+`WHERE CURRENT OF employee_cursor` は、**カーソル `employee_cursor` が現在指している行**を対象にする、という意味です。
+
+```text
+検索結果
+  行1
+→ 行2  ← カーソルが現在指している
+  行3
+
+WHERE CURRENT OF
+→ この「行2」を更新・削除の対象にする
+```
+
+ここで重要なのは、`employee_cursor` がテーブル名ではなく**カーソル名**だということです。
+
+```text
+OPEN employee_cursor
+FETCH employee_cursor
+WHERE CURRENT OF employee_cursor
+CLOSE employee_cursor
+```
+
+このように同じ名前に対してカーソル操作が続いていれば、名前が `X` や `C1` のように短くても、**使われ方からカーソルだと判断**できます。
+
+> **名前を見るより、何をされているかを見る。**
 
 ## 科目Aでどう出る？
 
@@ -332,6 +367,7 @@ Oracleの公式ドキュメントでも、埋込みSQLのカーソル制御と�
 - 埋込みSQLで、検索結果を親プログラムへ順番に渡す
 - `DECLARE CURSOR`で定義し、`OPEN`で開始する
 - `FETCH`で1行ずつ取得し、`CLOSE`で終了する
+- `WHERE CURRENT OF`は、カーソルが現在指している行を対象にする
 - `ORDER BY`は並べ替え、`UNION`は結果結合、`UNIQUE`は重複禁止
 - 仕組み全体は`CURSOR`、1行取得の操作は`FETCH`
 
