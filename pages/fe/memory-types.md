@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: コンピュータシステム
 fe_order: 50
 date: 2026-07-22
-last_modified_at: 2026-10-03
+last_modified_at: 2026-10-07
 ---
 
 ## まず結論
@@ -132,6 +132,22 @@ SRAMも揮発性メモリですが、リフレッシュは不要です。DRAMよ
 Intelの[Microcode Update Guidance](https://www.intel.com/content/www/us/en/developer/articles/technical/software-security-guidance/best-practices/microcode-update-guidance.html)は、BIOSのSPIフラッシュ、リセット時のファームウェア実行、DRAMが利用可能になる前の処理を説明しています。これは具体的な実装例であり、すべての機器の起動手順を同一にするものではありません。
 
 ROM系の書換え可否は[ROMの種類](/fe/rom-types/)、起動プログラムの信頼性を検証する仕組みは[セキュアブート](/fe/secure-boot/)で確認できます。
+
+### ECCメモリは「種類」より「信頼性を高める仕組み」で考える
+
+ECC（Error Correcting Code）メモリは、メモリ上のデータに冗長な情報を加え、**ビット誤りを検出・訂正して信頼性を高める**仕組みを備えたメモリです。
+
+```text
+キャッシュ・インターリーブ
+→ 主に高速化
+
+ECCメモリ
+→ 主に信頼性向上
+```
+
+DRAM・SRAM・ROMのような「記憶素子の種類」と同じ分類軸ではなく、**データを誤りから守る機能**として切り分けると理解しやすくなります。
+
+誤り検出・訂正の基本的な考え方は、[ハミング符号方式](/fe/hamming-code/)で整理しています。
 
 ## 科目Aでどう出る？
 
