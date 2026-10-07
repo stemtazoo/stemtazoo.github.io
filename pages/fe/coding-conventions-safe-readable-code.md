@@ -6,8 +6,9 @@ permalink: /fe/coding-conventions-safe-readable-code/
 tags: [fe, fe-technology, programming, coding]
 fe_section: テクノロジ系
 fe_subsection: プログラミング
+fe_order: 90
 date: 2026-10-06
-last_modified_at: 2026-10-06
+last_modified_at: 2026-10-07
 ---
 
 ## まず結論
