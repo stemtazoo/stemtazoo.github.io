@@ -32,7 +32,7 @@ AI citation / grounding metrics are supporting evidence, not a standalone articl
 Before saving an article, check whether a short excerpt from the page would still make sense if shown in an AI answer, search snippet, or related-article card.
 
 - Does the first paragraph directly define the topic or state the practical conclusion?
-- Does each heading contain meaningful words that identify the topic or comparison?
+- Do freely worded headings contain meaningful words that identify the topic or comparison? For required fixed headings, preserve the theme's wording and check that the text immediately below explicitly identifies the topic or comparison.
 - Does each important paragraph name the concept instead of relying on vague pronouns?
 - Are similar terms separated by criteria such as purpose, timing, target, mechanism, or exam-choice wording?
 - Are official links supportive and relevant, rather than a generic link collection?
