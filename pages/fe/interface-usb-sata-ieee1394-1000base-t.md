@@ -1,14 +1,14 @@
 ---
 layout: page
 title: USB・SATA・IEEE 1394・1000BASE-Tの違いとは？特徴語で切り分ける【基本情報技術者試験】
-description: USB 3.0、SATA、IEEE 1394、1000BASE-Tを、SuperSpeed、ATAのシリアル化、アイソクロナス転送、4対のツイストペアという特徴語から基本情報技術者試験向けに切り分けます。
+description: USB 3.0、SATA、IEEE 1394、1000BASE-Tを、SuperSpeed、ATAのシリアル化、FireWire、4対のツイストペアという特徴語から基本情報技術者試験向けに切り分けます。
 permalink: /fe/interface-usb-sata-ieee1394-1000base-t/
 tags: [fe, fe-technology, hardware, network]
 fe_section: テクノロジ系
 fe_subsection: ハードウェア
 fe_order: 152
 date: 2026-10-06
-last_modified_at: 2026-10-06
+last_modified_at: 2026-10-07
 ---
 
 ## まず結論
@@ -21,7 +21,7 @@ USB、SATA、IEEE 1394、1000BASE-Tは、どれもデータをやり取りする
 |---|---|
 | SuperSpeed、5 Gbit/s | USB 3.0 |
 | ATAをシリアル化 | SATA |
-| アイソクロナス転送 | IEEE 1394 |
+| FireWire | IEEE 1394 |
 | 4対のツイストペア、1 Gbit/s | 1000BASE-T |
 
 最も大切なのは、**「シリアル」という言葉だけでUSBを選ばないこと**です。USB、SATA、IEEE 1394はいずれもシリアル通信に関係します。
@@ -37,7 +37,7 @@ PC ─ 周辺機器
 PC ─ HDD・SSDなど
    → SATA
 
-PC ─ 音声・映像機器など
+PC ─ 音声・映像機器など（FireWire接続）
    → IEEE 1394
 
 PC ─ LAN
@@ -86,14 +86,16 @@ SATA
 IEEE 1394は、高速なシリアルバス規格で、音声・映像など時間的な連続性が重要なデータを扱う**アイソクロナス転送**をサポートします。
 
 ```text
-音声・映像
-＋
-アイソクロナス転送
+FireWire
 ↓
 IEEE 1394
+↓
+音声・映像などの転送に利用
 ```
 
-「音声・映像」という語だけではUSBなども候補になり得るため、試験では**アイソクロナス**を強い手掛かりとして見ます。
+**アイソクロナス転送はUSBでも利用されるため、この語だけでIEEE 1394とは確定できません。** IEEE 1394の別名である**FireWire**や、問題文に示された他の特徴と組み合わせて判断します。
+
+[Microsoft Learn：USBのアイソクロナス転送](https://learn.microsoft.com/en-us/windows-hardware/drivers/usbcon/transfer-data-to-isochronous-endpoints)でも、USBで音声・映像など時間に依存するデータを転送できることが説明されています。
 
 ### 1000BASE-T
 
@@ -120,7 +122,7 @@ IEEE 1394
 ストレージ接続
 → SATA
 
-アイソクロナス転送
+FireWire
 → IEEE 1394
 
 Ethernet・LAN
@@ -134,10 +136,10 @@ Ethernet・LAN
 | SuperSpeed、5 Gbit/s | USB 3.0 |
 | High-Speed、480 Mbit/s | USB 2.0 |
 | ATAをシリアル化 | SATA |
-| アイソクロナス転送 | IEEE 1394 |
+| FireWire | IEEE 1394 |
 | 4対、1 Gbit/s、Ethernet | 1000BASE-T |
 
-「シリアルインタフェース」という共通点よりも、**SuperSpeed、ATA、アイソクロナス、Ethernetといった固有語を優先**すると切りやすくなります。
+「シリアルインタフェース」という共通点よりも、**SuperSpeed、ATA、FireWire、Ethernetといった特徴語を優先**すると切りやすくなります。
 
 ## どんな場面で使う？
 
@@ -189,7 +191,9 @@ SuperSpeed
 
 そうとは限りません。
 
-USBでも音声・映像データは扱えます。IEEE 1394を判断する強い特徴は、**アイソクロナス転送**です。
+USBでも音声・映像データを扱え、アイソクロナス転送にも対応します。**音声・映像やアイソクロナス転送は、IEEE 1394だけの特徴ではありません。**
+
+FireWireという別名があればIEEE 1394と判断できます。それ以外では、接続方式や他の特徴も確認します。
 
 ### USB 3.xのコネクタは必ず青色？
 
@@ -207,8 +211,9 @@ USBの名称・表記は後に整理されており、現在の製品表記と�
 
 - **SuperSpeed・5 Gbit/s → USB 3.0**
 - **ATAをシリアル化 → SATA**
-- **アイソクロナス転送 → IEEE 1394**
+- **FireWire → IEEE 1394**
 - **4対のツイストペア・1 Gbit/s → 1000BASE-T**
+- アイソクロナス転送はUSBでも利用されるため、それだけでは規格を確定できない
 - 「シリアル」だけではUSB・SATA・IEEE 1394を区別できない
 - まず規格の種類を見て、その後に固有の特徴語で確定する
 - USBコネクタの色ではなく、仕様上の特徴で判断する
@@ -218,7 +223,7 @@ USBの名称・表記は後に整理されており、現在の製品表記と�
 ```text
 SuperSpeed → USB
 ATA → SATA
-アイソクロナス → IEEE 1394
+FireWire → IEEE 1394
 4対・1 Gbit/s → 1000BASE-T
 ```
 

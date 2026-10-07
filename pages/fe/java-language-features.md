@@ -6,8 +6,9 @@ permalink: /fe/java-language-features/
 tags: [fe, fe-technology, programming, java]
 fe_section: テクノロジ系
 fe_subsection: プログラミング
+fe_order: 70
 date: 2026-10-06
-last_modified_at: 2026-10-06
+last_modified_at: 2026-10-07
 ---
 
 ## まず結論
