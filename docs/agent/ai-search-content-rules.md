@@ -17,6 +17,16 @@ These rules are based on the general direction of AI search and grounding system
 - Do not keyword-stuff or repeat unnatural phrases. Preserve the existing beginner-friendly Japanese tone and write for human learners first.
 - For exam-prep articles, prioritize judgment criteria for eliminating wrong choices over broad textbook-style coverage.
 
+## Performance Interpretation
+
+AI citation / grounding metrics are supporting evidence, not a standalone article-quality score.
+
+- Do not revise, merge, or devalue an article only because AI citations, citation share, or Share of Authority are low or zero.
+- Evaluate ordinary search performance and AI citation performance as separate dimensions. An article may be useful as a search-entry page, an AI grounding source, both, or neither yet.
+- When AI citation data is available, compare the observed grounding query with the article's intended learning purpose and direct answer before proposing a content change.
+- Treat query demand and whether an AI system chooses to ground a topic as partly external to the article. A strong direct answer improves extractability but does not guarantee citations.
+- Preserve a strong human-facing or search-performing article when the only negative signal is weak AI citation performance.
+
 ## Practical Writing Checks
 
 Before saving an article, check whether a short excerpt from the page would still make sense if shown in an AI answer, search snippet, or related-article card.
