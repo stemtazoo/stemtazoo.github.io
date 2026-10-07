@@ -4,7 +4,7 @@ title: 基本情報技術者試験 学習まとめ
 description: 基本情報技術者試験（FE）の学習記事を、科目Aのテクノロジ・マネジメント・ストラテジ・情報セキュリティと、科目Bのアルゴリズム・データ構造・疑似言語・トレースに分けた総合索引です。用語の選択肢判断からプログラム読解へ進む学習順、分野別の頻出テーマ、苦手論点の関連記事を一覧から探し、試験対策に活用できます。
 permalink: /fe/
 tags: [fe]
-last_modified_at: 2026-10-04
+last_modified_at: 2026-10-07
 ---
 
 # 基本情報技術者試験 学習まとめ
@@ -57,10 +57,10 @@ last_modified_at: 2026-10-04
 <div class="portal-card-grid">
   <section class="portal-card">
     <h3>テクノロジ系</h3>
-    <p><strong>仕組み → 個別 → 計算</strong>の順で進みます。</p>
+    <p><strong>全体像 → 個別 → 計算</strong>の順で進みます。</p>
     <ol>
+      <li><a href="{{ '/fe/cpu-execution-overview/' | relative_url }}">CPUが命令を実行する全体像</a></li>
       <li><a href="{{ '/fe/memory-types/' | relative_url }}">メモリの種類</a></li>
-      <li><a href="{{ '/fe/memory-management-methods/' | relative_url }}">主記憶管理方式</a></li>
       <li><a href="{{ '/fe/database-schema/' | relative_url }}">データベース設計</a></li>
       <li><a href="{{ '/fe/osi-reference-model/' | relative_url }}">OSI基本参照モデル</a></li>
     </ol>
