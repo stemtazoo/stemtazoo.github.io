@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 58
 date: 2026-08-15
-last_modified_at: 2026-10-03
+last_modified_at: 2026-10-08
 ---
 
 ## まず結論
@@ -38,6 +38,80 @@ CIDR表記の `/22` のような数字は、**IPアドレス32ビットのうち
 さらに `/22` や `/21` のように、8ビット単位で区切れない場合は、**第3オクテットも変化する**ことに注意します。
 
 ## 直感的な説明
+
+<style>
+.cidr-visual{border:1px solid #cbd5e1;border-radius:12px;padding:1rem;margin:1.2rem 0;max-width:100%;box-sizing:border-box}
+.cidr-visual *{box-sizing:border-box}
+.cidr-visual .cidr-choices{display:flex;flex-wrap:wrap;gap:.5rem;margin:.75rem 0 1rem}
+.cidr-visual button{border:1px solid #64748b;border-radius:7px;background:transparent;color:inherit;padding:.45rem .85rem;cursor:pointer}
+.cidr-visual button[aria-pressed="true"]{background:#335f7b;color:#fff;border-color:#335f7b}
+.cidr-visual .cidr-octets{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.3rem}
+.cidr-visual .cidr-octet{border-radius:7px;background:#e3eef5;color:#18374b;text-align:center;padding:.65rem .1rem;min-width:0}
+.cidr-visual .cidr-octet:last-child{background:#f4e9d8;color:#634622}
+.cidr-visual .cidr-octet strong{display:block;font-size:clamp(1.15rem,4vw,1.65rem)}
+.cidr-visual .cidr-octet small{font-size:.7rem}
+.cidr-visual .cidr-bar{display:flex;height:18px;border-radius:5px;overflow:hidden;margin:.45rem 0}
+.cidr-visual .cidr-net{background:#4b829f}.cidr-visual .cidr-host{background:#c99b56}
+.cidr-visual .cidr-stats{display:flex;justify-content:space-between;gap:.5rem;flex-wrap:wrap;font-size:.85rem}
+.cidr-visual dl{margin:.75rem 0 0;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.6rem .3rem}
+.cidr-visual dt{min-width:0}.cidr-visual dd{margin:0;font-weight:700;text-align:right;overflow-wrap:anywhere}
+.cidr-visual .cidr-note{font-size:.85rem;margin:.75rem 0 0}
+@media(max-width:380px){.cidr-visual{padding:.7rem}.cidr-visual dl{grid-template-columns:1fr}.cidr-visual dd{text-align:left;margin-bottom:.3rem}}
+</style>
+
+<div class="cidr-visual" data-cidr-visual>
+  <strong>図解：192.168.0.10 のネットワーク</strong>
+  <p class="cidr-note">CIDR表記を切り替えて、ネットワーク部とホスト部の境界を比べてみましょう。</p>
+  <div class="cidr-choices" role="group" aria-label="CIDR表記を選択">
+    <button type="button" data-prefix="24" aria-pressed="true">/24</button>
+    <button type="button" data-prefix="25" aria-pressed="false">/25</button>
+    <button type="button" data-prefix="26" aria-pressed="false">/26</button>
+  </div>
+  <div class="cidr-octets" aria-label="IPアドレス 192.168.0.10">
+    <div class="cidr-octet"><strong>192</strong><small>ネット部</small></div>
+    <div class="cidr-octet"><strong>168</strong><small>ネット部</small></div>
+    <div class="cidr-octet"><strong>0</strong><small>ネット部</small></div>
+    <div class="cidr-octet"><strong>10</strong><small>境界を含む</small></div>
+  </div>
+  <div class="cidr-stats"><span>ネットワーク部 <b data-net-bits>24</b>ビット</span><span>ホスト部 <b data-host-bits>8</b>ビット</span></div>
+  <div class="cidr-bar" aria-label="ネットワーク部とホスト部のビット数">
+    <div class="cidr-net" data-net-bar style="width:75%"></div>
+    <div class="cidr-host" data-host-bar style="width:25%"></div>
+  </div>
+  <dl aria-live="polite">
+    <dt>サブネットマスク</dt><dd data-mask>255.255.255.0</dd>
+    <dt>ネットワークアドレス</dt><dd data-network>192.168.0.0</dd>
+    <dt>ブロードキャストアドレス</dt><dd data-broadcast>192.168.0.255</dd>
+    <dt>末尾のアドレス範囲</dt><dd data-range>0〜255</dd>
+  </dl>
+  <p class="cidr-note">青：ネットワーク部 ／ 茶：ホスト部。/25 と /26 では第4オクテットの途中に境界があります。</p>
+</div>
+<script>
+(function(){
+  function init(){
+    var root=document.querySelector('[data-cidr-visual]');
+    if(!root)return;
+    var data={
+      24:{mask:'255.255.255.0',network:'192.168.0.0',broadcast:'192.168.0.255',range:'0〜255'},
+      25:{mask:'255.255.255.128',network:'192.168.0.0',broadcast:'192.168.0.127',range:'0〜127'},
+      26:{mask:'255.255.255.192',network:'192.168.0.0',broadcast:'192.168.0.63',range:'0〜63'}
+    };
+    root.querySelectorAll('[data-prefix]').forEach(function(button){
+      button.addEventListener('click',function(){
+        var n=Number(button.getAttribute('data-prefix')),d=data[n];
+        root.querySelectorAll('[data-prefix]').forEach(function(b){b.setAttribute('aria-pressed',String(b===button));});
+        root.querySelector('[data-net-bits]').textContent=n;
+        root.querySelector('[data-host-bits]').textContent=32-n;
+        root.querySelector('[data-net-bar]').style.width=(n/32*100)+'%';
+        root.querySelector('[data-host-bar]').style.width=((32-n)/32*100)+'%';
+        ['mask','network','broadcast','range'].forEach(function(k){root.querySelector('[data-'+k+']').textContent=d[k];});
+      });
+    });
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
+</script>
+
 
 IPv4アドレスは、全部で32ビットあります。
 
