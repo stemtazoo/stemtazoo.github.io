@@ -6,9 +6,15 @@ permalink: /fe/virtual-memory/
 tags: [fe, fe-technology, computer-system]
 fe_section: テクノロジ系
 fe_subsection: コンピュータシステム
-fe_order: 48
+fe_order: 250
 date: 2026-10-02
-last_modified_at: 2026-10-02
+last_modified_at: 2026-10-08
+related_articles:
+  - /fe/memory-management-methods/
+  - /fe/paging/
+  - /fe/dynamic-address-translation/
+  - /fe/overlay-paging-swapping/
+  - /fe/thrashing/
 ---
 
 ## まず結論
@@ -109,6 +115,8 @@ OSがページファイルを自動拡張する設定なら、空き容量の確
 容量にはOS・アプリ・アドレス空間・補助記憶などの制約があります。また、補助記憶はRAMよりアクセスが遅いため、頻繁なページ交換は性能低下につながります。
 
 仮想記憶は、限られたRAMを補いながら記憶領域を管理する仕組みです。高速なRAMの増設と同じ効果があるとは考えません。
+
+アドレスの対応付けを詳しく確認するなら、[ページング方式](/fe/paging/)から[動的アドレス変換（DAT）](/fe/dynamic-address-translation/)へ進むと、管理単位と変換機構を分けて理解できます。
 
 ## まとめ（試験直前用）
 

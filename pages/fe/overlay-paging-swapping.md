@@ -6,9 +6,13 @@ permalink: /fe/overlay-paging-swapping/
 tags: [fe, fe-technology, computer-system]
 fe_section: テクノロジ系
 fe_subsection: コンピュータシステム
-fe_order: 120
+fe_order: 280
 date: 2026-08-05
-last_modified_at: 2026-09-20
+last_modified_at: 2026-10-08
+related_articles:
+  - /fe/memory-management-methods/
+  - /fe/virtual-memory/
+  - /fe/paging/
 ---
 
 ## まず結論

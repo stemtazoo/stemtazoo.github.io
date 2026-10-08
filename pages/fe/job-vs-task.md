@@ -3,12 +3,16 @@ layout: page
 title: ジョブとタスクの違いとは？ジョブステップ・スレッドとの関係【基本情報技術者試験】
 description: ジョブとタスクを仕事のまとまりとOSの実行管理単位として区別し、ジョブステップ、プロセス、スレッド、スケジューリングとの関係をFE試験向けに解説します。
 permalink: /fe/job-vs-task/
-tags: [fe, fe-technology, software]
+tags: [fe, fe-technology, operating-system, scheduling]
 fe_section: テクノロジ系
-fe_subsection: ソフトウェア
-fe_order: 124
+fe_subsection: オペレーティングシステム
+fe_order: 10
 date: 2026-10-07
-last_modified_at: 2026-10-07
+last_modified_at: 2026-10-08
+related_articles:
+  - /fe/task-scheduling/
+  - /fe/cpu-scheduling/
+  - /fe/preemptive-scheduling/
 ---
 
 ## まず結論

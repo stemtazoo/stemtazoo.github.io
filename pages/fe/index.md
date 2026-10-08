@@ -4,7 +4,7 @@ title: 基本情報技術者試験 学習まとめ
 description: 基本情報技術者試験（FE）の学習記事を、科目Aのテクノロジ・マネジメント・ストラテジ・情報セキュリティと、科目Bのアルゴリズム・データ構造・疑似言語・トレースに分けた総合索引です。用語の選択肢判断からプログラム読解へ進む学習順、分野別の頻出テーマ、苦手論点の関連記事を一覧から探し、試験対策に活用できます。
 permalink: /fe/
 tags: [fe]
-last_modified_at: 2026-10-07
+last_modified_at: 2026-10-08
 ---
 
 # 基本情報技術者試験 学習まとめ
@@ -101,6 +101,13 @@ last_modified_at: 2026-10-07
 </div>
 
 > 迷ったときは、**総論 → 個別 → 比較 → 計算**の順で読むと、似た用語を切り分けやすくなります。
+
+OS・メモリ・画像を学ぶ場合は、次の入口から進めます。
+
+- タスク管理：[ジョブとタスク](/fe/job-vs-task/) → [タスクスケジューリング](/fe/task-scheduling/) → [CPU方式の比較](/fe/cpu-scheduling/) → 個別方式・時間計算。
+- 主記憶管理：[方式の全体像](/fe/memory-management-methods/) → 固定区画・可変区画 → [断片化](/fe/memory-fragmentation/)・[コンパクション](/fe/memory-compaction/)。
+- 仮想記憶：[仮想記憶](/fe/virtual-memory/) → [ページング](/fe/paging/) → [DAT](/fe/dynamic-address-translation/) → ページ置換・スラッシング。
+- 画像・CG：[ラスタとベクタ](/fe/raster-vector-graphics/) → [CG技術の全体像](/fe/computer-graphics-overview/) → 表示範囲・可視性・輪郭・動きの個別技術。
 
 ## 科目A対策
 

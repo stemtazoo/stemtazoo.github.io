@@ -6,9 +6,13 @@ permalink: /fe/fixed-partition-memory-allocation/
 tags: [fe, fe-technology, computer-system]
 fe_section: テクノロジ系
 fe_subsection: コンピュータシステム
-fe_order: 48
+fe_order: 210
 date: 2026-07-10
-last_modified_at: 2026-09-20
+last_modified_at: 2026-10-08
+related_articles:
+  - /fe/memory-management-methods/
+  - /fe/variable-partition-memory-allocation/
+  - /fe/memory-fragmentation/
 ---
 
 ## まず結論

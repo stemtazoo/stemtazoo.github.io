@@ -6,9 +6,13 @@ permalink: /fe/variable-partition-memory-allocation/
 tags: [fe, fe-technology, computer-system]
 fe_section: テクノロジ系
 fe_subsection: コンピュータシステム
-fe_order: 48
+fe_order: 220
 date: 2026-07-10
-last_modified_at: 2026-10-02
+last_modified_at: 2026-10-08
+related_articles:
+  - /fe/memory-management-methods/
+  - /fe/memory-fragmentation/
+  - /fe/memory-compaction/
 ---
 
 ## まず結論

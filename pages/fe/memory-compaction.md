@@ -6,9 +6,13 @@ permalink: /fe/memory-compaction/
 tags: [fe, fe-technology, computer-system]
 fe_section: テクノロジ系
 fe_subsection: コンピュータシステム
-fe_order: 55
+fe_order: 240
 date: 2026-10-03
-last_modified_at: 2026-10-03
+last_modified_at: 2026-10-08
+related_articles:
+  - /fe/memory-management-methods/
+  - /fe/memory-fragmentation/
+  - /fe/variable-partition-memory-allocation/
 ---
 
 <style>
@@ -65,6 +69,8 @@ FEでは、次の2段階で考えると判断しやすくなります。
 > **移動時間 ＝ 移動量 ÷ 1回のアクセス量 × 2（読取り＋書込み）× 1回のアクセス時間**
 
 特に、**「移動」には読取りだけでなく書込みも必要**という点が重要です。
+
+内部・外部の断片化を先に整理したい場合は[フラグメンテーション](/fe/memory-fragmentation/)、割当方式を比較したい場合は[主記憶管理方式の全体像](/fe/memory-management-methods/)に戻れます。
 
 ## 直感的な説明
 

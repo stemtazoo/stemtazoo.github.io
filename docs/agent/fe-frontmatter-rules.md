@@ -148,6 +148,22 @@ fe_subsection: アルゴリズム
 fe_order: 50
 ```
 
+## Optional `related_articles`
+
+Use an ordered list of existing FE permalinks when a specific prerequisite, overview, comparison, or next learning step matters:
+
+```yaml
+related_articles:
+  - /fe/virtual-memory/
+  - /fe/paging/
+```
+
+- The FE footer displays valid FE destinations in the specified order, up to five; no unrelated automatic links are added to fill the list.
+- Keep the list short and purposeful. Do not specify the current page, duplicate URLs, missing pages, or other themes.
+- Omit the field when topic-tag matching provides useful related articles. A specified list is not required on every article.
+- For entry/overview pages, explain why to follow important links in the existing body when useful; do not duplicate a large link list there.
+- This field does not enable or authorize `prev` / `next` navigation.
+
 ## `prev` / `next`
 
 - Do not add `prev` or `next` to FE articles unless the user explicitly requests it.

@@ -6,9 +6,13 @@ permalink: /fe/clipping/
 tags: [fe, fe-technology, multimedia, computer-graphics]
 fe_section: テクノロジ系
 fe_subsection: マルチメディア
-fe_order: 31
+fe_order: 24
 date: 2026-09-23
-last_modified_at: 2026-09-23
+last_modified_at: 2026-10-08
+related_articles:
+  - /fe/computer-graphics-overview/
+  - /fe/hidden-line-and-surface-removal/
+  - /fe/anti-aliasing/
 ---
 
 ## まず結論
@@ -159,6 +163,8 @@ FEでは実装方法を深掘りするより、
 - [Khronos Group｜OpenGL Graphics System Specification](https://registry.khronos.org/OpenGL/specs/gl/glspec20.pdf)
 
 OpenGL仕様の「Clipping」では、図形（primitive）をクリップ領域に対して処理する仕組みが規定されています。
+
+表示範囲・可視性・表面表現などの役割を工程の中で整理するなら、[CG技術の全体像](/fe/computer-graphics-overview/)に戻れます。
 
 ## まとめ（試験直前用）
 

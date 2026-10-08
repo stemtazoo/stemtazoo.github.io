@@ -6,9 +6,13 @@ permalink: /fe/draw-software/
 tags: [fe, fe-technology, multimedia, graphics]
 fe_section: テクノロジ系
 fe_subsection: マルチメディア
-fe_order: 10
+fe_order: 8
 date: 2026-08-06
-last_modified_at: 2026-09-05
+last_modified_at: 2026-10-08
+related_articles:
+  - /fe/raster-vector-graphics/
+  - /fe/bitmap-outline-font/
+  - /fe/computer-graphics-overview/
 ---
 
 ## まず結論

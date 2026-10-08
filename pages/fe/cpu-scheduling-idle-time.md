@@ -5,10 +5,14 @@ description: CPUスケジューリングを、優先度、実行可能状態、I
 permalink: /fe/cpu-scheduling-idle-time/
 tags: [fe, fe-technology, operating-system, scheduling]
 fe_section: テクノロジ系
-fe_subsection: ソフトウェア
-fe_order: 40
+fe_subsection: オペレーティングシステム
+fe_order: 80
 date: 2026-07-13
-last_modified_at: 2026-10-05
+last_modified_at: 2026-10-08
+related_articles:
+  - /fe/cpu-scheduling/
+  - /fe/preemptive-scheduling/
+  - /fe/exclusive-resource-task-timing/
 ---
 
 ## まず結論

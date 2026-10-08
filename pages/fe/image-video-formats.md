@@ -6,9 +6,13 @@ permalink: /fe/image-video-formats/
 tags: [fe, fe-technology, multimedia]
 fe_section: テクノロジ系
 fe_subsection: マルチメディア
-fe_order: 40
+fe_order: 16
 date: 2026-07-16
-last_modified_at: 2026-08-20
+last_modified_at: 2026-10-08
+related_articles:
+  - /fe/raster-vector-graphics/
+  - /fe/mpeg/
+  - /fe/video-bandwidth-calculation/
 ---
 
 ## まず結論

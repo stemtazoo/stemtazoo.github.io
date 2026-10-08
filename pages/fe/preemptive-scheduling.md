@@ -5,10 +5,15 @@ description: プリエンプティブスケジューリングを、実行中タ�
 permalink: /fe/preemptive-scheduling/
 tags: [fe, fe-technology, operating-system]
 fe_section: テクノロジ系
-fe_subsection: コンピュータシステム
-fe_order: 90
+fe_subsection: オペレーティングシステム
+fe_order: 40
 date: 2026-07-16
-last_modified_at: 2026-09-20
+last_modified_at: 2026-10-08
+related_articles:
+  - /fe/task-scheduling/
+  - /fe/task-dispatch/
+  - /fe/cpu-scheduling/
+  - /fe/round-robin-scheduling/
 ---
 
 ## まず結論

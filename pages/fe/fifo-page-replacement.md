@@ -6,9 +6,12 @@ permalink: /fe/fifo-page-replacement/
 tags: [fe, fe-technology, computer-system, algorithm]
 fe_section: テクノロジ系
 fe_subsection: コンピュータシステム
-fe_order: 100
+fe_order: 300
 date: 2026-07-02
-last_modified_at: 2026-09-20
+last_modified_at: 2026-10-08
+related_articles:
+  - /fe/paging/
+  - /fe/lru-page-replacement/
 ---
 
 ## まず結論

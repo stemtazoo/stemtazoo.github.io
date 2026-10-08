@@ -3,12 +3,16 @@ layout: page
 title: 排他的資源を使うタスクの実行時間とは？待ち時間をタイムチャートで求める【基本情報技術者試験】
 description: 複数CPUで並列実行するタスクが共通資源を排他的に使うときの実行時間を、CPU処理と資源待ちを分けたタイムチャートで整理し、FE試験で待ち時間を見落とさない判断手順を解説します。
 permalink: /fe/exclusive-resource-task-timing/
-tags: [fe, fe-technology, computer-system]
+tags: [fe, fe-technology, operating-system, scheduling]
 fe_section: テクノロジ系
-fe_subsection: ソフトウェア
-fe_order: 120
+fe_subsection: オペレーティングシステム
+fe_order: 90
 date: 2026-08-11
-last_modified_at: 2026-08-11
+last_modified_at: 2026-10-08
+related_articles:
+  - /fe/task-scheduling/
+  - /fe/cpu-scheduling-idle-time/
+  - /fe/deadlock/
 ---
 
 ## まず結論

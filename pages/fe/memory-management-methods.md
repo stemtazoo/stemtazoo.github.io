@@ -6,9 +6,15 @@ permalink: /fe/memory-management-methods/
 tags: [fe, fe-technology, computer-system]
 fe_section: テクノロジ系
 fe_subsection: コンピュータシステム
-fe_order: 50
+fe_order: 200
 date: 2026-07-10
-last_modified_at: 2026-10-02
+last_modified_at: 2026-10-08
+related_articles:
+  - /fe/fixed-partition-memory-allocation/
+  - /fe/variable-partition-memory-allocation/
+  - /fe/memory-fragmentation/
+  - /fe/virtual-memory/
+  - /fe/memory-leak/
 ---
 
 ## まず結論
@@ -108,7 +114,7 @@ last_modified_at: 2026-10-02
 → 外部フラグメンテーション
 ```
 
-**フラグメンテーションは現象、コンパクションは整理する処理**です。コンパクションでは使用中の領域を移動して詰め、分散した空きを連続させます。空き容量の合計を増やす処理ではありません。
+**[フラグメンテーション](/fe/memory-fragmentation/)は現象、[コンパクション](/fe/memory-compaction/)は整理する処理**です。コンパクションでは使用中の領域を移動して詰め、分散した空きを連続させます。空き容量の合計を増やす処理ではありません。
 
 | 説明 | 判断 |
 |---|---|
@@ -176,6 +182,8 @@ last_modified_at: 2026-10-02
 - ページング方式：プログラムを固定長のページに分け、主記憶のページ枠と対応させる
 
 同じ「固定っぽい」方式でも、見ている単位が違います。
+
+不要になった領域が解放・再利用されない[メモリリーク](/fe/memory-leak/)は、割当方式や空き領域の分断とは別の問題です。メモリ不足を考えるときは、方式・断片化・解放漏れを分けて確認します。
 
 ## まとめ（試験直前用）
 

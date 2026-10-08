@@ -8,7 +8,11 @@ fe_section: テクノロジ系
 fe_subsection: ソフトウェア
 fe_order: 126
 date: 2026-10-07
-last_modified_at: 2026-10-07
+last_modified_at: 2026-10-08
+related_articles:
+  - /fe/memory-management-methods/
+  - /fe/memory-fragmentation/
+  - /fe/virtual-memory/
 ---
 
 ## まず結論

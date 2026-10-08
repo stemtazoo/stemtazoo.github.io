@@ -4,60 +4,68 @@
 
 {% assign current_tags = page.tags %}
 {% assign count = 0 %}
+{% assign selected_urls = "|" %}
+{% assign ignored_tags = "fe|fe-technology|fe-management|fe-strategy|fe-security" | split: "|" %}
+{% assign related_pages = site.pages | sort: "fe_order" %}
 
 <ul style="padding-left: 20px;">
-{% if page.fe_subsection %}
-  {% for p in site.pages %}
+{% for related_url in page.related_articles %}
+  {% if count >= 5 %}{% break %}{% endif %}
+  {% assign p = site.pages | where: "url", related_url | first %}
+  {% if p %}
     {% if p.url != page.url %}
       {% if p.tags contains "fe" %}
-        {% if p.fe_subsection == page.fe_subsection %}
+        {% capture url_key %}|{{ p.url }}|{% endcapture %}
+        {% unless selected_urls contains url_key %}
           <li style="margin-bottom: 6px;">
             <a href="{{ p.url | relative_url }}">{{ p.title }}</a>
           </li>
           {% assign count = count | plus: 1 %}
-        {% endif %}
+          {% capture selected_urls %}{{ selected_urls }}{{ p.url }}|{% endcapture %}
+        {% endunless %}
       {% endif %}
     {% endif %}
+  {% endif %}
+{% endfor %}
 
-    {% if count >= 3 %}
-      {% break %}
-    {% endif %}
-  {% endfor %}
-{% endif %}
-
-{% if count < 5 %}
-  {% if current_tags and current_tags.size > 0 %}
-    {% for p in site.pages %}
+{% if count == 0 %}
+{% for pass in (1..2) %}
+  {% if count >= 5 %}{% break %}{% endif %}
+  {% if current_tags %}
+    {% for p in related_pages %}
+      {% if count >= 5 %}{% break %}{% endif %}
       {% if p.url != page.url %}
         {% if p.tags %}
           {% if p.tags contains "fe" %}
-            {% unless page.fe_subsection and p.fe_subsection == page.fe_subsection %}
+            {% capture url_key %}|{{ p.url }}|{% endcapture %}
+            {% unless selected_urls contains url_key %}
               {% assign matched = false %}
-
               {% for tag in current_tags %}
-                {% if tag != "fe" %}
+                {% unless ignored_tags contains tag %}
                   {% if p.tags contains tag %}
                     {% assign matched = true %}
                   {% endif %}
-                {% endif %}
+                {% endunless %}
               {% endfor %}
-
+              {% if pass == 1 %}
+                {% unless page.fe_subsection %}{% assign matched = false %}{% endunless %}
+                {% if p.fe_section != page.fe_section %}{% assign matched = false %}{% endif %}
+                {% if p.fe_subsection != page.fe_subsection %}{% assign matched = false %}{% endif %}
+              {% endif %}
               {% if matched %}
                 <li style="margin-bottom: 6px;">
                   <a href="{{ p.url | relative_url }}">{{ p.title }}</a>
                 </li>
                 {% assign count = count | plus: 1 %}
+                {% capture selected_urls %}{{ selected_urls }}{{ p.url }}|{% endcapture %}
               {% endif %}
             {% endunless %}
           {% endif %}
         {% endif %}
       {% endif %}
-
-      {% if count >= 5 %}
-        {% break %}
-      {% endif %}
     {% endfor %}
   {% endif %}
+{% endfor %}
 {% endif %}
 
 {% if count == 0 %}

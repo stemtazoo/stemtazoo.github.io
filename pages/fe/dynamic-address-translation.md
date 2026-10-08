@@ -6,9 +6,13 @@ permalink: /fe/dynamic-address-translation/
 tags: [fe, fe-technology, computer-system]
 fe_section: テクノロジ系
 fe_subsection: コンピュータシステム
-fe_order: 127
+fe_order: 270
 date: 2026-10-07
-last_modified_at: 2026-10-07
+last_modified_at: 2026-10-08
+related_articles:
+  - /fe/virtual-memory/
+  - /fe/paging/
+  - /fe/memory-management-methods/
 ---
 
 ## まず結論

@@ -3,12 +3,17 @@ layout: page
 title: タスクスケジューリング方式とは？プリエンプティブとノンプリエンプティブの違い【基本情報技術者試験】
 description: タスクスケジューリング方式を、OSが実行中タスクを中断できるプリエンプティブ方式と、タスクが自らCPUを手放すまで切り替えないノンプリエンプティブ方式に分けて整理し、ラウンドロビン、優先順位、残余処理時間順との違いをFE試験向けに解説します。
 permalink: /fe/task-scheduling/
-tags: [fe, fe-technology, computer-system]
+tags: [fe, fe-technology, operating-system, scheduling]
 fe_section: テクノロジ系
-fe_subsection: コンピュータシステム
-fe_order: 40
+fe_subsection: オペレーティングシステム
+fe_order: 20
 date: 2026-07-05
-last_modified_at: 2026-10-07
+last_modified_at: 2026-10-08
+related_articles:
+  - /fe/job-vs-task/
+  - /fe/task-dispatch/
+  - /fe/preemptive-scheduling/
+  - /fe/cpu-scheduling/
 ---
 
 ## まず結論

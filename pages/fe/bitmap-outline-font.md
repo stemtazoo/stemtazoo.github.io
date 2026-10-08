@@ -6,9 +6,12 @@ permalink: /fe/bitmap-outline-font/
 tags: [fe, fe-technology, multimedia, graphics]
 fe_section: テクノロジ系
 fe_subsection: マルチメディア
-fe_order: 50
+fe_order: 12
 date: 2026-08-15
-last_modified_at: 2026-08-15
+last_modified_at: 2026-10-08
+related_articles:
+  - /fe/raster-vector-graphics/
+  - /fe/draw-software/
 ---
 
 ## まず結論

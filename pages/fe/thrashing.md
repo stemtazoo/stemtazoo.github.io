@@ -5,10 +5,14 @@ description: スラッシングを、仮想記憶でページイン・ページ�
 permalink: /fe/thrashing/
 tags: [fe, fe-technology, computer-system]
 fe_section: テクノロジ系
-fe_subsection: ソフトウェア
-fe_order: 10
+fe_subsection: コンピュータシステム
+fe_order: 310
 date: 2026-07-17
-last_modified_at: 2026-08-28
+last_modified_at: 2026-10-08
+related_articles:
+  - /fe/virtual-memory/
+  - /fe/paging/
+  - /fe/memory-leak/
 ---
 
 ## まず結論

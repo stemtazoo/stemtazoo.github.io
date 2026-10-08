@@ -6,9 +6,15 @@ permalink: /fe/computer-graphics-overview/
 tags: [fe, fe-technology, multimedia, computer-graphics]
 fe_section: テクノロジ系
 fe_subsection: マルチメディア
-fe_order: 19
+fe_order: 20
 date: 2026-10-07
 last_modified_at: 2026-10-08
+related_articles:
+  - /fe/raster-vector-graphics/
+  - /fe/clipping/
+  - /fe/hidden-line-and-surface-removal/
+  - /fe/anti-aliasing/
+  - /fe/morphing/
 ---
 
 ## まず結論
@@ -59,7 +65,7 @@ CG用語は、何をする技術なのかで整理すると覚えやすくなり
 
 [クリッピング](/fe/clipping/)は表示範囲の外側を描画対象から除外します。
 
-隠線消去・隠面消去は、他の面などに隠れて視点から見えない線や面を描画しないようにします。
+[隠線消去・隠面消去](/fe/hidden-line-and-surface-removal/)は、他の面などに隠れて視点から見えない線や面を描画しないようにします。
 
 ~~~text
 表示範囲の外 → クリッピング

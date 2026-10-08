@@ -3,12 +3,18 @@ layout: page
 title: フラグメンテーションとは？内部・外部とメモリコンパクションの違い【基本情報技術者試験】
 description: メモリの内部フラグメンテーションと外部フラグメンテーションの違い、外部断片化を改善するメモリコンパクション、ページングとの関係をFE試験向けに整理します。
 permalink: /fe/memory-fragmentation/
-tags: [fe, fe-technology, software]
+tags: [fe, fe-technology, computer-system]
 fe_section: テクノロジ系
-fe_subsection: ソフトウェア
-fe_order: 125
+fe_subsection: コンピュータシステム
+fe_order: 230
 date: 2026-10-07
-last_modified_at: 2026-10-07
+last_modified_at: 2026-10-08
+related_articles:
+  - /fe/memory-management-methods/
+  - /fe/variable-partition-memory-allocation/
+  - /fe/memory-compaction/
+  - /fe/paging/
+  - /fe/memory-leak/
 ---
 
 ## まず結論
@@ -26,6 +32,8 @@ FEでは、まず次の2種類を区別します。
 ```
 
 そして、**外部フラグメンテーションで散らばった空き領域をまとめる操作がメモリコンパクション**です。
+
+主記憶をどう分けて割り当てるかは[主記憶管理方式の全体像](/fe/memory-management-methods/)で確認できます。外部断片化を理解したら、[コンパクションの移動時間計算](/fe/memory-compaction/)へ進むと、現象と処理コストをつなげられます。
 
 ## 直感的な説明
 

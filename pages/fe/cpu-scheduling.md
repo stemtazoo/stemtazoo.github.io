@@ -6,9 +6,15 @@ permalink: /fe/cpu-scheduling/
 tags: [fe, fe-technology, operating-system, scheduling]
 fe_section: テクノロジ系
 fe_subsection: オペレーティングシステム
-fe_order: 80
+fe_order: 50
 date: 2026-08-27
-last_modified_at: 2026-09-20
+last_modified_at: 2026-10-08
+related_articles:
+  - /fe/task-scheduling/
+  - /fe/preemptive-scheduling/
+  - /fe/round-robin-scheduling/
+  - /fe/shortest-job-first-scheduling/
+  - /fe/cpu-scheduling-idle-time/
 ---
 
 ## まず結論

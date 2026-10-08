@@ -5,10 +5,14 @@ description: ラウンドロビンスケジューリングを、タイムスラ�
 permalink: /fe/round-robin-scheduling/
 tags: [fe, fe-technology, operating-system, scheduling]
 fe_section: テクノロジ系
-fe_subsection: コンピュータシステム
-fe_order: 105
+fe_subsection: オペレーティングシステム
+fe_order: 70
 date: 2026-07-19
-last_modified_at: 2026-10-01
+last_modified_at: 2026-10-08
+related_articles:
+  - /fe/cpu-scheduling/
+  - /fe/task-scheduling/
+  - /fe/preemptive-scheduling/
 ---
 
 ## まず結論

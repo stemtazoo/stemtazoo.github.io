@@ -6,9 +6,12 @@ permalink: /fe/morphing/
 tags: [fe, fe-technology, multimedia, computer-graphics]
 fe_section: テクノロジ系
 fe_subsection: マルチメディア
-fe_order: 20
+fe_order: 36
 date: 2026-08-02
-last_modified_at: 2026-08-30
+last_modified_at: 2026-10-08
+related_articles:
+  - /fe/computer-graphics-overview/
+  - /fe/raster-vector-graphics/
 ---
 
 ## まず結論
@@ -176,6 +179,8 @@ last_modified_at: 2026-08-30
 層を重ねて奥行きを表現
 → マルチプレーン技法
 ```
+
+形状・表面・描画・動きの役割を整理するなら、[CG技術の全体像](/fe/computer-graphics-overview/)に戻れます。
 
 ## まとめ（試験直前用）
 

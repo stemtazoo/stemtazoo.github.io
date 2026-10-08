@@ -6,9 +6,15 @@ permalink: /fe/paging/
 tags: [fe, fe-technology, computer-system]
 fe_section: テクノロジ系
 fe_subsection: コンピュータシステム
-fe_order: 49
+fe_order: 260
 date: 2026-07-10
-last_modified_at: 2026-10-03
+last_modified_at: 2026-10-08
+related_articles:
+  - /fe/virtual-memory/
+  - /fe/dynamic-address-translation/
+  - /fe/lru-page-replacement/
+  - /fe/fifo-page-replacement/
+  - /fe/thrashing/
 ---
 
 ## まず結論
@@ -124,7 +130,7 @@ RAM・ページファイル・ディスクの空き容量の違いや、メモ�
 ページ3 → ページ枠4
 ```
 
-CPUが仮想アドレスを使ってアクセスすると、ページテーブルを使って物理アドレスに変換します。
+CPUが仮想アドレスを使ってアクセスすると、ページテーブルを使って物理アドレスに変換します。この実行時の変換とMMU・TLBの役割は、[動的アドレス変換（DAT）](/fe/dynamic-address-translation/)で確認できます。
 
 ### ページフォールトが起きたときの流れ
 

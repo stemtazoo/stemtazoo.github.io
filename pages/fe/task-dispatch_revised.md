@@ -3,12 +3,16 @@ layout: page
 title: タスクのディスパッチとは？実行可能なタスクへCPUを割り当てる仕組み【基本情報技術者試験】
 description: タスクのディスパッチを「実行可能状態のタスクにプロセッサの使用権を割り当てること」として整理し、スケジューリング、TCB、コンテキスト、マルチタスクとの違いをFE試験向けに解説します。
 permalink: /fe/task-dispatch/
-tags: [fe, fe-technology, os]
+tags: [fe, fe-technology, operating-system, scheduling]
 fe_section: テクノロジ系
 fe_subsection: オペレーティングシステム
-fe_order: 70
+fe_order: 30
 date: 2026-06-30
-last_modified_at: 2026-07-25
+last_modified_at: 2026-10-08
+related_articles:
+  - /fe/job-vs-task/
+  - /fe/task-scheduling/
+  - /fe/preemptive-scheduling/
 ---
 
 ## まず結論

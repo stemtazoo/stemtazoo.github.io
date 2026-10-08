@@ -216,6 +216,9 @@ Rules for `_includes/fe_article_footer.html`:
 - Related articles must be limited to pages whose `tags` contain `fe`.
 - Do not show DS, SG, or GK articles in FE related articles.
 - When matching related articles, ignore the base tag `fe` itself and match using concrete tags such as `algorithm` or `data-structure`.
+- Ignore category tags (`fe-technology`, `fe-management`, `fe-strategy`, `fe-security`) as well; sharing a broad category is not a useful related-article match.
+- When `related_articles` supplies valid FE URLs, display that ordered list (up to five), without padding it with automatic matches. Use automatic matching only when no valid specified URL remains.
+- Automatic matches require a shared topic tag. Prefer the same section/subsection, then other FE pages, in `fe_order` order; never match on subsection alone.
 - Keep the `基本情報技術者トップに戻る` link.
 - Do not break the Jekyll build if there are no related articles.
 - The related-article filter should include an FE guard such as `{% raw %}{% if p.tags contains "fe" %}{% endraw %}`.

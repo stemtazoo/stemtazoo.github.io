@@ -6,9 +6,14 @@ permalink: /fe/raster-vector-graphics/
 tags: [fe, fe-technology, multimedia]
 fe_section: テクノロジ系
 fe_subsection: マルチメディア
-fe_order: 128
+fe_order: 4
 date: 2026-10-07
-last_modified_at: 2026-10-07
+last_modified_at: 2026-10-08
+related_articles:
+  - /fe/computer-graphics-overview/
+  - /fe/draw-software/
+  - /fe/bitmap-outline-font/
+  - /fe/image-video-formats/
 ---
 
 ## まず結論
@@ -92,6 +97,8 @@ SVGでは、XMLを基盤とした記述によって、円、長方形、線、�
 | JPEG・PNG | 主にラスタ画像形式 |
 
 特に **画素→ラスタ、座標・線・図形→ベクタ** という判断軸を最初に使うと選択肢を切りやすくなります。
+
+画像表現をソフトウェアの用途につなげるなら[ドローソフトとペイントソフト](/fe/draw-software/)、画像を作る工程の中で整理するなら[CG技術の全体像](/fe/computer-graphics-overview/)で確認できます。
 
 ## どんな場面で使う？
 

@@ -6,9 +6,13 @@ permalink: /fe/anti-aliasing/
 tags: [fe, fe-technology, multimedia, computer-graphics]
 fe_section: テクノロジ系
 fe_subsection: マルチメディア
-fe_order: 30
+fe_order: 32
 date: 2026-08-21
-last_modified_at: 2026-09-23
+last_modified_at: 2026-10-08
+related_articles:
+  - /fe/computer-graphics-overview/
+  - /fe/raster-vector-graphics/
+  - /fe/clipping/
 ---
 
 ## まず結論
@@ -158,6 +162,8 @@ CG技術はどれも表示を自然にしたり、見栄えを良くしたりす
 解像度が高くなるとギザギザが目立ちにくくなる場合はありますが、アンチエイリアシングは単に解像度を上げることそのものではありません。
 
 試験では、**輪郭付近の見え方を調整して滑らかにする処理**と理解しておけば十分です。
+
+画像を作る工程と画素の関係を整理するなら、[CG技術の全体像](/fe/computer-graphics-overview/)に戻れます。
 
 ## まとめ（試験直前用）
 

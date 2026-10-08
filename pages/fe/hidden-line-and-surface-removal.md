@@ -5,10 +5,14 @@ description: 隠線消去と隠面消去を「指定した視点から見えな�
 permalink: /fe/hidden-line-and-surface-removal/
 tags: [fe, fe-technology, computer-graphics, multimedia]
 fe_section: テクノロジ系
-fe_subsection: ソフトウェア
-fe_order: 260
+fe_subsection: マルチメディア
+fe_order: 28
 date: 2026-08-03
-last_modified_at: 2026-08-03
+last_modified_at: 2026-10-08
+related_articles:
+  - /fe/computer-graphics-overview/
+  - /fe/clipping/
+  - /fe/anti-aliasing/
 ---
 
 ## まず結論
@@ -201,6 +205,8 @@ Zバッファ法
 半透明表示では、奥にある物体や内部の形状をあえて見せることがあります。
 
 隠面消去は、見えない面を描画しない処理なので、目的が異なります。
+
+クリッピングやシェーディングとの位置づけを工程の中で整理するなら、[CG技術の全体像](/fe/computer-graphics-overview/)に戻れます。
 
 ## まとめ（試験直前用）
 

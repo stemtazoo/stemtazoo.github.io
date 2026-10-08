@@ -6,9 +6,13 @@ permalink: /fe/shortest-job-first-scheduling/
 tags: [fe, fe-technology, operating-system, scheduling]
 fe_section: テクノロジ系
 fe_subsection: オペレーティングシステム
-fe_order: 85
+fe_order: 60
 date: 2026-09-18
-last_modified_at: 2026-09-18
+last_modified_at: 2026-10-08
+related_articles:
+  - /fe/cpu-scheduling/
+  - /fe/preemptive-scheduling/
+  - /fe/turnaround-time/
 ---
 
 ## まず結論
