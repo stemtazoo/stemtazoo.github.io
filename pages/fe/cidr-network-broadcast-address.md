@@ -54,6 +54,7 @@ CIDR表記の `/22` のような数字は、**IPアドレス32ビットのうち
 .cidr-visual .cidr-net{background:#4b829f}.cidr-visual .cidr-host{background:#c99b56}
 .cidr-visual .cidr-bits{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:.2rem;margin:.4rem 0}
 .cidr-visual .cidr-bit{color:#fff;text-align:center;padding:.3rem 0;border-radius:3px;font-family:monospace;font-weight:700}
+.cidr-visual .cidr-bit.cidr-net{background:#335f7b}
 .cidr-visual .cidr-bit.cidr-host{color:#30210d}
 .cidr-visual .cidr-stats{display:flex;justify-content:space-between;gap:.5rem;flex-wrap:wrap;font-size:.85rem}
 .cidr-visual dl{margin:.75rem 0 0;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.6rem .3rem}
