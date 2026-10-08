@@ -47,11 +47,14 @@ CIDR表記の `/22` のような数字は、**IPアドレス32ビットのうち
 .cidr-visual button[aria-pressed="true"]{background:#335f7b;color:#fff;border-color:#335f7b}
 .cidr-visual .cidr-octets{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.3rem}
 .cidr-visual .cidr-octet{border-radius:7px;background:#e3eef5;color:#18374b;text-align:center;padding:.65rem .1rem;min-width:0}
-.cidr-visual .cidr-octet:last-child{background:#f4e9d8;color:#634622}
+.cidr-visual .cidr-octet:last-child{background:linear-gradient(to right,#e3eef5 0%,#e3eef5 var(--cidr-octet-net,0%),#f4e9d8 var(--cidr-octet-net,0%),#f4e9d8 100%);color:#18374b}
 .cidr-visual .cidr-octet strong{display:block;font-size:clamp(1.15rem,4vw,1.65rem)}
 .cidr-visual .cidr-octet small{font-size:.7rem}
 .cidr-visual .cidr-bar{display:flex;height:18px;border-radius:5px;overflow:hidden;margin:.45rem 0}
 .cidr-visual .cidr-net{background:#4b829f}.cidr-visual .cidr-host{background:#c99b56}
+.cidr-visual .cidr-bits{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:.2rem;margin:.4rem 0}
+.cidr-visual .cidr-bit{color:#fff;text-align:center;padding:.3rem 0;border-radius:3px;font-family:monospace;font-weight:700}
+.cidr-visual .cidr-bit.cidr-host{color:#30210d}
 .cidr-visual .cidr-stats{display:flex;justify-content:space-between;gap:.5rem;flex-wrap:wrap;font-size:.85rem}
 .cidr-visual dl{margin:.75rem 0 0;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.6rem .3rem}
 .cidr-visual dt{min-width:0}.cidr-visual dd{margin:0;font-weight:700;text-align:right;overflow-wrap:anywhere}
@@ -71,8 +74,20 @@ CIDR表記の `/22` のような数字は、**IPアドレス32ビットのうち
     <div class="cidr-octet"><strong>192</strong><small>ネット部</small></div>
     <div class="cidr-octet"><strong>168</strong><small>ネット部</small></div>
     <div class="cidr-octet"><strong>0</strong><small>ネット部</small></div>
-    <div class="cidr-octet"><strong>10</strong><small>境界を含む</small></div>
+    <div class="cidr-octet" data-last-octet><strong>10</strong><small data-octet-label>ホスト部</small></div>
   </div>
+  <p class="cidr-note">第4オクテット「10」の2進数（8ビット）</p>
+  <div class="cidr-bits" data-octet-bits role="img" aria-label="00001010：ネットワーク部0ビット、ホスト部8ビット">
+    <span class="cidr-bit cidr-host" data-last-bit aria-hidden="true">0</span>
+    <span class="cidr-bit cidr-host" data-last-bit aria-hidden="true">0</span>
+    <span class="cidr-bit cidr-host" data-last-bit aria-hidden="true">0</span>
+    <span class="cidr-bit cidr-host" data-last-bit aria-hidden="true">0</span>
+    <span class="cidr-bit cidr-host" data-last-bit aria-hidden="true">1</span>
+    <span class="cidr-bit cidr-host" data-last-bit aria-hidden="true">0</span>
+    <span class="cidr-bit cidr-host" data-last-bit aria-hidden="true">1</span>
+    <span class="cidr-bit cidr-host" data-last-bit aria-hidden="true">0</span>
+  </div>
+  <p class="cidr-note" data-octet-caption>第4オクテット：ネット部0ビット／ホスト部8ビット</p>
   <div class="cidr-stats"><span>ネットワーク部 <b data-net-bits>24</b>ビット</span><span>ホスト部 <b data-host-bits>8</b>ビット</span></div>
   <div class="cidr-bar" aria-label="ネットワーク部とホスト部のビット数">
     <div class="cidr-net" data-net-bar style="width:75%"></div>
@@ -84,7 +99,7 @@ CIDR表記の `/22` のような数字は、**IPアドレス32ビットのうち
     <dt>ブロードキャストアドレス</dt><dd data-broadcast>192.168.0.255</dd>
     <dt>末尾のアドレス範囲</dt><dd data-range>0〜255</dd>
   </dl>
-  <p class="cidr-note">青：ネットワーク部 ／ 茶：ホスト部。/25 と /26 では第4オクテットの途中に境界があります。</p>
+  <p class="cidr-note">青：ネットワーク部 ／ 茶：ホスト部。/24 では第4オクテットの8ビット全部がホスト部です。/25 は先頭1ビット、/26 は先頭2ビットがネットワーク部になります。</p>
 </div>
 <script>
 (function(){
@@ -104,6 +119,14 @@ CIDR表記の `/22` のような数字は、**IPアドレス32ビットのうち
         root.querySelector('[data-host-bits]').textContent=32-n;
         root.querySelector('[data-net-bar]').style.width=(n/32*100)+'%';
         root.querySelector('[data-host-bar]').style.width=((32-n)/32*100)+'%';
+        var octetNet=n-24,octetHost=32-n;
+        root.querySelector('[data-last-octet]').style.setProperty('--cidr-octet-net',(octetNet/8*100)+'%');
+        root.querySelector('[data-octet-label]').textContent=octetNet===0?'ホスト部':'ネット＋ホスト';
+        root.querySelectorAll('[data-last-bit]').forEach(function(bit,i){
+          bit.className='cidr-bit '+(i<octetNet?'cidr-net':'cidr-host');
+        });
+        root.querySelector('[data-octet-bits]').setAttribute('aria-label','00001010：ネットワーク部'+octetNet+'ビット、ホスト部'+octetHost+'ビット');
+        root.querySelector('[data-octet-caption]').textContent='第4オクテット：ネット部'+octetNet+'ビット／ホスト部'+octetHost+'ビット';
         ['mask','network','broadcast','range'].forEach(function(k){root.querySelector('[data-'+k+']').textContent=d[k];});
       });
     });
