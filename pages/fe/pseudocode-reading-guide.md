@@ -105,6 +105,40 @@ IPAの別紙2では、主な演算の優先順位は **括弧やメンバアク�
 
 最後は `i=4` で `i ≦ 3` が偽となり終了します。**最終的なtotalは6**です。
 
+
+### 1行ずつ動かすトレース練習
+
+「次の1行」を押すと、**現在の実行行・変数の値・条件の結果**が変化します。偶数だけを合計する上のプログラムと同じ処理です。
+
+<div class="fe-learning-demo fe-pseudocode-demo" data-fe-pseudocode-demo>
+  <p class="fe-learning-demo__title">擬似言語トレース：偶数だけ合計</p>
+  <p class="fe-learning-demo__hint">配列の添字は1から開始。見るポイント：条件が偽のときは合計を更新しない。</p>
+  <div class="fe-pseudocode-demo__layout">
+    <div class="fe-pseudocode-demo__code" aria-label="実行中の擬似言語">
+      <div data-trace-line="0">i ← 1</div>
+      <div data-trace-line="1">total ← 0</div>
+      <div data-trace-line="2">while (i ≦ 3)</div>
+      <div data-trace-line="3">　if (data[i] mod 2 = 0)</div>
+      <div data-trace-line="4">　　total ← total + data[i]</div>
+      <div data-trace-line="5">　i ← i + 1</div>
+      <div data-trace-line="6">終了</div>
+    </div>
+    <div class="fe-pseudocode-demo__state">
+      <p><strong>配列：</strong> <span data-trace-array>① 4　② 7　③ 2</span></p>
+      <p><strong>現在の i：</strong> <output data-trace-i>未設定</output></p>
+      <p><strong>現在の total：</strong> <output data-trace-total>未設定</output></p>
+      <p><strong>次に実行する行：</strong> <span data-trace-next>i ← 1</span></p>
+    </div>
+  </div>
+  <div class="fe-learning-demo__controls">
+    <button type="button" class="fe-learning-demo__button" data-trace-prev disabled>1行戻る</button>
+    <button type="button" class="fe-learning-demo__button" data-trace-next-button>次の1行 →</button>
+    <button type="button" class="fe-learning-demo__button" data-trace-reset>最初から</button>
+  </div>
+  <p class="fe-pseudocode-demo__message" data-trace-message role="status" aria-live="polite">開始前です。「次の1行」を押してください。</p>
+  <p class="fe-learning-demo__hint">JavaScriptを使えない場合も、直前のトレース表で同じ結果を確認できます。</p>
+</div>
+
 ### 試験でのトレース手順
 
 1. **初期値**を書く。配列の添字開始番号も確認する。
@@ -139,5 +173,8 @@ IPAの別紙2では、主な演算の優先順位は **括弧やメンバアク�
 - 別紙2は共通の記述形式。**問題ごとの注記が優先**される。
 
 出典：[IPA：擬似言語の記述形式（Ver.5.1、別紙2）](https://www.ipa.go.jp/shiken/syllabus/doe3um0000002djj-att/shiken_yougo_ver5_1.pdf)
+
+<link rel="stylesheet" href="{{ '/assets/css/fe-visualizer.css' | relative_url }}">
+<script src="{{ '/assets/js/fe-visualizer.js' | relative_url }}" defer></script>
 
 {% include fe_article_footer.html %}
