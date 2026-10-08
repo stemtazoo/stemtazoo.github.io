@@ -707,7 +707,7 @@ document.addEventListener("DOMContentLoaded", () => {
     next.addEventListener("click",()=>{if(stage<2){stage++;render();}});
     render();
   });
-  // FE pseudocode trace: each state is the result of exactly one executed line.
+  // FE pseudocode trace: highlight the line just executed; show the next line separately.
   document.querySelectorAll("[data-fe-pseudocode-demo]").forEach((demo) => {
     const lines = Array.from(demo.querySelectorAll("[data-trace-line]"));
     const previous = demo.querySelector("[data-trace-prev]");
@@ -721,27 +721,28 @@ document.addEventListener("DOMContentLoaded", () => {
     const states = [];
     let i;
     let total;
-    const add = (line, explanation) => states.push({line, i, total, explanation});
-    add(0, "開始前です。次は i に1を代入します。");
-    i = 1; add(1, "i ← 1：添字を1にします。");
-    total = 0; add(2, "total ← 0：合計を初期化します。");
+    const add = (executed, upcoming, explanation) =>
+      states.push({executed, upcoming, i, total, explanation});
+    add(-1, 0, "開始前です。次は i に1を代入します。");
+    i = 1; add(0, 1, "i ← 1：添字を1にします。");
+    total = 0; add(1, 2, "total ← 0：合計を初期化します。");
     while (true) {
       if (i > values.length) {
-        add(6, "while の条件は偽です。ループを抜けます。");
-        add(-1, "終了です。最終的な total は " + total + " です。");
+        add(2, 6, "while の条件は偽です。ループを抜けます。");
+        add(6, -1, "終了です。最終的な total は " + total + " です。");
         break;
       }
-      add(3, "while の条件は真です。i = " + i + " なので、次は偶数判定です。");
+      add(2, 3, "while の条件は真です。i = " + i + " なので、次は偶数判定です。");
       const value = values[i - 1];
       if (value % 2 === 0) {
-        add(4, "data[" + i + "] = " + value + " は偶数です。加算します。");
+        add(3, 4, "data[" + i + "] = " + value + " は偶数です。加算します。");
         total += value;
-        add(5, "total に " + value + " を加え、" + total + " になりました。");
+        add(4, 5, "total に " + value + " を加え、" + total + " になりました。");
       } else {
-        add(5, "data[" + i + "] = " + value + " は奇数です。加算を飛ばします。");
+        add(3, 5, "data[" + i + "] = " + value + " は奇数です。加算を飛ばします。");
       }
       i += 1;
-      add(2, "i を " + i + " に更新しました。while の条件を再判定します。");
+      add(5, 2, "i を " + i + " に更新しました。while の条件を再判定します。");
     }
     let position = 0;
     function render() {
@@ -749,18 +750,23 @@ document.addEventListener("DOMContentLoaded", () => {
       iOutput.textContent = state.i === undefined ? "未設定" : String(state.i);
       totalOutput.textContent = state.total === undefined ? "未設定" : String(state.total);
       lines.forEach((line, index) => {
-        const active = index === state.line;
+        const active = index === state.executed;
         line.classList.toggle("is-active", active);
         if (active) line.setAttribute("aria-current", "step");
         else line.removeAttribute("aria-current");
       });
-      nextOutput.textContent = state.line < 0 ? "なし（終了）" : lines[state.line].textContent.trim();
+      nextOutput.textContent = state.upcoming < 0
+        ? "なし（終了）" : lines[state.upcoming].textContent.trim();
       message.textContent = state.explanation;
       previous.disabled = position === 0;
       next.disabled = position === states.length - 1;
     }
-    next.addEventListener("click", () => { if (position < states.length - 1) { position++; render(); } });
-    previous.addEventListener("click", () => { if (position > 0) { position--; render(); } });
+    next.addEventListener("click", () => {
+      if (position < states.length - 1) { position++; render(); }
+    });
+    previous.addEventListener("click", () => {
+      if (position > 0) { position--; render(); }
+    });
     reset.addEventListener("click", () => { position = 0; render(); });
     render();
   });
