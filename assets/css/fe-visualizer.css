@@ -829,3 +829,15 @@
 .fe-memory-boot__step p { margin: 0.4rem 0; }
 .fe-memory-boot__label { font-weight: 700; }
 @media (max-width: 700px) { .fe-memory-boot { grid-template-columns: 1fr; } }
+
+/* FE: accessible, responsive pseudocode step tracer */
+.fe-pseudocode-demo__layout{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:1rem}
+.fe-pseudocode-demo__code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.9rem;overflow-x:auto;white-space:pre}
+.fe-pseudocode-demo__code>div{padding:.4rem .55rem;border-left:3px solid transparent}
+.fe-pseudocode-demo__code>div.is-active{background:rgba(11,111,174,.13);border-left-color:#0b6fae;font-weight:700}
+.fe-pseudocode-demo__state{border:1px solid rgba(11,111,174,.25);border-radius:8px;padding:.75rem;overflow-wrap:anywhere}
+.fe-pseudocode-demo__state p{margin:.35rem 0}
+.fe-pseudocode-demo__message{min-height:2.5em}
+.fe-pseudocode-demo .fe-learning-demo__button{min-height:44px}
+.fe-pseudocode-demo .fe-learning-demo__button:disabled{opacity:.5;cursor:default}
+@media(max-width:650px){.fe-pseudocode-demo__layout{grid-template-columns:1fr}}
