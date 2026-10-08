@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: 基礎理論
 fe_order: 41
 date: 2026-08-12
-last_modified_at: 2026-09-04
+last_modified_at: 2026-10-08
 ---
 
 ## まず結論
@@ -80,6 +80,39 @@ last_modified_at: 2026-09-04
 条件を指定して文章そのものを作る
 → ジェネレータ
 ```
+
+<style>
+.fe-language-compare{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem;margin:1rem 0}
+.fe-language-panel{min-width:0;padding:1rem;border:1px solid #cbd5e1;border-radius:12px;background:#f6f8fa;text-align:center}
+.fe-language-panel h3{margin:0 0 .8rem;font-size:1.1rem}
+.fe-language-stage{padding:.75rem .35rem;border-radius:8px;background:#fff;border:1px solid #d8dee4;font-weight:700}
+.fe-language-arrow{margin:.35rem 0;font-size:1.4rem;line-height:1.3;color:#64748b}
+.fe-language-note{margin:.7rem 0 0;font-size:.9rem;color:#475569}
+@media(max-width:520px){.fe-language-compare{grid-template-columns:1fr}.fe-language-panel{padding:.8rem}}
+</style>
+
+<div class="fe-language-compare" aria-label="インタプリタとコンパイラの処理の比較">
+  <div class="fe-language-panel">
+    <h3>インタプリタ</h3>
+    <div class="fe-language-stage">ソースコード</div>
+    <div class="fe-language-arrow" aria-hidden="true">↓</div>
+    <div class="fe-language-stage">解釈しながら実行</div>
+    <p class="fe-language-note">実行時にプログラムを解釈する</p>
+  </div>
+  <div class="fe-language-panel">
+    <h3>コンパイラ</h3>
+    <div class="fe-language-stage">ソースコード</div>
+    <div class="fe-language-arrow" aria-hidden="true">↓</div>
+    <div class="fe-language-stage">翻訳</div>
+    <div class="fe-language-arrow" aria-hidden="true">↓</div>
+    <div class="fe-language-stage">目的プログラムなど</div>
+    <p class="fe-language-note">実行前に翻訳結果を作る</p>
+  </div>
+</div>
+
+**見るポイント：** インタプリタは「解釈して実行」、コンパイラは「翻訳して目的プログラムなどを作る」です。
+
+※ これはFE試験向けの基本的な比較です。実際の処理系では、中間コードやJITコンパイルなどを組み合わせる場合もあります。
 
 ここで重要なのは、**ローダは翻訳しない**ことです。
 
