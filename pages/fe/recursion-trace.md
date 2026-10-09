@@ -122,7 +122,7 @@ JavaScriptを使えない場合は、以下の静的なトレース表でも同�
 
 関連：[スタックの仕組み](/fe/stack/)・[IPA公式：基本情報技術者試験](https://www.ipa.go.jp/shiken/kubun/fe.html)
 
-<link rel="stylesheet" href="{{ '/assets/css/fe-recursion-trace.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/fe-recursion-trace.css' | relative_url }}?v=20261009-spacing2">
 <script src="{{ '/assets/js/fe-recursion-trace.js' | relative_url }}" defer></script>
 
 {% include fe_article_footer.html %}
