@@ -1,0 +1,15 @@
+.fe-recursion-trace__layout{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0}
+.fe-recursion-trace__heading{font-weight:700;margin:.65rem 0 .35rem}
+.fe-recursion-trace__code{font-family:ui-monospace,Consolas,monospace;white-space:pre;overflow-x:auto;font-size:.88rem;line-height:1.5}
+.fe-recursion-trace__code>div{margin:0;padding:.35rem .5rem;border-left:3px solid transparent}
+.fe-recursion-trace__code>div.is-active{background:rgba(11,111,174,.13);border-left-color:#0b6fae;font-weight:700}
+.fe-recursion-trace__stack{border:1px solid #bacbd5;border-radius:8px;padding:.5rem;min-height:5rem}
+.fe-recursion-trace__frame{margin:.35rem 0;padding:.5rem;border:1px solid #bacbd5;border-radius:6px;background:rgba(127,127,127,.06)}
+.fe-recursion-trace__frame.is-active{border:2px solid #0b6fae;background:rgba(11,111,174,.12);font-weight:700}
+.fe-recursion-trace__returns{overflow-wrap:anywhere;min-height:2rem}
+.fe-recursion-trace__message{min-height:3rem}
+.fe-recursion-trace select{font:inherit;padding:.5rem;margin:.3rem}
+.fe-recursion-trace .fe-learning-demo__controls{display:flex;flex-wrap:wrap;gap:.5rem}
+.fe-recursion-trace .fe-learning-demo__button{min-height:44px;border:1px solid #0b6fae;border-radius:999px;background:transparent;color:inherit;padding:.5rem .85rem;font:inherit;cursor:pointer}
+.fe-recursion-trace .fe-learning-demo__button:disabled{opacity:.5;cursor:default}
+@media(max-width:700px){.fe-recursion-trace__layout{grid-template-columns:1fr}}
