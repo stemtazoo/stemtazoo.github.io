@@ -1,7 +1,7 @@
 .fe-recursion-trace__layout{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0}
 .fe-recursion-trace__heading{font-weight:700;margin:.65rem 0 .35rem}
-.fe-recursion-trace__code{font-family:ui-monospace,Consolas,monospace;white-space:pre;overflow-x:auto;font-size:.88rem;line-height:1.5}
-.fe-recursion-trace__code>div{margin:0;padding:.35rem .5rem;border-left:3px solid transparent}
+.fe-recursion-trace__code{font-family:ui-monospace,Consolas,monospace;white-space:normal;overflow-x:auto;font-size:.88rem;line-height:1.5}
+.fe-recursion-trace__code>div{white-space:pre;margin:0;padding:.35rem .5rem;border-left:3px solid transparent}
 .fe-recursion-trace__code>div.is-active{background:rgba(11,111,174,.13);border-left-color:#0b6fae;font-weight:700}
 .fe-recursion-trace__stack{border:1px solid #bacbd5;border-radius:8px;padding:.5rem;min-height:5rem}
 .fe-recursion-trace__frame{margin:.35rem 0;padding:.5rem;border:1px solid #bacbd5;border-radius:6px;background:rgba(127,127,127,.06)}
