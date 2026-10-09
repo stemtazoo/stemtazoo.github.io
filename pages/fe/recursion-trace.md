@@ -60,7 +60,7 @@ f(1) = 1 → f(2) = 2 → f(3) = 6
 
 ### 1ステップずつ動かす再帰トレース
 
-「次へ」で、**コード・スタック・戻り値**が連動して変わります。最初は `f(3)`、慣れたら `f(4)` に変更してください。
+「次へ」で、**コード・スタック・戻り値**が連動して変わります。戻り値は、関数を数値に置き換える計算過程をカードで表示し、最新の結果を青く強調します。最初は `f(3)`、慣れたら `f(4)` に変更してください。
 
 <div class="fe-learning-demo fe-recursion-trace" data-fe-recursion-trace>
   <p class="fe-learning-demo__title">再帰の行きと戻りを確認</p>
@@ -82,14 +82,14 @@ f(1) = 1 → f(2) = 2 → f(3) = 6
     </div>
   </div>
   <p class="fe-recursion-trace__heading">③ 戻り値の流れ</p>
-  <p data-recursion-returns class="fe-recursion-trace__returns">まだ戻り値はありません。</p>
+  <div data-recursion-returns class="fe-recursion-trace__returns" aria-label="確定した戻り値と計算過程">まだ戻り値はありません。</div>
   <div class="fe-learning-demo__controls">
     <button type="button" class="fe-learning-demo__button" data-recursion-prev disabled>1ステップ戻る</button>
     <button type="button" class="fe-learning-demo__button" data-recursion-next>次のステップ →</button>
     <button type="button" class="fe-learning-demo__button" data-recursion-reset>最初から</button>
   </div>
   <p data-recursion-message class="fe-recursion-trace__message" role="status" aria-live="polite">開始前です。次のステップを押してください。</p>
-  <p class="fe-learning-demo__hint">青い行＝今のステップで実行した行。青いスタック枠＝現在処理中の呼び出し。灰色＝呼び出し先の結果を待つ呼び出し。</p>
+  <p class="fe-learning-demo__hint">青い行＝今のステップで実行した行。青いスタック枠＝現在処理中の呼び出し。灰色＝呼び出し先の結果を待つ呼び出し。戻り値の青いカード＝直近で確定した計算結果。</p>
 </div>
 
 JavaScriptを使えない場合は、以下の静的なトレース表でも同じ順番を確認できます。
@@ -122,7 +122,7 @@ JavaScriptを使えない場合は、以下の静的なトレース表でも同�
 
 関連：[スタックの仕組み](/fe/stack/)・[IPA公式：基本情報技術者試験](https://www.ipa.go.jp/shiken/kubun/fe.html)
 
-<link rel="stylesheet" href="{{ '/assets/css/fe-recursion-trace.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/fe-recursion-trace.css' | relative_url }}?v=20261009-spacing2">
 <script src="{{ '/assets/js/fe-recursion-trace.js' | relative_url }}" defer></script>
 
 {% include fe_article_footer.html %}

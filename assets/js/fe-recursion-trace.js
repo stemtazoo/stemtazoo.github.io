@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const record = (line, description) => result.push({
         line, description,
         frames: frames.map(f => ({n: f.n, status: f.status})),
-        values: values.slice()
+        values: values.map(v => ({...v}))
       });
       record(-1, "開始前です。次のステップを押してください。");
       function visit(k) {
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
           record(3, "f(" + k + ") を再開。戻り値 " + child + " に " + k + " を掛けて " + value + " を返します。");
         }
         frames.pop();
-        values.push("f(" + k + ") = " + value);
+        values.push({n:k, child:k === 1 ? null : k-1, childValue:k === 1 ? null : value/k, value});
         record(-1, "f(" + k + ") のフレームを取り除き、戻り値 " + value + " を呼び出し元に渡します。");
         return value;
       }
@@ -62,7 +62,28 @@ document.addEventListener("DOMContentLoaded", () => {
           (frame.status === "active" ? "［実行中］" : "［戻り値待ち］");
         stack.appendChild(item);
       });
-      returns.textContent = state.values.length ? state.values.join(" → ") : "まだ戻り値はありません。";
+      returns.replaceChildren();
+      if (!state.values.length) {
+        returns.textContent = "まだ戻り値はありません。";
+      }
+      state.values.forEach((entry, index) => {
+        const card = document.createElement("div");
+        card.className = "fe-recursion-trace__return-card" +
+          (index === state.values.length - 1 ? " is-latest" : "");
+        const heading = document.createElement("strong");
+        heading.textContent = "f(" + entry.n + ") の戻り値";
+        const expression = document.createElement("div");
+        expression.className = "fe-recursion-trace__return-expression";
+        expression.textContent = entry.child === null
+          ? "終了条件 n = 1 → return 1"
+          : entry.n + " × f(" + entry.child + ") → " +
+            entry.n + " × " + entry.childValue + " → " + entry.value;
+        const answer = document.createElement("div");
+        answer.className = "fe-recursion-trace__return-answer";
+        answer.textContent = "f(" + entry.n + ") = " + entry.value;
+        card.append(heading, expression, answer);
+        returns.appendChild(card);
+      });
       message.textContent = "ステップ " + position + "/" + (states.length-1) + "：" + state.description;
       previous.disabled = position === 0;
       next.disabled = position === states.length - 1;

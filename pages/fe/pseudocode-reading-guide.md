@@ -174,7 +174,7 @@ IPAの別紙2では、主な演算の優先順位は **括弧やメンバアク�
 
 出典：[IPA：擬似言語の記述形式（Ver.5.1、別紙2）](https://www.ipa.go.jp/shiken/syllabus/doe3um0000002djj-att/shiken_yougo_ver5_1.pdf)
 
-<link rel="stylesheet" href="{{ '/assets/css/fe-visualizer.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/fe-visualizer.css' | relative_url }}?v=20261009-trace-spacing">
 <script src="{{ '/assets/js/fe-visualizer.js' | relative_url }}" defer></script>
 
 {% include fe_article_footer.html %}
