@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ソフトウェア設計
 fe_order: 210
 date: 2026-07-22
-last_modified_at: 2026-08-28
+last_modified_at: 2026-10-11
 ---
 
 ## まず結論
@@ -388,6 +388,8 @@ input_data("network")
 高い強度
 → モジュール内のまとまりが強い
 ```
+
+結合度の6種類とPythonによる比較例は、[モジュール結合度](/fe/module-coupling/)で確認できます。
 
 ## まとめ（試験直前用）
 
