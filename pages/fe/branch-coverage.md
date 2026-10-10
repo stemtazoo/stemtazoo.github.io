@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: システム開発技術
 fe_order: 10
 date: 2026-08-07
-last_modified_at: 2026-08-07
+last_modified_at: 2026-10-10
 ---
 
 ## まず結論
@@ -52,6 +52,28 @@ A OR B = 偽
 ```text
 分岐網羅 = 真の道と偽の道を両方通る
 ```
+
+### Pythonで真・偽の両分岐を確認する
+
+```python
+def check(a, b):
+    if a or b:
+        return "TRUE"
+    else:
+        return "FALSE"
+
+print(check(False, False))  # FALSE：偽の分岐
+print(check(True, True))    # TRUE ：真の分岐
+```
+
+この2回の実行で、判定式 `a or b` の**結果が真の場合と偽の場合**を通ります。したがって、この判定に関して分岐網羅を満たします。
+
+| a | b | 判定式全体 | 通る分岐 |
+|---|---|---|---|
+| False | False | False | 偽 |
+| True | True | True | 真 |
+
+ただし、`(False, True)` や `(True, False)` の組合せはまだ試していません。**分岐網羅は、個々の条件の真偽やすべての組合せの網羅とは異なる**ことに注意します。なお、Pythonの `or` は短絡評価を行い、左側が真なら右側を評価しません。
 
 ## 定義・仕組み
 
