@@ -8,7 +8,7 @@ fe_section: ストラテジ系
 fe_subsection: 経営戦略
 fe_order: 124
 date: 2026-08-12
-last_modified_at: 2026-08-12
+last_modified_at: 2026-10-11
 ---
 
 ## まず結論
@@ -128,6 +128,76 @@ last_modified_at: 2026-08-12
 例えば、独創的な技術を使って新製品を開発した場合、注目するのは「独創的な技術」という言葉ではなく、**新しくなった対象が製品そのものか**です。
 
 逆に、製品の品質を高める目的で新しい製造工程を開発した場合は、結果として品質が向上していても、変えた対象は**製造工程**なのでプロセスイノベーションです。
+
+### 具体例で判断してみよう
+
+次の事例では、**何を新しくしたか**を選んでから、解説を確認してください。製品の品質が向上していても、革新した対象が工程ならプロセスイノベーションです。
+
+<div class="fe-innovation-practice" data-innovation-practice>
+  <p class="fe-innovation-practice__progress" aria-live="polite">事例 1 / 3</p>
+  <p class="fe-innovation-practice__question" data-question>新しい加工方法を開発し、部品の不良率を大幅に下げた。</p>
+  <div class="fe-innovation-practice__choices" role="group" aria-label="革新の種類を選ぶ">
+    <button type="button" data-choice="process">プロセスイノベーション</button>
+    <button type="button" data-choice="product">プロダクトイノベーション</button>
+  </div>
+  <p class="fe-innovation-practice__feedback" data-feedback role="status" aria-live="polite">どちらかを選ぶと、判断理由が表示されます。</p>
+  <div class="fe-innovation-practice__nav">
+    <button type="button" data-prev disabled>前の事例</button>
+    <button type="button" data-next>次の事例</button>
+  </div>
+</div>
+
+<noscript>JavaScriptを使わない場合の答え：事例1は加工方法の革新なのでプロセスイノベーションです。</noscript>
+
+<style>
+.fe-innovation-practice{border:1px solid #b8c6cb;border-radius:12px;padding:1rem;margin:1.2rem 0;background:#f7f9f9;color:#263b43}
+.fe-innovation-practice__progress{font-size:.88rem;color:#536a73;margin:0 0 .6rem}
+.fe-innovation-practice__question{font-weight:650;line-height:1.7;min-height:3.4em}
+.fe-innovation-practice__choices{display:grid;gap:.6rem}
+.fe-innovation-practice button{border:1px solid #8ca4ad;border-radius:8px;background:white;color:#263b43;padding:.8rem .65rem;min-height:44px;cursor:pointer;font:inherit;text-align:center}
+.fe-innovation-practice button:focus-visible{outline:3px solid #527e90;outline-offset:2px}
+.fe-innovation-practice button[aria-pressed="true"]{background:#dcebed;border-color:#527e90;font-weight:700}
+.fe-innovation-practice button:disabled{opacity:.45;cursor:default}
+.fe-innovation-practice__feedback{background:#eaf0f1;border-radius:8px;padding:.8rem;line-height:1.7;min-height:4em}
+.fe-innovation-practice__nav{display:flex;justify-content:space-between;gap:.6rem}
+@media(min-width:600px){.fe-innovation-practice__choices{grid-template-columns:1fr 1fr}}
+</style>
+<script>
+(function(){
+  function init(){
+    document.querySelectorAll('[data-innovation-practice]').forEach(function(root){
+      if(root.dataset.initialized)return;
+      root.dataset.initialized='true';
+      var examples=[
+        {question:'新しい加工方法を開発し、部品の不良率を大幅に下げた。',answer:'process',why:'加工方法（製造工程）を革新しています。品質向上はその結果です。'},
+        {question:'これまでにない機能を持つセンサーを開発し、新市場に投入した。',answer:'product',why:'新しい価値を持つ製品そのものを開発しています。'},
+        {question:'生産ラインの自動化方式を刷新し、製造時間を半減させた。',answer:'process',why:'製造時間の短縮を実現したのは、生産工程の革新です。'}
+      ];
+      var index=0, selected={};
+      var progress=root.querySelector('.fe-innovation-practice__progress');
+      var question=root.querySelector('[data-question]');
+      var feedback=root.querySelector('[data-feedback]');
+      var choices=root.querySelectorAll('[data-choice]');
+      var prev=root.querySelector('[data-prev]');
+      var next=root.querySelector('[data-next]');
+      function render(){
+        var ex=examples[index], choice=selected[index];
+        progress.textContent='事例 '+(index+1)+' / '+examples.length;
+        question.textContent=ex.question;
+        choices.forEach(function(button){button.setAttribute('aria-pressed',String(button.dataset.choice===choice));});
+        feedback.textContent=choice ? (choice===ex.answer?'正解です。':'もう一度、革新した対象を確認しましょう。')+ex.why : 'どちらかを選ぶと、判断理由が表示されます。';
+        prev.disabled=index===0;
+        next.disabled=index===examples.length-1;
+      }
+      choices.forEach(function(button){button.addEventListener('click',function(){selected[index]=button.dataset.choice;render();});});
+      prev.addEventListener('click',function(){if(index>0){index--;render();}});
+      next.addEventListener('click',function(){if(index<examples.length-1){index++;render();}});
+      render();
+    });
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{init();}
+})();
+</script>
 
 ## どんな場面で使う？
 
