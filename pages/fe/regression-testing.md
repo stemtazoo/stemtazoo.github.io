@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ソフトウェア
 fe_order: 181
 date: 2026-09-20
-last_modified_at: 2026-09-20
+last_modified_at: 2026-10-10
 ---
 
 ## まず結論
@@ -56,6 +56,30 @@ IPAの基本情報技術者試験シラバスでも、テストの種類の用�
 > **直したところ以外も、前と同じように動くか確認する**
 
 のが回帰テストです。
+
+### Pythonで「修正後の影響」を確かめる
+
+送料が5,000円以上なら無料、それ未満なら500円という仕様を、短いPythonで表します。
+
+```python
+def shipping_fee(price):
+    return 0 if price >= 5000 else 500
+
+assert shipping_fee(3000) == 500
+assert shipping_fee(6000) == 0
+print("変更前のテスト：成功")
+```
+
+ここで、別の改修の際に送料無料の境界を誤って3,000円に変えてしまったとします。
+
+```python
+def shipping_fee(price):
+    return 0 if price >= 3000 else 500
+
+assert shipping_fee(3000) == 500  # AssertionError
+```
+
+**見るポイント：修正したコードを動かした後、以前は成功していた確認をもう一度実行する**ことです。意図しない変更なら回帰不具合を発見できます。一方、送料無料の条件を3,000円に変更することが新仕様なら、失敗したテストの期待値自体を見直す必要があります。
 
 ## 定義・仕組み
 
