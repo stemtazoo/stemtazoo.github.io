@@ -771,4 +771,78 @@ document.addEventListener("DOMContentLoaded", () => {
     render();
   });
 
+  document.querySelectorAll("[data-fe-multi-stack-demo]").forEach((demo) => {
+    const actions = [
+      { label: "Aをスタック1にpush", type: "push", stack: 0, value: "A" },
+      { label: "Cをスタック2にpush", type: "push", stack: 1, value: "C" },
+      { label: "Kをスタック3にpush", type: "push", stack: 2, value: "K" },
+      { label: "Sをスタック3にpush", type: "push", stack: 2, value: "S" },
+      { label: "スタック3からSをpop・出力", type: "pop", stack: 2, value: "S" },
+      { label: "Tをスタック3にpush", type: "push", stack: 2, value: "T" },
+      { label: "スタック3からTをpop・出力", type: "pop", stack: 2, value: "T" },
+      { label: "スタック1からAをpop・出力", type: "pop", stack: 0, value: "A" },
+      { label: "スタック2からCをpop・出力", type: "pop", stack: 1, value: "C" },
+      { label: "スタック3からKをpop・出力", type: "pop", stack: 2, value: "K" },
+    ];
+    const shafts = Array.from(demo.querySelectorAll("[data-ms-stack]"));
+    const actionLabel = demo.querySelector("[data-ms-action]");
+    const counter = demo.querySelector("[data-ms-counter]");
+    const output = demo.querySelector("[data-ms-output]");
+    const previous = demo.querySelector("[data-ms-prev]");
+    const next = demo.querySelector("[data-ms-next]");
+    const reset = demo.querySelector("[data-ms-reset]");
+    if (shafts.length !== 3 || !actionLabel || !counter || !output || !previous || !next || !reset) return;
+    let position = 0;
+
+    function render() {
+      const stacks = [[], [], []];
+      const printed = [];
+      for (let i = 0; i < position; i++) {
+        const step = actions[i];
+        if (step.type === "push") stacks[step.stack].push(step.value);
+        else {
+          const removed = stacks[step.stack].pop();
+          if (removed !== step.value) throw new Error("Unexpected multi-stack trace");
+          printed.push(removed);
+        }
+      }
+      shafts.forEach((shaft, index) => {
+        shaft.replaceChildren();
+        if (stacks[index].length === 0) {
+          const empty = document.createElement("span");
+          empty.className = "fe-multi-stack-demo__empty";
+          empty.textContent = "空";
+          shaft.appendChild(empty);
+        }
+        stacks[index].forEach((value, valueIndex) => {
+          const item = document.createElement("span");
+          item.className = "fe-multi-stack-demo__item";
+          if (position > 0 && actions[position - 1].type === "push" &&
+              actions[position - 1].stack === index && valueIndex === stacks[index].length - 1) {
+            item.classList.add("is-current");
+          }
+          item.textContent = value;
+          shaft.appendChild(item);
+        });
+      });
+      output.replaceChildren();
+      if (printed.length === 0) output.textContent = "まだありません";
+      printed.forEach((value) => {
+        const item = document.createElement("span");
+        item.className = "fe-multi-stack-demo__printed";
+        item.textContent = value;
+        output.appendChild(item);
+      });
+      actionLabel.textContent = position === 0 ? "開始前：次へ進んでください" : actions[position - 1].label;
+      counter.textContent = position + " / " + actions.length + " 操作";
+      previous.disabled = position === 0;
+      next.disabled = position === actions.length;
+      reset.disabled = position === 0;
+    }
+    previous.addEventListener("click", () => { if (position > 0) { position--; render(); } });
+    next.addEventListener("click", () => { if (position < actions.length) { position++; render(); } });
+    reset.addEventListener("click", () => { position = 0; render(); });
+    render();
+  });
+
 });
