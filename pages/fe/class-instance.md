@@ -8,7 +8,7 @@ fe_section: 科目B対策
 fe_subsection: プログラミング
 fe_order: 60
 date: 2026-07-07
-last_modified_at: 2026-10-03
+last_modified_at: 2026-10-10
 ---
 
 ## まず結論
@@ -49,6 +49,30 @@ UMLでクラスを属性・操作・関連としてどう表すかは、[UMLク�
 
 クラスは、データや処理の形を決めます。  
 そのクラスをもとに作られた具体的なものがインスタンスです。
+
+### Pythonで同じクラスから2つの実体を作る
+
+```python
+class Car:
+    def __init__(self, color):
+        self.color = color
+
+car1 = Car("red")
+car2 = Car("blue")
+
+print(car1.color)  # red
+print(car2.color)  # blue
+```
+
+`Car` はクラス（設計図）、`car1` と `car2` はそのクラスから作った**別々のインスタンス**です。`color` はインスタンスごとに保持する属性です。
+
+```python
+car1.color = "green"
+print(car1.color)  # green
+print(car2.color)  # blue
+```
+
+**見るポイント：一方のインスタンスの属性を変更しても、もう一方の属性は変わらない**ことです。設計図は共通でも、実体が持つデータはそれぞれ異なります。
 
 ## 定義・仕組み
 
