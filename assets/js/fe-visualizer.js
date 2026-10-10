@@ -845,4 +845,43 @@ document.addEventListener("DOMContentLoaded", () => {
     render();
   });
 
+  document.querySelectorAll("[data-fe-block-allocation-demo]").forEach((demo) => {
+    const slider = demo.querySelector("[data-fba-slider]");
+    const sizeLabel = demo.querySelector("[data-fba-size]");
+    const blocksElement = demo.querySelector("[data-fba-blocks]");
+    const result = demo.querySelector("[data-fba-result]");
+    if (!slider || !sizeLabel || !blocksElement || !result) return;
+    function render() {
+      const size = Number(slider.value);
+      const count = Math.ceil(size / 4000);
+      const unused = count * 4000 - size;
+      sizeLabel.textContent = size.toLocaleString("ja-JP");
+      blocksElement.replaceChildren();
+      for (let i = 0; i < count; i++) {
+        const used = Math.max(0, Math.min(4000, size - i * 4000));
+        const block = document.createElement("div");
+        block.className = "fe-block-allocation-demo__block";
+        const fill = document.createElement("div");
+        fill.className = "fe-block-allocation-demo__fill";
+        fill.style.width = (used / 4000 * 100) + "%";
+        block.appendChild(fill);
+        const label = document.createElement("span");
+        label.textContent = "ブロック" + (i + 1);
+        block.appendChild(label);
+        block.setAttribute("aria-label", "ブロック" + (i + 1) + "：使用" + used + "バイト、未使用" + (4000 - used) + "バイト");
+        blocksElement.appendChild(block);
+      }
+      result.textContent = size.toLocaleString("ja-JP") + "バイト → " + count +
+        "ブロック → " + (count * 8) + "セクタ（未使用 " + unused.toLocaleString("ja-JP") + "バイト）";
+    }
+    slider.addEventListener("input", render);
+    demo.querySelectorAll("[data-fba-set]").forEach((button) => {
+      button.addEventListener("click", () => {
+        slider.value = button.dataset.fbaSet;
+        render();
+      });
+    });
+    render();
+  });
+
 });
