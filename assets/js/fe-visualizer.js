@@ -884,4 +884,46 @@ document.addEventListener("DOMContentLoaded", () => {
     render();
   });
 
+  document.querySelectorAll("[data-fe-bi-demo]").forEach((demo) => {
+    const rows = [
+      { store: "A店", product: "商品X", sales: 100 },
+      { store: "A店", product: "商品Y", sales: 50 },
+      { store: "B店", product: "商品X", sales: 60 },
+      { store: "B店", product: "商品Y", sales: 90 }
+    ];
+    const chart = demo.querySelector("[data-bi-chart]");
+    const insight = demo.querySelector("[data-bi-insight]");
+    const buttons = Array.from(demo.querySelectorAll("[data-bi-view]"));
+    if (!chart || !insight || !buttons.length) return;
+    function render(view) {
+      const key = view === "product" ? "product" : "store";
+      const labels = key === "store" ? ["A店", "B店"] : ["商品X", "商品Y"];
+      const totals = labels.map(label => rows.filter(row => row[key] === label).reduce((sum, row) => sum + row.sales, 0));
+      const max = Math.max(...totals);
+      chart.replaceChildren();
+      labels.forEach((label, index) => {
+        const row = document.createElement("div");
+        row.className = "fe-bi-demo__row";
+        const name = document.createElement("span");
+        name.textContent = label;
+        const track = document.createElement("div");
+        track.className = "fe-bi-demo__track";
+        const bar = document.createElement("div");
+        bar.className = "fe-bi-demo__bar";
+        bar.style.width = (totals[index] / max * 100) + "%";
+        track.appendChild(bar);
+        const value = document.createElement("strong");
+        value.textContent = totals[index] + "万円";
+        row.append(name, track, value);
+        chart.appendChild(row);
+      });
+      buttons.forEach(button => button.setAttribute("aria-pressed", String(button.dataset.biView === key)));
+      insight.textContent = key === "store"
+        ? "店舗別ではA店もB店も150万円。合計だけでは商品の売れ方の違いは分かりません。"
+        : "商品別では商品Xが160万円、商品Yが140万円。商品別の合計だけでは店舗ごとの売れ方は分かりません。";
+    }
+    buttons.forEach(button => button.addEventListener("click", () => render(button.dataset.biView)));
+    render("store");
+  });
+
 });
