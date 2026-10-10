@@ -869,3 +869,13 @@
 .fe-multi-stack-demo .fe-learning-demo__button{min-height:44px}
 .fe-multi-stack-demo .fe-learning-demo__button:disabled{opacity:.45;cursor:default}
 @media(max-width:420px){.fe-multi-stack-demo__stacks{gap:.35rem}.fe-multi-stack-demo__shaft{height:140px;padding:4px}.fe-multi-stack-demo__column>strong{font-size:.76rem}}
+
+
+/* File block allocation teaching aid */
+.fe-block-allocation-demo input[type=range]{display:block;width:100%;margin:.9rem 0;accent-color:#397e9d}
+.fe-block-allocation-demo__blocks{display:grid;grid-template-columns:repeat(auto-fit,minmax(90px,1fr));gap:.5rem;margin:.8rem 0}
+.fe-block-allocation-demo__block{position:relative;overflow:hidden;min-height:64px;border:1px solid #7c9dab;border-radius:6px;background:#edf0f1;color:#193c4d;display:flex;align-items:center;justify-content:center}
+.fe-block-allocation-demo__fill{position:absolute;left:0;top:0;bottom:0;background:#9dc9dc}
+.fe-block-allocation-demo__block span{position:relative;font-size:.85rem;font-weight:700}
+.fe-block-allocation-demo__legend{font-size:.83rem;color:inherit;opacity:.8}
+.fe-block-allocation-demo .fe-learning-demo__button{min-height:44px}
