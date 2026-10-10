@@ -879,3 +879,15 @@
 .fe-block-allocation-demo__block span{position:relative;font-size:.85rem;font-weight:700}
 .fe-block-allocation-demo__legend{font-size:.83rem;color:inherit;opacity:.8}
 .fe-block-allocation-demo .fe-learning-demo__button{min-height:44px}
+
+
+/* BI aggregation example: compact, responsive, and accessible */
+.fe-bi-demo__chart{display:grid;gap:.8rem;margin:1rem 0}
+.fe-bi-demo__row{display:grid;grid-template-columns:4.5rem minmax(0,1fr) 4.7rem;gap:.5rem;align-items:center;font-size:.9rem}
+.fe-bi-demo__row strong{font-variant-numeric:tabular-nums;text-align:right;font-size:.85rem}
+.fe-bi-demo__track{height:1.65rem;background:#edf0f1;border-radius:5px;overflow:hidden}
+.fe-bi-demo__bar{height:100%;background:#7baab8;border-radius:5px}
+.fe-bi-demo__note{font-size:.85rem;opacity:.8;margin:.6rem 0 0}
+.fe-bi-demo .fe-learning-demo__button{min-height:44px}
+.fe-bi-demo .fe-learning-demo__button[aria-pressed="true"]{background:#e3eff2;border-color:#467b8d;color:#1b4b5a;font-weight:700}
+@media(max-width:400px){.fe-bi-demo__row{grid-template-columns:3.4rem minmax(0,1fr) 4.3rem;gap:.3rem;font-size:.8rem}}
