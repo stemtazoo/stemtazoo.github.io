@@ -397,39 +397,40 @@ p = p - 1
 
 **見るポイント：SとTをすぐに取り出す間も、A・C・Kはそれぞれ別のスタックで待機しています。** 3個で実現でき、2個以下では実現できないため、最小個数は3個です。
 
-#### Pythonで実際に動かす
+#### 操作して理解する：3本のスタック
 
-Pythonのリストは `append()` で末尾へ追加し、`pop()` で末尾から取り出せるので、スタックの動きを確かめられます。下のコードでは操作ごとに中身と出力を表示します。
+「次へ」を押すと、**今どの文字を積み、どの文字を取り出したか**を1操作ずつ確認できます。各スタックは下が底、上が取り出し口です。
 
-```python
-stacks = [[], [], []]
-output = []
+<link rel="stylesheet" href="{{ '/assets/css/fe-visualizer.css' | relative_url }}">
 
-def push(i, value):
-    stacks[i].append(value)
-    print("push", value, stacks, output)
+<div class="fe-learning-demo fe-multi-stack-demo" data-fe-multi-stack-demo>
+  <p class="fe-learning-demo__title">3本のスタックで出力順序を変える</p>
+  <p class="fe-learning-demo__lead">入力：A → C → K → S → T　／　目標出力：S → T → A → C → K</p>
+  <p class="fe-multi-stack-demo__action" data-ms-action role="status" aria-live="polite">開始前：次へ進んでください</p>
+  <p class="fe-multi-stack-demo__counter" data-ms-counter>0 / 10 操作</p>
+  <div class="fe-multi-stack-demo__stacks" aria-label="3本のスタックの現在の状態">
+    <section class="fe-multi-stack-demo__column" aria-label="スタック1">
+      <strong>スタック1</strong><div class="fe-multi-stack-demo__shaft" data-ms-stack="0"><span class="fe-multi-stack-demo__empty">空</span></div>
+    </section>
+    <section class="fe-multi-stack-demo__column" aria-label="スタック2">
+      <strong>スタック2</strong><div class="fe-multi-stack-demo__shaft" data-ms-stack="1"><span class="fe-multi-stack-demo__empty">空</span></div>
+    </section>
+    <section class="fe-multi-stack-demo__column" aria-label="スタック3">
+      <strong>スタック3</strong><div class="fe-multi-stack-demo__shaft" data-ms-stack="2"><span class="fe-multi-stack-demo__empty">空</span></div>
+    </section>
+  </div>
+  <p class="fe-multi-stack-demo__output-label"><strong>取り出した文字（出力順）</strong></p>
+  <div class="fe-multi-stack-demo__output" data-ms-output aria-label="出力した文字">まだありません</div>
+  <div class="fe-learning-demo__controls">
+    <button type="button" class="fe-learning-demo__button" data-ms-prev disabled>戻る</button>
+    <button type="button" class="fe-learning-demo__button" data-ms-next disabled>次へ</button>
+    <button type="button" class="fe-learning-demo__button" data-ms-reset disabled>最初から</button>
+  </div>
+  <p class="fe-learning-demo__hint">見るポイント：S・Tを先に出す間、A・C・Kは別々のスタックに残ります。2本では3文字をこの順番で待機させられません。</p>
+  <noscript><p>JavaScriptが無効の場合は、直前の操作表で同じ流れを確認できます。</p></noscript>
+</div>
 
-def pop(i):
-    value = stacks[i].pop()
-    output.append(value)
-    print("pop ", value, stacks, output)
-
-push(0, "A")
-push(1, "C")
-push(2, "K")
-push(2, "S")
-pop(2)  # S
-push(2, "T")
-pop(2)  # T
-pop(0)  # A
-pop(1)  # C
-pop(2)  # K
-
-print("出力順:", output)
-# 出力順: ['S', 'T', 'A', 'C', 'K']
-```
-
-これはPythonで動作を確認するための例です。**FE科目Bの擬似言語とPythonは同一ではありません。** 試験では、push・popの操作後に各スタックに何が残るかを表にして追うと判断しやすくなります。
+<script src="{{ '/assets/js/fe-visualizer.js' | relative_url }}" defer></script>
 
 ## よくある誤解・混同
 
