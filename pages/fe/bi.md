@@ -8,7 +8,7 @@ fe_section: ストラテジ系
 fe_subsection: 経営戦略
 fe_order: 160
 date: 2026-08-27
-last_modified_at: 2026-08-27
+last_modified_at: 2026-10-11
 ---
 
 ## まず結論
@@ -53,6 +53,40 @@ BIは、このように複数のデータを分析し、ダッシュボードや
 - 売上が落ちている原因は何か
 
 といった判断をしやすくします。
+
+### 動かして理解する：BIの集計の切り口
+
+次の売上データを、**店舗別**と**商品別**で集計してみましょう。数値は学習用の架空データです。
+
+| 店舗 | 商品 | 売上 |
+|---|---|---:|
+| A店 | 商品X | 100万円 |
+| A店 | 商品Y | 50万円 |
+| B店 | 商品X | 60万円 |
+| B店 | 商品Y | 90万円 |
+
+<link rel="stylesheet" href="{{ '/assets/css/fe-visualizer.css' | relative_url }}">
+
+<div class="fe-learning-demo fe-bi-demo" data-fe-bi-demo>
+  <p class="fe-learning-demo__title">同じデータを違う切り口で見る</p>
+  <div class="fe-learning-demo__controls" role="group" aria-label="集計の切り口">
+    <button type="button" class="fe-learning-demo__button" data-bi-view="store" aria-pressed="true">店舗別に集計</button>
+    <button type="button" class="fe-learning-demo__button" data-bi-view="product" aria-pressed="false">商品別に集計</button>
+  </div>
+  <div class="fe-bi-demo__chart" data-bi-chart aria-label="売上の棒グラフ">
+    <div class="fe-bi-demo__row"><span>A店</span><div class="fe-bi-demo__track"><div class="fe-bi-demo__bar" style="width:100%"></div></div><strong>150万円</strong></div>
+    <div class="fe-bi-demo__row"><span>B店</span><div class="fe-bi-demo__track"><div class="fe-bi-demo__bar" style="width:100%"></div></div><strong>150万円</strong></div>
+  </div>
+  <p class="fe-learning-demo__result" data-bi-insight role="status" aria-live="polite">店舗別ではA店もB店も150万円。合計だけでは商品の売れ方の違いは分かりません。</p>
+  <p class="fe-bi-demo__note">売上全体：300万円（どちらの切り口でも変わりません）</p>
+  <noscript><p>JavaScriptが無効の場合は店舗別の集計を表示します。商品別では、商品Xが160万円、商品Yが140万円です。</p></noscript>
+</div>
+
+<script src="{{ '/assets/js/fe-visualizer.js' | relative_url }}" defer></script>
+
+店舗別の合計は同じでも、**商品XはA店で、商品YはB店で多く売れています**。商品別の合計だけでも店舗ごとの違いは分かりません。BIでは、このように切り口を変えて状況を把握し、仕入れや販売施策を検討します。
+
+このような複数の切り口による集計は、**OLAP（多次元分析）**の考え方にもつながります。ただし、集計結果を見ることと、その結果をもとに意思決定することは別の段階です。
 
 ## 定義・仕組み
 
