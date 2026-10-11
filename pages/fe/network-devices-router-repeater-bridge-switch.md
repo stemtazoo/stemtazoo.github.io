@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 10
 date: 2026-08-30
-last_modified_at: 2026-09-20
+last_modified_at: 2026-10-11
 ---
 
 ## まず結論
@@ -57,6 +57,29 @@ IPアドレスを見る
 ```
 
 つまり、名前を丸暗記するよりも、**何を見て判断しているか**を押さえると整理しやすくなります。
+
+### 図で比較：OSIの何層まで処理する？
+
+問題文に装置のOSI階層が描かれているときは、**装置が扱う最も上の層**に注目します。
+
+<div role="img" aria-label="リピータは物理層まで、ブリッジとスイッチングハブはデータリンク層まで、ルータはネットワーク層まで処理する比較図" style="margin:1rem 0;overflow-x:auto;">
+  <div style="min-width:300px;border:1px solid #aebbc0;border-radius:10px;padding:12px;">
+    <p style="font-weight:bold;margin:0 0 10px;">OSI階層とネットワーク機器</p>
+    <div style="display:grid;grid-template-columns:72px repeat(3,minmax(0,1fr));gap:5px;text-align:center;font-size:.82rem;">
+      <div></div><div><strong>リピータ<br>ハブ</strong></div><div><strong>ブリッジ<br>スイッチ</strong></div><div><strong>ルータ</strong></div>
+      <div style="padding:10px 3px;background:#edf0f2;border-radius:4px;">第3層<br>IP</div><div style="background:#f4f5f6;border-radius:4px;"></div><div style="background:#f4f5f6;border-radius:4px;"></div><div style="background:#c6ddd6;border:1px solid #5c8a7b;border-radius:4px;padding:10px 2px;"><strong>経路を選ぶ</strong></div>
+      <div style="padding:10px 3px;background:#edf0f2;border-radius:4px;">第2層<br>MAC</div><div style="background:#f4f5f6;border-radius:4px;"></div><div style="background:#dce8e4;border:1px solid #90aaa0;border-radius:4px;padding:10px 2px;"><strong>宛先を選ぶ</strong></div><div style="background:#dce8e4;border:1px solid #90aaa0;border-radius:4px;padding:10px 2px;">フレーム処理</div>
+      <div style="padding:10px 3px;background:#edf0f2;border-radius:4px;">第1層<br>信号</div><div style="background:#e9edeb;border:1px solid #a6b6ad;border-radius:4px;padding:10px 2px;"><strong>信号を中継</strong></div><div style="background:#e9edeb;border:1px solid #a6b6ad;border-radius:4px;padding:10px 2px;">信号を扱う</div><div style="background:#e9edeb;border:1px solid #a6b6ad;border-radius:4px;padding:10px 2px;">信号を扱う</div>
+    </div>
+    <p style="font-size:.83rem;margin:10px 0 0;">色付きのマスは、その機器が利用する層を示します。試験では最上段の層で機器を区別します。</p>
+  </div>
+</div>
+
+**見るポイント：** 第1層までならリピータ、第2層までならブリッジ、第3層までならルータです。
+
+例えば、二つのLANセグメントの間にある装置が「ネットワーク層・データリンク層・物理層」を持つ図なら、**ルータ**と判断できます。
+
+ただし、実際の機器には複数の機能を備えるものもあります。ここではFE試験で問われる**代表的な機能による分類**を示しています。
 
 ## 定義・仕組み
 
