@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 58
 date: 2026-08-15
-last_modified_at: 2026-10-08
+last_modified_at: 2026-10-11
 ---
 
 ## まず結論
@@ -160,6 +160,44 @@ IPv4アドレスは、全部で32ビットあります。
 このホスト部をすべて0にすると、そのネットワーク自体を表す**ネットワークアドレス**になります。
 
 逆に、ホスト部をすべて1にすると、そのネットワーク内の全端末へ送るための**ブロードキャストアドレス**になります。
+
+
+### 図解：ネットワークの先頭と末尾
+
+`192.168.18.70/22` が属するネットワークを例に、**ホスト部を全部0／全部1にする**違いを確認します。
+
+<div style="border:1px solid #cbd5e1;border-radius:12px;padding:1rem;margin:1rem 0;background:#f8fafc;color:#233746;">
+  <p style="font-weight:700;margin:0 0 .7rem;">192.168.18.70/22 のアドレス範囲</p>
+  <div style="display:flex;gap:3px;height:22px;overflow:hidden;border-radius:5px;" aria-label="32ビットのうちネットワーク部22ビット、ホスト部10ビット">
+    <div style="flex:22;background:#477c94;"></div>
+    <div style="flex:10;background:#d5aa6e;"></div>
+  </div>
+  <p style="margin:.4rem 0 .9rem;font-size:.85em;">青：ネットワーク部22ビット ／ 茶：ホスト部10ビット</p>
+  <div style="display:grid;grid-template-columns:minmax(0,1fr);gap:0;border:1px solid #cbd5e1;border-radius:8px;overflow:hidden;">
+    <div style="background:#dce9f0;padding:.75rem;">
+      <strong>範囲の先頭：192.168.16.0</strong><div style="font-size:.88em;">ホスト部が全部0 → ネットワークアドレス</div>
+    </div>
+    <div style="background:#e5f1e9;padding:.75rem;">
+      <strong>間のアドレス：192.168.16.1 ～ 192.168.19.254</strong><div style="font-size:.88em;">通常のホスト割当可能範囲</div>
+    </div>
+    <div style="background:#f3e7d9;padding:.75rem;">
+      <strong>範囲の末尾：192.168.19.255</strong><div style="font-size:.88em;">ホスト部が全部1 → ブロードキャストアドレス</div>
+    </div>
+  </div>
+  <p style="margin:.8rem 0 0;font-size:.9em;">見るポイント：<strong>/22では第3オクテットが16～19まで変わる</strong>ため、末尾を単に「192.168.18.255」とはできません。</p>
+</div>
+
+さらに第3オクテットを2進数で比べると、境界がはっきりします。
+
+<div style="border:1px solid #cbd5e1;border-radius:10px;padding:.8rem;margin:1rem 0;background:#f8fafc;color:#233746;">
+  <p style="margin:0 0 .5rem;font-weight:700;">第3オクテットの8ビット</p>
+  <div style="display:grid;grid-template-columns:5.7em minmax(0,1fr);gap:.45rem;align-items:center;font-size:.9em;">
+    <span>元のIP：18</span><div style="display:flex;gap:2px;font-family:monospace;font-weight:700;text-align:center;"><span style="flex:6;background:#477c94;color:white;padding:.35rem 0;border-radius:4px;">000100</span><span style="flex:2;background:#d5aa6e;padding:.35rem 0;border-radius:4px;">10</span></div>
+    <span>先頭：16</span><div style="display:flex;gap:2px;font-family:monospace;font-weight:700;text-align:center;"><span style="flex:6;background:#477c94;color:white;padding:.35rem 0;border-radius:4px;">000100</span><span style="flex:2;background:#d5aa6e;padding:.35rem 0;border-radius:4px;">00</span></div>
+    <span>末尾：19</span><div style="display:flex;gap:2px;font-family:monospace;font-weight:700;text-align:center;"><span style="flex:6;background:#477c94;color:white;padding:.35rem 0;border-radius:4px;">000100</span><span style="flex:2;background:#d5aa6e;padding:.35rem 0;border-radius:4px;">11</span></div>
+  </div>
+  <p style="margin:.65rem 0 0;font-size:.88em;">青の6ビットは変えず、茶色の2ビットを0または1にします。第4オクテットも同じように全部0／全部1にします。</p>
+</div>
 
 ## 定義・仕組み
 
