@@ -31,6 +31,25 @@ last_modified_at: 2026-09-25
 
 入力が10×10でほかの条件が同じ場合は `floor((10+4−3)÷2)+1=floor(5.5)+1=6` となり、**6×6**です。
 
+### 操作して確認：カーネルを置ける位置
+
+入力サイズ・カーネル・ストライド・パディングを変更し、**次の位置**を押すと窓の移動が分かります。オレンジの枠が現在のカーネル位置です。縦横が同じ正方形の入力、拡張率1の例です。
+
+<link rel="stylesheet" href="{{ '/assets/css/gk-interactive-pilot.css' | relative_url }}">
+<div class="gk-pilot" data-gk-cnn-demo>
+  <div class="gk-pilot-controls">
+    <label>入力サイズ <input data-field="n" type="number" min="5" max="12" value="7"></label>
+    <label>カーネル <input data-field="k" type="number" min="1" max="3" value="3"></label>
+    <label>ストライド <input data-field="s" type="number" min="1" max="3" value="2"></label>
+    <label>パディング <input data-field="p" type="number" min="0" max="2" value="1"></label>
+  </div>
+  <svg viewBox="0 0 240 240" role="img" aria-label="入力格子と現在のカーネル位置"></svg>
+  <p class="gk-pilot-output" data-output aria-live="polite">出力：4 × 4</p>
+  <p class="gk-pilot-note" data-note>出力サイズは、窓を置ける位置の数です。</p>
+  <button type="button" data-next>次の位置 →</button>
+</div>
+<script defer src="{{ '/assets/js/gk-cnn-output-demo.js' | relative_url }}"></script>
+
 ## いつ使う？（得意・不得意）
 
 畳み込み層やプーリング層の出力形状を追う際に使います。ただし、プーリングには端数の扱いを変える設定もあります。問題文に指定があれば、**層の種類と端数処理**を確認してください。
