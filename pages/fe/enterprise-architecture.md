@@ -8,7 +8,7 @@ fe_section: ストラテジ系
 fe_subsection: システム戦略
 fe_order: 95
 date: 2026-08-14
-last_modified_at: 2026-10-03
+last_modified_at: 2026-10-11
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/fe-ea-diagram.css' | relative_url }}">
@@ -128,6 +128,78 @@ EAは、[IPA：基本情報技術者試験シラバス Ver.9.2](https://www.ipa.
 4体系は、**Business / Data / Application / Technology**です。
 
 「システムアーキテクチャ」「ソフトウェアアーキテクチャ」「バスアーキテクチャ」は一般的なIT用語として使われますが、この4体系の名称そのものではありません。
+
+### 具体例で4体系を判断する練習
+
+同じ会社の取り組みでも、**何を整理しているか**で体系が変わります。事例を読んで4つの体系から選び、判断理由を確認しましょう。
+
+<div class="fe-ea-practice" data-ea-practice>
+  <p class="fe-ea-practice__progress" data-progress aria-live="polite">事例 1 / 4</p>
+  <p class="fe-ea-practice__question" data-question>受注情報と顧客情報の関連を整理する。</p>
+  <div class="fe-ea-practice__choices" role="group" aria-label="EAの体系を選ぶ">
+    <button type="button" data-choice="business">ビジネス</button>
+    <button type="button" data-choice="data">データ</button>
+    <button type="button" data-choice="application">アプリケーション</button>
+    <button type="button" data-choice="technology">テクノロジ</button>
+  </div>
+  <p class="fe-ea-practice__feedback" data-feedback role="status" aria-live="polite">体系を選ぶと判断理由が表示されます。</p>
+  <div class="fe-ea-practice__nav">
+    <button type="button" data-prev disabled>前の事例</button>
+    <button type="button" data-next>次の事例</button>
+  </div>
+</div>
+
+<noscript>JavaScriptなしでの答え：事例1は情報同士の関連を整理しているため、データアーキテクチャです。</noscript>
+
+<style>
+.fe-ea-practice{border:1px solid #b8c6cb;border-radius:12px;padding:1rem;margin:1.2rem 0;background:#f7f9f9;color:#263b43}
+.fe-ea-practice__progress{font-size:.88rem;color:#536a73;margin:0 0 .6rem}
+.fe-ea-practice__question{font-weight:650;line-height:1.7;min-height:3.4em}
+.fe-ea-practice__choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem}
+.fe-ea-practice button{border:1px solid #8ca4ad;border-radius:8px;background:#fff;color:#263b43;padding:.8rem .4rem;min-height:44px;cursor:pointer;font:inherit;font-size:.9rem;overflow-wrap:anywhere}
+.fe-ea-practice button:focus-visible{outline:3px solid #527e90;outline-offset:2px}
+.fe-ea-practice button[aria-pressed="true"]{background:#dcebed;border-color:#527e90;font-weight:700}
+.fe-ea-practice button:disabled{opacity:.45;cursor:default}
+.fe-ea-practice__feedback{background:#eaf0f1;border-radius:8px;padding:.8rem;line-height:1.7;min-height:4em}
+.fe-ea-practice__nav{display:flex;justify-content:space-between;gap:.6rem}
+</style>
+<script>
+(function(){
+  function init(){
+    document.querySelectorAll('[data-ea-practice]').forEach(function(root){
+      if(root.dataset.initialized)return;
+      root.dataset.initialized='true';
+      var examples=[
+        {question:'受注情報と顧客情報の関連を整理する。',answer:'data',why:'情報の内容や関係を整理するため、データ体系です。'},
+        {question:'在庫管理システムに必要な機能を整理する。',answer:'application',why:'業務を支えるシステムの機能を整理するため、アプリケーション体系です。'},
+        {question:'工場の受注から出荷までの業務手順を見直す。',answer:'business',why:'業務そのものの流れを整理するため、ビジネス体系です。'},
+        {question:'システムを動かすサーバとネットワークの構成を整理する。',answer:'technology',why:'システムを実現する技術基盤を整理するため、テクノロジ体系です。'}
+      ];
+      var index=0,selected={};
+      var progress=root.querySelector('[data-progress]');
+      var question=root.querySelector('[data-question]');
+      var feedback=root.querySelector('[data-feedback]');
+      var buttons=root.querySelectorAll('[data-choice]');
+      var prev=root.querySelector('[data-prev]');
+      var next=root.querySelector('[data-next]');
+      function render(){
+        var ex=examples[index],choice=selected[index];
+        progress.textContent='事例 '+(index+1)+' / '+examples.length;
+        question.textContent=ex.question;
+        buttons.forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.choice===choice));});
+        feedback.textContent=choice ? (choice===ex.answer?'正解です。':'整理する対象に注目しましょう。')+ex.why : '体系を選ぶと判断理由が表示されます。';
+        prev.disabled=index===0;
+        next.disabled=index===examples.length-1;
+      }
+      buttons.forEach(function(b){b.addEventListener('click',function(){selected[index]=b.dataset.choice;render();});});
+      prev.addEventListener('click',function(){if(index>0){index--;render();}});
+      next.addEventListener('click',function(){if(index<examples.length-1){index++;render();}});
+      render();
+    });
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{init();}
+})();
+</script>
 
 ## どんな場面で使う？
 
