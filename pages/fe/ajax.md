@@ -72,13 +72,20 @@ Ajaxでは、必要なデータだけをサーバとやり取りし、画面の�
 .ajax-panel button:focus-visible {outline:3px solid #2563eb;outline-offset:2px;}
 .ajax-status {font-size:.85rem;min-height:3em;margin-top:8px;}
 .ajax-updated {background:#dcfce7!important;}
+.ajax-screen.ajax-full-refresh { animation:ajax-page-refresh .85s ease-in-out; }
+.ajax-screen.ajax-full-refresh .ajax-head,.ajax-screen.ajax-full-refresh .ajax-fixed,.ajax-screen.ajax-full-refresh .ajax-result { animation:ajax-repaint .85s ease-in-out; }
+.ajax-result.ajax-part-refresh { animation:ajax-result-refresh .85s ease-in-out; }
+@keyframes ajax-page-refresh { 0%,40% {opacity:.25;background:#cbd5e1;} 100% {opacity:1;background:#f8fafc;} }
+@keyframes ajax-repaint { 0%,40% {opacity:0;} 100% {opacity:1;} }
+@keyframes ajax-result-refresh { 0% {opacity:.45;} 100% {opacity:1;} }
+@media(prefers-reduced-motion:reduce){.ajax-screen.ajax-full-refresh,.ajax-screen.ajax-full-refresh .ajax-head,.ajax-screen.ajax-full-refresh .ajax-fixed,.ajax-screen.ajax-full-refresh .ajax-result,.ajax-result.ajax-part-refresh{animation:none;}}
 @media(max-width:560px){.ajax-compare{grid-template-columns:1fr;}}
 </style>
 
 <div class="ajax-compare" id="ajax-compare-demo">
   <div class="ajax-panel">
     <h3>① ページ全体を再読み込みする例</h3>
-    <div class="ajax-screen" aria-label="ページ全体の更新例">
+    <div class="ajax-screen" id="ajax-full-screen" aria-label="ページ全体の更新例">
       <div class="ajax-head">商品検索</div>
       <div class="ajax-fixed">検索欄：りんご</div>
       <div class="ajax-result" id="ajax-full-result">検索結果：未取得</div>
@@ -101,25 +108,33 @@ Ajaxでは、必要なデータだけをサーバとやり取りし、画面の�
 (function () {
   var root = document.getElementById('ajax-compare-demo');
   if (!root) return;
-  var count = 0;
+  var fullCount = 0;
+  var partCount = 0;
+  var fullScreen = root.querySelector('#ajax-full-screen');
   var full = root.querySelector('#ajax-full-result');
   var part = root.querySelector('#ajax-part-result');
   root.querySelector('#ajax-full-button').addEventListener('click', function () {
-    count += 1;
-    full.textContent = '検索結果：りんご（' + count + '回目）';
+    fullCount += 1;
+    fullScreen.classList.remove('ajax-full-refresh');
+    void fullScreen.offsetWidth;
+    fullScreen.classList.add('ajax-full-refresh');
+    full.textContent = '検索結果：りんご（' + fullCount + '回目）';
     full.classList.add('ajax-updated');
-    root.querySelector('#ajax-full-status').textContent = 'ページ全体を読み直す場合の表示を再現しました。';
+    root.querySelector('#ajax-full-status').textContent = '画面の見出し・検索欄・結果欄をまとめて再表示するイメージです。';
   });
   root.querySelector('#ajax-part-button').addEventListener('click', function () {
-    count += 1;
-    part.textContent = '検索結果：りんご（' + count + '回目）';
+    partCount += 1;
+    part.classList.remove('ajax-part-refresh');
+    void part.offsetWidth;
+    part.classList.add('ajax-part-refresh');
+    part.textContent = '検索結果：りんご（' + partCount + '回目）';
     part.classList.add('ajax-updated');
-    root.querySelector('#ajax-part-status').textContent = '検索結果だけ変更。見出し・検索欄はそのままです。';
+    root.querySelector('#ajax-part-status').textContent = '結果欄だけ変化。見出し・検索欄は変わりません。';
   });
 }());
 </script>
 
-**見るポイント：** 左はページ全体を読み直す方式、右は検索結果だけを書き換える方式です。ボタンを押して違いを確認してください。
+**見るポイント：** ①は画面全体が一度薄くなって再表示され、②は結果欄だけが変化します。スマートフォンでは上下に並ぶ2つのボタンを順に押して比べてください。
 
 ※これは表示の違いを示す**疑似デモ**です。実際のサーバ通信やページ再読み込みは行っていません。AjaxではJavaScriptからHTTP要求を送信し、受け取ったデータで必要な箇所を更新します。
 
