@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 420
 date: 2026-08-31
-last_modified_at: 2026-08-31
+last_modified_at: 2026-10-11
 ---
 
 ## まず結論
@@ -59,6 +59,69 @@ Ajaxでは、必要なデータだけをサーバとやり取りし、画面の�
 たとえば、検索欄へ文字を入力したときに候補が自動表示される処理をイメージすると分かりやすいです。
 
 ページ全体を開き直さなくても、候補部分だけが変わります。
+
+<style>
+.ajax-compare { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:1rem 0; }
+.ajax-panel { border:1px solid #cbd5e1;border-radius:10px;padding:12px;min-width:0; }
+.ajax-panel h3 {font-size:1rem;margin:0 0 10px;}
+.ajax-screen {border:2px solid #94a3b8;border-radius:7px;padding:10px;background:#f8fafc;min-height:120px;}
+.ajax-screen .ajax-head {font-weight:700;border-bottom:1px solid #cbd5e1;padding-bottom:5px;}
+.ajax-screen .ajax-fixed {font-size:.85rem;margin:9px 0;}
+.ajax-screen .ajax-result {background:#dbeafe;border-radius:5px;padding:9px;font-weight:600;min-height:44px;}
+.ajax-panel button {margin-top:10px;padding:9px 12px;border:1px solid #64748b;border-radius:7px;background:#f1f5f9;color:#172033;cursor:pointer;width:100%;}
+.ajax-panel button:focus-visible {outline:3px solid #2563eb;outline-offset:2px;}
+.ajax-status {font-size:.85rem;min-height:3em;margin-top:8px;}
+.ajax-updated {background:#dcfce7!important;}
+@media(max-width:560px){.ajax-compare{grid-template-columns:1fr;}}
+</style>
+
+<div class="ajax-compare" id="ajax-compare-demo">
+  <div class="ajax-panel">
+    <h3>① ページ全体を再読み込みする例</h3>
+    <div class="ajax-screen" aria-label="ページ全体の更新例">
+      <div class="ajax-head">商品検索</div>
+      <div class="ajax-fixed">検索欄：りんご</div>
+      <div class="ajax-result" id="ajax-full-result">検索結果：未取得</div>
+    </div>
+    <button type="button" id="ajax-full-button">全体を更新</button>
+    <div class="ajax-status" id="ajax-full-status" aria-live="polite">画面全体を作り直すイメージです。</div>
+  </div>
+  <div class="ajax-panel">
+    <h3>② Ajaxによる部分更新の例</h3>
+    <div class="ajax-screen" aria-label="部分更新例">
+      <div class="ajax-head">商品検索</div>
+      <div class="ajax-fixed">検索欄：りんご</div>
+      <div class="ajax-result" id="ajax-part-result">検索結果：未取得</div>
+    </div>
+    <button type="button" id="ajax-part-button">結果だけ更新</button>
+    <div class="ajax-status" id="ajax-part-status" aria-live="polite">見出しと検索欄はそのままです。</div>
+  </div>
+</div>
+<script>
+(function () {
+  var root = document.getElementById('ajax-compare-demo');
+  if (!root) return;
+  var count = 0;
+  var full = root.querySelector('#ajax-full-result');
+  var part = root.querySelector('#ajax-part-result');
+  root.querySelector('#ajax-full-button').addEventListener('click', function () {
+    count += 1;
+    full.textContent = '検索結果：りんご（' + count + '回目）';
+    full.classList.add('ajax-updated');
+    root.querySelector('#ajax-full-status').textContent = 'ページ全体を読み直す場合の表示を再現しました。';
+  });
+  root.querySelector('#ajax-part-button').addEventListener('click', function () {
+    count += 1;
+    part.textContent = '検索結果：りんご（' + count + '回目）';
+    part.classList.add('ajax-updated');
+    root.querySelector('#ajax-part-status').textContent = '検索結果だけ変更。見出し・検索欄はそのままです。';
+  });
+}());
+</script>
+
+**見るポイント：** 左はページ全体を読み直す方式、右は検索結果だけを書き換える方式です。ボタンを押して違いを確認してください。
+
+※これは表示の違いを示す**疑似デモ**です。実際のサーバ通信やページ再読み込みは行っていません。AjaxではJavaScriptからHTTP要求を送信し、受け取ったデータで必要な箇所を更新します。
 
 ## 定義・仕組み
 
