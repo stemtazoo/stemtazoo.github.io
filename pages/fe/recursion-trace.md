@@ -8,7 +8,7 @@ fe_section: 科目B対策
 fe_subsection: トレース
 fe_order: 71
 date: 2026-10-09
-last_modified_at: 2026-10-09
+last_modified_at: 2026-10-11
 ---
 
 ## まず結論
@@ -103,6 +103,59 @@ JavaScriptを使えない場合は、以下の静的なトレース表でも同�
 | 5 | f(2) が 2 × 1 = 2 を返す | f(3) |
 | 6 | f(3) が 3 × 2 = 6 を返す | 空 |
 
+### 応用：3つのスタックを再帰で移す
+
+次は、**データ用スタック A・B・C** と **再帰の呼び出しスタック** を区別する練習です。これは説明用のオリジナル例で、各スタックの右端を取り出し口とします。
+
+```text
+初期値：A = [1, 2, 3]、B = [1, 2, 3]、C = [1, 2, 3]
+
+f():
+  Aが空なら何もしない
+  そうでなければ
+    AからpopしてCへpush
+    f()を呼ぶ
+    CからpopしてBへpush
+```
+
+**見るポイント：** 再帰呼び出しの**前**は A → C、再帰呼び出しの**後**は C → B です。「次へ」を押し、戻り処理がどの呼び出しから始まるかを確認してください。
+
+<div class="fe-learning-demo fe-recursion-trace" data-fe-three-stacks>
+  <p class="fe-learning-demo__title">A・B・Cと再帰の行き・戻り</p>
+  <p data-three-stacks-phase role="status" aria-live="polite">開始前です。</p>
+  <div class="fe-recursion-trace__layout">
+    <div>
+      <p class="fe-recursion-trace__heading">① データ用スタック（右端が一番上）</p>
+      <div data-three-stacks-data></div>
+    </div>
+    <div>
+      <p class="fe-recursion-trace__heading">② 呼び出しスタック（下が最新）</p>
+      <div data-three-stacks-calls></div>
+    </div>
+  </div>
+  <div class="fe-learning-demo__controls">
+    <button type="button" class="fe-learning-demo__button" data-three-stacks-prev>1ステップ戻る</button>
+    <button type="button" class="fe-learning-demo__button" data-three-stacks-next>次のステップ →</button>
+    <button type="button" class="fe-learning-demo__button" data-three-stacks-reset>最初から</button>
+  </div>
+  <p data-three-stacks-message class="fe-recursion-trace__message"></p>
+</div>
+
+JavaScriptが無効な場合も、次の表で確認できます。
+
+| 段階 | A | B | C | 実行内容 |
+|---|---|---|---|---|
+| 開始 | [1,2,3] | [1,2,3] | [1,2,3] | 初期状態 |
+| 行き① | [1,2] | [1,2,3] | [1,2,3,3] | 3をCへ |
+| 行き② | [1] | [1,2,3] | [1,2,3,3,2] | 2をCへ |
+| 行き③ | [] | [1,2,3] | [1,2,3,3,2,1] | 1をCへ |
+| 終了条件 | [] | [1,2,3] | [1,2,3,3,2,1] | Aが空 |
+| 戻り③ | [] | [1,2,3,1] | [1,2,3,3,2] | 1をBへ |
+| 戻り② | [] | [1,2,3,1,2] | [1,2,3,3] | 2をBへ |
+| 戻り① | [] | [1,2,3,1,2,3] | [1,2,3] | 3をBへ |
+
+最初にAから取り出す順番は **3 → 2 → 1** ですが、再帰から戻るときにBへ入れる順番は **1 → 2 → 3** です。Bの最終状態は **[1,2,3,1,2,3]** になります。
+
 ## よくある誤解・混同
 
 | 誤解 | 正しい見方 |
@@ -124,5 +177,7 @@ JavaScriptを使えない場合は、以下の静的なトレース表でも同�
 
 <link rel="stylesheet" href="{{ '/assets/css/fe-recursion-trace.css' | relative_url }}?v=20261009-spacing2">
 <script src="{{ '/assets/js/fe-recursion-trace.js' | relative_url }}" defer></script>
+
+<script src="{{ '/assets/js/fe-three-stacks-trace.js' | relative_url }}" defer></script>
 
 {% include fe_article_footer.html %}
