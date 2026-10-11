@@ -1250,3 +1250,34 @@
     font-size: 0.85rem;
   }
 }
+
+/* Article heading hierarchy: understated, mobile-friendly accents.
+   Scope to article prose so portal cards and custom study widgets retain their styling. */
+.post .post-content .pagefind-content > h2 {
+  margin: 2.4rem 0 1.2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #d6e0e6;
+  color: #083c5a;
+  line-height: 1.45;
+}
+
+.post .post-content .pagefind-content > h3 {
+  margin: 2rem 0 1rem;
+  padding: 0.15rem 0 0.15rem 0.8rem;
+  border: 0;
+  border-left: 4px solid #3c788a;
+  color: #083c5a;
+  line-height: 1.5;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.post .post-content .pagefind-content > h4 {
+  margin: 1.6rem 0 0.7rem;
+  padding: 0;
+  border: 0;
+  color: #254b60;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
