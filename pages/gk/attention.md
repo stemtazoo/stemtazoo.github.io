@@ -68,6 +68,19 @@ Attentionだからといって、必ず系列全体を自由に参照するわ�
 
 一方、BERT系のEncoderでは、基本的に左右の文脈を利用します。
 
+### 操作して確認：どの単語に注目する？
+
+Queryにする単語を選ぶと、各単語への**参照重み**が変わります。数値は仕組みを理解するための例示で、実際のモデルが計算した値ではありません。
+
+<link rel="stylesheet" href="{{ '/assets/css/gk-interactive-pilot.css' | relative_url }}">
+<div class="gk-pilot" data-gk-attention>
+  <label>Queryにする単語<select aria-label="Queryにする単語"><option value="0">昨日</option><option value="1">買った</option><option value="2">赤い</option><option value="3" selected>車</option></select></label>
+  <div data-weights aria-label="単語ごとの参照重み"><p>昨日 5% ／ 買った 10% ／ 赤い 65% ／ 車 20%</p></div>
+  <p class="gk-pilot-output" data-summary aria-live="polite">QとKから重みを求め、Vを重み付きで集約します。</p>
+  <p class="gk-pilot-note">重みは合計100%。Self-Attentionでは同じ系列からQ・K・Vを作ります。マスクがあれば参照できる範囲は制限されます。</p>
+</div>
+<script defer src="{{ '/assets/js/gk-attention-demo.js' | relative_url }}"></script>
+
 ## いつ使う？（得意・不得意）
 
 Attentionは、
