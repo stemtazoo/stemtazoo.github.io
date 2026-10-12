@@ -906,3 +906,18 @@
 .fe-address-demo__explanation{margin:.8rem 0 0}
 .fe-address-demo .fe-learning-demo__button{min-height:44px}
 @media(max-width:480px){.fe-address-demo__inputs{gap:.3rem}.fe-address-demo__value{padding:.65rem .2rem}.fe-address-demo__value span{font-size:.75rem}.fe-address-demo__value strong{font-size:1.2rem}}
+
+
+/* Nash equilibrium: best-response comparison */
+.fe-nash-demo__scroll{max-width:100%;overflow-x:auto}
+.fe-nash-demo__table{border-collapse:collapse;width:100%;min-width:285px;text-align:center}
+.fe-nash-demo__table caption{text-align:left;font-size:.86rem;margin-bottom:.4rem}
+.fe-nash-demo__table th,.fe-nash-demo__table td{border:1px solid #b8cbd3;padding:.75rem .35rem}
+.fe-nash-demo__table th{background:rgba(11,111,174,.07)}
+.fe-nash-demo__table td{transition:background-color .15s ease}
+.fe-nash-demo__table td.is-best-a{background:rgba(80,132,170,.12)}
+.fe-nash-demo__table td.is-best-b{box-shadow:inset 0 0 0 2px #8a9b65}
+.fe-nash-demo__table td.is-equilibrium{background:rgba(73,134,109,.2);box-shadow:inset 0 0 0 2px #4f846c}
+.fe-nash-demo__table td small{display:block;min-height:1.2em;font-size:.75rem;margin-top:.3rem}
+.fe-nash-demo__status{border-radius:8px;background:rgba(11,111,174,.07);padding:.75rem;margin:.8rem 0}
+.fe-nash-demo .fe-learning-demo__button{min-height:44px}
