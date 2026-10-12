@@ -71,6 +71,18 @@ F1-score → Precision と Recall のバランス
 
 ただし、**すべての評価指標が1つの混同行列だけから求まるわけではありません**。例えばROC-AUCは、しきい値を動かしたときの複数の結果を使って評価します。
 
+### 操作して確認：誤検知と見逃しで指標はどう変わる？
+
+数値を変えて、**FP（誤検知）とFN（見逃し）**がどの評価指標に影響するか確認しましょう。陽性は「異常」、陰性は「正常」の例です。
+
+<link rel="stylesheet" href="{{ '/assets/css/gk-interactive-pilot.css' | relative_url }}">
+<div class="gk-pilot" data-gk-matrix>
+  <table class="gk-matrix-table"><caption>実際と予測の組合せ</caption><thead><tr><th scope="col">実際＼予測</th><th scope="col">陽性</th><th scope="col">陰性</th></tr></thead><tbody><tr><th scope="row">陽性</th><td><label>TP 正しく検出<input data-tp type="number" min="0" max="999" value="8"></label></td><td><label>FN 見逃し<input data-fn type="number" min="0" max="999" value="2"></label></td></tr><tr><th scope="row">陰性</th><td><label>FP 誤検知<input data-fp type="number" min="0" max="999" value="2"></label></td><td><label>TN 正しく正常<input data-tn type="number" min="0" max="999" value="88"></label></td></tr></tbody></table>
+  <p class="gk-pilot-output" data-results aria-live="polite">Precision 80.0% ／ Recall 80.0% ／ Accuracy 96.0% ／ F1 80.0%</p>
+  <p class="gk-pilot-note">Precision = TP/(TP+FP)、Recall = TP/(TP+FN)。分母が0の場合は「—」と表示します。</p>
+</div>
+<script defer src="{{ '/assets/js/gk-confusion-demo.js' | relative_url }}"></script>
+
 ## いつ使う？（得意・不得意）
 
 ### 得意なこと
