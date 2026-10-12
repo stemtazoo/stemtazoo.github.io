@@ -35,14 +35,14 @@ G検定では、
 
 ベイズの定理は、
 
-**P(H|D) = P(D|H) P(H) / P(D)**
+<div class="gk-formula" role="math" aria-label="P(H given D) equals P(D given H) times P(H), divided by P(D)" style="max-width:100%;overflow-x:auto;margin:1rem 0;padding:.7rem .9rem;border-left:3px solid #789aa4;background:rgba(120,154,164,.08);font-weight:600;">P(H&#124;D) = P(D&#124;H) × P(H) / P(D)</div>
 
 です。
 
-- P(H) → **事前確率**
-- P(D|H) → **尤度**
-- P(D) → **周辺尤度・正規化項**
-- P(H|D) → **事後確率**
+- `P(H)` → **事前確率**
+- `P(D|H)` → **尤度**
+- `P(D)` → **周辺尤度・正規化項**
+- `P(H|D)` → **事後確率**
 
 比例関係だけを見ると、
 
