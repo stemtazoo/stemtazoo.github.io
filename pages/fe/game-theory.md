@@ -8,7 +8,7 @@ fe_section: ストラテジ系
 fe_subsection: 経営戦略
 fe_order: 129
 date: 2026-08-12
-last_modified_at: 2026-09-20
+last_modified_at: 2026-10-12
 ---
 
 ## まず結論
@@ -84,7 +84,50 @@ last_modified_at: 2026-09-20
 
 MIT OpenCourseWareでも、ナッシュ均衡を、各プレイヤーが他のプレイヤーの選択に対する最適反応を選んでおり、単独で戦略を変更しても得をしない状態として説明しています。
 
-FE試験では、まず複雑な計算よりも、ゲーム理論がどのような場面に向くのかを見分けられることが重要です。
+FE試験では、ゲーム理論の用途を見分けるだけでなく、**利得表から各社の最適反応を調べる**ことも大切です。
+
+### 利得表からナッシュ均衡を求める手順
+
+2社がそれぞれ2種類の戦略を選ぶ例を考えます。各マスの**左の数値がA社、右の数値がB社の利得**です。数値が大きいほど、その会社にとって有利とします。
+
+| A社＼B社 | b1 | b2 |
+|---|---|---|
+| a1 | 40, 20 | 50, 30 |
+| a2 | 30, 10 | 25, 25 |
+
+1. **A社の最適反応を探す**：B社がb1なら左の数字40と30を**縦に**比べ、a1を選びます。B社がb2なら50と25を比べ、a1を選びます。
+2. **B社の最適反応を探す**：A社がa1なら右の数字20と30を**横に**比べ、b2を選びます。A社がa2なら10と25を比べ、b2を選びます。
+3. **両方の最適反応が重なるマス**を探します。この表では**（a1, b2）＝（50, 30）**がナッシュ均衡です。
+
+つまり、**A社は縦方向に左側の数値、B社は横方向に右側の数値**を比較するのが判断のコツです。表全体で最大の数字を探すのではありません。
+
+<link rel="stylesheet" href="{{ '/assets/css/fe-visualizer.css' | relative_url }}">
+
+<div class="fe-learning-demo fe-nash-demo" data-fe-nash-demo>
+  <p class="fe-learning-demo__title">触って確認：ナッシュ均衡はどのマス？</p>
+  <p class="fe-learning-demo__lead">A社・B社のボタンを押すと、それぞれにとって相手の戦略別に最適なマスが強調されます。</p>
+  <div class="fe-learning-demo__controls" role="group" aria-label="最適反応の表示切替">
+    <button type="button" class="fe-learning-demo__button" data-nash-view="a" aria-pressed="false">A社の最適反応</button>
+    <button type="button" class="fe-learning-demo__button" data-nash-view="b" aria-pressed="false">B社の最適反応</button>
+    <button type="button" class="fe-learning-demo__button" data-nash-view="both" aria-pressed="true">両方を表示</button>
+  </div>
+  <div class="fe-nash-demo__scroll">
+    <table class="fe-nash-demo__table">
+      <caption>利得表（左：A社、右：B社）</caption>
+      <thead><tr><th scope="col">A社＼B社</th><th scope="col">b1</th><th scope="col">b2</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">a1</th><td data-nash-cell="a1b1" data-best-a="true" data-best-b="false"><span>40, 20</span><small data-nash-marker></small></td><td data-nash-cell="a1b2" data-best-a="true" data-best-b="true"><span>50, 30</span><small data-nash-marker>★ ナッシュ均衡</small></td></tr>
+        <tr><th scope="row">a2</th><td data-nash-cell="a2b1" data-best-a="false" data-best-b="false"><span>30, 10</span><small data-nash-marker></small></td><td data-nash-cell="a2b2" data-best-a="false" data-best-b="true"><span>25, 25</span><small data-nash-marker></small></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="fe-nash-demo__status" data-nash-status aria-live="polite">両社の最適反応が重なる（a1, b2）がナッシュ均衡です。</p>
+  <p class="fe-learning-demo__hint">見るポイント：A社は各列で左の数値を比較し、B社は各行で右の数値を比較します。</p>
+</div>
+
+<script src="{{ '/assets/js/fe-visualizer.js' | relative_url }}" defer></script>
+
+**注意：** このように1つの戦略だけを選ぶ場合を「純粋戦略」といいます。一般には純粋戦略のナッシュ均衡が複数ある場合や、存在しない場合もあります。また同点なら、最適反応が複数になることもあります。
 
 ### 1次情報・大学講義資料
 
@@ -128,7 +171,7 @@ FE対策では、これらの理論を深く証明する必要はありません
 市場参入
 ```
 
-### 試験中の判断手順
+### ナッシュ均衡を選択肢から判断する\n\n利得表の問題なら、**A社の最大値を各列で、B社の最大値を各行で探し、印が重なる場所**を選びます。各社の数値を足した合計が最大のマスを選ぶわけではありません。\n\n### 試験中の判断手順
 
 ```text
 相手も意思決定するか？
@@ -240,7 +283,7 @@ FE対策では、これらの理論を深く証明する必要はありません
 
 入場ゲート数や受付窓口数のような問題では、競争相手の戦略ではなく待ち時間を扱うので、待ち行列理論を考えます。
 
-### 一番利益が大きい戦略を単独で選べばよい
+### 利得の合計が最大ならナッシュ均衡？\n\nそうとは限りません。ナッシュ均衡は**各プレイヤーが相手の選択に対して自分だけ変更しても有利にならない**組合せです。合計値の最大化とは別の条件です。\n\n### 一番利益が大きい戦略を単独で選べばよい
 
 ゲーム理論では、相手の選択によって利益が変わります。
 
@@ -252,6 +295,6 @@ FE対策では、これらの理論を深く証明する必要はありません
 - 「競争相手」「価格競争」「交渉」「市場参入」はゲーム理論のヒント
 - 待ち時間や混雑は待ち行列理論、重要品目の重点管理はABC分析、将来の売上は需要予測と切り分ける
 - 試験では「相手も意思決定するか？」を最初に確認する
-- ゲーム理論の中心は、他者との相互作用を考えた意思決定
+- ナッシュ均衡は**各社の最適反応が重なるマス**。A社は縦に左の数値、B社は横に右の数値を比較する\n- ゲーム理論の中心は、他者との相互作用を考えた意思決定
 
 {% include fe_article_footer.html %}
