@@ -955,4 +955,34 @@ document.addEventListener("DOMContentLoaded", () => {
     render("index");
   });
 
+
+  // Nash equilibrium: compare each player's best response to the other player's choice.
+  document.querySelectorAll("[data-fe-nash-demo]").forEach((demo) => {
+    const buttons = Array.from(demo.querySelectorAll("[data-nash-view]"));
+    const cells = Array.from(demo.querySelectorAll("[data-nash-cell]"));
+    const status = demo.querySelector("[data-nash-status]");
+    const messages = {
+      a: "A社：B社がb1でもb2でも、左の数値が大きいa1を選びます（縦に比較）。",
+      b: "B社：A社がa1でもa2でも、右の数値が大きいb2を選びます（横に比較）。",
+      both: "両社の最適反応が重なる（a1, b2）がナッシュ均衡です。"
+    };
+    function render(view) {
+      if (!Object.prototype.hasOwnProperty.call(messages, view)) return;
+      cells.forEach((cell) => {
+        const bestA = cell.dataset.bestA === "true";
+        const bestB = cell.dataset.bestB === "true";
+        const equilibrium = bestA && bestB;
+        cell.classList.toggle("is-best-a", (view === "a" || view === "both") && bestA);
+        cell.classList.toggle("is-best-b", (view === "b" || view === "both") && bestB);
+        cell.classList.toggle("is-equilibrium", view === "both" && equilibrium);
+        const marker = cell.querySelector("[data-nash-marker]");
+        if (marker) marker.textContent = view === "a" && bestA ? "A社の最適反応" : view === "b" && bestB ? "B社の最適反応" : view === "both" && equilibrium ? "★ ナッシュ均衡" : "";
+      });
+      status.textContent = messages[view];
+      buttons.forEach((button) => button.setAttribute("aria-pressed", String(button.dataset.nashView === view)));
+    }
+    buttons.forEach((button) => button.addEventListener("click", () => render(button.dataset.nashView)));
+    render("both");
+  });
+
 });
