@@ -50,6 +50,20 @@ G検定では、
 
 と整理できます。
 
+### 操作して確認：陽性なら病気の可能性は高い？
+
+病気の割合（事前確率）、感度、特異度を変えると、陽性だった人が本当に病気である確率（事後確率）が変わります。人数は1000人に換算した期待値です。
+
+<link rel="stylesheet" href="{{ '/assets/css/gk-interactive-pilot.css' | relative_url }}">
+<div class="gk-pilot" data-gk-bayes>
+<label class="gk-demo-slider"><span>病気の割合</span><input type="range" data-prior data-prior-field="prior" min="1" max="50" step="1" value="1"><output data-value-prior>1%</output></label>
+<label class="gk-demo-slider"><span>感度</span><input type="range" data-sensitivity data-sensitivity-field="sensitivity" min="50" max="100" step="1" value="90"><output data-value-sensitivity>90%</output></label>
+<label class="gk-demo-slider"><span>特異度</span><input type="range" data-specificity data-specificity-field="specificity" min="50" max="100" step="1" value="90"><output data-value-specificity>90%</output></label>
+<p class="gk-demo-output" data-result aria-live="polite">値を変更すると事後確率が更新されます。</p>
+<p class="gk-pilot-note">感度＝病気の人が陽性になる割合。特異度＝病気でない人が陰性になる割合。陽性後の確率とは異なります。</p>
+</div>
+<script defer src="{{ '/assets/js/gk-bayes-demo.js' | relative_url }}"></script>
+
 ## いつ使う？（得意・不得意）
 
 - [ナイーブベイズ](/gk/naive-bayes/)

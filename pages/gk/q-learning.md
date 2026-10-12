@@ -38,6 +38,18 @@ Q学習では、状態と行動の組み合わせの価値であるQ値を学び
 
 探索にはε-greedyなどを使えます。探索中にランダム行動を取っても、更新目標は最大Q値を使えます。
 
+### 操作して確認：Q学習とSARSAの違い
+
+現在のQ値を2、学習率を0.5、割引率を0.9として比較します。Q学習は次状態の**最大Q値**、SARSAは**実際に選んだ次行動のQ値**を使います。
+
+<link rel="stylesheet" href="{{ '/assets/css/gk-interactive-pilot.css' | relative_url }}">
+<div class="gk-pilot" data-gk-qlearning>
+<div class="gk-pilot-controls"><label>報酬 r <input class="gk-demo-number" type="number" data-reward value="1" step="1"></label><label>次行動AのQ値 <input class="gk-demo-number" type="number" data-nextA value="8" step="1"></label><label>次行動BのQ値 <input class="gk-demo-number" type="number" data-nextB value="3" step="1"></label><label>実際に選んだ次行動 <select data-chosen><option value="0">A</option><option value="1" selected>B</option></select></label><label>学習率 α <input class="gk-demo-number" type="number" data-alpha value="0.5" min="0" max="1" step="0.1"></label><label>割引率 γ <input class="gk-demo-number" type="number" data-gamma value="0.9" min="0" max="1" step="0.1"></label></div>
+<p class="gk-demo-output" data-result aria-live="polite">Q学習とSARSAの更新後のQ値を比較します。</p>
+<p class="gk-pilot-note">両者の更新式は「現在のQ値 + α ×（目標値 − 現在のQ値）」。次状態の値をどう選ぶかが違います。</p>
+</div>
+<script defer src="{{ '/assets/js/gk-qlearning-demo.js' | relative_url }}"></script>
+
 ## いつ使う？（得意・不得意）
 
 ### 向いている場面
