@@ -54,6 +54,21 @@ LSTMは、過去情報について、
 
 この加算的な情報経路とゲート制御により、単純RNNより長期依存を学習しやすくなります。
 
+### 操作して確認：3つのゲートの役割
+
+前のセル状態を0.60とする単純化した例です。ゲートの値を動かすと、保持・追加・出力の違いが見えます。実際のLSTMではゲート値は入力などから学習済みの重みを用いて計算されます。
+
+<link rel="stylesheet" href="{{ '/assets/css/gk-interactive-pilot.css' | relative_url }}">
+<div class="gk-pilot" data-gk-lstm>
+<label class="gk-demo-slider"><span>忘却ゲート</span><input type="range" data-forget data-forget-field="forget" min="0" max="100" step="1" value="80"><output data-value-forget>80%</output></label>
+<label class="gk-demo-slider"><span>入力ゲート</span><input type="range" data-input data-input-field="input" min="0" max="100" step="1" value="50"><output data-value-input>50%</output></label>
+<label class="gk-demo-slider"><span>候補情報</span><input type="range" data-candidate data-candidate-field="candidate" min="0" max="100" step="1" value="40"><output data-value-candidate>40%</output></label>
+<label class="gk-demo-slider"><span>出力ゲート</span><input type="range" data-output data-output-field="output" min="0" max="100" step="1" value="70"><output data-value-output>70%</output></label>
+<p class="gk-demo-output" data-result aria-live="polite">ゲートを動かすとセル状態と出力が変わります。</p>
+<p class="gk-pilot-note">忘却＝前の情報を残す割合、入力＝候補情報を追加する割合、出力＝セル状態から外へ出す割合。候補情報は理解しやすいよう正の値だけを使用しています。</p>
+</div>
+<script defer src="{{ '/assets/js/gk-lstm-demo.js' | relative_url }}"></script>
+
 ## いつ使う？（得意・不得意）
 
 LSTMは、
