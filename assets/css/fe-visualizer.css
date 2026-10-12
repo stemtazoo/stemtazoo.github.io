@@ -891,3 +891,18 @@
 .fe-bi-demo .fe-learning-demo__button{min-height:44px}
 .fe-bi-demo .fe-learning-demo__button[aria-pressed="true"]{background:#e3eff2;border-color:#467b8d;color:#1b4b5a;font-weight:700}
 @media(max-width:400px){.fe-bi-demo__row{grid-template-columns:3.4rem minmax(0,1fr) 4.3rem;gap:.3rem;font-size:.8rem}}
+
+
+/* Addressing mode comparison: index, base, relative */
+.fe-address-demo__inputs{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:.5rem;margin:1rem 0}
+.fe-address-demo__value{border:1px solid #b7cbd4;border-radius:9px;padding:.85rem .5rem;text-align:center;min-width:0}
+.fe-address-demo__value span,.fe-address-demo__result span{display:block;font-size:.85rem}
+.fe-address-demo__value strong{display:block;font-size:1.4rem;font-variant-numeric:tabular-nums;margin-top:.25rem}
+.fe-address-demo__source{background:rgba(11,111,174,.08);border-color:#0b6fae}
+.fe-address-demo__operator{font-size:1.5rem;font-weight:700}
+.fe-address-demo__arrow{text-align:center;font-weight:700;margin:.5rem 0}
+.fe-address-demo__result{border:2px solid #0b6fae;border-radius:10px;text-align:center;padding:.9rem;background:rgba(11,111,174,.07)}
+.fe-address-demo__result strong{display:block;font-size:1.65rem;font-variant-numeric:tabular-nums;margin:.3rem 0}
+.fe-address-demo__explanation{margin:.8rem 0 0}
+.fe-address-demo .fe-learning-demo__button{min-height:44px}
+@media(max-width:480px){.fe-address-demo__inputs{gap:.3rem}.fe-address-demo__value{padding:.65rem .2rem}.fe-address-demo__value span{font-size:.75rem}.fe-address-demo__value strong{font-size:1.2rem}}

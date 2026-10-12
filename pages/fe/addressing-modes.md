@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: コンピュータ構成要素
 fe_order: 40
 date: 2026-07-06
-last_modified_at: 2026-09-30
+last_modified_at: 2026-10-12
 ---
 
 ## まず結論
@@ -144,6 +144,34 @@ last_modified_at: 2026-09-30
 指標・基底・相対のようにアドレス部との足し算はしません。
 
 このテーマは、基本情報技術者試験の「コンピュータ構成要素」やCPUの命令実行と関係する内容です。公式の出題範囲やシラバスは、[IPA：基本情報技術者試験](https://www.ipa.go.jp/shiken/kubun/fe.html) から確認できます。
+
+
+<link rel="stylesheet" href="{{ '/assets/css/fe-visualizer.css' | relative_url }}">
+
+<div class="fe-learning-demo fe-address-demo" data-fe-address-demo>
+  <p class="fe-learning-demo__title">触って比較：どの値を足すと参照先が変わる？</p>
+  <p class="fe-learning-demo__lead">指標・基底・相対を切り替えて、使われるレジスタと有効アドレスの変化を確認しましょう。</p>
+  <div class="fe-learning-demo__controls" role="group" aria-label="アドレス指定方式">
+    <button type="button" class="fe-learning-demo__button" data-address-mode="index" aria-pressed="true">指標</button>
+    <button type="button" class="fe-learning-demo__button" data-address-mode="base" aria-pressed="false">基底</button>
+    <button type="button" class="fe-learning-demo__button" data-address-mode="relative" aria-pressed="false">相対</button>
+  </div>
+  <div class="fe-address-demo__inputs">
+    <div class="fe-address-demo__value"><span>命令のアドレス部</span><strong>100</strong></div>
+    <div class="fe-address-demo__operator" aria-hidden="true">＋</div>
+    <div class="fe-address-demo__value fe-address-demo__source"><span data-address-register>指標レジスタ（R2）</span><strong data-address-offset>50</strong></div>
+  </div>
+  <div class="fe-address-demo__arrow" aria-hidden="true">↓ 加算 ↓</div>
+  <div class="fe-address-demo__result" aria-live="polite" aria-atomic="true">
+    <span>有効アドレス（主記憶の参照先）</span>
+    <strong data-address-result>150番地</strong>
+    <span data-address-formula>100 ＋ 50 ＝ 150</span>
+  </div>
+  <p class="fe-address-demo__explanation" data-address-explanation>指標レジスタR2の値50を加えて、主記憶の150番地を参照します。</p>
+  <p class="fe-learning-demo__hint">見るポイント：3方式とも足し算ですが、何を足しているかが違います。説明用の値は指標50、基底200、プログラムカウンタ400です。</p>
+</div>
+
+<script src="{{ '/assets/js/fe-visualizer.js' | relative_url }}" defer></script>
 
 ## 科目Aでどう出る？
 

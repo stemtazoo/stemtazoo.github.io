@@ -926,4 +926,33 @@ document.addEventListener("DOMContentLoaded", () => {
     render("store");
   });
 
+
+  // Addressing modes: show which register value is added to the instruction field.
+  document.querySelectorAll("[data-fe-address-demo]").forEach((demo) => {
+    const modes = {
+      index: { label: "指標レジスタ（R2）", value: 50, description: "指標レジスタR2の値50を加えて、主記憶の150番地を参照します。" },
+      base: { label: "ベースレジスタ", value: 200, description: "ベースレジスタの値200を基準にして、主記憶の300番地を参照します。" },
+      relative: { label: "プログラムカウンタ", value: 400, description: "プログラムカウンタの値400を基準にして、主記憶の500番地を参照します。" }
+    };
+    const buttons = Array.from(demo.querySelectorAll("[data-address-mode]"));
+    const register = demo.querySelector("[data-address-register]");
+    const offset = demo.querySelector("[data-address-offset]");
+    const result = demo.querySelector("[data-address-result]");
+    const formula = demo.querySelector("[data-address-formula]");
+    const explanation = demo.querySelector("[data-address-explanation]");
+    function render(mode) {
+      const data = modes[mode];
+      if (!data) return;
+      const address = 100 + data.value;
+      register.textContent = data.label;
+      offset.textContent = String(data.value);
+      result.textContent = address + "番地";
+      formula.textContent = "100 ＋ " + data.value + " ＝ " + address;
+      explanation.textContent = data.description;
+      buttons.forEach((button) => button.setAttribute("aria-pressed", String(button.dataset.addressMode === mode)));
+    }
+    buttons.forEach((button) => button.addEventListener("click", () => render(button.dataset.addressMode)));
+    render("index");
+  });
+
 });
