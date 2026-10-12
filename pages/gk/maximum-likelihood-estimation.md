@@ -31,7 +31,7 @@ G検定では、
 
 観測データDとパラメータθについて、
 
-**L(θ) = P(D|θ)**
+<div class="gk-formula" role="math" style="max-width:100%;overflow-x:auto;margin:1rem 0;padding:.7rem .9rem;border-left:3px solid #789aa4;background:rgba(120,154,164,.08);font-weight:600;">L(θ) = P(D&#124;θ)</div>
 
 をθの関数として見たものが尤度です。
 

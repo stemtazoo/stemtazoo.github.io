@@ -36,7 +36,7 @@ last_modified_at: 2026-09-24
 
 離散分布では、
 
-**D_KL(P || Q) = Σ P(x) log(P(x)/Q(x))**
+<div class="gk-formula" role="math" style="max-width:100%;overflow-x:auto;margin:1rem 0;padding:.7rem .9rem;border-left:3px solid #789aa4;background:rgba(120,154,164,.08);font-weight:600;">D_KL(P &#124;&#124; Q) = Σ P(x) log(P(x) / Q(x))</div>
 
 と表します。
 

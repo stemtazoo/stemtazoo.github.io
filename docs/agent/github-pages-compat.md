@@ -81,3 +81,9 @@ These should be treated as actual blockers:
 - `Liquid syntax error`
 - page rendering failures
 - include or layout parsing failures
+
+## Math expressions containing vertical bars
+
+When a mathematical expression includes a vertical bar such as `P(A|B)`, `P(D|θ)`, or `KL(P || Q)`, inspect the rendered Jekyll page. A standalone Markdown line containing pipes can be interpreted as a table or split into cells, especially when the text is wrapped in `**...` bold syntax. Avoid assuming that bold Markdown protects the pipes.
+
+For a standalone formula that must render reliably without MathJax, prefer a simple HTML block with HTML entities `&#124;` for vertical bars, and verify both desktop and mobile rendering. Keep the formula text selectable, accessible, and horizontally scrollable when needed. Inline expressions in prose may use backticks. Do not blindly replace actual Markdown tables, code samples, or all vertical bars. Check the published page after Actions completes.
