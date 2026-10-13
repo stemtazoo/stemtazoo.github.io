@@ -1,14 +1,14 @@
 ---
 layout: page
 title: IPv4とIPv6の違いとは？32ビット・128ビットと表記方法の見分け方【基本情報技術者試験】
-description: IPv4の32ビットとIPv6の128ビットを、同じ尺度の図と表記例で比較します。IPv6での変更点とIPv4にもあるサブネット・プライベートアドレスを切り分け、プレフィックス長、40バイトの基本ヘッダー、IPsecのサポートと実際の暗号化の違いをFE科目A向けに整理します。
+description: IPv4の32ビットとIPv6の128ビットを、同じ尺度の図と表記例で比較します。IPv6のアドレス種別・省略表記・IPv4との対応関係を図解し、サブネットの混同を防ぎ、プレフィックス長、40バイトの基本ヘッダー、IPsecのサポートと実際の暗号化の違いをFE科目A向けに整理します。
 permalink: /fe/ipv4-ipv6/
 tags: [fe, fe-technology, network, ip-address, ipv6]
 fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 100
 date: 2026-09-01
-last_modified_at: 2026-10-03
+last_modified_at: 2026-10-13
 ---
 
 ## まず結論
@@ -144,6 +144,57 @@ IPv6はそのまま書くと長いため、表記を短くするルールがあ�
 ```
 
 このため、IPv6のアドレスを見たときに「8ブロックないからIPv6ではない」と判断しないよう注意します。
+
+### IPv6アドレスの種類を区別する
+
+IPv6のアドレスが**すべてインターネットで使えるグローバルアドレスというわけではありません**。通信できる範囲と用途が異なります。
+
+| 種類 | 代表的な範囲 | 主な用途 |
+|---|---|---|
+| グローバルユニキャスト | `2000::/3`（現在の代表的な割当範囲） | グローバルに経路制御できるユニキャスト通信 |
+| リンクローカル | `fe80::/10` | 同じリンク内の通信。ルータを越えて転送しない |
+| ユニークローカル | `fc00::/7` | 組織内などのローカル通信。通常はグローバルインターネットへ経路広告しない |
+
+以下は用途の違いを表す概念図です。アドレス範囲を網羅する図ではありません。
+
+<div class="fe-learning-demo" role="img" aria-label="グローバルユニキャストは広域での経路制御、リンクローカルは同じリンク内、ユニークローカルは組織内などで使うという違い">
+  <p class="fe-learning-demo__title">IPv6は全部グローバル？ → いいえ</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.75rem">
+    <div style="padding:1rem;border:1px solid #94a3b8;border-radius:.65rem;background:#f8fafc">
+      <strong>グローバル</strong><p>広域ネットワーク</p><small>2000::/3</small>
+    </div>
+    <div style="padding:1rem;border:1px solid #94a3b8;border-radius:.65rem;background:#f8fafc">
+      <strong>リンクローカル</strong><p>同じリンク内</p><small>fe80::/10</small>
+    </div>
+    <div style="padding:1rem;border:1px solid #94a3b8;border-radius:.65rem;background:#f8fafc">
+      <strong>ユニークローカル</strong><p>組織内など</p><small>fc00::/7</small>
+    </div>
+  </div>
+</div>
+
+なお、IPv6にはこれらのほか、複数の宛先に届ける**マルチキャスト**や、複数の機器のうち経路上で選ばれた機器に届ける**エニーキャスト**もあります。
+
+### IPv4とIPv6は必ず1対1で対応する？
+
+**対応しません。** IPv4は32ビット、IPv6は128ビットで、アドレス体系も異なります。IPv6のアドレス空間が大きいからといって、すべてのIPv6アドレスに対応するIPv4アドレスが存在するわけではありません。
+
+IPv4とIPv6を併用・接続するために、デュアルスタックや変換技術などがあります。ただし、これらは**全アドレスが自動的に1対1対応する**という意味ではありません。
+
+### 16進数4文字が16ビットになる理由
+
+16進数1文字は4ビットなので、**4文字 × 4ビット = 16ビット**です。
+
+```text
+2001 : 0db8 : 0000 : 0000 : 0000 : 0000 : 0000 : 0001
+ 16     16     16     16     16     16     16     16  ビット
+                     合計128ビット
+
+省略形：2001:db8::1
+```
+
+`::` は連続するゼロのグループを省略した記法です。**見た目が短くてもアドレス長は128ビット**のままです。
+
+参考：[RFC 4291：IPv6 Addressing Architecture](https://www.rfc-editor.org/rfc/rfc4291.html)、[RFC 4193：Unique Local IPv6 Unicast Addresses](https://www.rfc-editor.org/rfc/rfc4193.html)
 
 ### ネットワーク範囲はプレフィックス長で示す
 
