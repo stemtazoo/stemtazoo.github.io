@@ -921,3 +921,40 @@
 .fe-nash-demo__table td small{display:block;min-height:1.2em;font-size:.75rem;margin-top:.3rem}
 .fe-nash-demo__status{border-radius:8px;background:rgba(11,111,174,.07);padding:.75rem;margin:.8rem 0}
 .fe-nash-demo .fe-learning-demo__button{min-height:44px}
+
+
+/* Linked-list node references: mobile-friendly, no external dependencies. */
+.fe-linked-demo__nodes {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.45rem;
+  margin: 1rem 0;
+}
+.fe-linked-demo__node {
+  border: 1px solid rgba(11, 111, 174, 0.34);
+  border-radius: 8px;
+  padding: 0.6rem 0.25rem;
+  text-align: center;
+  min-width: 0;
+}
+.fe-linked-demo__node strong,
+.fe-linked-demo__node span,
+.fe-linked-demo__node em {
+  display: block;
+  overflow-wrap: anywhere;
+}
+.fe-linked-demo__node span { font-size: 0.76rem; }
+.fe-linked-demo__node em { font-size: 0.8rem; font-style: normal; font-weight: bold; }
+.fe-linked-demo__node.is-prev {
+  background: rgba(11, 111, 174, 0.12);
+  border: 2px solid #0b6fae;
+}
+.fe-linked-demo__node.is-detached {
+  opacity: 0.4;
+  border-style: dashed;
+}
+@media (max-width: 420px) {
+  .fe-linked-demo__nodes { gap: 0.25rem; }
+  .fe-linked-demo__node { padding: 0.45rem 0.15rem; }
+  .fe-linked-demo__node span { font-size: 0.68rem; }
+}

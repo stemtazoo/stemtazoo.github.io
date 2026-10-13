@@ -8,7 +8,7 @@ fe_section: 科目B対策
 fe_subsection: データ構造
 fe_order: 50
 date: 2026-07-13
-last_modified_at: 2026-09-27
+last_modified_at: 2026-10-13
 ---
 
 ## まず結論
@@ -132,6 +132,91 @@ A → X → B → C
 ```
 
 処理のポイントは、データ自体を大きく移動するのではなく、参照先を変更することです。
+
+### 参照をたどる操作と、つなぎ替える操作の違い
+
+科目Bの疑似言語で `prev` が出てきたときは、**配列ではなく、ある一つのノードを指す変数**として考えます。
+
+```text
+listHead → A → B → C → D → 終端
+prev → A
+```
+
+各ノードは値 `val` と、次のノードへの参照 `next` を持つとします。
+
+| 式 | prevがAを指している場合 |
+|---|---|
+| `prev` | Aへの参照 |
+| `prev.next` | Bへの参照 |
+| `prev.next.next` | Cへの参照 |
+
+配列の `data[1]` のように番号で取り出すのではなく、`.next` を一つずつたどります。
+
+```text
+prev ← prev.next
+```
+
+これは **prev自身の参照先をAからBに変える** 操作です。Aのnextは変わらないため、リストのつながりも変わりません。
+
+一方、`prev` がBを指しているとき、
+
+```text
+prev.next ← prev.next.next
+```
+
+は **Bが持つnextをCからDに変更する** 操作です。先頭からは `A → B → D` とたどるため、Cがリストから外れます。これはCのメモリを直接解放する命令とは別です。
+
+<div class="fe-learning-demo" data-fe-linked-demo>
+  <p class="fe-learning-demo__title">図解：prevの移動と、nextの書き換え</p>
+  <p class="fe-learning-demo__lead">見るポイント：同じ「next」が登場しても、左辺の位置によって変わるものが違います。</p>
+  <div class="fe-linked-demo__nodes" data-fe-linked-nodes aria-label="AからDまでの単方向リスト"></div>
+  <div class="fe-learning-demo__controls">
+    <button type="button" class="fe-learning-demo__button" data-fe-linked-move>prev ← prev.next</button>
+    <button type="button" class="fe-learning-demo__button" data-fe-linked-delete>prev.next ← prev.next.next</button>
+    <button type="button" class="fe-learning-demo__button" data-fe-linked-reset>最初から</button>
+  </div>
+  <p class="fe-binary-demo__status" data-fe-linked-status aria-live="polite">prevはAを指しています。まず移動を押してみましょう。</p>
+  <noscript>JavaScriptが無効な場合：prev ← prev.next は変数prevだけを移動します。prev.next ← prev.next.next はprevが指すノードのnextを書き換えます。</noscript>
+</div>
+
+#### Pythonでも確認する
+
+```python
+class Node:
+    def __init__(self, val):
+        self.val = val
+        self.next = None
+
+a, b, c, d = (Node(v) for v in "ABCD")
+a.next, b.next, c.next = b, c, d
+
+prev = a
+prev = prev.next      # prevはBを指す。A→B→C→Dは変わらない
+prev.next = prev.next.next  # Bの次をDに変更する
+print(a.next.next.val)      # D
+```
+
+ここで、`prev = prev.next` は変数の代入、`prev.next = ...` はノードのメンバ変数の変更です。この区別が科目Bのトレースで重要になります。
+
+#### 削除位置までの繰返し
+
+先頭を1番目とし、削除位置を `pos` とする場合、先頭以外の削除では対象の**一つ前**を探します。
+
+```text
+prev ← listHead
+for (iを2からpos－1まで1ずつ増やす)
+    prev ← prev.next
+endfor
+prev.next ← prev.next.next
+```
+
+| pos | 繰返し回数 | 変更前にprevが指すノード |
+|---|---:|---|
+| 2 | 0回 | A |
+| 3 | 1回 | B |
+| 4 | 2回 | C |
+
+`pos = 1` の場合だけは一つ前のノードがないので、`listHead ← listHead.next` として先頭を更新します。なお、末尾を削除するときの右辺は「次の要素がない」状態になります。
 
 削除でも同様です。
 
@@ -274,6 +359,10 @@ box[1]
 
 ## よくある誤解・混同
 
+### 誤解0：prevを配列や、すべての要素を持つ変数だと思う
+
+`prev` はノード一つへの参照です。`prev.next` は配列の次の添字ではなく、ノードが持つ次の参照です。また、`prev ← prev.next` は参照変数の移動、`prev.next ← prev.next.next` はノード間のつながりの変更です。
+
 ### 誤解1：連結リストは添字で直接アクセスできる
 
 基本的にはできません。
@@ -328,6 +417,7 @@ box[1]
 - 単方向は次だけ、双方向は前後をたどれる
 - 配列は添字で直接アクセスしやすい
 - 連結リストは参照の付け替えで挿入・削除しやすい
+- `prev ← prev.next` は変数の参照先の変更、`prev.next ← prev.next.next` はリストのつながりの変更
 - 「データ部＋次の格納先を指すポインタ部」とあれば連結リスト
 - 二つの配列で表す問題では、`box[i]` が値、`next[i]` が次の配列番号
 - **配列番号とリスト上の順番は別物**
