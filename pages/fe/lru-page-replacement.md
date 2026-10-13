@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: コンピュータシステム
 fe_order: 290
 date: 2026-07-02
-last_modified_at: 2026-10-08
+last_modified_at: 2026-10-13
 related_articles:
   - /fe/paging/
   - /fe/fifo-page-replacement/
@@ -200,6 +200,134 @@ LRU
 ここで、ページ2を参照した後に、ページ2を古いままと考えると間違えます。
 
 LRUでは、**ヒットしたページも参照時刻を更新する** のがポイントです。
+
+
+### FIFOとLRUを1ステップずつ比較する
+
+ページ枠が3つで、参照順が \`1, 3, 2, 1, 4, 5, 2, 3, 4, 5\` の場合を追います。**空き枠への初回読み込みはページフォールトですが、ページの置換え回数には含めません。**
+
+<div id="fe-page-replacement-demo" class="fe-pr-demo">
+  <p class="fe-pr-hint">「次へ」で参照を進めると、2方式の違いを同時に確認できます。</p>
+  <div class="fe-pr-sequence" aria-label="ページ参照順"></div>
+  <div class="fe-pr-comparison">
+    <section class="fe-pr-panel" data-method="fifo">
+      <h3>FIFO <small>読み込んだ順</small></h3>
+      <div class="fe-pr-frames"></div>
+      <p class="fe-pr-count"></p>
+      <p class="fe-pr-detail" aria-live="polite"></p>
+    </section>
+    <section class="fe-pr-panel" data-method="lru">
+      <h3>LRU <small>最後に参照した順</small></h3>
+      <div class="fe-pr-frames"></div>
+      <p class="fe-pr-count"></p>
+      <p class="fe-pr-detail" aria-live="polite"></p>
+    </section>
+  </div>
+  <p class="fe-pr-status" role="status" aria-live="polite">開始前：3つのページ枠は空です。</p>
+  <div class="fe-pr-controls">
+    <button type="button" data-action="prev" disabled>戻る</button>
+    <button type="button" data-action="next">次へ</button>
+    <button type="button" data-action="reset">最初から</button>
+  </div>
+  <p class="fe-pr-hint">確認ポイント：4番目の「1」は置換えなし。FIFOは読み込み順を変えず、LRUは「1」を最近使った扱いに更新します。</p>
+</div>
+
+<style>
+.fe-pr-demo{border:1px solid #b9c8d2;border-radius:12px;padding:1rem;margin:1.2rem 0;color:#253541;background:#f9fbfc}
+.fe-pr-hint{font-size:.88rem;line-height:1.65;color:#536574}
+.fe-pr-sequence{display:flex;gap:3px;margin:1rem 0;flex-wrap:wrap}
+.fe-pr-sequence span{min-width:2rem;text-align:center;padding:.35rem .25rem;background:#e9eff2;border-radius:5px;font-variant-numeric:tabular-nums}
+.fe-pr-sequence span.done{background:#dce9e8}
+.fe-pr-sequence span.current{background:#335e78;color:white;font-weight:700}
+.fe-pr-comparison{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem}
+.fe-pr-panel{border:1px solid #ccd7dd;border-radius:8px;background:white;padding:.7rem;min-width:0}
+.fe-pr-panel h3{font-size:1rem;margin:0 0 .7rem}
+.fe-pr-panel h3 small{display:block;font-size:.72rem;font-weight:400;color:#60727d;margin-top:.2rem}
+.fe-pr-frames{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px}
+.fe-pr-frame{background:#eaf0f3;border:1px solid #d3dfe4;border-radius:5px;text-align:center;padding:.6rem .1rem;font-weight:700;font-size:1.15rem}
+.fe-pr-frame.empty{color:#84929a}
+.fe-pr-count{font-size:.9rem;font-weight:700;margin:.7rem 0 .35rem}
+.fe-pr-detail{font-size:.82rem;line-height:1.6;min-height:3em;margin:0}
+.fe-pr-status{padding:.7rem;background:#e9f0f2;border-radius:6px;font-size:.9rem;margin:.8rem 0}
+.fe-pr-controls{display:flex;gap:.5rem;flex-wrap:wrap}
+.fe-pr-controls button{border:1px solid #335e78;border-radius:6px;padding:.5rem .9rem;background:#335e78;color:white;cursor:pointer}
+.fe-pr-controls button[data-action="reset"]{background:white;color:#335e78}
+.fe-pr-controls button:disabled{opacity:.45;cursor:default}
+@media(max-width:380px){.fe-pr-demo{padding:.65rem}.fe-pr-panel{padding:.45rem}.fe-pr-sequence span{min-width:1.55rem;font-size:.85rem}}
+@media(prefers-color-scheme:dark){.fe-pr-demo{background:#19262e;color:#e9f0f3;border-color:#536775}.fe-pr-panel{background:#24333c;border-color:#526571}.fe-pr-frame{background:#334650;border-color:#60717a}.fe-pr-sequence span{background:#334650}.fe-pr-sequence span.done{background:#375650}.fe-pr-sequence span.current{background:#487e9c}.fe-pr-status{background:#304650}.fe-pr-hint,.fe-pr-panel h3 small{color:#bdcbd2}}
+</style>
+<script>
+(function(){
+  function init(){
+    const root=document.getElementById('fe-page-replacement-demo');
+    if(!root || root.dataset.ready) return;
+    root.dataset.ready='1';
+    const sequence=[1,3,2,1,4,5,2,3,4,5];
+    let step=0;
+    function simulate(){
+      const fifo=[null,null,null],lru=[null,null,null],queue=[],last={};
+      let fifoCount=0,lruCount=0;
+      const history=[];
+      sequence.forEach((page,i)=>{
+        const notes={fifo:'',lru:''};
+        if(fifo.includes(page)){
+          notes.fifo='ヒット：読み込み順は更新しません';
+        }else{
+          let slot=fifo.indexOf(null);
+          if(slot!==-1){
+            fifo[slot]=page;queue.push(page);
+            notes.fifo='空き枠へ読み込み（置換えなし）';
+          }else{
+            const victim=queue.shift();
+            slot=fifo.indexOf(victim);
+            fifo[slot]=page;queue.push(page);fifoCount++;
+            notes.fifo=victim+'を追い出し、'+page+'を読み込み';
+          }
+        }
+        if(lru.includes(page)){
+          notes.lru='ヒット：'+page+'の最終参照時刻を更新';
+        }else{
+          let slot=lru.indexOf(null);
+          if(slot!==-1){
+            lru[slot]=page;
+            notes.lru='空き枠へ読み込み（置換えなし）';
+          }else{
+            let victim=lru[0];
+            lru.forEach(p=>{if(last[p]<last[victim])victim=p;});
+            slot=lru.indexOf(victim);
+            lru[slot]=page;lruCount++;
+            notes.lru=victim+'を追い出し、'+page+'を読み込み';
+          }
+        }
+        last[page]=i;
+        history.push({page,fifo:fifo.slice(),lru:lru.slice(),fifoCount,lruCount,notes});
+      });
+      return history;
+    }
+    const history=simulate();
+    function render(){
+      root.querySelector('.fe-pr-sequence').innerHTML=sequence.map((p,i)=>'<span class="'+(i===step-1?'current':i<step?'done':'')+'">'+p+'</span>').join('');
+      ['fifo','lru'].forEach(method=>{
+        const panel=root.querySelector('[data-method="'+method+'"]');
+        const current=step?history[step-1]:null;
+        const frames=current?current[method]:[null,null,null];
+        panel.querySelector('.fe-pr-frames').innerHTML=frames.map(p=>'<div class="fe-pr-frame'+(p===null?' empty':'')+'">'+(p===null?'—':p)+'</div>').join('');
+        panel.querySelector('.fe-pr-count').textContent='置換え：'+(current?current[method+'Count']:0)+'回';
+        panel.querySelector('.fe-pr-detail').textContent=current?current.notes[method]:'まだ参照していません';
+      });
+      root.querySelector('.fe-pr-status').textContent=step===0?'開始前：3つのページ枠は空です。':step===sequence.length?'完了：FIFOは3回、LRUは6回。正解は「イ」です。':'ステップ '+step+' / '+sequence.length+'：ページ'+history[step-1].page+'を参照';
+      root.querySelector('[data-action="prev"]').disabled=step===0;
+      root.querySelector('[data-action="next"]').disabled=step===sequence.length;
+    }
+    root.querySelector('[data-action="prev"]').addEventListener('click',()=>{step=Math.max(0,step-1);render();});
+    root.querySelector('[data-action="next"]').addEventListener('click',()=>{step=Math.min(sequence.length,step+1);render();});
+    root.querySelector('[data-action="reset"]').addEventListener('click',()=>{step=0;render();});
+    render();
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);
+  else init();
+})();
+</script>
 
 ## よくある誤解・混同
 
