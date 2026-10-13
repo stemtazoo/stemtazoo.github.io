@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: コンピュータシステム
 fe_order: 110
 date: 2026-09-30
-last_modified_at: 2026-09-30
+last_modified_at: 2026-10-13
 ---
 
 ## まず結論
@@ -175,6 +175,100 @@ file → command
 ```
 
 試験では厳密な内部実装よりも、**何と何をつないでいるか**を見ると判断しやすくなります。
+
+### パイプとリダイレクトを実行結果で比較
+
+次の例では、まずサンプルログを作ります。UNIX系のシェル（Bashなど）で実行できます。
+
+```bash
+printf 'INFO start\nERROR motor\nINFO stop\nERROR sensor\n' > log.txt
+```
+
+**① パイプ：コマンドの出力を次のコマンドへ渡す**
+
+```bash
+cat log.txt | grep ERROR
+```
+
+出力：
+
+```text
+ERROR motor
+ERROR sensor
+```
+
+`cat` の標準出力が `grep` の標準入力へ流れます。ここでは結果をファイルに保存していません。
+
+**② 出力リダイレクト `>`：ファイルに書き込む**
+
+```bash
+grep ERROR log.txt > errors.txt
+cat errors.txt
+```
+
+出力：
+
+```text
+ERROR motor
+ERROR sensor
+```
+
+`>` は出力先のファイルを新規作成するか、**既存ファイルの内容を上書き**します。
+
+**③ 追記リダイレクト `>>`：既存ファイルの末尾に追加**
+
+```bash
+echo 'ERROR bearing' >> errors.txt
+cat errors.txt
+```
+
+出力：
+
+```text
+ERROR motor
+ERROR sensor
+ERROR bearing
+```
+
+**④ 入力リダイレクト `<`：ファイルを標準入力に渡す**
+
+```bash
+grep ERROR < log.txt
+```
+
+出力：
+
+```text
+ERROR motor
+ERROR sensor
+```
+
+`<` はファイルをコマンドの標準入力に接続します。`grep ERROR log.txt` のようにファイル名を引数で指定する方法とは、入力の渡し方が異なります。
+
+### パイプとリダイレクトを組み合わせる
+
+```bash
+cat log.txt | grep ERROR > errors.txt
+```
+
+<div class="fe-pipe-flow" role="img" aria-label="log.txtからcatへ入力し、パイプでgrepへ渡し、出力リダイレクトでerrors.txtへ保存する流れ">
+  <div class="fe-pipe-node"><strong>cat log.txt</strong><small>ログを読み込む</small></div>
+  <div class="fe-pipe-connector">| →</div>
+  <div class="fe-pipe-node"><strong>grep ERROR</strong><small>ERRORだけ抽出</small></div>
+  <div class="fe-pipe-connector">> →</div>
+  <div class="fe-pipe-node"><strong>errors.txt</strong><small>結果を保存</small></div>
+</div>
+
+**パイプはコマンド間の接続、リダイレクトは入出力先の切替え**です。どちらも一つのコマンド行で使えます。
+
+| 記号 | 役割 | 判断の言葉 |
+|---|---|---|
+| `\|` | 前のコマンドの標準出力を次のコマンドの標準入力へ | **つなぐ** |
+| `>` | 標準出力をファイルへ（上書き） | **保存・上書き** |
+| `>>` | 標準出力をファイル末尾へ | **追記** |
+| `<` | ファイルから標準入力へ | **入力元を切替え** |
+
+※通常の `|` や `>` は標準エラー出力（stderr）を自動では渡しません。エラー出力は別の経路です。
 
 ## どんな場面で使う？
 
