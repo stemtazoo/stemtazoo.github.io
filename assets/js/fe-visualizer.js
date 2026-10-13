@@ -985,4 +985,64 @@ document.addEventListener("DOMContentLoaded", () => {
     render("both");
   });
 
+
+  // Linked-list reference demo: moving prev does not rewrite links.
+  document.querySelectorAll("[data-fe-linked-demo]").forEach((demo) => {
+    const nodes = demo.querySelector("[data-fe-linked-nodes]");
+    const status = demo.querySelector("[data-fe-linked-status]");
+    const move = demo.querySelector("[data-fe-linked-move]");
+    const remove = demo.querySelector("[data-fe-linked-delete]");
+    const resetButton = demo.querySelector("[data-fe-linked-reset]");
+    const labels = ["A", "B", "C", "D"];
+    let prevIndex = 0;
+    let next = [1, 2, 3, -1];
+
+    function render(message) {
+      const reachable = [];
+      let at = 0;
+      while (at !== -1 && !reachable.includes(at)) {
+        reachable.push(at);
+        at = next[at];
+      }
+      nodes.replaceChildren();
+      labels.forEach((label, index) => {
+        const item = document.createElement("div");
+        item.className = "fe-linked-demo__node";
+        if (!reachable.includes(index)) item.classList.add("is-detached");
+        if (prevIndex === index) item.classList.add("is-prev");
+        const value = document.createElement("strong");
+        value.textContent = label;
+        const nextLabel = document.createElement("span");
+        nextLabel.textContent = "next → " + (next[index] < 0 ? "なし" : labels[next[index]]);
+        item.append(value, nextLabel);
+        if (prevIndex === index) {
+          const marker = document.createElement("em");
+          marker.textContent = "← prev";
+          item.append(marker);
+        }
+        nodes.append(item);
+      });
+      if (status) status.textContent = message;
+      move.disabled = next[prevIndex] === -1;
+      remove.disabled = next[prevIndex] === -1;
+    }
+
+    move.addEventListener("click", () => {
+      const from = labels[prevIndex];
+      prevIndex = next[prevIndex];
+      render("prev が " + from + " から " + labels[prevIndex] + " を指すようになりました。next のつながりは変わりません。");
+    });
+    remove.addEventListener("click", () => {
+      const target = next[prevIndex];
+      const after = next[target];
+      next[prevIndex] = after;
+      render(labels[prevIndex] + " の next を " + labels[target] + " から " + (after < 0 ? "なし" : labels[after]) + " に変更。 " + labels[target] + " は先頭からたどれなくなりました。");
+    });
+    resetButton.addEventListener("click", () => {
+      prevIndex = 0;
+      next = [1, 2, 3, -1];
+      render("prev は A を指しています。まず移動を押してみましょう。");
+    });
+    render("prev は A を指しています。まず移動を押してみましょう。");
+  });
 });
