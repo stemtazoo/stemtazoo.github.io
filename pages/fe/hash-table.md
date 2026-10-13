@@ -8,7 +8,7 @@ fe_section: 科目B対策
 fe_subsection: データ構造
 fe_order: 60
 date: 2026-07-30
-last_modified_at: 2026-09-20
+last_modified_at: 2026-10-13
 ---
 
 ## まず結論
@@ -44,6 +44,54 @@ last_modified_at: 2026-09-20
 引き出し番号がすぐに分かれば、先頭から順番に探す必要がありません。
 
 ただし、異なるキーから同じ引き出し番号が求められることがあります。これが衝突です。
+
+### 動かして理解する：キーから格納場所を求める
+
+次の図では、キーを切り替えると `キー mod 10` で求めた格納場所が変わります。**123と133はどちらも場所3**となり、同じ格納先を使おうとすることが分かります。
+
+<div class="fe-learning-demo" id="fe-hash-interactive" aria-label="キーを選んでハッシュ値と格納場所を確認する図解">
+  <p class="fe-learning-demo__title">ハッシュ関数：キー mod 10</p>
+  <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin:.8rem 0">
+    <button type="button" data-hash-key="123" aria-pressed="true">123</button>
+    <button type="button" data-hash-key="124" aria-pressed="false">124</button>
+    <button type="button" data-hash-key="133" aria-pressed="false">133</button>
+  </div>
+  <p aria-live="polite">キー <strong data-hash-current>123</strong> → 10で割った余り <strong data-hash-result>3</strong></p>
+  <div data-hash-slots style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.35rem;margin:.75rem 0">
+    <span>0</span><span>1</span><span>2</span><strong style="background:#d8e9e2;padding:.5rem;border-radius:.35rem;text-align:center">3 ←</strong><span>4</span>
+    <span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+  </div>
+  <p data-hash-note>123と133は同じ場所3になります。異なるキーが同じ場所を求めることを「衝突」といいます。</p>
+</div>
+<script>
+(function () {
+  const root = document.getElementById('fe-hash-interactive');
+  if (!root) return;
+  const buttons = root.querySelectorAll('[data-hash-key]');
+  const slots = root.querySelector('[data-hash-slots]');
+  const current = root.querySelector('[data-hash-current]');
+  const result = root.querySelector('[data-hash-result]');
+  const note = root.querySelector('[data-hash-note]');
+  function update(key) {
+    const index = key % 10;
+    current.textContent = String(key);
+    result.textContent = String(index);
+    slots.replaceChildren();
+    for (let i = 0; i < 10; i++) {
+      const cell = document.createElement(i === index ? 'strong' : 'span');
+      cell.textContent = String(i) + (i === index ? ' ←' : '');
+      cell.style.cssText = 'padding:.5rem .15rem;text-align:center;border:1px solid #94a3b8;border-radius:.35rem;' + (i === index ? 'background:#d8e9e2;color:#173f35;' : '');
+      slots.appendChild(cell);
+    }
+    buttons.forEach(button => button.setAttribute('aria-pressed', String(Number(button.dataset.hashKey) === key)));
+    note.textContent = index === 3
+      ? '123と133はどちらも場所3です。異なるキーが同じ場所を求めることを「衝突」といいます。'
+      : 'キーを変えると格納場所も変わります。123と133を選んで衝突を確認しましょう。';
+  }
+  buttons.forEach(button => button.addEventListener('click', () => update(Number(button.dataset.hashKey))));
+  update(123);
+})();
+</script>
 
 ## 定義・仕組み
 
@@ -168,6 +216,18 @@ last_modified_at: 2026-09-20
 このとき、配列の添字、繰返し回数、表の末尾に達した後の戻り方を追うことがポイントです。
 
 探索方法との違いも整理しておきましょう。[線形探索](/fe/linear-search/)は先頭から順番に探し、[二分探索](/fe/binary-search/)は整列済みデータを半分ずつ絞り込みます。ハッシュ法は、キーから格納先を直接計算する考え方です。
+
+### 探索方法を選択肢から切り分ける
+
+| 探索方法 | 何を手掛かりに探す？ | 代表的な計算量 |
+|---|---|---|
+| 線形探索 | 先頭から順番に比較 | O(n) |
+| 二分探索 | 整列済みの範囲を半分ずつ絞る | O(log n) |
+| ハッシュ法 | キーから格納先を計算 | 平均 O(1) |
+
+ハッシュ法は**2分木を使う方法ではありません**。また、異なるキーが同じ格納先になる衝突が起こり得るため、「衝突しない」という説明も誤りです。
+
+**平均 O(1) は常に一定時間という意味ではありません。** 衝突が集中するなど、実装や条件によっては最悪 O(n) になることがあります。試験では「キーの関数値で格納場所を決める」を最優先の判断基準にします。
 
 ## よくある誤解・混同
 
