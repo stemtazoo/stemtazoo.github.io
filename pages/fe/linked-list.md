@@ -8,8 +8,11 @@ fe_section: 科目B対策
 fe_subsection: データ構造
 fe_order: 50
 date: 2026-07-13
-last_modified_at: 2026-10-14
+last_modified_at: 2026-10-15
 ---
+
+<link rel="stylesheet" href="{{ '/assets/css/fe-visualizer.css' | relative_url }}">
+<script src="{{ '/assets/js/fe-visualizer.js' | relative_url }}" defer></script>
 
 ## まず結論
 
