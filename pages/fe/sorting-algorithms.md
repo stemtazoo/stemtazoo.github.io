@@ -8,7 +8,7 @@ fe_section: 科目B対策
 fe_subsection: アルゴリズム
 fe_order: 80
 date: 2026-08-30
-last_modified_at: 2026-09-20
+last_modified_at: 2026-10-14
 ---
 
 ## まず結論
@@ -127,6 +127,99 @@ last_modified_at: 2026-09-20
 探索アルゴリズムとの違いを確認したい場合は、[ブロック探索とは？平均比較回数を公式なしで求める方法]({{ '/fe/block-search-average-comparisons/' | relative_url }})も参考になります。
 
 基本情報技術者試験の出題範囲は、[IPA：試験要綱・シラバスについて](https://www.ipa.go.jp/shiken/syllabus/index.html) で確認できます。
+
+### 途中経過で見分ける：4種類のソートを動かす
+
+同じ配列 `[4, 1, 3, 2]` でも、並べ替え方によって途中経過が変わります。以下は**各方式の代表的な処理単位**で一歩ずつ進める教材です。比較や交換の全命令を表示するものではありません。
+
+<div class="fe-sort-demo" id="fe-sort-demo">
+  <label for="fe-sort-kind">アルゴリズムを選ぶ</label>
+  <select id="fe-sort-kind">
+    <option value="selection">選択ソート</option>
+    <option value="insertion">挿入ソート</option>
+    <option value="bubble">バブルソート</option>
+    <option value="quick">クイックソート（末尾をピボット）</option>
+  </select>
+  <div id="fe-sort-cells" class="fe-sort-cells" aria-live="polite">4　1　3　2</div>
+  <p id="fe-sort-status" aria-live="polite">初期状態</p>
+  <button type="button" id="fe-sort-prev">戻る</button>
+  <button type="button" id="fe-sort-next">次へ</button>
+  <button type="button" id="fe-sort-reset">最初から</button>
+  <p class="fe-sort-note">見るポイント：どの値を選び、どの位置に動かしたか。緑色はその時点で整列済みと判断できる位置です。</p>
+</div>
+
+<style>
+.fe-sort-demo{border:1px solid #94a3b8;border-radius:12px;padding:1rem;margin:1rem 0}
+.fe-sort-demo select{display:block;max-width:100%;padding:.45rem;margin:.5rem 0 1rem;background:var(--background-color,#fff);color:var(--text-color,#172033);border:1px solid #64748b;border-radius:6px}
+.fe-sort-cells{display:flex;gap:.5rem;flex-wrap:wrap;margin:.8rem 0}
+.fe-sort-cell{min-width:3rem;min-height:3rem;display:grid;place-items:center;border:1px solid #64748b;border-radius:8px;background:#e2e8f0;color:#172033;font-weight:700;font-size:1.3rem}
+.fe-sort-cell.is-fixed{background:#bbf7d0;color:#14532d;border-color:#15803d}
+.fe-sort-demo button{padding:.45rem .8rem;margin:.2rem .25rem .2rem 0;border-radius:6px;border:1px solid #64748b;background:#e2e8f0;color:#172033;cursor:pointer}
+.fe-sort-demo button:disabled{opacity:.45;cursor:not-allowed}
+.fe-sort-note{font-size:.9rem}
+</style>
+<script>
+(function(){
+  const root=document.getElementById('fe-sort-demo');
+  if(!root)return;
+  const traces={
+    selection:[
+      [[4,1,3,2],0,'初期状態'],
+      [[1,4,3,2],1,'未整列部分の最小値1と先頭の4を交換'],
+      [[1,2,3,4],2,'残りの最小値2と4を交換'],
+      [[1,2,3,4],4,'残りの3と4は既に正しい順序']
+    ],
+    insertion:[
+      [[4,1,3,2],1,'最初の4を整列済みとみなす'],
+      [[1,4,3,2],2,'1を整列済み部分へ挿入'],
+      [[1,3,4,2],3,'3を整列済み部分へ挿入'],
+      [[1,2,3,4],4,'2を整列済み部分へ挿入']
+    ],
+    bubble:[
+      [[4,1,3,2],0,'初期状態'],
+      [[1,4,3,2],0,'隣の4と1を交換'],
+      [[1,3,4,2],0,'隣の4と3を交換'],
+      [[1,3,2,4],1,'隣の4と2を交換。末尾4が確定'],
+      [[1,2,3,4],2,'次の走査で3と2を交換。末尾3も確定'],
+      [[1,2,3,4],4,'交換がなくなり整列完了']
+    ],
+    quick:[
+      [[4,1,3,2],0,'初期状態。末尾2をピボットにする'],
+      [[1,4,3,2],0,'2より小さい1を左側へ移す'],
+      [[1,2,3,4],0,'ピボット2を境界に置く。右側は3と4'],
+      [[1,2,3,4],4,'右側も分割して整列完了']
+    ]
+  };
+  const kind=root.querySelector('#fe-sort-kind'),cells=root.querySelector('#fe-sort-cells'),status=root.querySelector('#fe-sort-status');
+  const prev=root.querySelector('#fe-sort-prev'),next=root.querySelector('#fe-sort-next');
+  let step=0;
+  function render(){
+    const trace=traces[kind.value],entry=trace[step];
+    cells.replaceChildren();
+    entry[0].forEach((value,index)=>{
+      const cell=document.createElement('span');
+      cell.className='fe-sort-cell';
+      const fixed=kind.value==='bubble'?index>=4-entry[1]:index<entry[1];
+      if(fixed)cell.classList.add('is-fixed');
+      cell.textContent=String(value);
+      cells.appendChild(cell);
+    });
+    status.textContent='ステップ '+step+'/'+(trace.length-1)+'：'+entry[2];
+    prev.disabled=step===0;next.disabled=step===trace.length-1;
+  }
+  kind.addEventListener('change',()=>{step=0;render()});
+  prev.addEventListener('click',()=>{if(step>0)step--;render()});
+  next.addEventListener('click',()=>{if(step<traces[kind.value].length-1)step++;render()});
+  root.querySelector('#fe-sort-reset').addEventListener('click',()=>{step=0;render()});
+  render();
+})();
+</script>
+
+#### 途中の並びだけで断定できる？
+
+選択ソートなら `[4,1,3,2] → [1,4,3,2] → [1,2,3,4]` となります。一方、挿入ソートも `[4,1,3,2] → [1,4,3,2] → [1,3,4,2] → [1,2,3,4]` と進みます。
+
+**途中状態を省略している場合、同じ二つの状態だけから方式を一意に特定できないことがあります。** 設問が「各交換をすべて記録した」のか、「各回の結果だけ示した」のかを確認してください。
 
 ## 科目Aでどう出る？
 
