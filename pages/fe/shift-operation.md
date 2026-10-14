@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: 基礎理論
 fe_order: 35
 date: 2026-07-02
-last_modified_at: 2026-10-12
+last_modified_at: 2026-10-14
 ---
 
 ## まず結論
@@ -428,6 +428,57 @@ A    B    C    D
 > **16進 → 2進 → シフト → 16進**
 
 と処理すると、桁またぎのミスを減らせます。
+
+### 16進数 `AB88` を右へ2ビットずらす
+
+16進数 `AB88` を**16ビットの符号なし整数として論理右シフト**する例です。16進数の桁を直接動かすのではなく、4ビットずつ2進数に直します。
+
+```text
+16進数      A    B    8    8
+2進数     1010 1011 1000 1000
+                  ↓ 論理右シフト2ビット
+          0010 1010 1110 0010
+16進数      2    A    E    2
+```
+
+**答えは `2AE2₁₆` です。** 右端の2ビットを捨て、左端には0を二つ補います。途中で16進数の区切りをまたぐことに注意してください。
+
+#### 動かして確認：0～4ビットの論理右シフト
+
+下のボタンを押すと、`AB88` の16ビットが右へ移動し、結果の16進数も変わります。**見るポイント：4ビットの境界をまたいで、各桁がどう変化するか。**
+
+<div class="fe-learning-demo fe-hex-shift-demo" data-fe-hex-shift-demo>
+  <p><strong>元の値：</strong><code>AB88₁₆</code>（16ビット、論理右シフト）</p>
+  <label for="fe-hex-shift-count">右へ動かすビット数：<output data-hex-shift-count>2</output></label>
+  <input id="fe-hex-shift-count" type="range" min="0" max="4" step="1" value="2" data-hex-shift-input>
+  <p><strong>元のビット列：</strong><code>1010 1011 1000 1000</code></p>
+  <p><strong>移動後：</strong><code data-hex-shift-bits>0010 1010 1110 0010</code></p>
+  <p><strong>16進数の結果：</strong><output data-hex-shift-result>2AE2</output></p>
+  <p class="fe-learning-demo__hint">左側の空きは0で埋め、右端からはみ出すビットは捨てます。</p>
+  <noscript><p>JavaScriptが無効でも、上の2ビットシフトの計算例を確認できます。</p></noscript>
+</div>
+<script>
+(function () {
+  var root = document.querySelector('[data-fe-hex-shift-demo]');
+  if (!root) return;
+  var slider = root.querySelector('[data-hex-shift-input]');
+  var count = root.querySelector('[data-hex-shift-count]');
+  var bits = root.querySelector('[data-hex-shift-bits]');
+  var result = root.querySelector('[data-hex-shift-result]');
+  function render() {
+    var shift = Number(slider.value);
+    var value = 0xAB88 >>> shift;
+    var binary = value.toString(2).padStart(16, '0');
+    count.textContent = String(shift);
+    bits.textContent = binary.match(/.{4}/g).join(' ');
+    result.textContent = value.toString(16).toUpperCase().padStart(4, '0');
+  }
+  slider.addEventListener('input', render);
+  render();
+})();
+</script>
+
+Pythonで確認するなら、`hex(0xAB88 >> 2)` の結果は `'0x2ae2'` です。なお、**16ビット符号付き整数として算術右シフトする場合は別の結果**になるため、試験では符号とシフトの種類を必ず確認します。
 
 ### 交互ビット列を足す問題
 
