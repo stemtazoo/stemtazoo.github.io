@@ -241,7 +241,8 @@ LRUでは、**ヒットしたページも参照時刻を更新する** のがポ
 .fe-pr-sequence span.current{background:#335e78;color:white;font-weight:700}
 .fe-pr-comparison{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem}
 .fe-pr-panel{border:1px solid #ccd7dd;border-radius:8px;background:white;padding:.7rem;min-width:0}
-.fe-pr-panel h3{font-size:1rem;margin:0 0 .7rem}
+.fe-pr-panel h3{font-size:1rem;margin:0 0 .7rem;color:#253541}
+.fe-pr-panel h3 small{color:#536574}
 .fe-pr-panel h3 small{display:block;font-size:.72rem;font-weight:400;color:#60727d;margin-top:.2rem}
 .fe-pr-frames{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px}
 .fe-pr-frame{background:#eaf0f3;border:1px solid #d3dfe4;border-radius:5px;text-align:center;padding:.6rem .1rem;font-weight:700;font-size:1.15rem}
@@ -254,7 +255,7 @@ LRUでは、**ヒットしたページも参照時刻を更新する** のがポ
 .fe-pr-controls button[data-action="reset"]{background:white;color:#335e78}
 .fe-pr-controls button:disabled{opacity:.45;cursor:default}
 @media(max-width:380px){.fe-pr-demo{padding:.65rem}.fe-pr-panel{padding:.45rem}.fe-pr-sequence span{min-width:1.55rem;font-size:.85rem}}
-@media(prefers-color-scheme:dark){.fe-pr-demo{background:#19262e;color:#e9f0f3;border-color:#536775}.fe-pr-panel{background:#24333c;border-color:#526571}.fe-pr-frame{background:#334650;border-color:#60717a}.fe-pr-sequence span{background:#334650}.fe-pr-sequence span.done{background:#375650}.fe-pr-sequence span.current{background:#487e9c}.fe-pr-status{background:#304650}.fe-pr-hint,.fe-pr-panel h3 small{color:#bdcbd2}}
+@media(prefers-color-scheme:dark){.fe-pr-demo{background:#19262e;color:#e9f0f3;border-color:#536775}.fe-pr-panel{background:#24333c;border-color:#526571}.fe-pr-frame{background:#334650;border-color:#60717a}.fe-pr-sequence span{background:#334650}.fe-pr-sequence span.done{background:#375650}.fe-pr-sequence span.current{background:#487e9c}.fe-pr-status{background:#304650} .fe-pr-hint,.fe-pr-panel h3 small{color:#bdcbd2}.fe-pr-panel h3{color:#f0f5f8}}
 </style>
 <script>
 (function(){
