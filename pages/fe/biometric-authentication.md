@@ -8,7 +8,7 @@ fe_section: 情報セキュリティ
 fe_subsection: 認証
 fe_order: 32
 date: 2026-10-03
-last_modified_at: 2026-10-05
+last_modified_at: 2026-10-15
 ---
 
 ## まず結論
@@ -128,6 +128,22 @@ FE試験では、まず次の2つに分けます。
   <div><strong>判定を厳しくする</strong><br><span>FRR ↑</span><br><small>本人も拒否されやすい</small><br><span>FAR ↓</span><br><small>他人は通りにくい</small></div>
   <div class="bio-arrow">⇄</div>
   <div><strong>判定を緩くする</strong><br><span>FRR ↓</span><br><small>本人は通りやすい</small><br><span>FAR ↑</span><br><small>他人も通りやすい</small></div>
+</div>
+
+### しきい値を動かして確かめる
+
+次のスライダーで「どのくらい似ていれば本人と認めるか」を変えてみましょう。
+
+<div class="bio-sim" id="bio-sim">
+  <label for="bio-match-threshold"><strong>本人と判定する一致度の基準</strong>：<output id="bio-match-value">60</output>％</label>
+  <input id="bio-match-threshold" type="range" min="20" max="90" step="5" value="60" aria-describedby="bio-sim-explanation">
+  <div class="bio-sim-scale"><span>緩い ← 許可しやすい</span><span>厳しい → 拒否しやすい</span></div>
+  <div class="bio-sim-cards">
+    <div class="bio-sim-card"><strong>FRR（本人拒否率）</strong><span id="bio-frr-value" aria-live="polite">—</span><small>本人なのに拒否する割合</small></div>
+    <div class="bio-sim-card"><strong>FAR（他人受入率）</strong><span id="bio-far-value" aria-live="polite">—</span><small>他人なのに通してしまう割合</small></div>
+  </div>
+  <p id="bio-sim-explanation" class="bio-sim-explanation" aria-live="polite">基準を動かすと、本人拒否率と他人受入率の変化を確認できます。</p>
+  <p class="bio-sim-note">※ 学習用の架空データです。登録者と他人の一致度の分布を仮定した概念モデルであり、実際の認証装置の性能や推奨しきい値を示すものではありません。</p>
 </div>
 
 つまり、**FRRだけを下げればよい、FARだけを下げればよい、という関係ではありません**。認証システムを導入するときは、用途に応じて両方を考慮しながらしきい値を調整します。
@@ -264,4 +280,51 @@ FRRとFARを両方考慮して調整
   .bio-threshold {flex-direction:column;}
   .bio-arrow {transform:rotate(90deg);}
 }
+.bio-sim {border:1px solid #aab8c3;border-radius:12px;padding:1rem;margin:1.5rem auto;max-width:680px;background:rgba(120,145,160,.07)}
+.bio-sim label {display:block;margin-bottom:.65rem}
+.bio-sim input[type=range] {display:block;width:100%;accent-color:#668fa2}
+.bio-sim-scale {display:flex;justify-content:space-between;gap:.5rem;font-size:.82rem;margin:.3rem 0 1rem}
+.bio-sim-cards {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem}
+.bio-sim-card {display:flex;flex-direction:column;align-items:center;gap:.4rem;border:1px solid #aab8c3;border-radius:9px;padding:.8rem;text-align:center}
+.bio-sim-card span {font-size:1.4rem;font-weight:700;font-variant-numeric:tabular-nums}
+.bio-sim-card small {line-height:1.5}
+.bio-sim-explanation {font-weight:600;margin:.9rem 0}
+.bio-sim-note {font-size:.82rem;opacity:.8;margin-bottom:0}
+@media(max-width:420px){.bio-sim-cards{grid-template-columns:1fr}.bio-sim-scale{font-size:.72rem}}
 </style>
+<script>
+(function(){
+  function initBiometricSimulator(){
+    var root=document.getElementById('bio-sim');
+    if(!root || root.dataset.initialized) return;
+    root.dataset.initialized='1';
+    var input=document.getElementById('bio-match-threshold');
+    var val=document.getElementById('bio-match-value');
+    var frr=document.getElementById('bio-frr-value');
+    var far=document.getElementById('bio-far-value');
+    var message=document.getElementById('bio-sim-explanation');
+    if(!input||!val||!frr||!far||!message)return;
+    function normalCdf(x,mean,sd){
+      // Logistic approximation used only for an intuitive educational model.
+      return 1/(1+Math.exp(-1.7*(x-mean)/sd));
+    }
+    function update(){
+      var threshold=Number(input.value);
+      var rejection=normalCdf(threshold,72,13)*100;
+      var acceptance=(1-normalCdf(threshold,38,13))*100;
+      val.textContent=String(threshold);
+      frr.textContent=rejection.toFixed(1)+'%';
+      far.textContent=acceptance.toFixed(1)+'%';
+      message.textContent=threshold>=70
+        ?'厳しい判定：他人は通りにくい一方、本人も拒否されやすくなります。'
+        :threshold<=40
+        ?'緩い判定：本人は通りやすい一方、他人も通りやすくなります。'
+        :'中間の判定：本人の使いやすさと、他人を通さない安全性の両方を考えます。';
+    }
+    input.addEventListener('input',update);
+    update();
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initBiometricSimulator);
+  else initBiometricSimulator();
+})();
+</script>
