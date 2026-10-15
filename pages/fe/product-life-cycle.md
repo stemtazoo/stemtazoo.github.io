@@ -8,7 +8,7 @@ fe_section: ストラテジ系
 fe_subsection: 経営戦略・業務システム
 fe_order: 50
 date: 2026-08-31
-last_modified_at: 2026-08-31
+last_modified_at: 2026-10-15
 ---
 
 ## まず結論
@@ -60,6 +60,40 @@ last_modified_at: 2026-08-31
 ```
 
 この流れを、導入期・成長期・成熟期・衰退期の4段階で整理します。
+
+### 売上曲線で4段階を確認する
+
+次の図は、製品が市場に投入されてからの**売上の変化を模式的に示したもの**です。
+
+<div class="fe-plc-chart" role="img" aria-label="導入期は売上が少なく、成長期に急増、成熟期に高水準で伸びが鈍り、衰退期に減少する概念図">
+  <svg viewBox="0 0 660 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <rect x="55" y="20" width="140" height="230" fill="#8caeab" fill-opacity=".13"/>
+    <rect x="195" y="20" width="140" height="230" fill="#94a9c2" fill-opacity=".13"/>
+    <rect x="335" y="20" width="140" height="230" fill="#c2b19a" fill-opacity=".13"/>
+    <rect x="475" y="20" width="140" height="230" fill="#b5a9b7" fill-opacity=".13"/>
+    <path d="M55 20 V250 H620" stroke="currentColor" stroke-width="1.5" fill="none"/>
+    <path d="M75 235 C130 235 162 220 195 198 S278 75 335 60 S427 53 475 65 S560 140 605 205" fill="none" stroke="#578c91" stroke-width="5" stroke-linecap="round"/>
+    <g fill="currentColor" font-size="15" text-anchor="middle">
+      <text x="125" y="274">導入期</text><text x="265" y="274">成長期</text><text x="405" y="274">成熟期</text><text x="545" y="274">衰退期</text>
+      <text x="31" y="32" font-size="13">売上</text><text x="616" y="294" font-size="13">時間</text>
+    </g>
+    <g fill="currentColor" font-size="12" text-anchor="middle">
+      <text x="125" y="213">認知を広げる</text>
+      <text x="265" y="126">急増</text>
+      <text x="405" y="86">伸びが鈍る</text>
+      <text x="545" y="125">減少</text>
+    </g>
+  </svg>
+  <p class="fe-plc-chart-note">※ 学習用の概念図です。実際の製品の売上は必ずしもこの形にはなりません。</p>
+</div>
+
+<style>
+.fe-plc-chart{max-width:700px;margin:1.3rem auto;padding:.75rem;border:1px solid #aab8c3;border-radius:10px}
+.fe-plc-chart svg{width:100%;height:auto;display:block}
+.fe-plc-chart-note{font-size:.82rem;opacity:.8;margin:.5rem 0 0}
+</style>
+
+**成熟期は「売上が減る時期」ではありません。** 売上が高水準でも、伸びが鈍くなることがポイントです。
 
 ## 定義・仕組み
 
@@ -145,6 +179,15 @@ last_modified_at: 2026-08-31
 | 市場拡大、売上急増、販売チャネル拡大 | 成長期 |
 | 競争激化、差別化、市場細分化、コストダウン | 成熟期 |
 | 需要減少、撤退、代替市場 | 衰退期 |
+
+### 「新規参入」と「導入期」を混同しない
+
+「新規参入企業が増える」とあっても、**製品の導入期とは限りません**。
+
+- **導入期**：製品を初めて市場に出し、先進的な消費者への販売や認知度向上を進める
+- **成長期**：売上が急増し、成長市場を狙う企業の新規参入で競争が激しくなる
+
+試験では「新規」という一語ではなく、**市場全体の売上がどのように変化しているか**を先に確認します。
 
 ### 成長期と成熟期を区別する
 
