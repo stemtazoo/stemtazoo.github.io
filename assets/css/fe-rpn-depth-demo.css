@@ -1,0 +1,16 @@
+/* FE: Reverse Polish notation stack depth, responsive and accessible */
+.fe-rpn-depth-demo [data-rpn-choice]{display:block;width:100%;max-width:100%;padding:.65rem;margin:.35rem 0 1rem;border:1px solid #9cb6c2;border-radius:7px;background:var(--main-background-color,#fff);color:inherit}
+.fe-rpn-depth-demo__tokens{display:flex;gap:.35rem;flex-wrap:wrap;margin:.7rem 0}
+.fe-rpn-depth-demo__tokens span{min-width:2.15rem;text-align:center;border-radius:7px;padding:.45rem;background:rgba(100,125,140,.13);font-weight:600}
+.fe-rpn-depth-demo__tokens span.is-current{background:rgba(11,111,174,.2);outline:2px solid #0b6fae}
+.fe-rpn-depth-demo__tokens span.is-done{opacity:.55}
+.fe-rpn-depth-demo__action{min-height:2.5em;margin:.7rem 0;font-weight:600}
+.fe-rpn-depth-demo__layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(8rem,1fr);gap:1rem;align-items:start}
+.fe-rpn-depth-demo__shaft{height:13rem;display:flex;flex-direction:column;justify-content:flex-end;gap:.3rem;padding:.5rem;border:2px solid #7895a4;border-top:0;margin-top:.5rem;text-align:center}
+.fe-rpn-depth-demo__shaft strong{display:block;padding:.4rem;border-radius:5px;background:rgba(11,111,174,.12)}
+.fe-rpn-depth-demo__shaft>span{opacity:.65}
+.fe-rpn-depth-demo__metrics{display:grid;gap:.3rem;text-align:center}
+.fe-rpn-depth-demo__metrics span{font-size:.83rem;opacity:.85}
+.fe-rpn-depth-demo__metrics strong{font-size:1.65rem;font-variant-numeric:tabular-nums}
+.fe-rpn-depth-demo .fe-learning-demo__button{min-height:44px}
+@media(max-width:420px){.fe-rpn-depth-demo__layout{gap:.6rem;grid-template-columns:minmax(0,1fr) minmax(6.5rem,.8fr)}.fe-rpn-depth-demo__tokens span{min-width:1.8rem;padding:.4rem}.fe-rpn-depth-demo__metrics strong{font-size:1.4rem}}
