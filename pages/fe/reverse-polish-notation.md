@@ -370,6 +370,8 @@ d      → [a+b+c, d]      深さ2
 
 次の図は、例として `a=2、b=3、c=4、d=5` を使います。「次へ」を押すと、**実際の計算結果と、スタックの高さ**が1記号ずつ変わります。
 
+<link rel="stylesheet" href="{{ '/assets/css/fe-rpn-depth-demo.css' | relative_url }}">
+
 <div class="fe-learning-demo fe-rpn-depth-demo" data-fe-rpn-depth-demo>
   <p class="fe-learning-demo__title">逆ポーランド表記を1文字ずつ実行する</p>
   <p class="fe-learning-demo__lead">同じ合計14でも、計算する順番によって最大深さが変わります。</p>
