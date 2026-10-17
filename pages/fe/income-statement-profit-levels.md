@@ -8,7 +8,7 @@ fe_section: ストラテジ系
 fe_subsection: 企業活動
 fe_order: 50
 date: 2026-07-18
-last_modified_at: 2026-08-29
+last_modified_at: 2026-10-17
 ---
 
 ## まず結論
@@ -37,6 +37,22 @@ last_modified_at: 2026-08-29
 特別損益まで含める
 → 税引前当期純利益
 ```
+
+### 図で見る：5種類の利益の位置
+
+<div class="fe-profit-stages" aria-label="売上高から売上原価、販管費、営業外損益、特別損益、法人税等を順に反映し、5種類の利益を求める">
+  <div class="fe-profit-stage">売上高</div>
+  <div class="fe-profit-step">− 売上原価</div>
+  <div class="fe-profit-stage">売上総利益（粗利）</div>
+  <div class="fe-profit-step">− 販売費及び一般管理費</div>
+  <div class="fe-profit-stage">営業利益</div>
+  <div class="fe-profit-step">＋ 営業外収益 − 営業外費用</div>
+  <div class="fe-profit-stage">経常利益</div>
+  <div class="fe-profit-step">＋ 特別利益 − 特別損失</div>
+  <div class="fe-profit-stage">税引前当期純利益</div>
+  <div class="fe-profit-step">− 法人税等</div>
+  <div class="fe-profit-stage">当期純利益</div>
+</div>
 
 ## 直感的な説明
 
@@ -148,6 +164,29 @@ last_modified_at: 2026-08-29
 ```
 
 最終的に会社へ残る利益を見るときに使います。
+
+### 数字を入れて計算する例
+
+次の金額（単位：万円）から、利益がどの段階で変わるかを確認します。
+
+| 項目 | 金額 |
+|---|---:|
+| 売上高 | 7,500 |
+| 売上原価 | 6,000 |
+| 販売費及び一般管理費 | 1,000 |
+| 営業外収益／営業外費用 | 160／110 |
+| 特別利益／特別損失 | 20／10 |
+| 法人税等 | 260 |
+
+~~~text
+売上総利益：7,500 − 6,000 = 1,500
+営業利益：1,500 − 1,000 = 500
+経常利益：500 + 160 − 110 = 550
+税引前当期純利益：550 + 20 − 10 = 560
+当期純利益：560 − 260 = 300
+~~~
+
+**計算で迷ったら、問われている利益の段階で止める**のがポイントです。
 
 ## 科目Aでどう出る？
 
@@ -269,5 +308,11 @@ last_modified_at: 2026-08-29
 試験では、次の一文を思い出してください。
 
 > **売上原価までなら粗利、販管費まで引けば営業利益、営業外まで含めれば経常利益。**
+
+<style>
+.fe-profit-stages { max-width: 630px; margin: 1.3rem auto; text-align: center; }
+.fe-profit-stage { padding: .7rem 1rem; background: rgba(118,138,147,.10); border: 1px solid rgba(118,138,147,.45); border-radius: 8px; font-weight: 650; }
+.fe-profit-step { padding: .45rem; font-size: .92em; }
+</style>
 
 {% include fe_article_footer.html %}
