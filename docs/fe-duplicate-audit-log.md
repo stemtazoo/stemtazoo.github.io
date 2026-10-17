@@ -6,9 +6,12 @@
 
 - GitHub mainの再帰ツリーを2026-10-17に取得
 - FE Markdown: 778ファイル（転送用ページを含む）
-- 過去の本文確認履歴に対応する現存ファイル: 94ファイル（重複排除）
-- ファイル単位の確認履歴カバー率: 12.1%。これは全件本文比較の完了率ではありません。
-- 削除済みファイルは分母・分子から除外。転送ページのうち17ファイルを本文で確認済み。全件分類は未完了です。
+- 過去の本文確認履歴に対応する現存ファイル: 122ファイル（重複排除）
+- ファイル単位の確認履歴カバー率: 15.7%。これは全件本文比較の完了率ではありません。
+- 削除済みファイルは分母・分子から除外。全778件の本文から転送17件と実記事761件を検出しました。
+
+- 実記事の個別確認履歴: **111/761件（14.6%）**。転送の17件は別管理。
+- 761実記事すべての**機械的な類似候補抽出は実施済み**。候補の目視確認は抽出された16組を終了。未抽出の組合せが重複なしと確定したわけではありません。
 
 ## 修正PRの記録
 
@@ -21,39 +24,69 @@
 - #432 内部統制の統合
 - #433 バックアップ方式の役割整理
 - #434 PKI・認証局と暗号化の役割整理
+- #438 761実記事の自動候補抽出・転送判定を導入（当PR）
 
 ## 本文確認履歴に含まれる現存ファイル
 
 以下は確認履歴のインデックスです。記載だけで重複なし・公開確認済みとは判断しません。
 
+- pages/fe/as-is-to-be-ea.md
 - pages/fe/audit-evidence.md
 - pages/fe/audit-working-papers.md
 - pages/fe/authentication-devices.md
 - pages/fe/backup-methods.md
 - pages/fe/backup-redundancy.md
+- pages/fe/bathtub-curve.md
+- pages/fe/binary-representation.md
 - pages/fe/biometric-authentication.md
+- pages/fe/block-search-average-comparisons.md
+- pages/fe/bottom-up-testing.md
 - pages/fe/business-continuity-management.md
 - pages/fe/business-continuity-plan.md
+- pages/fe/business-domain.md
+- pages/fe/business-impact-analysis.md
 - pages/fe/capacity-management-analysis-methods.md
 - pages/fe/capacity-management-analysis-models.md
 - pages/fe/certificate-authority.md
 - pages/fe/challenge-response-authentication.md
+- pages/fe/checksum.md
 - pages/fe/cia-triad.md
+- pages/fe/commit-rollback.md
+- pages/fe/compiler-analysis-flow.md
+- pages/fe/compiler-linker-loader-debugger.md
+- pages/fe/conditional-branch-average-comparisons.md
 - pages/fe/configuration-management.md
 - pages/fe/contract-types-outsourcing.md
+- pages/fe/crc.md
+- pages/fe/critical-chain.md
+- pages/fe/critical-path-vs-critical-chain.md
 - pages/fe/cryptographic-algorithm-types.md
 - pages/fe/database-backup-recovery.md
 - pages/fe/database-log-recovery.md
 - pages/fe/database-recovery-rollforward-rollback.md
 - pages/fe/dispatch-secondment-contract.md
+- pages/fe/dns.md
+- pages/fe/dram.md
 - pages/fe/drive-by-download.md
 - pages/fe/drive-by-download-attack.md
+- pages/fe/enterprise-architecture.md
 - pages/fe/envelope-encryption.md
 - pages/fe/fe-requirements-definition-process.md
+- pages/fe/fifo-page-replacement.md
+- pages/fe/floating-point-errors.md
+- pages/fe/floating-point-format.md
+- pages/fe/floating-point-normalization.md
+- pages/fe/floating-point-representation.md
 - pages/fe/full-differential-incremental-backup.md
 - pages/fe/functional-nonfunctional-requirements.md
+- pages/fe/gompertz-curve.md
+- pages/fe/hamming-code.md
 - pages/fe/hash-function-1.md
 - pages/fe/hash-method-uniform-distribution.md
+- pages/fe/hex-binary-conversion.md
+- pages/fe/hexadecimal-fraction.md
+- pages/fe/hexadecimal-fraction-bit-shift.md
+- pages/fe/hexadecimal-fraction-conversion.md
 - pages/fe/hybrid-encryption.md
 - pages/fe/incident-management-vs-problem-management.md
 - pages/fe/incident-service-request-management.md
@@ -61,23 +94,33 @@
 - pages/fe/input-data-checks.md
 - pages/fe/internal-control-components.md
 - pages/fe/internal-control-six-elements.md
+- pages/fe/it-investment-evaluation.md
+- pages/fe/it-investment-management.md
 - pages/fe/java-language-features.md
 - pages/fe/java-programming-language.md
+- pages/fe/logistic-curve.md
+- pages/fe/lru-page-replacement.md
 - pages/fe/magnetic-disk-access-time.md
 - pages/fe/magnetic-disk-average-wait-time.md
 - pages/fe/memory-management-methods.md
 - pages/fe/message-authentication-code.md
+- pages/fe/nat.md
 - pages/fe/network-configuration-management.md
 - pages/fe/non-functional-requirements.md
+- pages/fe/packet-filtering.md
 - pages/fe/password-hash-authentication.md
 - pages/fe/pki-certificate-authority.md
+- pages/fe/pppoe.md
 - pages/fe/problem-management.md
+- pages/fe/process-innovation.md
 - pages/fe/project-life-cycle.md
 - pages/fe/project-lifecycle-characteristics.md
 - pages/fe/project-management-process-groups.md
 - pages/fe/project-management-subject-groups.md
+- pages/fe/prototyping-model.md
 - pages/fe/public-key-cryptography.md
 - pages/fe/public-key-encryption-digital-signature.md
+- pages/fe/rest-api.md
 - pages/fe/risk-assessment-process.md
 - pages/fe/risk-level.md
 - pages/fe/security-by-design.md
@@ -86,8 +129,10 @@
 - pages/fe/security-threat-countermeasures.md
 - pages/fe/software-architecture-design.md
 - pages/fe/software-design-phases.md
+- pages/fe/spiral-model.md
 - pages/fe/sql-aggregate-functions.md
 - pages/fe/sql-group-by-aggregate-functions.md
+- pages/fe/sram.md
 - pages/fe/stack-vs-queue.md
 - pages/fe/stored-program-architecture.md
 - pages/fe/stored-program-concept.md
@@ -100,28 +145,13 @@
 - pages/fe/tlo.md
 - pages/fe/tlo-technology-licensing-organization.md
 - pages/fe/top-down-bottom-up-test.md
+- pages/fe/top-down-testing.md
+- pages/fe/transaction-1.md
 - pages/fe/usb.md
 - pages/fe/usb-interface.md
+- pages/fe/web-api.md
 - pages/fe/work-made-for-hire.md
 - pages/fe/work-made-for-hire-copyright.md
-
-
-- pages/fe/it-investment-evaluation.md
-- pages/fe/it-investment-management.md
-- pages/fe/binary-representation.md
-- pages/fe/hex-binary-conversion.md
-- pages/fe/hexadecimal-fraction.md
-- pages/fe/hexadecimal-fraction-conversion.md
-- pages/fe/hexadecimal-fraction-bit-shift.md
-- pages/fe/floating-point-representation.md
-- pages/fe/floating-point-format.md
-- pages/fe/floating-point-normalization.md
-- pages/fe/floating-point-errors.md
-- pages/fe/block-search-average-comparisons.md
-- pages/fe/conditional-branch-average-comparisons.md
-- pages/fe/business-domain.md
-- pages/fe/as-is-to-be-ea.md
-- pages/fe/business-impact-analysis.md
 
 ## 追加本文監査：数値表現・IT投資など（2026-10-17）
 
@@ -149,12 +179,35 @@
 - pages/fe/conditional-branch-average-comparisons.md
 - pages/fe/business-domain.md
 - pages/fe/as-is-to-be-ea.md
+## 自動抽出候補16組の本文・役割確認（2026-10-17）
+
+全761実記事を走査し、しきい値を超えた16組（重複しない28記事）を本文・見出し・試験での判断基準で確認しました。いずれも**役割が異なるため維持**と判断し、新たな統合は行っていません。なお、しきい値未満の重複が存在しないと保証するものではありません。
+
+| 候補の組合せ | 判断 | 理由 |
+|---|---|---|
+| `bottom-up-testing` / `top-down-testing` | 維持 | 下位→上位と上位→下位。ドライバとスタブの判断を分ける |
+| `dram` / `sram` | 維持 | リフレッシュが必要な主記憶と、不要で高速なキャッシュ用途 |
+| `enterprise-architecture` / `process-innovation` | 維持 | 組織・システム全体の設計と、業務工程の革新 |
+| `bathtub-curve` / `logistic-curve` | 維持 | 時間による故障率と、普及・成長のS字変化 |
+| `critical-chain` / `critical-path-vs-critical-chain` | 維持 | 資源制約・バッファの詳説と、パスとの比較 |
+| `compiler-analysis-flow` / `compiler-linker-loader-debugger` | 維持 | コンパイラ内部の処理順と、翻訳・結合・読込みツールの役割 |
+| `dns` / `nat` | 維持 | 名前解決とIPアドレス変換 |
+| `fifo-page-replacement` / `lru-page-replacement` | 維持 | 主記憶に入った順と最後に参照した時刻 |
+| `prototyping-model` / `spiral-model` | 維持 | 試作品で要求を確認する方式と、工程を繰り返す方式 |
+| `checksum` / `crc` | 維持 | 総和・補数による誤り検出と、生成多項式による検出 |
+| `checksum` / `hamming-code` | 維持 | 合計値での誤り検出と、誤り位置の特定・訂正 |
+| `gompertz-curve` / `logistic-curve` | 維持 | テストの累積バグ推移と、一般的な普及・成長 |
+| `commit-rollback` / `transaction-1` | 維持 | 確定・取消し操作の詳説と、トランザクションの総論 |
+| `crc` / `hamming-code` | 維持 | CRCの誤り検出と、ハミング符号の訂正 |
+| `rest-api` / `web-api` | 維持 | Web APIの一般概念と、RESTのリソース操作という設計スタイル |
+| `packet-filtering` / `pppoe` | 維持 | 通信の許可・拒否と、Ethernet上のPPP接続方式 |
+
 ## 転送専用ページの確認（2026-10-17）
 
-Markdownが1100バイト未満の17件を抽出し、17件すべての本文にHTMLのmeta refresh転送を確認しました。**この条件に当てはまらない転送ページは未調査**です。
+初回は1100バイト未満から17件を抽出しました。その後、**全778件の本文**を自動走査し、`layout: null` とHTMLのmeta refreshの両方を満たす17件を検出しました。
 
 - 確認済み転送専用ページ: 17件
-- 転送を除いた実記事数の暫定上限: 761件（778 - 17）
+- 自動判定で転送を除いた実記事数: 761件（778 - 17）。異なる転送方式は判定対象外
 - これらの転送はHTTP 301ではなく、HTML meta refreshです。
 
 - pages/fe/activity-diagram.md
@@ -190,7 +243,7 @@ GitHub Actions の **FE duplicate content candidate audit** は、手動起動�
 
 ## 次の手順
 
-1. HTML転送専用ページを全件識別し、実記事の分母を確定する。
-2. 未確認の実記事を優先して本文類似度を比較する。
+1. 今後の追加記事で転送ページ判定・実記事数が変わらないかを監視する。
+2. 類似スコアのしきい値を変えた再走査や未確認記事の個別監査を進める。
 3. 統合・役割分担・維持・要再確認の判定理由を記録する。
 4. 修正PRのビルドと旧URL転送を確認する。
