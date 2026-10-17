@@ -6,11 +6,11 @@
 
 - GitHub mainの再帰ツリーを2026-10-17に取得
 - FE Markdown: 778ファイル（転送用ページを含む）
-- 過去の本文確認履歴に対応する現存ファイル: 482ファイル（重複排除）
-- ファイル単位の確認履歴カバー率: 62.0%。これは全件本文比較の完了率ではありません。
-- 削除済みファイルは分母・分子から除外。mainはPR #446まで反映済みで転送28件・実記事750件。今回の継続PR適用後は転送29件・実記事749件です。
+- 過去の本文確認履歴に対応する現存ファイル: 512ファイル（重複排除）
+- ファイル単位の確認履歴カバー率: 65.8%。これは全件本文比較の完了率ではありません。
+- 削除済みファイルは分母・分子から除外。mainはPR #447まで反映済みで転送29件・実記事749件。今回は新たな統合を行わないため実記事数は変わりません。
 
-- 実記事の個別確認履歴（今回のmain向け継続PR適用後）: **459/749件（61.3%）**。転送の29件は別管理。
+- 実記事の個別確認履歴（今回のmain向け継続PR適用後）: **489/749件（65.3%）**。転送の29件は別管理。
 - 変更前の761実記事に対して**機械的な類似候補抽出を実施済み**。PR #442の新しい構成ではCIで再走査します。未抽出の組合せが重複なしと確定したわけではありません。
 
 ## 修正PRの記録
@@ -32,12 +32,14 @@
 - #444 CPU・OSの30記事監査と割込み・リンキングの2組統合（#445でmainへ反映済み）
 - #445 画像・記憶媒体24記事監査とRAIDの役割整理、#444のmain反映（マージ済み）
 - #446 開発・テスト・品質管理30記事監査、開発・運用連携記事の統合（マージ済み）
+- #447 ネットワーク・セキュリティ30記事監査、CPSFの重複統合（マージ済み）
 
 ## 本文確認履歴に含まれる現存ファイル
 
 以下は確認履歴のインデックスです。記載されているだけで全本文の逐語比較や公開状態を確認済みとは判断しません。
 
 - pages/fe/3d-printer.md
+- pages/fe/3pl.md
 - pages/fe/account-aggregation.md
 - pages/fe/acid-properties.md
 - pages/fe/ad-conversion.md
@@ -46,6 +48,7 @@
 - pages/fe/affinity-diagram.md
 - pages/fe/agile-iteration.md
 - pages/fe/ai-vs-rule-based-control.md
+- pages/fe/ansoff-growth-matrix.md
 - pages/fe/anti-aliasing.md
 - pages/fe/application-maintenance.md
 - pages/fe/arp.md
@@ -66,8 +69,10 @@
 - pages/fe/backup-redundancy.md
 - pages/fe/balance-sheet.md
 - pages/fe/bathtub-curve.md
+- pages/fe/behavioral-targeting.md
 - pages/fe/benchmark-test.md
 - pages/fe/benchmarking.md
+- pages/fe/bi.md
 - pages/fe/big-data-3v.md
 - pages/fe/big-data-utilization-stages.md
 - pages/fe/binary-representation.md
@@ -81,8 +86,10 @@
 - pages/fe/black-box-testing.md
 - pages/fe/black-box-vs-white-box-testing.md
 - pages/fe/block-search-average-comparisons.md
+- pages/fe/blue-ocean-strategy.md
 - pages/fe/bluetooth.md
 - pages/fe/bottom-up-testing.md
+- pages/fe/bpm.md
 - pages/fe/bpo-saas-hosting-comparison.md
 - pages/fe/bpr.md
 - pages/fe/branch-coverage.md
@@ -122,8 +129,10 @@
 - pages/fe/cold-warm-start.md
 - pages/fe/command-and-control.md
 - pages/fe/commit-rollback.md
+- pages/fe/commoditization.md
 - pages/fe/common-frame.md
 - pages/fe/common-frame-support-processes.md
+- pages/fe/competitive-position-strategy.md
 - pages/fe/compiler-analysis-flow.md
 - pages/fe/compiler-linker-loader-debugger.md
 - pages/fe/compiler-optimization.md
@@ -135,7 +144,9 @@
 - pages/fe/contract-types-outsourcing.md
 - pages/fe/control-structures-loop-selection.md
 - pages/fe/control-total-check.md
+- pages/fe/conversion-rate.md
 - pages/fe/core-competence.md
+- pages/fe/core-technology.md
 - pages/fe/cpi-clock-cycle-cpu-time.md
 - pages/fe/cpsf.md
 - pages/fe/cpu-clock-frequency.md
@@ -158,6 +169,7 @@
 - pages/fe/csma-cd.md
 - pages/fe/csv-format.md
 - pages/fe/csv-spreadsheet-cell-reference.md
+- pages/fe/customer-portfolio-analysis.md
 - pages/fe/cyber-physical-security-framework.md
 - pages/fe/data-error-management.md
 - pages/fe/data-flow-diagram.md
@@ -185,6 +197,7 @@
 - pages/fe/disk-striping.md
 - pages/fe/dispatch-secondment-contract.md
 - pages/fe/display-types.md
+- pages/fe/disruptive-innovation.md
 - pages/fe/dmz-server-placement.md
 - pages/fe/dns.md
 - pages/fe/dns-cache-poisoning.md
@@ -196,6 +209,7 @@
 - pages/fe/ecc-memory.md
 - pages/fe/economic-order-quantity.md
 - pages/fe/effort-productivity-duration.md
+- pages/fe/electronic-commerce.md
 - pages/fe/email-protocols.md
 - pages/fe/enterprise-architecture.md
 - pages/fe/envelope-encryption.md
@@ -203,6 +217,7 @@
 - pages/fe/equivalence-partitioning-boundary-value.md
 - pages/fe/er-diagram.md
 - pages/fe/er-diagram-cardinality.md
+- pages/fe/erp.md
 - pages/fe/evm.md
 - pages/fe/exclusive-resource-task-timing.md
 - pages/fe/external-internal-design.md
@@ -259,6 +274,7 @@
 - pages/fe/income-statement-profit-levels.md
 - pages/fe/inheritance.md
 - pages/fe/initial-running-cost.md
+- pages/fe/innovation-adoption-lifecycle.md
 - pages/fe/input-data-check.md
 - pages/fe/input-data-checks.md
 - pages/fe/input-data-completeness-control.md
@@ -298,6 +314,7 @@
 - pages/fe/linker.md
 - pages/fe/lock-granularity.md
 - pages/fe/logistic-curve.md
+- pages/fe/long-tail.md
 - pages/fe/lru.md
 - pages/fe/lru-cache-replacement.md
 - pages/fe/lru-page-replacement.md
@@ -306,6 +323,7 @@
 - pages/fe/magnetic-disk-access-time.md
 - pages/fe/magnetic-disk-average-wait-time.md
 - pages/fe/many-to-many-associative-entity.md
+- pages/fe/marketing-mix.md
 - pages/fe/master-file-maintenance.md
 - pages/fe/memory-compaction.md
 - pages/fe/memory-fragmentation.md
@@ -322,6 +340,7 @@
 - pages/fe/module-coupling.md
 - pages/fe/morphing.md
 - pages/fe/mpeg.md
+- pages/fe/mrp.md
 - pages/fe/mtbf.md
 - pages/fe/mtbf-mttr.md
 - pages/fe/multicore-processor.md
@@ -332,10 +351,12 @@
 - pages/fe/network-device-functions-comparison.md
 - pages/fe/network-devices-router-repeater-bridge-switch.md
 - pages/fe/network-diagnostic-commands.md
+- pages/fe/niche-strategy.md
 - pages/fe/non-functional-requirements.md
 - pages/fe/ntp.md
 - pages/fe/ntp-time-synchronization.md
 - pages/fe/on-demand-service.md
+- pages/fe/open-innovation.md
 - pages/fe/open-redirect.md
 - pages/fe/operational-testing.md
 - pages/fe/operations-involvement-system-development.md
@@ -343,6 +364,8 @@
 - pages/fe/os-api.md
 - pages/fe/osi-reference-model.md
 - pages/fe/ot-dmz.md
+- pages/fe/otoo.md
+- pages/fe/overall-optimization-business-model.md
 - pages/fe/overlay-paging-swapping.md
 - pages/fe/packet-filtering.md
 - pages/fe/packet-filtering-port-rules.md
@@ -364,11 +387,13 @@
 - pages/fe/planning-process.md
 - pages/fe/polymorphism.md
 - pages/fe/pop3-smtp-imap.md
+- pages/fe/ppm.md
 - pages/fe/pppoe.md
 - pages/fe/preemptive-scheduling.md
 - pages/fe/primary-key.md
 - pages/fe/problem-management.md
 - pages/fe/process-innovation.md
+- pages/fe/product-life-cycle.md
 - pages/fe/profit-calculation.md
 - pages/fe/program-counter-interrupt.md
 - pages/fe/progress-productivity-effort.md
@@ -404,6 +429,7 @@
 - pages/fe/relations-diagram.md
 - pages/fe/relocation.md
 - pages/fe/rest-api.md
+- pages/fe/retention-rate.md
 - pages/fe/reverse-brute-force.md
 - pages/fe/reverse-polish-notation.md
 - pages/fe/risc-cisc.md
@@ -414,6 +440,7 @@
 - pages/fe/rom-types.md
 - pages/fe/round-robin-scheduling.md
 - pages/fe/router-bridge-repeater-gateway.md
+- pages/fe/rpa.md
 - pages/fe/run-length-encoding.md
 - pages/fe/saas-paas-iaas.md
 - pages/fe/scm.md
@@ -429,6 +456,7 @@
 - pages/fe/server-client-port.md
 - pages/fe/server-room-physical-security.md
 - pages/fe/service-availability.md
+- pages/fe/sfa.md
 - pages/fe/shared-exclusive-lock.md
 - pages/fe/shell.md
 - pages/fe/shell-redirection.md
@@ -466,6 +494,7 @@
 - pages/fe/stub-driver.md
 - pages/fe/subnet-host-address.md
 - pages/fe/supply-chain-management.md
+- pages/fe/swot-analysis.md
 - pages/fe/system-audit.md
 - pages/fe/system-audit-regulations.md
 - pages/fe/system-audit-techniques.md
@@ -478,6 +507,7 @@
 - pages/fe/tcp-connection-identification.md
 - pages/fe/tcp-ip-layers.md
 - pages/fe/tcp-udp-port-number.md
+- pages/fe/technology-s-curve.md
 - pages/fe/test-support-tools.md
 - pages/fe/tethering.md
 - pages/fe/three-tier-client-server.md
@@ -498,6 +528,7 @@
 - pages/fe/usb.md
 - pages/fe/usb-ieee1394.md
 - pages/fe/usb-interface.md
+- pages/fe/value-chain.md
 - pages/fe/variable-partition-memory-allocation.md
 - pages/fe/verification-validation.md
 - pages/fe/video-bandwidth-calculation.md
@@ -822,11 +853,34 @@ SG・DS・GKも関連語で検索し、テーマ外の記事は本監査の件�
 - 図解評価：正規記事のセンサー→分析→制御と各層の具体例で目的を説明できるため、新たな操作UIは不要。
 - main（`86cca6a8`、#446まで）：430/750実記事（57.3%）。今回適用後：778 Markdown・転送29・実記事749、確認履歴482ファイル（転送23・実記事459）。**459/749実記事（61.3%）**、未確認290実記事。
 
+## 継続監査：経営戦略・業務・マーケティングの未確認30記事（2026-10-17）
+
+履歴482ファイルに含まれない30実記事の定義・冒頭・見出し・試験の判断基準を比較しました。新たな統合対象はありません。以下は学習目的・判断軸の確認履歴であり、全記事間の総当たり比較や全段落の校正の完了率ではありません。
+
+| 記事群 | 判定・理由 |
+|---|---|
+| `ansoff-growth-matrix` / `ppm` / `swot-analysis` / `customer-portfolio-analysis` | 維持。製品・市場の既存／新規／市場成長率・相対シェア／内部・外部のプラス・マイナス／顧客購買規模・自社取引額。2軸表という形式が共通でも、対象と判断が異なる |
+| `product-life-cycle` / `technology-s-curve` / `innovation-adoption-lifecycle` | 維持。製品の売上段階／技術投入に対する性能進歩／採用者の時期・態度。既存確認済みロジスティック曲線とも同一視しない |
+| `disruptive-innovation` / `open-innovation` / `blue-ocean-strategy` | 維持。既存企業が重視しない市場からの置換／社外知識の活用／新しい価値と市場の創出。「新しい事業」だけで統合しない |
+| `niche-strategy` / `competitive-position-strategy` | 役割を明示して維持。特定市場への集中の詳説／4つの競争地位の比較。冒頭に読み分けの説明と相互リンクを追加 |
+| `commoditization` / `core-technology` / 既存確認済み`core-competence` | 維持。差別化困難になる市場状態／競争優位を生む独自技術／技術に限定しない組織の中核能力。状態・技術・能力が異なる |
+| `value-chain` / `overall-optimization-business-model` / 既存確認済み業務モデル・SCM | 維持。企業の主活動・支援活動による価値分析／業務と情報のあるべき姿／現新・論理物理の分類／企業間供給連鎖の最適化を分担 |
+| `bpm` / `bi` / `rpa` / 既存確認済みBPR・業務改善手順 | 維持。継続的な業務プロセス管理／データ分析による意思決定支援／定型PC業務の自動化／抜本的な再設計／改善活動の工程順は異なる。BIの既存操作図解を保持 |
+| `marketing-mix` / `behavioral-targeting` / `long-tail` | 維持。4P・4Cの施策の組合せ／広告表示の基準となる行動履歴／非売れ筋商品の合計売上。マーケティングという分野が共通するだけ |
+| `conversion-rate` / `retention-rate` | 維持。訪問から成果への割合／期首顧客の継続割合。母集団・対象期間・新規会員の除外という計算が異なる |
+| `sfa` / `erp` / `mrp` | 維持。営業活動・商談／全社経営資源の統合／生産計画から部品所要量と発注時期の算出。既存のERP・SFA相互リンクも確認 |
+| `3pl` / `electronic-commerce` / `otoo` | 維持。物流企画を含む包括受託／売り手・買い手による電子商取引の分類／オンラインから実店舗への誘導。SCMと3PLも全体最適と受託形態の違いがある |
+
+- SG・DS・GKも関連語で検索し、他テーマとの統合はしない。原典・規格の鮮度と全面的な内容校正は別監査。
+- 編集はニッチ戦略と競争地位別戦略の2記事のみ。元の初回日付・URL・分類・見出し・フッターを保持し、更新日を変更。
+- 既存の軸表・例・図解を保持し、学習導線だけの追加には新たな操作UIを設けない。
+- main（`aaf0fa59`、#447まで）：459/749実記事（61.3%）。今回適用後：778 Markdown・転送29・実記事749、確認履歴512ファイル（転送23・実記事489）。**489/749実記事（65.3%）**、未確認260実記事。
+
 ## 転送専用ページの確認（2026-10-17）
 
 初回は1100バイト未満から17件を抽出しました。その後、**全778件の本文**を自動走査し、`layout: null` とHTMLのmeta refreshの両方を満たす17件を検出しました。
 
-- 確認済み転送専用ページ: 29件（#446までの28件に今回1件追加）
+- 確認済み転送専用ページ: 29件（#447で反映済み。今回の新規転送なし）
 - 今回の継続PR適用後の実記事数: 749件（778 - 29）。HTML meta refresh以外の転送方式は判定対象外
 - これらの転送はHTTP 301ではなく、HTML meta refreshです。
 
