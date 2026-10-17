@@ -175,6 +175,19 @@ Markdownが1100バイト未満の17件を抽出し、17件すべての本文にH
 - pages/fe/uml-diagrams.md
 - pages/fe/work-made-for-hire.md
 
+## 全件自動スキャンの実行方法（PR #438）
+
+重複候補の抽出と転送ページ判定を、以下の標準ライブラリのみのスクリプトで再現できます。公開記事を自動変更・自動統合する機能はありません。
+
+```bash
+python -m unittest discover -s tests -p 'test_fe_duplicate_content.py' -v
+python scripts/audit_fe_duplicate_content.py --output docs/audits/fe-duplicate-candidates.md
+```
+
+GitHub Actions の **FE duplicate content candidate audit** は、手動起動、またはFE記事・スクリプト関連のPR時に実行され、結果レポートを `fe-duplicate-candidates` というアーティファクトに保存します。**自動でmainへコミットしません。**
+
+判定基準：転送は `layout: null` とHTML meta refreshの両方を確認。実記事の本文は前付け・見出し・コードなどを除いた文字列の9文字片で比較し、重なりの多い候補だけ抽出します。類似候補は**未審査**です。本文を読んで学習目的・選択肢の判断基準を比較するまで「重複確定」にしません。
+
 ## 次の手順
 
 1. HTML転送専用ページを全件識別し、実記事の分母を確定する。
