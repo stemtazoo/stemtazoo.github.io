@@ -6,11 +6,11 @@
 
 - GitHub mainの再帰ツリーを2026-10-17に取得
 - FE Markdown: 778ファイル（転送用ページを含む）
-- 過去の本文確認履歴に対応する現存ファイル: 254ファイル（重複排除）
-- ファイル単位の確認履歴カバー率: 32.6%。これは全件本文比較の完了率ではありません。
-- 削除済みファイルは分母・分子から除外。変更前は転送17件・実記事761件でした。本PR適用後は転送20件・実記事758件となる見込みです。
+- 過去の本文確認履歴に対応する現存ファイル: 318ファイル（重複排除）
+- ファイル単位の確認履歴カバー率: 40.9%。これは全件本文比較の完了率ではありません。
+- 削除済みファイルは分母・分子から除外。変更前は転送17件・実記事761件でした。前提PR #440適用後は転送20件・実記事758件、このPR #441適用後は転送21件・実記事757件となる見込みです。
 
-- 実記事の個別確認履歴（本PR適用後）: **240/758件（31.7%）**。転送の20件は別管理。
+- 実記事の個別確認履歴（PR #440・#441両方適用後）: **303/757件（40.0%）**。転送の21件は別管理。
 - 変更前の761実記事すべての**機械的な類似候補抽出は実施済み**。候補の目視確認は抽出された43組を終了。未抽出の組合せが重複なしと確定したわけではありません。
 
 ## 修正PRの記録
@@ -26,16 +26,19 @@
 - #434 PKI・認証局と暗号化の役割整理
 - #438 761実記事の自動候補抽出・転送判定を導入（マージ済み）
 - #439 追加53記事の役割監査と3記事の学習導線整理（マージ済み）
-- #440 ASP・コード体系・LRUの重複統合、関連記事の照合（当PR）
+- #440 ASP・コード体系・LRUの重複統合、関連記事の照合（前提PR）
+- #441 業務モデル2記事の統合と関連教材への学習導線改善（当PR）
 
 ## 本文確認履歴に含まれる現存ファイル
 
 以下は確認履歴のインデックスです。記載されているだけで全本文の逐語比較や公開状態を確認済みとは判断しません。
 
 - pages/fe/account-aggregation.md
+- pages/fe/ad-conversion.md
 - pages/fe/affinity-diagram.md
 - pages/fe/agile-iteration.md
 - pages/fe/ai-vs-rule-based-control.md
+- pages/fe/array.md
 - pages/fe/arrow-diagram.md
 - pages/fe/as-is-to-be-ea.md
 - pages/fe/asp.md
@@ -44,6 +47,7 @@
 - pages/fe/audit-working-papers.md
 - pages/fe/authentication-devices.md
 - pages/fe/automaton-state-transition.md
+- pages/fe/backup-media-offsite-storage.md
 - pages/fe/backup-methods.md
 - pages/fe/backup-redundancy.md
 - pages/fe/balance-sheet.md
@@ -55,15 +59,22 @@
 - pages/fe/binary-search-tree.md
 - pages/fe/binary-tree-traversal.md
 - pages/fe/biometric-authentication.md
+- pages/fe/bit-mask.md
+- pages/fe/bitwise-operations-mask.md
 - pages/fe/black-box-testing.md
 - pages/fe/block-search-average-comparisons.md
 - pages/fe/bottom-up-testing.md
 - pages/fe/bpo-saas-hosting-comparison.md
+- pages/fe/bpr.md
+- pages/fe/break-even-point.md
 - pages/fe/brute-force-attack.md
 - pages/fe/business-continuity-management.md
 - pages/fe/business-continuity-plan.md
 - pages/fe/business-domain.md
 - pages/fe/business-impact-analysis.md
+- pages/fe/business-improvement-process.md
+- pages/fe/business-model-four-types.md
+- pages/fe/business-model-physical-logical.md
 - pages/fe/cache-hit-rate-average-access-time.md
 - pages/fe/cache-memory.md
 - pages/fe/capacity-management-analysis-methods.md
@@ -72,6 +83,7 @@
 - pages/fe/challenge-response-authentication.md
 - pages/fe/character-code-table.md
 - pages/fe/character-encoding.md
+- pages/fe/check-digit.md
 - pages/fe/checksum.md
 - pages/fe/cia-triad.md
 - pages/fe/cidr-network-broadcast-address.md
@@ -80,6 +92,7 @@
 - pages/fe/cloud-deployment-models.md
 - pages/fe/code-system-types.md
 - pages/fe/code-types-and-identification.md
+- pages/fe/coding-conventions-safe-readable-code.md
 - pages/fe/cold-warm-start.md
 - pages/fe/command-and-control.md
 - pages/fe/commit-rollback.md
@@ -93,6 +106,7 @@
 - pages/fe/configuration-management.md
 - pages/fe/contract-types-outsourcing.md
 - pages/fe/control-structures-loop-selection.md
+- pages/fe/control-total-check.md
 - pages/fe/core-competence.md
 - pages/fe/cpi-clock-cycle-cpu-time.md
 - pages/fe/cpu-clock-frequency.md
@@ -110,24 +124,33 @@
 - pages/fe/csirt-soc-psirt-jcrat.md
 - pages/fe/csv-format.md
 - pages/fe/csv-spreadsheet-cell-reference.md
+- pages/fe/data-error-management.md
 - pages/fe/data-mining.md
+- pages/fe/data-transfer-time.md
 - pages/fe/data-warehouse.md
 - pages/fe/database-backup-recovery.md
 - pages/fe/database-log-recovery.md
 - pages/fe/database-recovery-rollforward-rollback.md
+- pages/fe/depreciation-methods.md
+- pages/fe/depreciation-straight-line.md
 - pages/fe/development-environment-maintenance.md
 - pages/fe/dhcp.md
 - pages/fe/disk-scheduling.md
 - pages/fe/disk-scheduling-scan.md
 - pages/fe/dispatch-secondment-contract.md
+- pages/fe/dmz-server-placement.md
 - pages/fe/dns.md
 - pages/fe/dram.md
 - pages/fe/drive-by-download.md
 - pages/fe/drive-by-download-attack.md
+- pages/fe/ecc.md
+- pages/fe/ecc-memory.md
 - pages/fe/economic-order-quantity.md
 - pages/fe/effort-productivity-duration.md
 - pages/fe/enterprise-architecture.md
 - pages/fe/envelope-encryption.md
+- pages/fe/equipment-investment-cost-effectiveness.md
+- pages/fe/evm.md
 - pages/fe/fast-tracking.md
 - pages/fe/fault-tolerant-system.md
 - pages/fe/fe-requirements-definition-process.md
@@ -148,6 +171,7 @@
 - pages/fe/gpl-mit-bsd-license-comparison.md
 - pages/fe/green-procurement.md
 - pages/fe/green-purchasing.md
+- pages/fe/hadoop.md
 - pages/fe/hadoop-spark.md
 - pages/fe/hamming-code.md
 - pages/fe/hash-function-1.md
@@ -163,19 +187,28 @@
 - pages/fe/hybrid-encryption.md
 - pages/fe/ide-development-environment.md
 - pages/fe/ide-eclipse.md
+- pages/fe/ids-ips-firewall.md
 - pages/fe/incident-management-vs-problem-management.md
 - pages/fe/incident-service-request-management.md
 - pages/fe/inheritance.md
+- pages/fe/initial-running-cost.md
 - pages/fe/input-data-check.md
 - pages/fe/input-data-checks.md
+- pages/fe/input-data-completeness-control.md
 - pages/fe/interface-usb-sata-ieee1394-1000base-t.md
 - pages/fe/internal-control-components.md
 - pages/fe/internal-control-six-elements.md
+- pages/fe/internet-vpn.md
+- pages/fe/ipsec.md
+- pages/fe/ipsec-l2tp-tls.md
 - pages/fe/is-a-part-of-instance-class.md
 - pages/fe/it-investment-evaluation.md
 - pages/fe/it-investment-management.md
 - pages/fe/java-language-features.md
 - pages/fe/java-programming-language.md
+- pages/fe/job-vs-task.md
+- pages/fe/line-utilization-rate.md
+- pages/fe/linked-list.md
 - pages/fe/logistic-curve.md
 - pages/fe/lru.md
 - pages/fe/lru-cache-replacement.md
@@ -183,6 +216,8 @@
 - pages/fe/mac-address.md
 - pages/fe/magnetic-disk-access-time.md
 - pages/fe/magnetic-disk-average-wait-time.md
+- pages/fe/memory-compaction.md
+- pages/fe/memory-fragmentation.md
 - pages/fe/memory-hierarchy.md
 - pages/fe/memory-management-methods.md
 - pages/fe/memory-types.md
@@ -191,6 +226,7 @@
 - pages/fe/mtbf-mttr.md
 - pages/fe/nat.md
 - pages/fe/nat-napt.md
+- pages/fe/net-present-value.md
 - pages/fe/network-configuration-management.md
 - pages/fe/network-device-functions-comparison.md
 - pages/fe/network-devices-router-repeater-bridge-switch.md
@@ -199,9 +235,15 @@
 - pages/fe/on-demand-service.md
 - pages/fe/operational-testing.md
 - pages/fe/order-quantity-and-inventory-cost.md
+- pages/fe/ot-dmz.md
+- pages/fe/overlay-paging-swapping.md
 - pages/fe/packet-filtering.md
+- pages/fe/packet-filtering-port-rules.md
 - pages/fe/paging.md
+- pages/fe/parity-check.md
+- pages/fe/parity-circuit.md
 - pages/fe/password-hash-authentication.md
+- pages/fe/pcm-sampling-quantization-encoding.md
 - pages/fe/pdm-dependency-types.md
 - pages/fe/physical-security-measures-comparison.md
 - pages/fe/pki-certificate-authority.md
@@ -210,22 +252,36 @@
 - pages/fe/pppoe.md
 - pages/fe/problem-management.md
 - pages/fe/process-innovation.md
+- pages/fe/profit-calculation.md
 - pages/fe/progress-productivity-effort.md
 - pages/fe/project-life-cycle.md
 - pages/fe/project-lifecycle-characteristics.md
 - pages/fe/project-management-process-groups.md
 - pages/fe/project-management-subject-groups.md
+- pages/fe/project-progress-weighted-effort.md
 - pages/fe/project-scope.md
 - pages/fe/prototyping-model.md
+- pages/fe/pseudocode-reading-guide.md
 - pages/fe/public-key-cryptography.md
 - pages/fe/public-key-encryption-digital-signature.md
+- pages/fe/python-indentation-code-blocks.md
+- pages/fe/qr-code.md
+- pages/fe/qr-code-barcode.md
+- pages/fe/queue.md
 - pages/fe/rasis.md
+- pages/fe/recursion.md
+- pages/fe/recursion-trace.md
+- pages/fe/recursive-factorial.md
+- pages/fe/recursive-function.md
 - pages/fe/regression-testing.md
 - pages/fe/relations-diagram.md
 - pages/fe/rest-api.md
 - pages/fe/reverse-brute-force.md
+- pages/fe/reverse-polish-notation.md
 - pages/fe/risk-assessment-process.md
 - pages/fe/risk-level.md
+- pages/fe/roi.md
+- pages/fe/round-robin-scheduling.md
 - pages/fe/router-bridge-repeater-gateway.md
 - pages/fe/saas-paas-iaas.md
 - pages/fe/scrum-events.md
@@ -238,6 +294,7 @@
 - pages/fe/server-client-port.md
 - pages/fe/server-room-physical-security.md
 - pages/fe/service-availability.md
+- pages/fe/shortest-job-first-scheduling.md
 - pages/fe/siem.md
 - pages/fe/soc.md
 - pages/fe/software-architecture-design.md
@@ -249,6 +306,7 @@
 - pages/fe/sql-aggregate-functions.md
 - pages/fe/sql-group-by-aggregate-functions.md
 - pages/fe/sram.md
+- pages/fe/stack.md
 - pages/fe/stack-vs-queue.md
 - pages/fe/standby-system.md
 - pages/fe/state-transition-diagram.md
@@ -264,6 +322,9 @@
 - pages/fe/system-development-quality-management.md
 - pages/fe/system-failure-monitoring.md
 - pages/fe/system-test-audit.md
+- pages/fe/task-scheduling.md
+- pages/fe/tcp-connection-identification.md
+- pages/fe/tcp-udp-port-number.md
 - pages/fe/three-tier-client-server.md
 - pages/fe/throughput.md
 - pages/fe/throughput-spooling.md
@@ -279,6 +340,9 @@
 - pages/fe/usb-ieee1394.md
 - pages/fe/usb-interface.md
 - pages/fe/variable-partition-memory-allocation.md
+- pages/fe/video-bandwidth-calculation.md
+- pages/fe/virtual-memory.md
+- pages/fe/waf.md
 - pages/fe/waterfall-model.md
 - pages/fe/wbs.md
 - pages/fe/web-api.md
@@ -286,6 +350,7 @@
 - pages/fe/white-box-testing.md
 - pages/fe/work-made-for-hire.md
 - pages/fe/work-made-for-hire-copyright.md
+- pages/fe/xor-bit-flip.md
 
 ## 追加本文監査：数値表現・IT投資など（2026-10-17）
 
@@ -426,12 +491,32 @@
 
 統合先の`date`・`permalink`・FE記事の既存構成を保持し、追加教材も残しました。旧ページは**HTTP 301ではなくHTML meta refreshの転送**で、`sitemap: false`・`noindex,follow`・canonicalを指定します。公開する前にGitHub Actions・Jekyllビルドを確認してください。
 
+## 追加監査：未確認64記事と業務モデルの統合（2026-10-17）
+
+タイトルだけでは見つけにくい重複を補うため、70記事の**定義・本文冒頭・見出し・試験での判断基準**を照合しました。過去の監査ログと重なる6記事を除き、**新たに64ファイル**を確認履歴へ追加しています。この確認は全段落の逐語校正ではありません。
+
+| 関連する記事群 | 判断と対応 |
+|---|---|
+| 業務モデルの4種類（`business-model-four-types`／`business-model-physical-logical`） | **実質的な重複のため統合**。詳細な4モデルの説明を前者に集約し、確認問題・「データクラス」の注意書きを維持。後者の旧URLはHTML転送 |
+| ビットマスク／AND・OR・XOR・NAND／XORによる反転 | マスクの位置・演算の仕組み・XORの具体例を分担するため**維持**。相互リンクを追加 |
+| 再帰処理／再帰関数／階乗／再帰トレース | 呼出しの行き戻り・終了条件・階乗・トレース実演を分担するため**維持**。基本記事から計算・可視化への導線を追加 |
+| パリティチェック／パリティ回路／ハミング／CRC／チェックサム | 検査ビット付加・XOR回路・誤り訂正・生成多項式・総和チェックは別機能のため**維持**。パリティ2記事へ相互リンク追加 |
+| A/D変換／PCM | 分解能・ノイズ対策／標本化→量子化→符号化の切り分けで**維持**。相互リンク追加 |
+| 仮想記憶・断片化・コンパクション・オーバーレイ | 現象・対策・移動時間・管理手法比較は別の学習目的のため**維持** |
+| HadoopとSpark／QRコードとバーコード／バックアップ媒体の外部保管 | 個別定義／比較／運用安全管理の役割が異なるため**維持** |
+| IPsec・VPN・L2TP・DMZ・WAF・パケットフィルタ・TCPポート | 保護する層・通信の対象・実際のフィルタ条件・接続識別が異なるため**維持** |
+| 減価償却／ROI・NPV・投資の費用対効果／EVM・工程工数 | 償却の基本・当期費用計算・投資評価・進捗管理で判断の対象が異なるため**維持** |
+| BPR・業務改善／入力チェックとコントロールトータル | 抜本的な改革と改善手順／個々の入力値チェックと合計照合を区別し**維持** |
+| ジョブとタスク／CPUスケジューリング／ラウンドロビン／処理時間順 | 管理対象・中断可否・割当計算・実行順の計算を分担するため**維持** |
+
+**注意**：本文スキャンは定型句に影響されるので、自動スコアが低くても「内容の目的が同じ」なら手動照合します。今回の統合もその経緯です。
+
 ## 転送専用ページの確認（2026-10-17）
 
 初回は1100バイト未満から17件を抽出しました。その後、**全778件の本文**を自動走査し、`layout: null` とHTMLのmeta refreshの両方を満たす17件を検出しました。
 
-- 確認済み転送専用ページ: 20件（本PR適用後。うち3件は新規転送）
-- 本PR適用後の実記事数: 758件（778 - 20）。HTML meta refresh以外の転送方式は判定対象外
+- 確認済み転送専用ページ: 21件（PR #440・#441両方適用後。うち4件は新規転送）
+- PR #440・#441両方適用後の実記事数: 757件（778 - 21）。HTML meta refresh以外の転送方式は判定対象外
 - これらの転送はHTTP 301ではなく、HTML meta refreshです。
 
 - pages/fe/activity-diagram.md
@@ -454,6 +539,7 @@
 - pages/fe/asp-service.md
 - pages/fe/code-types-and-identification.md
 - pages/fe/lru-cache-replacement.md
+- pages/fe/business-model-physical-logical.md
 
 ## 全件自動スキャンの実行方法（PR #438）
 
