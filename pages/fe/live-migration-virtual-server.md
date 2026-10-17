@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: システム構成要素
 fe_order: 80
 date: 2026-07-31
-last_modified_at: 2026-10-16
+last_modified_at: 2026-10-17
 ---
 
 ## まず結論
@@ -234,7 +234,7 @@ CPU・メモリなどを増減する
 
 **Q4.** 年末の繁忙期だけ処理能力を増やし、繁忙期が終わったら資源を返したい。
 
-<details>
+<details markdown="1">
 <summary>答えと判断基準を見る</summary>
 
 - **Q1：ライブマイグレーション**。移す対象は「稼働中の仮想マシン」です。
