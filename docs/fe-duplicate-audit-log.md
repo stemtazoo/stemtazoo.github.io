@@ -6,11 +6,11 @@
 
 - GitHub mainの再帰ツリーを2026-10-17に取得
 - FE Markdown: 778ファイル（転送用ページを含む）
-- 過去の本文確認履歴に対応する現存ファイル: 422ファイル（重複排除）
-- ファイル単位の確認履歴カバー率: 54.2%。これは全件本文比較の完了率ではありません。
-- 削除済みファイルは分母・分子から除外。PR #441までの状態は転送21件・実記事757件。mainはPR #442まで反映済みで転送25件・実記事753件。PR #444の未反映分を含む今回のPR適用後は転送27件・実記事751件です。
+- 過去の本文確認履歴に対応する現存ファイル: 452ファイル（重複排除）
+- ファイル単位の確認履歴カバー率: 58.1%。これは全件本文比較の完了率ではありません。
+- 削除済みファイルは分母・分子から除外。mainはPR #445まで反映済みで転送27件・実記事751件。今回の継続PR適用後は転送28件・実記事750件です。
 
-- 実記事の個別確認履歴（今回のmain向け継続PR適用後）: **401/751件（53.4%）**。転送の27件は別管理。
+- 実記事の個別確認履歴（今回のmain向け継続PR適用後）: **430/750件（57.3%）**。転送の28件は別管理。
 - 変更前の761実記事に対して**機械的な類似候補抽出を実施済み**。PR #442の新しい構成ではCIで再走査します。未抽出の組合せが重複なしと確定したわけではありません。
 
 ## 修正PRの記録
@@ -29,7 +29,8 @@
 - #440 ASP・コード体系・LRUの重複統合、関連記事の照合（マージ済み）
 - #441 業務モデル2記事の統合と関連教材への学習導線改善（マージ済み）
 - #442 損益計算書・メール・SCM・かんばん方式の重複4組の統合（mainにマージ済み）
-- #444 CPU・OSの30記事監査と割込み・リンキングの2組統合（#442の作業ブランチにマージ済みだがmain未反映。今回のPRで反映）
+- #444 CPU・OSの30記事監査と割込み・リンキングの2組統合（#445でmainへ反映済み）
+- #445 画像・記憶媒体24記事監査とRAIDの役割整理、#444のmain反映（マージ済み）
 
 ## 本文確認履歴に含まれる現存ファイル
 
@@ -44,6 +45,7 @@
 - pages/fe/agile-iteration.md
 - pages/fe/ai-vs-rule-based-control.md
 - pages/fe/anti-aliasing.md
+- pages/fe/application-maintenance.md
 - pages/fe/arp.md
 - pages/fe/arp-rarp-dns-nat.md
 - pages/fe/array.md
@@ -51,6 +53,7 @@
 - pages/fe/as-is-to-be-ea.md
 - pages/fe/asp.md
 - pages/fe/asp-service.md
+- pages/fe/assertion-check.md
 - pages/fe/audit-evidence.md
 - pages/fe/audit-working-papers.md
 - pages/fe/authentication-devices.md
@@ -73,12 +76,16 @@
 - pages/fe/bitmap-outline-font.md
 - pages/fe/bitwise-operations-mask.md
 - pages/fe/black-box-testing.md
+- pages/fe/black-box-vs-white-box-testing.md
 - pages/fe/block-search-average-comparisons.md
 - pages/fe/bottom-up-testing.md
 - pages/fe/bpo-saas-hosting-comparison.md
 - pages/fe/bpr.md
+- pages/fe/branch-coverage.md
 - pages/fe/break-even-point.md
 - pages/fe/brute-force-attack.md
+- pages/fe/bug-management-chart.md
+- pages/fe/bug-seeding.md
 - pages/fe/business-continuity-management.md
 - pages/fe/business-continuity-plan.md
 - pages/fe/business-domain.md
@@ -90,6 +97,7 @@
 - pages/fe/cache-memory.md
 - pages/fe/capacity-management-analysis-methods.md
 - pages/fe/capacity-management-analysis-models.md
+- pages/fe/case-tools.md
 - pages/fe/cd-r.md
 - pages/fe/certificate-authority.md
 - pages/fe/challenge-response-authentication.md
@@ -103,6 +111,7 @@
 - pages/fe/client-server-system.md
 - pages/fe/clipping.md
 - pages/fe/cloud-deployment-models.md
+- pages/fe/cmmi.md
 - pages/fe/code-system-types.md
 - pages/fe/code-types-and-identification.md
 - pages/fe/coding-conventions-safe-readable-code.md
@@ -156,9 +165,11 @@
 - pages/fe/database-recovery-rollforward-rollback.md
 - pages/fe/database-schema.md
 - pages/fe/deadlock.md
+- pages/fe/defect-repair-cost-expected-value.md
 - pages/fe/depreciation-methods.md
 - pages/fe/depreciation-straight-line.md
 - pages/fe/development-environment-maintenance.md
+- pages/fe/development-operations-collaboration.md
 - pages/fe/device-driver.md
 - pages/fe/dhcp.md
 - pages/fe/disk-scheduling.md
@@ -180,10 +191,13 @@
 - pages/fe/enterprise-architecture.md
 - pages/fe/envelope-encryption.md
 - pages/fe/equipment-investment-cost-effectiveness.md
+- pages/fe/equivalence-partitioning-boundary-value.md
 - pages/fe/er-diagram.md
 - pages/fe/er-diagram-cardinality.md
 - pages/fe/evm.md
 - pages/fe/exclusive-resource-task-timing.md
+- pages/fe/external-internal-design.md
+- pages/fe/extreme-programming.md
 - pages/fe/fast-tracking.md
 - pages/fe/fault-tolerant-system.md
 - pages/fe/fe-requirements-definition-process.md
@@ -202,6 +216,7 @@
 - pages/fe/function-point-effort.md
 - pages/fe/function-point-method.md
 - pages/fe/functional-nonfunctional-requirements.md
+- pages/fe/fuzzing.md
 - pages/fe/gantt-chart.md
 - pages/fe/gompertz-curve.md
 - pages/fe/gpl-license.md
@@ -275,6 +290,7 @@
 - pages/fe/magnetic-disk-access-time.md
 - pages/fe/magnetic-disk-average-wait-time.md
 - pages/fe/many-to-many-associative-entity.md
+- pages/fe/master-file-maintenance.md
 - pages/fe/memory-compaction.md
 - pages/fe/memory-fragmentation.md
 - pages/fe/memory-hierarchy.md
@@ -283,8 +299,11 @@
 - pages/fe/message-authentication-code.md
 - pages/fe/microkernel.md
 - pages/fe/middleware.md
+- pages/fe/migration-test.md
 - pages/fe/mips.md
 - pages/fe/mips-processing-time.md
+- pages/fe/module-cohesion.md
+- pages/fe/module-coupling.md
 - pages/fe/morphing.md
 - pages/fe/mpeg.md
 - pages/fe/mtbf.md
@@ -302,6 +321,7 @@
 - pages/fe/ntp-time-synchronization.md
 - pages/fe/on-demand-service.md
 - pages/fe/operational-testing.md
+- pages/fe/operations-involvement-system-development.md
 - pages/fe/order-quantity-and-inventory-cost.md
 - pages/fe/os-api.md
 - pages/fe/ot-dmz.md
@@ -353,6 +373,7 @@
 - pages/fe/recursive-factorial.md
 - pages/fe/recursive-function.md
 - pages/fe/reentrant-program.md
+- pages/fe/refactoring.md
 - pages/fe/referential-integrity.md
 - pages/fe/regression-testing.md
 - pages/fe/relational-model.md
@@ -395,6 +416,11 @@
 - pages/fe/software-design-phases.md
 - pages/fe/software-license-contract-types.md
 - pages/fe/software-license-minimum-cost.md
+- pages/fe/software-quality-characteristics.md
+- pages/fe/software-repository.md
+- pages/fe/software-reuse.md
+- pages/fe/software-review-inspection.md
+- pages/fe/software-testing-types.md
 - pages/fe/speculative-execution.md
 - pages/fe/spiral-model.md
 - pages/fe/spooling.md
@@ -426,6 +452,7 @@
 - pages/fe/task-scheduling.md
 - pages/fe/tcp-connection-identification.md
 - pages/fe/tcp-udp-port-number.md
+- pages/fe/test-support-tools.md
 - pages/fe/three-tier-client-server.md
 - pages/fe/throughput.md
 - pages/fe/throughput-spooling.md
@@ -445,14 +472,18 @@
 - pages/fe/usb-ieee1394.md
 - pages/fe/usb-interface.md
 - pages/fe/variable-partition-memory-allocation.md
+- pages/fe/verification-validation.md
 - pages/fe/video-bandwidth-calculation.md
 - pages/fe/virtual-memory.md
 - pages/fe/waf.md
+- pages/fe/walkthrough-review.md
+- pages/fe/waterfall-defect-correction-cost.md
 - pages/fe/waterfall-model.md
 - pages/fe/wbs.md
 - pages/fe/web-api.md
 - pages/fe/web-client-server.md
 - pages/fe/weighted-average-inventory-valuation.md
+- pages/fe/white-box-test-coverage.md
 - pages/fe/white-box-testing.md
 - pages/fe/work-made-for-hire.md
 - pages/fe/work-made-for-hire-copyright.md
@@ -713,12 +744,36 @@ SG・DS・GKも関連語で検索し、テーマ外の記事は本監査の件�
 - 今回24記事追加後：778 Markdown・転送27・実記事751、確認履歴422ファイル（転送21・実記事401）。**401/751実記事（53.4%）**、未確認350実記事。
 - PRのマージ済み表示だけで公開反映済みと判断せず、mainの本文と履歴を照合した。
 
+## 継続監査：開発・テスト・品質管理の未確認30記事（2026-10-17）
+
+履歴422ファイルに含まれない30ファイルを追加しました。定義・冒頭・見出し・科目A/Bの判断軸を比較し、統合対象2記事は本文全体を照合しています。全記事間の総当たり比較や全文校正の完了率ではありません。
+
+| 記事群 | 判定・理由 |
+|---|---|
+| `development-operations-collaboration` / `operations-involvement-system-development` | **統合**。要件定義からの運用参加・運用テスト・引継ぎという学習目的が同じ。初回日付が早く設備設計のたとえを持つ後者を維持。前者の運用要件表、クラウド移行の例、DevOpsとの違いを移植。旧URLをHTML転送し、既存別名は正規記事へ直接転送する設定を維持 |
+| `black-box-vs-white-box-testing` / `white-box-test-coverage` / `branch-coverage` | 維持。テスト設計根拠の比較とPython例／5種類の網羅基準・最小ケース数／判定式全体の真偽とPython例。既存のブラック・ホワイト個別記事とも区別 |
+| `equivalence-partitioning-boundary-value` / `assertion-check` / `fuzzing` / `test-support-tools` | 維持。代表値・境界の選び方／実行時に成立すべき条件／多様な入力による異常探索／静的・動的・環境設定のツール分類。既存のリンクも確認 |
+| `software-review-inspection` / `walkthrough-review` | 維持。4つのレビュー技法の比較／作成者を含むレビューの進め方・早期発見。双方の役割説明とリンクが既にある |
+| `bug-management-chart` / `bug-seeding` / 既存確認済み`gompertz-curve` | 維持。複数曲線の収束と停滞の判定／既知バグ検出率による残存数の計算／累積バグのS字モデルは異なる |
+| `defect-repair-cost-expected-value` / `waterfall-defect-correction-cost` | 維持。不良率・発見率・対象割合・単価で費用を計算／上流誤りが後続成果物に及ぼす手戻りの比較。費用という語だけで統合しない |
+| `software-testing-types` / `migration-test` / 既存確認済みの回帰・運用テスト | 維持。工程・目的によるテスト全体の分類／切替手順・時間・切戻しのリハーサル／修正後の悪影響／実運用の確認を分担 |
+| `application-maintenance` / `master-file-maintenance` | 維持。修正・テスト・承認・本番反映・記録／データの重複・内容・参照関係の整備。「保守」の対象が異なる |
+| `module-cohesion` / `module-coupling` | 維持。モジュール内部のまとまり／モジュール間の依存。種類と望ましい強弱も異なる |
+| `external-internal-design` / `verification-validation` / 既存確認済み設計工程・共通フレーム支援記事 | 維持。設計成果物の分類／仕様適合と利用目的適合／工程の全体像／支援プロセス群は別の学習目的 |
+| `extreme-programming` / `refactoring` / `software-reuse` | 維持。XPのプラクティス比較／外部動作を保った内部改善／再利用部品を作る工数と使う工数の違い |
+| `case-tools` / `software-repository` / `cmmi` / `software-quality-characteristics` | 維持。開発支援工程／成果物一元管理／プロセス成熟度／製品品質の評価軸。既存確認済みの構成管理・品質管理とも区別 |
+
+- SG・DS・GKも関連語で検索し、他テーマとの統合は行わない。出典の鮮度・規格変更・全面的な内容校正は別監査。
+- 統合先の`date`・`permalink`・分類・見出し・フッターを維持し更新日を変更。既存別名`/fe/development-to-operations-transition/`を統合先の`redirect_from`へ移し、多段転送を避ける。
+- 図解評価：設備設計のたとえ・工程フロー・運用要件表で目的を説明できるため、新たな操作UIは追加しない。
+- main（`f7dde4d7`、#445まで）：401/751実記事（53.4%）。今回適用後：778 Markdown・転送28・実記事750、確認履歴452ファイル（転送22・実記事430）。**430/750実記事（57.3%）**、未確認320実記事。
+
 ## 転送専用ページの確認（2026-10-17）
 
 初回は1100バイト未満から17件を抽出しました。その後、**全778件の本文**を自動走査し、`layout: null` とHTMLのmeta refreshの両方を満たす17件を検出しました。
 
-- 確認済み転送専用ページ: 27件（PR #442と継続PR適用後。今回2件追加）
-- PR #442と継続PR適用後の実記事数: 751件（778 - 27）。HTML meta refresh以外の転送方式は判定対象外
+- 確認済み転送専用ページ: 28件（#445までの27件に今回1件追加）
+- 今回の継続PR適用後の実記事数: 750件（778 - 28）。HTML meta refresh以外の転送方式は判定対象外
 - これらの転送はHTTP 301ではなく、HTML meta refreshです。
 
 - pages/fe/activity-diagram.md
@@ -751,6 +806,8 @@ SG・DS・GKも関連語で検索し、テーマ外の記事は本監査の件�
 
 - pages/fe/interrupt.md
 - pages/fe/static-dynamic-linking.md
+
+- pages/fe/development-operations-collaboration.md
 
 ## 全件自動スキャンの実行方法（PR #438）
 
