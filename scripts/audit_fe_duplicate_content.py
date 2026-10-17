@@ -21,7 +21,7 @@ META_REFRESH_RE = re.compile(
     r"<meta\b[^>]*\bhttp-equiv\s*=\s*['\"]?refresh['\"]?[^>]*>",
     re.IGNORECASE | re.DOTALL,
 )
-REDIRECT_URL_RE = re.compile(r"\burl\s*=\s*['\"]?(/fe/[\w/-]+/)", re.IGNORECASE)
+REDIRECT_URL_RE = re.compile(r"\burl\s*=\s*(?:\{\{\s*)?['\"]?(/fe/[\w/-]+/)", re.IGNORECASE)
 FENCE_RE = re.compile(r"^\s*(```|~~~)")
 LINK_RE = re.compile(r"\[([^]]+)\]\([^)]*\)")
 HTML_RE = re.compile(r"<[^>]+>")
