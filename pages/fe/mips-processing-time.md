@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: コンピュータ構成要素
 fe_order: 15
 date: 2026-07-06
-last_modified_at: 2026-08-30
+last_modified_at: 2026-10-17
 ---
 
 ## まず結論
@@ -29,6 +29,8 @@ FE試験では、MIPSの問題は次の流れで解きます。
 ```
 
 という意味です。
+
+このページでは**与えられたMIPSからCPU時間を求め、I/O待ち時間を足す計算**を扱います。クロック周波数・命令ごとのCPIからMIPSそのものを求める計算は、[MIPSとCPIの基本](/fe/mips/)で確認できます。
 
 ---
 
