@@ -6,7 +6,7 @@ permalink: /fe/usb/
 tags: [fe, fe-technology, hardware, interface]
 fe_section: テクノロジ系
 fe_subsection: コンピュータ構成要素
-last_modified_at: 2026-07-20
+last_modified_at: 2026-10-17
 ---
 
 ## まず結論
@@ -264,6 +264,8 @@ USB 2.0・USB 3.xなど
 USBは給電できますが、供給できる電力には上限があります。
 
 大きな電力を必要とする機器では、ACアダプターなどの外部電源が必要になることがあります。
+
+転送モード（Low Speed・Full Speed・High Speed）やIEEE 1394・RS-232との詳しい比較は、[USBインタフェースの転送モード](/fe/usb-interface/)で確認できます。
 
 ## まとめ（試験直前用）
 

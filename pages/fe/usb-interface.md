@@ -6,10 +6,13 @@ permalink: /fe/usb-interface/
 tags: [fe, fe-technology, computer-system, interface]
 fe_section: テクノロジ系
 fe_subsection: コンピュータ構成要素
-last_modified_at: 2026-08-05
+last_modified_at: 2026-10-17
 ---
 
 ## まず結論
+
+この記事は、**USBの転送モードと他のインタフェース規格との比較**に重点を置きます。ホットプラグ・プラグアンドプレイ・バスパワーなどの基本的な特徴は、[USBの基本](/fe/usb/)で確認できます。
+
 
 **USB（Universal Serial Bus）**とは、パソコンと周辺機器を接続するための代表的なシリアルインタフェースです。
 
