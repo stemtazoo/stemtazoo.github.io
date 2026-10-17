@@ -6,8 +6,8 @@
 
 - GitHub mainの再帰ツリーを2026-10-17に取得
 - FE Markdown: 778ファイル（転送用ページを含む）
-- 過去の本文確認履歴に対応する現存ファイル: 78ファイル（重複排除）
-- ファイル単位の確認履歴カバー率: 10.0%。これは全件本文比較の完了率ではありません。
+- 過去の本文確認履歴に対応する現存ファイル: 94ファイル（重複排除）
+- ファイル単位の確認履歴カバー率: 12.1%。これは全件本文比較の完了率ではありません。
 - 削除済みファイルは分母・分子から除外。転送ページのうち17ファイルを本文で確認済み。全件分類は未完了です。
 
 ## 修正PRの記録
@@ -106,6 +106,23 @@
 - pages/fe/work-made-for-hire-copyright.md
 
 
+- pages/fe/it-investment-evaluation.md
+- pages/fe/it-investment-management.md
+- pages/fe/binary-representation.md
+- pages/fe/hex-binary-conversion.md
+- pages/fe/hexadecimal-fraction.md
+- pages/fe/hexadecimal-fraction-conversion.md
+- pages/fe/hexadecimal-fraction-bit-shift.md
+- pages/fe/floating-point-representation.md
+- pages/fe/floating-point-format.md
+- pages/fe/floating-point-normalization.md
+- pages/fe/floating-point-errors.md
+- pages/fe/block-search-average-comparisons.md
+- pages/fe/conditional-branch-average-comparisons.md
+- pages/fe/business-domain.md
+- pages/fe/as-is-to-be-ea.md
+- pages/fe/business-impact-analysis.md
+
 ## 追加本文監査：数値表現・IT投資など（2026-10-17）
 
 今回新たに16ファイルの本文を確認。既存ログとの重複は除外して追記しました。
@@ -132,7 +149,6 @@
 - pages/fe/conditional-branch-average-comparisons.md
 - pages/fe/business-domain.md
 - pages/fe/as-is-to-be-ea.md
-- pages/fe/business-impact-analysis.md
 ## 転送専用ページの確認（2026-10-17）
 
 Markdownが1100バイト未満の17件を抽出し、17件すべての本文にHTMLのmeta refresh転送を確認しました。**この条件に当てはまらない転送ページは未調査**です。
