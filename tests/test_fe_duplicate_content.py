@@ -42,6 +42,14 @@ class DuplicateAuditTests(unittest.TestCase):
         self.assertEqual(redirects[0].target, "/fe/source/")
         self.assertEqual(len([p for p in pages if not p.redirect]), 1)
 
+    def test_detects_liquid_relative_url_meta_refresh(self):
+        self.article("canonical", "暗号化を使う場合には鍵を正しく管理します。" * 5)
+        self.write("alias.md", "---\nlayout: null\npermalink: /fe/alias/\n---\n"
+                   "<meta http-equiv=\"refresh\" content=\"0; url={{ '/fe/canonical/' | relative_url }}\">")
+        pages = module.read_pages(self.root)
+        self.assertEqual([p.target for p in pages if p.redirect], ["/fe/canonical/"])
+        self.assertNotIn("転送先の要確認", module.report(pages, [], 10))
+
     def test_detects_duplicate_even_when_titles_differ(self):
         shared = (
             "入力した情報が正しく処理されるかを確認するには、複数の条件と境界値を比較して判断します。"
