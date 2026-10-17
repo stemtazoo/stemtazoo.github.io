@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: 基礎理論
 fe_order: 25
 date: 2026-07-02
-last_modified_at: 2026-08-02
+last_modified_at: 2026-10-17
 ---
 
 ## まず結論
@@ -36,6 +36,8 @@ B = A XOR C
 つまり、**3つのうち2つが分かれば、残り1つをXORで逆算できます。**
 
 > **残すならAND、1にするならOR、反転・逆算ならXOR。**
+
+このページは**AND・OR・XOR・NANDの演算と逆算**が中心です。操作するビットの位置を指定する考え方は[ビットマスク](/fe/bit-mask/)、XORによる反転の例は[XORによるビット反転](/fe/xor-bit-flip/)で詳しく説明しています。
 
 ## 直感的な説明
 

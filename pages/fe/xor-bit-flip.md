@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: 基礎理論
 fe_order: 90
 date: 2026-08-30
-last_modified_at: 2026-08-31
+last_modified_at: 2026-10-17
 ---
 
 ## まず結論
@@ -40,6 +40,8 @@ X AND 1 → Xのまま
 ```
 
 そのため、**残したい位置を1にしたマスクとANDをとる**と、必要なビットだけ取り出せます。
+
+このページでは、**XORで指定したビットだけ反転する手順**に注目します。マスクの1が表す位置は[ビットマスク](/fe/bit-mask/)、AND・OR・XOR・NANDの全体比較は[ビット演算の基本](/fe/bitwise-operations-mask/)で整理しています。
 
 ## 直感的な説明
 
