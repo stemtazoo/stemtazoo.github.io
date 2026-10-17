@@ -6,11 +6,11 @@
 
 - GitHub mainの再帰ツリーを2026-10-17に取得
 - FE Markdown: 778ファイル（転送用ページを含む）
-- 過去の本文確認履歴に対応する現存ファイル: 452ファイル（重複排除）
-- ファイル単位の確認履歴カバー率: 58.1%。これは全件本文比較の完了率ではありません。
-- 削除済みファイルは分母・分子から除外。mainはPR #445まで反映済みで転送27件・実記事751件。今回の継続PR適用後は転送28件・実記事750件です。
+- 過去の本文確認履歴に対応する現存ファイル: 482ファイル（重複排除）
+- ファイル単位の確認履歴カバー率: 62.0%。これは全件本文比較の完了率ではありません。
+- 削除済みファイルは分母・分子から除外。mainはPR #446まで反映済みで転送28件・実記事750件。今回の継続PR適用後は転送29件・実記事749件です。
 
-- 実記事の個別確認履歴（今回のmain向け継続PR適用後）: **430/750件（57.3%）**。転送の28件は別管理。
+- 実記事の個別確認履歴（今回のmain向け継続PR適用後）: **459/749件（61.3%）**。転送の29件は別管理。
 - 変更前の761実記事に対して**機械的な類似候補抽出を実施済み**。PR #442の新しい構成ではCIで再走査します。未抽出の組合せが重複なしと確定したわけではありません。
 
 ## 修正PRの記録
@@ -31,6 +31,7 @@
 - #442 損益計算書・メール・SCM・かんばん方式の重複4組の統合（mainにマージ済み）
 - #444 CPU・OSの30記事監査と割込み・リンキングの2組統合（#445でmainへ反映済み）
 - #445 画像・記憶媒体24記事監査とRAIDの役割整理、#444のmain反映（マージ済み）
+- #446 開発・テスト・品質管理30記事監査、開発・運用連携記事の統合（マージ済み）
 
 ## 本文確認履歴に含まれる現存ファイル
 
@@ -41,6 +42,7 @@
 - pages/fe/acid-properties.md
 - pages/fe/ad-conversion.md
 - pages/fe/addressing-modes.md
+- pages/fe/adsl.md
 - pages/fe/affinity-diagram.md
 - pages/fe/agile-iteration.md
 - pages/fe/ai-vs-rule-based-control.md
@@ -54,6 +56,7 @@
 - pages/fe/asp.md
 - pages/fe/asp-service.md
 - pages/fe/assertion-check.md
+- pages/fe/atm.md
 - pages/fe/audit-evidence.md
 - pages/fe/audit-working-papers.md
 - pages/fe/authentication-devices.md
@@ -78,6 +81,7 @@
 - pages/fe/black-box-testing.md
 - pages/fe/black-box-vs-white-box-testing.md
 - pages/fe/block-search-average-comparisons.md
+- pages/fe/bluetooth.md
 - pages/fe/bottom-up-testing.md
 - pages/fe/bpo-saas-hosting-comparison.md
 - pages/fe/bpr.md
@@ -133,6 +137,7 @@
 - pages/fe/control-total-check.md
 - pages/fe/core-competence.md
 - pages/fe/cpi-clock-cycle-cpu-time.md
+- pages/fe/cpsf.md
 - pages/fe/cpu-clock-frequency.md
 - pages/fe/cpu-execution-overview.md
 - pages/fe/cpu-instruction-cycle.md
@@ -149,8 +154,11 @@
 - pages/fe/cryptographic-algorithm-types.md
 - pages/fe/csirt-material-1.md
 - pages/fe/csirt-soc-psirt-jcrat.md
+- pages/fe/csma-ca.md
+- pages/fe/csma-cd.md
 - pages/fe/csv-format.md
 - pages/fe/csv-spreadsheet-cell-reference.md
+- pages/fe/cyber-physical-security-framework.md
 - pages/fe/data-error-management.md
 - pages/fe/data-flow-diagram.md
 - pages/fe/data-mining.md
@@ -179,6 +187,7 @@
 - pages/fe/display-types.md
 - pages/fe/dmz-server-placement.md
 - pages/fe/dns.md
+- pages/fe/dns-cache-poisoning.md
 - pages/fe/dram.md
 - pages/fe/draw-software.md
 - pages/fe/drive-by-download.md
@@ -237,6 +246,7 @@
 - pages/fe/hidden-line-and-surface-removal.md
 - pages/fe/hot-warm-cold-site.md
 - pages/fe/housing-service.md
+- pages/fe/https.md
 - pages/fe/huffman-coding.md
 - pages/fe/hybrid-cloud.md
 - pages/fe/hybrid-encryption.md
@@ -268,6 +278,11 @@
 - pages/fe/ip-mac-address-routing.md
 - pages/fe/ipsec.md
 - pages/fe/ipsec-l2tp-tls.md
+- pages/fe/ipv4-address-classes.md
+- pages/fe/ipv4-address-notation.md
+- pages/fe/ipv4-global-private-address.md
+- pages/fe/ipv4-ipv6.md
+- pages/fe/ipv4-subnet-host-count.md
 - pages/fe/is-a-part-of-instance-class.md
 - pages/fe/it-investment-evaluation.md
 - pages/fe/it-investment-management.md
@@ -286,6 +301,7 @@
 - pages/fe/lru.md
 - pages/fe/lru-cache-replacement.md
 - pages/fe/lru-page-replacement.md
+- pages/fe/lte.md
 - pages/fe/mac-address.md
 - pages/fe/magnetic-disk-access-time.md
 - pages/fe/magnetic-disk-average-wait-time.md
@@ -320,21 +336,26 @@
 - pages/fe/ntp.md
 - pages/fe/ntp-time-synchronization.md
 - pages/fe/on-demand-service.md
+- pages/fe/open-redirect.md
 - pages/fe/operational-testing.md
 - pages/fe/operations-involvement-system-development.md
 - pages/fe/order-quantity-and-inventory-cost.md
 - pages/fe/os-api.md
+- pages/fe/osi-reference-model.md
 - pages/fe/ot-dmz.md
 - pages/fe/overlay-paging-swapping.md
 - pages/fe/packet-filtering.md
 - pages/fe/packet-filtering-port-rules.md
+- pages/fe/packet-switching.md
 - pages/fe/page-printer.md
 - pages/fe/paging.md
 - pages/fe/parity-check.md
 - pages/fe/parity-circuit.md
 - pages/fe/password-hash-authentication.md
+- pages/fe/password-list-attack-comparison.md
 - pages/fe/pcm-sampling-quantization-encoding.md
 - pages/fe/pdm-dependency-types.md
+- pages/fe/phishing.md
 - pages/fe/physical-security-measures-comparison.md
 - pages/fe/ping.md
 - pages/fe/pipe.md
@@ -358,6 +379,7 @@
 - pages/fe/project-progress-weighted-effort.md
 - pages/fe/project-scope.md
 - pages/fe/prototyping-model.md
+- pages/fe/proxy-server.md
 - pages/fe/pseudocode-reading-guide.md
 - pages/fe/public-key-cryptography.md
 - pages/fe/public-key-encryption-digital-signature.md
@@ -365,6 +387,7 @@
 - pages/fe/qr-code.md
 - pages/fe/qr-code-barcode.md
 - pages/fe/queue.md
+- pages/fe/radius.md
 - pages/fe/raid-levels.md
 - pages/fe/rasis.md
 - pages/fe/raster-vector-graphics.md
@@ -401,6 +424,7 @@
 - pages/fe/security-cia.md
 - pages/fe/security-guidelines-comparison.md
 - pages/fe/security-threat-countermeasures.md
+- pages/fe/seo-poisoning.md
 - pages/fe/series-parallel-system-availability.md
 - pages/fe/server-client-port.md
 - pages/fe/server-room-physical-security.md
@@ -428,6 +452,7 @@
 - pages/fe/sql-group-by-aggregate-functions.md
 - pages/fe/sram.md
 - pages/fe/sram-dram.md
+- pages/fe/ssid-bssid.md
 - pages/fe/stack.md
 - pages/fe/stack-vs-queue.md
 - pages/fe/standby-system.md
@@ -451,8 +476,10 @@
 - pages/fe/task-dispatch_revised.md
 - pages/fe/task-scheduling.md
 - pages/fe/tcp-connection-identification.md
+- pages/fe/tcp-ip-layers.md
 - pages/fe/tcp-udp-port-number.md
 - pages/fe/test-support-tools.md
+- pages/fe/tethering.md
 - pages/fe/three-tier-client-server.md
 - pages/fe/throughput.md
 - pages/fe/throughput-spooling.md
@@ -475,7 +502,9 @@
 - pages/fe/verification-validation.md
 - pages/fe/video-bandwidth-calculation.md
 - pages/fe/virtual-memory.md
+- pages/fe/voip-gatekeeper.md
 - pages/fe/waf.md
+- pages/fe/wake-on-lan.md
 - pages/fe/walkthrough-review.md
 - pages/fe/waterfall-defect-correction-cost.md
 - pages/fe/waterfall-model.md
@@ -485,6 +514,8 @@
 - pages/fe/weighted-average-inventory-valuation.md
 - pages/fe/white-box-test-coverage.md
 - pages/fe/white-box-testing.md
+- pages/fe/wireless-lan-channel-interference.md
+- pages/fe/wireless-lan-security.md
 - pages/fe/work-made-for-hire.md
 - pages/fe/work-made-for-hire-copyright.md
 - pages/fe/xor-bit-flip.md
@@ -768,12 +799,35 @@ SG・DS・GKも関連語で検索し、テーマ外の記事は本監査の件�
 - 図解評価：設備設計のたとえ・工程フロー・運用要件表で目的を説明できるため、新たな操作UIは追加しない。
 - main（`f7dde4d7`、#445まで）：401/751実記事（53.4%）。今回適用後：778 Markdown・転送28・実記事750、確認履歴452ファイル（転送22・実記事430）。**430/750実記事（57.3%）**、未確認320実記事。
 
+## 継続監査：ネットワーク・セキュリティの未確認30記事（2026-10-17）
+
+履歴452ファイルに含まれない30ファイルを追加確認しました。定義・冒頭・見出し・試験の判断基準を比較し、統合対象2記事は本文全体を照合しています。全段落の校正・全記事間の総当たり比較の完了率ではありません。
+
+| 記事群 | 判定・理由 |
+|---|---|
+| `cpsf` / `cyber-physical-security-framework` | **統合**。目的、産業社会・サプライチェーン、3層のつながり、個別ガイドラインとの区別が同じ。初回日付が早く、設備停止・安全への影響と各層の実例を持つ正式名称側を維持。略称側の学習内容は統合先に含まれている。旧URLをHTML転送し、正式名称側からガイドライン比較へ誘導 |
+| `ipv4-address-notation` / `ipv4-address-classes` / `ipv4-global-private-address` / `ipv4-ipv6` | 維持。8ビット区切りの表記／旧来のクラス境界／私用・特殊用途の範囲／IPv6との長さ・表記・機能比較で判断が異なる |
+| `ipv4-subnet-host-count` / 既存確認済みCIDR・ホストアドレス記事 | 維持。プレフィックスから使用可能数を計算／ネットワークとブロードキャストの番地算出／個々の番地の割当可否を分担 |
+| `osi-reference-model` / `tcp-ip-layers` | 維持。OSI7層の機能判断／TCP/IP4層・プロトコルとフレーム内情報の対応。既存の相互リンクと役割説明を確認 |
+| `csma-ca` / `csma-cd` | 維持。無線LANでの衝突回避・ACK／共有型Ethernetの衝突検出・再送・混雑を分担。既存相互リンクを確認 |
+| `ssid-bssid` / `wireless-lan-channel-interference` / `wireless-lan-security` | 維持。ネットワーク・APの識別／2.4GHz帯の干渉とチャネル配置／暗号化・接続制限・端末間分離という目的が異なる |
+| `adsl` / `atm` / `packet-switching` | 維持。電話線の周波数分離と非対称通信／53バイトの固定長セル／分割転送と回線共有。ATMとパケット交換は関連するが個別方式の判断が異なる |
+| `bluetooth` / `lte` / `tethering` | 維持。近距離の無線規格／携帯電話網の移動通信システム／モバイル回線を別端末へ共有する機能。通信方式と機能を混同しない |
+| `dns-cache-poisoning` / `seo-poisoning` / `open-redirect` / `phishing` | 維持。名前解決情報／検索順位／Web転送機能の悪用／利用者をだまして情報入力させる攻撃を分担。誘導という結果だけで統合しない |
+| `password-list-attack-comparison` / 既存確認済み総当たり・リバース総当たり記事 | 維持。流出した組合せ・候補語・固定する項目・ハッシュ解析の横断比較／全候補による探索／パスワード固定での試行という役割差 |
+| `proxy-server` / `radius` / `https` / `voip-gatekeeper` / `wake-on-lan` | 維持。代理接続と2本のTCP接続／ネットワーク利用者の認証／HTTP通信のTLS保護／H.323の番号とIP対応／LAN経由の起動。既存確認済みDNS・NAT・PKI・WAFとの違いも照合 |
+
+- SG・DS・GKの関連語も検索し、他テーマとの統合は行わない。規格・ガイドラインの最新性と全面的な内容校正は別監査。
+- 正規記事の初回`date`・`permalink`・分類・主要見出し・フッター・出典・工場の具体例は保持。略称記事の内容に独自の計算問題や操作図解はなく、重複する工程図は追加しない。
+- 図解評価：正規記事のセンサー→分析→制御と各層の具体例で目的を説明できるため、新たな操作UIは不要。
+- main（`86cca6a8`、#446まで）：430/750実記事（57.3%）。今回適用後：778 Markdown・転送29・実記事749、確認履歴482ファイル（転送23・実記事459）。**459/749実記事（61.3%）**、未確認290実記事。
+
 ## 転送専用ページの確認（2026-10-17）
 
 初回は1100バイト未満から17件を抽出しました。その後、**全778件の本文**を自動走査し、`layout: null` とHTMLのmeta refreshの両方を満たす17件を検出しました。
 
-- 確認済み転送専用ページ: 28件（#445までの27件に今回1件追加）
-- 今回の継続PR適用後の実記事数: 750件（778 - 28）。HTML meta refresh以外の転送方式は判定対象外
+- 確認済み転送専用ページ: 29件（#446までの28件に今回1件追加）
+- 今回の継続PR適用後の実記事数: 749件（778 - 29）。HTML meta refresh以外の転送方式は判定対象外
 - これらの転送はHTTP 301ではなく、HTML meta refreshです。
 
 - pages/fe/activity-diagram.md
@@ -808,6 +862,8 @@ SG・DS・GKも関連語で検索し、テーマ外の記事は本監査の件�
 - pages/fe/static-dynamic-linking.md
 
 - pages/fe/development-operations-collaboration.md
+
+- pages/fe/cpsf.md
 
 ## 全件自動スキャンの実行方法（PR #438）
 
