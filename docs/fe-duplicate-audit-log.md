@@ -6,11 +6,11 @@
 
 - GitHub mainの再帰ツリーを2026-10-17に取得
 - FE Markdown: 778ファイル（転送用ページを含む）
-- 過去の本文確認履歴に対応する現存ファイル: 368ファイル（重複排除）
-- ファイル単位の確認履歴カバー率: 47.3%。これは全件本文比較の完了率ではありません。
-- 削除済みファイルは分母・分子から除外。PR #441までの状態は転送21件・実記事757件。今回のPR #442適用後は転送25件・実記事753件となる見込みです。
+- 過去の本文確認履歴に対応する現存ファイル: 422ファイル（重複排除）
+- ファイル単位の確認履歴カバー率: 54.2%。これは全件本文比較の完了率ではありません。
+- 削除済みファイルは分母・分子から除外。PR #441までの状態は転送21件・実記事757件。mainはPR #442まで反映済みで転送25件・実記事753件。PR #444の未反映分を含む今回のPR適用後は転送27件・実記事751件です。
 
-- 実記事の個別確認履歴（PR #442適用後）: **349/753件（46.3%）**。転送の25件は別管理。
+- 実記事の個別確認履歴（今回のmain向け継続PR適用後）: **401/751件（53.4%）**。転送の27件は別管理。
 - 変更前の761実記事に対して**機械的な類似候補抽出を実施済み**。PR #442の新しい構成ではCIで再走査します。未抽出の組合せが重複なしと確定したわけではありません。
 
 ## 修正PRの記録
@@ -28,18 +28,22 @@
 - #439 追加53記事の役割監査と3記事の学習導線整理（マージ済み）
 - #440 ASP・コード体系・LRUの重複統合、関連記事の照合（マージ済み）
 - #441 業務モデル2記事の統合と関連教材への学習導線改善（マージ済み）
-- #442 損益計算書・メール・SCM・かんばん方式の重複4組の統合（当PR）
+- #442 損益計算書・メール・SCM・かんばん方式の重複4組の統合（mainにマージ済み）
+- #444 CPU・OSの30記事監査と割込み・リンキングの2組統合（#442の作業ブランチにマージ済みだがmain未反映。今回のPRで反映）
 
 ## 本文確認履歴に含まれる現存ファイル
 
 以下は確認履歴のインデックスです。記載されているだけで全本文の逐語比較や公開状態を確認済みとは判断しません。
 
+- pages/fe/3d-printer.md
 - pages/fe/account-aggregation.md
 - pages/fe/acid-properties.md
 - pages/fe/ad-conversion.md
+- pages/fe/addressing-modes.md
 - pages/fe/affinity-diagram.md
 - pages/fe/agile-iteration.md
 - pages/fe/ai-vs-rule-based-control.md
+- pages/fe/anti-aliasing.md
 - pages/fe/arp.md
 - pages/fe/arp-rarp-dns-nat.md
 - pages/fe/array.md
@@ -66,6 +70,7 @@
 - pages/fe/binary-tree-traversal.md
 - pages/fe/biometric-authentication.md
 - pages/fe/bit-mask.md
+- pages/fe/bitmap-outline-font.md
 - pages/fe/bitwise-operations-mask.md
 - pages/fe/black-box-testing.md
 - pages/fe/block-search-average-comparisons.md
@@ -85,6 +90,7 @@
 - pages/fe/cache-memory.md
 - pages/fe/capacity-management-analysis-methods.md
 - pages/fe/capacity-management-analysis-models.md
+- pages/fe/cd-r.md
 - pages/fe/certificate-authority.md
 - pages/fe/challenge-response-authentication.md
 - pages/fe/character-code-table.md
@@ -95,6 +101,7 @@
 - pages/fe/cidr-network-broadcast-address.md
 - pages/fe/class-instance.md
 - pages/fe/client-server-system.md
+- pages/fe/clipping.md
 - pages/fe/cloud-deployment-models.md
 - pages/fe/code-system-types.md
 - pages/fe/code-types-and-identification.md
@@ -106,7 +113,9 @@
 - pages/fe/common-frame-support-processes.md
 - pages/fe/compiler-analysis-flow.md
 - pages/fe/compiler-linker-loader-debugger.md
+- pages/fe/compiler-optimization.md
 - pages/fe/complete-binary-tree.md
+- pages/fe/computer-graphics-overview.md
 - pages/fe/condition-branch-order.md
 - pages/fe/conditional-branch-average-comparisons.md
 - pages/fe/configuration-management.md
@@ -116,6 +125,7 @@
 - pages/fe/core-competence.md
 - pages/fe/cpi-clock-cycle-cpu-time.md
 - pages/fe/cpu-clock-frequency.md
+- pages/fe/cpu-execution-overview.md
 - pages/fe/cpu-instruction-cycle.md
 - pages/fe/cpu-registers.md
 - pages/fe/cpu-scheduling.md
@@ -124,6 +134,7 @@
 - pages/fe/crc.md
 - pages/fe/critical-chain.md
 - pages/fe/critical-path-vs-critical-chain.md
+- pages/fe/cross-compiler.md
 - pages/fe/crowdfunding.md
 - pages/fe/crowdsourcing.md
 - pages/fe/cryptographic-algorithm-types.md
@@ -148,13 +159,17 @@
 - pages/fe/depreciation-methods.md
 - pages/fe/depreciation-straight-line.md
 - pages/fe/development-environment-maintenance.md
+- pages/fe/device-driver.md
 - pages/fe/dhcp.md
 - pages/fe/disk-scheduling.md
 - pages/fe/disk-scheduling-scan.md
+- pages/fe/disk-striping.md
 - pages/fe/dispatch-secondment-contract.md
+- pages/fe/display-types.md
 - pages/fe/dmz-server-placement.md
 - pages/fe/dns.md
 - pages/fe/dram.md
+- pages/fe/draw-software.md
 - pages/fe/drive-by-download.md
 - pages/fe/drive-by-download-attack.md
 - pages/fe/ecc.md
@@ -175,7 +190,10 @@
 - pages/fe/feedback-feedforward-control.md
 - pages/fe/fifo-inventory-valuation.md
 - pages/fe/fifo-page-replacement.md
+- pages/fe/five-functions-fetch-decode.md
+- pages/fe/five-stage-pipeline.md
 - pages/fe/fixed-partition-memory-allocation.md
+- pages/fe/flash-memory.md
 - pages/fe/floating-point-errors.md
 - pages/fe/floating-point-format.md
 - pages/fe/floating-point-normalization.md
@@ -201,13 +219,16 @@
 - pages/fe/hexadecimal-fraction.md
 - pages/fe/hexadecimal-fraction-bit-shift.md
 - pages/fe/hexadecimal-fraction-conversion.md
+- pages/fe/hidden-line-and-surface-removal.md
 - pages/fe/hot-warm-cold-site.md
 - pages/fe/housing-service.md
+- pages/fe/huffman-coding.md
 - pages/fe/hybrid-cloud.md
 - pages/fe/hybrid-encryption.md
 - pages/fe/ide-development-environment.md
 - pages/fe/ide-eclipse.md
 - pages/fe/ids-ips-firewall.md
+- pages/fe/image-video-formats.md
 - pages/fe/incident-management-vs-problem-management.md
 - pages/fe/incident-service-request-management.md
 - pages/fe/income-statement-profit-levels.md
@@ -216,11 +237,17 @@
 - pages/fe/input-data-check.md
 - pages/fe/input-data-checks.md
 - pages/fe/input-data-completeness-control.md
+- pages/fe/input-devices.md
+- pages/fe/instruction-cache.md
+- pages/fe/instruction-format.md
 - pages/fe/instruction-register-program-counter.md
 - pages/fe/interface-usb-sata-ieee1394-1000base-t.md
 - pages/fe/internal-control-components.md
 - pages/fe/internal-control-six-elements.md
+- pages/fe/internal-external-interrupts.md
 - pages/fe/internet-vpn.md
+- pages/fe/interpreter-compiler-processing-time.md
+- pages/fe/interrupt.md
 - pages/fe/inventory-collection.md
 - pages/fe/inventory-ordering-methods.md
 - pages/fe/ip-mac-address-routing.md
@@ -235,8 +262,10 @@
 - pages/fe/kanban-jit.md
 - pages/fe/kanban-system.md
 - pages/fe/lan-analyzer.md
+- pages/fe/language-processor-comparison.md
 - pages/fe/line-utilization-rate.md
 - pages/fe/linked-list.md
+- pages/fe/linker.md
 - pages/fe/lock-granularity.md
 - pages/fe/logistic-curve.md
 - pages/fe/lru.md
@@ -252,10 +281,15 @@
 - pages/fe/memory-management-methods.md
 - pages/fe/memory-types.md
 - pages/fe/message-authentication-code.md
+- pages/fe/microkernel.md
+- pages/fe/middleware.md
 - pages/fe/mips.md
 - pages/fe/mips-processing-time.md
+- pages/fe/morphing.md
+- pages/fe/mpeg.md
 - pages/fe/mtbf.md
 - pages/fe/mtbf-mttr.md
+- pages/fe/multicore-processor.md
 - pages/fe/nat.md
 - pages/fe/nat-napt.md
 - pages/fe/net-present-value.md
@@ -269,10 +303,12 @@
 - pages/fe/on-demand-service.md
 - pages/fe/operational-testing.md
 - pages/fe/order-quantity-and-inventory-cost.md
+- pages/fe/os-api.md
 - pages/fe/ot-dmz.md
 - pages/fe/overlay-paging-swapping.md
 - pages/fe/packet-filtering.md
 - pages/fe/packet-filtering-port-rules.md
+- pages/fe/page-printer.md
 - pages/fe/paging.md
 - pages/fe/parity-check.md
 - pages/fe/parity-circuit.md
@@ -281,15 +317,19 @@
 - pages/fe/pdm-dependency-types.md
 - pages/fe/physical-security-measures-comparison.md
 - pages/fe/ping.md
+- pages/fe/pipe.md
+- pages/fe/pipeline-control.md
 - pages/fe/pki-certificate-authority.md
 - pages/fe/planning-process.md
 - pages/fe/polymorphism.md
 - pages/fe/pop3-smtp-imap.md
 - pages/fe/pppoe.md
+- pages/fe/preemptive-scheduling.md
 - pages/fe/primary-key.md
 - pages/fe/problem-management.md
 - pages/fe/process-innovation.md
 - pages/fe/profit-calculation.md
+- pages/fe/program-counter-interrupt.md
 - pages/fe/progress-productivity-effort.md
 - pages/fe/project-life-cycle.md
 - pages/fe/project-lifecycle-characteristics.md
@@ -305,29 +345,37 @@
 - pages/fe/qr-code.md
 - pages/fe/qr-code-barcode.md
 - pages/fe/queue.md
+- pages/fe/raid-levels.md
 - pages/fe/rasis.md
+- pages/fe/raster-vector-graphics.md
 - pages/fe/recursion.md
 - pages/fe/recursion-trace.md
 - pages/fe/recursive-factorial.md
 - pages/fe/recursive-function.md
+- pages/fe/reentrant-program.md
 - pages/fe/referential-integrity.md
 - pages/fe/regression-testing.md
 - pages/fe/relational-model.md
 - pages/fe/relational-operations.md
 - pages/fe/relations-diagram.md
+- pages/fe/relocation.md
 - pages/fe/rest-api.md
 - pages/fe/reverse-brute-force.md
 - pages/fe/reverse-polish-notation.md
+- pages/fe/risc-cisc.md
 - pages/fe/risk-assessment-process.md
 - pages/fe/risk-level.md
 - pages/fe/roi.md
 - pages/fe/rollback-rollforward.md
+- pages/fe/rom-types.md
 - pages/fe/round-robin-scheduling.md
 - pages/fe/router-bridge-repeater-gateway.md
+- pages/fe/run-length-encoding.md
 - pages/fe/saas-paas-iaas.md
 - pages/fe/scm.md
 - pages/fe/scrum-events.md
 - pages/fe/scrum-roles.md
+- pages/fe/sd-sdhc-sdxc-sduc.md
 - pages/fe/security-by-design.md
 - pages/fe/security-cia.md
 - pages/fe/security-guidelines-comparison.md
@@ -337,6 +385,8 @@
 - pages/fe/server-room-physical-security.md
 - pages/fe/service-availability.md
 - pages/fe/shared-exclusive-lock.md
+- pages/fe/shell.md
+- pages/fe/shell-redirection.md
 - pages/fe/shortest-job-first-scheduling.md
 - pages/fe/siem.md
 - pages/fe/snmp.md
@@ -345,6 +395,7 @@
 - pages/fe/software-design-phases.md
 - pages/fe/software-license-contract-types.md
 - pages/fe/software-license-minimum-cost.md
+- pages/fe/speculative-execution.md
 - pages/fe/spiral-model.md
 - pages/fe/spooling.md
 - pages/fe/sql-aggregate-functions.md
@@ -356,6 +407,8 @@
 - pages/fe/standby-system.md
 - pages/fe/state-transition-diagram.md
 - pages/fe/state-transition-table.md
+- pages/fe/static-dynamic-linking.md
+- pages/fe/storage-media-read-write-methods.md
 - pages/fe/stored-program-architecture.md
 - pages/fe/stored-program-concept.md
 - pages/fe/structured-unstructured-data.md
@@ -369,6 +422,7 @@
 - pages/fe/system-development-quality-management.md
 - pages/fe/system-failure-monitoring.md
 - pages/fe/system-test-audit.md
+- pages/fe/task-dispatch_revised.md
 - pages/fe/task-scheduling.md
 - pages/fe/tcp-connection-identification.md
 - pages/fe/tcp-udp-port-number.md
@@ -379,6 +433,7 @@
 - pages/fe/tlo-technology-licensing-organization.md
 - pages/fe/top-down-bottom-up-test.md
 - pages/fe/top-down-testing.md
+- pages/fe/touch-panel.md
 - pages/fe/transaction-1.md
 - pages/fe/transaction-atomicity-rollback.md
 - pages/fe/transaction-state-transition.md
@@ -610,12 +665,60 @@ SG・DS・GKの関連語も検索し、テーマをまたぐ記事はFE内の統
 - ファイル単位の確認履歴は368/778件（47.3%）。うち19件は転送ページ。全転送25件のうち6件は冒頭の履歴インデックスとは別の転送確認一覧だけにあるため、368−25で実記事数を計算しない。
 - PR #442は未マージ。main反映済みの進捗と、PR適用後の進捗を区別する。
 
+## 継続監査：CPU・OS・言語処理の未確認30記事（2026-10-17）
+
+前回の確認履歴368ファイルと照合し、未登録30ファイルを追加しました。定義・冒頭・見出し・科目Aの判断基準を比較し、統合対象の4記事は本文全体を照合しました。全記事間の総当たり比較や全段落の校正を終えた割合ではありません。
+
+| 記事群 | 判定・対応 |
+|---|---|
+| `interrupt` / `internal-external-interrupts` | **統合**。分類基準・タイマー・ゼロ除算・ページフォールト等の学習目的が同じ。同期／非同期、ポーリング、ウォッチドッグ、システムコール、出典を持つ後者を正規記事に維持。前者の内容は後者に含まれるため、割込みの基本定義を冒頭に補い旧URLを転送 |
+| `linker` / `static-dynamic-linking` | **統合**。結合の時点とインタプリタ／オーバレイとの混同防止が重複。相互参照解決、ロードモジュール、ローダとの比較も持つ前者を維持。後者の「何をしているか→いつ行うか」の判断順を明示し旧URLを転送 |
+| `cpu-execution-overview` / `five-functions-fetch-decode` / `instruction-format` / `addressing-modes` | 維持。CPU用語をつなぐ地図／五大機能の担当／命令コードとオペランド／有効アドレス算出で役割が異なる。既存確認済みの命令サイクル・レジスタ記事とも照合 |
+| `five-stage-pipeline` / `pipeline-control` / `speculative-execution` / `risc-cisc` / `multicore-processor` | 維持。5段の順序とサイクル数／段の細分化と命令同時実行の比較／予測に基づく先行実行／命令セットの設計思想／複数コアの並列性と共有資源を分担 |
+| `instruction-cache` / 既存確認済みキャッシュ記事 | 維持。命令配置と局所性／キャッシュの基本・書込み方式／ヒット率の計算は別の判断 |
+| `program-counter-interrupt` / `preemptive-scheduling` / `task-dispatch_revised` | 維持。復帰位置の保存／優先度に応じた中断後の状態／CPU使用権の割当て。既存のスケジューリング・レジスタ記事とも区別。割込みの正規記事からPCの解説へリンク |
+| `compiler-optimization` / `cross-compiler` / `language-processor-comparison` / `interpreter-compiler-processing-time` | 維持。生成コードの効率改善／別環境向けの生成／入力と出力による処理系比較／繰返し実行時の総時間計算。既存確認済みの解析工程・ツール比較記事とも区別 |
+| `relocation` / `reentrant-program` | 維持。ロード位置に応じたアドレス補正／再入・再帰・再使用・再配置の性質比較。リンキングの結合処理とも区別 |
+| `middleware` / `device-driver` / `os-api` / `microkernel` | 維持。共通機能を提供する層／機器固有制御／OS機能の呼出し口／カーネルに置く機能の設計を分担 |
+| `shell` / `shell-redirection` / `pipe` | 維持。コマンドの解釈／入出力の接続先変更／コマンド間の出力→入力接続。記号の判定・実行例という独自内容がある |
+
+- 本バッチの図解評価：統合元の説明図と判断表は統合先でも説明済み。既存の流れ図・表を保持し、重複する図や新たな操作UIは追加しない。
+- 正規記事の初回`date`・`permalink`・分類・6見出し・FEフッターを保持し、`last_modified_at`だけ更新。既存の別名`/fe/internal-external-interrupt/`も維持。
+- SG・DS・GKの関連語検索も行い、テーマをまたぐ記事の統合はしない。出典の更新やシラバスの鮮度監査は今回の範囲外。
+- PR #442を前提に、778 Markdown・転送27・実記事751。確認履歴398ファイル（転送21・実記事377）、**377/751実記事（50.2%）**、未確認374実記事。
+- main反映済みは303/757実記事（40.0%）。上記50.2%は前提PRと継続PRがともに適用された場合の値。
+
+## 継続監査：画像・CG・記憶媒体・圧縮の未確認24記事（2026-10-17）
+
+前回の履歴398ファイルに含まれない24実記事を追加確認しました。定義・本文冒頭・見出し・科目Aの判断基準と、重なりの大きい説明部分を照合しています。全段落の逐語校正や全記事間比較の完了率ではありません。新たな統合対象はありません。
+
+| 記事群 | 判定・対応 |
+|---|---|
+| `computer-graphics-overview` / `anti-aliasing` / `clipping` / `hidden-line-and-surface-removal` / `morphing` | 維持。CG工程の地図／輪郭のギザギザ／表示範囲外の除外／視点と遮蔽物による可視性・Zバッファ／中間画像での変形を分担 |
+| `raster-vector-graphics` / `draw-software` / `bitmap-outline-font` | 維持。画像データの表現とSVG／図形・画素単位の編集ソフト／文字の保存方式と等幅・プロポーショナルの別軸を扱う。既存の関連リンクも確認 |
+| `image-video-formats` / `mpeg` | 維持。静止画・音声・動画と可逆性の横断比較／MPEG-1・2・4とH.264の用途・配信制御との違い。横断比較からMPEGの詳説へのリンクがある |
+| `huffman-coding` / `run-length-encoding` | 維持。出現頻度・プレフィックス・平均符号長／同じ値の連続回数と並び方という異なる圧縮原理 |
+| `rom-types` / `flash-memory` / `sd-sdhc-sdxc-sduc` | 維持。ROM系の消去・再書込みの比較／フラッシュの書換え耐久性・消去の仕組み／カードの容量・ファイルシステム規格。ROMとフラッシュの相互リンクを確認 |
+| `storage-media-read-write-methods` / `cd-r` | 維持。磁気・光磁気・光の記録／読取りの比較／有機色素と追記・CD-RWとの違い。CD-Rから媒体比較へのリンクがある |
+| `disk-striping` / `raid-levels` | **役割整理して維持**。前者のb0〜b15の分散配置図と図問題の読解を残し、重複するRAID0・1・5の詳細比較は短い説明と後者へのリンクに整理。後者からも配置図へ誘導 |
+| `input-devices` / `touch-panel` / `display-types` | 維持。文字・マーク・画像・座標の入力対象／タッチの検出原理／表示の発光方式で判断軸が違う |
+| `page-printer` / `3d-printer` | 維持。ページ単位の画像展開・ドライバとフォント処理／3Dデータからの実物造形。フォント記事とも役割が違う |
+
+SG・DS・GKも関連語で検索し、テーマ外の記事は本監査の件数に含めません。出典の最新性や記事内容の全面校正は別監査です。ストライピングは既存配置図で学べるため、新しい操作UIは追加しません。
+
+### mainへの反映と進捗
+
+- main（`f692505b`、PR #442まで）：実記事753、確認履歴349（46.3%）。
+- #444は#442の作業ブランチにマージされており、mainにはCPU・OS監査と2組統合が未反映。今回のmain向けPRへ同じ変更を取り込み、最新mainの逆ポーランド図解などは保持。
+- 今回24記事追加後：778 Markdown・転送27・実記事751、確認履歴422ファイル（転送21・実記事401）。**401/751実記事（53.4%）**、未確認350実記事。
+- PRのマージ済み表示だけで公開反映済みと判断せず、mainの本文と履歴を照合した。
+
 ## 転送専用ページの確認（2026-10-17）
 
 初回は1100バイト未満から17件を抽出しました。その後、**全778件の本文**を自動走査し、`layout: null` とHTMLのmeta refreshの両方を満たす17件を検出しました。
 
-- 確認済み転送専用ページ: 25件（PR #442適用後。前回から4件の新規転送）
-- PR #442適用後の実記事数: 753件（778 - 25）。HTML meta refresh以外の転送方式は判定対象外
+- 確認済み転送専用ページ: 27件（PR #442と継続PR適用後。今回2件追加）
+- PR #442と継続PR適用後の実記事数: 751件（778 - 27）。HTML meta refresh以外の転送方式は判定対象外
 - これらの転送はHTTP 301ではなく、HTML meta refreshです。
 
 - pages/fe/activity-diagram.md
@@ -645,6 +748,9 @@ SG・DS・GKの関連語も検索し、テーマをまたぐ記事はFE内の統
 - pages/fe/pop3-smtp-imap.md
 - pages/fe/supply-chain-management.md
 - pages/fe/kanban-jit.md
+
+- pages/fe/interrupt.md
+- pages/fe/static-dynamic-linking.md
 
 ## 全件自動スキャンの実行方法（PR #438）
 
