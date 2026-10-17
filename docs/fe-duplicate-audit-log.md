@@ -6,11 +6,11 @@
 
 - GitHub mainの再帰ツリーを2026-10-17に取得
 - FE Markdown: 778ファイル（転送用ページを含む）
-- 過去の本文確認履歴に対応する現存ファイル: 512ファイル（重複排除）
-- ファイル単位の確認履歴カバー率: 65.8%。これは全件本文比較の完了率ではありません。
-- 削除済みファイルは分母・分子から除外。mainはPR #447まで反映済みで転送29件・実記事749件。今回は新たな統合を行わないため実記事数は変わりません。
+- 過去の本文確認履歴に対応する現存ファイル: 542ファイル（重複排除）
+- ファイル単位の確認履歴カバー率: 69.7%。これは全件本文比較の完了率ではありません。
+- 削除済みファイルは分母・分子から除外。mainはPR #448まで反映済みで転送29件・実記事749件。今回は新たな統合を行わないため実記事数は変わりません。
 
-- 実記事の個別確認履歴（今回のmain向け継続PR適用後）: **489/749件（65.3%）**。転送の29件は別管理。
+- 実記事の個別確認履歴（今回のmain向け継続PR適用後）: **519/749件（69.3%）**。転送の29件は別管理。
 - 変更前の761実記事に対して**機械的な類似候補抽出を実施済み**。PR #442の新しい構成ではCIで再走査します。未抽出の組合せが重複なしと確定したわけではありません。
 
 ## 修正PRの記録
@@ -33,6 +33,7 @@
 - #445 画像・記憶媒体24記事監査とRAIDの役割整理、#444のmain反映（マージ済み）
 - #446 開発・テスト・品質管理30記事監査、開発・運用連携記事の統合（マージ済み）
 - #447 ネットワーク・セキュリティ30記事監査、CPSFの重複統合（マージ済み）
+- #448 経営戦略・業務30記事監査、ニッチ戦略の導線整理（マージ済み）
 
 ## 本文確認履歴に含まれる現存ファイル
 
@@ -63,6 +64,7 @@
 - pages/fe/audit-evidence.md
 - pages/fe/audit-working-papers.md
 - pages/fe/authentication-devices.md
+- pages/fe/authenticity-reliability-security.md
 - pages/fe/automaton-state-transition.md
 - pages/fe/backup-media-offsite-storage.md
 - pages/fe/backup-methods.md
@@ -104,10 +106,12 @@
 - pages/fe/business-improvement-process.md
 - pages/fe/business-model-four-types.md
 - pages/fe/business-model-physical-logical.md
+- pages/fe/byod.md
 - pages/fe/cache-hit-rate-average-access-time.md
 - pages/fe/cache-memory.md
 - pages/fe/capacity-management-analysis-methods.md
 - pages/fe/capacity-management-analysis-models.md
+- pages/fe/captcha.md
 - pages/fe/case-tools.md
 - pages/fe/cd-r.md
 - pages/fe/certificate-authority.md
@@ -138,6 +142,7 @@
 - pages/fe/compiler-optimization.md
 - pages/fe/complete-binary-tree.md
 - pages/fe/computer-graphics-overview.md
+- pages/fe/computer-unauthorized-access-countermeasure-standard.md
 - pages/fe/condition-branch-order.md
 - pages/fe/conditional-branch-average-comparisons.md
 - pages/fe/configuration-management.md
@@ -171,6 +176,8 @@
 - pages/fe/csv-spreadsheet-cell-reference.md
 - pages/fe/customer-portfolio-analysis.md
 - pages/fe/cyber-physical-security-framework.md
+- pages/fe/cybercrime-laws.md
+- pages/fe/cybersecurity-management-guideline.md
 - pages/fe/data-error-management.md
 - pages/fe/data-flow-diagram.md
 - pages/fe/data-mining.md
@@ -192,6 +199,7 @@
 - pages/fe/development-operations-collaboration.md
 - pages/fe/device-driver.md
 - pages/fe/dhcp.md
+- pages/fe/digital-watermark.md
 - pages/fe/disk-scheduling.md
 - pages/fe/disk-scheduling-scan.md
 - pages/fe/disk-striping.md
@@ -210,7 +218,9 @@
 - pages/fe/economic-order-quantity.md
 - pages/fe/effort-productivity-duration.md
 - pages/fe/electronic-commerce.md
+- pages/fe/electronic-signature-law.md
 - pages/fe/email-protocols.md
+- pages/fe/email-security-measures.md
 - pages/fe/enterprise-architecture.md
 - pages/fe/envelope-encryption.md
 - pages/fe/equipment-investment-cost-effectiveness.md
@@ -259,6 +269,7 @@
 - pages/fe/hexadecimal-fraction-bit-shift.md
 - pages/fe/hexadecimal-fraction-conversion.md
 - pages/fe/hidden-line-and-surface-removal.md
+- pages/fe/honeypot.md
 - pages/fe/hot-warm-cold-site.md
 - pages/fe/housing-service.md
 - pages/fe/https.md
@@ -300,6 +311,7 @@
 - pages/fe/ipv4-ipv6.md
 - pages/fe/ipv4-subnet-host-count.md
 - pages/fe/is-a-part-of-instance-class.md
+- pages/fe/isms-pdca.md
 - pages/fe/it-investment-evaluation.md
 - pages/fe/it-investment-management.md
 - pages/fe/java-language-features.md
@@ -307,6 +319,7 @@
 - pages/fe/job-vs-task.md
 - pages/fe/kanban-jit.md
 - pages/fe/kanban-system.md
+- pages/fe/keylogger.md
 - pages/fe/lan-analyzer.md
 - pages/fe/language-processor-comparison.md
 - pages/fe/line-utilization-rate.md
@@ -322,6 +335,9 @@
 - pages/fe/mac-address.md
 - pages/fe/magnetic-disk-access-time.md
 - pages/fe/magnetic-disk-average-wait-time.md
+- pages/fe/mail-third-party-relay.md
+- pages/fe/malware-criminal-law.md
+- pages/fe/malware-detection-analysis.md
 - pages/fe/many-to-many-associative-entity.md
 - pages/fe/marketing-mix.md
 - pages/fe/master-file-maintenance.md
@@ -334,6 +350,7 @@
 - pages/fe/microkernel.md
 - pages/fe/middleware.md
 - pages/fe/migration-test.md
+- pages/fe/mime.md
 - pages/fe/mips.md
 - pages/fe/mips-processing-time.md
 - pages/fe/module-cohesion.md
@@ -390,7 +407,9 @@
 - pages/fe/ppm.md
 - pages/fe/pppoe.md
 - pages/fe/preemptive-scheduling.md
+- pages/fe/preventive-detective-controls.md
 - pages/fe/primary-key.md
+- pages/fe/privacy-by-design.md
 - pages/fe/problem-management.md
 - pages/fe/process-innovation.md
 - pages/fe/product-life-cycle.md
@@ -438,6 +457,7 @@
 - pages/fe/roi.md
 - pages/fe/rollback-rollforward.md
 - pages/fe/rom-types.md
+- pages/fe/rootkit.md
 - pages/fe/round-robin-scheduling.md
 - pages/fe/router-bridge-repeater-gateway.md
 - pages/fe/rpa.md
@@ -447,6 +467,7 @@
 - pages/fe/scrum-events.md
 - pages/fe/scrum-roles.md
 - pages/fe/sd-sdhc-sdxc-sduc.md
+- pages/fe/secure-boot.md
 - pages/fe/security-by-design.md
 - pages/fe/security-cia.md
 - pages/fe/security-guidelines-comparison.md
@@ -456,6 +477,7 @@
 - pages/fe/server-client-port.md
 - pages/fe/server-room-physical-security.md
 - pages/fe/service-availability.md
+- pages/fe/session-id-invalidation.md
 - pages/fe/sfa.md
 - pages/fe/shared-exclusive-lock.md
 - pages/fe/shell.md
@@ -474,10 +496,13 @@
 - pages/fe/software-review-inspection.md
 - pages/fe/software-testing-types.md
 - pages/fe/speculative-execution.md
+- pages/fe/spf.md
 - pages/fe/spiral-model.md
 - pages/fe/spooling.md
+- pages/fe/spyware.md
 - pages/fe/sql-aggregate-functions.md
 - pages/fe/sql-group-by-aggregate-functions.md
+- pages/fe/sql-injection.md
 - pages/fe/sram.md
 - pages/fe/sram-dram.md
 - pages/fe/ssid-bssid.md
@@ -502,6 +527,8 @@
 - pages/fe/system-development-quality-management.md
 - pages/fe/system-failure-monitoring.md
 - pages/fe/system-test-audit.md
+- pages/fe/tamper-resistance.md
+- pages/fe/targeted-attack-email.md
 - pages/fe/task-dispatch_revised.md
 - pages/fe/task-scheduling.md
 - pages/fe/tcp-connection-identification.md
@@ -513,6 +540,7 @@
 - pages/fe/three-tier-client-server.md
 - pages/fe/throughput.md
 - pages/fe/throughput-spooling.md
+- pages/fe/timestamp-service.md
 - pages/fe/tlo.md
 - pages/fe/tlo-technology-licensing-organization.md
 - pages/fe/top-down-bottom-up-test.md
@@ -525,6 +553,7 @@
 - pages/fe/twos-complement.md
 - pages/fe/twos-complement-remainder.md
 - pages/fe/uml-multiplicity.md
+- pages/fe/unauthorized-access-law.md
 - pages/fe/usb.md
 - pages/fe/usb-ieee1394.md
 - pages/fe/usb-interface.md
@@ -533,6 +562,7 @@
 - pages/fe/verification-validation.md
 - pages/fe/video-bandwidth-calculation.md
 - pages/fe/virtual-memory.md
+- pages/fe/virus-detection-methods.md
 - pages/fe/voip-gatekeeper.md
 - pages/fe/waf.md
 - pages/fe/wake-on-lan.md
@@ -549,6 +579,7 @@
 - pages/fe/wireless-lan-security.md
 - pages/fe/work-made-for-hire.md
 - pages/fe/work-made-for-hire-copyright.md
+- pages/fe/xml-digital-signature.md
 - pages/fe/xor-bit-flip.md
 
 ## 追加本文監査：数値表現・IT投資など（2026-10-17）
@@ -875,6 +906,29 @@ SG・DS・GKも関連語で検索し、テーマ外の記事は本監査の件�
 - 編集はニッチ戦略と競争地位別戦略の2記事のみ。元の初回日付・URL・分類・見出し・フッターを保持し、更新日を変更。
 - 既存の軸表・例・図解を保持し、学習導線だけの追加には新たな操作UIを設けない。
 - main（`aaf0fa59`、#447まで）：459/749実記事（61.3%）。今回適用後：778 Markdown・転送29・実記事749、確認履歴512ファイル（転送23・実記事489）。**489/749実記事（65.3%）**、未確認260実記事。
+
+## 継続監査：セキュリティ対策・認証・関連法務の未確認30記事（2026-10-17）
+
+履歴512ファイルに含まれない30実記事を、定義・冒頭・見出し・試験判断基準で比較しました。重なりが強い検知・メール対策は仕組みの説明部分も照合しています。今回新たな統合対象はありません。全段落校正・法改正確認・全記事間総当たり比較の完了率ではありません。
+
+| 記事群 | 判定・理由 |
+|---|---|
+| `malware-detection-analysis` / `virus-detection-methods` | 役割を明示して維持。検知・逆アセンブル・ハッシュによる識別の切り分け／パターン・ビヘイビア・コンペア・チェックサムの検出方式比較。両記事に目的説明と相互リンクを追加 |
+| `keylogger` / `spyware` / `rootkit` | 維持。キー入力の記録／秘密裏の情報収集／侵入後の痕跡隠蔽・居座り。結果が情報漏えいでも手口・役割が違う |
+| `honeypot` / `captcha` / `byod` | 維持。攻撃観察用のおとり／人間とbotの判別／私物端末の業務利用。認証や監視という語だけで統合しない |
+| `secure-boot` / `tamper-resistance` / `session-id-invalidation` | 維持。起動時の署名確認／物理解析への耐性／ログアウト時のサーバ側セッション失効。保護する対象・時点が違う |
+| `sql-injection` / `privacy-by-design` / 既存確認済み`security-by-design` | 維持。入力がSQLとして解釈される攻撃と対策／設計段階でのプライバシー保護／設計段階でのセキュリティという個別攻撃・保護対象の差がある |
+| `email-security-measures` / `spf` / `mail-third-party-relay` / `mime` | 維持。対策の目的別比較／DNS情報と接続元IPの照合／接続元・送信者・受信者の判定／データ形式・添付を表す仕組み。総論からSPFと第三者中継の詳説へリンクを追加 |
+| `targeted-attack-email` / 既存確認済みフィッシング | 維持。特定の相手に合わせた業務文面／偽装による情報入力の誘導。対象選定と目的・手段の切り口が異なる |
+| `digital-watermark` / `xml-digital-signature` / `timestamp-service` / `electronic-signature-law` | 維持。コンテンツ内の識別情報／XML部分署名と形式／存在・非改ざんの時点／法律上の電子署名・認証業務制度。既存の公開鍵・PKI記事とも役割が異なる |
+| `authenticity-reliability-security` / `preventive-detective-controls` / `isms-pdca` | 維持。情報の特性／問題発生を防ぐか発見するか／管理サイクルの段階。既存CIA・内部統制記事とも分類軸が違う |
+| `cybercrime-laws` / `malware-criminal-law` / `unauthorized-access-law` | 維持。行為別の法律横断比較／不正指令電磁的記録の目的・理由の判断／識別符号利用・アクセス制御回避。法律総論と個別行為の詳説を分担 |
+| `computer-unauthorized-access-countermeasure-standard` / `cybersecurity-management-guideline` | 維持。ID・最小権限・接続・方針・教育の基準／経営者の体制・資源・サプライチェーン責任。禁止行為を扱う法律とも区別 |
+
+- SG・DS・GKも関連語検索を行い、他テーマとの統合はしない。法律・規格・製品挙動の最新性は今回検証していないため、正確性・鮮度監査の完了とは扱わない。
+- 編集は検知・解析の2記事とメール総論の計3記事のみ。既存の本文・例・初回日付・URL・分類・見出し・フッターは保持し、更新日と目的説明・リンクだけ変更。
+- 図解評価：今回は既存教材への読み分けを補う変更のため、新たな操作UIは追加しない。
+- main（`46e26fca`、#448まで）：489/749実記事（65.3%）。今回適用後：778 Markdown・転送29・実記事749、確認履歴542ファイル（転送23・実記事519）。**519/749実記事（69.3%）**、未確認230実記事。
 
 ## 転送専用ページの確認（2026-10-17）
 
