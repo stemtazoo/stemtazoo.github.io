@@ -6,11 +6,11 @@
 
 - GitHub mainのFEファイル構成を2026-10-18に再確認
 - FE Markdown: 778ファイル（転送用ページを含む）
-- 過去の本文確認履歴に対応する現存ファイル: 606ファイル（重複排除）
-- ファイル単位の確認履歴カバー率: 77.9%。これは全件本文比較の完了率ではありません。
-- 削除済みファイルは分母・分子から除外。mainはPR #450まで反映済みで転送29件・実記事749件。今回は新たな統合を行わないため実記事数は変わりません。
+- 過去の本文確認履歴に対応する現存ファイル: 638ファイル（重複排除）
+- ファイル単位の確認履歴カバー率: 82.0%。これは全件本文比較の完了率ではありません。
+- 削除済みファイルは分母・分子から除外。mainはPR #451まで反映済みで転送29件・実記事749件。今回は新たな統合を行わないため実記事数は変わりません。
 
-- 実記事の個別確認履歴（今回のmain向け継続PR適用後）: **583/749件（77.8%）**。転送の29件は別管理。
+- 実記事の個別確認履歴（今回のmain向け継続PR適用後）: **615/749件（82.1%）**。転送の29件は別管理。
 - 変更前の761実記事に対して**機械的な類似候補抽出を実施済み**。PR #442の新しい構成ではCIで再走査します。未抽出の組合せが重複なしと確定したわけではありません。
 
 ## 修正PRの記録
@@ -36,6 +36,7 @@
 - #448 経営戦略・業務30記事監査、ニッチ戦略の導線整理（マージ済み）
 - #449 セキュリティ・関連法務30記事監査、検知・メール対策の導線整理（マージ済み）
 - #450 アルゴリズム・数理32記事監査、確率・ビット数の導線整理（マージ済み）
+- #451 DB・Web・データ形式32記事監査、複式簿記とSQLの導線整理（マージ済み）
 
 ## 本文確認履歴に含まれる現存ファイル
 
@@ -46,7 +47,9 @@
 - pages/fe/absolute-relative-path.md
 - pages/fe/account-aggregation.md
 - pages/fe/acid-properties.md
+- pages/fe/actuator.md
 - pages/fe/ad-conversion.md
+- pages/fe/address-bus-data-bus.md
 - pages/fe/addressing-modes.md
 - pages/fe/adjacency-matrix.md
 - pages/fe/adsl.md
@@ -57,6 +60,7 @@
 - pages/fe/ansoff-growth-matrix.md
 - pages/fe/anti-aliasing.md
 - pages/fe/application-maintenance.md
+- pages/fe/archive.md
 - pages/fe/arp.md
 - pages/fe/arp-rarp-dns-nat.md
 - pages/fe/array.md
@@ -68,6 +72,7 @@
 - pages/fe/atm.md
 - pages/fe/audit-evidence.md
 - pages/fe/audit-working-papers.md
+- pages/fe/augmented-reality.md
 - pages/fe/authentication-devices.md
 - pages/fe/authenticity-reliability-security.md
 - pages/fe/automaton-state-transition.md
@@ -105,6 +110,7 @@
 - pages/fe/branch-coverage.md
 - pages/fe/break-even-point.md
 - pages/fe/brute-force-attack.md
+- pages/fe/buffer-size-transfer-rate.md
 - pages/fe/bug-management-chart.md
 - pages/fe/bug-seeding.md
 - pages/fe/business-continuity-management.md
@@ -128,6 +134,7 @@
 - pages/fe/challenge-response-authentication.md
 - pages/fe/character-code-table.md
 - pages/fe/character-encoding.md
+- pages/fe/chattering.md
 - pages/fe/check-digit.md
 - pages/fe/checksum.md
 - pages/fe/cia-triad.md
@@ -193,6 +200,7 @@
 - pages/fe/cyber-physical-security-framework.md
 - pages/fe/cybercrime-laws.md
 - pages/fe/cybersecurity-management-guideline.md
+- pages/fe/daisy-chain.md
 - pages/fe/data-dictionary.md
 - pages/fe/data-error-management.md
 - pages/fe/data-flow-diagram.md
@@ -210,6 +218,7 @@
 - pages/fe/database-recovery-rollforward-rollback.md
 - pages/fe/database-schema.md
 - pages/fe/database-view-select-privilege.md
+- pages/fe/dc-power-feeding.md
 - pages/fe/deadlock.md
 - pages/fe/debit-credit-double-entry.md
 - pages/fe/decimal-to-binary-div-mod.md
@@ -228,6 +237,7 @@
 - pages/fe/dispatch-secondment-contract.md
 - pages/fe/display-types.md
 - pages/fe/disruptive-innovation.md
+- pages/fe/dma.md
 - pages/fe/dmz-server-placement.md
 - pages/fe/dns.md
 - pages/fe/dns-cache-poisoning.md
@@ -236,11 +246,15 @@
 - pages/fe/draw-software.md
 - pages/fe/drive-by-download.md
 - pages/fe/drive-by-download-attack.md
+- pages/fe/dual-duplex-system.md
+- pages/fe/dynamic-address-translation.md
 - pages/fe/ecc.md
 - pages/fe/ecc-memory.md
 - pages/fe/economic-order-quantity.md
+- pages/fe/edge-computing.md
 - pages/fe/edi.md
 - pages/fe/effort-productivity-duration.md
+- pages/fe/electric-power-energy-wh.md
 - pages/fe/electronic-commerce.md
 - pages/fe/electronic-signature-law.md
 - pages/fe/elementary-row-operations.md
@@ -258,23 +272,27 @@
 - pages/fe/exclusive-resource-task-timing.md
 - pages/fe/external-internal-design.md
 - pages/fe/extreme-programming.md
+- pages/fe/fail-safe-fail-soft-fault-tolerance-foolproof.md
 - pages/fe/fast-tracking.md
 - pages/fe/fault-tolerant-system.md
 - pages/fe/fe-requirements-definition-process.md
 - pages/fe/feedback-feedforward-control.md
 - pages/fe/fifo-inventory-valuation.md
 - pages/fe/fifo-page-replacement.md
+- pages/fe/file-block-allocation.md
 - pages/fe/finite-fraction-radix.md
 - pages/fe/five-functions-fetch-decode.md
 - pages/fe/five-stage-pipeline.md
 - pages/fe/fixed-partition-memory-allocation.md
 - pages/fe/fixed-point-iteration.md
 - pages/fe/flash-memory.md
+- pages/fe/flip-flop-sequential-circuit.md
 - pages/fe/floating-point-errors.md
 - pages/fe/floating-point-format.md
 - pages/fe/floating-point-normalization.md
 - pages/fe/floating-point-representation.md
 - pages/fe/floor-function.md
+- pages/fe/full-adder.md
 - pages/fe/full-differential-incremental-backup.md
 - pages/fe/function-point-effort.md
 - pages/fe/function-point-method.md
@@ -290,6 +308,7 @@
 - pages/fe/grid-shortest-path-combinations.md
 - pages/fe/hadoop.md
 - pages/fe/hadoop-spark.md
+- pages/fe/half-adder.md
 - pages/fe/hamming-code.md
 - pages/fe/hash-function-1.md
 - pages/fe/hash-method-uniform-distribution.md
@@ -403,6 +422,10 @@
 - pages/fe/mtbf.md
 - pages/fe/mtbf-mttr.md
 - pages/fe/multicore-processor.md
+- pages/fe/multiprocessor-system-types.md
+- pages/fe/nand-gate.md
+- pages/fe/nand-xor-circuit.md
+- pages/fe/nas.md
 - pages/fe/nat.md
 - pages/fe/nat-napt.md
 - pages/fe/necessary-and-sufficient-condition.md
@@ -449,8 +472,10 @@
 - pages/fe/pipeline-control.md
 - pages/fe/pki-certificate-authority.md
 - pages/fe/planning-process.md
+- pages/fe/pll-frequency-divider.md
 - pages/fe/polymorphism.md
 - pages/fe/pop3-smtp-imap.md
+- pages/fe/power-gating.md
 - pages/fe/ppm.md
 - pages/fe/pppoe.md
 - pages/fe/preemptive-scheduling.md
@@ -482,6 +507,7 @@
 - pages/fe/raid-levels.md
 - pages/fe/rasis.md
 - pages/fe/raster-vector-graphics.md
+- pages/fe/real-time-system.md
 - pages/fe/recursion.md
 - pages/fe/recursion-trace.md
 - pages/fe/recursive-factorial.md
@@ -512,6 +538,7 @@
 - pages/fe/rpc.md
 - pages/fe/run-length-encoding.md
 - pages/fe/saas-paas-iaas.md
+- pages/fe/scale-up-vs-scale-out.md
 - pages/fe/scm.md
 - pages/fe/scrum-events.md
 - pages/fe/scrum-roles.md
@@ -533,6 +560,7 @@
 - pages/fe/shell.md
 - pages/fe/shell-redirection.md
 - pages/fe/shift-operation.md
+- pages/fe/shift-register-timing.md
 - pages/fe/shortest-job-first-scheduling.md
 - pages/fe/siem.md
 - pages/fe/snmp.md
@@ -576,6 +604,7 @@
 - pages/fe/stored-procedure.md
 - pages/fe/stored-program-architecture.md
 - pages/fe/stored-program-concept.md
+- pages/fe/streaming-buffering.md
 - pages/fe/structured-unstructured-data.md
 - pages/fe/stub-driver.md
 - pages/fe/subnet-host-address.md
@@ -587,6 +616,7 @@
 - pages/fe/system-auditor-independence.md
 - pages/fe/system-development-quality-management.md
 - pages/fe/system-failure-monitoring.md
+- pages/fe/system-performance-evaluation.md
 - pages/fe/system-test-audit.md
 - pages/fe/tamper-resistance.md
 - pages/fe/targeted-attack-email.md
@@ -598,6 +628,7 @@
 - pages/fe/technology-s-curve.md
 - pages/fe/test-support-tools.md
 - pages/fe/tethering.md
+- pages/fe/thrashing.md
 - pages/fe/three-tier-client-server.md
 - pages/fe/throughput.md
 - pages/fe/throughput-spooling.md
@@ -611,11 +642,13 @@
 - pages/fe/transaction-atomicity-rollback.md
 - pages/fe/transaction-state-transition.md
 - pages/fe/transition-probability.md
+- pages/fe/turnaround-time.md
 - pages/fe/two-phase-commit.md
 - pages/fe/twos-complement.md
 - pages/fe/twos-complement-remainder.md
 - pages/fe/uml-multiplicity.md
 - pages/fe/unauthorized-access-law.md
+- pages/fe/ups.md
 - pages/fe/usb.md
 - pages/fe/usb-ieee1394.md
 - pages/fe/usb-interface.md
@@ -1040,6 +1073,35 @@ mainの#450反映と履歴574ファイルを確認し、未登録32実記事を�
 - 公開記事の編集は借方貸方・会計データモデル・GROUP BYとORDER BYの3件。元のdate・URL・分類・見出し・計算例・フッターを保持し、更新日・目的説明・リンクだけ変更。
 - 図解評価：今回は既存教材間の読み分けで、新たな操作UIは不要。既存のSQL・表・例は保持。
 - main（`004b9b22`、#450まで）：551/749実記事（73.6%）。今回適用後：778 Markdown・転送29・実記事749、確認履歴606ファイル（転送23・実記事583）。**583/749実記事（77.8%）**、未確認166実記事。
+
+## 継続監査：回路・ハードウェア・システム構成の未確認32記事（2026-10-18）
+
+PR #451がmainへマージ済みであることを確認して継続。未登録32記事の結論・見出し・比較対象となる説明を、既存の仮想記憶・ページング・スループット・耐故障性・USB等の記事と照合しました。全本文の逐語比較や全組合せの比較を完了したという意味ではありません。
+
+| 対象記事 | 判定と理由 |
+|---|---|
+| actuator / chattering | 維持。制御信号を物理動作へ変える装置と、接点の振動による多重入力という現象で異なる。 |
+| address-bus-data-bus / dma / daisy-chain | 維持。場所指定とデータ幅、転送の制御主体、機器の接続形態で判断軸が異なる。USBの記事は規格の共通機能を扱う。 |
+| archive / file-block-allocation | 維持。ファイルをまとめる操作と、ファイルごとの割当領域の切上げ計算で異なる。バックアップや主記憶の断片化の説明とも目的が異なる。 |
+| augmented-reality | 維持。現実への情報の重畳をVR等と区別する教材。CGの描画工程とは役割が異なる。 |
+| buffer-size-transfer-rate / streaming-buffering | 維持・相互リンク。速度差を使う点は共通だが、前者は入力超過によるあふれを防ぐ容量、後者は出力超過による不足を防ぐ再生開始待ち時間を扱う。後者の「50秒分のデータ」を待ち時間50秒・蓄積量300kバイトと明確化。 |
+| dc-power-feeding / electric-power-energy-wh / power-gating / ups | 維持。変換損失、電力・電力量の計算、回路への電源遮断、停電直後の一時給電という役割で異なる。 |
+| dual-duplex-system / multiprocessor-system-types | 維持・相互リンク。二重化の動作・切替えの詳細と、主記憶・OS共有も含めた構成の横断比較で読み分けを明示。旧dual-vs-duplex-systemは既存の転送を維持。 |
+| fail-safe-fail-soft-fault-tolerance-foolproof | 維持。故障・誤操作への対応目的を横断比較する教材。fault-tolerant-systemは必要機能の継続と実現手段・復旧との違いを詳しく扱う。 |
+| dynamic-address-translation / thrashing | 維持。実行時のアドレス変換と、ページ交換多発による性能低下。virtual-memoryは全体像、pagingは管理単位と対応付けを扱う。 |
+| edge-computing / real-time-system | 維持。処理を行う場所と、期限内に完了するという要件で異なる。エッジであることだけでは期限保証にならない。 |
+| flip-flop-sequential-circuit / shift-register-timing | 維持。1ビットの状態保持と、クロック・ストローブに沿ったビット列の変化の追跡で異なる。 |
+| full-adder / half-adder | 維持。下位桁からの桁上がりを含む加算と、AND・XORによる2入力の加算を扱う。共通の真理値表という形式だけでは統合しない。 |
+| nand-gate / nand-xor-circuit | 維持。単一ゲートの定義・万能性と、途中出力を追って複合回路全体の機能を判定する手順で異なる。 |
+| nas | 維持。ネットワーク経由のファイル共有をSAN・DASと比較する教材。RAIDはディスク構成、バックアップは復旧用の保存で異なる。 |
+| pll-frequency-divider | 維持。ブロック図上の逓倍・分周の計算。CPU性能・クロックの一般説明とは問題の判断手順が異なる。 |
+| scale-up-vs-scale-out / system-performance-evaluation / turnaround-time | 維持。性能向上の構成変更、測定条件の選び方、到着から完了までの時間計算で異なる。スループットやスケジューリングは関連するが同一教材ではない。 |
+
+- 新たな統合はなし。転送29件・実記事749件は維持。
+- 確認履歴は583/749件から**615/749件（82.1%）**へ。未確認の実記事は134件。
+- 現存ファイルの確認履歴インデックスは638件（実記事615件＋履歴に含まれる転送23件）。
+- 元の公開日・URL・分類・既存見出し・フッターを保持。記事変更4件の更新日を更新。
+- 検証：監査スクリプトの単体テスト5件成功。通常16候補・拡張43候補を再抽出し、git diff --checkを通過。ローカルのJekyll環境がないため公開表示のビルドは未確認。
 
 ## 転送専用ページの確認（2026-10-17）
 
