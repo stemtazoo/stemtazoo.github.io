@@ -8,7 +8,7 @@
 - FE Markdown: 778ファイル（転送用ページを含む）
 - 過去の本文確認履歴に対応する現存ファイル: 78ファイル（重複排除）
 - ファイル単位の確認履歴カバー率: 10.0%。これは全件本文比較の完了率ではありません。
-- 削除済みファイルは分母・分子から除外。転送ページはまだ全件分類していません。
+- 削除済みファイルは分母・分子から除外。転送ページのうち17ファイルを本文で確認済み。全件分類は未完了です。
 
 ## 修正PRの記録
 
@@ -104,6 +104,33 @@
 - pages/fe/usb-interface.md
 - pages/fe/work-made-for-hire.md
 - pages/fe/work-made-for-hire-copyright.md
+
+
+## 転送専用ページの確認（2026-10-17）
+
+Markdownが1100バイト未満の17件を抽出し、17件すべての本文にHTMLのmeta refresh転送を確認しました。**この条件に当てはまらない転送ページは未調査**です。
+
+- 確認済み転送専用ページ: 17件
+- 転送を除いた実記事数の暫定上限: 761件（778 - 17）
+- これらの転送はHTTP 301ではなく、HTML meta refreshです。
+
+- pages/fe/activity-diagram.md
+- pages/fe/black-box-vs-white-box-test.md
+- pages/fe/capacity-management-analysis-models.md
+- pages/fe/communication-encryption-eavesdropping.md
+- pages/fe/drive-by-download-attack.md
+- pages/fe/dual-vs-duplex-system.md
+- pages/fe/fault-tolerance.md
+- pages/fe/functional-nonfunctional-requirements.md
+- pages/fe/input-data-check.md
+- pages/fe/internal-control-components.md
+- pages/fe/project-life-cycle.md
+- pages/fe/security-cia.md
+- pages/fe/software-architecture-design.md
+- pages/fe/stored-program-architecture.md
+- pages/fe/tlo.md
+- pages/fe/uml-diagrams.md
+- pages/fe/work-made-for-hire.md
 
 ## 次の手順
 
