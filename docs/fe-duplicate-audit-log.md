@@ -4,13 +4,13 @@
 
 ## 対象と進捗
 
-- GitHub mainの再帰ツリーを2026-10-17に取得
+- GitHub mainのFEファイル構成を2026-10-18に再確認
 - FE Markdown: 778ファイル（転送用ページを含む）
-- 過去の本文確認履歴に対応する現存ファイル: 542ファイル（重複排除）
-- ファイル単位の確認履歴カバー率: 69.7%。これは全件本文比較の完了率ではありません。
-- 削除済みファイルは分母・分子から除外。mainはPR #448まで反映済みで転送29件・実記事749件。今回は新たな統合を行わないため実記事数は変わりません。
+- 過去の本文確認履歴に対応する現存ファイル: 574ファイル（重複排除）
+- ファイル単位の確認履歴カバー率: 73.8%。これは全件本文比較の完了率ではありません。
+- 削除済みファイルは分母・分子から除外。mainはPR #449まで反映済みで転送29件・実記事749件。今回は新たな統合を行わないため実記事数は変わりません。
 
-- 実記事の個別確認履歴（今回のmain向け継続PR適用後）: **519/749件（69.3%）**。転送の29件は別管理。
+- 実記事の個別確認履歴（今回のmain向け継続PR適用後）: **551/749件（73.6%）**。転送の29件は別管理。
 - 変更前の761実記事に対して**機械的な類似候補抽出を実施済み**。PR #442の新しい構成ではCIで再走査します。未抽出の組合せが重複なしと確定したわけではありません。
 
 ## 修正PRの記録
@@ -34,6 +34,7 @@
 - #446 開発・テスト・品質管理30記事監査、開発・運用連携記事の統合（マージ済み）
 - #447 ネットワーク・セキュリティ30記事監査、CPSFの重複統合（マージ済み）
 - #448 経営戦略・業務30記事監査、ニッチ戦略の導線整理（マージ済み）
+- #449 セキュリティ・関連法務30記事監査、検知・メール対策の導線整理（マージ済み）
 
 ## 本文確認履歴に含まれる現存ファイル
 
@@ -45,6 +46,7 @@
 - pages/fe/acid-properties.md
 - pages/fe/ad-conversion.md
 - pages/fe/addressing-modes.md
+- pages/fe/adjacency-matrix.md
 - pages/fe/adsl.md
 - pages/fe/affinity-diagram.md
 - pages/fe/agile-iteration.md
@@ -71,18 +73,21 @@
 - pages/fe/backup-redundancy.md
 - pages/fe/balance-sheet.md
 - pages/fe/bathtub-curve.md
+- pages/fe/bayes-theorem.md
 - pages/fe/behavioral-targeting.md
 - pages/fe/benchmark-test.md
 - pages/fe/benchmarking.md
 - pages/fe/bi.md
 - pages/fe/big-data-3v.md
 - pages/fe/big-data-utilization-stages.md
+- pages/fe/binary-decimal-digit-count.md
 - pages/fe/binary-representation.md
 - pages/fe/binary-search.md
 - pages/fe/binary-search-tree.md
 - pages/fe/binary-tree-traversal.md
 - pages/fe/biometric-authentication.md
 - pages/fe/bit-mask.md
+- pages/fe/bit-pattern-count.md
 - pages/fe/bitmap-outline-font.md
 - pages/fe/bitwise-operations-mask.md
 - pages/fe/black-box-testing.md
@@ -109,6 +114,7 @@
 - pages/fe/byod.md
 - pages/fe/cache-hit-rate-average-access-time.md
 - pages/fe/cache-memory.md
+- pages/fe/call-by-value.md
 - pages/fe/capacity-management-analysis-methods.md
 - pages/fe/capacity-management-analysis-models.md
 - pages/fe/captcha.md
@@ -136,6 +142,7 @@
 - pages/fe/commoditization.md
 - pages/fe/common-frame.md
 - pages/fe/common-frame-support-processes.md
+- pages/fe/communication-paths-combination.md
 - pages/fe/competitive-position-strategy.md
 - pages/fe/compiler-analysis-flow.md
 - pages/fe/compiler-linker-loader-debugger.md
@@ -145,6 +152,7 @@
 - pages/fe/computer-unauthorized-access-countermeasure-standard.md
 - pages/fe/condition-branch-order.md
 - pages/fe/conditional-branch-average-comparisons.md
+- pages/fe/conditional-probability.md
 - pages/fe/configuration-management.md
 - pages/fe/contract-types-outsourcing.md
 - pages/fe/control-structures-loop-selection.md
@@ -152,6 +160,8 @@
 - pages/fe/conversion-rate.md
 - pages/fe/core-competence.md
 - pages/fe/core-technology.md
+- pages/fe/correlation-coefficient.md
+- pages/fe/counting-constrained-strings.md
 - pages/fe/cpi-clock-cycle-cpu-time.md
 - pages/fe/cpsf.md
 - pages/fe/cpu-clock-frequency.md
@@ -192,12 +202,14 @@
 - pages/fe/database-recovery-rollforward-rollback.md
 - pages/fe/database-schema.md
 - pages/fe/deadlock.md
+- pages/fe/decimal-to-binary-div-mod.md
 - pages/fe/defect-repair-cost-expected-value.md
 - pages/fe/depreciation-methods.md
 - pages/fe/depreciation-straight-line.md
 - pages/fe/development-environment-maintenance.md
 - pages/fe/development-operations-collaboration.md
 - pages/fe/device-driver.md
+- pages/fe/dfs-vs-bfs.md
 - pages/fe/dhcp.md
 - pages/fe/digital-watermark.md
 - pages/fe/disk-scheduling.md
@@ -219,6 +231,7 @@
 - pages/fe/effort-productivity-duration.md
 - pages/fe/electronic-commerce.md
 - pages/fe/electronic-signature-law.md
+- pages/fe/elementary-row-operations.md
 - pages/fe/email-protocols.md
 - pages/fe/email-security-measures.md
 - pages/fe/enterprise-architecture.md
@@ -228,6 +241,7 @@
 - pages/fe/er-diagram.md
 - pages/fe/er-diagram-cardinality.md
 - pages/fe/erp.md
+- pages/fe/euclidean-algorithm.md
 - pages/fe/evm.md
 - pages/fe/exclusive-resource-task-timing.md
 - pages/fe/external-internal-design.md
@@ -238,14 +252,17 @@
 - pages/fe/feedback-feedforward-control.md
 - pages/fe/fifo-inventory-valuation.md
 - pages/fe/fifo-page-replacement.md
+- pages/fe/finite-fraction-radix.md
 - pages/fe/five-functions-fetch-decode.md
 - pages/fe/five-stage-pipeline.md
 - pages/fe/fixed-partition-memory-allocation.md
+- pages/fe/fixed-point-iteration.md
 - pages/fe/flash-memory.md
 - pages/fe/floating-point-errors.md
 - pages/fe/floating-point-format.md
 - pages/fe/floating-point-normalization.md
 - pages/fe/floating-point-representation.md
+- pages/fe/floor-function.md
 - pages/fe/full-differential-incremental-backup.md
 - pages/fe/function-point-effort.md
 - pages/fe/function-point-method.md
@@ -257,6 +274,7 @@
 - pages/fe/gpl-mit-bsd-license-comparison.md
 - pages/fe/green-procurement.md
 - pages/fe/green-purchasing.md
+- pages/fe/grid-shortest-path-combinations.md
 - pages/fe/hadoop.md
 - pages/fe/hadoop-spark.md
 - pages/fe/hamming-code.md
@@ -276,6 +294,7 @@
 - pages/fe/huffman-coding.md
 - pages/fe/hybrid-cloud.md
 - pages/fe/hybrid-encryption.md
+- pages/fe/hypothesis-testing.md
 - pages/fe/ide-development-environment.md
 - pages/fe/ide-eclipse.md
 - pages/fe/ids-ips-firewall.md
@@ -323,6 +342,8 @@
 - pages/fe/lan-analyzer.md
 - pages/fe/language-processor-comparison.md
 - pages/fe/line-utilization-rate.md
+- pages/fe/linear-programming.md
+- pages/fe/linear-search.md
 - pages/fe/linked-list.md
 - pages/fe/linker.md
 - pages/fe/lock-granularity.md
@@ -340,6 +361,7 @@
 - pages/fe/malware-detection-analysis.md
 - pages/fe/many-to-many-associative-entity.md
 - pages/fe/marketing-mix.md
+- pages/fe/markov-process.md
 - pages/fe/master-file-maintenance.md
 - pages/fe/memory-compaction.md
 - pages/fe/memory-fragmentation.md
@@ -355,6 +377,7 @@
 - pages/fe/mips-processing-time.md
 - pages/fe/module-cohesion.md
 - pages/fe/module-coupling.md
+- pages/fe/monte-carlo-method.md
 - pages/fe/morphing.md
 - pages/fe/mpeg.md
 - pages/fe/mrp.md
@@ -363,13 +386,16 @@
 - pages/fe/multicore-processor.md
 - pages/fe/nat.md
 - pages/fe/nat-napt.md
+- pages/fe/necessary-and-sufficient-condition.md
 - pages/fe/net-present-value.md
 - pages/fe/network-configuration-management.md
 - pages/fe/network-device-functions-comparison.md
 - pages/fe/network-devices-router-repeater-bridge-switch.md
 - pages/fe/network-diagnostic-commands.md
+- pages/fe/newton-method.md
 - pages/fe/niche-strategy.md
 - pages/fe/non-functional-requirements.md
+- pages/fe/normal-distribution-table.md
 - pages/fe/ntp.md
 - pages/fe/ntp-time-synchronization.md
 - pages/fe/on-demand-service.md
@@ -395,6 +421,7 @@
 - pages/fe/password-list-attack-comparison.md
 - pages/fe/pcm-sampling-quantization-encoding.md
 - pages/fe/pdm-dependency-types.md
+- pages/fe/permutations-combinations.md
 - pages/fe/phishing.md
 - pages/fe/physical-security-measures-comparison.md
 - pages/fe/ping.md
@@ -447,6 +474,7 @@
 - pages/fe/relational-operations.md
 - pages/fe/relations-diagram.md
 - pages/fe/relocation.md
+- pages/fe/required-bits.md
 - pages/fe/rest-api.md
 - pages/fe/retention-rate.md
 - pages/fe/reverse-brute-force.md
@@ -482,6 +510,7 @@
 - pages/fe/shared-exclusive-lock.md
 - pages/fe/shell.md
 - pages/fe/shell-redirection.md
+- pages/fe/shift-operation.md
 - pages/fe/shortest-job-first-scheduling.md
 - pages/fe/siem.md
 - pages/fe/snmp.md
@@ -495,6 +524,7 @@
 - pages/fe/software-reuse.md
 - pages/fe/software-review-inspection.md
 - pages/fe/software-testing-types.md
+- pages/fe/sorting-algorithms.md
 - pages/fe/speculative-execution.md
 - pages/fe/spf.md
 - pages/fe/spiral-model.md
@@ -508,6 +538,7 @@
 - pages/fe/ssid-bssid.md
 - pages/fe/stack.md
 - pages/fe/stack-vs-queue.md
+- pages/fe/standard-deviation.md
 - pages/fe/standby-system.md
 - pages/fe/state-transition-diagram.md
 - pages/fe/state-transition-table.md
@@ -549,6 +580,7 @@
 - pages/fe/transaction-1.md
 - pages/fe/transaction-atomicity-rollback.md
 - pages/fe/transaction-state-transition.md
+- pages/fe/transition-probability.md
 - pages/fe/two-phase-commit.md
 - pages/fe/twos-complement.md
 - pages/fe/twos-complement-remainder.md
@@ -559,6 +591,7 @@
 - pages/fe/usb-interface.md
 - pages/fe/value-chain.md
 - pages/fe/variable-partition-memory-allocation.md
+- pages/fe/venn-diagram-set-operations.md
 - pages/fe/verification-validation.md
 - pages/fe/video-bandwidth-calculation.md
 - pages/fe/virtual-memory.md
@@ -929,6 +962,28 @@ SG・DS・GKも関連語で検索し、テーマ外の記事は本監査の件�
 - 編集は検知・解析の2記事とメール総論の計3記事のみ。既存の本文・例・初回日付・URL・分類・見出し・フッターは保持し、更新日と目的説明・リンクだけ変更。
 - 図解評価：今回は既存教材への読み分けを補う変更のため、新たな操作UIは追加しない。
 - main（`46e26fca`、#448まで）：489/749実記事（65.3%）。今回適用後：778 Markdown・転送29・実記事749、確認履歴542ファイル（転送23・実記事519）。**519/749実記事（69.3%）**、未確認230実記事。
+
+## 継続監査：アルゴリズム・数値表現・確率統計の未確認32記事（2026-10-18）
+
+mainの#449反映と履歴542ファイルを確認してから、未登録32実記事を追加しました。定義・冒頭・見出し・試験の判断軸を比較し、マルコフ過程と遷移確率は本文全体、数え上げとビット数の記事群は計算の対象も照合しています。今回新たな統合対象はありません。全段落の校正・全記事間の総当たり比較の完了率ではありません。
+
+| 記事群 | 判定・理由 |
+|---|---|
+| `binary-decimal-digit-count` / `bit-pattern-count` / `required-bits` | 維持。基数を変えた桁数の概算／既知ビット数から個数・倍率／種類数から最小ビット数という順逆の計算。必要ビット数からパターン数へのリンクを追加し、既存の逆方向リンクと対応 |
+| `decimal-to-binary-div-mod` / `shift-operation` / `finite-fraction-radix` | 維持。整数変換のmod保存・div更新／ビット移動と倍率・マスク／分母の素因数から有限小数になるかの判断。既存確認済み16進変換・浮動小数点誤差とも区別 |
+| `permutations-combinations` / `communication-paths-combination` / `grid-shortest-path-combinations` / `counting-constrained-strings` | 維持。順番の有無・余事象の総論／1対1のペアと増員差分／右上移動の並べ方／各位置の制約と重複許容。公式が共通でも制約の読み方が違う |
+| `conditional-probability` / `bayes-theorem` / `transition-probability` / `markov-process` | 維持。条件から分母を選ぶ／観測後の逆向き確率／条件を固定した確率表と合計1／複数ステップの経路確率。遷移確率とマルコフ過程へ相互リンクを追加 |
+| `standard-deviation` / `normal-distribution-table` / `correlation-coefficient` / `hypothesis-testing` | 維持。散らばりと定数変換／z標準化・左右の面積／2変数の直線関係／p値と有意水準から棄却判断で対象が異なる |
+| `fixed-point-iteration` / `newton-method` / `monte-carlo-method` | 維持。反復で変わらない値の条件／接線を使う方程式の求根／乱数の繰返しによる近似。反復という語だけでは統合しない |
+| `elementary-row-operations` / `linear-programming` | 維持。行列の操作判定／線形制約の下で頂点を比較する最適化で目的が違う |
+| `adjacency-matrix` / `dfs-vs-bfs` / `linear-search` / `sorting-algorithms` | 維持。グラフの接続表現／探索順とスタック・キュー／先頭から値を探す／比較交換による整列。既存の二分探索・木走査記事とも区別。既存のソート操作図解を保持 |
+| `euclidean-algorithm` / `call-by-value` | 維持。最大公約数計算の変数更新・終了判定／引数のコピーと仮引数への代入効果。トレース対象・目的が異なる。既存の値呼出し操作図解を保持 |
+| `necessary-and-sufficient-condition` / `venn-diagram-set-operations` | 維持。含意の向きと反例／集合の領域・等式・包含の判定。既存確認済み論理演算記事とも対象が違う |
+
+- SG・DS・GKも関連語で検索し、他テーマとの統合は行わない。全面的な数式校正・実装検証・出典の鮮度は別監査。
+- 公開記事の編集はマルコフ過程・遷移確率・必要ビット数の3件のみ。元のdate・URL・分類・見出し・計算例・フッターを保持し、更新日・役割説明・リンクだけ変更。
+- 図解評価：今回は既存教材の読み分けの補足で、新しい操作UIは不要。既存の操作図解・例は保持。
+- main（`c27cd649`、#449まで）：519/749実記事（69.3%）。今回適用後：778 Markdown・転送29・実記事749、確認履歴574ファイル（転送23・実記事551）。**551/749実記事（73.6%）**、未確認198実記事。
 
 ## 転送専用ページの確認（2026-10-17）
 
