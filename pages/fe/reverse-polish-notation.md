@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: アルゴリズムとプログラミング
 fe_order: 40
 date: 2026-07-09
-last_modified_at: 2026-10-01
+last_modified_at: 2026-10-16
 ---
 
 ## まず結論
@@ -363,6 +363,48 @@ d      → [a+b+c, d]      深さ2
 最大深さは2です。
 
 どちらも加算だけなら最終結果は同じですが、必要なスタックの深さは異なります。
+
+### 操作して理解する：最大スタック深さ
+
+**スタックの深さは、積まれている値の個数（図の高さ）**です。最後に1個になるかどうかではなく、**処理途中の最大値**を見ます。
+
+次の図は、例として `a=2、b=3、c=4、d=5` を使います。「次へ」を押すと、**実際の計算結果と、スタックの高さ**が1記号ずつ変わります。
+
+<link rel="stylesheet" href="{{ '/assets/css/fe-rpn-depth-demo.css' | relative_url }}">
+
+<div class="fe-learning-demo fe-rpn-depth-demo" data-fe-rpn-depth-demo>
+  <p class="fe-learning-demo__title">逆ポーランド表記を1文字ずつ実行する</p>
+  <p class="fe-learning-demo__lead">同じ合計14でも、計算する順番によって最大深さが変わります。</p>
+  <label for="fe-rpn-choice">比較する式</label>
+  <select id="fe-rpn-choice" data-rpn-choice>
+    <option value="ab+c+d+">ア：ab+c+d+（最大2）</option>
+    <option value="ab+cd++">イ：ab+cd++（最大3）</option>
+    <option value="abc++d+">ウ：abc++d+（最大3）</option>
+    <option value="abc+d++">エ：abc+d++（最大3）</option>
+  </select>
+  <div class="fe-rpn-depth-demo__tokens" data-rpn-tokens aria-label="処理する記号"></div>
+  <p class="fe-rpn-depth-demo__action" data-rpn-action role="status" aria-live="polite">開始前です。「次へ」でaを積みます。</p>
+  <div class="fe-rpn-depth-demo__layout">
+    <div>
+      <strong>スタック（下が底・上が先頭）</strong>
+      <div class="fe-rpn-depth-demo__shaft" data-rpn-stack aria-label="現在のスタック"><span>空</span></div>
+    </div>
+    <div class="fe-rpn-depth-demo__metrics">
+      <span>現在の深さ</span><strong data-rpn-depth>0</strong>
+      <span>ここまでの最大深さ</span><strong data-rpn-max>0</strong>
+      <span>処理済み</span><strong data-rpn-progress>0 / 7</strong>
+    </div>
+  </div>
+  <div class="fe-learning-demo__controls">
+    <button type="button" class="fe-learning-demo__button" data-rpn-prev disabled>戻る</button>
+    <button type="button" class="fe-learning-demo__button" data-rpn-next>次へ</button>
+    <button type="button" class="fe-learning-demo__button" data-rpn-reset>最初から</button>
+  </div>
+  <p class="fe-learning-demo__hint">見るポイント：値なら1個増える。+なら2個取り出して結果を1個積むので、深さは1減る。最終深さと最大深さは別です。</p>
+  <noscript><p>JavaScriptが無効の場合は、直前の表でスタックの変化を確認してください。</p></noscript>
+</div>
+
+<script src="{{ '/assets/js/fe-rpn-depth-demo.js' | relative_url }}" defer></script>
 
 ### 最大深さを小さくする判断基準
 
