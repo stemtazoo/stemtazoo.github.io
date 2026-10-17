@@ -6,11 +6,11 @@
 
 - GitHub mainの再帰ツリーを2026-10-17に取得
 - FE Markdown: 778ファイル（転送用ページを含む）
-- 過去の本文確認履歴に対応する現存ファイル: 148ファイル（重複排除）
-- ファイル単位の確認履歴カバー率: 19.0%。これは全件本文比較の完了率ではありません。
+- 過去の本文確認履歴に対応する現存ファイル: 201ファイル（重複排除）
+- ファイル単位の確認履歴カバー率: 25.8%。これは全件本文比較の完了率ではありません。
 - 削除済みファイルは分母・分子から除外。全778件の本文から転送17件と実記事761件を検出しました。
 
-- 実記事の個別確認履歴: **137/761件（18.0%）**。転送の17件は別管理。
+- 実記事の個別確認履歴: **190/761件（25.0%）**。転送の17件は別管理。
 - 761実記事すべての**機械的な類似候補抽出は実施済み**。候補の目視確認は抽出された43組を終了。未抽出の組合せが重複なしと確定したわけではありません。
 
 ## 修正PRの記録
@@ -24,11 +24,12 @@
 - #432 内部統制の統合
 - #433 バックアップ方式の役割整理
 - #434 PKI・認証局と暗号化の役割整理
-- #438 761実記事の自動候補抽出・転送判定を導入（当PR）
+- #438 761実記事の自動候補抽出・転送判定を導入（マージ済み）
+- #439 追加53記事の役割監査と3記事の学習導線整理（当PR）
 
 ## 本文確認履歴に含まれる現存ファイル
 
-以下は確認履歴のインデックスです。記載だけで重複なし・公開確認済みとは判断しません。
+以下は確認履歴のインデックスです。記載されているだけで全本文の逐語比較や公開状態を確認済みとは判断しません。
 
 - pages/fe/account-aggregation.md
 - pages/fe/affinity-diagram.md
@@ -36,15 +37,20 @@
 - pages/fe/audit-evidence.md
 - pages/fe/audit-working-papers.md
 - pages/fe/authentication-devices.md
+- pages/fe/automaton-state-transition.md
 - pages/fe/backup-methods.md
 - pages/fe/backup-redundancy.md
 - pages/fe/balance-sheet.md
 - pages/fe/bathtub-curve.md
 - pages/fe/binary-representation.md
+- pages/fe/binary-search.md
+- pages/fe/binary-search-tree.md
+- pages/fe/binary-tree-traversal.md
 - pages/fe/biometric-authentication.md
 - pages/fe/black-box-testing.md
 - pages/fe/block-search-average-comparisons.md
 - pages/fe/bottom-up-testing.md
+- pages/fe/brute-force-attack.md
 - pages/fe/business-continuity-management.md
 - pages/fe/business-continuity-plan.md
 - pages/fe/business-domain.md
@@ -56,15 +62,27 @@
 - pages/fe/checksum.md
 - pages/fe/cia-triad.md
 - pages/fe/cidr-network-broadcast-address.md
+- pages/fe/class-instance.md
+- pages/fe/client-server-system.md
 - pages/fe/cloud-deployment-models.md
+- pages/fe/cold-warm-start.md
 - pages/fe/command-and-control.md
 - pages/fe/commit-rollback.md
+- pages/fe/common-frame.md
+- pages/fe/common-frame-support-processes.md
 - pages/fe/compiler-analysis-flow.md
 - pages/fe/compiler-linker-loader-debugger.md
+- pages/fe/complete-binary-tree.md
 - pages/fe/conditional-branch-average-comparisons.md
 - pages/fe/configuration-management.md
 - pages/fe/contract-types-outsourcing.md
 - pages/fe/core-competence.md
+- pages/fe/cpi-clock-cycle-cpu-time.md
+- pages/fe/cpu-clock-frequency.md
+- pages/fe/cpu-instruction-cycle.md
+- pages/fe/cpu-scheduling.md
+- pages/fe/cpu-scheduling-idle-time.md
+- pages/fe/crashing-vs-fast-tracking.md
 - pages/fe/crc.md
 - pages/fe/critical-chain.md
 - pages/fe/critical-path-vs-critical-chain.md
@@ -76,40 +94,57 @@
 - pages/fe/database-backup-recovery.md
 - pages/fe/database-log-recovery.md
 - pages/fe/database-recovery-rollforward-rollback.md
+- pages/fe/development-environment-maintenance.md
 - pages/fe/dhcp.md
+- pages/fe/disk-scheduling.md
+- pages/fe/disk-scheduling-scan.md
 - pages/fe/dispatch-secondment-contract.md
 - pages/fe/dns.md
 - pages/fe/dram.md
 - pages/fe/drive-by-download.md
 - pages/fe/drive-by-download-attack.md
+- pages/fe/economic-order-quantity.md
+- pages/fe/effort-productivity-duration.md
 - pages/fe/enterprise-architecture.md
 - pages/fe/envelope-encryption.md
+- pages/fe/fast-tracking.md
 - pages/fe/fe-requirements-definition-process.md
 - pages/fe/fifo-page-replacement.md
+- pages/fe/fixed-partition-memory-allocation.md
 - pages/fe/floating-point-errors.md
 - pages/fe/floating-point-format.md
 - pages/fe/floating-point-normalization.md
 - pages/fe/floating-point-representation.md
 - pages/fe/full-differential-incremental-backup.md
+- pages/fe/function-point-effort.md
+- pages/fe/function-point-method.md
 - pages/fe/functional-nonfunctional-requirements.md
 - pages/fe/gompertz-curve.md
+- pages/fe/gpl-license.md
+- pages/fe/gpl-mit-bsd-license-comparison.md
 - pages/fe/hadoop-spark.md
 - pages/fe/hamming-code.md
 - pages/fe/hash-function-1.md
 - pages/fe/hash-method-uniform-distribution.md
+- pages/fe/hash-table.md
+- pages/fe/hash-table-collision.md
 - pages/fe/hex-binary-conversion.md
 - pages/fe/hexadecimal-fraction.md
 - pages/fe/hexadecimal-fraction-bit-shift.md
 - pages/fe/hexadecimal-fraction-conversion.md
+- pages/fe/hot-warm-cold-site.md
 - pages/fe/hybrid-cloud.md
 - pages/fe/hybrid-encryption.md
+- pages/fe/ide-development-environment.md
 - pages/fe/incident-management-vs-problem-management.md
 - pages/fe/incident-service-request-management.md
 - pages/fe/inheritance.md
 - pages/fe/input-data-check.md
 - pages/fe/input-data-checks.md
+- pages/fe/interface-usb-sata-ieee1394-1000base-t.md
 - pages/fe/internal-control-components.md
 - pages/fe/internal-control-six-elements.md
+- pages/fe/is-a-part-of-instance-class.md
 - pages/fe/it-investment-evaluation.md
 - pages/fe/it-investment-management.md
 - pages/fe/java-language-features.md
@@ -125,16 +160,20 @@
 - pages/fe/nat-napt.md
 - pages/fe/network-configuration-management.md
 - pages/fe/network-device-functions-comparison.md
+- pages/fe/network-devices-router-repeater-bridge-switch.md
 - pages/fe/non-functional-requirements.md
 - pages/fe/ntp.md
+- pages/fe/order-quantity-and-inventory-cost.md
 - pages/fe/packet-filtering.md
 - pages/fe/paging.md
 - pages/fe/password-hash-authentication.md
+- pages/fe/physical-security-measures-comparison.md
 - pages/fe/pki-certificate-authority.md
 - pages/fe/polymorphism.md
 - pages/fe/pppoe.md
 - pages/fe/problem-management.md
 - pages/fe/process-innovation.md
+- pages/fe/progress-productivity-effort.md
 - pages/fe/project-life-cycle.md
 - pages/fe/project-lifecycle-characteristics.md
 - pages/fe/project-management-process-groups.md
@@ -144,19 +183,27 @@
 - pages/fe/public-key-encryption-digital-signature.md
 - pages/fe/relations-diagram.md
 - pages/fe/rest-api.md
+- pages/fe/reverse-brute-force.md
 - pages/fe/risk-assessment-process.md
 - pages/fe/risk-level.md
+- pages/fe/router-bridge-repeater-gateway.md
 - pages/fe/security-by-design.md
 - pages/fe/security-cia.md
 - pages/fe/security-guidelines-comparison.md
 - pages/fe/security-threat-countermeasures.md
+- pages/fe/server-client-port.md
+- pages/fe/server-room-physical-security.md
 - pages/fe/software-architecture-design.md
 - pages/fe/software-design-phases.md
+- pages/fe/software-license-contract-types.md
+- pages/fe/software-license-minimum-cost.md
 - pages/fe/spiral-model.md
 - pages/fe/sql-aggregate-functions.md
 - pages/fe/sql-group-by-aggregate-functions.md
 - pages/fe/sram.md
 - pages/fe/stack-vs-queue.md
+- pages/fe/state-transition-diagram.md
+- pages/fe/state-transition-table.md
 - pages/fe/stored-program-architecture.md
 - pages/fe/stored-program-concept.md
 - pages/fe/stub-driver.md
@@ -166,15 +213,22 @@
 - pages/fe/system-audit-techniques.md
 - pages/fe/system-auditor-independence.md
 - pages/fe/system-test-audit.md
+- pages/fe/three-tier-client-server.md
 - pages/fe/tlo.md
 - pages/fe/tlo-technology-licensing-organization.md
 - pages/fe/top-down-bottom-up-test.md
 - pages/fe/top-down-testing.md
 - pages/fe/transaction-1.md
+- pages/fe/transaction-state-transition.md
+- pages/fe/twos-complement.md
+- pages/fe/twos-complement-remainder.md
 - pages/fe/usb.md
+- pages/fe/usb-ieee1394.md
 - pages/fe/usb-interface.md
+- pages/fe/variable-partition-memory-allocation.md
 - pages/fe/waterfall-model.md
 - pages/fe/web-api.md
+- pages/fe/web-client-server.md
 - pages/fe/white-box-testing.md
 - pages/fe/work-made-for-hire.md
 - pages/fe/work-made-for-hire-copyright.md
@@ -263,6 +317,39 @@
 | `memory-management-methods` / `paging` | 記憶管理全体の総論とページング方式の詳説 |
 
 自動抽出は**全761実記事へ2通りの条件で実施済み**ですが、全記事についての目視レビュー完了とは異なります。
+
+
+## 追加監査：未確認53記事の学習目的比較（2026-10-17）
+
+全件自動抽出で拾えない可能性がある重複を補うため、**ファイル名・概念上の関連が強い未確認53記事**の本文冒頭・見出し・試験での切り分け視点を確認しました。新たな統合対象はなく、いずれも**維持**の判定です。ここでの確認は各記事の逐語的な全文校正ではありません。
+
+| 系統 | 記事名（ファイル名） | 役割の違い |
+|---|---|---|
+| オブジェクト指向 | class-instance / is-a-part-of-instance-class | クラスと実体の基本 ／ is-a・part-of・instance-ofの関係比較 |
+| クライアントサーバ | client-server-system / server-client-port / three-tier-client-server / web-client-server | 要求と提供の役割 ／ ポート番号 ／ 三層の役割 ／ ブラウザ方式の導入・保守 |
+| 共通フレーム | common-frame / common-frame-support-processes | 開発プロセスの全体像 ／ 検証・妥当性確認など支援プロセス |
+| CPUスケジューリング | cpu-scheduling / cpu-scheduling-idle-time | 方式を見分ける ／ タスク状態とI/O待ちから遊休時間を追う |
+| プロジェクト短縮 | crashing-vs-fast-tracking / fast-tracking | クラッシングとの比較 ／ ファストトラッキング単独の仕組み |
+| ディスクスケジューリング | disk-scheduling / disk-scheduling-scan | FCFS・SSTF・SCAN比較 ／ SCANの移動順と距離計算 |
+| ファンクションポイント | function-point-method / function-point-effort | 機能の重み付き合計からFP値算出 ／ FPと生産性から工数算出 |
+| 状態遷移 | state-transition-diagram / state-transition-table / automaton-state-transition / transaction-state-transition | 図の基本 ／ 表の追跡 ／ オートマトンの入力出力 ／ DB取引の状態変化 |
+| 二分木と探索 | binary-search-tree / binary-search / binary-tree-traversal / complete-binary-tree | 探索木の大小関係 ／ 整列済み配列の探索 ／ 走査順 ／ 木の節点数 |
+| ハッシュ表 | hash-table / hash-table-collision | ハッシュ表の全体像 ／ modで最初の衝突を見つける |
+| OSSライセンス | gpl-license / gpl-mit-bsd-license-comparison | GPL単独の配布条件 ／ GPL・MIT・BSD比較 |
+| 2の補数 | twos-complement / twos-complement-remainder | 負数表現 ／ 下位ビット・剰余・負数の商の丸め |
+| 主記憶の区画 | fixed-partition-memory-allocation / variable-partition-memory-allocation | 固定区画の内部断片化 ／ 可変区画の割当て・解放トレース |
+| ネットワーク装置 | network-devices-router-repeater-bridge-switch / router-bridge-repeater-gateway | スイッチを含むOSI層比較 ／ ゲートウェイの方式変換を含む比較 |
+| インタフェース | interface-usb-sata-ieee1394-1000base-t / usb-ieee1394 | 複数規格の特徴語比較 ／ USBとIEEE1394の共通点・ホットプラグ |
+| 総当たり攻撃 | brute-force-attack / reverse-brute-force | パスワード等の総当たり ／ パスワード固定・IDを変える攻撃 |
+| コールド／ウォーム | cold-warm-start / hot-warm-cold-site | 再起動の考え方 ／ 災害対策拠点の準備レベル |
+| CPUのクロックと命令 | cpi-clock-cycle-cpu-time / cpu-clock-frequency / cpu-instruction-cycle | CPIと処理時間 ／ 内部・外部クロック ／ 命令実行工程 |
+| 開発環境 | development-environment-maintenance / ide-development-environment | 開発環境の継続維持 ／ IDEというソフトウェアの役割 |
+| 発注量 | economic-order-quantity / order-quantity-and-inventory-cost | 費用のバランス点EOQ ／ 割引等を含む年間総費用比較 |
+| 工数 | effort-productivity-duration / progress-productivity-effort | 人月と要員数から期間 ／ 出来高率と投入工数から超過工数 |
+| ソフトウェア契約 | software-license-contract-types / software-license-minimum-cost | 契約類型の見分け方 ／ 数量制約の下で最安の組合せを求める |
+| 物理セキュリティ | physical-security-measures-comparison / server-room-physical-security | 紙・画面・端末の対策比較 ／ サーバ室の入退室・災害対策 |
+
+**編集**：`disk-scheduling.md` と `disk-scheduling-scan.md` に総論とSCANの計算問題の行き先を追加。`order-quantity-and-inventory-cost.md` からEOQ記事へのリンクを追加。3記事とも元の公開日と本文構成を保持し、更新日のみ変更しました。
 
 ## 転送専用ページの確認（2026-10-17）
 
