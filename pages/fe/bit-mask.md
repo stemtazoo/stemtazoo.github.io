@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: 基礎理論
 fe_order: 30
 date: 2026-07-02
-last_modified_at: 2026-07-02
+last_modified_at: 2026-10-17
 ---
 
 ## まず結論
@@ -26,6 +26,8 @@ last_modified_at: 2026-07-02
 | 特定のビットを反転する | XOR | 反転する場所 |
 
 つまり、マスクは単体で意味が決まるのではなく、**AND、OR、XORのどれと組み合わせるか** で役割が決まります。
+
+このページでは、**どのビット位置を操作対象にするか**を中心に考えます。AND・OR・XOR・NANDの演算そのものは[ビット演算の基本](/fe/bitwise-operations-mask/)、XORを使って特定位置を反転する手順は[XORによるビット反転](/fe/xor-bit-flip/)で詳しく確認できます。
 
 ## 直感的な説明
 
