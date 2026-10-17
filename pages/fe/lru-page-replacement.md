@@ -8,11 +8,11 @@ fe_section: テクノロジ系
 fe_subsection: コンピュータシステム
 fe_order: 290
 date: 2026-07-02
-last_modified_at: 2026-10-13
+last_modified_at: 2026-10-17
 related_articles:
   - /fe/paging/
   - /fe/fifo-page-replacement/
-  - /fe/lru-cache-replacement/
+  - /fe/lru/
 ---
 
 ## まず結論
@@ -29,11 +29,11 @@ LRU（Least Recently Used）は、**最後に参照された時刻が最も古�
 → 最後の参照が最も古いページを追い出す
 ```
 
-LRUそのものの概要や、キャッシュ置換も含めたFIFO・LFU・NRUとの比較は、[LRU方式とは？FIFO・LFU・NRUとの違い](/fe/lru-cache-replacement/)で整理しています。
+LRUそのものの概要や、キャッシュ置換も含めたFIFO・LFU・NRUとの比較は、[LRU方式とは？FIFO・LFU・NRUとの違い](/fe/lru/)で整理しています。
 
 > **このページは「LRUをページ参照列でどう追うか」に重点を置く記事です。**
 
-LRUの定義やFIFO・LFU・NRUとの横断比較は、[LRU方式とは？](/fe/lru-cache-replacement/) を参照してください。
+LRUの定義やFIFO・LFU・NRUとの横断比較は、[LRU方式とは？](/fe/lru/) を参照してください。
 
 ## 直感的な説明
 
