@@ -8,7 +8,7 @@ fe_section: ストラテジ系
 fe_subsection: システム戦略
 fe_order: 50
 date: 2026-07-28
-last_modified_at: 2026-07-28
+last_modified_at: 2026-10-17
 ---
 
 ## まず結論
@@ -48,6 +48,24 @@ ASPは、ソフトウェアを利用者のパソコンへ個別にインスト�
 ```
 
 大切なのは、利用者が借りているのがサーバそのものではなく、**サーバ上で動くアプリケーションの機能**だという点です。
+
+### 何を提供するサービスか、図で見分ける
+
+<div class="fe-asp-offer-grid" aria-label="ハウジングは場所、ホスティングはサーバ、ASPはアプリ、アウトソーシングは業務を提供する">
+  <div><span>施設・場所</span><strong>ハウジング</strong></div>
+  <div><span>サーバ</span><strong>ホスティング</strong></div>
+  <div><span>アプリケーション</span><strong>ASP</strong></div>
+  <div><span>業務そのもの</span><strong>アウトソーシング</strong></div>
+</div>
+
+特に混同しやすいのは、ハウジングとホスティングです。
+
+<div class="fe-asp-owner-grid">
+  <div><strong>ハウジング</strong><span>自社のサーバを<br>事業者の施設に置く</span></div>
+  <div><strong>ホスティング</strong><span>事業者のサーバを<br>利用者が借りる</span></div>
+</div>
+
+**「場所を借りるか、サーバを借りるか」**まで確認すると選びやすくなります。
 
 ## 定義・仕組み
 
@@ -184,5 +202,14 @@ ASPはアプリケーションの提供です。
 - 業務そのものを任せるならアウトソーシング
 - ASPとSaaSは、ネット経由でアプリを使う点が共通
 - SaaSはクラウドの提供形態として、PaaS・IaaSとの比較で問われやすい
+
+<style>
+.fe-asp-offer-grid,.fe-asp-owner-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem;max-width:640px;margin:1.1rem auto}
+.fe-asp-offer-grid>div,.fe-asp-owner-grid>div{border:1px solid #b9c8ce;border-radius:10px;padding:.85rem 1rem;background:#f5f8f8;text-align:center}
+.fe-asp-offer-grid span,.fe-asp-offer-grid strong,.fe-asp-owner-grid strong,.fe-asp-owner-grid span{display:block}
+.fe-asp-offer-grid span{font-size:.9em;margin-bottom:.2rem}
+.fe-asp-owner-grid span{margin-top:.45rem;font-size:.92em}
+@media(max-width:520px){.fe-asp-offer-grid,.fe-asp-owner-grid{grid-template-columns:1fr}}
+</style>
 
 {% include fe_article_footer.html %}
