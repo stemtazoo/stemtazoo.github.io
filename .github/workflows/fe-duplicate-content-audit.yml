@@ -25,9 +25,11 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_fe_duplicate_content.py' -v
       - name: Scan all FE Markdown files
         run: python scripts/audit_fe_duplicate_content.py --output docs/audits/fe-duplicate-candidates.md
+      - name: Scan expanded candidates for follow-up review
+        run: python scripts/audit_fe_duplicate_content.py --min-overlap 0.15 --top 200 --output docs/audits/fe-duplicate-candidates-expanded.md
       - name: Upload review-only report
         uses: actions/upload-artifact@v4
         with:
           name: fe-duplicate-candidates
-          path: docs/audits/fe-duplicate-candidates.md
+          path: docs/audits/fe-duplicate-candidates*.md
           retention-days: 30
