@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: データベース
 fe_order: 90
 date: 2026-07-15
-last_modified_at: 2026-07-15
+last_modified_at: 2026-10-18
 ---
 
 ## まず結論
@@ -35,6 +35,8 @@ FROM 中間テスト
 GROUP BY クラス名, 教科名
 ORDER BY クラス名, 教科名;
 ```
+
+このページは、**集計単位を決めるGROUP BYと、結果を並べ替えるORDER BYの違い**を扱います。集計前の行と集計後のグループを絞るWHERE・HAVINGの使い分けは、[グループ集計と絞り込み](/fe/sql-group-by-aggregate-functions/)で確認できます。
 
 ## 直感的な説明
 

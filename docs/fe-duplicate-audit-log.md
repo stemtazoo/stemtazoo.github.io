@@ -6,11 +6,11 @@
 
 - GitHub mainのFEファイル構成を2026-10-18に再確認
 - FE Markdown: 778ファイル（転送用ページを含む）
-- 過去の本文確認履歴に対応する現存ファイル: 574ファイル（重複排除）
-- ファイル単位の確認履歴カバー率: 73.8%。これは全件本文比較の完了率ではありません。
-- 削除済みファイルは分母・分子から除外。mainはPR #449まで反映済みで転送29件・実記事749件。今回は新たな統合を行わないため実記事数は変わりません。
+- 過去の本文確認履歴に対応する現存ファイル: 606ファイル（重複排除）
+- ファイル単位の確認履歴カバー率: 77.9%。これは全件本文比較の完了率ではありません。
+- 削除済みファイルは分母・分子から除外。mainはPR #450まで反映済みで転送29件・実記事749件。今回は新たな統合を行わないため実記事数は変わりません。
 
-- 実記事の個別確認履歴（今回のmain向け継続PR適用後）: **551/749件（73.6%）**。転送の29件は別管理。
+- 実記事の個別確認履歴（今回のmain向け継続PR適用後）: **583/749件（77.8%）**。転送の29件は別管理。
 - 変更前の761実記事に対して**機械的な類似候補抽出を実施済み**。PR #442の新しい構成ではCIで再走査します。未抽出の組合せが重複なしと確定したわけではありません。
 
 ## 修正PRの記録
@@ -35,6 +35,7 @@
 - #447 ネットワーク・セキュリティ30記事監査、CPSFの重複統合（マージ済み）
 - #448 経営戦略・業務30記事監査、ニッチ戦略の導線整理（マージ済み）
 - #449 セキュリティ・関連法務30記事監査、検知・メール対策の導線整理（マージ済み）
+- #450 アルゴリズム・数理32記事監査、確率・ビット数の導線整理（マージ済み）
 
 ## 本文確認履歴に含まれる現存ファイル
 
@@ -42,6 +43,7 @@
 
 - pages/fe/3d-printer.md
 - pages/fe/3pl.md
+- pages/fe/absolute-relative-path.md
 - pages/fe/account-aggregation.md
 - pages/fe/acid-properties.md
 - pages/fe/ad-conversion.md
@@ -51,6 +53,7 @@
 - pages/fe/affinity-diagram.md
 - pages/fe/agile-iteration.md
 - pages/fe/ai-vs-rule-based-control.md
+- pages/fe/ajax.md
 - pages/fe/ansoff-growth-matrix.md
 - pages/fe/anti-aliasing.md
 - pages/fe/application-maintenance.md
@@ -121,6 +124,7 @@
 - pages/fe/case-tools.md
 - pages/fe/cd-r.md
 - pages/fe/certificate-authority.md
+- pages/fe/cgi.md
 - pages/fe/challenge-response-authentication.md
 - pages/fe/character-code-table.md
 - pages/fe/character-encoding.md
@@ -158,6 +162,7 @@
 - pages/fe/control-structures-loop-selection.md
 - pages/fe/control-total-check.md
 - pages/fe/conversion-rate.md
+- pages/fe/corba.md
 - pages/fe/core-competence.md
 - pages/fe/core-technology.md
 - pages/fe/correlation-coefficient.md
@@ -188,20 +193,25 @@
 - pages/fe/cyber-physical-security-framework.md
 - pages/fe/cybercrime-laws.md
 - pages/fe/cybersecurity-management-guideline.md
+- pages/fe/data-dictionary.md
 - pages/fe/data-error-management.md
 - pages/fe/data-flow-diagram.md
 - pages/fe/data-mining.md
 - pages/fe/data-oriented-design.md
 - pages/fe/data-transfer-time.md
 - pages/fe/data-warehouse.md
+- pages/fe/database-administrator.md
 - pages/fe/database-backup-recovery.md
 - pages/fe/database-consistency.md
 - pages/fe/database-index.md
 - pages/fe/database-log-recovery.md
 - pages/fe/database-normalization.md
+- pages/fe/database-performance-troubleshooting.md
 - pages/fe/database-recovery-rollforward-rollback.md
 - pages/fe/database-schema.md
+- pages/fe/database-view-select-privilege.md
 - pages/fe/deadlock.md
+- pages/fe/debit-credit-double-entry.md
 - pages/fe/decimal-to-binary-div-mod.md
 - pages/fe/defect-repair-cost-expected-value.md
 - pages/fe/depreciation-methods.md
@@ -221,6 +231,7 @@
 - pages/fe/dmz-server-placement.md
 - pages/fe/dns.md
 - pages/fe/dns-cache-poisoning.md
+- pages/fe/double-entry-bookkeeping-data-model.md
 - pages/fe/dram.md
 - pages/fe/draw-software.md
 - pages/fe/drive-by-download.md
@@ -228,6 +239,7 @@
 - pages/fe/ecc.md
 - pages/fe/ecc-memory.md
 - pages/fe/economic-order-quantity.md
+- pages/fe/edi.md
 - pages/fe/effort-productivity-duration.md
 - pages/fe/electronic-commerce.md
 - pages/fe/electronic-signature-law.md
@@ -272,6 +284,7 @@
 - pages/fe/gompertz-curve.md
 - pages/fe/gpl-license.md
 - pages/fe/gpl-mit-bsd-license-comparison.md
+- pages/fe/grant-revoke-sql-privileges.md
 - pages/fe/green-procurement.md
 - pages/fe/green-purchasing.md
 - pages/fe/grid-shortest-path-combinations.md
@@ -333,14 +346,19 @@
 - pages/fe/isms-pdca.md
 - pages/fe/it-investment-evaluation.md
 - pages/fe/it-investment-management.md
+- pages/fe/java-beans.md
 - pages/fe/java-language-features.md
 - pages/fe/java-programming-language.md
+- pages/fe/java-servlet.md
+- pages/fe/jdbc.md
 - pages/fe/job-vs-task.md
+- pages/fe/json.md
 - pages/fe/kanban-jit.md
 - pages/fe/kanban-system.md
 - pages/fe/keylogger.md
 - pages/fe/lan-analyzer.md
 - pages/fe/language-processor-comparison.md
+- pages/fe/least-privilege-database-access.md
 - pages/fe/line-utilization-rate.md
 - pages/fe/linear-programming.md
 - pages/fe/linear-search.md
@@ -362,6 +380,7 @@
 - pages/fe/many-to-many-associative-entity.md
 - pages/fe/marketing-mix.md
 - pages/fe/markov-process.md
+- pages/fe/mashup.md
 - pages/fe/master-file-maintenance.md
 - pages/fe/memory-compaction.md
 - pages/fe/memory-fragmentation.md
@@ -396,6 +415,7 @@
 - pages/fe/niche-strategy.md
 - pages/fe/non-functional-requirements.md
 - pages/fe/normal-distribution-table.md
+- pages/fe/nosql-data-models.md
 - pages/fe/ntp.md
 - pages/fe/ntp-time-synchronization.md
 - pages/fe/on-demand-service.md
@@ -489,6 +509,7 @@
 - pages/fe/round-robin-scheduling.md
 - pages/fe/router-bridge-repeater-gateway.md
 - pages/fe/rpa.md
+- pages/fe/rpc.md
 - pages/fe/run-length-encoding.md
 - pages/fe/saas-paas-iaas.md
 - pages/fe/scm.md
@@ -507,6 +528,7 @@
 - pages/fe/service-availability.md
 - pages/fe/session-id-invalidation.md
 - pages/fe/sfa.md
+- pages/fe/sgml.md
 - pages/fe/shared-exclusive-lock.md
 - pages/fe/shell.md
 - pages/fe/shell-redirection.md
@@ -514,6 +536,8 @@
 - pages/fe/shortest-job-first-scheduling.md
 - pages/fe/siem.md
 - pages/fe/snmp.md
+- pages/fe/soa.md
+- pages/fe/soap-wsdl-uddi.md
 - pages/fe/soc.md
 - pages/fe/software-architecture-design.md
 - pages/fe/software-design-phases.md
@@ -531,8 +555,13 @@
 - pages/fe/spooling.md
 - pages/fe/spyware.md
 - pages/fe/sql-aggregate-functions.md
+- pages/fe/sql-correlated-subquery.md
+- pages/fe/sql-cursor.md
 - pages/fe/sql-group-by-aggregate-functions.md
+- pages/fe/sql-group-by-order-by.md
 - pages/fe/sql-injection.md
+- pages/fe/sql-logical-operators.md
+- pages/fe/sql-optimizer.md
 - pages/fe/sram.md
 - pages/fe/sram-dram.md
 - pages/fe/ssid-bssid.md
@@ -544,6 +573,7 @@
 - pages/fe/state-transition-table.md
 - pages/fe/static-dynamic-linking.md
 - pages/fe/storage-media-read-write-methods.md
+- pages/fe/stored-procedure.md
 - pages/fe/stored-program-architecture.md
 - pages/fe/stored-program-concept.md
 - pages/fe/structured-unstructured-data.md
@@ -604,6 +634,8 @@
 - pages/fe/waterfall-model.md
 - pages/fe/wbs.md
 - pages/fe/web-api.md
+- pages/fe/web-application-server.md
+- pages/fe/web-beacon.md
 - pages/fe/web-client-server.md
 - pages/fe/weighted-average-inventory-valuation.md
 - pages/fe/white-box-test-coverage.md
@@ -613,6 +645,7 @@
 - pages/fe/work-made-for-hire.md
 - pages/fe/work-made-for-hire-copyright.md
 - pages/fe/xml-digital-signature.md
+- pages/fe/xml-dtd.md
 - pages/fe/xor-bit-flip.md
 
 ## 追加本文監査：数値表現・IT投資など（2026-10-17）
@@ -984,6 +1017,29 @@ mainの#449反映と履歴542ファイルを確認してから、未登録32実�
 - 公開記事の編集はマルコフ過程・遷移確率・必要ビット数の3件のみ。元のdate・URL・分類・見出し・計算例・フッターを保持し、更新日・役割説明・リンクだけ変更。
 - 図解評価：今回は既存教材の読み分けの補足で、新しい操作UIは不要。既存の操作図解・例は保持。
 - main（`c27cd649`、#449まで）：519/749実記事（69.3%）。今回適用後：778 Markdown・転送29・実記事749、確認履歴574ファイル（転送23・実記事551）。**551/749実記事（73.6%）**、未確認198実記事。
+
+## 継続監査：DB・Web・データ形式の未確認32記事（2026-10-18）
+
+mainの#450反映と履歴574ファイルを確認し、未登録32実記事を追加しました。定義・冒頭・見出し・試験判断軸を比較し、SQL集計・簿記データモデルは仕組みと例の対象も照合しました。新たな統合対象はありません。全段落校正や全記事間の総当たり比較の完了率ではありません。
+
+| 記事群 | 判定・理由 |
+|---|---|
+| `data-dictionary` / `database-administrator` / 既存確認済みスキーマ | 維持。定義情報を管理する辞書／DBを安定稼働させる役割／データ構造の定義と3層スキーマ。情報・担当者・構造という対象が異なる |
+| `database-performance-troubleshooting` / `sql-optimizer` / 既存確認済みインデックス | 維持。遅い原因と調査項目の対応／アクセス経路・実行計画の選択／検索高速化のデータ構造。原因調査とDBMS機能を区別 |
+| `database-view-select-privilege` / `grant-revoke-sql-privileges` / `least-privilege-database-access` | 維持。ビューの定義・権限・更新可能性／権限付与と取消のSQL／処理に必要な最小権限の選択 |
+| `nosql-data-models` / `json` / `xml-dtd` / `sgml` | 維持。DBのデータモデル／データ交換形式／XML文書構造の定義／文書記述の規格。XML・JSONを扱うという理由だけで統合しない |
+| `stored-procedure` / `sql-cursor` / `sql-correlated-subquery` / `sql-logical-operators` | 維持。DBMS側の処理保存と呼出し／結果の1行ずつ処理／外側の行を参照し0件も考える条件／WHEREの論理条件。操作と判定対象が違う |
+| `sql-group-by-order-by` / 既存確認済み集計関数・GROUP BY詳説 | 維持。集計単位と表示順の比較／COUNT等とNULL・WHERE／WHERE・HAVINGとグループ集計。比較記事から絞り込みの詳説へリンクを追加 |
+| `debit-credit-double-entry` / `double-entry-bookkeeping-data-model` | 維持。勘定科目の増減と借方貸方の基本／取引・勘定・移動の3表を対応付ける応用。冒頭に役割説明と相互リンクを追加 |
+| `java-servlet` / `java-beans` / `jdbc` / `web-application-server` | 維持。サーバ側で要求処理するJavaプログラム／再利用部品の仕様／JavaからDBへのAPI／Web・APの役割分離。既存確認済みJava・3層クライアントサーバとも役割が異なる |
+| `ajax` / `cgi` / `web-beacon` / `absolute-relative-path` | 維持。非同期で画面の一部を更新／Webサーバと外部プログラムの接続／画像読込みで閲覧を計測／基準位置からファイルをたどる指定。Webに関連しても目的が違う |
+| `rpc` / `corba` / `soa` / `soap-wsdl-uddi` / `mashup` | 維持。別コンピュータの手続呼出し／分散オブジェクト連携の仕様／サービスを組み合わせる設計思想／交換・記述・検索の役割／公開API等の組合せによる新サービス。既存Web API・REST記事とも比較 |
+| `edi` / 既存確認済み電子商取引 | 維持。企業間取引データと4種類の規約／電子的な商取引と当事者分類。情報交換の約束と商取引自体を区別 |
+
+- SG・DS・GKも関連語で検索し、他テーマとの統合はしない。DBMS・言語・規格の現行仕様検証、全面的なSQL実行確認は別監査。
+- 公開記事の編集は借方貸方・会計データモデル・GROUP BYとORDER BYの3件。元のdate・URL・分類・見出し・計算例・フッターを保持し、更新日・目的説明・リンクだけ変更。
+- 図解評価：今回は既存教材間の読み分けで、新たな操作UIは不要。既存のSQL・表・例は保持。
+- main（`004b9b22`、#450まで）：551/749実記事（73.6%）。今回適用後：778 Markdown・転送29・実記事749、確認履歴606ファイル（転送23・実記事583）。**583/749実記事（77.8%）**、未確認166実記事。
 
 ## 転送専用ページの確認（2026-10-17）
 

@@ -8,7 +8,7 @@ fe_section: ストラテジ系
 fe_subsection: 企業活動
 fe_order: 35
 date: 2026-07-27
-last_modified_at: 2026-08-29
+last_modified_at: 2026-10-18
 ---
 
 ## まず結論
@@ -44,6 +44,8 @@ last_modified_at: 2026-08-29
 ```
 
 ---
+
+このページは、**取引番号と勘定コードで3つの表を結び、仕訳を読み解く応用**を扱います。借方・貸方と勘定科目の増減を先に整理する場合は、[複式簿記の基本](/fe/debit-credit-double-entry/)を参照してください。
 
 ## 直感的な説明
 
