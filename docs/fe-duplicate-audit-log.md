@@ -78,10 +78,6 @@
 - pages/fe/business-improvement-process.md
 - pages/fe/business-model-four-types.md
 - pages/fe/business-model-physical-logical.md
-- pages/fe/profit-calculation.md
-- pages/fe/pop3-smtp-imap.md
-- pages/fe/supply-chain-management.md
-- pages/fe/kanban-jit.md
 - pages/fe/cache-hit-rate-average-access-time.md
 - pages/fe/cache-memory.md
 - pages/fe/capacity-management-analysis-methods.md
@@ -603,6 +599,12 @@
 - pages/fe/code-types-and-identification.md
 - pages/fe/lru-cache-replacement.md
 - pages/fe/business-model-physical-logical.md
+
+
+- pages/fe/profit-calculation.md
+- pages/fe/pop3-smtp-imap.md
+- pages/fe/supply-chain-management.md
+- pages/fe/kanban-jit.md
 
 ## 全件自動スキャンの実行方法（PR #438）
 
