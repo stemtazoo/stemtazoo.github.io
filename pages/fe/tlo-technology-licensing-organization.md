@@ -8,7 +8,7 @@ fe_section: ストラテジ系
 fe_subsection: 経営戦略
 fe_order: 126
 date: 2026-09-03
-last_modified_at: 2026-09-03
+last_modified_at: 2026-10-17
 ---
 
 ## まず結論
@@ -155,6 +155,11 @@ TLO
 ```text
 大学 → TLO → 企業
 ```
+
+## 一次情報
+
+- [文部科学省：産学官連携に関する情報](https://www.mext.go.jp/a_menu/shinkou/sangaku/)
+- [特許庁：知的財産に関する情報](https://www.jpo.go.jp/)
 
 ## まとめ（試験直前用）
 
