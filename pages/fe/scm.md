@@ -307,6 +307,8 @@ SCMは、購買・生産・在庫・販売・物流などを一連の流れと�
 
 </details>
 
+出題範囲の確認は、[IPA：基本情報技術者試験](https://www.ipa.go.jp/shiken/kubun/fe.html)を参照してください。
+
 ## まとめ（試験直前用）
 
 - SCMはSupply Chain Managementの略
