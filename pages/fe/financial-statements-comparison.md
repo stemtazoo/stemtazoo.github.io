@@ -8,7 +8,7 @@ fe_section: ストラテジ系
 fe_subsection: 経営戦略
 fe_order: 330
 date: 2026-07-02
-last_modified_at: 2026-07-25
+last_modified_at: 2026-10-18
 ---
 
 ## まず結論
@@ -33,6 +33,8 @@ last_modified_at: 2026-07-25
 純資産
 財政状態
 ```
+
+このページは、**どの財務諸表が何を表すかを見分ける入口**です。勘定科目を資産・負債・純資産へ分ける練習は[貸借対照表](/fe/balance-sheet/)、売上高から利益の各段階を計算する練習は[営業利益と利益区分](/fe/income-statement-profit-levels/)で確認できます。
 
 ## 直感的な説明
 
