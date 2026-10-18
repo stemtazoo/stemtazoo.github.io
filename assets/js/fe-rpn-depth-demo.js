@@ -56,7 +56,8 @@ document.addEventListener("DOMContentLoaded", () => {
         empty.textContent = "空";
         stackEl.append(empty);
       } else {
-        frame.stack.forEach((value) => {
+        // Draw the top first without changing the calculation stack.
+        [...frame.stack].reverse().forEach((value) => {
           const item = document.createElement("strong");
           item.textContent = String(value);
           stackEl.append(item);
