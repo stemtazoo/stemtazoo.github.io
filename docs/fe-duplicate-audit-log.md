@@ -6,11 +6,11 @@
 
 - GitHub mainのFEファイル構成を2026-10-18に再確認
 - FE Markdown: 778ファイル（転送用ページを含む）
-- 過去の本文確認履歴に対応する現存ファイル: 702ファイル（重複排除）
-- ファイル単位の確認履歴カバー率: 90.2%。これは全件本文比較の完了率ではありません。
-- 削除済みファイルは分母・分子から除外。mainはPR #453まで反映済みで転送29件・実記事749件。今回は新たな統合を行わないため実記事数は変わりません。
+- 過去の本文確認履歴に対応する現存ファイル: 734ファイル（重複排除）
+- ファイル単位の確認履歴カバー率: 94.3%。これは全件本文比較の完了率ではありません。
+- 削除済みファイルは分母・分子から除外。mainはPR #454まで反映済みで転送29件・実記事749件。今回は新たな統合を行わないため実記事数は変わりません。
 
-- 実記事の個別確認履歴（今回のmain向け継続PR適用後）: **679/749件（90.7%）**。転送の29件は別管理。
+- 実記事の個別確認履歴（今回のmain向け継続PR適用後）: **711/749件（94.9%）**。転送の29件は別管理。
 - 変更前の761実記事に対して**機械的な類似候補抽出を実施済み**。PR #442の新しい構成ではCIで再走査します。未抽出の組合せが重複なしと確定したわけではありません。
 
 ## 修正PRの記録
@@ -39,6 +39,7 @@
 - #451 DB・Web・データ形式32記事監査、複式簿記とSQLの導線整理（マージ済み）
 - #452 回路・ハードウェア・システム構成32記事監査、バッファと二重化の役割整理（マージ済み）
 - #453 品質・プロジェクト管理・サービス運用32記事監査、ABC分析とQC手法の導線整理（マージ済み）
+- #454 機械学習・UI・ソフトウェア32記事監査、オーバーライド・GUI・UMLの導線整理（マージ済み）
 
 ## 本文確認履歴に含まれる現存ファイル
 
@@ -106,6 +107,7 @@
 - pages/fe/black-box-testing.md
 - pages/fe/black-box-vs-white-box-testing.md
 - pages/fe/block-search-average-comparisons.md
+- pages/fe/blockchain-cryptocurrency-mining.md
 - pages/fe/blue-ocean-strategy.md
 - pages/fe/bluetooth.md
 - pages/fe/bnf.md
@@ -131,6 +133,7 @@
 - pages/fe/byod.md
 - pages/fe/cache-hit-rate-average-access-time.md
 - pages/fe/cache-memory.md
+- pages/fe/cad-cam-cae.md
 - pages/fe/call-by-value.md
 - pages/fe/capacity-management-analysis-methods.md
 - pages/fe/capacity-management-analysis-models.md
@@ -142,6 +145,7 @@
 - pages/fe/cell-production-system.md
 - pages/fe/certificate-authority.md
 - pages/fe/cgi.md
+- pages/fe/cgm.md
 - pages/fe/challenge-response-authentication.md
 - pages/fe/character-code-table.md
 - pages/fe/character-encoding.md
@@ -187,6 +191,7 @@
 - pages/fe/core-competence.md
 - pages/fe/core-technology.md
 - pages/fe/correlation-coefficient.md
+- pages/fe/cost-plus-pricing.md
 - pages/fe/counting-constrained-strings.md
 - pages/fe/cpi-clock-cycle-cpu-time.md
 - pages/fe/cpsf.md
@@ -242,6 +247,7 @@
 - pages/fe/deep-learning-basics.md
 - pages/fe/defect-repair-cost-expected-value.md
 - pages/fe/delphi-method.md
+- pages/fe/demand-function-linear-equation.md
 - pages/fe/depreciation-methods.md
 - pages/fe/depreciation-straight-line.md
 - pages/fe/development-environment-maintenance.md
@@ -249,6 +255,7 @@
 - pages/fe/device-driver.md
 - pages/fe/dfs-vs-bfs.md
 - pages/fe/dhcp.md
+- pages/fe/digital-divide-comparison.md
 - pages/fe/digital-watermark.md
 - pages/fe/disk-scheduling.md
 - pages/fe/disk-scheduling-scan.md
@@ -256,6 +263,7 @@
 - pages/fe/dispatch-secondment-contract.md
 - pages/fe/display-types.md
 - pages/fe/disruptive-innovation.md
+- pages/fe/diversity-management.md
 - pages/fe/dma.md
 - pages/fe/dmz-server-placement.md
 - pages/fe/dns.md
@@ -287,11 +295,13 @@
 - pages/fe/er-diagram.md
 - pages/fe/er-diagram-cardinality.md
 - pages/fe/erp.md
+- pages/fe/escrow-service.md
 - pages/fe/euclidean-algorithm.md
 - pages/fe/evm.md
 - pages/fe/exclusive-resource-task-timing.md
 - pages/fe/external-internal-design.md
 - pages/fe/extreme-programming.md
+- pages/fe/fabless.md
 - pages/fe/fail-safe-fail-soft-fault-tolerance-foolproof.md
 - pages/fe/fast-tracking.md
 - pages/fe/fault-tolerant-system.md
@@ -300,6 +310,7 @@
 - pages/fe/fifo-inventory-valuation.md
 - pages/fe/fifo-page-replacement.md
 - pages/fe/file-block-allocation.md
+- pages/fe/financial-statements-comparison.md
 - pages/fe/finite-fraction-radix.md
 - pages/fe/five-functions-fetch-decode.md
 - pages/fe/five-stage-pipeline.md
@@ -337,6 +348,7 @@
 - pages/fe/hash-method-uniform-distribution.md
 - pages/fe/hash-table.md
 - pages/fe/hash-table-collision.md
+- pages/fe/hems.md
 - pages/fe/hex-binary-conversion.md
 - pages/fe/hexadecimal-fraction.md
 - pages/fe/hexadecimal-fraction-bit-shift.md
@@ -346,6 +358,7 @@
 - pages/fe/honeypot.md
 - pages/fe/hot-warm-cold-site.md
 - pages/fe/housing-service.md
+- pages/fe/hr-tech.md
 - pages/fe/https.md
 - pages/fe/huffman-coding.md
 - pages/fe/human-centered-design.md
@@ -356,9 +369,11 @@
 - pages/fe/ide-eclipse.md
 - pages/fe/ids-ips-firewall.md
 - pages/fe/image-video-formats.md
+- pages/fe/in-house-company-system.md
 - pages/fe/incident-management-vs-problem-management.md
 - pages/fe/incident-service-request-management.md
 - pages/fe/income-statement-profit-levels.md
+- pages/fe/information-strategy.md
 - pages/fe/inheritance.md
 - pages/fe/initial-running-cost.md
 - pages/fe/innovation-adoption-lifecycle.md
@@ -378,6 +393,7 @@
 - pages/fe/interrupt.md
 - pages/fe/inventory-collection.md
 - pages/fe/inventory-ordering-methods.md
+- pages/fe/iot.md
 - pages/fe/ip-mac-address-routing.md
 - pages/fe/ipsec.md
 - pages/fe/ipsec-l2tp-tls.md
@@ -403,6 +419,7 @@
 - pages/fe/kanban-jit.md
 - pages/fe/kanban-system.md
 - pages/fe/keylogger.md
+- pages/fe/kgi-csf-kpi.md
 - pages/fe/knowledge-management.md
 - pages/fe/lan-analyzer.md
 - pages/fe/language-processor-comparison.md
@@ -435,6 +452,7 @@
 - pages/fe/markov-process.md
 - pages/fe/mashup.md
 - pages/fe/master-file-maintenance.md
+- pages/fe/matrix-organization.md
 - pages/fe/memory-compaction.md
 - pages/fe/memory-fragmentation.md
 - pages/fe/memory-hierarchy.md
@@ -480,11 +498,13 @@
 - pages/fe/ntp.md
 - pages/fe/ntp-time-synchronization.md
 - pages/fe/oc-curve.md
+- pages/fe/ojt-off-jt.md
 - pages/fe/on-demand-service.md
 - pages/fe/open-innovation.md
 - pages/fe/open-redirect.md
 - pages/fe/operational-testing.md
 - pages/fe/operations-involvement-system-development.md
+- pages/fe/opportunity-loss.md
 - pages/fe/order-quantity-and-inventory-cost.md
 - pages/fe/os-api.md
 - pages/fe/osi-reference-model.md
@@ -519,6 +539,7 @@
 - pages/fe/pll-frequency-divider.md
 - pages/fe/polymorphism.md
 - pages/fe/pop3-smtp-imap.md
+- pages/fe/pos-system.md
 - pages/fe/power-gating.md
 - pages/fe/ppm.md
 - pages/fe/pppoe.md
@@ -529,6 +550,8 @@
 - pages/fe/problem-management.md
 - pages/fe/process-innovation.md
 - pages/fe/product-life-cycle.md
+- pages/fe/product-mix.md
+- pages/fe/production-methods-comparison.md
 - pages/fe/profit-calculation.md
 - pages/fe/program-counter-interrupt.md
 - pages/fe/program-management.md
@@ -575,9 +598,11 @@
 - pages/fe/reverse-engineering.md
 - pages/fe/reverse-polish-notation.md
 - pages/fe/rfi-rfp-procurement-process.md
+- pages/fe/rfid.md
 - pages/fe/risc-cisc.md
 - pages/fe/risk-assessment-process.md
 - pages/fe/risk-level.md
+- pages/fe/roe-roa-financial-ratios.md
 - pages/fe/roi.md
 - pages/fe/rollback-rollforward.md
 - pages/fe/rom-types.md
@@ -599,6 +624,7 @@
 - pages/fe/security-cia.md
 - pages/fe/security-guidelines-comparison.md
 - pages/fe/security-threat-countermeasures.md
+- pages/fe/seo.md
 - pages/fe/seo-poisoning.md
 - pages/fe/sequence-communication-diagram.md
 - pages/fe/series-parallel-system-availability.md
@@ -610,6 +636,7 @@
 - pages/fe/sfa.md
 - pages/fe/sgml.md
 - pages/fe/shared-exclusive-lock.md
+- pages/fe/sharing-economy.md
 - pages/fe/shell.md
 - pages/fe/shell-redirection.md
 - pages/fe/shift-operation.md
@@ -617,10 +644,13 @@
 - pages/fe/shortest-job-first-scheduling.md
 - pages/fe/siem.md
 - pages/fe/sla.md
+- pages/fe/smart-grid.md
+- pages/fe/smart-meter.md
 - pages/fe/snmp.md
 - pages/fe/soa.md
 - pages/fe/soap-wsdl-uddi.md
 - pages/fe/soc.md
+- pages/fe/society-5-0.md
 - pages/fe/software-architecture-design.md
 - pages/fe/software-design-phases.md
 - pages/fe/software-license-contract-types.md
@@ -659,6 +689,7 @@
 - pages/fe/stored-procedure.md
 - pages/fe/stored-program-architecture.md
 - pages/fe/stored-program-concept.md
+- pages/fe/strain-gauge.md
 - pages/fe/streaming-buffering.md
 - pages/fe/structured-unstructured-data.md
 - pages/fe/stub-driver.md
@@ -673,6 +704,7 @@
 - pages/fe/system-auditor-independence.md
 - pages/fe/system-development-quality-management.md
 - pages/fe/system-failure-monitoring.md
+- pages/fe/system-integrator.md
 - pages/fe/system-migration-plan.md
 - pages/fe/system-performance-evaluation.md
 - pages/fe/system-test-audit.md
@@ -722,6 +754,7 @@
 - pages/fe/vdi.md
 - pages/fe/venn-diagram-set-operations.md
 - pages/fe/verification-validation.md
+- pages/fe/vertical-horizontal-conglomerate-merger.md
 - pages/fe/video-bandwidth-calculation.md
 - pages/fe/virtual-memory.md
 - pages/fe/virus-detection-methods.md
@@ -1223,6 +1256,32 @@ PR #453のmain反映を確認。未登録32記事の結論・見出し・定義�
 - 個別確認履歴は647/749件から**679/749件（90.7%）**へ。未確認の実記事は70件。
 - 確認履歴インデックス702件は、実記事679件と履歴に含まれる転送23件。
 - 変更記事5件（うちpolymorphismは既存確認記事）は役割説明・リンクのみ。公開日・URL・分類・見出し・フッターを維持し、更新日を更新。
+- 検証：単体テスト5件成功、通常16候補・拡張43候補を再抽出。git diff --check成功。ローカルJekyll環境がないため公開表示のビルドは未確認。
+
+## 継続監査：経営・生産・会計・IoTの未確認32記事（2026-10-18）
+
+PR #454のmain反映を確認。未登録32記事の結論・見出し・定義と、重なりが疑われる比較説明を関連FE教材と照合しました。全本文の逐語比較や全組合せ比較の完了を示すものではありません。
+
+| 対象記事 | 判定と理由 |
+|---|---|
+| financial-statements-comparison / roe-roa-financial-ratios | 維持。書類と記載内容の見分け方と、分母に着目する指標の計算・識別。前者から貸借対照表の勘定科目分類と損益計算書の利益計算へ誘導。 |
+| product-mix / opportunity-loss / cost-plus-pricing / demand-function-linear-equation | 維持。制約下の生産数量、欠品により得られなかった利益、原価からの価格設定、価格・需要2点からの一次式で計算対象が異なる。製品ミックスから複数制約を扱う線形計画法へリンク。 |
+| production-methods-comparison / cad-cam-cae / fabless | 維持。生産量・繰返し方、設計・加工準備・解析の支援、設計と製造の企業間分担で異なる。生産方式比較から作業者の工程担当を扱うセル生産へ誘導。 |
+| hems / smart-grid / smart-meter | 維持。家庭の管理・制御、電力網の需給制御、計測・通信する装置。既存の相互リンクと役割説明で読み分け可能。 |
+| iot / strain-gauge / rfid | 維持。モノの接続・収集・監視・制御の全体像、変形を抵抗変化で測るセンサー、無線タグによる識別で異なる。 |
+| society-5-0 / digital-divide-comparison | 維持。サイバー・フィジカル融合による社会像と、IT利用の差が生む社会的・経済的格差。アクセシビリティは利用の障壁・改善策を扱う個別教材。 |
+| information-strategy / kgi-csf-kpi | 維持。経営計画とIT活用方針の整合と、最終目標・成功要因・進捗指標の区別。BSCは4視点への展開、CIOは統括する役職。 |
+| in-house-company-system / matrix-organization / vertical-horizontal-conglomerate-merger | 維持。社内事業単位への権限、職能と事業の二軸所属、企業間の上流下流・競争関係による結合の区別で異なる。 |
+| diversity-management / ojt-off-jt / hr-tech | 維持。人材の違いを組織成果に結ぶ管理、実務内外での学習、人事業務へのICT活用。人材という共通語だけで統合しない。 |
+| cgm / seo / pos-system | 維持。情報の作り手、自然検索での発見、販売時点の記録と顧客IDから分かること。マーケティング全体とは個別の対象が異なる。 |
+| escrow-service / sharing-economy | 維持。条件確認まで第三者が代金を預かる決済の仕組みと、遊休資産やスキルのマッチングによる活用。ECは取引の広い分類。 |
+| blockchain-cryptocurrency-mining | 維持。暗号学的に関連付けた記録とPoW型でのブロック生成・報酬。ハッシュ関数の定義やデータマイニングとは役割が異なる。 |
+| system-integrator | 維持。顧客要件に応じた複数要素の統合を担う事業者。ASP・SaaSというサービス提供形態や委託全般とは異なる。 |
+
+- 新たな統合なし。転送29件・実記事749件を維持。
+- 個別確認履歴は679/749件から**711/749件（94.9%）**へ。未確認の実記事は38件。
+- 確認履歴インデックス734件は、実記事711件と履歴に含まれる転送23件。
+- 変更記事3件は役割説明・関連リンクのみ。公開日・URL・分類・見出し・フッターを維持し、更新日を更新。会計・制度の鮮度や投資判断は今回の監査範囲外。
 - 検証：単体テスト5件成功、通常16候補・拡張43候補を再抽出。git diff --check成功。ローカルJekyll環境がないため公開表示のビルドは未確認。
 
 ## 転送専用ページの確認（2026-10-17）
