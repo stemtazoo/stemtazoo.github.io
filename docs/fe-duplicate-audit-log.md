@@ -6,11 +6,11 @@
 
 - GitHub mainのFEファイル構成を2026-10-18に再確認
 - FE Markdown: 778ファイル（転送用ページを含む）
-- 過去の本文確認履歴に対応する現存ファイル: 638ファイル（重複排除）
-- ファイル単位の確認履歴カバー率: 82.0%。これは全件本文比較の完了率ではありません。
-- 削除済みファイルは分母・分子から除外。mainはPR #451まで反映済みで転送29件・実記事749件。今回は新たな統合を行わないため実記事数は変わりません。
+- 過去の本文確認履歴に対応する現存ファイル: 670ファイル（重複排除）
+- ファイル単位の確認履歴カバー率: 86.1%。これは全件本文比較の完了率ではありません。
+- 削除済みファイルは分母・分子から除外。mainはPR #452まで反映済みで転送29件・実記事749件。今回は新たな統合を行わないため実記事数は変わりません。
 
-- 実記事の個別確認履歴（今回のmain向け継続PR適用後）: **615/749件（82.1%）**。転送の29件は別管理。
+- 実記事の個別確認履歴（今回のmain向け継続PR適用後）: **647/749件（86.4%）**。転送の29件は別管理。
 - 変更前の761実記事に対して**機械的な類似候補抽出を実施済み**。PR #442の新しい構成ではCIで再走査します。未抽出の組合せが重複なしと確定したわけではありません。
 
 ## 修正PRの記録
@@ -37,6 +37,7 @@
 - #449 セキュリティ・関連法務30記事監査、検知・メール対策の導線整理（マージ済み）
 - #450 アルゴリズム・数理32記事監査、確率・ビット数の導線整理（マージ済み）
 - #451 DB・Web・データ形式32記事監査、複式簿記とSQLの導線整理（マージ済み）
+- #452 回路・ハードウェア・システム構成32記事監査、バッファと二重化の役割整理（マージ済み）
 
 ## 本文確認履歴に含まれる現存ファイル
 
@@ -44,6 +45,7 @@
 
 - pages/fe/3d-printer.md
 - pages/fe/3pl.md
+- pages/fe/abc-analysis.md
 - pages/fe/absolute-relative-path.md
 - pages/fe/account-aggregation.md
 - pages/fe/acid-properties.md
@@ -80,6 +82,7 @@
 - pages/fe/backup-methods.md
 - pages/fe/backup-redundancy.md
 - pages/fe/balance-sheet.md
+- pages/fe/balanced-scorecard.md
 - pages/fe/bathtub-curve.md
 - pages/fe/bayes-theorem.md
 - pages/fe/behavioral-targeting.md
@@ -107,12 +110,14 @@
 - pages/fe/bpm.md
 - pages/fe/bpo-saas-hosting-comparison.md
 - pages/fe/bpr.md
+- pages/fe/brainstorming.md
 - pages/fe/branch-coverage.md
 - pages/fe/break-even-point.md
 - pages/fe/brute-force-attack.md
 - pages/fe/buffer-size-transfer-rate.md
 - pages/fe/bug-management-chart.md
 - pages/fe/bug-seeding.md
+- pages/fe/burndown-chart.md
 - pages/fe/business-continuity-management.md
 - pages/fe/business-continuity-plan.md
 - pages/fe/business-domain.md
@@ -126,9 +131,12 @@
 - pages/fe/call-by-value.md
 - pages/fe/capacity-management-analysis-methods.md
 - pages/fe/capacity-management-analysis-models.md
+- pages/fe/capacity-planning.md
 - pages/fe/captcha.md
 - pages/fe/case-tools.md
+- pages/fe/cause-and-effect-diagram.md
 - pages/fe/cd-r.md
+- pages/fe/cell-production-system.md
 - pages/fe/certificate-authority.md
 - pages/fe/cgi.md
 - pages/fe/challenge-response-authentication.md
@@ -139,6 +147,7 @@
 - pages/fe/checksum.md
 - pages/fe/cia-triad.md
 - pages/fe/cidr-network-broadcast-address.md
+- pages/fe/cio.md
 - pages/fe/class-instance.md
 - pages/fe/client-server-system.md
 - pages/fe/clipping.md
@@ -165,6 +174,7 @@
 - pages/fe/conditional-branch-average-comparisons.md
 - pages/fe/conditional-probability.md
 - pages/fe/configuration-management.md
+- pages/fe/contingency-plan.md
 - pages/fe/contract-types-outsourcing.md
 - pages/fe/control-structures-loop-selection.md
 - pages/fe/control-total-check.md
@@ -185,6 +195,7 @@
 - pages/fe/crashing-vs-fast-tracking.md
 - pages/fe/crc.md
 - pages/fe/critical-chain.md
+- pages/fe/critical-path-1.md
 - pages/fe/critical-path-vs-critical-chain.md
 - pages/fe/cross-compiler.md
 - pages/fe/crowdfunding.md
@@ -223,6 +234,7 @@
 - pages/fe/debit-credit-double-entry.md
 - pages/fe/decimal-to-binary-div-mod.md
 - pages/fe/defect-repair-cost-expected-value.md
+- pages/fe/delphi-method.md
 - pages/fe/depreciation-methods.md
 - pages/fe/depreciation-straight-line.md
 - pages/fe/development-environment-maintenance.md
@@ -298,6 +310,7 @@
 - pages/fe/function-point-method.md
 - pages/fe/functional-nonfunctional-requirements.md
 - pages/fe/fuzzing.md
+- pages/fe/game-theory.md
 - pages/fe/gantt-chart.md
 - pages/fe/gompertz-curve.md
 - pages/fe/gpl-license.md
@@ -306,6 +319,7 @@
 - pages/fe/green-procurement.md
 - pages/fe/green-purchasing.md
 - pages/fe/grid-shortest-path-combinations.md
+- pages/fe/groupthink.md
 - pages/fe/hadoop.md
 - pages/fe/hadoop-spark.md
 - pages/fe/half-adder.md
@@ -319,6 +333,7 @@
 - pages/fe/hexadecimal-fraction-bit-shift.md
 - pages/fe/hexadecimal-fraction-conversion.md
 - pages/fe/hidden-line-and-surface-removal.md
+- pages/fe/histogram.md
 - pages/fe/honeypot.md
 - pages/fe/hot-warm-cold-site.md
 - pages/fe/housing-service.md
@@ -365,6 +380,8 @@
 - pages/fe/isms-pdca.md
 - pages/fe/it-investment-evaluation.md
 - pages/fe/it-investment-management.md
+- pages/fe/it-service-management-pdca.md
+- pages/fe/it-service-retirement-asset-management.md
 - pages/fe/java-beans.md
 - pages/fe/java-language-features.md
 - pages/fe/java-programming-language.md
@@ -375,6 +392,7 @@
 - pages/fe/kanban-jit.md
 - pages/fe/kanban-system.md
 - pages/fe/keylogger.md
+- pages/fe/knowledge-management.md
 - pages/fe/lan-analyzer.md
 - pages/fe/language-processor-comparison.md
 - pages/fe/least-privilege-database-access.md
@@ -396,6 +414,7 @@
 - pages/fe/mail-third-party-relay.md
 - pages/fe/malware-criminal-law.md
 - pages/fe/malware-detection-analysis.md
+- pages/fe/management-science-methods.md
 - pages/fe/many-to-many-associative-entity.md
 - pages/fe/marketing-mix.md
 - pages/fe/markov-process.md
@@ -413,6 +432,7 @@
 - pages/fe/mime.md
 - pages/fe/mips.md
 - pages/fe/mips-processing-time.md
+- pages/fe/mm1-queueing-model.md
 - pages/fe/module-cohesion.md
 - pages/fe/module-coupling.md
 - pages/fe/monte-carlo-method.md
@@ -434,6 +454,7 @@
 - pages/fe/network-device-functions-comparison.md
 - pages/fe/network-devices-router-repeater-bridge-switch.md
 - pages/fe/network-diagnostic-commands.md
+- pages/fe/new-qc-seven-tools.md
 - pages/fe/newton-method.md
 - pages/fe/niche-strategy.md
 - pages/fe/non-functional-requirements.md
@@ -441,6 +462,7 @@
 - pages/fe/nosql-data-models.md
 - pages/fe/ntp.md
 - pages/fe/ntp-time-synchronization.md
+- pages/fe/oc-curve.md
 - pages/fe/on-demand-service.md
 - pages/fe/open-innovation.md
 - pages/fe/open-redirect.md
@@ -458,13 +480,16 @@
 - pages/fe/packet-switching.md
 - pages/fe/page-printer.md
 - pages/fe/paging.md
+- pages/fe/pareto-chart.md
 - pages/fe/parity-check.md
 - pages/fe/parity-circuit.md
 - pages/fe/password-hash-authentication.md
 - pages/fe/password-list-attack-comparison.md
 - pages/fe/pcm-sampling-quantization-encoding.md
 - pages/fe/pdm-dependency-types.md
+- pages/fe/pdpc.md
 - pages/fe/permutations-combinations.md
+- pages/fe/person-day-effort.md
 - pages/fe/phishing.md
 - pages/fe/physical-security-measures-comparison.md
 - pages/fe/ping.md
@@ -487,9 +512,11 @@
 - pages/fe/product-life-cycle.md
 - pages/fe/profit-calculation.md
 - pages/fe/program-counter-interrupt.md
+- pages/fe/program-management.md
 - pages/fe/progress-productivity-effort.md
 - pages/fe/project-life-cycle.md
 - pages/fe/project-lifecycle-characteristics.md
+- pages/fe/project-management-office.md
 - pages/fe/project-management-process-groups.md
 - pages/fe/project-management-subject-groups.md
 - pages/fe/project-progress-weighted-effort.md
@@ -525,6 +552,7 @@
 - pages/fe/retention-rate.md
 - pages/fe/reverse-brute-force.md
 - pages/fe/reverse-polish-notation.md
+- pages/fe/rfi-rfp-procurement-process.md
 - pages/fe/risc-cisc.md
 - pages/fe/risk-assessment-process.md
 - pages/fe/risk-level.md
@@ -540,6 +568,7 @@
 - pages/fe/saas-paas-iaas.md
 - pages/fe/scale-up-vs-scale-out.md
 - pages/fe/scm.md
+- pages/fe/scoring-model.md
 - pages/fe/scrum-events.md
 - pages/fe/scrum-roles.md
 - pages/fe/sd-sdhc-sdxc-sduc.md
@@ -553,6 +582,7 @@
 - pages/fe/server-client-port.md
 - pages/fe/server-room-physical-security.md
 - pages/fe/service-availability.md
+- pages/fe/service-desk-structure.md
 - pages/fe/session-id-invalidation.md
 - pages/fe/sfa.md
 - pages/fe/sgml.md
@@ -563,6 +593,7 @@
 - pages/fe/shift-register-timing.md
 - pages/fe/shortest-job-first-scheduling.md
 - pages/fe/siem.md
+- pages/fe/sla.md
 - pages/fe/snmp.md
 - pages/fe/soa.md
 - pages/fe/soap-wsdl-uddi.md
@@ -595,6 +626,7 @@
 - pages/fe/ssid-bssid.md
 - pages/fe/stack.md
 - pages/fe/stack-vs-queue.md
+- pages/fe/stakeholder-analysis.md
 - pages/fe/standard-deviation.md
 - pages/fe/standby-system.md
 - pages/fe/state-transition-diagram.md
@@ -616,6 +648,7 @@
 - pages/fe/system-auditor-independence.md
 - pages/fe/system-development-quality-management.md
 - pages/fe/system-failure-monitoring.md
+- pages/fe/system-migration-plan.md
 - pages/fe/system-performance-evaluation.md
 - pages/fe/system-test-audit.md
 - pages/fe/tamper-resistance.md
@@ -1102,6 +1135,34 @@ PR #451がmainへマージ済みであることを確認して継続。未登録
 - 現存ファイルの確認履歴インデックスは638件（実記事615件＋履歴に含まれる転送23件）。
 - 元の公開日・URL・分類・既存見出し・フッターを保持。記事変更4件の更新日を更新。
 - 検証：監査スクリプトの単体テスト5件成功。通常16候補・拡張43候補を再抽出し、git diff --checkを通過。ローカルのJekyll環境がないため公開表示のビルドは未確認。
+
+## 継続監査：品質管理・プロジェクト管理・サービス運用の未確認32記事（2026-10-18）
+
+PR #452のmain反映を確認して継続。未登録32記事の結論・見出し・定義と、重なりが疑われる箇所を関連教材と照合しました。確認履歴は全本文の逐語比較や全組合せ比較の完了を示すものではありません。
+
+| 対象記事 | 判定と理由 |
+|---|---|
+| abc-analysis / pareto-chart | 維持・相互リンク。累積構成比のしきい値による分類計算と、降順の棒・累積比率から重点対策を読む図で役割が異なる。 |
+| cause-and-effect-diagram / histogram / oc-curve | 維持。原因候補の整理、量的データの分布、抜取り検査における不良率と合格確率で対象・軸が異なる。パレート図とも判断目的が異なる。 |
+| new-qc-seven-tools / pdpc | 維持・導線追加。7手法の横断的な選択基準と、問題・対応策・代替経路を組み込む具体的手順で異なる。比較記事からPDPCと日程計算へ誘導。 |
+| critical-path-1 | 維持。経路ごとの日数計算が中心。arrow-diagramは矢印・結合点・ダミーを読む基礎、critical-path-vs-critical-chainは資源制約との比較を扱う。 |
+| management-science-methods / mm1-queueing-model / game-theory | 維持。OR手法の目的別選択、確率モデルの前提と待ち時間計算、相手の戦略への最適反応・均衡で判断軸が異なる。データ構造のキューや線形計画の計算教材とも分担する。 |
+| brainstorming / delphi-method / groupthink | 維持。案の発散、専門家への反復調査による収束、集団の同調圧力による判断低下。親和図法は得られた意見を整理する段階で異なる。 |
+| balanced-scorecard / scoring-model | 維持。戦略を4視点・指標へ展開する枠組みと、評価点・重み・満点から総合点や達成率を求める計算。評価という共通語だけで統合しない。 |
+| capacity-planning / sla | 維持。現状から将来の必要能力を計画する流れと、顧客とサービス水準を合意する内容。分析手法・可用性の個別記事とは既存リンクで読み分けられる。 |
+| burndown-chart / person-day-effort | 維持。残作業量の推移の読取りと、工数単位・人数・日数の基本計算。生産性差を含む工程期間や進捗からの工数予測とは学習段階が異なる。 |
+| program-management / project-management-office / stakeholder-analysis | 維持。関連プロジェクトの便益統合、管理を支援・標準化する組織、関係者の要求・影響力の分析で異なる。 |
+| contingency-plan / system-migration-plan | 維持。発動条件と予備対応を決める計画と、新旧切替え・データ移行・切り戻しの具体的計画。PDPCは問題と代替経路を図で検討する手法。 |
+| service-desk-structure / it-service-management-pdca / it-service-retirement-asset-management | 維持。受付窓口の配置・連携、SMSの活動段階の識別、廃止対象と共有資産の依存関係確認で異なる。インシデント受付後の管理手順とも分担する。 |
+| rfi-rfp-procurement-process | 維持。情報収集・提案依頼・評価・選定・契約の順序を扱う。scoring-modelは評価工程で使う計算方法。 |
+| cell-production-system / cio / knowledge-management | 維持。少人数による複数工程担当、情報戦略を統括する役職、知識の共有・活用。かんばんの生産指示、情報戦略の計画、組織構造の説明とは異なる。 |
+
+- 新たな統合なし。転送29件・実記事749件を維持。
+- 個別確認履歴は615/749件から**647/749件（86.4%）**へ。未確認の実記事は102件。
+- 確認履歴インデックス670件は、実記事647件と履歴に含まれる転送23件。
+- 変更は記事4件の役割説明・学習リンクと監査ログ。公開日・URL・分類・見出し・フッターを維持し、記事の更新日を更新。
+- 規格・制度の鮮度監査は今回の範囲外。既存の一次情報や規格の版の説明は変更しない。
+- 検証：単体テスト5件成功、通常16候補・拡張43候補を再抽出。git diff --check成功。ローカルJekyll環境がないため公開表示のビルドは未確認。
 
 ## 転送専用ページの確認（2026-10-17）
 
