@@ -6,11 +6,13 @@
 
 - GitHub mainのFEファイル構成を2026-10-18に再確認
 - FE Markdown: 778ファイル（転送用ページを含む）
-- 過去の本文確認履歴に対応する現存ファイル: 734ファイル（重複排除）
-- ファイル単位の確認履歴カバー率: 94.3%。これは全件本文比較の完了率ではありません。
-- 削除済みファイルは分母・分子から除外。mainはPR #454まで反映済みで転送29件・実記事749件。今回は新たな統合を行わないため実記事数は変わりません。
+- 過去の本文確認履歴に対応する現存ファイル: 772ファイル（重複排除）
+- ファイル単位の確認履歴カバー率: 99.2%。これは全件本文比較の完了率ではありません。
+- 削除済みファイルは分母・分子から除外。mainはPR #455まで反映済みで転送29件・実記事749件。今回は新たな統合を行わないため実記事数は変わりません。
 
-- 実記事の個別確認履歴（今回のmain向け継続PR適用後）: **711/749件（94.9%）**。転送の29件は別管理。
+- 非転送ページの個別確認履歴（今回のmain向け継続PR適用後）: **749/749件（100%）**。内訳は教材748記事と総合索引1ページ。従来の「実記事749件」は索引を含む呼称でした。転送29件は別管理。
+- **既存ページの役割確認は一巡**しました。確認履歴のある教材は748/748記事ですが、全本文の校閲・全組合せの比較・法令や規格の鮮度監査・公開表示確認の完了を意味しません。
+- インデックス772件は、非転送749件と履歴に含まれる転送23件。残る転送6件は転送専用ページの節で別記確認済みです。
 - 変更前の761実記事に対して**機械的な類似候補抽出を実施済み**。PR #442の新しい構成ではCIで再走査します。未抽出の組合せが重複なしと確定したわけではありません。
 
 ## 修正PRの記録
@@ -40,6 +42,7 @@
 - #452 回路・ハードウェア・システム構成32記事監査、バッファと二重化の役割整理（マージ済み）
 - #453 品質・プロジェクト管理・サービス運用32記事監査、ABC分析とQC手法の導線整理（マージ済み）
 - #454 機械学習・UI・ソフトウェア32記事監査、オーバーライド・GUI・UMLの導線整理（マージ済み）
+- #455 経営・生産・会計・IoT32記事監査、財務諸表・製品ミックス・生産方式の導線整理（マージ済み）
 
 ## 本文確認履歴に含まれる現存ファイル
 
@@ -64,6 +67,8 @@
 - pages/fe/ajax.md
 - pages/fe/ansoff-growth-matrix.md
 - pages/fe/anti-aliasing.md
+- pages/fe/antimonopoly-law.md
+- pages/fe/apache-license-2.md
 - pages/fe/application-maintenance.md
 - pages/fe/archive.md
 - pages/fe/arp.md
@@ -99,6 +104,7 @@
 - pages/fe/binary-search.md
 - pages/fe/binary-search-tree.md
 - pages/fe/binary-tree-traversal.md
+- pages/fe/binomial-approximation.md
 - pages/fe/biometric-authentication.md
 - pages/fe/bit-mask.md
 - pages/fe/bit-pattern-count.md
@@ -176,6 +182,8 @@
 - pages/fe/compiler-linker-loader-debugger.md
 - pages/fe/compiler-optimization.md
 - pages/fe/complete-binary-tree.md
+- pages/fe/compliance.md
+- pages/fe/comprehensive-evaluation-bidding.md
 - pages/fe/computer-graphics-overview.md
 - pages/fe/computer-unauthorized-access-countermeasure-standard.md
 - pages/fe/condition-branch-order.md
@@ -183,13 +191,17 @@
 - pages/fe/conditional-probability.md
 - pages/fe/configuration-management.md
 - pages/fe/contingency-plan.md
+- pages/fe/contract-for-work-vs-mandate.md
+- pages/fe/contract-nonconformity-liability.md
 - pages/fe/contract-types-outsourcing.md
 - pages/fe/control-structures-loop-selection.md
 - pages/fe/control-total-check.md
 - pages/fe/conversion-rate.md
+- pages/fe/copyright-permitted-use.md
 - pages/fe/corba.md
 - pages/fe/core-competence.md
 - pages/fe/core-technology.md
+- pages/fe/corporate-governance.md
 - pages/fe/correlation-coefficient.md
 - pages/fe/cost-plus-pricing.md
 - pages/fe/counting-constrained-strings.md
@@ -215,6 +227,7 @@
 - pages/fe/csirt-soc-psirt-jcrat.md
 - pages/fe/csma-ca.md
 - pages/fe/csma-cd.md
+- pages/fe/csr.md
 - pages/fe/csv-format.md
 - pages/fe/csv-spreadsheet-cell-reference.md
 - pages/fe/customer-portfolio-analysis.md
@@ -257,10 +270,12 @@
 - pages/fe/dhcp.md
 - pages/fe/digital-divide-comparison.md
 - pages/fe/digital-watermark.md
+- pages/fe/discretionary-labor-system.md
 - pages/fe/disk-scheduling.md
 - pages/fe/disk-scheduling-scan.md
 - pages/fe/disk-striping.md
 - pages/fe/dispatch-secondment-contract.md
+- pages/fe/dispatch-worker-responsibility.md
 - pages/fe/display-types.md
 - pages/fe/disruptive-innovation.md
 - pages/fe/diversity-management.md
@@ -275,6 +290,7 @@
 - pages/fe/drive-by-download-attack.md
 - pages/fe/dual-duplex-system.md
 - pages/fe/dynamic-address-translation.md
+- pages/fe/eavesdropping-encryption.md
 - pages/fe/ecc.md
 - pages/fe/ecc-memory.md
 - pages/fe/economic-order-quantity.md
@@ -295,6 +311,7 @@
 - pages/fe/er-diagram.md
 - pages/fe/er-diagram-cardinality.md
 - pages/fe/erp.md
+- pages/fe/escalation.md
 - pages/fe/escrow-service.md
 - pages/fe/euclidean-algorithm.md
 - pages/fe/evm.md
@@ -303,6 +320,7 @@
 - pages/fe/extreme-programming.md
 - pages/fe/fabless.md
 - pages/fe/fail-safe-fail-soft-fault-tolerance-foolproof.md
+- pages/fe/false-positive-false-negative.md
 - pages/fe/fast-tracking.md
 - pages/fe/fault-tolerant-system.md
 - pages/fe/fe-requirements-definition-process.md
@@ -310,6 +328,7 @@
 - pages/fe/fifo-inventory-valuation.md
 - pages/fe/fifo-page-replacement.md
 - pages/fe/file-block-allocation.md
+- pages/fe/file-permissions-octal.md
 - pages/fe/financial-statements-comparison.md
 - pages/fe/finite-fraction-radix.md
 - pages/fe/five-functions-fetch-decode.md
@@ -323,6 +342,7 @@
 - pages/fe/floating-point-normalization.md
 - pages/fe/floating-point-representation.md
 - pages/fe/floor-function.md
+- pages/fe/fraud-triangle.md
 - pages/fe/full-adder.md
 - pages/fe/full-differential-incremental-backup.md
 - pages/fe/function-point-effort.md
@@ -373,6 +393,8 @@
 - pages/fe/incident-management-vs-problem-management.md
 - pages/fe/incident-service-request-management.md
 - pages/fe/income-statement-profit-levels.md
+- pages/fe/index.md
+- pages/fe/industrial-property-rights.md
 - pages/fe/information-strategy.md
 - pages/fe/inheritance.md
 - pages/fe/initial-running-cost.md
@@ -384,10 +406,12 @@
 - pages/fe/instruction-cache.md
 - pages/fe/instruction-format.md
 - pages/fe/instruction-register-program-counter.md
+- pages/fe/intellectual-property-rights-comparison.md
 - pages/fe/interface-usb-sata-ieee1394-1000base-t.md
 - pages/fe/internal-control-components.md
 - pages/fe/internal-control-six-elements.md
 - pages/fe/internal-external-interrupts.md
+- pages/fe/international-standards.md
 - pages/fe/internet-vpn.md
 - pages/fe/interpreter-compiler-processing-time.md
 - pages/fe/interrupt.md
@@ -404,6 +428,8 @@
 - pages/fe/ipv4-subnet-host-count.md
 - pages/fe/is-a-part-of-instance-class.md
 - pages/fe/isms-pdca.md
+- pages/fe/iso-9001-quality-management.md
+- pages/fe/it-governance.md
 - pages/fe/it-investment-evaluation.md
 - pages/fe/it-investment-management.md
 - pages/fe/it-service-management-pdca.md
@@ -413,8 +439,10 @@
 - pages/fe/java-programming-language.md
 - pages/fe/java-servlet.md
 - pages/fe/jdbc.md
+- pages/fe/jisc-jis-jec-ieee-jeita.md
 - pages/fe/job-assignment-scheduling.md
 - pages/fe/job-vs-task.md
+- pages/fe/jpcert-cc.md
 - pages/fe/json.md
 - pages/fe/kanban-jit.md
 - pages/fe/kanban-system.md
@@ -502,14 +530,17 @@
 - pages/fe/on-demand-service.md
 - pages/fe/open-innovation.md
 - pages/fe/open-redirect.md
+- pages/fe/open-source-software.md
 - pages/fe/operational-testing.md
 - pages/fe/operations-involvement-system-development.md
 - pages/fe/opportunity-loss.md
+- pages/fe/opt-out.md
 - pages/fe/order-quantity-and-inventory-cost.md
 - pages/fe/os-api.md
 - pages/fe/osi-reference-model.md
 - pages/fe/ot-dmz.md
 - pages/fe/otoo.md
+- pages/fe/outsourced-copyright-moral-rights.md
 - pages/fe/overall-optimization-business-model.md
 - pages/fe/overfitting.md
 - pages/fe/overlay-paging-swapping.md
@@ -529,6 +560,7 @@
 - pages/fe/pdpc.md
 - pages/fe/permutations-combinations.md
 - pages/fe/person-day-effort.md
+- pages/fe/personal-information.md
 - pages/fe/phishing.md
 - pages/fe/physical-security-measures-comparison.md
 - pages/fe/ping.md
@@ -549,10 +581,12 @@
 - pages/fe/privacy-by-design.md
 - pages/fe/problem-management.md
 - pages/fe/process-innovation.md
+- pages/fe/product-liability-law-software.md
 - pages/fe/product-life-cycle.md
 - pages/fe/product-mix.md
 - pages/fe/production-methods-comparison.md
 - pages/fe/profit-calculation.md
+- pages/fe/program-copyright-scope.md
 - pages/fe/program-counter-interrupt.md
 - pages/fe/program-management.md
 - pages/fe/progress-productivity-effort.md
@@ -611,6 +645,7 @@
 - pages/fe/router-bridge-repeater-gateway.md
 - pages/fe/rpa.md
 - pages/fe/rpc.md
+- pages/fe/rto-rpo-mtd.md
 - pages/fe/run-length-encoding.md
 - pages/fe/saas-paas-iaas.md
 - pages/fe/scale-up-vs-scale-out.md
@@ -619,8 +654,10 @@
 - pages/fe/scrum-events.md
 - pages/fe/scrum-roles.md
 - pages/fe/sd-sdhc-sdxc-sduc.md
+- pages/fe/sdn-openflow.md
 - pages/fe/secure-boot.md
 - pages/fe/security-by-design.md
+- pages/fe/security-certification-schemes.md
 - pages/fe/security-cia.md
 - pages/fe/security-guidelines-comparison.md
 - pages/fe/security-threat-countermeasures.md
@@ -655,6 +692,7 @@
 - pages/fe/software-design-phases.md
 - pages/fe/software-license-contract-types.md
 - pages/fe/software-license-minimum-cost.md
+- pages/fe/software-management-guideline.md
 - pages/fe/software-quality-characteristics.md
 - pages/fe/software-repository.md
 - pages/fe/software-reuse.md
@@ -728,7 +766,9 @@
 - pages/fe/tlo-technology-licensing-organization.md
 - pages/fe/top-down-bottom-up-test.md
 - pages/fe/top-down-testing.md
+- pages/fe/toriteki-law.md
 - pages/fe/touch-panel.md
+- pages/fe/trade-secret.md
 - pages/fe/train-validation-test.md
 - pages/fe/transaction-1.md
 - pages/fe/transaction-atomicity-rollback.md
@@ -776,6 +816,7 @@
 - pages/fe/wireless-lan-security.md
 - pages/fe/work-made-for-hire.md
 - pages/fe/work-made-for-hire-copyright.md
+- pages/fe/work-sharing.md
 - pages/fe/xml-digital-signature.md
 - pages/fe/xml-dtd.md
 - pages/fe/xor-bit-flip.md
@@ -1284,6 +1325,34 @@ PR #454のmain反映を確認。未登録32記事の結論・見出し・定義�
 - 変更記事3件は役割説明・関連リンクのみ。公開日・URL・分類・見出し・フッターを維持し、更新日を更新。会計・制度の鮮度や投資判断は今回の監査範囲外。
 - 検証：単体テスト5件成功、通常16候補・拡張43候補を再抽出。git diff --check成功。ローカルJekyll環境がないため公開表示のビルドは未確認。
 
+## 継続監査：残り38ページの役割確認と一巡時点の集計（2026-10-18）
+
+PR #455のmain反映を確認。残り38ページ（教材37記事と総合索引1ページ）の結論・見出し・定義と、重なりが疑われる本文・関連教材を照合しました。特に産業財産権と知的財産権の比較、標準化の2記事は比較範囲と判断軸を確認して維持しました。
+
+| 対象記事 | 判定と理由 |
+|---|---|
+| industrial-property-rights / intellectual-property-rights-comparison | 維持。商標を含む4権利の集合の整理と、著作権も含めた保護対象・定義文・ソフトウェアの保護と許諾の比較で異なる。前者から後者への導線を補強。 |
+| international-standards / jisc-jis-jec-ieee-jeita | 維持・相互リンク。国・国際的範囲や技術分野による比較と、JISC/JISを中心とした規格と機関・団体の区別で異なる。 |
+| copyright-permitted-use / program-copyright-scope / outsourced-copyright-moral-rights | 維持。許諾不要となる利用条件、プログラムの保護範囲、委託成果物の権利帰属・人格権で異なる。職務著作との既存導線も維持。 |
+| open-source-software / apache-license-2 / software-management-guideline | 維持。OSS全体の性質、特定ライセンスの再配布・特許条項、組織による適正利用の管理活動で異なる。GPL等の比較記事とも分担。 |
+| contract-for-work-vs-mandate / contract-nonconformity-liability / dispatch-worker-responsibility / toriteki-law | 維持。契約で約束する内容、納品物が契約と異なる場合の責任、派遣元先の具体的責任、委託取引の規制で異なる。外部委託契約総論・派遣比較とは既存の役割説明で分担。 |
+| antimonopoly-law / product-liability-law-software / personal-information / trade-secret / opt-out | 維持。競争、製造物の欠陥、個人の識別、秘密情報の要件、利用・参加の拒否という別々の判定対象。 |
+| corporate-governance / it-governance / compliance / csr / fraud-triangle | 維持。経営監督、IT統制、規範の遵守、社会への責任、不正の発生要因で異なる。内部統制や情報戦略の教材とも役割を確認。 |
+| discretionary-labor-system / work-sharing | 維持。みなし労働時間の制度と、労働時間・仕事の配分による雇用確保という目的で異なる。 |
+| iso-9001-quality-management / security-certification-schemes | 維持。品質の管理・運用・改善と、評価対象が異なるセキュリティ認証制度の見分け方。標準化組織の総論とは対象が異なる。 |
+| jpcert-cc / escalation | 維持。インシデント対応を支援・調整する組織と、現在の担当から専門担当・上位者へ引き継ぐ活動で異なる。CSIRT・サービスデスクとも分担。 |
+| eavesdropping-encryption / false-positive-false-negative / file-permissions-octal | 維持。盗聴への対策選択、実際と判定のずれ、許可ビットの8進表現で異なる。暗号・検知方式・権限管理の総論と問題の判断手順が異なる。 |
+| rto-rpo-mtd / sdn-openflow | 維持。復旧目標と許容停止の指標、ネットワーク制御と転送の分離という個別教材。MTBF/MTTRやSNMPとは役割が異なる。 |
+| comprehensive-evaluation-bidding / binomial-approximation | 維持。条件を満たす入札者の価格・技術評価と、高次項を省く近似の考え方。重み付き評価の一般計算や通常の二項展開とは学習目的が異なる。 |
+| index | 維持。分野別教材へ誘導する総合索引。個別の用語・計算教材とは異なる。記事の重複に関する役割のみ確認し、全リンク・公開表示の監査を完了したものではない。 |
+
+- 新たな統合なし。778 Markdown＝転送29ページ＋教材748記事＋総合索引1ページ。
+- 非転送ページの役割確認履歴は711/749件から**749/749件（100%）**へ。未確認0件。教材だけなら**748/748記事**。
+- 確認履歴インデックスは772件（非転送749件＋転送23件）。別記の転送6件を含めると現存778ファイルすべてに確認記録がある。
+- 変更記事3件は役割説明・関連リンクのみ。公開日・URL・分類・見出し・フッターを維持し、更新日を更新。
+- 法令・規格・ライセンスの内容や鮮度を全面検証したという判定ではない。今回の100%は既存ページの役割確認履歴のカバー率であり、重複が一切ないことの証明ではない。
+- 検証：単体テスト5件成功、通常16候補・拡張43候補を再抽出。git diff --check成功。ローカルJekyll環境がないため公開表示のビルドは未確認。
+
 ## 転送専用ページの確認（2026-10-17）
 
 初回は1100バイト未満から17件を抽出しました。その後、**全778件の本文**を自動走査し、`layout: null` とHTMLのmeta refreshの両方を満たす17件を検出しました。
@@ -1343,6 +1412,6 @@ GitHub Actions の **FE duplicate content candidate audit** は、手動起動�
 ## 次の手順
 
 1. 今後の追加記事で転送ページ判定・実記事数が変わらないかを監視する。
-2. 15%未満の重なりや未確認記事の個別監査を進める。
+2. 既存ページの役割確認は一巡済み。今後の新規・大幅更新時に、低い類似度の候補も含めて関連教材との役割を再確認する。
 3. 統合・役割分担・維持・要再確認の判定理由を記録する。
 4. 修正PRのビルドと旧URL転送を確認する。

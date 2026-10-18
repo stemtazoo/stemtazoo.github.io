@@ -8,7 +8,7 @@ fe_section: ストラテジ系
 fe_subsection: 法務・標準化
 fe_order: 40
 date: 2026-08-16
-last_modified_at: 2026-10-08
+last_modified_at: 2026-10-18
 ---
 
 ## まず結論
@@ -32,6 +32,8 @@ last_modified_at: 2026-10-08
 特に、問題文に **「国際的に採用」「各国で共通」「国際規格」** といった表現があれば、まずISOを疑います。
 
 > **世界ならISO、日本ならJIS、米国ならANSI、電気・電子系ならIEEE。**
+
+このページは、**国・国際的な範囲や技術分野から、標準化に関する名称を見分ける比較**を扱います。JISとJISCのように、規格そのものと審議機関・団体を区別する場合は、[JISC・JIS・JEC・IEEE・JEITAの違い](/fe/jisc-jis-jec-ieee-jeita/)で確認できます。
 
 ## 直感的な説明
 
