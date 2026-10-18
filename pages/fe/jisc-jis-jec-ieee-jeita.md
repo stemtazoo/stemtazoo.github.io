@@ -8,7 +8,7 @@ fe_section: ストラテジ系
 fe_subsection: 経営戦略・業務システム
 fe_order: 56
 date: 2026-07-10
-last_modified_at: 2026-08-15
+last_modified_at: 2026-10-18
 ---
 
 ## まず結論
@@ -35,6 +35,8 @@ JISC
 ```
 
 を選びます。
+
+このページは、**JISCとJISを中心に、規格そのものと規格を扱う機関・団体を区別する教材**です。ISO・ANSI・IETFなども含め、国や技術分野から名称を整理する場合は、[国際規格と標準化組織の比較](/fe/international-standards/)で確認できます。
 
 ## 直感的な説明
 
