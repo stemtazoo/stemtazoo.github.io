@@ -6,11 +6,11 @@
 
 - GitHub mainのFEファイル構成を2026-10-18に再確認
 - FE Markdown: 778ファイル（転送用ページを含む）
-- 過去の本文確認履歴に対応する現存ファイル: 670ファイル（重複排除）
-- ファイル単位の確認履歴カバー率: 86.1%。これは全件本文比較の完了率ではありません。
-- 削除済みファイルは分母・分子から除外。mainはPR #452まで反映済みで転送29件・実記事749件。今回は新たな統合を行わないため実記事数は変わりません。
+- 過去の本文確認履歴に対応する現存ファイル: 702ファイル（重複排除）
+- ファイル単位の確認履歴カバー率: 90.2%。これは全件本文比較の完了率ではありません。
+- 削除済みファイルは分母・分子から除外。mainはPR #453まで反映済みで転送29件・実記事749件。今回は新たな統合を行わないため実記事数は変わりません。
 
-- 実記事の個別確認履歴（今回のmain向け継続PR適用後）: **647/749件（86.4%）**。転送の29件は別管理。
+- 実記事の個別確認履歴（今回のmain向け継続PR適用後）: **679/749件（90.7%）**。転送の29件は別管理。
 - 変更前の761実記事に対して**機械的な類似候補抽出を実施済み**。PR #442の新しい構成ではCIで再走査します。未抽出の組合せが重複なしと確定したわけではありません。
 
 ## 修正PRの記録
@@ -38,6 +38,7 @@
 - #450 アルゴリズム・数理32記事監査、確率・ビット数の導線整理（マージ済み）
 - #451 DB・Web・データ形式32記事監査、複式簿記とSQLの導線整理（マージ済み）
 - #452 回路・ハードウェア・システム構成32記事監査、バッファと二重化の役割整理（マージ済み）
+- #453 品質・プロジェクト管理・サービス運用32記事監査、ABC分析とQC手法の導線整理（マージ済み）
 
 ## 本文確認履歴に含まれる現存ファイル
 
@@ -47,6 +48,7 @@
 - pages/fe/3pl.md
 - pages/fe/abc-analysis.md
 - pages/fe/absolute-relative-path.md
+- pages/fe/accessibility.md
 - pages/fe/account-aggregation.md
 - pages/fe/acid-properties.md
 - pages/fe/actuator.md
@@ -106,6 +108,7 @@
 - pages/fe/block-search-average-comparisons.md
 - pages/fe/blue-ocean-strategy.md
 - pages/fe/bluetooth.md
+- pages/fe/bnf.md
 - pages/fe/bottom-up-testing.md
 - pages/fe/bpm.md
 - pages/fe/bpo-saas-hosting-comparison.md
@@ -152,6 +155,7 @@
 - pages/fe/client-server-system.md
 - pages/fe/clipping.md
 - pages/fe/cloud-deployment-models.md
+- pages/fe/cluster-analysis.md
 - pages/fe/cmmi.md
 - pages/fe/code-system-types.md
 - pages/fe/code-types-and-identification.md
@@ -198,6 +202,7 @@
 - pages/fe/critical-path-1.md
 - pages/fe/critical-path-vs-critical-chain.md
 - pages/fe/cross-compiler.md
+- pages/fe/cross-validation.md
 - pages/fe/crowdfunding.md
 - pages/fe/crowdsourcing.md
 - pages/fe/cryptographic-algorithm-types.md
@@ -217,6 +222,7 @@
 - pages/fe/data-flow-diagram.md
 - pages/fe/data-mining.md
 - pages/fe/data-oriented-design.md
+- pages/fe/data-scientist-skills.md
 - pages/fe/data-transfer-time.md
 - pages/fe/data-warehouse.md
 - pages/fe/database-administrator.md
@@ -233,6 +239,7 @@
 - pages/fe/deadlock.md
 - pages/fe/debit-credit-double-entry.md
 - pages/fe/decimal-to-binary-div-mod.md
+- pages/fe/deep-learning-basics.md
 - pages/fe/defect-repair-cost-expected-value.md
 - pages/fe/delphi-method.md
 - pages/fe/depreciation-methods.md
@@ -272,6 +279,7 @@
 - pages/fe/elementary-row-operations.md
 - pages/fe/email-protocols.md
 - pages/fe/email-security-measures.md
+- pages/fe/encapsulation.md
 - pages/fe/enterprise-architecture.md
 - pages/fe/envelope-encryption.md
 - pages/fe/equipment-investment-cost-effectiveness.md
@@ -320,6 +328,7 @@
 - pages/fe/green-purchasing.md
 - pages/fe/grid-shortest-path-combinations.md
 - pages/fe/groupthink.md
+- pages/fe/gui-controls.md
 - pages/fe/hadoop.md
 - pages/fe/hadoop-spark.md
 - pages/fe/half-adder.md
@@ -339,6 +348,7 @@
 - pages/fe/housing-service.md
 - pages/fe/https.md
 - pages/fe/huffman-coding.md
+- pages/fe/human-centered-design.md
 - pages/fe/hybrid-cloud.md
 - pages/fe/hybrid-encryption.md
 - pages/fe/hypothesis-testing.md
@@ -387,6 +397,7 @@
 - pages/fe/java-programming-language.md
 - pages/fe/java-servlet.md
 - pages/fe/jdbc.md
+- pages/fe/job-assignment-scheduling.md
 - pages/fe/job-vs-task.md
 - pages/fe/json.md
 - pages/fe/kanban-jit.md
@@ -396,12 +407,15 @@
 - pages/fe/lan-analyzer.md
 - pages/fe/language-processor-comparison.md
 - pages/fe/least-privilege-database-access.md
+- pages/fe/legacy-interface-standards.md
 - pages/fe/line-utilization-rate.md
 - pages/fe/linear-programming.md
 - pages/fe/linear-search.md
 - pages/fe/linked-list.md
 - pages/fe/linker.md
+- pages/fe/live-migration-virtual-server.md
 - pages/fe/lock-granularity.md
+- pages/fe/logic-circuit-boolean-expression.md
 - pages/fe/logistic-curve.md
 - pages/fe/long-tail.md
 - pages/fe/lru.md
@@ -409,6 +423,7 @@
 - pages/fe/lru-page-replacement.md
 - pages/fe/lte.md
 - pages/fe/mac-address.md
+- pages/fe/machine-learning-basics.md
 - pages/fe/magnetic-disk-access-time.md
 - pages/fe/magnetic-disk-average-wait-time.md
 - pages/fe/mail-third-party-relay.md
@@ -423,6 +438,8 @@
 - pages/fe/memory-compaction.md
 - pages/fe/memory-fragmentation.md
 - pages/fe/memory-hierarchy.md
+- pages/fe/memory-interleaving.md
+- pages/fe/memory-leak.md
 - pages/fe/memory-management-methods.md
 - pages/fe/memory-types.md
 - pages/fe/message-authentication-code.md
@@ -474,7 +491,9 @@
 - pages/fe/ot-dmz.md
 - pages/fe/otoo.md
 - pages/fe/overall-optimization-business-model.md
+- pages/fe/overfitting.md
 - pages/fe/overlay-paging-swapping.md
+- pages/fe/override.md
 - pages/fe/packet-filtering.md
 - pages/fe/packet-filtering-port-rules.md
 - pages/fe/packet-switching.md
@@ -526,6 +545,7 @@
 - pages/fe/pseudocode-reading-guide.md
 - pages/fe/public-key-cryptography.md
 - pages/fe/public-key-encryption-digital-signature.md
+- pages/fe/pull-down-menu.md
 - pages/fe/python-indentation-code-blocks.md
 - pages/fe/qr-code.md
 - pages/fe/qr-code-barcode.md
@@ -543,6 +563,7 @@
 - pages/fe/refactoring.md
 - pages/fe/referential-integrity.md
 - pages/fe/regression-testing.md
+- pages/fe/regular-expression.md
 - pages/fe/relational-model.md
 - pages/fe/relational-operations.md
 - pages/fe/relations-diagram.md
@@ -551,6 +572,7 @@
 - pages/fe/rest-api.md
 - pages/fe/retention-rate.md
 - pages/fe/reverse-brute-force.md
+- pages/fe/reverse-engineering.md
 - pages/fe/reverse-polish-notation.md
 - pages/fe/rfi-rfp-procurement-process.md
 - pages/fe/risc-cisc.md
@@ -578,6 +600,7 @@
 - pages/fe/security-guidelines-comparison.md
 - pages/fe/security-threat-countermeasures.md
 - pages/fe/seo-poisoning.md
+- pages/fe/sequence-communication-diagram.md
 - pages/fe/series-parallel-system-availability.md
 - pages/fe/server-client-port.md
 - pages/fe/server-room-physical-security.md
@@ -639,7 +662,9 @@
 - pages/fe/streaming-buffering.md
 - pages/fe/structured-unstructured-data.md
 - pages/fe/stub-driver.md
+- pages/fe/subject-b-input-output-reading.md
 - pages/fe/subnet-host-address.md
+- pages/fe/supervised-unsupervised-reinforcement-learning.md
 - pages/fe/supply-chain-management.md
 - pages/fe/swot-analysis.md
 - pages/fe/system-audit.md
@@ -666,11 +691,13 @@
 - pages/fe/throughput.md
 - pages/fe/throughput-spooling.md
 - pages/fe/timestamp-service.md
+- pages/fe/timing-diagram.md
 - pages/fe/tlo.md
 - pages/fe/tlo-technology-licensing-organization.md
 - pages/fe/top-down-bottom-up-test.md
 - pages/fe/top-down-testing.md
 - pages/fe/touch-panel.md
+- pages/fe/train-validation-test.md
 - pages/fe/transaction-1.md
 - pages/fe/transaction-atomicity-rollback.md
 - pages/fe/transaction-state-transition.md
@@ -679,14 +706,20 @@
 - pages/fe/two-phase-commit.md
 - pages/fe/twos-complement.md
 - pages/fe/twos-complement-remainder.md
+- pages/fe/ui-ux.md
+- pages/fe/uml.md
+- pages/fe/uml-activity-diagram.md
+- pages/fe/uml-class-diagram.md
 - pages/fe/uml-multiplicity.md
 - pages/fe/unauthorized-access-law.md
 - pages/fe/ups.md
 - pages/fe/usb.md
+- pages/fe/usb-hub.md
 - pages/fe/usb-ieee1394.md
 - pages/fe/usb-interface.md
 - pages/fe/value-chain.md
 - pages/fe/variable-partition-memory-allocation.md
+- pages/fe/vdi.md
 - pages/fe/venn-diagram-set-operations.md
 - pages/fe/verification-validation.md
 - pages/fe/video-bandwidth-calculation.md
@@ -1162,6 +1195,34 @@ PR #452のmain反映を確認して継続。未登録32記事の結論・見出�
 - 確認履歴インデックス670件は、実記事647件と履歴に含まれる転送23件。
 - 変更は記事4件の役割説明・学習リンクと監査ログ。公開日・URL・分類・見出し・フッターを維持し、記事の更新日を更新。
 - 規格・制度の鮮度監査は今回の範囲外。既存の一次情報や規格の版の説明は変更しない。
+- 検証：単体テスト5件成功、通常16候補・拡張43候補を再抽出。git diff --check成功。ローカルJekyll環境がないため公開表示のビルドは未確認。
+
+## 継続監査：機械学習・画面設計・ソフトウェアの未確認32記事（2026-10-18）
+
+PR #453のmain反映を確認。未登録32記事の結論・見出し・定義と、重なりが疑われる説明・例を関連FE教材と照合しました。全本文の逐語比較や全組合せ比較の完了を示すものではありません。
+
+| 対象記事 | 判定と理由 |
+|---|---|
+| machine-learning-basics / deep-learning-basics / supervised-unsupervised-reinforcement-learning / cluster-analysis | 維持。データから学ぶ全体像、多層ネットワークという手法、学習の手掛かりによる分類、類似データのグループ分けという個別の目的で異なる。 |
+| train-validation-test / cross-validation / overfitting | 維持。学習・選択・最終評価のデータの役割、分割を入れ替える手順と件数、誤差からの状態判定・止めどきで分担。既存の相互リンクを維持。 |
+| data-scientist-skills | 維持。課題整理・分析・実装運用という能力の役割を問う教材。機械学習手法自体の説明とは異なる。 |
+| accessibility / human-centered-design / ui-ux | 維持。利用の障壁と改善策、利用状況・要求・設計・評価の反復、接点と体験の違いで分担。 |
+| gui-controls / pull-down-menu | 維持・相互リンク。GUI部品全体の選択数・表示・入力の比較と、候補数や入力条件からプルダウンの採否を選ぶ教材。 |
+| bnf / regular-expression | 維持。文法の生成規則を再帰的に展開する読取りと、文字クラス・繰返し・対象位置から文字列パターンを読む練習で異なる。 |
+| encapsulation / override | 維持。内部の隠蔽と、継承したメソッドの再定義。overrideと既存polymorphismは動物クラスの例が重なるが、再定義・オーバーロードとの区別と、共通呼出しで振る舞いを変える性質・利点で役割を明示し相互リンク。 |
+| uml / uml-class-diagram / uml-activity-diagram / sequence-communication-diagram / timing-diagram | 維持。図の全体分類、静的構造の記号、処理・分岐の流れ、相互作用の時間順と接続関係、状態や値が続く時間で分担。総論の図一覧から詳細記事へのリンクを補強。 |
+| reverse-engineering | 維持。既存成果物から仕様・構造を明らかにする解析の方向が中心。クラス図は解析結果を表す図の記法を扱う。 |
+| subject-b-input-output-reading | 維持。入力と返す値が満たす条件の読み違いを防ぐ教材。疑似言語の総論・補数計算・XOR操作の個別教材と目的が異なる。 |
+| job-assignment-scheduling | 維持。複数装置の終了時刻から次の割当て先を追う計算。単一CPUの方式比較やターンアラウンドタイムの定義とは異なる。 |
+| logic-circuit-boolean-expression | 維持。共通項・補元律による論理式の簡単化が中心。nand-gateは素子の定義、nand-xor-circuitは途中出力と真理値表で複合回路を判定する手順。 |
+| memory-interleaving / memory-leak | 維持。バンクへの並行アクセスによる高速化と、不要メモリの解放・再利用ができない問題。キャッシュや断片化とも発生箇所・目的が異なる。 |
+| legacy-interface-standards / usb-hub | 維持。伝送媒体・接続方式で旧規格を見分ける比較と、USB機器の分岐・台数・LANハブとの違い。USB規格の共通機能やデイジーチェーンの形とは分担する。 |
+| live-migration-virtual-server / vdi | 維持。稼働中の仮想サーバを別物理サーバへ移す技術と、サーバ上のデスクトップを端末から操作する構成。仮想化という共通語のみで統合しない。 |
+
+- 新たな統合なし。転送29件・実記事749件を維持。
+- 個別確認履歴は647/749件から**679/749件（90.7%）**へ。未確認の実記事は70件。
+- 確認履歴インデックス702件は、実記事679件と履歴に含まれる転送23件。
+- 変更記事5件（うちpolymorphismは既存確認記事）は役割説明・リンクのみ。公開日・URL・分類・見出し・フッターを維持し、更新日を更新。
 - 検証：単体テスト5件成功、通常16候補・拡張43候補を再抽出。git diff --check成功。ローカルJekyll環境がないため公開表示のビルドは未確認。
 
 ## 転送専用ページの確認（2026-10-17）
