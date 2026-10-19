@@ -1,7 +1,6 @@
 ---
 layout: page
 title: WHERE句とは？条件抽出の基本を理解する【DS検定】
-description: "WHERE句は、SQLで条件に合う行だけを抽出するための基本構文です。SELECTでの絞り込み、UPDATE・DELETEでの対象指定、JOINやHAVINGとの違い、DS検定で迷いやすい判断ポイントを整理します。"
 permalink: /ds/sql-where/
 categories: [data-engineering]
 tags: [ds, data-processing, sql]
@@ -9,7 +8,8 @@ ds_area: dataengineering
 ds_section: data-processing
 prev: /ds/sql-union/
 next: /ds/left-join-where/
-last_modified_at: 2026-09-26
+description: "WHERE句を、条件がTRUEになる行を選ぶSQLの構文として整理します。売上の抽出前後、NULL、AND・OR、UPDATE・DELETEの対象指定、JOINやHAVINGとの違いを具体例で確認します。"
+last_modified_at: 2026-10-19
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -30,29 +30,34 @@ DS検定では、次のように切り分けると判断しやすくなります
 
 ## 直感的な説明
 
-例えば、売上データが次のようにあるとします。
+例えば、次の売上データがあるとします。
 
-| customer | item | price |
+| 日付 | 店舗 | 売上 |
 |---|---|---:|
-| 田中 | ノートPC | 120000 |
-| 佐藤 | マウス | 3000 |
-| 鈴木 | キーボード | 8000 |
+| 4/1 | 東京 | 80万円 |
+| 4/2 | 東京 | 120万円 |
+| 4/3 | 大阪 | 90万円 |
+| 4/4 | 東京 | 150万円 |
 
-この中から「1万円以上の商品だけ見たい」とき、全件を見てから人間が探すのではなく、SQL側で条件を指定します。
+金額の表は万円単位、SQLで扱う`売上`列は円単位です。
+
+「売上が100万円以上の日だけ知りたい」なら、必要な行は次の2件です。
+
+| 日付 | 店舗 | 売上 |
+|---|---|---:|
+| 4/2 | 東京 | 120万円 |
+| 4/4 | 東京 | 150万円 |
+
+このように、**条件に合う行だけを残す**のがフィルタリングです。
+
+SQLでは `WHERE` 句を使います。
 
 ```sql
 SELECT *
 FROM sales
-WHERE price >= 10000;
+WHERE 売上 >= 1000000;
 ```
 
-結果は次のようになります。
-
-| customer | item | price |
-|---|---|---:|
-| 田中 | ノートPC | 120000 |
-
-つまりWHERE句は、分析に必要な行だけを取り出す**フィルター**です。
 
 ## 定義・仕組み
 
@@ -72,7 +77,7 @@ FROM customers
 WHERE city = 'Tokyo';
 ```
 
-よく使う条件演算子は次の通りです。
+ここからは、`price`を円単位の価格列とする別の売上表の例で考えます。よく使う条件演算子は次の通りです。
 
 | 演算子 | 意味 |
 |---|---|
@@ -85,12 +90,28 @@ WHERE city = 'Tokyo';
 
 複数条件を組み合わせる場合は、`AND` や `OR` を使います。
 
+| 条件指定 | 意味 |
+|---|---|
+| `AND` | すべての条件を満たす |
+| `OR` | いずれかの条件を満たす |
+| `IN` | 指定した値の集合に含まれる |
+| `LIKE` | 文字列のパターンに一致する |
+| `BETWEEN` | 両端を含む範囲に入る |
+
+ANDとORを混ぜるときは、括弧で条件のまとまりを明確にします。
+
 ```sql
 SELECT *
 FROM sales
 WHERE price >= 1000
   AND price < 10000;
 ```
+
+### TRUE・FALSE・NULLの扱い
+
+WHEREは、条件の結果が**TRUEの行だけ**を残します。FALSEやUNKNOWN（NULLに関わる不明な判定）の行は残りません。
+
+例えば`price >= 1000`では、`price`がNULLの行は残りません。欠損を探す場合は`price IS NULL`を使い、`price = NULL`とは書き分けます。
 
 DS検定では、SQLを完全に暗記するよりも、**条件が行に対して働くのか、集計後の結果に対して働くのか**を見分けることが重要です。
 
@@ -129,7 +150,7 @@ WHERE句は、データ分析の前処理や確認作業で頻繁に使います
 
 `JOIN` は表をつなぐ操作、`WHERE` は結合後または取得対象の行を絞る操作です。
 
-DS検定で「テーブル同士を関連付ける」とあればJOIN、「条件に一致する行を抽出する」とあればWHEREと判断します。
+基本形では、`JOIN ... ON`で表同士の対応、WHEREで取得する行の条件を表します。なお、複数の表をFROMに並べ、WHEREに表同士の対応条件を書く記法もあります。「WHEREでは表同士の対応を指定できない」とは一般化しません。
 
 ### ② WHEREとHAVINGを混同する
 
@@ -154,6 +175,12 @@ WHERE total_amount >= 100000;
 
 このため実務では、更新や削除のWHERE条件を誤ると影響範囲が大きくなります。
 
+### ④ フィルタリングはデータ削除？
+
+SELECTで条件に合う行だけを取得しても、元の行は消えません。一方、DELETEと組み合わせると削除対象を指定します。**句の役割と、SQL全体で行う処理を分けて読みます。**
+
+[GROUP BY](/ds/sql-groupby/)での集計、[HAVING](/ds/sql-having/)での集計後の条件、[LEFT JOINとWHERE](/ds/left-join-where/)でのNULL行の注意も関連します。
+
 ## まとめ（試験直前用）
 
 - WHERE句は「条件に一致する行」を対象にするSQLの構文
@@ -164,7 +191,7 @@ WHERE total_amount >= 100000;
 
 ## 公式情報・参考リンク
 
-- [PostgreSQL Documentation｜SELECT](https://www.postgresql.org/docs/current/sql-select.html)
+- [PostgreSQL公式：Table Expressions](https://www.postgresql.org/docs/current/queries-table-expressions.html)
   - WHERE句によって条件を満たさない行がSELECT結果から除外される処理を確認できます。
 
 ## 対応スキル項目（ver.6 データエンジニアリング）

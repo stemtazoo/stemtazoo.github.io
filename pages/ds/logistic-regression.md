@@ -8,7 +8,7 @@ tags: [ds, modeling]
 ds_area: datascience
 ds_section: modeling
 prev: /ds/kernel/
-next: /ds/machine-learning-algorithms-cheatsheet/
+next: /ds/machine-learning-methods/
 last_modified_at: 2026-06-21
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">

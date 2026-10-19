@@ -7,7 +7,7 @@ categories: [business]
 tags: [ds, design]
 ds_area: datascience
 ds_section: data-understanding
-prev: /ds/analysis-approach-selection/
+prev: /ds/analysis-approach-design/
 next: /ds/design-thinking/
 last_modified_at: 2026-07-01
 ---

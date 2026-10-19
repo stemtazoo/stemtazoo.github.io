@@ -8,7 +8,7 @@ tags: [ds, modeling]
 ds_area: datascience
 ds_section: modeling
 prev: /ds/association-analysis/
-next: /ds/basket-analysis/
+next: /ds/market-basket-analysis/
 last_modified_at: 2026-09-26
 ---
 

@@ -8,7 +8,7 @@ tags: [ds, sql]
 ds_area: dataengineering
 ds_section: sql
 prev: /ds/sql-distinct/
-next: /ds/sql-filtering/
+next: /ds/sql-where/
 last_modified_at: 2026-09-26
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
