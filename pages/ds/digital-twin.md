@@ -1,7 +1,7 @@
 ---
 layout: page
-title: デジタルツインとは？CPSとの違いを整理【DS検定】
-description: デジタルツインを、現実の対象のデータと結び付けて更新するデジタル表現・モデルとして整理します。工場設備の故障予測を例に、CPSのシステム全体との関係、制御への活用、通常のシミュレーションとの違い、用途に応じた同期の考え方を押さえます。
+title: デジタルツインとは？現実に対応するモデルと更新の仕組み【DS検定】
+description: "デジタルツインを、現実の対象のデータと結び付いて更新するモデルとして説明します。設備の故障予測、用途に応じた同期、通常のシミュレーションとの違いと、CPSでの活用を整理します。"
 permalink: /ds/digital-twin/
 categories: [business]
 tags: [ds, design]
@@ -9,7 +9,7 @@ ds_area: value-creation
 ds_section: technology-social-trends
 prev: /ds/digital-image-representation/
 next: /ds/dunning-kruger-effect/
-last_modified_at: 2026-10-07
+last_modified_at: 2026-10-19
 ---
 
 <div style="font-size: 14px; margin-bottom: 12px;">
@@ -22,6 +22,8 @@ last_modified_at: 2026-10-07
 **デジタルツインは、現実のモノやシステムに対応し、そのデータと結び付けて更新するデジタル上の表現・モデル**です。状態の把握、シミュレーション、予測、最適化などに使います。
 
 CPSは、計算・通信と物理的なプロセスが連携するシステムを指します。**デジタルツインはCPSの構成要素にもなり、現実の対象の制御にも利用できます。**「制御するかどうか」だけで二つを区別しないことが判断のポイントです。
+
+このページはモデルの更新と利用を詳しく扱います。三つの用語を同じ設備で比べるなら、[IoT・デジタルツイン・CPSの比較](/ds/cps-iot-digitaltwin-cheatsheet/)へ進めます。
 
 ## 直感的な説明
 

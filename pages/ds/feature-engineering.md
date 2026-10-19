@@ -1,7 +1,7 @@
 ---
 layout: page
-title: 特徴量エンジニアリングとは？モデルに効くデータ加工を整理【DS検定】
-description: "特徴量エンジニアリングを、機械学習モデルが使いやすい形にデータを作成・変換・選択する工程として整理します。前処理との違い、精度への影響、特徴量リークを避ける判断軸をDS検定向けに確認します。"
+title: 特徴量エンジニアリングとは？作成・変換・選択の全体像【DS検定】
+description: "特徴量エンジニアリングの作成・変換・選択を整理し、日付やカテゴリを入力表現へ変える目的を説明します。前処理・モデル調整との違い、予測時点とリーク防止を押さえ、顧客表の加工演習へつなぎます。"
 permalink: /ds/feature-engineering/
 categories: [data-science]
 tags: [ds, data-preparation, preprocessing]
@@ -9,8 +9,9 @@ ds_area: datascience
 ds_section: data-preparation
 prev: /ds/encoding/
 next: /ds/image-filter-processing/
-last_modified_at: 2026-08-16
+last_modified_at: 2026-10-19
 ---
+
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
   ＞ {{ page.title }}
@@ -21,6 +22,8 @@ last_modified_at: 2026-08-16
 **特徴量エンジニアリング（Feature Engineering）**とは、機械学習モデルが予測に使いやすい形へ、特徴量を**作成・変換・選択すること**です。
 
 DS検定では、アルゴリズムだけでなく、**どの情報をどの形でモデルへ渡すかが性能に影響する**ことを理解しているかがポイントです。
+
+このページは操作の全体像を整理します。一つの表で加工と採否を試すなら、[顧客表の特徴量加工演習](/ds/feature-engineering2/)へ進めます。
 
 ## 直感的な説明
 

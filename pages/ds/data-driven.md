@@ -1,7 +1,7 @@
 ---
 layout: page
-title: データドリブンとは？勘や経験に頼らない意思決定【DS検定】
-description: "データドリブンとは、勘や経験だけでなく、目的に合ったデータを根拠に意思決定し、結果を検証して改善する考え方です。KPI、A/Bテスト、データ品質、相関と因果、仮説思考やエビデンスベースドとの違いをDS検定向けに整理します。"
+title: データドリブンとは？データ品質と比較条件から意思決定する【DS検定】
+description: "データドリブンを、目的に合う指標・データ品質・比較条件を確認して判断し、結果を検証する考え方として説明します。広告のクリック率を例に、数字の大小や相関だけで決めない読み方を整理します。"
 permalink: /ds/data-driven/
 categories: [business]
 tags: [ds, design, data-literacy, decision-making]
@@ -9,7 +9,7 @@ ds_area: foundation
 ds_section: data-understanding
 prev: /ds/cps-iot-digitaltwin-cheatsheet/
 next: /ds/data-driven-management/
-last_modified_at: 2026-07-13
+last_modified_at: 2026-10-19
 ---
 
 ## まず結論
@@ -25,6 +25,8 @@ DS検定では、単に「数字を見ること」ではなく、次の流れで
 5. 実施後の結果を検証して改善する
 
 **データがあるだけでは不十分で、正しく読み、目的に結び付けて使うことが重要**です。
+
+このページは判断の基本姿勢を扱います。費用も踏まえて施策を続けるか決める具体例は、[KPIによる経営判断の事例](/ds/data-driven-management/)で確認できます。
 
 ## 直感的な説明
 
