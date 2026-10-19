@@ -6,12 +6,14 @@ permalink: /gk/attention/
 tags: [gk, neural_network, attention]
 gk_section: ディープラーニングの要素技術/リカレントニューラルネットワーク (RNN)
 gk_order: 9
-last_modified_at: 2026-09-26
+last_modified_at: 2026-10-19
 ---
 
 ## まず結論
 
 **Attention（注意機構）**は、入力の中から**どの情報をどれくらい参照するかを重み付けする仕組み**です。
+
+ここでは**QとKで重みを求め、Vを集める共通の仕組みと参照範囲**を扱います。同じ系列の情報が混ざる具体例は[Self-Attention](/gk/self-attention/)で確認できます。
 
 G検定では、
 
@@ -60,6 +62,15 @@ Self-Attentionでは、Q・K・Vを**同じ入力系列**から作ります。
 
 Self-Attentionは[Transformer](/gk/transformer/)の中核技術です。
 
+### 同じ系列か、別の系列か
+
+| 種類 | Queryの由来 | Key・Valueの由来 |
+| --- | --- | --- |
+| Self-Attention | 同じ系列の各位置 | 同じ系列の各位置 |
+| Encoder-Decoder Attention（Cross-Attention） | Decoder側の表現 | Encoder側の出力 |
+
+Q・K・Vの役割は共通でも、情報の出所は異なります。Attention全体をSelf-Attentionの別名とは考えません。
+
 ### 参照範囲はマスクに依存する
 
 Attentionだからといって、必ず系列全体を自由に参照するわけではありません。
@@ -70,7 +81,7 @@ Attentionだからといって、必ず系列全体を自由に参照するわ�
 
 ### 操作して確認：どの単語に注目する？
 
-Queryにする単語を選ぶと、各単語への**参照重み**が変わります。数値は仕組みを理解するための例示で、実際のモデルが計算した値ではありません。
+以下は同じ系列を参照するSelf-Attentionの例です。Queryにする単語を選ぶと、各単語への**参照重み**が変わります。数値は仕組みを理解するための例示で、実際のモデルが計算した値ではありません。
 
 <link rel="stylesheet" href="{{ '/assets/css/gk-interactive-pilot.css' | relative_url }}">
 <div class="gk-pilot" data-gk-attention>
