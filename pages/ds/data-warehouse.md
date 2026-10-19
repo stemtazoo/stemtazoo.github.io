@@ -1,7 +1,7 @@
 ---
 layout: page
-title: データウェアハウス（DWH）とは？（データレイクとの違いも整理）【DS検定リテラシー】
-description: "データウェアハウス（DWH）は、複数システムのデータを分析しやすい形に整理・統合して蓄積する基盤です。データレイクや業務DBとの違い、Schema on Write、DS検定での判断ポイントを整理します。"
+title: データウェアハウス（DWH）とは？整理・統合とデータレイクの違い【DS検定】
+description: "DWHを、複数システムのデータを整理・統合して蓄積する分析基盤として説明します。Schema on WriteとReadの対比、データレイクや業務DBとの違いを学び、全社・部門の範囲比較へつなぎます。"
 permalink: /ds/data-warehouse/
 categories: [data-engineering]
 tags: [ds, data-storage, data-structure, database]
@@ -9,8 +9,9 @@ ds_area: dataengineering
 ds_section: data-storage
 prev: /ds/data-mart/
 next: /ds/data-warehouse-vs-datamart/
-last_modified_at: 2026-06-22
+last_modified_at: 2026-10-19
 ---
+
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
   ＞ {{ page.title }}
@@ -21,6 +22,8 @@ last_modified_at: 2026-06-22
 データウェアハウス（DWH）は、複数の業務システムから集めたデータを、分析しやすい形に整理・統合して蓄積する基盤です。
 
 DS検定では、**DWHは整理済みの分析用データ、データレイクは生データを幅広くためる場所**と切り分けられることが重要です。
+
+このページはデータを整理・統合して保存する仕組みを扱います。全社と部門の対象範囲やBI・OLAPの関係は、[DWHとデータマートの比較](/ds/data-warehouse-vs-datamart/)で確認できます。
 
 ## 直感的な説明
 
@@ -43,7 +46,7 @@ DWHは、分析目的で使うデータを蓄積する基盤です。一般的�
 3. 分析しやすいテーブル構造に統合する
 4. レポート、BI、KPI管理に利用する
 
-DWHでは、保存前にデータの構造を決めて整える考え方が重要です。これは **Schema on Write** と呼ばれ、データレイクの **Schema on Read** と対比されます。
+DWHでは、保存前にデータの構造を決めて整える **Schema on Write** が、データレイクでは利用時に構造を解釈する **Schema on Read** が代表的な考え方として対比されます。実際の基盤では取り込み後に変換する構成や両者を組み合わせる構成もあり、処理順序や製品を一律に決める分類ではありません。
 
 ## どんな場面で使う？
 

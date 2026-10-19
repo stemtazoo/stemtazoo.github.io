@@ -1,16 +1,17 @@
 ---
 layout: page
-title: NoSQLデータストアとは？RDBとの違いと使いどころを整理【DS検定】
+title: NoSQLデータストアとは？四つのデータモデルと保存・検索【DS検定】
 permalink: /ds/nosql-datastore/
 categories: [data-engineering]
 tags: [ds, data-storage, database]
 ds_area: dataengineering
 ds_section: data-storage
 next: /ds/olap/
-description: "NoSQLをキーバリュー・ドキュメント・列族・グラフの保存モデルで整理します。キャッシュやログなどの用途を比較し、ACID・整合性・拡張性をRDBとの単純な二択で判断しないための注意を説明します。"
+description: "NoSQLをキーバリュー・ドキュメント・列族・グラフの保存モデルで整理します。セッションやプロフィールの例から保存・検索の形を学び、RDBとの要件比較へつなぎます。"
 last_modified_at: 2026-10-19
 prev: /ds/normalization-2nf-3nf/
 ---
+
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a> ＞ {{ page.title }}
 </div>
@@ -20,6 +21,8 @@ prev: /ds/normalization-2nf-3nf/
 **NoSQLデータストアは、キーバリュー・ドキュメント・列族・グラフなど、関係データベースとは異なるデータモデルで保存・検索するデータベースの総称**です。「NoSQL」とも呼びます。
 
 まず「どんな形でデータを保存し、どんな操作で使うか」を見ます。大量データや柔軟な構造を扱う製品も多いですが、**整合性・トランザクション・拡張方法は製品と設定によって異なります。**
+
+このページは保存モデルの概説です。注文やログの要件から選ぶ練習は、[RDBとNoSQLの選び方](/ds/rdb-vs-nosql/)で扱います。
 
 ## 直感的な説明
 
