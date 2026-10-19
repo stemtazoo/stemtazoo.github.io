@@ -194,6 +194,9 @@ last_modified_at: 2026-09-25
 </ul>
 
 ### ITセキュリティ
+
+署名と暗号化の違いは、データエンジニアリング領域の[電子署名：本人性・完全性と鍵の役割](/ds/digital-signature/)で確認できます。
+
 <ul>
 {% for p in site.pages %}
   {% if p.url contains "/ds/" %}
@@ -273,6 +276,9 @@ last_modified_at: 2026-09-25
 </ul>
 
 ### データの理解・検証
+
+データ・手法・可視化を選ぶ前提は、基盤領域の[分析アプローチ設計：目的から手段へつなぐ](/ds/analysis-approach-design/)で整理します。
+
 <ul>
 {% for p in site.pages %}
   {% if p.url contains "/ds/" %}

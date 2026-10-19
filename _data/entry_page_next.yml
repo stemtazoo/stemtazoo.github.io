@@ -43,7 +43,7 @@
     - url: /ds/association-metrics/
       title: 支持度・信頼度・リフト値の違い
       reason: 抽出したルールを評価する3指標を切り分ける
-    - url: /ds/basket-analysis/
+    - url: /ds/market-basket-analysis/
       title: バスケット分析とは？
       reason: 購買データでの具体的な活用方法を確認する
 

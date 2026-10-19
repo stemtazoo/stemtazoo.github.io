@@ -8,7 +8,7 @@ tags: [ds, data-structure, database]
 ds_area: dataengineering
 ds_section: data-structure
 prev: /ds/foreign-key/
-next: /ds/nosql/
+next: /ds/nosql-datastore/
 last_modified_at: 2026-06-28
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">

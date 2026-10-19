@@ -7,7 +7,7 @@ categories: [data-engineering]
 tags: [ds, data-processing, sql]
 ds_area: dataengineering
 ds_section: data-processing
-prev: /ds/sql-filtering/
+prev: /ds/sql-where/
 next: /ds/sql-having/
 last_modified_at: 2026-09-26
 ---

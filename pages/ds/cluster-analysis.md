@@ -7,7 +7,7 @@ categories: [data-science]
 tags: [ds, modeling]
 ds_area: datascience
 ds_section: modeling
-prev: /ds/basket-analysis/
+prev: /ds/market-basket-analysis/
 next: /ds/cnn/
 last_modified_at: 2026-08-16
 ---

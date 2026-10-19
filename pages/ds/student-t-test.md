@@ -7,7 +7,7 @@ categories: [data-science]
 tags: [ds, statistics]
 ds_area: datascience
 ds_section: statistics
-prev: /ds/statistics-summary/
+prev: /ds/statistics-overview/
 next: /ds/variance-and-standard-deviation/
 last_modified_at: 2026-09-26
 ---

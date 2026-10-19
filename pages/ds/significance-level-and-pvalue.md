@@ -7,7 +7,7 @@ categories: [data-science]
 tags: [ds, statistics]
 ds_area: datascience
 ds_section: statistics
-prev: /ds/sampling-methods-comparison/
+prev: /ds/random-sampling-methods/
 next: /ds/spearman-rank-correlation/
 last_modified_at: 2026-10-04
 ---

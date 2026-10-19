@@ -1,7 +1,6 @@
 ---
 layout: page
 title: 母分散・標本分散・不偏分散の違いとは？【DS検定リテラシー】
-description: 母分散を母集団や確率分布のばらつき、標本分散を手元のデータのばらつきとして区別します。nとn−1で割る計算を数値例で比べ、不偏推定に必要な条件、最尤推定との違い、標本分散という名称やライブラリのddof設定による混同を防ぎます。
 permalink: /ds/population-sample-unbiased-variance/
 categories: [data-science]
 tags: [ds, statistics]
@@ -9,7 +8,8 @@ ds_area: datascience
 ds_section: statistics
 prev: /ds/point-interval-estimation/
 next: /ds/quartile/
-last_modified_at: 2026-10-07
+description: "母分散・標本分散・不偏分散を、記述と不偏推定の目的から区別します。2・4・6の数値例、独立同分布と標本平均の前提、nで割る推定量、NumPyのddofを整理します。"
+last_modified_at: 2026-10-19
 ---
 
 <div style="font-size: 14px; margin-bottom: 12px;">
@@ -36,6 +36,8 @@ last_modified_at: 2026-10-07
 標本平均は手元のデータに合わせて決まるため、データから標本平均までの距離は小さめになります。独立同分布の標本では、nで割った分散は母分散より**平均的に小さくなる**ので、n−1で割って補正します。
 
 「平均的に」とは、同じ方法で標本を何度も取り直した場合の話です。毎回の標本分散が必ず母分散より小さくなるわけではありません。
+
+社内アンケートで4人の満足度を集めた場合も同じです。4人のデータを記述する目的と、会社全体の母分散を推定する目的を分けます。ただし、「会社全体を推定したい」という言葉だけでは分母は決まりません。**どの性質を持つ推定量を求めるか**まで確認します。
 
 ## 定義・仕組み
 

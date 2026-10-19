@@ -7,7 +7,7 @@ categories: [business]
 tags: [ds, security, design]
 ds_area: foundation
 ds_section: security
-prev: /ds/digital-signature2/
+prev: /ds/digital-signature/
 next: /ds/hash-vs-encryption/
 last_modified_at: 2026-06-21
 ---
