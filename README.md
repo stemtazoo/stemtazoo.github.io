@@ -34,7 +34,7 @@
 | `scripts/` | データ生成、メタデータ補完、監査、移行、IndexNow 送信など |
 | `.github/workflows/` | Pages 公開、データ生成、監査、移行などの GitHub Actions |
 | `docs/agent/` / `project_rules/` | 編集・運用ルールと補助方針 |
-| `docs/audits/` | 記事・分類・Markdown の監査記録 |
+| `docs/audits/` | DS移行処理と一緒に更新する検証出力。独立した監査記録は [study-site-audit](https://github.com/stemtazoo/study-site-audit) へ移管 |
 | `artifacts/` | AI 向けコンテンツ監査などの出力（公開対象外） |
 | `_site/` | Jekyll と後処理による公開用生成物 |
 
@@ -177,3 +177,7 @@ front matter・タグ・ナビゲーションの詳細は [作業別ルール一
 SG記事で判断軸や関連記事との役割分担を強化する場合は、補助方針 [SG記事改善ルール](project_rules/sg_article_ai_search_improvement.md) を必要に応じて参照します。
 
 編集の共通判断は [編集方針](docs/agent/editorial-rules.md)、description は [共通メタデータ方針](docs/agent/metadata-rules.md)、作業別の参照先は [ルール一覧](docs/agent/README.md) を正本とします。ルール更新後は [回帰確認](docs/agent/instruction-regression.md) を実施してください。
+
+## 横断監査
+
+記事全体の重複監査・監査履歴・独立したFE/DS監査の実行は [study-site-audit](https://github.com/stemtazoo/study-site-audit) で管理します。ブログ側のFE候補抽出・DS平坦Markdown専用Actionsは移管済みです。監査側の **Study site candidate audit** を手動起動し、`main`・コミットSHA・`refs/pull/番号/head` を対象に指定できます。ブログのPRごとの自動起動は行いません。Pagesビルドと記事作成ルール・移行処理内の検証はこのリポジトリに残ります。
