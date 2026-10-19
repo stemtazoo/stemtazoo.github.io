@@ -1,4 +1,4 @@
-﻿---
+---
 layout: page
 title: LeNetとは？【G検定対策】
 description: "LeNetについて、畳み込み層・サブサンプリング層・全結合層からなる基本構造、局所受容野と重み共有、教師あり学習と誤差逆伝播の役割を整理します。ネオコグニトロンやAlexNetとの違いも比較し、G検定でCNNの発展史を見分けます。"
@@ -6,7 +6,7 @@ permalink: /gk/lenet/
 tags: [gk, neural_network, cnn]
 gk_section: ディープラーニングの応用例/画像認識/ネオコグニトロンとLeNet
 gk_order: 2
-last_modified_at: 2026-07-18
+last_modified_at: 2026-10-19
 ---
 
 ## まず結論
@@ -37,6 +37,8 @@ LeNetは、画像全体を一度に覚えるのではなく、
 LeNet-5は、主に次の層を組み合わせた構造です。
 
 ### 畳み込み層
+
+フィルタを掛けて足し、特徴マップを作る計算は、[畳み込みの基本](/gk/convolution/)で確認できます。
 
 画像の小さな領域を見て、線や角などの局所的な特徴を抽出します。
 

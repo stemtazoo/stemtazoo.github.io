@@ -6,7 +6,7 @@ permalink: /gk/word2vec-vs-bert/
 tags: [gk, nlp, transformer]
 gk_section: ディープラーニングの応用例/自然言語処理/分散表現
 gk_order: 8
-last_modified_at: 2026-08-26
+last_modified_at: 2026-10-19
 ---
 
 ## まず結論
@@ -26,12 +26,12 @@ G検定では、
 
 ## 直感的な説明
 
-たとえば「はし」という語を考えます。
+英単語「bank」は、「銀行」と「川岸」の両方を意味します。
 
-- 箸でご飯を食べる
-- 橋を渡る
+- I went to the bank to deposit money.（預金するために銀行へ行った）
+- We sat on the river bank.（川岸に座った）
 
-表記やトークン化のされ方は実装によりますが、ポイントは**周囲の文脈によって意味が変わる語をどう表すか**です。
+同じ語形でも、周囲の語によって意味が変わります。
 
 Word2Vecでは、ある単語に対して学習後は基本的に1つの静的ベクトルを使います。
 
@@ -64,6 +64,15 @@ BERTでは、文全体の文脈を利用して、その位置の表現を変化�
 
 そのため、文脈による語義の違いを扱いやすいのが特徴です。
 
+### 静的Embeddingと文脈依存Embeddingの位置付け
+
+| 表現 | 代表例 | 同じ単語の扱い |
+| --- | --- | --- |
+| 静的Embedding | Word2Vec、GloVe | 学習後は基本的に固定ベクトルを使う |
+| 文脈依存Embedding | ELMo、BERT | 入力文脈に応じた表現を作る |
+
+ELMoは双方向LSTMを使う文脈依存表現、BERTはTransformer Encoderを使う文脈依存表現です。**文脈依存なら必ずTransformer、とは限りません。** Word2Vec以外の静的表現は[Word2Vec・fastText・GloVeの比較](/gk/word2vec-fasttext-glove/)で確認できます。
+
 ## いつ使う？（得意・不得意）
 
 ### Word2Vecが向く場面
@@ -85,7 +94,7 @@ BERTでは、文全体の文脈を利用して、その位置の表現を変化�
 
 ### Word2Vecは文脈を使わない
 
-誤りとは言い切れません。
+「学習時にも周辺語を使わない」という意味なら誤りです。
 
 学習時には周辺語を使います。試験では、**最終的な表現が静的か文脈依存か**で判断する方が安全です。
 
@@ -115,5 +124,14 @@ BERTは代表的には文脈理解・分類・抽出などで使われ、自己�
 - Word2Vecも学習時には周辺語を使う
 - 同じ単語を文脈ごとに表現し分けるのはBERT側
 - **固定か、文脈で変わるか**で切る
+
+## 参考資料（原論文）
+
+- [Efficient Estimation of Word Representations in Vector Space｜arXiv](https://arxiv.org/abs/1301.3781)
+  - 周囲と中心語の予測から単語表現を学ぶWord2Vecの基本構造を確認できます。
+- [Deep contextualized word representations｜arXiv](https://arxiv.org/abs/1802.05365)
+  - 双方向言語モデルを使い、文脈に応じた表現を作るELMoの原論文です。
+- [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding｜arXiv](https://arxiv.org/abs/1810.04805)
+  - 前後の文脈を使うTransformerによる表現学習を確認できます。
 
 {% include gk_article_footer.html %}

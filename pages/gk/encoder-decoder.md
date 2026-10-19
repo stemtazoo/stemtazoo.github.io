@@ -1,143 +1,20 @@
-﻿---
-layout: page
-title: エンコーダ・デコーダ（Encoder-Decoder）
-description: "エンコーダ・デコーダ（Encoder-Decoder）について、G検定で問われるAI・機械学習分野の観点から、基本的な意味、代表モデル・手法との関係、試験で問われやすい判断軸を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
+---
+layout: null
 permalink: /gk/encoder-decoder/
-tags: [gk, neural_network, rnn]
-gk_section: ディープラーニングの要素技術/リカレントニューラルネットワーク (RNN)
-gk_order: 6
-last_modified_at: 2026-09-26
+sitemap: false
+last_modified_at: 2026-10-19
 ---
-
-## まず結論
-
-**エンコーダ・デコーダは「入力と出力がどちらも系列（シーケンス）」の問題に最も適した構造です。**
-
-G検定では、
-👉 **「シーケンス → シーケンス（seq2seq）」かどうか**
-を見抜けるかが最大のポイントになります。
-
----
-
-## 直感的な説明
-
-エンコーダ・デコーダは、
-
-* 文章をいったん「意味のかたまり」に変換し
-* その意味をもとに別の文章を生成する
-
-という仕組みです。
-
-👉 **入力の長さと出力の長さが違ってもOK**
-
-これが最大の特徴です。
-
----
-
-## 定義・仕組み
-
-### エンコーダ（Encoder）
-
-* 入力系列（文・音声など）を受け取る
-* 系列全体の情報を内部表現（文脈ベクトル）にまとめる
-
----
-
-### デコーダ（Decoder）
-
-* エンコーダの内部表現をもとに
-* 出力系列を 1 ステップずつ生成する
-
----
-
-### RNN Encoder-Decoder
-
-* RNN（LSTM / GRU）がよく使われる
-* **自然言語処理での基本構造**
-
-👉 後に Attention / Transformer へ発展
-
----
-
-## いつ使う？（得意・不得意）
-
-### 得意なタスク
-
-* **機械翻訳**（最重要）
-* 文章要約
-* 音声認識（音声 → 文字）
-* 対話生成
-
-👉 **入力も出力も系列**
-
----
-
-### 不得意・向いていないタスク
-
-* 単純な数値予測（気温・株価）
-* 物体検出
-* 姿勢推定
-
-👉 **系列 → 単一値** なら Encoder-Decoder は不要
-
----
-
-## G検定ひっかけポイント
-
-### ① 時系列予測と混同させる
-
-* 気温・株価予測：RNNは使える
-* しかし **Encoder-Decoder 構造は必須ではない**
-
-👉 単一系列の予測は seq2seq ではない
-
----
-
-### ② 画像系タスクを混ぜる
-
-* 物体検出・姿勢推定 → CNN 系
-* Encoder-Decoder（RNN）は不適切
-
----
-
-### ③ 「翻訳」が出たら即答
-
-* 機械翻訳
-* 言語変換
-
-👉 **Encoder-Decoder 一択**
-
----
-
-## Transformer・Attention との関係
-
-* Encoder-Decoder は構造の考え方
-* Attention は情報の取り出し方
-* Transformer は
-
-  * Encoder-Decoder
-  * * Attention
-  * * RNNなし
-
-👉 **系譜を押さえると混乱しない**
-
----
-
-## まとめ（試験直前用）
-
-* Encoder-Decoder = **系列 → 系列**
-* 代表例：**機械翻訳**
-* 単純な時系列予測では不要
-
-👉 迷ったら
-
-> **入力も出力も文章？ → Encoder-Decoder**
-
-## 参考資料（原論文）
-
-- [Learning Phrase Representations using RNN Encoder–Decoder for Statistical Machine Translation｜ACL Anthology](https://aclanthology.org/D14-1179/)
-  - Choら（EMNLP 2014）。Encoderで入力系列を表現へ変換し、Decoderで出力系列を生成するRNN Encoder-Decoderを提案しています。
-- [Sequence to Sequence Learning with Neural Networks｜NeurIPS](https://proceedings.neurips.cc/paper_files/paper/2014/hash/5a18e133cbf9f257297f410bb7eca942-Abstract.html)
-  - Sutskever・Vinyals・Le（2014）。LSTMを用いたEncoder-Decoder型のSeq2Seq学習を示した代表的な原論文です。
-
-{% include gk_article_footer.html %}
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,follow">
+  <meta http-equiv="refresh" content="0; url=/gk/rnn-encoder-decoder/">
+  <link rel="canonical" href="https://stemtazoo.github.io/gk/rnn-encoder-decoder/">
+  <title>統合先の記事へ移動します</title>
+</head>
+<body>
+  <p>この記事は統合しました。<a href="/gk/rnn-encoder-decoder/">RNN Encoder-Decoder（Seq2Seq）とは？固定長ベクトルとAttention【G検定】</a>をご覧ください。</p>
+</body>
+</html>

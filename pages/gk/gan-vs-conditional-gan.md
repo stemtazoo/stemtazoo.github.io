@@ -1,107 +1,20 @@
-﻿---
-layout: page
-title: GANとConditional GANの違いとは？【1ページ比較・G検定対策】
-description: "GANとConditional GANの違いについて、G検定で問われる生成モデル分野の観点から、目的、前提、モデル構造、入力と出力、評価観点のどこが異なるかを比較します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
-permalink: /gk/gan-vs-conditional-gan/
-tags: [gk, neural_network, cheatsheet]
-gk_section: ディープラーニングの応用例/データ生成/GAN・派生モデル
-gk_order: 8
-last_modified_at: 2026-09-26
 ---
-
-## まず結論
-
-通常のGANは**条件なしでランダム生成**を行うのに対し、Conditional GANは**条件を与えて生成結果を制御できるGAN**で、G検定ではこの違いを使って選択肢を切ることが最重要。
-
-## 直感的な説明
-
-通常のGANは、
-
-> 開けるまで中身が分からないガチャ
-
-のようなものです。
-
-一方、Conditional GANは、
-
-> 「犬を出して」「数字の3を出して」
-
-と**注文できるガチャ**です。
-
-つまり、
-
-* GAN：何が出るか分からない
-* Conditional GAN：何を出すか指定できる
-
-という違いがあります。
-
-## 定義・仕組み
-
-### 通常のGAN（Generative Adversarial Network）
-
-* 入力：ランダムノイズのみ
-* 出力：ランダムな生成データ
-* 条件情報：なし
-
-### Conditional GAN（条件付きGAN）
-
-* 入力：ランダムノイズ + 条件
-* 出力：条件に沿った生成データ
-* 条件情報：クラスラベル・属性・画像など
-
-Discriminatorも同様に、
-
-* データ + 条件
-
-を使って真偽判定を行います。
-
-## いつ使う？（得意・不得意）
-
-### 通常のGANが向く場面
-
-* 完全に自由なデータ生成
-* 条件を指定する必要がない場合
-
-### Conditional GANが向く場面
-
-* 生成結果を制御したい場合
-* クラス別・属性別に生成したい場合
-* 入力に応じた出力が必要な場合（Pix2Pixなど）
-
-## G検定ひっかけポイント
-
-G検定では、**「GAN＝全部同じ」だと思わせる選択肢**が出ます。
-
-### よくあるひっかけ
-
-* Conditional GANを独立したモデル名だと誤解
-* Pix2Pixと通常GANを同列に並べる
-
-### 判断基準（ここで切る）
-
-* **条件がある？** → Conditional GAN
-* **条件がない？** → 通常のGAN
-* **入力画像が条件？** → Pix2Pix（Conditional GAN）
-* **ペアなし画像変換？** → CycleGAN
-
-選択肢で
-
-> 「条件情報を用いて生成を制御する」
-
-とあれば、Conditional GAN側です。
-
-## まとめ（試験直前用）
-
-* 通常のGANは条件なし生成
-* Conditional GANは条件付き生成
-* 条件はラベル・属性・画像など
-* Pix2PixはConditional GANの一種
-* G検定では「条件の有無」で即判断
-
-## 参考資料（原論文）
-
-- [Generative Adversarial Nets｜NeurIPS](https://proceedings.neurips.cc/paper/2014/hash/f033ed80deb0234979a61f95710dbe25-Abstract.html)
-  - Goodfellowら（2014）によるGANの原論文です。
-- [Conditional Generative Adversarial Nets｜arXiv](https://arxiv.org/abs/1411.1784)
-  - Mirza・Osindero（2014）によるConditional GANの原論文です。条件情報をGeneratorとDiscriminatorへ入力する点が通常のGANとの違いです。
-
-{% include gk_article_footer.html %}
+layout: null
+permalink: /gk/gan-vs-conditional-gan/
+sitemap: false
+last_modified_at: 2026-10-19
+---
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,follow">
+  <meta http-equiv="refresh" content="0; url=/gk/conditional-gan/">
+  <link rel="canonical" href="https://stemtazoo.github.io/gk/conditional-gan/">
+  <title>統合先の記事へ移動します</title>
+</head>
+<body>
+  <p>この記事は統合しました。<a href="/gk/conditional-gan/">Conditional GAN（条件付きGAN）とは？Pix2Pixとの関係【G検定対策】</a>をご覧ください。</p>
+</body>
+</html>
