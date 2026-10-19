@@ -20,7 +20,7 @@ The front-matter guides refer to [shared metadata writing](metadata-rules.md). S
 | Task trigger | Also read |
 | --- | --- |
 | FE example-driven article consideration | FE article guides and editorial rules above; search all four themes before choosing new/update/no change. If approved for writing, preserve standalone examples and title independence. |
-| FE existing-content audit, overlap, freshness, syllabus, or gap review | [FE audit](fe-audit-rules.md); [source rules](primary-source-audit-rules.md) when sources/freshness are involved |
+| FE existing-content audit, overlap, freshness, syllabus, or gap review (owned by [study-site-audit](https://github.com/stemtazoo/study-site-audit)) | [FE audit](fe-audit-rules.md); [source rules](primary-source-audit-rules.md) when sources/freshness are involved |
 | Read-only full FE audit | [full-audit prompt](fe-full-audit-prompt.md) together with the FE audit route; do not repair articles during the report task |
 | SG series/summary creation or learning-sequence/navigation changes | [series summaries](sg-series-summary-rules.md), [SG navigation](sg-navigation-rules.md) (canonical authorization boundary) |
 | SG early judgment/role blocks | [SG improvement guide](../../project_rules/sg_article_ai_search_improvement.md); do not add blocks mechanically |
@@ -49,3 +49,7 @@ The front-matter guides refer to [shared metadata writing](metadata-rules.md). S
 | Instruction regression scenarios and limits | [instruction regression](instruction-regression.md) |
 
 Other files may link to or briefly summarize a rule. Do not maintain another complete procedure there. If two guides conflict, correct their ownership/definitions; do not resolve drift by adding more exceptions.
+
+## Audit ownership
+
+Cross-article audit procedures, historical reports, and decision ledgers live in [study-site-audit](https://github.com/stemtazoo/study-site-audit). Local FE audit guide files are routing stubs only. Source-selection rules, editorial new-article decisions, article templates, build checks, and validation coupled to site migrations remain here. See [migration inventory](https://github.com/stemtazoo/study-site-audit/blob/main/projects/stemtazoo/migration-2026-10-19.md).

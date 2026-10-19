@@ -24,7 +24,7 @@ When making changes, use this order of priority:
 ## Repository-wide MUSTs
 
 - Before new articles or meaningful content edits, read `docs/agent/editorial-rules.md` and the theme's content, template, front-matter, and tag guides listed in `docs/agent/README.md`.
-- Search all four themes before creating an article. Give each page a clear learning purpose; do not create near-duplicates or merge useful pages merely for sharing terms or having low traffic.
+- Search all four themes before creating an article. Give each page a clear learning purpose; do not create near-duplicates or merge useful pages merely for sharing terms or having low traffic. Cross-article audit procedures and decision history are maintained in [study-site-audit](https://github.com/stemtazoo/study-site-audit). Consult relevant existing decisions, verify their source versions, and continue repository search when records are missing or stale.
 - Preserve the existing Japanese tone, heading conventions, beginner readability, exam judgment criteria, and confusion prevention. Treat examples and screenshots as input for a standalone explanation, not as unseen prerequisites.
 - Current official rules are authoritative for current claims. Use `docs/agent/primary-source-audit-rules.md` for source selection, freshness, original-paper decisions, and supersession checks; distinguish historical exam assumptions from current rules.
 - Do not add sources, headings, learning-path blocks, or interactive aids mechanically. Preserve reader usefulness and originality over search or monetization optimization.

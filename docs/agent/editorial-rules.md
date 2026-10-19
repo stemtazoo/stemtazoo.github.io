@@ -28,6 +28,8 @@ Do not optimize only one page in isolation when the change affects site structur
 
 ## New Article Decision Workflow
 
+Consult relevant decisions in [study-site-audit](https://github.com/stemtazoo/study-site-audit) before creating a page. Check the recorded source commit and article hashes; old decisions supplement, rather than replace, the current four-theme search and learning-purpose comparison. If the audit repository is unavailable or no decision exists, continue these checks in the site repository. Record the compared pages, their distinct learning purposes, and the new/update/no-change reason.
+
 Before creating a new article, agents must check for similar existing content under:
 
 - `pages/sg`
