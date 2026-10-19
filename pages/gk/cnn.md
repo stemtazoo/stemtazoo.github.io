@@ -6,12 +6,14 @@ permalink: /gk/cnn/
 tags: [gk, neural_network, cnn]
 gk_section: ディープラーニングの要素技術/ネットワークの構成要素
 gk_order: 1
-last_modified_at: 2026-09-26
+last_modified_at: 2026-10-19
 ---
 
 ## まず結論
 
 **CNN（Convolutional Neural Network）**は、畳み込みによって**局所的なパターンを抽出し、同じフィルタを空間上で共有するニューラルネットワーク**です。
+
+ここでは**CNNを特徴付ける局所受容野と重み共有**を理解します。構成要素や計算の確認先を選びたい場合は[CNN学習マップ](/gk/cnn-cheatsheet/)へ進めます。
 
 G検定では、
 

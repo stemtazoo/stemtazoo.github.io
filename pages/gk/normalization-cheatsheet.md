@@ -6,12 +6,14 @@ permalink: /gk/normalization-cheatsheet/
 tags: [gk, neural_network, cnn, cheatsheet]
 gk_section: ディープラーニングの要素技術/ネットワークの構成要素
 gk_order: 10
-last_modified_at: 2026-09-26
+last_modified_at: 2026-10-19
 ---
 
 ## まず結論
 
 Batch Normalization（BN）・Layer Normalization（LN）・Instance Normalization（IN）の違いは、**平均・分散をどの単位で計算するか**です。
+
+このページは、**どの軸をまとめるかを横並びに選ぶための一覧**です。INを実際に計算する例は[画像2枚・2チャネルの集計例](/gk/instance-normalization/)で確認できます。
 
 G検定では、次の3点で切り分けます。
 
@@ -34,8 +36,10 @@ G検定では、次の3点で切り分けます。
 | 手法 | 統計量を取る主な単位 | バッチサイズ依存 | よく使われる場面 |
 |---|---|---|---|
 | Batch Normalization | バッチ内の複数サンプルを含む単位 | あり | CNNなど |
-| Layer Normalization | 各サンプル内の特徴 | なし | Transformerなど |
+| Layer Normalization | 各サンプル内で指定した特徴軸 | なし | Transformerなど |
 | Instance Normalization | 各サンプル・各チャネルの空間方向 | なし | スタイル変換など |
+
+画像テンソルを `N（サンプル）×C（チャネル）×H（高さ）×W（幅）` とすると、CNNのBNは通常N・H・W方向、INはH・W方向の統計量を使います。LNの対象軸は設定によって異なり、Transformerでは各トークンの特徴方向を正規化するのが代表例です。
 
 ### Batch Normalization
 
