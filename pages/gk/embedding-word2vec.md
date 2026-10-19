@@ -1,134 +1,20 @@
-﻿---
-layout: page
-title: Embedding / Word2Vec
-description: "Embedding / Word2Vecについて、G検定で問われる自然言語処理・系列データ分野の観点から、系列データを扱う仕組み、学習目的、代表モデルとの関係を整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
+---
+layout: null
 permalink: /gk/embedding-word2vec/
-tags: [gk, neural_network, nlp, embedding]
-gk_section: ディープラーニングの応用例/自然言語処理/分散表現
-gk_order: 3
-last_modified_at: 2026-09-26
+sitemap: false
+last_modified_at: 2026-10-19
 ---
-
-## まず結論
-
-* **Embeddingは単語やカテゴリをベクトルで表現する方法**
-* **Word2Vecは代表的な単語Embedding手法**
-* 意味の近さを **数値（ベクトル距離）で扱える** ようになる
-
----
-
-## 直感的な説明
-
-Embeddingは、
-
-> 「単語を意味の地図の中の点として配置する」
-
-イメージです。
-
-* 意味が近い単語は近くに
-* 関係が薄い単語は遠くに
-
-配置されるため、
-**意味的な関係を計算で扱える** ようになります。
-
----
-
-## 定義・仕組み
-
-### Embeddingとは
-
-* 離散的なID（単語番号など）を
-* **連続値ベクトル** に変換
-
-する処理です。
-
-One-Hot表現と違い、
-
-* 次元が低い
-* 意味情報を持つ
-
-という特徴があります。
-
----
-
-### Word2Vec
-
-Word2Vecは、
-
-> 「周囲の単語から、その単語の意味を学習する」
-
-方法です。
-
-代表的な2つの学習方式があります。
-
----
-
-#### CBOW（Continuous Bag of Words）
-
-* 周囲の単語 → 中心単語を予測
-
-**特徴**
-
-* 学習が速い
-* 全体的な意味を捉えやすい
-
----
-
-#### Skip-gram
-
-* 中心単語 → 周囲の単語を予測
-
-**特徴**
-
-* 低頻度語に強い
-* 精度が高い傾向
-
----
-
-### 分散表現の特徴
-
-* 「王 − 男 + 女 ≒ 女王」のような
-  **意味演算** が可能
-
----
-
-## いつ使う？（得意・不得意）
-
-### 得意なこと
-
-* 自然言語処理の前処理
-* TransformerやRNNへの入力
-* 類似語検索
-
-### 注意点
-
-* 文脈を考慮しない（Word2Vec）
-* 同じ単語は常に同じベクトル
-
-> 文脈を考慮するのが BERT などのモデルです。
-
----
-
-## G検定ひっかけポイント
-
-* ❌「EmbeddingはOne-Hot表現と同じ」→ **誤り**
-* ❌「Word2Vecは教師あり学習」→ **誤り**
-* ✅ Word2Vecは **自己教師あり学習**
-* ✅ Skip-gramは低頻度語に強い
-
----
-
-## まとめ（試験直前用）
-
-* Embeddingは **意味を持つベクトル表現**
-* Word2Vecは代表的手法
-* CBOWとSkip-gramの違いを押さえる
-
-👉 これで **NLP系トピックは完成** です。
-
-## 参考資料（原論文）
-
-- [Efficient Estimation of Word Representations in Vector Space｜arXiv](https://arxiv.org/abs/1301.3781)
-  - Mikolovら（2013）によるWord2Vecの代表的な原論文です。CBOWとSkip-gramによって単語を低次元の連続ベクトルとして学習します。
-
-{% include gk_article_footer.html %}
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,follow">
+  <meta http-equiv="refresh" content="0; url=/gk/word2vec/">
+  <link rel="canonical" href="https://stemtazoo.github.io/gk/word2vec/">
+  <title>統合先の記事へ移動します</title>
+</head>
+<body>
+  <p>この記事は統合しました。<a href="/gk/word2vec/">Word2Vec（CBOW / Skip-gram）とは？【分散表現の基本｜G検定対策】</a>をご覧ください。</p>
+</body>
+</html>

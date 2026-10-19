@@ -6,7 +6,7 @@ permalink: /gk/supervised-unsupervised-reinforcement/
 tags: [gk, machine_learning, cheatsheet]
 gk_section: 機械学習の概要/代表的な手法/学習の種類
 gk_order: 5
-last_modified_at: 2026-08-21
+last_modified_at: 2026-10-19
 ---
 
 ## まず結論
@@ -75,6 +75,16 @@ G検定では、まず次の3語で切ります。
 代表的な手法には、Q学習、DQN、方策勾配法などがあります。
 
 詳しくは、[強化学習](/gk/reinforcement-learning/)で整理しています。
+
+### 代表手法を対応させる
+
+| 学習方式 | 代表例 |
+| --- | --- |
+| 教師あり学習 | 線形回帰、ロジスティック回帰、分類に使うSVM |
+| 教師なし学習 | k-means、PCA、GMM |
+| 強化学習 | Q学習、SARSA、DQN |
+
+これは代表的な使い方です。たとえばOne-Class SVMのような派生手法もあるため、名称だけでなく学習設定を確認します。
 
 ## いつ使う？（得意・不得意）
 

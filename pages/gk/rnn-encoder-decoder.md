@@ -6,7 +6,7 @@ permalink: /gk/rnn-encoder-decoder/
 tags: [gk, rnn, nlp]
 gk_section: ディープラーニングの要素技術/リカレントニューラルネットワーク (RNN)
 gk_order: 7
-last_modified_at: 2026-09-23
+last_modified_at: 2026-10-19
 ---
 
 ## まず結論
@@ -19,6 +19,8 @@ last_modified_at: 2026-09-23
 という2つの系列モデルを組み合わせる構造です。
 
 初期のSeq2Seqでは、入力系列を**固定次元のベクトル**へまとめてDecoderへ渡しました。
+
+Encoder-Decoderは、入力を表現へ変換する側と、その表現から出力を作る側を組み合わせる構造の総称です。この記事では、そのうち**RNNで系列を別の系列へ変換する構造**を扱います。Encoder-Decoder一般がRNNやSeq2Seqだけを意味するわけではありません。
 
 ## 直感的な説明
 
@@ -41,6 +43,8 @@ last_modified_at: 2026-09-23
 Encoderの表現を条件として、出力系列を1ステップずつ生成します。
 
 初期のRNN Encoder-Decoderでは、入力を**1つの固定長ベクトルへ圧縮**することがボトルネックになりました。
+
+EncoderやDecoderのRNNには、[LSTM](/gk/lstm/)や[GRU](/gk/gru/)が使われます。入力系列と出力系列は、同じ長さである必要はありません。
 
 ### Attentionへの発展
 
@@ -73,9 +77,15 @@ Attention付きEncoder-Decoderでは、Decoderが出力の各時刻で**Encoder�
 ❌ RNN Encoder-Decoderの別名  
 ⭕ **Transformerも系列変換に使えるが、再帰を使わない別アーキテクチャ**
 
+### Encoder-Decoderは画像には使わない？
+
+誤りです。たとえば[U-Net](/gk/u-net/)にもEncoderとDecoderがあります。画像の構造と、この記事で扱うRNNの系列変換を分けて考えます。
+
+時系列データを使うだけでSeq2Seqと決まるわけでもありません。過去のデータから1つの値を予測する場合と、出力系列を生成する場合では目的が異なります。翻訳という用途名だけで、必ずRNNを使うとも判断しません。
+
 ### Teacher Forcing
 
-学習時に正解トークンを次のDecoder入力へ使う方法で、Seq2Seqの構造そのものとは別概念です。
+学習時に正解トークンを次のDecoder入力へ使う[Teacher Forcing](/gk/teacher-forcing/)は、Seq2Seqの構造そのものとは別概念です。
 
 ## まとめ（試験直前用）
 

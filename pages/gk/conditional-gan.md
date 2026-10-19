@@ -6,7 +6,7 @@ permalink: /gk/conditional-gan/
 tags: [gk, neural_network, cnn]
 gk_section: ディープラーニングの応用例/データ生成/GAN・派生モデル
 gk_order: 4
-last_modified_at: 2026-09-26
+last_modified_at: 2026-10-19
 ---
 
 ## まず結論
@@ -35,9 +35,21 @@ Conditional GANは、GANに**条件情報（condition）**を追加したモデ�
 
 条件には、クラスラベル、属性情報、テキスト、入力画像などが使われます。重要なのは、GeneratorだけでなくDiscriminatorにも条件を与え、**その条件に合った本物らしさ**を学習させる点です。
 
+### 通常のGANとの入力の違い
+
+| 比較軸 | 通常のGAN | Conditional GAN |
+| --- | --- | --- |
+| 生成器の入力 | ノイズ | ノイズ＋条件 |
+| 識別器の入力 | データ | データ＋条件 |
+| 生成内容の指定 | クラスや属性を直接指定しない | ラベル・属性などの条件で指定する |
+
+条件は生成器だけへの注文ではありません。識別器も条件を見て、本物のデータとの組合せに近いかを判定します。
+
 Pix2Pixでは、条件として「入力画像」を与えます。そのため、Pix2PixはConditional GANの考え方を画像変換に使った具体例として理解できます。
 
 ## いつ使う？（得意・不得意）
+
+条件を指定せずデータ分布から生成したい場合は通常のGAN、生成クラスや入力との対応を指定したい場合はConditional GANという違いで考えます。
 
 ### 得意なケース
 
@@ -55,7 +67,7 @@ Pix2Pixでは、条件として「入力画像」を与えます。そのため�
 
 | 用語 | 役割 | 見分けるキーワード |
 | --- | --- | --- |
-| GAN | 条件なしの基本的な生成モデル | Generator / Discriminator |
+| 通常のGAN | 条件なしの基本的な生成モデル | Generator / Discriminator |
 | Conditional GAN | 条件を与えて生成を制御 | ラベル、属性、条件付き生成 |
 | Pix2Pix | 入力画像を条件にした画像変換 | ペア画像、教師あり画像変換 |
 | CycleGAN | 対応ペアなしの画像変換 | ペア不要、Cycle Consistency |
@@ -74,6 +86,9 @@ Pix2Pixでは、条件として「入力画像」を与えます。そのため�
 - G検定では「条件付きか」「ペアありか」で選択肢を切る
 
 ## 参考資料（原論文）
+
+- [Generative Adversarial Nets｜NeurIPS](https://proceedings.neurips.cc/paper/2014/hash/f033ed80deb0234979a61f95710dbe25-Abstract.html)
+  - 通常のGANの生成器・識別器の構成を確認できます。条件付きGANとの入力の違いを理解するための原論文です。
 
 - [Conditional Generative Adversarial Nets｜arXiv](https://arxiv.org/abs/1411.1784)
   - Mirza・Osindero（2014）によるConditional GANの原論文です。GeneratorとDiscriminatorの双方へ条件情報を与え、条件付き生成を行う枠組みを提案しています。

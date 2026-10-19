@@ -1,152 +1,20 @@
-﻿---
-layout: page
-title: 最適化手法まとめ（SGD / Adam など）
-description: "最適化手法まとめ（SGD / Adam など）について、G検定で問われる学習・最適化分野の観点から、学習が進む仕組み、更新の考え方、過学習対策や代表手法との違いを整理します。暗記だけでなく、似た概念との混同を避ける見分け方や、選択肢を切るためのポイントも確認します。"
+---
+layout: null
 permalink: /gk/optimizers/
-tags: [gk, neural_network, optimizer]
-gk_section: ディープラーニングの概要/最適化手法
-gk_order: 0
-last_modified_at: 2026-08-26
+sitemap: false
+last_modified_at: 2026-10-19
 ---
-
-## まず結論
-
-* **最適化手法は「どうやって重みを更新するか」を決める方法**
-* 誤差逆伝播法で求めた **勾配をどう使うか** が違い
-* G検定では **特徴・違い・名前の対応関係** がよく問われる
-
----
-
-## 直感的な説明
-
-学習とは、
-
-> 「間違いを少しずつ減らす方向に、重みを動かすこと」
-
-です。
-
-最適化手法は、
-
-* 一気に動かすか
-* ゆっくり動かすか
-* 過去の動きを覚えるか
-
-といった **動かし方のルール** を決めています。
-
----
-
-## 定義・仕組み
-
-### 勾配降下法の基本
-
-すべての最適化手法の基本は、
-
-[
-w := w - \eta \frac{\partial L}{\partial w}
-]
-
-です。
-
-* (\eta)：学習率
-* 勾配の方向に逆らって重みを更新
-
----
-
-## 主な最適化手法
-
-### SGD（確率的勾配降下法）
-
-* ミニバッチごとに重みを更新
-
-**特徴**
-
-* シンプル
-* 実装が簡単
-
-**欠点**
-
-* 学習が不安定になりやすい
-* 収束が遅い場合がある
-
----
-
-### Momentum
-
-* 過去の更新方向を考慮
-
-**特徴**
-
-* 振動を抑える
-* 収束が速くなる
-
----
-
-### AdaGrad
-
-* パラメータごとに学習率を調整
-
-**特徴**
-
-* あまり更新されない重みを大きく更新
-
-**欠点**
-
-* 学習が進むと学習率が小さくなりすぎる
-
----
-
-### RMSProp
-
-* AdaGradの改良版
-
-**特徴**
-
-* 学習率が極端に小さくならない
-* 非定常な問題に強い
-
----
-
-### Adam
-
-* Momentum + RMSProp の考え方を組み合わせ
-
-**特徴**
-
-* 学習が安定
-* デフォルト設定でも性能が出やすい
-* 現在の主流
-
----
-
-## いつ使う？（得意・不得意）
-
-| 手法       | 特徴        |
-| -------- | --------- |
-| SGD      | 基本・理論理解向け |
-| Momentum | SGDの安定化   |
-| AdaGrad  | 疎な特徴量     |
-| RMSProp  | 学習率調整     |
-| Adam     | まず試す定番    |
-
----
-
-## G検定ひっかけポイント
-
-* ❌「最適化手法は誤差を計算する方法」→ **誤り**
-* ❌「Adamは勾配消失を解決する」→ **誤り**
-* ✅ 誤差逆伝播法は **勾配を計算**
-* ✅ 最適化手法は **勾配の使い方**
-* ✅ Adam = Momentum + RMSProp
-
----
-
-## まとめ（試験直前用）
-
-* 最適化手法は **重み更新ルール**
-* 基本は **SGD**
-* 実務・試験ともに **Adamが定番**
-* Backprop と役割を混同しない
-
-👉 次は **正則化・過学習対策** をまとめると理解が完成します。
-
-{% include gk_article_footer.html %}
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,follow">
+  <meta http-equiv="refresh" content="0; url=/gk/optimization-cheatsheet/">
+  <link rel="canonical" href="https://stemtazoo.github.io/gk/optimization-cheatsheet/">
+  <title>統合先の記事へ移動します</title>
+</head>
+<body>
+  <p>この記事は統合しました。<a href="/gk/optimization-cheatsheet/">最適化手法まとめ｜SGD・Momentum・AdaGrad・RMSprop・Adam【G検定】</a>をご覧ください。</p>
+</body>
+</html>
