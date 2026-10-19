@@ -7,15 +7,24 @@
 - `pages/ds/*.md` 総数: **290**
 - 特殊ページ除外: **15**
 - 通常記事母数: **275**
-- 分類済み: **274**
-- 未分類: **1**
-- 通常記事の分類進捗: **99.6%**
+- 分類済み: **265**
+- 未分類: **10**
+- 通常記事の分類進捗: **96.4%**
 
 ## 未分類の通常記事
 
 | ファイル | title |
 |---|---|
+| `analysis-approach-selection.md` |  |
 | `authentication-vs-authorization.md` |  |
+| `basket-analysis.md` |  |
+| `digital-signature2.md` |  |
+| `machine-learning-algorithms-cheatsheet.md` |  |
+| `nosql.md` |  |
+| `sample-variance-unbiased-variance.md` |  |
+| `sampling-methods-comparison.md` |  |
+| `sql-filtering.md` |  |
+| `statistics-summary.md` |  |
 
 ## 分類母数から除外した特殊ページ
 
