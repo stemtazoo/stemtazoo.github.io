@@ -6,6 +6,7 @@ on:
     paths:
       - 'pages/ds/*.md'
       - 'scripts/audit_ds_ver6_classification.py'
+      - 'tests/test_ds_classification_audit.py'
       - 'scripts/migrate_ds_ver6_reviewed_business.py'
       - 'scripts/migrate_ds_ver6_reviewed_followup.py'
       - '.github/workflows/ds-ver6-classification-audit.yml'
@@ -26,6 +27,9 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.x'
+
+      - name: Verify redirect and article classification
+        run: python -m unittest discover -s tests -p 'test_ds_classification_audit.py' -v
 
       - name: Generate audit
         run: python scripts/audit_ds_ver6_classification.py

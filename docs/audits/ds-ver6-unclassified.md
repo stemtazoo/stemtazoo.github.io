@@ -5,26 +5,16 @@
 ## 集計
 
 - `pages/ds/*.md` 総数: **290**
-- 特殊ページ除外: **15**
-- 通常記事母数: **275**
+- 特殊ページ除外: **14**
+- 転送ページ除外: **11**
+- 通常記事母数: **265**
 - 分類済み: **265**
-- 未分類: **10**
-- 通常記事の分類進捗: **96.4%**
+- 未分類: **0**
+- 通常記事の分類進捗: **100.0%**
 
 ## 未分類の通常記事
 
-| ファイル | title |
-|---|---|
-| `analysis-approach-selection.md` |  |
-| `authentication-vs-authorization.md` |  |
-| `basket-analysis.md` |  |
-| `digital-signature2.md` |  |
-| `machine-learning-algorithms-cheatsheet.md` |  |
-| `nosql.md` |  |
-| `sample-variance-unbiased-variance.md` |  |
-| `sampling-methods-comparison.md` |  |
-| `sql-filtering.md` |  |
-| `statistics-summary.md` |  |
+未分類の通常記事はありません。
 
 ## 分類母数から除外した特殊ページ
 
@@ -34,7 +24,6 @@
 | `business-skillcheck.md` | 旧『ビジネス力』スキルチェックについて｜DS検定 ver.6 |
 | `datascience-skillcheck.md` | DS検定 ver.6｜データサイエンス ★1スキルチェック |
 | `engineering-skillcheck.md` | DS検定 ver.6｜データエンジニアリング ★1スキルチェック |
-| `file-transfer-protocol.md` |  |
 | `foundation-skillcheck.md` | DS検定 ver.6｜基盤 ★1スキルチェック |
 | `index.md` | DS検定 リテラシー 学習まとめ |
 | `model-curriculum-summary.md` | "数理・データサイエンス・AIリテラシーモデルカリキュラム総まとめ【DS検定対応】" |
@@ -45,3 +34,19 @@
 | `skilllevel-2023-assistant-ds-datascience.md` | "④ Assistant Data Scientist（見習い）に求められるデータサイエンス力" |
 | `skilllevel-2023-summary.md` | "スキルレベル定義2023 総まとめ【Assistant Data Scientist（見習い）】" |
 | `value-creation-skillcheck.md` | DS検定 ver.6｜価値創造 ★1スキルチェック |
+
+## 分類母数から除外した転送ページ
+
+| ファイル |
+|---|
+| `analysis-approach-selection.md` |
+| `authentication-vs-authorization.md` |
+| `basket-analysis.md` |
+| `digital-signature2.md` |
+| `file-transfer-protocol.md` |
+| `machine-learning-algorithms-cheatsheet.md` |
+| `nosql.md` |
+| `sample-variance-unbiased-variance.md` |
+| `sampling-methods-comparison.md` |
+| `sql-filtering.md` |
+| `statistics-summary.md` |

@@ -6,6 +6,7 @@ progress is not understated by pages that should not receive a single ds_area.
 Run this script whenever reviewed mappings or exclusions change.
 """
 from pathlib import Path
+from html.parser import HTMLParser
 
 ROOT = Path(__file__).resolve().parents[1]
 DS_DIR = ROOT / "pages" / "ds"
@@ -45,16 +46,37 @@ def front_matter(path: Path) -> dict[str, str]:
     return data
 
 
+def is_redirect(path: Path, meta: dict[str, str]) -> bool:
+    """Count explicit layout:null + meta refresh pages separately from articles."""
+    if "layout" not in meta or meta["layout"].strip("\"'").lower() not in ("null", "~", ""):
+        return False
+
+    class RefreshParser(HTMLParser):
+        found = False
+
+        def handle_starttag(self, tag, attrs):
+            attrs = dict(attrs)
+            if tag == "meta" and (attrs.get("http-equiv") or "").lower() == "refresh":
+                self.found = True
+
+    parser = RefreshParser()
+    parser.feed(path.read_text(encoding="utf-8-sig"))
+    return parser.found
+
+
 def main() -> int:
     files = sorted(p for p in DS_DIR.glob("*.md") if p.is_file())
     classified = []
     unclassified = []
     excluded_present = []
+    redirects = []
 
     for path in files:
         meta = front_matter(path)
         row = (path.name, meta.get("title", ""), meta.get("ds_area", ""), meta.get("ds_section", ""))
-        if path.name in EXCLUDED:
+        if is_redirect(path, meta):
+            redirects.append(row)
+        elif path.name in EXCLUDED:
             excluded_present.append(row)
         elif meta.get("ds_area") and meta.get("ds_section"):
             classified.append(row)
@@ -73,6 +95,7 @@ def main() -> int:
         "",
         f"- `pages/ds/*.md` 総数: **{len(files)}**",
         f"- 特殊ページ除外: **{len(excluded_present)}**",
+        f"- 転送ページ除外: **{len(redirects)}**",
         f"- 通常記事母数: **{ordinary_total}**",
         f"- 分類済み: **{len(classified)}**",
         f"- 未分類: **{len(unclassified)}**",
@@ -93,14 +116,19 @@ def main() -> int:
     for name, title, _, _ in excluded_present:
         lines.append(f"| `{name}` | {title} |")
 
-    missing_exclusions = sorted(EXCLUDED - {row[0] for row in excluded_present})
+    lines.extend(["", "## 分類母数から除外した転送ページ", "", "| ファイル |", "|---|"])
+    lines.extend(f"| `{row[0]}` |" for row in redirects)
+    if not redirects:
+        lines.append("転送ページはありません。")
+
+    missing_exclusions = sorted(EXCLUDED - {path.name for path in files})
     if missing_exclusions:
         lines.extend(["", "## 除外リストにあるが現在存在しないページ", ""])
         lines.extend(f"- `{name}`" for name in missing_exclusions)
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text("\n".join(lines) + "\n", encoding="utf-8")
-    print(f"total={len(files)} excluded={len(excluded_present)} ordinary={ordinary_total} classified={len(classified)} unclassified={len(unclassified)} progress={progress:.1f}%")
+    print(f"total={len(files)} excluded={len(excluded_present)} redirects={len(redirects)} ordinary={ordinary_total} classified={len(classified)} unclassified={len(unclassified)} progress={progress:.1f}%")
     return 0
 
 
