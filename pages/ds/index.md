@@ -682,9 +682,11 @@ ver.6 の分類済み記事は、旧タグに関係なく表示済みとして�
 <ul>
 {% for p in site.pages %}
   {% if p.url contains "/ds/" and p.url != "/ds/" and p.path contains "pages/ds/" %}
-    {% unless shown_urls contains p.url %}
-      <li><a href="{{ p.url }}">{{ p.title }}</a></li>
-    {% endunless %}
+    {% if p.layout %}
+      {% unless shown_urls contains p.url %}
+        <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+      {% endunless %}
+    {% endif %}
   {% endif %}
 {% endfor %}
 </ul>
