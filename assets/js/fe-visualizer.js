@@ -1092,6 +1092,12 @@ document.addEventListener("DOMContentLoaded", () => {
         cell.classList.toggle("is-mid", index === entry.mid);
         cell.classList.toggle("is-found", Boolean(entry.found) && index === entry.mid);
         cell.classList.toggle("is-discarded", index < entry.low || index > entry.high);
+        const marker = cell.querySelector("[data-loop-mark]");
+        if (marker) {
+          marker.textContent = index === entry.mid
+            ? (entry.found ? "見つかった" : "比較した位置")
+            : (index === 2 ? "target" : (index < entry.low ? "除外済み" : "候補"));
+        }
       });
       buttons.forEach((button) => {
         button.setAttribute("aria-pressed", String(button.dataset.loopMode === mode));
