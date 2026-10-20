@@ -958,3 +958,25 @@
   .fe-linked-demo__node { padding: 0.45rem 0.15rem; }
   .fe-linked-demo__node span { font-size: 0.68rem; }
 }
+
+
+/* FE Subject B: compare a stalled binary search with its corrected bound update. */
+.fe-loop-demo__modes{display:flex;flex-wrap:wrap;gap:.5rem;margin:.8rem 0}
+.fe-loop-demo__array{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem;margin:1rem 0}
+.fe-loop-demo__cell{border:1px solid #a8bac7;border-radius:9px;padding:.8rem .5rem;text-align:center;min-width:0;transition:opacity .15s ease,background-color .15s ease}
+.fe-loop-demo__cell span,.fe-loop-demo__cell strong,.fe-loop-demo__cell small{display:block}
+.fe-loop-demo__cell span{font-size:.85rem}
+.fe-loop-demo__cell strong{font-size:1.4rem;font-variant-numeric:tabular-nums}
+.fe-loop-demo__cell small{font-size:.78rem}
+.fe-loop-demo__cell.is-mid{background:rgba(11,111,174,.1);border-color:#477999}
+.fe-loop-demo__cell.is-found{background:rgba(65,126,91,.15);border-color:#417e5b}
+.fe-loop-demo__cell.is-discarded{opacity:.46}
+.fe-loop-demo__values{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.45rem;margin:1rem 0}
+.fe-loop-demo__values span{background:rgba(11,111,174,.06);border-radius:7px;padding:.6rem;font-size:.9rem}
+.fe-loop-demo__values strong{font-variant-numeric:tabular-nums}
+.fe-loop-demo__update{font-weight:600;margin:.75rem 0}
+.fe-loop-demo__status{background:rgba(11,111,174,.06);border-radius:8px;padding:.75rem;min-height:3.2em;margin:.75rem 0}
+.fe-loop-demo__status.is-warning{background:rgba(150,91,49,.13)}
+.fe-loop-demo__status.is-found{background:rgba(65,126,91,.13)}
+.fe-loop-demo .fe-learning-demo__button{min-height:44px}
+@media(max-width:400px){.fe-loop-demo__values span{font-size:.82rem;padding:.5rem}.fe-loop-demo__cell{padding:.65rem .3rem}}

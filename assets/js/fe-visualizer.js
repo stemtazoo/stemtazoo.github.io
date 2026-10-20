@@ -1046,3 +1046,79 @@ document.addEventListener("DOMContentLoaded", () => {
     render("prev は A を指しています。まず移動を押してみましょう。");
   });
 });
+
+
+// FE Subject B: compare non-progressing and corrected binary-search bounds.
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("[data-fe-loop-demo]").forEach((demo) => {
+    const buttons = Array.from(demo.querySelectorAll("[data-loop-mode]"));
+    const cells = Array.from(demo.querySelectorAll("[data-loop-cell]"));
+    const lowLabel = demo.querySelector("[data-loop-low]");
+    const highLabel = demo.querySelector("[data-loop-high]");
+    const middleLabel = demo.querySelector("[data-loop-middle]");
+    const countLabel = demo.querySelector("[data-loop-count]");
+    const update = demo.querySelector("[data-loop-update]");
+    const status = demo.querySelector("[data-loop-status]");
+    const nextButton = demo.querySelector("[data-loop-next]");
+    const resetButton = demo.querySelector("[data-loop-reset]");
+
+    const steps = {
+      bug: [
+        { low: 1, high: 2, mid: null, note: "まだ比較していません。", change: "まず探索範囲の中央を確認します。" },
+        { low: 1, high: 2, mid: 1, note: "data[1] = 3 は target = 8 より小さい。low ← middle でも low は1のままです。", change: "1回目：low ← middle = 1（変化なし）" },
+        { low: 1, high: 2, mid: 1, repeat: true, note: "2回目も low=1・high=2・middle=1。終了条件は真のままで、同じ処理が続きます。", change: "2回目：low ← middle = 1（変化なし）" }
+      ],
+      fixed: [
+        { low: 1, high: 2, mid: null, note: "まだ比較していません。", change: "まず探索範囲の中央を確認します。" },
+        { low: 2, high: 2, mid: 1, note: "data[1] = 3 は target = 8 より小さい。中央を除外して low を2に更新します。", change: "1回目：low ← middle + 1 = 2" },
+        { low: 2, high: 2, mid: 2, found: true, note: "data[2] = 8 が target と一致。要素番号2を返して終了します。", change: "2回目：return 2（探索終了）" }
+      ]
+    };
+    let mode = "bug";
+    let current = 0;
+
+    function render() {
+      const entry = steps[mode][current];
+      lowLabel.textContent = String(entry.low);
+      highLabel.textContent = String(entry.high);
+      middleLabel.textContent = entry.mid === null ? "―" : String(entry.mid);
+      countLabel.textContent = current + "回";
+      update.textContent = entry.change;
+      status.textContent = entry.note;
+      status.classList.toggle("is-warning", Boolean(entry.repeat));
+      status.classList.toggle("is-found", Boolean(entry.found));
+      cells.forEach((cell) => {
+        const index = Number(cell.dataset.loopCell);
+        cell.classList.toggle("is-mid", index === entry.mid);
+        cell.classList.toggle("is-found", Boolean(entry.found) && index === entry.mid);
+        cell.classList.toggle("is-discarded", index < entry.low || index > entry.high);
+        const marker = cell.querySelector("[data-loop-mark]");
+        if (marker) {
+          marker.textContent = index === entry.mid
+            ? (entry.found ? "見つかった" : "比較した位置")
+            : (index === 2 ? "target" : (index < entry.low ? "除外済み" : "候補"));
+        }
+      });
+      buttons.forEach((button) => {
+        button.setAttribute("aria-pressed", String(button.dataset.loopMode === mode));
+      });
+      nextButton.disabled = current === steps[mode].length - 1;
+      nextButton.textContent = entry.repeat ? "同じ状態の再発を確認" : entry.found ? "探索終了" : "次の比較 →";
+    }
+
+    buttons.forEach((button) => button.addEventListener("click", () => {
+      mode = button.dataset.loopMode;
+      current = 0;
+      render();
+    }));
+    nextButton.addEventListener("click", () => {
+      current = Math.min(current + 1, steps[mode].length - 1);
+      render();
+    });
+    resetButton.addEventListener("click", () => {
+      current = 0;
+      render();
+    });
+    render();
+  });
+});
