@@ -6,7 +6,7 @@ permalink: /sg/physical-security-summary/
 prev: /sg/ups/
 next: /sg/physical-security/
 tags: [sg, sg-security-measures, risk_assessment, it_security_operations]
-last_modified_at: 2026-07-27
+last_modified_at: 2026-10-20
 ---
 
 ## まず結論
@@ -45,7 +45,7 @@ SG試験では、似た用語の「役割の違い」を見抜けるかが問わ
 | カード使い回し防止 | [アンチパスバックとは？不正な入退室を防ぐ仕組み](/sg/anti-passback/) | 入室記録と退室記録の整合を取るか |
 | 機器盗難防止 | [セキュリティワイヤとは？機器盗難を防ぐ基本対策](/sg/security-wire/) | PCなどを物理的に固定するか |
 | 抑止・証跡 | [監視カメラとは？抑止と証跡の役割を整理](/sg/surveillance-camera/) | 防止ではなく記録・確認が中心か |
-| 情報漏えい防止の運用 | [クリアデスク・クリアスクリーンとは？情報漏えい防止の基本ルール](/sg/clear-desk-screen/) | 紙・画面・媒体の置き忘れを防ぐか |
+| 情報漏えい防止の運用 | [クリアデスク・クリアスクリーンとは？情報漏えい防止の基本ルール](/sg/clear-desk/) | 紙・画面・媒体の置き忘れを防ぐか |
 
 ---
 

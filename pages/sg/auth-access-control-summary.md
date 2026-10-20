@@ -4,7 +4,7 @@ title: 認証・アクセス制御まとめ｜主要用語を整理【SG試験�
 description: "認証・認可・アクセス制御を「本人確認」「許可範囲」「操作制限」に分け、MFA、SSO、特権ID、ゼロトラストを責任範囲と運用場面からつなげて復習するまとめです。ログイン可否、操作許可、権限棚卸しを別問題として読むことで、似た対策名に迷わない学習導線を作ります。"
 permalink: /sg/auth-access-control-summary/
 tags: [sg, sg-security-measures, access_control]
-last_modified_at: 2026-10-04
+last_modified_at: 2026-10-20
 ---
 
 ## まず結論
@@ -52,7 +52,7 @@ last_modified_at: 2026-10-04
 | [アクセス管理とは？特権IDとneed-to-knowで権限を適切に制御【SG試験】](/sg/access-control/) | 必要な人に必要な範囲だけ権限を与える |
 | [アクセス制御モデルとは？RBAC・ABAC・DAC・MACの違いを整理【SG試験】](/sg/access-control-model/) | 役割・属性・所有者・強制ルールのどれで制御するかを見る |
 | [最小権限の原則とは？権限管理の基本を理解【SG試験】](/sg/least-privilege/) | 業務に必要な最小限の権限だけを付与する |
-| [特権ID管理とは？管理者権限のリスクと対策を整理【SG試験】](/sg/privileged-id/) | 管理者権限の貸与、承認、記録、棚卸しを重視する |
+| [特権ID管理とは？管理者権限のリスクと対策を整理【SG試験】](/sg/privileged-id-management/) | 管理者権限の貸与、承認、記録、棚卸しを重視する |
 | [ゼロトラストとは？境界防御との違いを整理【SG試験】](/sg/zero-trust/) | 社内ネットワークも含めて「常に検証」する思想か |
 
 ## SG試験でのひっかけポイント
@@ -89,7 +89,7 @@ last_modified_at: 2026-10-04
 15. [アクセス管理とは？特権IDとneed-to-knowで権限を適切に制御【SG試験】](/sg/access-control/)
 16. [アクセス制御モデルとは？RBAC・ABAC・DAC・MACの違いを整理【SG試験】](/sg/access-control-model/)
 17. [最小権限の原則とは？権限管理の基本を理解【SG試験】](/sg/least-privilege/)
-18. [特権ID管理とは？管理者権限のリスクと対策を整理【SG試験】](/sg/privileged-id/)
+18. [特権ID管理とは？管理者権限のリスクと対策を整理【SG試験】](/sg/privileged-id-management/)
 19. [ゼロトラストとは？境界防御との違いを整理【SG試験】](/sg/zero-trust/)
 
 ## 記事一覧
@@ -122,7 +122,7 @@ last_modified_at: 2026-10-04
 - [アクセス管理とは？特権IDとneed-to-knowで権限を適切に制御【SG試験】](/sg/access-control/)
 - [アクセス制御モデルとは？RBAC・ABAC・DAC・MACの違いを整理【SG試験】](/sg/access-control-model/)
 - [最小権限の原則とは？権限管理の基本を理解【SG試験】](/sg/least-privilege/)
-- [特権ID管理とは？管理者権限のリスクと対策を整理【SG試験】](/sg/privileged-id/)
+- [特権ID管理とは？管理者権限のリスクと対策を整理【SG試験】](/sg/privileged-id-management/)
 - [ゼロトラストとは？境界防御との違いを整理【SG試験】](/sg/zero-trust/)
 
 ### 関連記事との役割分担（混同防止）

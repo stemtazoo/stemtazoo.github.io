@@ -5,8 +5,8 @@ description: CRYPTRECは、日本で利用される暗号技術の安全性を�
 permalink: /sg/cryptrec/
 tags: [sg, sg-security-measures]
 prev: /sg/cryptojacking/
-next: /sg/csirt/
 last_modified_at: 2026-05-20
+next: /sg/cryptrec-list/
 ---
 
 ## まず結論

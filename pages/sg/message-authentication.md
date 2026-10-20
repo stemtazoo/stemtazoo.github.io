@@ -4,9 +4,9 @@ title: "メッセージ認証とは？MAC・電子署名との違い【SG試験�
 description: "メッセージ認証は、データの改ざん有無や送信者の正しさを確認する考え方です。SG試験でMAC、電子署名、否認防止を混同しないように、共有鍵を使うのか公開鍵で第三者に証明できるのか、何を確認したい場面なのかを比較して整理します。"
 permalink: /sg/message-authentication/
 prev: /sg/hash-collision-resistance/
-next: /sg/message-authentication-code/
+next: /sg/mac-message-authentication-code/
 tags: [sg, security_general, crypto_auth, access_control, sg-security-overview]
-last_modified_at: 2026-06-24
+last_modified_at: 2026-10-20
 ---
 
 ## まず結論

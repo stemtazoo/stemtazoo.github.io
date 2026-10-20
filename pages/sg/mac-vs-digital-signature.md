@@ -4,7 +4,7 @@ title: MACとデジタル署名の違いとは？改ざん検知と否認防止�
 description: MACとデジタル署名はどちらも改ざん検知に使われますが、共通鍵を使うか公開鍵暗号を使うか、否認防止ができるかが異なります。メッセージ認証コード、ハッシュ、暗号化との違いを押さえ、SG試験で用途を切り分ける基準を整理します。科目Aの用語理解と科目Bのケース判断で迷いやすい表現も確認します。
 permalink: /sg/mac-vs-digital-signature/
 tags: [sg, sg-security-overview, cryptography, authentication, integrity, non_repudiation]
-last_modified_at: 2026-06-24
+last_modified_at: 2026-10-20
 ---
 
 ## まず結論
@@ -46,7 +46,7 @@ MACも改ざん検知はできますが、送信者と受信者が同じ鍵を�
 ## 関連記事との役割分担（混同防止）
 
 - 署名の基本を単体で確認したい → [電子署名とは？本人証明と改ざん検知を整理【SG試験】](/sg/digital-signature/)
-- MACの基礎を単体で確認したい → [メッセージ認証符号（MAC）とは？共有鍵で改ざんを検知する仕組み【SG試験】](/sg/message-authentication-code/)
+- MACの基礎を単体で確認したい → [メッセージ認証符号（MAC）とは？共有鍵で改ざんを検知する仕組み【SG試験】](/sg/mac-message-authentication-code/)
 - 否認防止の考え方を確認したい → [否認防止とは？証跡で「やっていない」を防ぐ考え方【SG試験】](/sg/non-repudiation/)
 
 ---

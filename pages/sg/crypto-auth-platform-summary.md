@@ -4,7 +4,7 @@ title: 暗号・証明書・認証基盤まとめ｜証明書運用まで整理�
 description: 暗号・証明書・認証基盤を、暗号化、ハッシュ、MAC、電子署名、CA、CRL/OCSPまで一連の信頼確認として整理します。機密性・完全性・真正性・否認防止のどれを満たす仕組みかをSG試験向けに切り分けます。HTTPSや電子署名の実務場面にもつなげます。
 permalink: /sg/crypto-auth-platform-summary/
 tags: [sg, sg-security-measures, crypto_auth]
-last_modified_at: 2026-06-24
+last_modified_at: 2026-10-20
 ---
 
 ## まず結論
@@ -35,7 +35,7 @@ SG試験では、問題文に出た場面で「何を確認したいのか」を
 | [公開鍵暗号方式とは？鍵の受け渡し問題を解決する仕組み【SG試験】](/sg/public-key-cryptography/) | 公開鍵と秘密鍵を使い分ける。鍵配送問題を緩和。 |
 | [ハイブリッド暗号方式とは？速度と安全性を両立する仕組み【SG試験】](/sg/hybrid-cryptography/) | 本文は共通鍵、鍵配送は公開鍵で行う実運用型。 |
 | [ハッシュ化とは？固定長のハッシュ値と改ざん検知を整理【SG試験】](/sg/hash-function/) | 復号せず整合性確認を行う。完全性の確認軸。 |
-| [メッセージ認証符号（MAC）とは？共有鍵で改ざんを検知する仕組み【SG試験】](/sg/message-authentication-code/) | 共通鍵で改ざん検知・送信者確認を行う。 |
+| [メッセージ認証符号（MAC）とは？共有鍵で改ざんを検知する仕組み【SG試験】](/sg/mac-message-authentication-code/) | 共通鍵で改ざん検知・送信者確認を行う。 |
 | [電子署名とは？本人証明と改ざん検知を整理【SG試験】](/sg/digital-signature/) | 秘密鍵で署名し公開鍵で検証。真正性・否認防止で使う。 |
 | [電子証明書とは？公開鍵の正当性を証明する仕組み【SG試験】](/sg/digital-certificate/) | 公開鍵と主体をひも付ける証明書。 |
 | [認証局（CA）の役割とは？デジタル証明書の信頼の仕組み【SG試験】](/sg/certificate-authority-role/) | 証明書の発行者として信頼連鎖を支える主体。 |
@@ -67,7 +67,7 @@ SG試験では、問題文に出た場面で「何を確認したいのか」を
 3. [共通鍵暗号方式とは？高速だが鍵管理が課題の仕組み【SG試験】](/sg/symmetric-key-cryptography/)
 4. [公開鍵暗号方式とは？鍵の受け渡し問題を解決する仕組み【SG試験】](/sg/public-key-cryptography/)
 5. [ハッシュ化とは？固定長のハッシュ値と改ざん検知を整理【SG試験】](/sg/hash-function/)
-6. [メッセージ認証符号（MAC）とは？共有鍵で改ざんを検知する仕組み【SG試験】](/sg/message-authentication-code/)
+6. [メッセージ認証符号（MAC）とは？共有鍵で改ざんを検知する仕組み【SG試験】](/sg/mac-message-authentication-code/)
 7. [電子署名とは？本人証明と改ざん検知を整理【SG試験】](/sg/digital-signature/)
 8. [PKIとは？公開鍵基盤の役割をやさしく整理【SG試験】](/sg/pki/)
 9. [認証局（CA）の役割とは？デジタル証明書の信頼の仕組み【SG試験】](/sg/certificate-authority-role/)
@@ -91,7 +91,7 @@ SG試験では、問題文に出た場面で「何を確認したいのか」を
 ### 完全性・真正性
 
 - [ハッシュ化とは？固定長のハッシュ値と改ざん検知を整理【SG試験】](/sg/hash-function/)
-- [メッセージ認証符号（MAC）とは？共有鍵で改ざんを検知する仕組み【SG試験】](/sg/message-authentication-code/)
+- [メッセージ認証符号（MAC）とは？共有鍵で改ざんを検知する仕組み【SG試験】](/sg/mac-message-authentication-code/)
 - [電子署名とは？本人証明と改ざん検知を整理【SG試験】](/sg/digital-signature/)
 - [改ざん検知とは？ハッシュ・MAC・デジタル署名の違いを整理【SG試験】](/sg/tamper-detection/)
 

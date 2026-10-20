@@ -3,7 +3,7 @@ layout: page
 title: 情報セキュリティ対策まとめ
 description: "認証、ネットワーク、マルウェア、脆弱性、IoT、物理対策など、SG試験の情報セキュリティ対策を目的別の入口とタグ連動の全記事一覧で整理します。新規記事も主分類タグから自動で一覧へ反映されます。"
 permalink: /sg/category/security-measures/
-last_modified_at: 2026-09-09
+last_modified_at: 2026-10-20
 ---
 
 [SGトップへ戻る](/sg/)
@@ -87,6 +87,10 @@ IoTでは、機器だけでなく通信・クラウド・運用まで含めて�
 - [遠隔バックアップとは？災害時のデータ保護の基本](/sg/remote-backup/)
 - [UPSとは？停電時の業務継続を支える仕組み](/sg/ups/)
 - [稼働率とは？可用性の考え方とSLAでの判断基準](/sg/availability/)
+
+## 関連する判断を確認する
+
+- [特権ID管理](/sg/privileged-id-management/)：最小権限を承認・操作記録・見直しの運用へつなぐ。
 
 ## 全記事一覧（タグから自動更新）
 

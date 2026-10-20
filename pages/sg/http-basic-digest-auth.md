@@ -5,7 +5,7 @@ description: "HTTPのBasic認証とDigest認証について、401応答、WWW-Au
 permalink: /sg/http-basic-digest-auth/
 tags: [sg, sg-technology, access_control, network, crypto_auth]
 date: 2026-06-01
-last_modified_at: 2026-09-26
+last_modified_at: 2026-10-20
 ---
 
 ## まず結論
@@ -34,6 +34,8 @@ Digest認証は、サーバから渡された使い捨てに近い値である**
 ただし、Digest認証が守る中心は認証情報です。Webページ本文や送受信データ全体を暗号化するわけではありません。
 
 > BasicとDigestの違いは認証情報の送り方、HTTPSは通信路全体の保護です。
+
+Basicは受付へIDとパスワードを表現し直して渡すイメージ、Digestは受付から示された今回用の値（nonce）などを使い、秘密を知ることを示す応答を作るイメージです。どちらも、受付までの通信路を守る役割とは別です。
 
 ## 定義・仕組み
 
@@ -83,6 +85,8 @@ SG試験では、細かいアルゴリズム名よりも、次を優先します
 
 - Basic：Base64
 - Digest：nonceなどを使ったハッシュ値
+
+サーバは、クライアントの応答を検証するための秘密情報を持つ必要があります。平文パスワードそのものを持たず、仕様の計算に用いる値から検証できる構成でも、**その検証用の値を漏らしてよいわけではありません。** Digestは単に、いつも同じパスワードのハッシュを送る方式ではありません。
 
 ### HTTPSとの関係
 
@@ -167,6 +171,10 @@ Basic認証はHTTPのAuthorizationヘッダを使います。フォーム認証�
 - 「クライアントが認証情報を送るヘッダ」→ `Authorization`
 - 「通信全体を暗号化する」→ HTTPS
 - 「Digest認証ならHTTPS不要」→ 誤り
+
+### OAuthとの違い
+
+OAuthは、外部サービス等へアクセス権を委任する認可の仕組みです。HTTPの認証方式の比較で、Basic/Digestとそのまま同じ本人確認方式として並べないようにします。
 
 ## 確認問題（SG試験対策）
 
