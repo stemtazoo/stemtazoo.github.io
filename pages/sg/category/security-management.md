@@ -3,7 +3,7 @@ layout: page
 title: 情報セキュリティ管理まとめ
 description: "情報セキュリティポリシー、ISMS、リスク管理、インシデント対応、ログ管理、委託先管理を学習用の入口とタグ連動の全記事一覧で整理します。新規記事も主分類タグから自動で反映されます。"
 permalink: /sg/category/security-management/
-last_modified_at: 2026-09-09
+last_modified_at: 2026-10-20
 ---
 
 [SGトップへ戻る](/sg/)
@@ -44,6 +44,9 @@ last_modified_at: 2026-09-09
 - [情報資産台帳とは？](/sg/asset-register/)
 
 ### インシデント・運用
+
+- [ソフトウェア管理ガイドライン](/sg/software-management-guideline/)：責任者・監査・教育とライセンス管理。
+- [脆弱性対策の早見表](/sg/vulnerability-cheatsheet/)：情報収集・評価・対処・確認の役割。
 
 - [情報セキュリティインシデントとは？](/sg/security-incident/)
 - [インシデント対応とは？](/sg/incident-response/)

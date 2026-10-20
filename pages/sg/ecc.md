@@ -4,7 +4,7 @@ title: 楕円曲線暗号（ECC）とは？RSAとの違いと鍵長の見方【S
 description: 楕円曲線暗号を短い鍵長で公開鍵暗号を実現しやすい方式として整理し、RSA、共通鍵暗号、鍵交換や電子署名での公開鍵・秘密鍵の扱いを切り分けます。 同じ安全性なら鍵を短くできる利点に注目し、暗号化の速度だけで共通鍵暗号と混同する選択肢を避けます。
 permalink: /sg/ecc/
 tags: [sg, sg-technology, crypto_auth, network]
-last_modified_at: 2026-06-24
+last_modified_at: 2026-10-20
 ---
 
 ## まず結論
@@ -37,7 +37,7 @@ ECC（Elliptic Curve Cryptography）は、楕円曲線に基づく計算の難�
 | 試験での注意 | 共通鍵暗号と混同しない | 共通鍵暗号と混同しない |
 
 暗号方式の選定方針は、CRYPTRECの公開資料でも確認できます。  
-公式: [電子政府における調達のために参照すべき暗号のリスト](https://www.cryptrec.go.jp/list/cryptrec-ls-0001-2012r5.pdf)
+公式: [電子政府における調達のために参照すべき暗号のリスト](https://www.cryptrec.go.jp/list.html)
 
 また、鍵長や運用を含む暗号鍵設定の考え方は、IPAのガイダンスが参考になります。  
 公式: [暗号鍵設定ガイダンス](https://www.ipa.go.jp/security/crypto/guideline/ckms_setting.html)

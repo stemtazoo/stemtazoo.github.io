@@ -1,142 +1,20 @@
 ---
-layout: page
-title: CRYPTOREC暗号リストとは？電子政府で使う暗号の基準【SG試験】
-description: CRYPTREC暗号リストを電子政府で安全に使う暗号方式の指針として整理し、危殆化した方式を使い続ける選択肢や暗号方式の選定基準を見抜く視点を押さえます。 推奨リストは暗号そのものを作る制度ではなく選定・移行の判断材料である点を押さえ、危殆化への対応も確認します。
+layout: null
+sitemap: false
+last_modified_at: 2026-10-20
 permalink: /sg/cryptrec1/
-prev: /sg/compromise-crypto/
-next: /sg/salt/
-tags: [sg, sg-security-overview, crypto_auth, risk_assessment]
-last_modified_at: 2026-09-09
 ---
-
-## まず結論
-CRYPTOREC暗号リストは、**電子政府で安全に使うべき暗号方式を示した指針（推奨リスト）**です。  
-SG試験では「どの暗号を採用すべきか」を判断させる問題で問われます。
-
----
-
-## 直感的な説明
-「政府のお墨付きリスト」と考えると分かりやすいです。
-
-- 世の中には多くの暗号がある  
-- その中から  
-👉 **「これなら安全に使っていい」と選ばれたものの一覧**
-
-企業でいうと  
-「社内標準で使っていいツール一覧」に近いイメージです。
-
----
-
-## 定義・仕組み
-CRYPTOREC（クリプトレック）は、
-
-- 総務省
-- 経済産業省
-- IPA
-
-などが連携して策定しているプロジェクトで、  
-**安全に利用可能な暗号技術を評価・リスト化**しています。
-
-このリストは主に：
-
-- 電子政府システムの調達
-- 公的機関のシステム設計
-
-で参照されます。
-
-IPAの[暗号技術](https://www.ipa.go.jp/security/crypto/index.html)ページは、暗号技術に関する公式情報の入口として利用できます。個別の方式を確認するときは、[AES](/sg/aes/)や[RSA](/sg/rsa/)の記事から、IPAのJCMVP確認リストも参照できます。
-
----
-
-### 主な暗号技術（CRYPTORECリストの例）
-
-| 技術分類 | 用途 | 主な暗号技術 |
-|----------|------|--------------|
-| 公開鍵暗号 | 署名 | DSA / ECDSA / RSA-PSS / RSASSA-PKCS1-v1_5 |
-| 公開鍵暗号 | 守秘 | RSA-OAEP |
-| 公開鍵暗号 | 鍵共有 | DH / ECDH |
-| 共通鍵暗号 | 暗号化 | AES |
-| ハッシュ関数 | 改ざん検知 | SHA-256 / SHA-512 |
-
-👉 ポイント  
-- 「署名」「守秘」「鍵共有」など**用途ごとに分類されている**
-- 暗号は**目的に応じて選ぶ必要がある**
-
----
-
-### 参照資料（公式）
-- [IPA：暗号技術](https://www.ipa.go.jp/security/crypto/index.html)
-- [電子政府における調達のために参照すべき暗号のリスト](https://www.cryptrec.go.jp/list/cryptrec-ls-0001-2012r5.pdf)
-
----
-
-👉 SG試験では  
-**「暗号を選ぶ基準」＝CRYPTOREC**  
-と理解しておくのが重要です。
-
----
-
-## どんな場面で使う？
-### 使う場面
-- システム導入時の暗号方式選定
-- 委託先への要件提示
-- セキュリティポリシー策定
-
-👉 現場では  
-**「この暗号を使っていいか？」の判断基準**になります。
-
----
-
-### 使うと誤解しやすい場面
-- 暗号を実装する仕組みそのもの  
-→ それはPKIや暗号アルゴリズム
-
----
-
-## よくある誤解・混同
-SG試験ではここがよく狙われます。
-
-### ❌ CRYPTORECは暗号方式そのもの
-→ ⭕ **暗号を評価してリスト化した指針**
-
----
-
-### ❌ CRYPTORECに載っていれば絶対安全
-→ ⭕  
-**現時点で安全と評価されているだけ（将来は危殆化する可能性あり）**
-
----
-
-### ❌ 危殆化しても使い続ける
-→ ⭕  
-**危殆化した暗号はリストから外れる → 見直しが必要**
-
----
-
-### ❌ PKIと同じ
-→ ⭕  
-- PKI：仕組み  
-- CRYPTOREC：**採用する暗号の基準**
-
----
-
-👉 SG試験では  
-**「安全な暗号の選定基準 → CRYPTOREC」  
-「暗号の劣化 → 危殆化」**  
-でセットで問われることが多いです。
-
----
-
-## まとめ（試験直前用）
-- CRYPTORECは**暗号の推奨リスト**
-- 電子政府の調達基準として使われる
-- 暗号そのものではない（評価基準）
-- 危殆化するとリストから外れる
-- 暗号選定の判断基準として使う
-
-👉 判断基準  
-**暗号の選定基準 → CRYPTOREC  
-暗号の劣化 → 危殆化  
-仕組み → PKI**
-
-{% include sg_article_footer.html %}
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,follow">
+  <meta http-equiv="refresh" content="0; url=/sg/cryptrec-list/">
+  <link rel="canonical" href="https://stemtazoo.github.io/sg/cryptrec-list/">
+  <title>統合先の記事へ移動します</title>
+</head>
+<body>
+  <p>この記事は統合しました。<a href="/sg/cryptrec-list/">CRYPTREC暗号リストとは？電子政府推奨・推奨候補・運用監視の違い【SG試験】</a>をご覧ください。</p>
+</body>
+</html>

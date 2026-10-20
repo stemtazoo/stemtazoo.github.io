@@ -4,7 +4,7 @@ title: ネットワーク防御と通信保護まとめ｜主要用語を整理�
 description: "ネットワーク防御を、通信を許可・遮断するファイアウォール、公開サーバを隔離するDMZ、攻撃を検知・防御するIDS・IPSと、通信経路を暗号化するTLS・VPN・IPsecに分けて整理します。DNSやメール経路の防御も含め、境界・配置・検知・暗号化のどの役割が求められているかからSG試験の対策を選ぶ学習マップです。"
 permalink: /sg/network-defense-summary/
 tags: [sg, sg-security-measures, network, unauthorized_access]
-last_modified_at: 2026-07-14
+last_modified_at: 2026-10-20
 ---
 
 ## まず結論
@@ -47,7 +47,7 @@ SG試験では、同じ「ネットワーク対策」に見える選択肢でも
 | [権威DNSサーバとキャッシュDNSサーバの違い【SG試験】](/sg/authoritative-dns-vs-cache-dns/) | 正式情報を持つ側か、問い合わせ代行・一時保存する側か |
 | [DNSゾーン転送とは？許可先を制限する理由をやさしく解説【SG試験】](/sg/dns-zone-transfer/) | ゾーン情報の同期と、許可先を限定する運用か |
 | [オープンリゾルバとは？DNSの再帰問い合わせと悪用リスク【SG試験】](/sg/open-resolver/) | 不特定多数から再帰問い合わせを受ける危険状態か |
-| [DNSリフレクター攻撃とは？仕組みと対策の考え方【SG試験】](/sg/dns-reflector-attack/) | 送信元偽装＋応答増幅で標的に負荷をかける攻撃か |
+| [DNSリフレクター攻撃とは？仕組みと対策の考え方【SG試験】](/sg/dns-amplification-attack/) | 送信元偽装＋応答増幅で標的に負荷をかける攻撃か |
 | [DNS水責め攻撃とは？ランダムサブドメインで権威DNSを狙う攻撃【SG試験】](/sg/dns-water-torture-attack/) | ランダムサブドメインで権威DNSサーバに負荷を集中させる攻撃か |
 | [SMTP-AUTHとは？メール送信時の認証方式【SG試験】](/sg/smtp-auth/) | メール送信時の利用者認証の仕組みか |
 | [SMTPのポート番号とは？パケットフィルタリングでの見方を整理【SG試験】](/sg/smtp-port-packet-filtering/) | メール送信通信をポート番号で判定する話か |
@@ -126,7 +126,7 @@ SG試験では、同じ「ネットワーク対策」に見える選択肢でも
 - [DNSゾーン転送とは？許可先を制限する理由をやさしく解説【SG試験】](/sg/dns-zone-transfer/)
 - [オープンリゾルバとは？DNSの再帰問い合わせと悪用リスク【SG試験】](/sg/open-resolver/)
 - [DNSキャッシュポイズニングとは？偽サイトへ誘導する攻撃【SG試験】](/sg/dns-cache-poisoning/)
-- [DNSリフレクター攻撃とは？仕組みと対策の考え方【SG試験】](/sg/dns-reflector-attack/)
+- [DNSリフレクター攻撃とは？仕組みと対策の考え方【SG試験】](/sg/dns-amplification-attack/)
 - [DNS水責め攻撃とは？ランダムサブドメインで権威DNSを狙う攻撃【SG試験】](/sg/dns-water-torture-attack/)
 - [SMTP-AUTHとは？メール送信時の認証方式【SG試験】](/sg/smtp-auth/)
 - [SMTPのポート番号とは？パケットフィルタリングでの見方を整理【SG試験】](/sg/smtp-port-packet-filtering/)

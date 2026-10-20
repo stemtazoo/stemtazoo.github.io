@@ -4,7 +4,7 @@ title: DNS・メールセキュリティまとめ｜SPF・DKIM・OP25Bを整理�
 description: "DNS・メールセキュリティを、名前解決の正当性、送信ドメイン確認、迷惑メール判定、暗号化メールに分けて整理し、DNSSEC・SPF・DKIM・S/MIMEなどの守る対象を比較します。"
 permalink: /sg/dns-mail-security-summary/
 tags: [sg, sg-security-measures, network, data_leakage]
-last_modified_at: 2026-07-04
+last_modified_at: 2026-10-20
 ---
 
 ## まず結論
@@ -35,7 +35,7 @@ DNSは、ドメイン名をIPアドレスへ変換する仕組みです。ここ
 | [DNSSECとは？DNS応答の正当性と完全性を確認する仕組み【SG試験】](/sg/dnssec/) | DNS応答の正当性・完全性を署名で検証する仕組みか |
 | [DNSゾーン転送とは？許可先を制限する理由をやさしく解説【SG試験】](/sg/dns-zone-transfer/) | プライマリからセカンダリへゾーン情報を同期し、許可先を限定する話か |
 | [DNSキャッシュポイズニングとは？偽サイトへ誘導する攻撃【SG試験】](/sg/dns-cache-poisoning/) | DNSキャッシュへ偽情報を入れて誘導する攻撃か |
-| [DNSリフレクター攻撃とは？仕組みと対策の考え方【SG試験】](/sg/dns-reflector-attack/) | DNSサーバを踏み台にして大量通信を送る攻撃か |
+| [DNSリフレクター攻撃とは？仕組みと対策の考え方【SG試験】](/sg/dns-amplification-attack/) | DNSサーバを踏み台にして大量通信を送る攻撃か |
 | [DNS水責め攻撃とは？ランダムサブドメインで権威DNSを狙う攻撃【SG試験】](/sg/dns-water-torture-attack/) | ランダムサブドメインで権威DNSサーバへ負荷を集中させる攻撃か |
 | [ドメイン名ハイジャックとは？DNSを悪用したなりすましの仕組み【SG試験】](/sg/domain-hijacking/) | ドメイン管理そのものを奪い悪用する攻撃か |
 | [SPFとは？送信元IPでなりすましを防ぐ仕組み【SG試験】](/sg/spf/) | 送信元IPが当該ドメインの許可サーバかを確認する仕組みか |
@@ -74,7 +74,7 @@ DNSは、ドメイン名をIPアドレスへ変換する仕組みです。ここ
 2. [DNSSECとは？DNS応答の正当性と完全性を確認する仕組み【SG試験】](/sg/dnssec/)
 3. [DNSゾーン転送とは？許可先を制限する理由をやさしく解説【SG試験】](/sg/dns-zone-transfer/)
 4. [DNSキャッシュポイズニングとは？偽サイトへ誘導する攻撃【SG試験】](/sg/dns-cache-poisoning/)
-5. [DNSリフレクター攻撃とは？仕組みと対策の考え方【SG試験】](/sg/dns-reflector-attack/)
+5. [DNSリフレクター攻撃とは？仕組みと対策の考え方【SG試験】](/sg/dns-amplification-attack/)
 6. [DNS水責め攻撃とは？ランダムサブドメインで権威DNSを狙う攻撃【SG試験】](/sg/dns-water-torture-attack/)
 7. [SPFとは？送信元IPでなりすましを防ぐ仕組み【SG試験】](/sg/spf/)
 8. [SPF・DKIMとは？なりすましメール対策の仕組み【SG試験】](/sg/spf-dkim/)
@@ -93,7 +93,7 @@ DNSは、ドメイン名をIPアドレスへ変換する仕組みです。ここ
 - [DNSSECとは？DNS応答の正当性と完全性を確認する仕組み【SG試験】](/sg/dnssec/)
 - [DNSゾーン転送とは？許可先を制限する理由をやさしく解説【SG試験】](/sg/dns-zone-transfer/)
 - [DNSキャッシュポイズニングとは？偽サイトへ誘導する攻撃【SG試験】](/sg/dns-cache-poisoning/)
-- [DNSリフレクター攻撃とは？仕組みと対策の考え方【SG試験】](/sg/dns-reflector-attack/)
+- [DNSリフレクター攻撃とは？仕組みと対策の考え方【SG試験】](/sg/dns-amplification-attack/)
 - [DNS水責め攻撃とは？ランダムサブドメインで権威DNSを狙う攻撃【SG試験】](/sg/dns-water-torture-attack/)
 - [ドメイン名ハイジャックとは？DNSを悪用したなりすましの仕組み【SG試験】](/sg/domain-hijacking/)
 

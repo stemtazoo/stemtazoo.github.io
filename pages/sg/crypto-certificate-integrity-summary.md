@@ -4,7 +4,7 @@ title: 改ざん検知・電子署名・証明書まとめ｜完全性と真正�
 description: 改ざん検知・電子署名・証明書を、完全性・真正性・否認防止の違いから比較します。ハッシュ、MAC、電子署名、電子証明書、CRL/OCSPを鍵の種類と第三者証明の有無で判断するSG試験向けまとめです。暗号化と署名を混同する誤答を避けます。証明書の有効性確認を問う問題にもつなげます。
 permalink: /sg/crypto-certificate-integrity-summary/
 tags: [sg, sg-security-measures, crypto_auth]
-last_modified_at: 2026-06-24
+last_modified_at: 2026-10-20
 ---
 
 ## まず結論
@@ -36,7 +36,7 @@ SG試験では、細かい暗号アルゴリズムの計算よりも、**その�
 | [公開鍵暗号方式とは？鍵の受け渡し問題を解決する仕組み【SG試験】](/sg/public-key-cryptography/) | 公開鍵と秘密鍵のペアを使う。鍵配送や電子署名の説明で出やすい。 |
 | [ハイブリッド暗号方式とは？速度と安全性を両立する仕組み【SG試験】](/sg/hybrid-cryptography/) | データ本体は共通鍵、鍵交換は公開鍵で行う。TLSの理解につながる。 |
 | [ハッシュ化とは？固定長のハッシュ値と改ざん検知を整理【SG試験】](/sg/hash-function/) | 元に戻すのではなく、同じデータかどうかを確認する。完全性の判断軸。 |
-| [メッセージ認証符号（MAC）とは？共有鍵で改ざんを検知する仕組み【SG試験】](/sg/message-authentication-code/) | 共通鍵を使い、改ざん検知と送信者確認を行う。否認防止までは弱い。 |
+| [メッセージ認証符号（MAC）とは？共有鍵で改ざんを検知する仕組み【SG試験】](/sg/mac-message-authentication-code/) | 共通鍵を使い、改ざん検知と送信者確認を行う。MACだけでは否認防止を提供しない。 |
 | [電子署名とは？本人証明と改ざん検知を整理【SG試験】](/sg/digital-signature/) | 秘密鍵で署名し、公開鍵で検証する。改ざん検知・本人確認・否認防止を判断する。 |
 | [電子証明書とは？公開鍵の正当性を証明する仕組み【SG試験】](/sg/digital-certificate/) | 公開鍵が誰のものかを第三者が証明する。なりすまし防止の観点で見る。 |
 | [PKIとは？公開鍵基盤の役割をやさしく整理【SG試験】](/sg/pki/) | 電子証明書、認証局、失効確認などを含む公開鍵運用の仕組み全体。 |
@@ -62,7 +62,7 @@ SG試験では、細かい暗号アルゴリズムの計算よりも、**その�
 2. [公開鍵暗号方式とは？鍵の受け渡し問題を解決する仕組み【SG試験】](/sg/public-key-cryptography/)
 3. [ハイブリッド暗号方式とは？速度と安全性を両立する仕組み【SG試験】](/sg/hybrid-cryptography/)
 4. [ハッシュ化とは？固定長のハッシュ値と改ざん検知を整理【SG試験】](/sg/hash-function/)
-5. [メッセージ認証符号（MAC）とは？共有鍵で改ざんを検知する仕組み【SG試験】](/sg/message-authentication-code/)
+5. [メッセージ認証符号（MAC）とは？共有鍵で改ざんを検知する仕組み【SG試験】](/sg/mac-message-authentication-code/)
 6. [電子署名とは？本人証明と改ざん検知を整理【SG試験】](/sg/digital-signature/)
 7. [電子証明書とは？公開鍵の正当性を証明する仕組み【SG試験】](/sg/digital-certificate/)
 8. [PKIとは？公開鍵基盤の役割をやさしく整理【SG試験】](/sg/pki/)
@@ -83,7 +83,7 @@ SG試験では、細かい暗号アルゴリズムの計算よりも、**その�
 
 - [ハッシュ化とは？固定長のハッシュ値と改ざん検知を整理【SG試験】](/sg/hash-function/)
 - [ハッシュ関数の種類とは？SHAとMD5の違いを整理【SG試験】](/sg/hash-algorithms/)
-- [メッセージ認証符号（MAC）とは？共有鍵で改ざんを検知する仕組み【SG試験】](/sg/message-authentication-code/)
+- [メッセージ認証符号（MAC）とは？共有鍵で改ざんを検知する仕組み【SG試験】](/sg/mac-message-authentication-code/)
 - [HMACとは？ハッシュと共通鍵でメッセージを認証する仕組み【SG試験】](/sg/hmac/)
 - [電子署名とは？本人証明と改ざん検知を整理【SG試験】](/sg/digital-signature/)
 - [改ざん検知とは？ハッシュ・MAC・デジタル署名の違いを整理【SG試験】](/sg/tamper-detection/)

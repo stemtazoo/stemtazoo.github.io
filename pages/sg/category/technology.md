@@ -3,7 +3,7 @@ layout: page
 title: テクノロジ系まとめ
 description: "ネットワーク、データベース、システム構成、暗号技術を、何を実現する技術かという入口とタグ連動の全記事一覧で整理します。新規記事は主分類タグから自動反映し、旧タグの記事も移行期間中は拾います。"
 permalink: /sg/category/technology/
-last_modified_at: 2026-09-09
+last_modified_at: 2026-10-20
 ---
 
 [SGトップへ戻る](/sg/)
@@ -41,6 +41,10 @@ last_modified_at: 2026-09-09
 
 - [RAIDとは？冗長化による信頼性向上の仕組み](/sg/raid/)
 - [稼働率とは？可用性の考え方とSLAでの判断基準](/sg/availability/)
+
+## 関連する判断を確認する
+
+- [パケットフィルタリング方式](/sg/packet-filtering-firewall/)：IP・ポート・プロトコルによる通信制御。
 
 ## 全記事一覧（タグから自動更新）
 

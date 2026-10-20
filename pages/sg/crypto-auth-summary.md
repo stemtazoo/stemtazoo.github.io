@@ -4,7 +4,7 @@ title: 暗号と認証の基本まとめ｜秘密にする・確認するを整�
 description: "暗号と認証の基本として、暗号化、ハッシュ、MAC、電子署名を「秘密にする」「改ざんを確認する」「相手を確認する」に分けて整理します。SG試験で証明書・認証基盤の詳細へ進む前に、主要用語の役割、鍵の使い方、選択肢の切り方を短時間で復習できます。"
 permalink: /sg/crypto-auth-summary/
 tags: [sg, sg-security-measures, crypto_auth]
-last_modified_at: 2026-06-24
+last_modified_at: 2026-10-20
 ---
 
 ## まず結論
@@ -35,7 +35,7 @@ last_modified_at: 2026-06-24
 | [公開鍵暗号方式](/sg/public-key-cryptography/) | 公開鍵と秘密鍵を使い分ける方式。鍵配送問題を緩和。 |
 | [ハイブリッド暗号方式](/sg/hybrid-cryptography/) | 通信本体は共通鍵、鍵配送は公開鍵で行う実運用型。 |
 | [ハッシュ関数](/sg/hash-function/) | 復号しない要約値で整合性を確認。改ざん検知に使う。 |
-| [メッセージ認証符号（MAC）](/sg/message-authentication-code/) | 共通鍵を使って改ざん・なりすましを検知。送信者共有鍵前提。 |
+| [メッセージ認証符号（MAC）](/sg/mac-message-authentication-code/) | 共通鍵を使って改ざん・なりすましを検知。送信者共有鍵前提。 |
 | [デジタル署名](/sg/digital-signature/) | 秘密鍵で署名し、公開鍵で検証。真正性・否認防止に強い。 |
 | [電子証明書](/sg/digital-certificate/) | 公開鍵が誰のものかを第三者（認証局）が証明する。 |
 | [SSL/TLS](/sg/ssl-tls/) | 通信路の暗号化とサーバ認証を提供するプロトコル。 |
@@ -61,7 +61,7 @@ last_modified_at: 2026-06-24
 2. [公開鍵暗号方式](/sg/public-key-cryptography/)
 3. [ハイブリッド暗号方式](/sg/hybrid-cryptography/)
 4. [ハッシュ関数](/sg/hash-function/)
-5. [メッセージ認証符号（MAC）](/sg/message-authentication-code/)
+5. [メッセージ認証符号（MAC）](/sg/mac-message-authentication-code/)
 6. [デジタル署名](/sg/digital-signature/)
 7. [電子証明書](/sg/digital-certificate/)
 8. [SSL/TLS](/sg/ssl-tls/)
@@ -81,7 +81,7 @@ last_modified_at: 2026-06-24
 ### 完全性・真正性の確認
 
 - [ハッシュ関数とは？改ざん検知の基本をやさしく整理【SG試験】](/sg/hash-function/)
-- [メッセージ認証符号（MAC）とは？共有鍵で改ざんを検知する仕組み【SG試験】](/sg/message-authentication-code/)
+- [メッセージ認証符号（MAC）とは？共有鍵で改ざんを検知する仕組み【SG試験】](/sg/mac-message-authentication-code/)
 - [デジタル署名とは？改ざん検知となりすまし防止の仕組み【SG試験】](/sg/digital-signature/)
 
 ### 証明書と通信路保護

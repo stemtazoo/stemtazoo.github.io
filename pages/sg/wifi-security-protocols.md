@@ -4,9 +4,9 @@ title: "Wi-Fiのセキュリティ方式を比較！WEP・WPA・WPA2・WPA3の�
 description: "WEP・WPA・WPA2・WPA3を、セキュリティ方式・暗号方式・認証方式に分けて整理します。WEPやTKIPを避ける理由、WPA2/WPA3、Personal/Enterprise、AES・CCMP・802.1Xなどを混同しないためのSG試験の判断基準を一次情報とともに確認します。"
 permalink: /sg/wifi-security-protocols/
 prev: /sg/secure-protocol/
-next: /sg/compromise-crypto/
+next: /sg/cryptographic-deprecation/
 tags: [sg, sg-security-measures, unauthorized_access, network]
-last_modified_at: 2026-09-14
+last_modified_at: 2026-10-20
 ---
 
 ## まず結論

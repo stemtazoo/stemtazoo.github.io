@@ -4,10 +4,10 @@ title: "アンチパスバックとは？入退室記録の矛盾を防ぐ仕組
 description: "アンチパスバックは、セキュリティ区域の出入口で利用者IDごとの入退室状態を管理し、退室記録なしの再入室など矛盾した入退室を制限する仕組みです。TPMOR、インターロックゲート、パニックオープンとの違いも含めて、SG試験での判断基準を解説します。"
 permalink: /sg/anti-passback/
 prev: /sg/access-control-physical/
-next: /sg/clear-desk-screen/
+next: /sg/clear-desk/
 tags: [sg, sg-security-measures, access_control, it_security_operations]
 date: 2026-05-10
-last_modified_at: 2026-08-30
+last_modified_at: 2026-10-20
 ---
 
 ## まず結論

@@ -3,10 +3,10 @@ layout: page
 title: 電子署名とは？本人証明と改ざん検知を整理【SG試験】
 description: "電子署名を送信者確認と改ざん検知の仕組みとして整理し、ハッシュ値、秘密鍵での署名、公開鍵での検証、暗号化との違いをSG試験で見分けます。内容を秘密にする技術ではなく、本人性と完全性を確認する技術として選択肢を判断します。"
 permalink: /sg/digital-signature/
-prev: /sg/message-authentication-code/
+prev: /sg/mac-message-authentication-code/
 next: /sg/xml-signature/
 tags: [sg, sg-security-overview, crypto_auth, it_security_operations]
-last_modified_at: 2026-07-02
+last_modified_at: 2026-10-20
 ---
 
 ## まず結論
@@ -47,7 +47,7 @@ SG試験では「なりすまし防止と改ざん検知の両方」を判断さ
 
 - 証明書の役割を確認したい → [電子証明書とは？公開鍵の正当性を証明する仕組み【SG試験】](/sg/digital-certificate/)
 - MACとの違いを比べたい → [MACとデジタル署名の違いとは？改ざん検知と否認防止で整理【SG試験】](/sg/mac-vs-digital-signature/)
-- MAC単体を確認したい → [メッセージ認証符号（MAC）とは？共有鍵で改ざんを検知する仕組み【SG試験】](/sg/message-authentication-code/)
+- MAC単体を確認したい → [メッセージ認証符号（MAC）とは？共有鍵で改ざんを検知する仕組み【SG試験】](/sg/mac-message-authentication-code/)
 
 ---
 ## 直感的な説明

@@ -1,112 +1,20 @@
 ---
-layout: page
-title: 危殆化とは？暗号が使えなくなる状態を理解【SG試験】
-description: "危殆化を「暗号技術の安全性が維持できなくなる状態」として整理し、CRYPTORECや電子政府推奨暗号リストとの関係、鍵長・アルゴリズム変更が必要になる場面をSGの判断軸で確認します。"
+layout: null
+sitemap: false
+last_modified_at: 2026-10-20
 permalink: /sg/compromise-crypto/
-prev: /sg/wifi-security-protocols/
-next: /sg/cryptrec1/
-tags: [sg, sg-security-overview, crypto_auth, risk_assessment]
-last_modified_at: 2026-07-04
 ---
-
-## まず結論
-危殆化（きたいか）は、**暗号の安全性が失われ、安全に使えなくなる状態**です。  
-SG試験では「使い続けてよいか／更新すべきか」を判断させる問題で問われます。
-
----
-
-## 直感的な説明
-「壊れかけの鍵」をイメージすると分かりやすいです。
-
-- これまで安全だった鍵  
-→ 実は誰でも開けられる可能性が出てきた  
-
-👉  
-**“まだ使えるように見えるけど、安全ではない状態”**が危殆化です。
-
----
-
-## 定義・仕組み
-
-> 公式: JVN iPedia（脆弱性対策情報）：[公式: JVN iPedia（脆弱性対策情報）](https://jvndb.jvn.jp/)
-危殆化とは、
-
-- 計算能力の向上
-- 新しい攻撃手法の発見
-- 鍵長の不足
-
-などによって、  
-**暗号が破られる可能性が現実的になること**を指します。
-
-例えば：
-- 古い暗号（例：短い鍵長のRSA）
-- 脆弱性が見つかったアルゴリズム
-
-👉  
-「理論的には安全」から  
-**「実際に破られる可能性がある」状態に変わる**ことがポイントです。
-
----
-
-## どんな場面で使う？
-### 使う場面
-- 暗号方式の見直し（古い暗号の廃止）
-- システム更新・セキュリティ対策の判断
-- 政府推奨リスト（CRYPTORECなど）の確認
-
-👉 現場では  
-**「その暗号、まだ使っていい？」を判断するために使う言葉**
-
----
-
-### 使うと誤解しやすい場面
-- すぐに完全に使えなくなる  
-→ 実際は「危険性が高まった状態」
-
----
-
-## よくある誤解・混同
-SG試験ではここが重要です。
-
-### ❌ 危殆化＝すでに完全に破られた
-→ ⭕  
-**破られる可能性が高くなった状態**
-
----
-
-### ❌ 危殆化してもすぐ問題ない
-→ ⭕  
-**原則は速やかに移行（アルゴリズム変更など）**
-
----
-
-### ❌ 強い暗号は危殆化しない
-→ ⭕  
-**時間とともに危殆化する可能性がある**
-
----
-
-### ❌ CRYPTORECは暗号を作る組織
-→ ⭕  
-**安全に使える暗号のリストを示す**
-
----
-
-👉 SG試験では  
-**「危殆化 → 使用継続NG（見直し必要）」**  
-と判断できるかがポイントです。
-
----
-
-## まとめ（試験直前用）
-- 危殆化は**暗号の安全性が失われる状態**
-- 原因は計算能力向上・攻撃手法の進化など
-- すぐ破られるとは限らないが危険
-- 基本は**速やかに安全な方式へ移行**
-- CRYPTORECで推奨暗号を確認する
-
-👉 判断基準  
-**危殆化 → 使い続けない（見直し）  
-安全な暗号 → CRYPTORECで確認**
-
-{% include sg_article_footer.html %}
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,follow">
+  <meta http-equiv="refresh" content="0; url=/sg/cryptographic-deprecation/">
+  <link rel="canonical" href="https://stemtazoo.github.io/sg/cryptographic-deprecation/">
+  <title>統合先の記事へ移動します</title>
+</head>
+<body>
+  <p>この記事は統合しました。<a href="/sg/cryptographic-deprecation/">暗号の危殆化とは？古い暗号技術が危険になる理由【SG試験】</a>をご覧ください。</p>
+</body>
+</html>
