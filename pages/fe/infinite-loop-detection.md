@@ -130,7 +130,7 @@ low ← middle
     <button type="button" class="fe-learning-demo__button" data-loop-mode="fixed" aria-pressed="false">修正後</button>
   </div>
   <div class="fe-loop-demo__array" aria-label="要素番号が1から始まる配列">
-    <div class="fe-loop-demo__cell" data-loop-cell="1"><span>data[1]</span><strong>3</strong><small data-loop-mark="1">初期状態</small></div>
+    <div class="fe-loop-demo__cell" data-loop-cell="1"><span>data[1]</span><strong>3</strong><small data-loop-mark="1">候補</small></div>
     <div class="fe-loop-demo__cell" data-loop-cell="2"><span>data[2]</span><strong>8</strong><small data-loop-mark="2">target</small></div>
   </div>
   <div class="fe-loop-demo__values">
@@ -145,7 +145,7 @@ low ← middle
     <button type="button" class="fe-learning-demo__button" data-loop-next>次の比較 →</button>
     <button type="button" class="fe-learning-demo__button" data-loop-reset>最初から</button>
   </div>
-  <p class="fe-learning-demo__hint">見るポイント：同じ `low`・`high`・`middle` で同じ比較が繰り返されるか。無限実行はせず、2回の比較で再発を表示します。</p>
+  <p class="fe-learning-demo__hint">見るポイント：同じ <code>low</code>・<code>high</code>・<code>middle</code> で同じ比較が繰り返されるか。無限実行はせず、2回の比較で再発を表示します。</p>
 </div>
 
 <script src="{{ '/assets/js/fe-visualizer.js' | relative_url }}" defer></script>
