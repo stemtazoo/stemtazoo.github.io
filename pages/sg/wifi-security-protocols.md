@@ -6,7 +6,7 @@ permalink: /sg/wifi-security-protocols/
 prev: /sg/secure-protocol/
 next: /sg/cryptographic-deprecation/
 tags: [sg, sg-security-measures, unauthorized_access, network]
-last_modified_at: 2026-10-20
+last_modified_at: 2026-10-21
 ---
 
 ## まず結論
@@ -21,8 +21,8 @@ SG試験では、まず次の3点で切り分けると判断しやすくなり�
 
 特に、単純に「WPA2＝AES」と覚えるのではなく、
 
-> WPA2 / WPA3：Wi-Fiのセキュリティ規格  
-> AES・CCMPなど：暗号化に関係する仕組み  
+> WPA2 / WPA3：Wi-Fiのセキュリティ規格
+> AES・CCMPなど：暗号化に関係する仕組み
 > PSK・SAE・802.1Xなど：認証や鍵共有に関係する仕組み
 
 と分けて考えるのがポイントです。
@@ -60,13 +60,7 @@ WEPは古く、長いパスワードを設定しても方式自体に弱点が�
 | WPA2 | 長く広く使われている方式 | 設定・認証方式も確認する |
 | WPA3 | WPA2をさらに強化した方式 | Personal / Enterpriseなどを区別する |
 
-IPAの「政府機関等の対策基準策定のためのガイドライン」では、無線LANの暗号化方式としてWPA2 EnterpriseやWPA3 Enterpriseが例示され、**WEPやTKIPは利用すべきではない**とされています。
-
-ここから、SG試験ではまず、
-
-> **WEP・TKIPが安全な選択肢として出てきたら疑う**
-
-と覚えておくと判断しやすくなります。
+WEPやTKIPを現行の安全な方式として選ばず、対応機器、更新状況、暗号と認証の設定を確認します。方式の世代だけでなく、接続先を確認する運用も必要です。
 
 ### 「WPA2＝AES」とだけ覚えない
 
@@ -94,7 +88,7 @@ WPA2やWPA3には、利用場面に応じた方式があります。
 
 Enterpriseでは、IEEE 802.1XやEAPなどを使った利用者認証が重要になります。
 
-IPAのガイドでも、組織の無線LANではWPA2 EnterpriseやWPA3 Enterpriseと、IEEE 802.1Xによる認証が例示されています。
+個別認証の運用は、[無線LAN認証の運用](/sg/wifi-auth-wpa2-wpa3-8021x/)で具体例を確認できます。
 
 ### WPA3で押さえる点
 
@@ -110,11 +104,22 @@ WPA3-Personalでは、従来の事前共有鍵を使う方式から改善され�
 
 ### 一次情報
 
-- [IPA：政府機関等の対策基準策定のためのガイドライン（無線LAN対策を含む）](https://www.ipa.go.jp/security/vuln/scap/ug65p9000001994c-att/guider3_2.pdf)
+- [Cisco：WPA3導入ガイド](https://www.cisco.com/c/ja_jp/td/docs/wireless/controller/9800/technical-reference/wpa3-dg.html)
 - [IPA：JC-STAR 適合基準・ガイダンス関連資料](https://www.ipa.go.jp/security/jc-star/tekigou-kizyun-guide/)
 - [IPA：試験問題・解答例](https://www.ipa.go.jp/shiken/mondai-kaiotu/index.html)
 
 ---
+
+### 同じ「WPA3」でも運用方式は別
+
+| セキュリティの世代 | Personal | Enterprise |
+|---|---|---|
+| WPA2 | PSKを利用する構成 | 802.1X・EAP等を利用する構成 |
+| WPA3 | SAEを利用する構成 | 802.1X・EAP等を利用する構成 |
+
+このページは世代・保護方式の比較が中心です。利用者ごとの失効や認証機器の配置を判断する場合は、[無線LAN認証の運用](/sg/wifi-auth-wpa2-wpa3-8021x/)へ進んでください。
+
+[CiscoのWPA3導入ガイド](https://www.cisco.com/c/ja_jp/td/docs/wireless/controller/9800/technical-reference/wpa3-dg.html)でも、PersonalのSAEとEnterpriseを分けて説明しています。
 
 ## どんな場面で使う？
 

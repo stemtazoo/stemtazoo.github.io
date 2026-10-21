@@ -3,7 +3,7 @@ layout: page
 title: 情報セキュリティ関連法規まとめ
 description: "個人情報保護法、不正アクセス禁止法、著作権法、電子署名法などを、何を守る法律か・どの行為が問題になるかという入口とタグ連動の全記事一覧で整理します。新規記事は主分類タグから自動反映し、旧タグの記事も移行期間中は拾います。"
 permalink: /sg/category/law/
-last_modified_at: 2026-09-09
+last_modified_at: 2026-10-21
 ---
 
 [SGトップへ戻る](/sg/)
@@ -28,7 +28,7 @@ last_modified_at: 2026-09-09
 ### 個人情報・プライバシー
 
 - [個人情報保護法とJIS Q 15001の違い【SG試験】](/sg/privacy-law-vs-jis-q-15001/)
-- [個人情報保護マネジメントシステムとは？JIS Q 15001の役割を整理【SG試験】](/sg/personal-information-protection-management-system/)
+- [PMSとは？顧客表の管理を点検・改善する運用例【SG試験】](/sg/personal-information-protection-management-system/)
 - [個人情報保護法（要配慮個人情報）とは？同意要件と実務上の注意点【SG試験】](/sg/personal-information-protection-law-sensitive-data/)
 
 ### 不正アクセス

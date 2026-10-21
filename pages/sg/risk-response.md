@@ -4,7 +4,7 @@ title: リスク対応の全体像とは？評価後に対処方針を決める�
 description: "リスク対応は、リスク分析・リスク評価で明らかになったリスクに対して、回避・低減・移転・受容などの方針を決めて実行する流れです。SG試験で、評価後に何を決める工程かを判断できるように整理します。"
 permalink: /sg/risk-response/
 tags: [sg, sg-security-management, risk_assessment, asset_management]
-last_modified_at: 2026-06-24
+last_modified_at: 2026-10-21
 ---
 
 ## まず結論
@@ -39,7 +39,7 @@ last_modified_at: 2026-06-24
 ## 関連記事との役割分担（混同防止）
 
 - 基本概念と4分類を整理したい → [リスク対応とは？基本概念と4つの分類を整理【SG試験】](/sg/risk-treatment/)
-- 具体例で回避・低減・移転・受容を見分けたい → [リスク対応の具体例で覚える回避・低減・移転・受容【SG試験】](/sg/risk-treatment2/)
+- 具体例で回避・低減・移転・受容を見分けたい → [リスク対応の具体例｜同じ受付業務で対応案を比べる【SG試験】](/sg/risk-treatment2/)
 - リスク評価の手順から確認したい → [リスクアセスメントとは？手順とJISの考え方を整理【SG試験】](/sg/risk-assessment/)
 - リスク基準との関係を確認したい → [リスク基準（受容基準）とは？判断の軸をやさしく整理【SG試験】](/sg/risk-criteria/)
 
