@@ -1122,3 +1122,58 @@ document.addEventListener("DOMContentLoaded", () => {
     render();
   });
 });
+
+
+// FE: BST deletion, compare four candidate values against all remaining descendants.
+// Invalid diagrams are comparison previews, not completed tree reconstructions.
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("[data-fe-bst-delete-demo]").forEach((demo) => {
+    const choices = Array.from(demo.querySelectorAll("[data-bst-delete-choice]"));
+    const target = demo.querySelector("[data-bst-delete-target]");
+    const label = demo.querySelector("[data-bst-delete-target-value]");
+    const status = demo.querySelector("[data-bst-delete-status]");
+    const verdict = demo.querySelector("[data-bst-delete-verdict]");
+    const tree = demo.querySelector("svg");
+    const nodes = Array.from(demo.querySelectorAll("[data-bst-delete-node]"));
+    const originEdges = Array.from(demo.querySelectorAll("[data-bst-delete-edge-from]"));
+    if (!target || !label || !status || !verdict || !tree || choices.length !== 4) return;
+    const cases = {
+      9: { valid: false, errors: [10, 11],
+        note: "左部分木に10と11が残ります。どちらも9より大きいため不成立です。9の元の位置は葉なので空にできますが、大小関係が壊れます。" },
+      10: { valid: false, errors: [11],
+        note: "左部分木に11が残ります。11は10より大きいため不成立です。元の10には子の9と11もあり、単に節点を外しただけではつながりが保てません。" },
+      13: { valid: true, errors: [],
+        note: "左の9・10・11は13より小さく、右の14・15は13より大きいので成立です。葉の13を直接移し、14の左の子を空にするだけで済みます。" },
+      14: { valid: false, errors: [13],
+        note: "右部分木に13が残ります。13は14より小さいため不成立です。元の14には子の13と15もあり、つなぎ直さないと完成した木にはなりません。" }
+    };
+    function render(value) {
+      const item = cases[value];
+      if (!item) return;
+      label.textContent = String(value);
+      target.classList.toggle("is-valid", item.valid);
+      target.classList.toggle("is-invalid", !item.valid);
+      nodes.forEach((node) => {
+        const n = Number(node.dataset.bstDeleteNode);
+        node.classList.toggle("is-origin", n === value && !item.valid);
+        node.classList.toggle("is-removed", n === value && item.valid);
+        node.classList.toggle("is-violation", item.errors.includes(n));
+      });
+      originEdges.forEach(edge => edge.classList.toggle(
+        "is-removed", item.valid && Number(edge.dataset.bstDeleteEdgeFrom) === value
+      ));
+      choices.forEach(button => button.setAttribute(
+        "aria-pressed", String(Number(button.dataset.bstDeleteChoice) === value)
+      ));
+      verdict.classList.toggle("is-valid", item.valid);
+      verdict.classList.toggle("is-invalid", !item.valid);
+      verdict.textContent = value + "を試す → " + (item.valid ? "○ 成立（1個の移動だけ）" : "× 不成立（追加の再配置が必要）");
+      status.textContent = item.note;
+      tree.setAttribute("aria-label", "8の右の位置に" + value + "を仮置きした判定。" + verdict.textContent + "。" + item.note);
+    }
+    choices.forEach(button => {
+      const value = Number(button.dataset.bstDeleteChoice);
+      if (cases[value]) button.addEventListener("click", () => render(value));
+    });
+  });
+});
