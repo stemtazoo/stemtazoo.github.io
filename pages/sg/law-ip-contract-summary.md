@@ -4,7 +4,7 @@ title: 法令・知的財産・委託契約まとめ｜責任と保護対象で�
 description: "著作権、営業秘密、不正アクセス禁止法、特定商取引法、製造物責任法、請負・準委任などを、何を守る制度か、誰が責任を負うかで整理します。SG試験で法務系の選択肢を、保護対象・禁止行為・契約責任から切り分け、科目Bの事例判断にもつなげます。"
 permalink: /sg/law-ip-contract-summary/
 tags: [sg, sg-security-law, vendor_management]
-last_modified_at: 2026-06-24
+last_modified_at: 2026-10-21
 ---
 
 ## まず結論
@@ -41,7 +41,7 @@ last_modified_at: 2026-06-24
 | [パブリックドメインソフトウェアとは？著作権が消滅したソフトの扱い【SG試験】](/sg/public-domain-software/) | 著作権制限がなくコピー・改変できる状態か |
 | [コピーコントロール回避プログラムとは？著作権法で禁止される行為【SG試験】](/sg/copy-protection-circumvention/) | 技術的保護手段を無効化する機能を持つプログラムの販売等か |
 | [営業秘密とは？3要件で判断する【SG試験】](/sg/trade-secret/) | 秘密管理性・有用性・非公知性の3要件を満たすか |
-| [不正競争防止法とは？営業秘密の3要件を整理【SG試験】](/sg/unfair-competition-prevention-act/) | 公正競争保護の枠組みか、営業秘密保護論点か |
+| [不正競争防止法とは？営業秘密・表示・ドメインの行為を分ける【SG試験】](/sg/unfair-competition-prevention-act/) | 公正競争保護の枠組みか、営業秘密保護論点か |
 | [電子署名法とは？電子署名の効力と認証業務を整理【SG試験】](/sg/electronic-signature-law/) | 電磁的記録の真正成立推定と認証業務制度の理解 |
 | [不正アクセス禁止法とは？禁止される行為を整理【SG試験】](/sg/unauthorized-access-law/) | 不正アクセス行為そのものか、助長行為（取得・提供・保管等）か |
 | [コンピュータ不正アクセス対策基準とは？4つの基準と選択肢の切り方【SG試験】](/sg/unauthorized-access-countermeasure-standard/) | ID共有禁止、最小権限、ネットワーク分離、教育など、不正アクセス対策として適切な運用か |
@@ -79,7 +79,7 @@ last_modified_at: 2026-06-24
 4. [パブリックドメインソフトウェアとは？著作権が消滅したソフトの扱い【SG試験】](/sg/public-domain-software/)
 5. [コピーコントロール回避プログラムとは？著作権法で禁止される行為【SG試験】](/sg/copy-protection-circumvention/)
 6. [営業秘密とは？3要件で判断する【SG試験】](/sg/trade-secret/)
-7. [不正競争防止法とは？営業秘密の3要件を整理【SG試験】](/sg/unfair-competition-prevention-act/)
+7. [不正競争防止法とは？営業秘密・表示・ドメインの行為を分ける【SG試験】](/sg/unfair-competition-prevention-act/)
 8. [不正アクセス禁止法とは？禁止される行為を整理【SG試験】](/sg/unauthorized-access-law/)
 9. [コンピュータ不正アクセス対策基準とは？4つの基準と選択肢の切り方【SG試験】](/sg/unauthorized-access-countermeasure-standard/)
 10. [電子署名法とは？電子署名の効力と認証業務を整理【SG試験】](/sg/electronic-signature-law/)
@@ -103,7 +103,7 @@ last_modified_at: 2026-06-24
 ### 営業秘密・不正競争
 
 - [営業秘密とは？3要件で判断する【SG試験】](/sg/trade-secret/)
-- [不正競争防止法とは？営業秘密の3要件を整理【SG試験】](/sg/unfair-competition-prevention-act/)
+- [不正競争防止法とは？営業秘密・表示・ドメインの行為を分ける【SG試験】](/sg/unfair-competition-prevention-act/)
 
 ### 不正アクセス・電子署名関連法規
 

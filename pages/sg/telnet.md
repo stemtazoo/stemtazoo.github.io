@@ -6,7 +6,7 @@ permalink: /sg/telnet/
 tags: [sg, network, unauthorized_access, sg-technology]
 prev: /sg/targeted-attack/
 next: /sg/timestamp/
-last_modified_at: 2026-09-09
+last_modified_at: 2026-10-21
 ---
 
 ## まず結論
@@ -43,7 +43,7 @@ IoT機器全体のセキュリティ対策は、[IoTセキュリティとは？I
 
 - 暗号化された遠隔操作を確認したい → [SSHとは？安全なリモートログインの基本【SG試験】](/sg/ssh/)
 - 主要なポート番号をまとめて確認したい → [よく出るポート番号まとめ【SG試験】](/sg/common-port-numbers/)
-- 不正ログインやアクセス制御突破を確認したい → [不正アクセス行為とは？不正ログインとアクセス制御突破を整理【SG試験】](/sg/unauthorized-access/)
+- 不正ログインやアクセス制御突破を確認したい → [不正アクセス行為の成立条件｜LAN・認証・権限を事例で読む【SG試験】](/sg/unauthorized-access/)
 
 ---
 

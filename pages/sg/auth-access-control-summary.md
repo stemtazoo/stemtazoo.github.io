@@ -4,7 +4,7 @@ title: 認証・アクセス制御まとめ｜主要用語を整理【SG試験�
 description: "認証・認可・アクセス制御を「本人確認」「許可範囲」「操作制限」に分け、MFA、SSO、特権ID、ゼロトラストを責任範囲と運用場面からつなげて復習するまとめです。ログイン可否、操作許可、権限棚卸しを別問題として読むことで、似た対策名に迷わない学習導線を作ります。"
 permalink: /sg/auth-access-control-summary/
 tags: [sg, sg-security-measures, access_control]
-last_modified_at: 2026-10-20
+last_modified_at: 2026-10-21
 ---
 
 ## まず結論
@@ -81,7 +81,7 @@ last_modified_at: 2026-10-20
 7. [多要素認証と多段階認証の違いとは？混同しやすい認証方式を整理【SG試験】](/sg/mfa-vs-step-auth/)
 8. [リスクベース認証とは？いつもと違うアクセスだけ追加確認する仕組み【SG試験】](/sg/risk-based-authentication/)
 9. [チャレンジレスポンス認証とは？パスワードを送らない認証の仕組み【SG試験】](/sg/challenge-response-authentication/)
-10. [チャレンジレスポンス認証はなぜ使われない？現代の認証方式との違い【SG試験】](/sg/challenge-response-why-not-used/)
+10. [旧パスワード型チャレンジレスポンスの注意点｜公開鍵型との違い【SG試験】](/sg/challenge-response-why-not-used/)
 11. [シングルサインオン（SSO）とは？利便性とリスクを整理【SG試験】](/sg/sso/)
 12. [IdP（認証サーバ）とは？SSOの中核とリスクを整理【SG試験】](/sg/idp/)
 13. [トークン認証とは？SAML・OAuth・OIDCの違いを整理【SG試験】](/sg/token-authentication/)
@@ -108,7 +108,7 @@ last_modified_at: 2026-10-20
 - [多要素認証と多段階認証の違いとは？混同しやすい認証方式を整理【SG試験】](/sg/mfa-vs-step-auth/)
 - [リスクベース認証とは？いつもと違うアクセスだけ追加確認する仕組み【SG試験】](/sg/risk-based-authentication/)
 - [チャレンジレスポンス認証とは？パスワードを送らない認証の仕組み【SG試験】](/sg/challenge-response-authentication/)
-- [チャレンジレスポンス認証はなぜ使われない？現代の認証方式との違い【SG試験】](/sg/challenge-response-why-not-used/)
+- [旧パスワード型チャレンジレスポンスの注意点｜公開鍵型との違い【SG試験】](/sg/challenge-response-why-not-used/)
 
 ### 認証基盤・連携
 

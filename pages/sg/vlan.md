@@ -4,7 +4,7 @@ title: VLANとは？ネットワークを論理的に分ける仕組み【SG試�
 description: "VLANを同一スイッチ上の端末を論理的に分ける仕組みとして整理し、ブロードキャスト範囲、セグメント分割、認証VLAN、MACアドレスフィルタリングの違いを見分けます。物理配線を変えずに部署や用途で通信範囲を分ける問題で、認証や暗号化だけではない対策を選べます。"
 permalink: /sg/vlan/
 tags: [sg, sg-security-measures, network, access_control]
-last_modified_at: 2026-06-29
+last_modified_at: 2026-10-21
 ---
 
 ## まず結論
@@ -38,7 +38,7 @@ SG試験では、VLANを「ブロードキャストの到達範囲を限定し�
 ## 関連記事との役割分担（混同防止）
 
 - VLANでネットワークを論理的に分ける考え方を確認したい → このページ
-- 認証結果で接続先を変える話を確認したい → [WPA2・WPA3・802.1Xとは？無線LAN認証の違いを整理【SG試験】](/sg/wifi-auth-wpa2-wpa3-8021x/)
+- 認証結果で接続先を変える話を確認したい → [無線LAN認証の運用｜Personal・Enterprise・802.1Xを選ぶ【SG試験】](/sg/wifi-auth-wpa2-wpa3-8021x/)
 - ルータ、スイッチ、ブリッジのOSI層の違いを確認したい → [ルータ・ブリッジ・リピータ・スイッチングハブの違いは？OSI層で切り分ける【SG試験】](/sg/router-bridge-repeater-switch-difference/)
 
 ---
