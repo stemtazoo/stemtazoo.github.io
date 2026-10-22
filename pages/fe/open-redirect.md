@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: セキュリティ
 fe_order: 43
 date: 2026-09-17
-last_modified_at: 2026-09-17
+last_modified_at: 2026-10-23
 ---
 
 ## 1. まず結論
@@ -118,3 +118,5 @@ Webの転送機能を悪用
 - **DNS応答を大量送信** → DNSアンプ攻撃
 - **プロキシなどを攻撃の中継点として悪用** → 踏み台攻撃
 - 対策は、**リダイレクト先を固定・制限し、任意URLを許可しない**
+
+{% include fe_article_footer.html %}
