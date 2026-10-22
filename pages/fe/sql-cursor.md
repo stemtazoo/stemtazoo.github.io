@@ -6,7 +6,9 @@ permalink: /fe/sql-cursor/
 tags: [fe, fe-technology, database, sql]
 fe_section: テクノロジ系
 fe_subsection: データベース
-last_modified_at: 2026-10-05
+fe_order: 100
+date: 2026-07-28
+last_modified_at: 2026-10-22
 ---
 
 ## まず結論
@@ -181,6 +183,44 @@ CLOSE employee_cursor
 
 > **名前を見るより、何をされているかを見る。**
 
+### 操作を進めて確認する
+
+次の社員表について、**更新可能なカーソル `X`** で1行ずつ取得し、取得した行の給与を10%増やす流れを見てみましょう。ここでは、カーソルが取り出す順序を「田中 → 佐藤 → 鈴木」と決めた例で説明します。
+
+「次の操作」を押すたびに、`FETCH` で現在行が移り、`WHERE CURRENT OF X` では**現在行だけが更新される**ことを確認できます。
+
+<link rel="stylesheet" href="{{ '/assets/css/fe-sql-cursor-visualizer.css' | relative_url }}">
+
+<section class="fe-sql-cursor-demo" data-fe-sql-cursor-demo aria-label="SQLカーソルの行取得と更新の体験">
+  <p class="fe-sql-cursor-demo__title">カーソルの動き：FETCH → 現在行を更新</p>
+  <p class="fe-sql-cursor-demo__instruction">見るポイント：FETCHで行が移動し、UPDATEだけでは移動しません。</p>
+  <div class="fe-sql-cursor-demo__table-wrap">
+    <table>
+      <thead><tr><th scope="col">名前</th><th scope="col">給与</th><th scope="col">カーソル位置</th></tr></thead>
+      <tbody>
+        <tr data-cursor-row="0"><td>田中</td><td data-cursor-salary>300,000円</td><td data-cursor-row-state>—</td></tr>
+        <tr data-cursor-row="1"><td>佐藤</td><td data-cursor-salary>350,000円</td><td data-cursor-row-state>—</td></tr>
+        <tr data-cursor-row="2"><td>鈴木</td><td data-cursor-salary>400,000円</td><td data-cursor-row-state>—</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="fe-sql-cursor-demo__panel">
+    <p><strong>実行中の操作</strong>：<code class="fe-sql-cursor-demo__command" data-cursor-command>開始前</code></p>
+    <p data-cursor-message aria-live="polite">JavaScriptを有効にすると、1行ずつ操作を追えます。</p>
+    <p><strong>最後にFETCHした値</strong>：<span class="fe-sql-cursor-demo__variables" data-cursor-variables>まだFETCHしていません</span></p>
+  </div>
+  <div class="fe-sql-cursor-demo__controls">
+    <button type="button" data-cursor-next disabled>次の操作 →</button>
+    <button type="button" data-cursor-reset disabled>最初から</button>
+    <span class="fe-sql-cursor-demo__step" data-cursor-step aria-label="進行ステップ">0 / 8</span>
+  </div>
+  <p><small>図解は教材用の簡略化です。実際の更新には、DBMSに応じた更新可能カーソルの条件が必要です。</small></p>
+</section>
+
+<script defer src="{{ '/assets/js/fe-sql-cursor-visualizer.js' | relative_url }}"></script>
+
+なお、`FETCH` で受け取ったホスト変数 `:SALARY` は、`UPDATE` を実行しただけでは自動的に書き換わりません。**カーソルが指す行・表に保存された値・変数に受け取った値**は分けて考えます。
+
 ## 科目Aでどう出る？
 
 ### 用語の切り分け
@@ -207,7 +247,7 @@ CLOSE employee_cursor
 
 ### CURSORとFETCHの違いを最優先で切る
 
-今回のような問題では、`CURSOR` と `FETCH` を混同しないことが最重要です。
+埋込みSQLの用語を見分けるときは、`CURSOR` と `FETCH` を混同しないことが重要です。
 
 ```text
 CURSOR
