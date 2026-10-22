@@ -8,7 +8,7 @@ fe_section: ストラテジ系
 fe_subsection: マーケティング
 fe_order: 47
 date: 2026-09-17
-last_modified_at: 2026-09-17
+last_modified_at: 2026-10-22
 ---
 
 ## 1. まず結論
@@ -115,3 +115,5 @@ last_modified_at: 2026-09-17
 - 過去の検索・閲覧・購買履歴 → 行動ターゲティング広告
 
 特に、**「過去の行動を分析して興味・関心を推定する」**という表現が行動ターゲティングの決め手です。
+
+{% include fe_article_footer.html %}
