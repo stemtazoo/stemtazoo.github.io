@@ -1066,7 +1066,7 @@ document.addEventListener("DOMContentLoaded", () => {
       bug: [
         { low: 1, high: 2, mid: null, note: "まだ比較していません。", change: "まず探索範囲の中央を確認します。" },
         { low: 1, high: 2, mid: 1, note: "data[1] = 3 は target = 8 より小さい。low ← middle でも low は1のままです。", change: "1回目：low ← middle = 1（変化なし）" },
-        { low: 1, high: 2, mid: 1, repeat: true, note: "2回目も low=1・high=2・middle=1。終了条件は真のままで、同じ処理が続きます。", change: "2回目：low ← middle = 1（変化なし）" }
+        { low: 1, high: 2, mid: 1, repeat: true, note: "2回目も low=1・high=2・middle=1。継続条件 low ≦ high は真のままで、同じ処理が続きます。", change: "2回目：low ← middle = 1（変化なし）" }
       ],
       fixed: [
         { low: 1, high: 2, mid: null, note: "まだ比較していません。", change: "まず探索範囲の中央を確認します。" },
