@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: オペレーティングシステム
 fe_order: 90
 date: 2026-08-11
-last_modified_at: 2026-10-08
+last_modified_at: 2026-10-22
 related_articles:
   - /fe/task-scheduling/
   - /fe/cpu-scheduling-idle-time/
@@ -109,27 +109,61 @@ CPU 20ms → 資源R 40ms → CPU 30ms
 CPU 30ms → 資源R 40ms → CPU 20ms
 ```
 
-CPUが2台なら、最初のCPU処理は同時に開始できます。
+CPUが2台なら、最初のCPU処理は同時に開始できます。ただし、資源Rを使えるのは一度に1タスクだけです。
 
-```text
-時間   0      20      30      60      70      90
-       |-------|-------|-------|-------|-------|
+<div style="max-width:100%; overflow-x:auto;" role="region" tabindex="0" aria-label="タスクと資源Rのタイムチャート。小さい画面では横にスクロールできます。">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 228" width="760" height="228" role="img" aria-labelledby="fe-r-timing-title fe-r-timing-desc" style="display:block;max-width:none;">
+  <title id="fe-r-timing-title">CPU2台と排他的な資源Rのタイムチャート</title>
+  <desc id="fe-r-timing-desc">タスクAは0から20ミリ秒までCPU、20から60まで資源R、60から90までCPU。タスクBは0から30までCPU、30から60までR待ち、60から100まで資源R、100から120までCPU。資源Rは20から60をA、60から100をBが使い、全体は120ミリ秒で終了します。</desc>
+  <rect x="0" y="0" width="760" height="228" rx="8" fill="#f7f9fb"/>
+  <text x="13" y="27" font-size="13" fill="#30475d">経過時間（ms）</text>
+  <line x1="105" y1="36" x2="105" y2="188" stroke="#d6dee6" stroke-width="1"/>
+  <text x="105" y="27" text-anchor="middle" font-size="13" fill="#30475d">0</text>
+  <line x1="205" y1="36" x2="205" y2="188" stroke="#d6dee6" stroke-width="1"/>
+  <text x="205" y="27" text-anchor="middle" font-size="13" fill="#30475d">20</text>
+  <line x1="255" y1="36" x2="255" y2="188" stroke="#d6dee6" stroke-width="1"/>
+  <text x="255" y="27" text-anchor="middle" font-size="13" fill="#30475d">30</text>
+  <line x1="405" y1="36" x2="405" y2="188" stroke="#d6dee6" stroke-width="1"/>
+  <text x="405" y="27" text-anchor="middle" font-size="13" fill="#30475d">60</text>
+  <line x1="555" y1="36" x2="555" y2="188" stroke="#d6dee6" stroke-width="1"/>
+  <text x="555" y="27" text-anchor="middle" font-size="13" fill="#30475d">90</text>
+  <line x1="605" y1="36" x2="605" y2="188" stroke="#d6dee6" stroke-width="1"/>
+  <text x="605" y="27" text-anchor="middle" font-size="13" fill="#30475d">100</text>
+  <line x1="705" y1="36" x2="705" y2="188" stroke="#d6dee6" stroke-width="1"/>
+  <text x="705" y="27" text-anchor="middle" font-size="13" fill="#30475d">120</text>
+  <text x="12" y="81" font-size="15" font-weight="bold" fill="#203d51">タスクA</text>
+  <rect x="105" y="58" width="100" height="32" rx="3" fill="#c8d9eb" stroke="#e3ebf0" stroke-width="1"/>
+  <text x="155" y="79" text-anchor="middle" font-size="14" fill="#183244">CPU</text>
+  <rect x="205" y="58" width="200" height="32" rx="3" fill="#95cdbd" stroke="#e3ebf0" stroke-width="1"/>
+  <text x="305" y="79" text-anchor="middle" font-size="14" fill="#183244">資源R</text>
+  <rect x="405" y="58" width="150" height="32" rx="3" fill="#c8d9eb" stroke="#e3ebf0" stroke-width="1"/>
+  <text x="480" y="79" text-anchor="middle" font-size="14" fill="#183244">CPU</text>
+  <text x="12" y="132" font-size="15" font-weight="bold" fill="#203d51">タスクB</text>
+  <rect x="105" y="109" width="150" height="32" rx="3" fill="#c8d9eb" stroke="#e3ebf0" stroke-width="1"/>
+  <text x="180" y="130" text-anchor="middle" font-size="14" fill="#183244">CPU</text>
+  <rect x="255" y="109" width="150" height="32" rx="3" fill="#f1d2a2" stroke="#e3ebf0" stroke-width="1"/>
+  <text x="330" y="130" text-anchor="middle" font-size="14" fill="#183244">R待ち</text>
+  <rect x="405" y="109" width="200" height="32" rx="3" fill="#95cdbd" stroke="#e3ebf0" stroke-width="1"/>
+  <text x="505" y="130" text-anchor="middle" font-size="14" fill="#183244">資源R</text>
+  <rect x="605" y="109" width="100" height="32" rx="3" fill="#c8d9eb" stroke="#e3ebf0" stroke-width="1"/>
+  <text x="655" y="130" text-anchor="middle" font-size="14" fill="#183244">CPU</text>
+  <text x="12" y="179" font-size="15" font-weight="bold" fill="#203d51">資源R</text>
+  <rect x="205" y="158" width="200" height="30" rx="3" fill="#95cdbd" stroke="#e3ebf0" stroke-width="1"/>
+  <text x="305" y="178" text-anchor="middle" font-size="14" fill="#183244">Aが使用</text>
+  <rect x="405" y="158" width="200" height="30" rx="3" fill="#95cdbd" stroke="#e3ebf0" stroke-width="1"/>
+  <text x="505" y="178" text-anchor="middle" font-size="14" fill="#183244">Bが使用</text>
+  <text x="105" y="214" font-size="13" fill="#30475d">Aは90msで完了、Bは120msで完了 → 全体は120ms</text>
+</svg>
+</div>
 
-A      CPU     [---- R ----]    CPU
-B      CPU         待ち         [---- R ----] CPU
-```
+見るポイントは、**Bが30msで資源Rを要求しても、Aが60msまで使っているため30ms待つ**ことです。図の「R待ち」はCPUを使用している時間ではありません。
 
-Aは20msで資源Rを要求し、20〜60msにRを使います。
+- **タスクA：** CPU（0〜20ms）→ 資源R（20〜60ms）→ CPU（60〜90ms）→ **90msで完了**
+- **タスクB：** CPU（0〜30ms）→ R待ち（30〜60ms）→ 資源R（60〜100ms）→ CPU（100〜120ms）→ **120msで完了**
 
-Bは30msでRを要求しますが、60msまでAが使用中です。
+資源Rの使用区間は、Aが20〜60ms、Bが60〜100msで、重なっていません。
 
-したがって、Bには
-
-```text
-60 - 30 = 30ms
-```
-
-の待ち時間が発生します。
+したがって、Bの待ち時間は **60 − 30 = 30ms**、全体の終了時刻は **120ms** です。
 
 ### 待ち時間を速く求める方法
 
@@ -203,13 +237,17 @@ CPUが複数台
 
 問題が「二つのタスクの処理が完了するまでの時間」を聞いている場合は、早く終わる方ではなく、**最後に終了するタスクの終了時刻**を答えます。
 
+先ほどのタイムチャートでは、AとBの処理時間（待ち時間を除く）は、どちらも90msです。
+
 ```text
-A終了：120ms
-B終了：140ms
+A終了：20 + 40 + 30 = 90ms
+B終了：30 + 40 + 20 + 待ち30 = 120ms
 
 全体終了
-→ 140ms
+→ 120ms
 ```
+
+Bの待ち時間30msを加え、**最後に終了するBの120ms**を答えます。
 
 ## どんな場面で使う？
 
