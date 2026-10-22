@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ソフトウェア
 fe_order: 40
 date: 2026-07-08
-last_modified_at: 2026-07-15
+last_modified_at: 2026-10-22
 ---
 
 ## まず結論
@@ -68,6 +68,7 @@ SGML
 | データベースの検索、登録、更新、削除 | DML |
 | オブジェクト指向開発の図や表記 | UML |
 | データの意味や構造をタグで表す | XML |
+| CADなどの製品データをシステム間で交換する国際規格 | STEP |
 
 SGMLを選ぶ判断軸は、次の3つです。
 
