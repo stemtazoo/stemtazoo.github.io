@@ -1,0 +1,78 @@
+.fe-sql-cursor-demo {
+  margin: 1.25rem 0;
+  padding: 1rem;
+  border: 1px solid #a9c0d0;
+  border-radius: 12px;
+  background: rgba(114, 139, 155, .055);
+  color: inherit;
+}
+.fe-sql-cursor-demo__title { margin: 0 0 .5rem; font-weight: 700; }
+.fe-sql-cursor-demo__instruction { margin: 0 0 .8rem; }
+.fe-sql-cursor-demo__table-wrap { overflow-x: auto; }
+.fe-sql-cursor-demo table {
+  width: 100%;
+  min-width: 290px;
+  border-collapse: collapse;
+  margin: .5rem 0;
+  font-size: .93rem;
+}
+.fe-sql-cursor-demo th,
+.fe-sql-cursor-demo td {
+  padding: .55rem .45rem;
+  border: 1px solid #a9c0d0;
+  text-align: left;
+  vertical-align: middle;
+}
+.fe-sql-cursor-demo th:nth-child(2),
+.fe-sql-cursor-demo td:nth-child(2) {
+  text-align: right;
+  white-space: nowrap;
+}
+.fe-sql-cursor-demo tr.is-current {
+  background: rgba(11, 111, 174, .19);
+  font-weight: 700;
+}
+.fe-sql-cursor-demo tr.is-updated td:nth-child(2) {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.fe-sql-cursor-demo__panel {
+  margin: .8rem 0;
+  padding: .7rem .8rem;
+  border-left: 4px solid #0b6fae;
+  background: rgba(11, 111, 174, .08);
+  border-radius: 4px;
+}
+.fe-sql-cursor-demo__panel p { margin: .25rem 0 !important; }
+.fe-sql-cursor-demo__command { display: block; overflow-wrap: anywhere; }
+.fe-sql-cursor-demo__variables { overflow-wrap: anywhere; }
+.fe-sql-cursor-demo__controls {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .55rem;
+}
+.fe-sql-cursor-demo__controls button {
+  min-height: 44px;
+  padding: .5rem .9rem;
+  border: 1px solid #0b6fae;
+  border-radius: 999px;
+  background: rgba(11, 111, 174, .09);
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+.fe-sql-cursor-demo__controls button:disabled {
+  opacity: .5;
+  cursor: default;
+}
+.fe-sql-cursor-demo__controls button:focus-visible {
+  outline: 3px solid #0b6fae;
+  outline-offset: 2px;
+}
+.fe-sql-cursor-demo__step { font-variant-numeric: tabular-nums; }
+@media (max-width: 480px) {
+  .fe-sql-cursor-demo { padding: .7rem; }
+  .fe-sql-cursor-demo table { font-size: .84rem; }
+  .fe-sql-cursor-demo th, .fe-sql-cursor-demo td { padding: .45rem .35rem; }
+}
