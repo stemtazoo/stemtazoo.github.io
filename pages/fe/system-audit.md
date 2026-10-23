@@ -7,7 +7,7 @@ tags: [fe, fe-management, system-audit, governance]
 fe_section: マネジメント系
 fe_subsection: システム監査
 fe_order: 410
-last_modified_at: 2026-10-13
+last_modified_at: 2026-10-24
 ---
 
 ## まず結論
@@ -17,6 +17,8 @@ last_modified_at: 2026-10-13
 FE試験では、独立性や報告先に加えて、**どの監査手続で監査証拠を集めるか**もよく問われます。
 
 この記事は、経済産業省の**システム監査基準（令和5年／2023年改訂版）**に合わせて整理しています。
+
+情報システムを**管理する組織側の基準**は、[システム管理基準]({{ '/fe/system-management-standard/' | relative_url }})で別に整理しています。監査を実施するためのシステム監査基準とは役割が異なります。
 
 このページは、**システム監査の総論**として、独立性・報告先・監査証拠・責任の所在を中心に扱います。個別の監査技法は[システム監査の監査技法](/fe/system-audit-techniques/)、組織内の規程や役割分担は[システム監査規程](/fe/system-audit-regulations/)で確認できます。 システムテスト工程の監査に絞った確認ポイントは、[システムテストの監査とは？](/fe/system-test-audit/) を参照してください。 監査人の独立性は[システム監査人の独立性](/fe/system-auditor-independence/)、監査証拠と監査調書は[監査証拠](/fe/audit-evidence/)・[監査調書](/fe/audit-working-papers/)で詳しく確認できます。
 
