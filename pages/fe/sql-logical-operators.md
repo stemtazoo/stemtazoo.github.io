@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: データベース
 fe_order: 70
 date: 2026-07-17
-last_modified_at: 2026-07-17
+last_modified_at: 2026-10-25
 ---
 
 ## まず結論
@@ -135,6 +135,8 @@ NOT (A AND B)
 ## 科目Aでどう出る？
 
 科目Aでは、`WHERE`句の条件式を読み、どの行が抽出されるかを判断する問題が出ます。
+
+複数の指定値と範囲指定の違いは、[SQLのINとBETWEENの違い](/fe/sql-in-between/)で表の抽出結果を切り替えながら確認できます。
 
 | 日本語の条件 | SQLの考え方 |
 |---|---|
