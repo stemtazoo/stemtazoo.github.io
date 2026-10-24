@@ -1082,3 +1082,31 @@
   .fe-nested-counter-demo__stats { gap: .25rem; }
   .fe-nested-counter-demo__stats strong { font-size: 1.2rem; }
 }
+
+/* FE UTF-8 3-byte visualizer: clear progress across three bytes. */
+.fe-utf8-trace { max-width: 42rem; padding: 1rem; margin: 1rem 0; border: 1px solid #c8d6df; border-radius: 10px; color: #243847; background: #f8fafc; }
+.fe-utf8-trace__choices, .fe-utf8-trace__controls { display: flex; gap: .6rem; flex-wrap: wrap; margin: .75rem 0; }
+.fe-utf8-trace button { cursor: pointer; border: 1px solid #5b8297; border-radius: 7px; padding: .55rem .8rem; min-height: 44px; background: #fff; color: #243847; font: inherit; }
+.fe-utf8-trace button:focus-visible { outline: 3px solid #2b6b85; outline-offset: 2px; }
+.fe-utf8-trace button:disabled { opacity: .5; cursor: default; }
+.fe-utf8-trace__choices button[aria-pressed="true"] { background: #e0eef3; border: 2px solid #2b6b85; font-weight: 700; }
+.fe-utf8-trace__status { margin: .75rem 0; padding: .65rem .75rem; border-left: 4px solid #3a6e88; background: #eaf2f6; border-radius: 5px; line-height: 1.55; }
+.fe-utf8-trace__step { font-size: .91rem; }
+.fe-utf8-trace__bytes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .5rem; margin: .75rem 0; }
+.fe-utf8-trace__bytes > div { border: 1px solid #bacbd6; border-radius: 8px; background: #eef3f6; padding: .65rem .3rem; display: flex; flex-direction: column; align-items: center; gap: .25rem; }
+.fe-utf8-trace__bytes > div.is-filled { background: #e2efe8; border-color: #6a9b80; }
+.fe-utf8-trace__bytes > div.is-current { outline: 3px solid #347c5d; outline-offset: -3px; }
+.fe-utf8-trace__bytes span { font-size: .82rem; }
+.fe-utf8-trace__bytes strong { font-size: 1.45rem; font-family: ui-monospace, Consolas, monospace; font-variant-numeric: tabular-nums; }
+.fe-utf8-trace__bytes small { font-family: ui-monospace, Consolas, monospace; font-size: .86rem; letter-spacing: .015em; }
+.fe-utf8-trace__calculation { min-height: 3em; margin: .65rem 0; font-size: .93rem; line-height: 1.6; }
+.fe-utf8-trace__controls[hidden] { display: none; }
+@media (max-width: 430px) {
+  .fe-utf8-trace { padding: .65rem; }
+  .fe-utf8-trace__choices { gap: .35rem; }
+  .fe-utf8-trace__choices button { padding: .4rem .5rem; }
+  .fe-utf8-trace__bytes { gap: .25rem; }
+  .fe-utf8-trace__bytes > div { padding: .6rem .15rem; }
+  .fe-utf8-trace__bytes strong { font-size: 1.28rem; }
+  .fe-utf8-trace__bytes small { font-size: .72rem; }
+}
