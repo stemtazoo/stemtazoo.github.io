@@ -3,8 +3,9 @@ layout: page
 title: トップダウンテストとボトムアップテストの違いとは？スタブとドライバの切り分け【基本情報技術者試験】
 description: トップダウンテストとボトムアップテストの違いを、スタブとドライバの役割、上位・下位モジュールの関係、試験での判断基準とともに整理します。
 permalink: /fe/top-down-bottom-up-test/
-tags: [fe, technology, software, testing]
-last_modified_at: 2026-09-20
+tags: [fe, fe-technology, software-testing, integration-test]
+date: 2026-08-01
+last_modified_at: 2026-10-25
 fe_section: テクノロジ系
 fe_subsection: ソフトウェア開発管理技術
 fe_order: 130
