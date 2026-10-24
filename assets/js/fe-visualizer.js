@@ -1284,3 +1284,89 @@ document.addEventListener("DOMContentLoaded", () => {
     render("in");
   });
 });
+
+// FE nested-if counter trace: process one order at a time for a selected item.
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("[data-fe-nested-counter-demo]").forEach((demo) => {
+    const rows = Array.from(demo.querySelectorAll("[data-fe-nested-order]"));
+    const choices = Array.from(demo.querySelectorAll("[data-fe-nested-target]"));
+    const kOutput = demo.querySelector("[data-fe-nested-k]");
+    const mOutput = demo.querySelector("[data-fe-nested-m]");
+    const progress = demo.querySelector("[data-fe-nested-progress]");
+    const status = demo.querySelector("[data-fe-nested-status]");
+    const next = demo.querySelector("[data-fe-nested-next]");
+    const prev = demo.querySelector("[data-fe-nested-prev]");
+    const reset = demo.querySelector("[data-fe-nested-reset]");
+    const controls = demo.querySelector("[data-fe-nested-controls]");
+    if (rows.length !== 5 || choices.length !== 2 || !kOutput || !mOutput ||
+        !progress || !status || !next || !prev || !reset || !controls) return;
+
+    let current = 0;
+    let target = "牛乳";
+
+    function render() {
+      let k = 0;
+      let m = 0;
+      let last = "開始前です。「次の注文」を押してください。";
+
+      rows.forEach((row, index) => {
+        const items = row.dataset.feNestedOrder.split(",");
+        const hasTarget = items.includes(target);
+        const hasBase = items.includes("パン");
+        const processed = index < current;
+        const active = index === current - 1;
+        row.classList.toggle("is-processed", processed);
+        row.classList.toggle("is-current", active);
+        const verdict = row.querySelector("[data-fe-nested-verdict]");
+        if (!processed) {
+          if (verdict) verdict.textContent = "—";
+          return;
+        }
+        if (hasTarget) k += 1;
+        if (hasTarget && hasBase) m += 1;
+        let reason = "";
+        if (hasTarget && hasBase) reason = "外側と内側が真：KもMも1増える";
+        else if (hasTarget) reason = "外側だけが真：Kだけ1増える";
+        else reason = "外側が偽：内側は判定せず、どちらも増えない";
+        if (verdict) verdict.textContent = hasTarget && hasBase ? "KとM +1" :
+          hasTarget ? "K +1" : "変化なし";
+        if (active) last = "注文" + (index + 1) + "：" + reason;
+      });
+
+      choices.forEach((button) => {
+        button.setAttribute("aria-pressed", String(button.dataset.feNestedTarget === target));
+      });
+      kOutput.textContent = String(k);
+      mOutput.textContent = String(m);
+      progress.textContent = current + " / " + rows.length;
+      if (current === rows.length) last += "。すべての注文を確認しました。";
+      status.textContent = last;
+      prev.disabled = current === 0;
+      reset.disabled = current === 0;
+      next.disabled = current === rows.length;
+    }
+
+    choices.forEach((button) => {
+      button.addEventListener("click", () => {
+        target = button.dataset.feNestedTarget;
+        current = 0;
+        render();
+      });
+    });
+    next.addEventListener("click", () => {
+      current = Math.min(current + 1, rows.length);
+      render();
+    });
+    prev.addEventListener("click", () => {
+      current = Math.max(current - 1, 0);
+      render();
+    });
+    reset.addEventListener("click", () => {
+      current = 0;
+      render();
+    });
+
+    controls.hidden = false;
+    render();
+  });
+});
