@@ -8,7 +8,7 @@ fe_section: 科目B対策
 fe_subsection: 疑似言語
 fe_order: 10
 date: 2026-10-09
-last_modified_at: 2026-10-09
+last_modified_at: 2026-10-25
 related_articles:
   - /fe/array/
   - /fe/control-structures-loop-selection/
@@ -138,6 +138,8 @@ IPAの別紙2では、主な演算の優先順位は **括弧やメンバアク�
   <p class="fe-pseudocode-demo__message" data-trace-message role="status" aria-live="polite">開始前です。「次の1行」を押してください。</p>
   <p class="fe-learning-demo__hint">JavaScriptを使えない場合も、直前のトレース表で同じ結果を確認できます。</p>
 </div>
+
+複数のif文が入れ子になり、カウンタを別々に増やす場面は、[入れ子のif文と二つのカウンタのトレース](/fe/nested-if-counter-trace/)で具体的に確認できます。
 
 ### 試験でのトレース手順
 

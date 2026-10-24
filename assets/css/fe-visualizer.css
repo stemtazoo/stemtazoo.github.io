@@ -1053,3 +1053,32 @@
   .fe-sql-conditions-demo__table { font-size: .82rem; }
   .fe-sql-conditions-demo__table th, .fe-sql-conditions-demo__table td { padding: .48rem .2rem; }
 }
+
+/* FE nested-if trace: compact order-by-order counter visualization. */
+.fe-nested-counter-demo { max-width: 42rem; border: 1px solid #cbd8e0; border-radius: 10px; padding: 1rem; margin: 1rem 0; background: #f8fafc; color: #223744; }
+.fe-nested-counter-demo__choices { display: flex; flex-wrap: wrap; gap: .6rem; margin: .7rem 0; }
+.fe-nested-counter-demo button { cursor: pointer; min-height: 44px; border: 1px solid #53778c; background: #fff; border-radius: 7px; padding: .5rem .9rem; color: #223744; font: inherit; }
+.fe-nested-counter-demo__choices [aria-pressed="true"] { background: #dcecf2; border: 2px solid #286781; font-weight: 700; }
+.fe-nested-counter-demo button:focus-visible { outline: 3px solid #286781; outline-offset: 2px; }
+.fe-nested-counter-demo button:disabled { cursor: default; opacity: .48; }
+.fe-nested-counter-demo__table-wrap { overflow-x: auto; }
+.fe-nested-counter-demo__table { width: 100%; min-width: 320px; border-collapse: collapse; font-size: .9rem; }
+.fe-nested-counter-demo__table th, .fe-nested-counter-demo__table td { padding: .52rem .45rem; border-bottom: 1px solid #c1d0d8; text-align: left; }
+.fe-nested-counter-demo__table thead { background: #e6eef3; }
+.fe-nested-counter-demo__table tr.is-processed { background: #e9f1ed; }
+.fe-nested-counter-demo__table tr.is-current { background: #d2eadd; outline: 2px solid #2b775b; outline-offset: -2px; }
+.fe-nested-counter-demo__table [data-fe-nested-verdict] { font-weight: 650; }
+.fe-nested-counter-demo__stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .5rem; margin: .75rem 0; }
+.fe-nested-counter-demo__stats > div { background: #edf3f6; border-radius: 7px; padding: .65rem .35rem; display: flex; flex-direction: column; align-items: center; gap: .2rem; text-align: center; }
+.fe-nested-counter-demo__stats span { font-size: .78rem; }
+.fe-nested-counter-demo__stats strong { font-size: 1.35rem; font-variant-numeric: tabular-nums; }
+.fe-nested-counter-demo__status { padding: .7rem .8rem; min-height: 3.3rem; background: #e8f0f5; border-left: 4px solid #286781; border-radius: 6px; margin: .75rem 0; }
+.fe-nested-counter-demo__controls { display: flex; flex-wrap: wrap; gap: .5rem; }
+.fe-nested-counter-demo__controls[hidden] { display: none; }
+@media (max-width: 430px) {
+  .fe-nested-counter-demo { padding: .7rem; }
+  .fe-nested-counter-demo__table { font-size: .8rem; }
+  .fe-nested-counter-demo__table th, .fe-nested-counter-demo__table td { padding: .5rem .2rem; }
+  .fe-nested-counter-demo__stats { gap: .25rem; }
+  .fe-nested-counter-demo__stats strong { font-size: 1.2rem; }
+}
