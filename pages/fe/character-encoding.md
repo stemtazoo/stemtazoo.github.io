@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: コンピュータ構成要素
 fe_order: 95
 date: 2026-08-24
-last_modified_at: 2026-08-24
+last_modified_at: 2026-10-25
 ---
 
 ## まず結論
@@ -135,6 +135,8 @@ Unicodeは、世界中の文字を統一的に扱えるように、それぞれ�
 ここで注意したいのは、**Unicodeを「16ビット固定の文字コード」と覚えないこと**です。
 
 Unicodeは文字に番号を割り当てる仕組みで、その番号を実際のバイト列として表す方法には、UTF-8やUTF-16などがあります。
+
+UTF-8で3バイトの文字を6ビットずつ取り出して符号化する手順は、[UTF-8の3バイト符号化](/fe/utf8-three-byte-encoding/)で具体例とともに確認できます。
 
 ```text
 Unicode

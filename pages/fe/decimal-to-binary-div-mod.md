@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: 基礎理論
 fe_order: 20
 date: 2026-08-25
-last_modified_at: 2026-08-25
+last_modified_at: 2026-10-25
 ---
 
 ## まず結論
@@ -23,6 +23,8 @@ j div 2 → 商   → 次の j にする
 ```
 
 つまり、**modはビットを取り出す、divは次へ進む**です。
+
+この考え方を6ビット単位に応用した例は、[UTF-8の3バイト符号化](/fe/utf8-three-byte-encoding/)で紹介しています。
 
 ## 直感的な説明
 

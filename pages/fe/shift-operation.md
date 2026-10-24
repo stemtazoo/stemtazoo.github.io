@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: 基礎理論
 fe_order: 35
 date: 2026-07-02
-last_modified_at: 2026-10-14
+last_modified_at: 2026-10-25
 ---
 
 ## まず結論
@@ -207,6 +207,8 @@ F | 0 | C | 3
 ```
 
 次に `C` を見たいなら、値全体を右へ4ビット動かします。
+
+ビットを6桁ずつ取り出す際の商と余りの使い方は、[UTF-8の3バイト符号化](/fe/utf8-three-byte-encoding/)で確かめられます。
 
 ```text
 F | 0 | C | 3
