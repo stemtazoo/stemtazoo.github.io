@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ソフトウェア
 fe_order: 75
 date: 2026-10-11
-last_modified_at: 2026-10-11
+last_modified_at: 2026-10-24
 related_articles:
   - /fe/recursion/
   - /fe/compiler-optimization/
@@ -116,6 +116,49 @@ F5_1 True
 
 **「途中で使える文字」と「先頭に使える文字」は同じとは限らない**、という点が判断の中心です。
 
+### 式を組み立てる規則では、括弧も規則どおり
+
+変数名だけでなく、複数の式を組み合わせるBNFもあります。次は説明用に作った独立した例です。
+
+~~~text
+<式> ::= <変数> | (<式>-<式>) | <式>/<式>
+<変数> ::= P | Q | R | S
+~~~
+
+この規則では、引き算は `(<式>-<式>)` の形で**全体を括弧で囲み**、割り算は `<式>/<式>` の形で組み合わせます。
+
+例えば、`(P-Q)/(R-S)` は次の順番で生成できます。
+
+<div style="max-width:560px;margin:1rem auto;padding:1rem;border:1px solid #cbd5e1;border-radius:12px;background:#f8fafc;color:#243247;">
+  <p style="margin:0 0 .7rem;font-weight:700;">式を1段ずつ生成する</p>
+  <div style="padding:.55rem .75rem;border-radius:8px;background:#e2e8f0;text-align:center;">
+    <code style="color:#243247;">&lt;式&gt;</code>
+  </div>
+  <p style="margin:.3rem 0;text-align:center;font-size:.85rem;">↓ 割り算の規則を選ぶ</p>
+  <div style="padding:.55rem .75rem;border-radius:8px;background:#e2e8f0;text-align:center;">
+    <code style="color:#243247;">&lt;式&gt;/&lt;式&gt;</code>
+  </div>
+  <p style="margin:.3rem 0;text-align:center;font-size:.85rem;">↓ 左右とも引き算の規則を選ぶ</p>
+  <div style="padding:.55rem .75rem;border-radius:8px;background:#dbeafe;text-align:center;overflow-x:auto;">
+    <code style="color:#243247;white-space:nowrap;">(&lt;式&gt;-&lt;式&gt;)/(&lt;式&gt;-&lt;式&gt;)</code>
+  </div>
+  <p style="margin:.3rem 0;text-align:center;font-size:.85rem;">↓ 変数をP・Q・R・Sに展開</p>
+  <div style="padding:.55rem .75rem;border-radius:8px;background:#dcfce7;text-align:center;">
+    <code style="color:#243247;">(P-Q)/(R-S)</code>
+  </div>
+</div>
+
+**見るポイント：** 規則を選ぶたびに、`<式>` がどの形へ展開されたかを確認します。括弧は引き算の規則に含まれているので、この位置に現れます。
+
+| 候補 | 生成できる？ | 判断 |
+|---|---|---|
+| `(P-Q)/(R-S)` | ○ | 括弧付きの引き算を2つ作り、割り算で結ぶ |
+| `P/Q` | ○ | 割り算の規則をそのまま使う |
+| `P-(Q-R)` | × | 引き算全体を囲む括弧がない |
+| `(P/Q)` | × | 割り算全体だけを括弧で囲む規則がない |
+
+数式として計算できる形でも、**BNFにない括弧を自由に追加したり、省略したりはできません**。
+
 ## どんな場面で使う？
 
 BNFは、プログラミング言語の構文や、入力文字列の形式を定義するときに使われます。
@@ -138,6 +181,10 @@ BNFは、プログラミング言語の構文や、入力文字列の形式を�
 
 いいえ。今回の規則ではアンダースコアは**追加する文字**には使えますが、**最初の英字**の代わりにはなりません。
 
+### 式に括弧を自由に付けてもよい？
+
+いいえ。**そのBNFが許す位置にしか括弧を付けられません**。上の式の例では、`P/Q` は生成できますが、`(P/Q)` は生成できません。一方、引き算は `(P-Q)` の形が必要です。
+
 ### BNFの再帰と、再帰関数は同じ？
 
 どちらも自分自身を参照する形ですが、役割は異なります。BNFの再帰は**文法を定義する方法**、再帰関数は**関数が自分自身を呼び出して処理する方法**です。後者は[再帰処理の解説](/fe/recursion/)で確認できます。
@@ -148,6 +195,7 @@ BNFは、プログラミング言語の構文や、入力文字列の形式を�
 - `::=` は定義、`|` は「または」
 - 右辺に自分自身が出てきたら、**再帰的に繰り返せる形**を確認する
 - 選択肢は**先頭文字の制約**から調べると速い
+- 式の規則では**括弧の有無や位置も照合する**。普段の数式の書き方で補わない
 - BNFの文法チェックと、プログラムの意味的な正しさは別
 
 {% include fe_article_footer.html %}
