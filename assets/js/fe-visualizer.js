@@ -1177,3 +1177,42 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+// FE polling control: show the first periodic check after a persistent event.
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("[data-fe-polling-demo]").forEach((demo) => {
+    const slider = demo.querySelector("#fe-polling-interval");
+    const intervalValue = demo.querySelector("[data-fe-polling-interval]");
+    const firstValue = demo.querySelector("[data-fe-polling-first]");
+    const delayValue = demo.querySelector("[data-fe-polling-delay]");
+    const marks = demo.querySelector("[data-fe-polling-marks]");
+    const detectionMark = demo.querySelector("[data-fe-polling-detect]");
+    if (!slider || !intervalValue || !firstValue || !delayValue || !marks || !detectionMark) return;
+
+    const eventTime = 0.5;
+    const chartEnd = 6;
+
+    function render() {
+      const interval = Math.max(1, Math.min(5, Number(slider.value) || 2));
+      const firstDetection = Math.ceil(eventTime / interval) * interval;
+      const delay = firstDetection - eventTime;
+      const newMarks = [];
+
+      for (let time = 0; time <= chartEnd; time += interval) {
+        const mark = document.createElement("span");
+        mark.className = "fe-polling-demo__mark";
+        mark.style.left = (time / chartEnd * 100) + "%";
+        newMarks.push(mark);
+      }
+
+      marks.replaceChildren(...newMarks);
+      detectionMark.style.left = (firstDetection / chartEnd * 100) + "%";
+      intervalValue.textContent = String(interval);
+      firstValue.textContent = String(firstDetection);
+      delayValue.textContent = delay.toFixed(1);
+    }
+
+    slider.addEventListener("input", render);
+    render();
+  });
+});
