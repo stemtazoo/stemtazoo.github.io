@@ -1029,3 +1029,27 @@
   .fe-polling-demo__legend { font-size: .78rem; }
   .fe-polling-demo__result { font-size: .92rem; }
 }
+
+/* FE SQL IN/BETWEEN: matching rows in a responsive comparison table. */
+.fe-sql-conditions-demo { max-width: 44rem; margin: 1rem 0; padding: 1rem; background: #f8fafc; border: 1px solid #c7d4df; border-radius: 10px; color: #253543; }
+.fe-sql-conditions-demo__choices { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .55rem; margin: .75rem 0; }
+.fe-sql-conditions-demo__choices .fe-learning-demo__button { min-height: 44px; padding: .55rem .35rem; }
+.fe-sql-conditions-demo__choices [aria-pressed="true"] { background: #dcecf4; color: #163f56; border: 2px solid #28617e; font-weight: 700; }
+.fe-sql-conditions-demo__choices .fe-learning-demo__button:focus-visible { outline: 3px solid #28617e; outline-offset: 2px; }
+.fe-sql-conditions-demo__sql { padding: .7rem; margin: .75rem 0; border-radius: 6px; background: #edf2f6; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: .91rem; overflow-wrap: anywhere; }
+.fe-sql-conditions-demo__result { margin: .75rem 0; padding: .6rem .75rem; background: #e6eef4; border-left: 4px solid #28617e; border-radius: 5px; }
+.fe-sql-conditions-demo__table-wrap { width: 100%; overflow-x: auto; }
+.fe-sql-conditions-demo__table { width: 100%; min-width: 315px; border-collapse: collapse; font-size: .91rem; }
+.fe-sql-conditions-demo__table th, .fe-sql-conditions-demo__table td { padding: .52rem .4rem; border-bottom: 1px solid #bfcbd5; text-align: left; }
+.fe-sql-conditions-demo__table th { background: #e9eff4; color: #283c4a; font-weight: 700; }
+.fe-sql-conditions-demo__table tr.is-matched { background: #dceee6; color: #20543f; font-weight: 650; }
+.fe-sql-conditions-demo__table tr.is-excluded { background: #f3f5f7; color: #5a6470; }
+.fe-sql-conditions-demo__table [data-fe-sql-verdict] { font-weight: 750; text-align: center; }
+.fe-sql-conditions-demo__note { margin: .75rem 0 .35rem; min-height: 2.5em; line-height: 1.55; }
+.fe-sql-conditions-demo .fe-learning-demo__hint { font-size: .88rem; }
+@media (max-width: 430px) {
+  .fe-sql-conditions-demo { padding: .65rem; }
+  .fe-sql-conditions-demo__choices { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .fe-sql-conditions-demo__table { font-size: .82rem; }
+  .fe-sql-conditions-demo__table th, .fe-sql-conditions-demo__table td { padding: .48rem .2rem; }
+}
