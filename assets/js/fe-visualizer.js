@@ -1370,3 +1370,100 @@ document.addEventListener("DOMContentLoaded", () => {
     render();
   });
 });
+
+// FE UTF-8 3-byte trace: one lower-six-bit extraction at a time.
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("[data-fe-utf8-trace]").forEach((demo) => {
+    const choices = Array.from(demo.querySelectorAll("[data-fe-utf8-point]"));
+    const cells = Array.from(demo.querySelectorAll("[data-fe-utf8-cell]"));
+    const byteValues = Array.from(demo.querySelectorAll("[data-fe-utf8-byte]"));
+    const binaryValues = Array.from(demo.querySelectorAll("[data-fe-utf8-binary]"));
+    const status = demo.querySelector("[data-fe-utf8-status]");
+    const stepText = demo.querySelector("[data-fe-utf8-step]");
+    const cpText = demo.querySelector("[data-fe-utf8-cp]");
+    const calculation = demo.querySelector("[data-fe-utf8-calculation]");
+    const controls = demo.querySelector("[data-fe-utf8-controls]");
+    const prev = demo.querySelector("[data-fe-utf8-prev]");
+    const next = demo.querySelector("[data-fe-utf8-next]");
+    const reset = demo.querySelector("[data-fe-utf8-reset]");
+    if (choices.length !== 3 || cells.length !== 3 ||
+        byteValues.length !== 3 || binaryValues.length !== 3 ||
+        !status || !stepText || !cpText || !calculation || !controls ||
+        !prev || !next || !reset) return;
+
+    let codePoint = 12354; // U+3042: an independent learning example
+    let stepsDone = 0;
+
+    function render() {
+      let cp = codePoint;
+      const bytes = [224, 128, 128];
+      let latest = null;
+
+      for (let k = 0; k < stepsDone; k += 1) {
+        const position = 2 - k; // last byte first
+        const before = cp;
+        const remainder = cp % 64;
+        const quotient = Math.floor(cp / 64);
+        bytes[position] += remainder;
+        latest = { position, before, remainder, quotient, result: bytes[position] };
+        cp = quotient;
+      }
+
+      byteValues.forEach((el, index) => {
+        el.textContent = bytes[index].toString(16).toUpperCase().padStart(2, "0");
+      });
+      binaryValues.forEach((el, index) => {
+        el.textContent = bytes[index].toString(2).padStart(8, "0");
+      });
+      cells.forEach((el, index) => {
+        el.classList.toggle("is-filled", index >= 3 - stepsDone);
+        el.classList.toggle("is-current", latest !== null && index === latest.position);
+      });
+      choices.forEach(button => {
+        button.setAttribute("aria-pressed", String(Number(button.dataset.feUtf8Point) === codePoint));
+      });
+      stepText.textContent = stepsDone + " / 3";
+      cpText.textContent = String(cp);
+
+      if (!latest) {
+        status.textContent = "開始前：cp＝" + codePoint + "。右端の3バイト目から進めます。";
+        calculation.textContent = "64で割った余りを右端から保存します。";
+      } else {
+        const n = latest.position + 1;
+        status.textContent = n + "バイト目に余り" + latest.remainder +
+          "を加算しました。" + (stepsDone === 3 ? "3バイト完成です。" : "");
+        calculation.textContent = latest.before + " ÷ 64 → 余り" +
+          latest.remainder + "、商" + latest.quotient +
+          "。格納先は" + n + "バイト目：" + latest.result + "（10進数）";
+      }
+
+      prev.disabled = stepsDone === 0;
+      reset.disabled = stepsDone === 0;
+      next.disabled = stepsDone === 3;
+    }
+
+    choices.forEach(button => {
+      button.addEventListener("click", () => {
+        const chosen = Number(button.dataset.feUtf8Point);
+        if (![12354, 28450, 8364].includes(chosen)) return;
+        codePoint = chosen;
+        stepsDone = 0;
+        render();
+      });
+    });
+    next.addEventListener("click", () => {
+      stepsDone = Math.min(stepsDone + 1, 3);
+      render();
+    });
+    prev.addEventListener("click", () => {
+      stepsDone = Math.max(stepsDone - 1, 0);
+      render();
+    });
+    reset.addEventListener("click", () => {
+      stepsDone = 0;
+      render();
+    });
+    controls.hidden = false;
+    render();
+  });
+});
