@@ -1216,3 +1216,71 @@ document.addEventListener("DOMContentLoaded", () => {
     render();
   });
 });
+
+// FE SQL: compare IN / OR / AND / BETWEEN using a standalone supplier-ID example.
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("[data-fe-sql-conditions-demo]").forEach((demo) => {
+    const buttons = Array.from(demo.querySelectorAll("[data-fe-sql-case]"));
+    const rows = Array.from(demo.querySelectorAll("[data-fe-sql-supplier]"));
+    const sqlText = demo.querySelector("[data-fe-sql-expression]");
+    const count = demo.querySelector("[data-fe-sql-count]");
+    const note = demo.querySelector("[data-fe-sql-note]");
+    if (buttons.length !== 4 || rows.length !== 6 || !sqlText || !count || !note) return;
+
+    const options = {
+      in: {
+        expression: "仕入先ID IN ('M002', 'M004')",
+        note: "INは列挙したM002・M004だけ。間のM003は含みません。"
+      },
+      or: {
+        expression: "仕入先ID = 'M002' OR 仕入先ID = 'M004'",
+        note: "ORはM002またはM004。INと同じ3行になります。"
+      },
+      and: {
+        expression: "仕入先ID = 'M002' AND 仕入先ID = 'M004'",
+        note: "一つの仕入先IDが同時にM002とM004になることはありません。"
+      },
+      between: {
+        expression: "仕入先ID BETWEEN 'M002' AND 'M004'",
+        note: "BETWEENは両端を含む範囲。間のM003も含むため5行になります。"
+      }
+    };
+
+    function matches(supplier, mode) {
+      if (mode === "in" || mode === "or") {
+        return supplier === "M002" || supplier === "M004";
+      }
+      if (mode === "and") {
+        return supplier === "M002" && supplier === "M004";
+      }
+      if (mode === "between") {
+        return supplier >= "M002" && supplier <= "M004";
+      }
+      return false;
+    }
+
+    function render(mode) {
+      if (!options[mode]) return;
+      let matched = 0;
+      rows.forEach((row) => {
+        const isMatch = matches(row.dataset.feSqlSupplier, mode);
+        if (isMatch) matched += 1;
+        row.classList.toggle("is-matched", isMatch);
+        row.classList.toggle("is-excluded", !isMatch);
+        const verdict = row.querySelector("[data-fe-sql-verdict]");
+        if (verdict) verdict.textContent = isMatch ? "○" : "—";
+      });
+      buttons.forEach(button => {
+        button.setAttribute("aria-pressed", String(button.dataset.feSqlCase === mode));
+      });
+      sqlText.textContent = options[mode].expression;
+      count.textContent = String(matched);
+      note.textContent = options[mode].note;
+    }
+
+    buttons.forEach(button => {
+      button.addEventListener("click", () => render(button.dataset.feSqlCase));
+    });
+    render("in");
+  });
+});
