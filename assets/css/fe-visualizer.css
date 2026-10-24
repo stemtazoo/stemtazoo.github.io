@@ -1008,3 +1008,24 @@
 @media (max-width: 380px) {
   .fe-bst-delete__choices { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+
+/* FE polling control: readable timeline and single interval slider. */
+.fe-polling-demo { max-width: 38rem; padding: 1rem; margin: 1rem 0; border: 1px solid #cbd5df; border-radius: 10px; background: #f8fafc; color: #243544; }
+.fe-polling-demo label { display: block; margin: .5rem 0; font-weight: 700; }
+.fe-polling-demo input[type="range"] { display: block; width: 100%; min-height: 44px; accent-color: #285d77; cursor: pointer; }
+.fe-polling-demo input[type="range"]:focus-visible { outline: 3px solid #285d77; outline-offset: 3px; }
+.fe-polling-demo__timeline { padding: .5rem .5rem .2rem; margin: .5rem 0; }
+.fe-polling-demo__track { position: relative; height: 4.2rem; border-bottom: 2px solid #617589; background: linear-gradient(180deg, #f8fafc, #edf2f6); }
+.fe-polling-demo__mark { position: absolute; bottom: 0; height: 1.1rem; border-left: 3px solid #426983; transform: translateX(-50%); }
+.fe-polling-demo__event { position: absolute; top: .3rem; transform: translateX(-50%); width: 0; height: 0; border-left: 7px solid transparent; border-right: 7px solid transparent; border-top: 11px solid #ae673b; }
+.fe-polling-demo__detect { position: absolute; bottom: 1.4rem; transform: translateX(-50%); width: 14px; height: 14px; border-radius: 50%; background: #236a56; border: 2px solid #fff; box-shadow: 0 0 0 1px #236a56; }
+.fe-polling-demo__ticks { display: flex; justify-content: space-between; font-size: .82rem; color: #445466; margin-top: .25rem; }
+.fe-polling-demo__legend { font-size: .85rem; line-height: 1.6; margin: .7rem 0; }
+.fe-polling-demo__result { background: #e8f0f5; border-left: 4px solid #285d77; padding: .65rem .75rem; border-radius: 5px; margin: .7rem 0; }
+.fe-polling-demo__result output { font-variant-numeric: tabular-nums; }
+.fe-polling-demo .fe-learning-demo__hint { font-size: .9rem; }
+@media (max-width: 420px) {
+  .fe-polling-demo { padding: .75rem; }
+  .fe-polling-demo__legend { font-size: .78rem; }
+  .fe-polling-demo__result { font-size: .92rem; }
+}
