@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: コンピュータ構成要素
 fe_order: 42
 date: 2026-09-16
-last_modified_at: 2026-10-17
+last_modified_at: 2026-10-24
 ---
 
 ## まず結論
@@ -198,6 +198,21 @@ RAID1より容量を効率よく使いやすい一方で、パリティの計算
 
 FEでは、この3つをまず確実に区別できるようにするのが効率的です。
 
+### RAID2〜RAID5は「分割単位」と「復元情報の置き方」で見分ける
+
+「データを複数のディスクに分散する」だけでは、RAID5とは判断できません。**データの分割単位**と**復元用情報をどこに置くか**をセットで確認します。
+
+| RAID | データの分割単位 | 復元用情報の記録方法 |
+|---|---|---|
+| RAID2 | ビット単位 | ハミング符号（ECC）を複数のディスクに記録 |
+| RAID3 | バイト単位 | パリティを専用の1台に記録 |
+| RAID4 | ブロック単位 | パリティを専用の1台に記録 |
+| **RAID5** | **ブロック単位** | **パリティを複数ディスクに分散** |
+
+特に**RAID4とRAID5は、どちらもブロック単位でデータを分散します**。パリティを特定の1台に固定するならRAID4、複数のディスクに分散するならRAID5です。
+
+RAID2のハミング符号（ECC）はエラー訂正用の情報です。パリティを使うRAID3〜5とは区別しましょう。
+
 ## どんな場面で使う？
 
 RAIDは、サーバやストレージ装置など、複数のディスクを使う場面で利用されます。
@@ -283,6 +298,7 @@ RAIDの用語や各レベルの定義を確認する一次資料として、Stor
 
 - [SNIA：Dictionary](https://www.snia.org/education/online-dictionary)
 - [SNIA：Common RAID Disk Data Format (DDF)](https://www.snia.org/tech_activities/standards/curr_standards/ddf)
+- [IBM：RAID level descriptions - Servers](https://www.ibm.com/support/pages/raid-level-descriptions-servers)
 
 RAIDはレベルによってデータ配置・冗長性・性能特性が異なります。また、RAIDはバックアップそのものではありません。
 
