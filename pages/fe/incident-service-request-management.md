@@ -8,7 +8,7 @@ fe_section: マネジメント系
 fe_subsection: サービスマネジメント
 fe_order: 220
 date: 2026-08-15
-last_modified_at: 2026-09-20
+last_modified_at: 2026-10-25
 ---
 
 ## まず結論
@@ -157,6 +157,11 @@ last_modified_at: 2026-09-20
 
 問題が解消したことを確認し、記録を終了します。
 
+### 規格・参考資料
+
+- [ISO/IEC 20000-1:2018 — Information technology — Service management — Part 1: Service management system requirements](https://www.iso.org/standard/70636.html)
+- [ISO/IEC 20000-1における顧客中心性の解説資料（ISO/IEC JTC 1/SC 40）](https://committee.iso.org/files/live/sites/jtc1sc40/files/Customer%20Centricity%20in%20ISO_IEC%2020000-1%2020240803.pdf)
+
 ## 科目Aでどう出る？
 
 科目Aでは、受付後の処理順序や各作業の役割を問われます。
@@ -269,10 +274,5 @@ last_modified_at: 2026-09-20
 ```
 
 この一文を思い出せれば、選択肢を切りやすくなります。
-
-## 参考資料
-
-- [ISO/IEC 20000-1:2018 — Information technology — Service management — Part 1: Service management system requirements](https://www.iso.org/standard/70636.html)
-- [ISO/IEC 20000-1における顧客中心性の解説資料（ISO/IEC JTC 1/SC 40）](https://committee.iso.org/files/live/sites/jtc1sc40/files/Customer%20Centricity%20in%20ISO_IEC%2020000-1%2020240803.pdf)
 
 {% include fe_article_footer.html %}
