@@ -105,10 +105,10 @@ result = self.processor.pay(amount)
     <div data-delegation-payment><strong>PaymentProcessor</strong><span>決済を担当</span></div>
   </div>
   <ol class="fe-delegation-demo__steps">
-    <li data-delegation-stage="0">利用者が `Order.checkout(1500)` を呼ぶ</li>
-    <li data-delegation-stage="1">`Order` が `PaymentProcessor.pay(1500)` を呼ぶ（委譲）</li>
-    <li data-delegation-stage="2">`PaymentProcessor` が決済処理し「支払完了」を返す</li>
-    <li data-delegation-stage="3">`Order` が戻り値を受け取り、呼出元へ返す</li>
+    <li data-delegation-stage="0">利用者が <code>Order.checkout(1500)</code> を呼ぶ</li>
+    <li data-delegation-stage="1"><code>Order</code> が <code>PaymentProcessor.pay(1500)</code> を呼ぶ（委譲）</li>
+    <li data-delegation-stage="2"><code>PaymentProcessor</code> が決済処理し「支払完了」を返す</li>
+    <li data-delegation-stage="3"><code>Order</code> が戻り値を受け取り、呼出元へ返す</li>
   </ol>
   <p class="fe-delegation-demo__status" data-delegation-status role="status" aria-live="polite">最初はOrder.checkout()が呼ばれます。</p>
   <div class="fe-delegation-demo__controls">
