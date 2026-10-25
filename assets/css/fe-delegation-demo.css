@@ -1,0 +1,21 @@
+/* FE Delegation walkthrough: scoped, responsive, readable without JS. */
+.fe-delegation-demo{margin:1.1rem 0;padding:1rem;border:1px solid #aabcc6;border-radius:10px;color:inherit;background:var(--main-background-color,transparent)}
+.fe-delegation-demo__title{font-weight:700;margin:0 0 .65rem}
+.fe-delegation-demo__objects{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:.5rem;align-items:center;margin-bottom:.8rem}
+.fe-delegation-demo__objects>div{min-width:0;padding:.8rem .45rem;border:1px solid #a7b7bd;border-radius:7px;text-align:center;background:rgba(81,117,130,.08)}
+.fe-delegation-demo__objects strong,.fe-delegation-demo__objects span:not(.fe-delegation-demo__arrow){display:block;overflow-wrap:anywhere}
+.fe-delegation-demo__objects span:not(.fe-delegation-demo__arrow){font-size:.84rem;margin-top:.25rem}
+.fe-delegation-demo__arrow{font-size:1.35rem}
+.fe-delegation-demo__objects>div.is-active{outline:2px solid #497a77;outline-offset:1px;background:rgba(74,122,119,.15)}
+.fe-delegation-demo__steps{margin:0;padding-left:1.75rem}
+.fe-delegation-demo__steps li{padding:.4rem .45rem;border-radius:6px;margin:.15rem 0}
+.fe-delegation-demo__steps li.is-current{font-weight:600;background:rgba(74,122,119,.15)}
+.fe-delegation-demo__status{margin:.7rem 0;padding:.6rem;border:1px solid #c2cdcf;border-radius:7px}
+.fe-delegation-demo__controls{display:none;align-items:center;gap:.45rem;flex-wrap:wrap}
+.fe-delegation-demo.is-interactive .fe-delegation-demo__controls{display:flex}
+.fe-delegation-demo__controls button{min-height:44px;padding:.4rem .7rem;border-radius:7px;border:1px solid #93a8b3;background:transparent;color:inherit;cursor:pointer}
+.fe-delegation-demo__controls button:focus-visible{outline:2px solid #497a77;outline-offset:2px}
+.fe-delegation-demo__controls button:disabled{opacity:.5;cursor:default}
+.fe-delegation-demo__controls span{margin-left:auto;font-variant-numeric:tabular-nums}
+.fe-delegation-demo__hint{margin:.65rem 0 0;font-size:.92rem}
+@media(max-width:430px){.fe-delegation-demo{padding:.75rem}.fe-delegation-demo__objects{gap:.3rem}.fe-delegation-demo__controls span{width:100%;margin:0}}
