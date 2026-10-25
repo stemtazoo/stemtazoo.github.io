@@ -1,0 +1,14 @@
+/* FE: positive-value rounding boundary visualizer */
+.fe-round-floor{margin:1rem 0;padding:1rem;border:1px solid #aabdc4;border-radius:10px;background:var(--main-background-color,#fff);color:inherit}
+.fe-round-floor__title{margin:0 0 .5rem;font-weight:700}
+.fe-round-floor label{display:block;margin:.5rem 0}
+.fe-round-floor input[type=range]{display:block;width:100%;margin:.7rem 0;accent-color:#4a7779}
+.fe-round-floor__presets{display:flex;flex-wrap:wrap;gap:.5rem;margin:.5rem 0 1rem}
+.fe-round-floor__presets button{min-width:4.4rem;min-height:44px;padding:.4rem .6rem;color:inherit;background:transparent;border:1px solid #93a9af;border-radius:7px;cursor:pointer}
+.fe-round-floor__presets button:focus-visible{outline:2px solid #4a7779;outline-offset:2px}
+.fe-round-floor__steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem}
+.fe-round-floor__steps div{padding:.8rem;border:1px solid #c2d0d3;border-radius:8px;background:rgba(87,119,127,.08);text-align:center}
+.fe-round-floor__steps span{display:block;font-size:.85rem}
+.fe-round-floor__steps strong{display:block;margin-top:.3rem;font-size:1.45rem;font-variant-numeric:tabular-nums}
+.fe-round-floor__hint{margin:.7rem 0 0;font-size:.92rem}
+@media(max-width:420px){.fe-round-floor{padding:.8rem}.fe-round-floor__steps{grid-template-columns:1fr}}
