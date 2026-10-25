@@ -7,7 +7,8 @@ tags: [fe, fe-management, service-management]
 fe_section: マネジメント系
 fe_subsection: サービスマネジメント
 fe_order: 225
-last_modified_at: 2026-09-29
+date: 2026-07-20
+last_modified_at: 2026-10-25
 ---
 
 ## まず結論
