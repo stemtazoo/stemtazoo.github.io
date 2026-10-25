@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 57
 date: 2026-09-27
-last_modified_at: 2026-09-27
+last_modified_at: 2026-10-25
 ---
 
 ## まず結論
@@ -296,6 +296,8 @@ XML SchemaはXML形式で記述されます。
 と切り分けます。
 
 XMLの基本仕様は、[W3C：Extensible Markup Language (XML)](https://www.w3.org/TR/xml/) で確認できます。
+
+XMLのタグ・要素・属性そのものを理解したい場合は、[XMLとは？](/fe/xml/)から読むと整理しやすくなります。DTDは、そのXML文書の構造ルールを決める仕組みです。
 
 XML Schemaは、[W3C：XML Schema Definition Language (XSD) 1.1](https://www.w3.org/TR/xmlschema11-1/) で確認できます。
 

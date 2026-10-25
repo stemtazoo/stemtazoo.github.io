@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 56
 date: 2026-07-10
-last_modified_at: 2026-09-27
+last_modified_at: 2026-10-25
 ---
 
 ## まず結論
@@ -189,6 +189,8 @@ JSONでは、次の混同がよく起こります。
 特に、JSON・XML・CSVは次のように分けます。
 
 XMLの文書構造を定義するDTDや、XML宣言との違いは、[DTDとは？XML宣言・XML Schemaとの違い](/fe/xml-dtd/)で整理しています。
+
+XMLの独自タグや基本構文から確認したい場合は、[XMLとは？](/fe/xml/)も参照してください。JSONはキーと値、XMLはタグによる構造化が基本です。
 
 | 形式 | 見た目 | 得意なこと |
 |---|---|---|
