@@ -375,6 +375,61 @@ Yを右シフト → 0
 
 となり、結果は `9` です。
 
+#### 動かして確認：シフトと加算による乗算
+
+乗数Yの**第0ビットが1ならXをZに加算**し、その後でXを左、Yを右に1ビットずつシフトします。次の例は16ビット符号なし整数の `3 × 3` です。
+
+<div class="fe-learning-demo" data-fe-shift-multiply>
+  <p class="fe-learning-demo__title">1ステップずつ確認：3 × 3</p>
+  <p data-mul-step aria-live="polite">開始前（0 / 16回）</p>
+  <p><strong>X（被乗数）：</strong><output data-mul-x>3</output>　<strong>Y（乗数）：</strong><output data-mul-y>3</output>　<strong>Z（結果）：</strong><output data-mul-z>0</output></p>
+  <p><strong>Yの下位8ビット：</strong><code data-mul-bits>00000011</code>（右端が第0ビット）</p>
+  <p data-mul-explain>「次へ」で第0ビットの判定から始めます。</p>
+  <div style="display:flex;gap:.6rem;flex-wrap:wrap">
+    <button type="button" data-mul-prev disabled>戻る</button>
+    <button type="button" data-mul-next>次へ</button>
+    <button type="button" data-mul-reset>最初から</button>
+  </div>
+  <p class="fe-learning-demo__hint">確認ポイント：Xは左へ（2倍）、Yは右へ（半分）。Yが0になっても、問題の流れ図に合わせて16回まで確認できます。</p>
+  <noscript><p>JavaScriptが無効な場合は、上の計算例を確認してください。</p></noscript>
+</div>
+<script>
+(function () {
+  var root = document.querySelector('[data-fe-shift-multiply]');
+  if (!root) return;
+  var states = [{x:3,y:3,z:0,explain:'「次へ」で第0ビットの判定から始めます。'}];
+  for (var i=0;i<16;i++) {
+    var prev=states[states.length-1];
+    var add=(prev.y & 1)===1;
+    states.push({
+      x:(prev.x << 1) >>> 0,
+      y:prev.y >>> 1,
+      z:(prev.z + (add ? prev.x : 0)) >>> 0,
+      explain:(i+1)+'回目：Yの第0ビットは'+(add?'1なのでXを加算。':'0なので加算なし。')+'その後、Xを左・Yを右に1ビットシフト。'
+    });
+  }
+  var index=0;
+  var prevButton=root.querySelector('[data-mul-prev]');
+  var nextButton=root.querySelector('[data-mul-next]');
+  function render() {
+    var s=states[index];
+    root.querySelector('[data-mul-step]').textContent=index===0?'開始前（0 / 16回）':'処理 '+index+' / 16回';
+    root.querySelector('[data-mul-x]').textContent=s.x;
+    root.querySelector('[data-mul-y]').textContent=s.y;
+    root.querySelector('[data-mul-z]').textContent=s.z;
+    var bits=(s.y & 255).toString(2).padStart(8,'0');
+    root.querySelector('[data-mul-bits]').textContent=bits.slice(0,7)+'【'+bits.slice(7)+'】';
+    root.querySelector('[data-mul-explain]').textContent=s.explain;
+    prevButton.disabled=index===0;
+    nextButton.disabled=index===16;
+  }
+  prevButton.addEventListener('click',function(){if(index>0){index--;render();}});
+  nextButton.addEventListener('click',function(){if(index<16){index++;render();}});
+  root.querySelector('[data-mul-reset]').addEventListener('click',function(){index=0;render();});
+  render();
+})();
+</script>
+
 公式の出題範囲やシラバスは、[IPA：基本情報技術者試験](https://www.ipa.go.jp/shiken/kubun/fe.html) から確認できます。
 
 ## 科目Aでどう出る？
