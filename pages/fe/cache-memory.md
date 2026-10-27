@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: コンピュータ構成要素
 fe_order: 120
 date: 2026-08-02
-last_modified_at: 2026-10-16
+last_modified_at: 2026-10-27
 ---
 
 ## まず結論
@@ -142,6 +142,88 @@ CPUが書込み
 | ライトスルー | キャッシュと主記憶を更新 | その都度 |
 | ライトバック | まずキャッシュだけ更新 | 後で反映 |
 
+### 実際に触って理解する：書込み方式を比較
+
+書込み方式を切り替えて、**キャッシュと主記憶の値がいつ一致するか**を確認してみましょう。ライトバックでは、書込み直後に主記憶が古い値のままになることがポイントです。
+
+<div id="fe-cache-write-demo" class="fe-cache-demo">
+  <div class="fe-cache-demo__modes" role="group" aria-label="キャッシュの書込み方式">
+    <button type="button" data-mode="through" aria-pressed="true">ライトスルー</button>
+    <button type="button" data-mode="back" aria-pressed="false">ライトバック</button>
+  </div>
+  <div class="fe-cache-demo__values">
+    <div><span>キャッシュ</span><strong data-cache>10</strong><small data-cache-status>主記憶と一致</small></div>
+    <div><span>主記憶</span><strong data-memory>10</strong><small data-memory-status>最新の値</small></div>
+  </div>
+  <button type="button" data-write>データに5を加えて書き込む</button>
+  <button type="button" data-evict>キャッシュのデータを追い出す</button>
+  <p class="fe-cache-demo__result" role="status" aria-live="polite" data-result>初期状態：両方とも10</p>
+  <button type="button" data-reset>リセット</button>
+  <p class="fe-cache-demo__note">※ 理解用の簡略モデルです。キャッシュの1ブロックが常に存在するものとし、書込みミスや複数階層の制御は省略しています。変更済みデータを追い出すとき、ライトバックでは主記憶へ書き戻します。</p>
+</div>
+
+<style>
+#fe-cache-write-demo {border:1px solid #bac5cf;border-radius:12px;padding:16px;margin:18px 0;max-width:680px}
+#fe-cache-write-demo button {cursor:pointer;border:1px solid #8494a5;border-radius:8px;padding:10px 12px;background:transparent;color:inherit;font:inherit}
+#fe-cache-write-demo .fe-cache-demo__modes {display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px}
+#fe-cache-write-demo .fe-cache-demo__modes button[aria-pressed="true"] {background:#345e78;color:white;border-color:#345e78}
+#fe-cache-write-demo .fe-cache-demo__values {display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+#fe-cache-write-demo .fe-cache-demo__values>div {border:1px solid #aab8c5;border-radius:10px;padding:14px 8px;text-align:center}
+#fe-cache-write-demo .fe-cache-demo__values span,#fe-cache-write-demo .fe-cache-demo__values small {display:block}
+#fe-cache-write-demo .fe-cache-demo__values strong {display:block;font-size:2rem;line-height:1.5}
+#fe-cache-write-demo .fe-cache-demo__values small {font-size:.8rem}
+#fe-cache-write-demo [data-write],#fe-cache-write-demo [data-evict] {display:block;width:100%;margin:8px 0}
+#fe-cache-write-demo [data-write] {background:#345e78;color:white;border-color:#345e78}
+#fe-cache-write-demo .fe-cache-demo__result {border-left:3px solid #688ca1;padding:10px 12px;background:rgba(120,140,160,.1);margin:12px 0}
+#fe-cache-write-demo .fe-cache-demo__note {font-size:.85rem;margin:12px 0 0}
+</style>
+
+<script>
+(function () {
+  const root = document.getElementById('fe-cache-write-demo');
+  if (!root || root.dataset.ready) return;
+  root.dataset.ready = '1';
+  let mode = 'through', cache = 10, memory = 10, dirty = false;
+  const el = (selector) => root.querySelector(selector);
+  function render(message) {
+    el('[data-cache]').textContent = cache;
+    el('[data-memory]').textContent = memory;
+    el('[data-cache-status]').textContent = dirty ? '未反映の変更あり' : '主記憶と一致';
+    el('[data-memory-status]').textContent = dirty ? '古い値' : '最新の値';
+    el('[data-result]').textContent = message;
+    root.querySelectorAll('[data-mode]').forEach(button => {
+      button.setAttribute('aria-pressed', String(button.dataset.mode === mode));
+    });
+  }
+  function reset() {
+    cache = 10; memory = 10; dirty = false;
+    render('初期状態：両方とも10');
+  }
+  root.querySelectorAll('[data-mode]').forEach(button => {
+    button.addEventListener('click', () => { mode = button.dataset.mode; reset(); });
+  });
+  el('[data-write]').addEventListener('click', () => {
+    cache += 5;
+    if (mode === 'through') {
+      memory = cache;
+      dirty = false;
+      render('ライトスルー：キャッシュと主記憶の両方を更新しました。');
+    } else {
+      dirty = true;
+      render('ライトバック：キャッシュだけを更新しました。主記憶はまだ古い値です。');
+    }
+  });
+  el('[data-evict]').addEventListener('click', () => {
+    const needsWriteBack = mode === 'back' && dirty;
+    if (needsWriteBack) memory = cache;
+    dirty = false;
+    render(needsWriteBack ? '変更済みデータを主記憶へ書き戻してから追い出しました。' : '書戻しは不要です。キャッシュのデータを追い出しました。');
+  });
+  el('[data-reset]').addEventListener('click', reset);
+  reset();
+})();
+</script>
+
 ### SRAMとDRAM
 
 一般に、キャッシュメモリには高速な**SRAM**が使われ、主記憶には大容量化しやすい**DRAM**が使われます。
@@ -189,7 +271,7 @@ SRAMの特徴は、[SRAMとは？リフレッシュ不要で高速なキャッ�
 2. **命令を並列に処理**ならパイプラインやスーパースカラ
 3. **命令の解読・実行**ならCPUの働き
 
-### 判断軸2：ライトスルーとライトバック
+### 判断軸3：ライトスルーとライトバック
 
 ```text
 キャッシュと主記憶を同時に更新
@@ -201,7 +283,7 @@ SRAMの特徴は、[SRAMとは？リフレッシュ不要で高速なキャッ�
 
 特に、**「ブロックの入替え時に主記憶へ書き戻す」**という表現があれば、ライトバックを疑います。
 
-### 判断軸3：キャッシュミス時のデータの流れ
+### 判断軸4：キャッシュミス時のデータの流れ
 
 キャッシュミスの問題では、**どこからどこへ転送するか**を見ると切りやすくなります。
 
@@ -223,7 +305,7 @@ CPU用キャッシュがミス
 
 また、「キャッシュミスすると割込みが発生し、アプリケーションプログラムが主記憶から転送する」という説明も不適切です。
 
-### 判断軸4：キャッシュラインとページを混同しない
+### 判断軸5：キャッシュラインとページを混同しない
 
 キャッシュミス時の転送は、通常**キャッシュライン（ブロック）単位**です。一方、仮想記憶では**ページ**という単位を使います。
 
@@ -234,7 +316,7 @@ CPU用キャッシュがミス
 
 したがって、「キャッシュの転送ブロックを仮想記憶のページと同じ大きさにすれば必ず効率が向上する」といった説明を、そのまま正しいとは判断しません。
 
-### 判断軸5：レジスタと混同しない
+### 判断軸6：レジスタと混同しない
 
 レジスタもキャッシュも高速ですが、役割は異なります。
 
@@ -250,7 +332,7 @@ CPU用キャッシュがミス
 
 「高速アクセスできるからレジスタと同じ働き」という説明は誤りです。
 
-### 判断軸6：TLB・MMU・主記憶と混同しない
+### 判断軸7：TLB・MMU・主記憶と混同しない
 
 「高速化」という言葉だけでキャッシュメモリを選ばず、**何を高速化・管理するのか**を見ます。
 
