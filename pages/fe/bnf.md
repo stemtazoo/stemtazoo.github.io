@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ソフトウェア
 fe_order: 75
 date: 2026-10-11
-last_modified_at: 2026-10-24
+last_modified_at: 2026-10-27
 related_articles:
   - /fe/recursion/
   - /fe/compiler-optimization/
@@ -158,6 +158,62 @@ F5_1 True
 | `(P/Q)` | × | 割り算全体だけを括弧で囲む規則がない |
 
 数式として計算できる形でも、**BNFにない括弧を自由に追加したり、省略したりはできません**。
+
+### 実際に触ってみる：再帰規則を展開する
+
+次は、平成20年春期の科目A相当の過去問で扱われた、別のBNF規則です。
+
+```text
+<S> ::= 01 | 0<S>1
+```
+
+`01` を選ぶと展開終了、`0<S>1` を選ぶと左右に0と1を一つずつ増やせます。**スライダーを動かして**、途中の `<S>` がどう変わるか確認しましょう。
+
+<div class="fe-learning-demo" data-fe-bnf-expand style="max-width:620px;margin:1rem auto;padding:1rem;border:1px solid #cbd5e1;border-radius:12px;">
+  <p class="fe-learning-demo__title" style="font-weight:700;">展開回数を変えて確認</p>
+  <label for="fe-bnf-expand-count">再帰規則の使用回数：<strong data-bnf-count>2</strong>回</label>
+  <input id="fe-bnf-expand-count" data-bnf-range type="range" min="0" max="5" step="1" value="2" style="display:block;width:100%;margin:1rem 0;" aria-label="再帰規則の使用回数">
+  <div style="padding:1rem;border-radius:10px;background:#e2e8f0;color:#1e293b;text-align:center;">
+    <p style="margin:0;">生成される文字列</p>
+    <strong data-bnf-result style="font-size:1.7rem;letter-spacing:.08em;overflow-wrap:anywhere;">000111</strong>
+    <p data-bnf-summary style="margin:.3rem 0 0;">0が3個 ＋ 1が3個</p>
+  </div>
+  <p style="font-weight:700;margin-top:1rem;">展開の流れ</p>
+  <div data-bnf-steps aria-live="polite"><p><code>&lt;S&gt; → 0&lt;S&gt;1 → 00&lt;S&gt;11 → 000111</code></p></div>
+  <p style="font-size:.9rem;">青い <code>&lt;S&gt;</code> が、まだ置き換えられる部分です。最後に <code>01</code> を選んで終了します。</p>
+  <noscript><p>操作にはJavaScriptが必要です。上の展開例でも規則を確認できます。</p></noscript>
+</div>
+
+<script>
+(function () {
+  var root = document.querySelector('[data-fe-bnf-expand]');
+  if (!root) return;
+  var range = root.querySelector('[data-bnf-range]');
+  function render() {
+    var n = Number(range.value);
+    var steps = ['&lt;S&gt;'];
+    for (var i = 1; i <= n; i++) {
+      steps.push('0'.repeat(i) + '&lt;S&gt;' + '1'.repeat(i));
+    }
+    var result = '0'.repeat(n + 1) + '1'.repeat(n + 1);
+    root.querySelector('[data-bnf-count]').textContent = n;
+    root.querySelector('[data-bnf-result]').textContent = result;
+    root.querySelector('[data-bnf-summary]').textContent = '0が' + (n + 1) + '個 ＋ 1が' + (n + 1) + '個';
+    var html = steps.map(function (s, i) {
+      return '<p style="margin:.4rem 0"><small>' + (i === 0 ? '開始' : i + '回目') +
+        '</small>　<code style="overflow-wrap:anywhere">' +
+        s.replace(/&lt;S&gt;/g, '<span style="color:#2563eb;font-weight:700">&lt;S&gt;</span>') +
+        '</code></p>';
+    }).join('');
+    root.querySelector('[data-bnf-steps]').innerHTML = html +
+      '<p style="margin:.4rem 0"><small>終了（01に置換）</small>　<strong>' + result + '</strong></p>';
+  }
+  range.addEventListener('input', render);
+  render();
+})();
+</script>
+
+**選択肢を切る基準：** この規則では、0と1が同数であるだけでは不十分です。**0が先に連続し、その後に同じ個数の1が連続する**必要があります。例えば `0101` は0と1が2個ずつですが、生成できません。
 
 ## どんな場面で使う？
 
