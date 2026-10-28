@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: 基礎理論
 fe_order: 35
 date: 2026-07-02
-last_modified_at: 2026-10-25
+last_modified_at: 2026-10-29
 ---
 
 ## まず結論
@@ -379,6 +379,8 @@ Yを右シフト → 0
 
 乗数Yの**第0ビットが1ならXをZに加算**し、その後でXを左、Yを右に1ビットずつシフトします。次の例は16ビット符号なし整数の `3 × 3` です。
 
+**16ビットからあふれた上位ビットは捨てます。** Xは14回目に `49,152`、15回目に `32,768`、16回目に `0` になります。Yは2回目で0になるため、その後の加算はなく、Zは `9` のままです。
+
 <div class="fe-learning-demo" data-fe-shift-multiply>
   <p class="fe-learning-demo__title">1ステップずつ確認：3 × 3</p>
   <p data-mul-step aria-live="polite">開始前（0 / 16回）</p>
@@ -390,7 +392,7 @@ Yを右シフト → 0
     <button type="button" data-mul-next>次へ</button>
     <button type="button" data-mul-reset>最初から</button>
   </div>
-  <p class="fe-learning-demo__hint">確認ポイント：Xは左へ（2倍）、Yは右へ（半分）。Yが0になっても、問題の流れ図に合わせて16回まで確認できます。</p>
+  <p class="fe-learning-demo__hint">確認ポイント：Xは左へ、Yは右へ1ビットシフトします。Xが2倍になるのは桁あふれがない間だけです。Yが0になった後も、16ビット分の処理として16回まで確認できます。</p>
   <noscript><p>JavaScriptが無効な場合は、上の計算例を確認してください。</p></noscript>
 </div>
 <script>
@@ -402,9 +404,9 @@ Yを右シフト → 0
     var prev=states[states.length-1];
     var add=(prev.y & 1)===1;
     states.push({
-      x:(prev.x << 1) >>> 0,
+      x:(prev.x << 1) & 0xffff,
       y:prev.y >>> 1,
-      z:(prev.z + (add ? prev.x : 0)) >>> 0,
+      z:(prev.z + (add ? prev.x : 0)) & 0xffff,
       explain:(i+1)+'回目：Yの第0ビットは'+(add?'1なのでXを加算。':'0なので加算なし。')+'その後、Xを左・Yを右に1ビットシフト。'
     });
   }
