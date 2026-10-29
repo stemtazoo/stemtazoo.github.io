@@ -1,0 +1,12 @@
+.fe-multiplicity { padding: 1rem; margin: 1.5rem 0; border: 1px solid #8b9ca9; border-radius: .6rem; background: #f5f8fa; color: #243746; }
+.fe-multiplicity__diagram { display: flex; align-items: center; gap: .25rem; margin: 1rem 0; }
+.fe-multiplicity__class { padding: .5rem; border: 2px solid #526878; background: #fff; font-weight: bold; flex-shrink: 0; }
+.fe-multiplicity__end { padding: .25rem; text-align: center; font-size: .95rem; overflow-wrap: anywhere; }
+.fe-multiplicity__end--read { border: 2px solid #2e637e; background: #e1edf3; font-weight: bold; }
+.fe-multiplicity__line { border-top: 2px solid #526878; min-width: .5rem; flex: 1; }
+.fe-multiplicity [data-multiplicity-controls]:not([hidden]) { display: flex; flex-wrap: wrap; align-items: end; gap: .8rem; }
+.fe-multiplicity label { display: flex; flex-direction: column; gap: .3rem; }
+.fe-multiplicity select, .fe-multiplicity button { min-height: 44px; max-width: 100%; padding: .4rem; font: inherit; color: #243746; background: #fff; border: 1px solid #526878; border-radius: .25rem; }
+.fe-multiplicity :focus-visible { outline: 3px solid #295d7b; outline-offset: 3px; }
+.fe-multiplicity__note { font-size: .9rem; }
+@media (max-width: 420px) { .fe-multiplicity { padding: .65rem; } .fe-multiplicity label { width: 100%; } .fe-multiplicity__class { padding: .3rem; } }
