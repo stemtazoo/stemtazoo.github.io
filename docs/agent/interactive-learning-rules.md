@@ -206,6 +206,18 @@ Use this sequence when predicting the next state genuinely improves learning:
 
 Prediction is optional, not a required quiz for every article. A static diagram or direct manipulation may teach the concept better. Do not block the normal demonstration when a learner skips prediction.
 
+### Explain outputs before asking learners to interpret them
+
+Before an interactive block displays metrics, abbreviations, scores, or calculated values that beginners may not recognize:
+
+1. Introduce each output in plain Japanese: **what it measures**, **how it is calculated or derived**, and **why its change matters**.
+2. Prefer a compact table or a few short sentences directly **before** the interactive block. Link to existing detailed articles for deeper explanations rather than repeating full lessons.
+3. Give one focused observation prompt, such as 「FPを増やすとPrecisionはどう変わる？」, that connects an input to the meaning of an output.
+4. Keep output labels consistent between the introductory explanation and the live results. Japanese terms can accompany English metric names.
+5. Distinguish a demonstration that changes one count while holding others fixed from a comparison of predictions on the same fixed dataset. Do not imply that both are the same experiment.
+
+Do not add an introductory table mechanically when the outputs are already familiar or clearly explained nearby. The learner should understand **what a displayed number means** before being asked to learn from its change.
+
 ### State and explanation
 
 - Clearly distinguish **changed**, **currently selected/compared**, and **confirmed/fixed** states when those distinctions matter. Never label a changed position as a comparison unless the trace actually records comparisons.
