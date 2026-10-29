@@ -150,7 +150,7 @@ last_modified_at: 2026-10-27
 
 ### 途中経過で見分ける：4種類のソートを動かす
 
-同じ配列 `[4, 1, 3, 2]` でも、並べ替え方によって途中経過が変わります。以下は**各方式の代表的な処理単位**で一歩ずつ進める教材です。比較や交換の全命令を表示するものではありません。
+同じ配列 `[4, 1, 3, 2]` でも、並べ替え方によって途中経過が変わります。以下は**各方式の代表的な処理単位**で一歩ずつ進める教材です。比較や交換の全命令を表示するものではありません。まず次の状態を予想してから「次へ」を押してください。
 
 <div class="fe-sort-demo" id="fe-sort-demo">
   <label for="fe-sort-kind">アルゴリズムを選ぶ</label>
@@ -162,10 +162,11 @@ last_modified_at: 2026-10-27
   </select>
   <div id="fe-sort-cells" class="fe-sort-cells" aria-live="polite">4　1　3　2</div>
   <p id="fe-sort-status" aria-live="polite">初期状態</p>
+  <p id="fe-sort-question">次に、どの値が動くでしょうか？</p>
   <button type="button" id="fe-sort-prev">戻る</button>
   <button type="button" id="fe-sort-next">次へ</button>
   <button type="button" id="fe-sort-reset">最初から</button>
-  <p class="fe-sort-note">見るポイント：どの値を選び、どの位置に動かしたか。緑色はその時点で整列済みと判断できる位置です。</p>
+  <p class="fe-sort-note">見るポイント：どの値を選び、どの位置に動かしたか。緑色はその時点で整列済みと判断できる位置です（方式ごとに確定する位置が異なります）。</p>
 </div>
 
 <style>
@@ -212,6 +213,7 @@ last_modified_at: 2026-10-27
   };
   const kind=root.querySelector('#fe-sort-kind'),cells=root.querySelector('#fe-sort-cells'),status=root.querySelector('#fe-sort-status');
   const prev=root.querySelector('#fe-sort-prev'),next=root.querySelector('#fe-sort-next');
+  const question=root.querySelector('#fe-sort-question');
   let step=0;
   function render(){
     const trace=traces[kind.value],entry=trace[step];
@@ -225,6 +227,7 @@ last_modified_at: 2026-10-27
       cells.appendChild(cell);
     });
     status.textContent='ステップ '+step+'/'+(trace.length-1)+'：'+entry[2];
+    question.textContent=step===trace.length-1?'整列完了。別の方式に切り替えて、途中経過を比べましょう。':'次の状態を予想してから「次へ」を押しましょう。';
     prev.disabled=step===0;next.disabled=step===trace.length-1;
   }
   kind.addEventListener('change',()=>{step=0;render()});
