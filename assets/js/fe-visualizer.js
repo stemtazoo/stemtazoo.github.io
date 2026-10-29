@@ -288,6 +288,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const add = find("add");
     const remove = find("remove");
     const reset = find("reset");
+    const check = find("check");
+    const guessStack = find("guess-stack");
+    const guessQueue = find("guess-queue");
+    const feedback = find("feedback");
     let stack, queue, nextValue;
 
     function paintItems(name, values, nextIndex) {
@@ -306,6 +310,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function render(message) {
+      if (guessStack) guessStack.value = "";
+      if (guessQueue) guessQueue.value = "";
+      if (feedback) feedback.textContent = "次に取り出す値を予想できます。";
+      if (check) check.disabled = stack.length === 0;
       paintItems("stack", stack, stack.length - 1);
       paintItems("queue", queue, 0);
       add.textContent = `${nextValue}を追加`;
@@ -325,6 +333,22 @@ document.addEventListener("DOMContentLoaded", () => {
       find("queue-out").textContent = "まだありません";
       reset.disabled = false;
       render("1、2、3の順に入れた状態です。");
+    }
+
+    if (check && guessStack && guessQueue && feedback) {
+      check.addEventListener("click", () => {
+        if (!stack.length) return;
+        if (!guessStack.value || !guessQueue.value) {
+          feedback.textContent = "スタックとキューの両方を選んでください。";
+          return;
+        }
+        const expectedStack = String(stack[stack.length - 1]);
+        const expectedQueue = String(queue[0]);
+        const correct = guessStack.value === expectedStack && guessQueue.value === expectedQueue;
+        feedback.textContent = correct
+          ? "正解です。スタックは最後に入れた値、キューは最初に入れた値が出ます。"
+          : `確認：スタックは${expectedStack}、キューは${expectedQueue}が出ます。右端と左端に注目しましょう。`;
+      });
     }
 
     add.addEventListener("click", () => {
