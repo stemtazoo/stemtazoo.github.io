@@ -8,7 +8,7 @@ fe_section: 科目B対策
 fe_subsection: アルゴリズム
 fe_order: 80
 date: 2026-08-30
-last_modified_at: 2026-10-27
+last_modified_at: 2026-10-29
 ---
 
 ## まず結論
@@ -162,12 +162,12 @@ last_modified_at: 2026-10-27
   </select>
   <div id="fe-sort-cells" class="fe-sort-cells" aria-live="polite">4　1　3　2</div>
   <p id="fe-sort-status" aria-live="polite">初期状態</p>
-  <p class="fe-sort-note">オレンジの枠：直前のステップで値が変わった位置。緑：確定済みの位置。</p>
+  <p class="fe-sort-note">オレンジの枠：直前のステップで値が変わった位置。緑：挿入ソートでは「その時点で整列済みの前方部分」、他の方式では「最終位置が確定した部分」です。</p>
   <p id="fe-sort-question">次に、どの値が動くでしょうか？</p>
   <button type="button" id="fe-sort-prev">戻る</button>
   <button type="button" id="fe-sort-next">次へ</button>
   <button type="button" id="fe-sort-reset">最初から</button>
-  <p class="fe-sort-note">見るポイント：どの値を選び、どの位置に動かしたか。緑色はその時点で整列済みと判断できる位置です（方式ごとに確定する位置が異なります）。オレンジ枠は直前のステップから値が変化した位置であり、比較したすべての位置ではありません。</p>
+  <p class="fe-sort-note">見るポイント：挿入ソートで緑になった <code>[1, 4]</code> の4も、次の挿入で右へ動きます。「整列済み」と「最終位置が確定」は区別しましょう。選択・バブルソートの緑は最終位置が確定した部分です。このクイックソート図では、完了時に全体を緑にします。オレンジ枠は値が変わった位置であり、比較したすべての位置ではありません。</p>
 </div>
 
 <style>
