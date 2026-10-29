@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: データベース
 fe_order: 31
 date: 2026-09-22
-last_modified_at: 2026-09-22
+last_modified_at: 2026-10-29
 ---
 
 ## まず結論
@@ -110,6 +110,81 @@ Bさんの残高を1万円増やす
 ~~~
 
 特に3番が、このタイプの問題で強い判断材料になります。
+
+
+### 実際に触ってみる：状態遷移を判定
+
+次の「遷移前」と「遷移後」を選ぶと、その遷移が起こり得るかと理由を確認できます。今回の科目Aの選択肢4つをそのまま試せます。
+
+<div id="fe-transaction-state-demo" class="fe-transaction-demo">
+  <div class="fe-transaction-inputs">
+    <label>遷移前
+      <select id="fe-transaction-from">
+        <option value="aborting">アボート処理中</option>
+        <option value="committing">コミット処理中</option>
+      </select>
+    </label>
+    <span aria-hidden="true">→</span>
+    <label>遷移後
+      <select id="fe-transaction-to">
+        <option value="aborted">アボート済</option>
+        <option value="committing">コミット処理中</option>
+        <option value="aborting">アボート処理中</option>
+        <option value="committed">コミット済</option>
+      </select>
+    </label>
+  </div>
+  <p id="fe-transaction-result" class="fe-transaction-result" role="status" aria-live="polite"></p>
+  <p id="fe-transaction-reason" aria-live="polite"></p>
+  <button type="button" id="fe-transaction-next">次の例を確認</button>
+  <p class="fe-transaction-note">※同じトランザクション内での遷移を扱います。中止後に新しいトランザクションを開始する操作は含みません。</p>
+</div>
+
+<style>
+.fe-transaction-demo{border:1px solid #94a3b8;border-radius:12px;padding:1rem;margin:1rem 0}
+.fe-transaction-inputs{display:flex;align-items:end;flex-wrap:wrap;gap:.7rem}
+.fe-transaction-inputs label{display:grid;gap:.35rem;font-weight:600}
+.fe-transaction-inputs select{max-width:100%;padding:.55rem;border:1px solid #64748b;border-radius:6px;background:var(--background-color,#fff);color:var(--text-color,#172033)}
+.fe-transaction-result{font-weight:700;font-size:1.08rem;margin-bottom:.3rem}
+.fe-transaction-demo button{padding:.55rem .9rem;background:#e2e8f0;color:#172033;border:1px solid #64748b;border-radius:6px;cursor:pointer}
+.fe-transaction-note{font-size:.85rem}
+</style>
+<script>
+(function(){
+  const root=document.getElementById('fe-transaction-state-demo');
+  if(!root)return;
+  const from=root.querySelector('#fe-transaction-from');
+  const to=root.querySelector('#fe-transaction-to');
+  const result=root.querySelector('#fe-transaction-result');
+  const reason=root.querySelector('#fe-transaction-reason');
+  const cases=[
+    ['aborting','aborted','取り消しが完了してアボート済になります。'],
+    ['aborting','committing','取り消し処理に入った同じトランザクションは、コミット処理へ戻りません。'],
+    ['committing','aborting','コミットが確定する前に失敗した場合、アボート処理へ進むことがあります。'],
+    ['committing','committed','コミットが正常に完了するとコミット済になります。']
+  ];
+  function render(){
+    const row=cases.find(c=>c[0]===from.value&&c[1]===to.value);
+    if(!row){
+      result.textContent='この組み合わせは例題の4つの遷移には含まれません';
+      reason.textContent='まずは上の説明にある成功・失敗ルートを確認してください。';
+      return;
+    }
+    const ok=!(row[0]==='aborting'&&row[1]==='committing');
+    result.textContent=ok?'○ 起こり得る遷移':'× 起こり得ない遷移（今回の正解）';
+    reason.textContent=row[2];
+  }
+  function next(){
+    const index=cases.findIndex(c=>c[0]===from.value&&c[1]===to.value);
+    const c=cases[(index+1)%cases.length];
+    from.value=c[0];to.value=c[1];render();
+  }
+  from.addEventListener('change',render);
+  to.addEventListener('change',render);
+  root.querySelector('#fe-transaction-next').addEventListener('click',next);
+  render();
+})();
+</script>
 
 ## どんな場面で使う？
 
