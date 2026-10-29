@@ -162,11 +162,12 @@ last_modified_at: 2026-10-27
   </select>
   <div id="fe-sort-cells" class="fe-sort-cells" aria-live="polite">4　1　3　2</div>
   <p id="fe-sort-status" aria-live="polite">初期状態</p>
+  <p class="fe-sort-note">オレンジの枠：直前のステップで値が変わった位置。緑：確定済みの位置。</p>
   <p id="fe-sort-question">次に、どの値が動くでしょうか？</p>
   <button type="button" id="fe-sort-prev">戻る</button>
   <button type="button" id="fe-sort-next">次へ</button>
   <button type="button" id="fe-sort-reset">最初から</button>
-  <p class="fe-sort-note">見るポイント：どの値を選び、どの位置に動かしたか。緑色はその時点で整列済みと判断できる位置です（方式ごとに確定する位置が異なります）。</p>
+  <p class="fe-sort-note">見るポイント：どの値を選び、どの位置に動かしたか。緑色はその時点で整列済みと判断できる位置です（方式ごとに確定する位置が異なります）。オレンジ枠は直前のステップから値が変化した位置であり、比較したすべての位置ではありません。</p>
 </div>
 
 <style>
@@ -174,6 +175,7 @@ last_modified_at: 2026-10-27
 .fe-sort-demo select{display:block;max-width:100%;padding:.45rem;margin:.5rem 0 1rem;background:var(--background-color,#fff);color:var(--text-color,#172033);border:1px solid #64748b;border-radius:6px}
 .fe-sort-cells{display:flex;gap:.5rem;flex-wrap:wrap;margin:.8rem 0}
 .fe-sort-cell{min-width:3rem;min-height:3rem;display:grid;place-items:center;border:1px solid #64748b;border-radius:8px;background:#e2e8f0;color:#172033;font-weight:700;font-size:1.3rem}
+.fe-sort-cell.is-changed{outline:3px solid #b45309;outline-offset:2px;background:#fef3c7;color:#78350f}
 .fe-sort-cell.is-fixed{background:#bbf7d0;color:#14532d;border-color:#15803d}
 .fe-sort-demo button{padding:.45rem .8rem;margin:.2rem .25rem .2rem 0;border-radius:6px;border:1px solid #64748b;background:#e2e8f0;color:#172033;cursor:pointer}
 .fe-sort-demo button:disabled{opacity:.45;cursor:not-allowed}
@@ -223,6 +225,7 @@ last_modified_at: 2026-10-27
       cell.className='fe-sort-cell';
       const fixed=kind.value==='bubble'?index>=4-entry[1]:index<entry[1];
       if(fixed)cell.classList.add('is-fixed');
+      if(step>0 && trace[step-1][0][index]!==value)cell.classList.add('is-changed');
       cell.textContent=String(value);
       cells.appendChild(cell);
     });
