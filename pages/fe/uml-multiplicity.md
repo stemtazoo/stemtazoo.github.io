@@ -153,8 +153,6 @@ UMLそのものや各種UML図の役割を整理したい場合は、先に[UML�
 </div>
 <script src="{{ '/assets/js/fe-uml-multiplicity-demo.js' | relative_url }}" defer></script>
 
-JavaScriptが使えない場合も、顧客側が `1`・注文側が `0..*` の図は「顧客1人に注文0件以上、注文1件に顧客1人」と読めます。
-
 ## 科目Aでどう出る？
 
 科目Aでは、クラス図と多重度が示され、そこから正しい関係を選ぶ問題として出題されます。
