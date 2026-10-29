@@ -6,7 +6,7 @@ permalink: /gk/confusion-matrix/
 tags: [gk, 機械学習, 評価指標, 頻出]
 gk_section: 機械学習の概要/モデルの選択・評価/分類の評価指標
 gk_order: 1
-last_modified_at: 2026-08-26
+last_modified_at: 2026-10-29
 ---
 
 ## まず結論
@@ -79,6 +79,8 @@ F1-score → Precision と Recall のバランス
 <div class="gk-pilot" data-gk-matrix>
   <table class="gk-matrix-table"><caption>実際と予測の組合せ</caption><thead><tr><th scope="col">実際＼予測</th><th scope="col">陽性</th><th scope="col">陰性</th></tr></thead><tbody><tr><th scope="row">陽性</th><td><label>TP 正しく検出<input data-tp type="number" min="0" max="999" value="8"></label></td><td><label>FN 見逃し<input data-fn type="number" min="0" max="999" value="2"></label></td></tr><tr><th scope="row">陰性</th><td><label>FP 誤検知<input data-fp type="number" min="0" max="999" value="2"></label></td><td><label>TN 正しく正常<input data-tn type="number" min="0" max="999" value="88"></label></td></tr></tbody></table>
   <p class="gk-pilot-output" data-results aria-live="polite">Precision 80.0% ／ Recall 80.0% ／ Accuracy 96.0% ／ F1 80.0%</p>
+  <p class="gk-pilot-note" data-input-feedback role="status" aria-live="polite"></p>
+  <p class="gk-pilot-note">TP・FN・FP・TNには0〜999の整数を入力します。空欄や範囲外の値では計算しません。</p>
   <p class="gk-pilot-note">Precision = TP/(TP+FP)、Recall = TP/(TP+FN)。分母が0の場合は「—」と表示します。</p>
 </div>
 <script defer src="{{ '/assets/js/gk-confusion-demo.js' | relative_url }}"></script>
