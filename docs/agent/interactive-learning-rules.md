@@ -195,6 +195,51 @@ Especially useful for:
 
 The interaction should help the learner answer: `How should this result be interpreted?`
 
+## Shared Teaching Interaction Standard
+
+Use this sequence when predicting the next state genuinely improves learning:
+
+1. **Predict:** Ask one concrete question before revealing the next state.
+2. **Operate:** Provide a clearly named action such as 「次へ」 or 「取り出す」.
+3. **Observe:** Show the changed state and briefly identify what changed.
+4. **Judge:** Connect the result to the article's exam distinction or practical interpretation.
+
+Prediction is optional, not a required quiz for every article. A static diagram or direct manipulation may teach the concept better. Do not block the normal demonstration when a learner skips prediction.
+
+### State and explanation
+
+- Clearly distinguish **changed**, **currently selected/compared**, and **confirmed/fixed** states when those distinctions matter. Never label a changed position as a comparison unless the trace actually records comparisons.
+- Describe the result in short Japanese text as well as with visual styling. Color alone must not carry meaning.
+- Explain the scope of simplified traces: representative steps are not necessarily every comparison, assignment, or swap.
+- Keep the learner's input, the displayed state, and the explanation synchronized after next, back, reset, mode changes, and boundary conditions.
+- Use deterministic examples where possible, and show the initial state and final state clearly.
+
+### Controls, accessibility, and fallbacks
+
+- Label each input and button by its action; use semantic HTML controls and visible keyboard focus.
+- Make interactive state changes understandable to screen-reader users, without excessive announcements.
+- Support narrow screens and touch targets without requiring hover, precise dragging, or horizontal scrolling for the main operation.
+- Provide a short static explanation or worked example when JavaScript is disabled.
+- Avoid adding duplicate UI or shared-JavaScript behavior that interferes with other articles.
+
+### Verification before merging
+
+For every new or modified interaction, record what was actually checked and what remains unverified:
+
+1. Initial state, normal operation, final state, reset, and mode switching if applicable.
+2. Empty/full or other relevant boundary conditions; correct prediction and incorrect prediction when a quiz exists.
+3. Agreement between numeric values, highlighted positions, explanatory text, and the article's exam rule.
+4. Smartphone layout, keyboard operation, readable contrast, and JavaScript-disabled fallback.
+5. Regression impact on other pages using the same CSS/JavaScript assets.
+6. GitHub Pages build and deployed page when available. Never equate a successful commit with a successful deployment.
+
+### Exam-specific outcome
+
+- **FE:** The learner can trace what changes next and explain why.
+- **GK:** The learner can distinguish the role or behavior of similar AI concepts and reject misleading choices.
+- **DS:** The learner can interpret a result and explain how changed assumptions or values affect it.
+- **SG:** The learner can choose an appropriate security or workplace response and explain the decision condition. Use the SG article rules when adapting an aid.
+
 ## When Not To Add One
 
 Do not add an interactive aid when:
