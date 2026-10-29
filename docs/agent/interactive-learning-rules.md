@@ -245,6 +245,17 @@ For every new or modified interaction, record what was actually checked and what
 5. Regression impact on other pages using the same CSS/JavaScript assets.
 6. GitHub Pages build and deployed page when available. Never equate a successful commit with a successful deployment.
 
+#### Lightweight execution and reporting
+
+Use the checks above to support continued creation of useful CSS/JavaScript teaching aids. Keep verification proportional to the changed behavior; a new test framework or exhaustive browser matrix is not required for each article.
+
+- Before testing, choose one representative operation and state its expected result from the article's explanation. In a browser, perform the operation and compare the visible numbers, diagram/highlights, and explanation with that expectation. For CSS-only aids, check the intended visual relationship at desktop and narrow widths.
+- For interactions, also try reset and relevant boundary values or first/last steps when those controls or states exist. When changing shared assets, check a representative existing consumer as well as the changed article.
+- Record the page and tested version, environment (local rendered page or deployed URL, browser and viewport), operation, expected result, and observed result briefly in the PR. Distinguish **code review only**, **browser operation checked**, and **deployed page checked**; record failures and unverified items explicitly. A screenshot alone does not establish that an operation works.
+- Example report format (fill with actual observations, not assumed success): `GK confusion matrix / <commit> / <local or deployed URL, browser, viewport>: with TP fixed above zero, FP 2 -> 12 should lower Precision; observed: <result>. Reset: <result>. Boundary: <case/result>. Unverified: <items>.`
+- If browser execution is unavailable, continue the implementation and report the limitation and concrete follow-up operation. Do not remove or avoid a useful teaching aid solely because that environment is unavailable, and do not describe code inspection or a passing build as an operation check.
+- Keep the existing update audit as a follow-up safeguard, with code review and actual browser execution reported separately. Consider targeted automation only when repeated failures or widely reused components justify its maintenance cost; do not introduce blanket automation as a prerequisite for teaching-aid creation.
+
 ### Exam-specific outcome
 
 - **FE:** The learner can trace what changes next and explain why.
