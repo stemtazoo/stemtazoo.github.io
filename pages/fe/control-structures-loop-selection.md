@@ -8,7 +8,7 @@ fe_section: 科目B対策
 fe_subsection: アルゴリズム
 fe_order: 61
 date: 2026-10-03
-last_modified_at: 2026-10-03
+last_modified_at: 2026-10-29
 ---
 
 ## まず結論
@@ -176,8 +176,6 @@ while 条件:
 繰返し → 同じ処理へ戻る
 選択   → どの処理へ進むか決める
 ```
-
-for文で**ループ終了後の制御変数**を使う場合は、[for文の終了後、変数iはnかn+1か？](/fe/for-loop-final-variable/)で仕様の確認ポイントを整理しています。
 
 ## まとめ（試験直前用）
 
