@@ -129,6 +129,17 @@ dequeue() → C
 <div class="fe-learning-demo fe-stack-queue-demo" data-fe-stack-queue-demo>
   <p class="fe-learning-demo__title">同じ操作をスタックとキューで比較</p>
   <p class="fe-learning-demo__lead">両方に同じ値を追加し、両方から1個ずつ取り出します。表示は左から右へ読みます。</p>
+  <p>取り出す前に予想してみましょう。今の状態で、どちらから何が出ますか？</p>
+  <div class="fe-learning-demo__controls">
+    <label>スタックの予想
+      <select data-sq-guess-stack aria-label="スタックから出る値の予想"><option value="">選択</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option></select>
+    </label>
+    <label>キューの予想
+      <select data-sq-guess-queue aria-label="キューから出る値の予想"><option value="">選択</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option></select>
+    </label>
+    <button type="button" class="fe-learning-demo__button" data-sq-check disabled>予想を確認</button>
+  </div>
+  <p data-sq-feedback role="status" aria-live="polite">予想は任意です。答えを確かめたら取り出してみましょう。</p>
   <div class="fe-learning-demo__controls">
     <button type="button" class="fe-learning-demo__button" data-sq-add disabled>4を追加</button>
     <button type="button" class="fe-learning-demo__button" data-sq-remove disabled>取り出す</button>
