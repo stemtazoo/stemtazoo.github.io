@@ -311,9 +311,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function render(message) {
       if (guessStack && guessQueue) {
-        [guessStack, guessQueue].forEach((select) => {
+        [[guessStack, stack], [guessQueue, queue]].forEach(([select, values]) => {
           select.replaceChildren(new Option("選択", ""));
-          stack.forEach((value) => select.add(new Option(String(value), String(value))));
+          values.forEach((value) => select.add(new Option(String(value), String(value))));
         });
       }
       if (check) check.disabled = stack.length === 0;
