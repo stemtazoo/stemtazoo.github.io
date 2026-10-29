@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: システム開発技術
 fe_order: 65
 date: 2026-08-28
-last_modified_at: 2026-09-27
+last_modified_at: 2026-10-30
 ---
 
 ## まず結論
@@ -116,6 +116,44 @@ UMLそのものや各種UML図の役割を整理したい場合は、先に[UML�
 また、クラスとインスタンスの違いがあいまいな場合は、[クラスとインスタンスとは？](/fe/class-instance/)を先に確認すると、この「1つのインスタンスから見る」という考え方がつかみやすくなります。
 
 公式の出題範囲やシラバスは、[IPA：基本情報技術者試験](https://www.ipa.go.jp/shiken/kubun/fe.html)から確認できます。
+
+### 操作して確認：どちらを1個に固定して読む？
+
+図の端にある数字は、**反対側を1個に固定したときの対応件数**です。下の例では顧客側を `1` に固定し、注文側の多重度だけを変えます。
+
+見るポイント：注文側を `1..*` にしたとき、顧客1人に注文0件は許されるでしょうか。次に「注文1件から見る」へ切り替え、読む数字の位置を比べてください。
+
+<link rel="stylesheet" href="{{ '/assets/css/fe-uml-multiplicity-demo.css' | relative_url }}">
+<div class="fe-multiplicity" data-fe-multiplicity>
+  <p><strong>顧客と注文のクラス図</strong>（この例の設計）</p>
+  <div class="fe-multiplicity__diagram" aria-label="顧客側の多重度は1、注文側の多重度は変更可能">
+    <span class="fe-multiplicity__class">顧客</span>
+    <span class="fe-multiplicity__end" data-customer-end>1</span>
+    <span class="fe-multiplicity__line" aria-hidden="true"></span>
+    <span class="fe-multiplicity__end" data-order-end>0..*</span>
+    <span class="fe-multiplicity__class">注文</span>
+  </div>
+  <div data-multiplicity-controls hidden>
+    <label>注文側の多重度
+      <select data-order-multiplicity><option value="0..1">0..1</option><option value="1">1</option><option value="0..*" selected>0..*</option><option value="1..*">1..*</option></select>
+    </label>
+    <label>どちらを1個に固定する？
+      <select data-viewpoint><option value="customer">顧客1人から見る</option><option value="order">注文1件から見る</option></select>
+    </label>
+    <label>対応する相手の件数を試す
+      <select data-example-count><option value="0">0件</option><option value="1" selected>1件</option><option value="2">2件</option><option value="3">3件</option></select>
+    </label>
+    <button type="button" data-multiplicity-reset>最初に戻す</button>
+  </div>
+  <div role="status" aria-live="polite" aria-atomic="true">
+    <p data-multiplicity-reading>顧客1人から見た注文は0件以上。注文側の0..*を読みます。</p>
+    <p data-multiplicity-example>例えば注文1件は、この多重度で許されます。</p>
+  </div>
+  <p class="fe-multiplicity__note">枠内の「読む」を目印にします。0〜3件は試すための例で、*に上限があるという意味ではありません。全顧客数・全注文数はこの図だけでは決まりません。</p>
+</div>
+<script src="{{ '/assets/js/fe-uml-multiplicity-demo.js' | relative_url }}" defer></script>
+
+JavaScriptが使えない場合も、顧客側が `1`・注文側が `0..*` の図は「顧客1人に注文0件以上、注文1件に顧客1人」と読めます。
 
 ## 科目Aでどう出る？
 
