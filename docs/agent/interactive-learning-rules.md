@@ -263,6 +263,13 @@ Use the checks above to support continued creation of useful CSS/JavaScript teac
 - **DS:** The learner can interpret a result and explain how changed assumptions or values affect it.
 - **SG:** The learner can choose an appropriate security or workplace response and explain the decision condition. Use the SG article rules when adapting an aid.
 
+### Comparison and prediction proximity
+
+- When two methods produce similar intermediate states, show **the operation or invariant that distinguishes them** beside the visual, not only the resulting values. For example, insertion sort grows a sorted prefix, while left-to-right bubble sort fixes a suffix.
+- Put the current state **immediately before or beside** the prediction controls, especially on narrow screens. Avoid forcing learners to scroll away from the values they must inspect.
+- Check that prediction prompts do not reveal the answer in adjacent labels or status text before the learner answers. After the operation, reveal the reason and the relevant changed state.
+- Keep explanations brief and preserve the existing interactive logic when the issue is presentation rather than calculation.
+
 ## When Not To Add One
 
 Do not add an interactive aid when:

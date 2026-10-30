@@ -150,7 +150,7 @@ last_modified_at: 2026-10-29
 
 ### 途中経過で見分ける：4種類のソートを動かす
 
-同じ配列 `[4, 1, 3, 2]` でも、並べ替え方によって途中経過が変わります。以下は**各方式の代表的な処理単位**で一歩ずつ進める教材です。比較や交換の全命令を表示するものではありません。まず次の状態を予想してから「次へ」を押してください。
+同じ配列 `[4, 1, 3, 2]` でも、並べ替え方によって途中経過が変わります。**挿入ソートとバブルソートは途中の並びが同じになる場合があります。** 挿入は「左の整列済み部分へ差し込む」、バブルは「隣同士を交換して右端を確定する」という**処理の目的**を比べてください。以下は**各方式の代表的な処理単位**で一歩ずつ進める教材です。比較や交換の全命令を表示するものではありません。まず次の状態を予想してから「次へ」を押してください。
 
 <div class="fe-sort-demo" id="fe-sort-demo">
   <label for="fe-sort-kind">アルゴリズムを選ぶ</label>
@@ -160,6 +160,7 @@ last_modified_at: 2026-10-29
     <option value="bubble">バブルソート</option>
     <option value="quick">クイックソート（末尾をピボット）</option>
   </select>
+  <p id="fe-sort-focus" class="fe-sort-focus" aria-live="polite">選択：未整列部分から最小値を探す</p>
   <div id="fe-sort-cells" class="fe-sort-cells" aria-live="polite">4　1　3　2</div>
   <p id="fe-sort-status" aria-live="polite">初期状態</p>
   <p class="fe-sort-note">オレンジの枠：直前のステップで値が変わった位置。緑：挿入ソートでは「その時点で整列済みの前方部分」、他の方式では「最終位置が確定した部分」です。</p>
@@ -180,6 +181,7 @@ last_modified_at: 2026-10-29
 .fe-sort-demo button{padding:.45rem .8rem;margin:.2rem .25rem .2rem 0;border-radius:6px;border:1px solid #64748b;background:#e2e8f0;color:#172033;cursor:pointer}
 .fe-sort-demo button:disabled{opacity:.45;cursor:not-allowed}
 .fe-sort-note{font-size:.9rem}
+.fe-sort-focus{padding:.55rem .7rem;border-left:4px solid #64748b;background:rgba(100,116,139,.1);font-weight:700}
 </style>
 <script>
 (function(){
@@ -216,6 +218,8 @@ last_modified_at: 2026-10-29
   const kind=root.querySelector('#fe-sort-kind'),cells=root.querySelector('#fe-sort-cells'),status=root.querySelector('#fe-sort-status');
   const prev=root.querySelector('#fe-sort-prev'),next=root.querySelector('#fe-sort-next');
   const question=root.querySelector('#fe-sort-question');
+  const focus=root.querySelector('#fe-sort-focus');
+  const focusLabels={selection:'選択：未整列部分から最小値を探して前へ置く（左端が確定）',insertion:'挿入：次の値を左側の整列済み部分へ差し込む（左側は後で動くこともある）',bubble:'バブル：隣同士を比較・交換して右端を確定させる',quick:'クイック：ピボットを基準に小さい側と大きい側へ分ける'};
   let step=0;
   function render(){
     const trace=traces[kind.value],entry=trace[step];
@@ -229,6 +233,7 @@ last_modified_at: 2026-10-29
       cell.textContent=String(value);
       cells.appendChild(cell);
     });
+    focus.textContent=focusLabels[kind.value];
     status.textContent='ステップ '+step+'/'+(trace.length-1)+'：'+entry[2];
     question.textContent=step===trace.length-1?'整列完了。別の方式に切り替えて、途中経過を比べましょう。':'次の状態を予想してから「次へ」を押しましょう。';
     prev.disabled=step===0;next.disabled=step===trace.length-1;
