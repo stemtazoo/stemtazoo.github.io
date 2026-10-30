@@ -294,17 +294,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const feedback = find("feedback");
     let stack, queue, nextValue;
 
-    function paintItems(name, values, nextIndex) {
+    function paintItems(name, values) {
       const container = find(name);
       container.replaceChildren();
       if (!values.length) {
         container.textContent = "空です";
         return;
       }
-      values.forEach((value, index) => {
+      values.forEach((value) => {
         const cell = document.createElement("span");
-        cell.textContent = `${value}${index === nextIndex ? "（次）" : ""}`;
-        cell.classList.toggle("is-next", index === nextIndex);
+        cell.textContent = String(value);
         container.appendChild(cell);
       });
     }
@@ -317,16 +316,18 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       }
       if (check) check.disabled = stack.length === 0;
-      if (feedback) feedback.textContent = "次に出る値を予想してみましょう。";
-      paintItems("stack", stack, stack.length - 1);
-      paintItems("queue", queue, 0);
+      if (feedback) feedback.textContent = stack.length
+        ? "次に出る値を予想してみましょう。予想せずに操作することもできます。"
+        : "両方とも空です。値を追加すると予想できます。";
+      paintItems("stack", stack);
+      paintItems("queue", queue);
       add.textContent = `${nextValue}を追加`;
       add.disabled = stack.length >= 6;
       remove.disabled = stack.length === 0;
-      const next = stack.length
-        ? `次に出るのはスタックが${stack[stack.length - 1]}、キューが${queue[0]}です。`
-        : "両方とも空なので取り出せません。追加すると再開できます。";
-      find("status").textContent = `${message} ${next}${add.disabled ? " 表示上限の6個です。追加するには1個取り出してください。" : ""}`;
+      const boundary = !stack.length
+        ? " 両方とも空なので取り出せません。追加すると再開できます。"
+        : add.disabled ? " 表示上限の6個です。追加するには1個取り出してください。" : "";
+      find("status").textContent = `${message}${boundary}`;
     }
 
     function initialize() {
@@ -350,7 +351,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const queueAnswer = String(queue[0]);
         const correct = guessStack.value === stackAnswer && guessQueue.value === queueAnswer;
         feedback.textContent = correct
-          ? "正解です。スタックは最後に入れた値、キューは最初に入れた値が出ます。"
+          ? `正解です。スタックは${stackAnswer}、キューは${queueAnswer}が出ます。スタックは最後に入れた値、キューは最初に入れた値が出ます。`
           : `スタックは${stackAnswer}、キューは${queueAnswer}が出ます。右端と左端を確認しましょう。`;
       });
     }
