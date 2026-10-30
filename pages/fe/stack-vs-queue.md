@@ -8,7 +8,7 @@ fe_section: 科目B対策
 fe_subsection: データ構造
 fe_order: 25
 date: 2026-08-09
-last_modified_at: 2026-10-29
+last_modified_at: 2026-10-30
 ---
 
 ## まず結論
@@ -132,15 +132,15 @@ dequeue() → C
   <div class="fe-stack-queue-demo__panels">
     <section class="fe-stack-queue-demo__panel" aria-label="スタックの状態">
       <p><strong>スタック（LIFO）</strong><br>左が底、右が上（追加・取り出し口）</p>
-      <div class="fe-stack-queue-demo__items" data-sq-stack><span>1</span><span>2</span><span class="is-next">3（次）</span></div>
+      <div class="fe-stack-queue-demo__items" data-sq-stack><span>1</span><span>2</span><span>3</span></div>
       <p>直前に取り出した値：<strong data-sq-stack-out>まだありません</strong></p>
     </section>
     <section class="fe-stack-queue-demo__panel" aria-label="キューの状態">
       <p><strong>キュー（FIFO）</strong><br>左が先頭（取り出し口）、右が末尾（追加口）</p>
-      <div class="fe-stack-queue-demo__items" data-sq-queue><span class="is-next">1（次）</span><span>2</span><span>3</span></div>
+      <div class="fe-stack-queue-demo__items" data-sq-queue><span>1</span><span>2</span><span>3</span></div>
       <p>直前に取り出した値：<strong data-sq-queue-out>まだありません</strong></p>
     </section>
-  </div>"
+  </div>
   <p><strong>取り出す前に予想：</strong>スタックとキュー、それぞれ次に出る値を選んでみましょう。</p>
   <div class="fe-learning-demo__controls">
     <label>スタックの予想
@@ -161,19 +161,7 @@ dequeue() → C
     <button type="button" class="fe-learning-demo__button" data-sq-remove disabled>取り出す</button>
     <button type="button" class="fe-learning-demo__button" data-sq-reset disabled>最初に戻す</button>
   </div>
-  <div class="fe-stack-queue-demo__panels">
-    <section class="fe-stack-queue-demo__panel" aria-label="スタックの状態">
-      <p><strong>スタック（LIFO）</strong><br>左が底、右が上（追加・取り出し口）</p>
-      <div class="fe-stack-queue-demo__items" data-sq-stack><span>1</span><span>2</span><span class="is-next">3（次）</span></div>
-      <p>直前に取り出した値：<strong data-sq-stack-out>まだありません</strong></p>
-    </section>
-    <section class="fe-stack-queue-demo__panel" aria-label="キューの状態">
-      <p><strong>キュー（FIFO）</strong><br>左が先頭（取り出し口）、右が末尾（追加口）</p>
-      <div class="fe-stack-queue-demo__items" data-sq-queue><span class="is-next">1（次）</span><span>2</span><span>3</span></div>
-      <p>直前に取り出した値：<strong data-sq-queue-out>まだありません</strong></p>
-    </section>
-  </div>
-  <p class="fe-learning-demo__result" data-sq-status role="status" aria-live="polite" aria-atomic="true">1、2、3の順に入れた状態です。次に出るのはスタックが3、キューが1です。</p>
+  <p class="fe-learning-demo__result" data-sq-status role="status" aria-live="polite" aria-atomic="true">1、2、3の順に入れた状態です。</p>
   <p class="fe-learning-demo__hint">この教材では見やすさのため、中に置ける値を各6個までにしています。データ構造そのものの上限ではありません。</p>
   <noscript><p>操作にはJavaScriptが必要です。下の表でも同じ操作の結果を確認できます。</p></noscript>
 </div>
