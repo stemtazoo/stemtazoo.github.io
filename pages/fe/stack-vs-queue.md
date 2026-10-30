@@ -129,6 +129,18 @@ dequeue() → C
 <div class="fe-learning-demo fe-stack-queue-demo" data-fe-stack-queue-demo>
   <p class="fe-learning-demo__title">同じ操作をスタックとキューで比較</p>
   <p class="fe-learning-demo__lead">両方に同じ値を追加し、両方から1個ずつ取り出します。表示は左から右へ読みます。</p>
+  <div class="fe-stack-queue-demo__panels">
+    <section class="fe-stack-queue-demo__panel" aria-label="スタックの状態">
+      <p><strong>スタック（LIFO）</strong><br>左が底、右が上（追加・取り出し口）</p>
+      <div class="fe-stack-queue-demo__items" data-sq-stack><span>1</span><span>2</span><span class="is-next">3（次）</span></div>
+      <p>直前に取り出した値：<strong data-sq-stack-out>まだありません</strong></p>
+    </section>
+    <section class="fe-stack-queue-demo__panel" aria-label="キューの状態">
+      <p><strong>キュー（FIFO）</strong><br>左が先頭（取り出し口）、右が末尾（追加口）</p>
+      <div class="fe-stack-queue-demo__items" data-sq-queue><span class="is-next">1（次）</span><span>2</span><span>3</span></div>
+      <p>直前に取り出した値：<strong data-sq-queue-out>まだありません</strong></p>
+    </section>
+  </div>"
   <p><strong>取り出す前に予想：</strong>スタックとキュー、それぞれ次に出る値を選んでみましょう。</p>
   <div class="fe-learning-demo__controls">
     <label>スタックの予想
