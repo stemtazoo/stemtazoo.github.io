@@ -53,6 +53,15 @@ jobs:
       - name: Audit agent-facing content
         run: python scripts/audit_agent_content.py
 
+      - name: Audit rendered article text
+        run: python scripts/audit_rendered_content.py
+
+      - name: Upload rendered text audit
+        uses: actions/upload-artifact@v4
+        with:
+          name: rendered-content-audit
+          path: artifacts/rendered-content-audit.json
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:

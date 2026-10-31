@@ -35,6 +35,32 @@ For description-writing policy, use `docs/agent/metadata-rules.md`; section-spec
 - Update `prev` / `next` only when it improves the learning flow.
 - Layouts may fall back to `page.date` when `last_modified_at` is missing, but this is only a fallback; preferred source is explicit `last_modified_at`.
 
+## Rendered article text audit
+
+After a Jekyll build, run `python scripts/audit_rendered_content.py --site _site`.
+The Pages workflow runs this check before upload and saves
+`artifacts/rendered-content-audit.json` as the `rendered-content-audit` Actions artifact.
+This build-coupled check covers FE, GK, DS, and SG HTML, including `/pages/<theme>/`
+fallback output when a broken header prevents the intended permalink.
+
+Review candidates for literal `\n` / `\r\n` / `\r`, multiple front-matter keys
+near the opening, unresolved Liquid, and escaped HTML tags in article text.
+Preformatted/code examples, scripts, styles, templates, and explicitly hidden regions
+are excluded. A normal LF or CRLF line ending is not a displayed escape sequence.
+Intentional syntax explanations outside code can still be candidates: inspect the
+rendered page before deciding to fix anything. Do not remove useful code examples.
+
+Candidates produce warnings and a report, not deployment failures. A missing build
+directory or scan error is an execution failure, not a clean audit. Inspect the report
+after deployment; a passing build or zero candidates does not prove correct layout.
+This parser does not evaluate CSS, JavaScript, responsive layout, or all malformed
+HTML. Keep the browser verification in the interactive-learning guide, and report
+code inspection, rendered-HTML checks, and browser operation separately.
+
+Run `python -m unittest discover -s tests -p 'test_rendered_content.py' -v`
+when modifying the detector. Cross-article audit decisions remain in study-site-audit;
+this check lives here because it reads the exact Jekyll build output.
+
 ## Communication Preferences
 
 - Explain build failures using the actual failing file and line when available.
