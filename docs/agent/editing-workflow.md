@@ -50,6 +50,13 @@ are excluded. A normal LF or CRLF line ending is not a displayed escape sequence
 Intentional syntax explanations outside code can still be candidates: inspect the
 rendered page before deciding to fix anything. Do not remove useful code examples.
 
+Escape matching uses token boundaries so TeX commands such as `\rho`, `\right`,
+and `\nabla` do not count as newline escapes. An escape immediately followed by
+an ASCII letter may be missed; this check is not exhaustive. Body-less Jekyll
+redirects with matching HTTP(S) canonical and refresh destinations are recognized
+without a missing-body warning. This does not verify the destination's availability;
+missing or conflicting redirect metadata still requires review.
+
 Candidates produce warnings and a report, not deployment failures. A missing build
 directory or scan error is an execution failure, not a clean audit. Inspect the report
 after deployment; a passing build or zero candidates does not prove correct layout.

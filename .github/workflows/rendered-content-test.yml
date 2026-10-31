@@ -5,12 +5,14 @@ on:
     paths:
       - 'scripts/audit_rendered_content.py'
       - 'tests/test_rendered_content.py'
+      - 'tests/test_article_rendering.py'
       - '.github/workflows/pages.yml'
       - '.github/workflows/rendered-content-test.yml'
   push:
     paths:
       - 'scripts/audit_rendered_content.py'
       - 'tests/test_rendered_content.py'
+      - 'tests/test_article_rendering.py'
       - '.github/workflows/pages.yml'
       - '.github/workflows/rendered-content-test.yml'
   workflow_dispatch:
@@ -34,6 +36,8 @@ jobs:
           destination: ./_site
       - name: Audit preview article text
         run: python scripts/audit_rendered_content.py
+      - name: Verify repaired article rendering
+        run: python -m unittest discover -s tests -p 'test_article_rendering.py' -v
       - name: Upload preview audit
         uses: actions/upload-artifact@v4
         with:

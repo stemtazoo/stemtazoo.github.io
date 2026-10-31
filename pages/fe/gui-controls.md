@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ヒューマンインタフェース
 fe_order: 30
 date: 2026-10-11
-last_modified_at: 2026-10-18
+last_modified_at: 2026-11-01
 ---
 
 ## まず結論
@@ -54,7 +54,7 @@ last_modified_at: 2026-10-18
   <div>
     <label for="fe-gui-item"><strong>④ 入力可能なコンボボックスの例：入力・候補選択</strong></label>
     <input id="fe-gui-item" list="fe-gui-items" placeholder="商品名を入力" style="display:block;margin-top:8px;padding:8px;max-width:100%;box-sizing:border-box;">
-    <datalist id="fe-gui-items"><option value="ノート"><option value="ペン"><option value="消しゴム"></datalist>
+    <datalist id="fe-gui-items"><option value="ノート"></option><option value="ペン"></option><option value="消しゴム"></option></datalist>
     <small>※ HTMLのdatalistを使った簡易的な例です。候補の見え方はブラウザによって異なります。</small>
   </div>
 </div>
