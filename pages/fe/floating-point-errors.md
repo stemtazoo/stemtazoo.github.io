@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: コンピュータシステム
 fe_order: 62
 date: 2026-07-11
-last_modified_at: 2026-10-12
+last_modified_at: 2026-10-31
 ---
 
 ## まず結論
@@ -205,6 +205,43 @@ last_modified_at: 2026-10-12
 ↓
 小さい数の情報が失われる
 ```
+
+### 触って確認：4種類の誤差は何が変わる？
+
+**見るポイント：** 保持できる桁数や加える値を変えると、どのように計算結果が変わるでしょうか。まず結果を予想してから、スライダーを動かしてみましょう。
+
+ここでは**10進数の有効数字を指定して丸める学習用モデル**を使います。実際のIEEE 754の2進浮動小数点形式や、その丸め動作を再現したものではありません。
+
+<link rel="stylesheet" href="{{ '/assets/css/fe-floating-point-errors-demo.css' | relative_url }}">
+
+<div id="fe-floating-errors-demo" class="fe-fpe">
+  <strong>誤差の種類を選択</strong>
+  <div class="fe-fpe-tabs" role="group" aria-label="誤差の種類">
+    <button type="button" data-fe-fpe-mode="rounding" aria-pressed="true">丸め誤差</button>
+    <button type="button" data-fe-fpe-mode="loss" aria-pressed="false">情報落ち</button>
+    <button type="button" data-fe-fpe-mode="cancellation" aria-pressed="false">桁落ち</button>
+    <button type="button" data-fe-fpe-mode="overflow" aria-pressed="false">桁あふれ</button>
+  </div>
+  <div class="fe-fpe-controls">
+    <label id="fe-fpe-control-label" for="fe-fpe-slider">保持する有効数字</label>
+    <input id="fe-fpe-slider" type="range" min="1" max="8" value="3" aria-describedby="fe-fpe-control-value">
+    <output id="fe-fpe-control-value" for="fe-fpe-slider">3桁</output>
+  </div>
+  <div class="fe-fpe-result" aria-live="polite" aria-atomic="true">
+    <p>計算・入力：<span id="fe-fpe-input">1 ÷ 3 = 0.333333…</span></p>
+    <p>保持・判定結果：</p>
+    <output id="fe-fpe-result">0.333</output>
+    <p id="fe-fpe-note" class="fe-fpe-hint">桁数を増やして変化を確認しましょう。</p>
+  </div>
+  <button id="fe-fpe-reset" type="button">この種類の初期値に戻す</button>
+</div>
+<script src="{{ '/assets/js/fe-floating-point-errors-demo.js' | relative_url }}" defer></script>
+
+<noscript>
+JavaScriptを利用できない場合の例：丸め誤差は 1 ÷ 3 = 0.333333… を有効数字3桁で 0.333 と表すと発生します。情報落ちは 1234 + 0.01 が有効数字4桁で 1234 となる例、桁落ちは 1.2345678 − 1.2345666 のような近い値の減算、桁あふれは8ビット符号なし整数で 250 + 6 = 256 が最大値255を超える例です。
+</noscript>
+
+操作で確認した現象を、次の科目Aの判断基準と結び付けてください。
 
 ## 科目Aでどう出る？
 
