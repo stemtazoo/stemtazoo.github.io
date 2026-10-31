@@ -22,6 +22,21 @@ class RenderedContentTests(unittest.TestCase):
             self.assertIn('frontmatter_leak', self.codes(content))
         self.assertNotIn('frontmatter_leak', self.codes('<p>title: はタイトルです。</p>'))
 
+    def test_tex_command_prefixes_are_not_newline_escapes(self):
+        for command in (r'\rho', r'\right', r'\rvert', r'\nu', r'\neq', r'\nabla'):
+            self.assertNotIn('literal_newline', self.codes('<p>' + command + '</p>'))
+        self.assertIn('literal_newline', self.codes(r'<p>\rho 本文\n次の説明</p>'))
+
+    def test_bodyless_jekyll_redirect_is_not_missing_article(self):
+        head = ('<!DOCTYPE html><html><meta charset="utf-8">'
+                '<link rel="canonical" href="https://stemtazoo.github.io/fe/new/">')
+        self.assertEqual([], inspect_html(head + '<meta http-equiv="refresh" content="0; url=/fe/new/">'))
+        # Missing or conflicting redirect metadata must still be reported.
+        for ending in ('', '<meta http-equiv="refresh" content="0; url=/fe/other/">'):
+            self.assertEqual('missing_content_region', inspect_html(head + ending)[0]['code'])
+        self.assertIn('literal_newline', {x['code'] for x in inspect_html(
+            head + '<meta http-equiv="refresh" content="0; url=/fe/new/"><body>本文\\n続き</body>')})
+
     def test_excludes_examples_and_invisible_text(self):
         for tag in ('code', 'pre', 'script', 'style', 'template'):
             self.assertEqual(set(), self.codes(f'<{tag}>layout: page title: x \\n {{{{ page.title }}}}</{tag}><p>通常本文</p>'))

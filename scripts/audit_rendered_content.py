@@ -5,6 +5,7 @@ import json
 import re
 from html.parser import HTMLParser
 from pathlib import Path
+from urllib.parse import urljoin, urlsplit
 
 THEMES = ('fe', 'gk', 'ds', 'sg')
 SKIP = {'pre', 'code', 'script', 'style', 'template'}
@@ -14,7 +15,8 @@ BLOCK = {'p', 'div', 'section', 'article', 'main', 'li', 'tr', 'td', 'th',
          'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'br', 'hr', 'dt', 'dd'}
 META = re.compile(r'(?<![\w-])(?:layout|title|description|permalink|tags|date|'
                   r'last_modified_at|(?:fe|gk|ds|sg)_(?:section|subsection|order))\s*:')
-NEWLINE = re.compile(r'\\r\\n|\\n|\\r')
+# Match escape tokens, not the prefixes of TeX commands such as \rho/\right.
+NEWLINE = re.compile(r'\\r\\n(?![A-Za-z])|\\[nr](?![A-Za-z])')
 LIQUID = re.compile(r'\{\{[^\n]*?\}\}|\{%[^\n]*?%\}')
 TAG = re.compile(r'<!doctype\s+html[^>]*>|</?(?:div|span|p|br|table|tr|td|th|script|style|section|h[1-6])\b[^>]*>', re.I)
 
@@ -30,6 +32,8 @@ class TextRegions(HTMLParser):
         self.stack = []
         self.parts = {x: [] for x in ('article', 'main', 'body')}
         self.seen = set()
+        self.canonical = None
+        self.refresh_target = None
 
     def emit(self, text):
         if any(skip for _, _, skip in self.stack):
@@ -40,6 +44,13 @@ class TextRegions(HTMLParser):
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
+        if tag == 'link' and 'canonical' in attrs.get('rel', '').lower().split():
+            self.canonical = attrs.get('href')
+        if tag == 'meta' and attrs.get('http-equiv', '').lower() == 'refresh':
+            match = re.fullmatch(r'\s*\d+(?:\.\d+)?\s*;\s*url\s*=\s*(.+?)\s*',
+                                 attrs.get('content', ''), re.I)
+            if match:
+                self.refresh_target = match.group(1).strip('\'"')
         classes = attrs.get('class', '').split()
         region = ('article' if 'data-pagefind-body' in attrs or 'post-content' in classes
                   else tag if tag in ('main', 'body') else None)
@@ -75,12 +86,22 @@ class TextRegions(HTMLParser):
                 return ''.join(self.parts[region]), region
         return '', None
 
+    def is_redirect(self):
+        """Recognize Jekyll's body-less redirect; do not certify its destination."""
+        if not self.canonical or not self.refresh_target:
+            return False
+        target = urlsplit(self.canonical)
+        return (target.scheme in ('http', 'https') and bool(target.netloc)
+                and urljoin(self.canonical, self.refresh_target) == self.canonical)
+
 
 def inspect_html(html):
     parser = TextRegions()
     parser.feed(html)
     text, region = parser.text()
     if region is None:
+        if parser.is_redirect():
+            return []
         return [{'code': 'missing_content_region', 'excerpt': 'No article/main/body region; inspect HTML.'}]
     findings = []
     for code, pattern in (('literal_newline', NEWLINE), ('unresolved_liquid', LIQUID),
