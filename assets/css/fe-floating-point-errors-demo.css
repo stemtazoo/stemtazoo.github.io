@@ -1,0 +1,16 @@
+.fe-fpe{border:1px solid #c5ced7;border-radius:12px;padding:1rem;margin:1.5rem 0;color:inherit}
+.fe-fpe *{box-sizing:border-box}
+.fe-fpe .fe-fpe-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.55rem;margin:1rem 0}
+.fe-fpe button{font:inherit;border:1px solid #8995a2;border-radius:8px;padding:.7rem .5rem;min-height:44px;background:transparent;color:inherit;cursor:pointer}
+.fe-fpe button[aria-pressed="true"]{background:#185e90;color:#fff;border-color:#185e90;font-weight:700}
+.fe-fpe button:focus-visible,.fe-fpe input:focus-visible{outline:3px solid #f2a900;outline-offset:2px}
+.fe-fpe .fe-fpe-controls{display:flex;flex-wrap:wrap;align-items:center;gap:.7rem;margin:.75rem 0}
+.fe-fpe input[type=range]{flex:1;min-width:120px}
+.fe-fpe .fe-fpe-result{border:1px solid #8995a2;border-radius:9px;padding:1rem;margin:.7rem 0}
+.fe-fpe .fe-fpe-result p{margin:.35rem 0}
+.fe-fpe .fe-fpe-result output{display:block;font-weight:700;font-size:1.3rem;overflow-wrap:anywhere}
+.fe-fpe .fe-fpe-hint{font-size:.9rem}
+.fe-fpe .fe-fpe-prediction{display:flex;flex-wrap:wrap;gap:.5rem;margin:.65rem 0}
+.fe-fpe .fe-fpe-prediction button{flex:1;min-width:110px}
+.fe-fpe .fe-fpe-feedback{font-weight:600;min-height:1.5em}
+@media(max-width:420px){.fe-fpe{padding:.75rem}.fe-fpe .fe-fpe-tabs{gap:.4rem}.fe-fpe button{font-size:.92rem}}
