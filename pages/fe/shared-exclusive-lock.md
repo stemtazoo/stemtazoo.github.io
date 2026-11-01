@@ -7,7 +7,7 @@ tags: [fe, fe-technology, database]
 fe_section: テクノロジ系
 fe_subsection: データベース
 date: 2026-07-27
-last_modified_at: 2026-07-27
+last_modified_at: 2026-11-01
 ---
 
 ## まず結論
@@ -67,6 +67,139 @@ last_modified_at: 2026-07-27
 共有ロックを「読む」、専有ロックを「書く」と置き換えるとイメージしやすいです。
 
 ---
+
+
+### 触って覚える：共有ロックと専有ロックの両立性
+
+**T1がロックを保持している間に、T2もロックを取得できるでしょうか？** T1とT2のロック種別を選び、T2の結果を予想してから1操作ずつ進めてください。**共有＋共有だけが同時取得できる**ことを4パターンで確認します。
+
+これは**同じ1件のデータに対し、異なるトランザクションT1・T2がロックを要求する単純化モデル**です。共有ロックをS、専有ロックをXとします。待機したT2はT1の解放後に自動で再試行するものとします。公平性・待ち行列・ロックの昇格・タイムアウト・MVCCなどのDBMS固有の処理は再現しません。
+
+<div class="fe-lock-compat-demo" id="fe-lock-compat-demo">
+  <div class="fe-lock-compat-demo__controls">
+    <label for="fe-lock-t1">T1が先に取得するロック
+      <select id="fe-lock-t1">
+        <option value="S">共有ロック（S）：読み取り</option>
+        <option value="X">専有ロック（X）：更新</option>
+      </select>
+    </label>
+    <label for="fe-lock-t2">T2が要求するロック
+      <select id="fe-lock-t2">
+        <option value="S">共有ロック（S）：読み取り</option>
+        <option value="X">専有ロック（X）：更新</option>
+      </select>
+    </label>
+  </div>
+  <div class="fe-lock-compat-demo__presets" aria-label="比較する組合せ">
+    <button type="button" data-lock-case="SS">S＋S</button>
+    <button type="button" data-lock-case="SX">S＋X</button>
+    <button type="button" data-lock-case="XS">X＋S</button>
+    <button type="button" data-lock-case="XX">X＋X</button>
+  </div>
+  <fieldset class="fe-lock-compat-demo__prediction">
+    <legend>予想：T1が保持中、T2は取得できる？</legend>
+    <label><input type="radio" name="fe-lock-guess" value="yes">取得できる</label>
+    <label><input type="radio" name="fe-lock-guess" value="no">待機する</label>
+  </fieldset>
+  <div class="fe-lock-compat-demo__actions">
+    <button type="button" id="fe-lock-next">1操作進める</button>
+    <button type="button" id="fe-lock-prev">1操作戻る</button>
+    <button type="button" id="fe-lock-reset">最初から</button>
+  </div>
+  <div class="fe-lock-compat-demo__states" aria-label="ロックの現在状態">
+    <section><h4>トランザクションT1</h4><p id="fe-lock-state-t1">まだロックを取得していません。</p></section>
+    <section><h4>トランザクションT2</h4><p id="fe-lock-state-t2">まだロックを要求していません。</p></section>
+  </div>
+  <p id="fe-lock-feedback" role="status" aria-live="polite">まずロックの組合せを選んで予想してください。</p>
+  <p id="fe-lock-reason" aria-live="polite">最初にT1がロックを取得し、次にT2が要求します。</p>
+  <ol id="fe-lock-log" aria-label="ロック取得と解除の履歴"><li>まだ操作していません。</li></ol>
+  <table>
+    <caption>同じデータへのロック両立性（異なるトランザクション間）</caption>
+    <thead><tr><th scope="col">T1の保持</th><th scope="col">T2の要求：共有（S）</th><th scope="col">T2の要求：専有（X）</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">共有（S）</th><td>○ 取得できる</td><td>× 待機</td></tr>
+      <tr><th scope="row">専有（X）</th><td>× 待機</td><td>× 待機</td></tr>
+    </tbody>
+  </table>
+  <p class="fe-lock-compat-demo__note">ロック待ちが1つあるだけではデッドロックではありません。T1が解放できればT2は進めます。複数の資源を互いに待つデッドロックは<a href="/fe/deadlock/">デッドロックの記事</a>で確認できます。</p>
+</div>
+<noscript><p>JavaScript無効時は上の両立性表をご覧ください。T1が共有ロックならT2の共有ロックのみ取得可能、T1が専有ロックならT2のどちらの要求も待機します。</p></noscript>
+
+<style>
+.fe-lock-compat-demo{border:1px solid #94a3b8;border-radius:12px;padding:1rem;margin:1.2rem 0}
+.fe-lock-compat-demo__controls,.fe-lock-compat-demo__states{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.65rem}
+.fe-lock-compat-demo__controls label{display:flex;flex-direction:column;gap:.35rem}
+.fe-lock-compat-demo select{padding:.45rem;min-width:0;width:100%;border:1px solid #64748b;border-radius:6px;background:var(--background-color,#fff);color:var(--text-color,#172033)}
+.fe-lock-compat-demo__presets,.fe-lock-compat-demo__actions{display:flex;gap:.45rem;flex-wrap:wrap;margin:.8rem 0}
+.fe-lock-compat-demo button{padding:.5rem .75rem;border:1px solid #64748b;border-radius:6px;background:#e2e8f0;color:#172033;cursor:pointer}
+.fe-lock-compat-demo button:disabled{opacity:.45;cursor:not-allowed}
+.fe-lock-compat-demo__prediction{display:flex;flex-wrap:wrap;gap:.8rem;border:1px solid #94a3b8;border-radius:8px;padding:.65rem}
+.fe-lock-compat-demo__prediction legend{font-weight:700}
+.fe-lock-compat-demo__states section{border:1px solid #94a3b8;border-radius:8px;padding:.65rem;min-width:0}
+.fe-lock-compat-demo__states h4{font-size:1rem;margin:0 0 .4rem}
+.fe-lock-compat-demo__states p{margin:0}
+.fe-lock-compat-demo table{border-collapse:collapse;width:100%;margin:.8rem 0}
+.fe-lock-compat-demo th,.fe-lock-compat-demo td{border:1px solid #94a3b8;padding:.4rem;text-align:left}
+.fe-lock-compat-demo__note{font-size:.9rem}
+.fe-lock-compat-demo :focus-visible{outline:3px solid #2563eb;outline-offset:2px}
+@media(max-width:560px){.fe-lock-compat-demo{padding:.65rem}.fe-lock-compat-demo__controls,.fe-lock-compat-demo__states{grid-template-columns:1fr}.fe-lock-compat-demo__actions button{flex:1 1 43%}}
+</style>
+<script>
+(function(){
+  "use strict";
+  const root=document.getElementById("fe-lock-compat-demo");if(!root)return;
+  const $=id=>root.querySelector("#"+id);
+  const t1=$("fe-lock-t1"),t2=$("fe-lock-t2");
+  let step=0,feedback="";
+  function compatible(){return t1.value==="S"&&t2.value==="S";}
+  function label(mode){return mode==="S"?"共有ロック（S）":"専有ロック（X）";}
+  function reset(message){
+    step=0;feedback=message||"最初の状態です。T2の結果を予想してみましょう。";
+    root.querySelectorAll('input[name="fe-lock-guess"]').forEach(r=>r.checked=false);
+    render();
+  }
+  function render(){
+    const yes=compatible();
+    $("fe-lock-state-t1").textContent=step===0?"未取得":step===3?"解放済み":label(t1.value)+"を保持";
+    $("fe-lock-state-t2").textContent=step<2?"未要求":step===2?(yes?label(t2.value)+"を取得済み":"待機中："+label(t2.value)+"を要求"):(yes?"T1解放後も"+label(t2.value)+"を保持":"T1解放後に"+label(t2.value)+"を取得");
+    $("fe-lock-next").disabled=step===3;$("fe-lock-prev").disabled=step===0;
+    $("fe-lock-next").textContent=step===0?"T1がロック取得":step===1?"T2がロック要求":"T1がロック解放";
+    root.querySelectorAll('input[name="fe-lock-guess"]').forEach(r=>r.disabled=step>=2);
+    $("fe-lock-feedback").textContent=feedback;
+    const reasons=[
+      "T1が先にロックを取得し、T2が同じデータに要求します。",
+      "T1が"+label(t1.value)+"を取得しました。T2の結果を予想してください。",
+      yes?"共有（S）＋共有（S）なのでT2も取得できます。":"専有（X）が含まれるためT2は待機します。",
+      yes?"T1は解放しましたがT2は共有ロックを保持中です。":"T1が解放したため、待機していたT2が取得できました。"
+    ];
+    $("fe-lock-reason").textContent=reasons[step];
+    const items=["T1が"+label(t1.value)+"を取得","T2が"+label(t2.value)+"を要求 → "+(yes?"取得":"待機"),"T1が解除 → "+(yes?"T2は引き続き保持":"T2の待機を解除し取得")];
+    const log=$("fe-lock-log");log.replaceChildren();
+    (step?items.slice(0,step):["まだ操作していません。"]).forEach(item=>{
+      const li=document.createElement("li");li.textContent=item;log.appendChild(li);
+    });
+    root.querySelectorAll("[data-lock-case]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.lockCase===t1.value+t2.value)));
+  }
+  $("fe-lock-next").addEventListener("click",()=>{
+    if(step>=3)return;
+    if(step===1){
+      const picked=root.querySelector('input[name="fe-lock-guess"]:checked'),yes=compatible();
+      feedback=(picked?(picked.value===(yes?"yes":"no")?"予想正解！ ":"予想と異なりました。 "):"")+(yes?"共有ロック同士なので同時に取得できます。":"T2は取得できず待機します。");
+      root.querySelectorAll('input[name="fe-lock-guess"]').forEach(r=>r.checked=false);
+    }else if(step===0){feedback="T1がロックを取得しました。T2の結果を予想してください。";}
+    else{feedback="T1がロックを解放しました。"+(compatible()?"T2は保持を続けます。":"待機していたT2が取得しました。");}
+    step++;render();
+  });
+  $("fe-lock-prev").addEventListener("click",()=>{if(step>0)step--;feedback="1操作戻しました。";render();});
+  $("fe-lock-reset").addEventListener("click",()=>reset());
+  [t1,t2].forEach(el=>el.addEventListener("change",()=>reset("ロックの組合せを変更しました。結果を予想してください。")));
+  root.querySelectorAll("[data-lock-case]").forEach(b=>b.addEventListener("click",()=>{
+    t1.value=b.dataset.lockCase[0];t2.value=b.dataset.lockCase[1];
+    reset("組合せ"+b.dataset.lockCase+"に切り替えました。");
+  }));
+  reset();
+})();
+</script>
 
 ## 定義・仕組み
 
