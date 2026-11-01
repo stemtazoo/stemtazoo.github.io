@@ -11,6 +11,15 @@ class RenderedContentTests(unittest.TestCase):
     def codes(self, content):
         return {x['code'] for x in inspect_html('<body><main><div data-pagefind-body>' + content + '</div></main></body>')}
 
+    def test_truncated_tool_output_is_reported(self):
+        self.assertIn('truncation_marker', self.codes('<p>…1196 tokens truncated…査・遮断する |</p>'))
+        self.assertEqual(set(), self.codes('<pre>…1196 tokens truncated…</pre>'))
+
+    def test_unconverted_markdown_table_is_reported(self):
+        self.assertIn('unrendered_markdown_table', self.codes('<p>| 誤解 | 正しい理解 |</p>'))
+        self.assertEqual(set(), self.codes('<table><tr><td>誤解</td><td>正しい理解</td></tr></table>'))
+        self.assertEqual(set(), self.codes('<pre>| 誤解 | 正しい理解 |</pre>'))
+
     def test_detects_newline_and_split_inline_text(self):
         self.assertIn('literal_newline', self.codes(r'<p>説明\<span>n</span>続き</p>'))
         self.assertIn('literal_newline', self.codes(r'<p>説明\r\n続き</p>'))
