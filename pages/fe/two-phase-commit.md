@@ -117,7 +117,7 @@ A銀行：可       B銀行：不可
     <label><input type="radio" name="fe-2pc-guess" value="abort">全員中止</label>
   </fieldset>
   <p id="fe-2pc-guide" class="study-demo__guide" role="status" aria-live="polite">予想したら、すぐ下の「第1相へ：準備確認」を押してください。予想せずに進めることもできます。</p>
-  <div class="fe-2pc-demo__actions">
+  <div class="fe-2pc-demo__actions study-demo__actions">
     <button type="button" id="fe-2pc-next">第1相へ：準備確認</button>
     <button type="button" id="fe-2pc-prev">1段階戻る</button>
     <button type="button" id="fe-2pc-reset">最初から</button>

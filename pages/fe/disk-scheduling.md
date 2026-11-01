@@ -131,7 +131,7 @@ SCAN方式は、**エレベータ**をイメージすると理解しやすい方
     <input id="fe-disk-guess" type="number" min="0" max="199" step="1" placeholder="例：120">
   </fieldset>
   <p id="fe-disk-guide" class="study-demo__guide" role="status" aria-live="polite">番号を予想したら、すぐ下の「1要求進める」を押してください。予想せずに進めることもできます。</p>
-  <div class="fe-disk-demo__buttons">
+  <div class="fe-disk-demo__buttons study-demo__actions">
     <button type="button" id="fe-disk-next">1要求進める</button>
     <button type="button" id="fe-disk-prev">1要求戻る</button>
     <button type="button" id="fe-disk-all">最後まで実行</button>

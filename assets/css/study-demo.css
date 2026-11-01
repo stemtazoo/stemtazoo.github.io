@@ -29,3 +29,6 @@
   font-weight: 700;
 }
 .study-demo :focus-visible { outline: 3px solid #2563eb; outline-offset: 2px; }
+@media (max-width: 360px) {
+  .study-demo .study-demo__actions button { flex: 1 1 100%; }
+}

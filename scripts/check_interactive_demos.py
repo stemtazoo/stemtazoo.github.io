@@ -6,6 +6,7 @@ import argparse
 from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 import json
+import os
 from pathlib import Path
 import threading
 import traceback
@@ -32,6 +33,12 @@ def contained(page, root):
     }''')
     assert not result['overflow'], f'Controls outside lesson: {result}'
     assert result['left'] >= -1 and result['right'] <= result['viewport'] + 1, result
+    if page.viewport_size['width'] <= 360:
+        layout = page.locator(root + ' .study-demo__actions').evaluate('''group => {
+          const buttons = Array.from(group.querySelectorAll('button')).map(b => b.getBoundingClientRect());
+          return buttons.every((b, i) => !i || b.top >= buttons[i-1].bottom - 1);
+        }''')
+        assert layout, 'Narrow action buttons should occupy separate rows'
 
 
 def selection(page, root, value):
@@ -169,7 +176,8 @@ def run(args):
     plan = json.loads(args.selection.read_text())
     args.artifacts.mkdir(parents=True, exist_ok=True)
     records = []
-    report = {'records': records, 'uncovered_articles': plan['uncovered_articles'],
+    report = {'commit': os.environ.get('GITHUB_SHA', 'local-uncommitted'),
+              'records': records, 'uncovered_articles': plan['uncovered_articles'],
               'manual_follow_up': ['Instruction clarity and prediction/state proximity',
                                    'Real Android/iOS browser and screen-reader checks',
                                    'Deployed-page confirmation after merge'],
@@ -215,6 +223,7 @@ def run(args):
                         print(record['error'], flush=True)
                 # Static learning fallback is independently checked with scripting off.
                 context = browser.new_context(java_script_enabled=False, viewport={'width': 390, 'height': 900})
+                context.route('**/*', lambda route: route.continue_() if urlsplit(route.request.url).hostname == '127.0.0.1' else route.abort())
                 page = context.new_page()
                 try:
                     page.goto(f'http://127.0.0.1:{server.server_port}/fe/{slug}/', wait_until='load')

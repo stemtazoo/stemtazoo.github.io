@@ -14,6 +14,7 @@ association; each article still owns its algorithm, correct answers and state.
 
 - Use `study-demo__controls` for controls that must fit their parent width.
 - Choice buttons have `data-demo-choice`; the selected value sets `aria-pressed`.
+- `study-demo__actions` uses one button per row at 360px and below, avoiding awkward label wrapping.
 - `study-demo__guide` sits directly between prediction and the action buttons.
 - New consumers need a representative browser scenario before expanding coverage.
 

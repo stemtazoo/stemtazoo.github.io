@@ -104,7 +104,7 @@ last_modified_at: 2026-11-02
     <label><input type="radio" name="fe-lock-guess" value="no">待機する</label>
   </fieldset>
   <p class="study-demo__guide" id="fe-lock-guide" role="status" aria-live="polite">予想したら、すぐ下の「T1がロック取得」を押してください。予想を選ばずに進めることもできます。</p>
-  <div class="fe-lock-compat-demo__actions">
+  <div class="fe-lock-compat-demo__actions study-demo__actions">
     <button type="button" id="fe-lock-next" aria-describedby="fe-lock-guide">T1がロック取得</button>
     <button type="button" id="fe-lock-prev">1操作戻る</button>
     <button type="button" id="fe-lock-reset">最初から</button>
