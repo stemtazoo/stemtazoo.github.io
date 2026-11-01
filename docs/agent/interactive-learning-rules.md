@@ -256,6 +256,10 @@ Use the checks above to support continued creation of useful CSS/JavaScript teac
 - If browser execution is unavailable, continue the implementation and report the limitation and concrete follow-up operation. Do not remove or avoid a useful teaching aid solely because that environment is unavailable, and do not describe code inspection or a passing build as an operation check.
 - Keep the existing update audit as a follow-up safeguard, with code review and actual browser execution reported separately. Consider targeted automation only when repeated failures or widely reused components justify its maintenance cost; do not introduce blanket automation as a prerequisite for teaching-aid creation.
 
+### Three-page FE browser pilot
+
+The shared/exclusive-lock, two-phase-commit and disk-scheduling lessons use a small opt-in UI helper and changed-page browser checks. See the [pilot implementation and follow-up guide](../../tests/browser/README.md) for the shared assets, registered scope, artifacts and manual follow-up owner. This is an FE pilot, not a new mandatory automation gate for other lessons.
+
 ### Exam-specific outcome
 
 - **FE:** The learner can trace what changes next and explain why.

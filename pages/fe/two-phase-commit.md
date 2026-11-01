@@ -98,12 +98,14 @@ A銀行：可       B銀行：不可
 
 **「全員が準備OK」と「1人だけ準備NG」では、最終結果がどう変わるでしょうか？** 参加者A・B・Cの回答を切り替え、まず結論を予想してから第1相と第2相を順番に実行してください。
 
-<div id="fe-2pc-demo" class="fe-2pc-demo">
+{% include study_demo_assets.html %}
+
+<div id="fe-2pc-demo" class="fe-2pc-demo study-demo">
   <div class="fe-2pc-demo__presets">
-    <button type="button" data-preset="all">全員OKの例</button>
-    <button type="button" data-preset="one">BだけNGの例</button>
+    <button type="button" data-preset="all" data-demo-choice="all">全員OKの例</button>
+    <button type="button" data-preset="one" data-demo-choice="one">BだけNGの例</button>
   </div>
-  <fieldset class="fe-2pc-demo__responses">
+  <fieldset class="fe-2pc-demo__responses study-demo__controls">
     <legend>各参加者の準備結果を設定する</legend>
     <label>参加者A <select data-participant="A"><option value="yes">準備OK</option><option value="no">準備NG</option></select></label>
     <label>参加者B <select data-participant="B"><option value="yes">準備OK</option><option value="no">準備NG</option></select></label>
@@ -114,6 +116,7 @@ A銀行：可       B銀行：不可
     <label><input type="radio" name="fe-2pc-guess" value="commit">全員コミット</label>
     <label><input type="radio" name="fe-2pc-guess" value="abort">全員中止</label>
   </fieldset>
+  <p id="fe-2pc-guide" class="study-demo__guide" role="status" aria-live="polite">予想したら、すぐ下の「第1相へ：準備確認」を押してください。予想せずに進めることもできます。</p>
   <div class="fe-2pc-demo__actions">
     <button type="button" id="fe-2pc-next">第1相へ：準備確認</button>
     <button type="button" id="fe-2pc-prev">1段階戻る</button>
@@ -139,8 +142,6 @@ A銀行：可       B銀行：不可
 .fe-2pc-demo{border:1px solid #94a3b8;border-radius:12px;padding:1rem;margin:1rem 0}
 .fe-2pc-demo__presets,.fe-2pc-demo__actions{display:flex;gap:.5rem;flex-wrap:wrap;margin:.7rem 0}
 .fe-2pc-demo button{border:1px solid #64748b;border-radius:6px;background:#e2e8f0;color:#172033;padding:.5rem .7rem;cursor:pointer}
-.fe-2pc-demo__presets button[aria-pressed="true"]{background:#1e40af;color:#fff;border-color:#1e40af;font-weight:700;box-shadow:inset 0 0 0 2px #fff}
-.fe-2pc-demo__presets button[aria-pressed="true"]::after{content:"選択中";display:block;font-size:.8em}
 .fe-2pc-demo button:disabled{opacity:.45;cursor:not-allowed}
 .fe-2pc-demo fieldset{border:1px solid #94a3b8;border-radius:8px;margin:.8rem 0;padding:.7rem}
 .fe-2pc-demo legend{font-weight:700}
@@ -177,7 +178,7 @@ A銀行：可       B銀行：不可
   function render(){
     const result=outcome();
     const preset=selects.every(s=>s.value==="yes")?"all":selects.every((s,i)=>s.value===(i===1?"no":"yes"))?"one":null;
-    root.querySelectorAll("[data-preset]").forEach(button=>button.setAttribute("aria-pressed",String(button.dataset.preset===preset)));
+    StudyDemoUI.selectChoice(root,preset);
     for(let i=0;i<3;i++){
       const name=names[i],status=$("fe-2pc-status-"+name);
       status.textContent=phase===0?"未確認":phase===1?(selects[i].value==="yes"?"準備OK（未確定）":"準備NG（未確定）"):(result==="commit"?"コミット確定":"中止・ロールバック");
@@ -186,6 +187,11 @@ A銀行：可       B銀行：不可
     $("fe-2pc-decision").textContent=phase===0?"調停者の決定：まだありません。":phase===1?"調停者の決定：全員の回答を確認中。まだ最終決定していません。":"調停者の決定："+(result==="commit"?"全員にCOMMITを指示":"全員にABORTを指示");
     $("fe-2pc-feedback").textContent=answer;
     next.textContent=phase===0?"第1相へ：準備確認":"第2相へ：最終決定";
+    StudyDemoUI.nextAction(next,$("fe-2pc-guide"),[
+      "予想したら、すぐ下の「第1相へ：準備確認」を押してください。予想せずに進めることもできます。",
+      "次は、すぐ下の「第2相へ：最終決定」を押して全体の結果を確認してください。",
+      "確認は完了です。別の例を選ぶか、「最初から」で同じ設定を試せます。"
+    ][phase]);
     next.disabled=phase===2;prev.disabled=phase===0;
     selects.forEach(s=>s.disabled=phase!==0);
     root.querySelectorAll('input[name="fe-2pc-guess"]').forEach(r=>r.disabled=phase!==0);

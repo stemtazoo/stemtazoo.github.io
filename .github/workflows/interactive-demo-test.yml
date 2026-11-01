@@ -1,0 +1,121 @@
+name: Interactive demo browser checks
+
+on:
+  pull_request:
+    paths:
+      - 'pages/**'
+      - 'assets/**'
+      - '_includes/**'
+      - '_layouts/**'
+      - '_config.yml'
+      - 'Gemfile*'
+      - 'tests/browser/**'
+      - 'tests/test_interactive_selection.py'
+      - 'scripts/*interactive*.py'
+      - '.github/workflows/interactive-demo-test.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'pages/**'
+      - 'assets/**'
+      - '_includes/**'
+      - '_layouts/**'
+      - '_config.yml'
+      - 'Gemfile*'
+      - 'tests/browser/**'
+      - 'tests/test_interactive_selection.py'
+      - 'scripts/*interactive*.py'
+      - '.github/workflows/interactive-demo-test.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: interactive-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test change selection
+        run: python -m unittest discover -s tests -p 'test_interactive_selection.py' -v
+      - name: Select changed pilot lessons
+        id: select
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          python - <<'PY'
+          import json, os, subprocess
+          from pathlib import Path
+          event = json.loads(Path(os.environ['GITHUB_EVENT_PATH']).read_text())
+          command = ['python', 'scripts/select_interactive_checks.py', '--output', 'artifacts/interactive-demo/selection.json']
+          if os.environ['EVENT_NAME'] == 'workflow_dispatch':
+              command += ['--all']
+          else:
+              base = event['pull_request']['base']['sha'] if 'pull_request' in event else event.get('before', '')
+              command += ['--base', base, '--head', os.environ['GITHUB_SHA']]
+          subprocess.run(command, check=True)
+          plan = json.loads(Path('artifacts/interactive-demo/selection.json').read_text())
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
+              output.write('run_browser=' + str(bool(plan['pages'])).lower() + '\n')
+          PY
+      - name: Build actual Jekyll preview
+        if: steps.select.outputs.run_browser == 'true'
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+      - name: Install Chromium test dependencies
+        if: steps.select.outputs.run_browser == 'true'
+        run: |
+          python -m pip install -r tests/browser/requirements.txt
+          python -m playwright install --with-deps chromium
+      - name: Check pilot lessons at mobile and desktop widths
+        if: steps.select.outputs.run_browser == 'true'
+        run: python scripts/check_interactive_demos.py --selection artifacts/interactive-demo/selection.json
+      - name: Record coverage and manual follow-up
+        if: always()
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          folder = Path('artifacts/interactive-demo')
+          selection = folder / 'selection.json'
+          report = folder / 'report.json'
+          plan = json.loads(selection.read_text()) if selection.exists() else {}
+          data = json.loads(report.read_text()) if report.exists() else {}
+          lines = ['# Interactive demo checks', '', 'Commit: ' + os.environ['GITHUB_SHA'], '']
+          records = data.get('records', [])
+          lines += ['| Page | Width / mode | Result |', '| --- | --- | --- |']
+          for record in records:
+              lines.append('| {} | {} | {} |'.format(record['page'], record.get('mode', str(record.get('width')) + 'px'), record['status']))
+          if plan.get('pages') and not records:
+              lines += ['', '**Browser execution did not complete. The selected lessons remain unverified.**']
+          elif not plan.get('pages'):
+              lines += ['', 'No registered pilot lesson was selected. This is not a pass for other articles.']
+          lines += ['', '## Follow-up remains', '', '- Human review: next action is clear; prediction and current state are close.', '- Real mobile browser, screen reader, and deployed-page confirmation.', '- Owner: author/reviewer of this PR. Record version, environment, operation, expected/observed result in the PR before closing these items.']
+          if plan.get('uncovered_articles'):
+              lines += ['', 'Unregistered article changes (no browser coverage):']
+              lines += ['- ' + path for path in plan['uncovered_articles']]
+          folder.mkdir(parents=True, exist_ok=True)
+          summary = '\n'.join(lines) + '\n'
+          (folder / 'follow-up.md').write_text(summary)
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as output:
+              output.write(summary)
+          PY
+      - name: Upload screenshots, traces, results and follow-up
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: interactive-demo-checks
+          path: artifacts/interactive-demo/
+          retention-days: 14

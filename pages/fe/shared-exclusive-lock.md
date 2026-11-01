@@ -75,8 +75,10 @@ last_modified_at: 2026-11-02
 
 これは**同じ1件のデータに対し、異なるトランザクションT1・T2がロックを要求する単純化モデル**です。共有ロックをS、専有ロックをXとします。待機したT2はT1の解放後に自動で再試行するものとします。公平性・待ち行列・ロックの昇格・タイムアウト・MVCCなどのDBMS固有の処理は再現しません。
 
-<div class="fe-lock-compat-demo" id="fe-lock-compat-demo">
-  <div class="fe-lock-compat-demo__controls">
+{% include study_demo_assets.html %}
+
+<div class="fe-lock-compat-demo study-demo" id="fe-lock-compat-demo">
+  <div class="fe-lock-compat-demo__controls study-demo__controls">
     <label for="fe-lock-t1">T1が先に取得するロック
       <select id="fe-lock-t1">
         <option value="S">共有ロック（S）：読み取り</option>
@@ -91,17 +93,17 @@ last_modified_at: 2026-11-02
     </label>
   </div>
   <div class="fe-lock-compat-demo__presets" aria-label="比較する組合せ">
-    <button type="button" data-lock-case="SS">S＋S</button>
-    <button type="button" data-lock-case="SX">S＋X</button>
-    <button type="button" data-lock-case="XS">X＋S</button>
-    <button type="button" data-lock-case="XX">X＋X</button>
+    <button type="button" data-lock-case="SS" data-demo-choice="SS">S＋S</button>
+    <button type="button" data-lock-case="SX" data-demo-choice="SX">S＋X</button>
+    <button type="button" data-lock-case="XS" data-demo-choice="XS">X＋S</button>
+    <button type="button" data-lock-case="XX" data-demo-choice="XX">X＋X</button>
   </div>
   <fieldset class="fe-lock-compat-demo__prediction">
     <legend>予想：T1が保持中、T2は取得できる？</legend>
     <label><input type="radio" name="fe-lock-guess" value="yes">取得できる</label>
     <label><input type="radio" name="fe-lock-guess" value="no">待機する</label>
   </fieldset>
-  <p class="fe-lock-compat-demo__guide" id="fe-lock-guide" role="status" aria-live="polite">予想したら、すぐ下の「T1がロック取得」を押してください。予想を選ばずに進めることもできます。</p>
+  <p class="study-demo__guide" id="fe-lock-guide" role="status" aria-live="polite">予想したら、すぐ下の「T1がロック取得」を押してください。予想を選ばずに進めることもできます。</p>
   <div class="fe-lock-compat-demo__actions">
     <button type="button" id="fe-lock-next" aria-describedby="fe-lock-guide">T1がロック取得</button>
     <button type="button" id="fe-lock-prev">1操作戻る</button>
@@ -134,9 +136,6 @@ last_modified_at: 2026-11-02
 .fe-lock-compat-demo__presets,.fe-lock-compat-demo__actions{display:flex;gap:.45rem;flex-wrap:wrap;margin:.8rem 0}
 .fe-lock-compat-demo button{padding:.5rem .75rem;border:1px solid #64748b;border-radius:6px;background:#e2e8f0;color:#172033;cursor:pointer}
 .fe-lock-compat-demo__presets{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
-.fe-lock-compat-demo__presets button[aria-pressed="true"]{background:#1e40af;color:#fff;border-color:#1e40af;font-weight:700;box-shadow:inset 0 0 0 2px #fff}
-.fe-lock-compat-demo__presets button[aria-pressed="true"]::after{content:"選択中";display:block;font-size:.8em}
-.fe-lock-compat-demo__guide{border-left:4px solid #2563eb;padding:.5rem .65rem;margin:.8rem 0;font-weight:700}
 .fe-lock-compat-demo button:disabled{opacity:.45;cursor:not-allowed}
 .fe-lock-compat-demo__prediction{display:flex;flex-wrap:wrap;gap:.8rem;border:1px solid #94a3b8;border-radius:8px;padding:.65rem}
 .fe-lock-compat-demo__prediction legend{font-weight:700}
@@ -175,7 +174,7 @@ last_modified_at: 2026-11-02
       "次は、すぐ下の「T1がロック解放」を押し、T2の状態がどうなるか確認してください。",
       "確認は完了です。別の組合せを選んで比べるか、「最初から」で同じ組合せを試せます。"
     ];
-    $("fe-lock-guide").textContent=guides[step];
+    StudyDemoUI.nextAction($("fe-lock-next"),$("fe-lock-guide"),guides[step]);
     root.querySelectorAll('input[name="fe-lock-guess"]').forEach(r=>r.disabled=step>=2);
     $("fe-lock-feedback").textContent=feedback;
     const reasons=[
@@ -190,7 +189,7 @@ last_modified_at: 2026-11-02
     (step?items.slice(0,step):["まだ操作していません。"]).forEach(item=>{
       const li=document.createElement("li");li.textContent=item;log.appendChild(li);
     });
-    root.querySelectorAll("[data-lock-case]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.lockCase===t1.value+t2.value)));
+    StudyDemoUI.selectChoice(root,t1.value+t2.value);
   }
   $("fe-lock-next").addEventListener("click",()=>{
     if(step>=3)return;
