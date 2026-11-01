@@ -19,6 +19,8 @@ META = re.compile(r'(?<![\w-])(?:layout|title|description|permalink|tags|date|'
 NEWLINE = re.compile(r'\\r\\n(?![A-Za-z])|\\[nr](?![A-Za-z])')
 LIQUID = re.compile(r'\{\{[^\n]*?\}\}|\{%[^\n]*?%\}')
 TAG = re.compile(r'<!doctype\s+html[^>]*>|</?(?:div|span|p|br|table|tr|td|th|script|style|section|h[1-6])\b[^>]*>', re.I)
+TRUNCATION = re.compile(r'\b\d+\s+(?:tokens?|characters?|lines?)\s+truncated\b', re.I)
+RAW_TABLE = re.compile(r'^\s*\|[^\n|]+\|[^\n|]+\|\s*$', re.M)
 
 
 class TextRegions(HTMLParser):
@@ -105,7 +107,8 @@ def inspect_html(html):
         return [{'code': 'missing_content_region', 'excerpt': 'No article/main/body region; inspect HTML.'}]
     findings = []
     for code, pattern in (('literal_newline', NEWLINE), ('unresolved_liquid', LIQUID),
-                          ('escaped_html_tag', TAG)):
+                          ('escaped_html_tag', TAG), ('truncation_marker', TRUNCATION),
+                          ('unrendered_markdown_table', RAW_TABLE)):
         match = pattern.search(text)
         if match:
             findings.append({'code': code, 'excerpt': text[max(0, match.start()-45):match.end()+90].strip()})

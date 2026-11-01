@@ -68,6 +68,14 @@ class ArticleRenderingTests(unittest.TestCase):
 
     def test_waf_comparison_rows_and_summary_render_separately(self):
         page = self.page('waf')
+        for heading in ('科目Bでどう使う？', 'どんな場面で使う？', 'よくある誤解・混同'):
+            self.assertIn(heading, page.headings)
+        misconceptions = [row for row in page.rows if row and (
+            row[0].startswith('WAFは') or row[0] in (
+                '通常のファイアウォールと同じ', 'HTTPSならWAFはどこに置いてもよい',
+                'DBサーバの直前に置けばよい'))]
+        self.assertEqual(7, len(misconceptions))
+        self.assertTrue(all(len(row) == 2 for row in misconceptions))
         for phrase in ('OSのセキュリティホールを修正する', 'ウイルスやワームを検出・駆除する',
                        'SSL/TLSの暗号化・復号処理を肩代わりする'):
             self.assertTrue(any(len(row) == 2 and row[0] == phrase for row in page.rows), phrase)

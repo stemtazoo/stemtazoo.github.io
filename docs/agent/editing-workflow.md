@@ -45,6 +45,10 @@ fallback output when a broken header prevents the intended permalink.
 
 Review candidates for literal `\n` / `\r\n` / `\r`, multiple front-matter keys
 near the opening, unresolved Liquid, and escaped HTML tags in article text.
+Also check tool-output truncation markers and pipe-delimited Markdown table rows
+that remain plain text. A clean candidate report is not proof that every section
+or table survived an edit; verify the complete changed region in the source diff
+and rendered output. Never write abbreviated tool output back into a source file.
 Preformatted/code examples, scripts, styles, templates, and explicitly hidden regions
 are excluded. A normal LF or CRLF line ending is not a displayed escape sequence.
 Intentional syntax explanations outside code can still be candidates: inspect the
