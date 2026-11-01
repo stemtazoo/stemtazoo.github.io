@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: オペレーティングシステム
 fe_order: 50
 date: 2026-08-27
-last_modified_at: 2026-10-08
+last_modified_at: 2026-11-01
 related_articles:
   - /fe/task-scheduling/
   - /fe/preemptive-scheduling/
@@ -98,6 +98,200 @@ CPU中心：      CPU CPU CPU       CPU CPU CPU
 ```
 
 つまり、狙いは**CPUを1つのタスクに長く使わせることではなく、CPUとI/O装置の両方をできるだけ遊ばせないこと**です。
+
+
+### 触って覚える：同じタスクを4方式で比較する
+
+次の3タスクの到着時刻・CPU処理時間・優先度を変更して、**次に動くタスクを予想**しましょう。そのあと「1単位進める」でCPUの動きと待ち時間を確かめます。方式を切り替えても入力条件は保持されます。
+
+この教材ではCPUは1個、各タスクのCPU処理は1回だけ、I/O待ち・切替え時間・エージングは扱いません。FCFS・SJF・優先度は**非プリエンプティブ**（実行中は完了まで継続）、ラウンドロビンだけタイムクォンタムで交代します。**優先度は数字が小さいほど高い**とします。同時刻の到着はA→B→C、同順位では到着時刻→A/B/Cの順で決めます。ラウンドロビンでは、時刻境界で新たに到着したタスクを待ち行列に追加してから、時間切れのタスクを末尾へ戻します。
+
+<div class="fe-cpu-demo" id="fe-cpu-demo">
+  <div class="fe-cpu-demo__controls">
+    <label>方式
+      <select id="fe-cpu-kind">
+        <option value="fcfs">到着順（FCFS）</option>
+        <option value="sjf">処理時間順（SJF）</option>
+        <option value="priority">優先度順</option>
+        <option value="rr">ラウンドロビン（RR）</option>
+      </select>
+    </label>
+    <label>タイムクォンタム（RRのみ）
+      <select id="fe-cpu-quantum"><option value="1">1</option><option value="2" selected>2</option><option value="3">3</option><option value="4">4</option></select>
+    </label>
+  </div>
+  <div class="fe-cpu-demo__scroll">
+    <table>
+      <caption>タスクの条件（値を変更できます）</caption>
+      <thead><tr><th scope="col">タスク</th><th scope="col">到着時刻</th><th scope="col">CPU処理時間</th><th scope="col">優先度</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">A</th><td><input aria-label="Aの到着時刻" data-job="0" data-field="arrival" type="number" min="0" max="12" step="1" value="0"></td><td><input aria-label="Aの処理時間" data-job="0" data-field="burst" type="number" min="1" max="12" step="1" value="5"></td><td><input aria-label="Aの優先度" data-job="0" data-field="priority" type="number" min="1" max="9" step="1" value="2"></td></tr>
+        <tr><th scope="row">B</th><td><input aria-label="Bの到着時刻" data-job="1" data-field="arrival" type="number" min="0" max="12" step="1" value="1"></td><td><input aria-label="Bの処理時間" data-job="1" data-field="burst" type="number" min="1" max="12" step="1" value="2"></td><td><input aria-label="Bの優先度" data-job="1" data-field="priority" type="number" min="1" max="9" step="1" value="1"></td></tr>
+        <tr><th scope="row">C</th><td><input aria-label="Cの到着時刻" data-job="2" data-field="arrival" type="number" min="0" max="12" step="1" value="2"></td><td><input aria-label="Cの処理時間" data-job="2" data-field="burst" type="number" min="1" max="12" step="1" value="3"></td><td><input aria-label="Cの優先度" data-job="2" data-field="priority" type="number" min="1" max="9" step="1" value="3"></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <fieldset class="fe-cpu-demo__predict">
+    <legend>予想：次の1単位でCPUを使うのは？</legend>
+    <label><input type="radio" name="fe-cpu-prediction" value="A">A</label>
+    <label><input type="radio" name="fe-cpu-prediction" value="B">B</label>
+    <label><input type="radio" name="fe-cpu-prediction" value="C">C</label>
+    <label><input type="radio" name="fe-cpu-prediction" value="-">待機</label>
+  </fieldset>
+  <div class="fe-cpu-demo__buttons">
+    <button type="button" id="fe-cpu-next">1単位進める</button>
+    <button type="button" id="fe-cpu-prev">1単位戻る</button>
+    <button type="button" id="fe-cpu-reset">最初から</button>
+    <button type="button" id="fe-cpu-all">最後まで実行</button>
+  </div>
+  <p id="fe-cpu-status" role="status" aria-live="polite">初期状態：実行するタスクを予想してください。</p>
+  <p id="fe-cpu-feedback" aria-live="polite">予想を選択してから進めると、答え合わせができます。</p>
+  <div class="fe-cpu-demo__scroll" tabindex="0" aria-label="CPU実行ガントチャート（横スクロール可）">
+    <div id="fe-cpu-timeline" class="fe-cpu-demo__timeline" aria-label="ガントチャート">まだ実行していません。</div>
+  </div>
+  <div id="fe-cpu-remaining">残りCPU時間：A=5、B=2、C=3</div>
+  <div class="fe-cpu-demo__scroll">
+    <table>
+      <caption>各方式を最後まで実行した場合の比較（入力を変えると更新）</caption>
+      <thead><tr><th scope="col">方式</th><th scope="col">平均待ち時間</th><th scope="col">平均ターンアラウンド時間</th></tr></thead>
+      <tbody id="fe-cpu-comparison"><tr><td colspan="3">JavaScript有効時に結果を表示します。</td></tr></tbody>
+    </table>
+  </div>
+  <p class="fe-cpu-demo__note">待ち時間 = 完了時刻 − 到着時刻 − CPU処理時間。ターンアラウンド時間 = 完了時刻 − 到着時刻。方式を変更したときは操作履歴が初期化されます。各方式を比較するための教育用モデルであり、実際のOSの全機能は再現しません。</p>
+</div>
+
+<style>
+.fe-cpu-demo{border:1px solid #94a3b8;border-radius:12px;padding:1rem;margin:1rem 0}
+.fe-cpu-demo__controls{display:flex;gap:1rem;flex-wrap:wrap}
+.fe-cpu-demo__controls label{display:flex;flex-direction:column;gap:.3rem;flex:1 1 180px}
+.fe-cpu-demo select,.fe-cpu-demo input[type=number]{max-width:100%;min-height:2.3rem;border:1px solid #64748b;border-radius:6px;background:var(--background-color,#fff);color:var(--text-color,#172033);padding:.3rem}
+.fe-cpu-demo input[type=number]{width:4.3rem;box-sizing:border-box}
+.fe-cpu-demo__scroll{max-width:100%;overflow-x:auto;margin:.75rem 0}
+.fe-cpu-demo table{width:100%;min-width:410px;border-collapse:collapse}
+.fe-cpu-demo th,.fe-cpu-demo td{padding:.4rem;border:1px solid #94a3b8;text-align:center}
+.fe-cpu-demo__predict{display:flex;gap:.8rem;flex-wrap:wrap;border:1px solid #94a3b8;border-radius:6px;margin:1rem 0;padding:.6rem}
+.fe-cpu-demo__predict legend{font-weight:700}
+.fe-cpu-demo__predict label{white-space:nowrap}
+.fe-cpu-demo__buttons{display:flex;gap:.5rem;flex-wrap:wrap}
+.fe-cpu-demo button{border:1px solid #64748b;border-radius:6px;background:#e2e8f0;color:#172033;padding:.5rem .75rem;cursor:pointer}
+.fe-cpu-demo button:disabled{opacity:.45;cursor:not-allowed}
+.fe-cpu-demo__timeline{display:flex;min-height:55px;align-items:stretch;width:max-content;min-width:100%}
+.fe-cpu-demo__slot{width:42px;flex:0 0 42px;text-align:center;background:#dbeafe;color:#1e3a8a;border:1px solid #64748b;padding:.3rem 0;box-sizing:border-box;font-weight:700}
+.fe-cpu-demo__slot small{display:block;font-size:.7rem;font-weight:400}
+.fe-cpu-demo__slot[data-task="B"]{background:#dcfce7;color:#14532d}
+.fe-cpu-demo__slot[data-task="C"]{background:#ffedd5;color:#9a3412}
+.fe-cpu-demo__slot[data-task="-"]{background:#e2e8f0;color:#334155}
+.fe-cpu-demo__note{font-size:.9rem}
+.fe-cpu-demo :focus-visible{outline:3px solid #2563eb;outline-offset:2px}
+@media(max-width:560px){.fe-cpu-demo{padding:.65rem}.fe-cpu-demo__buttons button{flex:1 1 43%}}
+</style>
+<script>
+(function(){
+  "use strict";
+  const root=document.getElementById("fe-cpu-demo");
+  if(!root)return;
+  const $=id=>root.querySelector("#"+id);
+  const kind=$("fe-cpu-kind"),quantum=$("fe-cpu-quantum");
+  const next=$("fe-cpu-next"),prev=$("fe-cpu-prev"),reset=$("fe-cpu-reset"),all=$("fe-cpu-all");
+  const names=["A","B","C"];
+  let trace=[],step=0,feedback="";
+  function jobs(){
+    const fields=[...root.querySelectorAll("input[data-job]")];
+    const result=names.map((name,id)=>({name,id,arrival:0,burst:1,priority:1}));
+    for(const field of fields){
+      const min=Number(field.min),max=Number(field.max);
+      let value=Number(field.value);
+      if(!Number.isFinite(value))value=min;
+      value=Math.max(min,Math.min(max,Math.trunc(value)));
+      field.value=String(value);
+      result[Number(field.dataset.job)][field.dataset.field]=value;
+    }
+    return result;
+  }
+  function simulate(tasks,method,q){
+    const remaining=tasks.map(t=>t.burst),finish=tasks.map(()=>null);
+    const total=remaining.reduce((a,b)=>a+b,0);
+    const limit=total+Math.max(...tasks.map(t=>t.arrival))+1;
+    let time=0,running=-1,used=0,queue=[],queued=new Set();
+    const slots=[];
+    function enqueueArrivals(t){
+      tasks.filter(j=>j.arrival===t&&remaining[j.id]>0&&!queued.has(j.id)&&j.id!==running)
+        .sort((a,b)=>a.id-b.id).forEach(j=>{queue.push(j.id);queued.add(j.id)});
+    }
+    for(;time<limit && remaining.some(n=>n>0);time++){
+      enqueueArrivals(time);
+      if(method==="rr"){
+        if(running!==-1 && used>=q){
+          queue.push(running);queued.add(running);running=-1;used=0;
+        }
+        if(running===-1&&queue.length){running=queue.shift();queued.delete(running);used=0;}
+      }else if(running===-1){
+        const eligible=tasks.filter(j=>j.arrival<=time&&remaining[j.id]>0);
+        eligible.sort((a,b)=>{
+          if(method==="sjf")return a.burst-b.burst||a.arrival-b.arrival||a.id-b.id;
+          if(method==="priority")return a.priority-b.priority||a.arrival-b.arrival||a.id-b.id;
+          return a.arrival-b.arrival||a.id-b.id;
+        });
+        running=eligible.length?eligible[0].id:-1;
+      }
+      const current=running;
+      slots.push(current===-1?"-":names[current]);
+      if(current!==-1){
+        remaining[current]--;used++;
+        if(remaining[current]===0){finish[current]=time+1;running=-1;used=0;}
+      }
+    }
+    const avgWait=tasks.reduce((sum,j)=>sum+finish[j.id]-j.arrival-j.burst,0)/tasks.length;
+    const avgTurn=tasks.reduce((sum,j)=>sum+finish[j.id]-j.arrival,0)/tasks.length;
+    return {slots,avgWait,avgTurn,finish};
+  }
+  function rebuild(){
+    const tasks=jobs(),q=Number(quantum.value);
+    trace=simulate(tasks,kind.value,q).slots;step=0;feedback="";
+    const keys=["fcfs","sjf","priority","rr"];
+    const labels=["到着順","処理時間順","優先度順","ラウンドロビン"];
+    const tbody=$("fe-cpu-comparison");tbody.replaceChildren();
+    keys.forEach((key,index)=>{
+      const result=simulate(tasks,key,q),tr=document.createElement("tr");
+      [labels[index],result.avgWait.toFixed(2),result.avgTurn.toFixed(2)].forEach(value=>{
+        const td=document.createElement("td");td.textContent=value;tr.appendChild(td);
+      });tbody.appendChild(tr);
+    });
+    render();
+  }
+  function render(){
+    const tasks=jobs(),remaining=tasks.map(j=>j.burst);
+    trace.slice(0,step).forEach(name=>{const id=names.indexOf(name);if(id>=0)remaining[id]--});
+    const timeline=$("fe-cpu-timeline");timeline.replaceChildren();
+    if(!step)timeline.textContent="まだ実行していません。";
+    trace.slice(0,step).forEach((name,index)=>{
+      const cell=document.createElement("div");cell.className="fe-cpu-demo__slot";cell.dataset.task=name;
+      cell.textContent=name==="-"?"待機":name;
+      const mark=document.createElement("small");mark.textContent=index+"–"+(index+1);cell.appendChild(mark);
+      timeline.appendChild(cell);
+    });
+    $("fe-cpu-remaining").textContent="残りCPU時間："+names.map((n,i)=>n+"="+remaining[i]).join("、");
+    $("fe-cpu-status").textContent=step===trace.length?"完了：時刻"+step+"。全タスクが終了しました。":"時刻"+step+"：次に実行するタスクを予想してください。";
+    $("fe-cpu-feedback").textContent=feedback||"予想を選択してから進めると、答え合わせができます。";
+    prev.disabled=step===0;next.disabled=step===trace.length;all.disabled=step===trace.length;
+    quantum.disabled=false;
+  }
+  next.addEventListener("click",()=>{
+    if(step===trace.length)return;
+    const selected=root.querySelector('input[name="fe-cpu-prediction"]:checked');
+    const actual=trace[step];
+    feedback=selected?(selected.value===actual?"正解！":"予想と違いました。")+" 時刻"+step+"で実行したのは"+(actual==="-"?"待機":actual)+"です。":"時刻"+step+"で実行したのは"+(actual==="-"?"待機":actual)+"です。次は先に予想してみましょう。";
+    step++;root.querySelectorAll('input[name="fe-cpu-prediction"]').forEach(r=>r.checked=false);render();
+  });
+  prev.addEventListener("click",()=>{if(step>0)step--;feedback="1単位戻しました。次を予想してください。";render();});
+  reset.addEventListener("click",()=>{step=0;feedback="初期状態に戻しました。";render();});
+  all.addEventListener("click",()=>{step=trace.length;feedback="全タスクの実行が終了しました。方式を変えて比較しましょう。";render();});
+  kind.addEventListener("change",rebuild);
+  quantum.addEventListener("change",rebuild);
+  root.querySelectorAll("input[data-job]").forEach(field=>field.addEventListener("change",rebuild));
+  rebuild();
+})();
+</script>
 
 ## 定義・仕組み
 
