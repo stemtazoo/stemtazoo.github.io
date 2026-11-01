@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: データベース
 fe_order: 40
 date: 2026-07-16
-last_modified_at: 2026-09-19
+last_modified_at: 2026-11-01
 ---
 
 ## まず結論
@@ -77,6 +77,140 @@ Bが処理を開始
 この場合は、いずれBが進めます。
 
 **「待っている」だけではデッドロックではありません。待ち関係が輪になっているかを見ることが重要です。**
+
+
+### 触って覚える：ロックの取得順序で「待ち」と「デッドロック」を見分ける
+
+**次の操作でロックを取得できるか、待つかを予想**してから「次の操作」を押してください。AとBが資源X・Yを使う3パターンを比較します。特に**逆順で取得するケース**と**同じ順序で取得するケース**の違いに注目しましょう。
+
+この教材は、資源ごとに**専有ロック**を1個だけ設定する単純化したモデルです。ロックを取れなければ保持中のロックを手放さずに待機し、全処理完了時にまとめて解放します。実際のDBMSにあるタイムアウト・デッドロック検出による自動中止・共有ロックなどは再現しません。
+
+<div id="fe-deadlock-demo" class="fe-deadlock-demo">
+  <label for="fe-deadlock-case">比較するケース</label>
+  <select id="fe-deadlock-case">
+    <option value="reverse">逆順で取得：循環待ちになる例</option>
+    <option value="ordered">同じ順番で取得：片方が先に待つ例</option>
+    <option value="single">資源Xのみ：通常のロック待ち</option>
+  </select>
+  <div class="fe-deadlock-demo__grid" aria-label="資源のロック状態">
+    <section class="fe-deadlock-demo__panel">
+      <h4>資源X</h4><p id="fe-deadlock-x">未ロック</p>
+    </section>
+    <section class="fe-deadlock-demo__panel">
+      <h4>資源Y</h4><p id="fe-deadlock-y">未ロック</p>
+    </section>
+  </div>
+  <div class="fe-deadlock-demo__grid">
+    <section class="fe-deadlock-demo__panel">
+      <h4>トランザクションA</h4><p id="fe-deadlock-a">保持：なし / 待ち：なし</p>
+    </section>
+    <section class="fe-deadlock-demo__panel">
+      <h4>トランザクションB</h4><p id="fe-deadlock-b">保持：なし / 待ち：なし</p>
+    </section>
+  </div>
+  <fieldset class="fe-deadlock-demo__prediction">
+    <legend>予想：次のロック要求は？</legend>
+    <label><input type="radio" name="fe-deadlock-guess" value="granted">取得できる</label>
+    <label><input type="radio" name="fe-deadlock-guess" value="blocked">待つ</label>
+    <span class="fe-deadlock-demo__note">解放操作の場合は選択不要です。</span>
+  </fieldset>
+  <p id="fe-deadlock-next" class="fe-deadlock-demo__next">次の操作：AがXをロック要求</p>
+  <div class="fe-deadlock-demo__actions">
+    <button type="button" id="fe-deadlock-step">次の操作</button>
+    <button type="button" id="fe-deadlock-prev">1つ戻す</button>
+    <button type="button" id="fe-deadlock-reset">最初から</button>
+  </div>
+  <p id="fe-deadlock-result" role="status" aria-live="polite">初期状態：資源X・Yは空いています。</p>
+  <p id="fe-deadlock-judgment" aria-live="polite">まだ循環待ちはありません。</p>
+  <ol id="fe-deadlock-history" aria-label="操作履歴"><li>操作履歴はまだありません。</li></ol>
+  <p class="fe-deadlock-demo__note">ポイント：一方だけが待っていても、相手が処理を続けてロックを解放できるなら通常のロック待ちです。双方が相手のロックを保持したまま待つと循環待ちになります。</p>
+</div>
+
+<style>
+.fe-deadlock-demo{border:1px solid #94a3b8;border-radius:12px;padding:1rem;margin:1.2rem 0}
+.fe-deadlock-demo select{display:block;width:100%;max-width:100%;min-height:2.5rem;margin:.5rem 0 1rem;padding:.45rem;border:1px solid #64748b;border-radius:6px;background:var(--background-color,#fff);color:var(--text-color,#172033)}
+.fe-deadlock-demo__grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.65rem;margin:.65rem 0}
+.fe-deadlock-demo__panel{border:1px solid #94a3b8;border-radius:8px;padding:.55rem;background:rgba(148,163,184,.08);min-width:0}
+.fe-deadlock-demo__panel h4{font-size:1rem;margin:0 0 .4rem}
+.fe-deadlock-demo__panel p{margin:0;overflow-wrap:anywhere}
+.fe-deadlock-demo__prediction{display:flex;flex-wrap:wrap;gap:.75rem;border:1px solid #94a3b8;border-radius:8px;padding:.7rem;margin:1rem 0}
+.fe-deadlock-demo__prediction legend{font-weight:700}
+.fe-deadlock-demo__next{padding:.65rem;border-left:4px solid #2563eb;background:rgba(59,130,246,.09);font-weight:700}
+.fe-deadlock-demo__actions{display:flex;gap:.5rem;flex-wrap:wrap}
+.fe-deadlock-demo button{padding:.5rem .8rem;border:1px solid #64748b;border-radius:6px;background:#e2e8f0;color:#172033;cursor:pointer}
+.fe-deadlock-demo button:disabled{opacity:.45;cursor:not-allowed}
+.fe-deadlock-demo__note{font-size:.9rem}
+.fe-deadlock-demo :focus-visible{outline:3px solid #2563eb;outline-offset:2px}
+@media(max-width:560px){.fe-deadlock-demo{padding:.65rem}.fe-deadlock-demo__grid{grid-template-columns:1fr}.fe-deadlock-demo__actions button{flex:1 1 42%}}
+</style>
+<script>
+(function(){
+  "use strict";
+  const root=document.getElementById("fe-deadlock-demo");if(!root)return;
+  const $=id=>root.querySelector("#"+id);
+  // request = [transaction, resource]; release = [transaction, "*"].
+  // A retry of a blocked request is explicitly shown after the lock owner releases it.
+  const cases={
+    reverse:[["A","X"],["B","Y"],["A","Y"],["B","X"]],
+    ordered:[["A","X"],["B","X"],["A","Y"],["A","*"],["B","X"],["B","Y"],["B","*"]],
+    single:[["A","X"],["B","X"],["A","*"],["B","X"],["B","*"]]
+  };
+  const selector=$("fe-deadlock-case");
+  let index=0,feedback="";
+  function evaluate(length){
+    const owner={X:null,Y:null},waiting={A:null,B:null},events=[];
+    for(const [person,resource] of cases[selector.value].slice(0,length)){
+      if(resource==="*"){
+        for(const key of ["X","Y"])if(owner[key]===person)owner[key]=null;
+        waiting[person]=null;
+        events.push(person+"が処理を完了してロックを解放");
+      }else if(!owner[resource]||owner[resource]===person){
+        owner[resource]=person;waiting[person]=null;
+        events.push(person+"が"+resource+"のロックを取得");
+      }else{
+        waiting[person]=resource;
+        events.push(person+"は"+resource+"を取得できず、"+owner[resource]+"を待つ");
+      }
+    }
+    const cycle=waiting.A&&waiting.B&&owner[waiting.A]==="B"&&owner[waiting.B]==="A";
+    return {owner,waiting,events,cycle};
+  }
+  function render(){
+    const state=evaluate(index),steps=cases[selector.value],upcoming=steps[index];
+    for(const key of ["X","Y"])$("fe-deadlock-"+key.toLowerCase()).textContent=state.owner[key]?"ロック中："+state.owner[key]:"未ロック";
+    for(const person of ["A","B"]){
+      const held=["X","Y"].filter(k=>state.owner[k]===person).join("・")||"なし";
+      $("fe-deadlock-"+person.toLowerCase()).textContent="保持："+held+" / 待ち："+(state.waiting[person]||"なし");
+    }
+    $("fe-deadlock-next").textContent=upcoming?"次の操作："+upcoming[0]+"が"+(upcoming[1]==="*"?"処理を完了しロック解除":upcoming[1]+"をロック要求"):"全操作が終了しました。";
+    $("fe-deadlock-result").textContent=feedback||"初期状態：資源X・Yは空いています。";
+    const waitingCount=Object.values(state.waiting).filter(Boolean).length;
+    $("fe-deadlock-judgment").textContent=state.cycle?"デッドロック発生！ A→B→Aの循環待ちです。":waitingCount?"通常のロック待ち（現時点では循環なし）です。":"循環待ちはありません。";
+    const history=$("fe-deadlock-history");history.replaceChildren();
+    (state.events.length?state.events:["操作履歴はまだありません。"]).forEach(message=>{
+      const li=document.createElement("li");li.textContent=message;history.appendChild(li);
+    });
+    $("fe-deadlock-step").disabled=!upcoming;
+    $("fe-deadlock-prev").disabled=index===0;
+    root.querySelectorAll('input[name="fe-deadlock-guess"]').forEach(r=>r.disabled=!upcoming||upcoming[1]==="*");
+  }
+  $("fe-deadlock-step").addEventListener("click",()=>{
+    const upcoming=cases[selector.value][index];if(!upcoming)return;
+    const prior=evaluate(index),owner=prior.owner[upcoming[1]];
+    const actual=upcoming[1]==="*"?"release":owner&&owner!==upcoming[0]?"blocked":"granted";
+    const guess=root.querySelector('input[name="fe-deadlock-guess"]:checked');
+    const answer=actual==="blocked"?"待つ":"取得できる";
+    feedback=actual==="release"?"ロックを解放しました。":guess?(guess.value===actual?"正解！ ":"予想と違いました。 ")+"結果："+answer:"結果："+answer+"。次回は先に予想してみましょう。";
+    index++;
+    root.querySelectorAll('input[name="fe-deadlock-guess"]').forEach(r=>r.checked=false);
+    render();
+  });
+  $("fe-deadlock-prev").addEventListener("click",()=>{if(index>0)index--;feedback="1操作戻しました。次の結果を予想してください。";render()});
+  $("fe-deadlock-reset").addEventListener("click",()=>{index=0;feedback="最初の状態に戻しました。";render()});
+  selector.addEventListener("change",()=>{index=0;feedback="ケースを切り替えました。";root.querySelectorAll('input[name="fe-deadlock-guess"]').forEach(r=>r.checked=false);render()});
+  render();
+})();
+</script>
 
 ## 定義・仕組み
 
