@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ソフトウェア
 fe_order: 180
 date: 2026-08-14
-last_modified_at: 2026-10-04
+last_modified_at: 2026-11-01
 ---
 
 ## まず結論
@@ -184,6 +184,41 @@ if A OR B
 > 「全ての組合せ」なら条件の中身を見る。**
 
 という順で切り分けます。
+
+### 触って覚える：テストケースを選んで比べる
+
+`A OR B` に対して、**「A＝偽・B＝真」と「A＝真・B＝偽」の2ケース**を選ぶと、AもBも真・偽を取ります。しかし判定結果は、どちらも真です。条件網羅は満たしますが、判定条件網羅（分岐網羅）は満たしません。
+
+次の教材では、**各条件・判定全体・全組合せ**の3か所を比べます。「達成」は、選んだケースがその基準を満たすという意味です。まず2ケースを選び、その後「A＝偽・B＝偽」を追加して、何が変わるか確認しましょう。
+
+<link rel="stylesheet" href="{{ '/assets/css/fe-visualizer.css' | relative_url }}">
+<script src="{{ '/assets/js/fe-visualizer.js' | relative_url }}" defer></script>
+
+<div class="fe-learning-demo fe-coverage-demo" data-fe-coverage-demo hidden>
+  <p class="fe-learning-demo__title">A OR B：選んだケースで何を網羅できる？</p>
+  <p>見るポイント：AとBそれぞれの真・偽がそろっても、判定全体の真・偽がそろうとは限りません。</p>
+  <fieldset class="fe-coverage-demo__cases">
+    <legend>テストするケースを選ぶ（複数選択可）</legend>
+    <label><input type="checkbox" data-coverage-case="0"> A＝偽・B＝偽 <span>→ 判定は偽</span></label>
+    <label><input type="checkbox" data-coverage-case="1"> A＝偽・B＝真 <span>→ 判定は真</span></label>
+    <label><input type="checkbox" data-coverage-case="2"> A＝真・B＝偽 <span>→ 判定は真</span></label>
+    <label><input type="checkbox" data-coverage-case="3"> A＝真・B＝真 <span>→ 判定は真</span></label>
+  </fieldset>
+  <div class="fe-learning-demo__controls">
+    <button type="button" class="fe-learning-demo__button" data-coverage-reset>選択をすべて解除</button>
+  </div>
+  <p data-coverage-count>選択：0 / 4ケース</p>
+  <dl class="fe-coverage-demo__results">
+    <div><dt>条件網羅：<strong data-coverage-condition>未達成</strong></dt><dd data-coverage-condition-detail>A：未確認 ／ B：未確認</dd></div>
+    <div><dt>判定条件網羅（分岐網羅）：<strong data-coverage-decision>未達成</strong></dt><dd data-coverage-decision-detail>判定全体：未確認</dd></div>
+    <div><dt>複数条件網羅：<strong data-coverage-multiple>未達成</strong></dt><dd data-coverage-multiple-detail>確認済みの組合せ：0 / 4通り</dd></div>
+  </dl>
+  <p class="fe-coverage-demo__status" data-coverage-status role="status" aria-live="polite" aria-atomic="true">ケースを選ぶと、達成状況と理由が変わります。</p>
+</div>
+
+**試験での判断：** 個々のA・Bを見るのが条件網羅、`A OR B`全体を見るのが判定条件網羅、4通りすべてを見るのが複数条件網羅です。条件網羅と判定条件網羅を両方満たすと、判定条件・条件網羅も達成します。
+
+この教材は真理値表上の入力値で比較します。短絡評価による条件の評価省略や、命令網羅の判定は扱いません。
 
 ## 定義・仕組み
 

@@ -1,4 +1,66 @@
 document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("[data-fe-coverage-demo]").forEach((demo) => {
+    const cases = [[false, false], [false, true], [true, false], [true, true]];
+    const inputs = Array.from(demo.querySelectorAll("[data-coverage-case]"));
+    const reset = demo.querySelector("[data-coverage-reset]");
+    const status = demo.querySelector("[data-coverage-status]");
+    const text = (key, value) => {
+      demo.querySelector(`[data-coverage-${key}]`).textContent = value;
+    };
+    const observed = (values) => {
+      const seen = [false, true].filter((value) => values.includes(value));
+      return seen.length ? seen.map((value) => value ? "真" : "偽").join("・") : "未確認";
+    };
+    const both = (values) => values.includes(false) && values.includes(true);
+
+    function render(announce) {
+      const selected = inputs.filter((input) => input.checked)
+        .map((input) => cases[Number(input.dataset.coverageCase)]);
+      const aValues = selected.map(([a]) => a);
+      const bValues = selected.map(([, b]) => b);
+      const decisions = selected.map(([a, b]) => a || b);
+      const condition = both(aValues) && both(bValues);
+      const decision = both(decisions);
+      const multiple = selected.length === cases.length;
+      text("count", `選択：${selected.length} / 4ケース`);
+      [["condition", condition], ["decision", decision], ["multiple", multiple]]
+        .forEach(([key, achieved]) => {
+          const output = demo.querySelector(`[data-coverage-${key}]`);
+          output.textContent = achieved ? "達成" : "未達成";
+          output.classList.toggle("is-achieved", achieved);
+        });
+      text("condition-detail", `A：${observed(aValues)} ／ B：${observed(bValues)}`);
+      text("decision-detail", `判定全体：${observed(decisions)}`);
+      text("multiple-detail", `確認済みの組合せ：${selected.length} / 4通り`);
+
+      if (announce) {
+        let reason;
+        if (!selected.length) {
+          reason = "ケースを選ぶと、達成状況と理由が変わります。";
+        } else if (multiple) {
+          reason = "全4通りを確認しました。条件網羅・判定条件網羅・複数条件網羅をすべて達成しています。";
+        } else if (condition && !decision) {
+          reason = "条件網羅は達成。ただし判定は真だけなので、判定条件網羅は未達成です。A＝偽・B＝偽も試してみましょう。";
+        } else if (condition && decision) {
+          reason = "条件網羅と判定条件網羅を達成。判定条件・条件網羅も達成しますが、まだ全4通りは確認していません。";
+        } else if (decision) {
+          reason = "判定条件網羅は達成。ただしAかBの真・偽がそろっていないため、条件網羅は未達成です。";
+        } else {
+          reason = "まだ各基準は未達成です。A・Bそれぞれと判定全体について、不足している真・偽を確認しましょう。";
+        }
+        status.textContent = `選択${selected.length}ケース。${reason}`;
+      }
+    }
+
+    inputs.forEach((input) => input.addEventListener("change", () => render(true)));
+    reset.addEventListener("click", () => {
+      inputs.forEach((input) => { input.checked = false; });
+      render(true);
+    });
+    render(false);
+    demo.hidden = false;
+  });
+
   document.querySelectorAll("[data-fe-branch-demo]").forEach((demo) => {
     const rates = {
       A: Number(demo.dataset.rateA || 0),

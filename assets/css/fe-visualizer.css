@@ -1,3 +1,17 @@
+.fe-coverage-demo[hidden] { display: none; }
+.fe-coverage-demo__cases { min-width: 0; margin: .75rem 0; padding: .6rem; border: 1px solid #66849a; border-radius: 8px; }
+.fe-coverage-demo__cases legend { padding: 0 .3rem; font-weight: 700; }
+.fe-coverage-demo__cases label { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem; min-height: 44px; padding: .35rem; cursor: pointer; }
+.fe-coverage-demo__cases input { width: 1.2rem; height: 1.2rem; margin: 0 .25rem 0 0; flex-shrink: 0; }
+.fe-coverage-demo input:focus-visible, .fe-coverage-demo button:focus-visible { outline: 3px solid #0b6fae; outline-offset: 3px; }
+.fe-coverage-demo__results { margin: .75rem 0; }
+.fe-coverage-demo__results > div { padding: .65rem; margin: .5rem 0; border: 1px solid #bacbd6; border-radius: 8px; }
+.fe-coverage-demo__results dt { font-weight: 700; }
+.fe-coverage-demo__results dd { margin: .25rem 0 0; }
+.fe-coverage-demo__results strong { display: inline-block; padding: .1rem .4rem; border-radius: 4px; background: #f1f2f3; color: #343b43; }
+.fe-coverage-demo__results strong.is-achieved { background: #e2efe8; color: #195538; }
+.fe-coverage-demo__status { padding: .65rem; border-left: 4px solid #0b6fae; }
+
 .fe-learning-demo {
   border: 1px solid rgba(11, 111, 174, 0.28);
   border-radius: 12px;
