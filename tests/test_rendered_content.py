@@ -1,10 +1,13 @@
 import sys
 import tempfile
 import unittest
+from contextlib import redirect_stdout
+from io import StringIO
 from pathlib import Path
+from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
-from audit_rendered_content import inspect_html, scan
+from audit_rendered_content import RAW_TABLE, inspect_html, scan
 
 
 class RenderedContentTests(unittest.TestCase):
@@ -24,6 +27,14 @@ class RenderedContentTests(unittest.TestCase):
         self.assertIn('literal_newline', self.codes(r'<p>説明\<span>n</span>続き</p>'))
         self.assertIn('literal_newline', self.codes(r'<p>説明\r\n続き</p>'))
         self.assertNotIn('literal_newline', self.codes('<p>説明\n続き</p>'))
+
+    def test_table_row_does_not_consume_surrounding_blank_lines(self):
+        # A large blank region reproduces the previous cross-line backtracking.
+        row = '\t | 誤解 | 正しい理解 | \t\r'
+        text = (' \t\n' * 10000) + row + '\n' + (' \t\n' * 10000)
+        self.assertEqual(row, RAW_TABLE.search(text).group())
+        self.assertIsNone(RAW_TABLE.search(' \t\n' * 20000))
+        self.assertIsNone(RAW_TABLE.search('| 誤解 |\n正しい理解 |'))
 
     def test_detects_leaked_header_in_paragraph_or_heading(self):
         for content in ('<p>--- layout: page title: test permalink: /fe/test/ ---</p>',
@@ -81,6 +92,31 @@ class RenderedContentTests(unittest.TestCase):
             result = scan(root)
             self.assertEqual(5, result['scanned_pages'])
             self.assertEqual(5, len(result['findings']))
+
+    def test_progress_and_slow_page_timing(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            folder = root / 'fe'
+            folder.mkdir()
+            for index in range(101):
+                (folder / f'{index:03}.html').write_text('<body>正常</body>', encoding='utf-8')
+            clock = iter(range(1000))
+            output = StringIO()
+            with patch('audit_rendered_content.perf_counter', side_effect=lambda: next(clock)):
+                with redirect_stdout(output):
+                    result = scan(root)
+            log = output.getvalue()
+            self.assertIn('starting 101 pages', log)
+            self.assertIn('Scanning 1/101: fe/000.html', log)
+            self.assertIn('Scanning 101/101: fe/100.html', log)
+            self.assertIn('Slow page: fe/000.html took 1.00s', log)
+            self.assertIn('completed 101/101 pages', log)
+            self.assertIn('Slowest pages:', log)
+            self.assertEqual(101, result['scanned_pages'])
+            self.assertEqual([], result['findings'])
+            self.assertGreater(result['elapsed_seconds'], 0)
+            self.assertEqual(5, len(result['slowest_pages']))
+            self.assertTrue(all(item['seconds'] == 1 for item in result['slowest_pages']))
 
 
 if __name__ == '__main__':
