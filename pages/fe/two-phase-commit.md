@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: データベース
 fe_order: 20
 date: 2026-06-27
-last_modified_at: 2026-10-16
+last_modified_at: 2026-11-01
 ---
 
 ## まず結論
@@ -92,6 +92,126 @@ A銀行：可       B銀行：不可
 ```
 
 **「確認する段階」と「確定・中止を指示する段階」を分ける**ことが、2相コミットの名前の由来です。
+
+
+### 触って覚える：2相コミットの準備と最終決定
+
+**「全員が準備OK」と「1人だけ準備NG」では、最終結果がどう変わるでしょうか？** 参加者A・B・Cの回答を切り替え、まず結論を予想してから第1相と第2相を順番に実行してください。
+
+<div id="fe-2pc-demo" class="fe-2pc-demo">
+  <div class="fe-2pc-demo__presets">
+    <button type="button" data-preset="all">全員OKの例</button>
+    <button type="button" data-preset="one">BだけNGの例</button>
+  </div>
+  <fieldset class="fe-2pc-demo__responses">
+    <legend>各参加者の準備結果を設定する</legend>
+    <label>参加者A <select data-participant="A"><option value="yes">準備OK</option><option value="no">準備NG</option></select></label>
+    <label>参加者B <select data-participant="B"><option value="yes">準備OK</option><option value="no">準備NG</option></select></label>
+    <label>参加者C <select data-participant="C"><option value="yes">準備OK</option><option value="no">準備NG</option></select></label>
+  </fieldset>
+  <fieldset class="fe-2pc-demo__prediction">
+    <legend>予想：全体の最終結果は？</legend>
+    <label><input type="radio" name="fe-2pc-guess" value="commit">全員コミット</label>
+    <label><input type="radio" name="fe-2pc-guess" value="abort">全員中止</label>
+  </fieldset>
+  <div class="fe-2pc-demo__actions">
+    <button type="button" id="fe-2pc-next">第1相へ：準備確認</button>
+    <button type="button" id="fe-2pc-prev">1段階戻る</button>
+    <button type="button" id="fe-2pc-reset">最初から</button>
+  </div>
+  <p id="fe-2pc-feedback" role="status" aria-live="polite">予想を選んで第1相へ進めてください。</p>
+  <ol class="fe-2pc-demo__phases" aria-label="2相コミットの処理段階">
+    <li id="fe-2pc-phase-0">開始前：調停者はまだ問い合わせていません。</li>
+    <li id="fe-2pc-phase-1">第1相：各参加者に準備できるか問い合わせる。</li>
+    <li id="fe-2pc-phase-2">第2相：全員OKならCOMMIT、1人でもNGならABORTを指示する。</li>
+  </ol>
+  <div class="fe-2pc-demo__cards" aria-label="参加者ごとの状態">
+    <section><h4>参加者A</h4><p id="fe-2pc-status-A">未確認</p></section>
+    <section><h4>参加者B</h4><p id="fe-2pc-status-B">未確認</p></section>
+    <section><h4>参加者C</h4><p id="fe-2pc-status-C">未確認</p></section>
+  </div>
+  <p id="fe-2pc-decision" class="fe-2pc-demo__decision" aria-live="polite">調停者の決定：まだありません。</p>
+  <p class="fe-2pc-demo__note">第1相の「準備OK」は、まだコミット完了ではありません。第2相で調停者が最終決定を送り、全参加者の処理を確定または中止します。ケースを変えるとシミュレーションを最初からやり直します。</p>
+</div>
+<noscript><p>JavaScriptが使えない場合：全員OKなら「準備確認 → 全員コミット」、BだけNGなら「準備確認 → 全員中止」です。上の本文にも同じ例を掲載しています。</p></noscript>
+
+<style>
+.fe-2pc-demo{border:1px solid #94a3b8;border-radius:12px;padding:1rem;margin:1rem 0}
+.fe-2pc-demo__presets,.fe-2pc-demo__actions{display:flex;gap:.5rem;flex-wrap:wrap;margin:.7rem 0}
+.fe-2pc-demo button{border:1px solid #64748b;border-radius:6px;background:#e2e8f0;color:#172033;padding:.5rem .7rem;cursor:pointer}
+.fe-2pc-demo button:disabled{opacity:.45;cursor:not-allowed}
+.fe-2pc-demo fieldset{border:1px solid #94a3b8;border-radius:8px;margin:.8rem 0;padding:.7rem}
+.fe-2pc-demo legend{font-weight:700}
+.fe-2pc-demo__responses{display:flex;flex-wrap:wrap;gap:.75rem}
+.fe-2pc-demo__responses label{display:flex;flex-direction:column;gap:.3rem;flex:1 1 130px}
+.fe-2pc-demo select{width:100%;padding:.45rem;border:1px solid #64748b;border-radius:6px;background:var(--background-color,#fff);color:var(--text-color,#172033)}
+.fe-2pc-demo__prediction{display:flex;gap:1rem;flex-wrap:wrap}
+.fe-2pc-demo__phases{padding-left:1.5rem}
+.fe-2pc-demo__phases li{padding:.35rem;margin:.3rem 0;border-left:3px solid #94a3b8}
+.fe-2pc-demo__phases li.is-current{border-color:#2563eb;background:rgba(59,130,246,.1);font-weight:700}
+.fe-2pc-demo__cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.6rem}
+.fe-2pc-demo__cards section{border:1px solid #94a3b8;border-radius:8px;padding:.5rem;min-width:0}
+.fe-2pc-demo__cards h4{font-size:1rem;margin:0 0 .4rem}
+.fe-2pc-demo__cards p{margin:0;overflow-wrap:anywhere}
+.fe-2pc-demo__decision{padding:.6rem;border-left:4px solid #2563eb;background:rgba(59,130,246,.08);font-weight:700}
+.fe-2pc-demo__note{font-size:.9rem}
+.fe-2pc-demo :focus-visible{outline:3px solid #2563eb;outline-offset:2px}
+@media(max-width:560px){.fe-2pc-demo{padding:.65rem}.fe-2pc-demo__cards{grid-template-columns:1fr}.fe-2pc-demo__actions button{flex:1 1 45%}}
+</style>
+<script>
+(function(){
+  "use strict";
+  const root=document.getElementById("fe-2pc-demo");if(!root)return;
+  const $=id=>root.querySelector("#"+id),names=["A","B","C"];
+  const selects=names.map(n=>root.querySelector('[data-participant="'+n+'"]'));
+  const next=$("fe-2pc-next"),prev=$("fe-2pc-prev");
+  let phase=0,guess=null,answer="";
+  function outcome(){return selects.every(s=>s.value==="yes")?"commit":"abort";}
+  function reset(message){
+    phase=0;guess=null;answer=message||"予想を選んで第1相へ進めてください。";
+    root.querySelectorAll('input[name="fe-2pc-guess"]').forEach(r=>r.checked=false);
+    render();
+  }
+  function render(){
+    const result=outcome();
+    for(let i=0;i<3;i++){
+      const name=names[i],status=$("fe-2pc-status-"+name);
+      status.textContent=phase===0?"未確認":phase===1?(selects[i].value==="yes"?"準備OK（未確定）":"準備NG（未確定）"):(result==="commit"?"コミット確定":"中止・ロールバック");
+      $("fe-2pc-phase-"+i).classList.toggle("is-current",phase===i);
+    }
+    $("fe-2pc-decision").textContent=phase===0?"調停者の決定：まだありません。":phase===1?"調停者の決定：全員の回答を確認中。まだ最終決定していません。":"調停者の決定："+(result==="commit"?"全員にCOMMITを指示":"全員にABORTを指示");
+    $("fe-2pc-feedback").textContent=answer;
+    next.textContent=phase===0?"第1相へ：準備確認":"第2相へ：最終決定";
+    next.disabled=phase===2;prev.disabled=phase===0;
+    selects.forEach(s=>s.disabled=phase!==0);
+    root.querySelectorAll('input[name="fe-2pc-guess"]').forEach(r=>r.disabled=phase!==0);
+  }
+  next.addEventListener("click",()=>{
+    if(phase===0){
+      const selected=root.querySelector('input[name="fe-2pc-guess"]:checked');
+      guess=selected?selected.value:null;phase=1;
+      answer="第1相：参加者の準備結果を集めました。『準備OK』はコミット済みではありません。";
+    }else if(phase===1){
+      phase=2;const result=outcome();
+      const verdict=result==="commit"?"全員コミット":"全員中止";
+      answer=(guess?(guess===result?"予想正解！ ":"予想と違いました。 "):"")+"第2相：調停者は「"+verdict+"」を指示しました。"+(result==="commit"?"全員が準備OKだったためです。":"準備NGが1人以上いたためです。");
+    }
+    render();
+  });
+  prev.addEventListener("click",()=>{
+    if(phase>0)phase--;
+    answer="1段階戻しました。最終確定前と確定後の違いを確認しましょう。";
+    render();
+  });
+  $("fe-2pc-reset").addEventListener("click",()=>reset("最初からやり直します。"));
+  root.querySelectorAll("[data-preset]").forEach(button=>button.addEventListener("click",()=>{
+    selects.forEach((s,i)=>s.value=button.dataset.preset==="one"&&i===1?"no":"yes");
+    reset(button.dataset.preset==="one"?"Bだけ準備NGの例です。最終結果を予想してください。":"全員準備OKの例です。最終結果を予想してください。");
+  }));
+  selects.forEach(s=>s.addEventListener("change",()=>reset("準備結果を変更しました。最終結果を予想してください。")));
+  reset();
+})();
+</script>
 
 ## 定義・仕組み
 
