@@ -3,6 +3,7 @@
 import argparse
 import json
 import re
+from time import perf_counter
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urljoin, urlsplit
@@ -20,7 +21,9 @@ NEWLINE = re.compile(r'\\r\\n(?![A-Za-z])|\\[nr](?![A-Za-z])')
 LIQUID = re.compile(r'\{\{[^\n]*?\}\}|\{%[^\n]*?%\}')
 TAG = re.compile(r'<!doctype\s+html[^>]*>|</?(?:div|span|p|br|table|tr|td|th|script|style|section|h[1-6])\b[^>]*>', re.I)
 TRUNCATION = re.compile(r'\b\d+\s+(?:tokens?|characters?|lines?)\s+truncated\b', re.I)
-RAW_TABLE = re.compile(r'^\s*\|[^\n|]+\|[^\n|]+\|\s*$', re.M)
+# Horizontal whitespace only: \s also matches newlines and repeatedly revisits
+# long blank regions. A Markdown table row must stay on one line.
+RAW_TABLE = re.compile(r'^[^\S\n]*\|[^\n|]+\|[^\n|]+\|[^\S\n]*$', re.M)
 
 
 class TextRegions(HTMLParser):
@@ -122,6 +125,7 @@ def inspect_html(html):
 
 
 def scan(site):
+    started = perf_counter()
     files = set()
     for theme in THEMES:
         for directory in (site / theme, site / 'pages' / theme):
@@ -129,10 +133,29 @@ def scan(site):
     if not files:
         raise ValueError('No rendered study HTML found; check --site/build output')
     findings = []
-    for path in sorted(files):
+    timings = []
+    total = len(files)
+    print(f'Rendered text audit: starting {total} pages.', flush=True)
+    for index, path in enumerate(sorted(files), 1):
+        relative = path.relative_to(site).as_posix()
+        if index == 1 or (index - 1) % 100 == 0:
+            print(f'Scanning {index}/{total}: {relative} '
+                  f'(elapsed {perf_counter() - started:.2f}s)', flush=True)
+        page_started = perf_counter()
         for item in inspect_html(path.read_text(encoding='utf-8')):
-            findings.append({'path': path.relative_to(site).as_posix(), **item})
-    return {'scanned_pages': len(files), 'findings': findings,
+            findings.append({'path': relative, **item})
+        seconds = perf_counter() - page_started
+        timings.append({'path': relative, 'seconds': seconds})
+        if seconds >= 1:
+            print(f'Slow page: {relative} took {seconds:.2f}s', flush=True)
+    elapsed = perf_counter() - started
+    slowest = sorted(timings, key=lambda item: item['seconds'], reverse=True)[:5]
+    print(f'Rendered text audit: completed {total}/{total} pages in {elapsed:.2f}s.',
+          flush=True)
+    for item in slowest:
+        print(f"Slowest pages: {item['path']} ({item['seconds']:.3f}s)", flush=True)
+    return {'scanned_pages': total, 'findings': findings,
+            'elapsed_seconds': elapsed, 'slowest_pages': slowest,
             'limits': 'Text candidates only; excludes code/pre/script/style/template and explicit hidden regions. '
                       'Does not verify CSS layout, JavaScript, or all rendering defects. Review candidates before editing.'}
 
