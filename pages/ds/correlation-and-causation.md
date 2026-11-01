@@ -65,7 +65,7 @@ DS検定では、「相関がある＝原因である」と早合点していな
     <div class="ds-causal-demo__node ds-causal-demo__third is-source" data-causal-third>観察データでは、一緒に増えていることまでは分かる</div>
   </div>
 
-  <div class="ds-causal-demo__result">
+  <div class="ds-causal-demo__result" role="status" aria-live="polite" aria-atomic="true">
     <span class="ds-causal-demo__verdict" data-causal-verdict>相関あり / 因果は未確定</span>
     <span data-causal-note>売上が高い会社ほど広告費を増やしている可能性もあり、向きまでは決められません。</span>
   </div>

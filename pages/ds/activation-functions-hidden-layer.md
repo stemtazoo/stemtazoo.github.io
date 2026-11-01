@@ -63,7 +63,7 @@ DS検定では「どの関数が中間層向きか」を判断させる問題が
     <div class="ds-layer-demo__box is-focus"><strong>出力層</strong><span class="ds-layer-demo__role">代表：<b data-output-activation>Sigmoid</b></span></div>
   </div>
 
-  <p class="ds-layer-demo__result" data-layer-result>二値分類：中間層で特徴を非線形に変換し、出力層では0〜1に収めるSigmoidを使う組合せが代表的です。</p>
+  <p class="ds-layer-demo__result" data-layer-result role="status" aria-live="polite" aria-atomic="true">二値分類：中間層で特徴を非線形に変換し、出力層では0〜1に収めるSigmoidを使う組合せが代表的です。</p>
   <p class="ds-learning-demo__hint">判断のコツ：「中間層か出力層か」→「分類か回帰か」の順で考えます。</p>
 </div>
 
