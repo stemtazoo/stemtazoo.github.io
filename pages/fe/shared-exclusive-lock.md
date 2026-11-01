@@ -7,7 +7,7 @@ tags: [fe, fe-technology, database]
 fe_section: テクノロジ系
 fe_subsection: データベース
 date: 2026-07-27
-last_modified_at: 2026-11-01
+last_modified_at: 2026-11-02
 ---
 
 ## まず結論
@@ -71,7 +71,7 @@ last_modified_at: 2026-11-01
 
 ### 触って覚える：共有ロックと専有ロックの両立性
 
-**T1がロックを保持している間に、T2もロックを取得できるでしょうか？** T1とT2のロック種別を選び、T2の結果を予想してから1操作ずつ進めてください。**共有＋共有だけが同時取得できる**ことを4パターンで確認します。
+**T1がロックを保持している間に、T2もロックを取得できるでしょうか？** T1とT2のロック種別を選び、T2の結果を予想してください。その後、予想欄の下にある「T1がロック取得」→「T2がロック要求」→「T1がロック解放」の順にボタンを押し、1操作ずつ進めます。**共有＋共有だけが同時取得できる**ことを4パターンで確認します。
 
 これは**同じ1件のデータに対し、異なるトランザクションT1・T2がロックを要求する単純化モデル**です。共有ロックをS、専有ロックをXとします。待機したT2はT1の解放後に自動で再試行するものとします。公平性・待ち行列・ロックの昇格・タイムアウト・MVCCなどのDBMS固有の処理は再現しません。
 
@@ -101,8 +101,9 @@ last_modified_at: 2026-11-01
     <label><input type="radio" name="fe-lock-guess" value="yes">取得できる</label>
     <label><input type="radio" name="fe-lock-guess" value="no">待機する</label>
   </fieldset>
+  <p class="fe-lock-compat-demo__guide" id="fe-lock-guide" role="status" aria-live="polite">予想したら、すぐ下の「T1がロック取得」を押してください。予想を選ばずに進めることもできます。</p>
   <div class="fe-lock-compat-demo__actions">
-    <button type="button" id="fe-lock-next">1操作進める</button>
+    <button type="button" id="fe-lock-next" aria-describedby="fe-lock-guide">T1がロック取得</button>
     <button type="button" id="fe-lock-prev">1操作戻る</button>
     <button type="button" id="fe-lock-reset">最初から</button>
   </div>
@@ -132,6 +133,10 @@ last_modified_at: 2026-11-01
 .fe-lock-compat-demo select{padding:.45rem;min-width:0;width:100%;border:1px solid #64748b;border-radius:6px;background:var(--background-color,#fff);color:var(--text-color,#172033)}
 .fe-lock-compat-demo__presets,.fe-lock-compat-demo__actions{display:flex;gap:.45rem;flex-wrap:wrap;margin:.8rem 0}
 .fe-lock-compat-demo button{padding:.5rem .75rem;border:1px solid #64748b;border-radius:6px;background:#e2e8f0;color:#172033;cursor:pointer}
+.fe-lock-compat-demo__presets{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.fe-lock-compat-demo__presets button[aria-pressed="true"]{background:#1e40af;color:#fff;border-color:#1e40af;font-weight:700;box-shadow:inset 0 0 0 2px #fff}
+.fe-lock-compat-demo__presets button[aria-pressed="true"]::after{content:"選択中";display:block;font-size:.8em}
+.fe-lock-compat-demo__guide{border-left:4px solid #2563eb;padding:.5rem .65rem;margin:.8rem 0;font-weight:700}
 .fe-lock-compat-demo button:disabled{opacity:.45;cursor:not-allowed}
 .fe-lock-compat-demo__prediction{display:flex;flex-wrap:wrap;gap:.8rem;border:1px solid #94a3b8;border-radius:8px;padding:.65rem}
 .fe-lock-compat-demo__prediction legend{font-weight:700}
@@ -142,7 +147,7 @@ last_modified_at: 2026-11-01
 .fe-lock-compat-demo th,.fe-lock-compat-demo td{border:1px solid #94a3b8;padding:.4rem;text-align:left}
 .fe-lock-compat-demo__note{font-size:.9rem}
 .fe-lock-compat-demo :focus-visible{outline:3px solid #2563eb;outline-offset:2px}
-@media(max-width:560px){.fe-lock-compat-demo{padding:.65rem}.fe-lock-compat-demo__controls,.fe-lock-compat-demo__states{grid-template-columns:1fr}.fe-lock-compat-demo__actions button{flex:1 1 43%}}
+@media(max-width:560px){.fe-lock-compat-demo{padding:.65rem}.fe-lock-compat-demo__controls,.fe-lock-compat-demo__states{grid-template-columns:1fr}.fe-lock-compat-demo__presets{grid-template-columns:repeat(2,minmax(0,1fr))}.fe-lock-compat-demo__actions button{flex:1 1 43%}}
 </style>
 <script>
 (function(){
@@ -154,21 +159,28 @@ last_modified_at: 2026-11-01
   function compatible(){return t1.value==="S"&&t2.value==="S";}
   function label(mode){return mode==="S"?"共有ロック（S）":"専有ロック（X）";}
   function reset(message){
-    step=0;feedback=message||"最初の状態です。T2の結果を予想してみましょう。";
+    step=0;feedback=message||"最初の状態です。予想したら、下のボタンで1操作ずつ進めましょう。";
     root.querySelectorAll('input[name="fe-lock-guess"]').forEach(r=>r.checked=false);
     render();
   }
   function render(){
-    const yes=compatible();
+    const yes=compatible(),picked=root.querySelector('input[name="fe-lock-guess"]:checked');
     $("fe-lock-state-t1").textContent=step===0?"未取得":step===3?"解放済み":label(t1.value)+"を保持";
     $("fe-lock-state-t2").textContent=step<2?"未要求":step===2?(yes?label(t2.value)+"を取得済み":"待機中："+label(t2.value)+"を要求"):(yes?"T1解放後も"+label(t2.value)+"を保持":"T1解放後に"+label(t2.value)+"を取得");
     $("fe-lock-next").disabled=step===3;$("fe-lock-prev").disabled=step===0;
     $("fe-lock-next").textContent=step===0?"T1がロック取得":step===1?"T2がロック要求":"T1がロック解放";
+    const guides=[
+      (picked?"予想を選びました。":"予想したら、")+"すぐ下の「T1がロック取得」を押してください。"+(picked?"":"予想を選ばずに進めることもできます。"),
+      (picked?"予想を選びました。":"T2の結果を予想したら、")+"すぐ下の「T2がロック要求」を押して結果を確認してください。",
+      "次は、すぐ下の「T1がロック解放」を押し、T2の状態がどうなるか確認してください。",
+      "確認は完了です。別の組合せを選んで比べるか、「最初から」で同じ組合せを試せます。"
+    ];
+    $("fe-lock-guide").textContent=guides[step];
     root.querySelectorAll('input[name="fe-lock-guess"]').forEach(r=>r.disabled=step>=2);
     $("fe-lock-feedback").textContent=feedback;
     const reasons=[
       "T1が先にロックを取得し、T2が同じデータに要求します。",
-      "T1が"+label(t1.value)+"を取得しました。T2の結果を予想してください。",
+      "T1が"+label(t1.value)+"を取得しました。次の「T2がロック要求」で結果を確認します。",
       yes?"共有（S）＋共有（S）なのでT2も取得できます。":"専有（X）が含まれるためT2は待機します。",
       yes?"T1は解放しましたがT2は共有ロックを保持中です。":"T1が解放したため、待機していたT2が取得できました。"
     ];
@@ -186,10 +198,11 @@ last_modified_at: 2026-11-01
       const picked=root.querySelector('input[name="fe-lock-guess"]:checked'),yes=compatible();
       feedback=(picked?(picked.value===(yes?"yes":"no")?"予想正解！ ":"予想と異なりました。 "):"")+(yes?"共有ロック同士なので同時に取得できます。":"T2は取得できず待機します。");
       root.querySelectorAll('input[name="fe-lock-guess"]').forEach(r=>r.checked=false);
-    }else if(step===0){feedback="T1がロックを取得しました。T2の結果を予想してください。";}
+    }else if(step===0){feedback="T1がロックを取得しました。次の「T2がロック要求」で結果を確認します。";}
     else{feedback="T1がロックを解放しました。"+(compatible()?"T2は保持を続けます。":"待機していたT2が取得しました。");}
     step++;render();
   });
+  root.querySelectorAll('input[name="fe-lock-guess"]').forEach(r=>r.addEventListener("change",render));
   $("fe-lock-prev").addEventListener("click",()=>{if(step>0)step--;feedback="1操作戻しました。";render();});
   $("fe-lock-reset").addEventListener("click",()=>reset());
   [t1,t2].forEach(el=>el.addEventListener("change",()=>reset("ロックの組合せを変更しました。結果を予想してください。")));
