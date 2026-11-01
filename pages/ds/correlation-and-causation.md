@@ -9,7 +9,7 @@ ds_area: datascience
 ds_section: statistics
 prev: /ds/chi-square-distribution/
 next: /ds/correlation-coefficient-determination/
-last_modified_at: 2026-09-17
+last_modified_at: 2026-11-01
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -53,9 +53,9 @@ DS検定では、「相関がある＝原因である」と早合点していな
   <p class="ds-learning-demo__lead">観察データ・交絡・ランダム化比較を切り替えて、どこまで言えるかを比べます。</p>
 
   <div class="ds-learning-demo__controls">
-    <button type="button" class="ds-learning-demo__button" data-causal-mode="correlation" aria-pressed="true">相関だけ</button>
-    <button type="button" class="ds-learning-demo__button" data-causal-mode="confounder" aria-pressed="false">交絡あり</button>
-    <button type="button" class="ds-learning-demo__button" data-causal-mode="randomized" aria-pressed="false">ランダム化比較</button>
+    <button type="button" class="ds-learning-demo__button" data-causal-mode="correlation" aria-pressed="true" disabled>相関だけ</button>
+    <button type="button" class="ds-learning-demo__button" data-causal-mode="confounder" aria-pressed="false" disabled>交絡あり</button>
+    <button type="button" class="ds-learning-demo__button" data-causal-mode="randomized" aria-pressed="false" disabled>ランダム化比較</button>
   </div>
 
   <div class="ds-causal-demo__diagram">
@@ -73,7 +73,9 @@ DS検定では、「相関がある＝原因である」と早合点していな
   <p class="ds-learning-demo__hint">見るポイント：「一緒に動く」ことと「AがBを起こす」ことを分けて考えます。</p>
 </div>
 
-<script src="{{ '/assets/js/ds-visualizer.js' | relative_url }}" defer></script>
+<noscript><p>操作にはJavaScriptが必要です。本文の説明でも、相関・交絡・因果の違いを確認できます。</p></noscript>
+
+<script src="{{ '/assets/js/ds-visualizer.js?v=20261101-startup' | relative_url }}" defer></script>
 
 ## 定義・仕組み
 

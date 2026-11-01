@@ -48,5 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
     next.addEventListener("click",()=>{if(position<steps.length-1){position++;render();}});
     root.querySelector("[data-three-stacks-reset]").addEventListener("click",()=>{position=0;render();});
     render();
+    root.querySelector("[data-three-stacks-reset]").disabled=false;
   });
 });

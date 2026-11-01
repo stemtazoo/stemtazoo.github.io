@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     render("binary");
+    buttons.forEach((button) => { button.disabled = false; });
   });
 
   document.querySelectorAll("[data-ds-causal-demo]").forEach((demo) => {
@@ -94,6 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     render("correlation");
+    buttons.forEach((button) => { button.disabled = false; });
   });
 });
 

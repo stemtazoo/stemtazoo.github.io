@@ -93,6 +93,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     slider.addEventListener("input", updatePoint);
     drawCurve();
+    buttons.forEach((button) => { button.disabled = false; });
+    slider.disabled = false;
   });
 
   document.querySelectorAll("[data-gk-softmax-demo]").forEach((demo) => {
@@ -119,6 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     sliders.forEach((slider) => slider.addEventListener("input", render));
     render();
+    sliders.forEach((slider) => { slider.disabled = false; });
   });
 
   document.querySelectorAll("[data-gk-pooling-demo]").forEach((demo) => {

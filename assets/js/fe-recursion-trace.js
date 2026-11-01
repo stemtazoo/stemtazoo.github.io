@@ -98,5 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
     reset.addEventListener("click",initialize);
     input.addEventListener("change",initialize);
     initialize();
+    input.disabled = false;
+    reset.disabled = false;
   });
 });

@@ -6,7 +6,7 @@ permalink: /gk/activation-functions/
 tags: [gk, neural_network, activation]
 gk_section: ディープラーニングの概要/活性化関数
 gk_order: 1
-last_modified_at: 2026-09-26
+last_modified_at: 2026-11-01
 ---
 
 ## まず結論
@@ -37,9 +37,9 @@ G検定では、まず**「なぜ必要か」→ 非線形性**、次に**「ど
   <p class="gk-learning-demo__lead">関数を切り替えて、同じ入力に対する出力の違いを確認できます。</p>
 
   <div class="gk-learning-demo__controls" aria-label="活性化関数を選択">
-    <button type="button" class="gk-learning-demo__button" data-function="relu" aria-pressed="true">ReLU</button>
-    <button type="button" class="gk-learning-demo__button" data-function="sigmoid" aria-pressed="false">Sigmoid</button>
-    <button type="button" class="gk-learning-demo__button" data-function="tanh" aria-pressed="false">tanh</button>
+    <button type="button" class="gk-learning-demo__button" data-function="relu" aria-pressed="true" disabled>ReLU</button>
+    <button type="button" class="gk-learning-demo__button" data-function="sigmoid" aria-pressed="false" disabled>Sigmoid</button>
+    <button type="button" class="gk-learning-demo__button" data-function="tanh" aria-pressed="false" disabled>tanh</button>
   </div>
 
   <svg class="gk-activation-demo__chart" viewBox="0 0 600 260" role="img" aria-label="選択した活性化関数のグラフ">
@@ -50,7 +50,7 @@ G検定では、まず**「なぜ必要か」→ 非線形性**、次に**「ど
   </svg>
 
   <label for="gk-activation-x">入力 x：<strong data-activation-input>0.0</strong></label>
-  <input id="gk-activation-x" class="gk-activation-demo__slider" data-activation-x type="range" min="-6" max="6" step="0.1" value="0">
+  <input id="gk-activation-x" class="gk-activation-demo__slider" data-activation-x type="range" min="-6" max="6" step="0.1" value="0" disabled>
 
   <p class="gk-activation-demo__readout">出力：<strong data-activation-output>0</strong><br><span data-activation-note>ReLU：負の入力は0、正の入力はそのまま。中間層で使われやすい。</span></p>
   <p class="gk-learning-demo__hint">見るポイント：関数の「形」より、出力範囲と使う場所を結び付けます。</p>
@@ -60,9 +60,9 @@ G検定では、まず**「なぜ必要か」→ 非線形性**、次に**「ど
   <p class="gk-learning-demo__title">Softmaxは「複数のスコアをまとめて確率にする」</p>
   <p class="gk-learning-demo__lead">3クラスのスコアを動かしても、変換後の確率の合計は1になります。</p>
 
-  <label>クラスAのスコア：<strong data-softmax-score-label>2.0</strong><input class="gk-activation-demo__slider" data-softmax-score type="range" min="-2" max="4" step="0.1" value="2"></label>
-  <label>クラスBのスコア：<strong data-softmax-score-label>1.0</strong><input class="gk-activation-demo__slider" data-softmax-score type="range" min="-2" max="4" step="0.1" value="1"></label>
-  <label>クラスCのスコア：<strong data-softmax-score-label>0.0</strong><input class="gk-activation-demo__slider" data-softmax-score type="range" min="-2" max="4" step="0.1" value="0"></label>
+  <label>クラスAのスコア：<strong data-softmax-score-label>2.0</strong><input class="gk-activation-demo__slider" data-softmax-score type="range" min="-2" max="4" step="0.1" value="2" disabled></label>
+  <label>クラスBのスコア：<strong data-softmax-score-label>1.0</strong><input class="gk-activation-demo__slider" data-softmax-score type="range" min="-2" max="4" step="0.1" value="1" disabled></label>
+  <label>クラスCのスコア：<strong data-softmax-score-label>0.0</strong><input class="gk-activation-demo__slider" data-softmax-score type="range" min="-2" max="4" step="0.1" value="0" disabled></label>
 
   <div class="gk-activation-demo__softmax">
     <div class="gk-activation-demo__bar-row"><span>A</span><div class="gk-activation-demo__bar-track"><div class="gk-activation-demo__bar" data-softmax-bar></div></div><strong data-softmax-prob></strong></div>
@@ -74,7 +74,9 @@ G検定では、まず**「なぜ必要か」→ 非線形性**、次に**「ど
   <p class="gk-learning-demo__hint">Softmaxは1個の値を変換する曲線としてではなく、複数クラスをまとめて見るのがポイントです。</p>
 </div>
 
-<script src="{{ '/assets/js/gk-visualizer.js' | relative_url }}" defer></script>
+<noscript><p>操作にはJavaScriptが必要です。本文の比較表と各関数の説明で、出力範囲や使いどころを確認できます。</p></noscript>
+
+<script src="{{ '/assets/js/gk-visualizer.js?v=20261101-startup' | relative_url }}" defer></script>
 
 ## 定義・仕組み
 
