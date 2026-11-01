@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: データベース
 fe_order: 165
 date: 2026-07-02
-last_modified_at: 2026-09-22
+last_modified_at: 2026-11-01
 ---
 
 ## まず結論
@@ -67,6 +67,143 @@ FE試験では、まず第3正規形までを判断できれば十分です。
 ```
 
 FE試験では、**「別表へ移す情報」と「表同士をつなぐキー」を区別する**ことが重要です。
+
+
+### 触って覚える：更新異状と正規化後の違い
+
+**顧客C01の名前を変更するとき、何行の修正が必要でしょうか？** まず「未正規化の注文表」で1行だけ変更し、同じ顧客番号なのに名前が食い違う状態を確認します。その後「正規化した表」に切り替え、顧客表の1か所だけを変更してみましょう。
+
+この例は、注文番号が主キーで、**顧客番号 → 顧客名**、**商品番号 → 商品名**が成立するデータを使用します。注文表に顧客番号と商品番号を残して、顧客名・商品名をそれぞれ別表で管理する構造です。ここでは**更新異状**を中心に扱い、複合主キーによる第2正規化の操作までは再現しません。
+
+<div class="fe-normalization-demo" id="fe-normalization-demo">
+  <fieldset class="fe-normalization-demo__modes">
+    <legend>表の構造を選ぶ</legend>
+    <label><input type="radio" name="fe-norm-mode" value="flat" checked>分割前：注文表に顧客名も保存</label>
+    <label><input type="radio" name="fe-norm-mode" value="normalized">分割後：顧客表と商品表へ分離</label>
+  </fieldset>
+  <p class="fe-normalization-demo__step" id="fe-norm-tip">予想：C01の顧客名を変更するには、何行を修正する必要がある？</p>
+  <div class="fe-normalization-demo__buttons">
+    <button type="button" id="fe-norm-update-one">C01の名前を1行だけ変更</button>
+    <button type="button" id="fe-norm-update-all">C01の名前をすべて変更</button>
+    <button type="button" id="fe-norm-reset">初期状態へ戻す</button>
+  </div>
+  <p id="fe-norm-feedback" role="status" aria-live="polite">初期状態：同じ顧客番号は同じ名前です。</p>
+  <div class="fe-normalization-demo__scroll">
+    <table>
+      <caption id="fe-norm-orders-caption">注文表（分割前）</caption>
+      <thead><tr id="fe-norm-orders-head"></tr></thead>
+      <tbody id="fe-norm-orders-body"></tbody>
+    </table>
+  </div>
+  <div id="fe-norm-dimensions" class="fe-normalization-demo__dimensions" hidden>
+    <div class="fe-normalization-demo__scroll">
+      <table>
+        <caption>顧客表：顧客番号が主キー</caption>
+        <thead><tr><th scope="col">顧客番号</th><th scope="col">顧客名</th></tr></thead>
+        <tbody id="fe-norm-customers"></tbody>
+      </table>
+    </div>
+    <div class="fe-normalization-demo__scroll">
+      <table>
+        <caption>商品表：商品番号が主キー</caption>
+        <thead><tr><th scope="col">商品番号</th><th scope="col">商品名</th></tr></thead>
+        <tbody id="fe-norm-products"></tbody>
+      </table>
+    </div>
+  </div>
+  <p id="fe-norm-check" class="fe-normalization-demo__check" aria-live="polite">整合性：一致しています。</p>
+  <p class="fe-normalization-demo__note">「1行だけ変更」は分割前の**更新漏れを意図的に再現する操作**です。分割後は顧客表の該当1行を変更し、注文表の顧客番号で参照します。既存の注文が指す顧客名もすべて新しい値になります。実際のDBMSのSQL実行や制約の自動検証を行うものではありません。</p>
+</div>
+<noscript><p>JavaScriptを使わない場合：分割前の注文表にC01が3行あれば、1行だけ名前を変更すると「山田商事」と「山田工業」が混在します。分割後は顧客表でC01の名前を1か所変更し、注文表には顧客番号だけを保存します。</p></noscript>
+
+<style>
+.fe-normalization-demo{border:1px solid #94a3b8;border-radius:12px;padding:1rem;margin:1.2rem 0}
+.fe-normalization-demo__modes{display:flex;flex-direction:column;gap:.5rem;border:1px solid #94a3b8;border-radius:8px;padding:.7rem}
+.fe-normalization-demo__modes legend{font-weight:700}
+.fe-normalization-demo__buttons{display:flex;gap:.5rem;flex-wrap:wrap;margin:.8rem 0}
+.fe-normalization-demo button{padding:.55rem .75rem;border:1px solid #64748b;background:#e2e8f0;color:#172033;border-radius:6px;cursor:pointer}
+.fe-normalization-demo__scroll{overflow-x:auto;max-width:100%;margin:.8rem 0}
+.fe-normalization-demo table{width:100%;min-width:430px;border-collapse:collapse}
+.fe-normalization-demo th,.fe-normalization-demo td{border:1px solid #94a3b8;padding:.45rem;text-align:left}
+.fe-normalization-demo td.is-changed{background:#fef3c7;color:#78350f;font-weight:700}
+.fe-normalization-demo__dimensions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem}
+.fe-normalization-demo__dimensions[hidden]{display:none}
+.fe-normalization-demo__step{font-weight:700}
+.fe-normalization-demo__check{padding:.6rem;border-left:4px solid #64748b;background:rgba(100,116,139,.08)}
+.fe-normalization-demo__note{font-size:.9rem}
+.fe-normalization-demo :focus-visible{outline:3px solid #2563eb;outline-offset:2px}
+@media(max-width:650px){.fe-normalization-demo{padding:.65rem}.fe-normalization-demo__dimensions{grid-template-columns:1fr}.fe-normalization-demo__buttons button{flex:1 1 45%}}
+</style>
+<script>
+(function(){
+  "use strict";
+  const root=document.getElementById("fe-normalization-demo");if(!root)return;
+  const $=id=>root.querySelector("#"+id);
+  const original=[
+    {order:1,customer:"C01",name:"山田商事",product:"P01",productName:"商品A"},
+    {order:2,customer:"C01",name:"山田商事",product:"P02",productName:"商品B"},
+    {order:3,customer:"C01",name:"山田商事",product:"P03",productName:"商品C"},
+    {order:4,customer:"C02",name:"田中商店",product:"P01",productName:"商品A"}
+  ];
+  let flat=[],customerName="山田商事";
+  function mode(){return root.querySelector('input[name="fe-norm-mode"]:checked').value;}
+  function reset(){
+    flat=original.map(row=>({...row}));customerName="山田商事";
+    $("fe-norm-feedback").textContent="初期状態：C01の名前は全行で一致しています。";
+    render();
+  }
+  function makeRow(values,highlightIndex){
+    const tr=document.createElement("tr");
+    values.forEach((value,i)=>{
+      const td=document.createElement("td");td.textContent=String(value);
+      if(i===highlightIndex)td.className="is-changed";
+      tr.appendChild(td);
+    });
+    return tr;
+  }
+  function render(){
+    const normalized=mode()==="normalized";
+    $("fe-norm-dimensions").hidden=!normalized;
+    $("fe-norm-orders-caption").textContent=normalized?"注文表：顧客番号・商品番号で各表を参照":"注文表（分割前）：顧客名・商品名が重複";
+    const head=$("fe-norm-orders-head");head.replaceChildren();
+    const headers=normalized?["注文番号（主キー）","顧客番号（外部キー）","商品番号（外部キー）"]:["注文番号（主キー）","顧客番号","顧客名","商品番号","商品名"];
+    headers.forEach(label=>{const th=document.createElement("th");th.scope="col";th.textContent=label;head.appendChild(th)});
+    const body=$("fe-norm-orders-body");body.replaceChildren();
+    original.forEach((row,i)=>{
+      const source=flat[i],values=normalized?[row.order,row.customer,row.product]:[row.order,row.customer,source.name,row.product,source.productName];
+      body.appendChild(makeRow(values,!normalized&&source.name!==row.name?2:-1));
+    });
+    const customers=$("fe-norm-customers");customers.replaceChildren();
+    customers.appendChild(makeRow(["C01",customerName],customerName!=="山田商事"?1:-1));
+    customers.appendChild(makeRow(["C02","田中商店"],-1));
+    const products=$("fe-norm-products");products.replaceChildren();
+    [["P01","商品A"],["P02","商品B"],["P03","商品C"]].forEach(row=>products.appendChild(makeRow(row,-1)));
+    const names=new Set(flat.filter(r=>r.customer==="C01").map(r=>r.name));
+    $("fe-norm-check").textContent=normalized?"整合性：C01の顧客名は顧客表の1か所で管理します。":"整合性："+(names.size>1?"不一致！同じC01に異なる顧客名が混在しています。":"C01の顧客名は一致しています。");
+    $("fe-norm-tip").textContent=normalized?"C01の名前を変えるには、顧客表の1行だけ更新すればよい。":"C01は3行に重複しています。1行だけ更新するとどうなる？";
+    $("fe-norm-update-one").textContent=normalized?"顧客表のC01を更新":"C01の名前を1行だけ変更";
+    $("fe-norm-update-all").hidden=normalized;
+  }
+  $("fe-norm-update-one").addEventListener("click",()=>{
+    if(mode()==="normalized"){
+      customerName="山田工業";
+      $("fe-norm-feedback").textContent="顧客表のC01を1行更新。注文表の3件から参照する名前がすべて変わります。";
+    }else{
+      flat[0].name="山田工業";
+      $("fe-norm-feedback").textContent="注文1だけ更新しました。同じC01の他の注文には旧名が残り、更新異状が発生します。";
+    }
+    render();
+  });
+  $("fe-norm-update-all").addEventListener("click",()=>{
+    flat.filter(row=>row.customer==="C01").forEach(row=>row.name="山田工業");
+    $("fe-norm-feedback").textContent="C01の3行をすべて変更。整合性は戻りますが、同じ情報を3回更新する必要がありました。";
+    render();
+  });
+  root.querySelectorAll('input[name="fe-norm-mode"]').forEach(r=>r.addEventListener("change",reset));
+  $("fe-norm-reset").addEventListener("click",reset);
+  reset();
+})();
+</script>
 
 ## 定義・仕組み
 
