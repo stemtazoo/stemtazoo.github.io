@@ -57,7 +57,7 @@ FE科目Aでは、**仮想記憶のための領域を増やすことと、RAMを
       <select id="fe-vmem-frames"><option value="2">2枠</option><option value="3" selected>3枠</option><option value="4">4枠</option></select>
     </label>
     <label for="fe-vmem-sequence">仮想ページの参照列（0〜5、カンマ区切り）
-      <input id="fe-vmem-sequence" type="text" value="0,1,2,0,3,0,4,1">
+      <input id="fe-vmem-sequence" type="text" value="0,1,2,0,1,3,0,4,1">
     </label>
   </div>
   <p class="fe-vmem-demo__note">参照順序を変えたり、RAMのページ枠数を増減して違いを確かめられます。入力を変更すると初期状態に戻ります。</p>
@@ -88,7 +88,7 @@ FE科目Aでは、**仮想記憶のための領域を増やすことと、RAMを
       <div id="fe-vmem-ram" class="fe-vmem-demo__pages" aria-label="現在RAMにあるページ">空き</div>
     </section>
   </div>
-  <p id="fe-vmem-pending">未処理：0, 1, 2, 0, 3, 0, 4, 1</p>
+  <p id="fe-vmem-pending">未処理：0, 1, 2, 0, 1, 3, 0, 4, 1</p>
   <div class="fe-vmem-demo__two">
     <section>
       <h4>RAMを増やすと？</h4>
