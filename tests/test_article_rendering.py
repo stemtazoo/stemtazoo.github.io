@@ -16,6 +16,7 @@ class RenderedElements(HTMLParser):
         self.rows = []
         self.items = []
         self.options = []
+        self.inputs = []
         self.capture = None
         self.text = ''
         self.row = None
@@ -23,6 +24,8 @@ class RenderedElements(HTMLParser):
         self.feed(html)
 
     def handle_starttag(self, tag, attrs):
+        if tag == 'input':
+            self.inputs.append(dict(attrs))
         if tag in ('h2', 'td', 'li'):
             self.capture, self.text = tag, ''
         if tag == 'tr':
@@ -65,6 +68,16 @@ class ArticleRenderingTests(unittest.TestCase):
         self.assertIn('まとめ（試験直前用）', page.headings)
         self.assertEqual(['ノート', 'ペン', '消しゴム'], page.options)
         self.assertTrue(any(len(row) == 3 and row[0] == 'ラジオボタン' for row in page.rows))
+
+    def test_coverage_demo_preserves_truth_table_and_later_sections(self):
+        page = self.page('white-box-test-coverage')
+        cases = [item for item in page.inputs if 'data-coverage-case' in item]
+        self.assertEqual(['0', '1', '2', '3'], [item['data-coverage-case'] for item in cases])
+        self.assertTrue(all(item.get('type') == 'checkbox' for item in cases))
+        for row in (['偽', '偽', '偽'], ['偽', '真', '真'], ['真', '偽', '真'], ['真', '真', '真']):
+            self.assertIn(row, page.rows)
+        for heading in ('定義・仕組み', '科目Aでどう出る？', 'よくある誤解・混同', 'まとめ（試験直前用）'):
+            self.assertIn(heading, page.headings)
 
     def test_waf_comparison_rows_and_summary_render_separately(self):
         page = self.page('waf')
