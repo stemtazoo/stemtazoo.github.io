@@ -102,7 +102,7 @@ CPU中心：      CPU CPU CPU       CPU CPU CPU
 
 ### 触って覚える：同じタスクを4方式で比較する
 
-次の3タスクの到着時刻・CPU処理時間・優先度を変更して、**次に動くタスクを予想**しましょう。そのあと「1単位進める」でCPUの動きと待ち時間を確かめます。方式を切り替えても入力条件は保持されます。
+初期設定では3タスクが同時刻に到着し、FCFS・SJF・優先度方式で**異なる実行順序**になります。到着時刻・CPU処理時間・優先度を変更して、**次に動くタスクを予想**しましょう。そのあと「1単位進める」でCPUの動きと待ち時間を確かめます。方式を切り替えても入力条件は保持されます。
 
 この教材ではCPUは1個、各タスクのCPU処理は1回だけ、I/O待ち・切替え時間・エージングは扱いません。FCFS・SJF・優先度は**非プリエンプティブ**（実行中は完了まで継続）、ラウンドロビンだけタイムクォンタムで交代します。**優先度は数字が小さいほど高い**とします。同時刻の到着はA→B→C、同順位では到着時刻→A/B/Cの順で決めます。ラウンドロビンでは、時刻境界で新たに到着したタスクを待ち行列に追加してから、時間切れのタスクを末尾へ戻します。
 
@@ -125,9 +125,9 @@ CPU中心：      CPU CPU CPU       CPU CPU CPU
       <caption>タスクの条件（値を変更できます）</caption>
       <thead><tr><th scope="col">タスク</th><th scope="col">到着時刻</th><th scope="col">CPU処理時間</th><th scope="col">優先度</th></tr></thead>
       <tbody>
-        <tr><th scope="row">A</th><td><input aria-label="Aの到着時刻" data-job="0" data-field="arrival" type="number" min="0" max="12" step="1" value="0"></td><td><input aria-label="Aの処理時間" data-job="0" data-field="burst" type="number" min="1" max="12" step="1" value="5"></td><td><input aria-label="Aの優先度" data-job="0" data-field="priority" type="number" min="1" max="9" step="1" value="2"></td></tr>
-        <tr><th scope="row">B</th><td><input aria-label="Bの到着時刻" data-job="1" data-field="arrival" type="number" min="0" max="12" step="1" value="1"></td><td><input aria-label="Bの処理時間" data-job="1" data-field="burst" type="number" min="1" max="12" step="1" value="2"></td><td><input aria-label="Bの優先度" data-job="1" data-field="priority" type="number" min="1" max="9" step="1" value="1"></td></tr>
-        <tr><th scope="row">C</th><td><input aria-label="Cの到着時刻" data-job="2" data-field="arrival" type="number" min="0" max="12" step="1" value="2"></td><td><input aria-label="Cの処理時間" data-job="2" data-field="burst" type="number" min="1" max="12" step="1" value="3"></td><td><input aria-label="Cの優先度" data-job="2" data-field="priority" type="number" min="1" max="9" step="1" value="3"></td></tr>
+        <tr><th scope="row">A</th><td><input aria-label="Aの到着時刻" data-job="0" data-field="arrival" type="number" min="0" max="12" step="1" value="0"></td><td><input aria-label="Aの処理時間" data-job="0" data-field="burst" type="number" min="1" max="12" step="1" value="5"></td><td><input aria-label="Aの優先度" data-job="0" data-field="priority" type="number" min="1" max="9" step="1" value="3"></td></tr>
+        <tr><th scope="row">B</th><td><input aria-label="Bの到着時刻" data-job="1" data-field="arrival" type="number" min="0" max="12" step="1" value="0"></td><td><input aria-label="Bの処理時間" data-job="1" data-field="burst" type="number" min="1" max="12" step="1" value="2"></td><td><input aria-label="Bの優先度" data-job="1" data-field="priority" type="number" min="1" max="9" step="1" value="2"></td></tr>
+        <tr><th scope="row">C</th><td><input aria-label="Cの到着時刻" data-job="2" data-field="arrival" type="number" min="0" max="12" step="1" value="0"></td><td><input aria-label="Cの処理時間" data-job="2" data-field="burst" type="number" min="1" max="12" step="1" value="3"></td><td><input aria-label="Cの優先度" data-job="2" data-field="priority" type="number" min="1" max="9" step="1" value="1"></td></tr>
       </tbody>
     </table>
   </div>
@@ -153,11 +153,11 @@ CPU中心：      CPU CPU CPU       CPU CPU CPU
   <div class="fe-cpu-demo__scroll">
     <table>
       <caption>各方式を最後まで実行した場合の比較（入力を変えると更新）</caption>
-      <thead><tr><th scope="col">方式</th><th scope="col">平均待ち時間</th><th scope="col">平均ターンアラウンド時間</th></tr></thead>
-      <tbody id="fe-cpu-comparison"><tr><td colspan="3">JavaScript有効時に結果を表示します。</td></tr></tbody>
+      <thead><tr><th scope="col">方式</th><th scope="col">実行順序</th><th scope="col">平均待ち時間</th><th scope="col">平均ターンアラウンド時間</th></tr></thead>
+      <tbody id="fe-cpu-comparison"><tr><td colspan="4">JavaScript有効時に結果を表示します。</td></tr></tbody>
     </table>
   </div>
-  <p class="fe-cpu-demo__note">待ち時間 = 完了時刻 − 到着時刻 − CPU処理時間。ターンアラウンド時間 = 完了時刻 − 到着時刻。方式を変更したときは操作履歴が初期化されます。各方式を比較するための教育用モデルであり、実際のOSの全機能は再現しません。</p>
+  <p class="fe-cpu-demo__note">待ち時間 = 完了時刻 − 到着時刻 − CPU処理時間。ターンアラウンド時間 = 完了時刻 − 到着時刻。方式を変更したときは操作履歴が初期化されます。比較表の実行順序は同じタスクの連続実行をまとめて表示します。各方式を比較するための教育用モデルであり、実際のOSの全機能は再現しません。</p>
 </div>
 
 <style>
@@ -253,7 +253,8 @@ CPU中心：      CPU CPU CPU       CPU CPU CPU
     const tbody=$("fe-cpu-comparison");tbody.replaceChildren();
     keys.forEach((key,index)=>{
       const result=simulate(tasks,key,q),tr=document.createElement("tr");
-      [labels[index],result.avgWait.toFixed(2),result.avgTurn.toFixed(2)].forEach(value=>{
+      const order=result.slots.filter((task,i,slots)=>task!=="-"&&(i===0||slots[i-1]!==task)).join(" → ");
+      [labels[index],order,result.avgWait.toFixed(2),result.avgTurn.toFixed(2)].forEach(value=>{
         const td=document.createElement("td");td.textContent=value;tr.appendChild(td);
       });tbody.appendChild(tr);
     });
