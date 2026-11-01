@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: コンピュータシステム
 fe_order: 52
 date: 2026-10-05
-last_modified_at: 2026-11-01
+last_modified_at: 2026-11-02
 ---
 
 <style>
@@ -158,10 +158,11 @@ SCAN方式は、**エレベータ**をイメージすると理解しやすい方
 <style>
 .fe-disk-demo{border:1px solid #94a3b8;border-radius:12px;padding:1rem;margin:1.2rem 0}
 .fe-disk-demo__controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem}
-.fe-disk-demo__controls label{display:flex;flex-direction:column;gap:.3rem}
+.fe-disk-demo__controls label{display:flex;flex-direction:column;gap:.3rem;min-width:0}
+.fe-disk-demo__controls input,.fe-disk-demo__controls select{width:100%}
 .fe-disk-demo input,.fe-disk-demo select{min-height:2.35rem;max-width:100%;min-width:0;box-sizing:border-box;padding:.45rem;border:1px solid #64748b;border-radius:6px;background:var(--background-color,#fff);color:var(--text-color,#172033)}
-.fe-disk-demo__prediction{border:1px solid #94a3b8;border-radius:8px;margin:1rem 0;padding:.65rem;display:flex;gap:.5rem;flex-wrap:wrap;align-items:center}
-.fe-disk-demo__prediction legend{font-weight:700}
+.fe-disk-demo__prediction{min-width:0;border:1px solid #94a3b8;border-radius:8px;margin:1rem 0;padding:.65rem;display:flex;gap:.5rem;flex-wrap:wrap;align-items:center}
+.fe-disk-demo__prediction legend{font-weight:700;max-width:100%;overflow-wrap:anywhere}
 .fe-disk-demo__prediction input{width:6rem}
 .fe-disk-demo__buttons{display:flex;gap:.5rem;flex-wrap:wrap}
 .fe-disk-demo button{padding:.5rem .75rem;border-radius:6px;border:1px solid #64748b;background:#e2e8f0;color:#172033;cursor:pointer}
