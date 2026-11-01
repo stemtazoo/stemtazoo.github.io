@@ -8,7 +8,7 @@ fe_section: 科目B対策
 fe_subsection: トレース
 fe_order: 71
 date: 2026-10-09
-last_modified_at: 2026-10-11
+last_modified_at: 2026-11-01
 ---
 
 ## まず結論
@@ -65,7 +65,7 @@ f(1) = 1 → f(2) = 2 → f(3) = 6
 <div class="fe-learning-demo fe-recursion-trace" data-fe-recursion-trace>
   <p class="fe-learning-demo__title">再帰の行きと戻りを確認</p>
   <label for="fe-recursion-n">最初に呼び出す関数</label>
-  <select id="fe-recursion-n" data-recursion-input><option value="3">f(3)</option><option value="4">f(4)</option></select>
+  <select id="fe-recursion-n" data-recursion-input disabled><option value="3">f(3)</option><option value="4">f(4)</option></select>
   <div class="fe-recursion-trace__layout">
     <div>
       <p class="fe-recursion-trace__heading">① 実行中のコード</p>
@@ -85,8 +85,8 @@ f(1) = 1 → f(2) = 2 → f(3) = 6
   <div data-recursion-returns class="fe-recursion-trace__returns" aria-label="確定した戻り値と計算過程">まだ戻り値はありません。</div>
   <div class="fe-learning-demo__controls">
     <button type="button" class="fe-learning-demo__button" data-recursion-prev disabled>1ステップ戻る</button>
-    <button type="button" class="fe-learning-demo__button" data-recursion-next>次のステップ →</button>
-    <button type="button" class="fe-learning-demo__button" data-recursion-reset>最初から</button>
+    <button type="button" class="fe-learning-demo__button" data-recursion-next disabled>次のステップ →</button>
+    <button type="button" class="fe-learning-demo__button" data-recursion-reset disabled>最初から</button>
   </div>
   <p data-recursion-message class="fe-recursion-trace__message" role="status" aria-live="polite">開始前です。次のステップを押してください。</p>
   <p class="fe-learning-demo__hint">青い行＝今のステップで実行した行。青いスタック枠＝現在処理中の呼び出し。灰色＝呼び出し先の結果を待つ呼び出し。戻り値の青いカード＝直近で確定した計算結果。</p>
@@ -134,9 +134,9 @@ f():
     </div>
   </div>
   <div class="fe-learning-demo__controls">
-    <button type="button" class="fe-learning-demo__button" data-three-stacks-prev>1ステップ戻る</button>
-    <button type="button" class="fe-learning-demo__button" data-three-stacks-next>次のステップ →</button>
-    <button type="button" class="fe-learning-demo__button" data-three-stacks-reset>最初から</button>
+    <button type="button" class="fe-learning-demo__button" data-three-stacks-prev disabled>1ステップ戻る</button>
+    <button type="button" class="fe-learning-demo__button" data-three-stacks-next disabled>次のステップ →</button>
+    <button type="button" class="fe-learning-demo__button" data-three-stacks-reset disabled>最初から</button>
   </div>
   <p data-three-stacks-message class="fe-recursion-trace__message"></p>
 </div>
@@ -176,8 +176,8 @@ JavaScriptが無効な場合も、次の表で確認できます。
 関連：[スタックの仕組み](/fe/stack/)・[IPA公式：基本情報技術者試験](https://www.ipa.go.jp/shiken/kubun/fe.html)
 
 <link rel="stylesheet" href="{{ '/assets/css/fe-recursion-trace.css' | relative_url }}?v=20261009-spacing2">
-<script src="{{ '/assets/js/fe-recursion-trace.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/fe-recursion-trace.js?v=20261101-startup' | relative_url }}" defer></script>
 
-<script src="{{ '/assets/js/fe-three-stacks-trace.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/fe-three-stacks-trace.js?v=20261101-startup' | relative_url }}" defer></script>
 
 {% include fe_article_footer.html %}

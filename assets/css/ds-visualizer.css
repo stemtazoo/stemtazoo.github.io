@@ -37,6 +37,12 @@
   font-weight: 700;
 }
 
+[data-ds-layer-demo] .ds-learning-demo__button:disabled,
+[data-ds-causal-demo] .ds-learning-demo__button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
 .ds-layer-demo__flow {
   align-items: stretch;
   display: grid;

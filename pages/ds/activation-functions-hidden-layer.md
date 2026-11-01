@@ -9,7 +9,7 @@ ds_area: datascience
 ds_section: modeling
 prev: /ds/zero-trust/
 next: /ds/anchoring-effect/
-last_modified_at: 2026-09-17
+last_modified_at: 2026-11-01
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -50,9 +50,9 @@ DS検定では「どの関数が中間層向きか」を判断させる問題が
   <p class="ds-learning-demo__lead">中間層と出力層では、活性化関数の役割が違います。</p>
 
   <div class="ds-learning-demo__controls" aria-label="問題の種類を選択">
-    <button type="button" class="ds-learning-demo__button" data-task="binary" aria-pressed="true">二値分類</button>
-    <button type="button" class="ds-learning-demo__button" data-task="multiclass" aria-pressed="false">多クラス分類</button>
-    <button type="button" class="ds-learning-demo__button" data-task="regression" aria-pressed="false">回帰</button>
+    <button type="button" class="ds-learning-demo__button" data-task="binary" aria-pressed="true" disabled>二値分類</button>
+    <button type="button" class="ds-learning-demo__button" data-task="multiclass" aria-pressed="false" disabled>多クラス分類</button>
+    <button type="button" class="ds-learning-demo__button" data-task="regression" aria-pressed="false" disabled>回帰</button>
   </div>
 
   <div class="ds-layer-demo__flow">
@@ -67,7 +67,9 @@ DS検定では「どの関数が中間層向きか」を判断させる問題が
   <p class="ds-learning-demo__hint">判断のコツ：「中間層か出力層か」→「分類か回帰か」の順で考えます。</p>
 </div>
 
-<script src="{{ '/assets/js/ds-visualizer.js' | relative_url }}" defer></script>
+<noscript><p>操作にはJavaScriptが必要です。本文の説明でも、中間層と出力層の役割の違いを確認できます。</p></noscript>
+
+<script src="{{ '/assets/js/ds-visualizer.js?v=20261101-startup' | relative_url }}" defer></script>
 
 
 ## 定義・仕組み

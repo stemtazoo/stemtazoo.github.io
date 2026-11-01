@@ -226,10 +226,11 @@ LRUでは、**ヒットしたページも参照時刻を更新する** のがポ
   <p class="fe-pr-status" role="status" aria-live="polite">開始前：3つのページ枠は空です。</p>
   <div class="fe-pr-controls">
     <button type="button" data-action="prev" disabled>戻る</button>
-    <button type="button" data-action="next">次へ</button>
-    <button type="button" data-action="reset">最初から</button>
+    <button type="button" data-action="next" disabled>次へ</button>
+    <button type="button" data-action="reset" disabled>最初から</button>
   </div>
   <p class="fe-pr-hint">確認ポイント：4番目の「1」は置換えなし。FIFOは読み込み順を変えず、LRUは「1」を最近使った扱いに更新します。</p>
+  <noscript><p>操作にはJavaScriptが必要です。本文の参照列の表でも、LRUの置換え手順を確認できます。</p></noscript>
 </div>
 
 <style>
@@ -324,6 +325,7 @@ LRUでは、**ヒットしたページも参照時刻を更新する** のがポ
     root.querySelector('[data-action="next"]').addEventListener('click',()=>{step=Math.min(sequence.length,step+1);render();});
     root.querySelector('[data-action="reset"]').addEventListener('click',()=>{step=0;render();});
     render();
+    root.querySelector('[data-action="reset"]').disabled=false;
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);
   else init();
