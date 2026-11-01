@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: データベース
 fe_order: 20
 date: 2026-06-27
-last_modified_at: 2026-11-01
+last_modified_at: 2026-11-02
 ---
 
 ## まず結論
@@ -139,6 +139,8 @@ A銀行：可       B銀行：不可
 .fe-2pc-demo{border:1px solid #94a3b8;border-radius:12px;padding:1rem;margin:1rem 0}
 .fe-2pc-demo__presets,.fe-2pc-demo__actions{display:flex;gap:.5rem;flex-wrap:wrap;margin:.7rem 0}
 .fe-2pc-demo button{border:1px solid #64748b;border-radius:6px;background:#e2e8f0;color:#172033;padding:.5rem .7rem;cursor:pointer}
+.fe-2pc-demo__presets button[aria-pressed="true"]{background:#1e40af;color:#fff;border-color:#1e40af;font-weight:700;box-shadow:inset 0 0 0 2px #fff}
+.fe-2pc-demo__presets button[aria-pressed="true"]::after{content:"選択中";display:block;font-size:.8em}
 .fe-2pc-demo button:disabled{opacity:.45;cursor:not-allowed}
 .fe-2pc-demo fieldset{border:1px solid #94a3b8;border-radius:8px;margin:.8rem 0;padding:.7rem}
 .fe-2pc-demo legend{font-weight:700}
@@ -174,6 +176,8 @@ A銀行：可       B銀行：不可
   }
   function render(){
     const result=outcome();
+    const preset=selects.every(s=>s.value==="yes")?"all":selects.every((s,i)=>s.value===(i===1?"no":"yes"))?"one":null;
+    root.querySelectorAll("[data-preset]").forEach(button=>button.setAttribute("aria-pressed",String(button.dataset.preset===preset)));
     for(let i=0;i<3;i++){
       const name=names[i],status=$("fe-2pc-status-"+name);
       status.textContent=phase===0?"未確認":phase===1?(selects[i].value==="yes"?"準備OK（未確定）":"準備NG（未確定）"):(result==="commit"?"コミット確定":"中止・ロールバック");
