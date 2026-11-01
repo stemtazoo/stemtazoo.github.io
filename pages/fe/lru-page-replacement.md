@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: コンピュータシステム
 fe_order: 290
 date: 2026-07-02
-last_modified_at: 2026-10-17
+last_modified_at: 2026-11-01
 related_articles:
   - /fe/paging/
   - /fe/fifo-page-replacement/
@@ -316,7 +316,7 @@ LRUでは、**ヒットしたページも参照時刻を更新する** のがポ
         panel.querySelector('.fe-pr-count').textContent='置換え：'+(current?current[method+'Count']:0)+'回';
         panel.querySelector('.fe-pr-detail').textContent=current?current.notes[method]:'まだ参照していません';
       });
-      root.querySelector('.fe-pr-status').textContent=step===0?'開始前：3つのページ枠は空です。':step===sequence.length?'完了：FIFOは3回、LRUは6回。正解は「イ」です。':'ステップ '+step+' / '+sequence.length+'：ページ'+history[step-1].page+'を参照';
+      root.querySelector('.fe-pr-status').textContent=step===0?'開始前：3つのページ枠は空です。':step===sequence.length?'完了：この参照列の置換え回数はFIFOが3回、LRUが6回です。':'ステップ '+step+' / '+sequence.length+'：ページ'+history[step-1].page+'を参照';
       root.querySelector('[data-action="prev"]').disabled=step===0;
       root.querySelector('[data-action="next"]').disabled=step===sequence.length;
     }
