@@ -3,12 +3,12 @@ layout: page
 title: スパイウェアとは？情報を密かに収集するマルウェア【基本情報技術者試験】
 description: スパイウェアを「利用者に気付かれないまま個人情報や操作情報を収集するマルウェア」として整理し、サニタイジング・ポートスキャン・辞書攻撃との違いを、FE科目Aで選択肢を切るための動作ベースの判断基準で解説します。
 permalink: /fe/spyware/
-tags: [fe, fe-security, malware, spyware]
+tags: [fe, fe-technology, malware, spyware]
 fe_section: 情報セキュリティ
 fe_subsection: セキュリティ技術
 fe_order: 110
 date: 2026-09-05
-last_modified_at: 2026-09-05
+last_modified_at: 2026-11-02
 ---
 
 ## まず結論
