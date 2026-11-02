@@ -9,6 +9,7 @@ fe_subsection: データ構造
 fe_order: 25
 date: 2026-08-09
 last_modified_at: 2026-10-30
+ux_readability_pilot: true
 ---
 
 ## まず結論

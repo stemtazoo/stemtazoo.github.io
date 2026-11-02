@@ -9,6 +9,7 @@ fe_subsection: コンピュータシステム
 fe_order: 52
 date: 2026-10-05
 last_modified_at: 2026-11-02
+ux_readability_pilot: true
 ---
 
 <style>

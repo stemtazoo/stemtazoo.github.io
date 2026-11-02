@@ -1281,3 +1281,16 @@
   font-weight: 700;
   line-height: 1.5;
 }
+
+
+/* Opt-in FE prose spacing trial.
+   Only top-level article prose is affected; nested interactive demos, cards,
+   tables, and controls retain their existing rhythm and line height. */
+.post--readability-pilot .pagefind-content > p {
+  margin-block: 1.15rem;
+}
+
+.post--readability-pilot .pagefind-content > ul,
+.post--readability-pilot .pagefind-content > ol {
+  margin-block: 1.15rem;
+}

@@ -9,6 +9,7 @@ fe_order: 34
 fe_subsection: データベース
 date: 2026-07-27
 last_modified_at: 2026-11-02
+ux_readability_pilot: true
 ---
 
 ## まず結論
