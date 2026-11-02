@@ -5,10 +5,10 @@ description: ISO・JIS・ANSI・IEEEの違いを、国際規格・日本・米�
 permalink: /fe/international-standards/
 tags: [fe, fe-strategy, standardization, iso, jis]
 fe_section: ストラテジ系
-fe_subsection: 法務・標準化
+fe_subsection: 企業と法務
 fe_order: 40
 date: 2026-08-16
-last_modified_at: 2026-10-18
+last_modified_at: 2026-11-02
 ---
 
 ## まず結論
