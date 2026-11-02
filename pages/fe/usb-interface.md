@@ -5,8 +5,9 @@ description: USBを、シリアルインタフェースとしての特徴、Low 
 permalink: /fe/usb-interface/
 tags: [fe, fe-technology, computer-system, interface]
 fe_section: テクノロジ系
+fe_order: 48
 fe_subsection: コンピュータ構成要素
-last_modified_at: 2026-10-17
+last_modified_at: 2026-11-02
 ---
 
 ## まず結論

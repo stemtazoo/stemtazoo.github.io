@@ -5,8 +5,9 @@ description: 再帰関数の基本を、階乗の再帰式を使って整理し�
 permalink: /fe/recursive-factorial/
 tags: [fe, technology, algorithm, recursion]
 fe_section: テクノロジ系
+fe_order: 111
 fe_subsection: アルゴリズムとプログラミング
-last_modified_at: 2026-10-31
+last_modified_at: 2026-11-02
 ---
 
 ## まず結論

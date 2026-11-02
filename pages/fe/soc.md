@@ -5,8 +5,9 @@ description: SoCの仕組みを、一つの半導体チップへシステム機�
 permalink: /fe/soc/
 tags: [fe, technology, computer-architecture, semiconductor]
 fe_section: テクノロジ系
+fe_order: 45
 fe_subsection: コンピュータ構成要素
-last_modified_at: 2026-08-07
+last_modified_at: 2026-11-02
 ---
 
 ## まず結論

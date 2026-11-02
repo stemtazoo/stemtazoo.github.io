@@ -5,8 +5,9 @@ description: QRコードの3つの位置検出パターン、回転しても読�
 permalink: /fe/qr-code/
 tags: [fe, fe-technology, computer-system]
 fe_section: テクノロジ系
-fe_subsection: コンピュータシステム
-last_modified_at: 2026-09-20
+fe_order: 170
+fe_subsection: マルチメディア
+last_modified_at: 2026-11-02
 ---
 
 ## まず結論

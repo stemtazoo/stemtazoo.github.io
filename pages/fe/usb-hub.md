@@ -5,8 +5,9 @@ description: USBハブの役割を、USBポートを増やす装置として整�
 permalink: /fe/usb-hub/
 tags: [fe, fe-technology, hardware, usb]
 fe_section: テクノロジ系
+fe_order: 47
 fe_subsection: コンピュータ構成要素
-last_modified_at: 2026-08-05
+last_modified_at: 2026-11-02
 ---
 
 ## まず結論

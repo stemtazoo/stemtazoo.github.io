@@ -5,8 +5,9 @@ description: プログラムマネジメントの意味を、プロジェクト�
 permalink: /fe/program-management/
 tags: [fe, fe-management, project-management]
 fe_section: マネジメント系
+fe_order: 12
 fe_subsection: プロジェクトマネジメント
-last_modified_at: 2026-09-23
+last_modified_at: 2026-11-02
 ---
 
 ## まず結論

@@ -5,8 +5,9 @@ description: ひずみゲージの仕組みと用途を、サーミスタ・ジ�
 permalink: /fe/strain-gauge/
 tags: [fe, fe-technology, sensor, iot]
 fe_section: テクノロジ系
+fe_order: 95
 fe_subsection: ハードウェア
-last_modified_at: 2026-07-20
+last_modified_at: 2026-11-02
 ---
 
 ## まず結論

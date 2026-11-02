@@ -5,9 +5,10 @@ description: シェルのリダイレクトを、標準入力・標準出力の�
 permalink: /fe/shell-redirection/
 tags: [fe, fe-technology, computer-system]
 fe_section: テクノロジ系
+fe_order: 106
 fe_subsection: コンピュータシステム
 date: 2026-10-03
-last_modified_at: 2026-10-03
+last_modified_at: 2026-11-02
 ---
 
 ## まず結論
