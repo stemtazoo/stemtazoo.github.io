@@ -4,7 +4,7 @@ layout: default
 <div class="site-layout{% if page.show_sidebar == false %} site-layout--no-sidebar{% endif %}">
   {% include mobile_study_nav.html %}
   <main class="site-main">
-    <article class="post">
+    <article class="post{% if page.ux_readability_pilot %} post--readability-pilot{% endif %}">
       <header class="post-header">
         {% assign page_last_modified = page.last_modified_at | default: page.date %}
         {% if page_last_modified %}
