@@ -3,12 +3,12 @@ layout: page
 title: パスワードリスト攻撃とは？認証攻撃4種類を見分ける方法【基本情報技術者試験】
 description: パスワードリスト攻撃を、ブルートフォース・リバースブルートフォース・レインボー攻撃と比較し、「流出情報を使うか」「何を固定して何を変えるか」「オンラインかオフラインか」でFE科目Aの選択肢を切る方法を整理します。
 permalink: /fe/password-list-attack-comparison/
-tags: [fe, fe-security, authentication, password-attack]
+tags: [fe, fe-technology, authentication, password-attack]
 fe_section: 情報セキュリティ
 fe_subsection: セキュリティ技術
 fe_order: 110
 date: 2026-08-30
-last_modified_at: 2026-09-23
+last_modified_at: 2026-11-02
 ---
 
 ## まず結論
