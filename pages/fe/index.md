@@ -89,7 +89,8 @@ last_modified_at: 2026-11-02
   </section>
 
   <section class="portal-card">
-    <h3>情報セキュリティ</h3>
+    <h3>情報セキュリティ（重点学習）</h3>
+    <p>IPAシラバス上は<strong>テクノロジ系のセキュリティ分野</strong>です。このサイトでは、科目B対策にもつながる重要テーマとして別の入口を設けています。</p>
     <p><strong>脅威 → 対策 → 暗号・認証</strong>で整理します。</p>
     <ol>
       <li><a href="{{ '/fe/security-threat-countermeasures/' | relative_url }}">脅威と対策の対応</a></li>
@@ -139,7 +140,11 @@ FEでは、用語の意味だけでなく、仕組みや処理の流れを問わ
 
 経営や業務改善の目的と、ITをどう結び付けるかを確認します。法律・契約・会計・標準化などは細かい暗記に寄りすぎず、何を守るためのルールかを意識して整理します。
 
-### 情報セキュリティ
+### 情報セキュリティ（重点学習用の入口）
+
+**IPAの基本情報技術者試験シラバスVer.9.2では、「セキュリティ」はテクノロジ系の「技術要素」に属する中分類です。** 「情報セキュリティ」がテクノロジ系と並ぶ別の科目A分野になっているわけではありません。このサイトでは、セキュリティの重要性と科目Bへの接続を考え、記事を探しやすくするために独立した学習入口も設けています。
+
+公式の分類は[IPAのFEシラバスVer.9.2（目次・中分類11）](https://www.ipa.go.jp/shiken/syllabus/omgdg50000005kpe-att/syllabus_fe_ver9_2.pdf)で確認できます。
 
 情報セキュリティ分野は、SG試験の学習内容とも重なる部分があります。
 
@@ -251,10 +256,12 @@ SGで学んだリスク、認証、アクセス制御、ログ、インシデン
     <li><a href="#fe-technology">テクノロジ系</a></li>
     <li><a href="#fe-management">マネジメント系</a></li>
     <li><a href="#fe-strategy">ストラテジ系</a></li>
-    <li><a href="#fe-security">情報セキュリティ</a></li>
+    <li><a href="#fe-security">情報セキュリティ（重点学習）</a></li>
     <li><a href="#fe-subject-b">科目B対策</a></li>
   </ul>
 </nav>
+
+**分類について：** IPAの科目Aシラバスでは、情報セキュリティは「テクノロジ系 → 技術要素 → セキュリティ」に含まれます。このサイトの「情報セキュリティ」は公式の独立した科目A分野ではなく、重点学習用の別入口です。「テクノロジ系 → セキュリティ」の記事と、独立入口の情報セキュリティ記事を合わせて学習してください。科目Bの情報セキュリティは、科目B対策で別途扱います。
 
 {% assign fe_pages = site.pages | sort: "fe_order" %}
 {% assign fe_total = 0 %}
@@ -293,7 +300,7 @@ SGで学んだリスク、認証、アクセス制御、ログ、インシデン
   {% endif %}
 {% endfor %}
 
-<h3 id="{{ section_id }}">{{ section }}（{{ section_count }}記事）</h3>
+<h3 id="{{ section_id }}">{% if section == "情報セキュリティ" %}情報セキュリティ（重点学習）{% else %}{{ section }}{% endif %}（{{ section_count }}記事）</h3>
 
 {% if section_count == 0 %}
 - 準備中です。
