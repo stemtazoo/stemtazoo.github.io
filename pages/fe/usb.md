@@ -5,8 +5,9 @@ description: USBのシリアル方式、転送速度、ホットプラグ、プ�
 permalink: /fe/usb/
 tags: [fe, fe-technology, hardware, interface]
 fe_section: テクノロジ系
+fe_order: 46
 fe_subsection: コンピュータ構成要素
-last_modified_at: 2026-10-17
+last_modified_at: 2026-11-02
 ---
 
 ## まず結論
