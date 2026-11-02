@@ -5,9 +5,10 @@ description: テザリングの意味を、Wi-Fi・USB・Bluetoothによる接�
 permalink: /fe/tethering/
 tags: [fe, fe-technology, network]
 fe_section: テクノロジ系
+fe_order: 66
 fe_subsection: ネットワーク
 date: 2026-07-27
-last_modified_at: 2026-07-27
+last_modified_at: 2026-11-02
 ---
 
 ## まず結論
