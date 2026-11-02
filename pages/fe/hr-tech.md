@@ -5,10 +5,10 @@ description: HRテックについて、人事領域へのICT活用という視�
 permalink: /fe/hr-tech/
 tags: [fe, fe-strategy, hr-tech, ict]
 fe_section: ストラテジ系
-fe_subsection: 経営戦略・ビジネスインダストリ
+fe_subsection: ビジネスインダストリ
 fe_order: 80
 date: 2026-09-16
-last_modified_at: 2026-09-16
+last_modified_at: 2026-11-02
 ---
 
 ## まず結論

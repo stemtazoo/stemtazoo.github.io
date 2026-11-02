@@ -5,10 +5,10 @@ description: バイオメトリクス認証（生体認証）を、身体的特�
 permalink: /fe/biometric-authentication/
 tags: [fe, fe-technology, security, authentication]
 fe_section: 情報セキュリティ
-fe_subsection: 認証
+fe_subsection: 認証・アクセス制御
 fe_order: 32
 date: 2026-10-03
-last_modified_at: 2026-10-15
+last_modified_at: 2026-11-02
 ---
 
 ## まず結論

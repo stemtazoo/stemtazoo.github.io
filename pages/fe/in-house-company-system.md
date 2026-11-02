@@ -5,10 +5,10 @@ description: 社内カンパニー制を、会社の中に会社のような事�
 permalink: /fe/in-house-company-system/
 tags: [fe, fe-strategy, organization, management]
 fe_section: ストラテジ系
-fe_subsection: 経営組織論
+fe_subsection: 企業活動
 fe_order: 70
 date: 2026-08-25
-last_modified_at: 2026-08-25
+last_modified_at: 2026-11-02
 ---
 
 ## まず結論

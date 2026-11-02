@@ -5,10 +5,10 @@ description: プライバシーバイデザインを「企画・設計時から�
 permalink: /fe/privacy-by-design/
 tags: [fe, fe-technology, security]
 fe_section: 情報セキュリティ
-fe_subsection: 情報セキュリティ
+fe_subsection: セキュリティ対策
 fe_order: 150
 date: 2026-10-11
-last_modified_at: 2026-10-11
+last_modified_at: 2026-11-02
 ---
 
 ## まず結論
