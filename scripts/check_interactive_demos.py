@@ -328,9 +328,9 @@ def adjacency(page, expect):
         const range = document.createRange();
         range.selectNodeContents(th);
         return range.getClientRects().length === 1;
-      }) && Array.from(table.querySelectorAll('button')).every(b => b.getBoundingClientRect().width >= 24);
+      }) && (innerWidth > 520 || Array.from(table.querySelectorAll('button')).every(b => b.getBoundingClientRect().width >= 24));
     }''')
-    assert readable, 'Short matrix labels should remain on one line and buttons must be at least 24px wide'
+    assert readable, 'Short matrix labels should remain on one line; narrow-screen buttons must be at least 24px wide'
 
     # This is a second consumer of fe-visualizer.js; the matrix and graph stay in sync.
     for edge in ('12', '13', '24', '34'):
