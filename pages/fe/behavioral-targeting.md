@@ -5,10 +5,10 @@ description: 行動ターゲティング広告について、検索連動型広�
 permalink: /fe/behavioral-targeting/
 tags: [fe, fe-strategy, marketing, advertising]
 fe_section: ストラテジ系
-fe_subsection: マーケティング
+fe_subsection: 経営戦略
 fe_order: 47
 date: 2026-09-17
-last_modified_at: 2026-10-22
+last_modified_at: 2026-11-02
 ---
 
 ## 1. まず結論
