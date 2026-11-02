@@ -5,9 +5,10 @@ description: 全体最適化計画と業務モデルを、組織全体のある�
 permalink: /fe/overall-optimization-business-model/
 tags: [fe, fe-strategy, system-strategy]
 fe_section: ストラテジ系
+fe_order: 16
 fe_subsection: システム戦略
 date: 2026-08-25
-last_modified_at: 2026-10-01
+last_modified_at: 2026-11-02
 ---
 
 ## まず結論
