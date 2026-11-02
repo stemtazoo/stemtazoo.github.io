@@ -5,10 +5,10 @@ description: システム障害の検知、通知、原因解析、復旧の役�
 permalink: /fe/system-failure-monitoring/
 tags: [fe, fe-technology, system, operations]
 fe_section: テクノロジ系
-fe_subsection: システム運用・保守
+fe_subsection: システム運用・管理
 fe_order: 130
 date: 2026-10-13
-last_modified_at: 2026-10-13
+last_modified_at: 2026-11-02
 ---
 
 ## まず結論
