@@ -104,6 +104,7 @@ SCAN方式は、**エレベータ**をイメージすると理解しやすい方
 {% include study_demo_assets.html %}
 
 <div id="fe-disk-demo" class="fe-disk-demo study-demo">
+  <p class="fe-disk-demo__step"><strong>① 比較条件を設定</strong><span>方式・開始位置・要求列を選びます。</span></p>
   <div class="fe-disk-demo__controls study-demo__controls">
     <label for="fe-disk-method">方式
       <select id="fe-disk-method">
@@ -125,11 +126,13 @@ SCAN方式は、**エレベータ**をイメージすると理解しやすい方
       <input id="fe-disk-requests" type="text" value="120,95,70,80,140,110,60">
     </label>
   </div>
+  <p class="fe-disk-demo__step"><strong>② 次の移動先を予想</strong><span>現在の方式で次に処理する番号を考えましょう。</span></p>
   <fieldset class="fe-disk-demo__prediction">
     <legend>予想：次に処理するシリンダ番号は？</legend>
     <label for="fe-disk-guess">番号を入力（0〜199）</label>
     <input id="fe-disk-guess" type="number" min="0" max="199" step="1" placeholder="例：120">
   </fieldset>
+  <p class="fe-disk-demo__step"><strong>③ 1要求ずつ動かす</strong><span>戻る・最後まで・リセットも試せます。</span></p>
   <p id="fe-disk-guide" class="study-demo__guide" role="status" aria-live="polite">番号を予想したら、すぐ下の「1要求進める」を押してください。予想せずに進めることもできます。</p>
   <div class="fe-disk-demo__buttons study-demo__actions">
     <button type="button" id="fe-disk-next">1要求進める</button>
@@ -137,6 +140,7 @@ SCAN方式は、**エレベータ**をイメージすると理解しやすい方
     <button type="button" id="fe-disk-all">最後まで実行</button>
     <button type="button" id="fe-disk-reset">最初から</button>
   </div>
+  <p class="fe-disk-demo__step"><strong>④ 移動距離と処理順を確認</strong><span>現在位置・残り要求・3方式の総移動量を見比べます。</span></p>
   <p id="fe-disk-feedback" role="status" aria-live="polite">次に移動するシリンダを予想してください。</p>
   <div class="fe-disk-demo__stats" aria-live="polite">
     <div>現在位置<strong id="fe-disk-current">100</strong></div>
@@ -179,6 +183,9 @@ SCAN方式は、**エレベータ**をイメージすると理解しやすい方
 .fe-disk-demo table{width:100%;min-width:470px;border-collapse:collapse}
 .fe-disk-demo th,.fe-disk-demo td{border:1px solid #94a3b8;padding:.45rem;text-align:left}
 .fe-disk-demo__note{font-size:.9rem}
+.fe-disk-demo__step{display:flex;flex-wrap:wrap;align-items:baseline;gap:.25rem .65rem;margin:1.1rem 0 .5rem;padding:.4rem 0;border-bottom:1px solid #94a3b8;line-height:1.5}
+.fe-disk-demo__step strong{font-size:1rem}
+.fe-disk-demo__step span{font-size:.9rem}
 .fe-disk-demo :focus-visible{outline:3px solid #2563eb;outline-offset:2px}
 @media(max-width:560px){.fe-disk-demo{padding:.65rem}.fe-disk-demo__controls{grid-template-columns:1fr}.fe-disk-demo__stats{grid-template-columns:1fr}.fe-disk-demo__buttons button{flex:1 1 42%}}
 </style>
