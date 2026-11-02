@@ -5,8 +5,9 @@ description: PMOの役割を、プロジェクトマネージャやプログラ�
 permalink: /fe/project-management-office/
 tags: [fe, fe-management, project-management]
 fe_section: マネジメント系
+fe_order: 13
 fe_subsection: プロジェクトマネジメント
-last_modified_at: 2026-07-20
+last_modified_at: 2026-11-02
 ---
 
 ## まず結論
