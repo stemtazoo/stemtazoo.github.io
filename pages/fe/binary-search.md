@@ -8,7 +8,7 @@ fe_section: 科目B対策
 fe_subsection: アルゴリズム
 fe_order: 50
 date: 2026-06-23
-last_modified_at: 2026-10-20
+last_modified_at: 2026-11-02
 ---
 
 ## まず結論

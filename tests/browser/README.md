@@ -1,13 +1,13 @@
 # Interactive lesson pilot
 
-This pilot covers only the six FE/GK pages registered in `pilot.json`.
+This pilot covers only the nine FE/GK pages registered in `pilot.json`.
 The canonical teaching and verification policy remains in
 [interactive-learning-rules.md](../../docs/agent/interactive-learning-rules.md).
 
 ## Shared UI
 
 Four FE pages opt in with `study-demo`, load `study_demo_assets.html` before
-article JavaScript, and use `StudyDemoUI.selectChoice` / `nextAction`.
+article JavaScript, and use the common sizing rules. Three also use `StudyDemoUI.selectChoice` / `nextAction`.
 The synchronous small script is intentional: inline article initialization must
 not race a deferred dependency. The helper owns selection presentation and guide
 association; each article still owns its algorithm, correct answers and state.
@@ -48,7 +48,8 @@ from root containment, while the main controls and action buttons are checked.
 The GK matrix additionally checks its own table bounds and label text clipping.
 With scripting off, the original three check `noscript`; CPU checks its static
 waiting-time explanation, matrix its initial metrics, and Attention its initial
-weights. These checks do not assert that interactive controls work without JS.
+weights. Binary search checks its static discard-direction hint, CNN its initial
+4×4 output, and adjacency matrix its initial edge description. These checks do not assert that interactive controls work without JS.
 
 They exercise native keyboard activation in the lock example, not every keyboard
 path or screen-reader behavior. Intentional table/history scrolling is allowed.
@@ -67,7 +68,12 @@ clarity, prediction/state proximity, actual mobile browsers, screen readers and
 post-merge deployment. Existing update audits remain a follow-up safeguard.
 
 Scope: three original FE repairs, CPU scheduling, GK confusion matrix, and
-Attention as a second consumer of the GK stylesheet. Observe this pilot before a
+Attention as a second consumer of the GK stylesheet, plus the binary-search/CNN
+repairs and adjacency matrix as a second consumer of fe-visualizer.js.
+Binary search checks slow/rapid comparisons and reset during a pending repaint.
+CNN checks valid examples, 16 invalid inputs, and recovery after each; its initial
+screenshot shows valid output, while the final screenshot shows input guidance.
+Observe this pilot before a
 sitewide migration. The existing teaching rules do not make browser automation a
 universal prerequisite for adding useful interactive explanations.
 

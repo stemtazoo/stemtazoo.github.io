@@ -6,7 +6,7 @@ permalink: /gk/cnn-output-size/
 tags: [gk, cnn, convolution]
 gk_section: ディープラーニングの応用例/画像認識/ネオコグニトロンとLeNet
 gk_order: 4
-last_modified_at: 2026-09-25
+last_modified_at: 2026-11-02
 ---
 
 ## まず結論

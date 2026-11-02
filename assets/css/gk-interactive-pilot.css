@@ -15,3 +15,5 @@
   .gk-pilot .gk-matrix-guided{display:table;white-space:normal}
   .gk-pilot .gk-matrix-guided label{grid-template-columns:minmax(0,1fr)}
 }
+/* CNN invalid inputs: make the unavailable advance action visible as such. */
+[data-gk-cnn-demo] [data-next]:disabled{opacity:.45;cursor:not-allowed}

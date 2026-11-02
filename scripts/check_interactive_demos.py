@@ -7,6 +7,7 @@ from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 import json
 import os
+import re
 from pathlib import Path
 import threading
 import traceback
@@ -227,8 +228,131 @@ def attention(page, expect):
         contained(page, '[data-gk-attention]')
 
 
+def binary_search(page, expect):
+    root = '[data-fe-binary-demo]'
+    for rapid in (False, True):
+        page.locator('[data-binary-reset]').click()
+        for left, right in [('4', '6'), ('4', '4')]:
+            page.locator('[data-binary-next]').press('Enter')
+            expect(page.locator('[data-binary-left]')).to_have_text(left)
+            expect(page.locator('[data-binary-right]')).to_have_text(right)
+            if not rapid:
+                page.wait_for_timeout(250)
+        page.locator('[data-binary-next]').click()
+        # The former 180ms callback must not erase the completed state.
+        page.wait_for_timeout(250)
+        expect(page.locator('[data-binary-cell]').nth(4)).to_have_class(re.compile(r'\bis-found\b'))
+        expect(page.locator('[data-binary-mid]')).to_have_text('4')
+        expect(page.locator('[data-binary-count]')).to_have_text('3回')
+        expect(page.locator('[data-binary-status]')).to_contain_text('発見')
+        expect(page.locator('[data-binary-next]')).to_be_disabled()
+    page.locator('[data-binary-reset]').click()
+    page.locator('[data-binary-next]').click()
+    page.locator('[data-binary-reset]').click()  # Reset while a repaint is pending.
+    page.wait_for_timeout(250)
+    expect(page.locator('[data-binary-count]')).to_have_text('0回')
+    expect(page.locator('[data-binary-mid]')).to_have_text('-')
+    expect(page.locator('[data-binary-next]')).to_be_enabled()
+    for _ in range(3):
+        page.locator('[data-binary-next]').click()
+    page.wait_for_timeout(250)
+    expect(page.locator('[data-binary-mid]')).to_have_text('4')
+    expect(page.locator('[data-binary-cell]').nth(4)).to_have_class(re.compile(r'\bis-found\b'))
+    contained(page, root)
+
+
+def cnn(page, expect):
+    root = '[data-gk-cnn-demo]'
+    def values(n='7', k='3', s='2', p='1'):
+        for key, value in [('n', n), ('k', k), ('s', s), ('p', p)]:
+            page.locator(f'[data-field="{key}"]').fill(value)
+    expect(page.locator('[data-output]')).to_contain_text('4 × 4（窓の位置 1 / 16）')
+    page.locator('[data-next]').click()
+    expect(page.locator('[data-note]')).to_contain_text('(1, -1)')
+    for n, size in [('11', '7'), ('10', '6')]:
+        values(n=n, p='2')
+        expect(page.locator('[data-output]')).to_contain_text(f'{size} × {size}')
+    values(n='5', s='3', p='0')
+    page.locator('[data-next]').click()
+    expect(page.locator('[data-output]')).to_contain_text('1 × 1（窓の位置 1 / 1）')
+    values(n='12', k='1', s='1', p='2')
+    expect(page.locator('[data-output]')).to_contain_text('16 × 16')
+    values(p='0')
+    for _ in range(9):
+        page.locator('[data-next]').click()
+    expect(page.locator('[data-output]')).to_contain_text('3 × 3（窓の位置 1 / 9）')
+    values()
+    invalid = [(key, '') for key in ('n', 'k', 's', 'p')]
+    invalid += [('n', '4'), ('n', '13'), ('k', '0'), ('k', '4'),
+                ('s', '0'), ('s', '4'), ('p', '-1'), ('p', '3')]
+    invalid += [(key, '1.5' if key != 'n' else '7.5') for key in ('n', 'k', 's', 'p')]
+    for key, value in invalid:
+        field = page.locator(f'[data-field="{key}"]')
+        field.fill(value)
+        expect(field).to_have_value(value)
+        expect(field).to_have_attribute('aria-invalid', 'true')
+        expect(page.locator('[data-output]')).to_have_text('入力を確認してください。')
+        expect(page.locator('[data-next]')).to_be_disabled()
+        assert page.locator(root + ' svg rect').count() == 0
+        expect(page.locator(root + ' svg')).not_to_be_visible()
+        assert not re.search('Infinity|NaN', page.locator(root).inner_text())
+        contained(page, root)
+        values()
+        expect(page.locator('[data-output]')).to_contain_text('4 × 4（窓の位置 1 / 16）')
+        expect(page.locator('[data-next]')).to_be_enabled()
+        expect(page.locator(root + ' svg')).to_be_visible()
+        for field in page.locator(root + ' input').all():
+            expect(field).to_have_attribute('aria-invalid', 'false')
+        page.locator('[data-next]').click()
+        expect(page.locator('[data-output]')).to_contain_text('窓の位置 2 / 16')
+    # The final screenshot records the readable input guidance, not an invalid result.
+    page.locator('[data-field="n"]').fill('')
+    expect(page.locator('[data-output]')).to_have_text('入力を確認してください。')
+    contained(page, root)
+
+
+def adjacency(page, expect):
+    root = '[data-fe-adj-demo]'
+    # Check the table's own scroll port as well as the lesson boundary.
+    clipped = page.locator('.fe-adj-demo__matrix').evaluate('''table => {
+      const b = table.getBoundingClientRect();
+      return Array.from(table.querySelectorAll('button')).some(button => {
+        const r = button.getBoundingClientRect();
+        return r.left < b.left - 1 || r.right > b.right + 1;
+      }) || table.scrollWidth > table.clientWidth + 1;
+    }''')
+    assert not clipped, 'Adjacency controls should be visible without table scrolling'
+    readable = page.locator('.fe-adj-demo__matrix').evaluate('''table => {
+      const headers = Array.from(table.querySelectorAll('th')).filter(th => th.textContent.trim());
+      return headers.every(th => {
+        const range = document.createRange();
+        range.selectNodeContents(th);
+        return range.getClientRects().length === 1;
+      }) && (innerWidth > 520 || Array.from(table.querySelectorAll('button')).every(b => b.getBoundingClientRect().width >= 24));
+    }''')
+    assert readable, 'Short matrix labels should remain on one line; narrow-screen buttons must be at least 24px wide'
+
+    # This is a second consumer of fe-visualizer.js; the matrix and graph stay in sync.
+    for edge in ('12', '13', '24', '34'):
+        page.locator(f'[data-adj-edge="{edge}"]').first.press('Enter')
+        for button in page.locator(f'[data-adj-edge="{edge}"]').all():
+            expect(button).to_have_text('0')
+            expect(button).to_have_attribute('aria-pressed', 'false')
+        expect(page.locator(f'[data-graph-edge="{edge}"]')).to_have_class(re.compile(r'\bis-off\b'))
+    expect(page.locator('[data-adj-status]')).to_contain_text('辺はありません')
+    page.locator('[data-adj-edge="14"]').first.click()
+    expect(page.locator('[data-adj-status]')).to_contain_text('V1―V4')
+    page.locator('[data-adj-reset]').click()
+    for edge in ('12', '13', '24', '34'):
+        expect(page.locator(f'[data-graph-edge="{edge}"]')).not_to_have_class(re.compile(r'\bis-off\b'))
+    for edge in ('14', '23'):
+        expect(page.locator(f'[data-graph-edge="{edge}"]')).to_have_class(re.compile(r'\bis-off\b'))
+    contained(page, root)
+
+
 CHECKS = {'shared-exclusive-lock': lock, 'two-phase-commit': two_phase, 'disk-scheduling': disk,
-          'cpu-scheduling': cpu, 'confusion-matrix': matrix, 'attention': attention}
+          'cpu-scheduling': cpu, 'confusion-matrix': matrix, 'attention': attention,
+          'binary-search': binary_search, 'cnn-output-size': cnn, 'adjacency-matrix': adjacency}
 
 
 def run(args):
@@ -271,6 +395,8 @@ def run(args):
                         assert response and response.status == 200
                         expect(page.locator(registry[slug]['root'])).to_be_visible()
                         contained(page, registry[slug]['root'])
+                        if slug == 'cnn-output-size':
+                            page.locator(registry[slug]['root']).screenshot(path=str(args.artifacts / f'{slug}-{width}-initial.png'))
                         CHECKS[slug](page, expect)
                         assert not errors, errors
                         page.locator(registry[slug]['root']).screenshot(path=str(args.artifacts / f'{slug}-{width}.png'))
