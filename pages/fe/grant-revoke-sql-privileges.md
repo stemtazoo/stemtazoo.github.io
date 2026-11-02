@@ -3,12 +3,12 @@ layout: page
 title: GRANT文とREVOKE文とは？SQLの権限付与・取消しを整理【基本情報技術者試験】
 description: SQLのGRANT文とREVOKE文について、SELECT・INSERT・UPDATE・DELETEとの違い、ユーザーやロールへの権限付与・取消し、基本情報技術者試験での見分け方を初心者向けに整理します。
 permalink: /fe/grant-revoke-sql-privileges/
-tags: [fe, database, sql, security]
+tags: [fe, fe-technology, database, sql, security]
 fe_section: テクノロジ系
 fe_subsection: データベース
 fe_order: 40
 date: 2026-09-15
-last_modified_at: 2026-09-15
+last_modified_at: 2026-11-02
 ---
 
 ## まず結論

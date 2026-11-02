@@ -3,12 +3,12 @@ layout: page
 title: パスワードはなぜハッシュ値で保存する？認証時の比較方法【基本情報技術者試験】
 description: パスワード認証を、登録時にパスワードをハッシュ化して保存し、認証時に入力パスワードを同じ方法でハッシュ化して比較する流れで整理します。平文保存、圧縮、利用者IDのハッシュ化との違いもFE科目A向けに解説します。
 permalink: /fe/password-hash-authentication/
-tags: [fe, fe-security, authentication, hash]
+tags: [fe, fe-technology, authentication, hash]
 fe_section: 情報セキュリティ
 fe_subsection: 暗号と認証
 fe_order: 45
 date: 2026-08-24
-last_modified_at: 2026-10-25
+last_modified_at: 2026-11-02
 ---
 
 ## まず結論

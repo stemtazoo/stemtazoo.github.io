@@ -3,7 +3,7 @@ layout: page
 title: SoCとは？SiP・チップセット・マイクロコントローラとの違い【基本情報技術者試験】
 description: SoCの仕組みを、一つの半導体チップへシステム機能を集積する考え方から整理します。SiP、チップセット、マイクロコントローラ、マザーボードとの違いを比較し、基本情報技術者試験で選択肢を切る判断軸を解説します。
 permalink: /fe/soc/
-tags: [fe, technology, computer-architecture, semiconductor]
+tags: [fe, fe-technology, computer-architecture, semiconductor]
 fe_section: テクノロジ系
 fe_order: 45
 fe_subsection: コンピュータ構成要素

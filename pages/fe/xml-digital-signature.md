@@ -3,12 +3,12 @@ layout: page
 title: XML署名とは？部分署名・多重署名と3つの署名形式【基本情報技術者試験】
 description: XML署名を「XML文書全体だけでなく、特定の要素や複数の対象にも署名できる仕組み」として整理し、部分署名、多重署名、Detached・Enveloped・Envelopingの違いをFE試験向けに解説します。
 permalink: /fe/xml-digital-signature/
-tags: [fe, fe-security, cryptography-authentication]
+tags: [fe, fe-technology, cryptography-authentication]
 fe_section: 情報セキュリティ
 fe_subsection: 暗号と認証
 fe_order: 190
 date: 2026-08-04
-last_modified_at: 2026-09-27
+last_modified_at: 2026-11-02
 ---
 
 ## まず結論

@@ -3,7 +3,7 @@ layout: page
 title: 再帰関数とは？階乗の再帰式と終了条件の見抜き方【基本情報技術者試験】
 description: 再帰関数の基本を、階乗の再帰式を使って整理します。終了条件、引数が小さくなる意味、無限再帰の見抜き方を確認し、基本情報技術者試験の科目Aで式を切り分ける判断軸を身につけます。
 permalink: /fe/recursive-factorial/
-tags: [fe, technology, algorithm, recursion]
+tags: [fe, fe-technology, algorithm, recursion]
 fe_section: テクノロジ系
 fe_order: 111
 fe_subsection: アルゴリズムとプログラミング

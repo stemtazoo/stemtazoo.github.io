@@ -3,12 +3,12 @@ layout: page
 title: ドライブバイダウンロード攻撃とは？水飲み場攻撃との違い【基本情報技術者試験】
 description: ドライブバイダウンロード攻撃を「Web閲覧をきっかけに、利用者が気付かないうちにマルウェアを送り込む攻撃」と捉え、ランサムウェア・トロイの木馬・水飲み場攻撃との違いをFE科目Aの判断基準で整理します。
 permalink: /fe/drive-by-download/
-tags: [fe, fe-security, malware, web-security]
+tags: [fe, fe-technology, malware, web-security]
 fe_section: 情報セキュリティ
 fe_subsection: セキュリティ技術
 fe_order: 115
 date: 2026-09-23
-last_modified_at: 2026-10-04
+last_modified_at: 2026-11-02
 ---
 
 ## まず結論

@@ -3,12 +3,12 @@ layout: page
 title: システムインテグレータとは？アウトソーシング・SaaS・ASPとの違い【基本情報技術者試験】
 description: システムインテグレータの役割を、情報システムの企画・設計・構築・運用を一括して請け負う企業という視点から整理します。アウトソーシング、SaaS、ASPとの違いを比較し、基本情報技術者試験で選択肢を切る判断軸を解説します。
 permalink: /fe/system-integrator/
-tags: [fe, strategy, system-strategy, system-integration]
+tags: [fe, fe-strategy, system-strategy, system-integration]
 fe_section: ストラテジ系
 fe_subsection: システム戦略
 fe_order: 55
 date: 2026-08-07
-last_modified_at: 2026-09-01
+last_modified_at: 2026-11-02
 ---
 
 ## まず結論

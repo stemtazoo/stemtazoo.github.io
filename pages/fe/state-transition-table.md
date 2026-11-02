@@ -3,7 +3,7 @@ layout: page
 title: 状態遷移表とは？入力を順番に追って最後の状態を求める方法【基本情報技術者試験】
 description: 状態遷移表の読み方を、現在状態・入力・次状態の関係から整理します。表の1マスが何を意味するか、空欄の扱い、文字列検査、不合格状態の追い方、状態遷移図との違いを確認し、科目Aで選択肢を切る判断軸を身につけます。
 permalink: /fe/state-transition-table/
-tags: [fe, technology, basic-theory, state-transition]
+tags: [fe, fe-technology, basic-theory, state-transition]
 fe_section: テクノロジ系
 fe_order: 11
 fe_subsection: 基礎理論
