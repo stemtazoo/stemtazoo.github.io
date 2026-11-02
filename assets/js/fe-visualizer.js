@@ -137,6 +137,12 @@ document.addEventListener("DOMContentLoaded", () => {
     let right;
     let comparisons;
     let finished;
+    let paintTimer;
+
+    function clearPaintTimer() {
+      window.clearTimeout(paintTimer);
+      paintTimer = undefined;
+    }
 
     function paint(mid = null, found = false) {
       cells.forEach((cell, index) => {
@@ -153,6 +159,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function reset() {
+      clearPaintTimer();
       left = 0;
       right = values.length - 1;
       comparisons = 0;
@@ -167,6 +174,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function step() {
       if (finished || left > right) return;
+      clearPaintTimer();
 
       const mid = Math.floor((left + right) / 2);
       const value = values[mid];
@@ -192,7 +200,10 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       paint(mid);
-      window.setTimeout(() => paint(), 180);
+      paintTimer = window.setTimeout(() => {
+        paintTimer = undefined;
+        if (!finished) paint();
+      }, 180);
     }
 
     if (nextButton) nextButton.addEventListener("click", step);

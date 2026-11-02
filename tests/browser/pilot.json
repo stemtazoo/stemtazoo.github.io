@@ -40,5 +40,32 @@
       "text": "赤い 65%"
     },
     "url": "/gk/attention/"
+  },
+  "binary-search": {
+    "source": "pages/fe/binary-search.md",
+    "root": "[data-fe-binary-demo]",
+    "url": "/fe/binary-search/",
+    "static": {
+      "selector": "[data-fe-binary-demo] .fe-learning-demo__hint",
+      "text": "どちら側を捨てるか"
+    }
+  },
+  "cnn-output-size": {
+    "source": "pages/gk/cnn-output-size.md",
+    "root": "[data-gk-cnn-demo]",
+    "url": "/gk/cnn-output-size/",
+    "static": {
+      "selector": "[data-output]",
+      "text": "4 × 4"
+    }
+  },
+  "adjacency-matrix": {
+    "source": "pages/fe/adjacency-matrix.md",
+    "root": "[data-fe-adj-demo]",
+    "url": "/fe/adjacency-matrix/",
+    "static": {
+      "selector": "[data-adj-status]",
+      "text": "V1―V2"
+    }
   }
 }
