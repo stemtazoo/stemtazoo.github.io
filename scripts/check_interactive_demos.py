@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run the three pilot lessons against real Jekyll output in Chromium (CI)."""
+"""Run registered pilot lessons against real Jekyll output in Chromium (CI)."""
 from __future__ import annotations
 
 import argparse
@@ -26,6 +26,7 @@ def contained(page, root):
     result = page.locator(root).evaluate('''root => {
       const bounds = root.getBoundingClientRect();
       const overflow = Array.from(root.querySelectorAll('input,select,fieldset,button')).filter(el => {
+        if (el.closest('.fe-cpu-demo__scroll')) return false;
         const r = el.getBoundingClientRect();
         return r.width && (r.left < bounds.left - 1 || r.right > bounds.right + 1);
       }).map(el => el.id || el.textContent);
@@ -33,7 +34,7 @@ def contained(page, root):
     }''')
     assert not result['overflow'], f'Controls outside lesson: {result}'
     assert result['left'] >= -1 and result['right'] <= result['viewport'] + 1, result
-    if page.viewport_size['width'] <= 360:
+    if page.viewport_size['width'] <= 360 and page.locator(root + ' .study-demo__actions').count():
         layout = page.locator(root + ' .study-demo__actions').evaluate('''group => {
           const buttons = Array.from(group.querySelectorAll('button')).map(b => b.getBoundingClientRect());
           return buttons.every((b, i) => !i || b.top >= buttons[i-1].bottom - 1);
@@ -166,7 +167,68 @@ def disk(page, expect):
     contained(page, root)
 
 
-CHECKS = {'shared-exclusive-lock': lock, 'two-phase-commit': two_phase, 'disk-scheduling': disk}
+def cpu(page, expect):
+    for method, task in [('fcfs', 'A'), ('sjf', 'B'), ('priority', 'C'), ('rr', 'A')]:
+        page.locator('#fe-cpu-kind').select_option(method)
+        page.locator(f'input[name="fe-cpu-prediction"][value="{task}"]').check()
+        page.locator('#fe-cpu-next').click()
+        expect(page.locator('#fe-cpu-feedback')).to_contain_text('正解')
+        expect(page.locator('#fe-cpu-timeline [data-task]').first).to_have_attribute('data-task', task)
+        page.locator('#fe-cpu-prev').click()
+        expect(page.locator('#fe-cpu-prev')).to_be_disabled()
+        page.locator('#fe-cpu-all').click()
+        expect(page.locator('#fe-cpu-status')).to_contain_text('時刻10')
+        expect(page.locator('#fe-cpu-next')).to_be_disabled()
+        page.locator('#fe-cpu-reset').click()
+    page.locator('#fe-cpu-quantum').select_option('1')
+    page.locator('#fe-cpu-next').click()
+    page.locator('#fe-cpu-next').click()
+    assert page.locator('#fe-cpu-timeline [data-task]').evaluate_all('es=>es.map(e=>e.dataset.task)') == ['A', 'B']
+    page.locator('#fe-cpu-reset').click()
+    contained(page, '#fe-cpu-demo')
+
+
+def matrix(page, expect):
+    # Root containment alone misses fields hidden by the table's own scroll port.
+    clipped = page.locator('.gk-matrix-guided').evaluate('''table => {
+      const b = table.getBoundingClientRect();
+      return Array.from(table.querySelectorAll('label,input')).filter(el => {
+        const r = el.getBoundingClientRect();
+        return r.left < b.left - 1 || r.right > b.right + 1 || el.scrollWidth > el.clientWidth + 1;
+      }).map(el => el.textContent || el.dataset);
+    }''')
+    assert not clipped, f'Matrix fields or labels clipped: {clipped}'
+    page.locator('[data-fn]').fill('12')
+    expect(page.locator('[data-results]')).to_contain_text('Recall 40.0%')
+    expect(page.locator('[data-results]')).to_contain_text('Precision 80.0%')
+    page.locator('[data-fn]').fill('2')
+    page.locator('[data-fp]').fill('12')
+    expect(page.locator('[data-results]')).to_contain_text('Precision 40.0%')
+    expect(page.locator('[data-results]')).to_contain_text('Recall 80.0%')
+    for key in ('tp', 'fn', 'fp', 'tn'):
+        page.locator(f'[data-{key}]').fill('0')
+    expect(page.locator('[data-results]')).to_have_text('Precision — ／ Recall — ／ Accuracy — ／ F1 —')
+    page.locator('[data-tp]').fill('')
+    expect(page.locator('[data-results]')).to_contain_text('入力を確認')
+    for key, value in [('tp', '8'), ('fn', '2'), ('fp', '2'), ('tn', '88')]:
+        page.locator(f'[data-{key}]').fill(value)
+    contained(page, '[data-gk-matrix]')
+
+
+def attention(page, expect):
+    # A second consumer of gk-interactive-pilot.css must retain its own layout.
+    for query, weights in [('0', [10, 10, 20, 60]), ('2', [5, 10, 70, 15]), ('3', [5, 10, 65, 20])]:
+        page.locator('[data-gk-attention] select').select_option(query)
+        bars = page.locator('.gk-attention-bar')
+        assert bars.count() == 4
+        for i, weight in enumerate(weights):
+            expect(bars.nth(i)).to_contain_text(f'{weight}%')
+        expect(page.locator('[data-summary]')).to_contain_text('QとKで重みを決め')
+        contained(page, '[data-gk-attention]')
+
+
+CHECKS = {'shared-exclusive-lock': lock, 'two-phase-commit': two_phase, 'disk-scheduling': disk,
+          'cpu-scheduling': cpu, 'confusion-matrix': matrix, 'attention': attention}
 
 
 def run(args):
@@ -192,7 +254,8 @@ def run(args):
             for slug in plan['pages']:
                 if slug not in CHECKS or slug not in registry:
                     raise ValueError(f'Unknown pilot: {slug}')
-                if not (args.site / 'fe' / slug / 'index.html').is_file():
+                url = registry[slug]['url']
+                if not (args.site / url.strip('/') / 'index.html').is_file():
                     raise FileNotFoundError(f'Missing rendered page: {slug}')
                 for width in WIDTHS:
                     record = {'page': slug, 'width': width, 'status': 'failed'}
@@ -204,7 +267,7 @@ def run(args):
                     errors = []
                     page.on('pageerror', lambda error: errors.append(str(error)))
                     try:
-                        response = page.goto(f'http://127.0.0.1:{server.server_port}/fe/{slug}/', wait_until='load')
+                        response = page.goto(f'http://127.0.0.1:{server.server_port}{url}', wait_until='load')
                         assert response and response.status == 200
                         expect(page.locator(registry[slug]['root'])).to_be_visible()
                         contained(page, registry[slug]['root'])
@@ -226,9 +289,12 @@ def run(args):
                 context.route('**/*', lambda route: route.continue_() if urlsplit(route.request.url).hostname == '127.0.0.1' else route.abort())
                 page = context.new_page()
                 try:
-                    page.goto(f'http://127.0.0.1:{server.server_port}/fe/{slug}/', wait_until='load')
-                    expect(page.locator('noscript')).to_be_visible()
-                    expect(page.locator('noscript')).not_to_be_empty()
+                    page.goto(f'http://127.0.0.1:{server.server_port}{url}', wait_until='load')
+                    fallback = registry[slug].get('static', {'selector': 'noscript'})
+                    expect(page.locator(fallback['selector'])).to_be_visible()
+                    expect(page.locator(fallback['selector'])).not_to_be_empty()
+                    if 'text' in fallback:
+                        expect(page.locator(fallback['selector'])).to_contain_text(fallback['text'])
                     records.append({'page': slug, 'width': 390, 'mode': 'javascript-disabled', 'status': 'passed'})
                 except Exception:
                     records.append({'page': slug, 'mode': 'javascript-disabled', 'status': 'failed', 'error': traceback.format_exc()})

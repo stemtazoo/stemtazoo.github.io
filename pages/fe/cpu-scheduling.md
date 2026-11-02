@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: オペレーティングシステム
 fe_order: 50
 date: 2026-08-27
-last_modified_at: 2026-11-01
+last_modified_at: 2026-11-02
 related_articles:
   - /fe/task-scheduling/
   - /fe/preemptive-scheduling/
@@ -106,8 +106,9 @@ CPU中心：      CPU CPU CPU       CPU CPU CPU
 
 この教材ではCPUは1個、各タスクのCPU処理は1回だけ、I/O待ち・切替え時間・エージングは扱いません。FCFS・SJF・優先度は**非プリエンプティブ**（実行中は完了まで継続）、ラウンドロビンだけタイムクォンタムで交代します。**優先度は数字が小さいほど高い**とします。同時刻の到着はA→B→C、同順位では到着時刻→A/B/Cの順で決めます。ラウンドロビンでは、時刻境界で新たに到着したタスクを待ち行列に追加してから、時間切れのタスクを末尾へ戻します。
 
-<div class="fe-cpu-demo" id="fe-cpu-demo">
-  <div class="fe-cpu-demo__controls">
+{% include study_demo_assets.html %}
+<div class="fe-cpu-demo study-demo" id="fe-cpu-demo">
+  <div class="fe-cpu-demo__controls study-demo__controls">
     <label>方式
       <select id="fe-cpu-kind">
         <option value="fcfs">到着順（FCFS）</option>
@@ -138,7 +139,7 @@ CPU中心：      CPU CPU CPU       CPU CPU CPU
     <label><input type="radio" name="fe-cpu-prediction" value="C">C</label>
     <label><input type="radio" name="fe-cpu-prediction" value="-">待機</label>
   </fieldset>
-  <div class="fe-cpu-demo__buttons">
+  <div class="fe-cpu-demo__buttons study-demo__actions">
     <button type="button" id="fe-cpu-next">1単位進める</button>
     <button type="button" id="fe-cpu-prev">1単位戻る</button>
     <button type="button" id="fe-cpu-reset">最初から</button>

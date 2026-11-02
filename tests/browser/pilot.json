@@ -1,5 +1,44 @@
 {
-  "shared-exclusive-lock": {"source": "pages/fe/shared-exclusive-lock.md", "root": "#fe-lock-compat-demo"},
-  "two-phase-commit": {"source": "pages/fe/two-phase-commit.md", "root": "#fe-2pc-demo"},
-  "disk-scheduling": {"source": "pages/fe/disk-scheduling.md", "root": "#fe-disk-demo"}
+  "shared-exclusive-lock": {
+    "source": "pages/fe/shared-exclusive-lock.md",
+    "root": "#fe-lock-compat-demo",
+    "url": "/fe/shared-exclusive-lock/"
+  },
+  "two-phase-commit": {
+    "source": "pages/fe/two-phase-commit.md",
+    "root": "#fe-2pc-demo",
+    "url": "/fe/two-phase-commit/"
+  },
+  "disk-scheduling": {
+    "source": "pages/fe/disk-scheduling.md",
+    "root": "#fe-disk-demo",
+    "url": "/fe/disk-scheduling/"
+  },
+  "cpu-scheduling": {
+    "source": "pages/fe/cpu-scheduling.md",
+    "root": "#fe-cpu-demo",
+    "static": {
+      "selector": ".fe-cpu-demo__note",
+      "text": "待ち時間 = 完了時刻"
+    },
+    "url": "/fe/cpu-scheduling/"
+  },
+  "confusion-matrix": {
+    "source": "pages/gk/confusion-matrix.md",
+    "root": "[data-gk-matrix]",
+    "static": {
+      "selector": "[data-results]",
+      "text": "Recall 80.0%"
+    },
+    "url": "/gk/confusion-matrix/"
+  },
+  "attention": {
+    "source": "pages/gk/attention.md",
+    "root": "[data-gk-attention]",
+    "static": {
+      "selector": "[data-weights]",
+      "text": "赤い 65%"
+    },
+    "url": "/gk/attention/"
+  }
 }

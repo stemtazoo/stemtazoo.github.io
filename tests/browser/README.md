@@ -1,12 +1,12 @@
 # Interactive lesson pilot
 
-This pilot covers only the three FE pages registered in `pilot.json`.
+This pilot covers only the six FE/GK pages registered in `pilot.json`.
 The canonical teaching and verification policy remains in
 [interactive-learning-rules.md](../../docs/agent/interactive-learning-rules.md).
 
 ## Shared UI
 
-The three pages opt in with `study-demo`, load `study_demo_assets.html` before
+Four FE pages opt in with `study-demo`, load `study_demo_assets.html` before
 article JavaScript, and use `StudyDemoUI.selectChoice` / `nextAction`.
 The synchronous small script is intentional: inline article initialization must
 not race a deferred dependency. The helper owns selection presentation and guide
@@ -27,9 +27,9 @@ text audit again. Chromium is the initial pilot browser, not a mobile-device lab
 External requests are blocked; local theme assets and article scripts are tested.
 
 A changed registered article selects its own scenario. Shared assets, layouts,
-includes, build configuration and test-harness changes select all three.
+includes, build configuration and test-harness changes select all registered pages.
 Other article changes are explicitly listed as unregistered, not counted as passes.
-Manual workflow dispatch runs all three. A missing page, dependency, browser or
+Manual workflow dispatch runs all registered pages. A missing page, dependency, browser or
 failed operation is a failed check, not a skipped success.
 
 ```sh
@@ -43,6 +43,13 @@ python scripts/check_interactive_demos.py --selection artifacts/interactive-demo
 The tests assert containment of controls inside the lesson and viewport, actual
 computed selected colors, state changes, next-action guides, reset/back, final
 boundaries, expected outcomes and JavaScript-disabled static explanations.
+CPU condition tables intentionally scroll; their numeric fields are excluded
+from root containment, while the main controls and action buttons are checked.
+The GK matrix additionally checks its own table bounds and label text clipping.
+With scripting off, the original three check `noscript`; CPU checks its static
+waiting-time explanation, matrix its initial metrics, and Attention its initial
+weights. These checks do not assert that interactive controls work without JS.
+
 They exercise native keyboard activation in the lock example, not every keyboard
 path or screen-reader behavior. Intentional table/history scrolling is allowed.
 
@@ -59,7 +66,8 @@ must not become a claimed pass. Human review remains necessary for instruction
 clarity, prediction/state proximity, actual mobile browsers, screen readers and
 post-merge deployment. Existing update audits remain a follow-up safeguard.
 
-Initial scope: the three repaired articles only. Observe this pilot before a
+Scope: three original FE repairs, CPU scheduling, GK confusion matrix, and
+Attention as a second consumer of the GK stylesheet. Observe this pilot before a
 sitewide migration. The existing teaching rules do not make browser automation a
 universal prerequisite for adding useful interactive explanations.
 
