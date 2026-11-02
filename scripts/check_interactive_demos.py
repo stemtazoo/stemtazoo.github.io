@@ -294,11 +294,13 @@ def cnn(page, expect):
         expect(page.locator('[data-output]')).to_have_text('入力を確認してください。')
         expect(page.locator('[data-next]')).to_be_disabled()
         assert page.locator(root + ' svg rect').count() == 0
+        expect(page.locator(root + ' svg')).not_to_be_visible()
         assert not re.search('Infinity|NaN', page.locator(root).inner_text())
         contained(page, root)
         values()
         expect(page.locator('[data-output]')).to_contain_text('4 × 4（窓の位置 1 / 16）')
         expect(page.locator('[data-next]')).to_be_enabled()
+        expect(page.locator(root + ' svg')).to_be_visible()
         for field in page.locator(root + ' input').all():
             expect(field).to_have_attribute('aria-invalid', 'false')
         page.locator('[data-next]').click()

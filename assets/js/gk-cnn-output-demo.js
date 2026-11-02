@@ -26,10 +26,12 @@ document.querySelectorAll('[data-gk-cnn-demo]').forEach(root => {
     next.disabled = !values;
     if (!values) {
       svg.replaceChildren();
+      svg.style.display = 'none';
       out.textContent = '入力を確認してください。';
       note.textContent = '入力サイズ5〜12、カーネル1〜3、ストライド1〜3、パディング0〜2の整数を入力してください（空欄不可）。';
       return;
     }
+    svg.style.removeProperty('display');
     const [n, k, s, p] = values;
     const size = n + 2 * p;
     const count = Math.floor((size - k) / s) + 1;
