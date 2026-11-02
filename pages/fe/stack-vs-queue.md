@@ -127,6 +127,7 @@ dequeue() → C
 <link rel="stylesheet" href="{{ '/assets/css/fe-visualizer.css' | relative_url }}">
 
 <div class="fe-learning-demo fe-stack-queue-demo" data-fe-stack-queue-demo>
+  <p class="fe-stack-queue-demo__step"><strong>① まず両方の中身を見る</strong><span>左右の取り出し口と値の並びを比べます。</span></p>
   <p class="fe-learning-demo__title">同じ操作をスタックとキューで比較</p>
   <p class="fe-learning-demo__lead">両方に同じ値を追加し、両方から1個ずつ取り出します。表示は左から右へ読みます。</p>
   <div class="fe-stack-queue-demo__panels">
@@ -141,7 +142,7 @@ dequeue() → C
       <p>直前に取り出した値：<strong data-sq-queue-out>まだありません</strong></p>
     </section>
   </div>
-  <p><strong>取り出す前に予想：</strong>スタックとキュー、それぞれ次に出る値を選んでみましょう。</p>
+  <p class="fe-stack-queue-demo__step"><strong>② 次の値を予想する</strong><span>スタックとキューそれぞれで、次に出る値を選びましょう。</span></p>
   <div class="fe-learning-demo__controls">
     <label>スタックの予想
       <select data-sq-guess-stack aria-label="スタックの取り出し予想">
@@ -156,15 +157,23 @@ dequeue() → C
     <button type="button" class="fe-learning-demo__button" data-sq-check disabled>予想を確認</button>
   </div>
   <p data-sq-feedback role="status" aria-live="polite">予想は任意です。確認してから取り出してみましょう。</p>
+  <p class="fe-stack-queue-demo__step"><strong>③ 同じ操作を実行する</strong><span>取り出す → 4を追加 → 取り出す、の順に操作します。</span></p>
   <div class="fe-learning-demo__controls">
     <button type="button" class="fe-learning-demo__button" data-sq-add disabled>4を追加</button>
     <button type="button" class="fe-learning-demo__button" data-sq-remove disabled>取り出す</button>
     <button type="button" class="fe-learning-demo__button" data-sq-reset disabled>最初に戻す</button>
   </div>
+  <p class="fe-stack-queue-demo__step"><strong>④ 残った値と取り出した値を確認</strong><span>①の状態と見比べ、追加した4が先に出るか確認します。</span></p>
   <p class="fe-learning-demo__result" data-sq-status role="status" aria-live="polite" aria-atomic="true">1、2、3の順に入れた状態です。</p>
   <p class="fe-learning-demo__hint">この教材では見やすさのため、中に置ける値を各6個までにしています。データ構造そのものの上限ではありません。</p>
   <noscript><p>操作にはJavaScriptが必要です。下の表でも同じ操作の結果を確認できます。</p></noscript>
 </div>
+
+<style>
+.fe-stack-queue-demo__step{display:flex;flex-wrap:wrap;align-items:baseline;gap:.25rem .65rem;margin:1rem 0 .5rem;padding:.4rem 0;border-bottom:1px solid #94a3b8;line-height:1.5}
+.fe-stack-queue-demo__step strong{font-size:1rem}
+.fe-stack-queue-demo__step span{font-size:.9rem}
+</style>
 
 <script src="{{ '/assets/js/fe-visualizer.js' | relative_url }}" defer></script>
 

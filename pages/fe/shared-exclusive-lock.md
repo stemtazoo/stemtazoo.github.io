@@ -79,6 +79,7 @@ last_modified_at: 2026-11-02
 {% include study_demo_assets.html %}
 
 <div class="fe-lock-compat-demo study-demo" id="fe-lock-compat-demo">
+  <p class="fe-lock-compat-demo__step"><strong>① 条件を選ぶ</strong><span>下の4パターンのボタンからも選べます。</span></p>
   <div class="fe-lock-compat-demo__controls study-demo__controls">
     <label for="fe-lock-t1">T1が先に取得するロック
       <select id="fe-lock-t1">
@@ -99,17 +100,20 @@ last_modified_at: 2026-11-02
     <button type="button" data-lock-case="XS" data-demo-choice="XS">X＋S</button>
     <button type="button" data-lock-case="XX" data-demo-choice="XX">X＋X</button>
   </div>
+  <p class="fe-lock-compat-demo__step"><strong>② 結果を予想する</strong><span>T1のロック保持中にT2が取得できるか考えます。</span></p>
   <fieldset class="fe-lock-compat-demo__prediction">
     <legend>予想：T1が保持中、T2は取得できる？</legend>
     <label><input type="radio" name="fe-lock-guess" value="yes">取得できる</label>
     <label><input type="radio" name="fe-lock-guess" value="no">待機する</label>
   </fieldset>
+  <p class="fe-lock-compat-demo__step"><strong>③ 操作して確かめる</strong><span>1操作ずつ進め、T1・T2の状態を確認します。</span></p>
   <p class="study-demo__guide" id="fe-lock-guide" role="status" aria-live="polite">予想したら、すぐ下の「T1がロック取得」を押してください。予想を選ばずに進めることもできます。</p>
   <div class="fe-lock-compat-demo__actions study-demo__actions">
     <button type="button" id="fe-lock-next" aria-describedby="fe-lock-guide">T1がロック取得</button>
     <button type="button" id="fe-lock-prev">1操作戻る</button>
     <button type="button" id="fe-lock-reset">最初から</button>
   </div>
+  <p class="fe-lock-compat-demo__step"><strong>④ 状態と理由を確認する</strong><span>実行結果と操作履歴を見比べましょう。</span></p>
   <div class="fe-lock-compat-demo__states" aria-label="ロックの現在状態">
     <section><h4>トランザクションT1</h4><p id="fe-lock-state-t1">まだロックを取得していません。</p></section>
     <section><h4>トランザクションT2</h4><p id="fe-lock-state-t2">まだロックを要求していません。</p></section>
@@ -146,6 +150,9 @@ last_modified_at: 2026-11-02
 .fe-lock-compat-demo table{border-collapse:collapse;width:100%;margin:.8rem 0}
 .fe-lock-compat-demo th,.fe-lock-compat-demo td{border:1px solid #94a3b8;padding:.4rem;text-align:left}
 .fe-lock-compat-demo__note{font-size:.9rem}
+.fe-lock-compat-demo__step{display:flex;flex-wrap:wrap;align-items:baseline;gap:.25rem .65rem;margin:1.1rem 0 .5rem;padding:.4rem 0;border-bottom:1px solid #94a3b8;line-height:1.5}
+.fe-lock-compat-demo__step strong{font-size:1rem}
+.fe-lock-compat-demo__step span{font-size:.9rem}
 .fe-lock-compat-demo :focus-visible{outline:3px solid #2563eb;outline-offset:2px}
 @media(max-width:560px){.fe-lock-compat-demo{padding:.65rem}.fe-lock-compat-demo__controls,.fe-lock-compat-demo__states{grid-template-columns:1fr}.fe-lock-compat-demo__presets{grid-template-columns:repeat(2,minmax(0,1fr))}.fe-lock-compat-demo__actions button{flex:1 1 43%}}
 </style>
