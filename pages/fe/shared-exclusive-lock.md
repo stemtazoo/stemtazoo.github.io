@@ -5,6 +5,7 @@ description: 共有ロックと専有ロックの違いを、読み取り・更�
 permalink: /fe/shared-exclusive-lock/
 tags: [fe, fe-technology, database]
 fe_section: テクノロジ系
+fe_order: 34
 fe_subsection: データベース
 date: 2026-07-27
 last_modified_at: 2026-11-02
