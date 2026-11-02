@@ -5,10 +5,10 @@ description: ソフトウェア開発の構成管理を、バージョン管理�
 permalink: /fe/configuration-management/
 tags: [fe, fe-technology, development-technology]
 fe_section: テクノロジ系
-fe_subsection: 開発技術
+fe_subsection: ソフトウェア開発管理技術
 fe_order: 70
 date: 2026-10-03
-last_modified_at: 2026-10-03
+last_modified_at: 2026-11-02
 ---
 
 ## まず結論
