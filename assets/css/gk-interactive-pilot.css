@@ -9,3 +9,9 @@
 .gk-pilot .gk-matrix-guided input{width:100%;min-width:0}
 .gk-pilot .gk-matrix-target{background:rgba(107,156,170,.13);outline:2px solid #658e9b;outline-offset:-2px}
 @media(max-width:480px){.gk-pilot .gk-matrix-guided th:first-child{width:3.5rem}.gk-pilot .gk-matrix-guided th,.gk-pilot .gk-matrix-guided td{padding:.3rem .2rem;font-size:.85rem}.gk-pilot .gk-matrix-guided input{font-size:1rem}}
+/* Override the article-wide scrollable-table rule only for this narrow guided matrix.
+   A zero-minimum label track also lets the number fields shrink with their cells. */
+@media(max-width:480px){
+  .gk-pilot .gk-matrix-guided{display:table;white-space:normal}
+  .gk-pilot .gk-matrix-guided label{grid-template-columns:minmax(0,1fr)}
+}
