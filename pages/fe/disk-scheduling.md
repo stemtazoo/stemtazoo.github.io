@@ -101,8 +101,10 @@ SCAN方式は、**エレベータ**をイメージすると理解しやすい方
 
 この教材では**全要求が最初から待機している**とし、同じシリンダ番号の要求はまとめて1件扱い、SSTFの距離が同じ場合は**小さいシリンダ番号を優先**します。SCANの例は、本文と同じく「進行方向に要求がなくなったら最後の要求位置で反転する」という**LOOK型の折返し条件**です。ディスクの物理端まで移動する厳密なSCANとは区別してください。移動距離はシリンダ番号の差の絶対値で計算します。
 
-<div id="fe-disk-demo" class="fe-disk-demo">
-  <div class="fe-disk-demo__controls">
+{% include study_demo_assets.html %}
+
+<div id="fe-disk-demo" class="fe-disk-demo study-demo">
+  <div class="fe-disk-demo__controls study-demo__controls">
     <label for="fe-disk-method">方式
       <select id="fe-disk-method">
         <option value="fcfs">FCFS：要求順</option>
@@ -128,7 +130,8 @@ SCAN方式は、**エレベータ**をイメージすると理解しやすい方
     <label for="fe-disk-guess">番号を入力（0〜199）</label>
     <input id="fe-disk-guess" type="number" min="0" max="199" step="1" placeholder="例：120">
   </fieldset>
-  <div class="fe-disk-demo__buttons">
+  <p id="fe-disk-guide" class="study-demo__guide" role="status" aria-live="polite">番号を予想したら、すぐ下の「1要求進める」を押してください。予想せずに進めることもできます。</p>
+  <div class="fe-disk-demo__buttons study-demo__actions">
     <button type="button" id="fe-disk-next">1要求進める</button>
     <button type="button" id="fe-disk-prev">1要求戻る</button>
     <button type="button" id="fe-disk-all">最後まで実行</button>
@@ -158,11 +161,10 @@ SCAN方式は、**エレベータ**をイメージすると理解しやすい方
 <style>
 .fe-disk-demo{border:1px solid #94a3b8;border-radius:12px;padding:1rem;margin:1.2rem 0}
 .fe-disk-demo__controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem}
-.fe-disk-demo__controls label{display:flex;flex-direction:column;gap:.3rem;min-width:0}
-.fe-disk-demo__controls input,.fe-disk-demo__controls select{width:100%}
+.fe-disk-demo__controls label{display:flex;flex-direction:column;gap:.3rem}
 .fe-disk-demo input,.fe-disk-demo select{min-height:2.35rem;max-width:100%;min-width:0;box-sizing:border-box;padding:.45rem;border:1px solid #64748b;border-radius:6px;background:var(--background-color,#fff);color:var(--text-color,#172033)}
-.fe-disk-demo__prediction{min-width:0;border:1px solid #94a3b8;border-radius:8px;margin:1rem 0;padding:.65rem;display:flex;gap:.5rem;flex-wrap:wrap;align-items:center}
-.fe-disk-demo__prediction legend{font-weight:700;max-width:100%;overflow-wrap:anywhere}
+.fe-disk-demo__prediction{border:1px solid #94a3b8;border-radius:8px;margin:1rem 0;padding:.65rem;display:flex;gap:.5rem;flex-wrap:wrap;align-items:center}
+.fe-disk-demo__prediction legend{font-weight:700}
 .fe-disk-demo__prediction input{width:6rem}
 .fe-disk-demo__buttons{display:flex;gap:.5rem;flex-wrap:wrap}
 .fe-disk-demo button{padding:.5rem .75rem;border-radius:6px;border:1px solid #64748b;background:#e2e8f0;color:#172033;cursor:pointer}
@@ -258,6 +260,10 @@ SCAN方式は、**エレベータ**をイメージすると理解しやすい方
     if(!previous.length)routeEl.textContent="有効な要求列を入力してください。";
     $("fe-disk-pending").textContent=data?"未処理："+(trace.slice(step).join(", ")||"なし"):"未処理：入力エラー";
     $("fe-disk-feedback").textContent=feedback;
+    StudyDemoUI.nextAction($("fe-disk-next"),$("fe-disk-guide"),!data?
+      "入力内容を修正してから進めてください。":step>=trace.length?
+      "全要求を処理しました。「最初から」で同じ設定を試すか、方式を変えて比べてください。":
+      "番号を予想したら、すぐ下の「1要求進める」を押してください。予想せずに進めることもできます。");
     $("fe-disk-prev").disabled=step===0;
     $("fe-disk-next").disabled=!data||step>=trace.length;
     $("fe-disk-all").disabled=!data||step>=trace.length;

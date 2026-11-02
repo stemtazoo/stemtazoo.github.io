@@ -1,0 +1,5 @@
+{
+  "shared-exclusive-lock": {"source": "pages/fe/shared-exclusive-lock.md", "root": "#fe-lock-compat-demo"},
+  "two-phase-commit": {"source": "pages/fe/two-phase-commit.md", "root": "#fe-2pc-demo"},
+  "disk-scheduling": {"source": "pages/fe/disk-scheduling.md", "root": "#fe-disk-demo"}
+}

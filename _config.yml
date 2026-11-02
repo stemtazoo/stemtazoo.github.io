@@ -18,6 +18,7 @@ exclude:
   - artifacts/
   - docs/agent/
   - internal/
+  - tests/browser/
 
 # Include well-known discovery files for static-site agents.
 include:

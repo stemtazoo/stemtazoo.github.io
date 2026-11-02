@@ -1,0 +1,34 @@
+/* Opt-in controls shared by the three pilot teaching aids. */
+.study-demo input,
+.study-demo select,
+.study-demo fieldset {
+  box-sizing: border-box;
+  min-width: 0;
+  max-width: 100%;
+}
+.study-demo__controls label { min-width: 0; }
+.study-demo__controls input,
+.study-demo__controls select { width: 100%; }
+.study-demo legend { max-width: 100%; overflow-wrap: anywhere; }
+.study-demo [data-demo-choice][aria-pressed="true"] {
+  background: #1e40af;
+  color: #fff;
+  border-color: #1e40af;
+  font-weight: 700;
+  box-shadow: inset 0 0 0 2px #fff;
+}
+.study-demo [data-demo-choice][aria-pressed="true"]::after {
+  content: "選択中";
+  display: block;
+  font-size: .8em;
+}
+.study-demo .study-demo__guide {
+  border-left: 4px solid #2563eb;
+  padding: .5rem .65rem;
+  margin: .8rem 0;
+  font-weight: 700;
+}
+.study-demo :focus-visible { outline: 3px solid #2563eb; outline-offset: 2px; }
+@media (max-width: 360px) {
+  .study-demo .study-demo__actions button { flex: 1 1 100%; }
+}
