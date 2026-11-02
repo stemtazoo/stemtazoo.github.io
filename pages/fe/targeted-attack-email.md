@@ -3,12 +3,12 @@ layout: page
 title: 標的型攻撃メールとは？フィッシング・スパム・架空請求との違い【基本情報技術者試験】
 description: 標的型攻撃メールを「特定の相手に合わせた件名・本文で信用させる攻撃」として整理し、フィッシング、スパム、架空請求との違いを、誰を狙うか・何をさせるかという判断軸で切り分けます。
 permalink: /fe/targeted-attack-email/
-tags: [fe, fe-security, social-engineering, phishing]
+tags: [fe, fe-technology, social-engineering, phishing]
 fe_section: 情報セキュリティ
 fe_subsection: セキュリティ技術
 fe_order: 100
 date: 2026-08-30
-last_modified_at: 2026-08-30
+last_modified_at: 2026-11-02
 ---
 
 ## まず結論
