@@ -5,9 +5,10 @@ description: SWOT分析を、強み・弱み・機会・脅威の4要素と、�
 permalink: /fe/swot-analysis/
 tags: [fe, fe-strategy, business-strategy]
 fe_section: ストラテジ系
+fe_order: 90
 fe_subsection: 経営戦略マネジメント
 date: 2026-07-27
-last_modified_at: 2026-09-20
+last_modified_at: 2026-11-02
 ---
 
 ## まず結論
