@@ -5,8 +5,9 @@ description: ウォーターフォール型開発で、要求定義や外部設�
 permalink: /fe/waterfall-defect-correction-cost/
 tags: [fe, fe-management, system-development, waterfall]
 fe_section: マネジメント系
+fe_order: 46
 fe_subsection: システム開発技術
-last_modified_at: 2026-07-28
+last_modified_at: 2026-11-02
 ---
 
 ## まず結論
