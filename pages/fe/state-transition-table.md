@@ -5,8 +5,9 @@ description: 状態遷移表の読み方を、現在状態・入力・次状態�
 permalink: /fe/state-transition-table/
 tags: [fe, technology, basic-theory, state-transition]
 fe_section: テクノロジ系
+fe_order: 11
 fe_subsection: 基礎理論
-last_modified_at: 2026-09-20
+last_modified_at: 2026-11-02
 ---
 
 ## まず結論
