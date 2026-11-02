@@ -311,6 +311,15 @@ def cnn(page, expect):
 
 def adjacency(page, expect):
     root = '[data-fe-adj-demo]'
+    # Check the table's own scroll port as well as the lesson boundary.
+    clipped = page.locator('.fe-adj-demo__matrix').evaluate('''table => {
+      const b = table.getBoundingClientRect();
+      return Array.from(table.querySelectorAll('button')).some(button => {
+        const r = button.getBoundingClientRect();
+        return r.left < b.left - 1 || r.right > b.right + 1;
+      }) || table.scrollWidth > table.clientWidth + 1;
+    }''')
+    assert not clipped, 'Adjacency controls should be visible without table scrolling'
     # This is a second consumer of fe-visualizer.js; the matrix and graph stay in sync.
     for edge in ('12', '13', '24', '34'):
         page.locator(f'[data-adj-edge="{edge}"]').first.press('Enter')
