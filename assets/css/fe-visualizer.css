@@ -1132,6 +1132,10 @@
     table-layout: fixed;
     white-space: normal;
   }
+  .fe-learning-demo .fe-adj-demo__matrix th,
+  .fe-learning-demo .fe-adj-demo__matrix td {
+    padding: .25rem;
+  }
   .fe-adj-demo__matrix button {
     box-sizing: border-box;
     min-width: 0;

@@ -322,6 +322,16 @@ def adjacency(page, expect):
       }) || table.scrollWidth > table.clientWidth + 1;
     }''')
     assert not clipped, 'Adjacency controls should be visible without table scrolling'
+    readable = page.locator('.fe-adj-demo__matrix').evaluate('''table => {
+      const headers = Array.from(table.querySelectorAll('th')).filter(th => th.textContent.trim());
+      return headers.every(th => {
+        const range = document.createRange();
+        range.selectNodeContents(th);
+        return range.getClientRects().length === 1;
+      }) && Array.from(table.querySelectorAll('button')).every(b => b.getBoundingClientRect().width >= 24);
+    }''')
+    assert readable, 'Short matrix labels should remain on one line and buttons must be at least 24px wide'
+
     # This is a second consumer of fe-visualizer.js; the matrix and graph stay in sync.
     for edge in ('12', '13', '24', '34'):
         page.locator(f'[data-adj-edge="{edge}"]').first.press('Enter')
