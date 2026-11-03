@@ -1,0 +1,25 @@
+/* Scope all visual choices to the ER learning aid. */
+.fe-er-demo{border:1px solid #94a3b8;border-radius:12px;padding:1rem;margin:1.3rem 0;max-width:100%;box-sizing:border-box}
+.fe-er-demo *{box-sizing:border-box}
+.fe-er-demo__step{margin:1rem 0 .55rem;border-bottom:1px solid #cbd5e1;padding:.35rem 0;font-weight:700;line-height:1.5}
+.fe-er-demo__controls{display:flex;flex-wrap:wrap;gap:.65rem}
+.fe-er-demo label{display:flex;min-width:0;flex:1 1 180px;flex-direction:column;gap:.25rem}
+.fe-er-demo select{width:100%;max-width:100%;background:#fff;color:#172033;border:1px solid #64748b;border-radius:7px;font:inherit;padding:.55rem}
+.fe-er-demo__canvas{background:#f8fafc;color:#172033;border:1px solid #cbd5e1;border-radius:9px;padding:.45rem;margin:.65rem 0}
+.fe-er-demo svg{display:block;width:100%;height:auto}
+.fe-er-demo__box{fill:#fff;stroke:#64748b;stroke-width:2}
+.fe-er-demo__heading{font-size:16px;font-weight:700;fill:#172033;text-anchor:middle}
+.fe-er-demo__instance{font-size:15px;fill:#172033;text-anchor:middle}
+.fe-er-demo__edge{stroke:#2563eb;stroke-width:3;stroke-linecap:round}
+.fe-er-demo__edge[data-hidden="true"]{display:none}
+.fe-er-demo__actions{display:flex;flex-wrap:wrap;gap:.5rem;margin:.6rem 0}
+.fe-er-demo button{font:inherit;border:1px solid #64748b;border-radius:7px;padding:.65rem .8rem;min-height:44px;background:#e2e8f0;color:#172033;cursor:pointer}
+.fe-er-demo button.fe-er-demo__primary{background:#1d4ed8;border-color:#1d4ed8;color:#fff}
+.fe-er-demo button:disabled{opacity:.45;cursor:not-allowed}
+.fe-er-demo :focus-visible{outline:3px solid #2563eb;outline-offset:3px}
+.fe-er-demo__result{background:#f1f5f9;color:#172033;border-radius:8px;padding:.75rem;margin:.7rem 0;overflow-wrap:anywhere}
+.fe-er-demo__result p{margin:.3rem 0}
+.fe-er-demo__result ol{margin:.35rem 0;padding-left:1.5rem}
+.fe-er-demo__feedback{font-weight:700}
+.fe-er-demo__note{color:#334155;font-size:.93rem}
+@media(max-width:480px){.fe-er-demo{padding:.65rem}.fe-er-demo label{flex-basis:100%}.fe-er-demo__actions button{flex:1 1 calc(50% - .5rem)}}
