@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: アルゴリズムとプログラミング
 fe_order: 50
 date: 2026-10-04
-last_modified_at: 2026-10-04
+last_modified_at: 2026-11-03
 ---
 
 ## まず結論
@@ -62,6 +62,81 @@ Aの左部分木はB・D・E・G、右部分木はC・Fです。Dは左の子G�
 | 後行順（postorder） | 左部分木 → 右部分木 → 根 | G → D → E → B → F → C → A |
 
 先行順は前順・行きがけ順、中間順は通りがけ順、後行順は後順・帰りがけ順とも呼ばれます。名称に迷ったら、問題文の処理順を確認します。
+
+### 触って覚える：同じ二分木を3つの順序で走査する
+
+**次に記録する節点はどれでしょうか？**
+
+1. 先行順・中間順・後行順から方式を選びます。
+2. 次に記録する節点を予想してから「次へ」を押します。
+3. 木の強調表示と記録順を確認し、方式を切り替えて比較します。
+
+**見るポイント：** 木の節点を通過していても、その時点で節点名を記録するとは限りません。中間順なら左部分木の記録が終わってから、後行順なら左右の部分木が終わってから根を記録します。
+
+<link rel="stylesheet" href="{{ '/assets/css/fe-tree-traversal.css' | relative_url }}">
+
+<div class="fe-tree-demo" id="fe-tree-traversal-demo" aria-label="二分木の走査を1ステップずつ確認する">
+  <p class="fe-tree-demo__step">① 走査方法を選ぶ</p>
+  <div class="fe-tree-demo__controls">
+    <label for="fe-tree-mode">比較する走査方法
+      <select id="fe-tree-mode">
+        <option value="pre">先行順：根 → 左 → 右</option>
+        <option value="inside">中間順：左 → 根 → 右</option>
+        <option value="post">後行順：左 → 右 → 根</option>
+      </select>
+    </label>
+  </div>
+  <div class="fe-tree-demo__visual">
+    <svg viewBox="0 0 420 270" role="img" aria-label="根A。Aの左がB、右がC。Bの左がD、右がE。Cの右がF。Dの左がG。">
+      <g aria-hidden="true">
+        <line class="fe-tree-demo__edge" data-tree-edge="A-B" x1="210" y1="31" x2="112" y2="93"/>
+        <line class="fe-tree-demo__edge" data-tree-edge="A-C" x1="210" y1="31" x2="308" y2="93"/>
+        <line class="fe-tree-demo__edge" data-tree-edge="B-D" x1="112" y1="93" x2="59" y2="159"/>
+        <line class="fe-tree-demo__edge" data-tree-edge="B-E" x1="112" y1="93" x2="165" y2="159"/>
+        <line class="fe-tree-demo__edge" data-tree-edge="C-F" x1="308" y1="93" x2="355" y2="159"/>
+        <line class="fe-tree-demo__edge" data-tree-edge="D-G" x1="59" y1="159" x2="28" y2="230"/>
+      </g>
+      <g class="fe-tree-demo__node" data-tree-node="A" data-state="idle"><circle cx="210" cy="31" r="22"/><text x="210" y="32">A</text></g>
+      <g class="fe-tree-demo__node" data-tree-node="B" data-state="idle"><circle cx="112" cy="93" r="22"/><text x="112" y="94">B</text></g>
+      <g class="fe-tree-demo__node" data-tree-node="C" data-state="idle"><circle cx="308" cy="93" r="22"/><text x="308" y="94">C</text></g>
+      <g class="fe-tree-demo__node" data-tree-node="D" data-state="idle"><circle cx="59" cy="159" r="22"/><text x="59" y="160">D</text></g>
+      <g class="fe-tree-demo__node" data-tree-node="E" data-state="idle"><circle cx="165" cy="159" r="22"/><text x="165" y="160">E</text></g>
+      <g class="fe-tree-demo__node" data-tree-node="F" data-state="idle"><circle cx="355" cy="159" r="22"/><text x="355" y="160">F</text></g>
+      <g class="fe-tree-demo__node" data-tree-node="G" data-state="idle"><circle cx="28" cy="230" r="22"/><text x="28" y="231">G</text></g>
+    </svg>
+    <div class="fe-tree-demo__key" aria-label="色の意味">
+      <span><span class="fe-tree-demo__swatch fe-tree-demo__swatch--current"></span>今回記録した節点</span>
+      <span><span class="fe-tree-demo__swatch fe-tree-demo__swatch--done"></span>記録済み</span>
+      <span><span class="fe-tree-demo__swatch fe-tree-demo__swatch--ancestor"></span>通過中の上位節点</span>
+    </div>
+  </div>
+  <p class="fe-tree-demo__step">② 次の節点を予想する</p>
+  <div class="fe-tree-demo__controls">
+    <label for="fe-tree-guess">次に記録されるのは？
+      <select id="fe-tree-guess">
+        <option value="">予想しないで進むこともできます</option>
+        <option value="A">A</option><option value="B">B</option><option value="C">C</option>
+        <option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option>
+      </select>
+    </label>
+  </div>
+  <p class="fe-tree-demo__step">③ 1節点ずつ記録して確認する</p>
+  <div class="fe-tree-demo__actions">
+    <button type="button" class="fe-tree-demo__primary" id="fe-tree-next">次へ（1節点記録）</button>
+    <button type="button" id="fe-tree-back">1節点戻る</button>
+    <button type="button" id="fe-tree-reset">最初から</button>
+  </div>
+  <div class="fe-tree-demo__result">
+    <p id="fe-tree-progress">先行順： 0 / 7 節点を記録</p>
+    <p id="fe-tree-feedback" class="fe-tree-demo__feedback" role="status" aria-live="polite">次に記録する節点を予想してから「次へ」を押しましょう。</p>
+    <p><strong>記録した順番：</strong> <output id="fe-tree-output" class="fe-tree-demo__output">まだ記録していません。</output></p>
+    <p id="fe-tree-reason">線をたどる順番と、節点名を記録するタイミングは同じとは限りません。</p>
+  </div>
+</div>
+<noscript>
+  <p>JavaScriptが無効の場合は、直前の「三つの走査順序」の表を確認してください。先行順は A→B→D→G→E→C→F、中間順は G→D→B→E→A→C→F、後行順は G→D→E→B→F→C→A です。</p>
+</noscript>
+<script src="{{ '/assets/js/fe-tree-traversal.js' | relative_url }}" defer></script>
 
 ### 中間順を部分木に分けて求める
 
