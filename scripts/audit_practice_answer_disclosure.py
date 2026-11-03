@@ -15,7 +15,7 @@ ANSWER = re.compile(r"(?:^|\s)(?:\*\*)?(?:正解|正答|解答)[：:]\s*[ア-エ
 QUESTION = re.compile(r"(?:確認問題|練習問題|演習問題|例題|ひっかけ|問題\d+|問題例|次のうち|どれか[。？?]?|どれでしょう)")
 HEADING = re.compile(r"^#{1,6}\s+")
 OPEN_DETAILS = re.compile(r"<details\b", re.I)
-OPEN_ATTRIBUTE = re.compile(r'<details\\b[^>]*\\sopen(?:\\s|=|>)', re.I)
+OPEN_ATTRIBUTE = re.compile(r'<details\b[^>]*\sopen(?:\s|=|>)', re.I)
 CLOSE_DETAILS = re.compile(r"</details\s*>", re.I)
 FENCE = re.compile(r"^\s*(`{3,}|~{3,})")
 
