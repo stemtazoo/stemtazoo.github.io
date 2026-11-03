@@ -234,6 +234,17 @@ Do not add an introductory table mechanically when the outputs are already famil
 - Provide a short static explanation or worked example when JavaScript is disabled.
 - Avoid adding duplicate UI or shared-JavaScript behavior that interferes with other articles.
 
+### Math and special-symbol display
+
+When a lesson contains notation whose shape changes the answer (for example negation bars, superscripts, subscripts, or mathematical operators):
+
+- Check legibility **in the rendered article, code examples, interactive aid and tables**, particularly at narrow widths. Browser logic tests alone cannot prove that the symbol looks correct on Android or iOS.
+- Be cautious with Unicode combining marks (such as a separately encoded overline). They may be displaced or missing with fallback fonts. Prefer a stable display method appropriate for the context (for example a semantic NOT symbol or CSS overline), with an understandable text alternative.
+- If typography affects exam meaning, add a **targeted** regression assertion for the relevant article and explicitly request a real-device visual check. A computed-style assertion validates the configured style, not how a specific phone actually draws it.
+- Do not require a general font/rendering test for every lesson or retrofit unrelated articles solely to satisfy this guidance.
+
+This is based on a confirmed Android Chrome rendering issue in the FE logical-expression lesson (site PR #619).
+
 ### Verification before merging
 
 For every new or modified interaction, record what was actually checked and what remains unverified:
