@@ -367,7 +367,7 @@ def binary_tree_traversal(page, expect):
             if i == 0:
                 page.locator('#fe-tree-guess').select_option(letter)
             elif i == 1:
-                page.locator('#fe-tree-guess').select_option('Z' if False else ('A' if letter != 'A' else 'G'))
+                page.locator('#fe-tree-guess').select_option('A' if letter != 'A' else 'G')
             page.locator('#fe-tree-next').click()
             expect(page.locator('#fe-tree-output')).to_have_text(' → '.join(sequence[:i + 1]))
             expect(page.locator(f'[data-tree-node="{letter}"]')).to_have_attribute('data-state', 'current')
