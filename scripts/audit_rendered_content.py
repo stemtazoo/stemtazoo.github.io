@@ -196,7 +196,8 @@ def scan(site):
         redirect_parser = TextRegions()
         redirect_parser.feed(html)
         page_findings = inspect_html(html)
-        page_findings.extend(inspect_headings(html, redirect=redirect_parser.is_redirect()))
+        if re.search(r'<html\\b', html, re.I):
+            page_findings.extend(inspect_headings(html, redirect=redirect_parser.is_redirect()))
         for item in page_findings:
             findings.append({'path': relative, **item})
         seconds = perf_counter() - page_started
