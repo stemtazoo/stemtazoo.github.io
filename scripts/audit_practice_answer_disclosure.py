@@ -85,7 +85,8 @@ def main():
     print(f"Scanned {result['total_articles']} articles ({result['by_group']}).")
     print(f"Potentially affected articles: {result['files_with_findings']}; finding counts: {summary}")
     print(f"Review report: {path.relative_to(ROOT)}")
-    # Reporting mode: do not break unrelated content changes before triage.
+    if "--fail-on-exposure" in __import__("sys").argv and summary.get("exposed_practice_answer", 0):
+        raise SystemExit("Exposed practice question answer(s) detected; see audit JSON.")
 
 
 if __name__ == "__main__":
