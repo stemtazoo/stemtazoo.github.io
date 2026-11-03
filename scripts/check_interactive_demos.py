@@ -750,6 +750,83 @@ def five_stage_pipeline(page, expect):
     contained(page, root)
 
 
+def sql_group_by_aggregate_functions(page, expect):
+    root = '#fe-group-demo'
+    def choose(where, kind, having):
+        page.locator('#fe-group-where').select_option(str(where))
+        page.locator('#fe-group-kind').select_option(kind)
+        page.locator('#fe-group-having').select_option(str(having))
+        expect(page.locator('#fe-group-stage')).to_contain_text('FROM')
+        expect(page.locator('#fe-group-table tbody tr')).to_have_count(5)
+
+    def advance():
+        for stage in ('WHERE', 'GROUP BY', 'HAVING', 'SELECT'):
+            page.locator('#fe-group-next').click()
+            expect(page.locator('#fe-group-stage')).to_contain_text(stage)
+
+    choose(0, 'SUM', 0)
+    page.locator('#fe-group-guess').select_option('3')
+    advance()
+    expect(page.locator('#fe-group-table tbody tr')).to_have_count(3)
+    expect(page.locator('#fe-group-table tbody')).to_contain_text('30')
+    expect(page.locator('#fe-group-table tbody')).to_contain_text('20')
+    expect(page.locator('#fe-group-table tbody')).to_contain_text('8')
+    expect(page.locator('#fe-group-feedback')).to_contain_text('予想正解')
+    expect(page.locator('#fe-group-next')).to_be_disabled()
+    # Back from SELECT re-exposes HAVING result with excluded rows.
+    page.locator('#fe-group-back').click()
+    expect(page.locator('#fe-group-stage')).to_contain_text('HAVING')
+    page.locator('#fe-group-next').click()
+    choose(10, 'SUM', 20)
+    page.locator('#fe-group-guess').select_option('1')
+    page.locator('#fe-group-next').click()
+    expect(page.locator('#fe-group-table tbody tr[data-selected="true"]')).to_have_count(3)
+    expect(page.locator('#fe-group-table tbody tr[data-selected="false"]')).to_have_count(2)
+    page.locator('#fe-group-next').click()
+    expect(page.locator('#fe-group-table tbody tr')).to_have_count(2)
+    page.locator('#fe-group-next').click()
+    expect(page.locator('#fe-group-table tbody tr[data-selected="true"]')).to_have_count(1)
+    page.locator('#fe-group-next').click()
+    expect(page.locator('#fe-group-table tbody tr')).to_have_count(1)
+    expect(page.locator('#fe-group-table tbody')).to_contain_text('8月1日')
+    expect(page.locator('#fe-group-table tbody')).to_contain_text('30')
+    expect(page.locator('#fe-group-feedback')).to_contain_text('予想正解')
+    # AVG is calculated from rows surviving WHERE, and HAVING uses the aggregate.
+    choose(0, 'AVG', 10)
+    page.locator('#fe-group-guess').select_option('1')
+    advance()
+    expect(page.locator('#fe-group-table tbody tr')).to_have_count(1)
+    expect(page.locator('#fe-group-table tbody')).to_contain_text('15')
+    # COUNT counts rows, not summed quantities.
+    choose(0, 'COUNT', 0)
+    page.locator('#fe-group-guess').select_option('3')
+    advance()
+    expect(page.locator('#fe-group-table tbody tr')).to_have_count(3)
+    expect(page.locator('#fe-group-table tbody')).to_contain_text('8月3日')
+    expect(page.locator('#fe-group-table tbody')).to_contain_text('1')
+    # Empty input after WHERE: no phantom group and zero-result feedback.
+    choose(25, 'SUM', 0)
+    page.locator('#fe-group-guess').select_option('0')
+    advance()
+    expect(page.locator('#fe-group-table tbody tr')).to_have_count(0)
+    expect(page.locator('#fe-group-explanation')).to_contain_text('0グループ')
+    expect(page.locator('#fe-group-feedback')).to_contain_text('予想正解')
+    # Wrong guess, keyboard Enter, reset and responsive containment.
+    choose(0, 'SUM', 0)
+    page.locator('#fe-group-guess').select_option('0')
+    page.locator('#fe-group-next').focus()
+    page.locator('#fe-group-next').press('Enter')
+    for _ in range(3):
+        page.locator('#fe-group-next').click()
+    expect(page.locator('#fe-group-feedback')).to_contain_text('予想とは異なりました')
+    page.locator('#fe-group-reset').click()
+    expect(page.locator('#fe-group-stage')).to_contain_text('FROM')
+    expect(page.locator('#fe-group-where')).to_have_value('0')
+    expect(page.locator('#fe-group-kind')).to_have_value('SUM')
+    expect(page.locator('#fe-group-guess')).to_have_value('')
+    contained(page, root)
+
+
 CHECKS = {'shared-exclusive-lock': lock, 'two-phase-commit': two_phase, 'disk-scheduling': disk,
           'cpu-scheduling': cpu, 'confusion-matrix': matrix, 'attention': attention,
           'binary-search': binary_search, 'cnn-output-size': cnn, 'adjacency-matrix': adjacency,
@@ -760,7 +837,8 @@ CHECKS = {'shared-exclusive-lock': lock, 'two-phase-commit': two_phase, 'disk-sc
           'logic-circuit-boolean-expression': logic_circuit_boolean_expression,
           'parity-check': parity_check,
           'cache-hit-rate-average-access-time': cache_hit_rate_average_access_time,
-          'five-stage-pipeline': five_stage_pipeline}
+          'five-stage-pipeline': five_stage_pipeline,
+          'sql-group-by-aggregate-functions': sql_group_by_aggregate_functions}
 
 
 def run(args):
