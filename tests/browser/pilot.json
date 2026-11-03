@@ -83,5 +83,13 @@
     "static": {
       "selector": "noscript"
     }
+  },
+  "absolute-relative-path": {
+    "source": "pages/fe/absolute-relative-path.md",
+    "root": "#fe-path-demo",
+    "url": "/fe/absolute-relative-path/",
+    "static": {
+      "selector": "noscript"
+    }
   }
 }
