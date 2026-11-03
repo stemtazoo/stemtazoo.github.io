@@ -239,6 +239,7 @@ Aの左部分木はB・D・E・G、右部分木はC・Fです。Dは左の子G�
 - エ：浅い層から記録するレベル順です。
 
 </details>
+
 ## 公式情報・参考リンク
 
 - [IPA：基本情報技術者試験シラバス Ver.9.2](https://www.ipa.go.jp/shiken/syllabus/omgdg50000005kpe-att/syllabus_fe_ver9_2.pdf)
