@@ -40,9 +40,11 @@
       [["a",result.a,0],["b",result.b,2]].forEach(([key,value,index]) => {
         const cache = result.nums[index], memory = result.nums[index+1];
         const bar = $("#fe-cache-"+key+"-fill");
-        bar.style.width = Math.min(100, Math.max(0, value/Math.max(1,...result.nums)*100)) + "%";
-        $("#fe-cache-"+key+"-value").textContent = fmt(value) + " ns";
-        $("#fe-cache-"+key+"-formula").textContent = fmt(cache)+" × "+fmt(result.p/100)+" + "+fmt(memory)+" × "+fmt(1-result.p/100)+" = "+fmt(value)+" ns";
+        bar.style.width = revealed ? Math.min(100, Math.max(0, value/Math.max(1,...result.nums)*100)) + "%" : "0%";
+        $("#fe-cache-"+key+"-value").textContent = revealed ? fmt(value) + " ns" : "？";
+        $("#fe-cache-"+key+"-formula").textContent = revealed
+          ? fmt(cache)+" × "+fmt(result.p/100)+" + "+fmt(memory)+" × "+fmt(1-result.p/100)+" = "+fmt(value)+" ns"
+          : "判定後に計算式と結果を表示します。";
       });
       answer.textContent = revealed
         ? (Math.abs(result.a-result.b) < 1e-7 ? "CPU AとCPU Bの平均アクセス時間は同じです。" : result.a < result.b ? "CPU Aの平均アクセス時間が短いです。" : "CPU Bの平均アクセス時間が短いです。")
