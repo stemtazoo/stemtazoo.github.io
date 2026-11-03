@@ -91,5 +91,13 @@
     "static": {
       "selector": "noscript"
     }
+  },
+  "er-diagram": {
+    "source": "pages/fe/er-diagram.md",
+    "root": "#fe-er-demo",
+    "url": "/fe/er-diagram/",
+    "static": {
+      "selector": "noscript"
+    }
   }
 }
