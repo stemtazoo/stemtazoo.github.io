@@ -73,8 +73,7 @@
     "root": "#fe-tree-traversal-demo",
     "url": "/fe/binary-tree-traversal/",
     "static": {
-      "selector": "noscript",
-      "text": "先行順は A"
+      "selector": "noscript"
     }
   }
 }
