@@ -228,6 +228,9 @@ Aの左部分木はB・D・E・G、右部分木はC・Fです。Dは左の子G�
 - ウ：D・B・E・C・A
 - エ：A・B・C・D・E
 
+<details markdown="1">
+<summary>正解と解説を見る（タップして開く）</summary>
+
 **正解：ウ**
 
 - ア：根を先に記録する先行順です。
@@ -235,6 +238,7 @@ Aの左部分木はB・D・E・G、右部分木はC・Fです。Dは左の子G�
 - ウ：B側はD・B、C側はE・Cと記録し、最後に全体の根Aを記録します。
 - エ：浅い層から記録するレベル順です。
 
+</details>
 ## 公式情報・参考リンク
 
 - [IPA：基本情報技術者試験シラバス Ver.9.2](https://www.ipa.go.jp/shiken/syllabus/omgdg50000005kpe-att/syllabus_fe_ver9_2.pdf)
