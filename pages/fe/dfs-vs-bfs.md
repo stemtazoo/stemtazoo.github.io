@@ -173,6 +173,7 @@ Gが追加されても、既に待っているE・Fが先に処理されます�
 - エ：D・B・E・C・Aは、子を調べ終わってから親を記録する場合の並びです。「初めて訪れた順」という条件に合いません。
 
 </details>
+
 ## 公式情報・参考リンク
 
 - [IPA：基本情報技術者試験シラバス Ver.9.2](https://www.ipa.go.jp/shiken/syllabus/omgdg50000005kpe-att/syllabus_fe_ver9_2.pdf)
