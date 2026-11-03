@@ -1,0 +1,24 @@
+/* FE GROUP BY: article-scoped, narrow-screen-friendly */
+.fe-group-demo{max-width:100%;box-sizing:border-box;border:1px solid #94a3b8;border-radius:12px;padding:1rem;margin:1.2rem 0}
+.fe-group-demo *{box-sizing:border-box}
+.fe-group-demo__step{font-weight:700;margin:1rem 0 .55rem;padding:.3rem 0;border-bottom:1px solid #cbd5e1}
+.fe-group-demo__controls{display:flex;flex-wrap:wrap;gap:.65rem;align-items:end}
+.fe-group-demo label{display:flex;flex-direction:column;gap:.3rem;flex:1 1 135px;min-width:0}
+.fe-group-demo select{font:inherit;width:100%;max-width:100%;background:#fff;color:#172033;border:1px solid #64748b;border-radius:7px;padding:.55rem}
+.fe-group-demo__actions{display:flex;gap:.5rem;flex-wrap:wrap;margin:.6rem 0}
+.fe-group-demo button{font:inherit;min-height:44px;padding:.6rem .8rem;border:1px solid #64748b;background:#e2e8f0;color:#172033;border-radius:7px;cursor:pointer}
+.fe-group-demo button.fe-group-demo__primary{background:#1d4ed8;color:#fff;border-color:#1d4ed8}
+.fe-group-demo button:disabled{opacity:.5;cursor:not-allowed}
+.fe-group-demo :focus-visible{outline:3px solid #2563eb;outline-offset:3px}
+.fe-group-demo__tablewrap{max-width:100%;overflow-x:auto;margin:.65rem 0}
+.fe-group-demo table{width:100%;min-width:260px;border-collapse:collapse;text-align:center;font-variant-numeric:tabular-nums}
+.fe-group-demo th,.fe-group-demo td{border:1px solid #cbd5e1;padding:.45rem .35rem}
+.fe-group-demo th{background:#e2e8f0;color:#172033}
+.fe-group-demo tr[data-selected="false"]{color:#64748b;background:#f1f5f9}
+.fe-group-demo tr[data-selected="true"]{background:#eff6ff;color:#172554}
+.fe-group-demo__outcome{background:#f1f5f9;color:#172033;padding:.7rem;border-radius:8px;margin:.6rem 0;overflow-wrap:anywhere}
+.fe-group-demo__outcome p{margin:.35rem 0}
+.fe-group-demo__feedback{font-weight:700}
+.fe-group-demo__hint{font-size:.9rem;color:#334155}
+.fe-group-demo__sql{max-width:100%;overflow-x:auto;white-space:pre;margin:.6rem 0;padding:.7rem;border-radius:8px;background:#f8fafc;color:#172033;border:1px solid #cbd5e1;font-size:.9rem}
+@media(max-width:480px){.fe-group-demo{padding:.65rem}.fe-group-demo label{flex:1 1 100%}.fe-group-demo__actions button{flex:1 1 calc(50% - .5rem)}}
