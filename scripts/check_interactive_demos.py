@@ -535,13 +535,59 @@ def er_diagram(page, expect):
     contained(page, root)
 
 
+def logic_circuit_boolean_expression(page, expect):
+    root = '#fe-logic-demo'
+    expect(page.locator('#fe-logic-original')).to_have_text('？')
+    expect(page.locator('#fe-logic-count')).to_have_text('0 / 8 通りを確認済み')
+    combos = [(x, y, z) for x in (0, 1) for y in (0, 1) for z in (0, 1)]
+    for x, y, z in combos:
+        key = f'{x}{y}{z}'
+        result = y & z
+        page.locator('#fe-logic-x').select_option(str(x))
+        page.locator('#fe-logic-y').select_option(str(y))
+        page.locator('#fe-logic-z').select_option(str(z))
+        expect(page.locator('#fe-logic-original')).to_have_text('？')
+        expect(page.locator('#fe-logic-simplified')).to_have_text('？')
+        page.locator('#fe-logic-guess').select_option(str(result))
+        page.locator('#fe-logic-check').click()
+        expect(page.locator('#fe-logic-original')).to_have_text(str(result))
+        expect(page.locator('#fe-logic-simplified')).to_have_text(str(result))
+        expect(page.locator('#fe-logic-feedback')).to_contain_text('予想正解')
+        expect(page.locator('#fe-logic-details')).to_contain_text('両方の出力は一致')
+        row = page.locator(f'[data-logic-combination="{key}"]')
+        expect(row.locator('[data-logic-original]')).to_have_text(str(result))
+        expect(row.locator('[data-logic-simple]')).to_have_text(str(result))
+        expect(row).to_have_attribute('data-selected', 'true')
+    expect(page.locator('#fe-logic-count')).to_have_text('8 / 8 通りを確認済み')
+    # Wrong prediction and skipped prediction.
+    page.locator('#fe-logic-x').select_option('0')
+    page.locator('#fe-logic-y').select_option('1')
+    page.locator('#fe-logic-z').select_option('1')
+    page.locator('#fe-logic-guess').select_option('0')
+    page.locator('#fe-logic-check').click()
+    expect(page.locator('#fe-logic-feedback')).to_contain_text('予想とは異なりました')
+    page.locator('#fe-logic-next').click()
+    expect(page.locator('#fe-logic-original')).to_have_text('？')
+    expect(page.locator('#fe-logic-guess')).to_have_value('')
+    page.locator('#fe-logic-check').focus()
+    page.locator('#fe-logic-check').press('Enter')
+    expect(page.locator('#fe-logic-feedback')).to_contain_text('予想を省略')
+    page.locator('#fe-logic-reset').click()
+    expect(page.locator('#fe-logic-count')).to_have_text('0 / 8 通りを確認済み')
+    expect(page.locator('#fe-logic-original')).to_have_text('？')
+    for row in page.locator('[data-logic-combination]').all():
+        expect(row.locator('[data-logic-original]')).to_have_text('—')
+    contained(page, root)
+
+
 CHECKS = {'shared-exclusive-lock': lock, 'two-phase-commit': two_phase, 'disk-scheduling': disk,
           'cpu-scheduling': cpu, 'confusion-matrix': matrix, 'attention': attention,
           'binary-search': binary_search, 'cnn-output-size': cnn, 'adjacency-matrix': adjacency,
           'binary-tree-traversal': binary_tree_traversal,
           'twos-complement': twos_complement,
           'absolute-relative-path': absolute_relative_path,
-          'er-diagram': er_diagram}
+          'er-diagram': er_diagram,
+          'logic-circuit-boolean-expression': logic_circuit_boolean_expression}
 
 
 def run(args):
