@@ -1,0 +1,44 @@
+name: Practice answer disclosure audit
+
+on:
+  pull_request:
+    paths:
+      - 'pages/fe/**'
+      - 'pages/gk/**'
+      - 'pages/ds/**'
+      - 'pages/sg/**'
+      - 'scripts/audit_practice_answer_disclosure.py'
+      - 'tests/test_practice_answer_disclosure.py'
+      - '.github/workflows/practice-answer-disclosure.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'pages/fe/**'
+      - 'pages/gk/**'
+      - 'pages/ds/**'
+      - 'pages/sg/**'
+      - 'scripts/audit_practice_answer_disclosure.py'
+      - 'tests/test_practice_answer_disclosure.py'
+      - '.github/workflows/practice-answer-disclosure.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Regression tests
+        run: python -m unittest discover -s tests -p 'test_practice_answer_disclosure.py' -v
+      - name: Scan all study articles and report candidates
+        run: python scripts/audit_practice_answer_disclosure.py
+      - name: Publish candidate list
+        uses: actions/upload-artifact@v4
+        with:
+          name: practice-answer-disclosure-audit
+          path: artifacts/practice-answer-disclosure-audit.json
