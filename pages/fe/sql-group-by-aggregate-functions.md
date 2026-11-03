@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: データベース
 fe_order: 120
 date: 2026-08-03
-last_modified_at: 2026-09-22
+last_modified_at: 2026-11-03
 ---
 
 ## まず結論
@@ -66,6 +66,96 @@ SELECTに通常列と集計関数がある
 | 8月2日 | 15 |
 
 `GROUP BY` は、行を消す処理ではなく、**同じ値をもつ行を集計単位にまとめる処理**です。
+
+### 触って覚える：WHERE・GROUP BY・HAVINGの順番
+
+**WHEREとHAVINGの条件を変えると、最終結果の行数はどう変わるでしょうか？**
+
+次の教材では、注文日と数量の5行を使います。
+
+1. `WHERE` の条件、集計関数（`SUM`・`AVG`・`COUNT`）、`HAVING` の条件を選びます。
+2. **最終結果に何グループ残るか**を予想します。予想は省略できます。
+3. 「次の段階」で `FROM → WHERE → GROUP BY（集計） → HAVING → SELECT` の順に進めます。
+4. 条件に合わない行・グループが灰色になり、最終的に出力される結果を確認します。
+
+**注意：** この教材では各注文の数量にNULLはなく、日付ごとの集計だけを扱います。`COUNT` は `COUNT(数量)` の意味で、各グループのNULLでない数量の件数です。条件を満たす行が0件なら、その日付のグループ自体ができません。今回は `ORDER BY` を扱いません。
+
+<link rel="stylesheet" href="{{ '/assets/css/fe-sql-group-demo.css' | relative_url }}">
+
+<div id="fe-group-demo" class="fe-group-demo" aria-label="SQLのWHEREとGROUP BYとHAVINGの処理順序を確認する教材">
+  <p class="fe-group-demo__step">① 条件を選ぶ</p>
+  <div class="fe-group-demo__controls">
+    <label for="fe-group-where">WHERE（数量がこの値以上）
+      <select id="fe-group-where">
+        <option value="0">0以上（全行）</option>
+        <option value="10">10以上</option>
+        <option value="15">15以上</option>
+        <option value="25">25以上（0行）</option>
+      </select>
+    </label>
+    <label for="fe-group-kind">集計関数
+      <select id="fe-group-kind">
+        <option value="SUM">SUM（合計）</option>
+        <option value="AVG">AVG（平均）</option>
+        <option value="COUNT">COUNT（件数）</option>
+      </select>
+    </label>
+    <label for="fe-group-having">HAVING（集計値がこの値より大きい）
+      <select id="fe-group-having">
+        <option value="0">0超（全グループ）</option>
+        <option value="10">10超</option>
+        <option value="20">20超</option>
+        <option value="30">30超</option>
+      </select>
+    </label>
+  </div>
+  <pre class="fe-group-demo__sql"><code id="fe-group-sql">SELECT 注文日, SUM(数量)
+FROM 注文明細
+WHERE 数量 &gt;= 0
+GROUP BY 注文日
+HAVING SUM(数量) &gt; 0;</code></pre>
+  <p class="fe-group-demo__step">② 最終結果を予想する</p>
+  <div class="fe-group-demo__controls">
+    <label for="fe-group-guess">最終結果のグループ数
+      <select id="fe-group-guess">
+        <option value="">予想しなくても進められます</option>
+        <option value="0">0グループ</option>
+        <option value="1">1グループ</option>
+        <option value="2">2グループ</option>
+        <option value="3">3グループ</option>
+      </select>
+    </label>
+  </div>
+  <p class="fe-group-demo__step">③ 1段階ずつ処理する</p>
+  <div class="fe-group-demo__actions">
+    <button type="button" id="fe-group-next" class="fe-group-demo__primary">次の段階</button>
+    <button type="button" id="fe-group-back" disabled>前の段階</button>
+    <button type="button" id="fe-group-reset">最初から</button>
+  </div>
+  <div class="fe-group-demo__outcome">
+    <p><strong>現在：</strong><output id="fe-group-stage">1 / 5　FROM：元データ</output></p>
+    <p id="fe-group-feedback" class="fe-group-demo__feedback" role="status" aria-live="polite">最終結果のグループ数を予想しましょう。</p>
+  </div>
+  <p class="fe-group-demo__step">④ どの行・グループが残るか確かめる</p>
+  <p class="fe-group-demo__hint">灰色の行・グループは現在の条件から除外されます。色だけでなく、各段階の説明も確認してください。</p>
+  <div class="fe-group-demo__tablewrap">
+    <table id="fe-group-table">
+      <thead><tr><th scope="col">注文日</th><th scope="col">数量</th></tr></thead>
+      <tbody>
+        <tr><td>8月1日</td><td>10</td></tr>
+        <tr><td>8月1日</td><td>20</td></tr>
+        <tr><td>8月2日</td><td>15</td></tr>
+        <tr><td>8月2日</td><td>5</td></tr>
+        <tr><td>8月3日</td><td>8</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="fe-group-demo__outcome"><p id="fe-group-explanation">元の5行を確認します。WHEREの条件はまだ適用していません。</p></div>
+</div>
+<noscript>
+  <p>JavaScriptが無効でも、本文の静的なSQL例を確認できます。5行の例では日付ごとに合計すると、8月1日は30、8月2日は20、8月3日は8です。WHEREは集計前の行を、HAVINGは集計後のグループを絞ります。</p>
+</noscript>
+<script src="{{ '/assets/js/fe-sql-group-demo.js' | relative_url }}" defer></script>
 
 ## 定義・仕組み
 
