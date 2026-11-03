@@ -652,6 +652,64 @@ def parity_check(page, expect):
     contained(page, root)
 
 
+def cache_hit_rate_average_access_time(page, expect):
+    root = '#fe-cache-demo'
+    cases = [
+        (0, '300 ns', '420 ns', 'a'),
+        (50, '180 ns', '220 ns', 'a'),
+        (75, '120 ns', '120 ns', 'equal'),
+        (100, '60 ns', '20 ns', 'b'),
+    ]
+    for p, expected_a, expected_b, winner in cases:
+        page.locator('#fe-cache-hit-number').fill(str(p))
+        expect(page.locator('#fe-cache-a-value')).to_have_text('？')
+        page.locator('#fe-cache-guess').select_option(winner)
+        page.locator('#fe-cache-check').click()
+        expect(page.locator('#fe-cache-a-value')).to_have_text(expected_a)
+        expect(page.locator('#fe-cache-b-value')).to_have_text(expected_b)
+        expect(page.locator('#fe-cache-feedback')).to_contain_text('予想正解')
+        expect(page.locator('#fe-cache-a-formula')).to_contain_text('ns')
+        if p == 75:
+            expect(page.locator('#fe-cache-answer')).to_contain_text('同じ')
+    # Slider and the numeric input are synchronized; results are hidden again.
+    page.locator('#fe-cache-hit').evaluate(
+        "el => { el.value = '80'; el.dispatchEvent(new Event('input', {bubbles:true})); }")
+    expect(page.locator('#fe-cache-hit-number')).to_have_value('80')
+    expect(page.locator('#fe-cache-b-value')).to_have_text('？')
+    page.locator('#fe-cache-guess').select_option('a')
+    page.locator('#fe-cache-check').click()
+    expect(page.locator('#fe-cache-feedback')).to_contain_text('予想とは異なりました')
+    # The same-as average intersection from the original article is 75%.
+    page.locator('#fe-cache-equal').click()
+    expect(page.locator('#fe-cache-hit-number')).to_have_value('75')
+    expect(page.locator('#fe-cache-a-value')).to_have_text('？')
+    page.locator('#fe-cache-check').focus()
+    page.locator('#fe-cache-check').press('Enter')
+    expect(page.locator('#fe-cache-answer')).to_contain_text('同じ')
+    # Change time assumptions and test invalid input / recovery.
+    page.locator('#fe-cache-a-cache').fill('40')
+    expect(page.locator('#fe-cache-a-value')).to_have_text('？')
+    page.locator('#fe-cache-a-cache').fill('-1')
+    expect(page.locator('#fe-cache-check')).to_be_disabled()
+    expect(page.locator('#fe-cache-error')).to_be_visible()
+    page.locator('#fe-cache-a-cache').fill('60')
+    expect(page.locator('#fe-cache-check')).to_be_enabled()
+    # Degenerate intersection cases must not divide by zero or invent a solution.
+    page.locator('#fe-cache-a-cache').fill('20')
+    page.locator('#fe-cache-a-memory').fill('420')
+    page.locator('#fe-cache-equal').click()
+    expect(page.locator('#fe-cache-feedback')).to_contain_text('どのヒット率でも同じ')
+    page.locator('#fe-cache-b-cache').fill('30')
+    page.locator('#fe-cache-b-memory').fill('430')
+    page.locator('#fe-cache-equal').click()
+    expect(page.locator('#fe-cache-feedback')).to_contain_text('直線が平行')
+    page.locator('#fe-cache-reset').click()
+    expect(page.locator('#fe-cache-hit-number')).to_have_value('0')
+    expect(page.locator('#fe-cache-a-cache')).to_have_value('60')
+    expect(page.locator('#fe-cache-a-value')).to_have_text('？')
+    contained(page, root)
+
+
 CHECKS = {'shared-exclusive-lock': lock, 'two-phase-commit': two_phase, 'disk-scheduling': disk,
           'cpu-scheduling': cpu, 'confusion-matrix': matrix, 'attention': attention,
           'binary-search': binary_search, 'cnn-output-size': cnn, 'adjacency-matrix': adjacency,
@@ -660,7 +718,8 @@ CHECKS = {'shared-exclusive-lock': lock, 'two-phase-commit': two_phase, 'disk-sc
           'absolute-relative-path': absolute_relative_path,
           'er-diagram': er_diagram,
           'logic-circuit-boolean-expression': logic_circuit_boolean_expression,
-          'parity-check': parity_check}
+          'parity-check': parity_check,
+          'cache-hit-rate-average-access-time': cache_hit_rate_average_access_time}
 
 
 def run(args):

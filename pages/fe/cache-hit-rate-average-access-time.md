@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: コンピュータシステム
 fe_order: 85
 date: 2026-07-02
-last_modified_at: 2026-09-23
+last_modified_at: 2026-11-03
 ---
 
 ## まず結論
@@ -58,6 +58,87 @@ CPUがデータを必要としたとき、まずキャッシュメモリを見�
 
 英語では、このような平均を `weighted average` といいます。  
 日本語では **重み付き平均** と考えると分かりやすいです。
+
+### 触って覚える：ヒット率を変えてCPU A・Bを比較する
+
+**ヒット率が上がると、どちらのCPUが速くなるでしょうか？**
+
+1. ヒット率とCPU A・Bのキャッシュ時間・主記憶時間を設定します。
+2. **平均アクセス時間が短いCPU**を予想します。
+3. 「判定する」を押し、両方の重み付き平均の式と結果を確認します。
+4. ヒット率0%・75%・100%を比べたり、「同じになるヒット率」を使って交点を探したりします。
+
+**この教材の前提：** 本文と同じ単純化モデルを使います。キャッシュヒットの所要時間はキャッシュ時間、ミスの所要時間は主記憶時間として、`平均 = キャッシュ時間 × P + 主記憶時間 × (1-P)` と計算します。実際のCPUではキャッシュ検索の追加時間などが条件によって異なります。2つのCPUには**同じヒット率P**を適用します。
+
+<link rel="stylesheet" href="{{ '/assets/css/fe-cache-average-demo.css' | relative_url }}">
+
+<div class="fe-cache-demo" id="fe-cache-demo" aria-label="CPU AとCPU Bのキャッシュヒット率と平均アクセス時間の比較">
+  <p class="fe-cache-demo__step">① ヒット率とCPUのアクセス時間を設定する</p>
+  <div class="fe-cache-demo__controls">
+    <label for="fe-cache-hit">ヒット率P（0〜100%）
+      <input id="fe-cache-hit" type="range" min="0" max="100" step="1" value="0">
+    </label>
+    <label for="fe-cache-hit-number">ヒット率（%・数値入力）
+      <input id="fe-cache-hit-number" type="number" min="0" max="100" step="0.01" value="0">
+    </label>
+  </div>
+  <p class="fe-cache-demo__hint">両CPUとも同じヒット率を使います。ミス率は100%−ヒット率です。</p>
+  <div class="fe-cache-demo__controls">
+    <label for="fe-cache-a-cache">CPU A：キャッシュ時間（ns）
+      <input id="fe-cache-a-cache" type="number" min="0" max="10000" step="1" value="60">
+    </label>
+    <label for="fe-cache-a-memory">CPU A：主記憶時間（ns）
+      <input id="fe-cache-a-memory" type="number" min="0" max="10000" step="1" value="300">
+    </label>
+    <label for="fe-cache-b-cache">CPU B：キャッシュ時間（ns）
+      <input id="fe-cache-b-cache" type="number" min="0" max="10000" step="1" value="20">
+    </label>
+    <label for="fe-cache-b-memory">CPU B：主記憶時間（ns）
+      <input id="fe-cache-b-memory" type="number" min="0" max="10000" step="1" value="420">
+    </label>
+  </div>
+  <p id="fe-cache-error" class="fe-cache-demo__error" role="alert" hidden></p>
+  <p class="fe-cache-demo__step">② どちらが速いか予想する</p>
+  <div class="fe-cache-demo__controls">
+    <label for="fe-cache-guess">平均アクセス時間が短いのは？
+      <select id="fe-cache-guess">
+        <option value="">予想しなくても進められます</option>
+        <option value="a">CPU A</option>
+        <option value="b">CPU B</option>
+        <option value="equal">同じ</option>
+      </select>
+    </label>
+  </div>
+  <div class="fe-cache-demo__actions">
+    <button type="button" class="fe-cache-demo__primary" id="fe-cache-check">判定する</button>
+    <button type="button" id="fe-cache-equal">同じになるヒット率を探す</button>
+    <button type="button" id="fe-cache-reset">最初から</button>
+  </div>
+  <p class="fe-cache-demo__step">③ 計算式と結果を確認する</p>
+  <div class="fe-cache-demo__model">
+    <div class="fe-cache-demo__cpu">
+      <strong>CPU A</strong>
+      <p id="fe-cache-a-value" class="fe-cache-demo__number">？</p>
+      <div class="fe-cache-demo__bar"><div class="fe-cache-demo__fill" id="fe-cache-a-fill"></div></div>
+      <p id="fe-cache-a-formula">判定後に計算式と結果を表示します。</p>
+    </div>
+    <div class="fe-cache-demo__cpu">
+      <strong>CPU B</strong>
+      <p id="fe-cache-b-value" class="fe-cache-demo__number">？</p>
+      <div class="fe-cache-demo__bar"><div class="fe-cache-demo__fill" id="fe-cache-b-fill"></div></div>
+      <p id="fe-cache-b-formula">判定後に計算式と結果を表示します。</p>
+    </div>
+  </div>
+  <div class="fe-cache-demo__result">
+    <p id="fe-cache-feedback" class="fe-cache-demo__feedback" role="status" aria-live="polite">CPU AとCPU Bのどちらが速いか予想しましょう。</p>
+    <p id="fe-cache-answer">どちらが短いか予想してから判定しましょう。</p>
+  </div>
+  <p class="fe-cache-demo__hint">棒の長さは平均アクセス時間の比較用です。<strong>短い方が速い</strong>ことを示します。交点の計算結果は、ヒット率の小数第2位までを入力に反映します。</p>
+</div>
+<noscript>
+  <p>JavaScriptが無効でも、本文の計算例で確認できます。CPU Aは<code>60P+300(1-P)</code>、CPU Bは<code>20P+420(1-P)</code>です。両者の平均アクセス時間が等しくなるヒット率は<code>P=0.75</code>です。</p>
+</noscript>
+<script src="{{ '/assets/js/fe-cache-average-demo.js' | relative_url }}" defer></script>
 
 ## 定義・仕組み
 
