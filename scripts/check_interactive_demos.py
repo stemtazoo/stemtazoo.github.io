@@ -827,6 +827,61 @@ def sql_group_by_aggregate_functions(page, expect):
     contained(page, root)
 
 
+def packet_filtering_port_rules(page, expect):
+    root = '#fe-port-demo'
+    # Stateful inspection is deliberately excluded: rules are stateless.
+    cases = [
+        ('80', '50000', 'request', 'outgoing', 'allow',
+         '192.0.2.10:50000', '198.51.100.20:80'),
+        ('80', '50000', 'reply', 'outgoing', 'deny',
+         '198.51.100.20:80', '192.0.2.10:50000'),
+        ('80', '50000', 'reply', 'both', 'allow',
+         '198.51.100.20:80', '192.0.2.10:50000'),
+        ('80', '50000', 'request', 'return', 'deny',
+         '192.0.2.10:50000', '198.51.100.20:80'),
+        ('443', '51000', 'request', 'outgoing', 'allow',
+         '192.0.2.10:51000', '198.51.100.20:443'),
+        ('443', '51000', 'reply', 'return', 'allow',
+         '198.51.100.20:443', '192.0.2.10:51000'),
+        ('443', '51000', 'reply', 'none', 'deny',
+         '198.51.100.20:443', '192.0.2.10:51000'),
+    ]
+    for service, client, direction, rule, expected, src, dst in cases:
+        page.locator('#fe-port-service').select_option(service)
+        page.locator('#fe-port-client').select_option(client)
+        page.locator('#fe-port-direction').select_option(direction)
+        page.locator('#fe-port-rules').select_option(rule)
+        expect(page.locator('#fe-port-verdict')).to_contain_text('判定前')
+        expect(page.locator('#fe-port-packet')).to_contain_text('送信元 ' + src)
+        expect(page.locator('#fe-port-packet')).to_contain_text('宛先 ' + dst)
+        page.locator('#fe-port-guess').select_option(expected)
+        page.locator('#fe-port-check').click()
+        expect(page.locator('#fe-port-verdict')).to_have_text(
+            '判定：許可' if expected == 'allow' else '判定：拒否')
+        expect(page.locator('#fe-port-feedback')).to_contain_text('予想正解')
+    # A wrong prediction must be explained, and changing the direction hides
+    # the previous verdict before the learner sees the new answer.
+    page.locator('#fe-port-rules').select_option('outgoing')
+    page.locator('#fe-port-direction').select_option('reply')
+    page.locator('#fe-port-guess').select_option('allow')
+    page.locator('#fe-port-check').click()
+    expect(page.locator('#fe-port-feedback')).to_contain_text('予想とは異なりました')
+    page.locator('#fe-port-direction').select_option('request')
+    expect(page.locator('#fe-port-verdict')).to_contain_text('判定前')
+    expect(page.locator('#fe-port-guess')).to_have_value('')
+    page.locator('#fe-port-check').focus()
+    page.locator('#fe-port-check').press('Enter')
+    expect(page.locator('#fe-port-feedback')).to_contain_text('予想を省略')
+    expect(page.locator('#fe-port-verdict')).to_have_text('判定：許可')
+    page.locator('#fe-port-reset').click()
+    expect(page.locator('#fe-port-service')).to_have_value('80')
+    expect(page.locator('#fe-port-client')).to_have_value('50000')
+    expect(page.locator('#fe-port-direction')).to_have_value('request')
+    expect(page.locator('#fe-port-rules')).to_have_value('outgoing')
+    expect(page.locator('#fe-port-verdict')).to_contain_text('判定前')
+    contained(page, root)
+
+
 CHECKS = {'shared-exclusive-lock': lock, 'two-phase-commit': two_phase, 'disk-scheduling': disk,
           'cpu-scheduling': cpu, 'confusion-matrix': matrix, 'attention': attention,
           'binary-search': binary_search, 'cnn-output-size': cnn, 'adjacency-matrix': adjacency,
@@ -838,7 +893,8 @@ CHECKS = {'shared-exclusive-lock': lock, 'two-phase-commit': two_phase, 'disk-sc
           'parity-check': parity_check,
           'cache-hit-rate-average-access-time': cache_hit_rate_average_access_time,
           'five-stage-pipeline': five_stage_pipeline,
-          'sql-group-by-aggregate-functions': sql_group_by_aggregate_functions}
+          'sql-group-by-aggregate-functions': sql_group_by_aggregate_functions,
+          'packet-filtering-port-rules': packet_filtering_port_rules}
 
 
 def run(args):
