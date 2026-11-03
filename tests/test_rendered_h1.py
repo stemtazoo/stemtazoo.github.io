@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Regression tests for rendered H1 structure."""
 import unittest
-from scripts.audit_rendered_content import inspect_html
+from scripts.audit_rendered_content import inspect_headings
 
 
 def document(head, body):
@@ -10,7 +10,7 @@ def document(head, body):
 
 class HeadingAuditTests(unittest.TestCase):
     def codes(self, html):
-        return [item['code'] for item in inspect_html(html)]
+        return [item['code'] for item in inspect_headings(html)]
 
     def test_normal_article_one_h1(self):
         html = document('<title>共有ロック | 学習ノート</title>',
@@ -34,7 +34,7 @@ class HeadingAuditTests(unittest.TestCase):
         html = document('<link rel="canonical" href="https://example.org/gk/merged/">'
                         '<meta http-equiv="refresh" content="0; url=/gk/merged/">',
                         '<p>記事は統合しました。</p>')
-        self.assertNotIn('missing_h1', self.codes(html))
+        self.assertNotIn('missing_h1', [f['code'] for f in inspect_headings(html, redirect=True)])
 
 
 if __name__ == '__main__':
