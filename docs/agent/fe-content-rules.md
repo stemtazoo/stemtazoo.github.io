@@ -36,6 +36,20 @@ FE articles should help readers solve exam questions, not merely memorize defini
 - Avoid deep specialist explanations that do not help FE exam judgment.
 - Use article-facing Japanese phrases naturally when they fit, such as `科目Aでは〜`, `科目Bでは〜`, `選択肢では〜に注意`, and `〜と〜を混同しない`.
 
+## Readability And Information Density
+
+Keep technical detail, exam judgment conditions, and meaningful examples intact, but make the **role of each explanation** easy to scan on mobile.
+
+- When a paragraph mixes a learner question, instructions, an answer, assumptions, and limitations, separate those roles instead of increasing global spacing or shortening the technical explanation.
+- Use **short prose** for intuition and causal explanation, **numbered steps** only for actions or ordered calculations, **bullets** for assumptions/features/exceptions, and **tables** for genuine side-by-side distinctions. Do not force a list or a numbered heading into every article.
+- For an interactive aid, a compact question followed by **predict → operate → observe → judge** usually helps. Put assumptions and simplified-model boundaries near the aid; do not hide them or reveal the answer prematurely when prediction matters.
+- Avoid repeating full instructions before and inside a demo. Keep one concise orientation, then let control labels and current-state feedback guide the learner.
+- Prefer natural breathing space and one focused emphasis over multiple decorative cards or highlighted boxes. Preserve existing CSS, JS, focus accessibility, and the relationship between inputs, changing results, and explanations.
+- Do not treat raw paragraph length as a defect by itself. Preserve necessary narrative when splitting would interrupt the reasoning.
+- When revising dense text, compare the original and revised meaning, verify that no conditions or caveats disappeared, and inspect rendered Markdown lists on a narrow screen when available. Report source checks separately from live browser checks.
+
+These decisions are informed by the 2026-11 FE mobile readability pilots (site PRs #605 and #606); they are guidance, not a mandatory template or a request to rewrite every article.
+
 ## Subject B Scope And Relevance
 
 Use the official IPA examination scope when deciding whether an FE article should include a `## 科目Bでどう使う？` section.
