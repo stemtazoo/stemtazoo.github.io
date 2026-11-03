@@ -154,7 +154,6 @@ def inspect_html(html):
     parser.feed(html)
     text, region = parser.text()
     redirect = parser.is_redirect()
-    heading_findings = inspect_headings(html, redirect=redirect)
     if region is None:
         if redirect:
             return []
@@ -172,7 +171,7 @@ def inspect_html(html):
     keys = list(META.finditer(opening))
     if len({m.group().strip() for m in keys}) >= 2:
         findings.append({'code': 'frontmatter_leak', 'excerpt': opening[max(0, keys[0].start()-20):keys[-1].end()+80].strip()})
-    return findings + heading_findings
+    return findings
 
 
 def scan(site):
@@ -193,7 +192,12 @@ def scan(site):
             print(f'Scanning {index}/{total}: {relative} '
                   f'(elapsed {perf_counter() - started:.2f}s)', flush=True)
         page_started = perf_counter()
-        for item in inspect_html(path.read_text(encoding='utf-8')):
+        html = path.read_text(encoding='utf-8')
+        redirect_parser = TextRegions()
+        redirect_parser.feed(html)
+        page_findings = inspect_html(html)
+        page_findings.extend(inspect_headings(html, redirect=redirect_parser.is_redirect()))
+        for item in page_findings:
             findings.append({'path': relative, **item})
         seconds = perf_counter() - page_started
         timings.append({'path': relative, 'seconds': seconds})
