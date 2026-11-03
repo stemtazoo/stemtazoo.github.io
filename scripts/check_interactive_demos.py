@@ -672,7 +672,8 @@ def cache_hit_rate_average_access_time(page, expect):
         if p == 75:
             expect(page.locator('#fe-cache-answer')).to_contain_text('同じ')
     # Slider and the numeric input are synchronized; results are hidden again.
-    page.locator('#fe-cache-hit').fill('80')
+    page.locator('#fe-cache-hit').evaluate(
+        "el => { el.value = '80'; el.dispatchEvent(new Event('input', {bubbles:true})); }")
     expect(page.locator('#fe-cache-hit-number')).to_have_value('80')
     expect(page.locator('#fe-cache-b-value')).to_have_text('？')
     page.locator('#fe-cache-guess').select_option('a')
