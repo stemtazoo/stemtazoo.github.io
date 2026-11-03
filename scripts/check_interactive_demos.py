@@ -899,6 +899,21 @@ def packet_filtering_port_rules(page, expect):
     assert page.locator('.fe-port-demo__rules').inner_text() == fixed_table
     contained(page, root)
 
+CHECKS = {'shared-exclusive-lock': lock, 'two-phase-commit': two_phase, 'disk-scheduling': disk,
+          'cpu-scheduling': cpu, 'confusion-matrix': matrix, 'attention': attention,
+          'binary-search': binary_search, 'cnn-output-size': cnn, 'adjacency-matrix': adjacency,
+          'binary-tree-traversal': binary_tree_traversal,
+          'twos-complement': twos_complement,
+          'absolute-relative-path': absolute_relative_path,
+          'er-diagram': er_diagram,
+          'logic-circuit-boolean-expression': logic_circuit_boolean_expression,
+          'parity-check': parity_check,
+          'cache-hit-rate-average-access-time': cache_hit_rate_average_access_time,
+          'five-stage-pipeline': five_stage_pipeline,
+          'sql-group-by-aggregate-functions': sql_group_by_aggregate_functions,
+          'packet-filtering-port-rules': packet_filtering_port_rules}
+
+
 def run(args):
     # A missing build or missing dependency is a failure, never a skipped success.
     from playwright.sync_api import sync_playwright, expect
