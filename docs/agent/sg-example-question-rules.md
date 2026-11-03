@@ -2,7 +2,7 @@
 
 This file is written in English for Codex readability. However, SG article content must be written in Japanese unless the user explicitly requests otherwise.
 
-Use these rules when creating SG articles from past questions, example questions, or screenshots, and when adding confirmation questions inside articles.
+Use these rules when creating SG articles from past questions, example questions, or screenshots, and when adding confirmation questions inside articles. The shared [answer disclosure rules](practice-question-answer-rules.md) are authoritative for initially hidden answers across all themes; this guide owns SG-specific placement, eligibility, and question quality.
 
 ## When Turning Past Questions Or Examples Into Articles
 
@@ -86,8 +86,7 @@ Always add the confirmation question immediately before `## まとめ（試験�
 - There must be exactly one correct answer.
 - Wrong choices should be close but still wrong.
 - Avoid obviously disposable choices.
-- Use `<details markdown="1">` for collapsible answers.
-- Make the `summary` text clearly indicate that it can be clicked.
+- Apply the shared answer disclosure rules; the SG template above illustrates their standard HTML format.
 - Preserve the existing body style, which is beginner-friendly Japanese.
 
 Include at least one of these axes:
