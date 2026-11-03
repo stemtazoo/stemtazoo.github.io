@@ -7,6 +7,7 @@ sitemap: false
 <html lang="ja">
 <head>
   <meta charset="utf-8">
+  <meta name="description" content="内部統制の基本的要素についての記事は「内部統制の6つの基本的要素」に統合しました。統合先で統制環境・リスク評価・統制活動などを解説します。">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="refresh" content="0; url={{ '/fe/internal-control-six-elements/' | relative_url }}">
   <meta name="robots" content="noindex,follow">
