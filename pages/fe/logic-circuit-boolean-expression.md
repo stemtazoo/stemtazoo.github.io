@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: 基礎理論
 fe_order: 40
 date: 2026-07-22
-last_modified_at: 2026-08-02
+last_modified_at: 2026-11-03
 ---
 
 ## まず結論
@@ -232,6 +232,91 @@ X + X̅ = 1
 Y • Z • 1 = Y • Z
 → 恒等律
 ```
+
+### 触って覚える：論理式の簡単化を8通りで確かめる
+
+**Xの値を変えると、式全体の答えも変わるでしょうか？**
+
+ここでは、元の式 `X • Y • Z + X̅ • Y • Z` と、簡単化した式 `Y • Z` を比べます。
+
+1. X・Y・Zの値を0か1に設定します。
+2. **両方の式で共通する出力**が0か1か予想します。
+3. 「判定する」を押して、**2つのAND、OR、簡単化後のAND**の途中結果を確認します。
+4. 「次の組合せ」で8通りを調べ、**Xを変えてもY・Zが同じなら出力も同じ**ことを確かめます。
+
+**この教材の前提：** `•` はAND（かつ）、`+` はOR（または）、`X̅` はNOT X（Xではない）です。足し算や掛け算の数値計算ではありません。
+
+<link rel="stylesheet" href="{{ '/assets/css/fe-logic-circuit-demo.css' | relative_url }}">
+
+<div class="fe-logic-demo" id="fe-logic-demo" aria-label="元の論理式と簡単化後の論理式の出力比較">
+  <p class="fe-logic-demo__step">① X・Y・Zの値を選ぶ</p>
+  <div class="fe-logic-demo__controls">
+    <label for="fe-logic-x">X
+      <select id="fe-logic-x"><option value="0">0</option><option value="1">1</option></select>
+    </label>
+    <label for="fe-logic-y">Y
+      <select id="fe-logic-y"><option value="0">0</option><option value="1">1</option></select>
+    </label>
+    <label for="fe-logic-z">Z
+      <select id="fe-logic-z"><option value="0">0</option><option value="1">1</option></select>
+    </label>
+  </div>
+  <p class="fe-logic-demo__step">② 出力を予想する</p>
+  <div class="fe-logic-demo__controls">
+    <label for="fe-logic-guess">2つの式の出力は？
+      <select id="fe-logic-guess">
+        <option value="">予想しなくても進められます</option>
+        <option value="0">0</option><option value="1">1</option>
+      </select>
+    </label>
+  </div>
+  <p class="fe-logic-demo__step">③ 判定して、途中の計算を確認する</p>
+  <div class="fe-logic-demo__expressions">
+    <div class="fe-logic-demo__card">
+      <strong>元の論理式</strong>
+      <p class="fe-logic-demo__formula">X • Y • Z + X̅ • Y • Z</p>
+      <p>AND → AND → OR</p>
+      <p class="fe-logic-demo__value" id="fe-logic-original">？</p>
+    </div>
+    <div class="fe-logic-demo__card">
+      <strong>簡単化した論理式</strong>
+      <p class="fe-logic-demo__formula">Y • Z</p>
+      <p>AND</p>
+      <p class="fe-logic-demo__value" id="fe-logic-simplified">？</p>
+    </div>
+  </div>
+  <div class="fe-logic-demo__actions">
+    <button type="button" class="fe-logic-demo__primary" id="fe-logic-check">判定する</button>
+    <button type="button" id="fe-logic-next">次の組合せ</button>
+    <button type="button" id="fe-logic-reset">最初から</button>
+  </div>
+  <div class="fe-logic-demo__result">
+    <p id="fe-logic-feedback" class="fe-logic-demo__feedback" role="status" aria-live="polite">X・Y・Zを選び、出力を予想してから判定してください。</p>
+    <p id="fe-logic-details">まず結果を予想してください。判定するまで出力を隠しています。</p>
+    <p id="fe-logic-count">0 / 8 通りを確認済み</p>
+  </div>
+  <p class="fe-logic-demo__step">④ 8通りの真理値を比較する</p>
+  <p class="fe-logic-demo__legend">確認した組合せだけ結果を表示します。青い行は現在判定中の入力です。</p>
+  <div class="fe-logic-demo__tablebox">
+    <table>
+      <thead><tr><th scope="col">X</th><th scope="col">Y</th><th scope="col">Z</th><th scope="col">元の式</th><th scope="col">Y • Z</th></tr></thead>
+      <tbody>
+        <tr data-logic-combination="000"><td>0</td><td>0</td><td>0</td><td data-logic-original>—</td><td data-logic-simple>—</td></tr>
+        <tr data-logic-combination="001"><td>0</td><td>0</td><td>1</td><td data-logic-original>—</td><td data-logic-simple>—</td></tr>
+        <tr data-logic-combination="010"><td>0</td><td>1</td><td>0</td><td data-logic-original>—</td><td data-logic-simple>—</td></tr>
+        <tr data-logic-combination="011"><td>0</td><td>1</td><td>1</td><td data-logic-original>—</td><td data-logic-simple>—</td></tr>
+        <tr data-logic-combination="100"><td>1</td><td>0</td><td>0</td><td data-logic-original>—</td><td data-logic-simple>—</td></tr>
+        <tr data-logic-combination="101"><td>1</td><td>0</td><td>1</td><td data-logic-original>—</td><td data-logic-simple>—</td></tr>
+        <tr data-logic-combination="110"><td>1</td><td>1</td><td>0</td><td data-logic-original>—</td><td data-logic-simple>—</td></tr>
+        <tr data-logic-combination="111"><td>1</td><td>1</td><td>1</td><td data-logic-original>—</td><td data-logic-simple>—</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<noscript>
+  <p>JavaScriptが無効な場合は、直後の真理値表で8通りを確認できます。元の式 `X • Y • Z + X̅ • Y • Z` と簡単化した式 `Y • Z` はすべて一致します。</p>
+</noscript>
+<script src="{{ '/assets/js/fe-logic-circuit-demo.js' | relative_url }}" defer></script>
 
 ### 真理値表で確認する
 
