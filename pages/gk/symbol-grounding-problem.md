@@ -8,6 +8,7 @@ last_modified_at: 2026-09-24
 <html lang="ja">
 <head>
   <meta charset="utf-8">
+  <meta name="description" content="シンボルグラウンディング問題の解説記事は統合しました。記号と意味・現実世界の接続については統合先の記事をご覧ください。">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex,follow">
   <meta http-equiv="refresh" content="0; url=/gk/symbol-grounding/">
