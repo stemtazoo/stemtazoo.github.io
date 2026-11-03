@@ -234,6 +234,17 @@ Do not add an introductory table mechanically when the outputs are already famil
 - Provide a short static explanation or worked example when JavaScript is disabled.
 - Avoid adding duplicate UI or shared-JavaScript behavior that interferes with other articles.
 
+### Math and special-symbol display
+
+When a lesson contains notation whose shape changes the answer (for example negation bars, superscripts, subscripts, or mathematical operators):
+
+- Check legibility **in the rendered article, code examples, interactive aid and tables**, particularly at narrow widths. Browser logic tests alone cannot prove that the symbol looks correct on Android or iOS.
+- Be cautious with Unicode combining marks (such as a separately encoded overline). They may be displaced or missing with fallback fonts. Prefer a stable display method appropriate for the context (for example a semantic NOT symbol or CSS overline), with an understandable text alternative.
+- If typography affects exam meaning, add a **targeted** regression assertion for the relevant article and explicitly request a real-device visual check. A computed-style assertion validates the configured style, not how a specific phone actually draws it.
+- Do not require a general font/rendering test for every lesson or retrofit unrelated articles solely to satisfy this guidance.
+
+This is based on a confirmed Android Chrome rendering issue in the FE logical-expression lesson (site PR #619).
+
 ### Verification before merging
 
 For every new or modified interaction, record what was actually checked and what remains unverified:
@@ -256,9 +267,9 @@ Use the checks above to support continued creation of useful CSS/JavaScript teac
 - If browser execution is unavailable, continue the implementation and report the limitation and concrete follow-up operation. Do not remove or avoid a useful teaching aid solely because that environment is unavailable, and do not describe code inspection or a passing build as an operation check.
 - Keep the existing update audit as a follow-up safeguard, with code review and actual browser execution reported separately. Consider targeted automation only when repeated failures or widely reused components justify its maintenance cost; do not introduce blanket automation as a prerequisite for teaching-aid creation.
 
-### Three-page FE browser pilot
+### Registered FE/GK browser pilot
 
-The shared/exclusive-lock, two-phase-commit and disk-scheduling lessons use a small opt-in UI helper and changed-page browser checks. See the [pilot implementation and follow-up guide](../../tests/browser/README.md) for the shared assets, registered scope, artifacts and manual follow-up owner. This is an FE pilot, not a new mandatory automation gate for other lessons.
+The shared/exclusive-lock, two-phase-commit and disk-scheduling lessons use a small opt-in UI helper. Additional FE/GK lessons, including the 2026-11 five-article interactive pilot, have their own registered browser scenarios. See the [pilot implementation and follow-up guide](../../tests/browser/README.md) for the current registry, artifacts and manual follow-up owner. Registration is opt-in, not a mandatory automation gate for every lesson.
 
 ### Exam-specific outcome
 

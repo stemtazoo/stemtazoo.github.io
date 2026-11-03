@@ -1,6 +1,6 @@
 # Interactive lesson pilot
 
-This pilot covers only the nine FE/GK pages registered in `pilot.json`.
+This pilot covers only the pages explicitly registered in `pilot.json`. The registry is the authoritative list; do not hard-code a page count.
 The canonical teaching and verification policy remains in
 [interactive-learning-rules.md](../../docs/agent/interactive-learning-rules.md).
 
@@ -67,14 +67,22 @@ must not become a claimed pass. Human review remains necessary for instruction
 clarity, prediction/state proximity, actual mobile browsers, screen readers and
 post-merge deployment. Existing update audits remain a follow-up safeguard.
 
-Scope: three original FE repairs, CPU scheduling, GK confusion matrix, and
-Attention as a second consumer of the GK stylesheet, plus the binary-search/CNN
-repairs and adjacency matrix as a second consumer of fe-visualizer.js.
+Scope includes the original FE repairs, CPU scheduling, GK confusion matrix and
+Attention (a second consumer of the GK stylesheet), the binary-search/CNN
+repairs, and adjacency matrix (a second consumer of fe-visualizer.js).
+The 2026-11-03 five-article pilot additionally registered binary-tree traversal,
+two's complement, absolute/relative paths, E-R diagrams and Boolean expressions.
+For the exact current scope, read `pilot.json` instead of this narrative.
 Binary search checks slow/rapid comparisons and reset during a pending repaint.
 CNN checks valid examples, 16 invalid inputs, and recovery after each; its initial
 screenshot shows valid output, while the final screenshot shows input guidance.
-Observe this pilot before a
-sitewide migration. The existing teaching rules do not make browser automation a
+The five added FE articles use separate teaching assets and article-specific
+scenarios. Their PR-head Chromium checks passed (site PRs #608, #611, #613,
+#615, #618), but these do not imply a real-device visual PASS. In the Boolean
+expression lesson, an Android Chrome review found missing/displaced negation
+bars despite passing behavioral tests; PR #619 replaced combining Unicode marks
+with CSS overlines and added targeted assertions. The owner subsequently confirmed
+the improved rendering on Android. Continue the pilot before a sitewide migration. The existing teaching rules do not make browser automation a
 universal prerequisite for adding useful interactive explanations.
 
 Implementation reference checked 2026-11-02:
