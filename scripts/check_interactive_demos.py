@@ -710,6 +710,46 @@ def cache_hit_rate_average_access_time(page, expect):
     contained(page, root)
 
 
+def five_stage_pipeline(page, expect):
+    root = '#fe-pipe-demo'
+    expect(page.locator('#fe-pipe-cycle')).to_have_text('0 / 10 サイクル')
+    expect(page.locator('#fe-pipe-back')).to_be_disabled()
+    for n in (1, 3, 6, 10):
+        page.locator('#fe-pipe-count').select_option(str(n))
+        expect(page.locator('#fe-pipe-table tbody tr')).to_have_count(n)
+        expect(page.locator('#fe-pipe-cycle')).to_have_text(f'0 / {n+4} サイクル')
+        page.locator('#fe-pipe-guess').select_option('0')
+        page.locator('#fe-pipe-next').click()
+        expect(page.locator('#fe-pipe-feedback')).to_contain_text('予想正解')
+        expect(page.locator('[data-instruction="1"][data-stage="IF"]')).to_have_attribute('data-active', 'true')
+        for cycle in range(2, n+5):
+            page.locator('#fe-pipe-next').click()
+            expect(page.locator('#fe-pipe-cycle')).to_have_text(f'{cycle} / {n+4} サイクル')
+            expect(page.locator('#fe-pipe-completed')).to_have_text(
+                f'{max(0, min(n, cycle-4))} / {n} 命令完了')
+            active = max(0, min(n, cycle) - max(1, cycle-4) + 1)
+            expect(page.locator('#fe-pipe-table td[data-active="true"]')).to_have_count(active)
+            if cycle == 5 and n >= 5:
+                expect(page.locator('[data-instruction="1"][data-stage="WB"]')).to_have_attribute('data-active', 'true')
+                expect(page.locator('[data-instruction="5"][data-stage="IF"]')).to_have_attribute('data-active', 'true')
+        expect(page.locator('#fe-pipe-next')).to_be_disabled()
+        expect(page.locator('#fe-pipe-completed')).to_have_text(f'{n} / {n} 命令完了')
+        page.locator('#fe-pipe-back').click()
+        expect(page.locator('#fe-pipe-next')).to_be_enabled()
+        page.locator('#fe-pipe-reset').click()
+        expect(page.locator('#fe-pipe-cycle')).to_have_text(f'0 / {n+4} サイクル')
+    # Incorrect prediction and keyboard.
+    page.locator('#fe-pipe-count').select_option('6')
+    page.locator('#fe-pipe-guess').select_option('1')
+    page.locator('#fe-pipe-next').focus()
+    page.locator('#fe-pipe-next').press('Enter')
+    expect(page.locator('#fe-pipe-feedback')).to_contain_text('予想とは異なりました')
+    page.locator('#fe-pipe-finish').click()
+    expect(page.locator('#fe-pipe-cycle')).to_have_text('10 / 10 サイクル')
+    expect(page.locator('#fe-pipe-completed')).to_have_text('6 / 6 命令完了')
+    contained(page, root)
+
+
 CHECKS = {'shared-exclusive-lock': lock, 'two-phase-commit': two_phase, 'disk-scheduling': disk,
           'cpu-scheduling': cpu, 'confusion-matrix': matrix, 'attention': attention,
           'binary-search': binary_search, 'cnn-output-size': cnn, 'adjacency-matrix': adjacency,
@@ -719,7 +759,8 @@ CHECKS = {'shared-exclusive-lock': lock, 'two-phase-commit': two_phase, 'disk-sc
           'er-diagram': er_diagram,
           'logic-circuit-boolean-expression': logic_circuit_boolean_expression,
           'parity-check': parity_check,
-          'cache-hit-rate-average-access-time': cache_hit_rate_average_access_time}
+          'cache-hit-rate-average-access-time': cache_hit_rate_average_access_time,
+          'five-stage-pipeline': five_stage_pipeline}
 
 
 def run(args):
