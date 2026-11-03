@@ -489,12 +489,59 @@ def absolute_relative_path(page, expect):
     contained(page, root)
 
 
+def er_diagram(page, expect):
+    root = '#fe-er-demo'
+    cases = [
+        ('customer', 'one-many', 3, '1対多', 'C01 → O02'),
+        ('product', 'many-many', 4, '多対多', 'O02 → P02'),
+        ('badge', 'one-one', 2, '1対1', 'E02 → K02'),
+    ]
+    expect(page.locator('#fe-er-back')).to_be_disabled()
+    for case, guess, count, label, pair in cases:
+        page.locator('#fe-er-case').select_option(case)
+        expect(page.locator('[data-er-link]')).to_have_count(0)
+        page.locator('#fe-er-guess').select_option(guess)
+        expect(page.locator('#fe-er-reason')).not_to_contain_text('判定：')
+        for n in range(1, count + 1):
+            page.locator('#fe-er-next').click()
+            expect(page.locator('[data-er-link]')).to_have_count(n)
+            expect(page.locator('#fe-er-pairs li')).to_have_count(n)
+        expect(page.locator('#fe-er-pairs')).to_contain_text(pair)
+        expect(page.locator('#fe-er-reason')).to_contain_text('判定：' + label)
+        expect(page.locator('#fe-er-feedback')).to_contain_text('予想正解')
+        expect(page.locator('#fe-er-next')).to_be_disabled()
+        if case == 'product':
+            expect(page.locator('#fe-er-reason')).to_contain_text('中間テーブル')
+        page.locator('#fe-er-back').click()
+        expect(page.locator('[data-er-link]')).to_have_count(count - 1)
+        expect(page.locator('#fe-er-next')).to_be_enabled()
+        page.locator('#fe-er-reset').click()
+        expect(page.locator('[data-er-link]')).to_have_count(0)
+        expect(page.locator('#fe-er-back')).to_be_disabled()
+    # Wrong guess, no guess, keyboard activation and a mid-way scenario change.
+    page.locator('#fe-er-case').select_option('customer')
+    page.locator('#fe-er-guess').select_option('one-one')
+    for _ in range(3):
+        page.locator('#fe-er-next').click()
+    expect(page.locator('#fe-er-feedback')).to_contain_text('予想とは異なりました')
+    page.locator('#fe-er-case').select_option('product')
+    expect(page.locator('[data-er-link]')).to_have_count(0)
+    page.locator('#fe-er-next').focus()
+    page.locator('#fe-er-next').press('Enter')
+    expect(page.locator('[data-er-link]')).to_have_count(1)
+    for _ in range(3):
+        page.locator('#fe-er-next').click()
+    expect(page.locator('#fe-er-feedback')).to_contain_text('予想を省略')
+    contained(page, root)
+
+
 CHECKS = {'shared-exclusive-lock': lock, 'two-phase-commit': two_phase, 'disk-scheduling': disk,
           'cpu-scheduling': cpu, 'confusion-matrix': matrix, 'attention': attention,
           'binary-search': binary_search, 'cnn-output-size': cnn, 'adjacency-matrix': adjacency,
           'binary-tree-traversal': binary_tree_traversal,
           'twos-complement': twos_complement,
-          'absolute-relative-path': absolute_relative_path}
+          'absolute-relative-path': absolute_relative_path,
+          'er-diagram': er_diagram}
 
 
 def run(args):
