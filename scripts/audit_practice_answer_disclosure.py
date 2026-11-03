@@ -15,6 +15,7 @@ ANSWER = re.compile(r"(?:^|\s)(?:\*\*)?(?:正解|正答|解答)[：:]\s*[ア-エ
 QUESTION = re.compile(r"(?:確認問題|練習問題|演習問題|例題|ひっかけ|問題\d+|問題例|次のうち|どれか[。？?]?|どれでしょう)")
 HEADING = re.compile(r"^#{1,6}\s+")
 OPEN_DETAILS = re.compile(r"<details\b", re.I)
+OPEN_ATTRIBUTE = re.compile(r'<details\b[^>]*\sopen(?:\s|=|>)', re.I)
 CLOSE_DETAILS = re.compile(r"</details\s*>", re.I)
 FENCE = re.compile(r"^\s*(`{3,}|~{3,})")
 
@@ -23,6 +24,7 @@ def audit(source: str):
     """Return high-confidence exposed answers and broader review candidates."""
     output = []
     details_depth = 0
+    visible_details_depth = 0
     in_fence = False
     fence_char = ""
     section_is_question = False
@@ -46,7 +48,8 @@ def audit(source: str):
         # A closing tag on its own line ends the protected block.
         if CLOSE_DETAILS.search(line):
             details_depth = max(0, details_depth - len(CLOSE_DETAILS.findall(line)))
-        if ANSWER.search(line) and details_depth == 0:
+            visible_details_depth = min(visible_details_depth, details_depth)
+        if ANSWER.search(line) and (details_depth == 0 or visible_details_depth > 0):
             near_question = section_is_question or line_no - recent_question <= 25
             output.append({
                 "line": line_no,
@@ -55,6 +58,8 @@ def audit(source: str):
             })
         if OPEN_DETAILS.search(line):
             details_depth += len(OPEN_DETAILS.findall(line))
+            if OPEN_ATTRIBUTE.search(line):
+                visible_details_depth = details_depth
     return output
 
 

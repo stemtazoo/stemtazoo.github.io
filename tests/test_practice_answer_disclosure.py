@@ -30,6 +30,21 @@ class AnswerDisclosureAuditTests(unittest.TestCase):
         self.assertEqual(1, len(findings))
         self.assertEqual("exposed_practice_answer", findings[0]["level"])
 
+    def test_four_theme_answer_formats(self):
+        samples = [
+            ("FE", "## 確認問題（科目A）\n\nどれか。\n\n**正解：イ**"),
+            ("GK", "### 問題3\n\nA. ...\n\n**正解：B**"),
+            ("DS", "## 演習問題\n\nどれか。\n\n**正解：3**"),
+            ("SG", "## 確認問題（SG試験対策）\n\n- ア：...\n\n**正解：エ**"),
+        ]
+        for theme, source in samples:
+            with self.subTest(theme=theme):
+                self.assertEqual("exposed_practice_answer", audit(source)[0]["level"])
+
+    def test_open_details_is_not_accepted_as_hidden(self):
+        sample = "## 確認問題\n\n<details open>\n正解：ア\n</details>"
+        self.assertEqual("exposed_practice_answer", audit(sample)[0]["level"])
+
     def test_existing_protected_fe_gk_examples(self):
         for relative in [
             "pages/fe/dfs-vs-bfs.md",
