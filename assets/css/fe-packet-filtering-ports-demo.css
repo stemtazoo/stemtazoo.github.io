@@ -21,3 +21,9 @@
 .fe-port-demo__rules td,.fe-port-demo__rules th{border:1px solid #cbd5e1;padding:.45rem;text-align:left}
 .fe-port-demo__rules th{background:#e2e8f0;color:#172033}
 @media(max-width:470px){.fe-port-demo{padding:.65rem}.fe-port-demo label{flex:1 1 100%}.fe-port-demo__actions button{flex:1 1 calc(50% - .5rem)}.fe-port-demo__flow{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);font-size:.86rem}}
+
+/* The example policy is immutable; only a matched row gets highlighted after judgment. */
+.fe-port-demo__rulewrap{max-width:100%;overflow-x:auto;margin:.65rem 0}
+.fe-port-demo__rules{min-width:720px}
+.fe-port-demo__rules tr[data-matched="true"]{background:#dbeafe;color:#172554;font-weight:700}
+.fe-port-demo__rules tr[data-matched="true"] th{background:#dbeafe;color:#172554}

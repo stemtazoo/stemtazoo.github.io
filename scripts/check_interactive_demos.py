@@ -829,44 +829,61 @@ def sql_group_by_aggregate_functions(page, expect):
 
 def packet_filtering_port_rules(page, expect):
     root = '#fe-port-demo'
-    # Stateful inspection is deliberately excluded: rules are stateless.
+    rules = page.locator('[data-fe-port-rule]')
+    expect(rules).to_have_count(3)
+    fixed_table = page.locator('.fe-port-demo__rules').inner_text()
     cases = [
-        ('80', '50000', 'request', 'outgoing', 'allow',
+        # TCP, fixed policy R1, R2 and R3 each genuinely match.
+        ('80', '50000', 'request', 'TCP', 'allow', 'R1',
          '192.0.2.10:50000', '198.51.100.20:80'),
-        ('80', '50000', 'reply', 'outgoing', 'deny',
+        ('80', '50000', 'reply', 'TCP', 'allow', 'R2',
          '198.51.100.20:80', '192.0.2.10:50000'),
-        ('80', '50000', 'reply', 'both', 'allow',
-         '198.51.100.20:80', '192.0.2.10:50000'),
-        ('80', '50000', 'request', 'return', 'deny',
-         '192.0.2.10:50000', '198.51.100.20:80'),
-        ('443', '51000', 'request', 'outgoing', 'allow',
+        ('443', '51000', 'request', 'TCP', 'allow', 'R3',
          '192.0.2.10:51000', '198.51.100.20:443'),
-        ('443', '51000', 'reply', 'return', 'allow',
+        # Only packet fields change, but policy remains unchanged.
+        ('80', '51000', 'request', 'TCP', 'deny', None,
+         '192.0.2.10:51000', '198.51.100.20:80'),
+        ('443', '50000', 'request', 'TCP', 'deny', None,
+         '192.0.2.10:50000', '198.51.100.20:443'),
+        ('443', '51000', 'reply', 'TCP', 'deny', None,
          '198.51.100.20:443', '192.0.2.10:51000'),
-        ('443', '51000', 'reply', 'none', 'deny',
-         '198.51.100.20:443', '192.0.2.10:51000'),
+        ('80', '50000', 'request', 'UDP', 'deny', None,
+         '192.0.2.10:50000', '198.51.100.20:80'),
     ]
-    for service, client, direction, rule, expected, src, dst in cases:
+    for service, client, direction, protocol, expected, rule, src, dst in cases:
         page.locator('#fe-port-service').select_option(service)
         page.locator('#fe-port-client').select_option(client)
         page.locator('#fe-port-direction').select_option(direction)
-        page.locator('#fe-port-rules').select_option(rule)
+        page.locator('#fe-port-protocol').select_option(protocol)
         expect(page.locator('#fe-port-verdict')).to_contain_text('判定前')
+        expect(page.locator('#fe-port-packet')).to_contain_text(protocol)
         expect(page.locator('#fe-port-packet')).to_contain_text('送信元 ' + src)
         expect(page.locator('#fe-port-packet')).to_contain_text('宛先 ' + dst)
+        assert page.locator('.fe-port-demo__rules').inner_text() == fixed_table
+        expect(page.locator('[data-matched="true"]')).to_have_count(0)
         page.locator('#fe-port-guess').select_option(expected)
         page.locator('#fe-port-check').click()
         expect(page.locator('#fe-port-verdict')).to_have_text(
             '判定：許可' if expected == 'allow' else '判定：拒否')
         expect(page.locator('#fe-port-feedback')).to_contain_text('予想正解')
-    # A wrong prediction must be explained, and changing the direction hides
-    # the previous verdict before the learner sees the new answer.
-    page.locator('#fe-port-rules').select_option('outgoing')
-    page.locator('#fe-port-direction').select_option('reply')
+        if rule:
+            expect(page.locator('#fe-port-explanation')).to_contain_text(rule)
+            expect(page.locator('[data-matched="true"]')).to_have_count(1)
+            expect(page.locator(f'[data-fe-port-rule="{rule}"]')).to_have_attribute('data-matched', 'true')
+        else:
+            expect(page.locator('#fe-port-explanation')).to_contain_text('一致しません')
+            expect(page.locator('[data-matched="true"]')).to_have_count(0)
+    # A wrong prediction and concrete mismatch reason for changing only client port.
+    page.locator('#fe-port-protocol').select_option('TCP')
+    page.locator('#fe-port-service').select_option('80')
+    page.locator('#fe-port-client').select_option('51000')
+    page.locator('#fe-port-direction').select_option('request')
     page.locator('#fe-port-guess').select_option('allow')
     page.locator('#fe-port-check').click()
     expect(page.locator('#fe-port-feedback')).to_contain_text('予想とは異なりました')
-    page.locator('#fe-port-direction').select_option('request')
+    expect(page.locator('#fe-port-explanation')).to_contain_text('送信元ポート')
+    # A change to a single header field hides the old answer before prediction.
+    page.locator('#fe-port-client').select_option('50000')
     expect(page.locator('#fe-port-verdict')).to_contain_text('判定前')
     expect(page.locator('#fe-port-guess')).to_have_value('')
     page.locator('#fe-port-check').focus()
@@ -877,10 +894,10 @@ def packet_filtering_port_rules(page, expect):
     expect(page.locator('#fe-port-service')).to_have_value('80')
     expect(page.locator('#fe-port-client')).to_have_value('50000')
     expect(page.locator('#fe-port-direction')).to_have_value('request')
-    expect(page.locator('#fe-port-rules')).to_have_value('outgoing')
+    expect(page.locator('#fe-port-protocol')).to_have_value('TCP')
     expect(page.locator('#fe-port-verdict')).to_contain_text('判定前')
+    assert page.locator('.fe-port-demo__rules').inner_text() == fixed_table
     contained(page, root)
-
 
 CHECKS = {'shared-exclusive-lock': lock, 'two-phase-commit': two_phase, 'disk-scheduling': disk,
           'cpu-scheduling': cpu, 'confusion-matrix': matrix, 'attention': attention,
