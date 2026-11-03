@@ -19,6 +19,7 @@ The front-matter guides refer to [shared metadata writing](metadata-rules.md). S
 
 | Task trigger | Also read |
 | --- | --- |
+| Practice or confirmation questions in FE/GK/DS/SG | [Shared answer disclosure rules](practice-question-answer-rules.md); use alongside each theme's article rules. |
 | FE example-driven article consideration | FE article guides and editorial rules above; search all four themes before choosing new/update/no change. If approved for writing, preserve standalone examples and title independence. |
 | FE existing-content audit, overlap, freshness, syllabus, or gap review (owned by [study-site-audit](https://github.com/stemtazoo/study-site-audit)) | [FE audit](fe-audit-rules.md); [source rules](primary-source-audit-rules.md) when sources/freshness are involved |
 | Read-only full FE audit | [full-audit prompt](fe-full-audit-prompt.md) together with the FE audit route; do not repair articles during the report task |
@@ -42,6 +43,7 @@ The front-matter guides refer to [shared metadata writing](metadata-rules.md). S
 | Task routing / when to load a guide | This file |
 | New article vs update, overlap, learning purpose, editorial roles, reader usefulness, learning paths | [editorial rules](editorial-rules.md) |
 | Source selection, current vs original authority, freshness, supersession, source-addition decisions | [primary-source rules](primary-source-audit-rules.md) |
+| Practice-question answer display for FE/GK/DS/SG | [Shared answer disclosure rules](practice-question-answer-rules.md) |
 | Shared description-writing policy | [metadata rules](metadata-rules.md) |
 | Theme-specific structure, metadata fields, dates, tags, exam focus | The corresponding theme guide |
 | SG prev/next authorization and series order | [SG navigation](sg-navigation-rules.md) |
