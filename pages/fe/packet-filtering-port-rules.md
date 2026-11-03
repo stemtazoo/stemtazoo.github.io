@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 130
 date: 2026-07-15
-last_modified_at: 2026-11-03
+last_modified_at: 2026-11-04
 ---
 
 ## まず結論
@@ -69,51 +69,48 @@ Webサーバ:80 → PC:50000
 
 また、80番や443番は通常のWeb利用にも必要です。マルウェア側から見ると、こうした通信は外部へ出るために許可されている可能性が高く、指令サーバとの通信に悪用しやすいという特徴があります。
 
-### 触って覚える：往路・復路とファイアウォールの許可条件
+### 触って覚える：固定ルール表とパケットを照合する
 
-**PCからWebサーバへの要求が許可されても、応答は必ず通るでしょうか？**
+**ルール表は変えずに、通信パケットの条件だけを変えたら判定はどう変わるでしょうか？**
 
-この教材では、クライアントPCとWebサーバの間を往復するTCPパケットを例に、**送信元と宛先の入れ替わり**を確認します。
+1. 次の**固定された許可ルール表**を確認します。各行のプロトコル、送信元IP・ポート、宛先IP・ポートが**すべて一致**した場合に限り許可します。
+2. HTTP・HTTPS、PC側のポート、往路・復路、TCP・UDPを変えてパケットを作ります。
+3. 「許可」「拒否」を予想し、「判定する」で一致したルール、または一致しなかった項目を確認します。
 
-1. HTTP（80番）かHTTPS（443番）、PC側の一時ポート、通信方向を選びます。
-2. ファイアウォールの許可ルールを選び、通信が許可されるか予想します。
-3. 「判定する」で結果と理由を表示します。特に**往路だけを許可したときの復路**を確認してください。
+例えばHTTPの往路 `PC:50000 → サーバ:80` はR1に一致します。しかし同じ往路でもPC側を `51000` に変えると**送信元ポートが違う**ため一致しません。復路は別ルールR2と照合します。
 
-**この教材の前提：** 接続状態を記憶しない *ステートレス* なルールを使い、選んだ明示的な許可ルールに一致しなければ拒否します。実際のステートフルファイアウォールでは、通信状態を追跡して応答パケットを自動許可する場合があります。IPアドレスは説明用の例示アドレスです。ポート80・443が使われていても、その通信が安全だと保証されるわけではありません。
+**この教材の前提：** 接続状態を記憶しない*ステートレス*なルールで、以下の3行以外は暗黙に拒否します。実際のステートフルファイアウォールでは応答を自動許可する場合があります。例示IPは説明用で、特定の実ネットワークを意味しません。これはルールの「完全一致」を学ぶための簡略化モデルです。
 
 <link rel="stylesheet" href="{{ '/assets/css/fe-packet-filtering-ports-demo.css' | relative_url }}">
 
-<div class="fe-port-demo" id="fe-port-demo" aria-label="通信方向とファイアウォールルールの比較">
-  <p class="fe-port-demo__step">① サービス・方向・許可ルールを選ぶ</p>
+<div class="fe-port-demo" id="fe-port-demo" aria-label="固定ルール表と通信パケットの照合">
+  <p class="fe-port-demo__step">① 固定された許可ルールを読む</p>
+  <p class="fe-port-demo__note">表は操作しても変わりません。全項目が一致したパケットだけを許可します。表にない通信は拒否します。</p>
+  <div class="fe-port-demo__rulewrap">
+    <table class="fe-port-demo__rules">
+      <thead><tr><th scope="col">ルール</th><th scope="col">プロトコル</th><th scope="col">送信元IP</th><th scope="col">送信元ポート</th><th scope="col">宛先IP</th><th scope="col">宛先ポート</th><th scope="col">動作</th></tr></thead>
+      <tbody>
+        <tr data-fe-port-rule="R1"><th scope="row">R1</th><td>TCP</td><td>192.0.2.10</td><td>50000</td><td>198.51.100.20</td><td>80</td><td>許可</td></tr>
+        <tr data-fe-port-rule="R2"><th scope="row">R2</th><td>TCP</td><td>198.51.100.20</td><td>80</td><td>192.0.2.10</td><td>50000</td><td>許可</td></tr>
+        <tr data-fe-port-rule="R3"><th scope="row">R3</th><td>TCP</td><td>192.0.2.10</td><td>51000</td><td>198.51.100.20</td><td>443</td><td>許可</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="fe-port-demo__step">② 通信パケットを変更する</p>
   <div class="fe-port-demo__controls">
     <label for="fe-port-service">Webサービス
-      <select id="fe-port-service">
-        <option value="80">HTTP（TCP 80）</option>
-        <option value="443">HTTPS（TCP 443）</option>
-      </select>
+      <select id="fe-port-service"><option value="80">HTTP（80）</option><option value="443">HTTPS（443）</option></select>
     </label>
     <label for="fe-port-client">PC側の一時ポート
-      <select id="fe-port-client">
-        <option value="50000">50000</option>
-        <option value="51000">51000</option>
-      </select>
+      <select id="fe-port-client"><option value="50000">50000</option><option value="51000">51000</option></select>
     </label>
     <label for="fe-port-direction">通信方向
-      <select id="fe-port-direction">
-        <option value="request">往路：PC → Webサーバ</option>
-        <option value="reply">復路：Webサーバ → PC</option>
-      </select>
+      <select id="fe-port-direction"><option value="request">往路：PC → サーバ</option><option value="reply">復路：サーバ → PC</option></select>
     </label>
-    <label for="fe-port-rules">許可ルール（該当しない通信は拒否）
-      <select id="fe-port-rules">
-        <option value="outgoing">往路のみ許可</option>
-        <option value="return">復路のみ許可</option>
-        <option value="both">往路と復路を許可</option>
-        <option value="none">該当する許可ルールなし</option>
-      </select>
+    <label for="fe-port-protocol">プロトコル
+      <select id="fe-port-protocol"><option value="TCP">TCP</option><option value="UDP">UDP</option></select>
     </label>
   </div>
-  <p class="fe-port-demo__step">② パケットの送信元と宛先を見る</p>
   <div class="fe-port-demo__packet">
     <div class="fe-port-demo__flow">
       <div class="fe-port-demo__endpoint" id="fe-port-from"><strong>PC</strong>192.0.2.10:50000</div>
@@ -121,16 +118,11 @@ Webサーバ:80 → PC:50000
       <div class="fe-port-demo__endpoint" id="fe-port-to"><strong>Webサーバ</strong>198.51.100.20:80</div>
     </div>
     <p id="fe-port-packet">TCP／送信元 192.0.2.10:50000 → 宛先 198.51.100.20:80</p>
-    <p><strong>現在の許可ルール：</strong><span id="fe-port-rule-summary">PC→WebサーバのTCP宛先ポート80を許可のみ</span></p>
   </div>
-  <p class="fe-port-demo__step">③ 許可・拒否を予想して確かめる</p>
+  <p class="fe-port-demo__step">③ 許可・拒否を予想して判定する</p>
   <div class="fe-port-demo__controls">
     <label for="fe-port-guess">このパケットは？
-      <select id="fe-port-guess">
-        <option value="">予想しなくても進められます</option>
-        <option value="allow">許可</option>
-        <option value="deny">拒否</option>
-      </select>
+      <select id="fe-port-guess"><option value="">予想しなくても進められます</option><option value="allow">許可</option><option value="deny">拒否</option></select>
     </label>
   </div>
   <div class="fe-port-demo__actions">
@@ -138,12 +130,12 @@ Webサーバ:80 → PC:50000
     <button type="button" id="fe-port-reset">最初から</button>
   </div>
   <div class="fe-port-demo__result">
-    <p id="fe-port-feedback" class="fe-port-demo__feedback" role="status" aria-live="polite">通信方向とルールを見て、許可か拒否か予想しましょう。</p>
+    <p id="fe-port-feedback" class="fe-port-demo__feedback" role="status" aria-live="polite">固定ルール表と比較して許可・拒否を予想しましょう。</p>
     <p id="fe-port-verdict">判定前：まだ結果を表示していません。</p>
-    <p id="fe-port-explanation">送信元／宛先を確認し、ルールと照合してから判定しましょう。</p>
+    <p id="fe-port-explanation">上の固定ルール表とパケットの各項目を照合しましょう。ルール表は変更されません。</p>
   </div>
 </div>
-<noscript><p>JavaScriptが使えない場合も、本文の往路・復路の表で確認できます。ステートレスで往路の宛先80番だけを許可した場合、復路は送信元80番・宛先一時ポートとなるため、対応する復路の許可ルールがなければ拒否されます。</p></noscript>
+<noscript><p>JavaScriptが無効でも上の固定ルール表を使えます。TCPのPC:50000→サーバ:80はR1に一致して許可、PC:51000→サーバ:80は送信元ポート不一致で拒否されます。復路サーバ:80→PC:50000はR2で許可です。</p></noscript>
 <script src="{{ '/assets/js/fe-packet-filtering-ports-demo.js' | relative_url }}" defer></script>
 
 ## 定義・仕組み
