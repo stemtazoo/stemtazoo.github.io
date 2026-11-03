@@ -115,5 +115,13 @@
     "static": {
       "selector": "noscript"
     }
+  },
+  "cache-hit-rate-average-access-time": {
+    "source": "pages/fe/cache-hit-rate-average-access-time.md",
+    "root": "#fe-cache-demo",
+    "url": "/fe/cache-hit-rate-average-access-time/",
+    "static": {
+      "selector": "noscript"
+    }
   }
 }
