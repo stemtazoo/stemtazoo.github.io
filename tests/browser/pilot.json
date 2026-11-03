@@ -139,5 +139,13 @@
     "static": {
       "selector": "noscript"
     }
+  },
+  "packet-filtering-port-rules": {
+    "source": "pages/fe/packet-filtering-port-rules.md",
+    "root": "#fe-port-demo",
+    "url": "/fe/packet-filtering-port-rules/",
+    "static": {
+      "selector": "noscript"
+    }
   }
 }
