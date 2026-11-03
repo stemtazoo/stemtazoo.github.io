@@ -110,8 +110,13 @@ class HeadingStructure(HTMLParser):
         self.h1_parts = None
         self.title_parts = []
         self.in_title = False
+        self.seo_title_override = False
 
     def handle_starttag(self, tag, attrs):
+        attributes = dict(attrs)
+        if (tag == 'meta' and attributes.get('name') == 'stemtazoo-seo-title-override'
+                and attributes.get('content') == 'true'):
+            self.seo_title_override = True
         if tag == 'h1':
             self.h1_parts = []
         elif tag == 'title':
@@ -143,10 +148,16 @@ def inspect_headings(html, redirect=False):
     if len(headings) > 1:
         return [{'code': 'multiple_h1', 'excerpt': f'{len(headings)} H1 tags: {headings[:3]!r}'}]
     title = ' '.join(''.join(parser.title_parts).split())
-    if title and headings[0] and headings[0] not in title:
-        return [{'code': 'h1_title_mismatch',
-                 'excerpt': f'H1={headings[0]!r}; title={title!r}'}]
-    return []
+    findings = []
+    if len(title) > 70:
+        findings.append({'code': 'title_too_long',
+                         'excerpt': f'{len(title)} characters: {title[:115]!r}'})
+    # A search-only title may intentionally differ from the visible H1.
+    if (title and headings[0] and headings[0] not in title
+            and not parser.seo_title_override):
+        findings.append({'code': 'h1_title_mismatch',
+                         'excerpt': f'H1={headings[0]!r}; title={title!r}'})
+    return findings
 
 
 def inspect_html(html):

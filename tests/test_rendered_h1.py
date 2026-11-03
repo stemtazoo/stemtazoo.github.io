@@ -30,6 +30,21 @@ class HeadingAuditTests(unittest.TestCase):
         html = document('<title>別の記事 | 学習ノート</title>', '<h1>共有ロック</h1><main>本文</main>')
         self.assertIn('h1_title_mismatch', self.codes(html))
 
+    def test_title_over_70_is_reported(self):
+        html = document('<title>' + 'A' * 71 + '</title>', '<h1>説明</h1>')
+        self.assertIn('title_too_long', self.codes(html))
+
+    def test_intentional_shorter_seo_title_keeps_h1(self):
+        html = document('<title>短いSEOタイトル【G検定】</title>'
+                        '<meta name="stemtazoo-seo-title-override" content="true">',
+                        '<header><h1>長い可視タイトルの説明【G検定】</h1></header>')
+        self.assertEqual([], self.codes(html))
+
+    def test_non_overridden_page_still_checks_h1_title(self):
+        html = document('<title>短いSEOタイトル【G検定】</title>',
+                        '<h1>別のタイトル【G検定】</h1>')
+        self.assertIn('h1_title_mismatch', self.codes(html))
+
     def test_jekyll_redirect_excluded(self):
         html = document('<link rel="canonical" href="https://example.org/gk/merged/">'
                         '<meta http-equiv="refresh" content="0; url=/gk/merged/">',
