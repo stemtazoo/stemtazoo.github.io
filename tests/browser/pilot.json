@@ -123,5 +123,13 @@
     "static": {
       "selector": "noscript"
     }
+  },
+  "five-stage-pipeline": {
+    "source": "pages/fe/five-stage-pipeline.md",
+    "root": "#fe-pipe-demo",
+    "url": "/fe/five-stage-pipeline/",
+    "static": {
+      "selector": "noscript"
+    }
   }
 }
