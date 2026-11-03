@@ -38,9 +38,14 @@ B. Momentum
 C. RMSprop  
 D. AdaBound
 
+<details markdown="1">
+<summary>正解と解説を見る（タップして開く）</summary>
+
 **正解：B**
 
 「慣性」「速度」「振動抑制」なら[Momentum](/gk/momentum/)です。
+
+</details>
 
 ### 問題2
 
@@ -51,9 +56,14 @@ B. RMSprop
 C. Adam  
 D. Momentum
 
+<details markdown="1">
+<summary>正解と解説を見る（タップして開く）</summary>
+
 **正解：A**
 
 「二乗を累積」なら[AdaGrad](/gk/adagrad/)です。
+
+</details>
 
 ### 問題3
 
@@ -64,9 +74,14 @@ B. AdaGrad
 C. RMSprop  
 D. Momentum
 
+<details markdown="1">
+<summary>正解と解説を見る（タップして開く）</summary>
+
 **正解：C**
 
 「二乗の移動平均」なら[RMSprop](/gk/rmsprop/)です。
+
+</details>
 
 ### 問題4
 
@@ -77,9 +92,14 @@ B. Momentum
 C. AdaGrad  
 D. SGD
 
+<details markdown="1">
+<summary>正解と解説を見る（タップして開く）</summary>
+
 **正解：A**
 
 [AdaDelta](/gk/adadelta/)はAdaGradの累積問題を補う系統です。
+
+</details>
 
 ### 問題5
 
@@ -90,9 +110,14 @@ B. Adam
 C. AdaGrad  
 D. SGD
 
+<details markdown="1">
+<summary>正解と解説を見る（タップして開く）</summary>
+
 **正解：B**
 
 「1次＋2次モーメント」なら[Adam](/gk/adam/)です。
+
+</details>
 
 ### 問題6
 
@@ -103,9 +128,14 @@ B. AdaBound
 C. RMSprop  
 D. Momentum
 
+<details markdown="1">
+<summary>正解と解説を見る（タップして開く）</summary>
+
 **正解：B**
 
 「Adam基盤＋動的な境界」なら[AdaBound](/gk/adabound/)です。
+
+</details>
 
 ### 問題7
 
@@ -116,9 +146,14 @@ B. AdaBound
 C. AMSBound  
 D. AdaGrad
 
+<details markdown="1">
+<summary>正解と解説を見る（タップして開く）</summary>
+
 **正解：C**
 
 「AMSGrad＋Bound」なら[AMSBound](/gk/amsbound/)です。
+
+</details>
 
 ### 問題8
 
@@ -127,9 +162,14 @@ D. AdaGrad
 A. 正しい  
 B. 誤り
 
+<details markdown="1">
+<summary>正解と解説を見る（タップして開く）</summary>
+
 **正解：B**
 
 Adamでも基本学習率などのハイパーパラメータを設定します。
+
+</details>
 
 ### 問題9
 
@@ -138,9 +178,14 @@ Adamでも基本学習率などのハイパーパラメータを設定します�
 A. 正しい  
 B. 誤り
 
+<details markdown="1">
+<summary>正解と解説を見る（タップして開く）</summary>
+
 **正解：B**
 
 最適化と汎化・過学習対策は関連しますが、Adamへ変えるだけで過学習が必ず防げるわけではありません。
+
+</details>
 
 ### 問題10
 
@@ -151,9 +196,14 @@ B. AdaBound
 C. AdaBoost  
 D. Adam
 
+<details markdown="1">
+<summary>正解と解説を見る（タップして開く）</summary>
+
 **正解：C**
 
 AdaBoostは最適化手法ではなく、**ブースティングによるアンサンブル学習**です。
+
+</details>
 
 ## いつ使う？（得意・不得意）
 
