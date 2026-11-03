@@ -36,8 +36,9 @@ jobs:
       - name: Regression tests
         run: python -m unittest discover -s tests -p 'test_practice_answer_disclosure.py' -v
       - name: Scan all study articles and report candidates
-        run: python scripts/audit_practice_answer_disclosure.py
+        run: python scripts/audit_practice_answer_disclosure.py --fail-on-exposure
       - name: Publish candidate list
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: practice-answer-disclosure-audit
