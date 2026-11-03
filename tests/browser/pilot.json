@@ -99,5 +99,13 @@
     "static": {
       "selector": "noscript"
     }
+  },
+  "logic-circuit-boolean-expression": {
+    "source": "pages/fe/logic-circuit-boolean-expression.md",
+    "root": "#fe-logic-demo",
+    "url": "/fe/logic-circuit-boolean-expression/",
+    "static": {
+      "selector": "noscript"
+    }
   }
 }
