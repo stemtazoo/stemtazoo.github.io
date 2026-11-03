@@ -100,12 +100,63 @@ class TextRegions(HTMLParser):
                 and urljoin(self.canonical, self.refresh_target) == self.canonical)
 
 
+
+class HeadingStructure(HTMLParser):
+    """Read actual H1 elements and the document title from generated HTML."""
+
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.headings = []
+        self.h1_parts = None
+        self.title_parts = []
+        self.in_title = False
+
+    def handle_starttag(self, tag, attrs):
+        if tag == 'h1':
+            self.h1_parts = []
+        elif tag == 'title':
+            self.in_title = True
+
+    def handle_endtag(self, tag):
+        if tag == 'h1' and self.h1_parts is not None:
+            self.headings.append(' '.join(''.join(self.h1_parts).split()))
+            self.h1_parts = None
+        elif tag == 'title':
+            self.in_title = False
+
+    def handle_data(self, data):
+        if self.h1_parts is not None:
+            self.h1_parts.append(data)
+        if self.in_title:
+            self.title_parts.append(data)
+
+
+def inspect_headings(html, redirect=False):
+    """Report absent/multiple H1 and H1-title disagreement, except redirects."""
+    if redirect:
+        return []
+    parser = HeadingStructure()
+    parser.feed(html)
+    headings = parser.headings
+    if not headings:
+        return [{'code': 'missing_h1', 'excerpt': 'No H1 in rendered page.'}]
+    if len(headings) > 1:
+        return [{'code': 'multiple_h1', 'excerpt': f'{len(headings)} H1 tags: {headings[:3]!r}'}]
+    title = ' '.join(''.join(parser.title_parts).split())
+    if title and headings[0] and headings[0] not in title:
+        return [{'code': 'h1_title_mismatch',
+                 'excerpt': f'H1={headings[0]!r}; title={title!r}'}]
+    return []
+
+
 def inspect_html(html):
     parser = TextRegions()
     parser.feed(html)
     text, region = parser.text()
+    redirect = parser.is_redirect()
+    heading_findings = inspect_headings(html, redirect=redirect)
     if region is None:
-        if parser.is_redirect():
+        if redirect:
             return []
         return [{'code': 'missing_content_region', 'excerpt': 'No article/main/body region; inspect HTML.'}]
     findings = []
@@ -121,7 +172,7 @@ def inspect_html(html):
     keys = list(META.finditer(opening))
     if len({m.group().strip() for m in keys}) >= 2:
         findings.append({'code': 'frontmatter_leak', 'excerpt': opening[max(0, keys[0].start()-20):keys[-1].end()+80].strip()})
-    return findings
+    return findings + heading_findings
 
 
 def scan(site):
