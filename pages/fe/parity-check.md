@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 30
 date: 2026-06-25
-last_modified_at: 2026-10-17
+last_modified_at: 2026-11-03
 ---
 
 ## まず結論
@@ -87,6 +87,94 @@ FE試験では、次のように切り分けます。
 です。どのビットが誤ったかまでは分かりません。
 
 ---
+
+### 触って覚える：送信するパリティビットと誤り検出
+
+**パリティビットを付けた後、途中で1ビット・2ビットが変わると受信側で気づけるでしょうか？**
+
+1. 元の7ビットと、偶数・奇数パリティを選びます。先頭に付ける1ビットの値を予想します。
+2. 「8ビットで送信」を押して、**先頭のパリティビット＋7ビットのデータ**を確認します。
+3. 通信中の誤りを「なし・1ビット・2ビット」から選び、検出できるか予想します。
+4. 「受信側で確認」で、受信データの `1` の個数と検出結果を比べます。
+
+**この教材の前提：** 検査対象は、先頭にパリティビットを置いた8ビット全体です。反転する位置は固定してあり、1ビット誤りでは1か所、2ビット誤りでは2か所を変更します。単純なパリティチェックで**偶数個の反転は検出できず、誤り位置の特定・訂正もできません**。
+
+<link rel="stylesheet" href="{{ '/assets/css/fe-parity-demo.css' | relative_url }}">
+
+<div id="fe-parity-demo" class="fe-parity-demo" aria-label="パリティビットを追加して誤り検出を確かめる教材">
+  <p class="fe-parity-demo__step">① 送るデータとパリティを選ぶ</p>
+  <div class="fe-parity-demo__controls">
+    <label for="fe-parity-preset">データ例
+      <select id="fe-parity-preset">
+        <option value="1011010">1011010（1が4個）</option>
+        <option value="1111010">1111010（1が5個）</option>
+        <option value="0000000">0000000（1が0個）</option>
+        <option value="1111111">1111111（1が7個）</option>
+      </select>
+    </label>
+    <label for="fe-parity-data">7ビットのデータ
+      <input id="fe-parity-data" type="text" value="1011010" maxlength="7" pattern="[01]{7}" inputmode="text" spellcheck="false" autocomplete="off">
+    </label>
+    <label for="fe-parity-mode">パリティ方式
+      <select id="fe-parity-mode">
+        <option value="even">偶数パリティ</option>
+        <option value="odd">奇数パリティ</option>
+      </select>
+    </label>
+  </div>
+  <p id="fe-parity-error" class="fe-parity-demo__error" role="alert" hidden></p>
+  <p class="fe-parity-demo__step">② 先頭のパリティビットを予想して送る</p>
+  <div class="fe-parity-demo__controls">
+    <label for="fe-parity-guess-bit">追加されるパリティビットは？
+      <select id="fe-parity-guess-bit">
+        <option value="">予想しなくても進められます</option>
+        <option value="0">0</option><option value="1">1</option>
+      </select>
+    </label>
+  </div>
+  <div class="fe-parity-demo__actions">
+    <button type="button" id="fe-parity-send" class="fe-parity-demo__primary">8ビットで送信</button>
+    <button type="button" id="fe-parity-reset">最初から</button>
+  </div>
+  <div class="fe-parity-demo__result">
+    <p><strong>送信する8ビット：</strong><output id="fe-parity-sent-text">送信前（予想して送信ボタンを押してください）</output></p>
+    <div id="fe-parity-sent" class="fe-parity-demo__bits" aria-hidden="true"></div>
+    <p class="fe-parity-demo__hint">左端の青い枠がパリティビットです。</p>
+  </div>
+  <p class="fe-parity-demo__step">③ 通信中に誤りを入れる</p>
+  <div class="fe-parity-demo__actions">
+    <button type="button" id="fe-parity-none" disabled>誤りなし</button>
+    <button type="button" id="fe-parity-one" disabled>1ビット反転</button>
+    <button type="button" id="fe-parity-two" disabled>2ビット反転</button>
+  </div>
+  <div class="fe-parity-demo__result">
+    <p><strong>受信した8ビット：</strong><output id="fe-parity-received-text">受信前</output></p>
+    <div id="fe-parity-received" class="fe-parity-demo__bits" aria-hidden="true"></div>
+    <p class="fe-parity-demo__hint">黄色の枠が通信中に反転したビットです（教材で反転位置が分かるよう表示しています）。実際の単純なパリティ検査で反転位置が分かるわけではありません。</p>
+  </div>
+  <p class="fe-parity-demo__step">④ 検出できるか予想して確かめる</p>
+  <div class="fe-parity-demo__controls">
+    <label for="fe-parity-guess-detect">受信側は誤りを検出する？
+      <select id="fe-parity-guess-detect" disabled>
+        <option value="">予想しなくても進められます</option>
+        <option value="yes">検出する</option>
+        <option value="no">検出しない</option>
+      </select>
+    </label>
+  </div>
+  <div class="fe-parity-demo__actions">
+    <button type="button" id="fe-parity-check" class="fe-parity-demo__primary" disabled>受信側で確認</button>
+  </div>
+  <div class="fe-parity-demo__result">
+    <p id="fe-parity-info">元データの1の個数：4個。追加するパリティビットを予想しましょう。</p>
+    <p id="fe-parity-feedback" class="fe-parity-demo__feedback" role="status" aria-live="polite">パリティビットを予想しましょう。</p>
+    <p id="fe-parity-verdict">送信前です。</p>
+  </div>
+</div>
+<noscript>
+  <p>JavaScriptが無効な場合も、本文の例で確認できます。7ビット <code>1111010</code> は1が5個なので、偶数パリティの先頭ビットは1、送信値は <code>11111010</code> です。1ビット反転は検出できますが、2ビット反転は偶奇が変わらず検出できません。</p>
+</noscript>
+<script src="{{ '/assets/js/fe-parity-demo.js' | relative_url }}" defer></script>
 
 ## 定義・仕組み
 
