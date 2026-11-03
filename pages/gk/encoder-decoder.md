@@ -8,6 +8,7 @@ last_modified_at: 2026-10-19
 <html lang="ja">
 <head>
   <meta charset="utf-8">
+  <meta name="description" content="Encoder-Decoderの解説記事は「RNN Encoder-Decoder（Seq2Seq）」に統合しました。固定長ベクトルとAttentionの違いは統合先をご覧ください。">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex,follow">
   <meta http-equiv="refresh" content="0; url=/gk/rnn-encoder-decoder/">
