@@ -449,11 +449,52 @@ def twos_complement(page, expect):
     contained(page, root)
 
 
+def absolute_relative_path(page, expect):
+    root = '#fe-path-demo'
+    expect(page.locator('#fe-path-current')).to_have_text('¥a¥a¥b¥c')
+    expect(page.locator('#fe-path-back')).to_be_disabled()
+    cases = [
+        ('example', ['¥a¥a¥b¥c', '¥a¥a¥b', '¥a¥a', '¥a¥a¥a', '¥a¥a¥a¥b', '¥a¥a¥a¥b¥file'],
+         ['same', 'up', 'up', 'down', 'down', 'file']),
+        ('parent', ['¥a¥a¥b', '¥a¥a'], ['up', 'up']),
+        ('same', ['¥a¥a¥b¥c'], ['same']),
+    ]
+    for case, expected, guesses in cases:
+        page.locator('#fe-path-case').select_option(case)
+        expect(page.locator('#fe-path-current')).to_have_text('¥a¥a¥b¥c')
+        for i, (destination, guess) in enumerate(zip(expected, guesses)):
+            page.locator('#fe-path-guess').select_option(guess)
+            page.locator('#fe-path-next').click()
+            expect(page.locator('#fe-path-current')).to_have_text(destination)
+            expect(page.locator('#fe-path-feedback')).to_contain_text('予想正解')
+            expect(page.locator('#fe-path-progress')).to_contain_text(str(i + 1) + ' / ')
+        expect(page.locator('#fe-path-next')).to_be_disabled()
+        page.locator('#fe-path-back').click()
+        expect(page.locator('#fe-path-next')).to_be_enabled()
+        page.locator('#fe-path-reset').click()
+        expect(page.locator('#fe-path-current')).to_have_text('¥a¥a¥b¥c')
+        expect(page.locator('#fe-path-back')).to_be_disabled()
+    page.locator('#fe-path-case').select_option('example')
+    page.locator('#fe-path-guess').select_option('up')  # Incorrect prediction for '.'.
+    page.locator('#fe-path-next').click()
+    expect(page.locator('#fe-path-feedback')).to_contain_text('予想とは異なりました')
+    page.locator('#fe-path-reset').click()
+    page.locator('#fe-path-next').focus()
+    page.locator('#fe-path-next').press('Enter')
+    expect(page.locator('#fe-path-current')).to_have_text('¥a¥a¥b¥c')
+    expect(page.locator('#fe-path-feedback')).to_contain_text('予想を省略')
+    page.locator('#fe-path-next').click()
+    expect(page.locator('#fe-path-current')).to_have_text('¥a¥a¥b')
+    expect(page.locator('[data-path-node="b1"]')).to_have_attribute('data-state', 'current')
+    contained(page, root)
+
+
 CHECKS = {'shared-exclusive-lock': lock, 'two-phase-commit': two_phase, 'disk-scheduling': disk,
           'cpu-scheduling': cpu, 'confusion-matrix': matrix, 'attention': attention,
           'binary-search': binary_search, 'cnn-output-size': cnn, 'adjacency-matrix': adjacency,
           'binary-tree-traversal': binary_tree_traversal,
-          'twos-complement': twos_complement}
+          'twos-complement': twos_complement,
+          'absolute-relative-path': absolute_relative_path}
 
 
 def run(args):

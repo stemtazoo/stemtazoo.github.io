@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: コンピュータシステム
 fe_order: 52
 date: 2026-07-05
-last_modified_at: 2026-07-25
+last_modified_at: 2026-11-03
 ---
 
 ## まず結論
@@ -114,6 +114,83 @@ file → fileを指定            → ¥a¥a¥a¥b¥file
 ```
 
 公式の出題範囲やシラバスは、[IPA：基本情報技術者試験](https://www.ipa.go.jp/shiken/kubun/fe.html) から確認できます。絶対パスと相対パスは、OSやファイル管理の基本として出題されることがあります。
+
+### 触って覚える：相対パスを左から1要素ずつたどる
+
+**「今いるフォルダ」から `.` と `..` を処理したら、最終的にどこへ着くでしょうか？**
+
+1. 相対パスの例を選び、次の要素がどのような移動を表すか予想します。
+2. 「次へ」を押して1要素ずつ処理し、フォルダツリーと現在地を確認します。
+3. 「1要素戻る」でやり直し、最後の絶対パスを確かめます。
+
+**この教材の前提：** カレントディレクトリは `¥a¥a¥b¥c` です。フォルダ名が同じ `a` でも、階層が違えば別のフォルダです。教材では、この記事の例と同じフォルダ構造を使います。
+
+<link rel="stylesheet" href="{{ '/assets/css/fe-relative-path.css' | relative_url }}">
+
+<div class="fe-path-demo" id="fe-path-demo" aria-label="絶対パスと相対パスを順にたどる教材">
+  <p class="fe-path-demo__step">① 相対パスを選ぶ</p>
+  <div class="fe-path-demo__controls">
+    <label for="fe-path-case">調べる相対パス
+      <select id="fe-path-case">
+        <option value="example">.¥..¥..¥a¥b¥file（記事の例）</option>
+        <option value="parent">..¥..（2階層上へ）</option>
+        <option value="same">.（今の場所のまま）</option>
+      </select>
+    </label>
+  </div>
+  <div class="fe-path-demo__tree" aria-label="教材のフォルダ構造。現在地は青で強調">
+    <strong>フォルダツリー</strong>
+    <ul>
+      <li><span class="fe-path-demo__node" data-path-node="root">¥（ルート）</span>
+        <ul><li><span class="fe-path-demo__node" data-path-node="a1">a</span>
+          <ul><li><span class="fe-path-demo__node" data-path-node="a2">a</span>
+            <ul>
+              <li><span class="fe-path-demo__node" data-path-node="b1">b</span>
+                <ul><li><span class="fe-path-demo__node" data-path-node="c">c（開始位置）</span></li></ul>
+              </li>
+              <li><span class="fe-path-demo__node" data-path-node="a3">a</span>
+                <ul><li><span class="fe-path-demo__node" data-path-node="b2">b</span>
+                  <ul><li><span class="fe-path-demo__node" data-path-node="file">file（ファイル）</span></li></ul>
+                </li></ul>
+              </li>
+            </ul>
+          </li></ul>
+        </li></ul>
+      </li>
+    </ul>
+    <p class="fe-path-demo__hint">青：現在地　薄青：通った場所。フォルダ名だけでなく階層を確認しましょう。</p>
+  </div>
+  <p class="fe-path-demo__step">② 次の要素の意味を予想する</p>
+  <p>次に読む要素：<strong id="fe-path-upcoming">.</strong></p>
+  <div class="fe-path-demo__controls">
+    <label for="fe-path-guess">次の要素は何を意味する？
+      <select id="fe-path-guess">
+        <option value="">予想しなくても進められます</option>
+        <option value="same">今の場所のまま</option>
+        <option value="up">親ディレクトリへ戻る</option>
+        <option value="down">子ディレクトリへ進む</option>
+        <option value="file">ファイルを指定する</option>
+      </select>
+    </label>
+  </div>
+  <p class="fe-path-demo__step">③ 進めて現在地を確認する</p>
+  <div class="fe-path-demo__actions">
+    <button type="button" id="fe-path-next" class="fe-path-demo__primary">次へ（1要素進む）</button>
+    <button type="button" id="fe-path-back">1要素戻る</button>
+    <button type="button" id="fe-path-reset">最初から</button>
+  </div>
+  <div class="fe-path-demo__result">
+    <p id="fe-path-progress">0 / 6 要素</p>
+    <p>現在の絶対パス：<output id="fe-path-current">¥a¥a¥b¥c</output></p>
+    <p>処理済みの要素：<span id="fe-path-history">まだ処理していません。</span></p>
+    <p class="fe-path-demo__notice" id="fe-path-feedback" role="status" aria-live="polite">次の要素の意味を予想しましょう。</p>
+    <p id="fe-path-reason">まずカレントディレクトリから始めます。各要素を左から一つずつ解釈します。</p>
+  </div>
+</div>
+<noscript>
+  <p>JavaScriptが無効でも、本文の例からたどれます。開始 ¥a¥a¥b¥c → 「.」で変化なし → 「..」で ¥a¥a¥b → 「..」で ¥a¥a → 「a」→「b」→「file」で ¥a¥a¥a¥b¥file になります。</p>
+</noscript>
+<script src="{{ '/assets/js/fe-relative-path.js' | relative_url }}" defer></script>
 
 ## 科目Aでどう出る？
 
