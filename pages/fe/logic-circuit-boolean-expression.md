@@ -17,8 +17,7 @@ last_modified_at: 2026-11-03
 
 まず、記号を次の日本語へ置き換えます。
 
-```text
-A • B
+<pre class="fe-logic-equation"><code>A • B
 → AかつB
 → AとBの両方が成り立つ
 
@@ -26,18 +25,15 @@ A + B
 → AまたはB
 → AとBのどちらかが成り立つ
 
-A̅
-→ Aではない
-```
+<span class="fe-logic-overbar" role="img" aria-label="Aの否定">A</span>
+→ Aではない</code></pre>
 
 式を簡単化するときは、次の順番で考えます。
 
-```text
-1. 同じ部分を探す
+<pre class="fe-logic-equation"><code>1. 同じ部分を探す
 2. 同じ部分を外へ出す
-3. A + A̅ = 1 を使う
-4. A • 1 = A を使う
-```
+3. A + <span class="fe-logic-overbar" role="img" aria-label="Aの否定">A</span> = 1 を使う
+4. A • 1 = A を使う</code></pre>
 
 覚える一文はこれです。
 
@@ -67,9 +63,7 @@ Yであり、
 
 一方、
 
-```text
-X • Y • Z + X̅ • Y • Z
-```
+<pre class="fe-logic-equation"><code>X • Y • Z + <span class="fe-logic-overbar" role="img" aria-label="Xの否定">X</span> • Y • Z</code></pre>
 
 は、次の二つの条件を表します。
 
@@ -108,7 +102,7 @@ Xでない場合でも Y • Z
 |---|---|---|---|
 | 論理積（AND） | `A • B` | AかつB | AとBの両方が1 |
 | 論理和（OR） | `A+B` | AまたはB | AとBのどちらかが1 |
-| 否定（NOT） | `A̅` または `¬A` | Aではない | Aが0 |
+| 否定（NOT） | <code><span class="fe-logic-overbar" role="img" aria-label="Aの否定">A</span></code> または `¬A` | Aではない | Aが0 |
 
 特に、論理積の `•` は算数の掛け算ではなく、**「両方の条件を満たす」**という意味です。
 
@@ -116,18 +110,14 @@ Xでない場合でも Y • Z
 
 次の式を考えます。
 
-```text
-X • Y • Z + X̅ • Y • Z
-```
+<pre class="fe-logic-equation"><code>X • Y • Z + <span class="fe-logic-overbar" role="img" aria-label="Xの否定">X</span> • Y • Z</code></pre>
 
 両方の項に `Y • Z` が含まれています。
 
 そこで、共通する `Y • Z` を外へ出します。
 
-```text
-X • Y • Z + X̅ • Y • Z
-= Y • Z • (X + X̅)
-```
+<pre class="fe-logic-equation"><code>X • Y • Z + <span class="fe-logic-overbar" role="img" aria-label="Xの否定">X</span> • Y • Z
+= Y • Z • (X + <span class="fe-logic-overbar" role="img" aria-label="Xの否定">X</span>)</code></pre>
 
 これは、通常の計算で次のようにくくる考え方と同じです。
 
@@ -138,23 +128,19 @@ a • b + c • b
 
 ### 補元律を使う
 
-`X` と `X̅` は、「Xである」と「Xではない」です。
+`X` と <code><span class="fe-logic-overbar" role="img" aria-label="Xの否定">X</span></code> は、「Xである」と「Xではない」です。
 
 どちらか一方は必ず成り立つため、
 
-```text
-X + X̅ = 1
-```
+<pre class="fe-logic-equation"><code>X + <span class="fe-logic-overbar" role="img" aria-label="Xの否定">X</span> = 1</code></pre>
 
 となります。
 
 したがって、
 
-```text
-Y • Z • (X + X̅)
+<pre class="fe-logic-equation"><code>Y • Z • (X + <span class="fe-logic-overbar" role="img" aria-label="Xの否定">X</span>)
 = Y • Z • 1
-= Y • Z
-```
+= Y • Z</code></pre>
 
 となります。
 
@@ -162,8 +148,8 @@ Y • Z • (X + X̅)
 
 | 法則 | 式 | 日本語での意味 |
 |---|---|---|
-| 補元律 | `A+A̅=1` | AかAでないかのどちらかは必ず成り立つ |
-| 補元律 | `A • A̅=0` | Aであり、同時にAでないことはない |
+| 補元律 | <code>A+<span class="fe-logic-overbar" role="img" aria-label="Aの否定">A</span>=1</code> | AかAでないかのどちらかは必ず成り立つ |
+| 補元律 | <code>A • <span class="fe-logic-overbar" role="img" aria-label="Aの否定">A</span>=0</code> | Aであり、同時にAでないことはない |
 | 恒等律 | `A • 1=A` | 必ず成り立つ条件とのANDはA |
 | 恒等律 | `A+0=A` | 成り立たない条件とのORはA |
 | 分配法則 | `A • B+A • C=A • (B+C)` | 同じ部分をくくる |
@@ -186,13 +172,11 @@ Y • Z • (X + X̅)
 
 式変形が難しく感じる場合は、いきなり法則を使わず、日本語へ置き換えます。
 
-```text
-X • Y • Z
+<pre class="fe-logic-equation"><code>X • Y • Z
 → XかつYかつZ
 
-X̅ • Y • Z
-→ Xではなく、YかつZ
-```
+<span class="fe-logic-overbar" role="img" aria-label="Xの否定">X</span> • Y • Z
+→ Xではなく、YかつZ</code></pre>
 
 二つを合わせると、
 
@@ -213,38 +197,36 @@ Y • Z
 
 ### 式変形で解く
 
-```text
-X • Y • Z + X̅ • Y • Z
-= Y • Z • (X + X̅)
+<pre class="fe-logic-equation"><code>X • Y • Z + <span class="fe-logic-overbar" role="img" aria-label="Xの否定">X</span> • Y • Z
+= Y • Z • (X + <span class="fe-logic-overbar" role="img" aria-label="Xの否定">X</span>)
 = Y • Z • 1
-= Y • Z
-```
+= Y • Z</code></pre>
 
 使った法則は、次の三つです。
 
-```text
-共通部分をくくる
+<pre class="fe-logic-equation"><code>共通部分をくくる
 → 分配法則
 
-X + X̅ = 1
+X + <span class="fe-logic-overbar" role="img" aria-label="Xの否定">X</span> = 1
 → 補元律
 
 Y • Z • 1 = Y • Z
-→ 恒等律
-```
+→ 恒等律</code></pre>
 
 ### 触って覚える：論理式の簡単化を8通りで確かめる
 
 **Xの値を変えると、式全体の答えも変わるでしょうか？**
 
-ここでは、元の式 `X • Y • Z + X̅ • Y • Z` と、簡単化した式 `Y • Z` を比べます。
+ここでは、元の式 <code>X • Y • Z + <span class="fe-logic-overbar" role="img" aria-label="Xの否定">X</span> • Y • Z</code> と、簡単化した式 `Y • Z` を比べます。
 
 1. X・Y・Zの値を0か1に設定します。
 2. **両方の式で共通する出力**が0か1か予想します。
 3. 「判定する」を押して、**2つのAND、OR、簡単化後のAND**の途中結果を確認します。
 4. 「次の組合せ」で8通りを調べ、**Xを変えてもY・Zが同じなら出力も同じ**ことを確かめます。
 
-**この教材の前提：** `•` はAND（かつ）、`+` はOR（または）、`X̅` はNOT X（Xではない）です。足し算や掛け算の数値計算ではありません。
+**否定の表記：** Xの上に横線を引く記号は「NOT X（Xではない）」です。文字がコピー先などで崩れる場合は、同じ意味の `¬X` と読み替えます。
+
+**この教材の前提：** `•` はAND（かつ）、`+` はOR（または）、<code><span class="fe-logic-overbar" role="img" aria-label="Xの否定">X</span></code> はNOT X（Xではない）です。足し算や掛け算の数値計算ではありません。
 
 <link rel="stylesheet" href="{{ '/assets/css/fe-logic-circuit-demo.css' | relative_url }}">
 
@@ -274,7 +256,7 @@ Y • Z • 1 = Y • Z
   <div class="fe-logic-demo__expressions">
     <div class="fe-logic-demo__card">
       <strong>元の論理式</strong>
-      <p class="fe-logic-demo__formula">X • Y • Z + X̅ • Y • Z</p>
+      <p class="fe-logic-demo__formula">X • Y • Z + <span class="fe-logic-overbar" role="img" aria-label="Xの否定">X</span> • Y • Z</p>
       <p>ANDを2つ計算 → ORで結合</p>
       <p class="fe-logic-demo__value" id="fe-logic-original">？</p>
     </div>
@@ -314,7 +296,7 @@ Y • Z • 1 = Y • Z
   </div>
 </div>
 <noscript>
-  <p>JavaScriptが無効な場合は、直後の真理値表で8通りを確認できます。元の式 `X • Y • Z + X̅ • Y • Z` と簡単化した式 `Y • Z` はすべて一致します。</p>
+  <p>JavaScriptが無効な場合は、直後の真理値表で8通りを確認できます。元の式 <code>X • Y • Z + <span class="fe-logic-overbar" role="img" aria-label="Xの否定">X</span> • Y • Z</code> と簡単化した式 `Y • Z` はすべて一致します。</p>
 </noscript>
 <script src="{{ '/assets/js/fe-logic-circuit-demo.js' | relative_url }}" defer></script>
 
@@ -322,7 +304,7 @@ Y • Z • 1 = Y • Z
 
 式変形に自信がない場合は、真理値表で確認できます。
 
-| X | Y | Z | `X • Y • Z` | `X̅ • Y • Z` | 全体 | `Y • Z` |
+| X | Y | Z | `X • Y • Z` | <code><span class="fe-logic-overbar" role="img" aria-label="Xの否定">X</span> • Y • Z</code> | 全体 | `Y • Z` |
 |---:|---:|---:|---:|---:|---:|---:|
 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
@@ -399,21 +381,17 @@ A+B
 
 AとBが両方とも1でも、結果は2ではなく1です。
 
-### `X + X̅ = 0` だと思う
+### <code>X + <span class="fe-logic-overbar" role="img" aria-label="Xの否定">X</span> = 0</code> だと思う
 
 逆です。
 
-```text
-X + X̅ = 1
-```
+<pre class="fe-logic-equation"><code>X + <span class="fe-logic-overbar" role="img" aria-label="Xの否定">X</span> = 1</code></pre>
 
 Xであるか、Xでないかのどちらかは必ず成り立ちます。
 
 一方、
 
-```text
-X • X̅ = 0
-```
+<pre class="fe-logic-equation"><code>X • <span class="fe-logic-overbar" role="img" aria-label="Xの否定">X</span> = 0</code></pre>
 
 です。
 
@@ -425,17 +403,13 @@ Xであり、同時にXでないことはありません。
 
 次の形を見つけたら、式変形の方が早く解けます。
 
-```text
-A • B + A̅ • B
-= B • (A+A̅)
-= B
-```
+<pre class="fe-logic-equation"><code>A • B + <span class="fe-logic-overbar" role="img" aria-label="Aの否定">A</span> • B
+= B • (A+<span class="fe-logic-overbar" role="img" aria-label="Aの否定">A</span>)
+= B</code></pre>
 
 ### 共通項を一部分だけ見落とす
 
-```text
-X • Y • Z + X̅ • Y • Z
-```
+<pre class="fe-logic-equation"><code>X • Y • Z + <span class="fe-logic-overbar" role="img" aria-label="Xの否定">X</span> • Y • Z</code></pre>
 
 では、共通するのは `Y` だけではなく `Y • Z` です。
 
@@ -447,8 +421,8 @@ X • Y • Z + X̅ • Y • Z
 - 論理和 `+` は「または」「どちらか」
 - 否定は「〜ではない」
 - 同じ部分があれば、分配法則でくくる
-- `A+A̅=1`、`A • A̅=0`
-- `A • B+A̅ • B=B` の形を覚える
+- <code>A+<span class="fe-logic-overbar" role="img" aria-label="Aの否定">A</span>=1</code>、<code>A • <span class="fe-logic-overbar" role="img" aria-label="Aの否定">A</span>=0</code>
+- <code>A • B+<span class="fe-logic-overbar" role="img" aria-label="Aの否定">A</span> • B=B</code> の形を覚える
 - 式が難しく見えたら、まず日本語へ置き換える
 
 > **数式として見る前に、「かつ・または・ではない」と読んでみる。**
