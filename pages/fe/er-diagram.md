@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: データベース
 fe_order: 10
 date: 2026-08-08
-last_modified_at: 2026-10-15
+last_modified_at: 2026-11-03
 ---
 
 ## まず結論
@@ -147,6 +147,73 @@ E-R図では、主に次の3つを整理します。
 試験では、**実体そのもの**と**実体同士の関係**を分けて考えることが大切です。
 
 このテーマは、基本情報技術者試験のデータベース設計に関係する内容です。公式の出題範囲やシラバスは、[IPA：基本情報技術者試験](https://www.ipa.go.jp/shiken/kubun/fe.html) から確認できます。
+
+### 触って覚える：実体同士の関連を結んでみる
+
+**1件のデータが、相手側の何件と結び付くでしょうか？**
+
+1. 「顧客と注文」「注文と商品」「社員と社員証」から組合せを選びます。
+2. **1対1・1対多・多対多**のどれになるかを予想します。
+3. 「次の関連を表示」で線を1本ずつ増やし、左右それぞれの1件がいくつの相手に結び付くかを確かめます。
+4. 全部の関連を表示したら、予想と理由を比較します。
+
+**この教材の前提：** 図に示すのは、実体の具体的な1件（インスタンス）どうしの対応例です。E-R図での多重度は、例の件数だけでなく業務上許される対応関係から決めます。多対多の「注文と商品」は、テーブル設計で**注文明細（中間テーブル）**を使う例につながります。
+
+<link rel="stylesheet" href="{{ '/assets/css/fe-er-diagram-demo.css' | relative_url }}">
+
+<div class="fe-er-demo" id="fe-er-demo" aria-label="E-R図の実体間の対応を1本ずつ確認する教材">
+  <p class="fe-er-demo__step">① 関連を調べる実体を選ぶ</p>
+  <div class="fe-er-demo__controls">
+    <label for="fe-er-case">実体の組合せ
+      <select id="fe-er-case">
+        <option value="customer">顧客と注文</option>
+        <option value="product">注文と商品</option>
+        <option value="badge">社員と社員証</option>
+      </select>
+    </label>
+  </div>
+  <p class="fe-er-demo__step">② 対応関係を予想する</p>
+  <div class="fe-er-demo__controls">
+    <label for="fe-er-guess">この例の関連は？
+      <select id="fe-er-guess">
+        <option value="">予想しなくても進められます</option>
+        <option value="one-one">1対1</option>
+        <option value="one-many">1対多</option>
+        <option value="many-many">多対多</option>
+      </select>
+    </label>
+  </div>
+  <p class="fe-er-demo__step">③ 線を1本ずつ増やして確認する</p>
+  <p id="fe-er-name"><strong>顧客と注文</strong></p>
+  <div class="fe-er-demo__canvas">
+    <svg id="fe-er-svg" viewBox="0 0 400 245" role="img" aria-label="顧客と注文の対応例。線を表示するには次の関連を表示ボタンを押してください">
+      <text x="90" y="24" class="fe-er-demo__heading">顧客</text>
+      <text x="310" y="24" class="fe-er-demo__heading">注文</text>
+      <rect x="26" y="58" width="124" height="44" rx="8" class="fe-er-demo__box"/><text x="88" y="85" class="fe-er-demo__instance">C01</text>
+      <rect x="26" y="138" width="124" height="44" rx="8" class="fe-er-demo__box"/><text x="88" y="165" class="fe-er-demo__instance">C02</text>
+      <rect x="250" y="43" width="124" height="44" rx="8" class="fe-er-demo__box"/><text x="312" y="70" class="fe-er-demo__instance">O01</text>
+      <rect x="250" y="105" width="124" height="44" rx="8" class="fe-er-demo__box"/><text x="312" y="132" class="fe-er-demo__instance">O02</text>
+      <rect x="250" y="167" width="124" height="44" rx="8" class="fe-er-demo__box"/><text x="312" y="194" class="fe-er-demo__instance">O03</text>
+    </svg>
+    <p class="fe-er-demo__note">左側・右側の各1件から、線が何本つながるかを見比べましょう。</p>
+  </div>
+  <div class="fe-er-demo__actions">
+    <button type="button" id="fe-er-next" class="fe-er-demo__primary">次の関連を表示</button>
+    <button type="button" id="fe-er-back" disabled>1本戻る</button>
+    <button type="button" id="fe-er-reset">最初から</button>
+  </div>
+  <div class="fe-er-demo__result">
+    <p id="fe-er-progress">0 / 3 関連を表示</p>
+    <p class="fe-er-demo__feedback" id="fe-er-feedback" role="status" aria-live="polite">次のつながりを予想して進めましょう。</p>
+    <p><strong>表示済みの対応：</strong></p>
+    <ol id="fe-er-pairs"></ol>
+    <p id="fe-er-reason">線を1本ずつ確認します。片側の1件から何件につながるか、両方向で調べましょう。</p>
+  </div>
+</div>
+<noscript>
+  <p>JavaScriptが無効でも、本文の説明で対応関係を確認できます。顧客1人に複数の注文は1対多、複数の注文と複数の商品は多対多、社員1人と社員証1枚は1対1の例です。</p>
+</noscript>
+<script src="{{ '/assets/js/fe-er-diagram-demo.js' | relative_url }}" defer></script>
 
 ## 科目Aでどう出る？
 
