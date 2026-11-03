@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: 基礎理論
 fe_order: 250
 date: 2026-08-14
-last_modified_at: 2026-10-12
+last_modified_at: 2026-11-03
 ---
 
 ## まず結論
@@ -102,6 +102,65 @@ last_modified_at: 2026-10-12
 ```
 
 のどちらでも同じ操作を使えます。
+
+### 触って覚える：ビット反転から「＋1」まで試す
+
+**8ビットの値を反転して1を加えると、どのビット列になるでしょうか？**
+
+1. 8桁の2進数を入力するか、例を選びます。
+2. 最後にできる8ビットの値を予想します（省略しても進められます）。
+3. 「次へ」で**全ビット反転 → 1を加える**の順に進め、結果を確認します。
+4. 元の値を変えて、0・負数・最小値 -128 でも試します。
+
+**この教材の前提：** 8ビットの2の補数表現を扱い、9ビット目への桁上がりは捨てます。**-128だけは符号反転しても-128のまま**です（+128は8ビットの符号付き整数では表せません）。
+
+<link rel="stylesheet" href="{{ '/assets/css/fe-twos-complement.css' | relative_url }}">
+
+<div class="fe-twos-demo" id="fe-twos-demo" aria-label="2の補数をビット反転と1の加算で確認する">
+  <p class="fe-twos-demo__step">① 8ビットの値を選ぶ</p>
+  <div class="fe-twos-demo__controls">
+    <label for="fe-twos-preset">例を選ぶ
+      <select id="fe-twos-preset">
+        <option value="00110110">00110110（54）</option>
+        <option value="11001101">11001101（-51）</option>
+        <option value="10000000">10000000（-128）</option>
+        <option value="00000000">00000000（0）</option>
+        <option value="11111111">11111111（-1）</option>
+        <option value="01111111">01111111（127）</option>
+      </select>
+    </label>
+    <label for="fe-twos-input">変更したい8ビットの値
+      <input id="fe-twos-input" type="text" inputmode="text" value="00110110" maxlength="8" pattern="[01]{8}" autocomplete="off" spellcheck="false">
+    </label>
+  </div>
+  <p class="fe-twos-demo__error" id="fe-twos-error" role="alert" hidden></p>
+  <p class="fe-twos-demo__step">② 変換後のビット列を予想する</p>
+  <div class="fe-twos-demo__controls">
+    <label for="fe-twos-prediction">予想（8桁、入力しなくてもOK）
+      <input id="fe-twos-prediction" type="text" inputmode="text" maxlength="8" autocomplete="off" spellcheck="false" placeholder="例：11001010">
+    </label>
+  </div>
+  <p class="fe-twos-demo__step">③ 反転と加算を1ステップずつ確認する</p>
+  <p id="fe-twos-stage" class="fe-twos-demo__caption">① 元の8ビット</p>
+  <div class="fe-twos-demo__bits" id="fe-twos-bits" aria-hidden="true">
+    <span class="fe-twos-demo__bit">0</span><span class="fe-twos-demo__bit">0</span><span class="fe-twos-demo__bit">1</span><span class="fe-twos-demo__bit">1</span><span class="fe-twos-demo__bit">0</span><span class="fe-twos-demo__bit">1</span><span class="fe-twos-demo__bit">1</span><span class="fe-twos-demo__bit">0</span>
+  </div>
+  <div class="fe-twos-demo__actions">
+    <button type="button" class="fe-twos-demo__primary" id="fe-twos-next">次へ：全ビット反転</button>
+    <button type="button" id="fe-twos-back">1ステップ戻る</button>
+    <button type="button" id="fe-twos-reset">最初から</button>
+  </div>
+  <div class="fe-twos-demo__result">
+    <p><strong>現在のビット列：</strong><output id="fe-twos-output">00110110</output></p>
+    <p id="fe-twos-feedback" class="fe-twos-demo__notice" role="status" aria-live="polite">次の結果を予想して進みましょう。</p>
+    <p id="fe-twos-reason">まず各ビットの0と1を入れ替えます。</p>
+    <p id="fe-twos-result">符号付き整数としての元の値：54</p>
+  </div>
+</div>
+<noscript>
+  <p>JavaScriptが無効でも、本文の例で手順を確認できます。00110110 → 全ビット反転 11001001 → 1を加えて 11001010（-54）。-128（10000000）は8ビットで反転＋1しても-128のままです。</p>
+</noscript>
+<script src="{{ '/assets/js/fe-twos-complement.js' | relative_url }}" defer></script>
 
 ## 定義・仕組み
 

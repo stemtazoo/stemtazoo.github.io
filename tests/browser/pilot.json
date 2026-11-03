@@ -75,5 +75,13 @@
     "static": {
       "selector": "noscript"
     }
+  },
+  "twos-complement": {
+    "source": "pages/fe/twos-complement.md",
+    "root": "#fe-twos-demo",
+    "url": "/fe/twos-complement/",
+    "static": {
+      "selector": "noscript"
+    }
   }
 }
