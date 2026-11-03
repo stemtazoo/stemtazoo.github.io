@@ -591,6 +591,67 @@ def logic_circuit_boolean_expression(page, expect):
     contained(page, root)
 
 
+def parity_check(page, expect):
+    root = '#fe-parity-demo'
+    expect(page.locator('#fe-parity-send')).to_be_enabled()
+    expect(page.locator('#fe-parity-one')).to_be_disabled()
+    scenarios = [
+        ('1011010', 'even', '0', '01011010'),
+        ('1111010', 'even', '1', '11111010'),
+        ('0000000', 'odd', '1', '10000000'),
+        ('1111111', 'odd', '0', '01111111'),
+    ]
+    for source, kind, bit, expected in scenarios:
+        page.locator('#fe-parity-preset').select_option(source)
+        page.locator('#fe-parity-mode').select_option(kind)
+        page.locator('#fe-parity-guess-bit').select_option(bit)
+        page.locator('#fe-parity-send').click()
+        expect(page.locator('#fe-parity-sent-text')).to_have_text(expected)
+        expect(page.locator('#fe-parity-feedback')).to_contain_text('予想正解')
+        expect(page.locator('#fe-parity-sent .fe-parity-demo__bit')).to_have_count(8)
+        expect(page.locator('#fe-parity-one')).to_be_enabled()
+        # No bit corruption: the receiver accepts the word.
+        page.locator('#fe-parity-none').click()
+        page.locator('#fe-parity-guess-detect').select_option('no')
+        page.locator('#fe-parity-check').click()
+        expect(page.locator('#fe-parity-verdict')).to_contain_text('検出しませんでした')
+        expect(page.locator('#fe-parity-feedback')).to_contain_text('予想正解')
+        # One-bit corruption: change the overall parity, always detected.
+        page.locator('#fe-parity-one').click()
+        page.locator('#fe-parity-guess-detect').select_option('yes')
+        page.locator('#fe-parity-check').click()
+        expect(page.locator('#fe-parity-verdict')).to_contain_text('誤りを検出しました')
+        expect(page.locator('#fe-parity-feedback')).to_contain_text('予想正解')
+        expect(page.locator('#fe-parity-received [data-flipped="true"]')).to_have_count(1)
+        # Two-bit corruption: changes the message without changing parity.
+        page.locator('#fe-parity-two').click()
+        page.locator('#fe-parity-guess-detect').select_option('yes')
+        page.locator('#fe-parity-check').click()
+        expect(page.locator('#fe-parity-verdict')).to_contain_text('検出しませんでした')
+        expect(page.locator('#fe-parity-verdict')).to_contain_text('2ビット反転')
+        expect(page.locator('#fe-parity-feedback')).to_contain_text('予想とは異なりました')
+        expect(page.locator('#fe-parity-received [data-flipped="true"]')).to_have_count(2)
+        assert page.locator('#fe-parity-sent-text').inner_text() != page.locator('#fe-parity-received-text').inner_text()
+    # Invalid input, valid recovery, ignored prediction and native keyboard.
+    page.locator('#fe-parity-data').fill('0101012')
+    expect(page.locator('#fe-parity-send')).to_be_disabled()
+    expect(page.locator('#fe-parity-error')).to_be_visible()
+    page.locator('#fe-parity-data').fill('1111010')
+    page.locator('#fe-parity-mode').select_option('even')
+    expect(page.locator('#fe-parity-send')).to_be_enabled()
+    page.locator('#fe-parity-send').focus()
+    page.locator('#fe-parity-send').press('Enter')
+    expect(page.locator('#fe-parity-sent-text')).to_have_text('11111010')
+    expect(page.locator('#fe-parity-feedback')).to_contain_text('予想を省略')
+    page.locator('#fe-parity-one').click()
+    page.locator('#fe-parity-check').click()
+    expect(page.locator('#fe-parity-feedback')).to_contain_text('予想を省略')
+    page.locator('#fe-parity-reset').click()
+    expect(page.locator('#fe-parity-one')).to_be_disabled()
+    expect(page.locator('#fe-parity-sent-text')).to_contain_text('送信前')
+    contained(page, root)
+
+
 CHECKS = {'shared-exclusive-lock': lock, 'two-phase-commit': two_phase, 'disk-scheduling': disk,
           'cpu-scheduling': cpu, 'confusion-matrix': matrix, 'attention': attention,
           'binary-search': binary_search, 'cnn-output-size': cnn, 'adjacency-matrix': adjacency,
@@ -598,7 +659,8 @@ CHECKS = {'shared-exclusive-lock': lock, 'two-phase-commit': two_phase, 'disk-sc
           'twos-complement': twos_complement,
           'absolute-relative-path': absolute_relative_path,
           'er-diagram': er_diagram,
-          'logic-circuit-boolean-expression': logic_circuit_boolean_expression}
+          'logic-circuit-boolean-expression': logic_circuit_boolean_expression,
+          'parity-check': parity_check}
 
 
 def run(args):

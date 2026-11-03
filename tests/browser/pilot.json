@@ -107,5 +107,13 @@
     "static": {
       "selector": "noscript"
     }
+  },
+  "parity-check": {
+    "source": "pages/fe/parity-check.md",
+    "root": "#fe-parity-demo",
+    "url": "/fe/parity-check/",
+    "static": {
+      "selector": "noscript"
+    }
   }
 }
