@@ -392,10 +392,68 @@ def binary_tree_traversal(page, expect):
     contained(page, root)
 
 
+def twos_complement(page, expect):
+    root = '#fe-twos-demo'
+    cases = [
+        ('00110110', '11001001', '11001010', '-54'),
+        ('11001101', '00110010', '00110011', '51'),
+        ('10000000', '01111111', '10000000', '-128'),
+        ('00000000', '11111111', '00000000', '0'),
+        ('11111111', '00000000', '00000001', '1'),
+        ('01111111', '10000000', '10000001', '-127'),
+    ]
+    expect(page.locator('#fe-twos-back')).to_be_disabled()
+    for source, inverted, final, signed in cases:
+        page.locator('#fe-twos-preset').select_option(source)
+        expect(page.locator('#fe-twos-output')).to_have_text(source)
+        page.locator('#fe-twos-prediction').fill(final)
+        # The answer is not revealed until both operations have been performed.
+        expect(page.locator('#fe-twos-result')).to_contain_text('元の値')
+        page.locator('#fe-twos-next').click()
+        expect(page.locator('#fe-twos-output')).to_have_text(inverted)
+        expect(page.locator('#fe-twos-result')).to_contain_text('まだ表示していません')
+        page.locator('#fe-twos-next').click()
+        expect(page.locator('#fe-twos-output')).to_have_text(final)
+        expect(page.locator('#fe-twos-result')).to_contain_text('整数：' + signed)
+        expect(page.locator('#fe-twos-feedback')).to_contain_text('予想正解')
+        expect(page.locator('#fe-twos-next')).to_be_disabled()
+        if source == '10000000':
+            expect(page.locator('#fe-twos-reason')).to_contain_text('+128は8ビット')
+        if source == '00000000':
+            expect(page.locator('#fe-twos-reason')).to_contain_text('9ビット目への桁上がり')
+        page.locator('#fe-twos-back').click()
+        expect(page.locator('#fe-twos-output')).to_have_text(inverted)
+        page.locator('#fe-twos-reset').click()
+        expect(page.locator('#fe-twos-output')).to_have_text(source)
+        expect(page.locator('#fe-twos-back')).to_be_disabled()
+    # Incorrect prediction, skipped prediction, invalid input, recovery and keyboard use.
+    page.locator('#fe-twos-preset').select_option('00110110')
+    page.locator('#fe-twos-prediction').fill('00000000')
+    page.locator('#fe-twos-next').click()
+    page.locator('#fe-twos-next').click()
+    expect(page.locator('#fe-twos-feedback')).to_contain_text('予想とは異なりました')
+    page.locator('#fe-twos-reset').click()
+    page.locator('#fe-twos-next').focus()
+    page.locator('#fe-twos-next').press('Enter')
+    expect(page.locator('#fe-twos-output')).to_have_text('11001001')
+    page.locator('#fe-twos-reset').click()
+    page.locator('#fe-twos-input').fill('0000012')
+    expect(page.locator('#fe-twos-next')).to_be_disabled()
+    expect(page.locator('#fe-twos-error')).to_be_visible()
+    page.locator('#fe-twos-input').fill('00000001')
+    expect(page.locator('#fe-twos-next')).to_be_enabled()
+    page.locator('#fe-twos-next').click()
+    page.locator('#fe-twos-next').click()
+    expect(page.locator('#fe-twos-output')).to_have_text('11111111')
+    expect(page.locator('#fe-twos-feedback')).to_contain_text('予想を省略')
+    contained(page, root)
+
+
 CHECKS = {'shared-exclusive-lock': lock, 'two-phase-commit': two_phase, 'disk-scheduling': disk,
           'cpu-scheduling': cpu, 'confusion-matrix': matrix, 'attention': attention,
           'binary-search': binary_search, 'cnn-output-size': cnn, 'adjacency-matrix': adjacency,
-          'binary-tree-traversal': binary_tree_traversal}
+          'binary-tree-traversal': binary_tree_traversal,
+          'twos-complement': twos_complement}
 
 
 def run(args):
