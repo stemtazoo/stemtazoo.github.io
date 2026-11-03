@@ -1,0 +1,23 @@
+/* FE: locally scoped two's complement visual lesson */
+.fe-twos-demo{border:1px solid #94a3b8;border-radius:12px;padding:1rem;margin:1.25rem 0;max-width:100%;box-sizing:border-box}
+.fe-twos-demo *{box-sizing:border-box}
+.fe-twos-demo__step{font-weight:700;line-height:1.55;margin:1rem 0 .55rem;padding:.4rem 0;border-bottom:1px solid #cbd5e1}
+.fe-twos-demo__controls{display:flex;flex-wrap:wrap;gap:.8rem;align-items:end}
+.fe-twos-demo label{display:flex;flex:1 1 175px;min-width:0;flex-direction:column;gap:.3rem}
+.fe-twos-demo select,.fe-twos-demo input{max-width:100%;width:100%;border:1px solid #64748b;border-radius:7px;padding:.55rem;background:#fff;color:#172033;font:inherit}
+.fe-twos-demo input[aria-invalid="true"]{border-color:#b91c1c;outline:2px solid #b91c1c}
+.fe-twos-demo__bits{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:3px;margin:.6rem 0}
+.fe-twos-demo__bit{min-width:0;text-align:center;border:1px solid #64748b;border-radius:5px;background:#f1f5f9;color:#172033;font-weight:700;font-variant-numeric:tabular-nums;padding:.45rem 0;font-size:clamp(.85rem,3.2vw,1.15rem)}
+.fe-twos-demo__bit[data-changed="true"]{background:#bfdbfe;border-color:#1d4ed8;color:#172554}
+.fe-twos-demo__bit[data-sign="true"]{border-width:2px}
+.fe-twos-demo__caption{font-size:.88rem;color:#334155}
+.fe-twos-demo__actions{display:flex;flex-wrap:wrap;gap:.5rem;margin:.6rem 0}
+.fe-twos-demo button{border:1px solid #64748b;border-radius:7px;padding:.65rem .8rem;min-height:44px;background:#e2e8f0;color:#172033;font:inherit;cursor:pointer}
+.fe-twos-demo button.fe-twos-demo__primary{background:#1d4ed8;border-color:#1d4ed8;color:#fff}
+.fe-twos-demo button:disabled{opacity:.48;cursor:not-allowed}
+.fe-twos-demo :focus-visible{outline:3px solid #2563eb;outline-offset:3px}
+.fe-twos-demo__result{background:#f1f5f9;border-radius:9px;padding:.75rem;color:#172033;margin:.7rem 0;overflow-wrap:anywhere}
+.fe-twos-demo__result p{margin:.3rem 0}
+.fe-twos-demo__notice{font-weight:700}
+.fe-twos-demo__error{color:#991b1b}
+@media(max-width:480px){.fe-twos-demo{padding:.65rem}.fe-twos-demo__controls label{flex-basis:100%}.fe-twos-demo__actions button{flex:1 1 calc(50% - .5rem)}}
