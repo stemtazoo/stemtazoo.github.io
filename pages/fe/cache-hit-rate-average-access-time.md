@@ -133,10 +133,10 @@ CPUがデータを必要としたとき、まずキャッシュメモリを見�
     <p id="fe-cache-feedback" class="fe-cache-demo__feedback" role="status" aria-live="polite">CPU AとCPU Bのどちらが速いか予想しましょう。</p>
     <p id="fe-cache-answer">どちらが短いか予想してから判定しましょう。</p>
   </div>
-  <p class="fe-cache-demo__hint">棒の長さは平均アクセス時間の比較用です。**短い方が速い**ことを示します。交点の計算結果は、ヒット率の小数第2位までを入力に反映します。</p>
+  <p class="fe-cache-demo__hint">棒の長さは平均アクセス時間の比較用です。<strong>短い方が速い</strong>ことを示します。交点の計算結果は、ヒット率の小数第2位までを入力に反映します。</p>
 </div>
 <noscript>
-  <p>JavaScriptが無効でも、本文の計算例で確認できます。CPU Aは`60P+300(1-P)`、CPU Bは`20P+420(1-P)`です。両者の平均アクセス時間が等しくなるヒット率は`P=0.75`です。</p>
+  <p>JavaScriptが無効でも、本文の計算例で確認できます。CPU Aは<code>60P+300(1-P)</code>、CPU Bは<code>20P+420(1-P)</code>です。両者の平均アクセス時間が等しくなるヒット率は<code>P=0.75</code>です。</p>
 </noscript>
 <script src="{{ '/assets/js/fe-cache-average-demo.js' | relative_url }}" defer></script>
 
