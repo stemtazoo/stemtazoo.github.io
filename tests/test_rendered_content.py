@@ -8,6 +8,7 @@ from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 from audit_rendered_content import RAW_TABLE, inspect_html, scan
+from test_rendered_h1 import HeadingAuditTests  # Include new cases in existing CI selection.
 
 
 class RenderedContentTests(unittest.TestCase):
