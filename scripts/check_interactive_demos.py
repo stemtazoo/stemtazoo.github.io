@@ -537,6 +537,17 @@ def er_diagram(page, expect):
 
 def logic_circuit_boolean_expression(page, expect):
     root = '#fe-logic-demo'
+    # Android/Chromium: NOT must have a drawn overline, not a combining mark.
+    overbars = page.locator('.fe-logic-overbar')
+    assert overbars.count() >= 20, 'Missing NOT markers in explanations'
+    for selector in ('.fe-logic-equation .fe-logic-overbar',
+                     '#fe-logic-demo .fe-logic-overbar',
+                     'table .fe-logic-overbar'):
+        marker = page.locator(selector).first
+        expect(marker).to_be_visible()
+        style = marker.evaluate('el => ({line:getComputedStyle(el).textDecorationLine, letter:el.textContent, width:el.getBoundingClientRect().width})')
+        assert 'overline' in style['line'] and style['letter'] in ('X', 'A') and style['width'] > 0, style
+    assert not page.locator('body').evaluate("el => /[AX]\\u0305/.test(el.textContent)"), 'Combining overline remains'
     expect(page.locator('#fe-logic-original')).to_have_text('？')
     expect(page.locator('#fe-logic-count')).to_have_text('0 / 8 通りを確認済み')
     combos = [(x, y, z) for x in (0, 1) for y in (0, 1) for z in (0, 1)]

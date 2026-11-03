@@ -26,3 +26,17 @@
 .fe-logic-demo tr[data-selected="true"]{background:#dbeafe;color:#172554;font-weight:700}
 .fe-logic-demo__legend{font-size:.87rem;color:#334155}
 @media(max-width:520px){.fe-logic-demo{padding:.65rem}.fe-logic-demo__expressions{grid-template-columns:minmax(0,1fr)}.fe-logic-demo label{flex:1 1 calc(33.33% - .7rem)}.fe-logic-demo__actions button{flex:1 1 calc(50% - .5rem)}}
+
+/* Use a real CSS overline instead of U+0305, whose mark can float or disappear
+   in Android fonts, inline code, Markdown tables and preformatted examples. */
+.fe-logic-overbar{
+  display:inline-block;
+  text-decoration-line:overline;
+  text-decoration-style:solid;
+  text-decoration-thickness:1.5px;
+  text-decoration-skip-ink:none;
+  line-height:1.25;
+  vertical-align:baseline;
+}
+.fe-logic-equation{white-space:pre;overflow-x:auto;max-width:100%}
+.fe-logic-equation .fe-logic-overbar{line-height:inherit}
