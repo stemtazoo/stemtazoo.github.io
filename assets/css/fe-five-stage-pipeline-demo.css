@@ -1,0 +1,24 @@
+/* Scoped five-stage pipeline teaching aid */
+.fe-pipe-demo{border:1px solid #94a3b8;border-radius:12px;padding:1rem;margin:1.2rem 0;max-width:100%;box-sizing:border-box}
+.fe-pipe-demo *{box-sizing:border-box}
+.fe-pipe-demo__step{font-weight:700;border-bottom:1px solid #cbd5e1;padding:.3rem 0;margin:.9rem 0 .5rem}
+.fe-pipe-demo__controls{display:flex;gap:.7rem;flex-wrap:wrap}
+.fe-pipe-demo label{display:flex;flex:1 1 160px;min-width:0;flex-direction:column;gap:.25rem}
+.fe-pipe-demo select{font:inherit;max-width:100%;width:100%;background:#fff;color:#172033;border:1px solid #64748b;border-radius:7px;padding:.55rem}
+.fe-pipe-demo__actions{display:flex;flex-wrap:wrap;gap:.5rem;margin:.75rem 0}
+.fe-pipe-demo button{font:inherit;min-height:44px;background:#e2e8f0;color:#172033;border:1px solid #64748b;border-radius:7px;padding:.6rem .75rem;cursor:pointer}
+.fe-pipe-demo button.fe-pipe-demo__primary{background:#1d4ed8;color:#fff;border-color:#1d4ed8}
+.fe-pipe-demo button:disabled{opacity:.5;cursor:not-allowed}
+.fe-pipe-demo :focus-visible{outline:3px solid #2563eb;outline-offset:3px}
+.fe-pipe-demo__status{background:#f1f5f9;color:#172033;padding:.75rem;border-radius:8px;margin:.6rem 0}
+.fe-pipe-demo__status p{margin:.3rem 0}
+.fe-pipe-demo__tablewrap{max-width:100%;overflow-x:auto;margin:.7rem 0}
+.fe-pipe-demo table{width:100%;min-width:310px;border-collapse:collapse;text-align:center;font-size:.94rem}
+.fe-pipe-demo th,.fe-pipe-demo td{padding:.5rem .2rem;border:1px solid #cbd5e1}
+.fe-pipe-demo th{background:#e2e8f0;color:#172033}
+.fe-pipe-demo td[data-active="true"]{background:#dbeafe;color:#172554;font-weight:800}
+.fe-pipe-demo td[data-active="false"]{color:#475569}
+.fe-pipe-demo__hint{font-size:.92rem;color:#334155}
+.fe-pipe-demo__feedback{font-weight:700}
+.fe-pipe-demo__stage{background:#f8fafc;color:#172033;border:1px solid #cbd5e1;border-radius:7px;padding:.55rem;margin:.5rem 0}
+@media(max-width:480px){.fe-pipe-demo{padding:.65rem}.fe-pipe-demo__actions button{flex:1 1 calc(50% - .5rem)}}

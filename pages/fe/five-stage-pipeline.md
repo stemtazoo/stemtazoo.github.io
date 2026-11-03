@@ -10,7 +10,7 @@ fe_section: テクノロジ系
 fe_subsection: コンピュータ構成要素
 fe_order: 30
 date: 2026-08-16
-last_modified_at: 2026-09-23
+last_modified_at: 2026-11-03
 ---
 
 ## まず結論
@@ -216,6 +216,53 @@ MEM
 ```
 
 「命令なのか、データなのか」で切り分けます。
+
+### 触って覚える：5段パイプラインを1サイクルずつ動かす
+
+**6命令を5段のパイプラインで処理すると、どの命令が同時に動くでしょうか？**
+
+1. 命令数を選び、次のサイクルで完了している命令の数を予想します。
+2. 「1サイクル進める」で、各命令がIF・ID・EX・MEM・WBのどこにいるかを確認します。
+3. 5サイクル目には命令1がWB、命令5がIFです。前後に戻って違いを比べます。
+
+この教材は**各ステージ1サイクル・途中停止なし**の基本モデルです。MEMにいる命令が必ずデータメモリを読み書きするという意味ではありません。
+
+<link rel="stylesheet" href="{{ '/assets/css/fe-five-stage-pipeline-demo.css' | relative_url }}">
+
+<div class="fe-pipe-demo" id="fe-pipe-demo">
+  <p class="fe-pipe-demo__step">① 命令数と予想</p>
+  <div class="fe-pipe-demo__controls">
+    <label for="fe-pipe-count">命令数
+      <select id="fe-pipe-count"><option value="1">1命令</option><option value="3">3命令</option><option value="6" selected>6命令</option><option value="10">10命令</option></select>
+    </label>
+    <label for="fe-pipe-guess">次のサイクルの完了命令数
+      <select id="fe-pipe-guess"><option value="">予想なしで進む</option><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select>
+    </label>
+  </div>
+  <p class="fe-pipe-demo__step">② 進める・戻る</p>
+  <div class="fe-pipe-demo__actions">
+    <button type="button" id="fe-pipe-next" class="fe-pipe-demo__primary">1サイクル進める</button>
+    <button type="button" id="fe-pipe-back" disabled>1サイクル戻る</button>
+    <button type="button" id="fe-pipe-finish">最終サイクルへ</button>
+    <button type="button" id="fe-pipe-reset">最初から</button>
+  </div>
+  <div class="fe-pipe-demo__status">
+    <p>現在：<output id="fe-pipe-cycle">0 / 10 サイクル</output></p>
+    <p>完了：<output id="fe-pipe-completed">0 / 6 命令完了</output></p>
+    <p id="fe-pipe-feedback" class="fe-pipe-demo__feedback" role="status" aria-live="polite">次のサイクルで命令1がIFに入ります。</p>
+  </div>
+  <p class="fe-pipe-demo__step">③ 命令とステージを確認</p>
+  <p class="fe-pipe-demo__hint">行は命令、列はステージ。青いマスが現在の処理、—は処理していない状態です。</p>
+  <div class="fe-pipe-demo__tablewrap">
+    <table id="fe-pipe-table">
+      <thead><tr><th scope="col">命令</th><th scope="col">IF</th><th scope="col">ID</th><th scope="col">EX</th><th scope="col">MEM</th><th scope="col">WB</th></tr></thead>
+      <tbody><tr><th scope="row">命令1</th><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr></tbody>
+    </table>
+  </div>
+  <div class="fe-pipe-demo__stage" id="fe-pipe-explanation"><p>命令はまだ処理を開始していません。</p></div>
+</div>
+<noscript><p>JavaScriptが無効な場合は、続く静的タイムチャートで確認できます。6命令は10サイクルで完了します。</p></noscript>
+<script src="{{ '/assets/js/fe-five-stage-pipeline-demo.js' | relative_url }}" defer></script>
 
 ## パイプラインの処理サイクル数を求める
 
