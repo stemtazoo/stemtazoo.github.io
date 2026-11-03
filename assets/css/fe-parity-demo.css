@@ -1,0 +1,24 @@
+/* FE parity-check: scoped, responsive lesson */
+.fe-parity-demo{border:1px solid #94a3b8;border-radius:12px;padding:1rem;margin:1.25rem 0;max-width:100%;box-sizing:border-box}
+.fe-parity-demo *{box-sizing:border-box}
+.fe-parity-demo__step{font-weight:700;line-height:1.5;margin:1rem 0 .55rem;padding:.3rem 0;border-bottom:1px solid #cbd5e1}
+.fe-parity-demo__controls{display:flex;gap:.65rem;flex-wrap:wrap;align-items:end}
+.fe-parity-demo label{display:flex;flex-direction:column;gap:.3rem;flex:1 1 175px;min-width:0}
+.fe-parity-demo select,.fe-parity-demo input{font:inherit;padding:.55rem;width:100%;max-width:100%;background:#fff;color:#172033;border:1px solid #64748b;border-radius:7px}
+.fe-parity-demo input[aria-invalid="true"]{border:2px solid #b91c1c}
+.fe-parity-demo__actions{display:flex;flex-wrap:wrap;gap:.5rem;margin:.65rem 0}
+.fe-parity-demo button{font:inherit;min-height:44px;border:1px solid #64748b;border-radius:7px;padding:.6rem .75rem;color:#172033;background:#e2e8f0;cursor:pointer}
+.fe-parity-demo button.fe-parity-demo__primary{background:#1d4ed8;border-color:#1d4ed8;color:#fff}
+.fe-parity-demo button:disabled{opacity:.48;cursor:not-allowed}
+.fe-parity-demo :focus-visible{outline:3px solid #2563eb;outline-offset:3px}
+.fe-parity-demo__bits{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:3px;margin:.6rem 0}
+.fe-parity-demo__bit{padding:.4rem 0;text-align:center;background:#f1f5f9;border:1px solid #64748b;border-radius:5px;color:#172033;font-size:clamp(.85rem,3vw,1.1rem);font-weight:700;min-width:0;font-variant-numeric:tabular-nums}
+.fe-parity-demo__bit[data-parity="true"]{background:#dbeafe;border:2px solid #2563eb;color:#172554}
+.fe-parity-demo__bit[data-flipped="true"]{background:#fef3c7;border:2px solid #b45309;color:#78350f}
+.fe-parity-demo__bit[data-empty="true"]{opacity:.5}
+.fe-parity-demo__result{background:#f1f5f9;color:#172033;border-radius:8px;padding:.7rem;margin:.65rem 0;overflow-wrap:anywhere}
+.fe-parity-demo__result p{margin:.3rem 0}
+.fe-parity-demo__feedback{font-weight:700}
+.fe-parity-demo__hint{font-size:.9rem;color:#334155}
+.fe-parity-demo__error{color:#991b1b;font-weight:700}
+@media(max-width:480px){.fe-parity-demo{padding:.65rem}.fe-parity-demo label{flex-basis:100%}.fe-parity-demo__actions button{flex:1 1 calc(50% - .5rem)}}
