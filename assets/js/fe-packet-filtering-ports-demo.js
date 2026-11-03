@@ -10,7 +10,7 @@
   const feedback = $("#fe-port-feedback"), verdict = $("#fe-port-verdict"), explanation = $("#fe-port-explanation");
   const pcIP = "192.0.2.10", serverIP = "198.51.100.20";
   // These rules are FIXED. User input changes only the packet to be tested.
-  // All six header fields must match the same allow rule. Everything else is denied.
+  // All five matching fields must match the same allow rule. Everything else is denied.
   const fixedRules = [
     { id: "R1", proto: "TCP", srcIP: pcIP, srcPort: 50000, dstIP: serverIP, dstPort: 80 },
     { id: "R2", proto: "TCP", srcIP: serverIP, srcPort: 80, dstIP: pcIP, dstPort: 50000 },
