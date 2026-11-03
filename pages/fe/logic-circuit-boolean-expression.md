@@ -275,7 +275,7 @@ Y • Z • 1 = Y • Z
     <div class="fe-logic-demo__card">
       <strong>元の論理式</strong>
       <p class="fe-logic-demo__formula">X • Y • Z + X̅ • Y • Z</p>
-      <p>AND → AND → OR</p>
+      <p>ANDを2つ計算 → ORで結合</p>
       <p class="fe-logic-demo__value" id="fe-logic-original">？</p>
     </div>
     <div class="fe-logic-demo__card">
