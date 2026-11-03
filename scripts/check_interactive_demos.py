@@ -350,9 +350,52 @@ def adjacency(page, expect):
     contained(page, root)
 
 
+def binary_tree_traversal(page, expect):
+    root = '#fe-tree-traversal-demo'
+    sequences = {
+        'pre': 'ABDGECF',
+        'inside': 'GDBEACF',
+        'post': 'GDEBFCA',
+    }
+    expect(page.locator('#fe-tree-progress')).to_contain_text('0 / 7')
+    expect(page.locator('#fe-tree-back')).to_be_disabled()
+    # Each traversal: correct guess, incorrect guess, skipped prediction, 7 steps, rollback, reset.
+    for mode, sequence in sequences.items():
+        page.locator('#fe-tree-mode').select_option(mode)
+        expect(page.locator('#fe-tree-output')).to_have_text('まだ記録していません。')
+        for i, letter in enumerate(sequence):
+            if i == 0:
+                page.locator('#fe-tree-guess').select_option(letter)
+            elif i == 1:
+                page.locator('#fe-tree-guess').select_option('A' if letter != 'A' else 'G')
+            page.locator('#fe-tree-next').click()
+            expect(page.locator('#fe-tree-output')).to_have_text(' → '.join(sequence[:i + 1]))
+            expect(page.locator(f'[data-tree-node="{letter}"]')).to_have_attribute('data-state', 'current')
+            if i == 0:
+                expect(page.locator('#fe-tree-feedback')).to_contain_text('予想正解')
+            if i == 1:
+                expect(page.locator('#fe-tree-feedback')).to_contain_text('予想とは違いました')
+        expect(page.locator('#fe-tree-next')).to_be_disabled()
+        expect(page.locator('#fe-tree-progress')).to_contain_text('7 / 7')
+        page.locator('#fe-tree-back').click()
+        expect(page.locator('#fe-tree-next')).to_be_enabled()
+        expect(page.locator('#fe-tree-output')).to_have_text(' → '.join(sequence[:-1]))
+        page.locator('#fe-tree-reset').click()
+        expect(page.locator('#fe-tree-output')).to_have_text('まだ記録していません。')
+        expect(page.locator('#fe-tree-back')).to_be_disabled()
+        expect(page.locator('#fe-tree-next')).to_be_enabled()
+    # Native keyboard activation and mobile-size control containment.
+    page.locator('#fe-tree-next').focus()
+    page.locator('#fe-tree-next').press('Enter')
+    expect(page.locator('#fe-tree-output')).to_have_text('G')
+    expect(page.locator('#fe-tree-reason')).to_contain_text('左右の部分木を両方調べ終えた後')
+    contained(page, root)
+
+
 CHECKS = {'shared-exclusive-lock': lock, 'two-phase-commit': two_phase, 'disk-scheduling': disk,
           'cpu-scheduling': cpu, 'confusion-matrix': matrix, 'attention': attention,
-          'binary-search': binary_search, 'cnn-output-size': cnn, 'adjacency-matrix': adjacency}
+          'binary-search': binary_search, 'cnn-output-size': cnn, 'adjacency-matrix': adjacency,
+          'binary-tree-traversal': binary_tree_traversal}
 
 
 def run(args):

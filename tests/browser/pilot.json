@@ -67,5 +67,13 @@
       "selector": "[data-adj-status]",
       "text": "V1―V2"
     }
+  },
+  "binary-tree-traversal": {
+    "source": "pages/fe/binary-tree-traversal.md",
+    "root": "#fe-tree-traversal-demo",
+    "url": "/fe/binary-tree-traversal/",
+    "static": {
+      "selector": "noscript"
+    }
   }
 }

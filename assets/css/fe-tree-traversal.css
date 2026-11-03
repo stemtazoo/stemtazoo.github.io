@@ -1,0 +1,31 @@
+/* Binary-tree traversal lesson: locally scoped visualizer. */
+.fe-tree-demo{border:1px solid #94a3b8;border-radius:12px;padding:1rem;margin:1.3rem 0;max-width:100%;box-sizing:border-box}
+.fe-tree-demo *{box-sizing:border-box}
+.fe-tree-demo__step{border-bottom:1px solid #cbd5e1;padding:.35rem 0;margin:1rem 0 .55rem;line-height:1.5;font-weight:700}
+.fe-tree-demo__intro,.fe-tree-demo__hint{margin:.5rem 0}
+.fe-tree-demo__controls{display:flex;flex-wrap:wrap;gap:.8rem;align-items:end}
+.fe-tree-demo__controls label{display:flex;flex-direction:column;gap:.3rem;min-width:0;flex:1 1 180px}
+.fe-tree-demo select{min-width:0;max-width:100%;width:100%;padding:.55rem;border:1px solid #64748b;border-radius:7px;background:#fff;color:#172033;font:inherit}
+.fe-tree-demo__visual{background:#f8fafc;border:1px solid #cbd5e1;border-radius:10px;margin:.8rem 0;padding:.45rem}
+.fe-tree-demo svg{display:block;width:100%;height:auto;max-height:310px}
+.fe-tree-demo__edge{stroke:#64748b;stroke-width:2.4}
+.fe-tree-demo__edge[data-active="true"]{stroke:#2563eb;stroke-width:4}
+.fe-tree-demo__node circle{fill:#fff;stroke:#475569;stroke-width:2.2}
+.fe-tree-demo__node text{fill:#172033;font-size:18px;font-weight:700;text-anchor:middle;dominant-baseline:middle}
+.fe-tree-demo__node[data-state="done"] circle{fill:#d1fae5;stroke:#047857}
+.fe-tree-demo__node[data-state="current"] circle{fill:#2563eb;stroke:#1d4ed8;stroke-width:3}
+.fe-tree-demo__node[data-state="current"] text{fill:#fff}
+.fe-tree-demo__node[data-state="ancestor"] circle{fill:#dbeafe;stroke:#2563eb}
+.fe-tree-demo__key{display:flex;flex-wrap:wrap;gap:.35rem 1rem;margin:.35rem 0;color:#334155;font-size:.87rem}
+.fe-tree-demo__swatch{display:inline-block;width:.85rem;height:.85rem;border:1px solid #64748b;border-radius:50%;vertical-align:middle;margin-right:.3rem}
+.fe-tree-demo__swatch--current{background:#2563eb}.fe-tree-demo__swatch--done{background:#d1fae5}.fe-tree-demo__swatch--ancestor{background:#dbeafe}
+.fe-tree-demo__actions{display:flex;flex-wrap:wrap;gap:.5rem;margin:.65rem 0}
+.fe-tree-demo__actions button{border:1px solid #64748b;background:#e2e8f0;color:#172033;border-radius:7px;padding:.65rem .8rem;font:inherit;cursor:pointer;min-height:44px}
+.fe-tree-demo__actions button:disabled{opacity:.45;cursor:not-allowed}
+.fe-tree-demo__actions button.fe-tree-demo__primary{background:#1d4ed8;color:#fff;border-color:#1d4ed8}
+.fe-tree-demo :focus-visible{outline:3px solid #2563eb;outline-offset:3px}
+.fe-tree-demo__result{background:#f1f5f9;color:#172033;border-radius:8px;padding:.75rem;margin:.7rem 0}
+.fe-tree-demo__result p{margin:.25rem 0}
+.fe-tree-demo__output{font-weight:700;overflow-wrap:anywhere}
+.fe-tree-demo__feedback{font-weight:600}
+@media(max-width:480px){.fe-tree-demo{padding:.65rem}.fe-tree-demo__actions button{flex:1 1 calc(50% - .5rem)}.fe-tree-demo__controls label{flex-basis:100%}}
