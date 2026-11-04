@@ -1,0 +1,19 @@
+/* Interactive comparison for FE DISTINCT. Scoped styles. */
+.fe-sql-distinct-demo{max-width:850px;margin:1.25rem auto;padding:1rem;border:1px solid #8eaab8;border-radius:12px}
+.fe-sql-distinct-demo [hidden]{display:none!important}
+.fe-sql-distinct-demo__choice{border:1px solid #a0b4c0;border-radius:8px;padding:.75rem;display:flex;flex-wrap:wrap;gap:.85rem}
+.fe-sql-distinct-demo__choice label,.fe-sql-distinct-demo__toggle{display:flex;align-items:center;gap:.4rem;min-height:36px}
+.fe-sql-distinct-demo__toggle{margin:.85rem 0}
+.fe-sql-distinct-demo__query{font-family:ui-monospace,monospace;background:#eaf3f9;color:#193f58;padding:.7rem;border-radius:8px;overflow-wrap:anywhere}
+.fe-sql-distinct-demo__actions{display:flex;flex-wrap:wrap;gap:.6rem;margin:.8rem 0}
+.fe-sql-distinct-demo button,.fe-sql-distinct-demo select{min-height:44px;font:inherit}
+.fe-sql-distinct-demo button{padding:.6rem 1rem;background:#196081;color:#fff;border:1px solid #135372;border-radius:8px;cursor:pointer}
+.fe-sql-distinct-demo button:focus-visible,.fe-sql-distinct-demo input:focus-visible,.fe-sql-distinct-demo select:focus-visible{outline:3px solid #cb922e;outline-offset:3px}
+.fe-sql-distinct-demo__table-wrap{overflow-x:auto}
+.fe-sql-distinct-demo table{width:100%;border-collapse:collapse;margin:.55rem 0}
+.fe-sql-distinct-demo th,.fe-sql-distinct-demo td{text-align:left;border:1px solid #8faab8;padding:.55rem}
+.fe-sql-distinct-demo th{background:#e9f1f6;color:#193d54}
+.fe-sql-distinct-demo [data-feedback]{font-weight:700}
+.fe-sql-distinct-demo__note{font-size:.88rem}
+@media(max-width:520px){.fe-sql-distinct-demo{padding:.7rem}.fe-sql-distinct-demo__choice{display:grid;gap:.2rem}.fe-sql-distinct-demo__actions button{flex:1 1 120px}.fe-sql-distinct-demo table{font-size:.85rem}}
+@media(prefers-color-scheme:dark){.fe-sql-distinct-demo__query{background:#284658;color:#f3f9ff}.fe-sql-distinct-demo th{background:#29495a;color:#fff}.fe-sql-distinct-demo button{background:#317c9d;color:#fff}}
