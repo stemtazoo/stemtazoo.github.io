@@ -1,0 +1,23 @@
+/* FE server virtualization visualizer: scoped UI */
+.fe-server-virtualization-demo{max-width:800px;margin:1.2rem auto;padding:1rem;border:1px solid #829eaf;border-radius:12px}
+.fe-server-virtualization-demo [hidden]{display:none!important}
+.fe-server-virtualization-demo__modes,.fe-server-virtualization-demo__actions{display:flex;flex-wrap:wrap;gap:.6rem}
+.fe-server-virtualization-demo button{font:inherit;min-height:44px;padding:.65rem .85rem;cursor:pointer;background:#edf4f8;color:#173c52;border:1px solid #5e8298;border-radius:8px}
+.fe-server-virtualization-demo button[aria-pressed="true"]{background:#175d7d;border-color:#175d7d;color:#fff;font-weight:700}
+.fe-server-virtualization-demo button:focus-visible,.fe-server-virtualization-demo input:focus-visible{outline:3px solid #dca33d;outline-offset:2px}
+.fe-server-virtualization-demo__modes button{flex:1 1 145px}
+.fe-server-virtualization-demo__step{margin:.9rem 0 .5rem}
+.fe-server-virtualization-demo__prediction{display:flex;gap:1rem;flex-wrap:wrap;padding:.75rem;border:1px solid #a7bac5;border-radius:8px}
+.fe-server-virtualization-demo__prediction legend{font-size:.9rem}
+.fe-server-virtualization-demo__prediction label{display:flex;align-items:center;gap:.4rem;min-height:36px}
+.fe-server-virtualization-demo__result{margin:.9rem 0;border:1px solid #9eb9c8;padding:.8rem;border-radius:9px}
+.fe-server-virtualization-demo__layers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.4rem;margin:.75rem auto;max-width:540px}
+.fe-server-virtualization-demo__layer{padding:.6rem .3rem;min-height:39px;display:flex;align-items:center;justify-content:center;text-align:center;background:#e4edf5;color:#173b54;border:1px solid #6e96b0;border-radius:6px}
+.fe-server-virtualization-demo__layer--full{grid-column:1/-1}
+.fe-server-virtualization-demo__layer--physical{background:#e0e4e9;color:#263441;border-color:#88939e}
+.fe-server-virtualization-demo__layer--guest{background:#efe5f6;color:#57336e;border-color:#a181bc}
+.fe-server-virtualization-demo__layer--host{background:#e1efdf;color:#2c5532;border-color:#7d9f7a}
+.fe-server-virtualization-demo__feedback{font-weight:700}
+.fe-server-virtualization-demo__note{font-size:.88rem;margin-top:.8rem}
+@media(max-width:520px){.fe-server-virtualization-demo{padding:.7rem}.fe-server-virtualization-demo__modes button{flex:1 1 125px}.fe-server-virtualization-demo__layer{font-size:.85rem}.fe-server-virtualization-demo__actions button{flex:1 1 140px}}
+@media(prefers-color-scheme:dark){.fe-server-virtualization-demo button{background:#254354;color:#f3f7fa}.fe-server-virtualization-demo button[aria-pressed="true"]{background:#327b9c;color:white}.fe-server-virtualization-demo__layer{background:#24445b;color:#f4f9fd}.fe-server-virtualization-demo__layer--physical{background:#374454;color:white}.fe-server-virtualization-demo__layer--guest{background:#4a345f;color:#fff}.fe-server-virtualization-demo__layer--host{background:#284e36;color:#fff}}
