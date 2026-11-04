@@ -1,0 +1,22 @@
+/* FE thin client comparison: scope styles to this learning aid */
+.fe-thin-client-demo{max-width:800px;margin:1.25rem auto;padding:1rem;border:1px solid #91a9b8;border-radius:12px}
+.fe-thin-client-demo [hidden]{display:none!important}
+.fe-thin-client-demo__modes,.fe-thin-client-demo__actions{display:flex;flex-wrap:wrap;gap:.6rem}
+.fe-thin-client-demo button{font:inherit;min-height:44px;border:1px solid #557f98;border-radius:8px;padding:.65rem .8rem;background:#f0f6f9;color:#153c54;cursor:pointer}
+.fe-thin-client-demo button[aria-pressed="true"]{background:#145b80;color:#fff;border-color:#145b80;font-weight:700}
+.fe-thin-client-demo button:focus-visible,.fe-thin-client-demo input:focus-visible{outline:3px solid #d89a34;outline-offset:3px}
+.fe-thin-client-demo__modes button{flex:1 1 175px}
+.fe-thin-client-demo__step{margin:.85rem 0 .4rem}
+.fe-thin-client-demo__predict{display:flex;gap:1.2rem;flex-wrap:wrap;padding:.65rem .8rem;border:1px solid #acbcc5;border-radius:8px}
+.fe-thin-client-demo__predict label{display:flex;gap:.4rem;align-items:center;min-height:36px}
+.fe-thin-client-demo__result{margin:.8rem 0;padding:.8rem;border:1px solid #8faab8;border-radius:9px}
+.fe-thin-client-demo__feedback{font-weight:700}
+.fe-thin-client-demo__columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem;margin:.8rem 0}
+.fe-thin-client-demo__place{background:#e9f2f8;color:#183d54;border:1px solid #83a4b8;border-radius:8px;padding:.7rem;min-width:0}
+.fe-thin-client-demo__place:nth-child(2){background:#e7f2e9;color:#214a32;border-color:#83ae8d}
+.fe-thin-client-demo__place h4{font:inherit;font-weight:700;margin:0 0 .55rem}
+.fe-thin-client-demo__place ul{padding-left:1.2rem;margin:0}
+.fe-thin-client-demo__place li{margin:.3rem 0;overflow-wrap:anywhere}
+.fe-thin-client-demo__note{font-size:.9rem;margin-top:.75rem}
+@media(max-width:520px){.fe-thin-client-demo{padding:.7rem}.fe-thin-client-demo__modes button{flex:1 1 125px}.fe-thin-client-demo__columns{gap:.4rem}.fe-thin-client-demo__place{padding:.55rem;font-size:.88rem}.fe-thin-client-demo__actions button{flex:1 1 135px}}
+@media(prefers-color-scheme:dark){.fe-thin-client-demo button{background:#294452;color:#f2f7fa}.fe-thin-client-demo button[aria-pressed="true"]{background:#327c9b;color:#fff}.fe-thin-client-demo__place{background:#24455a;color:#f0f9fe}.fe-thin-client-demo__place:nth-child(2){background:#294e38;color:#f4fff6}}
