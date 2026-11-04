@@ -1,0 +1,22 @@
+/* FE subquery comparison: local styles only */
+.fe-subquery-demo{max-width:860px;margin:1.25rem auto;padding:1rem;border:1px solid #8fa9ba;border-radius:12px}
+.fe-subquery-demo [hidden]{display:none!important}
+.fe-subquery-demo__tables{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem}
+.fe-subquery-demo__tables>div{min-width:0;overflow-x:auto}
+.fe-subquery-demo table{width:100%;border-collapse:collapse;margin:.5rem 0}
+.fe-subquery-demo th,.fe-subquery-demo td{border:1px solid #9cb3c2;padding:.45rem;text-align:left}
+.fe-subquery-demo th{background:#e8f2f7;color:#153d56}
+.fe-subquery-demo__controls{display:grid;grid-template-columns:1fr 1fr;gap:.45rem .7rem;margin:.8rem 0}
+.fe-subquery-demo__controls select{min-width:0;width:100%;min-height:44px;font:inherit}
+.fe-subquery-demo__checkbox{grid-column:1/-1;display:flex;align-items:center;gap:.5rem;min-height:44px}
+.fe-subquery-demo__query{font-family:ui-monospace,monospace;overflow-wrap:anywhere;background:#edf4f8;color:#173c54;padding:.7rem;border-radius:8px}
+.fe-subquery-demo__prediction{display:flex;flex-wrap:wrap;gap:.8rem;border:1px solid #9eb2bf;border-radius:8px;padding:.65rem}
+.fe-subquery-demo__prediction label{display:flex;align-items:center;gap:.35rem;min-height:36px}
+.fe-subquery-demo__actions{display:flex;flex-wrap:wrap;gap:.6rem;margin:.85rem 0}
+.fe-subquery-demo button{font:inherit;min-height:44px;background:#175e7f;color:white;border:1px solid #175e7f;border-radius:8px;padding:.65rem .9rem;cursor:pointer}
+.fe-subquery-demo button:focus-visible,.fe-subquery-demo input:focus-visible,.fe-subquery-demo select:focus-visible{outline:3px solid #d5952f;outline-offset:3px}
+.fe-subquery-demo__result{border:1px solid #8ca6b7;border-radius:8px;padding:.7rem;background:#edf5f8;color:#173b53}
+.fe-subquery-demo [data-feedback]{font-weight:700}
+.fe-subquery-demo__note{font-size:.88rem}
+@media(max-width:520px){.fe-subquery-demo{padding:.7rem}.fe-subquery-demo__controls{grid-template-columns:1fr}.fe-subquery-demo__tables{gap:.4rem}.fe-subquery-demo table{font-size:.83rem}.fe-subquery-demo th,.fe-subquery-demo td{padding:.3rem}.fe-subquery-demo__actions button{flex:1 1 120px}.fe-subquery-demo__prediction{display:grid}}
+@media(prefers-color-scheme:dark){.fe-subquery-demo th{background:#25495c;color:#fff}.fe-subquery-demo__query,.fe-subquery-demo__result{background:#294759;color:#fff}.fe-subquery-demo button{background:#2d789b;color:#fff}}

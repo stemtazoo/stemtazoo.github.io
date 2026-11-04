@@ -1,14 +1,14 @@
 ---
 layout: page
 title: SQLの相関サブクエリとは？COUNT・EXISTS・INと0件の扱い【基本情報技術者試験】
-description: 相関サブクエリを「外側の1行を内側の問合せで参照して判定するSQL」として整理し、COUNTが0を返す場合と、EXISTS・IN・GROUP BYで0件の候補が消える場合の違いをFE科目A向けに解説します。
+description: 相関サブクエリとIN・NOT IN・EXISTS・NOT EXISTSを比較。NULLを含むNOT INの落とし穴、COUNTが0を返す場合、外側の各行の判定を操作教材で学びます。
 permalink: /fe/sql-correlated-subquery/
 tags: [fe, fe-technology, database, sql]
 fe_section: テクノロジ系
 fe_subsection: データベース
 fe_order: 130
 date: 2026-09-27
-last_modified_at: 2026-09-27
+last_modified_at: 2026-11-04
 ---
 
 ## まず結論
@@ -192,7 +192,7 @@ WHERE EXISTS (
 
 ### INは「値が候補集合にあるか」を見る
 
-`IN` は、サブクエリなどで作った値の集合に、対象の値が含まれるかを判定します。
+`IN` は、サブクエリなどで作った値の集合に、対象の値が含まれるかを判定します。**INを使う副問合せが、必ずしも相関副問合せとは限りません**。内側から外側の列を参照するときだけ相関副問合せです。
 
 ```text
 候補集合に部署Aがある
@@ -203,6 +203,107 @@ WHERE EXISTS (
 ```
 
 つまり、0件の部署がサブクエリの候補集合に現れなければ、その部署は `IN` では選ばれません。
+
+### IN・NOT IN・EXISTS・NOT EXISTSの違い
+
+| 条件 | 判定すること | 典型的な用途 |
+|---|---|---|
+| `IN (副問合せ)` | 値が内側の結果に含まれるか | 条件を満たす社員番号を抽出 |
+| `NOT IN (副問合せ)` | 値が候補に含まれないか | 対象外の社員番号を抽出（NULLに注意） |
+| `EXISTS (副問合せ)` | 内側の結果が1行でも存在するか | 関連行がある社員を抽出 |
+| `NOT EXISTS (副問合せ)` | 内側の結果が0行か | 関連行がない社員を抽出 |
+
+たとえば「IPスキルを持つ社員」を調べる場合、次のSQLはいずれも**社員番号がNULLでない前提で**同じ社員を選びます。
+
+```sql
+-- IN：まずIPスキルを持つ社員番号の集合を得る
+SELECT *
+FROM 社員 AS e
+WHERE e.社員番号 IN (
+    SELECT s.社員番号
+    FROM 社員スキル AS s
+    WHERE s.スキルコード = 'IP'
+);
+```
+
+```sql
+-- EXISTS：外側の社員1行を内側の条件に渡す（相関副問合せ）
+SELECT *
+FROM 社員 AS e
+WHERE EXISTS (
+    SELECT 1
+    FROM 社員スキル AS s
+    WHERE s.社員番号 = e.社員番号
+      AND s.スキルコード = 'IP'
+);
+```
+
+`NOT EXISTS`なら、`EXISTS`を`NOT EXISTS`に変えれば**IPスキルが存在しない社員**を選べます。`NOT IN`でも似た結果になる場合がありますが、次のNULLの違いを必ず確認しましょう。
+
+### NOT INとNULL：単純な「含まれない」とは限らない
+
+SQLでは、NULLは通常の値とは異なり、比較の結果が**UNKNOWN（不明）**になる場合があります。たとえば内側の結果が `('002', NULL)` のとき、
+
+```sql
+WHERE 社員番号 NOT IN ('002', NULL)
+```
+
+では、`'001'`も`'003'`も **TRUEではなくUNKNOWN** になるため、WHEREで抽出されません。`'002'`なら一致があるのでFALSEです。
+
+`NOT EXISTS`では、外側の社員番号と一致する**行があるか**を調べます。内側の社員番号がNULLの行は、通常の等号比較では外側の社員番号と一致しないため、上記と同じNULLによる落とし穴を避けられます。
+
+**「NOT INとNOT EXISTSは常に同じ」ではありません。** 試験問題にNULLの有無が書かれていたら、最優先で確認してください。
+
+### 触って覚える：外側の社員を変えて判定しよう
+
+まず予想しましょう。**IPスキルを持たない社員を探すとき、社員スキル表に社員番号NULLのIPスキル行を追加すると、NOT INの結果はどうなるでしょうか？**
+
+次の教材で社員、条件、NULLを含むかを変更し、判定理由を確認してください。画面上の結果は固定データを使うシミュレーションで、SQLを実際に実行するものではありません。
+
+<link rel="stylesheet" href="{{ '/assets/css/fe-subquery-comparison.css' | relative_url }}">
+
+<div id="fe-subquery-demo" class="fe-subquery-demo">
+  <div class="fe-subquery-demo__tables">
+    <div>
+      <strong>社員表（外側）</strong>
+      <table>
+        <thead><tr><th scope="col">番号</th><th scope="col">氏名</th></tr></thead>
+        <tbody><tr><td>001</td><td>田中</td></tr><tr><td>002</td><td>鈴木</td></tr><tr><td>003</td><td>佐藤</td></tr><tr><td>004</td><td>高橋</td></tr></tbody>
+      </table>
+    </div>
+    <div>
+      <strong>社員スキル表（内側）</strong>
+      <table>
+        <thead><tr><th scope="col">番号</th><th scope="col">スキル</th></tr></thead>
+        <tbody data-skills><tr><td>001</td><td>FE</td></tr><tr><td>002</td><td>IP</td></tr><tr><td>002</td><td>FE</td></tr><tr><td>004</td><td>DB</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+  <div class="fe-subquery-demo__controls">
+    <label for="fe-subquery-person">① 外側で判定する社員</label>
+    <select id="fe-subquery-person"><option value="001">001 田中</option><option value="002" selected>002 鈴木</option><option value="003">003 佐藤</option><option value="004">004 高橋</option></select>
+    <label for="fe-subquery-mode">② SQLの条件</label>
+    <select id="fe-subquery-mode"><option value="in">IN</option><option value="notin">NOT IN</option><option value="exists" selected>EXISTS</option><option value="notexists">NOT EXISTS</option></select>
+    <label class="fe-subquery-demo__checkbox"><input id="fe-subquery-null" type="checkbox"> 社員番号NULL、スキルIPの行を内側に追加する</label>
+  </div>
+  <p data-query class="fe-subquery-demo__query">WHERE EXISTS (SELECT 1 FROM 社員スキル s WHERE s.社員番号 = e.社員番号 AND s.スキルコード = 'IP')</p>
+  <fieldset class="fe-subquery-demo__prediction">
+    <legend>③ この社員は抽出される？</legend>
+    <label><input type="radio" name="fe-subquery-guess" value="yes"> 抽出される</label>
+    <label><input type="radio" name="fe-subquery-guess" value="no"> 抽出されない</label>
+  </fieldset>
+  <div class="fe-subquery-demo__actions">
+    <button type="button" data-check>結果と理由を見る</button>
+    <button type="button" data-reset>最初から</button>
+  </div>
+  <div data-result hidden class="fe-subquery-demo__result">
+    <p data-feedback role="status" aria-live="polite"></p>
+    <p data-detail></p>
+  </div>
+  <p class="fe-subquery-demo__note">社員番号は外側ではNULLなし。内側のIPスキル社員番号は通常「002」、チェック時は「002とNULL」です。IN／NOT INはその集合との比較、EXISTS／NOT EXISTSは社員番号一致行の存在で判断します。WHEREはTRUEの行だけを抽出します。</p>
+</div>
+<noscript><p>JavaScriptなしでも判定できます。通常のIPスキル社員番号は002なので、INとEXISTSは002だけ、NOT INとNOT EXISTSは001・003・004を抽出します。内側にNULLがある場合、NOT INは002もそれ以外も抽出しませんが、NOT EXISTSは001・003・004を抽出します。</p></noscript>
+<script src="{{ '/assets/js/fe-subquery-comparison.js' | relative_url }}" defer></script>
 
 ## 科目Aでどう出る？
 
@@ -356,6 +457,10 @@ COUNTの結果が0
 
 と捉えます。
 
+### NOT INとNOT EXISTSはどちらも「ない」だから同じ？
+
+違います。**内側の候補にNULLが含まれるとNOT INはUNKNOWNになる場合がある**一方、NOT EXISTSは一致する行が存在するかを評価します。NULLを含むデータの否定条件では、違いを確認する必要があります。
+
 ### INと相関サブクエリは同じ
 
 同じ結果を作れる場合はありますが、考え方は違います。
@@ -376,6 +481,7 @@ SQLの見た目よりも、**何を比較・判定しているか**を読みま�
 - `COUNT(*)` は、該当行が0件でも **0** を返せる
 - `GROUP BY` は、元になる行が0件なら**グループ自体が作られない**
 - `EXISTS` は「1件でもあるか」、`IN` は「値が候補集合にあるか」を見る
+- `NOT EXISTS` は一致行が0件かを判定する。`NOT IN` は候補集合にNULLが含まれるとUNKNOWNに注意
 - 「5件未満」には **0件も含まれる**
 - 試験では、**何を数えているか・0件のときどうなるか・外側の候補は何か**を確認する
 
