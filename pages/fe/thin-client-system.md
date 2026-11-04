@@ -12,7 +12,6 @@ last_modified_at: 2026-11-04
 related_articles:
   - /fe/vdi/
   - /fe/client-server-system/
-  - /fe/server-virtualization/
 ---
 
 ## まず結論
