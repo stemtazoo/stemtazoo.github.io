@@ -1,0 +1,22 @@
+/* FE data independence: scoped, high contrast and keyboard accessible */
+.fe-data-independence{max-width:820px;margin:1.2rem auto;padding:1rem;border:1px solid #8eabb9;border-radius:12px}
+.fe-data-independence [hidden]{display:none!important}
+.fe-data-independence__choices,.fe-data-independence__actions{display:flex;flex-wrap:wrap;gap:.65rem}
+.fe-data-independence button{font:inherit;min-height:44px;padding:.6rem .8rem;border-radius:8px;border:1px solid #437c9b;background:#eef5f9;color:#173e55;cursor:pointer}
+.fe-data-independence button[aria-pressed="true"]{background:#135f81;color:#fff;font-weight:700}
+.fe-data-independence button:focus-visible,.fe-data-independence input:focus-visible{outline:3px solid #d49930;outline-offset:3px}
+.fe-data-independence__choices button{flex:1 1 155px}
+.fe-data-independence__question{margin:.85rem 0}
+.fe-data-independence__predict{display:grid;gap:.35rem;border:1px solid #a4bac7;border-radius:8px;padding:.6rem .85rem}
+.fe-data-independence__predict label{display:flex;align-items:center;gap:.4rem;min-height:36px}
+.fe-data-independence__actions{margin:.8rem 0}
+.fe-data-independence__result{border:1px solid #98b2c1;border-radius:9px;padding:.8rem;margin-top:.8rem}
+.fe-data-independence [data-feedback]{font-weight:700}
+.fe-data-independence__layers{display:grid;gap:.45rem;max-width:540px;margin:.8rem auto}
+.fe-data-independence__layers>div{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:.4rem;padding:.7rem;border:2px solid #9db2c0;border-radius:8px;background:#edf3f6;color:#173b55}
+.fe-data-independence__layers>div.is-changed{border-color:#b36b31;background:#fff0d9;color:#74410e}
+.fe-data-independence__layers>div.is-kept{border-color:#437b61;background:#e6f4eb;color:#24523d}
+.fe-data-independence__layers span{font-size:.88rem}
+.fe-data-independence__note{font-size:.9rem;margin-top:.8rem}
+@media(max-width:520px){.fe-data-independence{padding:.7rem}.fe-data-independence__choices button{flex:1 1 135px}.fe-data-independence__layers>div{display:grid;gap:.2rem}.fe-data-independence__actions button{flex:1 1 120px}}
+@media(prefers-color-scheme:dark){.fe-data-independence button{background:#23455a;color:#fff}.fe-data-independence button[aria-pressed="true"]{background:#337d9e}.fe-data-independence__layers>div{background:#284657;color:#fff}.fe-data-independence__layers>div.is-changed{background:#60401e;color:#fff}.fe-data-independence__layers>div.is-kept{background:#26513a;color:#fff}}
