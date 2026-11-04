@@ -146,9 +146,9 @@ last_modified_at: 2026-11-04
       <button type="button" data-reset>最初からやり直す</button>
     </div>
   </div>
-  <div class="fe-decision-tree-demo__fallback" data-fallback>
-    <p><strong>JavaScriptが使えない場合の計算例：</strong> 利益最大化では□の70万円と50万円から70万円を選び、次の○で 70×0.4＋120×0.6＝100万円、初期費用30万円を引いて70万円になります。費用最小化では□の70万円と50万円から50万円を選び、次の○で50×0.4＋90×0.6＝74万円、初期費用15万円を加えて89万円となります。</p>
-  </div>
+  <noscript>
+    <p class="fe-decision-tree-demo__fallback"><strong>JavaScriptが使えない場合の計算例：</strong> 利益最大化では□の70万円と50万円から70万円を選び、次の○で70×0.4＋120×0.6＝100万円、初期費用30万円を引いて70万円になります。費用最小化では□の70万円と50万円から50万円を選び、次の○で50×0.4＋90×0.6＝74万円、初期費用15万円を加えて89万円となります。</p>
+  </noscript>
 </div>
 
 <script src="{{ '/assets/js/fe-decision-tree-visualizer.js' | relative_url }}" defer></script>
