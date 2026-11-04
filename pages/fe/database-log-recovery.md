@@ -244,9 +244,9 @@ DBMSは障害回復を短縮するために、ログやデータページの状�
     </div>
     <p data-explanation></p>
   </div>
-  <p class="fe-checkpoint-timeline__note">これは時刻4で反映済み範囲が確定する**教材用のモデル**です。実際のDBMSのREDO対象は、チェックポイントの実装、更新ページの書込み状態、ログの管理方式に依存します。コミット済みだから必ずREDOするわけではありません。</p>
+  <p class="fe-checkpoint-timeline__note">これは時刻4で反映済み範囲が確定する<strong>教材用のモデル</strong>です。実際のDBMSのREDO対象は、チェックポイントの実装、更新ページの書込み状態、ログの管理方式に依存します。コミット済みだから必ずREDOするわけではありません。</p>
 </div>
-<noscript><p>JavaScriptなしでも表から判断できます。障害が時刻7ならT1は反映済みで対象外、T2は時刻5にコミットしたもののこの教材では未反映なのでREDO、T3は未コミットなのでUNDO、T4はまだ開始前です。</p></noscript>
+<noscript><p>JavaScriptなしでも表から判断できます。障害が時刻7ならT1は反映済みで対象外、T2は時刻5にコミットしたもののこの教材では未反映なのでREDO、T3は未コミットなのでUNDO、T4も時刻6に開始しており、未コミットなのでUNDOです。</p></noscript>
 <script src="{{ '/assets/js/fe-checkpoint-timeline.js' | relative_url }}" defer></script>
 
 

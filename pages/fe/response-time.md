@@ -110,9 +110,9 @@ related_articles:
     <p data-turnaround>全出力完了：12秒（7＋出力5）</p>
     <p data-reason>レスポンスタイムは最初の応答まで。ターンアラウンドタイムは出力完了までです。</p>
   </div>
-  <p class="fe-response-demo__note">この教材では「出力時間」は最初の応答が返った**後の残りの出力時間**です。実際の応答時間・処理完了時点は設問や計測仕様に従います。</p>
+  <p class="fe-response-demo__note">この教材では「出力時間」は最初の応答が返った<strong>後の残りの出力時間</strong>です。実際の応答時間・処理完了時点は設問や計測仕様に従います。</p>
 </div>
-<noscript><p>JavaScriptが無効でも学習できます。初期条件では待ち3秒＋処理4秒＝**レスポンスタイム7秒**、さらに残りの出力5秒を足して**ターンアラウンドタイム12秒**です。出力だけを5秒から8秒に増やすと、最初の応答は7秒のまま、全完了は15秒になります。</p></noscript>
+<noscript><p>JavaScriptが無効でも学習できます。初期条件では待ち3秒＋処理4秒＝<strong>レスポンスタイム7秒</strong>、さらに残りの出力5秒を足して<strong>ターンアラウンドタイム12秒</strong>です。出力だけを5秒から8秒に増やすと、最初の応答は7秒のまま、全完了は15秒になります。</p></noscript>
 <script src="{{ '/assets/js/fe-response-time-visualizer.js' | relative_url }}" defer></script>
 
 ## 科目Aでどう出る？
