@@ -1,0 +1,21 @@
+/* FE decision tree tutorial, scoped styles */
+.fe-decision-tree-demo{max-width:760px;margin:1.2rem auto;padding:1rem;border:1px solid #9aaebd;border-radius:12px}
+.fe-decision-tree-demo [hidden]{display:none!important}
+.fe-decision-tree-demo__modes,.fe-decision-tree-demo__choices,.fe-decision-tree-demo__steps{display:flex;flex-wrap:wrap;gap:.6rem}
+.fe-decision-tree-demo button{min-height:44px;border:1px solid #537d95;border-radius:8px;padding:.65rem .85rem;font:inherit;background:#fff;color:#19405a;cursor:pointer}
+.fe-decision-tree-demo button:focus-visible{outline:3px solid #d99b33;outline-offset:3px}
+.fe-decision-tree-demo button:disabled{opacity:.55;cursor:not-allowed}
+.fe-decision-tree-demo button[aria-pressed="true"]{background:#185879;color:#fff;border-color:#185879;font-weight:700}
+.fe-decision-tree-demo__modes button{flex:1 1 180px}
+.fe-decision-tree-demo__choices button{flex:1 1 125px}
+.fe-decision-tree-demo__tree{display:grid;gap:.6rem;border:1px solid #b2c4ca;padding:.85rem;border-radius:8px}
+.fe-decision-tree-demo__tree>div:first-child{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.4rem}
+.fe-decision-tree-demo__branch{border-left:4px solid #4b7998;padding:.45rem .7rem;background:#eef4f7;color:#253b48}
+.fe-decision-tree-demo__branch p{margin:.4rem 0}
+.fe-decision-tree-demo__progress{font-weight:700}
+.fe-decision-tree-demo__feedback{margin:.8rem 0;padding:.8rem;border:1px solid #8ba8b6;background:#f0f6f8;color:#243c4b;border-radius:8px}
+.fe-decision-tree-demo__feedback p{margin:0}
+.fe-decision-tree-demo__steps{margin-top:.8rem;justify-content:space-between}
+.fe-decision-tree-demo__fallback{border-left:3px solid #6b8b9c;padding:.25rem .8rem}
+@media(max-width:520px){.fe-decision-tree-demo{padding:.7rem}.fe-decision-tree-demo__steps button{flex:1 1 45%}}
+@media(prefers-color-scheme:dark){.fe-decision-tree-demo__branch,.fe-decision-tree-demo__feedback{background:#263c49;color:#f1f5f7}.fe-decision-tree-demo button{background:#293e4c;color:#f1f5f7}.fe-decision-tree-demo button[aria-pressed="true"]{background:#35799f;color:#fff}}
