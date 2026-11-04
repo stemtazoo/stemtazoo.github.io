@@ -1,0 +1,22 @@
+
+/* NTP clock-offset comparison: scoped to its FE teaching aid. */
+.fe-ntp-demo{max-width:780px;margin:1.25rem auto;padding:1rem;border:1px solid #8ea5b6;border-radius:12px}
+.fe-ntp-demo [hidden]{display:none!important}
+.fe-ntp-demo__controls{display:grid;gap:1rem}
+.fe-ntp-demo__control label{display:flex;justify-content:space-between;gap:1rem;font-weight:700;align-items:center}
+.fe-ntp-demo__control input{width:100%;min-height:38px;accent-color:#246a96}
+.fe-ntp-demo__control p{margin:.25rem 0;font-size:.88rem}
+.fe-ntp-demo__times{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.5rem;margin:.8rem 0}
+.fe-ntp-demo__times>div{border:1px solid #9cabb5;border-radius:8px;padding:.7rem;background:#f1f5f8;color:#273945}
+.fe-ntp-demo__times strong{display:block;font-size:1.3rem}
+.fe-ntp-demo__times span{display:block;font-size:.85rem}
+.fe-ntp-demo__math{background:#f5f7f9;color:#273945;border-radius:8px;padding:.8rem;line-height:1.7}
+.fe-ntp-demo__math p{margin:.3rem 0}
+.fe-ntp-demo__result{font-weight:700}
+.fe-ntp-demo__actions{display:flex;flex-wrap:wrap;gap:.6rem;margin:.8rem 0}
+.fe-ntp-demo button{font:inherit;border:1px solid #527994;border-radius:8px;padding:.65rem .8rem;min-height:44px;background:#fff;color:#1c4561;cursor:pointer}
+.fe-ntp-demo button:focus-visible,.fe-ntp-demo input:focus-visible{outline:3px solid #e1a23d;outline-offset:2px}
+.fe-ntp-demo__explain{margin:.6rem 0 0}
+.fe-ntp-demo__fallback{border-left:3px solid #527994;padding:.35rem .75rem}
+@media(max-width:530px){.fe-ntp-demo{padding:.7rem}.fe-ntp-demo__times{grid-template-columns:1fr}.fe-ntp-demo__actions button{flex:1 1 45%}}
+@media(prefers-color-scheme:dark){.fe-ntp-demo__times>div,.fe-ntp-demo__math{background:#263b48;color:#f2f6f8}.fe-ntp-demo button{background:#253a48;color:#f3f6fa}}
