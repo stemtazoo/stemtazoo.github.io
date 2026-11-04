@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: データベース
 fe_order: 80
 date: 2026-08-03
-last_modified_at: 2026-10-05
+last_modified_at: 2026-11-04
 ---
 
 ## まず結論
@@ -187,24 +187,79 @@ FEの問題文では **「ジャーナルファイル」** と **「ログファ
 
 チェックポイントは、障害回復を開始するときの基準点です。
 
-データベース管理システムは、一定の時点でメモリ上の更新内容をディスクへ反映し、その位置を記録します。
+DBMSは障害回復を短縮するために、ログやデータページの状態に関する情報を一定の時点で記録します。教科書で使われる**単純化したチェックポイント方式**では、そこまでの確定済み更新がディスクに反映されたものとして説明する場合があります。一方、実際のDBMSには、すべての更新済みページをチェックポイント時点で一斉に書き出さない方式もあります。
 
 ```text
-ここまではディスクへ反映済み
+回復の基準となる情報を記録する
 → チェックポイント
+
+単純化した方式では
+→ その時点までの確定済み更新が反映済みと仮定する
 ```
 
 チェックポイントがあることで、ログの先頭からすべてを調べる必要がなくなり、回復処理を効率化できます。
+
+### 触って覚える：障害時刻を動かしてUNDO・REDOを判定
+
+まず予想してください。**チェックポイント前に開始した処理でも、その時点で未コミットなら障害回復の対象になるでしょうか？**
+
+次の教材では、**時刻4にチェックポイントがあり、その時点までにコミットが完了したT1の更新はディスク反映済み**と仮定します。さらに、時刻4より後にコミットした更新は、障害までデータページへ未反映と仮定します。更新ログとコミット情報は回復に利用でき、障害時点で実行中のトランザクションは更新済みのデータを取り消す必要があるものとします。
+
+| 処理 | 開始 | コミット予定 | 見るポイント |
+|---|---:|---:|---|
+| T1 | 0 | 3 | チェックポイント前にコミット・反映済み |
+| T2 | 1 | 5 | チェックポイントをまたぐ |
+| T3 | 4 | 9 | チェックポイント以後に開始 |
+| T4 | 6 | 11 | 後から開始 |
+
+**予想 → 障害時刻を変更 →「判定する」→ コミット状態と復旧方法を確認**してみましょう。
+
+<link rel="stylesheet" href="{{ '/assets/css/fe-checkpoint-timeline.css' | relative_url }}">
+
+<div id="fe-checkpoint-timeline" class="fe-checkpoint-timeline">
+  <label for="fe-checkpoint-failure"><strong>① 障害発生時刻を選ぶ</strong>：<output id="fe-checkpoint-failure-value" for="fe-checkpoint-failure">7</output></label>
+  <input type="range" id="fe-checkpoint-failure" min="4" max="12" step="1" value="7">
+  <p class="fe-checkpoint-timeline__guide"><strong>② 予想：</strong>チェックポイントをまたいだT2は、時刻7で障害が起きたらどうなる？</p>
+  <fieldset class="fe-checkpoint-timeline__guess">
+    <legend>選んだ時刻の各処理を考えながら、T2の状態を予想</legend>
+    <label><input type="radio" name="fe-checkpoint-guess" value="undo"> UNDO（取り消し）</label>
+    <label><input type="radio" name="fe-checkpoint-guess" value="redo"> REDO（再反映）</label>
+    <label><input type="radio" name="fe-checkpoint-guess" value="none"> 処理不要</label>
+  </fieldset>
+  <div class="fe-checkpoint-timeline__actions">
+    <button type="button" data-evaluate>判定する</button>
+    <button type="button" data-reset>最初から</button>
+  </div>
+  <div data-result hidden>
+    <p data-message role="status" aria-live="polite"></p>
+    <div class="fe-checkpoint-timeline__timeline" data-timeline aria-label="トランザクションの時系列">
+      <div class="fe-checkpoint-timeline__ticks" data-ticks></div>
+      <div class="fe-checkpoint-timeline__rows" data-rows></div>
+    </div>
+    <div class="fe-checkpoint-timeline__table-wrap">
+      <table>
+        <thead><tr><th scope="col">処理</th><th scope="col">障害時の状態</th><th scope="col">教材での回復</th></tr></thead>
+        <tbody data-table></tbody>
+      </table>
+    </div>
+    <p data-explanation></p>
+  </div>
+  <p class="fe-checkpoint-timeline__note">これは時刻4で反映済み範囲が確定する**教材用のモデル**です。実際のDBMSのREDO対象は、チェックポイントの実装、更新ページの書込み状態、ログの管理方式に依存します。コミット済みだから必ずREDOするわけではありません。</p>
+</div>
+<noscript><p>JavaScriptなしでも表から判断できます。障害が時刻7ならT1は反映済みで対象外、T2は時刻5にコミットしたもののこの教材では未反映なのでREDO、T3は未コミットなのでUNDO、T4はまだ開始前です。</p></noscript>
+<script src="{{ '/assets/js/fe-checkpoint-timeline.js' | relative_url }}" defer></script>
+
+
 
 ### 障害回復の基本イメージ
 
 障害回復では、バックアップ、チェックポイント、ログを組み合わせます。
 
 ```text
-1. バックアップからデータベースを復元する
-2. チェックポイントを確認する
-3. コミット済みの処理をロールフォワードする
-4. 未コミットの処理をロールバックする
+1. 媒体障害などでは必要に応じてバックアップから復元する
+2. チェックポイントと更新ログを確認する
+3. 必要な未反映の更新をログでREDO（再反映）する
+4. 必要な未コミットの更新をUNDO（取り消し）する
 ```
 
 実際の順序や方法はログ方式によって異なるため、試験では問題文の条件を優先します。
@@ -405,6 +460,10 @@ DBのトランザクションログ
 → その後の更新も復元できる
 ```
 
+### チェックポイント前に開始した処理なら、回復対象外？
+
+誤りです。例えば、チェックポイントをまたいだ処理が障害時に**未コミット**なら、取り消しが必要になる場合があります。開始時刻だけでなく、障害発生時のコミット状態と更新のディスク反映状況を確認します。
+
 ### チェックポイントにはすべての更新内容が入っている
 
 誤りです。
@@ -490,6 +549,8 @@ DBのトランザクションログ
 - 更新前の値は、ロールバックに使う
 - 更新後の値は、ロールフォワードに使う
 - チェックポイントは、回復処理の基準点
+- 障害時はコミット状態だけでなく、更新がディスクに反映されているかも確認する
+- チェックポイントをまたいだトランザクションも回復対象になり得る
 - バックアップは、ある時点のデータベースのコピー
 - 媒体障害に備えるなら、復旧に必要なログを稼働中DBと同じ媒体だけに依存させない
 - インデックスは検索高速化、データディクショナリは定義情報、ログは更新履歴
