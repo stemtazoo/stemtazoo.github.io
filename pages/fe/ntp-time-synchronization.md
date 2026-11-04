@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 220
 date: 2026-08-14
-last_modified_at: 2026-08-14
+last_modified_at: 2026-11-04
 ---
 
 ## まず結論
@@ -100,6 +100,94 @@ T4  応答受信
 ```
 
 FEでは、往路と復路の伝送遅延が同じと仮定して計算する問題がよくあります。
+
+
+### 「100μsと500μs」なのに、片道遅延は等しいの？
+
+**4時刻は、一つの絶対的な共通時計の記録ではありません。** PCが記録するのはPC自身の時計、サーバが記録するのはサーバ自身の時計です。2台の時計は初めからずれている可能性があります。
+
+例えば、次の値が得られたとします（単位：μs）。
+
+| 出来事 | 記録する機器 | その機器の時計 |
+|---|---|---:|
+| 問合せを送る | PC | 100 |
+| 問合せが届く | サーバ | 200 |
+| 応答を送る | サーバ | 400 |
+| 応答が届く | PC | 900 |
+
+別々の時計を直接引くと、往路は `200 − 100 = 100μs`、復路は `900 − 400 = 500μs` です。しかし、**これらは見かけの時間差であって、伝送にかかった時間とは限りません。**
+
+この例で「往路と復路の通信遅延は等しい」と分かっている場合は、先に同じ時計で測った経過時間を計算します。
+
+1. PC自身の往復経過時間は `900 − 100 = 800μs`。
+2. サーバ自身の処理時間は `400 − 200 = 200μs`。
+3. 通信にかかった往復時間は `800 − 200 = 600μs`。
+4. 片道の遅延は `600 ÷ 2 = 300μs`。
+
+よって、復路の見かけの差500μsから実際の片道遅延300μsを引くと、`500 − 300 = +200μs`。**PCの時計が200μs進んでいる**と分かります。往路は反対に、`300 − 100 = 200μs` だけ短く見えます。
+
+| 種類 | 何を比較している？ | この例の値 |
+|---|---|---:|
+| 見かけの往路差 | サーバ受信時刻 − PC送信時刻（異なる時計） | 100μs |
+| 見かけの復路差 | PC受信時刻 − サーバ送信時刻（異なる時計） | 500μs |
+| 実際の片道遅延 | 通信に使った経過時間（両方向同じと仮定） | 300μs |
+| サーバ処理時間 | サーバ送信時刻 − サーバ受信時刻（同じ時計） | 200μs |
+| 時計のずれ | 同じ瞬間のPC時計 − サーバ時計 | +200μs |
+
+ここでは処理時間と時計のずれがたまたま同じ200μsですが、**処理時間は経過した時間、時計のずれは同じ瞬間に示す表示値の差**なので別物です。
+
+### 触って覚える：時計のずれと処理時間を別々に動かす
+
+**見るポイント：** 時計のずれを変えると、往路と復路の見かけの差が逆向きに変わります。一方、サーバ内部の処理時間を変えると、サーバ送信とPC受信の時刻が一緒に変わります。
+
+この学習用モデルでは、**片道の通信遅延は両方向とも300μs**、PCの問合せ送信はPC時計で100μsと固定します。2台の時計は同じ速さで進み、通信中に時計のずれは変化しないものとします。スライダーは実際のNTPサーバの時計を操作するものではありません。
+
+<link rel="stylesheet" href="{{ '/assets/css/fe-ntp-clock-visualizer.css' | relative_url }}">
+
+<div id="fe-ntp-clock-demo" class="fe-ntp-demo">
+  <div data-interactive hidden>
+    <div class="fe-ntp-demo__controls">
+      <div class="fe-ntp-demo__control">
+        <label for="fe-ntp-offset">PCの時計のずれ（PC − サーバ） <output for="fe-ntp-offset" data-field="offset-value">+200 μs</output></label>
+        <input id="fe-ntp-offset" data-offset type="range" min="-300" max="300" step="50" value="200">
+        <p>プラスならPCが進み、マイナスならPCが遅れています。</p>
+      </div>
+      <div class="fe-ntp-demo__control">
+        <label for="fe-ntp-process">サーバ内部の処理時間 <output for="fe-ntp-process" data-field="process-value">200 μs</output></label>
+        <input id="fe-ntp-process" data-process type="range" min="0" max="500" step="50" value="200">
+        <p>通信中の時間は変えず、サーバが応答するまでの時間だけを変えます。</p>
+      </div>
+    </div>
+    <div class="fe-ntp-demo__actions">
+      <button type="button" data-zero-process>処理時間を0にする</button>
+      <button type="button" data-reset>元の条件に戻す</button>
+    </div>
+    <div class="fe-ntp-demo__times" aria-label="各機器の時計で記録した4時刻">
+      <div><span>T1：PCが問合せ送信</span><strong><span data-field="t1">100</span> μs</strong></div>
+      <div><span>T2：サーバが問合せ受信</span><strong><span data-field="t2">200</span> μs</strong></div>
+      <div><span>T3：サーバが応答送信</span><strong><span data-field="t3">400</span> μs</strong></div>
+      <div><span>T4：PCが応答受信</span><strong><span data-field="t4">900</span> μs</strong></div>
+    </div>
+    <div class="fe-ntp-demo__math">
+      <p><strong>見かけの往路差：</strong> <span data-field="apparent-forward">200 − 100 = 100</span> μs</p>
+      <p><strong>見かけの復路差：</strong> <span data-field="apparent-return">900 − 400 = 500</span> μs</p>
+      <p><strong>PC自身の往復経過時間：</strong> <span data-field="roundtrip">900 − 100 = 800</span> μs</p>
+      <p><strong>サーバ自身の処理時間：</strong> <span data-field="server-process">400 − 200 = 200</span> μs</p>
+      <p><strong>通信の往復時間：</strong> <span data-field="network-roundtrip">800 − 200 = 600</span> μs</p>
+      <p><strong>実際の片道遅延：</strong> <span data-field="oneway">600 ÷ 2 = 300</span> μs</p>
+      <p class="fe-ntp-demo__result"><strong>時計のずれ（見かけの復路差 − 片道遅延）：</strong> <span data-field="offset-result">500 − 300 = +200 μs</span></p>
+    </div>
+    <p class="fe-ntp-demo__explain" data-field="explanation">同じ瞬間ならPCがサーバより200μs進んでいます。</p>
+  </div>
+  <div data-fallback class="fe-ntp-demo__fallback">
+    <p><strong>JavaScriptを使わない場合の確認例：</strong> 片道遅延300μs・時計のずれ+200μsで、サーバ処理時間だけを200μsから0μsにすると、T1=100、T2=200、T3=200、T4=700になります。PCの受信時刻は早くなりますが、見かけの復路差は700−200=500μsのまま。500−300=200μsなので、時計のずれは変わりません。</p>
+  </div>
+</div>
+
+<script src="{{ '/assets/js/fe-ntp-clock-visualizer.js' | relative_url }}" defer></script>
+
+**操作して確かめること：** 処理時間を0μsにすると、T3は200μs、T4は700μsになります。それでも時計のずれは+200μsのままです。「サーバ処理時間＝時計のずれ」ではないと確認できます。
+
 
 ## 科目Aでどう出る？
 
