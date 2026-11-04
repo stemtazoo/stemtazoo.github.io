@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ソフトウェア開発管理技術
 fe_order: 545
 date: 2026-09-08
-last_modified_at: 2026-09-20
+last_modified_at: 2026-11-04
 ---
 
 ## まず結論
@@ -154,6 +154,124 @@ last_modified_at: 2026-09-20
 ```
 
 つまり、**「作成者中心か、モデレータ中心か」→「柔軟か、形式的か」**の順に見るのがポイントです。
+
+
+### 触って覚える：4つのレビュー方法を場面から見分ける
+
+**見るポイント：**「会議形式かどうか」ではなく、**作成者の説明・順番交代・モデレータと正式な手順・成果物の回覧**のどれが中心かを読み取ります。
+
+まず場面を読んで予想し、選択肢を押してください。選んだ後に正誤と理由が表示されます。4場面は何度でも練習でき、場面を移ると前の回答は消えます。
+
+<div id="fe-review-method-quiz" class="fe-review-method-quiz">
+  <div class="fe-review-method-quiz__interactive" hidden>
+    <p class="fe-review-method-quiz__counter" data-counter>場面 1 / 4</p>
+    <div class="fe-review-method-quiz__scenario">
+      <strong>レビュー中の状況</strong>
+      <p data-scenario></p>
+    </div>
+    <p class="fe-review-method-quiz__prompt">どのレビュー方法でしょうか？</p>
+    <div class="fe-review-method-quiz__choices" role="group" aria-label="レビュー方法を選ぶ">
+      <button type="button" data-answer="walkthrough" aria-pressed="false">ウォークスルー</button>
+      <button type="button" data-answer="inspection" aria-pressed="false">インスペクション</button>
+      <button type="button" data-answer="roundrobin" aria-pressed="false">ラウンドロビン</button>
+      <button type="button" data-answer="passaround" aria-pressed="false">パスアラウンド</button>
+    </div>
+    <div class="fe-review-method-quiz__feedback" data-feedback role="status" aria-live="polite" aria-atomic="true" hidden></div>
+    <div class="fe-review-method-quiz__nav">
+      <button type="button" data-prev>前の場面</button>
+      <button type="button" data-next>次の場面</button>
+      <button type="button" data-reset>同じ場面をやり直す</button>
+    </div>
+  </div>
+  <div class="fe-review-method-quiz__fallback">
+    **JavaScriptなしでも復習できます：** 作成者が説明するのがウォークスルー、参加者が順番に進めるのがラウンドロビン、役割・チェックリスト・記録をそろえるのがインスペクション、成果物を回覧するのがパスアラウンドです。詳しい比較は直前の表も参照してください。
+  </div>
+</div>
+
+<style>
+.fe-review-method-quiz{max-width:740px;margin:1.2rem auto;padding:1rem;border:1px solid #93a9b7;border-radius:12px}
+.fe-review-method-quiz [hidden]{display:none!important}
+.fe-review-method-quiz__counter{font-size:.9rem;margin:0 0 .6rem;color:inherit}
+.fe-review-method-quiz__scenario{padding:.85rem 1rem;border-radius:9px;background:#edf3f6;color:#203846}
+.fe-review-method-quiz__scenario p{margin:.45rem 0 0}
+.fe-review-method-quiz__prompt{font-weight:700;margin:.9rem 0 .55rem}
+.fe-review-method-quiz__choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.55rem}
+.fe-review-method-quiz button{min-height:44px;padding:.65rem .75rem;font:inherit;text-align:center;border:1px solid #698495;border-radius:8px;background:#fff;color:#243a49;cursor:pointer;overflow-wrap:anywhere}
+.fe-review-method-quiz button[aria-pressed="true"]{background:#15567d;color:#fff;border-color:#15567d;font-weight:700}
+.fe-review-method-quiz button:focus-visible{outline:3px solid #e19a39;outline-offset:2px}
+.fe-review-method-quiz button:disabled{opacity:.48;cursor:not-allowed}
+.fe-review-method-quiz__feedback{padding:.8rem 1rem;margin-top:.75rem;border:1px solid #8ba7b5;border-radius:8px;background:#f0f6f8;color:#203846}
+.fe-review-method-quiz__feedback strong{display:block;margin-bottom:.3rem}
+.fe-review-method-quiz__nav{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.9rem;justify-content:space-between}
+@media(max-width:520px){.fe-review-method-quiz{padding:.7rem}.fe-review-method-quiz__choices{grid-template-columns:1fr}.fe-review-method-quiz__nav button{flex:1 1 45%}}
+@media(prefers-color-scheme:dark){.fe-review-method-quiz__scenario,.fe-review-method-quiz__feedback{background:#293d47;color:#f3f6f7}.fe-review-method-quiz button{background:#263943;color:#f4f6f7}.fe-review-method-quiz button[aria-pressed="true"]{background:#36799f;color:#fff}}
+</style>
+
+<script>
+(function(){
+  function init(){
+    var root=document.getElementById('fe-review-method-quiz');
+    if(!root||root.dataset.ready==='true')return;
+    var interactive=root.querySelector('.fe-review-method-quiz__interactive');
+    var fallback=root.querySelector('.fe-review-method-quiz__fallback');
+    var scenario=root.querySelector('[data-scenario]');
+    var feedback=root.querySelector('[data-feedback]');
+    var counter=root.querySelector('[data-counter]');
+    var prev=root.querySelector('[data-prev]');
+    var next=root.querySelector('[data-next]');
+    var reset=root.querySelector('[data-reset]');
+    var buttons=Array.prototype.slice.call(root.querySelectorAll('[data-answer]'));
+    if(!interactive||!fallback||!scenario||!feedback||!counter||!prev||!next||!reset||buttons.length!==4)return;
+    var cases=[
+      {text:'成果物の作成者が設計書の処理を順に説明し、参加者がその場で質問やコメントをしている。',answer:'walkthrough',reason:'作成者が説明しながら確認することが中心なので、ウォークスルーです。会議形式というだけでは判断できません。'},
+      {text:'モデレータが進行し、参加者には明確な役割がある。チェックリストに従って欠陥を確認し、結果を正式に記録する。',answer:'inspection',reason:'モデレータ・役割分担・チェックリスト・正式な記録という組合せがインスペクションの決め手です。'},
+      {text:'参加者が順番にレビューの司会や発言を担当し、全員に順番が回るように進めている。',answer:'roundrobin',reason:'順番に担当や発言を回すことがラウンドロビンの特徴です。成果物の回覧とは異なります。'},
+      {text:'作成した設計書を複数のレビューアに配布・回覧し、それぞれのコメントを集めている。',answer:'passaround',reason:'成果物を配布・回覧して意見を集めるので、パスアラウンドです。'}
+    ];
+    var labels={walkthrough:'ウォークスルー',inspection:'インスペクション',roundrobin:'ラウンドロビン',passaround:'パスアラウンド'};
+    var index=0;
+    function clearAnswer(){
+      buttons.forEach(function(button){button.setAttribute('aria-pressed','false');});
+      feedback.textContent='';
+      feedback.hidden=true;
+    }
+    function render(){
+      scenario.textContent=cases[index].text;
+      counter.textContent='場面 '+(index+1)+' / '+cases.length;
+      prev.disabled=index===0;
+      next.textContent=index===cases.length-1?'最初の場面に戻る':'次の場面';
+      clearAnswer();
+    }
+    buttons.forEach(function(button){
+      button.addEventListener('click',function(){
+        var chosen=button.getAttribute('data-answer');
+        buttons.forEach(function(item){item.setAttribute('aria-pressed',String(item===button));});
+        var correct=chosen===cases[index].answer;
+        feedback.textContent='';
+        var heading=document.createElement('strong');
+        heading.textContent=correct?'正解です！':'正解は「'+labels[cases[index].answer]+'」です';
+        var reason=document.createElement('span');
+        reason.textContent=cases[index].reason;
+        feedback.appendChild(heading);
+        feedback.appendChild(reason);
+        feedback.hidden=false;
+      });
+    });
+    prev.addEventListener('click',function(){if(index>0){index--;render();}});
+    next.addEventListener('click',function(){index=(index+1)%cases.length;render();});
+    reset.addEventListener('click',clearAnswer);
+    render();
+    interactive.hidden=false;
+    fallback.hidden=true;
+    root.dataset.ready='true';
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);
+  else init();
+}());
+</script>
+
+※ 学習用に特徴を強調した例です。実際のレビューでは、複数の方法に共通する運営・記録が使われることもあります。
+
 
 ## どんな場面で使う？
 
