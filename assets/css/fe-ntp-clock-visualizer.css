@@ -9,7 +9,7 @@
 .fe-ntp-demo__times{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.5rem;margin:.8rem 0}
 .fe-ntp-demo__times>div{border:1px solid #9cabb5;border-radius:8px;padding:.7rem;background:#f1f5f8;color:#273945}
 .fe-ntp-demo__times strong{display:block;font-size:1.3rem}
-.fe-ntp-demo__times span{display:block;font-size:.85rem}
+.fe-ntp-demo__times>div>span{display:block;font-size:.85rem}
 .fe-ntp-demo__math{background:#f5f7f9;color:#273945;border-radius:8px;padding:.8rem;line-height:1.7}
 .fe-ntp-demo__math p{margin:.3rem 0}
 .fe-ntp-demo__result{font-weight:700}
