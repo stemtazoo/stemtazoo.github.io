@@ -1,0 +1,19 @@
+/* Isolated FE cluster comparison demo. */
+.fe-cluster-demo{max-width:800px;margin:1.25rem auto;padding:1rem;border:1px solid #8fa8b8;border-radius:12px}
+.fe-cluster-demo [hidden]{display:none!important}
+.fe-cluster-demo__modes,.fe-cluster-demo__actions{display:flex;flex-wrap:wrap;gap:.55rem}
+.fe-cluster-demo button{font:inherit;min-height:44px;padding:.65rem .8rem;border-radius:8px;border:1px solid #597f98;background:#f0f5f9;color:#173c53;cursor:pointer}
+.fe-cluster-demo button[aria-pressed="true"]{background:#155b7c;color:white;border-color:#155b7c;font-weight:700}
+.fe-cluster-demo button:focus-visible{outline:3px solid #c78a1e;outline-offset:3px}
+.fe-cluster-demo__modes button{flex:1 1 145px}
+.fe-cluster-demo__nodes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.6rem;margin:.85rem 0}
+.fe-cluster-demo__node{display:flex;flex-direction:column;gap:.35rem;min-width:0;min-height:115px;border:2px solid #54839a;border-radius:9px;background:#edf4f8;color:#153d53;padding:.7rem;text-align:center;justify-content:center}
+.fe-cluster-demo__node [data-work]{font-size:.9rem}
+.fe-cluster-demo__node.is-standby{border-color:#958356;background:#faf4e7;color:#573f17}
+.fe-cluster-demo__node.is-failed{border-color:#b25454;background:#fff1f1;color:#722626}
+.fe-cluster-demo__guide{margin:.8rem 0}
+.fe-cluster-demo__status{font-weight:700;border-left:4px solid #397a94;padding:.6rem .8rem;background:#edf5f9;color:#173d54}
+.fe-cluster-demo__reason{margin:.65rem 0}
+.fe-cluster-demo__note{font-size:.88rem}
+@media(max-width:520px){.fe-cluster-demo{padding:.7rem}.fe-cluster-demo__nodes{gap:.35rem}.fe-cluster-demo__node{padding:.45rem .2rem;font-size:.88rem;min-height:112px}.fe-cluster-demo__node [data-work]{font-size:.78rem}.fe-cluster-demo__actions button{flex:1 1 120px}}
+@media(prefers-color-scheme:dark){.fe-cluster-demo__node{background:#203e50;color:#f0f7fc}.fe-cluster-demo__node.is-standby{background:#514322;color:#fff4dc}.fe-cluster-demo__node.is-failed{background:#562c32;color:#fff0f1}.fe-cluster-demo button{background:#253e4c;color:#e9f5fa}.fe-cluster-demo button[aria-pressed="true"]{background:#2e7191;color:#fff}.fe-cluster-demo__status{background:#203e50;color:#f0f7fc}}
