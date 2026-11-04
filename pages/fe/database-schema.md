@@ -1,14 +1,14 @@
 ---
 layout: page
 title: スキーマとは？外部・概念・内部スキーマとビューの違い【基本情報技術者試験】
-description: RDBMSにおけるスキーマを、データの内容・形式・関係などを定義するものとして整理し、外部スキーマ・概念スキーマ・内部スキーマの3層構造と、ビュー・SQL・整合性制約との違いをFE科目A向けに解説します。
+description: 外部・概念・内部の3層スキーマと、論理的・物理的データ独立性を区別。格納方法や論理構造を変更する操作教材でFE科目Aの判断方法を学びます。
 permalink: /fe/database-schema/
 tags: [fe, fe-technology, database, rdbms]
 fe_section: テクノロジ系
 fe_subsection: データベース
 fe_order: 160
 date: 2026-08-14
-last_modified_at: 2026-10-25
+last_modified_at: 2026-11-04
 ---
 
 ## まず結論
@@ -203,6 +203,56 @@ ANSI/X3/SPARCでは、スキーマを3層に分けて考える考え方があり
 
 です。
 
+### データ独立性：下位の変更が上位へ影響しないようにする
+
+**データ独立性（Data Independence）**とは、データベースの構造や格納方法が変わっても、利用者やアプリケーション側の定義をできるだけ変えずに利用できるようにする性質です。
+
+| 種類 | 変更する層 | 変更の影響を及ぼしにくくする層 | 例 |
+|---|---|---|---|
+| 物理的データ独立性 | 内部スキーマ（格納方法） | 概念スキーマなどの上位層 | 索引を追加しても表の定義を変えない |
+| 論理的データ独立性 | 概念スキーマ（論理構造） | 外部スキーマ・アプリの見え方 | 表の構造を変えても従来のビューを維持する |
+
+**内部 → 概念の変更を隠すのが物理的独立性、概念 → 外部の変更を隠すのが論理的独立性**と覚えます。変更内容によっては対応するマッピングやビューの調整が必要で、「どんな変更でも無条件に影響ゼロ」という意味ではありません。
+
+### 触って覚える：何を変更したら、どの層を守る？
+
+最初に予想しましょう。**「DBの保存方法だけを変更して、利用者が使う表の構造を変えない」**のは、物理的・論理的データ独立性のどちらでしょうか。
+
+方式を選んで「変更を確認」を押すと、**変更した層**と**そのまま使える上位層**を比較できます。
+
+<link rel="stylesheet" href="{{ '/assets/css/fe-data-independence-visualizer.css' | relative_url }}">
+
+<div class="fe-data-independence" id="fe-data-independence">
+  <div class="fe-data-independence__choices" role="group" aria-label="スキーマ変更の種類">
+    <button type="button" data-case="physical" aria-pressed="true">索引を追加する</button>
+    <button type="button" data-case="logical" aria-pressed="false">表の論理構造を変更</button>
+    <button type="button" data-case="external" aria-pressed="false">表示する列を変更</button>
+  </div>
+  <p class="fe-data-independence__question"><strong>予想：</strong><span data-question>索引を追加するとき、守りたいのはどの層の定義でしょうか？</span></p>
+  <fieldset class="fe-data-independence__predict">
+    <legend>この例に対応するデータ独立性は？</legend>
+    <label><input type="radio" name="fe-data-independence-guess" value="physical"> 物理的データ独立性</label>
+    <label><input type="radio" name="fe-data-independence-guess" value="logical"> 論理的データ独立性</label>
+    <label><input type="radio" name="fe-data-independence-guess" value="other"> いずれの定義でもない</label>
+  </fieldset>
+  <div class="fe-data-independence__actions">
+    <button type="button" data-reveal>変更を確認</button>
+    <button type="button" data-reset>最初から</button>
+  </div>
+  <div class="fe-data-independence__result" data-result hidden>
+    <p data-feedback role="status" aria-live="polite"></p>
+    <div class="fe-data-independence__layers" aria-label="スキーマの各層">
+      <div data-layer="external"><strong>外部スキーマ</strong><span data-detail="external">利用者の見え方</span></div>
+      <div data-layer="conceptual"><strong>概念スキーマ</strong><span data-detail="conceptual">表・関係などの論理構造</span></div>
+      <div data-layer="internal"><strong>内部スキーマ</strong><span data-detail="internal">保存方法・索引</span></div>
+    </div>
+    <p data-explanation></p>
+  </div>
+  <p class="fe-data-independence__note">概念モデルを簡略化した教材です。実際に論理構造を変える際は、ビューやマッピングの調整が必要になることがあります。「表示する列を変更」は外部スキーマそのものの変更であり、独立性の代表的な定義ではありません。</p>
+</div>
+<noscript><p>JavaScriptを使わない場合も上の比較表で学習できます。索引や保存先の変更は物理的データ独立性、論理構造の変更を利用者の見え方から隠すのは論理的データ独立性です。</p></noscript>
+<script src="{{ '/assets/js/fe-data-independence-visualizer.js' | relative_url }}" defer></script>
+
 ## 科目Aでどう出る？
 
 科目Aでは、スキーマの説明を、ビュー・SQL・整合性制約などと切り分ける問題が出ます。
@@ -245,6 +295,19 @@ ANSI/X3/SPARCでは、スキーマを3層に分けて考える考え方があり
 
 物理的な格納方法
 → 内部スキーマ
+```
+
+### データ独立性の判断
+
+```text
+索引・格納方式を変えても、表の定義を変えずに済む
+→ 物理的データ独立性
+
+表などの論理構造を変えても、利用者の見え方を維持する
+→ 論理的データ独立性
+
+利用者向けの列を直接変更する
+→ 外部スキーマの変更（それ自体は独立性の定義ではない）
 ```
 
 ### ビューのSELECT権限は元の表と別に考える
@@ -347,6 +410,10 @@ RDBMSにおけるスキーマの説明として、最も適切なものはどれ
 
 ## よくある誤解・混同
 
+### 「データ独立性があれば、どんな変更でも無影響」？
+
+違います。下位層の変更を上位層から隠すためのマッピング・定義やDBMSの仕組みが必要です。表から利用中の列を削除するような変更では、従来の見え方を保てない場合もあります。
+
 ### スキーマとビューは同じ？
 
 違います。
@@ -419,6 +486,8 @@ RDBMSでは、その見え方を実現する手段としてビューが使われ
 - 外部スキーマは利用者からの見え方
 - 概念スキーマはデータベース全体の論理構造
 - 内部スキーマは物理的な格納方法
+- **物理的データ独立性**：保存方法が変わっても論理構造を維持する
+- **論理的データ独立性**：論理構造が変わっても外部の見え方を維持する
 - ビューは仮想的な表
 - **ビューのSELECT権限と元の表のSELECT権限は別**。元の表への直接の権限がなくても、許可されたビューは参照できる
 - SQLはデータベース操作言語
