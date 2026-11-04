@@ -1,0 +1,22 @@
+/* FE SQL DDL interactive constraint comparison */
+.fe-ddl-demo{max-width:820px;margin:1.25rem auto;padding:1rem;border:1px solid #92a8b7;border-radius:12px}
+.fe-ddl-demo [hidden]{display:none!important}
+.fe-ddl-demo__choices,.fe-ddl-demo__actions{display:flex;flex-wrap:wrap;gap:.55rem}
+.fe-ddl-demo button{font:inherit;min-height:44px;padding:.6rem .8rem;border:1px solid #4b829d;border-radius:8px;background:#edf5fa;color:#183d56;cursor:pointer}
+.fe-ddl-demo button[aria-pressed="true"]{background:#175e81;color:#fff;border-color:#175e81;font-weight:700}
+.fe-ddl-demo button:focus-visible,.fe-ddl-demo input:focus-visible{outline:3px solid #d2962b;outline-offset:3px}
+.fe-ddl-demo__choices button{flex:1 1 135px}
+.fe-ddl-demo__rule{font-weight:700;margin:.85rem 0 .35rem}
+.fe-ddl-demo__reference{margin:.4rem 0;font-size:.88rem}
+.fe-ddl-demo__table-wrap{overflow-x:auto}
+.fe-ddl-demo table{width:100%;border-collapse:collapse;margin:.5rem 0}
+.fe-ddl-demo th,.fe-ddl-demo td{border:1px solid #9eb3bf;text-align:left;padding:.5rem}
+.fe-ddl-demo th{background:#e4f0f6;color:#173e54}
+.fe-ddl-demo__guess{display:flex;flex-wrap:wrap;gap:.9rem;border:1px solid #91aabc;border-radius:8px;padding:.6rem}
+.fe-ddl-demo__guess label{display:flex;gap:.35rem;align-items:center;min-height:36px}
+.fe-ddl-demo__actions{margin:.85rem 0}
+.fe-ddl-demo__result{padding:.7rem;border:1px solid #94afbd;border-radius:8px;background:#f0f5f8;color:#173b53}
+.fe-ddl-demo [data-feedback]{font-weight:700}
+.fe-ddl-demo__note{font-size:.88rem}
+@media(max-width:520px){.fe-ddl-demo{padding:.65rem}.fe-ddl-demo__choices button{flex:1 1 125px}.fe-ddl-demo__guess{display:grid}.fe-ddl-demo__actions button{flex:1 1 130px}}
+@media(prefers-color-scheme:dark){.fe-ddl-demo button{background:#274859;color:#fff}.fe-ddl-demo button[aria-pressed="true"]{background:#337f9b}.fe-ddl-demo__result{background:#264557;color:#fff}.fe-ddl-demo th{background:#29495b;color:#fff}}
