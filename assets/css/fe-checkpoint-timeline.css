@@ -1,0 +1,31 @@
+/* FE checkpoint recovery simulator: all styles local to demo */
+.fe-checkpoint-timeline{max-width:850px;border:1px solid #92a7b6;border-radius:12px;padding:1rem;margin:1.25rem auto}
+.fe-checkpoint-timeline [hidden]{display:none!important}
+.fe-checkpoint-timeline>label{display:block}
+.fe-checkpoint-timeline input[type="range"]{width:100%;margin:.7rem 0;min-height:32px}
+.fe-checkpoint-timeline__guide{margin:.7rem 0}
+.fe-checkpoint-timeline__guess{border:1px solid #98b1c0;border-radius:8px;padding:.65rem .8rem;display:flex;gap:.8rem;flex-wrap:wrap}
+.fe-checkpoint-timeline__guess legend{font-size:.9rem;font-weight:600}
+.fe-checkpoint-timeline__guess label{display:flex;align-items:center;min-height:36px;gap:.35rem}
+.fe-checkpoint-timeline__actions{display:flex;flex-wrap:wrap;gap:.65rem;margin:.8rem 0}
+.fe-checkpoint-timeline button{border:1px solid #2b6f91;border-radius:8px;min-height:44px;padding:.6rem 1rem;font:inherit;background:#ebf4fa;color:#184660;cursor:pointer}
+.fe-checkpoint-timeline button:focus-visible,.fe-checkpoint-timeline input:focus-visible{outline:3px solid #d69932;outline-offset:3px}
+.fe-checkpoint-timeline [data-message]{font-weight:700;margin:.9rem 0}
+.fe-checkpoint-timeline__timeline{max-width:750px;margin:.8rem 0}
+.fe-checkpoint-timeline__ticks,.fe-checkpoint-timeline__row{display:grid;grid-template-columns:32px minmax(0,1fr);gap:.5rem}
+.fe-checkpoint-timeline__ticks{align-items:end;margin-bottom:.35rem;font-size:.75rem}
+.fe-checkpoint-timeline__tick-track{position:relative;height:38px;border-bottom:1px solid #889aa8}
+.fe-checkpoint-timeline__tick{position:absolute;bottom:2px;transform:translateX(-50%);font-size:.73rem}
+.fe-checkpoint-timeline__row{align-items:center;margin:.4rem 0}
+.fe-checkpoint-timeline__track{position:relative;height:30px;border-radius:5px;background:#e6edf3}
+.fe-checkpoint-timeline__segment{position:absolute;top:7px;height:16px;background:#6c99bd;border:1px solid #31678e;border-radius:3px}
+.fe-checkpoint-timeline__checkpoint,.fe-checkpoint-timeline__failure{position:absolute;top:0;height:100%;width:2px;pointer-events:none}
+.fe-checkpoint-timeline__checkpoint{border-left:2px dashed #1477a7}
+.fe-checkpoint-timeline__failure{border-left:3px solid #b54435}
+.fe-checkpoint-timeline__table-wrap{overflow-x:auto}
+.fe-checkpoint-timeline table{width:100%;border-collapse:collapse;font-size:.92rem}
+.fe-checkpoint-timeline th,.fe-checkpoint-timeline td{border:1px solid #96abba;padding:.5rem;text-align:left}
+.fe-checkpoint-timeline th{background:#e7eff6;color:#193a52}
+.fe-checkpoint-timeline__note{font-size:.88rem;margin-top:.8rem}
+@media(max-width:520px){.fe-checkpoint-timeline{padding:.7rem}.fe-checkpoint-timeline__guess{display:grid;gap:.1rem}.fe-checkpoint-timeline__actions button{flex:1 1 120px}.fe-checkpoint-timeline table{font-size:.82rem}}
+@media(prefers-color-scheme:dark){.fe-checkpoint-timeline button{background:#274b60;color:#fff}.fe-checkpoint-timeline__track{background:#344659}.fe-checkpoint-timeline__segment{background:#5681a4}.fe-checkpoint-timeline th{background:#294757;color:#fff}}
