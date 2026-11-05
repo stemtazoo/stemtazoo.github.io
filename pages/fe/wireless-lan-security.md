@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 65
 date: 2026-09-08
-last_modified_at: 2026-09-22
+last_modified_at: 2026-11-05
 ---
 
 ## まず結論
@@ -112,6 +112,20 @@ WPA3-Personal
 ```
 
 という対応を押さえるのが先です。
+
+### WEP・WPA2-PSK・WPA3-Personalの違い
+
+| 用語 | 役割と注意点 |
+|---|---|
+| WEP | 古い無線LAN暗号化方式。弱点があり、安全な方式として使わない |
+| WPA2-Personal（PSK） | 端末とAPで共有するパスフレーズ等を基に認証し、接続ごとの通信鍵を導出する |
+| WPA3-Personal（SAE） | SAEによる認証で、パスワード推測攻撃への耐性を強化する |
+
+**PSK（Pre-Shared Key）は「事前共有鍵」**です。WPA2-PSKは端末が暗号鍵をずっと共用し続けるという意味ではなく、通信に使う鍵を接続ごとに導出します。
+
+**MACアドレスフィルタリングとSSIDステルスは暗号化の代わりにはなりません**。Wi-Fi接続はWPA2／WPA3などの適切な保護と組み合わせます。
+
+- [Apple公式：非推奨の無線LAN方式](https://support.apple.com/en-ie/guide/security/sec8a67fa93d/web)
 
 ### MACアドレスフィルタリング
 
