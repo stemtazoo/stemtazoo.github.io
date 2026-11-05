@@ -96,6 +96,10 @@ CREATE TABLE 社員 (
 | `UNIQUE` | 指定した列・列の組の一意性を保証 | NULLの扱いはDBMSによる |
 | `CHECK` | 条件を満たす値を制限 | 例：`CHECK (年齢 >= 0)` |
 
+**`CHECK (年齢 >= 0)` だけではNULLを禁止できません。** SQLのCHECK制約では、条件がTRUE、またはNULLによるUNKNOWN（不明）の場合は制約違反にならないため、年齢にNULLを登録できます。年齢を必須入力にして0以上に制限するなら、`年齢 NUMERIC(3, 0) NOT NULL CHECK (年齢 >= 0)` のように両方を指定します。
+
+- [PostgreSQL公式：CHECK制約とNOT NULL制約](https://www.postgresql.org/docs/current/ddl-constraints.html#DDL-CONSTRAINTS-CHECK-CONSTRAINTS)
+
 **外部キーの指定は `FOREIGN KEY (列名) REFERENCES 参照先表(列名)`** と読みます。参照先には通常、主キーや一意性が保証された列を指定します。詳細は[主キーの記事](/fe/primary-key/)へ進んでください。
 
 ### 触って覚える：このデータは登録できる？
