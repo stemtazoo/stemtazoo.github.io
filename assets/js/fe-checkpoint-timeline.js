@@ -13,6 +13,7 @@ function initialize(){
  if(!root||root.dataset.ready)return;
  var slider=root.querySelector("#fe-checkpoint-failure");
  var number=root.querySelector("#fe-checkpoint-failure-value");
+ var questionTime=root.querySelector("[data-question-time]");
  var result=root.querySelector("[data-result]");
  var msg=root.querySelector("[data-message]");
  var tbody=root.querySelector("[data-table]");
@@ -23,6 +24,10 @@ function initialize(){
  var reset=root.querySelector("[data-reset]");
  var guesses=Array.prototype.slice.call(root.querySelectorAll('input[name="fe-checkpoint-guess"]'));
  if(!slider||!number||!result||!msg||!tbody||!ticks||!rows||!explanation||!apply||!reset)return;
+ function syncTime(){
+  number.textContent=slider.value;
+  if(questionTime)questionTime.textContent=slider.value;
+ }
  function node(tag,cls,txt){
   var e=document.createElement(tag);
   if(cls)e.className=cls;
@@ -75,13 +80,14 @@ function initialize(){
   explanation.textContent="青い破線がチェックポイント、赤い線が障害時刻です。T1は反映済みです。T2は時刻5より前の障害でUNDO、それ以降は未反映という教材の仮定によってREDOになります。";
   result.hidden=false;
  }
- slider.addEventListener("input",function(){number.textContent=slider.value;result.hidden=true;});
+ slider.addEventListener("input",function(){syncTime();result.hidden=true;});
  apply.addEventListener("click",show);
  reset.addEventListener("click",function(){
-  slider.value="7";number.textContent="7";
+  slider.value="7";syncTime();
   guesses.forEach(function(g){g.checked=false;});
   result.hidden=true;
  });
+ syncTime();
  root.dataset.ready="true";
 }
 if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",initialize);
