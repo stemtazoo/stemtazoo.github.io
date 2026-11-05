@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 10
 date: 2026-07-27
-last_modified_at: 2026-09-22
+last_modified_at: 2026-11-06
 ---
 
 ## まず結論
@@ -104,7 +104,7 @@ IPv4アドレスは、ネットワーク上の機器を識別する番号です�
 → ループバックの範囲
 ```
 
-したがって、`127.158.32.134` のようなアドレスもグローバルIPアドレスではありません。
+したがって、`127.24.6.8` のようなアドレスもグローバルIPアドレスではありません。
 
 ### リンクローカルアドレス
 
@@ -140,29 +140,40 @@ IPv4にはこのほかにも特殊用途の範囲がありますが、FE試験�
 例えば次の候補があるとします。
 
 ```text
-118.151.146.138
-127.158.32.134
-172.22.151.43
-192.168.38.158
+8.8.4.4
+127.24.6.8
+172.28.4.10
+192.168.14.20
 ```
 
 順番に確認します。
 
 ```text
-127.158.32.134
+127.24.6.8
 → 127.0.0.0/8
 → ループバック
 
-172.22.151.43
+172.28.4.10
 → 172.16.0.0/12
 → プライベート
 
-192.168.38.158
+192.168.14.20
 → 192.168.0.0/16
 → プライベート
 ```
 
-残った `118.151.146.138` が、グローバルIPアドレスの候補です。
+残った `8.8.4.4` が、グローバルIPアドレスの候補です。
+
+### どこまで数字を見る？
+
+最初の数字だけで判定できる範囲と、**2番目の数字まで確認する範囲**があります。
+
+- `10.x.x.x`：先頭の10だけでプライベートと判断できます。
+- `127.x.x.x`：先頭の127だけでループバックと判断できます。
+- `172.x.x.x`：**2番目が16〜31のときだけ**プライベートです。
+- `192.x.x.x`：**2番目が168のときだけ**プライベートです。
+
+例えば `172.31.8.10` と `172.32.8.10` は1だけ違いますが、プライベート範囲に入るのは前者だけです。なお**クラスA・B・C**は旧来のアドレス分類であり、プライベートかどうかの分類とは異なります。詳しくは[IPv4のクラス分類](/fe/ipv4-address-classes/)を参照してください。
 
 ### 選択肢を切る判断表
 
@@ -187,6 +198,31 @@ IPv4にはこのほかにも特殊用途の範囲がありますが、FE試験�
 ```
 
 ---
+
+### 触って覚える：IPアドレスを分類しよう
+
+まずアドレスを見て種類を予想し、**判定する**を押すと理由が表示されます。
+
+**見るポイント：** 172の後ろの数字が16〜31に入るかを比較してください。
+
+<link rel="stylesheet" href="{{ '/assets/css/fe-ipv4-judge.css' | relative_url }}">
+<div class="fe-ipv4-judge" id="fe-ipv4-judge">
+  <div class="fe-ipv4-judge__head"><strong>IPv4判定練習</strong><span id="fe-ipv4-progress">1 / 6</span></div>
+  <p>このアドレスは何に分類される？</p>
+  <p class="fe-ipv4-judge__ip" id="fe-ipv4-address">172.31.10.5</p>
+  <fieldset id="fe-ipv4-choices"><legend>種類を予想する</legend>
+    <label><input type="radio" name="ipv4-kind" value="private"> プライベートIP</label>
+    <label><input type="radio" name="ipv4-kind" value="loopback"> ループバック</label>
+    <label><input type="radio" name="ipv4-kind" value="public"> グローバルIP</label>
+    <label><input type="radio" name="ipv4-kind" value="special"> その他の特殊用途</label>
+  </fieldset>
+  <button type="button" id="fe-ipv4-check" disabled>判定する</button>
+  <p id="fe-ipv4-feedback" class="fe-ipv4-judge__feedback" role="status" aria-live="polite" hidden></p>
+  <div class="fe-ipv4-judge__actions"><button type="button" id="fe-ipv4-prev" disabled>前へ</button><button type="button" id="fe-ipv4-next">次のアドレス</button><button type="button" id="fe-ipv4-reset">最初から</button></div>
+</div>
+<script defer src="{{ '/assets/js/fe-ipv4-judge.js' | relative_url }}"></script>
+
+JavaScriptが使えない場合も、上の判定表で同じ考え方を確認できます。例えば `172.31.10.5` はプライベート範囲内ですが、`172.32.10.5` はその範囲外です。
 
 ## どんな場面で使う？
 
