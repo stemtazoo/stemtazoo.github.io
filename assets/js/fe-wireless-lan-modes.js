@@ -4,7 +4,7 @@
 var modes={
  infra:{needsAP:true,top:"アクセスポイント（AP）",left:"PC",right:"スマートフォン",note:"両方の端末が既設APを介して通信します。",explain:"インフラストラクチャモードは既設のアクセスポイントが必要です。端末の通信は通常APを経由します。"},
  adhoc:{needsAP:false,top:"APなし：従来のIBSS",left:"端末A",right:"端末B",note:"APなしで端末同士が直接接続",explain:"アドホックモード（IBSS）は、既設APを使わずに端末同士で通信する従来の方式です。"},
- direct:{needsAP:false,top:"スマートフォン：Group Owner",left:"Group Owner",right:"プリンタ：Client",note:"機器の1台がグループを管理",explain:"Wi-Fi Directは既設APを必要としません。ただしGroup Ownerがアクセスポイントに似た役割で接続を管理します。"}
+ direct:{needsAP:false,top:"Wi-Fi Directグループ",left:"スマホ（Group Owner）",right:"プリンタ（Client）",note:"機器の1台がグループを管理",explain:"Wi-Fi Directは既設APを必要としません。ただしGroup Ownerがアクセスポイントに似た役割で接続を管理します。"}
 };
 function init(){
  var root=document.getElementById("fe-wireless-modes-demo");
@@ -43,7 +43,7 @@ function init(){
   diagram.replaceChildren();
   add("div","fe-wireless-modes-demo__node fe-wireless-modes-demo__node--center",spec.top);
   add("div","fe-wireless-modes-demo__node",spec.left);
-  add("span","fe-wireless-modes-demo__arrow","⇄");
+  add("span","fe-wireless-modes-demo__arrow",active==="infra"?"↖ ↗":"⇄");
   add("div","fe-wireless-modes-demo__node",spec.right);
   add("p","fe-wireless-modes-demo__caption",spec.note);
   explanation.textContent=spec.explain;
