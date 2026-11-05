@@ -899,6 +899,64 @@ def packet_filtering_port_rules(page, expect):
     assert page.locator('.fe-port-demo__rules').inner_text() == fixed_table
     contained(page, root)
 
+def response_time(page, expect):
+    root = page.locator('#fe-response-demo')
+    def result(r, total, start, first):
+        expect(root.locator('[data-response]')).to_contain_text(f'レスポンスタイム：{r}秒')
+        expect(root.locator('[data-turnaround]')).to_contain_text(f'ターンアラウンドタイム：{total}秒')
+        expect(root.locator('[data-response-endpoints]')).to_have_text(f'入力完了{start}秒 → 出力開始{first}秒')
+        expect(root.locator('[data-turnaround-endpoints]')).to_have_text(f'入力開始0秒 → 全出力完了{total}秒')
+        # Check rendered measurement geometry against the shared timeline.
+        ranges = root.evaluate("""root => {
+          const axis = root.querySelector('[data-timeline]').getBoundingClientRect();
+          const r = root.querySelector('[data-response-range]').getBoundingClientRect();
+          return {width: axis.width, offset: r.left - axis.left, response: r.width};
+        }""")
+        assert abs(ranges['offset'] - ranges['width'] * start / total) < 2
+        assert abs(ranges['response'] - ranges['width'] * r / total) < 2
+    def value(name, number):
+        slider = root.locator('#fe-response-' + name)
+        slider.focus()
+        slider.press('Home')
+        minimum = int(slider.get_attribute('min'))
+        for _ in range(number - minimum):
+            slider.press('ArrowRight')
+        expect(slider).to_have_value(str(number))
+        expect(root.locator('#fe-response-' + name + '-value')).to_have_text(f'{number}秒')
+    apply = root.locator('[data-apply]')
+    result(7, 14, 2, 9)
+    value('input', 5)
+    expect(root.locator('[data-feedback]')).to_contain_text('反映前')
+    result(7, 14, 2, 9)
+    apply.press('Enter')
+    result(7, 17, 5, 12)
+    value('output', 8)
+    root.locator('input[value="turnaround"]').check()
+    apply.click()
+    result(7, 20, 5, 12)
+    expect(root.locator('[data-feedback]')).to_contain_text('予想は正しい')
+    root.locator('input[value="both"]').check()
+    apply.click()
+    expect(root.locator('[data-feedback]')).to_contain_text('出力だけを延ばす場合はターンアラウンドタイムだけ')
+    for name, number in [('input', 0), ('wait', 0), ('work', 1), ('output', 0)]:
+        value(name, number)
+    apply.click()
+    result(1, 1, 0, 1)
+    expect(root.locator('[data-bar="input"]')).to_be_hidden()
+    expect(root.locator('[data-bar="wait"]')).to_be_hidden()
+    expect(root.locator('[data-bar="output"]')).to_be_hidden()
+    for name in ['input', 'wait', 'work', 'output']:
+        value(name, 10)
+    apply.click()
+    result(20, 40, 10, 30)
+    root.locator('[data-reset]').click()
+    result(7, 14, 2, 9)
+    expect(root.locator('input[name="fe-response-guess"]:checked')).to_have_count(0)
+    apply.click()  # prediction may be omitted
+    result(7, 14, 2, 9)
+    contained(page, '#fe-response-demo')
+
+
 CHECKS = {'shared-exclusive-lock': lock, 'two-phase-commit': two_phase, 'disk-scheduling': disk,
           'cpu-scheduling': cpu, 'confusion-matrix': matrix, 'attention': attention,
           'binary-search': binary_search, 'cnn-output-size': cnn, 'adjacency-matrix': adjacency,
@@ -911,7 +969,8 @@ CHECKS = {'shared-exclusive-lock': lock, 'two-phase-commit': two_phase, 'disk-sc
           'cache-hit-rate-average-access-time': cache_hit_rate_average_access_time,
           'five-stage-pipeline': five_stage_pipeline,
           'sql-group-by-aggregate-functions': sql_group_by_aggregate_functions,
-          'packet-filtering-port-rules': packet_filtering_port_rules}
+          'packet-filtering-port-rules': packet_filtering_port_rules,
+          'response-time': response_time}
 
 
 def run(args):
