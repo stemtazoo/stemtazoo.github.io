@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: コンピュータシステム
 fe_order: 52
 date: 2026-10-05
-last_modified_at: 2026-11-02
+last_modified_at: 2026-11-05
 ux_readability_pilot: true
 ---
 
@@ -100,14 +100,14 @@ SCAN方式は、**エレベータ**をイメージすると理解しやすい方
 
 **次にヘッドが移動するシリンダはどれでしょうか？**
 
-まず初期位置 **100**、要求列 **120, 95, 70, 80, 140, 110, 60** で比べます。
+まず初期位置 **100**、要求列 **120, 95, 70, 130, 140, 110, 60** で比べます。
 
 1. FCFS・SSTF・SCANから方式を選ぶ。
 2. 次に処理するシリンダ番号を予想する。
 3. 「1要求進める」で結果を確認する。
 4. 方式を切り替えて、処理順と総移動量を比較する。
 
-初期例は3方式の総移動量に差が出るよう、本文のSCAN例から要求列を調整しています。現在位置や要求列も変更できます。
+初期例の総移動量は、FCFSが220、SSTFが130、SCAN（この教材のLOOK型条件・増加方向）が120です。本文のSCAN例とは要求列を変えています。現在位置や要求列も変更できます。
 
 **この教材の計算条件**
 
@@ -138,7 +138,7 @@ SCAN方式は、**エレベータ**をイメージすると理解しやすい方
       </select>
     </label>
     <label for="fe-disk-requests">要求列（カンマ区切り、0〜199）
-      <input id="fe-disk-requests" type="text" value="120,95,70,80,140,110,60">
+      <input id="fe-disk-requests" type="text" value="120,95,70,130,140,110,60">
     </label>
   </div>
   <p class="fe-disk-demo__step"><strong>② 次の移動先を予想</strong><span>現在の方式で次に処理する番号を考えましょう。</span></p>
@@ -165,7 +165,7 @@ SCAN方式は、**エレベータ**をイメージすると理解しやすい方
   <div class="fe-disk-demo__scroll" tabindex="0" aria-label="ヘッド移動の履歴、横スクロール可能">
     <div id="fe-disk-route" class="fe-disk-demo__route">開始：100</div>
   </div>
-  <p id="fe-disk-pending">未処理：120, 95, 70, 80, 140, 110, 60</p>
+  <p id="fe-disk-pending">未処理：120, 95, 70, 130, 140, 110, 60</p>
   <div class="fe-disk-demo__scroll">
     <table>
       <caption>同じ条件での全方式比較（最後まで実行した場合）</caption>
