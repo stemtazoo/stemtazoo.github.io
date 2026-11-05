@@ -147,5 +147,14 @@
     "static": {
       "selector": "noscript"
     }
+  },
+  "response-time": {
+    "source": "pages/fe/response-time.md",
+    "root": "#fe-response-demo",
+    "url": "/fe/response-time/",
+    "static": {
+      "selector": "noscript p",
+      "text": "入力完了2秒から出力開始9秒"
+    }
   }
 }
