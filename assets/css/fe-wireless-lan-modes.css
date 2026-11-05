@@ -1,0 +1,21 @@
+/* Wireless LAN mode visualizer: scoped styles, responsive and keyboard accessible */
+.fe-wireless-modes-demo{max-width:820px;margin:1.25rem auto;padding:1rem;border:1px solid #91a9b9;border-radius:12px}
+.fe-wireless-modes-demo [hidden]{display:none!important}
+.fe-wireless-modes-demo__modes,.fe-wireless-modes-demo__actions{display:flex;flex-wrap:wrap;gap:.65rem}
+.fe-wireless-modes-demo button{min-height:44px;font:inherit;padding:.65rem .85rem;border-radius:8px;border:1px solid #4a819d;background:#edf5f9;color:#173e55;cursor:pointer}
+.fe-wireless-modes-demo__modes button{flex:1 1 155px}
+.fe-wireless-modes-demo button[aria-pressed="true"]{background:#165f83;color:#fff;font-weight:700}
+.fe-wireless-modes-demo button:focus-visible,.fe-wireless-modes-demo input:focus-visible{outline:3px solid #cf952c;outline-offset:3px}
+.fe-wireless-modes-demo__guess{display:flex;flex-wrap:wrap;gap:1rem;border:1px solid #9fb4c1;padding:.7rem;border-radius:8px}
+.fe-wireless-modes-demo__guess label{display:flex;align-items:center;gap:.4rem;min-height:36px}
+.fe-wireless-modes-demo__actions{margin:.85rem 0}
+.fe-wireless-modes-demo__result{padding:.85rem;border:1px solid #91aebe;border-radius:10px}
+.fe-wireless-modes-demo [data-feedback]{font-weight:700}
+.fe-wireless-modes-demo__diagram{display:grid;grid-template-columns:minmax(0,1fr) 46px minmax(0,1fr);align-items:center;gap:.45rem;max-width:550px;margin:.8rem auto}
+.fe-wireless-modes-demo__node{border:1px solid #6e97b2;background:#e3eff7;color:#193f59;padding:.65rem .4rem;border-radius:8px;min-height:50px;text-align:center;display:flex;justify-content:center;align-items:center;overflow-wrap:anywhere}
+.fe-wireless-modes-demo__node--center{grid-column:1/-1;background:#dcece2;border-color:#76a085;color:#224e37}
+.fe-wireless-modes-demo__arrow{font-size:1.3rem;text-align:center}
+.fe-wireless-modes-demo__caption{grid-column:1/-1;text-align:center;font-size:.88rem;margin:0}
+.fe-wireless-modes-demo__note{font-size:.88rem}
+@media(max-width:520px){.fe-wireless-modes-demo{padding:.7rem}.fe-wireless-modes-demo__modes button{flex:1 1 130px}.fe-wireless-modes-demo__actions button{flex:1 1 130px}.fe-wireless-modes-demo__diagram{grid-template-columns:minmax(0,1fr) 25px minmax(0,1fr)}.fe-wireless-modes-demo__node{font-size:.88rem}}
+@media(prefers-color-scheme:dark){.fe-wireless-modes-demo button{background:#294b61;color:white}.fe-wireless-modes-demo button[aria-pressed="true"]{background:#367e9e}.fe-wireless-modes-demo__node{background:#29475e;color:#fff}.fe-wireless-modes-demo__node--center{background:#294e3b;color:#fff}}
