@@ -22,3 +22,14 @@
 .fe-response-demo__note{font-size:.88rem}
 @media(max-width:520px){.fe-response-demo{padding:.7rem}.fe-response-demo__controls{grid-template-columns:1fr}.fe-response-demo__bar{font-size:.77rem}.fe-response-demo__actions button{flex:1 1 125px}}
 @media(prefers-color-scheme:dark){.fe-response-demo__controls label,.fe-response-demo__feedback{background:#253f52;color:#f1f7fa}.fe-response-demo__bar--wait{background:#385f79;color:#fff}.fe-response-demo__bar--work{background:#32654a;color:#fff}.fe-response-demo__bar--output{background:#654577;color:#fff}}
+/* Both measurement rows share the phase timeline's scale; text stays outside short bars. */
+.fe-response-demo__timeline{gap:0;min-height:24px}
+.fe-response-demo__bar{padding:0}
+.fe-response-demo__bar--input{background:#e0b864;color:#30220a}
+.fe-response-demo__measure{height:16px;background:#edf1f4;width:100%;margin:.3rem 0}
+.fe-response-demo__measure span{display:block;box-sizing:border-box;height:100%;background:#216587;border-left:3px solid #132f42;border-right:3px solid #132f42}
+.fe-response-demo__measure--turnaround span{width:100%;background:#7b4b80}
+.fe-response-demo [data-response],.fe-response-demo [data-turnaround]{font-weight:700;margin-top:1rem}
+.fe-response-demo [data-phases]{font-size:.9rem}
+.fe-response-demo [data-response-endpoints],.fe-response-demo [data-turnaround-endpoints]{font-size:.9rem}
+@media(prefers-color-scheme:dark){.fe-response-demo__measure{background:#304652}.fe-response-demo__measure span{background:#78c4e8}.fe-response-demo__measure--turnaround span{background:#cf99d4}}
