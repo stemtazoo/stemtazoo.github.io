@@ -1,14 +1,14 @@
 ---
 layout: page
 title: レスポンスタイムとは？ターンアラウンドタイムとの違いを時間軸で理解【基本情報技術者試験】
-description: レスポンスタイムは要求から最初の応答まで、ターンアラウンドタイムは全処理完了までの時間として、待ち時間・処理時間・出力時間を変える操作教材でFE科目Aの判断方法を学びます。
+description: オンライン処理の入力完了から出力開始までのレスポンスタイムと、入力開始から出力完了までのターンアラウンドタイムを、4区間の操作教材で比較します。
 permalink: /fe/response-time/
 tags: [fe, fe-technology, computer-system, performance]
 fe_section: テクノロジ系
 fe_subsection: コンピュータシステム
 fe_order: 125
 date: 2026-11-04
-last_modified_at: 2026-11-04
+last_modified_at: 2026-11-05
 related_articles:
   - /fe/throughput/
   - /fe/turnaround-time/
@@ -17,64 +17,60 @@ related_articles:
 
 ## まず結論
 
-**レスポンスタイム（response time、応答時間）**とは、利用者がシステムへ要求を出してから、**最初の応答が返るまで**にかかる時間です。
+**レスポンスタイム（response time、応答時間）**は、オンライン処理では一般に、**入力を完了してから、処理結果の出力が始まるまで**の時間です。
 
-**ターンアラウンドタイム**は、要求の受付から**処理結果の出力がすべて完了するまで**の時間です。基本情報技術者試験（FE）の科目Aでは、**どの時点までを測るか**を見分けます。
+**ターンアラウンドタイム**は、オンライン処理の一連の作業を測る場合、**入力を開始してから、結果の出力がすべて完了するまで**の時間です。終点だけでなく、**始点の違い**にも注目しましょう。
 
-| 性能指標 | 注目する区間 |
+| 性能指標 | この教材で測る区間 |
 |---|---|
-| レスポンスタイム | 要求 → 最初の応答 |
-| ターンアラウンドタイム | 要求 → 全処理・出力の完了 |
+| レスポンスタイム | 入力完了 → 出力開始（最初の応答） |
+| ターンアラウンドタイム | 入力開始 → 全出力完了 |
 | スループット | 単位時間に完了できる処理件数（量） |
 
-※実際のシステムでは「応答」をいつとするかの測定条件が異なる場合があります。**試験問題の測定開始・終了時点の指定が最優先**です。
+**測定範囲は文脈によって異なります。試験問題の測定開始・終了時点の指定が最優先**です。ジョブの到着から完了までをターンアラウンドタイムとする計算は、[ジョブの待ち時間とターンアラウンドタイム](/fe/turnaround-time/)で扱います。
 
 ## 直感的な説明
 
-レストランで注文する場面を考えます。
+検索画面で、検索条件を入力する場面を考えます。
 
-- **レスポンスタイム**：注文を伝えてから、店員から「承りました」と最初の返事があるまで。
-- **ターンアラウンドタイム**：注文を伝えてから、注文した料理がすべて提供されるまで。
+- **入力開始**：条件を入力し始める。
+- **入力完了**：検索ボタンを押して要求を送る。
+- **出力開始**：最初の検索結果が表示される。
+- **出力完了**：検索結果の表示がすべて終わる。
 
-**最初の返事が早くても、料理がすべて届くまでの時間が短いとは限りません。**
+検索ボタンを押してから最初の結果を待つ時間が、この教材の**レスポンスタイム**です。条件を入力し始めてから全結果の表示が終わるまでが、**ターンアラウンドタイム**です。単に「受付中」と返す表示ではなく、処理結果の出力開始を応答として扱います。
 
 ## 定義・仕組み
 
-オンライン処理を例に、測定時点を明確にします。
+この教材では、入力開始を **0秒** とし、次の4区間を順に並べます。
 
-```text
-要求開始       最初の応答        全出力完了
-  │────待機・処理────│────残りの出力────│
-  │←レスポンスタイム→│
-  │←──ターンアラウンドタイム──→│
-```
+| 区間 | 初期値 | レスポンスタイムに含む | ターンアラウンドタイムに含む |
+|---|---:|---|---|
+| 入力開始 → 入力完了 | 2秒 | 含まない | 含む |
+| 入力完了 → 処理開始（待ち） | 3秒 | 含む | 含む |
+| 処理開始 → 出力開始（処理） | 4秒 | 含む | 含む |
+| 出力開始 → 全出力完了（残りの出力） | 5秒 | 含まない | 含む |
 
-今回の学習用モデルでは、要求を出した時点を **0秒** として、次の3つを足し合わせます。
+- **レスポンスタイム = 待ち時間 + 処理時間**（初期値：3＋4＝7秒）
+- **ターンアラウンドタイム = 入力時間 + レスポンスタイム + 残りの出力時間**（初期値：2＋7＋5＝14秒）
 
-- **待ち時間**：処理が開始されるまでの時間
-- **処理時間**：最初の応答を作るまでの時間
-- **残りの出力時間**：最初の応答から全結果の出力が終わるまでの時間
-
-このモデルであれば、
-
-```text
-レスポンスタイム = 待ち時間 + 処理時間
-ターンアラウンドタイム = レスポンスタイム + 残りの出力時間
-```
-
-となります。これは**この教材の測定条件における式**であり、すべてのシステムの固定公式ではありません。
+この区間の取り方は、電力広域的運営推進機関の[要件定義書の「画面の応答時間」図（本文27ページ）](https://www.occto.or.jp/choutatsu/2022/files/221207_ippan_unit_youkenteigi.pdf)でも示されています。式は**この教材の測定条件**に対応しており、すべての計測場面での固定公式ではありません。
 
 ### 触って覚える：最初の応答と全完了の区間を比べよう
 
 **予想してみよう：残りの出力時間だけを長くすると、レスポンスタイムとターンアラウンドタイムのどちらが長くなるでしょうか？**
 
-待ち時間・処理時間・残りの出力時間を変更し、「反映して比較」を押すと、時間軸が更新されます。
+入力時間・待ち時間・処理時間・残りの出力時間を変更し、「反映して比較」を押すと、時間軸が更新されます。
 
 <link rel="stylesheet" href="{{ '/assets/css/fe-response-time-visualizer.css' | relative_url }}">
 
 <div class="fe-response-demo" id="fe-response-demo">
   <p class="fe-response-demo__step"><strong>① 条件を設定</strong>（単位は秒）</p>
   <div class="fe-response-demo__controls">
+    <label for="fe-response-input">入力開始から入力完了までの時間
+      <input id="fe-response-input" type="range" min="0" max="10" step="1" value="2">
+      <output for="fe-response-input" id="fe-response-input-value">2秒</output>
+    </label>
     <label for="fe-response-wait">処理開始までの待ち時間
       <input id="fe-response-wait" type="range" min="0" max="10" step="1" value="3">
       <output for="fe-response-wait" id="fe-response-wait-value">3秒</output>
@@ -99,25 +95,32 @@ related_articles:
     <button type="button" data-apply>反映して比較</button>
     <button type="button" data-reset>最初から</button>
   </div>
-  <p data-feedback class="fe-response-demo__feedback" role="status" aria-live="polite">初期条件：待ち3秒、処理4秒、出力5秒。変更して結果を比べてください。</p>
+  <p data-feedback class="fe-response-demo__feedback" role="status" aria-live="polite">初期条件：入力2秒、待ち3秒、処理4秒、出力5秒。変更して結果を比べてください。</p>
   <div class="fe-response-demo__display" data-display>
-    <div class="fe-response-demo__timeline" data-timeline aria-label="時間軸：待ち3秒、処理4秒、出力5秒">
-      <span class="fe-response-demo__bar fe-response-demo__bar--wait" data-bar="wait" style="flex:3">待ち</span>
-      <span class="fe-response-demo__bar fe-response-demo__bar--work" data-bar="work" style="flex:4">処理</span>
-      <span class="fe-response-demo__bar fe-response-demo__bar--output" data-bar="output" style="flex:5">出力</span>
+    <p>時間軸（入力開始を0秒とする）</p>
+    <div class="fe-response-demo__timeline" data-timeline aria-label="入力2秒、待ち3秒、処理4秒、残りの出力5秒">
+      <span class="fe-response-demo__bar fe-response-demo__bar--input" data-bar="input" style="flex:2" aria-hidden="true"></span>
+      <span class="fe-response-demo__bar fe-response-demo__bar--wait" data-bar="wait" style="flex:3" aria-hidden="true"></span>
+      <span class="fe-response-demo__bar fe-response-demo__bar--work" data-bar="work" style="flex:4" aria-hidden="true"></span>
+      <span class="fe-response-demo__bar fe-response-demo__bar--output" data-bar="output" style="flex:5" aria-hidden="true"></span>
     </div>
-    <p data-response>最初の応答：7秒（待ち3＋処理4）</p>
-    <p data-turnaround>全出力完了：12秒（7＋出力5）</p>
-    <p data-reason>レスポンスタイムは最初の応答まで。ターンアラウンドタイムは出力完了までです。</p>
+    <p data-phases>入力2秒 → 待ち3秒 → 処理4秒 → 残りの出力5秒</p>
+    <p data-response><strong>レスポンスタイム：7秒</strong>（待ち3＋処理4）</p>
+    <div class="fe-response-demo__measure" aria-hidden="true"><span data-response-range style="margin-left:14.2857%;width:50%"></span></div>
+    <p data-response-endpoints>入力完了2秒 → 出力開始9秒</p>
+    <p data-turnaround><strong>ターンアラウンドタイム：14秒</strong>（入力2＋待ち3＋処理4＋出力5）</p>
+    <div class="fe-response-demo__measure fe-response-demo__measure--turnaround" aria-hidden="true"><span></span></div>
+    <p data-turnaround-endpoints>入力開始0秒 → 全出力完了14秒</p>
+    <p data-reason>開始位置は、レスポンスタイムが入力完了、ターンアラウンドタイムが入力開始です。</p>
   </div>
-  <p class="fe-response-demo__note">この教材では「出力時間」は最初の応答が返った<strong>後の残りの出力時間</strong>です。実際の応答時間・処理完了時点は設問や計測仕様に従います。</p>
+  <p class="fe-response-demo__note">棒の長さは上の時間軸と同じ縮尺です。入力時間を0秒にすると両指標の開始位置が重なります。この教材では「出力時間」は最初の応答が返った<strong>後の残りの出力時間</strong>です。実際の応答時間・処理完了時点は設問や計測仕様に従います。</p>
 </div>
-<noscript><p>JavaScriptが無効でも学習できます。初期条件では待ち3秒＋処理4秒＝<strong>レスポンスタイム7秒</strong>、さらに残りの出力5秒を足して<strong>ターンアラウンドタイム12秒</strong>です。出力だけを5秒から8秒に増やすと、最初の応答は7秒のまま、全完了は15秒になります。</p></noscript>
+<noscript><p>初期条件は入力2秒、待ち3秒、処理4秒、残りの出力5秒。レスポンスタイムは入力完了2秒から出力開始9秒までの<strong>7秒</strong>、ターンアラウンドタイムは入力開始0秒から出力完了14秒までの<strong>14秒</strong>です。出力だけを5秒から8秒に増やすと、それぞれ7秒、17秒になります。</p></noscript>
 <script src="{{ '/assets/js/fe-response-time-visualizer.js' | relative_url }}" defer></script>
 
 ## 科目Aでどう出る？
 
-「最初の応答まで」と「全処理の終了まで」を区別するのがポイントです。
+「いつから」「いつまで」の両方を確認するのがポイントです。
 
 | 問題文の表現 | 判断 |
 |---|---|
@@ -168,8 +171,8 @@ related_articles:
 
 ## まとめ（試験直前用）
 
-- レスポンスタイム：要求から**最初の応答**まで。
-- ターンアラウンドタイム：要求から**結果の出力が全部完了**するまで。
+- この教材のレスポンスタイム：**入力完了**から**出力開始**まで。
+- この教材のターンアラウンドタイム：**入力開始**から**全出力完了**まで。
 - スループット：**単位時間当たりの処理量**。
 - 必ず設問で測定の開始時点と終了時点を確認する。
 - 待ち時間を落とさず、最初の応答以降の出力時間を混ぜない。
