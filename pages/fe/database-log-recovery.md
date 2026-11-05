@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: データベース
 fe_order: 80
 date: 2026-08-03
-last_modified_at: 2026-11-04
+last_modified_at: 2026-11-05
 ---
 
 ## まず結論
@@ -219,7 +219,7 @@ DBMSは障害回復を短縮するために、ログやデータページの状�
 <div id="fe-checkpoint-timeline" class="fe-checkpoint-timeline">
   <label for="fe-checkpoint-failure"><strong>① 障害発生時刻を選ぶ</strong>：<output id="fe-checkpoint-failure-value" for="fe-checkpoint-failure">7</output></label>
   <input type="range" id="fe-checkpoint-failure" min="4" max="12" step="1" value="7">
-  <p class="fe-checkpoint-timeline__guide"><strong>② 予想：</strong>チェックポイントをまたいだT2は、時刻7で障害が起きたらどうなる？</p>
+  <p class="fe-checkpoint-timeline__guide"><strong>② 予想：</strong>チェックポイントをまたいだT2は、時刻<span data-question-time>7</span>で障害が起きたらどうなる？</p>
   <fieldset class="fe-checkpoint-timeline__guess">
     <legend>選んだ時刻の各処理を考えながら、T2の状態を予想</legend>
     <label><input type="radio" name="fe-checkpoint-guess" value="undo"> UNDO（取り消し）</label>
