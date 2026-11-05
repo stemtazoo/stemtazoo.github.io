@@ -8,7 +8,7 @@ fe_section: ストラテジ系
 fe_subsection: 経営戦略
 fe_order: 123
 date: 2026-10-31
-last_modified_at: 2026-10-31
+last_modified_at: 2026-11-05
 ---
 
 ## まず結論
@@ -60,6 +60,7 @@ last_modified_at: 2026-10-31
   </div>
   <p class="fe-basket-prompt">予想：この2商品が両方入っている会計は何件でしょうか？</p>
   <div class="fe-basket-prediction" role="group" aria-label="同時購入数の予想">
+    <button type="button" data-fe-basket-guess="0">0件</button>
     <button type="button" data-fe-basket-guess="1">1件</button>
     <button type="button" data-fe-basket-guess="2">2件</button>
     <button type="button" data-fe-basket-guess="3">3件</button>

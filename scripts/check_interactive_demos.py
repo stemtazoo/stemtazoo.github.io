@@ -132,7 +132,7 @@ def two_phase(page, expect):
 
 def disk(page, expect):
     root = '#fe-disk-demo'
-    for method, first, total in [('fcfs', 120, 220), ('sstf', 95, 120), ('scan', 110, 120)]:
+    for method, first, total in [('fcfs', 120, 220), ('sstf', 95, 130), ('scan', 110, 120)]:
         page.locator('#fe-disk-method').select_option(method)
         contained(page, root)  # Includes the longest SCAN label.
         page.locator('#fe-disk-guess').fill(str(first))
@@ -163,7 +163,7 @@ def disk(page, expect):
     expect(page.locator('#fe-disk-next')).to_be_disabled()
     expect(page.locator('#fe-disk-guide')).to_contain_text('入力内容を修正')
     page.locator('#fe-disk-start').fill('100')
-    page.locator('#fe-disk-requests').fill('120,95,70,80,140,110,60')
+    page.locator('#fe-disk-requests').fill('120,95,70,130,140,110,60')
     page.locator('#fe-disk-requests').press('Tab')
     contained(page, root)
 
