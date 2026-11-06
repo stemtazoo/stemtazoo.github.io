@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: マルチメディア
 fe_order: 32
 date: 2026-08-21
-last_modified_at: 2026-10-08
+last_modified_at: 2026-11-07
 related_articles:
   - /fe/computer-graphics-overview/
   - /fe/raster-vector-graphics/
@@ -38,17 +38,82 @@ FE試験では、次の言葉が出たらアンチエイリアシングを疑い
 
 水平線や垂直線は比較的きれいに表せますが、斜め線や曲線は、ピクセルを階段状に並べるためギザギザして見えることがあります。
 
-```text
-アンチエイリアシングなし
-→ □
-   □
-    □
-     □
+### 同じ斜め線を比較：アンチエイリアシングなし・あり
 
-アンチエイリアシングあり
-→ 輪郭付近の色や明るさを調整して
-   見た目を滑らかにする
-```
+<div class="fe-aa-compare" aria-label="同じ斜め線の描画前後比較">
+  <figure class="fe-aa-compare__card">
+    <figcaption><strong>処理なし：ギザギザが目立つ</strong></figcaption>
+    <svg viewBox="0 0 120 120" role="img" aria-label="斜め線の画素が階段状に並んでギザギザが見える模式図" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+<rect width="120" height="120" fill="#ffffff"/>
+<rect x="110" y="0" width="10" height="10" fill="#18334a"/>
+<rect x="100" y="10" width="10" height="10" fill="#18334a"/>
+<rect x="90" y="20" width="10" height="10" fill="#18334a"/>
+<rect x="80" y="30" width="10" height="10" fill="#18334a"/>
+<rect x="70" y="40" width="10" height="10" fill="#18334a"/>
+<rect x="60" y="50" width="10" height="10" fill="#18334a"/>
+<rect x="50" y="60" width="10" height="10" fill="#18334a"/>
+<rect x="40" y="70" width="10" height="10" fill="#18334a"/>
+<rect x="30" y="80" width="10" height="10" fill="#18334a"/>
+<rect x="20" y="90" width="10" height="10" fill="#18334a"/>
+<rect x="10" y="100" width="10" height="10" fill="#18334a"/>
+<rect x="0" y="110" width="10" height="10" fill="#18334a"/>
+<rect width="120" height="120" fill="none" stroke="#a6b6c0" stroke-width="1"/>
+</svg>
+    <p>濃い画素だけで斜め線を表すと、輪郭が階段状になります。</p>
+  </figure>
+  <figure class="fe-aa-compare__card">
+    <figcaption><strong>処理あり：滑らかに見える</strong></figcaption>
+    <svg viewBox="0 0 120 120" role="img" aria-label="輪郭の隣の画素を中間の明るさにしてギザギザを目立たなくする模式図" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+<rect width="120" height="120" fill="#ffffff"/>
+<rect x="100" y="0" width="10" height="10" fill="#b5c1cb"/>
+<rect x="110" y="0" width="10" height="10" fill="#18334a"/>
+<rect x="90" y="10" width="10" height="10" fill="#b5c1cb"/>
+<rect x="100" y="10" width="10" height="10" fill="#18334a"/>
+<rect x="110" y="10" width="10" height="10" fill="#b5c1cb"/>
+<rect x="80" y="20" width="10" height="10" fill="#b5c1cb"/>
+<rect x="90" y="20" width="10" height="10" fill="#18334a"/>
+<rect x="100" y="20" width="10" height="10" fill="#b5c1cb"/>
+<rect x="70" y="30" width="10" height="10" fill="#b5c1cb"/>
+<rect x="80" y="30" width="10" height="10" fill="#18334a"/>
+<rect x="90" y="30" width="10" height="10" fill="#b5c1cb"/>
+<rect x="60" y="40" width="10" height="10" fill="#b5c1cb"/>
+<rect x="70" y="40" width="10" height="10" fill="#18334a"/>
+<rect x="80" y="40" width="10" height="10" fill="#b5c1cb"/>
+<rect x="50" y="50" width="10" height="10" fill="#b5c1cb"/>
+<rect x="60" y="50" width="10" height="10" fill="#18334a"/>
+<rect x="70" y="50" width="10" height="10" fill="#b5c1cb"/>
+<rect x="40" y="60" width="10" height="10" fill="#b5c1cb"/>
+<rect x="50" y="60" width="10" height="10" fill="#18334a"/>
+<rect x="60" y="60" width="10" height="10" fill="#b5c1cb"/>
+<rect x="30" y="70" width="10" height="10" fill="#b5c1cb"/>
+<rect x="40" y="70" width="10" height="10" fill="#18334a"/>
+<rect x="50" y="70" width="10" height="10" fill="#b5c1cb"/>
+<rect x="20" y="80" width="10" height="10" fill="#b5c1cb"/>
+<rect x="30" y="80" width="10" height="10" fill="#18334a"/>
+<rect x="40" y="80" width="10" height="10" fill="#b5c1cb"/>
+<rect x="10" y="90" width="10" height="10" fill="#b5c1cb"/>
+<rect x="20" y="90" width="10" height="10" fill="#18334a"/>
+<rect x="30" y="90" width="10" height="10" fill="#b5c1cb"/>
+<rect x="0" y="100" width="10" height="10" fill="#b5c1cb"/>
+<rect x="10" y="100" width="10" height="10" fill="#18334a"/>
+<rect x="20" y="100" width="10" height="10" fill="#b5c1cb"/>
+<rect x="0" y="110" width="10" height="10" fill="#18334a"/>
+<rect x="10" y="110" width="10" height="10" fill="#b5c1cb"/>
+<rect width="120" height="120" fill="none" stroke="#a6b6c0" stroke-width="1"/>
+</svg>
+    <p>輪郭の周辺画素にも中間色を使い、階段状の境界を目立たなくします。</p>
+  </figure>
+</div>
+
+<style>
+.fe-aa-compare{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:1rem;margin:1rem 0 1.2rem}
+.fe-aa-compare__card{margin:0;padding:1rem;border:1px solid #b8c5ce;border-radius:12px;background:#f7f9fb;min-width:0}
+.fe-aa-compare__card figcaption{font-size:.95rem;line-height:1.5;color:#233747;min-height:2.8em}
+.fe-aa-compare__card svg{display:block;width:100%;max-width:220px;height:auto;margin:0.6rem auto;background:#fff;image-rendering:pixelated}
+.fe-aa-compare__card p{font-size:.92rem;line-height:1.7;color:#334957;margin:0}
+</style>
+
+この図は、元画像の引用ではなく、画素の塗り分けを独自に作った説明用の模式図です。中間色を使うことで**線の輪郭を滑らかに見せる**考え方を表しています。画素数そのものを増やしているわけではありません。
 
 つまり、実際のピクセルの形を変えるのではなく、**境界付近の見え方を調整する**ことで滑らかに見せています。
 
