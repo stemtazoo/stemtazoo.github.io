@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: コンピュータシステム
 fe_order: 58
 date: 2026-07-10
-last_modified_at: 2026-09-23
+last_modified_at: 2026-11-07
 ---
 
 ## まず結論
@@ -173,6 +173,80 @@ M = 1111111111111111
 → 仮数部を最大
 → 4ビットずつ16進数へ変換
 ```
+
+### 独自の計算例：負の指数を2の補数で格納する
+
+**例題に使う独自形式**を先に確認します。ここでは、10進数の **0.1875** を次の16ビット形式で表します。
+
+| 部分 | ビット数 | この例での規則 |
+|---|---:|---|
+| 符号部 S | 1 | 0＝正、1＝負 |
+| 指数部 E | 4 | **符号付き2の補数**で指数を格納（−8～＋7） |
+| 仮数部 M | 11 | 2進小数の `0.M`。先頭が1になるよう正規化する |
+
+この独自形式の値は、**(−1)^S × 0.M × 2^E** とします。ここでの `E` は4ビットを符号付き2の補数として読んだ値です。IEEE 754の指数の表し方とは異なります。
+
+#### 手順1：10進小数を2進数へ
+
+```text
+0.1875 = 1/8 + 1/16
+       = 0.0011 (2進数)
+```
+
+#### 手順2：仮数部を正規化する
+
+仮数の最上位の小数けたが1になるよう、小数点位置を移します。
+
+```text
+0.0011 × 2^0
+      ↓ 小数点を右に2けた移動
+0.11   × 2^(-2)
+```
+
+値を変えないために、**仮数を4倍した分、指数を−2にする**のがポイントです。ここでは正規化後の仮数は `0.11`、指数は `−2` です。
+
+#### 手順3：指数 −2 を4ビットの2の補数に変換
+
+```text
++2 を4ビットで表す     0010
+ビットを反転する      1101
+1を加える             1110
+```
+
+したがって、**指数部は `1110`** です。
+
+※ `1110` を符号なし整数として読むと14ですが、**この例では4ビットの2の補数表現なので−2** です。ここを間違えやすいので注意します。
+
+#### 手順4：符号・指数・仮数をつなぐ
+
+0.1875 は正なので符号部は0です。仮数 `0.11` の小数点以下を11ビットにすると `11000000000` になります。
+
+<div class="fe-float-parts" role="group" aria-label="16ビットを符号1ビット・指数4ビット・仮数11ビットに分けた例">
+  <div class="fe-float-parts__field fe-float-parts__sign"><strong>符号 S（1ビット）</strong><code>0</code><small>正の数</small></div>
+  <div class="fe-float-parts__field fe-float-parts__exponent"><strong>指数 E（4ビット）</strong><code>1110</code><small>2の補数で−2</small></div>
+  <div class="fe-float-parts__field fe-float-parts__mantissa"><strong>仮数 M（11ビット）</strong><code>11000000000</code><small>0.11（2進数）</small></div>
+</div>
+
+<style>
+.fe-float-parts{display:grid;grid-template-columns:minmax(65px,1fr) minmax(92px,1.25fr) minmax(145px,2.6fr);gap:5px;max-width:720px;margin:1rem 0}
+.fe-float-parts__field{min-width:0;border:1px solid #8299a9;border-radius:8px;padding:10px 5px;text-align:center;display:flex;flex-direction:column;gap:6px;justify-content:center;align-items:center}
+.fe-float-parts__sign{background:#e4eaf2;color:#24384d}
+.fe-float-parts__exponent{background:#dfedfb;color:#173d69}
+.fe-float-parts__mantissa{background:#def1e7;color:#174a34}
+.fe-float-parts__field strong{font-size:.78rem;line-height:1.5}
+.fe-float-parts__field code{font-size:clamp(.72rem,2.2vw,1.08rem);font-weight:bold;letter-spacing:0;white-space:nowrap;background:transparent;color:inherit;padding:0;font-variant-numeric:tabular-nums}
+.fe-float-parts__field small{font-size:.74rem;line-height:1.4}
+@media(max-width:390px){.fe-float-parts{grid-template-columns:minmax(0,1fr)}.fe-float-parts__field{padding:8px}.fe-float-parts__field code{font-size:1rem}}
+</style>
+
+```text
+S | E    | M
+0 | 1110 | 11000000000
+```
+
+**検算：** `0.11 (2進数) = 1/2 + 1/4 = 0.75` なので、`0.75 × 2^(-2) = 0.1875` と元の値に戻ります。
+
+この手順は、**数値を2進数にする → 正規化する → 指数を指定の符号表現に変換する → ビットを結合する**、の順です。正規化の考え方そのものは[浮動小数点数の正規化](/fe/floating-point-normalization/)で学べます。
 
 ## どんな場面で使う？
 
