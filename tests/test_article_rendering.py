@@ -1,4 +1,5 @@
 """Regression checks against real Jekyll output; run after the preview build."""
+import re
 import sys
 import unittest
 from html.parser import HTMLParser
@@ -61,6 +62,18 @@ class ArticleRenderingTests(unittest.TestCase):
         html = (ROOT / '_site' / 'fe' / slug / 'index.html').read_text(encoding='utf-8')
         self.assertEqual([], inspect_html(html), slug)
         return RenderedElements(html)
+
+    def test_configuration_answer_renders_inside_closed_details(self):
+        page = self.page('configuration-management')
+        html = (ROOT / '_site/fe/configuration-management/index.html').read_text(encoding='utf-8')
+        answer = re.search(r'<details([^>]*)>(.*?)</details>', html, re.S)
+        self.assertIsNotNone(answer)
+        self.assertNotRegex(answer.group(1), r'\bopen(?:\s|=|$)')
+        self.assertIn('<strong>2</strong>', answer.group(2))
+        self.assertRegex(answer.group(2), r'<pre(?:\s|>)')
+        self.assertNotIn('**2**', answer.group(2))
+        self.assertNotIn('```', answer.group(2))
+        self.assertIn('まとめ（試験直前用）', page.headings)
 
     def test_gui_example_does_not_swallow_later_markdown(self):
         page = self.page('gui-controls')
