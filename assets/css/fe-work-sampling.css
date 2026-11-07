@@ -1,0 +1,15 @@
+.fe-ws{margin:1.25rem 0;padding:clamp(12px,3vw,20px);border:1px solid #a9bdcb;border-radius:12px;background:#f7fafc;color:#243442}
+.fe-ws__heading{font-weight:700;margin:0 0 12px}
+.fe-ws__options{display:flex;flex-wrap:wrap;gap:8px;border:0;padding:0;margin:0 0 14px;min-width:0}
+.fe-ws__options legend{font-weight:600;margin-bottom:6px}
+.fe-ws__options label{display:flex;align-items:center;gap:6px;padding:10px;background:#fff;border:1px solid #a9bdcb;border-radius:8px;min-height:44px;cursor:pointer}
+.fe-ws__options label:has(input:checked){background:#e1effa;border:2px solid #215e93}
+.fe-ws__options input{width:18px;height:18px;accent-color:#215e93}
+.fe-ws button{font:inherit;background:#215e93;color:#fff;border:1px solid #215e93;border-radius:8px;padding:9px 13px;min-height:44px;margin:0 8px 8px 0;cursor:pointer}
+.fe-ws button:disabled{opacity:.5;cursor:not-allowed}
+.fe-ws button:focus-visible,.fe-ws input:focus-visible{outline:3px solid #c36a16;outline-offset:2px}
+.fe-ws__result{border-top:1px solid #b7c8d2;padding-top:12px;margin-top:8px}
+.fe-ws__bar{height:26px;border:1px solid #a8c2b2;border-radius:5px;overflow:hidden;background:#e1e8ed}
+.fe-ws__bar span{display:block;height:100%;background:#25865f;width:0}
+.fe-ws__hint{font-size:.9rem;line-height:1.65;margin:10px 0 0}
+@media(max-width:410px){.fe-ws button{width:100%;margin-right:0}}
