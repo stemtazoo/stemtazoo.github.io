@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: システム構成要素
 fe_order: 70
 date: 2026-08-02
-last_modified_at: 2026-10-26
+last_modified_at: 2026-11-10
 ---
 
 ## まず結論
@@ -229,6 +229,50 @@ DBMS
 **要求を送るのはブラウザ、業務処理を行うのは主にサーバ側、結果を表示するのはブラウザ**です。ここでいう3層は論理的な役割の区分であり、Webサーバ・アプリケーションサーバ・DBサーバを必ず別々の3台にする意味ではありません。
 
 HTMLは画面の構造を表し、必要に応じてサーバが生成してブラウザへ送ります。ブラウザは受信したHTMLなどを解釈して表示します。なお、JavaScriptによる画面制御や入力チェックなど、クライアント側で実行する処理もあります。
+
+### 触って覚える：WebとDBの処理順序を並べよう
+
+小売店のWeb画面で、利用者が商品を検索し、会員向け価格を確認する場面です。ブラウザからの検索要求はすでにサーバへ届いています。**ここから先のサーバ側処理5つ**を、起こる順番に選んでみましょう。
+
+見るポイント：**DBの情報を使う処理は、DBで検索した後にしかできない**ことと、**HTML応答は必要な計算が終わってから作る**ことです。
+
+この教材では、説明を分かりやすくするため、1回の要求で検索・計算・応答を順に行うモデルを扱います。実際にはDB接続の再利用、キャッシュ、APIのJSON応答などもあり、すべてのWebシステムがこの手順になるわけではありません。
+
+<link rel="stylesheet" href="{{ '/assets/css/fe-three-tier-processing-order.css' | relative_url }}">
+
+<div class="fe-order-demo" data-fe-order-demo>
+  <p class="fe-order-demo__heading">次に行う処理を選んで順番に並べる</p>
+  <p class="fe-order-demo__hint">候補をタップすると下の一覧に追加されます。5つ並べたら判定してください。答えは判定するまで表示されません。</p>
+  <div class="fe-order-demo__choices" data-choices role="group" aria-label="処理の候補">
+    <p>JavaScriptを有効にすると、処理を選んで並べられます。</p>
+  </div>
+  <p class="fe-order-demo__heading">選んだ順番</p>
+  <ol class="fe-order-demo__sequence" data-sequence aria-label="選んだ処理順"></ol>
+  <div class="fe-order-demo__controls">
+    <button type="button" data-check disabled>判定する</button>
+    <button type="button" data-undo disabled>1つ戻す</button>
+    <button type="button" data-reset disabled>最初から</button>
+  </div>
+  <p class="fe-order-demo__status" data-status role="status" aria-live="polite">処理を選択してください。</p>
+</div>
+
+<noscript>
+<p>JavaScriptが使えない場合も、次の順序を文章で確認できます。まずは自分で考えてから開いてください。</p>
+<details markdown="1">
+<summary>処理順序と理由を見る（開く）</summary>
+
+1. **検索条件を確認する**：利用者の指定条件を確認する。
+2. **問い合わせ用SQLを準備する**：取得する情報を指定する。
+3. **DBで商品情報を検索する**：SQLを実行して情報を取得する。
+4. **取得した価格に割引を適用する**：取得した値を業務ルールで加工する。
+5. **結果をHTMLにして返す**：計算結果を表示できる応答にする。
+
+</details>
+</noscript>
+
+<script src="{{ '/assets/js/fe-three-tier-processing-order.js' | relative_url }}" defer></script>
+
+この操作は**実際にDBへ接続するものではなく**、処理の依存関係を確かめる練習です。迷ったら「その処理に必要な情報は、もう手元にあるか？」を考えましょう。
 
 ### Webシステムとして問われたとき
 
