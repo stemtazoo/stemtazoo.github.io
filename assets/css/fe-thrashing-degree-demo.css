@@ -1,0 +1,62 @@
+.fe-thrashing-degree-demo {
+  margin: 1rem 0 1.25rem;
+  padding: 1rem;
+  border: 1px solid #a9c0d0;
+  border-radius: 12px;
+  background: rgba(114, 139, 155, .055);
+  color: inherit;
+}
+.fe-thrashing-degree-demo__label { display: block; font-weight: 600; margin-bottom: .45rem; }
+.fe-thrashing-degree-demo input[type="range"] {
+  display: block;
+  width: 100%;
+  min-height: 44px;
+  accent-color: #1974b6;
+  cursor: pointer;
+}
+.fe-thrashing-degree-demo__legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem 1rem;
+  margin: .5rem 0;
+  font-size: .9rem;
+}
+.fe-thrashing-degree-demo__legend span { display: inline-flex; align-items: center; gap: .35rem; }
+.fe-thrashing-degree-demo__swatch { display: inline-block; width: 20px; border-top: 3px solid; }
+.fe-thrashing-degree-demo__swatch--throughput { border-color: #1974b6; }
+.fe-thrashing-degree-demo__swatch--paging { border-color: #c77718; border-top-style: dashed; }
+.fe-thrashing-degree-demo__chart-wrap { max-width: 620px; margin: .25rem auto .7rem; }
+.fe-thrashing-degree-demo svg { width: 100%; height: auto; display: block; overflow: visible; }
+.fe-thrashing-degree-demo svg text { font-size: 11px; fill: currentColor; }
+.fe-thrashing-degree-demo__axis { stroke: currentColor; opacity: .45; }
+.fe-thrashing-degree-demo__line--throughput {
+  fill: none; stroke: #1974b6; stroke-width: 3; stroke-linejoin: round; stroke-linecap: round;
+}
+.fe-thrashing-degree-demo__line--paging {
+  fill: none; stroke: #c77718; stroke-width: 3; stroke-dasharray: 6 4; stroke-linejoin: round; stroke-linecap: round;
+}
+.fe-thrashing-degree-demo__cursor { stroke: currentColor; stroke-width: 1.3; stroke-dasharray: 3 4; opacity: .6; }
+.fe-thrashing-degree-demo__dot--throughput { fill: #1974b6; stroke: #fff; stroke-width: 1; }
+.fe-thrashing-degree-demo__dot--paging { fill: #c77718; stroke: #fff; stroke-width: 1; }
+.fe-thrashing-degree-demo__metrics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .6rem;
+}
+.fe-thrashing-degree-demo__metrics p {
+  margin: 0;
+  padding: .65rem;
+  border-radius: 6px;
+  background: rgba(11, 111, 174, .08);
+}
+.fe-thrashing-degree-demo__comment { margin: .75rem 0; }
+.fe-thrashing-degree-demo button {
+  min-height: 44px; padding: .55rem 1rem; border-radius: 999px;
+  border: 1px solid #1974b6; background: rgba(11, 111, 174, .08);
+  color: inherit; font: inherit; cursor: pointer;
+}
+.fe-thrashing-degree-demo :is(input,button):focus-visible { outline: 3px solid #1974b6; outline-offset: 3px; }
+@media(max-width: 480px) {
+  .fe-thrashing-degree-demo { padding: .75rem; }
+  .fe-thrashing-degree-demo__metrics { grid-template-columns: 1fr; }
+}
