@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: データベース
 fe_order: 25
 date: 2026-08-12
-last_modified_at: 2026-09-22
+last_modified_at: 2026-11-13
 ---
 
 ## まず結論
@@ -105,7 +105,7 @@ last_modified_at: 2026-09-22
 | 射影 | 指定した列を取り出す | 列が減る |
 | 結合 | 共通する属性などで表を結び付ける | 表＋表 |
 | 和 | 2つの関係に含まれる組をまとめる | 集合の和 |
-| 積 | 2つの関係の組合せを作る | 全組合せ |
+| 直積（積） | 2つの関係の全行を組み合わせる | 行数の掛け算 |
 | 差 | 一方にだけ含まれる組を取り出す | 集合の差 |
 | 商 | 条件となる全ての組と関係する組を取り出す | 「全て満たす」 |
 
@@ -157,6 +157,72 @@ last_modified_at: 2026-09-22
 ```
 
 という表を作れます。
+
+
+### 直積（Cartesian product）はすべての行を組み合わせる
+
+**直積**は、表Rの各行に表Sの**すべての行**を組み合わせる演算です。結合条件は不要です。
+
+表Rが「P1・P2・P3」の3行、表Sが「赤・青」の2行なら、結果は次のとおりです。
+
+| 部品（R） | 色（S） |
+|---|---|
+| P1 | 赤 |
+| P1 | 青 |
+| P2 | 赤 |
+| P2 | 青 |
+| P3 | 赤 |
+| P3 | 青 |
+
+**3 × 2 = 6行**です。一般に、Rがm行、Sがn行なら**m × n行**。どちらかが0行なら結果も0行です。
+
+次の2つのSQLは、2表を条件なしで組み合わせる場合には同じ直積を返します。
+
+~~~sql
+SELECT * FROM R CROSS JOIN S;
+SELECT * FROM R, S;
+~~~
+
+CROSS JOINと書くと、直積だという意図が分かりやすくなります。3表以上でカンマとJOINを混在させる場合は結合の優先順位に注意が必要です。
+
+### 触って覚える：直積の行数
+
+**見るポイント：表Rを1行増やすと、Sの行数だけ結果が増えます。** スライダーを操作し、組合せと行数の変化を確認してください。
+
+<link rel="stylesheet" href="{{ '/assets/css/fe-relational-cartesian-demo.css' | relative_url }}">
+
+<section class="fe-cartesian-demo" data-fe-cartesian-demo aria-label="直積の行数を試す">
+  <div class="fe-cartesian-demo__inputs">
+    <label>表Rの行数：<strong data-cartesian-r-count>3</strong>行
+      <input type="range" min="0" max="5" step="1" value="3" data-cartesian-r aria-label="表Rの行数">
+    </label>
+    <label>表Sの行数：<strong data-cartesian-s-count>2</strong>行
+      <input type="range" min="0" max="5" step="1" value="2" data-cartesian-s aria-label="表Sの行数">
+    </label>
+  </div>
+  <p class="fe-cartesian-demo__result" data-cartesian-result aria-live="polite">R 3行 × S 2行 = 6行</p>
+  <p data-cartesian-guide>Rの各行にSの2行が対応します。</p>
+  <div class="fe-cartesian-demo__grid" data-cartesian-grid aria-label="直積の組合せ">
+    <span>R1・S1</span><span>R1・S2</span><span>R2・S1</span><span>R2・S2</span><span>R3・S1</span><span>R3・S2</span>
+  </div>
+  <button type="button" data-cartesian-reset>初期値に戻す</button>
+  <noscript><p>JavaScriptなしでも、Rが3行、Sが2行なら、結果は6行です。上の表で全組合せを確認できます。</p></noscript>
+</section>
+
+<script src="{{ '/assets/js/fe-relational-cartesian-demo.js' | relative_url }}" defer></script>
+
+### SQLの集合演算とは違う
+
+| SQL | 結果 | 見分け方 |
+|---|---|---|
+| CROSS JOIN（FROM R, S） | 全組合せ | 直積。行数を掛ける |
+| UNION | 両方の結果にある行をまとめ、重複を除く | 和集合 |
+| EXCEPT | 左の結果にだけある行 | 差集合 |
+| INTERSECT | 両方の結果に共通する行 | 共通部分 |
+
+**注意：** UNION・EXCEPT・INTERSECTは、対応する列数が同じでデータ型が適合する結果同士に使います。異なる列構成の表に単純にSELECT *を付けた結果には適用できない場合があります。UNION ALLは重複行を残す点でUNIONと異なります。
+
+詳しくは[PostgreSQL公式の結合](https://www.postgresql.org/docs/current/queries-table-expressions.html)と[集合演算](https://www.postgresql.org/docs/current/queries-union.html)を参照してください。
 
 このテーマは基本情報技術者試験のデータベース分野に含まれます。公式の出題範囲は、[IPA：基本情報技術者試験](https://www.ipa.go.jp/shiken/kubun/fe.html)から確認できます。
 
@@ -351,6 +417,10 @@ JOIN
 
 試験では、別の表にある情報が横方向に追加されるイメージで考えると分かりやすいです。
 
+### 直積と条件付き結合は同じ？
+
+直積は条件なしで全組合せを作ります。INNER JOINで条件を指定すると、その条件を満たす行の組だけを取り出します。直積の結果が大きくなり過ぎないよう、業務では必要に応じて結合条件を指定します。
+
 ### SQLのSELECTと関係演算の選択は同じ意味
 
 名前が紛らわしい点に注意します。
@@ -395,6 +465,9 @@ SQLのSELECT句
 - **組・タプル → 行 → 選択（selection）**
 - **列を取り出す → 射影（projection）**
 - **表をつなぐ → 結合（join）**
+- **直積は全組合せ：Rがm行、Sがn行ならm×n行**
+- **CROSS JOINとFROM R, Sは2表の直積**
+- UNIONは和、EXCEPTは差、INTERSECTは共通部分
 - 表の変化を見て、行・列・表のどれが変わったかを最初に確認する
 - SQLでは、`WHERE`が選択、`SELECT 列名`が射影、`JOIN`が結合に近い
 - 「併合（merge）」は基本的な関係演算名として覚えない

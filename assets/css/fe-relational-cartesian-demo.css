@@ -1,0 +1,65 @@
+.fe-cartesian-demo {
+  border: 1px solid #a9c0d0;
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 1rem 0;
+  background: rgba(114,139,155,.055);
+  color: inherit;
+}
+.fe-cartesian-demo__inputs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+.fe-cartesian-demo__inputs label {
+  display: grid;
+  gap: .5rem;
+  min-width: 0;
+}
+.fe-cartesian-demo__inputs input {
+  width: 100%;
+  accent-color: #0b6fae;
+}
+.fe-cartesian-demo__result {
+  padding: .7rem .85rem;
+  border-left: 4px solid #0b6fae;
+  background: rgba(11,111,174,.08);
+  font-weight: 700;
+  border-radius: 4px;
+  font-variant-numeric: tabular-nums;
+}
+.fe-cartesian-demo__grid {
+  display: grid;
+  grid-template-columns: repeat(var(--fe-cartesian-cols, 2), minmax(0, 1fr));
+  gap: .35rem;
+  margin: .8rem 0;
+}
+.fe-cartesian-demo__grid span {
+  display: block;
+  text-align: center;
+  background: rgba(11,111,174,.12);
+  border-radius: 5px;
+  padding: .55rem .15rem;
+  font-size: .86rem;
+  overflow-wrap: anywhere;
+}
+.fe-cartesian-demo__grid .fe-cartesian-demo__alt { background: rgba(20,150,100,.12); }
+.fe-cartesian-demo button {
+  min-height: 44px;
+  border: 1px solid #0b6fae;
+  background: rgba(11,111,174,.08);
+  border-radius: 999px;
+  padding: .55rem 1rem;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+.fe-cartesian-demo :is(input,button):focus-visible {
+  outline: 3px solid #0b6fae;
+  outline-offset: 3px;
+}
+@media (max-width: 480px) {
+  .fe-cartesian-demo { padding: .75rem; }
+  .fe-cartesian-demo__inputs { gap: .6rem; }
+  .fe-cartesian-demo__grid span { font-size: .76rem; }
+}
