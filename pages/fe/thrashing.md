@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: コンピュータシステム
 fe_order: 310
 date: 2026-07-17
-last_modified_at: 2026-10-25
+last_modified_at: 2026-11-14
 related_articles:
   - /fe/virtual-memory/
   - /fe/paging/
@@ -140,6 +140,68 @@ LRUなどのページ置換方式は、どのページを追い出すかを決�
 処理性能が低下する
 → スラッシング
 ```
+
+
+### 触って覚える：多重度を増やすと処理能力はどうなる？
+
+**見るポイント：多重度を増やしたとき、処理能力はずっと増え続けるでしょうか？** まず予想してから、スライダーを動かしてください。
+
+- **多重度**：同時に処理対象として扱うプログラムの数。
+- **処理能力の相対値**：単位時間に処理を進められる量のイメージ。数字が大きいほどよく処理できることを示します。
+- **ページ交換負荷の相対値**：ページイン・ページアウトに伴う負担のイメージ。数字が大きいほどページ交換に多くの時間・資源を取られます。
+
+以下は関係を説明するために作った**仮想的な数値**です。実測のCPU使用率、ページフォールト率、処理件数ではありません。各値の単位は共通の測定単位ではなく、**別々の相対指標（0～100）**です。多重度のどこからスラッシングが始まるかは、実際にはメモリ容量やプログラムの動作によって変わります。
+
+<link rel="stylesheet" href="{{ '/assets/css/fe-thrashing-degree-demo.css' | relative_url }}">
+
+<section class="fe-thrashing-degree-demo" data-fe-thrashing-degree-demo aria-label="多重度と処理能力・ページ交換負荷の関係">
+  <label class="fe-thrashing-degree-demo__label" for="fe-thrashing-degree-input">プログラムの多重度：<strong data-degree-value>4</strong></label>
+  <input id="fe-thrashing-degree-input" type="range" min="1" max="10" step="1" value="4" data-degree-input aria-label="プログラムの多重度">
+  <div class="fe-thrashing-degree-demo__legend">
+    <span><i class="fe-thrashing-degree-demo__swatch fe-thrashing-degree-demo__swatch--throughput"></i>処理能力（実線）</span>
+    <span><i class="fe-thrashing-degree-demo__swatch fe-thrashing-degree-demo__swatch--paging"></i>ページ交換負荷（破線）</span>
+  </div>
+  <div class="fe-thrashing-degree-demo__chart-wrap">
+    <svg viewBox="0 0 340 196" role="img" aria-label="多重度1から10の変化。処理能力は多重度4付近で最大になり、その後低下する。ページ交換負荷は高多重度で増える。">
+      <line x1="40" y1="12" x2="40" y2="157" class="fe-thrashing-degree-demo__axis"></line>
+      <line x1="40" y1="157" x2="326" y2="157" class="fe-thrashing-degree-demo__axis"></line>
+      <text x="33" y="18" text-anchor="end">100</text><text x="33" y="160" text-anchor="end">0</text>
+      <text x="40" y="171" text-anchor="middle">1</text><text x="326" y="171" text-anchor="middle">10</text>
+      <text x="181" y="191" text-anchor="middle">多重度</text>
+      <polyline points="40,121 72,88 104,60 136,42 168,47 200,66 232,94 264,118 296,133 326,141" class="fe-thrashing-degree-demo__line--throughput"></polyline>
+      <polyline points="40,154 72,151 104,147 136,141 168,128 200,103 232,76 264,49 296,29 326,18" class="fe-thrashing-degree-demo__line--paging"></polyline>
+      <line x1="136" y1="12" x2="136" y2="157" data-degree-cursor class="fe-thrashing-degree-demo__cursor"></line>
+      <circle cx="136" cy="42" r="5" data-degree-throughput-dot class="fe-thrashing-degree-demo__dot--throughput"></circle>
+      <circle cx="136" cy="141" r="5" data-degree-paging-dot class="fe-thrashing-degree-demo__dot--paging"></circle>
+    </svg>
+  </div>
+  <div class="fe-thrashing-degree-demo__metrics" aria-live="polite" aria-atomic="true">
+    <p>処理能力の相対値：<strong data-degree-throughput>80</strong> / 100</p>
+    <p>ページ交換負荷の相対値：<strong data-degree-paging>11</strong> / 100</p>
+  </div>
+  <p class="fe-thrashing-degree-demo__comment" data-degree-comment>このモデルでは処理能力が高い段階です。多重度をさらに上げてみましょう。</p>
+  <button type="button" data-degree-reset>初期値に戻す</button>
+  <noscript><p>JavaScriptが無効でも下の対応表で全10通りの数値と傾向を確認できます。</p></noscript>
+</section>
+
+<script src="{{ '/assets/js/fe-thrashing-degree-demo.js' | relative_url }}" defer></script>
+
+#### 変化を表で確認する
+
+| 多重度 | 処理能力（相対値） | ページ交換負荷（相対値） |
+|---:|---:|---:|
+| 1 | 25 | 2 |
+| 2 | 48 | 4 |
+| 3 | 68 | 7 |
+| 4 | 80 | 11 |
+| 5 | 76 | 20 |
+| 6 | 62 | 38 |
+| 7 | 43 | 57 |
+| 8 | 27 | 75 |
+| 9 | 17 | 89 |
+| 10 | 10 | 97 |
+
+**判断のコツ：** 多重度を増やせば必ず高速になるわけではありません。主記憶不足によりページ交換が増えすぎると、処理能力が逆に低下します。この関係を理解すれば、「仮想記憶方式で多重度が大きい」という試験の選択肢を判断しやすくなります。
 
 ## どんな場面で使う？
 
