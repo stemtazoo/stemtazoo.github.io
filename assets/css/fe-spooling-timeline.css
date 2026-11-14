@@ -18,3 +18,7 @@
 .fe-spool-time__table th,.fe-spool-time__table td{border:1px solid #8b9ca8;padding:.4rem .25rem;text-align:center;white-space:nowrap}
 .fe-spool-time__reason{line-height:1.7}
 @media(max-width:450px){.fe-spool-time{padding:.65rem}.fe-spool-time__inputs{gap:.5rem}.fe-spool-time__table{font-size:.77em}}
+
+.fe-spool-time__scale{display:grid;grid-template-columns:minmax(66px,88px) minmax(0,1fr);align-items:start;gap:.4rem;margin-top:-.3rem}
+.fe-spool-time__scale-track{position:relative;height:21px;font-size:.76em}
+.fe-spool-time__tick{position:absolute;top:0;white-space:nowrap}
