@@ -42,7 +42,7 @@ last_modified_at: 2026-11-14
 下の図は、説明のために新しく作成した架空のプロジェクトです。予定線・実績線の全体形状だけではなく、**同じマイルストーンの2つの位置**を比べてください。
 
 <figure>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 256" width="100%" role="img" aria-labelledby="trend-chart-fig-title trend-chart-fig-desc" style="display:block;max-width:650px;height:auto;margin:auto">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 290" width="100%" role="img" aria-labelledby="trend-chart-fig-title trend-chart-fig-desc" style="display:block;max-width:650px;height:auto;margin:auto">
     <title id="trend-chart-fig-title">トレンドチャート：予定より1か月遅れ、予算消化率が10ポイント少ない例</title>
     <desc id="trend-chart-fig-desc">横軸は開発期間1～6か月、縦軸は累積予算消化率0～100%。予定は破線、実績は実線。試験運用開始のマイルストーンは予定が4か月目60%、実績は5か月目50%。予定位置から実績位置へ矢印が右下に向かう。</desc>
     <rect width="360" height="256" rx="8" fill="#fff"/>
@@ -69,22 +69,22 @@ last_modified_at: 2026-11-14
       <line x1="41" y1="186" x2="332" y2="186"/>
     </g>
     <path d="M41 20 V219 H332" fill="none" stroke="#263b50" stroke-width="1.5"/>
-    <polyline points="41,219 88,198 135,177 182,146 229,94 276,63 323,32" fill="none" stroke="#a44b25" stroke-width="2.6" stroke-dasharray="6 4"/>
-    <polyline points="41,219 88,207 135,190 182,163 229,148 276,115 323,75" fill="none" stroke="#196ca7" stroke-width="2.8"/>
-    <path d="M233 96 L269 111" fill="none" stroke="#304458" stroke-width="2"/>
-    <path d="M260 111 L269 111 L265 102" fill="none" stroke="#304458" stroke-width="2"/>
-    <circle cx="229" cy="94" r="5.5" fill="#fff" stroke="#a44b25" stroke-width="2.5"/>
-    <circle cx="276" cy="115" r="5.5" fill="#fff" stroke="#196ca7" stroke-width="2.5"/>
+    <polyline points="41,219 88,198 135,177 182,146 229,106 276,63 323,32" fill="none" stroke="#a44b25" stroke-width="2.6" stroke-dasharray="6 4"/>
+    <polyline points="41,219 88,207 135,190 182,163 229,148 276,125 323,75" fill="none" stroke="#196ca7" stroke-width="2.8"/>
+    <path d="M234 109 L269 122" fill="none" stroke="#304458" stroke-width="2"/>
+    <path d="M260 122 L269 122 L265 113" fill="none" stroke="#304458" stroke-width="2"/>
+    <circle cx="229" cy="106" r="5.5" fill="#fff" stroke="#a44b25" stroke-width="2.5"/>
+    <circle cx="276" cy="125" r="5.5" fill="#fff" stroke="#196ca7" stroke-width="2.5"/>
     <g fill="#263b50" font-size="10">
-      <text x="174" y="75">予定: 4か月・60%</text>
-      <text x="237" y="130">実績: 5か月・50%</text>
+      <text x="174" y="93">予定: 4か月・60%</text>
+      <text x="237" y="143">実績: 5か月・50%</text>
       <text x="148" y="16">試験運用開始のマイルストーン</text>
     </g>
     <g font-size="11" fill="#263b50">
-      <line x1="66" y1="244" x2="91" y2="244" stroke="#a44b25" stroke-width="2.4" stroke-dasharray="6 4"/>
-      <text x="95" y="247">予定</text>
-      <line x1="157" y1="244" x2="182" y2="244" stroke="#196ca7" stroke-width="2.4"/>
-      <text x="186" y="247">実績</text>
+      <line x1="66" y1="270" x2="91" y2="270" stroke="#a44b25" stroke-width="2.4" stroke-dasharray="6 4"/>
+      <text x="95" y="273">予定</text>
+      <line x1="157" y1="270" x2="182" y2="270" stroke="#196ca7" stroke-width="2.4"/>
+      <text x="186" y="273">実績</text>
     </g>
   </svg>
   <figcaption>トレンドチャートの学習用模式図。破線は予定、実線は実績です。マイルストーンの予定位置（4か月目・60%）から実績位置（5か月目・50%）に向かう矢印は**右下**を向いています。線の推移・数値は架空のもので、進捗率ではなく累積予算消化率を表示しています。</figcaption>
