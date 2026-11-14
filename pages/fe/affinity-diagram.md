@@ -8,7 +8,7 @@ fe_section: マネジメント系
 fe_subsection: サービスマネジメント
 fe_order: 37
 date: 2026-07-23
-last_modified_at: 2026-07-23
+last_modified_at: 2026-11-14
 ---
 
 ## まず結論
@@ -99,6 +99,46 @@ last_modified_at: 2026-07-23
 また、グループ化しただけで原因が確定するわけではありません。親和図法は、複雑でまとまりのない情報を整理し、問題を考えやすい形にするための手法です。
 
 このテーマは、基本情報技術者試験のマネジメント分野や問題解決手法と関係します。公式の出題範囲やシラバスは、[IPA：基本情報技術者試験](https://www.ipa.go.jp/shiken/kubun/fe.html)から確認できます。
+
+
+### 触って覚える：意見カードからまとまりを見つける
+
+**見るポイント：** あらかじめ「教育」「設備」などの正解の分類を決めず、まず意見を読み比べてみましょう。意味が近いものをグループA～Cにまとめ、**最後に自分でグループの見出しと理由**を付けます。
+
+ここでは設備の運用について集めた6件の意見を使います。1つの意見が複数の見方を持つこともあるため、分類の仕方は一通りとは限りません。
+
+<link rel="stylesheet" href="{{ '/assets/css/fe-affinity-grouping-demo.css' | relative_url }}">
+
+<section class="fe-affinity-demo" data-fe-affinity-demo aria-label="親和図法の意見カード分類教材">
+  <div class="fe-affinity-demo__fallback">
+    <p><strong>意見カード</strong>：操作手順を覚えにくい／点検時間が足りない／交換部品の記録が見つからない／操作説明書が古い／点検の担当が曖昧／設備の故障履歴を共有できない</p>
+    <p>操作できない環境でも、これらの意見について「意味が近いのはどれか」「どんな見出しを付けるか」を考えられます。</p>
+  </div>
+  <div class="fe-affinity-demo__interactive" data-affinity-interactive hidden>
+    <p>各カードの行き先を選んでください。途中で別のグループへ移しても構いません。</p>
+    <div class="fe-affinity-demo__cards" data-affinity-cards></div>
+    <div class="fe-affinity-demo__groups" data-affinity-groups></div>
+    <label class="fe-affinity-demo__reason-label" for="fe-affinity-reason">どういう共通点で分けましたか？（分類の理由）</label>
+    <textarea id="fe-affinity-reason" data-affinity-reason rows="3" placeholder="例：作業手順の理解に関する意見をまとめた"></textarea>
+    <div class="fe-affinity-demo__actions">
+      <button type="button" data-affinity-review>分類を振り返る</button>
+      <button type="button" data-affinity-reset>最初から考え直す</button>
+    </div>
+    <p class="fe-affinity-demo__result" data-affinity-result role="status" aria-live="polite">まだカードを分類していません。</p>
+  </div>
+  <noscript><p>JavaScriptが無効な場合は上の意見一覧を使い、紙やノートで自由に分類してください。</p></noscript>
+</section>
+
+**分類した後に考えること：** どのカードを同じグループにしたかだけでなく、「どんな共通点があったか」「別の分け方はあるか」を考えましょう。**親和図法は決められた箱への正誤判定ではありません。** 分類だけで故障の原因や因果関係が確定するわけでもありません。
+
+<details markdown="1">
+<summary>分類例と振り返りの観点を見る</summary>
+
+一例として、操作手順・説明書を「作業の理解」、点検時間・担当を「点検体制」、交換部品の記録・故障履歴を「情報の共有」とまとめられます。
+
+ただし、記録に関する意見を「点検体制」にまとめるなど、**分類理由が説明できる別の整理もあり得ます**。見出しはカードを見た後に付けます。何が故障を引き起こしたかを確かめるには、その後に事実の検証や因果関係の分析が必要です。
+
+</details>
 
 ## 科目Aでどう出る？
 
