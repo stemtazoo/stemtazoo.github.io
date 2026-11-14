@@ -65,6 +65,16 @@
         lane.appendChild(track);
         chart.appendChild(lane);
       });
+      const scale = node("div", null, "fe-spool-time__scale");
+      scale.appendChild(node("span", "時刻（秒）", "fe-spool-time__lane-label"));
+      const scaleTrack = node("div", null, "fe-spool-time__scale-track");
+      [0, 0.25, 0.5, 0.75, 1].forEach((fraction, index) => {
+        const tick = node("span", String(Math.round(total * fraction)), "fe-spool-time__tick");
+        tick.style.left = (fraction * 100) + "%";
+        tick.style.transform = index === 0 ? "translateX(0)" : index === 4 ? "translateX(-100%)" : "translateX(-50%)";
+        scaleTrack.appendChild(tick);
+      });
+      scale.appendChild(scaleTrack); chart.appendChild(scale);
       output.appendChild(chart);
       output.appendChild(node("p", "横棒は左からA・B・Cの順です。A＝水色、B＝緑、C＝黄。各時刻は次の表で確認できます。", "fe-spool-time__legend"));
       const wrap = node("div", null, "fe-spool-time__table-wrap");
