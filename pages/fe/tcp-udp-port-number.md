@@ -1,14 +1,14 @@
 ---
 layout: page
 title: TCP・UDPのポート番号とは？送信元と宛先を図で理解する【基本情報技術者試験】
-description: TCP・UDPのポート番号を、IPアドレスとの違い、送信元・宛先ポート、往復通信での入れ替わりまで図で解説します。HTTPの80番とクライアント側の動的ポートを例に、基本情報技術者試験での判断方法を整理します。
+description: TCP・UDPのポート番号と送信元・宛先の関係を説明し、NTP・FTP・POP3・TELNET・DNS・DHCPの通信方式と代表的ポートを比較。HTTP/3やDNSの例外もFE科目A向けに解説します。
 permalink: /fe/tcp-udp-port-number/
 tags: [fe, fe-technology, network, tcp-ip]
 fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 12
 date: 2026-09-22
-last_modified_at: 2026-09-22
+last_modified_at: 2026-11-14
 ---
 
 ## まず結論
@@ -234,6 +234,57 @@ PC:50001 → Webサーバ:80
 
 です。
 
+
+### FE科目A：代表的なプロトコルはTCPかUDPか？
+
+ポート番号を覚えるときは、**アプリケーションの名前・役割・主に使うTCP/UDP・代表的なポート番号**をひとまとめに整理しましょう。
+
+| プロトコル | 主な役割 | 基本となる通信方式 | 代表的なポート |
+|---|---|---|---|
+| **FTP** | ファイル転送 | **TCP** | 制御用21、アクティブモードのデータ用20 |
+| **NTP** | コンピュータの時計を同期 | **UDP** | **123** |
+| **POP3** | メールサーバからメールを受信 | **TCP** | 110 |
+| **TELNET** | 遠隔端末操作 | **TCP** | 23 |
+| **DNS** | ドメイン名とIPアドレスなどを対応付ける | **UDPとTCPの両方** | 53 |
+| **DHCP（IPv4）** | IPアドレスなどの設定を自動配布 | **UDP** | サーバ67、クライアント68 |
+
+**試験で「FTP・NTP・POP3・TELNETのうちUDPを使うのは？」と問われたら、NTPを選びます。** これは代表的な利用方法に基づく判断です。
+
+FTPは一般にTCPでファイルを転送します。**20番は従来のアクティブモードのデータ接続で使う代表例**であり、FTP通信ではいつも20番と21番を両方使うとは限りません。
+
+#### 例外もセットで覚える
+
+- **DNS：UDPだけではない。** 通常の名前解決でUDP 53を使うことが多い一方、応答内容などに応じてTCP 53も使用します。
+- **HTTPS：TCPだけと決め付けない。** HTTP/1.1やHTTP/2を使うHTTPS通信は主にTCP 443ですが、**HTTP/3はUDP上のQUIC**を使います。通常のHTTPSでは443番が代表的です。
+- **DHCP：IPv4の基本例。** DHCPv4はUDP 67（サーバ）・68（クライアント）を使います。DHCPv6は別のポート番号（UDP 546・547）なので、IPv4と混同しないようにしましょう。
+
+このように、**「プロトコルの名前」と「ポート番号」だけでなく、実際にどの通信方式を使うか**を判断します。IANAのポート番号登録表では同じサービス名にTCP・UDPが載る場合もあるため、**登録されていることと、そのプロトコルが通常その方式で通信することは分けて考える**のが大切です。
+
+### TCP・UDPの判断をするオリジナル確認問題
+
+社内の監視システムで、機器の時刻を定期的に同期する通信を設定する。**通常のNTPによる時刻同期**で使用するトランスポート層のプロトコルと代表的なサーバ側ポート番号の組合せとして最も適切なのはどれか。
+
+- ア：TCP・21番
+- イ：UDP・123番
+- ウ：TCP・110番
+- エ：TCP・23番
+
+<details markdown="1">
+<summary>正解と解説を見る（タップして開く）</summary>
+
+**正解：イ（UDP・123番）**
+
+- **ア：誤り。** TCP 21はFTPの制御用ポートの代表例です。
+- **イ：正しい。** NTPはネットワーク上の時刻同期で、通常UDP 123を使用します。
+- **ウ：誤り。** TCP 110はPOP3の代表的なポート番号です。
+- **エ：誤り。** TCP 23はTELNETの代表的なポート番号です。
+
+**判断のコツ：** 「時刻同期」という用途からNTPを選び、**NTP＝UDP＝123**を思い出します。
+
+</details>
+
+時刻合わせの役割そのものは[NTP](/fe/ntp/)、通信遅延から時刻差を求める方法は[NTPの時刻同期計算](/fe/ntp-time-synchronization/)、アドレスの自動配布は[DHCP](/fe/dhcp/)の記事を参照してください。
+
 ## どんな場面で使う？
 
 ### Webサイトを見る
@@ -336,6 +387,9 @@ TCP・UDPのポート番号と割当ての考え方は、IETF/IANAの一次資�
 
 - [RFC 6335：Service Name and Transport Protocol Port Number Registry](https://www.rfc-editor.org/info/rfc6335)
 - [IANA：Service Name and Transport Protocol Port Number Registry](https://www.iana.org/assignments/service-names-port-numbers/)
+- [RFC 5905：NTPv4](https://www.rfc-editor.org/rfc/rfc5905)
+- [RFC 7766：DNS Transport over TCP](https://www.rfc-editor.org/rfc/rfc7766)
+- [RFC 9114：HTTP/3](https://www.rfc-editor.org/rfc/rfc9114)
 
 RFC 6335では、ポート番号空間を **System Ports（0～1023）・User Ports（1024～49151）・Dynamic Ports（49152～65535）** に分けています。
 
@@ -348,6 +402,8 @@ FE試験では全ポート番号を覚える必要はなく、HTTP 80、HTTPS 44
 - IPアドレス → **どのコンピュータか**
 - ポート番号 → **その中のどの通信・サービスか**
 - HTTPの代表的なポート番号は80
+- **NTPは通常UDP 123、FTP・POP3・TELNETは基本的にTCP**
+- **DNSはUDP/TCP両方、HTTP/3はUDP上のQUIC**
 - パケットには送信元ポートと宛先ポートがある
 - 往復通信では**送信元と宛先が入れ替わる**
 - プロキシを経由するときは、**クライアント⇔プロキシ**と**プロキシ⇔Webサーバ**の2本に分ける
