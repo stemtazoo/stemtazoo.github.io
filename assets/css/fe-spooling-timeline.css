@@ -1,0 +1,20 @@
+.fe-spool-time{border:1px solid #8b9fae;border-radius:12px;padding:1rem;margin:1rem 0;background:rgba(110,143,164,.06);color:inherit}
+.fe-spool-time__inputs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.65rem;margin:.8rem 0}
+.fe-spool-time__inputs label{display:flex;flex-direction:column;gap:.25rem;min-width:0;font-weight:600}
+.fe-spool-time input{width:100%;box-sizing:border-box;min-height:44px;border:1px solid #82919f;border-radius:7px;padding:.4rem .55rem;background:var(--body-bg,#fff);color:inherit;font:inherit}
+.fe-spool-time__actions{display:flex;gap:.6rem;flex-wrap:wrap;margin:.7rem 0}
+.fe-spool-time button{min-height:44px;min-width:115px;max-width:100%;padding:.55rem .9rem;background:rgba(20,108,159,.12);color:inherit;border:1px solid #22709e;border-radius:999px;font:inherit;cursor:pointer}
+.fe-spool-time :is(input,button):focus-visible{outline:3px solid #2378aa;outline-offset:2px}
+.fe-spool-time__notice{font-size:.95em}
+.fe-spool-time__summary{font-weight:700;line-height:1.6}
+.fe-spool-time__chart{display:flex;flex-direction:column;gap:.7rem;margin:1rem 0}
+.fe-spool-time__lane{display:grid;grid-template-columns:minmax(66px,88px) minmax(0,1fr);align-items:center;gap:.4rem}
+.fe-spool-time__lane-label{font-size:.85em}
+.fe-spool-time__track{position:relative;height:38px;border:1px solid #8796a1;border-radius:5px;background:repeating-linear-gradient(90deg,rgba(125,140,150,.08) 0,rgba(125,140,150,.08) 1px,transparent 1px,transparent 10%)}
+.fe-spool-time__bar{position:absolute;top:0;bottom:0;border-right:1px solid #596473;box-sizing:border-box}
+.fe-spool-time__legend{font-size:.82em}
+.fe-spool-time__table-wrap{overflow-x:auto;max-width:100%}
+.fe-spool-time__table{width:100%;border-collapse:collapse;font-size:.85em}
+.fe-spool-time__table th,.fe-spool-time__table td{border:1px solid #8b9ca8;padding:.4rem .25rem;text-align:center;white-space:nowrap}
+.fe-spool-time__reason{line-height:1.7}
+@media(max-width:450px){.fe-spool-time{padding:.65rem}.fe-spool-time__inputs{gap:.5rem}.fe-spool-time__table{font-size:.77em}}
