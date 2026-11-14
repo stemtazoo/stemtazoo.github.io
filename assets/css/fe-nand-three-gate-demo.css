@@ -1,0 +1,10 @@
+.fe-nand3{margin:1rem 0;padding:1rem;border:1px solid #94a8b5;border-radius:12px;background:rgba(110,143,164,.07);color:inherit}
+.fe-nand3__inputs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.6rem;margin:.8rem 0}
+.fe-nand3__inputs label{display:flex;flex-direction:column;gap:.3rem;min-width:0;font-weight:600}
+.fe-nand3 select{min-height:44px;width:100%;padding:.45rem;border:1px solid #839da9;border-radius:7px;background:var(--body-bg,#fff);color:inherit;font:inherit}
+.fe-nand3__actions{display:flex;gap:.65rem;flex-wrap:wrap}
+.fe-nand3 button{min-height:44px;padding:.55rem 1rem;border-radius:999px;border:1px solid #236e94;background:rgba(35,110,148,.12);color:inherit;font:inherit;cursor:pointer}
+.fe-nand3 :is(select,button):focus-visible{outline:3px solid #236e94;outline-offset:3px}
+.fe-nand3__result{margin-top:1rem;padding:.75rem;border-left:4px solid #236e94;background:rgba(35,110,148,.08);border-radius:6px;overflow-wrap:anywhere}
+.fe-nand3__result p{margin:.4rem 0}.fe-nand3__result p:first-child{margin-top:0}.fe-nand3__result p:last-child{margin-bottom:0}
+@media(max-width:420px){.fe-nand3{padding:.7rem}.fe-nand3__inputs{grid-template-columns:repeat(2,minmax(0,1fr))}}
