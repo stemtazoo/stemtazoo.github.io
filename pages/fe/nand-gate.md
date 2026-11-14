@@ -1,14 +1,14 @@
 ---
 layout: page
 title: NANDとは？AND・OR・NOTを作れる万能ゲートの仕組み【基本情報技術者試験】
-description: NANDの仕組みを、11のときだけ0になる論理演算という判断軸で整理します。AND・OR・NOT・NOR・XORとの違い、NANDだけで基本ゲートを作れる理由を、基本情報技術者試験向けに解説します。
+description: NANDの真理値表と万能ゲートの仕組みに加え、3個のNANDで二つのANDをORする論理式を図解。入力を切り替えて途中出力と最終出力を確かめられる教材を収録。
 permalink: /fe/nand-gate/
 tags: [fe, fe-technology, hardware, logic-circuit]
 fe_section: テクノロジ系
 fe_subsection: コンピュータ構成要素
 fe_order: 89
 date: 2026-08-07
-last_modified_at: 2026-10-25
+last_modified_at: 2026-11-14
 ---
 
 ## まず結論
@@ -203,6 +203,96 @@ QをNANDの両入力に接続 → S = ¬Q = C・D
 ただし、**一部の入力で結果が一致しても、回路全体が等価とは限りません**。最終確認は論理式の変形か、4入力なら16通りすべての真理値表で行います。
 
 複雑な回路の途中出力を追う手順は、[NAND回路からXORを見抜く方法](/fe/nand-xor-circuit/)でも説明しています。
+
+
+### NANDを3個組み合わせると「ANDの結果をOR」できる
+
+次は、**4つの独立した入力 P・Q・R・S** を使う学習用の組合せ回路です。左の2つのNANDから出た信号を、右のNANDに入力します。元の問題図がなくても理解できるように、変数名と回路は新しく用意しています。
+
+<figure>
+  <svg viewBox="0 0 360 204" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fe-nand-three-title fe-nand-three-desc" style="display:block;width:100%;max-width:560px;height:auto;margin:auto">
+    <title id="fe-nand-three-title">NAND3個を用いた二つのANDの論理和回路</title>
+    <desc id="fe-nand-three-desc">上側NANDにPとQ、下側NANDにRとSを入力。その出力UとVを右のNANDに接続し、Xを出力する。各NANDの出力に否定を意味する丸がある。</desc>
+    <rect x="0" y="0" width="360" height="204" rx="8" fill="#fff"/>
+    <g stroke="#293e50" fill="none" stroke-width="2" stroke-linejoin="round">
+      <path d="M58 21 L82 21 A27 27 0 0 1 82 75 L58 75 Z"/>
+      <circle cx="115" cy="48" r="5"/>
+      <path d="M58 119 L82 119 A27 27 0 0 1 82 173 L58 173 Z"/>
+      <circle cx="115" cy="146" r="5"/>
+      <path d="M226 66 L249 66 A27 27 0 0 1 249 120 L226 120 Z"/>
+      <circle cx="282" cy="93" r="5"/>
+      <path d="M22 37 H58 M22 61 H58 M22 135 H58 M22 159 H58"/>
+      <path d="M120 48 H176 V82 H226 M120 146 H176 V108 H226 M287 93 H328"/>
+    </g>
+    <g font-size="14" fill="#293e50">
+      <text x="8" y="32">P</text><text x="8" y="58">Q</text>
+      <text x="8" y="132">R</text><text x="8" y="155">S</text>
+      <text x="336" y="97">X</text>
+    </g>
+    <g fill="#185d8b" font-size="13" font-weight="600">
+      <text x="126" y="37">U</text><text x="126" y="165">V</text>
+    </g>
+    <g fill="#293e50" font-size="11">
+      <text x="64" y="13">① NAND</text><text x="64" y="111">② NAND</text>
+      <text x="226" y="58">③ NAND</text>
+      <text x="10" y="191">小さな丸は、直前のAND結果の否定（NOT）</text>
+    </g>
+  </svg>
+  <figcaption>説明用の回路図。①の出力をU、②の出力をVとし、③でNAND(U,V)を計算します。</figcaption>
+</figure>
+
+出力側の**小さな丸は否定（NOT）**です。左から順番に出力を求めます。
+
+~~~text
+① U = NOT(P・Q)
+② V = NOT(R・S)
+③ X = NOT(U・V)
+~~~
+
+③に①と②を代入し、**ド・モルガンの法則**を使うと、
+
+~~~text
+X = NOT( NOT(P・Q) ・ NOT(R・S) )
+  = NOT(NOT(P・Q)) + NOT(NOT(R・S))
+  = P・Q + R・S
+~~~
+
+となります。**「PとQが両方1」または「RとSが両方1」のときにXが1**です。4入力すべてのAND `P・Q・R・S` とは違います。
+
+| P | Q | R | S | U = NAND(P,Q) | V = NAND(R,S) | X = NAND(U,V) |
+|---:|---:|---:|---:|---:|---:|---:|
+| 1 | 1 | 0 | 0 | 0 | 1 | **1** |
+| 0 | 1 | 0 | 1 | 1 | 1 | **0** |
+| 1 | 1 | 1 | 1 | 0 | 0 | **1** |
+
+この表は代表的な3組のみです。**回路と論理式が等価かを完全に確かめるには4入力の16通りを比較**します。
+
+#### 触って覚える：入力を変えて3段階の結果を追う
+
+まず、`P=1、Q=1、R=0、S=0` なら、最後の出力Xは0と1のどちらになるか予想してください。次に入力を変えて、各NANDの途中結果がどう変わるか確認します。
+
+<link rel="stylesheet" href="{{ '/assets/css/fe-nand-three-gate-demo.css' | relative_url }}">
+
+<section class="fe-nand3" data-fe-nand3 aria-label="3個のNANDゲートを操作する教材">
+  <p>入力P・Q・R・Sを0または1から選び、「回路を計算」を押すと①U・②V・③Xを順番に表示します。</p>
+  <div class="fe-nand3__inputs">
+    <label>入力P <select data-nand3-input="p"><option value="0">0</option><option value="1" selected>1</option></select></label>
+    <label>入力Q <select data-nand3-input="q"><option value="0">0</option><option value="1" selected>1</option></select></label>
+    <label>入力R <select data-nand3-input="r"><option value="0" selected>0</option><option value="1">1</option></select></label>
+    <label>入力S <select data-nand3-input="s"><option value="0" selected>0</option><option value="1">1</option></select></label>
+  </div>
+  <div class="fe-nand3__actions">
+    <button type="button" data-nand3-run>回路を計算</button>
+    <button type="button" data-nand3-reset>初期状態に戻す</button>
+  </div>
+  <div class="fe-nand3__result" data-nand3-result role="status" aria-live="polite">
+    <p>まだ計算していません。まず結果を予想してから「回路を計算」を押してください。</p>
+  </div>
+  <noscript><p>JavaScriptが無効でも、上の論理式・回路図と3組の真理値表で各NANDを確認できます。P=1、Q=1、R=0、S=0ならU=0、V=1、X=1です。</p></noscript>
+</section>
+<script src="{{ '/assets/js/fe-nand-three-gate-demo.js' | relative_url }}" defer></script>
+
+**見るポイント：** 左のNANDで一度反転した結果を、最後のNANDがもう一度反転することで、`P・Q + R・S` と同じ出力になります。すべて1の入力でもXは1です。これは**4入力NAND**（すべて1なら0）との重要な違いです。
 
 ### NANDだけでORを作る
 
@@ -416,6 +506,7 @@ NANDは、ANDの結果全体を否定します。
 - NANDの両入力へ同じ値を入れるとNOTになる
 - NANDを2段使うとANDを作れる
 - ド・モルガンの法則を使うとORも作れる
+- **3個のNANDを2段に組むと、二つのANDの論理和** `P・Q + R・S` **を作れる**
 - NANDだけで基本ゲートを構成できるため、万能ゲートと呼ばれる
 - NORは `00` のときだけ1、XORは入力が異なるときだけ1
 
