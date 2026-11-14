@@ -1,14 +1,14 @@
 ---
 layout: page
 title: スプーリングとは？プリンタ処理とキャッシュ・割込みとの違い【基本情報技術者試験】
-description: スプーリングを、プリンタなどの低速な入出力装置とのデータ転送を補助記憶装置へいったん退避してCPUの待ち時間を減らす仕組みとして整理し、スワッピング・ブロッキング・ページングなどとの違いもFE科目A向けに解説します。
+description: スプーリングの仕組みとCPU・プリンターの並行処理を解説。3ジョブの処理時間を変更するとガントチャートや待ち時間、全印刷完了時刻が変わる教材を収録しています。
 permalink: /fe/spooling/
 tags: [fe, fe-technology, computer-system]
 fe_section: テクノロジ系
 fe_subsection: コンピュータ構成要素
 fe_order: 100
 date: 2026-08-14
-last_modified_at: 2026-09-20
+last_modified_at: 2026-11-14
 ---
 
 ## まず結論
@@ -139,6 +139,71 @@ CPUは次の処理へ
 そのため、主記憶だけでなく、磁気ディスクやSSDなどの補助記憶装置を使って一時保存することで、多数の印刷要求を効率よく管理できます。
 
 このテーマは、基本情報技術者試験の「コンピュータ構成要素」や「入出力装置」と関係します。公式の出題範囲やシラバスは、[IPA：基本情報技術者試験](https://www.ipa.go.jp/shiken/kubun/fe.html)から確認できます。
+
+
+### 触って覚える：CPUとプリンターはいつ処理を終える？
+
+次は、スプーリングによって**CPU処理と印刷を重ねられる**ことを、時刻で確認する教材です。オリジナルの3ジョブ（A・B・C）を使います。
+
+**前提**：3ジョブは同時に到着し、優先度はA→B→C。CPUは1ジョブずつ中断せず処理し、各ジョブのCPU処理が終わると印刷要求をスプール領域へ送ります。印刷は1台のプリンターでA→B→Cの順に1件ずつ行い、CPUと印刷は同時に動けます。スプール転送やその他の時間は0秒とみなします。
+
+| ジョブ | CPU処理時間 | 印刷時間 |
+|---|---:|---:|
+| A | 30秒 | 45秒 |
+| B | 20秒 | 15秒 |
+| C | 40秒 | 25秒 |
+
+**ここで使う数値の意味**：CPU終了時刻はそのジョブの印刷準備ができた時刻、印刷待ち時間はCPUが終わってから印刷が始まるまでの時間、全印刷完了時刻は最後のジョブの印刷が終了した時刻です。
+
+CPUとプリンターを使う時間帯を横棒で表すと、初期例は次のようになります。
+
+~~~text
+時間（秒）  0       30      50       75  90       115
+CPU        [   A   ][ B ][      C      ]  終了90秒
+プリンター [待機30][      A      ][B][    C    ] 終了115秒
+~~~
+
+AのCPUが30秒で完了すると、**Aを印刷しながらCPUはBとCを処理**できます。Bは50秒にCPU処理を終えますが、Aの印刷終了が75秒なので、Bの印刷開始は75秒です。Cは90秒にCPUを終え、Bの印刷も90秒に終わるため、その時刻から印刷を始めます。
+
+印刷開始時刻は、次の**遅い方**で決めます。
+
+~~~text
+印刷開始 = max(そのジョブのCPU終了, 前ジョブの印刷終了)
+印刷終了 = 印刷開始 + そのジョブの印刷時間
+印刷待ち = 印刷開始 - そのジョブのCPU終了
+~~~
+
+初期例では、CPU処理を全部終えるのは90秒、**全印刷完了は115秒**です。CPU処理時間の合計90秒と印刷時間の合計85秒を順番に足す**175秒ではありません**。
+
+#### 入力を変更してタイムチャートを確認
+
+**予想してみよう**：BのCPU処理を20秒から60秒に増やすと、Aの印刷終了時刻75秒は変わるでしょうか？ また、すべての印刷が終わる時刻はどうなるでしょうか？
+
+<link rel="stylesheet" href="{{ '/assets/css/fe-spooling-timeline.css' | relative_url }}">
+
+<section class="fe-spool-time" data-fe-spool-time aria-label="CPUと印刷の並行処理タイムチャート教材">
+  <p>各ジョブのCPU処理時間と印刷時間を変え、「タイムチャートを計算」を押してください。計算後はジョブごとの印刷待ち時間も表示します。</p>
+  <div class="fe-spool-time__inputs">
+    <label>ジョブA：CPU（秒）<input type="number" min="1" max="120" step="1" value="30" data-spool-cpu="0"></label>
+    <label>ジョブA：印刷（秒）<input type="number" min="1" max="120" step="1" value="45" data-spool-print="0"></label>
+    <label>ジョブB：CPU（秒）<input type="number" min="1" max="120" step="1" value="20" data-spool-cpu="1"></label>
+    <label>ジョブB：印刷（秒）<input type="number" min="1" max="120" step="1" value="15" data-spool-print="1"></label>
+    <label>ジョブC：CPU（秒）<input type="number" min="1" max="120" step="1" value="40" data-spool-cpu="2"></label>
+    <label>ジョブC：印刷（秒）<input type="number" min="1" max="120" step="1" value="25" data-spool-print="2"></label>
+  </div>
+  <div class="fe-spool-time__actions">
+    <button type="button" data-spool-run>タイムチャートを計算</button>
+    <button type="button" data-spool-reset>初期値に戻す</button>
+  </div>
+  <p class="fe-spool-time__notice" role="status" aria-live="polite" data-spool-notice>結果を予想してから「タイムチャートを計算」を押してください。</p>
+  <div data-spool-output></div>
+  <noscript><p>JavaScript無効時も上の計算例と式で学習できます。初期例はCPUの終了が90秒、全印刷完了が115秒です。</p></noscript>
+</section>
+<script src="{{ '/assets/js/fe-spooling-timeline.js' | relative_url }}" defer></script>
+
+**見るポイント**：CPUが先に終わっていても、前の印刷が終わるまでは次の印刷は始められません。反対に、CPUとプリンターが互いを待たずに働ける時間帯では、**同じ秒数を二重に加算しない**ことが大切です。
+
+この教材は、ジョブが固定順でそれぞれ1回CPU処理してから1回印刷する単純化モデルです。CPUスケジューリングの一般的な優先度方式や、複数回のI/O待ちを含む問題は[CPUスケジューリング](/fe/cpu-scheduling/)・[CPUの遊休時間](/fe/cpu-scheduling-idle-time/)で学びます。
 
 ## 科目Aでどう出る？
 
@@ -415,6 +480,8 @@ CPUを別のタスクへ切り替える
 
 - スプーリングは、低速I/O用データを補助記憶装置などへいったん保存する仕組み
 - 代表例はプリンタ
+- **印刷開始時刻は「CPU終了」と「前の印刷終了」の遅い方**で決まる
+- CPUと印刷は並行できるため、処理時間を単純加算しない
 - 目的は、CPU・主記憶と低速I/O装置の速度差を吸収して待ち時間を減らすこと
 - **「低速I/O＋高速な補助記憶装置を中継」→ スプーリング**
 - プログラムを主記憶から退避・復帰するのはスワッピング
