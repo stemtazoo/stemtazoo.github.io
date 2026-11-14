@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: システム開発技術
 fe_order: 60
 date: 2026-08-02
-last_modified_at: 2026-10-18
+last_modified_at: 2026-11-14
 ---
 
 ## まず結論
@@ -34,6 +34,9 @@ FE試験では、次の語がまとまって出たらUMLを強く疑います。
 
 クラスと関連・静的構造
 → クラス図
+
+具体的なインスタンス間の関係
+→ オブジェクト図
 
 イベントによる状態変化
 → 状態遷移図
@@ -91,10 +94,73 @@ UMLには大きく、システムの**静的な構造**を表す図と、**動�
 | 図 | 主に表すもの |
 |---|---|
 | [クラス図](/fe/uml-class-diagram/) | クラス・属性・操作・クラス間の関係 |
-| オブジェクト図 | ある時点のオブジェクトの具体例 |
+| オブジェクト図 | ある時点の具体的なインスタンスとそのリンク |
 | コンポーネント図 | ソフトウェア部品と依存関係 |
 | 配置図 | 実行環境やハードウェアへの配置 |
 | パッケージ図 | 要素のまとまりと依存関係 |
+
+
+### クラス図とオブジェクト図を同じ題材で比べる
+
+**クラス図**は「工場という種類と、設備という種類がどのような関係を持つか」という**型同士の設計**を示します。
+
+**オブジェクト図**は「工場Aという実体が、旋盤1・旋盤2という具体的な設備につながっている」という**ある時点のインスタンス同士の関係**を示します。
+
+<figure>
+  <figcaption><strong>クラス図：工場クラスと設備クラスの関係</strong></figcaption>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 145" width="100%" role="img" aria-labelledby="fe-uml-class-vs-object-class-title fe-uml-class-vs-object-class-desc" style="max-width:520px;height:auto">
+    <title id="fe-uml-class-vs-object-class-title">クラス図：工場と設備というクラスの関連</title>
+    <desc id="fe-uml-class-vs-object-class-desc">工場クラス1つに設備クラス0個以上を関連付ける例。具体的な工場名や設備名は示さない。</desc>
+    <rect width="360" height="145" rx="8" fill="#fff"/>
+    <rect x="12" y="25" width="115" height="66" fill="#f1f7fb" stroke="#253e50" stroke-width="2"/>
+    <line x1="12" y1="57" x2="127" y2="57" stroke="#253e50"/>
+    <text x="69" y="46" fill="#253e50" font-size="17" text-anchor="middle">工場</text>
+    <text x="20" y="76" fill="#253e50" font-size="13">工場名</text>
+    <rect x="233" y="25" width="115" height="66" fill="#f1f7fb" stroke="#253e50" stroke-width="2"/>
+    <line x1="233" y1="57" x2="348" y2="57" stroke="#253e50"/>
+    <text x="290" y="46" fill="#253e50" font-size="17" text-anchor="middle">設備</text>
+    <text x="241" y="76" fill="#253e50" font-size="13">設備名</text>
+    <line x1="127" y1="57" x2="233" y2="57" stroke="#253e50" stroke-width="2"/>
+    <text x="135" y="49" fill="#253e50" font-size="12">1</text>
+    <text x="206" y="49" fill="#253e50" font-size="12">0..*</text>
+    <text x="180" y="122" fill="#253e50" font-size="12" text-anchor="middle">型同士の関連（多重度は設計上の例）</text>
+  </svg>
+</figure>
+
+<figure>
+  <figcaption><strong>オブジェクト図：工場A・旋盤1・旋盤2の関係</strong></figcaption>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 185" width="100%" role="img" aria-labelledby="fe-uml-class-vs-object-instance-title fe-uml-class-vs-object-instance-desc" style="max-width:520px;height:auto">
+    <title id="fe-uml-class-vs-object-instance-title">オブジェクト図：工場Aと2台の旋盤</title>
+    <desc id="fe-uml-class-vs-object-instance-desc">工場Aという工場クラスのインスタンスから、旋盤1と旋盤2という設備クラスのインスタンスへ、2本のリンクが伸びる。各インスタンス名とクラス名は下線付きで表示する。</desc>
+    <rect width="360" height="185" rx="8" fill="#fff"/>
+    <rect x="9" y="61" width="151" height="61" fill="#f1f7fb" stroke="#253e50" stroke-width="2"/>
+    <text x="84" y="84" fill="#253e50" font-size="14" text-decoration="underline" text-anchor="middle">工場A : 工場</text>
+    <line x1="9" y1="92" x2="160" y2="92" stroke="#253e50"/>
+    <text x="18" y="111" fill="#253e50" font-size="12">工場名 = A</text>
+    <rect x="211" y="13" width="140" height="60" fill="#f1f7fb" stroke="#253e50" stroke-width="2"/>
+    <text x="281" y="36" fill="#253e50" font-size="14" text-decoration="underline" text-anchor="middle">旋盤1 : 設備</text>
+    <line x1="211" y1="44" x2="351" y2="44" stroke="#253e50"/>
+    <text x="219" y="62" fill="#253e50" font-size="12">設備名 = 旋盤1</text>
+    <rect x="211" y="109" width="140" height="60" fill="#f1f7fb" stroke="#253e50" stroke-width="2"/>
+    <text x="281" y="132" fill="#253e50" font-size="14" text-decoration="underline" text-anchor="middle">旋盤2 : 設備</text>
+    <line x1="211" y1="140" x2="351" y2="140" stroke="#253e50"/>
+    <text x="219" y="158" fill="#253e50" font-size="12">設備名 = 旋盤2</text>
+    <path d="M160 80 L184 80 L184 43 L211 43 M184 80 L184 139 L211 139" fill="none" stroke="#253e50" stroke-width="2"/>
+    <text x="11" y="177" fill="#253e50" font-size="11">実線はインスタンス間のリンク</text>
+  </svg>
+</figure>
+
+両方とも「工場と設備の関係」を表していますが、**上のクラス図は型の関係（関連）、下のオブジェクト図は実際に存在する個々の実体の関係（リンク）**です。
+
+オブジェクト図では、`工場A : 工場` のように **「インスタンス名 : クラス名」** を下線付きで記すのが代表的なUMLの表記です。ここでのリンクはある時点の具体的な関係を表し、時間順のメッセージを表すものではありません。下線やリンクの記法は[OMGのUML 2.5.1仕様](https://www.omg.org/spec/UML/2.5.1/)に基づきます。
+
+| 試験の手掛かり | 選ぶ図 |
+|---|---|
+| クラス同士の静的構造・属性・操作・関連 | **クラス図** |
+| **インスタンス間の関係・ある時点の具体的なオブジェクト** | **オブジェクト図** |
+| オブジェクト間のメッセージの時間順 | シーケンス図 |
+
+クラス図の関係記号の詳しい読み方は[クラス図](/fe/uml-class-diagram/)、クラスと実体の区別は[クラスとインスタンス](/fe/class-instance/)の記事で確認できます。
 
 ### 振る舞いを表す代表的な図
 
@@ -435,6 +501,7 @@ UMLの図のうち、システムの利用者などのアクタと、システ�
 - **オブジェクト指向＋分析・設計＋統一表記 → UML**
 - **アクタ＋システム機能・相互作用 → ユースケース図**
 - クラス・関連・静的構造 → クラス図
+- **具体的なインスタンスとリンク → オブジェクト図**
 - 時系列のやり取り → シーケンス図
 - 処理の流れ → アクティビティ図
 - イベントによる状態変化 → 状態遷移図
