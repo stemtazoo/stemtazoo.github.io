@@ -1,0 +1,70 @@
+.fe-affinity-demo {
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid #a9c0d0;
+  border-radius: 12px;
+  background: rgba(114,139,155,.055);
+}
+.fe-affinity-demo [hidden] { display: none !important; }
+.fe-affinity-demo__fallback { margin: 0 0 .8rem; }
+.fe-affinity-demo__cards, .fe-affinity-demo__groups {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: .65rem;
+}
+.fe-affinity-demo__card, .fe-affinity-demo__group {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  border: 1px solid #b2c5d0;
+  border-radius: 8px;
+  padding: .7rem;
+  background: rgba(11,111,174,.055);
+  min-width: 0;
+}
+.fe-affinity-demo__cards { margin: .8rem 0 1rem; }
+.fe-affinity-demo__groups { margin: .8rem 0 1rem; }
+.fe-affinity-demo__group { background: rgba(20,150,100,.045); }
+.fe-affinity-demo__group ul { margin: .2rem 0; padding-left: 1.15rem; }
+.fe-affinity-demo__group li { overflow-wrap: anywhere; margin-bottom: .3rem; }
+.fe-affinity-demo__empty { opacity: .7; }
+.fe-affinity-demo select, .fe-affinity-demo input, .fe-affinity-demo textarea {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 44px;
+  border: 1px solid #94a3b8;
+  border-radius: 6px;
+  padding: .5rem;
+  color: inherit;
+  background: var(--body-bg, #fff);
+  font: inherit;
+}
+.fe-affinity-demo__group label, .fe-affinity-demo__reason-label { display: block; font-weight: 600; }
+.fe-affinity-demo__group input { margin-top: .4rem; font-weight: normal; }
+.fe-affinity-demo textarea { display: block; min-height: 85px; margin: .45rem 0 .8rem; resize: vertical; }
+.fe-affinity-demo__actions { display: flex; flex-wrap: wrap; gap: .5rem; }
+.fe-affinity-demo button {
+  min-height: 44px;
+  padding: .55rem .9rem;
+  border: 1px solid #0b6fae;
+  border-radius: 999px;
+  background: rgba(11,111,174,.08);
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+.fe-affinity-demo :is(button,input,select,textarea):focus-visible {
+  outline: 3px solid #0b6fae;
+  outline-offset: 2px;
+}
+.fe-affinity-demo__result {
+  border-left: 4px solid #0b6fae;
+  background: rgba(11,111,174,.08);
+  border-radius: 4px;
+  padding: .7rem;
+  margin: .9rem 0 0;
+}
+@media(max-width: 560px) {
+  .fe-affinity-demo { padding: .75rem; }
+  .fe-affinity-demo__cards, .fe-affinity-demo__groups { grid-template-columns: 1fr; }
+}
