@@ -1,0 +1,13 @@
+.fe-signshift{border:1px solid #a8bbc6;border-radius:12px;padding:1rem;margin:1.15rem 0;background:#f7fafb;color:#223844;max-width:700px}
+.fe-signshift__intro{margin:.1rem 0 .65rem;line-height:1.6}
+.fe-signshift__controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem;margin-bottom:.8rem}
+.fe-signshift label{display:block;font-weight:650;font-size:.9rem}
+.fe-signshift select,.fe-signshift input{font:inherit;box-sizing:border-box;width:100%;min-height:44px;margin-top:.3rem;padding:.45rem;border:1px solid #819cab;border-radius:7px;background:white;color:#223844}
+.fe-signshift__bits{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:3px;max-width:520px;margin:.4rem 0}
+.fe-signshift__bit{display:flex;align-items:center;justify-content:center;min-height:37px;border-radius:5px;background:#e5ecf0;font-family:ui-monospace,monospace;font-weight:700}
+.fe-signshift__bit--filled{background:#ad6c23;color:#fff}
+.fe-signshift__meta{font-size:.88rem;color:#435765;margin:.1rem 0}
+.fe-signshift__arrow{font-size:.9rem;text-align:center;margin:.3rem 0}
+.fe-signshift__result{padding:.7rem;background:#e5eff3;border-radius:8px;line-height:1.7;margin-top:.8rem}
+.fe-signshift :focus-visible{outline:3px solid #b66e15;outline-offset:2px}
+@media(max-width:520px){.fe-signshift{padding:.75rem}.fe-signshift__controls{grid-template-columns:1fr}.fe-signshift__bit{min-height:34px}}

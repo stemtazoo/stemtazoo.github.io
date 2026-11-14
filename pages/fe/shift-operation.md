@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: 基礎理論
 fe_order: 35
 date: 2026-07-02
-last_modified_at: 2026-10-29
+last_modified_at: 2026-11-11
 ---
 
 ## まず結論
@@ -311,6 +311,76 @@ F | 0 | C | 3
 > **論理 = 0で埋める、算術右 = 符号を保つ**
 
 と切り分けます。
+
+### 算術右シフトでは、符号ビットも右へ動く？
+
+**はい。先頭のビットも含め、元のビット列全体が右へ動きます。** ただし、空いた左端には「元の符号ビットと同じ値」を新しく補います。**元の先頭ビットをその場に固定するわけではありません。**
+
+次の例は、8ビットの**2の補数表現**で `-48` を表したものです。
+
+~~~text
+元の値      11010000  = -48
+右へ1ビット 11101000  = -24
+右へ2ビット 11110100  = -12
+             ^^
+             左側には符号ビットの1を補う
+~~~
+
+例えば最初の1回では、もともと左端にあった `1` も1桁右へ動き、空いた左端を**新しい1**で埋めます。さらに右端の1ビットは捨てます。この動きを**符号拡張（sign extension）**と結び付けて理解するとよいでしょう。
+
+算術右シフトで数値はどう変わるのでしょうか。**2の補数で表した符号付き整数を1ビット算術右シフトすると、数値を2で割って負の無限大方向に丸めた結果**になります。2ビットなら4で割ることに相当します。
+
+~~~text
+-48 ÷ 2 = -24
+-48 ÷ 4 = -12
+~~~
+
+割り切れない負数には注意します。例えば `-5` は8ビットで `11111011` ですが、算術右シフト1ビットでは `11111101`、つまり `-3` です（`-5 ÷ 2 = -2.5` を負の無限大方向に丸める）。
+
+また、**算術シフトは2の補数を作る操作ではありません**。2の補数は「負数の表現方法」、算術右シフトは「符号付きの値を右へずらす操作」です。ビット列を符号なしの値として扱う場合やビットを取り出したい場合は論理右シフトを使うことがあります。負数表現の基本は[2の補数](/fe/twos-complement/)で確認できます。
+
+#### 触って覚える：論理／算術でビット列と10進数はどう変わる？
+
+**見るポイント：** 同じ8ビットから出発しても、左端を0で補うか、符号ビットで補うかによって、ビット列と数値の両方が変わります。まず `11010000` の**1ビット右シフト**を予想してから、方式を切り替えて確認しましょう。
+
+この教材では、**論理右シフトは8ビットの符号なし整数、算術右シフトは8ビットの2の補数整数として数値を解釈**します。方式を切り替えると、元のビット列は同じでも10進数としての読み方が変わります。シフト数は0〜3ビットです。
+
+<link rel="stylesheet" href="{{ '/assets/css/fe-arithmetic-right-shift.css' | relative_url }}">
+
+<div class="fe-signshift" data-fe-signshift>
+  <p class="fe-signshift__intro">方式と元の値を選び、右に動かすビット数を変えてみましょう。色の付いた左端のビットは、シフトによって新しく補われた部分です。</p>
+  <div class="fe-signshift__controls">
+    <label>元の8ビット
+      <select data-signshift-value>
+        <option value="208">11010000（算術なら -48）</option>
+        <option value="251">11111011（算術なら -5）</option>
+        <option value="40">00101000（算術なら +40）</option>
+      </select>
+    </label>
+    <label>右シフトの種類
+      <select data-signshift-mode>
+        <option value="arithmetic">算術右シフト（符号付き）</option>
+        <option value="logical">論理右シフト（符号なし）</option>
+      </select>
+    </label>
+    <label>右へ動かすビット数：<output data-signshift-amount-label>1</output>
+      <input type="range" data-signshift-amount min="0" max="3" step="1" value="1" aria-label="右へ動かすビット数">
+    </label>
+  </div>
+  <p data-signshift-before class="fe-signshift__meta">元の8ビット：11010000（符号付き -48）</p>
+  <div class="fe-signshift__bits" data-signshift-original aria-label="11010000">
+    <span class="fe-signshift__bit">1</span><span class="fe-signshift__bit">1</span><span class="fe-signshift__bit">0</span><span class="fe-signshift__bit">1</span><span class="fe-signshift__bit">0</span><span class="fe-signshift__bit">0</span><span class="fe-signshift__bit">0</span><span class="fe-signshift__bit">0</span>
+  </div>
+  <p class="fe-signshift__arrow">↓ 右にシフト</p>
+  <div class="fe-signshift__bits" data-signshift-shifted aria-label="11101000">
+    <span class="fe-signshift__bit fe-signshift__bit--filled">1</span><span class="fe-signshift__bit">1</span><span class="fe-signshift__bit">1</span><span class="fe-signshift__bit">0</span><span class="fe-signshift__bit">1</span><span class="fe-signshift__bit">0</span><span class="fe-signshift__bit">0</span><span class="fe-signshift__bit">0</span>
+  </div>
+  <p data-signshift-after class="fe-signshift__meta">結果の8ビット：11101000（符号付き -24）</p>
+  <p class="fe-signshift__result" data-signshift-summary role="status" aria-live="polite">左端に補う値：1。-48 ÷ 2 = -24 → シフト後 -24。</p>
+  <noscript><p>JavaScriptが無効な場合も、上の `-48 → -24 → -12` の例と、`-5 → -3` の丸め方を確認できます。</p></noscript>
+</div>
+
+<script src="{{ '/assets/js/fe-arithmetic-right-shift.js' | relative_url }}" defer></script>
 
 ### 16進数1桁は4ビット
 
