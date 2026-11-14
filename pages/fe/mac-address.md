@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 59
 date: 2026-07-11
-last_modified_at: 2026-10-31
+last_modified_at: 2026-11-14
 ---
 
 ## まず結論
@@ -87,6 +87,50 @@ OUIを使うMA-L方式では、次の構成が重要です。
 OUIは、Organizationally Unique Identifier の略です。
 
 IEEEから組織へ割り当てられる識別子で、メーカーやベンダを表す番号として使われます。
+
+
+### 図で確認：16進数6組を前半3組と後半3組に分ける
+
+一般的な48ビットMACアドレスは、**16進数2桁が1バイト（8ビット）**なので、合計6組で表せます。次は**OUIを使うMA-L方式の説明用の値**です。
+
+<figure>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 156" width="100%" role="img" aria-labelledby="mac-oui-diagram-title mac-oui-diagram-desc" style="display:block;max-width:600px;height:auto;margin:auto">
+    <title id="mac-oui-diagram-title">48ビットMACアドレスの24ビットずつの分割</title>
+    <desc id="mac-oui-diagram-desc">例 00:1A:2B:3C:4D:5E。先頭3バイトの00:1A:2Bが24ビットのOUI、後続3バイトの3C:4D:5Eが組織の管理する24ビットの固有識別部分。</desc>
+    <rect x="0" y="0" width="360" height="156" fill="#ffffff" rx="8"/>
+    <rect x="12" y="13" width="167" height="34" rx="6" fill="#dceefb"/>
+    <rect x="181" y="13" width="167" height="34" rx="6" fill="#def4e9"/>
+    <text x="95" y="27" font-size="12" text-anchor="middle" fill="#173d60">先頭24ビット</text>
+    <text x="95" y="41" font-size="11" text-anchor="middle" fill="#173d60">OUI（ベンダID）</text>
+    <text x="265" y="27" font-size="12" text-anchor="middle" fill="#194b35">後続24ビット</text>
+    <text x="265" y="41" font-size="11" text-anchor="middle" fill="#194b35">固有識別部分</text>
+    <g font-size="20" font-weight="600" text-anchor="middle">
+      <rect x="12" y="59" width="54" height="39" fill="#dceefb" stroke="#457ea7"/>
+      <rect x="68" y="59" width="54" height="39" fill="#dceefb" stroke="#457ea7"/>
+      <rect x="124" y="59" width="54" height="39" fill="#dceefb" stroke="#457ea7"/>
+      <rect x="182" y="59" width="54" height="39" fill="#def4e9" stroke="#48866a"/>
+      <rect x="238" y="59" width="54" height="39" fill="#def4e9" stroke="#48866a"/>
+      <rect x="294" y="59" width="54" height="39" fill="#def4e9" stroke="#48866a"/>
+      <text x="39" y="85" fill="#173d60">00</text><text x="95" y="85" fill="#173d60">1A</text><text x="151" y="85" fill="#173d60">2B</text>
+      <text x="209" y="85" fill="#194b35">3C</text><text x="265" y="85" fill="#194b35">4D</text><text x="321" y="85" fill="#194b35">5E</text>
+    </g>
+    <g font-size="13" text-anchor="middle" fill="#263d4a">
+      <text x="95" y="119">3バイト = 24ビット</text>
+      <text x="265" y="119">3バイト = 24ビット</text>
+      <text x="180" y="144" font-weight="600">合計6バイト = 48ビット</text>
+    </g>
+  </svg>
+  <figcaption>例：<code>00:1A:2B:3C:4D:5E</code>。色だけでなく、文字と区切りでも前半・後半が分かるようにしています。実際の製品の製造番号を示すものではありません。</figcaption>
+</figure>
+
+| 表記 | 区切る場所 | 対応 |
+|---|---|---|
+| `00:1A:2B` | 先頭3組（3バイト） | OUI：24ビット |
+| `3C:4D:5E` | 後続3組（3バイト） | 組織が割り当てる識別部分：24ビット |
+
+**16進数2桁＝8ビット**なので、`2桁 × 3組 = 6桁 = 24ビット` です。ここでの「固有製造番号」はFE問題の表現であり、機器のシリアル番号そのものとは限りません。
+
+この図は**MA-L方式の説明に限定**しています。MA-M・MA-Sやローカル管理アドレスでは、必ずしもこの分け方を適用しません。
 
 ### すべてのMACアドレスが「ベンダID＋製造番号」とは限らない
 
