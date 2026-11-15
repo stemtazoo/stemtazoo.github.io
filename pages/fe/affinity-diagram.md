@@ -80,7 +80,7 @@ last_modified_at: 2026-11-15
 
 例えば、次の6枚の意見カードを見比べてみます。**「文字が小さい」と「画面が見づらい」は、どちらも表示の見づらさについての意見**なので、近くに寄せられます。
 
-<link rel="stylesheet" href="{{ '/assets/css/fe-affinity-grouping-demo.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/fe-affinity-grouping-demo.css' | relative_url }}?v={{ site.github.build_revision }}">
 
 <figure class="fe-affinity-example" aria-label="ばらばらな意見を、意味の近さでまとめる親和図法の例">
   <p class="fe-affinity-example__step"><strong>① まず、ばらばらの意見を読む</strong></p>
