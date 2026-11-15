@@ -8,7 +8,7 @@ fe_section: マネジメント系
 fe_subsection: サービスマネジメント
 fe_order: 37
 date: 2026-07-23
-last_modified_at: 2026-11-14
+last_modified_at: 2026-11-15
 ---
 
 ## まず結論
@@ -128,6 +128,7 @@ last_modified_at: 2026-11-14
   </div>
   <noscript><p>JavaScriptが無効な場合は上の意見一覧を使い、紙やノートで自由に分類してください。</p></noscript>
 </section>
+<script src="{{ '/assets/js/fe-affinity-grouping-demo.js' | relative_url }}" defer></script>
 
 **分類した後に考えること：** どのカードを同じグループにしたかだけでなく、「どんな共通点があったか」「別の分け方はあるか」を考えましょう。**親和図法は決められた箱への正誤判定ではありません。** 分類だけで故障の原因や因果関係が確定するわけでもありません。
 

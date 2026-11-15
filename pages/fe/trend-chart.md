@@ -8,7 +8,7 @@ fe_section: マネジメント系
 fe_subsection: プロジェクトマネジメント
 fe_order: 24
 date: 2026-11-14
-last_modified_at: 2026-11-14
+last_modified_at: 2026-11-15
 ---
 
 ## まず結論
@@ -50,10 +50,10 @@ last_modified_at: 2026-11-14
       <text x="12" y="15">累積予算消化率（%）</text>
       <text x="176" y="249" text-anchor="middle">開発期間（月）</text>
       <text x="27" y="35" text-anchor="end">100</text>
-      <text x="27" y="87" text-anchor="end">75</text>
-      <text x="27" y="139" text-anchor="end">50</text>
-      <text x="27" y="191" text-anchor="end">25</text>
-      <text x="27" y="221" text-anchor="end">0</text>
+      <text x="27" y="82" text-anchor="end">75</text>
+      <text x="27" y="129" text-anchor="end">50</text>
+      <text x="27" y="176" text-anchor="end">25</text>
+      <text x="27" y="223" text-anchor="end">0</text>
       <text x="41" y="233" text-anchor="middle">0</text>
       <text x="88" y="233" text-anchor="middle">1</text>
       <text x="135" y="233" text-anchor="middle">2</text>
@@ -64,9 +64,9 @@ last_modified_at: 2026-11-14
     </g>
     <g stroke="#c5cbd2" stroke-width="1">
       <line x1="41" y1="31" x2="332" y2="31"/>
-      <line x1="41" y1="82" x2="332" y2="82"/>
-      <line x1="41" y1="134" x2="332" y2="134"/>
-      <line x1="41" y1="186" x2="332" y2="186"/>
+      <line x1="41" y1="78" x2="332" y2="78"/>
+      <line x1="41" y1="125" x2="332" y2="125"/>
+      <line x1="41" y1="172" x2="332" y2="172"/>
     </g>
     <path d="M41 20 V219 H332" fill="none" stroke="#263b50" stroke-width="1.5"/>
     <polyline points="41,219 88,198 135,177 182,146 229,106 276,63 323,32" fill="none" stroke="#a44b25" stroke-width="2.6" stroke-dasharray="6 4"/>
