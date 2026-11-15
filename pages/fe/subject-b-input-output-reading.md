@@ -8,7 +8,7 @@ fe_section: 科目B対策
 fe_subsection: 疑似言語
 fe_order: 15
 date: 2026-10-09
-last_modified_at: 2026-10-09
+last_modified_at: 2026-11-15
 related_articles:
   - /fe/pseudocode-reading-guide/
   - /fe/twos-complement/
@@ -19,7 +19,7 @@ related_articles:
 
 科目Bでは、**計算結果が合っていても、何を求める問題なのかを取り違えると誤答になる**ことがあります。プログラムを読む前に、**入力・返す値・返す値が満たす条件**を分けて確認しましょう。
 
-特に「0を返す」と「入力に足すと0になる値を返す」は別の要求です。
+特に「0を返す」と「入力に足すと0になる値を返す」は別の要求です。**計算が正しいかだけでなく、戻り値が問題文の条件を満たすか**を確かめます。
 
 ## 直感的な説明
 
@@ -113,6 +113,56 @@ x + return y
 
 一方、`x XOR 11111111` なら、次の1加算と合わせて2の補数を返せます。
 
+### 「正しく計算したのに不正解」を見える化する
+
+まず、次の二つは別の条件です。**右側の式を問題文から作ってから**、空欄の演算を考えます。
+
+| 読み方 | 確認する式 |
+|---|---|
+| y 自体が0になる値を返す | `return y = 00000000` |
+| x に足すと8ビットで0になる値を返す | `(x + return y) の下位8ビット = 00000000` |
+
+最初の読み方でも、`11111111 + 1` の下位8ビットは0になります。**途中の計算は合っています。** しかし入力が5なら、`5 + 0 = 5` のため、求められた条件を満たしません。
+
+### 触って確かめる：演算は正しいのに条件を満たさない？
+
+以下は、問題文の「戻り値を入力に加えると0」という条件を、独自の値とプログラムに置き換えた練習教材です。8ビットの符号なし整数を扱い、9ビット目の桁上がりは捨てます。
+
+`x` と空欄の候補（OR／XOR）を選び、まず **「条件を満たすか」** を予想してから「計算して判定」を押してください。`x=0` ではどちらも条件を満たすので、`x=5` などの0以外の値でも試しましょう。
+
+<div class="fe-return-demo" id="fe-return-condition-demo">
+  <div class="fe-return-demo__controls">
+    <label for="fe-return-x">入力 x
+      <select id="fe-return-x">
+        <option value="5" selected>5（00000101）</option>
+        <option value="1">1（00000001）</option>
+        <option value="0">0（00000000）</option>
+        <option value="128">128（10000000）</option>
+        <option value="255">255（11111111）</option>
+      </select>
+    </label>
+    <label for="fe-return-operation">空欄に入れる演算
+      <select id="fe-return-operation">
+        <option value="or" selected>x OR 11111111</option>
+        <option value="xor">x XOR 11111111</option>
+      </select>
+    </label>
+  </div>
+  <p>予想：最終的に <code>(x + return y)</code> の下位8ビットは0になるでしょうか？</p>
+  <button type="button" id="fe-return-check">計算して判定する</button>
+  <div id="fe-return-result" class="fe-return-demo__result" role="status" aria-live="polite" hidden>
+    <p>空欄で作る y：<output id="fe-return-before"></output></p>
+    <p>1を加えた return y：<output id="fe-return-after"></output></p>
+    <p>入力 x + return y の下位8ビット：<output id="fe-return-sum"></output></p>
+    <p id="fe-return-judgment"></p>
+  </div>
+</div>
+<noscript>
+JavaScriptが無効な場合は、以下の静的な比較で確認できます。x=5でORなら、yは255→+1で0→5+0=5（不成立）。XORなら、yは250→+1で251→5+251=256で下位8ビットは0（成立）。
+</noscript>
+<link rel="stylesheet" href="{{ '/assets/css/fe-return-condition-demo.css' | relative_url }}">
+<script src="{{ '/assets/js/fe-return-condition-demo.js' | relative_url }}" defer></script>
+
 ### 試験中の3ステップ
 
 1. **条件を言い換える**：「何を返すか」だけでなく「返す値で何が成立するか」を書く。
@@ -167,6 +217,6 @@ x + return y
 
 関連：[擬似言語の読み方](/fe/pseudocode-reading-guide/)・[2の補数](/fe/twos-complement/)・[XORによるビット反転](/fe/xor-bit-flip/)
 
-参考：[IPA：基本情報技術者試験](https://www.ipa.go.jp/shiken/kubun/fe.html)
+参考：[IPA「令和8年度 基本情報技術者試験 科目B 公開問題・解答例」](https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/2026r08.html)（科目B 問2）。上の練習教材は、同問題の学習上の着眼点を参考に、関数名・入力値・比較操作を独自に組み直したもので、問題文の転載ではありません。
 
 {% include fe_article_footer.html %}
