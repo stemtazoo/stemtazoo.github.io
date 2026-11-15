@@ -1,0 +1,9 @@
+.fe-return-demo { border: 1px solid #a3a3a3; border-radius: 10px; padding: 1rem; margin: 1rem 0; }
+.fe-return-demo__controls { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; }
+.fe-return-demo label { display: grid; gap: 0.35rem; font-weight: 600; min-width: 0; }
+.fe-return-demo select { width: 100%; min-width: 0; padding: 0.55rem; border: 1px solid #888; border-radius: 6px; background: var(--bs-body-bg, #fff); color: var(--bs-body-color, #222); }
+.fe-return-demo button { padding: 0.65rem 0.85rem; border-radius: 6px; border: 1px solid currentColor; background: var(--bs-body-bg, #fff); color: var(--bs-body-color, #222); cursor: pointer; }
+.fe-return-demo button:focus-visible, .fe-return-demo select:focus-visible { outline: 3px solid #287bb5; outline-offset: 2px; }
+.fe-return-demo__result { border-top: 1px solid #888; margin-top: 0.85rem; padding-top: 0.5rem; overflow-wrap: anywhere; }
+.fe-return-demo__result[hidden] { display: none; }
+@media (max-width: 600px) { .fe-return-demo__controls { grid-template-columns: minmax(0, 1fr); } }
