@@ -68,3 +68,56 @@
   .fe-affinity-demo { padding: .75rem; }
   .fe-affinity-demo__cards, .fe-affinity-demo__groups { grid-template-columns: 1fr; }
 }
+
+/* Static before/after example: readable without JavaScript or sideways scrolling. */
+.fe-affinity-example {
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid #a9c0d0;
+  border-radius: 12px;
+  background: rgba(114,139,155,.055);
+}
+.fe-affinity-example .fe-affinity-example__step { margin: 0 0 .6rem; }
+.fe-affinity-example .fe-affinity-example__cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: .5rem;
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+.fe-affinity-example .fe-affinity-example__cards li {
+  min-width: 0;
+  margin: 0;
+  padding: .65rem;
+  border: 1px solid #b2c5d0;
+  border-radius: 6px;
+  background: var(--body-bg, #fff);
+  overflow-wrap: anywhere;
+}
+.fe-affinity-example__groups {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: .65rem;
+}
+.fe-affinity-example__group {
+  min-width: 0;
+  padding: .7rem;
+  border: 2px solid #729b8c;
+  border-radius: 8px;
+  background: rgba(20,150,100,.045);
+}
+.fe-affinity-example .fe-affinity-example__name { margin: 0 0 .5rem; }
+.fe-affinity-example__group .fe-affinity-example__cards {
+  grid-template-columns: 1fr;
+  margin-bottom: .5rem;
+}
+.fe-affinity-example .fe-affinity-example__common { margin: 0; font-size: .9em; }
+.fe-affinity-example figcaption { margin-top: .8rem; }
+@media(max-width: 600px) {
+  .fe-affinity-example { padding: .75rem; }
+  .fe-affinity-example__groups { grid-template-columns: 1fr; }
+  .fe-affinity-example__group .fe-affinity-example__cards {
+    grid-template-columns: repeat(2, minmax(0,1fr));
+  }
+}

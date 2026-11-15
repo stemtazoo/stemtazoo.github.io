@@ -78,21 +78,49 @@ last_modified_at: 2026-11-15
 5. 必要に応じて、グループ同士をさらにまとめる
 6. 全体を見て問題の構造や特徴を読み取る
 
-イメージは次のとおりです。
+例えば、次の6枚の意見カードを見比べてみます。**「文字が小さい」と「画面が見づらい」は、どちらも表示の見づらさについての意見**なので、近くに寄せられます。
 
-```text
-情報A  情報B  情報C  情報D  情報E  情報F
-  ↓      ↓      ↓      ↓      ↓      ↓
+<link rel="stylesheet" href="{{ '/assets/css/fe-affinity-grouping-demo.css' | relative_url }}">
 
-[似た情報のグループ1]
-情報A・情報D
-
-[似た情報のグループ2]
-情報B・情報C・情報F
-
-[似た情報のグループ3]
-情報E
-```
+<figure class="fe-affinity-example" aria-label="ばらばらな意見を、意味の近さでまとめる親和図法の例">
+  <p class="fe-affinity-example__step"><strong>① まず、ばらばらの意見を読む</strong></p>
+  <ul class="fe-affinity-example__cards">
+    <li>文字が小さい</li>
+    <li>処理が遅い</li>
+    <li>操作方法が分からない</li>
+    <li>画面が見づらい</li>
+    <li>説明が不足している</li>
+    <li>検索に時間がかかる</li>
+  </ul>
+  <p class="fe-affinity-example__step"><strong>② 似た意見を寄せてから、見出しを付ける</strong></p>
+  <div class="fe-affinity-example__groups">
+    <div class="fe-affinity-example__group">
+      <p class="fe-affinity-example__name"><strong>画面表示</strong></p>
+      <ul class="fe-affinity-example__cards">
+        <li>文字が小さい</li>
+        <li>画面が見づらい</li>
+      </ul>
+      <p class="fe-affinity-example__common">共通点：表示が見づらい</p>
+    </div>
+    <div class="fe-affinity-example__group">
+      <p class="fe-affinity-example__name"><strong>性能</strong></p>
+      <ul class="fe-affinity-example__cards">
+        <li>処理が遅い</li>
+        <li>検索に時間がかかる</li>
+      </ul>
+      <p class="fe-affinity-example__common">共通点：待ち時間が長い</p>
+    </div>
+    <div class="fe-affinity-example__group">
+      <p class="fe-affinity-example__name"><strong>利用支援</strong></p>
+      <ul class="fe-affinity-example__cards">
+        <li>操作方法が分からない</li>
+        <li>説明が不足している</li>
+      </ul>
+      <p class="fe-affinity-example__common">共通点：使い方を理解しにくい</p>
+    </div>
+  </div>
+  <figcaption>同じ6枚を、内容の近さでまとめた一例です。箱の名前を先に決めるのではなく、意見の共通点を見つけた後で「画面表示」「性能」「利用支援」と名付けています。</figcaption>
+</figure>
 
 親和図法のポイントは、**原因と結果を矢印で結ぶことではなく、意味の近い情報をまとめること**です。
 
@@ -106,8 +134,6 @@ last_modified_at: 2026-11-15
 **見るポイント：** あらかじめ「教育」「設備」などの正解の分類を決めず、まず意見を読み比べてみましょう。意味が近いものをグループA～Cにまとめ、**最後に自分でグループの見出しと理由**を付けます。
 
 ここでは設備の運用について集めた6件の意見を使います。1つの意見が複数の見方を持つこともあるため、分類の仕方は一通りとは限りません。
-
-<link rel="stylesheet" href="{{ '/assets/css/fe-affinity-grouping-demo.css' | relative_url }}">
 
 <section class="fe-affinity-demo" data-fe-affinity-demo aria-label="親和図法の意見カード分類教材">
   <div class="fe-affinity-demo__fallback">
