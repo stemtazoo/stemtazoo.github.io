@@ -1,0 +1,12 @@
+.fe-context-demo{border:1px solid #92a4b1;border-radius:12px;padding:1rem;margin:1rem 0;background:rgba(113,143,163,.06);color:inherit}
+.fe-context-demo__step{font-weight:700;padding:.65rem;background:rgba(21,115,164,.11);border-radius:7px;margin:.75rem 0}
+.fe-context-demo__grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem}
+.fe-context-demo__panel{border:1px solid #92a4b1;border-radius:8px;padding:.8rem;min-width:0;overflow-wrap:anywhere}
+.fe-context-demo__panel h4{margin:0 0 .5rem;font-size:1rem}
+.fe-context-demo__panel p{margin:.55rem 0;line-height:1.55}
+.fe-context-demo__actions{display:flex;gap:.65rem;flex-wrap:wrap;margin:.9rem 0}
+.fe-context-demo button{min-height:44px;border:1px solid #28729c;border-radius:9px;background:rgba(35,114,158,.12);color:inherit;padding:.6rem .85rem;font:inherit;cursor:pointer}
+.fe-context-demo button:disabled{opacity:.55;cursor:not-allowed}
+.fe-context-demo button:focus-visible{outline:3px solid #2679b0;outline-offset:2px}
+.fe-context-demo__note{line-height:1.65;margin:.65rem 0}
+@media(max-width:640px){.fe-context-demo{padding:.75rem}.fe-context-demo__grid{grid-template-columns:minmax(0,1fr)}.fe-context-demo__actions button{flex:1 1 120px}}
