@@ -41,6 +41,19 @@ image:
   <figcaption>同じ2σでも、見る面積によって確率が変わります（正規分布を仮定）。</figcaption>
 </figure>
 
+<style>
+/* Keep the PC eyecatch layout unchanged; give the mobile diagram more room. */
+@media (max-width: 640px) {
+  .ds-eyecatch {
+    margin: 16px 12px 12px;
+  }
+  .ds-eyecatch figcaption {
+    margin-top: 8px;
+    line-height: 1.6;
+  }
+}
+</style>
+
 特に注意したいのが **「2σ」** です。
 
 - 「±2σの範囲」 → 約95.45%
