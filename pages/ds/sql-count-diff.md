@@ -9,7 +9,7 @@ ds_area: dataengineering
 ds_section: data-processing
 prev: /ds/er-diagram/
 next: /ds/sql-count-distinct/
-last_modified_at: 2026-09-26
+last_modified_at: 2026-11-17
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -25,6 +25,8 @@ last_modified_at: 2026-09-26
 | `COUNT(DISTINCT 列)` | NULLを除き、重複も除いた値の種類数 |
 
 DS検定では、**NULLを数えるか、重複を除くか**で切り分けます。
+
+このページは、**COUNT関数が何件を数えるか**に絞った解説です。顧客別・商品別など**グループごとの集計**を知りたい場合は、[GROUP BYの基本](/ds/sql-groupby/)を確認してください。
 
 ## 直感的な説明
 
