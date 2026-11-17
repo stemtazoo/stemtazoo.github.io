@@ -4,7 +4,7 @@ title: HMACとは？ハッシュと共通鍵でメッセージを認証する仕
 description: "HMACは、ハッシュ関数と共通鍵を組み合わせてメッセージの改ざん検知と送信者確認を行う仕組みです。SG試験・情報セキュリティマネジメント試験で混同しやすいハッシュ、MAC、デジタル署名、暗号化との違いを整理します。"
 permalink: /sg/hmac/
 tags: [sg, sg-security-overview, cryptography, authentication, integrity, hash]
-last_modified_at: 2026-10-06
+last_modified_at: 2026-11-17
 ---
 
 ## まず結論
@@ -20,6 +20,8 @@ SG試験では、次のように押さえると判断しやすくなります。
 
 HMACは、単なるハッシュではありません。  
 **共通鍵を使うことで、鍵を知らない人が正しい認証値を作れない**ようにしている点がポイントです。
+
+このページでは、**MACの一種であるHMACの具体的な作り方と役割**に絞ります。MAC全体の考え方やデジタル署名との違いを確認したい場合は、[メッセージ認証コード（MAC）の基本](/sg/mac-message-authentication-code/)を参照してください。
 
 ---
 
