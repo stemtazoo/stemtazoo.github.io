@@ -32,6 +32,7 @@ The front-matter guides refer to [shared metadata writing](metadata-rules.md). S
 | Layouts/includes/indexes/shared navigation/CSS | [Pages compatibility](github-pages-compat.md), [theme consistency](theme-consistency.md), [editing/verification](editing-workflow.md), and affected theme route |
 | Homepage update list | [homepage updates](home-updates-rules.md) |
 | IndexNow/deployment notification changes | [IndexNow](indexnow.md) |
+| Article images, eyecatches, OGP assets, or desktop/mobile picture sources | [article images](article-image-rules.md), [editing workflow](editing-workflow.md), and the affected theme's front matter guide |
 | Metadata repair, troubleshooting, or repository verification | [editing workflow](editing-workflow.md), theme front matter, [metadata writing](metadata-rules.md) when descriptions change |
 | Agent instruction changes | [instruction regression](instruction-regression.md); run automatic reference checks and affected scenario checks |
 
