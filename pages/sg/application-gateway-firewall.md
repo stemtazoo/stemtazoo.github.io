@@ -3,7 +3,7 @@ layout: page
 title: アプリケーションゲートウェイ方式とは？プロキシ型ファイアウォールの切り分け【SG試験】
 permalink: /sg/application-gateway-firewall/
 tags: [sg, sg-security-measures, unauthorized_access, network, access_control]
-last_modified_at: 2026-10-20
+last_modified_at: 2026-11-17
 description: "アプリケーションごとのプロキシが通信を受け取り、内容を確認して中継する方式です。IP・ポートだけの制御や接続状態の検査、WAF・IDS・IPSとの違いに加え、TLSの内容検査に必要な終端・復号と運用上の条件を判断します。"
 ---
 
@@ -22,6 +22,8 @@ SG試験では、次の言葉が出てきたらアプリケーションゲート
 判断のポイントは、**単にパケットを通すのではなく、いったん代理で受け取ってから中継する**ことです。
 
 ---
+
+この記事では、**アプリケーションごとのプロキシが通信内容を検査する方式**に絞って説明します。接続の成立を中心に制御する方式は、[サーキットレベルゲートウェイ方式](/sg/circuit-level-gateway-firewall/)で確認できます。
 
 ## 直感的な説明
 
