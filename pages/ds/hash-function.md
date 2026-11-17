@@ -9,7 +9,7 @@ ds_area: foundation
 ds_section: security
 prev: /ds/digital-signature/
 next: /ds/hash-vs-encryption/
-last_modified_at: 2026-06-21
+last_modified_at: 2026-11-17
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -21,6 +21,8 @@ last_modified_at: 2026-06-21
 ハッシュ関数とは、**任意のデータを一定の長さの値（ハッシュ値）に変換する不可逆な関数**です。  
 DS検定では「復元できるのか？」「暗号と何が違うのか？」を判断させる問題がよく出ます。
 
+
+このページは、**ハッシュ関数そのものの仕組み（固定長出力・衝突・ソルト）**を理解するための記事です。「元に戻せる暗号化とどう使い分けるか」を先に比べたい場合は、[ハッシュと暗号化の違い](/ds/hash-vs-encryption/)を確認してください。
 
 ## 直感的な説明
 
