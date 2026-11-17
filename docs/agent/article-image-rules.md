@@ -26,6 +26,15 @@ This guide owns **website-side use** of images in FE, GK, DS and SG articles. Th
 - The dimensions above are **illustrative**, not mandatory. Use the actual dimensions of each verified file. Keep the same meaning for both variants so one shared `alt` accurately describes either; do not put essential new facts only in a picture.
 - Use the image generation repository's slug-based `<slug>.<ext>` and `<slug>-mobile.<ext>` names. The article may refer to actual verified storage URLs but must not invent pCloud addresses.
 
+## Body image size and caption balance
+
+- For explanatory images embedded in the article body, **use the available article text width as the default**. An `img` with `width:100%` still fills only its parent: check the containing `figure` and any theme or browser margins before deciding that the image itself needs to change. Respect the article container; do not expand beyond it or create horizontal overflow.
+- When using `<figure>`, set its horizontal margin intentionally (for example, `margin:16px 0 20px` for a full article-width figure). Verify theme-specific styles do not override the intended width. Retain responsive `width:100%;max-width:100%;height:auto` on the image.
+- A caption should be visibly subordinate to normal body text while remaining legible, with appropriate spacing, contrast and line height. As a **starting point, not a fixed global rule**, `font-size:0.88em`, `line-height:1.5` and a muted but readable text color worked in the GK teacher-forcing pilot; adjust to the theme and check on mobile.
+- Judge the *whole article view*, not just whether image labels are legible in isolation. Inspect image size relative to nearby paragraphs and headings, arrows and small annotations, caption wrapping, surrounding whitespace and the transition to the next section, especially around a 340px content width.
+- If a landscape image initially looks too small on a phone, **first check the container width, figure margins, layout and caption** before requesting a separate mobile asset or regenerating the image. If meaningful diagram details remain unreadable at the available width, follow the mobile-variant decision workflow in the image-generation repository.
+- Evidence: the [GK teacher-forcing article](/gk/teacher-forcing/) became easier to read on a phone after reducing the figure's horizontal margins and visually subordinating its caption; the image pixels and OGP asset were unchanged. This is an observed pilot, not a guarantee for all illustrations.
+
 ## Review / release evidence
 
 1. Record the canonical article, source ref, desktop/mobile URLs, each asset's measured dimensions, format, and any network-access limitation. A user-provided URL or locally generated file alone does not establish an HTTP 200 response from external hosting.
