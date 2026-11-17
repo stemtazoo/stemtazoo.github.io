@@ -6,7 +6,7 @@ permalink: /gk/privacy-by-design/
 tags: [gk, ethics, privacy]
 gk_section: AIの法律と倫理/プライバシー・個人情報保護/保護設計・技術
 gk_order: 1
-last_modified_at: 2026-08-27
+last_modified_at: 2026-11-17
 ---
 
 ## まず結論
