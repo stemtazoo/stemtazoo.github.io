@@ -4,7 +4,7 @@ title: サーキットレベルゲートウェイ方式とは？接続を中継�
 description: "サーキットレベルゲートウェイ方式をコネクション確立を中継・制御する方式として整理し、通信内容よりも接続の成立を扱う点を確認します。アプリケーション内容を詳しく検査する方式との違いをファイアウォール問題で判断します。"
 permalink: /sg/circuit-level-gateway-firewall/
 tags: [sg, sg-security-measures, unauthorized_access, network, access_control]
-last_modified_at: 2026-06-30
+last_modified_at: 2026-11-17
 ---
 
 ## まず結論
@@ -22,6 +22,8 @@ SG試験では、次の表現が出てきたらサーキットレベルゲート
 判断のポイントは、**通信内容の細かい検査ではなく、接続の成立を管理する**ことです。
 
 ---
+
+この記事では、**接続をゲートウェイが受けて中継する方式**に絞って説明します。アプリケーションごとのプロキシで通信内容を検査する方式は、[アプリケーションゲートウェイ方式](/sg/application-gateway-firewall/)で確認できます。
 
 ## 直感的な説明
 
