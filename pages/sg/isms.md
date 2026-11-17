@@ -6,7 +6,7 @@ permalink: /sg/isms/
 prev: /sg/security-management-overview/
 next: /sg/security-committee/
 tags: [sg, sg-security-management, isms, risk_assessment, it_security_operations]
-last_modified_at: 2026-07-27
+last_modified_at: 2026-11-17
 ---
 
 ## まず結論
@@ -16,10 +16,11 @@ SG試験では「PDCAで継続的に管理されているか」を判断させ�
 ---
 
 ## 直感的な説明
-前の記事の「情報セキュリティ管理」は、  
-👉「組織で守る仕組み」でした。
+情報セキュリティ管理とは、組織が情報資産を守るために、ルール・役割・点検・改善を継続して行うことです。
 
-ISMSはその**“型（テンプレ）”**です。
+**ISMSは、この管理を体系的に進めるための仕組み**です。国際規格 ISO/IEC 27001（JIS Q 27001）では、組織が満たすべき要求事項が定められています。
+
+情報セキュリティ管理の全体像は、[情報セキュリティ管理の基本](/sg/security-management-overview/)でも確認できます。
 
 - 何を決めるべきか  
 - どう運用するべきか  
