@@ -6,13 +6,15 @@ permalink: /gk/conditional-gan/
 tags: [gk, neural_network, cnn]
 gk_section: ディープラーニングの応用例/データ生成/GAN・派生モデル
 gk_order: 4
-last_modified_at: 2026-10-19
+last_modified_at: 2026-11-17
 ---
 
 ## まず結論
 
 Conditional GAN（条件付きGAN）は、**ラベルや画像などの条件情報を与えて、生成結果をコントロールするGANの枠組み**です。
 G検定では、**通常のGANは条件なし生成、Conditional GANは条件付き生成、Pix2Pixは入力画像を条件にする具体例**と切り分けます。
+
+このページでは**条件情報をどう使うか**に絞って説明します。DCGAN・Pix2Pix・CycleGANを含む派生モデル全体の見分け方は、[GAN派生モデルの比較](/gk/gan-variants/)を確認してください。
 
 ## 直感的な説明
 
