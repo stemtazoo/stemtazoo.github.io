@@ -34,8 +34,11 @@ image:
 | ±3σ | 約99.73% | 約49.865% | 約0.135% |
 
 <figure class="ds-eyecatch">
-  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/ds/variance-standard-deviation.png" alt="正規分布で中央±2σは約95.45%、平均から+2σまでは約47.725%、+2σより右側の外側は約2.275%になることを示す3つの比較図" width="1200" height="630" style="display:block;max-width:100%;height:auto;" decoding="async">
-  <figcaption>同じ2σでも、どの範囲の面積を見るかによって確率は変わります（正規分布を仮定）。</figcaption>
+  <picture>
+    <source media="(max-width: 640px)" srcset="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/ds/variance-standard-deviation-mobile.png" width="1122" height="1402">
+    <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/ds/variance-standard-deviation.png" alt="正規分布で中央±2σは約95.45%、平均から+2σまでは約47.725%、+2σより右側の外側は約2.275%になることを示す3つの比較図" width="1200" height="630" style="display:block;width:100%;max-width:100%;height:auto;" decoding="async">
+  </picture>
+  <figcaption>同じ2σでも、見る面積によって確率が変わります（正規分布を仮定）。</figcaption>
 </figure>
 
 特に注意したいのが **「2σ」** です。
