@@ -9,7 +9,12 @@ ds_area: datascience
 ds_section: statistics
 prev: /ds/variance-and-standard-deviation/
 next: /ds/welch-t-test/
-last_modified_at: 2026-09-30
+last_modified_at: 2026-11-17
+image:
+  path: "https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/ds/variance-standard-deviation.png"
+  width: 1200
+  height: 630
+  alt: "正規分布の2σについて、中央±2σの約95.45%、平均から+2σの約47.725%、右側外側の約2.275%を比較した図"
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -27,6 +32,11 @@ last_modified_at: 2026-09-30
 | ±1σ | 約68.27% | 約34.135% | 約15.865% |
 | ±2σ | **約95.45%** | **約47.725%** | **約2.275%** |
 | ±3σ | 約99.73% | 約49.865% | 約0.135% |
+
+<figure class="ds-eyecatch">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/ds/variance-standard-deviation.png" alt="正規分布で中央±2σは約95.45%、平均から+2σまでは約47.725%、+2σより右側の外側は約2.275%になることを示す3つの比較図" width="1200" height="630" style="display:block;max-width:100%;height:auto;" decoding="async">
+  <figcaption>同じ2σでも、どの範囲の面積を見るかによって確率は変わります（正規分布を仮定）。</figcaption>
+</figure>
 
 特に注意したいのが **「2σ」** です。
 
