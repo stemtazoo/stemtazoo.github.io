@@ -9,7 +9,7 @@ ds_area: dataengineering
 ds_section: data-processing
 prev: /ds/sql-where/
 next: /ds/sql-having/
-last_modified_at: 2026-09-26
+last_modified_at: 2026-11-17
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -26,6 +26,8 @@ DS検定では、次の切り分けが重要です。
 |---|---|
 | `WHERE` | 条件に合う行を絞る |
 | `GROUP BY` | 同じ値の行をグループ化する |
+
+このページでは、**行をどの単位にまとめるか**を中心に学びます。集計関数を使ったときの `COUNT(*)`・`COUNT(列)`・`COUNT(DISTINCT 列)` の違いは、[COUNTの数え方の比較](/ds/sql-count-diff/)を確認してください。
 
 ## 直感的な説明
 
