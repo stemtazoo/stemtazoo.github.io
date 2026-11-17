@@ -9,7 +9,7 @@ ds_area: foundation
 ds_section: logical-thinking
 prev: /ds/activation-functions-hidden-layer/
 next: /ds/availability-heuristic/
-last_modified_at: 2026-07-01
+last_modified_at: 2026-11-17
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
