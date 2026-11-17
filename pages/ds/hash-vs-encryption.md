@@ -9,7 +9,7 @@ ds_area: foundation
 ds_section: security
 prev: /ds/hash-function/
 next: /ds/iam-policy/
-last_modified_at: 2026-06-21
+last_modified_at: 2026-11-17
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -23,6 +23,8 @@ last_modified_at: 2026-06-21
 
 DS検定では「復号できるかどうか」を判断させる問題がよく出ます。
 
+
+このページは、**ハッシュと暗号化の使い分け**を、復号の可否と利用目的から判断する比較記事です。ハッシュ値の仕組み、衝突、ソルトを詳しく学びたい場合は、[ハッシュ関数の基本](/ds/hash-function/)を確認してください。
 
 ## 直感的な説明
 
