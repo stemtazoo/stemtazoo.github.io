@@ -9,6 +9,11 @@ fe_subsection: 基礎理論
 fe_order: 35
 date: 2026-07-02
 last_modified_at: 2026-11-11
+image:
+  path: "https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/shift-operation.png"
+  width: 1731
+  height: 909
+  alt: "シフト演算の左シフトと右シフトを8ビットの例で比較した図"
 ---
 
 ## まず結論
@@ -45,6 +50,11 @@ last_modified_at: 2026-11-11
 ```
 
 とすると安全です。
+
+<figure class="fe-eyecatch">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/shift-operation.png" alt="8ビットの00110110を左に1ビットシフトすると01101100、論理右シフトすると00011011になる比較図" width="1731" height="909" style="display:block;max-width:100%;height:auto;" decoding="async">
+  <figcaption>左シフト・右シフトの例（8ビット、論理シフト）。左シフトは2倍方向、右シフトは2で割る方向に値が変化します。</figcaption>
+</figure>
 
 ## 直感的な説明
 
