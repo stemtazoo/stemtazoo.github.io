@@ -21,9 +21,9 @@ G検定では、**RNNなどの系列モデルで、学習時の誤差の蓄積�
 
 ただし重要なのは、**教師強制は学習時の工夫であり、推論時には正解ラベルを使えない**という点です。
 
-<figure class="gk-eyecatch">
+<figure class="gk-eyecatch" style="margin:16px 0 20px;">
   <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/teacher-forcing.png" width="1200" height="630" alt="学習時は正解トークンから次の入力へ矢印がつながり、モデルの予測は入力に使わない。推論時はモデル自身の予測から次の入力へ矢印がつながる比較図" loading="lazy" decoding="async" style="display:block;width:100%;max-width:100%;height:auto;">
-  <figcaption>学習時は正解を次の入力に使い、推論時はモデル自身の予測を次の入力に使います。</figcaption>
+  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#526171;">学習時は正解を次の入力に使い、推論時はモデル自身の予測を次の入力に使います。</figcaption>
 </figure>
 
 ## 直感的な説明
