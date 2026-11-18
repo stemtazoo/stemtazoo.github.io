@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 80
 date: 2026-10-05
-last_modified_at: 2026-11-18
+last_modified_at: 2026-11-19
 image:
   path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/subnet-host-address.png
   width: 1734
@@ -17,14 +17,9 @@ image:
 ---
 
 <style>
-.subnet-range { margin:1.2rem 0; padding:1rem; border:1px solid #d8dee4; border-radius:10px; }
-.subnet-bar { display:grid; grid-template-columns:1fr 5fr 1fr; gap:.35rem; margin-top:.8rem; }
-.subnet-cell { padding:.7rem .4rem; border:1px solid #8c959f; border-radius:7px; text-align:center; }
-.subnet-host { background:#f6f8fa; }
-.subnet-label { font-size:.88rem; margin-top:.3rem; }
 .subnet-steps { display:grid; grid-template-columns:repeat(3,1fr); gap:.6rem; margin:1rem 0; }
 .subnet-step { padding:.8rem; border:1px solid #d8dee4; border-radius:8px; }
-@media (max-width:600px) { .subnet-bar,.subnet-steps { grid-template-columns:1fr; } }
+@media (max-width:600px) { .subnet-steps { grid-template-columns:1fr; } }
 </style>
 
 ## まず結論
@@ -56,16 +51,7 @@ FEの科目Aでは、PCに割り当てられないIPアドレスを問われた�
 
 サブネットを「住所の区画」と考えると分かりやすくなります。
 
-例えば、あるサブネットが末尾 **16〜31** の範囲なら、
-
-<div class="subnet-range">
-<strong>1つのサブネット：16〜31</strong>
-<div class="subnet-bar">
-<div class="subnet-cell"><strong>16</strong><div class="subnet-label">ネットワーク<br>割当不可</div></div>
-<div class="subnet-cell subnet-host"><strong>17〜30</strong><div class="subnet-label">PCなどに割当可能</div></div>
-<div class="subnet-cell"><strong>31</strong><div class="subnet-label">ブロードキャスト<br>割当不可</div></div>
-</div>
-</div>
+画像の例では、末尾 **16〜31** が1つの区画です。最初の **16** と最後の **31** はネットワーク全体を表したり、ネットワーク内への一斉送信に使われたりする特別なアドレスなので、通常のPCには割り当てません。
 
 **最初と最後は特別な用途、PCが使えるのはその間**と考えると判断しやすくなります。
 
