@@ -10,6 +10,11 @@ fe_subsection: データベース
 date: 2026-07-27
 last_modified_at: 2026-11-02
 ux_readability_pilot: true
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/shared-exclusive-lock.png
+  width: 1734
+  height: 907
+  alt: 同じデータに対しT1が保持する共有S・専有XとT2が要求する共有S・専有Xの組合せ。SとSのみ両立し、SとX、XとS、XとXは待機する。ロック待ちはデッドロックとは異なる。
 ---
 
 ## まず結論
@@ -34,6 +39,14 @@ ux_readability_pilot: true
 > **共有ロック同士だけは両立し、専有ロックが関わる組合せは両立しない**
 
 と覚えると判断しやすくなります。
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/shared-exclusive-lock.png"
+       width="1734" height="907" loading="lazy" decoding="async"
+       alt="同じデータに対するT1とT2のロック両立性。共有Sと共有Sのみ同時取得でき、共有Sと専有X、専有Xと共有S、専有Xと専有Xは待機する。"
+       style="display:block;width:100%;max-width:100%;height:auto;">
+  <figcaption style="font-size:0.88em;line-height:1.5;color:var(--text-muted-color,#64748b);margin-top:0.4em;">同じデータに対する異なるトランザクションのロック両立性。待機はデッドロックとは限りません。</figcaption>
+</figure>
 
 ---
 
