@@ -4,7 +4,12 @@ title: ダミー作業とは？PERT図で依存関係を表すための作業【
 description: ダミー作業は、PERT図やアローダイアグラムで作業の依存関係だけを表すための仮の作業です。SG試験で迷いやすい実作業や所要日数との違いを整理します。 試験対策として重要語の定義・具体例・よくある誤解をまとめ、短時間で復習できるように整理しています。
 permalink: /sg/dummy-activity/
 tags: [sg, sg-management, project_management]
-last_modified_at: 2026-05-08
+last_modified_at: 2026-11-18
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/sg/dummy-activity.png
+  width: 1731
+  height: 909
+  alt: "アローダイアグラムの例。実作業Aは①から②、Bは①から③、Cは②から④、Dは③から④へ進む。②から③への0日の点線矢印は、DがAとBの完了を待つことを示すダミー作業。"
 ---
 
 ## まず結論
@@ -20,6 +25,11 @@ PERT図やアローダイアグラムで、作業の順序を正しく表すた�
 通常、ダミー作業の所要日数は **0** として扱います。
 
 つまり、ダミー作業は、時間を表すためではなく、**作業同士の関係を表すための記号**です。
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/sg/dummy-activity.png" width="1731" height="909" alt="①から②へA、①から③へB、②から④へC、③から④へD。②から③に所要0日の点線矢印があり、CはAだけ、DはAとBの完了を待つことを示すPERT図" loading="lazy" decoding="async" style="display:block;width:100%;max-width:100%;height:auto;">
+  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#64748b;">この図は作業A〜Dを使った独立した例です。CはAの完了だけを待ち、DはBと、点線のダミー作業（0日）を通じたAの両方の完了を待ちます。点線の矢印そのものには作業時間がかかりません。</figcaption>
+</figure>
 
 ---
 
