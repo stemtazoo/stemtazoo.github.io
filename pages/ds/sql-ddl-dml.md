@@ -9,7 +9,12 @@ ds_area: dataengineering
 ds_section: sql
 prev: /ds/sql-count-distinct/
 next: /ds/sql-distinct/
-last_modified_at: 2026-09-23
+last_modified_at: 2026-11-18
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/ds/sql-ddl-dml.png
+  width: 1734
+  height: 907
+  alt: "DDLはテーブルの構造を定義し、DMLはテーブル内のデータを扱う。CREATE・ALTER・DROPとSELECT・INSERT・UPDATE・DELETEを左右で比較した図"
 ---
 
 ## まず結論
@@ -25,6 +30,11 @@ DS検定では、次のように切り分けると判断しやすいです。
 
 > **入れ物を作る・変える → DDL**  
 > **中のデータを扱う → DML**
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/ds/sql-ddl-dml.png" width="1734" height="907" alt="DDLはテーブルの構造を定義し、DMLはテーブル内のデータを操作する。DDLのCREATE・ALTER・DROPとDMLのSELECT・INSERT・UPDATE・DELETEを左右で比較した図" style="display:block;width:100%;max-width:100%;height:auto;" loading="lazy" decoding="async">
+  <figcaption style="font-size:0.88em;line-height:1.5;color:#666;margin-top:8px;">DDLは構造、DMLはデータが操作対象です。空の表とデータ入りの表は違いを示す模式図であり、DDLは既存データのあるテーブルにも使えます。なお、SELECTをDQLとして別分類する場合もあります。</figcaption>
+</figure>
 
 ---
 
