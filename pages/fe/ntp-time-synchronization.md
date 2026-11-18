@@ -8,7 +8,12 @@ fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 220
 date: 2026-08-14
-last_modified_at: 2026-11-04
+last_modified_at: 2026-11-19
+image:
+  path: "https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/ntp-time-synchronization.png"
+  width: 1734
+  height: 907
+  alt: "NTPの4時刻。PCが100μsで問い合わせ送信、サーバが200μsで受信・400μsで応答送信、PCが900μsで受信。片道遅延は300μsで、PC時計はサーバ時計より200μs進んでいる。"
 ---
 
 ## まず結論
@@ -29,6 +34,15 @@ NTP（Network Time Protocol）は、**ネットワークを通してコンピュ
 > **時計の進み・遅れは、同じ瞬間の時刻同士を比べる**
 
 という考え方です。
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/ntp-time-synchronization.png"
+       width="1734" height="907"
+       alt="NTPの時刻記録。PCのT1は100μs、サーバのT2は200μs、T3は400μs、PCのT4は900μs。往復からサーバ処理200μsを除くと、往路・復路はそれぞれ300μs。PC時計は同じ瞬間のサーバ時計より200μs進んでいる。"
+       loading="lazy" decoding="async"
+       style="display:block;width:100%;max-width:100%;height:auto;">
+  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#64748b;">PCとNTPサーバの時計は別々です。往復の通信時間から片道遅延を求め、同じ瞬間の時計を比べます（図の時間間隔は縮尺どおりではありません）。</figcaption>
+</figure>
 
 ## 直感的な説明
 
