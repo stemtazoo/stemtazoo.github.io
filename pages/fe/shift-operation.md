@@ -8,12 +8,12 @@ fe_section: テクノロジ系
 fe_subsection: 基礎理論
 fe_order: 35
 date: 2026-07-02
-last_modified_at: 2026-11-11
+last_modified_at: 2026-11-18
 image:
-  path: "https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/shift-operation.png"
-  width: 1731
-  height: 909
-  alt: "シフト演算の左シフトと右シフトを8ビットの例で比較した図"
+  path: "/assets/images/fe/shift-operation.png"
+  width: 1200
+  height: 630
+  alt: "8ビットの00110110を1ビット左シフトすると01101100、論理右シフトすると00011011になる比較図"
 ---
 
 ## まず結論
@@ -51,9 +51,9 @@ image:
 
 とすると安全です。
 
-<figure class="fe-eyecatch">
-  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/shift-operation.png" alt="8ビットの00110110を左に1ビットシフトすると01101100、論理右シフトすると00011011になる比較図" width="1731" height="909" style="display:block;max-width:100%;height:auto;" decoding="async">
-  <figcaption>左シフト・右シフトの例（8ビット、論理シフト）。左シフトは2倍方向、右シフトは2で割る方向に値が変化します。</figcaption>
+<figure class="fe-eyecatch" style="margin:16px 0 20px;">
+  <img src="{{ '/assets/images/fe/shift-operation.png' | relative_url }}" alt="8ビットの00110110を1ビット左シフトすると01101100、論理右シフトすると00011011になる比較図" width="1200" height="630" style="display:block;width:100%;max-width:100%;height:auto;" decoding="async">
+  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#526171;">8ビットの例。左シフトでは右端に0、論理右シフトでは左端に0を補います。</figcaption>
 </figure>
 
 ## 直感的な説明
