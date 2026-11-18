@@ -10,6 +10,11 @@ fe_order: 52
 date: 2026-10-05
 last_modified_at: 2026-11-05
 ux_readability_pilot: true
+image:
+  path: "https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/disk-scheduling.png"
+  width: 1733
+  height: 908
+  alt: "ディスクスケジューリングのLOOK型条件の例。100から増加方向へ110、120、140と処理して140で折り返し、90、80、70、60の順に処理する。総移動量は120シリンダ。"
 ---
 
 <style>
@@ -67,6 +72,13 @@ FE科目Aでは、方式名だけでなく、**「次にヘッドがどこへ動
 SCAN方式は、**エレベータ**をイメージすると理解しやすい方式です。
 
 上へ進んでいる途中なら、上方向の要求を順番に処理します。上方向に処理すべき要求がなくなったら、方向を変えて下へ進みます。
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/disk-scheduling.png" width="1733" height="908"
+       alt="ディスクスケジューリングのLOOK型条件の例。100から増加方向へ110、120、140と処理して140で折り返し、90、80、70、60の順に処理する。総移動量は120シリンダ。" loading="lazy" decoding="async"
+       style="display:block;width:100%;max-width:100%;height:auto;">
+  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#64748b;">この図は最後の要求位置140で折り返すLOOK型条件の例です。ディスクの端まで進む厳密なSCANとは異なります。スマホでは図の数字が小さいため、以下の処理順とあわせて確認してください。</figcaption>
+</figure>
 
 例えば、現在位置が100で、要求が次のようにあるとします。
 
