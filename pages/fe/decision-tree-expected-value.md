@@ -8,7 +8,12 @@ fe_section: マネジメント系
 fe_subsection: プロジェクトマネジメント
 fe_order: 400
 date: 2026-11-04
-last_modified_at: 2026-11-04
+last_modified_at: 2026-11-19
+image:
+  path: "https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/decision-tree-expected-value.png"
+  width: 1734
+  height: 907
+  alt: "デシジョンツリーの例。左の○から40%で□に進み、利益80万円と60万円のうち80万円を選ぶ。残り60%は100万円となるため、右から左へ80×0.4＋100×0.6＝92万円と計算する。"
 ---
 
 ## まず結論
@@ -91,6 +96,13 @@ last_modified_at: 2026-11-04
 \]
 
 と計算します。
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/decision-tree-expected-value.png" width="1734" height="907"
+       alt="デシジョンツリーの例。左の○から40%で□に進み、利益80万円と60万円のうち80万円を選ぶ。残り60%は100万円となるため、右から左へ80×0.4＋100×0.6＝92万円と計算する。" loading="lazy" decoding="async"
+       style="display:block;width:100%;max-width:100%;height:auto;">
+  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#64748b;">□では利益が大きい80万円だけを選び、○では40%と60%を使って期待値92万円を求めます。出来事は左から右へ進み、計算は右から左へ戻します。スマホでは図の細かい文字を拡大するか、前後の本文とあわせて確認してください。</figcaption>
+</figure>
 
 もし□で80万円と60万円を平均して70万円にすると、最初の○は88万円になってしまいます。**選べる2案を勝手に平均してはいけない**のが今回の判断ポイントです。
 
