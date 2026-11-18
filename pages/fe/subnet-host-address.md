@@ -8,7 +8,12 @@ fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 80
 date: 2026-10-05
-last_modified_at: 2026-11-08
+last_modified_at: 2026-11-18
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/subnet-host-address.png
+  width: 1734
+  height: 907
+  alt: "200.170.70.16/28では、末尾16がネットワークアドレス、17〜30がホストに割当可能な14個のアドレス、31がブロードキャストアドレス。16と31は通常のホストに割当不可。"
 ---
 
 <style>
@@ -38,6 +43,14 @@ FEの科目Aでは、PCに割り当てられないIPアドレスを問われた�
 その間
 → ホストに割り当て可能
 ~~~
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/subnet-host-address.png"
+       width="1734" height="907" loading="lazy" decoding="async"
+       alt="200.170.70.16/28の16個のアドレス。末尾16はネットワークアドレスで割当不可、17〜30は通常のホストに割当可能な14個、31はブロードキャストアドレスで割当不可。"
+       style="display:block;width:100%;max-width:100%;height:auto;">
+  <figcaption style="font-size:0.88em;line-height:1.5;color:#57606a;margin-top:8px;">/28では16個のアドレスのうち、通常のホストに割り当てられるのは両端を除いた14個です。</figcaption>
+</figure>
 
 ## 直感的な説明
 
