@@ -36,12 +36,17 @@ NTP（Network Time Protocol）は、**ネットワークを通してコンピュ
 という考え方です。
 
 <figure style="margin:16px 0 20px;">
-  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/ntp-time-synchronization.png"
-       width="1734" height="907"
-       alt="NTPの時刻記録。PCのT1は100μs、サーバのT2は200μs、T3は400μs、PCのT4は900μs。往復からサーバ処理200μsを除くと、往路・復路はそれぞれ300μs。PC時計は同じ瞬間のサーバ時計より200μs進んでいる。"
-       loading="lazy" decoding="async"
-       style="display:block;width:100%;max-width:100%;height:auto;">
-  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#64748b;">PCとNTPサーバの時計は別々です。往復の通信時間から片道遅延を求め、同じ瞬間の時計を比べます（図の時間間隔は縮尺どおりではありません）。</figcaption>
+  <picture>
+    <source media="(max-width: 640px)"
+            srcset="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/ntp-time-synchronization-mobile.png"
+            width="1086" height="1448">
+    <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/ntp-time-synchronization.png"
+         width="1734" height="907"
+         alt="NTPの時刻記録。PCのT1は100μs、サーバのT2は200μs、T3は400μs、PCのT4は900μs。往路と復路の片道遅延はそれぞれ300μs、サーバ処理は200μs。PC時計はサーバ時計より200μs進んでいる。"
+         loading="lazy" decoding="async"
+         style="display:block;width:100%;max-width:100%;height:auto;">
+  </picture>
+  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#64748b;">異なる時計の時刻を直接引かず、通信遅延を考慮して同じ瞬間の時刻を比較します。</figcaption>
 </figure>
 
 ## 直感的な説明
