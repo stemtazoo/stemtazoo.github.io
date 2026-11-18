@@ -8,7 +8,12 @@ fe_section: テクノロジ系
 fe_subsection: システム開発技術
 fe_order: 65
 date: 2026-08-28
-last_modified_at: 2026-10-30
+last_modified_at: 2026-11-18
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/uml-multiplicity.png
+  width: 1734
+  height: 907
+  alt: "UMLの多重度を示すクラス図。顧客側は1、注文側は0..*。顧客1人に注文は0件以上、注文1件に顧客は必ず1人対応する。"
 ---
 
 ## まず結論
@@ -27,6 +32,14 @@ UMLの多重度は、**あるクラスの1つのインスタンスに対して�
 最も大切なのは、**数字が書かれている側だけを見ないこと**です。
 
 > **多重度は「反対側の1個から見て、こちら側が何個あるか」と読む。**
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/uml-multiplicity.png" width="1734" height="907"
+       alt="UMLの多重度を示すクラス図。顧客側は1、注文側は0..*。顧客1人に注文は0件以上、注文1件に顧客は必ず1人対応する。"
+       loading="lazy" decoding="async"
+       style="display:block;width:100%;max-width:100%;height:auto;">
+  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#64748b;">顧客1人からは注文側の「0..*」、注文1件からは顧客側の「1」を読みます。</figcaption>
+</figure>
 
 ## 直感的な説明
 
