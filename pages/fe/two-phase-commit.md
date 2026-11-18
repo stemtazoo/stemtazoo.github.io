@@ -32,9 +32,15 @@ image:
 いきなり更新を確定せず、まず全参加者へ確認し、その後に全体を確定または中止する点が重要です。
 
 <figure style="margin:16px 0 20px;">
-  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/two-phase-commit.png" width="1734" height="907"
-       alt="2相コミットの流れ。第1相では参加者A・B・Cの準備可否を確認するが確定はしない。第2相では全員OKなら全員コミット、1人でもNGなら全員中止する。" loading="lazy" decoding="async"
-       style="display:block;width:100%;max-width:100%;height:auto;">
+  <picture>
+    <source media="(max-width: 640px)"
+            srcset="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/two-phase-commit-mobile.png"
+            width="1122" height="1402">
+    <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/two-phase-commit.png" width="1734" height="907"
+         alt="2相コミットは第1相で参加者の準備可否を確認し、まだ確定しない。第2相では全員OKなら全員コミット、1人でもNGなら全員中止を指示する。"
+         loading="lazy" decoding="async"
+         style="display:block;width:100%;max-width:100%;height:auto;">
+  </picture>
   <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#64748b;">第1相の「準備OK」は、まだコミット完了ではありません。第2相で全員OKなら全員コミット、1人でもNGなら全員中止します。</figcaption>
 </figure>
 
