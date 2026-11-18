@@ -8,7 +8,12 @@ fe_section: テクノロジ系
 fe_subsection: データベース
 fe_order: 20
 date: 2026-06-27
-last_modified_at: 2026-11-02
+last_modified_at: 2026-11-18
+image:
+  path: "https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/two-phase-commit.png"
+  width: 1734
+  height: 907
+  alt: "2相コミットの流れ。第1相では参加者A・B・Cの準備可否を確認するが確定はしない。第2相では全員OKなら全員コミット、1人でもNGなら全員中止する。"
 ---
 
 ## まず結論
@@ -25,6 +30,13 @@ last_modified_at: 2026-11-02
 ```
 
 いきなり更新を確定せず、まず全参加者へ確認し、その後に全体を確定または中止する点が重要です。
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/two-phase-commit.png" width="1734" height="907"
+       alt="2相コミットの流れ。第1相では参加者A・B・Cの準備可否を確認するが確定はしない。第2相では全員OKなら全員コミット、1人でもNGなら全員中止する。" loading="lazy" decoding="async"
+       style="display:block;width:100%;max-width:100%;height:auto;">
+  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#64748b;">第1相の「準備OK」は、まだコミット完了ではありません。第2相で全員OKなら全員コミット、1人でもNGなら全員中止します。</figcaption>
+</figure>
 
 ## 直感的な説明
 
