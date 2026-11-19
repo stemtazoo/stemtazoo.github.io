@@ -47,28 +47,14 @@ ON
 
 と1回だけ切り替わるように見えます。
 
-しかし実際の接点は、切り替わる瞬間にわずかに跳ねたり振動したりします。
-
-そのため、電気信号は短時間だけ、
-
-```text
-OFF
-ON
-OFF
-ON
-OFF
-ON
-ON
-```
-
-のように変化することがあります。
-
-この短いON/OFFの繰返しがチャタリングです。
+しかし実際の接点は、切り替わる瞬間にわずかに跳ねたり振動したりします。そのため、**1回押しただけでも、電気信号が短時間にON/OFFを繰り返す**ことがあります。
 
 <figure style="margin:16px 0 20px;">
   <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/chattering.png" width="1734" height="907" alt="押しボタンスイッチを1回押すと、接点が振動してOFFとONが短時間に繰り返された後、ONで安定する様子を示す波形図。" loading="lazy" decoding="async" style="display:block;width:100%;max-width:100%;height:auto;">
   <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#666;">ボタン操作は1回でも、接点が安定するまで電気信号が何度も切り替わることがあります。</figcaption>
 </figure>
+
+このように、接点の振動によって起こる短いON/OFFの繰返しがチャタリングです。
 
 ## 定義・仕組み
 
