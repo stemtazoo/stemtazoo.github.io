@@ -8,7 +8,12 @@ fe_section: 科目B対策
 fe_subsection: トレース
 fe_order: 71
 date: 2026-10-09
-last_modified_at: 2026-11-01
+last_modified_at: 2026-11-19
+image:
+  path: "https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/recursion-trace.png"
+  width: 1732
+  height: 908
+  alt: "f(3)からf(2)、f(1)の順に呼び出す。終了条件のf(1)で1を返し、f(2)が2、最後にf(3)が6を返す。"
 ---
 
 ## まず結論
@@ -21,17 +26,19 @@ last_modified_at: 2026-11-01
 
 再帰は、途中まで書いた計算をいったん保留して、別の計算を先に済ませる仕組みです。
 
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/recursion-trace.png" width="1732" height="908"
+       alt="f(3)からf(2)、f(1)の順に呼び出す。終了条件のf(1)で1を返し、f(2)が2、最後にf(3)が6を返す。" loading="lazy" decoding="async"
+       style="display:block;width:100%;max-width:100%;height:auto;">
+</figure>
+
 ```text
 f(3) = 3 × f(2)  ← f(2)の結果を待つ
 f(2) = 2 × f(1)  ← f(1)の結果を待つ
 f(1) = 1         ← ここで止まる
 ```
 
-戻る順番は逆になります。
-
-```text
-f(1) = 1 → f(2) = 2 → f(3) = 6
-```
+`f(1)` が `1` を返すと、待っていた `f(2)` が `2 × 1 = 2` を計算します。その `2` を受け取った `f(3)` が `3 × 2 = 6` を計算します。
 
 ## 定義・仕組み
 
