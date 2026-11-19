@@ -7,8 +7,13 @@ tags: [fe, fe-technology, hardware, input-output]
 fe_section: テクノロジ系
 fe_subsection: ハードウェア
 fe_order: 280
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/chattering.png
+  width: 1734
+  height: 907
+  alt: "押しボタンスイッチを1回押したとき、接点の振動でOFFとONが短時間に何度も切り替わり、最後にONで安定する波形。"
 date: 2026-08-14
-last_modified_at: 2026-08-14
+last_modified_at: 2026-11-19
 ---
 
 ## まず結論
@@ -59,6 +64,11 @@ ON
 のように変化することがあります。
 
 この短いON/OFFの繰返しがチャタリングです。
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/chattering.png" width="1734" height="907" alt="押しボタンスイッチを1回押すと、接点が振動してOFFとONが短時間に繰り返された後、ONで安定する様子を示す波形図。" loading="lazy" decoding="async" style="display:block;width:100%;max-width:100%;height:auto;">
+  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#666;">ボタン操作は1回でも、接点が安定するまで電気信号が何度も切り替わることがあります。</figcaption>
+</figure>
 
 ## 定義・仕組み
 
