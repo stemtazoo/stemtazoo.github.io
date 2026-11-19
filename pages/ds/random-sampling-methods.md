@@ -7,7 +7,12 @@ tags: [ds, data-preparation, statistics]
 ds_area: datascience
 ds_section: data-preparation
 description: "単純無作為・系統・層別・集落・多段の抽出手続を比較します。各層から取ることと比例配分の違い、精度・コスト・名簿の条件、無作為でも誤差や偏りが残る点を整理します。"
-last_modified_at: 2026-10-19
+last_modified_at: 2026-11-19
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/ds/random-sampling-methods.png
+  width: 1731
+  height: 909
+  alt: "単純無作為・系統・層別・集落・多段の5種類を、抽出する対象と手順の違いで比較した図"
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -21,6 +26,11 @@ DS検定では「どの抽出方法かを見抜けるか」「方法の違いを
 
 無作為抽出をしても、偶然による標本誤差がなくなるわけではありません。狙いは「必ず偏りのない標本を作る」ことではなく、**選び方に意図的な偏りが入りにくく、抽出確率を説明できる状態にすること**です。
 
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/ds/random-sampling-methods.png" width="1731" height="909" alt="無作為抽出法の5種類。単純無作為は個人をランダムに、系統は一定間隔で、層別は各層から、集落は選んだグループ全体を、多段は段階的に対象を選ぶ図" style="display:block;width:100%;max-width:100%;height:auto;" loading="lazy" decoding="async">
+  <figcaption style="font-size:0.88em;line-height:1.5;color:#666;margin-top:8px;">5種類の違いは「何を、どの順序で選ぶか」。層別は各層から一部を選び、集落は選んだ集団を丸ごと調べる点に注目しましょう。</figcaption>
+</figure>
 
 ## 直感的な説明
 
