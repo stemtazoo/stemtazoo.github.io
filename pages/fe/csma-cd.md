@@ -7,8 +7,13 @@ tags: [fe, fe-technology, network]
 fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 220
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/csma-cd.png
+  width: 1734
+  height: 907
+  alt: "共有Ethernetで端末AとBが送信し、衝突を検出したあと、ランダムな時間待って再送するCSMA/CDの流れ。"
 date: 2026-07-27
-last_modified_at: 2026-09-20
+last_modified_at: 2026-11-19
 ---
 
 ## まず結論
@@ -54,6 +59,11 @@ CSMA/CDは、複数人が同じ会話の場で発言する状況に似ていま�
 複数の端末が同じ通信路を使うため、送信前に確認しても、ほぼ同時に送信を始めれば衝突することがあります。
 
 そのため、CSMA/CDでは衝突を検出した後に送信を中止し、少し待ってから再送します。
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/csma-cd.png" width="1734" height="907" alt="共有Ethernetで端末AとBが送信し、衝突を検出したあと、ランダムな時間待って再送するCSMA/CDの流れ。" loading="lazy" decoding="async" style="display:block;width:100%;max-width:100%;height:auto;">
+  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#666;">共有型Ethernetでは、通信路を確認しても同時送信で衝突する場合があります。衝突を検出した端末は送信を中止し、ランダムに待ってから再送します。</figcaption>
+</figure>
 
 ここで大切なのは、端末ごとに「あなたはこの時間に送信」と順番を割り当てているわけではないことです。
 
