@@ -3,6 +3,11 @@ layout: page
 title: 一次データと二次データの違い｜政府統計・アンケートはどっち？【DS検定】
 description: "一次データは自分たちが調査目的に合わせて直接収集したデータ、二次データは他者が収集・加工・公開した既存データです。政府統計、アンケート、スクレイピング、自社ログなどの具体例から、DS検定での見分け方を整理します。"
 permalink: /ds/primary-secondary-data/
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/ds/primary-secondary-data.png
+  width: 1200
+  height: 630
+  alt: "一次データは自社アンケートなど自分たちが直接収集したデータ、二次データは政府統計など他者が収集した既存データであることを示す比較図"
 categories: [business]
 tags: [ds, data-understanding, design]
 ds_area: foundation
@@ -30,6 +35,11 @@ DS検定では、**ダウンロードしたか、スクレイピングしたか�
 自社で顧客アンケートを実施して回答を集めるなら、その回答は一次データです。
 
 一方、政府が公開している統計や調査会社のレポートを使うなら、それは二次データです。
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/ds/primary-secondary-data.png" width="1200" height="630" loading="lazy" decoding="async" alt="一次データは自社で集めたアンケート、二次データは他者が集めた政府統計などの既存データという収集主体の違いを表す図" style="display:block;width:100%;max-width:100%;height:auto;">
+  <figcaption style="font-size:0.88em;line-height:1.5;color:#596579;margin-top:8px;">判断基準は取得方法ではなく、誰が何の目的で最初に収集したかです。</figcaption>
+</figure>
 
 ここで迷いやすいのがWebから取得したデータです。
 
