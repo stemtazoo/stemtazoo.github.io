@@ -8,7 +8,12 @@ fe_section: テクノロジ系
 fe_subsection: システム構成要素
 fe_order: 71
 date: 2026-10-04
-last_modified_at: 2026-10-04
+last_modified_at: 2026-11-19
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/web-application-server.png
+  width: 1200
+  height: 630
+  alt: "Webサーバは受付・配信、アプリケーションサーバは業務処理、DBはデータ保存を担当し、役割を分離すると必要な部分を個別に増強できる"
 ---
 
 <style>
@@ -64,6 +69,18 @@ Webサーバ
 > **「できる／できない」ではなく、「分けると変更・増強しやすい」で判断する。**
 
 ## 直感的な説明
+
+Web・アプリケーション・データベースの**役割分担と、分離して増強できるメリット**を図で整理します。
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/web-application-server.png"
+       alt="Webサーバは受付・配信、アプリケーションサーバは業務処理、DBはデータ保存を担当し、役割を分離すると必要な部分を個別に増強できる"
+       width="1200" height="630" loading="lazy" decoding="async"
+       style="display:block;width:100%;max-width:100%;height:auto;">
+  <figcaption style="font-size:0.88em;line-height:1.5;color:#526174;margin-top:8px;">役割の違いを示した概念図。実際には複数の役割を同じサーバで担当する構成もあります。</figcaption>
+</figure>
+
+次に、ECサイトで各層がどのように連携するかを見てみましょう。
 
 ECサイトをイメージします。
 
