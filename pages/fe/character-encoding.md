@@ -7,8 +7,13 @@ tags: [fe, fe-technology, computer-system, character-encoding]
 fe_section: テクノロジ系
 fe_subsection: コンピュータ構成要素
 fe_order: 95
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/character-encoding.png
+  width: 1734
+  height: 907
+  alt: "文字コードの見分け方。ASCIIは英数字・記号、Shift_JISは日本語、EUCはUNIX系、Unicodeは世界中の文字を扱うための規格。"
 date: 2026-08-24
-last_modified_at: 2026-10-25
+last_modified_at: 2026-11-19
 ---
 
 ## まず結論
@@ -55,6 +60,11 @@ UNIX系で使われた日本語文字コード
 ```
 
 この違いを押さえると、用語を丸暗記しなくても選択肢を切りやすくなります。
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/character-encoding.png" alt="文字コードの4種類の見分け方。ASCIIは英数字・記号、Shift_JISは日本語も扱う、EUCはUNIX系、Unicodeは世界中の文字に対応する。" width="1734" height="907" loading="lazy" decoding="async" style="display:block;width:100%;max-width:100%;height:auto;">
+  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#666;">FE試験では、文字コードを「英数字・日本語・UNIX系・世界共通」の特徴から見分けます。</figcaption>
+</figure>
 
 ## 定義・仕組み
 
