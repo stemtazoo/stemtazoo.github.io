@@ -7,8 +7,13 @@ tags: [fe, fe-technology, computer-system, interface]
 fe_section: テクノロジ系
 fe_subsection: コンピュータ構成要素
 fe_order: 60
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/daisy-chain.png
+  width: 1734
+  height: 907
+  alt: "PCから機器A、機器B、機器Cへ順番に接続するデイジーチェーン方式。途中の機器から次の機器へ接続が続く。"
 date: 2026-08-27
-last_modified_at: 2026-08-27
+last_modified_at: 2026-11-19
 ---
 
 ## まず結論
@@ -35,17 +40,10 @@ PC → 機器A → 機器B → 機器C
 
 PCにすべての機器を直接つなぐのではありません。
 
-```text
-デイジーチェーン
-
-PC
- ↓
-機器A
- ↓
-機器B
- ↓
-機器C
-```
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/daisy-chain.png" width="1734" height="907" alt="PCから機器A、機器B、機器Cへ順番につながるデイジーチェーン接続の図。" loading="lazy" decoding="async" style="display:block;width:100%;max-width:100%;height:auto;">
+  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#64748b;">PCから各機器を順番につなぐ。途中の機器が次の機器への接続点にもなる。</figcaption>
+</figure>
 
 ポイントは、**途中の機器が次の機器への接続点にもなる**ことです。
 
