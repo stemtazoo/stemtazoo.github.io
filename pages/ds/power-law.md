@@ -3,6 +3,11 @@ layout: page
 title: べき乗則とは？両対数グラフが直線になる理由【DS検定リテラシー】
 description: "べき乗則とは、ある量が別の量のべき乗に比例する関係です。両対数グラフで直線になる理由を押さえ、指数成長との違いを整理します。DS検定では『両対数か片対数か』『xのべき乗か一定割合の増加か』で選択肢を切り分けます。"
 permalink: /ds/power-law/
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/ds/power-law.png
+  width: 1200
+  height: 630
+  alt: "べき乗則の例として、通常のグラフでは曲線、両対数グラフでは直線になる関係を比較した図"
 categories: [business]
 tags: [ds, design]
 ds_area: datascience
@@ -42,6 +47,11 @@ DS検定では、次の切り分けが重要です。
 などでは、ある量が別の量のべき乗に比例する関係が現れることがあります。
 
 普通のグラフでは曲線に見えても、横軸と縦軸の両方を対数にすると直線になることがあります。
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/ds/power-law.png" width="1200" height="630" alt="べき乗則の例として、通常のグラフでは曲線、両対数グラフでは直線になる関係を比較した図" loading="lazy" decoding="async" style="display:block;width:100%;max-width:100%;height:auto;">
+  <figcaption style="font-size:0.88em;line-height:1.5;color:#606b75;margin-top:8px;">べき乗則の見え方：同じ関係でも、通常のグラフでは曲線、両対数グラフでは直線になります。</figcaption>
+</figure>
 
 ## 定義・仕組み
 
