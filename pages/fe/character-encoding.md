@@ -46,24 +46,10 @@ UNIX系で使われた日本語文字コード
 
 この「どの文字に、どの番号を割り当てるか」を決めた仕組みが文字コードです。
 
-ただし、文字コードには目的や歴史の違いがあります。
-
-```text
-英語中心で十分
-→ ASCII
-
-日本語を扱いたい
-→ Shift_JIS / EUC
-
-世界中の文字を共通に扱いたい
-→ Unicode
-```
-
-この違いを押さえると、用語を丸暗記しなくても選択肢を切りやすくなります。
+文字コードには目的や歴史の違いがあります。次の図で、4種類の見分け方を整理しましょう。
 
 <figure style="margin:16px 0 20px;">
   <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/character-encoding.png" alt="文字コードの4種類の見分け方。ASCIIは英数字・記号、Shift_JISは日本語も扱う、EUCはUNIX系、Unicodeは世界中の文字に対応する。" width="1734" height="907" loading="lazy" decoding="async" style="display:block;width:100%;max-width:100%;height:auto;">
-  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#666;">FE試験では、文字コードを「英数字・日本語・UNIX系・世界共通」の特徴から見分けます。</figcaption>
 </figure>
 
 ## 定義・仕組み
