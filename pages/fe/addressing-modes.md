@@ -7,8 +7,13 @@ tags: [fe, fe-technology, computer-architecture, addressing]
 fe_section: テクノロジ系
 fe_subsection: コンピュータ構成要素
 fe_order: 40
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/addressing-modes.png
+  width: 1200
+  height: 630
+  alt: "命令の数値20をそのまま使う即値、20番地のデータを参照する直接、20番地に格納された25をたどって25番地のデータを参照する間接アドレス指定の比較図。"
 date: 2026-07-06
-last_modified_at: 2026-10-22
+last_modified_at: 2026-11-20
 ---
 
 ## まず結論
@@ -45,6 +50,11 @@ last_modified_at: 2026-10-22
 - 「基準となる棚番号に、レジスタの値を足して目的の棚を探す」
 
 この違いが、アドレス指定方式の違いです。
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/addressing-modes.png" width="1200" height="630" alt="即値は命令中の20をデータとして使い、直接は20番地のデータを参照し、間接は20番地に格納された25をたどって25番地のデータを参照する。" loading="lazy" decoding="async" style="display:block;width:100%;max-width:100%;height:auto;">
+  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#666;">同じ「20」でも、数値そのものを使うか、番地を参照するかで結果が変わります。</figcaption>
+</figure>
 
 特に間接アドレス指定は、**目的のデータへ直接向かわず、別の番地を一度受け取る**と考えるのがポイントです。
 
