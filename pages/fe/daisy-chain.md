@@ -42,7 +42,6 @@ PCにすべての機器を直接つなぐのではありません。
 
 <figure style="margin:16px 0 20px;">
   <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/daisy-chain.png" width="1734" height="907" alt="PCから機器A、機器B、機器Cへ順番につながるデイジーチェーン接続の図。" loading="lazy" decoding="async" style="display:block;width:100%;max-width:100%;height:auto;">
-  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#64748b;">PCから各機器を順番につなぐ。途中の機器が次の機器への接続点にもなる。</figcaption>
 </figure>
 
 ポイントは、**途中の機器が次の機器への接続点にもなる**ことです。
