@@ -8,7 +8,12 @@ fe_section: テクノロジ系
 fe_subsection: コンピュータシステム
 fe_order: 290
 date: 2026-07-02
-last_modified_at: 2026-11-01
+last_modified_at: 2026-11-19
+image:
+  path: "https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/lru-page-replacement.png"
+  width: 1734
+  height: 907
+  alt: "ページ枠が満杯のとき、最後の参照時刻がAは10:01、Bは09:50、Cは10:05なので、LRUでは最も古いBを置き換える。"
 related_articles:
   - /fe/paging/
   - /fe/fifo-page-replacement/
@@ -83,15 +88,13 @@ LRUでは、ページが参照されるたびに、そのページを「最近�
 
 ページ枠がいっぱいで新しいページを入れるときは、枠内にあるページのうち、**最後に参照された時刻が最も古いページ** を置き換えます。
 
-例えば、次のような状態を考えます。
+例えば、最後に参照した時刻がAは10:01、Bは09:50、Cは10:05なら、最も古いBを置き換えます。
 
-| ページ | 最後に参照された時刻 | LRUでの見方 |
-|---|---|---|
-| A | 10:01 | 比較的新しい |
-| B | 09:50 | 最も古いので置換候補 |
-| C | 10:05 | 新しい |
-
-この例では、最後に参照された時刻が最も古いBが置換候補になります。
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/lru-page-replacement.png" width="1734" height="907"
+       alt="ページ枠が満杯のとき、最後の参照時刻がAは10:01、Bは09:50、Cは10:05なので、LRUでは最も古いBを置き換える。" loading="lazy" decoding="async"
+       style="display:block;width:100%;max-width:100%;height:auto;">
+</figure>
 
 このテーマは、基本情報技術者試験の「コンピュータシステム」や「オペレーティングシステム」と関係する内容です。公式の出題範囲やシラバスは、[IPA：基本情報技術者試験](https://www.ipa.go.jp/shiken/kubun/fe.html) から確認できます。
 
