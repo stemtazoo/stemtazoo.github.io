@@ -49,8 +49,11 @@ DS検定では、次の切り分けが重要です。
 普通のグラフでは曲線に見えても、横軸と縦軸の両方を対数にすると直線になることがあります。
 
 <figure style="margin:16px 0 20px;">
-  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/ds/power-law.png" width="1200" height="630" alt="べき乗則の例として、通常のグラフでは曲線、両対数グラフでは直線になる関係を比較した図" loading="lazy" decoding="async" style="display:block;width:100%;max-width:100%;height:auto;">
-  <figcaption style="font-size:0.88em;line-height:1.5;color:#606b75;margin-top:8px;">べき乗則の見え方：同じ関係でも、通常のグラフでは曲線、両対数グラフでは直線になります。</figcaption>
+  <picture>
+    <source media="(max-width: 640px)" srcset="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/ds/power-law-mobile.png" width="1122" height="1402">
+    <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/ds/power-law.png" width="1200" height="630" alt="べき乗則の例。通常のグラフでは右上がりの曲線、両対数グラフでは直線になることを比較" loading="lazy" decoding="async" style="display:block;width:100%;max-width:100%;height:auto;">
+  </picture>
+  <figcaption style="font-size:0.88em;line-height:1.5;color:#606b75;margin-top:8px;">べき乗則の例：同じ関係を異なる目盛りで表したグラフ。</figcaption>
 </figure>
 
 ## 定義・仕組み
