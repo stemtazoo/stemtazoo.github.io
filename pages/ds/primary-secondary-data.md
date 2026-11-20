@@ -14,7 +14,7 @@ ds_area: foundation
 ds_section: data-understanding
 prev: /ds/primary-data/
 next: /ds/publickey-vs-symmetric/
-last_modified_at: 2026-09-14
+last_modified_at: 2026-11-20
 ---
 
 ## まず結論
@@ -37,7 +37,10 @@ DS検定では、**ダウンロードしたか、スクレイピングしたか�
 一方、政府が公開している統計や調査会社のレポートを使うなら、それは二次データです。
 
 <figure style="margin:16px 0 20px;">
-  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/ds/primary-secondary-data.png" width="1200" height="630" loading="lazy" decoding="async" alt="一次データは自社で集めたアンケート、二次データは他者が集めた政府統計などの既存データという収集主体の違いを表す図" style="display:block;width:100%;max-width:100%;height:auto;">
+  <picture>
+    <source media="(max-width: 640px)" srcset="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/ds/primary-secondary-data-mobile.png">
+    <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/ds/primary-secondary-data.png" width="1200" height="630" loading="lazy" decoding="async" alt="一次データは自社で集めたアンケート、二次データは他者が集めた政府統計などの既存データという収集主体の違いを表す図" style="display:block;width:100%;max-width:100%;height:auto;">
+  </picture>
   <figcaption style="font-size:0.88em;line-height:1.5;color:#596579;margin-top:8px;">判断基準は取得方法ではなく、誰が何の目的で最初に収集したかです。</figcaption>
 </figure>
 
