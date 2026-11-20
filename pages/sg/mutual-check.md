@@ -9,7 +9,7 @@ image:
   height: 630
   alt: "相互けん制の比較。申請者が自分で承認するとチェックが働きにくいが、申請者と承認者を分けると別の人が確認できる。"
 tags: [sg, sg-security-management, risk_assessment, access_control, it_security_operations]
-last_modified_at: 2026-09-23
+last_modified_at: 2026-11-21
 ---
 
 ## まず結論
