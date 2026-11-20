@@ -8,7 +8,12 @@ fe_section: テクノロジ系
 fe_subsection: システム開発技術
 fe_order: 100
 date: 2026-07-07
-last_modified_at: 2026-09-20
+last_modified_at: 2026-11-21
+image:
+  path: "https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/state-transition-diagram.png"
+  width: 1200
+  height: 630
+  alt: "設備の停止中から起動ボタンで運転中へ、異常検知で異常停止へ、リセットで停止中へ戻る状態遷移図。矢印はイベントによる状態の変化を示す。"
 ---
 
 ## まず結論
@@ -36,6 +41,12 @@ last_modified_at: 2026-09-20
 単なる集計や料金計算より、センサー入力やボタン操作によって運転状態が切り替わる制御システムに向いています。
 
 ## 直感的な説明
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/state-transition-diagram.png" width="1200" height="630"
+       alt="設備の停止中から起動ボタンで運転中へ、異常検知で異常停止へ、リセットで停止中へ戻る状態遷移図。矢印はイベントによる状態の変化を示す。" loading="lazy" decoding="async"
+       style="display:block;width:100%;max-width:100%;height:auto;">
+</figure>
 
 状態遷移図は、システムの「今いる場所」と「次へ進むきっかけ」を表した地図のようなものです。
 
