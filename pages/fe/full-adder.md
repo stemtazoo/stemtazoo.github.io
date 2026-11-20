@@ -8,7 +8,12 @@ fe_section: テクノロジ系
 fe_subsection: コンピュータ構成要素
 fe_order: 620
 date: 2026-08-24
-last_modified_at: 2026-09-20
+last_modified_at: 2026-11-21
+image:
+  path: "https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/full-adder.png"
+  width: 1200
+  height: 630
+  alt: "全加算器でA=1、B=0、Cin=1を足すと、2進数の10となり、桁上がりC=1、その桁の和S=0になる例"
 ---
 
 ## まず結論
@@ -42,6 +47,13 @@ S = 0
 **「1の個数を数える」**と考えるのが、全加算器を理解する近道です。
 
 ## 直感的な説明
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/full-adder.png" width="1200" height="630"
+       alt="全加算器でA=1、B=0、Cin=1を足すと、2進数の10となり、桁上がりC=1、その桁の和S=0になる例" loading="lazy" decoding="async"
+       style="display:block;width:100%;max-width:100%;height:auto;">
+</figure>
+
 
 全加算器は、3つのスイッチのうち、何個がONになっているかを数える回路だと考えると分かりやすくなります。
 
