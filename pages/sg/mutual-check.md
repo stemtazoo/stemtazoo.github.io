@@ -16,7 +16,13 @@ SG試験では、相互けん制は**内部不正対策や誤操作防止のた�
 ポイントは、誰か一人を疑うことではありません。  
 一人だけで重要な作業を完結できないようにして、組織として安全な仕組みにすることです。
 
-![相互けん制の比較。申請者本人が承認する場合と、別の承認者が確認する場合の違いを示した図](https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/sg/mutual-check.png)
+<picture>
+  <source media="(max-width: 640px)" srcset="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/sg/mutual-check-mobile.png" width="1122" height="1402">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/sg/mutual-check.png" width="1200" height="630"
+       alt="相互けん制の比較。申請者が自分で承認するとチェックが働きにくいが、申請者と承認者を分けると別の人が確認できる。"
+       loading="lazy" decoding="async"
+       style="display:block;width:100%;max-width:100%;height:auto;">
+</picture>
 
 たとえば、次のような状態は相互けん制が弱い状態です。
 
