@@ -14,7 +14,7 @@ ds_area: datascience
 ds_section: statistics
 prev: /ds/polymorphism/
 next: /ds/primary-data/
-last_modified_at: 2026-08-16
+last_modified_at: 2026-11-21
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
