@@ -42,7 +42,10 @@ DS検定では、問題を見つけたら自分だけで抱え込まず、**早�
 そこで組織では、**「誰に・どの順番で報告するか」**をあらかじめ決めています。これがレポートラインです。
 
 <figure style="margin:16px 0 20px;">
-  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/ds/report-line-risk-management.png" width="1200" height="630" loading="lazy" decoding="async" alt="異常を発見した担当者が上司・リーダーへ速やかに報告し、組織として対応するまでの正式な報告経路を示す図" style="display:block;width:100%;max-width:100%;height:auto;">
+  <picture>
+    <source media="(max-width: 640px)" srcset="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/ds/report-line-risk-management-mobile.png" width="1122" height="1402">
+    <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/ds/report-line-risk-management.png" width="1200" height="630" loading="lazy" decoding="async" alt="異常を発見した担当者が上司・リーダーへ速やかに報告し、組織として対応するまでの正式な報告経路を示す図" style="display:block;width:100%;max-width:100%;height:auto;">
+  </picture>
   <figcaption style="font-size:0.88em;line-height:1.5;color:#596579;margin-top:8px;">異常を発見したら、自分だけで抱えず、決められた経路で早期に共有します。</figcaption>
 </figure>
 
