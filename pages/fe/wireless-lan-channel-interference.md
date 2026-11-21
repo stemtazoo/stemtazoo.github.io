@@ -49,7 +49,10 @@ image:
 2.4GHz帯では、チャネル番号が1つ違うだけでは、使う周波数帯が大きく重なります。
 
 <figure style="margin:16px 0 20px;">
-  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/wireless-lan-channel-interference.png" width="1200" height="630" alt="2.4GHz帯の無線LANで、チャネル1・2・3の重なりと、1・6・11の非重複配置を比較した図" loading="lazy" decoding="async" style="display:block;width:100%;max-width:100%;height:auto;">
+  <picture>
+    <source media="(max-width: 640px)" srcset="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/wireless-lan-channel-interference-mobile.png" width="1086" height="1448">
+    <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/wireless-lan-channel-interference.png" width="1200" height="630" alt="2.4GHz帯の無線LANで、チャネル1・2・3の重なりと、1・6・11の非重複配置を比較した図" loading="lazy" decoding="async" style="display:block;width:100%;max-width:100%;height:auto;">
+  </picture>
   <figcaption style="font-size:0.88em;line-height:1.5;color:#666;margin-top:8px;">近いチャネルは周波数帯が重なりやすい。1・6・11は代表的な非重複の組合せです。</figcaption>
 </figure>
 
