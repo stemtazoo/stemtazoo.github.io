@@ -59,7 +59,10 @@ user003 + 123456
 この「逆向き」のイメージを持つと、選択肢を切りやすくなります。
 
 <figure style="margin:16px 0 20px;">
-  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/reverse-brute-force.png" width="1200" height="630" alt="通常のブルートフォース攻撃はIDを固定してパスワードを変え、リバースブルートフォース攻撃はパスワードを固定してIDを変える比較図" loading="lazy" decoding="async" style="display:block;width:100%;max-width:100%;height:auto;">
+  <picture>
+    <source media="(max-width: 640px)" srcset="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/reverse-brute-force-mobile.png" width="1122" height="1402">
+    <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/reverse-brute-force.png" width="1200" height="630" alt="通常は同じ利用者IDでパスワードを変更し、リバースブルートフォースは同じパスワードで利用者IDを変更する比較図" loading="lazy" decoding="async" style="display:block;width:100%;max-width:100%;height:auto;">
+  </picture>
   <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#596579;">固定するものが逆になる点を比較した図。</figcaption>
 </figure>
 
