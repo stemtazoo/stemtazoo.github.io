@@ -6,13 +6,23 @@ permalink: /gk/vgg/
 tags: [gk, cnn]
 gk_section: ディープラーニングの応用例/画像認識/物体認識タスク
 gk_order: 2
-last_modified_at: 2026-09-26
+last_modified_at: 2026-11-22
+image:
+  path: "https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/vgg.png"
+  width: 1200
+  height: 630
+  alt: "VGGは3×3の畳み込みを2層重ねることで5×5相当の受容野を得ることを示した図"
 ---
 
 ## まず結論
 
 * **VGG**とは、**小さな畳み込み（3×3）を積み重ねてネットワークを深くする**という、非常にシンプルな設計思想のCNN。
 * G検定では**「構造が単純」「パラメータ数が多い」「深いCNN」**という特徴を理解しているかが問われる。
+
+<figure class="gk-eyecatch" style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/vgg.png" width="1200" height="630" alt="3×3の畳み込みを2層重ねると、ストライド1で5×5相当の範囲を参照できることを示すVGGの模式図" loading="lazy" decoding="async" style="display:block;width:100%;max-width:100%;height:auto;">
+  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#526171;">VGGは小さな3×3畳み込みを積み重ねて受容野を広げます（ストライド1の場合）。</figcaption>
+</figure>
 
 ## 直感的な説明
 
