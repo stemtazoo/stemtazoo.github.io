@@ -29,10 +29,15 @@ FE科目Aでは、次の一言を判断基準にすると切り分けやすく�
 ## 直感的な説明
 
 <figure style="margin:16px 0 20px;">
-  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/rpc.png" width="1200" height="630"
-       alt="RPCの流れ。クライアントがgetPrice(商品ID)をサーバに要求し、サーバで価格を検索した結果がクライアントへ返される。"
-       loading="lazy" decoding="async"
-       style="display:block;width:100%;max-width:100%;height:auto;">
+  <picture>
+    <source media="(max-width: 640px)"
+            srcset="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/rpc-mobile.png"
+            width="1024" height="1536">
+    <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/rpc.png" width="1200" height="630"
+         alt="RPCの流れ。クライアントがgetPrice(商品ID)をサーバに要求し、サーバで価格を検索した結果がクライアントへ返される。"
+         loading="lazy" decoding="async"
+         style="display:block;width:100%;max-width:100%;height:auto;">
+  </picture>
 </figure>
 
 RPCは、**遠くにいる相手へ仕事をお願いして、結果だけ返してもらう**イメージです。
