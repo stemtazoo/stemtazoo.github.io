@@ -8,7 +8,12 @@ fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 60
 date: 2026-06-26
-last_modified_at: 2026-08-28
+last_modified_at: 2026-11-21
+image:
+  path: "https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/rpc.png"
+  width: 1200
+  height: 630
+  alt: "RPCはクライアントがネットワーク越しにサーバの処理を呼び出し、サーバが処理を実行して結果を返す仕組み。"
 ---
 
 ## まず結論
@@ -22,6 +27,13 @@ FE科目Aでは、次の一言を判断基準にすると切り分けやすく�
 データを共有する仕組みや、遠隔からログインする仕組みとは役割が違います。
 
 ## 直感的な説明
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/rpc.png" width="1200" height="630"
+       alt="RPCの流れ。クライアントがgetPrice(商品ID)をサーバに要求し、サーバで価格を検索した結果がクライアントへ返される。"
+       loading="lazy" decoding="async"
+       style="display:block;width:100%;max-width:100%;height:auto;">
+</figure>
 
 RPCは、**遠くにいる相手へ仕事をお願いして、結果だけ返してもらう**イメージです。
 
