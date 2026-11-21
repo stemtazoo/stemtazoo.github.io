@@ -37,10 +37,13 @@ image:
 ## 直感的な説明
 
 <figure style="margin:16px 0 20px;">
-  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/bathtub-curve.png" width="1200" height="630"
-       alt="バスタブ曲線。初期故障期は故障率が低下し、偶発故障期は低くほぼ一定となり、摩耗故障期は上昇する。"
-       loading="lazy" decoding="async"
-       style="display:block;width:100%;max-width:100%;height:auto;">
+  <picture>
+    <source media="(max-width: 640px)" srcset="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/bathtub-curve-mobile.png" width="1122" height="1402">
+    <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/bathtub-curve.png" width="1200" height="630"
+         alt="バスタブ曲線。初期故障期は故障率が低下し、偶発故障期は低くほぼ一定となり、摩耗故障期は上昇する。"
+         loading="lazy" decoding="async"
+         style="display:block;width:100%;max-width:100%;height:auto;">
+  </picture>
 </figure>
 
 バスタブ曲線は、製品の一生を見ているイメージです。
