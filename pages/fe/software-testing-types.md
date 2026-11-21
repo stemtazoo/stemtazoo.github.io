@@ -8,7 +8,12 @@ fe_section: テクノロジ系
 fe_subsection: ソフトウェア開発
 fe_order: 30
 date: 2026-07-01
-last_modified_at: 2026-09-20
+last_modified_at: 2026-11-21
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/software-testing-types.png
+  width: 1200
+  height: 630
+  alt: ソフトウェアテストを工程と目的の二つの軸で整理し、単体・結合・システム・受入テストと負荷・退行テストの違いを示す図
 ---
 
 ## まず結論
@@ -42,6 +47,11 @@ last_modified_at: 2026-09-20
 > **修正・変更後に、以前正常だった箇所が壊れていないか確認する → 回帰テスト**
 
 回帰テストの詳しい切り分けは、[回帰テスト（リグレッションテスト）とは？](/fe/regression-testing/) で整理しています。
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/software-testing-types.png" width="1200" height="630" alt="工程による分類は単体・結合・システム・受入テスト、目的による分類は負荷・退行テストであり、分類の軸が異なることを示す図" loading="lazy" decoding="async" style="display:block;width:100%;max-width:100%;height:auto;">
+  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#596579;">テストの工程・範囲と、確認する目的を分けて整理した図。</figcaption>
+</figure>
 
 ## 直感的な説明
 
