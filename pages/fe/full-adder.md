@@ -49,22 +49,25 @@ S = 0
 ## 直感的な説明
 
 <figure style="margin:16px 0 20px;">
-  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/full-adder.png" width="1200" height="630"
-       alt="全加算器でA=1、B=0、Cin=1を足すと、2進数の10となり、桁上がりC=1、その桁の和S=0になる例" loading="lazy" decoding="async"
-       style="display:block;width:100%;max-width:100%;height:auto;">
+  <picture>
+    <source media="(max-width: 640px)" srcset="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/full-adder-mobile.png" width="1122" height="1402">
+    <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/full-adder.png" width="1200" height="630"
+         alt="全加算器の計算例。入力A=1、B=0、Cin=1の合計は2（2進数で10）となり、桁上がりC=1、その桁の和S=0になる。"
+         loading="lazy" decoding="async"
+         style="display:block;width:100%;max-width:100%;height:auto;">
+  </picture>
 </figure>
-
 
 全加算器は、3つのスイッチのうち、何個がONになっているかを数える回路だと考えると分かりやすくなります。
 
 入力はすべて0か1なので、1の個数は0〜3個です。
 
-| 1の個数 | 10進数の合計 | 2進数 | C | S |
-|---:|---:|---:|---:|---:|
-| 0個 | 0 | 00 | 0 | 0 |
-| 1個 | 1 | 01 | 0 | 1 |
-| 2個 | 2 | 10 | 1 | 0 |
-| 3個 | 3 | 11 | 1 | 1 |
+| 1の個数 | 2進数 | C | S |
+|---:|:---:|:---:|:---:|
+| 0個 | 00 | 0 | 0 |
+| 1個 | 01 | 0 | 1 |
+| 2個 | 10 | 1 | 0 |
+| 3個 | 11 | 1 | 1 |
 
 この表を見ると、全加算器の出力はかなり単純です。
 
@@ -158,16 +161,16 @@ C S
 
 入力3つの組合せを整理すると、次のようになります。
 
-| A | B | Cin | 1の個数 | C | S |
-|---:|---:|---:|---:|---:|---:|
-| 0 | 0 | 0 | 0 | 0 | 0 |
-| 0 | 0 | 1 | 1 | 0 | 1 |
-| 0 | 1 | 0 | 1 | 0 | 1 |
-| 1 | 0 | 0 | 1 | 0 | 1 |
-| 0 | 1 | 1 | 2 | 1 | 0 |
-| 1 | 0 | 1 | 2 | 1 | 0 |
-| 1 | 1 | 0 | 2 | 1 | 0 |
-| 1 | 1 | 1 | 3 | 1 | 1 |
+| A | B | Cin | C | S |
+|:---:|:---:|:---:|:---:|:---:|
+| 0 | 0 | 0 | 0 | 0 |
+| 0 | 0 | 1 | 0 | 1 |
+| 0 | 1 | 0 | 0 | 1 |
+| 1 | 0 | 0 | 0 | 1 |
+| 0 | 1 | 1 | 1 | 0 |
+| 1 | 0 | 1 | 1 | 0 |
+| 1 | 1 | 0 | 1 | 0 |
+| 1 | 1 | 1 | 1 | 1 |
 
 試験対策では、この8行を丸暗記する必要はありません。
 
