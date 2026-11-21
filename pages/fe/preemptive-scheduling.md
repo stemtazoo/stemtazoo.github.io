@@ -44,7 +44,10 @@ related_articles:
 このページでは、**実行中タスクを途中で中断できるプリエンプティブ方式**を中心に扱います。プリエンプティブとノンプリエンプティブを横並びで確認する場合は、[タスクスケジューリング方式](/fe/task-scheduling/) を参照してください。
 
 <figure style="margin:16px 0 20px;">
-  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/preemptive-scheduling.png" width="1200" height="630" alt="低優先度タスクBの実行中に高優先度タスクAが実行可能になると、CPUはAに切り替わり、Bは実行可能状態へ戻る" style="display:block;width:100%;max-width:100%;height:auto;">
+  <picture>
+    <source media="(max-width: 640px)" srcset="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/preemptive-scheduling-mobile.png" width="1122" height="1402">
+    <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/preemptive-scheduling.png" width="1200" height="630" alt="切り替え前は低優先度のBがCPUを実行中で、高優先度Aが実行可能になるとAに切り替わり、Bは待ち状態ではなく実行可能状態に戻る" style="display:block;width:100%;max-width:100%;height:auto;">
+  </picture>
   <figcaption style="font-size:0.88em;line-height:1.5;color:#555;">高優先度タスクAが実行可能になると、Bは中断されて実行可能状態に戻り、AがCPUを使います。</figcaption>
 </figure>
 
