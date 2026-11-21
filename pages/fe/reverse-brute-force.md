@@ -8,7 +8,12 @@ fe_section: 情報セキュリティ
 fe_subsection: 認証・アクセス制御
 fe_order: 40
 date: 2026-07-09
-last_modified_at: 2026-09-19
+last_modified_at: 2026-11-21
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/reverse-brute-force.png
+  width: 1200
+  height: 630
+  alt: 通常のブルートフォース攻撃は利用者IDを固定してパスワードを変え、リバースブルートフォース攻撃はパスワードを固定して利用者IDを変える比較図
 ---
 
 ## まず結論
@@ -52,6 +57,11 @@ user003 + 123456
 つまり、**パスワード側を固定し、ID側を変えていく**のがリバースブルートフォース攻撃です。
 
 この「逆向き」のイメージを持つと、選択肢を切りやすくなります。
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/reverse-brute-force.png" width="1200" height="630" alt="通常のブルートフォース攻撃はIDを固定してパスワードを変え、リバースブルートフォース攻撃はパスワードを固定してIDを変える比較図" loading="lazy" decoding="async" style="display:block;width:100%;max-width:100%;height:auto;">
+  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#596579;">固定するものが逆になる点を比較した図。</figcaption>
+</figure>
 
 ## 定義・仕組み
 
