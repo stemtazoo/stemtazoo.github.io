@@ -13,7 +13,7 @@ image:
   height: 630
   alt: "マイクロカーネルはファイルシステムやデバイスドライバをカーネル外のサーバプロセスに分離し、モノリシックカーネルはそれらをカーネル内部に置く構造の比較図。"
 date: 2026-07-23
-last_modified_at: 2026-11-21
+last_modified_at: 2026-11-22
 ---
 
 ## まず結論
@@ -33,10 +33,13 @@ last_modified_at: 2026-11-21
 ## 直感的な説明
 
 <figure style="margin:16px 0 20px;">
-  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/microkernel.png" width="1200" height="630"
+  <picture>
+    <source media="(max-width: 640px)" srcset="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/microkernel-mobile.png" width="1122" height="1402">
+    <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/microkernel.png" width="1200" height="630"
        alt="マイクロカーネルはファイルシステムやデバイスドライバをカーネル外のサーバプロセスに分離し、モノリシックカーネルはそれらをカーネル内部に置く構造の比較図。"
        loading="lazy" decoding="async"
        style="display:block;width:100%;max-width:100%;height:auto;">
+  </picture>
 </figure>
 
 マイクロカーネルは、会社の本部を小さくして、専門業務を各部門に分けるイメージです。
