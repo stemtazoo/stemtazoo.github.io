@@ -9,7 +9,12 @@ fe_subsection: サービスマネジメント
 tags_note: reliability
 fe_order: 67
 date: 2026-07-11
-last_modified_at: 2026-09-23
+last_modified_at: 2026-11-21
+image:
+  path: "https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/bathtub-curve.png"
+  width: 1200
+  height: 630
+  alt: "バスタブ曲線は故障率が使用開始直後に低下し、安定期はほぼ一定となり、長期使用後に摩耗や劣化で上昇することを示す。"
 ---
 
 ## まず結論
@@ -30,6 +35,13 @@ last_modified_at: 2026-09-23
 このページでは、**時間経過に伴う故障率の変化**を中心に扱います。故障せずに動いた時間と修理時間から信頼性を整理する場合は、[MTBF・MTTRとは？](/fe/mtbf-mttr/) を参照してください。直列・並列構成の稼働率計算は、[直列・並列システムの稼働率](/fe/series-parallel-system-availability/) で確認できます。
 
 ## 直感的な説明
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/bathtub-curve.png" width="1200" height="630"
+       alt="バスタブ曲線。初期故障期は故障率が低下し、偶発故障期は低くほぼ一定となり、摩耗故障期は上昇する。"
+       loading="lazy" decoding="async"
+       style="display:block;width:100%;max-width:100%;height:auto;">
+</figure>
 
 バスタブ曲線は、製品の一生を見ているイメージです。
 
