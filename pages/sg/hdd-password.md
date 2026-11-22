@@ -30,11 +30,16 @@ SG試験では、「どの層を守る対策か」で切り分けます。
 問題文に「HDDやSSDを抜き取り、別のPCへ接続する」とあれば、**OSではなくストレージ自体に効く対策か**を確認します。
 
 <figure style="margin:16px 0 20px;">
-  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/sg/hdd-password.png"
-       width="1200" height="630"
-       alt="OSログインパスワードはPCのログインを制限する一方、HDDパスワードはストレージ自体へのアクセスを制限するという違い。"
-       loading="lazy" decoding="async"
-       style="display:block;width:100%;max-width:100%;height:auto;">
+  <picture>
+    <source media="(max-width: 640px)"
+            srcset="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/sg/hdd-password-mobile.png"
+            width="1122" height="1402">
+    <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/sg/hdd-password.png"
+         width="1200" height="630"
+         alt="OSログインはPC側のログインを守り、HDDパスワードはストレージ自体へのアクセスを制限する。抜き取ったストレージへの対策は異なる。"
+         loading="lazy" decoding="async"
+         style="display:block;width:100%;max-width:100%;height:auto;">
+  </picture>
 </figure>
 
 ## 直感的な説明
