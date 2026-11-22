@@ -10,7 +10,7 @@ fe_order: 25
 date: 2026-08-28
 last_modified_at: 2026-09-22
 image:
-  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/sg/pdm-dependency-types.png
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/pdm-dependency-types.png
   width: 1200
   height: 630
   alt: "PDMのFS・SS・FF・SFの4種類の依存関係を、先行作業と後続作業の開始・終了の対応で比較した図"
@@ -28,7 +28,7 @@ PDM（Precedence Diagramming Method：プレシデンスダイアグラム法）
 | SF | Start to Finish | 先行作業の**開始** → 後続作業の**終了** |
 
 <figure style="margin:16px 0 20px;">
-  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/sg/pdm-dependency-types.png" width="1200" height="630" alt="PDMの4つの依存関係。FSは先行作業の終了から後続作業の開始、SSは開始から開始、FFは終了から終了、SFは開始から終了につながる。" style="display:block;width:100%;max-width:100%;height:auto;" loading="lazy" decoding="async">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/pdm-dependency-types.png" width="1200" height="630" alt="PDMの4つの依存関係。FSは先行作業の終了から後続作業の開始、SSは開始から開始、FFは終了から終了、SFは開始から終了につながる。" style="display:block;width:100%;max-width:100%;height:auto;" loading="lazy" decoding="async">
   <figcaption style="font-size:0.88em;line-height:1.5;color:#596579;margin-top:8px;">1文字目が先行作業、2文字目が後続作業の開始・終了を表します。</figcaption>
 </figure>
 
