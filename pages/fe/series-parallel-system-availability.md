@@ -26,7 +26,10 @@ last_modified_at: 2026-09-20
 - 少なくとも一つの装置が正常ならよい → 並列システム
 
 <figure style="margin:16px 0 20px;">
-  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/series-parallel-system-availability.png" width="1200" height="630" alt="直列は装置AとBが両方正常なら動作して稼働率81%、並列は少なくとも一方が正常なら動作して稼働率99%。各装置の稼働率は90%で故障は独立。" loading="lazy" decoding="async" style="display:block;width:100%;max-width:100%;height:auto;">
+  <picture>
+    <source media="(max-width: 640px)" srcset="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/series-parallel-system-availability-mobile.png" width="1024" height="1536">
+    <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/series-parallel-system-availability.png" width="1200" height="630" alt="直列は装置AとBが両方正常なら動作して稼働率81%、並列は少なくとも一方が正常なら動作して稼働率99%。各装置の稼働率は90%で故障は独立。" loading="lazy" decoding="async" style="display:block;width:100%;max-width:100%;height:auto;">
+  </picture>
   <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#555;">同じ稼働率90%の装置2台でも、必要な稼働条件で結果は変わります（故障は互いに独立と仮定）。</figcaption>
 </figure>
 
