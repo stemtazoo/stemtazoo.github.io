@@ -8,7 +8,12 @@ fe_section: テクノロジ系
 fe_subsection: コンピュータ構成要素
 fe_order: 89
 date: 2026-08-07
-last_modified_at: 2026-11-14
+last_modified_at: 2026-11-22
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/nand-gate.png
+  width: 1200
+  height: 630
+  alt: "NANDゲートはANDの出力を反転し、入力AとBがどちらも1のときだけ出力が0になることを表す図"
 ---
 
 ## まず結論
@@ -34,6 +39,11 @@ NAND = ¬(A・B)
 NANDの重要な特徴は、**NANDだけでNOT・AND・ORなどの基本論理回路を作れる**ことです。
 
 この性質から、NANDは**万能ゲート**と呼ばれます。
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/nand-gate.png" width="1200" height="630" alt="NANDゲートはANDの出力を反転する論理回路。入力AとBがともに1のときだけ出力は0、それ以外は1になる。" style="display:block;width:100%;max-width:100%;height:auto;" loading="lazy" decoding="async">
+  <figcaption style="font-size:0.88em;line-height:1.5;color:#526273;margin-top:8px;">NANDは「ANDの結果を反転」するゲート。出力側の小さな丸が反転を表します。</figcaption>
+</figure>
 
 ## 直感的な説明
 
