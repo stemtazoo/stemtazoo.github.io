@@ -30,11 +30,14 @@ image:
 G検定では、**モデル作成だけの手法ではない**ことが重要です。
 
 <figure style="margin:16px 0 20px;">
-  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/crisp-dm.png"
-       alt="CRISP-DMの6フェーズ。ビジネス理解、データ理解、データ準備、モデリング、評価、展開の順に示す図"
-       width="1200" height="630" loading="lazy"
-       style="display:block;width:100%;max-width:100%;height:auto;">
-  <figcaption style="font-size:0.88em;line-height:1.5;color:#596579;margin-top:8px;">CRISP-DMはビジネス理解から始まり、必要に応じて前のフェーズへ戻りながら進めます。</figcaption>
+  <picture>
+    <source media="(max-width: 640px)" srcset="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/crisp-dm-mobile.png" width="1122" height="1402">
+    <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/crisp-dm.png"
+         alt="CRISP-DMの6フェーズ。ビジネス理解、データ理解、データ準備、モデリング、評価、展開の順に示す図"
+         width="1200" height="630" loading="lazy"
+         style="display:block;width:100%;max-width:100%;height:auto;">
+  </picture>
+  <figcaption style="font-size:0.88em;line-height:1.5;color:#596579;margin-top:8px;">各フェーズは必要に応じて行き来します。</figcaption>
 </figure>
 
 ## 直感的な説明
