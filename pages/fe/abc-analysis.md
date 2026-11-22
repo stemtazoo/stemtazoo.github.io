@@ -44,7 +44,7 @@ ABC分析とは、**金額・数量・売上などの重要度が大きい項目
          loading="lazy" decoding="async"
          style="display:block;width:100%;max-width:100%;height:auto;">
   </picture>
-  <figcaption style="font-size:0.88em;line-height:1.5;color:var(--text-muted, #64748b);margin-top:8px;">ABC分析は品目数ではなく、金額・数量などの累積構成比を基準に分類します。</figcaption>
+  <figcaption style="font-size:0.88em;line-height:1.5;color:var(--text-muted, #64748b);margin-top:8px;">FE試験では、累積構成比が指定のしきい値に達するまで、上位から順に足して判断します。</figcaption>
 </figure>
 
 ## 直感的な説明
