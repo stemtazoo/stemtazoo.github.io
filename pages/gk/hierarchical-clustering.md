@@ -6,7 +6,7 @@ permalink: /gk/hierarchical-clustering/
 tags: [gk, unsupervised_learning, clustering]
 gk_section: 機械学習の概要/代表的な手法/教師なし学習/クラスタリング
 gk_order: 2
-last_modified_at: 2026-11-21
+last_modified_at: 2026-11-22
 image:
   path: "https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/hierarchical-clustering.png"
   width: 1200
@@ -23,8 +23,11 @@ image:
 - 結果の階層構造 → **デンドログラム**で可視化できる
 
 <figure class="gk-eyecatch" style="margin:16px 0 20px;">
-  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/hierarchical-clustering.png" width="1200" height="630" alt="AとB、CとDがそれぞれまとまり、さらに上位で結合するデンドログラム。凝集型はボトムアップ、分割型はトップダウンの方向を示す。" loading="lazy" decoding="async" style="display:block;width:100%;max-width:100%;height:auto;">
-  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#526171;">凝集型は小さな集団から結合し、分割型は大きな集団から分割します。デンドログラムは階層構造を表します。</figcaption>
+  <picture>
+    <source media="(max-width: 640px)" srcset="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/hierarchical-clustering-mobile.png" width="1122" height="1402">
+    <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/hierarchical-clustering.png" width="1200" height="630" alt="階層型クラスタリングの図。凝集型はAとB、CとDをそれぞれ結合して全体へまとめるボトムアップ、分割型は全体からA・BとC・Dの集団へ、さらに各データへ分けるトップダウンを示す。" loading="lazy" decoding="async" style="display:block;width:100%;max-width:100%;height:auto;">
+  </picture>
+  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#526171;">凝集型は結合、分割型は分割。どちらも階層構造を作ります。</figcaption>
 </figure>
 
 ## 直感的な説明
