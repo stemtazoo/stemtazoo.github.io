@@ -50,7 +50,7 @@ DVD・デジタル放送
        alt="JPEGは静止画像、MPEG-1はCD-ROMやVideo CD、MPEG-2はDVDやデジタル放送、MPEG-4は携帯端末や低ビットレート通信という、規格と主な用途の比較。"
        loading="lazy" decoding="async"
        style="display:block;width:100%;max-width:100%;height:auto;">
-  <figcaption style="font-size:0.88em;line-height:1.5;color:var(--text-muted, #64748b);margin-top:8px;">JPEGとMPEGの違いは、静止画か動画か、そして主な利用用途で整理します。</figcaption>
+  <figcaption style="font-size:0.88em;line-height:1.5;color:var(--text-muted, #64748b);margin-top:8px;">FE試験では、規格の数字の大小ではなく、問題文にある利用環境を手掛かりに判断しましょう。</figcaption>
 </figure>
 
 ## 直感的な説明
