@@ -6,7 +6,12 @@ permalink: /gk/crisp-dm/
 tags: [gk, data_mining, process, crisp-dm]
 gk_section: AIの社会実装に向けて/プロセス・方法論
 gk_order: 1
-last_modified_at: 2026-09-04
+last_modified_at: 2026-11-22
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/crisp-dm.png
+  width: 1200
+  height: 630
+  alt: "CRISP-DMの6フェーズ。ビジネス理解からデータ理解、データ準備、モデリング、評価、展開へ進むプロセスを示す図"
 ---
 
 ## まず結論
@@ -23,6 +28,14 @@ last_modified_at: 2026-09-04
 6. 展開（Deployment）
 
 G検定では、**モデル作成だけの手法ではない**ことが重要です。
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/crisp-dm.png"
+       alt="CRISP-DMの6フェーズ。ビジネス理解、データ理解、データ準備、モデリング、評価、展開の順に示す図"
+       width="1200" height="630" loading="lazy"
+       style="display:block;width:100%;max-width:100%;height:auto;">
+  <figcaption style="font-size:0.88em;line-height:1.5;color:#596579;margin-top:8px;">CRISP-DMはビジネス理解から始まり、必要に応じて前のフェーズへ戻りながら進めます。</figcaption>
+</figure>
 
 ## 直感的な説明
 
