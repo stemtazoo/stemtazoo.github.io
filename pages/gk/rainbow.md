@@ -6,7 +6,12 @@ permalink: /gk/rainbow/
 tags: [gk, reinforcement_learning]
 gk_section: ディープラーニングの応用例/深層強化学習/DQN・改良手法
 gk_order: 5
-last_modified_at: 2026-09-26
+last_modified_at: 2026-11-22
+image:
+  path: "https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/rainbow.png"
+  width: 1200
+  height: 630
+  alt: "RainbowはDQNにDouble DQN、Prioritized Experience Replay、Dueling Network、Noisy Nets、Distributional RL、Multi-step Learningの6つの改良を組み合わせる価値ベースの強化学習手法であることを示す図"
 ---
 
 ## まず結論
@@ -14,6 +19,11 @@ last_modified_at: 2026-09-26
 - **Rainbow**は、DQNに複数の改良手法を組み合わせた**価値ベースの深層強化学習アルゴリズム**です。
 - 1つの新しい仕組みではなく、**異なる弱点を改善する複数の工夫を統合した手法**です。
 - G検定では、**各構成要素が何を改善するか**を切り分けるのが重要です。
+
+<figure class="gk-eyecatch" style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/rainbow.png" width="1200" height="630" alt="RainbowはDQNを土台に、過大評価の緩和、経験の優先、価値表現、探索、リターン分布、複数ステップ学習の6つの改良を組み合わせる図" loading="lazy" decoding="async" style="display:block;width:100%;max-width:100%;height:auto;">
+  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#526171;">RainbowはDQNの6つの改良手法を統合した、価値ベースの深層強化学習アルゴリズムです。</figcaption>
+</figure>
 
 ## 直感的な説明
 
