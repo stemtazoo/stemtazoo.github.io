@@ -25,7 +25,7 @@ image:
     <source media="(max-width: 640px)" srcset="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/rainbow-mobile.png" width="1122" height="1402">
     <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/rainbow.png" width="1200" height="630" alt="RainbowはDQNを土台に、過大評価の緩和、経験の優先、価値表現、探索、リターン分布、複数ステップ学習の6つの改良を組み合わせる図" loading="lazy" decoding="async" style="display:block;width:100%;max-width:100%;height:auto;">
   </picture>
-  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#526171;">RainbowはDQNの6つの改良手法を統合した、価値ベースの深層強化学習アルゴリズムです。</figcaption>
+  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#526171;">6つの改良は、それぞれ異なる弱点を改善します。G検定では役割の違いに注目しましょう。</figcaption>
 </figure>
 
 ## 直感的な説明
