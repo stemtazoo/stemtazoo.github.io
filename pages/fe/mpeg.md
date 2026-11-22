@@ -8,7 +8,10 @@ fe_section: テクノロジ系
 fe_subsection: マルチメディア
 fe_order: 150
 date: 2026-08-14
-last_modified_at: 2026-09-23
+last_modified_at: 2026-11-22
+image:
+  path: "https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/mpeg.png"
+  alt: "JPEGは静止画像、MPEG-1はCD-ROMやVideo CD、MPEG-2はDVDやデジタル放送、MPEG-4は携帯端末や低ビットレート通信に対応する用途の違い。"
 ---
 
 ## まず結論
@@ -41,6 +44,14 @@ DVD・デジタル放送
 ```
 
 が出たら、MPEG-4を強く疑います。
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/mpeg.png"
+       alt="JPEGは静止画像、MPEG-1はCD-ROMやVideo CD、MPEG-2はDVDやデジタル放送、MPEG-4は携帯端末や低ビットレート通信という、規格と主な用途の比較。"
+       loading="lazy" decoding="async"
+       style="display:block;width:100%;max-width:100%;height:auto;">
+  <figcaption style="font-size:0.88em;line-height:1.5;color:var(--text-muted, #64748b);margin-top:8px;">JPEGとMPEGの違いは、静止画か動画か、そして主な利用用途で整理します。</figcaption>
+</figure>
 
 ## 直感的な説明
 
