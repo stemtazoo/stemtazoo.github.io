@@ -18,6 +18,8 @@ image:
 
 ## まず結論
 
+<link rel="stylesheet" href="{{ '/assets/css/fe-visualizer.css' | relative_url }}">
+
 **予防統制は不正やミスの発生を防ぐ仕組み、発見統制は起きた不正やミスを見つける仕組み**です。
 
 <figure style="margin:16px 0 20px;">
@@ -27,10 +29,23 @@ image:
   </picture>
 </figure>
 
-| 分類 | 主な目的 | 例 |
-|---|---|---|
-| 予防統制（preventive control） | 問題が起きにくいようにする | 操作しやすい画面、担当者教育、アクセス権限の制限 |
-| 発見統制（detective control） | 発生した問題に気付く | 入力結果と原始伝票の照合、アクセスログの監視 |
+<table class="fe-control-compare">
+  <thead>
+    <tr><th scope="col">分類</th><th scope="col">主な目的</th><th scope="col">例</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">予防統制（preventive control）</th>
+      <td><span class="fe-control-compare__label">主な目的</span>問題が起きにくいようにする</td>
+      <td><span class="fe-control-compare__label">例</span>操作しやすい画面、担当者教育、アクセス権限の制限</td>
+    </tr>
+    <tr>
+      <th scope="row">発見統制（detective control）</th>
+      <td><span class="fe-control-compare__label">主な目的</span>発生した問題に気付く</td>
+      <td><span class="fe-control-compare__label">例</span>入力結果と原始伝票の照合、アクセスログの監視</td>
+    </tr>
+  </tbody>
+</table>
 
 科目Aでは、**「起こさないためか、起きたことを見つけるためか」**を考えます。人が行うか、システムが自動で行うかは、この分類の基準ではありません。
 
@@ -42,7 +57,7 @@ image:
 
 それでも、数量を取り違えたり、伝票を入力し忘れたりする可能性があります。そこで入力後に、元の伝票と入力結果の一覧を突き合わせます。これは発見統制です。
 
-<link rel="stylesheet" href="{{ '/assets/css/fe-visualizer.css' | relative_url }}">
+
 
 <div class="fe-control-flow" role="group" aria-label="受注入力における予防統制と発見統制">
   <div class="fe-control-flow__step fe-control-flow__step--prevent">
