@@ -3,6 +3,11 @@ layout: page
 title: 直列・並列システムの稼働率とは？信頼度の計算と見分け方【基本情報技術者試験】
 description: 直列システムと並列システムの稼働率を、全て正常である必要がある場合と少なくとも一つ正常ならよい場合に分け、故障確率を使う計算手順と判断基準を解説します。
 permalink: /fe/series-parallel-system-availability/
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/series-parallel-system-availability.png
+  width: 1200
+  height: 630
+  alt: "稼働率90%の装置2台を直列と並列で比較し、独立故障の場合のシステム稼働率が直列81%、並列99%になることを示した図"
 redirect_from:
   - /fe/system-availability-calculation/
 tags: [fe, fe-technology, system-configuration, reliability]
@@ -19,6 +24,11 @@ last_modified_at: 2026-09-20
 
 - 全ての装置が正常である必要がある → 直列システム
 - 少なくとも一つの装置が正常ならよい → 並列システム
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/series-parallel-system-availability.png" width="1200" height="630" alt="直列は装置AとBが両方正常なら動作して稼働率81%、並列は少なくとも一方が正常なら動作して稼働率99%。各装置の稼働率は90%で故障は独立。" loading="lazy" decoding="async" style="display:block;width:100%;max-width:100%;height:auto;">
+  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#555;">同じ稼働率90%の装置2台でも、必要な稼働条件で結果は変わります（故障は互いに独立と仮定）。</figcaption>
+</figure>
 
 2台の稼働率をそれぞれ \(R_1\)、\(R_2\) とすると、基本式は次のとおりです。
 
