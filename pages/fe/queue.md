@@ -8,7 +8,12 @@ fe_section: 科目B対策
 fe_subsection: データ構造
 fe_order: 30
 date: 2026-06-23
-last_modified_at: 2026-10-06
+last_modified_at: 2026-11-22
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/queue.png
+  width: 1734
+  height: 907
+  alt: 左からA、B、Cが並ぶキュー。左端の先頭からAを取り出し、新しいデータは右端の末尾に追加する。
 ---
 
 ## まず結論
@@ -16,6 +21,10 @@ last_modified_at: 2026-10-06
 キューとは、**先に入れたデータから先に取り出す**データ構造です。
 
 基本情報技術者試験では、キューは **FIFO（First In, First Out：先入れ先出し）** として出題されます。
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/queue.png" width="1734" height="907" alt="左からA、B、Cが並ぶキュー。左端の先頭からAを取り出し、新しいデータは右端の末尾に追加する。" style="display:block;width:100%;max-width:100%;height:auto;" loading="lazy" decoding="async">
+</figure>
 
 スタックが「最後に入れたものを先に出す」のに対して、キューは「先に並んだものから順番に処理する」と考えると判断しやすいです。
 
