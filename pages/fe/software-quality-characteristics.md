@@ -65,7 +65,7 @@ IPAの最新の基本情報技術者試験シラバス Ver.9.2 でも、JIS X 25
 - [IPA：試験要綱・シラバス](https://www.ipa.go.jp/shiken/syllabus/gaiyou.html)
 - [IPA：基本情報技術者試験（レベル2）シラバス Ver.9.2](https://www.ipa.go.jp/shiken/syllabus/omgdg50000005kpe-att/syllabus_fe_ver9_2.pdf)
 
-<figure style="margin:16px 0 20px;">
+<figure style="margin:10px -8px 16px;">
   <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/software-quality-characteristics.png" width="1200" height="630"
        alt="ソフトウェア品質特性を改善目的で見分け、使用性は使いやすさ、信頼性は障害への強さ、保守性は修正のしやすさを表す比較図。"
        loading="lazy" decoding="async"
