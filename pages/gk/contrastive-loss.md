@@ -7,12 +7,22 @@ tags: [gk, neural_network, metrics]
 gk_section: ディープラーニングの概要/誤差関数
 gk_order: 3
 last_modified_at: 2026-09-26
+image:
+  path: "https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/contrastive-loss.png"
+  width: 1200
+  height: 630
+  alt: "Contrastive Lossは類似ペアの距離を縮め、非類似ペアの距離を広げることを示す比較図"
 ---
 
 ## まず結論
 Contrastive Loss（コントラスト損失）とは、**埋め込み空間で、類似したデータ同士の距離を小さくし、非類似データ同士の距離を大きくするように学習させる損失関数**です。
 
 G検定では、Contrastive Lossを「分類クラスを直接当てる損失」ではなく、**データ同士の関係や距離を学習する損失**として押さえます。
+
+<figure class="gk-eyecatch" style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/contrastive-loss.png" width="1200" height="630" alt="類似ペアは埋め込み空間で互いに近づけ、非類似ペアは互いに離すというContrastive Lossの学習方向を示す図" loading="lazy" decoding="async" style="display:block;width:100%;max-width:100%;height:auto;">
+  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#526171;">分類ラベルではなく、データのペア間の距離を学習します。</figcaption>
+</figure>
 
 | 観点 | Contrastive Loss |
 |---|---|
