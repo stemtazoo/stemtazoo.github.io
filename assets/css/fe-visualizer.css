@@ -1142,3 +1142,30 @@
     padding: 0;
   }
 }
+
+/* Preventive/detective controls: keep a comparison table on desktop and stack rows on phones. */
+.fe-control-compare { width: 100%; border-collapse: collapse; table-layout: auto; }
+.fe-control-compare th, .fe-control-compare td { overflow-wrap: anywhere; white-space: normal; }
+.fe-control-compare__label { display: none; }
+@media (max-width: 640px) {
+  .fe-control-compare { display: block; width: 100%; min-width: 0; border: 0; }
+  .fe-control-compare thead {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+  }
+  .fe-control-compare tbody { display: grid; grid-template-columns: minmax(0, 1fr); gap: .8rem; }
+  .fe-control-compare tbody tr {
+    display: block; min-width: 0; border: 1px solid #b8ccd8; border-radius: 10px;
+    background: #f8fafc; overflow: hidden;
+  }
+  .fe-control-compare tbody th, .fe-control-compare tbody td {
+    display: block; box-sizing: border-box; width: 100%; min-width: 0;
+    padding: .65rem .8rem; border: 0; text-align: left;
+    font-size: .94rem; line-height: 1.55; overflow-wrap: anywhere;
+  }
+  .fe-control-compare tbody th { background: #e6f1f7; color: #173a52; font-weight: 700; }
+  .fe-control-compare tbody td + td { border-top: 1px solid #d7e2e9; }
+  .fe-control-compare__label {
+    display: block; font-size: .8em; font-weight: 700; color: #37596c; margin-bottom: .2rem;
+  }
+}
