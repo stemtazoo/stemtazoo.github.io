@@ -27,7 +27,10 @@ G検定では、
 を最初の判断基準にします。
 
 <figure class="gk-eyecatch" style="margin:16px 0 20px;">
-  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/data-leakage.png" width="1200" height="630" alt="正常な学習とデータリーケージを比較。検証・テスト側や未来の情報が学習に混入すると、評価が実力以上によく見えることを示す図" loading="lazy" decoding="async" style="display:block;width:100%;max-width:100%;height:auto;">
+  <picture>
+    <source media="(max-width: 640px)" srcset="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/data-leakage-mobile.png" width="1122" height="1402">
+    <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/data-leakage.png" width="1200" height="630" alt="正常な学習とデータリーケージを比較。検証・テスト側や未来の情報が学習に混入すると、評価が実力以上によく見えることを示す図" loading="lazy" decoding="async" style="display:block;width:100%;max-width:100%;height:auto;">
+  </picture>
   <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#526171;">本来使えない情報が学習・モデル選択へ混入すると、独立した評価ができなくなります。</figcaption>
 </figure>
 
