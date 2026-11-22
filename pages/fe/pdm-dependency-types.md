@@ -20,12 +20,14 @@ image:
 
 PDM（Precedence Diagramming Method：プレシデンスダイアグラム法）では、作業同士の依存関係を次の4種類で表します。
 
-| 記号 | 関係 | 意味 |
-|---|---|---|
-| FS | Finish to Start | 先行作業の**終了** → 後続作業の**開始** |
-| SS | Start to Start | 先行作業の**開始** → 後続作業の**開始** |
-| FF | Finish to Finish | 先行作業の**終了** → 後続作業の**終了** |
-| SF | Start to Finish | 先行作業の**開始** → 後続作業の**終了** |
+| 記号 | 依存関係 |
+|:---:|---|
+| **FS** | **終了 → 開始**<br><small>Finish to Start</small> |
+| **SS** | **開始 → 開始**<br><small>Start to Start</small> |
+| **FF** | **終了 → 終了**<br><small>Finish to Finish</small> |
+| **SF** | **開始 → 終了**<br><small>Start to Finish</small> |
+
+表の矢印は、**先行作業の開始・終了 → 後続作業の開始・終了**を表します。
 
 <figure style="margin:16px 0 20px;">
   <picture>
