@@ -6,7 +6,12 @@ permalink: /gk/data-leakage/
 tags: [gk, machine_learning, evaluation]
 gk_section: 機械学習の概要/よくあるつまずき（過学習など）/学習状態の診断・評価設計
 gk_order: 2
-last_modified_at: 2026-08-27
+last_modified_at: 2026-11-22
+image:
+  path: "https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/data-leakage.png"
+  width: 1200
+  height: 630
+  alt: "データリーケージは、検証・テスト情報や予測時に使えない情報が学習に混入し、評価が実力以上によく見える問題であることを示す比較図"
 ---
 
 ## まず結論
@@ -20,6 +25,11 @@ G検定では、
 > **「その情報は本番の予測時点で本当に使えるか？」**
 
 を最初の判断基準にします。
+
+<figure class="gk-eyecatch" style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/data-leakage.png" width="1200" height="630" alt="正常な学習とデータリーケージを比較。検証・テスト側や未来の情報が学習に混入すると、評価が実力以上によく見えることを示す図" loading="lazy" decoding="async" style="display:block;width:100%;max-width:100%;height:auto;">
+  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#526171;">本来使えない情報が学習・モデル選択へ混入すると、独立した評価ができなくなります。</figcaption>
+</figure>
 
 ## 直感的な説明
 
