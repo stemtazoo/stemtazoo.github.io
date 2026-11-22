@@ -27,7 +27,10 @@ image:
 G検定では、**音声に使われる技術だからといって、すべてを音声認識モデルとみなさない**ことが重要です。
 
 <figure class="gk-eyecatch" style="margin:16px 0 20px;">
-  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/speech-recognition-cheatsheet.png" width="1200" height="630" alt="ASRは音声を文字へ変換し、CTCは系列の対応付けを扱う。RNNやTransformerはモデル構造、WaveNetは音声生成の技術であることを示す図" loading="lazy" decoding="async" style="display:block;width:100%;max-width:100%;height:auto;">
+  <picture>
+    <source media="(max-width: 640px)" srcset="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/speech-recognition-cheatsheet-mobile.png" width="1122" height="1402">
+    <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/speech-recognition-cheatsheet.png" width="1200" height="630" alt="ASRは音声を文字へ変換し、CTCは系列の対応付けを扱う。RNNやTransformerはモデル構造、WaveNetは音声生成の技術であることを示す図" loading="lazy" decoding="async" style="display:block;width:100%;max-width:100%;height:auto;">
+  </picture>
   <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#526171;">音声認識の技術は、認識・対応付け・モデル構造・生成という役割で見分けましょう。</figcaption>
 </figure>
 
