@@ -4,6 +4,11 @@ title: 最適化手法まとめ｜SGD・Momentum・AdaGrad・RMSprop・Adam【G�
 description: "ニューラルネットワークの最適化手法を、慣性、勾配二乗の累積、指数移動平均、1次・2次モーメント、動的な学習率境界という判断軸で比較します。SGDからAdam、AdaDelta、AdaBound、AMSBoundまでをG検定向けに整理します。"
 last_modified_at: 2026-10-19
 permalink: /gk/optimization-cheatsheet/
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/optimization-cheatsheet.png
+  width: 1200
+  height: 630
+  alt: "SGDは勾配に従い、Momentumは慣性、RMSpropは勾配二乗の移動平均、Adamは1次と2次のモーメントを使う最適化手法の比較図"
 tags: [gk, neural_network, optimization, cheatsheet]
 gk_section: ディープラーニングの概要/最適化手法
 gk_order: 13
@@ -31,6 +36,11 @@ G検定では、**どれが一番優れているかではなく、何を使っ�
 ## 直感的な説明
 
 坂を下る方法として考えます。
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/optimization-cheatsheet.png" width="1200" height="630" loading="lazy" decoding="async" alt="SGDは勾配に従い、Momentumは慣性、RMSpropは勾配二乗の移動平均、Adamは1次と2次のモーメントを使う最適化手法の比較図" style="display:block;width:100%;max-width:100%;height:auto;">
+  <figcaption style="font-size:0.88em;line-height:1.5;color:#596579;margin-top:8px;">更新方向と歩幅の調整に注目して、4つの手法を比較します。</figcaption>
+</figure>
 
 - SGD：今の傾きを見て進む
 - Momentum：これまでの勢いも使う
