@@ -26,7 +26,10 @@ G検定の線形代数は、細かな手計算より**役割**を押さえます
 - SVD → 行列を U・Σ・Vᵀ に分解
 
 <figure style="margin:16px 0 20px;">
-  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/linear-algebra-basics.png" width="1200" height="630" alt="行列Aによる変換で固有ベクトルvの方向は変わらず、固有値2により長さが2倍になる例（Av = 2v）" loading="lazy" decoding="async" style="display:block;width:100%;max-width:100%;height:auto;">
+  <picture>
+    <source media="(max-width: 640px)" srcset="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/linear-algebra-basics-mobile.png" width="1122" height="1402">
+    <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/linear-algebra-basics.png" width="1200" height="630" alt="行列Aによる変換で固有ベクトルvの方向は変わらず、固有値2により長さが2倍になる例（Av = 2v）" loading="lazy" decoding="async" style="display:block;width:100%;max-width:100%;height:auto;">
+  </picture>
   <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#606b78;">固有ベクトルは変換後も同じ方向を保ち、固有値が伸縮率を表します。</figcaption>
 </figure>
 
