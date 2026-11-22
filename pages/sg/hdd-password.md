@@ -3,6 +3,11 @@ layout: page
 title: HDDパスワードとは？BIOSパスワード・OSログインとの違い【SG試験】
 description: "HDDパスワードは、内蔵ストレージ自体へのアクセスを制限する対策です。BIOSパスワード、OSログイン、フルディスク暗号化、TPM、回復キー管理との違いを整理し、SG試験でストレージ抜き取り攻撃の選択肢を切る判断軸を解説します。"
 permalink: /sg/hdd-password/
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/sg/hdd-password.png
+  width: 1200
+  height: 630
+  alt: "OSログインパスワードはPCのログインを制限し、HDDパスワードはストレージ自体へのアクセスを制限する違いを示す図。"
 tags: [sg, sg-security-measures, access_control, asset_management, data_leakage]
 date: 2026-06-13
 last_modified_at: 2026-07-18
@@ -23,6 +28,14 @@ SG試験では、「どの層を守る対策か」で切り分けます。
 | フルディスク暗号化 | 保存データの内容 | 読み取られても判読しにくくする |
 
 問題文に「HDDやSSDを抜き取り、別のPCへ接続する」とあれば、**OSではなくストレージ自体に効く対策か**を確認します。
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/sg/hdd-password.png"
+       width="1200" height="630"
+       alt="OSログインパスワードはPCのログインを制限する一方、HDDパスワードはストレージ自体へのアクセスを制限するという違い。"
+       loading="lazy" decoding="async"
+       style="display:block;width:100%;max-width:100%;height:auto;">
+</figure>
 
 ## 直感的な説明
 
