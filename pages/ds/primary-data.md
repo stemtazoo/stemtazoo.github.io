@@ -3,13 +3,18 @@ layout: page
 title: 一次データとは？アンケート・実験・自社ログの具体例【DS検定】
 description: "一次データとは、調査目的に合わせて自分たちが直接収集するデータです。アンケート、インタビュー、実験、センサー計測、自社ログなどの具体例と、収集設計・品質管理で注意するポイントをDS検定向けに整理します。"
 permalink: /ds/primary-data/
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/ds/primary-data.png
+  width: 1200
+  height: 630
+  alt: "一次データは目的に合わせて自分たちが直接集めるデータであり、アンケート・実験・センサー計測がその収集例であることを示す図"
 categories: [business]
 tags: [ds, data-understanding, design]
 ds_area: foundation
 ds_section: data-understanding
 prev: /ds/power-law/
 next: /ds/primary-secondary-data/
-last_modified_at: 2026-09-23
+last_modified_at: 2026-11-22
 ---
 
 ## まず結論
@@ -32,6 +37,12 @@ DS検定では、一次データを「自分たちで直接集めたオリジナ
 ---
 
 ## 直感的な説明
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/ds/primary-data.png" width="1200" height="630" loading="lazy" decoding="async" alt="一次データの収集例として、自分たちで直接実施するアンケート・実験・センサー計測を示した図" style="display:block;width:100%;max-width:100%;height:auto;">
+  <figcaption style="font-size:0.88em;line-height:1.5;color:#596579;margin-top:8px;">一次データは、調べたい目的に合わせて自分たちで直接収集するデータです。</figcaption>
+</figure>
+
 
 一次データは、現場に行って自分で確かめた情報です。
 
