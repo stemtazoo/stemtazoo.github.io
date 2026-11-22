@@ -3,6 +3,11 @@ layout: page
 title: RTO・RPO・MTDの違いとは？復旧目標と許容停止時間の切り分け【基本情報技術者試験】
 description: RTO・RPO・MTDを、いつまでに復旧するか、どの時点のデータまで戻すか、最大でどれだけ停止を許容できるかという観点で整理し、BCPやビジネスインパクト分析の問題で選択肢を切る視点を解説します。
 permalink: /fe/rto-rpo-mtd/
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/rto-rpo-mtd.png
+  width: 1200
+  height: 630
+  alt: "障害発生を基準に、RPOは過去1時間のデータ復旧時点、RTOは8時間以内の復旧目標、MTDは24時間の最大許容停止時間を表す図"
 tags: [fe, fe-management, service-management]
 fe_section: マネジメント系
 fe_subsection: サービスマネジメント
@@ -30,6 +35,11 @@ MTD：最大でどれだけ停止を許容できるか
 過去に戻って「失ってよいデータ」 → RPO
 事業が耐えられる「停止の限界」 → MTD
 ```
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/rto-rpo-mtd.png" width="1200" height="630" loading="lazy" decoding="async" alt="障害発生を基準に、RPOは過去1時間のデータ復旧時点、RTOは8時間以内の復旧目標、MTDは24時間の最大許容停止時間を表す図" style="display:block;width:100%;max-width:100%;height:auto;">
+  <figcaption style="font-size:0.88em;line-height:1.5;margin-top:8px;color:#596579;">RTOは復旧の目標、MTDは事業が耐えられる停止の限界です。</figcaption>
+</figure>
 
 ## 直感的な説明
 
