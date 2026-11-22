@@ -26,7 +26,7 @@ related_articles:
 
 <figure style="margin:16px 0 20px;">
   <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/round-robin-scheduling.png" width="1200" height="630" alt="CPUを一定時間ずつジョブA・B・Cへ順番に割り当て、未完了のジョブには再び実行順が回ってくるラウンドロビン方式の図" style="display:block;width:100%;max-width:100%;height:auto;" loading="lazy" decoding="async">
-  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#555;">一定時間ごとにCPUを交代し、未完了のジョブは待ち行列の最後へ戻ります。</figcaption>
+  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#555;">タイムクオンタムが短いほど、CPUの切替え回数は増えます。</figcaption>
 </figure>
 
 CPU時間を短い時間片に分けてタスクへ割り当てる考え方を、**タイムスライシング（time slicing）**と呼びます。
