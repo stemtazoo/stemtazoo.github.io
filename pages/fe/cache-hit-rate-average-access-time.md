@@ -8,7 +8,12 @@ fe_section: テクノロジ系
 fe_subsection: コンピュータシステム
 fe_order: 85
 date: 2026-07-02
-last_modified_at: 2026-11-03
+last_modified_at: 2026-11-22
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/cache-hit-rate-average-access-time.png
+  width: 1200
+  height: 630
+  alt: ヒット率80%でキャッシュ20ns、ミス率20%で主記憶300nsの場合、平均アクセス時間は20×0.8＋300×0.2＝76nsとなる図。
 ---
 
 ## まず結論
@@ -32,6 +37,11 @@ last_modified_at: 2026-11-03
 ```
 
 この形を作れれば、キャッシュの計算問題はかなり解きやすくなります。
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/cache-hit-rate-average-access-time.png" width="1200" height="630" alt="ヒット率80%でキャッシュ20ns、ミス率20%で主記憶300nsの場合、平均アクセス時間は20×0.8＋300×0.2＝76nsとなる図。" style="display:block;width:100%;max-width:100%;height:auto;" loading="lazy" decoding="async">
+  <figcaption style="font-size:0.88em;line-height:1.5;color:#566578;margin-top:8px;">ヒット率が高いほど、平均アクセス時間は速いキャッシュ側の値に近づきます。</figcaption>
+</figure>
 
 キャッシュメモリ自体の役割や、ヒット・ミス時のデータの流れを先に確認したい場合は、[キャッシュメモリとは？ライトスルー・ライトバックの違い]({{ '/fe/cache-memory/' | relative_url }})を確認してください。
 
