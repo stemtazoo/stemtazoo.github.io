@@ -7,6 +7,11 @@ tags: [fe, fe-technology, network, wireless-lan]
 fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 221
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/csma-ca.png
+  width: 1200
+  height: 630
+  alt: "CSMA/CAは、無線LANで送信前に通信路を確認し、待ち時間をずらしてから送信することで衝突の確率を下げる仕組み。"
 date: 2026-09-10
 last_modified_at: 2026-09-20
 ---
@@ -48,6 +53,11 @@ CSMA/CAは、複数人が同じ場所で無線機を使って話す状況に似�
 無線LANでは、端末自身が送信している最中に、他端末との衝突を正確に検出するのが難しいという事情があります。
 
 そのため、CSMA/CDのように「衝突してから検出する」のではなく、**送信前にできるだけ衝突を避ける**考え方が使われます。
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/csma-ca.png" width="1200" height="630" alt="CSMA/CAは、無線LANで送信前に通信路を確認し、待ち時間をずらしてから送信することで衝突の確率を下げる仕組み。" loading="lazy" decoding="async" style="display:block;width:100%;max-width:100%;height:auto;">
+  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#666;">通信路の確認後、待ち時間をずらして送信の重なりを減らします。</figcaption>
+</figure>
 
 ## 定義・仕組み
 
