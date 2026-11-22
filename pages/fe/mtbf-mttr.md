@@ -8,7 +8,12 @@ fe_section: テクノロジ系
 fe_subsection: システム構成要素
 fe_order: 20
 date: 2026-08-12
-last_modified_at: 2026-10-16
+last_modified_at: 2026-11-22
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/mtbf-mttr.png
+  width: 1200
+  height: 630
+  alt: MTBFは稼働時間の平均、MTTRは修理時間の平均。MTBF900時間とMTTR100時間なら稼働率は90%になることを示す図。
 ---
 
 ## まず結論
@@ -35,6 +40,11 @@ MTTR = 修理時間 r の平均
 ```
 
 です。
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/mtbf-mttr.png" width="1200" height="630" alt="MTBFは稼働時間の平均、MTTRは修理時間の平均。MTBF900時間とMTTR100時間の場合、稼働率は900÷1000で90%となる。" style="display:block;width:100%;max-width:100%;height:auto;" loading="lazy" decoding="async">
+  <figcaption style="font-size:0.88em;line-height:1.5;color:#566578;margin-top:8px;">稼働率は、稼働時間と修理時間を合わせた時間に対する稼働時間の割合です。</figcaption>
+</figure>
 
 信頼性・可用性・保守性という評価の観点と指標の対応は、[RASISの5要素の違い](/fe/rasis/) で整理しています。
 
