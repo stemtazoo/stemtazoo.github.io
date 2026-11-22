@@ -24,13 +24,63 @@ G検定では、Contrastive Lossを「分類クラスを直接当てる損失」
   <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#526171;">分類ラベルではなく、データのペア間の距離を学習します。</figcaption>
 </figure>
 
-| 観点 | Contrastive Loss |
-|---|---|
-| 目的 | 似たデータを近づけ、違うデータを遠ざける |
-| 学習対象 | データ同士の距離・類似度 |
-| よく使う入力 | ペアデータ |
-| よく出るキーワード | 類似ペア、非類似ペア、埋め込み、距離、margin |
-| 代表的な用途 | 顔認識、画像検索、類似文検索、推薦 |
+<style>
+@media (max-width: 640px) {
+  #contrastive-overview {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    border: 0;
+    background: transparent;
+  }
+  #contrastive-overview thead { display: none; }
+  #contrastive-overview tbody { display: grid; gap: 12px; }
+  #contrastive-overview tbody tr {
+    display: block;
+    margin: 0;
+    padding: 12px 16px;
+    border: 1px solid #dce5eb;
+    border-radius: 10px;
+    background: #f6f9fc;
+  }
+  #contrastive-overview tbody th,
+  #contrastive-overview tbody td {
+    display: block;
+    width: auto;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    text-align: left;
+    overflow-wrap: anywhere;
+    white-space: normal;
+  }
+  #contrastive-overview tbody th {
+    margin-bottom: 4px;
+    color: #43566a;
+    font-size: 0.85em;
+    font-weight: 700;
+  }
+  #contrastive-overview tbody td {
+    color: #172b3c;
+    line-height: 1.6;
+  }
+}
+</style>
+
+<table id="contrastive-overview">
+  <thead>
+    <tr><th scope="col">観点</th><th scope="col">Contrastive Loss</th></tr>
+  </thead>
+  <tbody>
+    <tr><th scope="row">目的</th><td>似たデータを近づけ、違うデータを遠ざける</td></tr>
+    <tr><th scope="row">学習対象</th><td>データ同士の距離・類似度</td></tr>
+    <tr><th scope="row">よく使う入力</th><td>ペアデータ</td></tr>
+    <tr><th scope="row">よく出るキーワード</th><td>類似ペア、非類似ペア、埋め込み、距離、margin</td></tr>
+    <tr><th scope="row">代表的な用途</th><td>顔認識、画像検索、類似文検索、推薦</td></tr>
+  </tbody>
+</table>
 
 試験では、**「距離」「類似・非類似」「埋め込み表現」**が出てきたらContrastive Lossを疑うと判断しやすいです。
 
