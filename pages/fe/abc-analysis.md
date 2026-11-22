@@ -35,10 +35,15 @@ ABC分析とは、**金額・数量・売上などの重要度が大きい項目
 このページは、**累積構成比のしきい値からA・B・Cの分類を求める手順**を扱います。大きい順の棒と累積比率の折れ線から重点対策を見つける読み方は、[パレート図](/fe/pareto-chart/)で確認できます。
 
 <figure style="margin:16px 0 20px;">
-  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/abc-analysis.png"
-       alt="ABC分析は項目を重要度の高い順に並べ、累積構成比のしきい値を基準にA・B・Cのグループへ分類する手法。"
-       loading="lazy" decoding="async"
-       style="display:block;width:100%;max-width:100%;height:auto;">
+  <picture>
+    <source media="(max-width: 640px)"
+            srcset="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/abc-analysis-mobile.png"
+            width="1122" height="1402">
+    <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/abc-analysis.png"
+         alt="ABC分析では不良件数を大きい順に累積し、67%では70%に届かず、製品Dまでの80%で到達するためA群は4製品になる。"
+         loading="lazy" decoding="async"
+         style="display:block;width:100%;max-width:100%;height:auto;">
+  </picture>
   <figcaption style="font-size:0.88em;line-height:1.5;color:var(--text-muted, #64748b);margin-top:8px;">ABC分析は品目数ではなく、金額・数量などの累積構成比を基準に分類します。</figcaption>
 </figure>
 
