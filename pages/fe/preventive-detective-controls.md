@@ -21,7 +21,10 @@ image:
 **予防統制は不正やミスの発生を防ぐ仕組み、発見統制は起きた不正やミスを見つける仕組み**です。
 
 <figure style="margin:16px 0 20px;">
-  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/preventive-detective-controls.png" width="1200" height="630" alt="予防統制は権限を制限して問題を防ぎ、発見統制は伝票と入力結果を照合して問題を見つけることを示す比較図" style="display:block;width:100%;max-width:100%;height:auto;" loading="lazy" decoding="async">
+  <picture>
+    <source media="(max-width: 640px)" srcset="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/preventive-detective-controls-mobile.png" width="1024" height="1536">
+    <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/preventive-detective-controls.png" width="1200" height="630" alt="予防統制は権限の制限などで問題の発生を防ぎ、発見統制は伝票の照合やログ確認などで起きた問題を見つけることを比較した図" style="display:block;width:100%;max-width:100%;height:auto;" loading="lazy" decoding="async">
+  </picture>
 </figure>
 
 | 分類 | 主な目的 | 例 |
