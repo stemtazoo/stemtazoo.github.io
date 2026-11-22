@@ -3,6 +3,11 @@ layout: page
 title: ラウンドロビンスケジューリングとは？タイムクオンタムと終了時刻の計算方法【基本情報技術者試験】
 description: ラウンドロビンスケジューリングを、タイムスライシングでCPU時間を短く分割し、タイムクオンタムごとに順番に割り当てる方式として整理します。終了時刻の計算、コンテキストスイッチ、FCFSやリアルタイム処理との違いもFE試験向けに解説します。
 permalink: /fe/round-robin-scheduling/
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/round-robin-scheduling.png
+  width: 1200
+  height: 630
+  alt: "ラウンドロビン方式でCPUがジョブA・B・Cに一定時間ずつ割り当てられ、Aから再び順番に実行される流れ"
 tags: [fe, fe-technology, operating-system, scheduling]
 fe_section: テクノロジ系
 fe_subsection: オペレーティングシステム
@@ -18,6 +23,11 @@ related_articles:
 ## まず結論
 
 ラウンドロビンスケジューリングとは、**各ジョブへ一定時間ずつCPUを割り当て、時間内に終わらなければ待ち行列の最後へ戻す方式**です。
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/round-robin-scheduling.png" width="1200" height="630" alt="CPUを一定時間ずつジョブA・B・Cへ順番に割り当て、未完了のジョブには再び実行順が回ってくるラウンドロビン方式の図" style="display:block;width:100%;max-width:100%;height:auto;" loading="lazy" decoding="async">
+  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#555;">一定時間ごとにCPUを交代し、未完了のジョブは待ち行列の最後へ戻ります。</figcaption>
+</figure>
 
 CPU時間を短い時間片に分けてタスクへ割り当てる考え方を、**タイムスライシング（time slicing）**と呼びます。
 
