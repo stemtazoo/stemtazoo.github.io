@@ -6,7 +6,12 @@ permalink: /gk/speech-recognition-cheatsheet/
 tags: [gk, speech, cheatsheet]
 gk_section: ディープラーニングの応用例/音声処理/音声認識・系列モデル
 gk_order: 3
-last_modified_at: 2026-10-04
+last_modified_at: 2026-11-22
+image:
+  path: "https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/speech-recognition-cheatsheet.png"
+  width: 1200
+  height: 630
+  alt: "音声認識のASR、系列対応を扱うCTC、系列モデルのRNN・Transformerと音声生成のWaveNetの役割を整理した図"
 ---
 
 ## まず結論
@@ -20,6 +25,11 @@ last_modified_at: 2026-10-04
 - 音声波形を生成：**WaveNet**
 
 G検定では、**音声に使われる技術だからといって、すべてを音声認識モデルとみなさない**ことが重要です。
+
+<figure class="gk-eyecatch" style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/speech-recognition-cheatsheet.png" width="1200" height="630" alt="ASRは音声を文字へ変換し、CTCは系列の対応付けを扱う。RNNやTransformerはモデル構造、WaveNetは音声生成の技術であることを示す図" loading="lazy" decoding="async" style="display:block;width:100%;max-width:100%;height:auto;">
+  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#526171;">音声認識の技術は、認識・対応付け・モデル構造・生成という役割で見分けましょう。</figcaption>
+</figure>
 
 ## 直感的な説明
 
