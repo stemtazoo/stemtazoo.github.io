@@ -42,7 +42,10 @@ MTTR = 修理時間 r の平均
 です。
 
 <figure style="margin:16px 0 20px;">
-  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/mtbf-mttr.png" width="1200" height="630" alt="MTBFは稼働時間の平均、MTTRは修理時間の平均。MTBF900時間とMTTR100時間の場合、稼働率は900÷1000で90%となる。" style="display:block;width:100%;max-width:100%;height:auto;" loading="lazy" decoding="async">
+  <picture>
+    <source media="(max-width: 640px)" srcset="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/mtbf-mttr-mobile.png" width="1122" height="1402">
+    <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/mtbf-mttr.png" width="1200" height="630" alt="MTBFは稼働時間の平均、MTTRは修理時間の平均。MTBF900時間とMTTR100時間の場合、稼働率は900÷1000で90%となる。" style="display:block;width:100%;max-width:100%;height:auto;" loading="lazy" decoding="async">
+  </picture>
   <figcaption style="font-size:0.88em;line-height:1.5;color:#566578;margin-top:8px;">稼働率は、稼働時間と修理時間を合わせた時間に対する稼働時間の割合です。</figcaption>
 </figure>
 
