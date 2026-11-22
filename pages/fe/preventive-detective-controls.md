@@ -8,12 +8,21 @@ fe_section: マネジメント系
 fe_subsection: システム監査
 fe_order: 435
 date: 2026-10-03
-last_modified_at: 2026-10-03
+last_modified_at: 2026-11-22
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/preventive-detective-controls.png
+  width: 1200
+  height: 630
+  alt: 予防統制は権限を制限して問題を防ぎ、発見統制は伝票と入力結果を照合して問題を見つけることを示す比較図
 ---
 
 ## まず結論
 
 **予防統制は不正やミスの発生を防ぐ仕組み、発見統制は起きた不正やミスを見つける仕組み**です。
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/preventive-detective-controls.png" width="1200" height="630" alt="予防統制は権限を制限して問題を防ぎ、発見統制は伝票と入力結果を照合して問題を見つけることを示す比較図" style="display:block;width:100%;max-width:100%;height:auto;" loading="lazy" decoding="async">
+</figure>
 
 | 分類 | 主な目的 | 例 |
 |---|---|---|
