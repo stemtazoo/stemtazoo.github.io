@@ -8,7 +8,10 @@ fe_section: ストラテジ系
 fe_subsection: オペレーションズリサーチ
 fe_order: 122
 date: 2026-08-14
-last_modified_at: 2026-10-18
+last_modified_at: 2026-11-22
+image:
+  path: "https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/abc-analysis.png"
+  alt: "ABC分析では重要度の高い順に項目を並べ、累積構成比によってA群・B群・C群に分類する。"
 ---
 
 ## まず結論
@@ -30,6 +33,14 @@ ABC分析とは、**金額・数量・売上などの重要度が大きい項目
 例えば、A群を「累積70%以上」とするなら、**品目数の70%を選ぶのではなく、金額や数量などの累積値が全体の70%に達するまでの項目をA群に含めます。**
 
 このページは、**累積構成比のしきい値からA・B・Cの分類を求める手順**を扱います。大きい順の棒と累積比率の折れ線から重点対策を見つける読み方は、[パレート図](/fe/pareto-chart/)で確認できます。
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/abc-analysis.png"
+       alt="ABC分析は項目を重要度の高い順に並べ、累積構成比のしきい値を基準にA・B・Cのグループへ分類する手法。"
+       loading="lazy" decoding="async"
+       style="display:block;width:100%;max-width:100%;height:auto;">
+  <figcaption style="font-size:0.88em;line-height:1.5;color:var(--text-muted, #64748b);margin-top:8px;">ABC分析は品目数ではなく、金額・数量などの累積構成比を基準に分類します。</figcaption>
+</figure>
 
 ## 直感的な説明
 
