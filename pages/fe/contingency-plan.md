@@ -3,12 +3,17 @@ layout: page
 title: コンティンジェンシー計画とは？発動条件とリスク対応の違い【基本情報技術者試験】
 description: コンティンジェンシー計画の意味を、発動条件・対応策・回避・軽減・コンティンジェンシー予備との違いから整理し、基本情報技術者試験で選択肢を切る判断基準を解説します。
 permalink: /fe/contingency-plan/
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/contingency-plan.png
+  width: 1200
+  height: 630
+  alt: "コンティンジェンシー計画は発動条件と実行する対応策を事前にセットで決める。サーバ停止が10分を超えたら予備サーバへ切り替える例。"
 tags: [fe, fe-management, project-management, risk-management]
 fe_section: マネジメント系
 fe_subsection: プロジェクトマネジメント
 fe_order: 80
 date: 2026-08-27
-last_modified_at: 2026-09-16
+last_modified_at: 2026-11-23
 ---
 
 ## まず結論
@@ -29,6 +34,11 @@ last_modified_at: 2026-09-16
 覚える一文はこれです。
 
 > **「もし○○が起きたら、△△する」と事前に決めるのがコンティンジェンシー計画。**
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/contingency-plan.png" width="1200" height="630" loading="lazy" decoding="async" alt="コンティンジェンシー計画は発動条件と実行する対応策を事前にセットで決める。サーバ停止が10分を超えたら予備サーバへ切り替える例。" style="display:block;width:100%;max-width:100%;height:auto;">
+  <figcaption style="font-size:0.88em;line-height:1.5;margin-top:8px;color:#596579;">発動条件と対応策を事前に決めておくことがポイントです。</figcaption>
+</figure>
 
 ## 直感的な説明
 
