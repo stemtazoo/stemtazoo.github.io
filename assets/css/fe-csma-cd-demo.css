@@ -1,0 +1,19 @@
+.fe-csma-demo{border:1px solid #9bafc3;border-radius:12px;padding:16px;margin:16px 0 24px;background:var(--main-bg,#fff)}
+.fe-csma-demo__controls{display:flex;flex-wrap:wrap;gap:10px;align-items:end;margin:12px 0}
+.fe-csma-demo label{font-weight:600;display:block}
+.fe-csma-demo select{display:block;margin-top:5px;max-width:100%;min-height:44px;padding:8px;border:1px solid #879aae;border-radius:7px;background:var(--main-bg,#fff);color:inherit;font:inherit}
+.fe-csma-demo button{min-height:44px;padding:9px 13px;border:1px solid #175a95;border-radius:7px;background:#175a95;color:#fff;font:inherit;cursor:pointer}
+.fe-csma-demo button[data-back],.fe-csma-demo button[data-reset]{background:transparent;color:inherit;border-color:#879aae}
+.fe-csma-demo button:disabled{opacity:.48;cursor:not-allowed}
+.fe-csma-demo button:focus-visible,.fe-csma-demo select:focus-visible{outline:3px solid #d68c19;outline-offset:3px}
+.fe-csma-demo__network{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr) minmax(0,1fr);gap:6px;margin:12px 0}
+.fe-csma-demo__device,.fe-csma-demo__medium{border:1px solid #8cabc6;border-radius:9px;padding:10px 6px;text-align:center;min-width:0;overflow-wrap:anywhere}
+.fe-csma-demo__device strong,.fe-csma-demo__medium strong{display:block;font-size:.83rem}
+.fe-csma-demo__device span,.fe-csma-demo__medium span{display:block;margin-top:7px;font-size:.88rem;font-weight:700}
+.fe-csma-demo__medium[data-condition=collision]{background:#fff0df;color:#813d07;border:2px solid #ad580d}
+.fe-csma-demo__medium[data-condition=busy]{background:#e5f2ff;color:#164c7d;border:2px solid #2671b3}
+.fe-csma-demo__result{background:var(--blockquote-bg,#f1f5f9);border-radius:9px;padding:12px;margin-top:12px}
+.fe-csma-demo__result p{margin:5px 0}
+.fe-csma-demo__trace{padding-left:1.5em;margin:6px 0}
+.fe-csma-demo__trace [aria-current=step]{font-weight:700}
+@media(max-width:390px){.fe-csma-demo{padding:12px}.fe-csma-demo__controls label{flex:1 1 100%}.fe-csma-demo select{width:100%}.fe-csma-demo__device,.fe-csma-demo__medium{padding:8px 3px}.fe-csma-demo__device span,.fe-csma-demo__medium span{font-size:.76rem}.fe-csma-demo button{flex:1 1 42%}}

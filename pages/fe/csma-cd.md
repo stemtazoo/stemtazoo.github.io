@@ -13,7 +13,7 @@ image:
   height: 907
   alt: "共有Ethernetで端末AとBが送信し、衝突を検出したあと、ランダムな時間待って再送するCSMA/CDの流れ。"
 date: 2026-07-27
-last_modified_at: 2026-11-19
+last_modified_at: 2026-11-24
 ---
 
 ## まず結論
@@ -95,6 +95,60 @@ CSMA/CDは、**Carrier Sense Multiple Access with Collision Detection**の略で
 5. 再度、通信路を確認して送信する
 
 待ち時間をずらすのは、衝突した端末が同じタイミングで再送し、再び衝突するのを避けるためです。
+
+### 触って覚える：衝突を検出して再送するまで
+
+**見るポイント：** 送信前に空きを確認しても衝突は起こり得ます。衝突した場合と、送信時刻がずれた場合の違いを比較しましょう。
+
+1. 「ほぼ同時に送信」または「時間をずらして送信」を選びます。
+2. 次の通信路の状態（空き・使用中・衝突）を予想します。予想せず進んでも構いません。
+3. 「次へ」で端末A・Bと通信路がどう変わるかを確認します。「戻る」「最初から」で繰り返せます。
+
+<link rel="stylesheet" href="{{ '/assets/css/fe-csma-cd-demo.css' | relative_url }}">
+
+<div id="fe-csma-cd-demo" class="fe-csma-demo" aria-label="CSMA/CDの衝突検出と再送を追う操作教材">
+  <div class="fe-csma-demo__controls">
+    <label for="fe-csma-scenario">① 送信の状況
+      <select id="fe-csma-scenario" data-scenario>
+        <option value="collision">ほぼ同時に送信（衝突する例）</option>
+        <option value="staggered">時間をずらして送信（衝突しない例）</option>
+      </select>
+    </label>
+  </div>
+  <div class="fe-csma-demo__network" aria-label="端末A・共有通信路・端末Bの状態">
+    <div class="fe-csma-demo__device"><strong>端末A</strong><span data-a>待機</span></div>
+    <div class="fe-csma-demo__medium" data-condition="idle"><strong>共有通信路</strong><span data-medium>空き</span></div>
+    <div class="fe-csma-demo__device"><strong>端末B</strong><span data-b>待機</span></div>
+  </div>
+  <div class="fe-csma-demo__controls">
+    <label for="fe-csma-prediction">② 次の通信路は？（予想は任意）
+      <select id="fe-csma-prediction" data-prediction>
+        <option value="">予想しない</option>
+        <option value="idle">空き</option>
+        <option value="busy">使用中</option>
+        <option value="collision">衝突・衝突検出</option>
+      </select>
+    </label>
+  </div>
+  <div class="fe-csma-demo__controls">
+    <button type="button" data-next>次へ（1ステップ）</button>
+    <button type="button" data-back disabled>1ステップ戻る</button>
+    <button type="button" data-reset>最初から</button>
+  </div>
+  <div class="fe-csma-demo__result">
+    <p><strong>進行：</strong><span data-step>1 / 7</span>　<strong data-title>初期状態</strong></p>
+    <p data-note>2台は同じ共有通信路で送信を待っています。</p>
+    <p role="status" aria-live="polite" aria-atomic="true" data-feedback>予想は任意です。「次へ」で順番に確認できます。</p>
+    <p><strong>ここまでの流れ</strong></p>
+    <ol class="fe-csma-demo__trace" data-trace><li aria-current="step">1. 初期状態</li></ol>
+  </div>
+</div>
+<noscript>
+  <p>JavaScriptが無効でも流れは確認できます。送信前にA・Bが空きを確認 → ほぼ同時に送信 → 衝突を検出して中止 → それぞれランダムに待つ → Aが先に再送 → Bが通信路の空きを確かめて再送、という例です。送信時刻が十分離れていれば、衝突せず順に送信できます。</p>
+</noscript>
+<script src="{{ '/assets/js/fe-csma-cd-demo.js' | relative_url }}" defer></script>
+
+この教材は**仕組みを理解するための代表的な手順**です。待機時間は乱数によって決まりますが、教材では「Aの待機が先に終わる」例に固定しています。実際の通信時間・信号伝搬時間・再送上限や再衝突を正確に計算するシミュレータではありません。また、衝突を検出するCSMA/CDは主に従来の共有型・半二重Ethernetの仕組みです。
 
 ### 衝突は完全には防げない
 
