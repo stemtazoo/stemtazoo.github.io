@@ -39,7 +39,7 @@ G検定では、**どれが一番優れているかではなく、何を使っ�
 
 <figure style="margin:16px 0 20px;">
   <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/optimization-cheatsheet.png" width="1200" height="630" loading="lazy" decoding="async" alt="SGDは勾配に従い、Momentumは慣性、RMSpropは勾配二乗の移動平均、Adamは1次と2次のモーメントを使う最適化手法の比較図" style="display:block;width:100%;max-width:100%;height:auto;">
-  <figcaption style="font-size:0.88em;line-height:1.5;color:#596579;margin-top:8px;">更新方向と歩幅の調整に注目して、4つの手法を比較します。</figcaption>
+  <figcaption style="font-size:0.88em;line-height:1.5;color:#596579;margin-top:8px;">G検定では、各手法がどの情報を使って重みを更新するかが重要です。</figcaption>
 </figure>
 
 - SGD：今の傾きを見て進む
