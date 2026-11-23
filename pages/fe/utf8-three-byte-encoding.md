@@ -8,7 +8,12 @@ fe_section: 科目B対策
 fe_subsection: 疑似言語
 fe_order: 63
 date: 2026-10-25
-last_modified_at: 2026-10-25
+last_modified_at: 2026-11-24
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/utf8-three-byte-encoding.png
+  width: 1200
+  height: 630
+  alt: "UTF-8の3バイト形式は1110xxxx・10xxxxxx・10xxxxxxで、文字「あ」（U+3042）はE3 81 82に符号化される。下位6ビットから3、2、1バイト目の順に格納する。"
 related_articles:
   - /fe/character-encoding/
   - /fe/decimal-to-binary-div-mod/
@@ -16,6 +21,14 @@ related_articles:
 ---
 
 ## まず結論
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/utf8-three-byte-encoding.png" width="1200" height="630"
+       alt="UTF-8の3バイト形式は1110xxxx・10xxxxxx・10xxxxxxで、文字「あ」（U+3042）はE3 81 82に符号化される。下位6ビットから3、2、1バイト目の順に格納する。"
+       loading="lazy" decoding="async"
+       style="display:block;width:100%;max-width:100%;height:auto;">
+  <figcaption style="font-size:0.88em;line-height:1.5;color:#555;margin-top:8px;">UTF-8の3バイト形式は4＋6＋6ビットに分かれます。例の「あ」は、64で割った余りを右端から順に格納するとE3 81 82になります。</figcaption>
+</figure>
 
 UTF-8の**3バイト符号化**は、Unicodeの符号位置（文字に割り当てた番号）を、次の形で表します。
 
