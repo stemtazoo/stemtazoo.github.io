@@ -3,6 +3,11 @@ layout: page
 title: パレート図とは？重要な原因を見つけるための棒グラフと累積比率【基本情報技術者試験】
 description: パレート図を「値の大きい順に並べた棒グラフと累積比率を組み合わせた図」として整理し、品質問題の原因分析、重点対策、管理図・散布図・特性要因図との違いをFE試験向けに解説します。
 permalink: /fe/pareto-chart/
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/pareto-chart.png
+  width: 1200
+  height: 630
+  alt: 不良原因を件数の多い順に示す棒グラフと累積比率の折れ線。傷40件、寸法不良25件、汚れ15件までで全体の80%を占めるパレート図。
 tags: [fe, fe-management, quality-management]
 fe_section: マネジメント系
 fe_subsection: プロジェクトマネジメント
@@ -31,6 +36,11 @@ last_modified_at: 2026-10-18
 パレート図は、その**重点対策の対象を見つけるための図**です。
 
 このページは、**棒グラフと累積比率を読み、重点的に対策する項目を見つけること**を扱います。累積構成比にしきい値を設け、項目をA・B・Cに分ける計算は、[ABC分析](/fe/abc-analysis/)で確認できます。
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/pareto-chart.png" width="1200" height="630" loading="lazy" decoding="async" alt="不良原因を多い順に並べた棒グラフと累積比率の折れ線。傷40件、寸法不良25件、汚れ15件の上位3原因で全体の80%を占める。" style="display:block;width:100%;max-width:100%;height:auto;">
+  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#555;">棒は原因別の件数、折れ線は累積比率を表します。上位3項目を重点対策の候補として読み取れます。</figcaption>
+</figure>
 
 ## 直感的な説明
 
