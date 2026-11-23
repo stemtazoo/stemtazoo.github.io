@@ -3,6 +3,11 @@ layout: page
 title: WHYの並び立てとは？ストーリー構築の基本【DS検定】
 description: WHYの並び立てをストーリー構築の基本として整理します。問題の背景、原因、目的を論理的につなげる考え方を押さえ、DS検定で問われる説明設計や提案資料の判断ポイントを確認できます。本文では、用語の定義、具体例、似た概念との違い、試験で迷いやすい選択肢の見分け方まで、短時間で復習できるようにまとめています。
 permalink: /ds/why-structure/
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/ds/why-structure.png
+  width: 1200
+  height: 630
+  alt: "WHYの並び立て。複数のWHYで理由や根拠を整理し、納得できる結論につなげる論理構造を示した図。"
 categories: [business]
 tags: [ds, design]
 ds_area: foundation
@@ -22,6 +27,12 @@ WHYの並び立てとは、「なぜそう言えるのか？」を順番に積�
 
 DS検定では、**データを使って意思決定を説明できるか**を問われることが多く、「結論 → 理由」の筋道が通っているかを判断させる問題が出ます。
 
+
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/ds/why-structure.png" width="1200" height="630" loading="lazy" decoding="async" alt="WHYの並び立て。複数のWHYで理由や根拠を整理し、納得できる結論につなげる論理構造を示した図。" style="display:block;width:100%;max-width:100%;height:auto;">
+  <figcaption style="font-size:0.88em;line-height:1.5;color:#596579;margin-top:8px;">「なぜ？」の根拠を整理して、結論に至る筋道を明確にします。</figcaption>
+</figure>
 
 ## 直感的な説明
 
