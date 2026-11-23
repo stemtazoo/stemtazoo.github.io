@@ -8,7 +8,7 @@ fe_section: 科目B対策
 fe_subsection: データ構造
 fe_order: 20
 date: 2026-06-23
-last_modified_at: 2026-10-10
+last_modified_at: 2026-11-24
 image:
   path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/stack.png
   width: 1200
@@ -23,7 +23,6 @@ image:
        alt="スタックはA、B、Cの順に入れるとC、B、Aの順に取り出すLIFO（後入れ先出し）。pushとpopは同じ一番上で行う。"
        loading="lazy" decoding="async"
        style="display:block;width:100%;max-width:100%;height:auto;">
-  <figcaption style="font-size:0.88em;line-height:1.5;color:#555;margin-top:8px;">スタックでは、データの追加（push）も取出し（pop）も一番上から行います。</figcaption>
 </figure>
 
 スタックとは、**最後に入れたデータを最初に取り出すLIFO（後入れ先出し）のデータ構造**です。

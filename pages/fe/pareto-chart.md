@@ -13,7 +13,7 @@ fe_section: マネジメント系
 fe_subsection: プロジェクトマネジメント
 fe_order: 210
 date: 2026-07-02
-last_modified_at: 2026-10-18
+last_modified_at: 2026-11-24
 ---
 
 ## まず結論
@@ -39,7 +39,7 @@ last_modified_at: 2026-10-18
 
 <figure style="margin:16px 0 20px;">
   <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/pareto-chart.png" width="1200" height="630" loading="lazy" decoding="async" alt="不良原因を多い順に並べた棒グラフと累積比率の折れ線。傷40件、寸法不良25件、汚れ15件の上位3原因で全体の80%を占める。" style="display:block;width:100%;max-width:100%;height:auto;">
-  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#555;">棒は原因別の件数、折れ線は累積比率を表します。上位3項目を重点対策の候補として読み取れます。</figcaption>
+  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#555;">折れ線が80%に達する点の真下を見て、どの原因までが含まれるか確認しましょう。</figcaption>
 </figure>
 
 ## 直感的な説明

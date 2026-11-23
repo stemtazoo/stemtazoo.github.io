@@ -27,6 +27,13 @@ This guide owns **website-side use** of images in FE, GK, DS and SG articles. Th
 - The dimensions above are **illustrative**, not mandatory. Use the actual dimensions of each verified file. Keep the same meaning for both variants so one shared `alt` accurately describes either; do not put essential new facts only in a picture.
 - Use the image generation repository's slug-based `<slug>.<ext>` and `<slug>-mobile.<ext>` names. The article may refer to actual verified storage URLs but must not invent pCloud addresses.
 
+## Caption content
+
+- Compare the proposed caption with the figure, its alt text, the preceding and following paragraphs, and any nearby example or table. Look for repeated meaning as well as repeated wording.
+- Use a visible caption when it helps readers interpret this particular figure. Prefer one short sentence that points to an axis, arrow, comparison, or assumption. Keep figure identification and attribution when readers need them.
+- Omit `<figcaption>` when the surrounding explanation already gives readers everything they need to read the image. Preserve the figure and meaningful alt text. Keep definitions, calculation steps, and exam judgment criteria in the article so readers can follow the explanation without the image.
+- For example, when the article already explains the parts of a Pareto chart, guide readers to the point where the line reaches 80% and the item directly below it.
+
 ## Body image size and caption balance
 
 - For explanatory images embedded in the article body, **use the available article text width as the default**. An `img` with `width:100%` still fills only its parent: check the containing `figure` and any theme or browser margins before deciding that the image itself needs to change. Respect the article container; do not expand beyond it or create horizontal overflow.
