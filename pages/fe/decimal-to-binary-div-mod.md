@@ -13,7 +13,7 @@ fe_section: テクノロジ系
 fe_subsection: 基礎理論
 fe_order: 20
 date: 2026-08-25
-last_modified_at: 2026-10-25
+last_modified_at: 2026-11-24
 ---
 
 ## まず結論
@@ -33,7 +33,6 @@ j div 2 → 商   → 次の j にする
 
 <figure style="margin:16px 0 20px;">
   <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/decimal-to-binary-div-mod.png" width="1200" height="630" loading="lazy" decoding="async" alt="10進数50を2で割り続け、余りを下位ビットから取り出す。modは余りの保存、divは商の更新を担当し、余りを逆順に読むと110010₂になる。" style="display:block;width:100%;max-width:100%;height:auto;">
-  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#555;">modで余りを保存し、divで次の商へ進みます。得られた余りを逆順に読むと2進数になります。</figcaption>
 </figure>
 
 ## 直感的な説明
