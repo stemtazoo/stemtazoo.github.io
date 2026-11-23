@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 66
 date: 2026-09-20
-last_modified_at: 2026-11-21
+last_modified_at: 2026-11-24
 image:
   path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/wireless-lan-channel-interference.png
   width: 1200
@@ -69,6 +69,76 @@ AP3 → ch11
 のように、離れたチャネルを割り当てます。
 
 Ciscoの公式資料でも、2.4GHz帯で隣接APに使う代表的な非重複チャネルとして **1・6・11** が示されています。
+
+### 触って覚える：3台のAPのチャネルを変えてみる
+
+**見るポイント：** チャネル番号を変えると、周波数の帯域の重なりがどう変わるでしょうか。まずは **1・2・3** と **1・6・11** を比較しましょう。
+
+1. 組合せを選ぶか、AP1～AP3のチャネルを変更します。
+2. 帯域が重なるか予想してから「重なりを確認」を押します（予想は省略可）。
+3. 1・2・3と1・6・11の結果を比べ、**SSIDを変えるだけでは干渉対策にならない**理由を考えます。
+
+<link rel="stylesheet" href="{{ '/assets/css/fe-wireless-channel-demo.css' | relative_url }}">
+
+<div id="fe-channel-demo" class="fe-channel-demo" aria-label="2.4GHz帯の無線LANチャネル重なりを調べる操作教材">
+  <div class="fe-channel-demo__controls">
+    <label for="fe-channel-preset">① チャネルの組合せ
+      <select id="fe-channel-preset" data-preset>
+        <option value="near">1・2・3（近接チャネル）</option>
+        <option value="separate">1・6・11（代表的な非重複例）</option>
+        <option value="custom" disabled>個別に設定中</option>
+      </select>
+    </label>
+  </div>
+  <div class="fe-channel-demo__controls">
+    <label for="fe-channel-ap1">AP1
+      <select id="fe-channel-ap1" data-channel>
+        <option value="1">ch1</option><option value="2">ch2</option><option value="3">ch3</option><option value="4">ch4</option><option value="5">ch5</option><option value="6">ch6</option><option value="7">ch7</option><option value="8">ch8</option><option value="9">ch9</option><option value="10">ch10</option><option value="11">ch11</option>
+      </select>
+    </label>
+    <label for="fe-channel-ap2">AP2
+      <select id="fe-channel-ap2" data-channel>
+        <option value="1">ch1</option><option value="2" selected>ch2</option><option value="3">ch3</option><option value="4">ch4</option><option value="5">ch5</option><option value="6">ch6</option><option value="7">ch7</option><option value="8">ch8</option><option value="9">ch9</option><option value="10">ch10</option><option value="11">ch11</option>
+      </select>
+    </label>
+    <label for="fe-channel-ap3">AP3
+      <select id="fe-channel-ap3" data-channel>
+        <option value="1">ch1</option><option value="2">ch2</option><option value="3" selected>ch3</option><option value="4">ch4</option><option value="5">ch5</option><option value="6">ch6</option><option value="7">ch7</option><option value="8">ch8</option><option value="9">ch9</option><option value="10">ch10</option><option value="11">ch11</option>
+      </select>
+    </label>
+  </div>
+  <div class="fe-channel-demo__spectrum" aria-label="APごとの使用周波数帯の模式図">
+    <p><strong>2.4GHz帯のチャネル配置（模式図）</strong></p>
+    <div class="fe-channel-demo__row"><strong>AP1</strong><div class="fe-channel-demo__track"><span class="fe-channel-demo__band" data-band>ch1</span></div><span data-center>2412 MHz</span></div>
+    <div class="fe-channel-demo__row"><strong>AP2</strong><div class="fe-channel-demo__track"><span class="fe-channel-demo__band" data-band>ch2</span></div><span data-center>2417 MHz</span></div>
+    <div class="fe-channel-demo__row"><strong>AP3</strong><div class="fe-channel-demo__track"><span class="fe-channel-demo__band" data-band>ch3</span></div><span data-center>2422 MHz</span></div>
+    <div class="fe-channel-demo__axis"><span>2400 MHz付近</span><span>2480 MHz付近</span></div>
+  </div>
+  <div class="fe-channel-demo__controls">
+    <label for="fe-channel-prediction">② 帯域が重なる組合せはある？（任意）
+      <select id="fe-channel-prediction" data-prediction>
+        <option value="">予想しないで進む</option>
+        <option value="yes">ある</option>
+        <option value="no">ない</option>
+      </select>
+    </label>
+  </div>
+  <div class="fe-channel-demo__controls">
+    <button type="button" data-check>③ 重なりを確認</button>
+    <button type="button" data-reset>最初から</button>
+  </div>
+  <div class="fe-channel-demo__result">
+    <p><strong data-overlap>判定前</strong></p>
+    <p data-explanation>予想を選ぶか、そのまま「重なりを確認」を押してください。</p>
+    <p role="status" aria-live="polite" aria-atomic="true" data-feedback>チャネル番号が近いほど、使う周波数帯が重なりやすくなります。</p>
+  </div>
+</div>
+<noscript>
+  <p>JavaScriptが無効でも比較できます。2.4GHz帯の代表的な例では、ch1・ch2・ch3は周波数帯が互いに重なります。一方、ch1・ch6・ch11は帯域を分けやすい組合せです。SSIDが同じでも異なっていても、チャネルの重なり方自体は変わりません。</p>
+</noscript>
+<script src="{{ '/assets/js/fe-wireless-channel-demo.js' | relative_url }}" defer></script>
+
+この教材は、2.4GHz帯の**20MHz級チャネルを幅約22MHzの横棒**として描いた、重なりの仕組みを学ぶ模式図です。重なりの判定は中心周波数の間隔で単純化しています。信号の形状、電波強度、周辺APとの距離、送信出力、規格差などを再現した実測・設計用ツールではありません。実際の干渉の程度や通信速度は、この図だけでは決まりません。
 
 ## 定義・仕組み
 
