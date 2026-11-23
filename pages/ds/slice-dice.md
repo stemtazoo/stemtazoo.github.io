@@ -9,7 +9,12 @@ ds_area: datascience
 ds_section: visualization
 prev: /ds/pivot/
 next: /ds/visualization-basic-perspectives/
-last_modified_at: 2026-06-21
+last_modified_at: 2026-11-23
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/ds/slice-dice.png
+  width: 1200
+  height: 630
+  alt: "売上データから東京だけを切り出すスライスと、東京かつ2024年に絞り込むダイスの比較図"
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -23,6 +28,16 @@ last_modified_at: 2026-06-21
 
 DS検定では、BIツールの操作として  
 **「スライス・ダイス・ドリルダウン・フィルター」の違いを判断させる問題**がよく出題されます。
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/ds/slice-dice.png" width="1200" height="630"
+       alt="売上データから東京だけを切り出すスライスと、東京かつ2024年に絞り込むダイスの比較図"
+       loading="lazy" decoding="async"
+       style="display:block;width:100%;max-width:100%;height:auto;">
+  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#555;">
+    同じ売上データでも、指定する条件の数によって切り出す範囲が変わります。
+  </figcaption>
+</figure>
 
 
 ## 直感的な説明
