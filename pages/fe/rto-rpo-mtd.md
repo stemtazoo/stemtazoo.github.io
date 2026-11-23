@@ -37,7 +37,10 @@ MTD：最大でどれだけ停止を許容できるか
 ```
 
 <figure style="margin:16px 0 20px;">
-  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/rto-rpo-mtd.png" width="1200" height="630" loading="lazy" decoding="async" alt="障害発生を基準に、RPOは過去1時間のデータ復旧時点、RTOは8時間以内の復旧目標、MTDは24時間の最大許容停止時間を表す図" style="display:block;width:100%;max-width:100%;height:auto;">
+  <picture>
+    <source media="(max-width: 640px)" srcset="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/rto-rpo-mtd-mobile.png" width="1122" height="1402">
+    <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/rto-rpo-mtd.png" width="1200" height="630" loading="lazy" decoding="async" alt="障害発生を基準に、RPOは過去1時間のデータ復旧時点、RTOは8時間以内の復旧目標、MTDは24時間の最大許容停止時間を表す図" style="display:block;width:100%;max-width:100%;height:auto;">
+  </picture>
   <figcaption style="font-size:0.88em;line-height:1.5;margin-top:8px;color:#596579;">RTOは復旧の目標、MTDは事業が耐えられる停止の限界です。</figcaption>
 </figure>
 
