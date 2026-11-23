@@ -9,7 +9,7 @@ ds_area: dataengineering
 ds_section: sql
 prev: /ds/sql-count-distinct/
 next: /ds/sql-distinct/
-last_modified_at: 2026-11-18
+last_modified_at: 2026-11-24
 image:
   path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/ds/sql-ddl-dml.png
   width: 1734
@@ -121,6 +121,63 @@ FROM employees;
 | データを削除する | `DELETE` | DML |
 
 ---
+
+### 触って覚える：SQLで「入れ物」と「中身」を変えてみる
+
+**見るポイント：** DDLでは表の**構造**が変わり、DMLでは主に表の**データ**を扱います。SQLを選んで、テーブルの列と行のどちらが変わるか確かめましょう。
+
+この教材は、架空の社員テーブル `employees` をブラウザ内で模擬操作します。**実際のデータベースには接続せず、SQL文字列も実行しません。**
+
+1. SQLを選び、DDLとDMLのどちらかを予想します（省略可）。
+2. 「実行する」を押し、テーブルの列・行・説明を確認します。
+3. CREATE → INSERT → SELECT → ALTER → UPDATE → DELETE → DROP の順に試すと、違いが分かりやすくなります。
+
+<link rel="stylesheet" href="{{ '/assets/css/ds-ddl-dml-demo.css' | relative_url }}">
+
+<div class="ds-ddl-demo" id="ds-ddl-dml-demo" aria-label="DDLとDMLによるテーブルの変化を確かめる教材">
+  <div class="ds-ddl-demo__controls">
+    <label for="ds-ddl-operation">① 操作するSQL
+      <select id="ds-ddl-operation" data-operation>
+        <option value="create">CREATE：テーブル作成</option>
+        <option value="insert">INSERT：行を追加</option>
+        <option value="select">SELECT：行を取得</option>
+        <option value="alter">ALTER：列を追加</option>
+        <option value="update">UPDATE：行を書き換え</option>
+        <option value="delete">DELETE：行を削除</option>
+        <option value="drop">DROP：テーブル削除</option>
+      </select>
+    </label>
+    <label for="ds-ddl-prediction">② DDLとDMLのどちら？（任意）
+      <select id="ds-ddl-prediction" data-prediction>
+        <option value="">予想せずに進む</option>
+        <option value="DDL">DDL（表の構造）</option>
+        <option value="DML">DML（表のデータ）</option>
+      </select>
+    </label>
+  </div>
+  <p><strong>選んだSQL</strong></p>
+  <code class="ds-ddl-demo__sql" data-sql>CREATE TABLE employees (id INT, name VARCHAR(50));</code>
+  <div class="ds-ddl-demo__controls">
+    <button type="button" data-execute>③ 実行する（模擬操作）</button>
+    <button type="button" data-reset>最初から</button>
+  </div>
+  <p><strong data-kind>分類：実行後に表示</strong></p>
+  <p>テーブルの列：<strong data-columns>テーブルなし</strong>　行数：<strong data-row-count>—</strong></p>
+  <div class="ds-ddl-demo__table" data-table aria-label="employeesテーブルの現在の構造と行">
+    <p>employees テーブルは存在しません。</p>
+  </div>
+  <div class="ds-ddl-demo__result">
+    <p role="status" aria-live="polite" aria-atomic="true" data-feedback>最初はテーブルがありません。まずCREATEを実行してみましょう。</p>
+    <p><strong>操作履歴</strong></p>
+    <ol class="ds-ddl-demo__history" data-history><li>まだ実行していません。</li></ol>
+  </div>
+</div>
+<noscript>
+  <p>JavaScriptが無効な場合は、次の変化を確認してください。CREATEで「id」「name」の2列がある空の表を作成 → INSERTで1行追加 → SELECTでは表を変更せず取得 → ALTERで「department」列を追加 → UPDATEでnameを更新 → DELETEで行だけ削除 → DROPで表そのものを削除します。</p>
+</noscript>
+<script src="{{ '/assets/js/ds-ddl-dml-demo.js' | relative_url }}" defer></script>
+
+**教材の前提：** `INSERT` はid=1の「佐藤」を追加し、`UPDATE` はid=1の名前を「鈴木」に変更し、`DELETE` はid=1の行を削除します。対象がなければ変更は0行です。教材は単純化した模擬操作であり、製品ごとのDDLトランザクションや制約、権限、SQL実行エラーのすべてを再現するものではありません。また、このページでは`SELECT`をDML側として扱いますが、DQLに分ける分類もあります。
 
 ## どんな場面で使う？
 
