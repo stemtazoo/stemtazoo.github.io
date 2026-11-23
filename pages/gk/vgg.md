@@ -6,12 +6,12 @@ permalink: /gk/vgg/
 tags: [gk, cnn]
 gk_section: ディープラーニングの応用例/画像認識/物体認識タスク
 gk_order: 2
-last_modified_at: 2026-11-22
+last_modified_at: 2026-11-23
 image:
   path: "https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/vgg.png"
   width: 1200
   height: 630
-  alt: "VGGは3×3の畳み込みを2層重ねることで5×5相当の受容野を得ることを示した図"
+  alt: "VGGでストライド1の3×3畳み込みを、間にプーリングを挟まず2層重ねると、入力上の受容野が5×5になることを示した図"
 ---
 
 ## まず結論
@@ -22,9 +22,9 @@ image:
 <figure class="gk-eyecatch" style="margin:16px 0 20px;">
   <picture>
     <source media="(max-width: 640px)" srcset="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/vgg-mobile.png" width="1122" height="1402">
-    <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/vgg.png" width="1200" height="630" alt="VGGでは3×3畳み込みを2層重ねると5×5相当の受容野となる。構造がシンプルで層が深く、パラメータ数が多いことを示す図" loading="lazy" decoding="async" style="display:block;width:100%;max-width:100%;height:auto;">
+    <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/vgg.png" width="1200" height="630" alt="3×3の畳み込みをストライド1で2層重ね、層間にプーリングを挟まない場合、出力1点の受容野が入力上で5×5になることを示す図" loading="lazy" decoding="async" style="display:block;width:100%;max-width:100%;height:auto;">
   </picture>
-  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#526171;">VGGは小さな3×3畳み込みを積み重ねて受容野を広げます（ストライド1の場合）。</figcaption>
+  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#526171;">図の5×5は、ストライド1で、2層の間にプーリングを挟まない場合の受容野です。</figcaption>
 </figure>
 
 ## 直感的な説明
@@ -54,7 +54,7 @@ image:
 
 ### なぜ3×3を重ねるのか
 
-3×3畳み込みを2層重ねると、概ね5×5の範囲を参照できます。大きなフィルタを1回使う代わりに小さなフィルタを複数回使うことで、層の途中に活性化関数を挟めるため、より複雑な特徴を表現できます。
+ストライド1の3×3畳み込みを、間にプーリングを挟まず2層重ねると、出力1点は入力上の5×5の範囲を参照します。大きなフィルタを1回使う代わりに小さなフィルタを複数回使うことで、層の途中に活性化関数を挟めるため、より複雑な特徴を表現できます。
 
 VGG16やVGG19の数字は、主に**重みを持つ層の深さ**を表します。画像サイズやクラス数ではありません。また、VGGは全結合層が大きく、モデル全体のパラメータ数が多い点も弱点です。
 
