@@ -7,7 +7,7 @@ tags: [ds, data-preparation, statistics]
 ds_area: datascience
 ds_section: data-preparation
 description: "単純無作為・系統・層別・集落・多段の抽出手続を比較します。各層から取ることと比例配分の違い、精度・コスト・名簿の条件、無作為でも誤差や偏りが残る点を整理します。"
-last_modified_at: 2026-11-19
+last_modified_at: 2026-11-24
 image:
   path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/ds/random-sampling-methods.png
   width: 1731
@@ -84,6 +84,61 @@ DS検定では「どの抽出方法かを見抜けるか」「方法の違いを
 
 → 「各層から抽出」が重要。母集団の男女比に合わせるのは比例配分の例です。層化抽出には、層の大きさと同じ比率にしない非比例配分もあります。
 
+
+### 触って覚える：5種類の抽出方法を比較する
+
+**見るポイント：** 「個人を選ぶ」「各層から選ぶ」「集団を丸ごと選ぶ」「集団の中からさらに選ぶ」の違いを確かめましょう。
+
+この教材では、母集団60人を6グループ（各10人）に分け、全員を層A・B・Cのいずれかに分類しています（各層20人）。**グループは調査対象の集まり、層は比較したい属性による区分**で、同じ分類ではありません。
+
+1. 5種類の抽出方式から1つ選び、選び方を予想します（予想は省略可）。
+2. 「抽出する」を押し、青くなった人を確認します。
+3. もう一度抽出して標本が変わる様子を観察し、方式を切り替えて比較します。
+
+<link rel="stylesheet" href="{{ '/assets/css/ds-random-sampling.css' | relative_url }}">
+
+<div id="ds-sampling-demo" class="ds-sampling-demo" aria-label="5つの無作為抽出方法を比較する教材">
+  <div class="ds-sampling-demo__controls">
+    <label for="ds-sampling-method">① 抽出方法
+      <select id="ds-sampling-method" data-method>
+        <option value="simple">単純無作為抽出</option>
+        <option value="systematic">系統抽出</option>
+        <option value="stratified">層別抽出（比例配分の例）</option>
+        <option value="cluster">集落抽出（2集団を丸ごと）</option>
+        <option value="multistage">多段抽出（2集団→各6人）</option>
+      </select>
+    </label>
+    <label for="ds-sampling-guess">② 選び方を予想（任意）
+      <select id="ds-sampling-guess" data-guess>
+        <option value="">予想せずに進む</option>
+        <option value="simple">全員から個人を選ぶ</option>
+        <option value="systematic">最初を選び一定間隔で選ぶ</option>
+        <option value="stratified">各層から一部を選ぶ</option>
+        <option value="cluster">選んだ集団の全員を選ぶ</option>
+        <option value="multistage">集団を選んでから個人を選ぶ</option>
+      </select>
+    </label>
+  </div>
+  <div class="ds-sampling-demo__controls">
+    <button type="button" data-draw>③ 抽出する（もう一度押すと再抽出）</button>
+    <button type="button" data-reset>最初から</button>
+  </div>
+  <p class="ds-sampling-demo__legend">青：選ばれた人　白：選ばれていない人。A・B・Cは属性の層、グループ1～6は集団を表します。</p>
+  <div class="ds-sampling-demo__population" data-population aria-label="60人の母集団。青いマスが標本です">
+    <p>母集団60人を表示します。</p>
+  </div>
+  <div class="ds-sampling-demo__result">
+    <p><strong data-count>未抽出</strong></p>
+    <p data-breakdown>抽出ボタンを押すと、選ばれた人を表示します。</p>
+    <p role="status" aria-live="polite" aria-atomic="true" data-feedback>どの単位を選ぶ方式か予想してみましょう。</p>
+  </div>
+</div>
+<noscript>
+  <p>JavaScriptが無効でも手順は確認できます。60人を6グループ（各10人）、A・B・Cの3層（各20人）に分ける例です。単純無作為は全60人から12人、系統抽出は無作為な開始位置から5人おきに12人、層別は各層から4人ずつ12人を選びます。集落抽出は選んだ2グループの全20人、多段抽出は2グループを選んだ後に各6人ずつ合計12人を選びます。</p>
+</noscript>
+<script src="{{ '/assets/js/ds-random-sampling.js' | relative_url }}" defer></script>
+
+**注意：** 集落抽出だけ標本サイズは20人で、ほかの4方式は12人です。これは抽出手順を見比べるための例で、人数が異なる標本から精度を直接比較する教材ではありません。抽出が無作為でも、得られた標本が毎回母集団の比率と一致するとは限りません。
 
 ## どんな場面で使う？
 
