@@ -37,7 +37,7 @@ last_modified_at: 2026-11-23
 
 <figure style="margin:16px 0 20px;">
   <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/contingency-plan.png" width="1200" height="630" loading="lazy" decoding="async" alt="コンティンジェンシー計画は発動条件と実行する対応策を事前にセットで決める。サーバ停止が10分を超えたら予備サーバへ切り替える例。" style="display:block;width:100%;max-width:100%;height:auto;">
-  <figcaption style="font-size:0.88em;line-height:1.5;margin-top:8px;color:#596579;">発動条件と対応策を事前に決めておくことがポイントです。</figcaption>
+  <figcaption style="font-size:0.88em;line-height:1.5;margin-top:8px;color:#596579;">試験では「条件が成立したときだけ実行する」という表現が判断の手掛かりになります。</figcaption>
 </figure>
 
 ## 直感的な説明
