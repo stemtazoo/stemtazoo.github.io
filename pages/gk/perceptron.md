@@ -6,7 +6,12 @@ permalink: /gk/perceptron/
 tags: [gk, neural_network, perceptron]
 gk_section: ディープラーニングの概要/ニューラルネットワークとディープラーニング
 gk_order: 1
-last_modified_at: 2026-09-26
+last_modified_at: 2026-11-23
+image:
+  path: "https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/perceptron.png"
+  width: 1200
+  height: 630
+  alt: "ANDは直線で出力0と1を分離できるが、XORは1本の直線では分離できないことを示す比較図"
 ---
 
 ## まず結論
@@ -18,6 +23,11 @@ G検定では、次の対応を最優先で押さえます。
 - **線形分離できる** → 単純パーセプトロンで扱える
 - **線形分離できないXOR** → 単純パーセプトロンでは扱えない
 - **中間層＋非線形活性化** → 多層パーセプトロンでXORを表現できる
+
+<figure class="gk-eyecatch" style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/perceptron.png" width="1200" height="630" alt="ANDは直線で出力0と1を分離できるが、XORは1本の直線では分離できないことを示す比較図" loading="lazy" decoding="async" style="display:block;width:100%;max-width:100%;height:auto;">
+  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#526171;">ANDは線形分離できますが、XORは1本の直線では分離できません。</figcaption>
+</figure>
 
 ## 直感的な説明
 
