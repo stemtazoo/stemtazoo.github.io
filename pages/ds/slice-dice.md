@@ -38,7 +38,7 @@ DS検定では、BIツールの操作として
        style="display:block;width:100%;max-width:100%;height:auto;">
   </picture>
   <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#555;">
-    同じ売上データでも、指定する条件の数によって切り出す範囲が変わります。
+    DS検定では、1つの次元で切り出すスライスと、複数の次元で絞り込むダイスを区別しましょう。
   </figcaption>
 </figure>
 
