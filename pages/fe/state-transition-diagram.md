@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: システム開発技術
 fe_order: 100
 date: 2026-07-07
-last_modified_at: 2026-11-21
+last_modified_at: 2026-11-24
 image:
   path: "https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/state-transition-diagram.png"
   width: 1200
@@ -104,6 +104,57 @@ image:
 **ポイントは、毎回「今いる状態」を更新してから、次の矢印を探すこと**です。矢印が存在しないイベントについては、図や問題文に動作の指定がない限り、勝手に状態が変わるとは考えません。
 
 なお、**状態遷移表**の行と列を追う問題は、[状態遷移表の読み方](/fe/state-transition-table/)で詳しく扱います。
+
+### 触って覚える：イベントから次の状態をたどる
+
+**見るポイント：** 今の状態を確かめて、押したイベント名の矢印だけをたどりましょう。図にない矢印を勝手に補わないことも大切です。
+
+1. 現在の状態から、押したいイベントでどこへ移るか予想します。
+2. 「起動」「異常検知」「リセット」のいずれかを押します。
+3. 強調された状態と矢印、操作履歴を確認し、別の順序も試します。
+
+ここでは次の**3本の矢印だけ**を持つ設備を扱います。「リセット」は異常停止中の設備を停止中へ戻すイベントで、操作の「最初から」は教材の履歴を初期化する機能です。
+
+<link rel="stylesheet" href="{{ '/assets/css/fe-state-transition.css' | relative_url }}">
+
+<div id="fe-state-demo" class="fe-state-demo" aria-label="設備制御の状態遷移を操作する教材">
+  <p><strong>初期状態：停止中</strong></p>
+  <div class="fe-state-demo__states" aria-label="3つの状態。現在の状態は枠で強調">
+    <div class="fe-state-demo__state is-current" data-state="停止中" aria-current="step">停止中</div>
+    <div class="fe-state-demo__state" data-state="運転中">運転中</div>
+    <div class="fe-state-demo__state" data-state="異常停止">異常停止</div>
+  </div>
+  <p><strong>状態遷移図の矢印（イベント）</strong></p>
+  <ol class="fe-state-demo__transitions">
+    <li data-transition="停止中:起動">停止中 ──起動→ 運転中</li>
+    <li data-transition="運転中:異常検知">運転中 ──異常検知→ 異常停止</li>
+    <li data-transition="異常停止:リセット">異常停止 ──リセット→ 停止中</li>
+  </ol>
+  <p>現在の状態：<strong data-current>停止中</strong></p>
+  <label for="fe-state-prediction">次の状態を予想する（省略可）</label>
+  <select id="fe-state-prediction" data-guess>
+    <option value="">予想しないで進む</option>
+    <option value="停止中">停止中</option>
+    <option value="運転中">運転中</option>
+    <option value="異常停止">異常停止</option>
+  </select>
+  <p><strong>イベントを発生させる</strong></p>
+  <div class="fe-state-demo__controls">
+    <button type="button" data-event="起動">起動</button>
+    <button type="button" data-event="異常検知">異常検知</button>
+    <button type="button" data-event="リセット">リセット</button>
+    <button type="button" data-reset>最初から</button>
+  </div>
+  <div class="fe-state-demo__result">
+    <p data-feedback role="status" aria-live="polite" aria-atomic="true">初期状態は「停止中」です。次の状態を予想してからイベントを押しましょう。</p>
+    <p><strong>操作履歴</strong></p>
+    <ol data-history><li>まだ操作していません。</li></ol>
+  </div>
+</div>
+<noscript>
+  <p>JavaScriptが無効でも矢印を追えます。停止中から「起動」で運転中、「異常検知」で異常停止、「リセット」で停止中に戻ります。例えば停止中に「異常検知」を押した場合、この図にはその矢印の指定がありません。</p>
+</noscript>
+<script src="{{ '/assets/js/fe-state-transition.js' | relative_url }}" defer></script>
 
 ## 定義・仕組み
 
