@@ -23,7 +23,7 @@ image:
        alt="スタックはA、B、Cの順に入れるとC、B、Aの順に取り出すLIFO（後入れ先出し）。pushとpopは同じ一番上で行う。"
        loading="lazy" decoding="async"
        style="display:block;width:100%;max-width:100%;height:auto;">
-  <figcaption style="font-size:0.88em;line-height:1.5;color:#555;margin-top:8px;">スタックでは、データの追加（push）も取出し（pop）も一番上から行います。</figcaption>
+  <figcaption style="font-size:0.88em;line-height:1.5;color:#555;margin-top:8px;">科目Bでは、push・popのたびに一番上の要素がどう変わるかを追うことがポイントです。</figcaption>
 </figure>
 
 スタックとは、**最後に入れたデータを最初に取り出すLIFO（後入れ先出し）のデータ構造**です。
