@@ -1,12 +1,12 @@
 ---
 layout: page
 title: 線形代数の基礎｜ベクトル・行列・固有値をG検定向けに整理
-description: "G検定で必要な線形代数を、ベクトルは数値の並び、行列は線形変換やデータ表現、内積は類似度や射影、固有ベクトルは変換しても方向が変わらないベクトル、固有値はその伸縮率という判断軸で整理し、PCA・SVDとのつながりを確認します。"
+description: "G検定で必要な線形代数を、ベクトルは数値の並び、行列は線形変換やデータ表現、内積は類似度や射影、固有ベクトルは行列を掛けると自分の定数倍になるベクトル、固有値はその倍率という判断軸で整理し、PCA・SVDとのつながりを確認します。"
 permalink: /gk/linear-algebra-basics/
 tags: [gk, linear_algebra]
 gk_section: AIに必要な数理・統計知識
 gk_order: 7
-last_modified_at: 2026-11-22
+last_modified_at: 2026-11-23
 image:
   path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/linear-algebra-basics.png
   width: 1200
@@ -21,8 +21,8 @@ G検定の線形代数は、細かな手計算より**役割**を押さえます
 - ベクトル → 数値の並び・方向
 - 行列 → データ表現・線形変換
 - 内積 → 向きの近さ・射影
-- 固有ベクトル → 行列で変換しても方向が変わらない
-- 固有値 → その方向に何倍されるか
+- 固有ベクトル → 行列を掛けると自分の定数倍になる、零ベクトル以外のベクトル
+- 固有値 → その定数倍の倍率（符号を含む）
 - SVD → 行列を U・Σ・Vᵀ に分解
 
 <figure style="margin:16px 0 20px;">
@@ -30,7 +30,7 @@ G検定の線形代数は、細かな手計算より**役割**を押さえます
     <source media="(max-width: 640px)" srcset="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/linear-algebra-basics-mobile.png" width="1122" height="1402">
     <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/linear-algebra-basics.png" width="1200" height="630" alt="行列Aによる変換で固有ベクトルvの方向は変わらず、固有値2により長さが2倍になる例（Av = 2v）" loading="lazy" decoding="async" style="display:block;width:100%;max-width:100%;height:auto;">
   </picture>
-  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#606b78;">固有ベクトルは変換後も同じ方向を保ち、固有値が伸縮率を表します。</figcaption>
+  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#606b78;">図は固有値が正の例です。<code>Av = 2v</code> の場合、向きは同じで長さが2倍になります。</figcaption>
 </figure>
 
 ## 直感的な説明
@@ -39,13 +39,7 @@ G検定の線形代数は、細かな手計算より**役割**を押さえます
 
 多くのベクトルは、行列を掛けると向きも長さも変わります。
 
-しかし一部には、
-
-> 向きは変わらず、長さだけ変わる
-
-特別な方向があります。
-
-それが**固有ベクトル**で、何倍になるかが**固有値**です。
+あるベクトルを行列で変換した結果が、元のベクトルを1つの数で掛けたものになる場合があります。その零ベクトル以外のベクトルが**固有ベクトル**で、掛けた数が**固有値**です。
 
 ## 定義・仕組み
 
@@ -75,7 +69,7 @@ G検定の線形代数は、細かな手計算より**役割**を押さえます
 
 ### 固有値・固有ベクトル
 
-行列Aとベクトルvについて、
+正方行列Aと零ベクトル以外のベクトルvについて、
 
 **Av = λv**
 
@@ -84,7 +78,7 @@ G検定の線形代数は、細かな手計算より**役割**を押さえます
 - v → 固有ベクトル
 - λ → 固有値
 
-です。
+です。実数の固有値では、λが正なら同じ向き、負なら逆向きになり、長さは |λ| 倍です。λが0なら変換結果は零ベクトルです。たとえば `Av = -2v` なら逆向きで長さは2倍です。
 
 ### PCAとの関係
 
@@ -132,7 +126,7 @@ PCAでは「分散最大化」、SVDでは「U・Σ・Vᵀへの行列分解」�
 ### 固有ベクトル
 
 ❌ 変換後も値が完全に同じ  
-⭕ **方向が同じで、長さはλ倍になり得る**
+⭕ **変換結果は `λv`。実数のλの符号で向きが決まり、λが0なら零ベクトル**
 
 ### SVD
 
@@ -149,8 +143,8 @@ PCAでは「分散最大化」、SVDでは「U・Σ・Vᵀへの行列分解」�
 - ベクトル＝数値の並び
 - 行列＝線形変換
 - 内積＝向き・類似度に関係
-- 固有ベクトル＝方向が変わらない
-- 固有値＝伸縮率
+- 固有ベクトル＝`Av = λv` を満たす零ベクトル以外の `v`
+- 固有値＝`λ`。実数なら符号で向きが決まり、0なら変換結果は零ベクトル
 - PCA・SVDの基礎になる
 
 {% include gk_article_footer.html %}

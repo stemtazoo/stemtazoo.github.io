@@ -8,7 +8,7 @@ fe_section: マネジメント系
 fe_subsection: プロジェクトマネジメント
 fe_order: 25
 date: 2026-08-28
-last_modified_at: 2026-09-22
+last_modified_at: 2026-11-23
 image:
   path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/pdm-dependency-types.png
   width: 1200
@@ -27,14 +27,14 @@ PDM（Precedence Diagramming Method：プレシデンスダイアグラム法）
 | **FF** | **終了 → 終了**<br><small>Finish to Finish</small> |
 | **SF** | **開始 → 終了**<br><small>Start to Finish</small> |
 
-表の矢印は、**先行作業の開始・終了 → 後続作業の開始・終了**を表します。
+表の矢印は、**先行作業の開始・終了 → 後続作業の開始・終了**を表します。時間の前倒しを指定しない場合、SSでは先行作業の開始以降に後続作業を開始し、FFでは先行作業の終了以降に後続作業を終了します。
 
 <figure style="margin:16px 0 20px;">
   <picture>
     <source media="(max-width: 640px)" srcset="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/pdm-dependency-types-mobile.png" width="1024" height="1536">
     <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/pdm-dependency-types.png" width="1200" height="630" alt="PDMの4つの依存関係。FSは先行作業の終了から後続作業の開始、SSは開始から開始、FFは終了から終了、SFは開始から終了につながる。" style="display:block;width:100%;max-width:100%;height:auto;" loading="lazy" decoding="async">
   </picture>
-  <figcaption style="font-size:0.88em;line-height:1.5;color:#596579;margin-top:8px;">1文字目が先行作業、2文字目が後続作業の開始・終了を表します。</figcaption>
+  <figcaption style="font-size:0.88em;line-height:1.5;color:#596579;margin-top:8px;">SS・FFは、どの時点を基準にするかを表します。先行作業と後続作業の時点には間隔があっても構いません。</figcaption>
 </figure>
 
 基本情報技術者試験では、時間差の数字より先に、**「何が何の条件になっているか」**を見るのがポイントです。
