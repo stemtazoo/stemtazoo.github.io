@@ -15,7 +15,7 @@ fe_section: テクノロジ系
 fe_subsection: コンピュータシステム
 fe_order: 120
 date: 2026-07-17
-last_modified_at: 2026-09-20
+last_modified_at: 2026-11-23
 ---
 
 ## まず結論
@@ -30,7 +30,7 @@ last_modified_at: 2026-09-20
     <source media="(max-width: 640px)" srcset="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/series-parallel-system-availability-mobile.png" width="1024" height="1536">
     <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/series-parallel-system-availability.png" width="1200" height="630" alt="直列は装置AとBが両方正常なら動作して稼働率81%、並列は少なくとも一方が正常なら動作して稼働率99%。各装置の稼働率は90%で故障は独立。" loading="lazy" decoding="async" style="display:block;width:100%;max-width:100%;height:auto;">
   </picture>
-  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#555;">同じ稼働率90%の装置2台でも、必要な稼働条件で結果は変わります（故障は互いに独立と仮定）。</figcaption>
+  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#555;">故障が独立なら、各装置の稼働率を掛けて両方が正常な確率を、各装置の故障率を掛けて両方が故障する確率を求められます。</figcaption>
 </figure>
 
 2台の稼働率をそれぞれ \(R_1\)、\(R_2\) とすると、基本式は次のとおりです。
