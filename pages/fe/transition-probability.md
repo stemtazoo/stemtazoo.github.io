@@ -3,6 +3,11 @@ layout: page
 title: 遷移確率とは？確率表の行の合計が1になる理由【基本情報技術者試験】
 description: 遷移確率を、ある状態や入力を固定したときに次に起こる結果の確率として整理し、確率表で各行の合計が1になる理由や、行と列を取り違えない判断基準をFE科目A向けに解説します。
 permalink: /fe/transition-probability/
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/transition-probability.png
+  width: 1200
+  height: 630
+  alt: "入力0では出力0が0.3、出力1が0.7、入力1では出力0が0.6、出力1が0.4となり、入力ごとの確率の合計が1になることを示す図"
 tags: [fe, fe-technology, probability, statistics]
 fe_section: テクノロジ系
 fe_subsection: 基礎理論
@@ -32,6 +37,15 @@ last_modified_at: 2026-10-18
 最初に覚えるなら、次の一文で十分です。
 
 > **条件を1つ固定したら、その条件のもとで起こり得る結果の確率を全部足すと1。**
+
+<picture>
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/transition-probability.png"
+       width="1200" height="630"
+       alt="入力0では出力0が0.3、出力1が0.7、入力1では出力0が0.6、出力1が0.4となり、入力ごとの確率の合計が1になることを示す図"
+       loading="lazy"
+       decoding="async"
+       style="display:block;width:100%;max-width:100%;height:auto;">
+</picture>
 
 このページは、**条件を固定した確率表の読み方**を扱います。表を使って2回後・3回後の状態確率を求める計算は、[マルコフ過程の経路計算](/fe/markov-process/)で確認できます。
 
