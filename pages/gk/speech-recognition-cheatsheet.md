@@ -31,7 +31,7 @@ G検定では、**音声に使われる技術だからといって、すべて�
     <source media="(max-width: 640px)" srcset="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/speech-recognition-cheatsheet-mobile.png" width="1122" height="1402">
     <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/speech-recognition-cheatsheet.png" width="1200" height="630" alt="ASRは音声を文字へ変換し、CTCは系列の対応付けを扱う。RNNやTransformerはモデル構造、WaveNetは音声生成の技術であることを示す図" loading="lazy" decoding="async" style="display:block;width:100%;max-width:100%;height:auto;">
   </picture>
-  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#526171;">音声認識の技術は、認識・対応付け・モデル構造・生成という役割で見分けましょう。</figcaption>
+  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#526171;">CTCは対応付けの仕組み、RNNやTransformerはモデル構造です。G検定では役割の違いで整理しましょう。</figcaption>
 </figure>
 
 ## 直感的な説明
