@@ -5,8 +5,8 @@ description: "一次データとは、調査目的に合わせて自分たちが
 permalink: /ds/primary-data/
 image:
   path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/ds/primary-data.png
-  width: 1200
-  height: 630
+  width: 1731
+  height: 909
   alt: "一次データは目的に合わせて自分たちが直接集めるデータであり、アンケート・実験・センサー計測がその収集例であることを示す図"
 categories: [business]
 tags: [ds, data-understanding, design]
@@ -14,7 +14,7 @@ ds_area: foundation
 ds_section: data-understanding
 prev: /ds/power-law/
 next: /ds/primary-secondary-data/
-last_modified_at: 2026-11-22
+last_modified_at: 2026-11-23
 ---
 
 ## まず結論
@@ -41,7 +41,7 @@ DS検定では、一次データを「自分たちで直接集めたオリジナ
 <figure style="margin:16px 0 20px;">
   <picture>
     <source media="(max-width: 640px)" srcset="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/ds/primary-data-mobile.png" width="1024" height="1536">
-    <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/ds/primary-data.png" width="1200" height="630" loading="lazy" decoding="async" alt="一次データの直接収集の具体例として、アンケート・実験・センサー計測の3つを示した図" style="display:block;width:100%;max-width:100%;height:auto;">
+    <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/ds/primary-data.png" width="1731" height="909" loading="lazy" decoding="async" alt="一次データの直接収集の具体例として、アンケート・実験・センサー計測の3つを示した図" style="display:block;width:100%;max-width:100%;height:auto;">
   </picture>
   <figcaption style="font-size:0.88em;line-height:1.5;color:#596579;margin-top:8px;">一次データは、調べたい目的に合わせて自分たちで直接収集するデータです。</figcaption>
 </figure>
