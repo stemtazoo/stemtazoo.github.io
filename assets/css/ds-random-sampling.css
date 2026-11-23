@@ -1,0 +1,17 @@
+.ds-sampling-demo{margin:18px 0 24px;padding:16px;border:1px solid #a8b9c9;border-radius:12px;background:var(--main-bg,#fff)}
+.ds-sampling-demo__controls{display:flex;align-items:end;flex-wrap:wrap;gap:12px;margin:12px 0}
+.ds-sampling-demo label{font-weight:650;display:block}
+.ds-sampling-demo select{display:block;margin-top:5px;min-height:44px;max-width:100%;padding:8px;border:1px solid #8595a7;border-radius:8px;background:var(--main-bg,#fff);color:inherit;font:inherit}
+.ds-sampling-demo button{min-height:44px;padding:9px 15px;border-radius:8px;border:1px solid #1765a6;background:#1765a6;color:white;cursor:pointer;font:inherit}
+.ds-sampling-demo button[data-reset]{background:transparent;color:inherit;border-color:#8595a7}
+.ds-sampling-demo button:focus-visible,.ds-sampling-demo select:focus-visible{outline:3px solid #d38a13;outline-offset:3px}
+.ds-sampling-demo__population{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:12px 0}
+.ds-sampling-demo__group{padding:9px;border:1px solid #b3c0d0;border-radius:9px;min-width:0}
+.ds-sampling-demo__group strong{display:block;font-size:.82rem;margin-bottom:8px}
+.ds-sampling-demo__dots{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:4px}
+.ds-sampling-demo__person{display:flex;align-items:center;justify-content:center;min-width:0;aspect-ratio:1;border:1px solid #8a96a5;border-radius:5px;font-size:.75rem;color:#344054;background:#f1f5f9}
+.ds-sampling-demo__person.is-selected{background:#125e96;color:white;border-color:#125e96;font-weight:750}
+.ds-sampling-demo__result{padding:10px 12px;margin-top:12px;border-radius:8px;background:var(--blockquote-bg,#f1f5f9)}
+.ds-sampling-demo__result p{margin:6px 0}
+.ds-sampling-demo__legend{font-size:.9rem}
+@media(max-width:520px){.ds-sampling-demo{padding:12px}.ds-sampling-demo__population{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.ds-sampling-demo__group{padding:7px}.ds-sampling-demo__controls label{width:100%}.ds-sampling-demo__controls select{width:100%}.ds-sampling-demo__controls button{flex:1}}
