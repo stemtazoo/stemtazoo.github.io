@@ -31,7 +31,7 @@ DS検定では、**データを使って意思決定を説明できるか**を�
 
 <figure style="margin:16px 0 20px;">
   <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/ds/why-structure.png" width="1200" height="630" loading="lazy" decoding="async" alt="WHYの並び立て。複数のWHYで理由や根拠を整理し、納得できる結論につなげる論理構造を示した図。" style="display:block;width:100%;max-width:100%;height:auto;">
-  <figcaption style="font-size:0.88em;line-height:1.5;color:#596579;margin-top:8px;">「なぜ？」の根拠を整理して、結論に至る筋道を明確にします。</figcaption>
+  <figcaption style="font-size:0.88em;line-height:1.5;color:#596579;margin-top:8px;">DS検定では、WHYを並べる目的が「結論の根拠を示すこと」だと押さえましょう。</figcaption>
 </figure>
 
 ## 直感的な説明
