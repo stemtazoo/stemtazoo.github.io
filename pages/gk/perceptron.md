@@ -29,7 +29,7 @@ G検定では、次の対応を最優先で押さえます。
     <source media="(max-width: 640px)" srcset="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/perceptron-mobile.png" width="1122" height="1402">
     <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/perceptron.png" width="1200" height="630" alt="ANDは直線で出力0と1を分離できるが、XORは1本の直線では分離できないことを示す比較図" loading="lazy" decoding="async" style="display:block;width:100%;max-width:100%;height:auto;">
   </picture>
-  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#526171;">ANDは線形分離できますが、XORは1本の直線では分離できません。</figcaption>
+  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#526171;">線形分離できるかどうかが、単純パーセプトロンで扱える問題を見分けるポイントです。</figcaption>
 </figure>
 
 ## 直感的な説明
