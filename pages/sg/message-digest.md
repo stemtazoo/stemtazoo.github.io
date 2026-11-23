@@ -26,7 +26,7 @@ SHA-256では256ビットのメッセージダイジェストを作ります。
        alt="元データをSHA-256ハッシュ関数に入力し、256ビットのメッセージダイジェストを得る流れ。元データへの復元はできない。"
        width="1200" height="630" loading="lazy" decoding="async"
        style="display:block;width:100%;max-width:100%;height:auto;">
-  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#555;">ハッシュ関数の出力がメッセージダイジェストです。暗号文とは異なり、復号して元データに戻すものではありません。</figcaption>
+  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#555;">同じデータからは同じハッシュ値が生成されます。送信前と受信後の値を比較することで、データの変更を検知できます。</figcaption>
 </figure>
 
 ## 直感的な説明
