@@ -3,6 +3,11 @@ layout: page
 title: メッセージダイジェストとは？ハッシュ値との関係を整理【SG試験】
 description: メッセージダイジェストは、ハッシュ関数によって入力データから作られる固定長の要約値です。SHA-1やSHA-256との関係、暗号化ではなく改ざん検知に使う点、デジタル署名やMACとの違いをSG試験向けに整理します。科目Aの用語理解と科目Bのケース判断で迷いやすい表現も確認します。
 permalink: /sg/message-digest/
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/sg/message-digest.png
+  width: 1200
+  height: 630
+  alt: "元データをSHA-256で処理すると固定長のメッセージダイジェストが得られ、元のデータには復元できないことを示す図"
 tags: [sg, sg-security-overview, cryptography, hash_function, authentication]
 last_modified_at: 2026-05-06
 ---
@@ -15,6 +20,14 @@ SG試験では、**暗号化ではなく、改ざん検知や電子署名で使�
 SHA-256では256ビットのメッセージダイジェストを作ります。
 
 つまり、メッセージダイジェストは特別な別技術というより、**ハッシュ関数の出力結果**と考えると分かりやすいです。
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/sg/message-digest.png"
+       alt="元データをSHA-256ハッシュ関数に入力し、256ビットのメッセージダイジェストを得る流れ。元データへの復元はできない。"
+       width="1200" height="630" loading="lazy" decoding="async"
+       style="display:block;width:100%;max-width:100%;height:auto;">
+  <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#555;">ハッシュ関数の出力がメッセージダイジェストです。暗号文とは異なり、復号して元データに戻すものではありません。</figcaption>
+</figure>
 
 ## 直感的な説明
 メッセージダイジェストは、データの「要約メモ」や「指紋」のようなものです。
