@@ -30,6 +30,7 @@ The front-matter guides refer to [shared metadata writing](metadata-rules.md). S
 | GK Instagram carousel | [carousel rules](gk-carousel-rules.md) plus GK content; use the linked generation repository only for execution details |
 | Laws, standards, RFCs, current software behavior, original papers, or source audits | [primary-source audit](primary-source-audit-rules.md); retain theme writing requirements |
 | Layouts/includes/indexes/shared navigation/CSS | [Pages compatibility](github-pages-compat.md), [theme consistency](theme-consistency.md), [editing/verification](editing-workflow.md), and affected theme route |
+| Responsive article comparison tables | [Theme consistency](theme-consistency.md#responsive-article-comparison-tables), [editing workflow](editing-workflow.md) |
 | Homepage update list | [homepage updates](home-updates-rules.md) |
 | IndexNow/deployment notification changes | [IndexNow](indexnow.md) |
 | Article images, eyecatches, OGP assets, or desktop/mobile picture sources | [article images](article-image-rules.md), [editing workflow](editing-workflow.md), and the affected theme's front matter guide |
