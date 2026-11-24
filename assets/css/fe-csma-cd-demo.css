@@ -1,7 +1,7 @@
 .fe-csma-demo{border:1px solid #9bafc3;border-radius:12px;padding:16px;margin:16px 0 24px;background:var(--main-bg,#fff)}
-.fe-csma-demo__controls{display:flex;flex-wrap:wrap;gap:10px;align-items:end;margin:12px 0}
-.fe-csma-demo label{font-weight:600;display:block}
-.fe-csma-demo select{display:block;margin-top:5px;max-width:100%;min-height:44px;padding:8px;border:1px solid #879aae;border-radius:7px;background:var(--main-bg,#fff);color:inherit;font:inherit}
+.fe-csma-demo__controls{display:flex;flex-wrap:wrap;gap:10px;align-items:end;min-width:0;max-width:100%;margin:12px 0}
+.fe-csma-demo__controls label{font-weight:600;display:block;flex:1 1 100%;min-width:0;max-width:100%}
+.fe-csma-demo select{display:block;box-sizing:border-box;width:100%;min-width:0;max-width:100%;min-height:44px;padding:8px;border:1px solid #879aae;border-radius:7px;background:var(--main-bg,#fff);color:inherit;font:inherit}
 .fe-csma-demo button{min-height:44px;padding:9px 13px;border:1px solid #175a95;border-radius:7px;background:#175a95;color:#fff;font:inherit;cursor:pointer}
 .fe-csma-demo button[data-back],.fe-csma-demo button[data-reset]{background:transparent;color:inherit;border-color:#879aae}
 .fe-csma-demo button:disabled{opacity:.48;cursor:not-allowed}
