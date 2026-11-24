@@ -100,9 +100,9 @@ CSMA/CDは、**Carrier Sense Multiple Access with Collision Detection**の略で
 
 **見るポイント：** 送信前に空きを確認しても衝突は起こり得ます。衝突した場合と、送信時刻がずれた場合の違いを比較しましょう。
 
-1. 「ほぼ同時に送信」または「時間をずらして送信」を選びます。
-2. 次の通信路の状態（空き・使用中・衝突）を予想します。予想せず進んでも構いません。
-3. 「次へ」で端末A・Bと通信路がどう変わるかを確認します。「戻る」「最初から」で繰り返せます。
+まずは「ほぼ同時に送信」が選ばれた状態で「次へ（1ステップ）」を押し、端末A・Bと共有通信路を見てください。もう一度押すと送信が始まり、通信路の変化を確認できます。
+
+次に「時間をずらして送信」に切り替えて比べましょう。「1ステップ戻る」で直前の状態を見直し、「同じ条件で最初から」で選んだ送信状況を試し直せます。次の状態の予想は省略できます。
 
 <link rel="stylesheet" href="{{ '/assets/css/fe-csma-cd-demo.css' | relative_url }}">
 
@@ -133,14 +133,14 @@ CSMA/CDは、**Carrier Sense Multiple Access with Collision Detection**の略で
   <div class="fe-csma-demo__controls">
     <button type="button" data-next>次へ（1ステップ）</button>
     <button type="button" data-back disabled>1ステップ戻る</button>
-    <button type="button" data-reset>最初から</button>
+    <button type="button" data-reset>同じ条件で最初から</button>
   </div>
   <div class="fe-csma-demo__result">
     <p><strong>進行：</strong><span data-step>1 / 7</span>　<strong data-title>初期状態</strong></p>
     <p data-note>2台は同じ共有通信路で送信を待っています。</p>
     <p role="status" aria-live="polite" aria-atomic="true" data-feedback>予想は任意です。「次へ」で順番に確認できます。</p>
     <p><strong>ここまでの流れ</strong></p>
-    <ol class="fe-csma-demo__trace" data-trace><li aria-current="step">1. 初期状態</li></ol>
+    <ol class="fe-csma-demo__trace" data-trace><li aria-current="step">初期状態</li></ol>
   </div>
 </div>
 <noscript>

@@ -4,7 +4,7 @@
   if (!root) return;
 
   const operations = {
-    create: {kind:"DDL", sql:"CREATE TABLE employees (id INT, name VARCHAR(50));",
+    create: {kind:"DDL", sql:"CREATE TABLE employees (id INT PRIMARY KEY, name VARCHAR(50));",
       explain:"テーブルと列の構造を作りました。まだ行はありません。"},
     alter: {kind:"DDL", sql:"ALTER TABLE employees ADD department VARCHAR(30);",
       explain:"department列を追加しました。既存行がある場合、新しい列はこの例ではNULLになります。"},
@@ -38,7 +38,9 @@
     fields = [];
     rows = [];
     actions = [];
+    choice.value = "create";
     prediction.value = "";
+    kind.textContent = "分類：実行後に表示";
     feedback.textContent = "最初はテーブルがありません。まずCREATEを実行してみましょう。";
     render();
   }
@@ -46,7 +48,6 @@
   function render() {
     const op = operations[choice.value];
     sql.textContent = op.sql;
-    kind.textContent = "分類：実行後に表示";
     columns.textContent = tableExists ? fields.join(" / ") : "テーブルなし";
     rowCount.textContent = tableExists ? rows.length + "行" : "—";
     tableHost.replaceChildren();
@@ -94,9 +95,9 @@
       li.textContent = "まだ実行していません。";
       history.append(li);
     } else {
-      actions.forEach((entry,i) => {
+      actions.forEach(entry => {
         const li = document.createElement("li");
-        li.textContent = (i + 1) + ". " + entry;
+        li.textContent = entry;
         history.append(li);
       });
     }
@@ -126,11 +127,11 @@
       if (fields.includes("department")) {success=false;message="department列は既にあります。この例では同じ列をもう一度追加できません。";}
       else {fields.push("department");rows.forEach(record=>{record.department=null;});}
     } else if (key === "insert") {
-      if (rows.some(r=>r.id===1)) {success=false;message="id=1の行が既にあります。この教材では同じidを追加しません。";}
+      if (rows.some(r=>r.id===1)) {success=false;message="id=1の行が既にあります。主キーが重複するため追加できません。";}
       else {const record={id:1,name:"佐藤"};if(fields.includes("department"))record.department=null;rows.push(record);}
     } else if (key === "update") {
       const record=rows.find(r=>r.id===1);
-      if (!record) {success=false;message="id=1の行がないため、更新対象は0行でした。";}
+      if (!record) {message="id=1の行がないため、更新対象は0行でした。";}
       else {record.name="鈴木";}
     } else if (key === "delete") {
       const before=rows.length;

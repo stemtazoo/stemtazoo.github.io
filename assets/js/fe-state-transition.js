@@ -64,7 +64,7 @@
     current = states[0];
     records = [];
     guessEl.value = "";
-    statusEl.textContent = "初期状態は「停止中」です。次の状態を予想してからイベントを押しましょう。";
+    statusEl.textContent = "初期状態は「停止中」です。まず「起動」を押して、状態と矢印を見てみましょう。";
     render();
   });
   render();

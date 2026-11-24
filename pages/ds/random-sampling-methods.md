@@ -91,9 +91,9 @@ DS検定では「どの抽出方法かを見抜けるか」「方法の違いを
 
 この教材では、母集団60人を6グループ（各10人）に分け、全員を層A・B・Cのいずれかに分類しています（各層20人）。**グループは調査対象の集まり、層は比較したい属性による区分**で、同じ分類ではありません。
 
-1. 5種類の抽出方式から1つ選び、選び方を予想します（予想は省略可）。
-2. 「抽出する」を押し、青くなった人を確認します。
-3. もう一度抽出して標本が変わる様子を観察し、方式を切り替えて比較します。
+まず「集落抽出」を選んで「抽出する（もう一度押すと再抽出）」を押し、青くなった人がどのグループにいるか見てください。次に「多段抽出」に切り替えて、同じように確かめましょう。
+
+ほかの方式も選べます。もう一度押すと、同じ方式で抽出し直せます。選び方の予想は省略できます。
 
 <link rel="stylesheet" href="{{ '/assets/css/ds-random-sampling.css' | relative_url }}">
 
@@ -104,8 +104,8 @@ DS検定では「どの抽出方法かを見抜けるか」「方法の違いを
         <option value="simple">単純無作為抽出</option>
         <option value="systematic">系統抽出</option>
         <option value="stratified">層別抽出（比例配分の例）</option>
-        <option value="cluster">集落抽出（2集団を丸ごと）</option>
-        <option value="multistage">多段抽出（2集団→各6人）</option>
+        <option value="cluster">集落抽出</option>
+        <option value="multistage">多段抽出</option>
       </select>
     </label>
     <label for="ds-sampling-guess">② 選び方を予想（任意）
