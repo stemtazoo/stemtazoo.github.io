@@ -3,12 +3,17 @@ layout: page
 title: RAIDとは？RAID0・RAID1・RAID5の違いを整理【基本情報技術者試験】
 description: RAIDの基本と、基本情報技術者試験で重要なRAID0・RAID1・RAID5の違いを、ストライピング・ミラーリング・パリティの判断軸から整理して解説します。
 permalink: /fe/raid-levels/
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/raid-levels.png
+  width: 1200
+  height: 630
+  alt: RAID0はデータを分散、RAID1は同じデータを複製、RAID5はデータとパリティを複数ディスクに分散して保存する比較図。
 tags: [fe, fe-technology, computer-system, storage]
 fe_section: テクノロジ系
 fe_subsection: コンピュータ構成要素
 fe_order: 42
 date: 2026-09-16
-last_modified_at: 2026-10-24
+last_modified_at: 2026-11-24
 ---
 
 ## まず結論
@@ -36,6 +41,10 @@ RAID5
 特に、問題文に**「ミラーリング」**と書かれていたら、RAID1を思い出すのが重要です。
 
 このページは、**RAIDレベルごとの高速化・冗長性・容量の違い**を比較します。データを複数ディスクへ分散した図の読み方は、[ストライピングの配置図](/fe/disk-striping/)で確認できます。
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/raid-levels.png" width="1200" height="630" loading="lazy" decoding="async" alt="RAID0はデータを分散、RAID1は同じデータを複製、RAID5はデータとパリティを複数ディスクに分散して保存する比較図。" style="display:block;width:100%;max-width:100%;height:auto;">
+</figure>
 
 ## 直感的な説明
 
