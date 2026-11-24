@@ -1294,3 +1294,77 @@
 .post--readability-pilot .pagefind-content > ol {
   margin-block: 1.15rem;
 }
+
+/* Opt-in responsive comparison tables: FE / GK / DS / SG. */
+table.study-comparison.study-comparison--pair .study-comparison__label { display: none; }
+@media (max-width: 640px) {
+  table.study-comparison.study-comparison--pair {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    overflow-x: visible;
+    margin-bottom: 16px;
+    white-space: normal;
+    border: 0;
+    background: transparent;
+  }
+  table.study-comparison.study-comparison--pair thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+  table.study-comparison.study-comparison--pair tbody {
+    display: grid;
+    gap: 12px;
+    min-width: 0;
+  }
+  table.study-comparison.study-comparison--pair tbody tr {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 8px;
+    margin: 0;
+    padding: 10px;
+    border: 1px solid #dce5eb;
+    border-radius: 10px;
+    background: #fff;
+  }
+  table.study-comparison.study-comparison--pair tbody th,
+  table.study-comparison.study-comparison--pair tbody td {
+    display: block;
+    box-sizing: border-box;
+    width: auto;
+    min-width: 0;
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    text-align: left;
+    line-height: 1.55;
+    border: 0;
+  }
+  table.study-comparison.study-comparison--pair tbody th {
+    grid-column: 1 / -1;
+    padding: 0 2px 2px;
+    color: #34495e;
+    background: transparent;
+    font-weight: 700;
+  }
+  table.study-comparison.study-comparison--pair tbody td {
+    padding: 8px;
+    border-radius: 6px;
+    color: #172b3c;
+  }
+  table.study-comparison.study-comparison--pair tbody td:nth-child(2) { background: #eaf2fc; }
+  table.study-comparison.study-comparison--pair tbody td:nth-child(3) { background: #e8f5f1; }
+  table.study-comparison.study-comparison--pair .study-comparison__label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 700;
+  }
+  table.study-comparison.study-comparison--pair td:nth-child(2) .study-comparison__label { color: #185898; }
+  table.study-comparison.study-comparison--pair td:nth-child(3) .study-comparison__label { color: #08776e; }
+}
