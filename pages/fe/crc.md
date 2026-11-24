@@ -3,12 +3,17 @@ layout: page
 title: CRC方式とは？生成多項式で誤りを検出する方法【基本情報技術者試験】
 description: CRC方式を「送信データを生成多項式で割った余りを付加して誤りを検出する方式」として整理し、パリティチェック、チェックサム、ハミング符号との違いをFE試験向けに解説します。
 permalink: /fe/crc/
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/crc.png
+  width: 1200
+  height: 630
+  alt: 送信側で生成多項式による余りをデータに付加し、受信側で同じ多項式による余りが0でなければ誤りを検出する図。
 tags: [fe, fe-technology, network]
 fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 10
 date: 2026-06-25
-last_modified_at: 2026-08-19
+last_modified_at: 2026-11-24
 ---
 
 ## まず結論
@@ -18,6 +23,10 @@ CRC方式とは、**送信データを生成多項式で割った余りを付加
 基本情報技術者試験では、CRC方式は **生成多項式** というキーワードで判断しやすいです。
 
 CRC方式は、誤りを「訂正する」方式ではなく、主に誤りを「検出する」方式として押さえます。
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/crc.png" width="1200" height="630" loading="lazy" decoding="async" alt="送信側で生成多項式による余りをデータに付加し、受信側で同じ多項式による余りが0でなければ誤りを検出する図。" style="display:block;width:100%;max-width:100%;height:auto;">
+</figure>
 
 ## 直感的な説明
 
