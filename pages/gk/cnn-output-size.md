@@ -6,7 +6,7 @@ permalink: /gk/cnn-output-size/
 tags: [gk, cnn, convolution]
 gk_section: ディープラーニングの応用例/画像認識/ネオコグニトロンとLeNet
 gk_order: 4
-last_modified_at: 2026-11-02
+last_modified_at: 2026-11-24
 ---
 
 ## まず結論
@@ -33,7 +33,7 @@ last_modified_at: 2026-11-02
 
 ### 操作して確認：カーネルを置ける位置
 
-入力サイズ・カーネル・ストライド・パディングを変更し、**次の位置**を押すと窓の移動が分かります。オレンジの枠が現在のカーネル位置です。縦横が同じ正方形の入力、拡張率1の例です。
+**まず「次の位置 →」を1回押し、オレンジの枠が動く方向とマス数を見てください。** 初期設定はストライド2なので、窓（カーネル）は右に2マス動き、位置が1 / 16から2 / 16になります。
 
 <link rel="stylesheet" href="{{ '/assets/css/gk-interactive-pilot.css' | relative_url }}">
 <div class="gk-pilot" data-gk-cnn-demo>
@@ -43,12 +43,16 @@ last_modified_at: 2026-11-02
     <label>ストライド <input data-field="s" type="number" min="1" max="3" value="2"></label>
     <label>パディング <input data-field="p" type="number" min="0" max="2" value="1"></label>
   </div>
+  <button type="button" data-next>次の位置 →</button>
   <svg viewBox="0 0 240 240" role="img" aria-label="入力格子と現在のカーネル位置"></svg>
   <p class="gk-pilot-output" data-output aria-live="polite">出力：4 × 4</p>
   <p class="gk-pilot-note" data-note>出力サイズは、窓を置ける位置の数です。</p>
-  <button type="button" data-next>次の位置 →</button>
 </div>
 <script defer src="{{ '/assets/js/gk-cnn-output-demo.js' | relative_url }}"></script>
+
+次に「ストライド」だけを2から3に変えてみましょう。窓は先頭に戻ります。「次の位置 →」を押し、今度は右に何マス動くかを確かめます。この教材では縦横が同じ入力を使い、拡張率は1です。
+
+「入力を確認してください」と表示されたら、変更した欄を画面に示された範囲の整数に戻します。例えばストライドを4にした場合は、2に戻すと図が復帰し、先頭から操作できます。
 
 ## いつ使う？（得意・不得意）
 
