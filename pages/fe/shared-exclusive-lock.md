@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_order: 34
 fe_subsection: データベース
 date: 2026-07-27
-last_modified_at: 2026-11-02
+last_modified_at: 2026-11-24
 ux_readability_pilot: true
 image:
   path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/shared-exclusive-lock.png
@@ -86,16 +86,9 @@ image:
 
 ### 触って覚える：共有ロックと専有ロックの両立性
 
-**T1がロックを保持している間に、T2もロックを取得できるでしょうか？**
+まず「S＋X」（T1が共有、T2が専有）を選び、「T1がロック取得」→「T2がロック要求」の順に押してください。T1が保持している間に、**T2の状態と理由**がどう表示されるかを見ます。予想は省略できます。
 
-次の順番で4つの組合せを試します。
-
-1. T1とT2のロック種別を選ぶ（共有＝S、専有＝X）。
-2. T2が「取得できる」か「待機する」か予想する。
-3. 「T1がロック取得」→「T2がロック要求」→「T1がロック解放」の順に操作する。
-4. 予想とT2の状態を比較する。
-
-**確認するポイント：共有＋共有だけが同時取得できます。**
+続いて「T1がロック解放」を押し、T2の状態がどう変わるかを確認しましょう。「S＋S」を選んで同じ操作をすると、共有ロック同士の場合と比べられます。
 
 **この教材の前提**
 
@@ -106,7 +99,7 @@ image:
 {% include study_demo_assets.html %}
 
 <div class="fe-lock-compat-demo study-demo" id="fe-lock-compat-demo">
-  <p class="fe-lock-compat-demo__step"><strong>① 条件を選ぶ</strong><span>下の4パターンのボタンからも選べます。</span></p>
+  <p class="fe-lock-compat-demo__step"><strong>① 条件を選ぶ</strong><span>最初は「S＋X」を試しましょう。左がT1、右がT2です。</span></p>
   <div class="fe-lock-compat-demo__controls study-demo__controls">
     <label for="fe-lock-t1">T1が先に取得するロック
       <select id="fe-lock-t1">
@@ -127,14 +120,14 @@ image:
     <button type="button" data-lock-case="XS" data-demo-choice="XS">X＋S</button>
     <button type="button" data-lock-case="XX" data-demo-choice="XX">X＋X</button>
   </div>
-  <p class="fe-lock-compat-demo__step"><strong>② 結果を予想する</strong><span>T1のロック保持中にT2が取得できるか考えます。</span></p>
+  <p class="fe-lock-compat-demo__step"><strong>② 結果を予想する（任意）</strong><span>T1のロック保持中にT2が取得できるか考えます。</span></p>
   <fieldset class="fe-lock-compat-demo__prediction">
     <legend>予想：T1が保持中、T2は取得できる？</legend>
     <label><input type="radio" name="fe-lock-guess" value="yes">取得できる</label>
     <label><input type="radio" name="fe-lock-guess" value="no">待機する</label>
   </fieldset>
   <p class="fe-lock-compat-demo__step"><strong>③ 操作して確かめる</strong><span>1操作ずつ進め、T1・T2の状態を確認します。</span></p>
-  <p class="study-demo__guide" id="fe-lock-guide" role="status" aria-live="polite">予想したら、すぐ下の「T1がロック取得」を押してください。予想を選ばずに進めることもできます。</p>
+  <p class="study-demo__guide" id="fe-lock-guide" role="status" aria-live="polite">「T1がロック取得」を押してください。予想は省略できます。</p>
   <div class="fe-lock-compat-demo__actions study-demo__actions">
     <button type="button" id="fe-lock-next" aria-describedby="fe-lock-guide">T1がロック取得</button>
     <button type="button" id="fe-lock-prev">1操作戻る</button>
@@ -145,7 +138,7 @@ image:
     <section><h4>トランザクションT1</h4><p id="fe-lock-state-t1">まだロックを取得していません。</p></section>
     <section><h4>トランザクションT2</h4><p id="fe-lock-state-t2">まだロックを要求していません。</p></section>
   </div>
-  <p id="fe-lock-feedback" role="status" aria-live="polite">まずロックの組合せを選んで予想してください。</p>
+  <p id="fe-lock-feedback" role="status" aria-live="polite">ロックの組合せを選ぶと、その条件で試せます。</p>
   <p id="fe-lock-reason" aria-live="polite">最初にT1がロックを取得し、次にT2が要求します。</p>
   <ol id="fe-lock-log" aria-label="ロック取得と解除の履歴"><li>まだ操作していません。</li></ol>
   <table>
@@ -193,7 +186,7 @@ image:
   function compatible(){return t1.value==="S"&&t2.value==="S";}
   function label(mode){return mode==="S"?"共有ロック（S）":"専有ロック（X）";}
   function reset(message){
-    step=0;feedback=message||"最初の状態です。予想したら、下のボタンで1操作ずつ進めましょう。";
+    step=0;feedback=message||"T1は未取得、T2は未要求です。";
     root.querySelectorAll('input[name="fe-lock-guess"]').forEach(r=>r.checked=false);
     render();
   }
@@ -204,8 +197,8 @@ image:
     $("fe-lock-next").disabled=step===3;$("fe-lock-prev").disabled=step===0;
     $("fe-lock-next").textContent=step===0?"T1がロック取得":step===1?"T2がロック要求":"T1がロック解放";
     const guides=[
-      (picked?"予想を選びました。":"予想したら、")+"すぐ下の「T1がロック取得」を押してください。"+(picked?"":"予想を選ばずに進めることもできます。"),
-      (picked?"予想を選びました。":"T2の結果を予想したら、")+"すぐ下の「T2がロック要求」を押して結果を確認してください。",
+      "「T1がロック取得」を押してください。"+(picked?"":"予想は省略できます。"),
+      "「T2がロック要求」を押し、T2の状態と理由を確認してください。",
       "次は、すぐ下の「T1がロック解放」を押し、T2の状態がどうなるか確認してください。",
       "確認は完了です。別の組合せを選んで比べるか、「最初から」で同じ組合せを試せます。"
     ];
@@ -239,7 +232,7 @@ image:
   root.querySelectorAll('input[name="fe-lock-guess"]').forEach(r=>r.addEventListener("change",render));
   $("fe-lock-prev").addEventListener("click",()=>{if(step>0)step--;feedback="1操作戻しました。";render();});
   $("fe-lock-reset").addEventListener("click",()=>reset());
-  [t1,t2].forEach(el=>el.addEventListener("change",()=>reset("ロックの組合せを変更しました。結果を予想してください。")));
+  [t1,t2].forEach(el=>el.addEventListener("change",()=>reset("ロックの組合せを変更しました。")));
   root.querySelectorAll("[data-lock-case]").forEach(b=>b.addEventListener("click",()=>{
     t1.value=b.dataset.lockCase[0];t2.value=b.dataset.lockCase[1];
     reset("組合せ"+b.dataset.lockCase+"に切り替えました。");
