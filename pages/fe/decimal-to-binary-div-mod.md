@@ -32,7 +32,10 @@ j div 2 → 商   → 次の j にする
 この考え方を6ビット単位に応用した例は、[UTF-8の3バイト符号化](/fe/utf8-three-byte-encoding/)で紹介しています。
 
 <figure style="margin:16px 0 20px;">
-  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/decimal-to-binary-div-mod.png" width="1200" height="630" loading="lazy" decoding="async" alt="10進数50を2で割り続け、余りを下位ビットから取り出す。modは余りの保存、divは商の更新を担当し、余りを逆順に読むと110010₂になる。" style="display:block;width:100%;max-width:100%;height:auto;">
+  <picture>
+    <source media="(max-width: 640px)" srcset="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/decimal-to-binary-div-mod-mobile.png" width="1024" height="1536">
+    <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/decimal-to-binary-div-mod.png" width="1200" height="630" loading="lazy" decoding="async" alt="10進数50を2で割り続け、modで余りを保存しdivで商を更新する。得られた余りを下から上に読むと110010₂になる。" style="display:block;width:100%;max-width:100%;height:auto;">
+  </picture>
   <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#555;">科目Bでは、余りを保存してから商を更新する処理順序にも注意しましょう。</figcaption>
 </figure>
 
