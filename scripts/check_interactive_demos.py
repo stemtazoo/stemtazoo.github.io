@@ -275,10 +275,15 @@ def binary_search(page, expect):
     root = '[data-fe-binary-demo]'
     for rapid in (False, True):
         page.locator('[data-binary-reset]').click()
-        for left, right in [('4', '6'), ('4', '4')]:
+        for left, right, reason, excluded in [
+            ('4', '6', '16は12より大きいので、中央を含む左側', 4),
+            ('4', '4', '16は23より小さいので、中央を含む右側', 6),
+        ]:
             page.locator('[data-binary-next]').press('Enter')
             expect(page.locator('[data-binary-left]')).to_have_text(left)
             expect(page.locator('[data-binary-right]')).to_have_text(right)
+            expect(page.locator('[data-binary-status]')).to_contain_text(reason)
+            expect(page.locator(root + ' .is-discarded')).to_have_count(excluded)
             if not rapid:
                 page.wait_for_timeout(250)
         page.locator('[data-binary-next]').click()

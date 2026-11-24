@@ -8,7 +8,7 @@ fe_section: 科目B対策
 fe_subsection: アルゴリズム
 fe_order: 50
 date: 2026-06-23
-last_modified_at: 2026-11-02
+last_modified_at: 2026-11-24
 ---
 
 ## まず結論
@@ -47,7 +47,7 @@ binary は「2つに分ける」というイメージで押さえると分かり
 
 <div class="fe-learning-demo" data-fe-binary-demo data-values="2,5,8,12,16,23,38" data-target="16">
   <p class="fe-learning-demo__title">触って確認：16を二分探索してみる</p>
-  <p class="fe-learning-demo__lead">「次の比較」を押すと、調べなくてよい範囲が薄くなります。</p>
+  <p class="fe-learning-demo__lead">まず「次の比較」を押して、16と中央の値を比べましょう。次に、配列のどちら側が薄くなるか見てください。</p>
 
   <div class="fe-binary-demo__array" aria-label="二分探索の配列">
     <div class="fe-binary-demo__cell" data-binary-cell><span class="fe-binary-demo__index">a[0]</span>2</div>
@@ -66,7 +66,7 @@ binary は「2つに分ける」というイメージで押さえると分かり
     <span>比較 = <strong data-binary-count>0回</strong></span>
   </div>
 
-  <p class="fe-binary-demo__status" data-binary-status>探す値は16。まず探索範囲の中央を確認します。</p>
+  <p class="fe-binary-demo__status" data-binary-status role="status" aria-atomic="true">探す値は16。最初は配列全体が探索範囲です。</p>
 
   <div class="fe-learning-demo__controls">
     <button type="button" class="fe-learning-demo__button" data-binary-next>次の比較</button>

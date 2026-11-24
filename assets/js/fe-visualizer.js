@@ -165,7 +165,7 @@ document.addEventListener("DOMContentLoaded", () => {
       comparisons = 0;
       finished = false;
       paint();
-      if (status) status.textContent = `探す値は ${target}。まず探索範囲の中央を確認します。`;
+      if (status) status.textContent = `探す値は${target}。最初は配列全体が探索範囲です。`;
       if (nextButton) {
         nextButton.disabled = false;
         nextButton.textContent = "次の比較";
@@ -192,10 +192,10 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       if (target > value) {
-        if (status) status.innerHTML = `<strong>${comparisons}回目：</strong> a[${mid}] = ${value}。${target} は ${value} より大きいので、左側を捨てます。`;
+        if (status) status.innerHTML = `<strong>${comparisons}回目：</strong> a[${mid}] = ${value}。${target}は${value}より大きいので、中央を含む左側を候補から外し、右側だけを探します。`;
         left = mid + 1;
       } else {
-        if (status) status.innerHTML = `<strong>${comparisons}回目：</strong> a[${mid}] = ${value}。${target} は ${value} より小さいので、右側を捨てます。`;
+        if (status) status.innerHTML = `<strong>${comparisons}回目：</strong> a[${mid}] = ${value}。${target}は${value}より小さいので、中央を含む右側を候補から外し、左側だけを探します。`;
         right = mid - 1;
       }
 
