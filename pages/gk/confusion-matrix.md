@@ -6,7 +6,7 @@ permalink: /gk/confusion-matrix/
 tags: [gk, 機械学習, 評価指標, 頻出]
 gk_section: 機械学習の概要/モデルの選択・評価/分類の評価指標
 gk_order: 1
-last_modified_at: 2026-11-02
+last_modified_at: 2026-11-24
 ---
 
 ## まず結論
@@ -82,25 +82,27 @@ F1-score → Precision と Recall のバランス
 | [Recall（再現率）]({{ '/gk/recall/' | relative_url }}) | 実際に陽性の中で、見逃さず検出した割合 | TP ÷ (TP + FN) |
 | [F1-score]({{ '/gk/f1-score/' | relative_url }}) | PrecisionとRecallをまとめた値（調和平均） | 2TP ÷ (2TP + FP + FN) |
 
-**見るポイント：** FP（誤検知）を増やすとPrecisionはどう変わるでしょうか。FN（見逃し）を増やすとRecallはどう変わるでしょうか。
-
 ※以下の操作では、ほかの数値を固定して1つの値を変えます。これは**指標の計算の仕組みを理解するための実験**であり、同じデータに対して分類モデルの予測だけを変えた比較ではありません。
 
 ### 操作して確認：誤検知と見逃しで指標はどう変わる？
 
 数値を変えて、**FP（誤検知）とFN（見逃し）**がどの評価指標に影響するか確認しましょう。陽性は「異常」、陰性は「正常」の例です。
 
-**操作例：右上の「FN 見逃し」を2から12に変えてみましょう。** TP=8・FP=2・TN=88はそのままにすると、Recallは80.0%から40.0%になります。
+**最初は、左下の「FP 誤検知」だけを2から12に変えてください。** 入力すると表のすぐ下に結果が出ます。Precision（適合率）とRecall（再現率）を見比べましょう。
 
 <link rel="stylesheet" href="{{ '/assets/css/gk-interactive-pilot.css' | relative_url }}">
 <div class="gk-pilot" data-gk-matrix>
-  <table class="gk-matrix-table gk-matrix-guided"><caption>実際と予測の組合せ</caption><thead><tr><th scope="col">実際＼予測</th><th scope="col">陽性</th><th scope="col">陰性</th></tr></thead><tbody><tr><th scope="row">陽性</th><td><label>TP 正しく検出<input data-tp type="number" min="0" max="999" value="8"></label></td><td class="gk-matrix-target"><label>FN 見逃し<input aria-label="FN 見逃し（右上のセル）" data-fn type="number" min="0" max="999" value="2"></label></td></tr><tr><th scope="row">陰性</th><td><label>FP 誤検知<input data-fp type="number" min="0" max="999" value="2"></label></td><td><label>TN 正しく正常<input data-tn type="number" min="0" max="999" value="88"></label></td></tr></tbody></table>
+  <table class="gk-matrix-table gk-matrix-guided"><caption>実際と予測の組合せ</caption><thead><tr><th scope="col">実際＼予測</th><th scope="col">陽性</th><th scope="col">陰性</th></tr></thead><tbody><tr><th scope="row">陽性</th><td><label>TP 正しく検出<input data-tp type="number" min="0" max="999" value="8"></label></td><td><label>FN 見逃し<input data-fn type="number" min="0" max="999" value="2"></label></td></tr><tr><th scope="row">陰性</th><td class="gk-matrix-target"><label>FP 誤検知<input data-fp type="number" min="0" max="999" value="2"></label></td><td><label>TN 正しく正常<input data-tn type="number" min="0" max="999" value="88"></label></td></tr></tbody></table>
   <p class="gk-pilot-output" data-results aria-live="polite">Precision 80.0% ／ Recall 80.0% ／ Accuracy 96.0% ／ F1 80.0%</p>
   <p class="gk-pilot-note" data-input-feedback role="status" aria-live="polite"></p>
   <p class="gk-pilot-note">TP・FN・FP・TNには0〜999の整数を入力します。空欄や範囲外の値では計算しません。</p>
   <p class="gk-pilot-note">Precision = TP/(TP+FP)、Recall = TP/(TP+FN)。分母が0の場合は「—」と表示します。</p>
 </div>
 <script defer src="{{ '/assets/js/gk-confusion-demo.js' | relative_url }}"></script>
+
+FPが2から12になると、Precisionは80.0%から40.0%に下がります。「陽性と予測した件数」が増え、その中で正しかった件数（TP＝8）は同じだからです。RecallはTPとFNだけで計算するので、80.0%のままです。
+
+次はFPを2に戻し、「FN 見逃し」だけを2から12に変えて、どちらの指標が下がるか確かめてみましょう。
 
 ## いつ使う？（得意・不得意）
 
