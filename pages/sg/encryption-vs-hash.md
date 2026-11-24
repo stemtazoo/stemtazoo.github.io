@@ -4,7 +4,7 @@ title: 暗号化とハッシュの違いとは？元に戻せるかで整理【S
 description: 暗号化とハッシュはどちらもデータ保護で使われますが、暗号化は鍵で元に戻せる秘匿、ハッシュは原則元に戻せない要約値です。AES、RSA、SHA-1、改ざん検知、パスワード保存の違いを押さえ、SG試験で用途を切り分ける基準を整理します。SG試験の出題文で迷いやすい判断ポイントも確認します。
 permalink: /sg/encryption-vs-hash/
 tags: [sg, sg-security-overview, cryptography, hash_function, authentication]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-11-24
 ---
 
 ## まず結論
@@ -36,13 +36,38 @@ SG試験では、**内容を隠すなら暗号化、改ざんを確認するな�
 ハッシュは、入力データから固定長のハッシュ値を作る処理です。  
 代表例には、SHA-1、SHA-256などがあります。
 
-| 観点 | 暗号化 | ハッシュ |
-|---|---|---|
-| 主な目的 | 内容を隠す | 内容が同じか確認する |
-| 元に戻せるか | 復号できる | 原則戻せない |
-| 出力 | 暗号文 | ハッシュ値、メッセージダイジェスト |
-| 代表例 | AES、RSA | SHA-1、SHA-256 |
-| 試験のキーワード | 秘匿、盗聴対策、復号 | 改ざん検知、要約値、衝突 |
+<table class="study-comparison study-comparison--pair" id="encryption-hash-pair" role="table" aria-label="暗号化とハッシュの比較">
+  <thead role="rowgroup">
+    <tr role="row"><th scope="col" role="columnheader">観点</th><th scope="col" role="columnheader" id="encryption-hash-pair-col-1">暗号化</th><th scope="col" role="columnheader" id="encryption-hash-pair-col-2">ハッシュ</th></tr>
+  </thead>
+  <tbody role="rowgroup">
+    <tr role="row">
+      <th scope="row" role="rowheader" id="encryption-hash-pair-row-1">主な目的</th>
+      <td role="cell" headers="encryption-hash-pair-row-1 encryption-hash-pair-col-1"><span class="study-comparison__label" aria-hidden="true">暗号化</span>内容を隠す</td>
+      <td role="cell" headers="encryption-hash-pair-row-1 encryption-hash-pair-col-2"><span class="study-comparison__label" aria-hidden="true">ハッシュ</span>内容が同じか確認する</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="encryption-hash-pair-row-2">元に戻せるか</th>
+      <td role="cell" headers="encryption-hash-pair-row-2 encryption-hash-pair-col-1"><span class="study-comparison__label" aria-hidden="true">暗号化</span>復号できる</td>
+      <td role="cell" headers="encryption-hash-pair-row-2 encryption-hash-pair-col-2"><span class="study-comparison__label" aria-hidden="true">ハッシュ</span>原則戻せない</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="encryption-hash-pair-row-3">出力</th>
+      <td role="cell" headers="encryption-hash-pair-row-3 encryption-hash-pair-col-1"><span class="study-comparison__label" aria-hidden="true">暗号化</span>暗号文</td>
+      <td role="cell" headers="encryption-hash-pair-row-3 encryption-hash-pair-col-2"><span class="study-comparison__label" aria-hidden="true">ハッシュ</span>ハッシュ値、メッセージダイジェスト</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="encryption-hash-pair-row-4">代表例</th>
+      <td role="cell" headers="encryption-hash-pair-row-4 encryption-hash-pair-col-1"><span class="study-comparison__label" aria-hidden="true">暗号化</span>AES、RSA</td>
+      <td role="cell" headers="encryption-hash-pair-row-4 encryption-hash-pair-col-2"><span class="study-comparison__label" aria-hidden="true">ハッシュ</span>SHA-1、SHA-256</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="encryption-hash-pair-row-5">試験のキーワード</th>
+      <td role="cell" headers="encryption-hash-pair-row-5 encryption-hash-pair-col-1"><span class="study-comparison__label" aria-hidden="true">暗号化</span>秘匿、盗聴対策、復号</td>
+      <td role="cell" headers="encryption-hash-pair-row-5 encryption-hash-pair-col-2"><span class="study-comparison__label" aria-hidden="true">ハッシュ</span>改ざん検知、要約値、衝突</td>
+    </tr>
+  </tbody>
+</table>
 
 ここで注意したいのは、どちらもセキュリティで使われる技術ですが、目的が違うことです。
 

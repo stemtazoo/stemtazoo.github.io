@@ -13,7 +13,7 @@ image:
   height: 630
   alt: "CSMA/CAは、無線LANで送信前に通信路を確認し、待ち時間をずらしてから送信することで衝突の確率を下げる仕組み。"
 date: 2026-09-10
-last_modified_at: 2026-09-20
+last_modified_at: 2026-11-24
 ---
 
 ## まず結論
@@ -22,15 +22,23 @@ last_modified_at: 2026-09-20
 
 基本情報技術者試験では、まず次の対応を覚えると判断しやすくなります。
 
-```text
-無線LAN
-+ 衝突を回避
-→ CSMA/CA
-
-共有型Ethernet
-+ 衝突を検出
-→ CSMA/CD
-```
+<table class="study-comparison study-comparison--pair" id="csma-pair" role="table" aria-label="CSMA/CDとCSMA/CAの比較">
+  <thead role="rowgroup">
+    <tr role="row"><th scope="col" role="columnheader">観点</th><th scope="col" role="columnheader" id="csma-pair-col-1">CSMA/CD</th><th scope="col" role="columnheader" id="csma-pair-col-2">CSMA/CA</th></tr>
+  </thead>
+  <tbody role="rowgroup">
+    <tr role="row">
+      <th scope="row" role="rowheader" id="csma-pair-row-1">主な利用環境</th>
+      <td role="cell" headers="csma-pair-row-1 csma-pair-col-1"><span class="study-comparison__label" aria-hidden="true">CSMA/CD</span>共有型Ethernet</td>
+      <td role="cell" headers="csma-pair-row-1 csma-pair-col-2"><span class="study-comparison__label" aria-hidden="true">CSMA/CA</span>無線LAN</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="csma-pair-row-2">衝突への対応</th>
+      <td role="cell" headers="csma-pair-row-2 csma-pair-col-1"><span class="study-comparison__label" aria-hidden="true">CSMA/CD</span>衝突を検出して再送する</td>
+      <td role="cell" headers="csma-pair-row-2 csma-pair-col-2"><span class="study-comparison__label" aria-hidden="true">CSMA/CA</span>送信前にできるだけ衝突を避ける</td>
+    </tr>
+  </tbody>
+</table>
 
 ポイントは、**CA = Collision Avoidance（衝突回避）**です。
 

@@ -6,7 +6,7 @@ permalink: /gk/contrastive-loss/
 tags: [gk, neural_network, metrics]
 gk_section: ディープラーニングの概要/誤差関数
 gk_order: 3
-last_modified_at: 2026-09-26
+last_modified_at: 2026-11-24
 image:
   path: "https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/contrastive-loss.png"
   width: 1200
@@ -171,12 +171,33 @@ Cross Entropy Lossは、正解クラスの確率を高くするための損失�
 
 Contrastive Lossは、クラス確率ではなく、データ同士の距離を調整します。
 
-| 観点 | Contrastive Loss | Cross Entropy Loss |
-|---|---|---|
-| 目的 | 似たものを近づけ、違うものを遠ざける | 正解クラスの確率を高くする |
-| 入力の見方 | データのペア | データと正解ラベル |
-| 学習するもの | 距離・埋め込み表現 | クラス分類境界 |
-| 代表用途 | 類似検索、顔認識、距離学習 | 画像分類、文書分類 |
+<table class="study-comparison study-comparison--pair" id="loss-pair" role="table" aria-label="Contrastive LossとCross Entropy Lossの比較">
+  <thead role="rowgroup">
+    <tr role="row"><th scope="col" role="columnheader">観点</th><th scope="col" role="columnheader" id="loss-pair-col-1">Contrastive Loss</th><th scope="col" role="columnheader" id="loss-pair-col-2">Cross Entropy Loss</th></tr>
+  </thead>
+  <tbody role="rowgroup">
+    <tr role="row">
+      <th scope="row" role="rowheader" id="loss-pair-row-1">目的</th>
+      <td role="cell" headers="loss-pair-row-1 loss-pair-col-1"><span class="study-comparison__label" aria-hidden="true">Contrastive Loss</span>似たものを近づけ、違うものを遠ざける</td>
+      <td role="cell" headers="loss-pair-row-1 loss-pair-col-2"><span class="study-comparison__label" aria-hidden="true">Cross Entropy Loss</span>正解クラスの確率を高くする</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="loss-pair-row-2">入力の見方</th>
+      <td role="cell" headers="loss-pair-row-2 loss-pair-col-1"><span class="study-comparison__label" aria-hidden="true">Contrastive Loss</span>データのペア</td>
+      <td role="cell" headers="loss-pair-row-2 loss-pair-col-2"><span class="study-comparison__label" aria-hidden="true">Cross Entropy Loss</span>データと正解ラベル</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="loss-pair-row-3">学習するもの</th>
+      <td role="cell" headers="loss-pair-row-3 loss-pair-col-1"><span class="study-comparison__label" aria-hidden="true">Contrastive Loss</span>距離・埋め込み表現</td>
+      <td role="cell" headers="loss-pair-row-3 loss-pair-col-2"><span class="study-comparison__label" aria-hidden="true">Cross Entropy Loss</span>クラス分類境界</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="loss-pair-row-4">代表用途</th>
+      <td role="cell" headers="loss-pair-row-4 loss-pair-col-1"><span class="study-comparison__label" aria-hidden="true">Contrastive Loss</span>類似検索、顔認識、距離学習</td>
+      <td role="cell" headers="loss-pair-row-4 loss-pair-col-2"><span class="study-comparison__label" aria-hidden="true">Cross Entropy Loss</span>画像分類、文書分類</td>
+    </tr>
+  </tbody>
+</table>
 
 G検定では、**正解クラス確率ならCross Entropy、距離や類似度ならContrastive Loss**と区別します。
 
