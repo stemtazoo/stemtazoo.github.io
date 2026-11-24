@@ -3,17 +3,26 @@ layout: page
 title: RISCとCISCの違いとは？命令セットの設計思想を比較【基本情報技術者試験】
 description: RISCとCISCの違いを、CPUの命令セットをどう設計するかという視点から整理します。単純な命令を組み合わせるRISCと、複雑な命令を持つCISCを、命令長・命令数・パイプラインとの関係や試験での見分け方まで解説します。
 permalink: /fe/risc-cisc/
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/risc-cisc.png
+  width: 1200
+  height: 630
+  alt: 取る・足す・戻すという作業を、RISCでは複数の単純な命令で、CISCでは複雑な1命令の例で表した比較図。
 tags: [fe, fe-technology, computer-architecture, cpu]
 fe_section: テクノロジ系
 fe_subsection: コンピュータ構成要素
 fe_order: 24
 date: 2026-10-07
-last_modified_at: 2026-10-07
+last_modified_at: 2026-11-24
 ---
 
 ## まず結論
 
 **RISC**と**CISC**は、CPUが理解する**命令セットをどのように設計するか**という考え方の違いです。
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/risc-cisc.png" width="1200" height="630" loading="lazy" decoding="async" alt="取る・足す・戻すという作業を、RISCでは複数の単純な命令で、CISCでは複雑な1命令の例で表した比較図。" style="display:block;width:100%;max-width:100%;height:auto;">
+</figure>
 
 最初は次の対比を押さえます。
 
