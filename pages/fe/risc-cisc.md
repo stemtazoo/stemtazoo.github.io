@@ -26,13 +26,112 @@ last_modified_at: 2026-11-24
 
 最初は次の対比を押さえます。
 
-| | RISC | CISC |
-|---|---|---|
-| 基本思想 | 単純な命令を中心にする | 複雑で多機能な命令も持つ |
-| 1命令の処理 | 比較的単純 | 比較的複雑なものもある |
-| 命令形式 | 単純・規則的にしやすい | 多様になりやすい |
-| パイプライン | 適用しやすい設計にしやすい | 命令ごとの差を考慮する必要がある |
-| プログラム | 複数の単純命令を組み合わせる | 1命令で多くの処理を行える場合がある |
+<style>
+#risc-cisc-comparison .comparison-label { display: none; }
+@media (max-width: 640px) {
+  #risc-cisc-comparison {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    overflow-x: visible;
+    white-space: normal;
+    border: 0;
+    background: transparent;
+  }
+  #risc-cisc-comparison thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+  #risc-cisc-comparison tbody {
+    display: grid;
+    gap: 12px;
+    min-width: 0;
+  }
+  #risc-cisc-comparison tbody tr {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 8px;
+    margin: 0;
+    padding: 10px;
+    border: 1px solid #dce5eb;
+    border-radius: 10px;
+    background: #fff;
+  }
+  #risc-cisc-comparison tbody th,
+  #risc-cisc-comparison tbody td {
+    display: block;
+    box-sizing: border-box;
+    width: auto;
+    min-width: 0;
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    text-align: left;
+    line-height: 1.55;
+    border: 0;
+  }
+  #risc-cisc-comparison tbody th {
+    grid-column: 1 / -1;
+    padding: 0 2px 2px;
+    color: #34495e;
+    background: transparent;
+    font-weight: 700;
+  }
+  #risc-cisc-comparison tbody td {
+    padding: 8px;
+    border-radius: 6px;
+    color: #172b3c;
+  }
+  #risc-cisc-comparison tbody td:nth-child(2) { background: #eaf2fc; }
+  #risc-cisc-comparison tbody td:nth-child(3) { background: #e8f5f1; }
+  #risc-cisc-comparison .comparison-label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 700;
+  }
+  #risc-cisc-comparison td:nth-child(2) .comparison-label { color: #185898; }
+  #risc-cisc-comparison td:nth-child(3) .comparison-label { color: #08776e; }
+}
+</style>
+
+<table id="risc-cisc-comparison" role="table" aria-label="RISCとCISCの特徴比較">
+  <thead role="rowgroup">
+    <tr role="row"><th scope="col" role="columnheader">観点</th><th scope="col" role="columnheader" id="risc-col">RISC</th><th scope="col" role="columnheader" id="cisc-col">CISC</th></tr>
+  </thead>
+  <tbody role="rowgroup">
+    <tr role="row">
+      <th scope="row" role="rowheader" id="risc-cisc-row-1">基本思想</th>
+      <td role="cell" headers="risc-cisc-row-1 risc-col"><span class="comparison-label" aria-hidden="true">RISC</span>単純な命令を中心にする</td>
+      <td role="cell" headers="risc-cisc-row-1 cisc-col"><span class="comparison-label" aria-hidden="true">CISC</span>複雑で多機能な命令も持つ</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="risc-cisc-row-2">1命令の処理</th>
+      <td role="cell" headers="risc-cisc-row-2 risc-col"><span class="comparison-label" aria-hidden="true">RISC</span>比較的単純</td>
+      <td role="cell" headers="risc-cisc-row-2 cisc-col"><span class="comparison-label" aria-hidden="true">CISC</span>比較的複雑なものもある</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="risc-cisc-row-3">命令形式</th>
+      <td role="cell" headers="risc-cisc-row-3 risc-col"><span class="comparison-label" aria-hidden="true">RISC</span>単純・規則的にしやすい</td>
+      <td role="cell" headers="risc-cisc-row-3 cisc-col"><span class="comparison-label" aria-hidden="true">CISC</span>多様になりやすい</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="risc-cisc-row-4">パイプライン</th>
+      <td role="cell" headers="risc-cisc-row-4 risc-col"><span class="comparison-label" aria-hidden="true">RISC</span>適用しやすい設計にしやすい</td>
+      <td role="cell" headers="risc-cisc-row-4 cisc-col"><span class="comparison-label" aria-hidden="true">CISC</span>命令ごとの差を考慮する必要がある</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="risc-cisc-row-5">プログラム</th>
+      <td role="cell" headers="risc-cisc-row-5 risc-col"><span class="comparison-label" aria-hidden="true">RISC</span>複数の単純命令を組み合わせる</td>
+      <td role="cell" headers="risc-cisc-row-5 cisc-col"><span class="comparison-label" aria-hidden="true">CISC</span>1命令で多くの処理を行える場合がある</td>
+    </tr>
+  </tbody>
+</table>
 
 ```text
 RISC
