@@ -4,6 +4,15 @@
     "root": "#fe-lock-compat-demo",
     "url": "/fe/shared-exclusive-lock/"
   },
+  "sql-ddl-dml": {
+    "source": "pages/ds/sql-ddl-dml.md",
+    "root": "#ds-ddl-dml-demo",
+    "url": "/ds/sql-ddl-dml/",
+    "static": {
+      "selector": "noscript p",
+      "text": "DELETEで行だけ削除"
+    }
+  },
   "two-phase-commit": {
     "source": "pages/fe/two-phase-commit.md",
     "root": "#fe-2pc-demo",
@@ -155,6 +164,15 @@
     "static": {
       "selector": "noscript p",
       "text": "入力完了2秒から出力開始9秒"
+    }
+  },
+  "csma-cd": {
+    "source": "pages/fe/csma-cd.md",
+    "root": "#fe-csma-cd-demo",
+    "url": "/fe/csma-cd/",
+    "static": {
+      "selector": "noscript p",
+      "text": "衝突を検出して中止"
     }
   }
 }

@@ -55,6 +55,49 @@ def selection(page, root, value):
         assert styles == {'background': 'rgb(30, 64, 175)', 'color': 'rgb(255, 255, 255)', 'marker': '"選択中"'}, styles
 
 
+def ddl_dml(page, expect):
+    root = page.locator('#ds-ddl-dml-demo')
+    operation = root.locator('[data-operation]')
+    execute = root.locator('[data-execute]')
+    classification = root.locator('[data-kind]')
+    history = root.locator('[data-history] li').last
+    rows = root.locator('[data-row-count]')
+    expect(operation).to_have_value('create')
+    execute.press('Enter')
+    expect(classification).to_have_text('分類：DDL（実行）')
+    expect(rows).to_have_text('0行')
+
+    operation.select_option('update')
+    expect(classification).to_have_text('分類：実行後に表示')
+    execute.click()
+    expect(classification).to_have_text('分類：DML（実行）')
+    expect(root.locator('[data-feedback]')).to_contain_text('更新対象は0行')
+    expect(history).to_have_text('UPDATE（DML）：実行')
+    expect(rows).to_have_text('0行')
+
+    operation.select_option('insert')
+    execute.click()
+    expect(rows).to_have_text('1行')
+    execute.click()
+    expect(classification).to_have_text('分類：DML（実行できず）')
+    expect(rows).to_have_text('1行')
+
+    operation.select_option('delete')
+    execute.click()
+    expect(rows).to_have_text('0行')
+    expect(root.locator('[data-columns]')).to_have_text('id / name')
+    operation.select_option('drop')
+    execute.click()
+    expect(root.locator('[data-columns]')).to_have_text('テーブルなし')
+
+    root.locator('[data-reset]').click()
+    expect(operation).to_have_value('create')
+    expect(classification).to_have_text('分類：実行後に表示')
+    expect(root.locator('[data-sql]')).to_contain_text('PRIMARY KEY')
+    expect(history).to_have_text('まだ実行していません。')
+    contained(page, '#ds-ddl-dml-demo')
+
+
 def lock(page, expect):
     root = '#fe-lock-compat-demo'
     selection(page, root, 'SS')
@@ -957,8 +1000,42 @@ def response_time(page, expect):
     contained(page, '#fe-response-demo')
 
 
+def csma_cd(page, expect):
+    root = page.locator('#fe-csma-cd-demo')
+    scenario = root.locator('[data-scenario]')
+    medium = root.locator('.fe-csma-demo__medium')
+    step = root.locator('[data-step]')
+    next_step = root.locator('[data-next]')
+    expect(step).to_have_text('1 / 7')
+    idle_background = medium.evaluate('el => getComputedStyle(el).backgroundColor')
+    next_step.press('Enter')
+    next_step.click()
+    expect(medium).to_have_attribute('data-condition', 'collision')
+    expect(medium.locator('[data-medium]')).to_have_text('衝突')
+    expect(medium).to_have_css('background-color', 'rgb(255, 240, 223)')
+    expect(root.locator('[data-trace] li').first).to_have_text('初期状態')
+
+    root.locator('[data-back]').click()
+    expect(medium).to_have_attribute('data-condition', 'idle')
+    expect(medium).to_have_css('background-color', idle_background)
+    scenario.select_option('staggered')
+    expect(step).to_have_text('1 / 5')
+    contained(page, '#fe-csma-cd-demo')
+    next_step.click()
+    next_step.click()
+    expect(medium).to_have_attribute('data-condition', 'busy')
+    expect(medium).to_have_css('background-color', 'rgb(229, 242, 255)')
+    next_step.click()
+    next_step.click()
+    expect(next_step).to_be_disabled()
+    root.locator('[data-reset]').click()
+    expect(scenario).to_have_value('staggered')
+    expect(step).to_have_text('1 / 5')
+    expect(medium).to_have_attribute('data-condition', 'idle')
+
+
 CHECKS = {'shared-exclusive-lock': lock, 'two-phase-commit': two_phase, 'disk-scheduling': disk,
-          'cpu-scheduling': cpu, 'confusion-matrix': matrix, 'attention': attention,
+          'sql-ddl-dml': ddl_dml, 'cpu-scheduling': cpu, 'confusion-matrix': matrix, 'attention': attention,
           'binary-search': binary_search, 'cnn-output-size': cnn, 'adjacency-matrix': adjacency,
           'binary-tree-traversal': binary_tree_traversal,
           'twos-complement': twos_complement,
@@ -970,7 +1047,7 @@ CHECKS = {'shared-exclusive-lock': lock, 'two-phase-commit': two_phase, 'disk-sc
           'five-stage-pipeline': five_stage_pipeline,
           'sql-group-by-aggregate-functions': sql_group_by_aggregate_functions,
           'packet-filtering-port-rules': packet_filtering_port_rules,
-          'response-time': response_time}
+          'response-time': response_time, 'csma-cd': csma_cd}
 
 
 def run(args):

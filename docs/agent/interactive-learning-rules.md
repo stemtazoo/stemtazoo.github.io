@@ -206,6 +206,12 @@ Use this sequence when predicting the next state genuinely improves learning:
 
 Prediction is optional, not a required quiz for every article. A static diagram or direct manipulation may teach the concept better. Do not block the normal demonstration when a learner skips prediction.
 
+### Help learners start and recover
+
+- In the initial view, name one useful first action and what to look at after it. Use the exact visible control label and a ready-to-try starting condition where practical.
+- Give the main action a clear visual emphasis within the lesson. Use a short label that describes the action. Put the resulting change and a brief reason near the control or visual being changed.
+- Make reset behavior match the label and initial guidance. If a reset keeps the current conditions for comparison, describe what it resets, for example 「同じ条件で最初から」.
+
 ### Explain outputs before asking learners to interpret them
 
 Before an interactive block displays metrics, abbreviations, scores, or calculated values that beginners may not recognize:
@@ -262,12 +268,18 @@ Use the checks above to support continued creation of useful CSS/JavaScript teac
 
 - Before testing, choose one representative operation and state its expected result from the article's explanation. In a browser, perform the operation and compare the visible numbers, diagram/highlights, and explanation with that expectation. For CSS-only aids, check the intended visual relationship at desktop and narrow widths.
 - For interactions, also try reset and relevant boundary values or first/last steps when those controls or states exist. When changing shared assets, check a representative existing consumer as well as the changed article.
-- Record the page and tested version, environment (local rendered page or deployed URL, browser and viewport), operation, expected result, and observed result briefly in the PR. Distinguish **code review only**, **browser operation checked**, and **deployed page checked**; record failures and unverified items explicitly. A screenshot alone does not establish that an operation works.
+- For lessons with selects, check the main operation at 320 and 390 CSS pixels with a long visible option selected. Check that the control stays within the lesson, opens, and leaves the next action reachable. Use 320 CSS pixels as the reflow reference and 390 as an additional site test width.
+- Record one representative operation in the PR as operation → expected result → observed result, with the page, tested version, browser and viewport. Include reset and a relevant boundary when they exist. Distinguish **code review only**, **browser operation checked**, and **deployed page checked**; record failures and unverified items explicitly. A screenshot alone does not establish that an operation works.
 - Example report format (fill with actual observations, not assumed success): `GK confusion matrix / <commit> / <local or deployed URL, browser, viewport>: with TP fixed above zero, FP 2 -> 12 should lower Precision; observed: <result>. Reset: <result>. Boundary: <case/result>. Unverified: <items>.`
 - If browser execution is unavailable, continue the implementation and report the limitation and concrete follow-up operation. Do not remove or avoid a useful teaching aid solely because that environment is unavailable, and do not describe code inspection or a passing build as an operation check.
 - Keep the existing update audit as a follow-up safeguard, with code review and actual browser execution reported separately. Consider targeted automation only when repeated failures or widely reused components justify its maintenance cost; do not introduce blanket automation as a prerequisite for teaching-aid creation.
 
-### Registered FE/GK browser pilot
+#### UI references
+
+- [GOV.UK Design System — Button](https://design-system.service.gov.uk/components/button/) informs the main-action hierarchy and descriptive button labels.
+- [W3C WAI — Reflow](https://www.w3.org/WAI/WCAG22/Understanding/reflow.html) informs the narrow-width check. [W3C WAI — Status Messages](https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html) informs how to announce results without moving keyboard focus.
+
+### Registered browser pilot
 
 The shared/exclusive-lock, two-phase-commit and disk-scheduling lessons use a small opt-in UI helper. Additional FE/GK lessons, including the 2026-11 five-article interactive pilot, have their own registered browser scenarios. See the [pilot implementation and follow-up guide](../../tests/browser/README.md) for the current registry, artifacts and manual follow-up owner. Registration is opt-in, not a mandatory automation gate for every lesson.
 

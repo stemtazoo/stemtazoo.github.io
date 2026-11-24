@@ -128,9 +128,9 @@ FROM employees;
 
 この教材は、架空の社員テーブル `employees` をブラウザ内で模擬操作します。**実際のデータベースには接続せず、SQL文字列も実行しません。**
 
-1. SQLを選び、DDLとDMLのどちらかを予想します（省略可）。
-2. 「実行する」を押し、テーブルの列・行・説明を確認します。
-3. CREATE → INSERT → SELECT → ALTER → UPDATE → DELETE → DROP の順に試すと、違いが分かりやすくなります。
+まずは「CREATE」が選ばれた状態で「実行する（模擬操作）」を押し、できた表の列と行数を見てください。次に「INSERT」を実行すると、同じ列のまま1行増えます。DDLとDMLの予想は省略できます。
+
+続けて SELECT → ALTER → UPDATE → DELETE → DROP の順に試し、どこが変わるか比べましょう。
 
 <link rel="stylesheet" href="{{ '/assets/css/ds-ddl-dml-demo.css' | relative_url }}">
 
@@ -156,7 +156,7 @@ FROM employees;
     </label>
   </div>
   <p><strong>選んだSQL</strong></p>
-  <code class="ds-ddl-demo__sql" data-sql>CREATE TABLE employees (id INT, name VARCHAR(50));</code>
+  <code class="ds-ddl-demo__sql" data-sql>CREATE TABLE employees (id INT PRIMARY KEY, name VARCHAR(50));</code>
   <div class="ds-ddl-demo__controls">
     <button type="button" data-execute>③ 実行する（模擬操作）</button>
     <button type="button" data-reset>最初から</button>
@@ -177,7 +177,9 @@ FROM employees;
 </noscript>
 <script src="{{ '/assets/js/ds-ddl-dml-demo.js' | relative_url }}" defer></script>
 
-**教材の前提：** `INSERT` はid=1の「佐藤」を追加し、`UPDATE` はid=1の名前を「鈴木」に変更し、`DELETE` はid=1の行を削除します。対象がなければ変更は0行です。教材は単純化した模擬操作であり、製品ごとのDDLトランザクションや制約、権限、SQL実行エラーのすべてを再現するものではありません。また、このページでは`SELECT`をDML側として扱いますが、DQLに分ける分類もあります。
+**教材の前提：** `INSERT` はid=1の「佐藤」を追加し、`UPDATE` はid=1の名前を「鈴木」に変更し、`DELETE` はid=1の行を削除します。`id` は主キー（行を見分ける一意の値）なので、同じ `id` の行は追加できません。`UPDATE` や `DELETE` は、表があって条件に合う行がなければ0行を変更して完了します。教材は単純化した模擬操作であり、製品ごとのDDLトランザクションや制約、権限、SQL実行エラーのすべてを再現するものではありません。また、このページでは`SELECT`をDML側として扱いますが、DQLに分ける分類もあります。
+
+0行更新と主キーの仕様は、PostgreSQLの公式文書で確認できます。 [UPDATE](https://www.postgresql.org/docs/current/sql-update.html) · [Primary Keys](https://www.postgresql.org/docs/current/ddl-constraints.html#DDL-CONSTRAINTS-PRIMARY-KEYS)
 
 ## どんな場面で使う？
 

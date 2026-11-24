@@ -44,6 +44,7 @@
     a: root.querySelector("[data-a]"),
     b: root.querySelector("[data-b]"),
     medium: root.querySelector("[data-medium]"),
+    mediumCard: root.querySelector(".fe-csma-demo__medium"),
     step: root.querySelector("[data-step]"),
     title: root.querySelector("[data-title]"),
     note: root.querySelector("[data-note]"),
@@ -52,6 +53,12 @@
   };
   let index = 0;
   let feedback = "予想は任意です。「次へ」で順番に確認できます。";
+
+  function conditionOf(medium) {
+    if (medium.includes("衝突")) return "collision";
+    if (medium.includes("使用中")) return "busy";
+    return "idle";
+  }
 
   function render() {
     const steps = scenarios[scenario.value];
@@ -63,8 +70,7 @@
     fields.title.textContent = item.title;
     fields.note.textContent = item.note;
     fields.feedback.textContent = feedback;
-    fields.medium.dataset.condition = item.medium.includes("衝突") ? "collision" :
-      item.medium.includes("使用中") ? "busy" : "idle";
+    fields.mediumCard.dataset.condition = conditionOf(item.medium);
     fields.trace.replaceChildren();
     steps.slice(0, index + 1).forEach((step, i) => {
       const li = document.createElement("li");
@@ -84,8 +90,7 @@
     const guess = prediction.value;
     index += 1;
     const result = steps[index];
-    const actual = result.medium.includes("衝突") ? "collision" :
-      result.medium.includes("使用中") ? "busy" : "idle";
+    const actual = conditionOf(result.medium);
     feedback = guess ? (guess === actual ? "予想どおりです。" : "予想とは異なりました。") : "次の状態を確認しました。";
     clearPrediction();
     render();
