@@ -156,5 +156,14 @@
       "selector": "noscript p",
       "text": "入力完了2秒から出力開始9秒"
     }
+  },
+  "csma-cd": {
+    "source": "pages/fe/csma-cd.md",
+    "root": "#fe-csma-cd-demo",
+    "url": "/fe/csma-cd/",
+    "static": {
+      "selector": "noscript p",
+      "text": "衝突を検出して中止"
+    }
   }
 }

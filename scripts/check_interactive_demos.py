@@ -957,6 +957,40 @@ def response_time(page, expect):
     contained(page, '#fe-response-demo')
 
 
+def csma_cd(page, expect):
+    root = page.locator('#fe-csma-cd-demo')
+    scenario = root.locator('[data-scenario]')
+    medium = root.locator('.fe-csma-demo__medium')
+    step = root.locator('[data-step]')
+    next_step = root.locator('[data-next]')
+    expect(step).to_have_text('1 / 7')
+    idle_background = medium.evaluate('el => getComputedStyle(el).backgroundColor')
+    next_step.press('Enter')
+    next_step.click()
+    expect(medium).to_have_attribute('data-condition', 'collision')
+    expect(medium.locator('[data-medium]')).to_have_text('衝突')
+    expect(medium).to_have_css('background-color', 'rgb(255, 240, 223)')
+    expect(root.locator('[data-trace] li').first).to_have_text('初期状態')
+
+    root.locator('[data-back]').click()
+    expect(medium).to_have_attribute('data-condition', 'idle')
+    expect(medium).to_have_css('background-color', idle_background)
+    scenario.select_option('staggered')
+    expect(step).to_have_text('1 / 5')
+    contained(page, '#fe-csma-cd-demo')
+    next_step.click()
+    next_step.click()
+    expect(medium).to_have_attribute('data-condition', 'busy')
+    expect(medium).to_have_css('background-color', 'rgb(229, 242, 255)')
+    next_step.click()
+    next_step.click()
+    expect(next_step).to_be_disabled()
+    root.locator('[data-reset]').click()
+    expect(scenario).to_have_value('staggered')
+    expect(step).to_have_text('1 / 5')
+    expect(medium).to_have_attribute('data-condition', 'idle')
+
+
 CHECKS = {'shared-exclusive-lock': lock, 'two-phase-commit': two_phase, 'disk-scheduling': disk,
           'cpu-scheduling': cpu, 'confusion-matrix': matrix, 'attention': attention,
           'binary-search': binary_search, 'cnn-output-size': cnn, 'adjacency-matrix': adjacency,
@@ -970,7 +1004,7 @@ CHECKS = {'shared-exclusive-lock': lock, 'two-phase-commit': two_phase, 'disk-sc
           'five-stage-pipeline': five_stage_pipeline,
           'sql-group-by-aggregate-functions': sql_group_by_aggregate_functions,
           'packet-filtering-port-rules': packet_filtering_port_rules,
-          'response-time': response_time}
+          'response-time': response_time, 'csma-cd': csma_cd}
 
 
 def run(args):
