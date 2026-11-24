@@ -23,10 +23,13 @@ related_articles:
 ## まず結論
 
 <figure style="margin:16px 0 20px;">
-  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/utf8-three-byte-encoding.png" width="1200" height="630"
+  <picture>
+    <source media="(max-width: 640px)" srcset="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/utf8-three-byte-encoding-mobile.png">
+    <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/utf8-three-byte-encoding.png" width="1200" height="630"
        alt="UTF-8の3バイト形式は1110xxxx・10xxxxxx・10xxxxxxで、文字「あ」（U+3042）はE3 81 82に符号化される。下位6ビットから3、2、1バイト目の順に格納する。"
        loading="lazy" decoding="async"
        style="display:block;width:100%;max-width:100%;height:auto;">
+  </picture>
 </figure>
 
 UTF-8の**3バイト符号化**は、Unicodeの符号位置（文字に割り当てた番号）を、次の形で表します。
