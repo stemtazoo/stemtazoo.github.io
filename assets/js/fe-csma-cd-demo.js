@@ -68,7 +68,7 @@
     fields.trace.replaceChildren();
     steps.slice(0, index + 1).forEach((step, i) => {
       const li = document.createElement("li");
-      li.textContent = `${i + 1}. ${step.title}`;
+      li.textContent = step.title;
       if (i === index) li.setAttribute("aria-current", "step");
       fields.trace.append(li);
     });
