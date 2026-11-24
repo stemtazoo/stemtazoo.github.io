@@ -230,6 +230,15 @@ def cpu(page, expect):
     assert page.locator('#fe-cpu-timeline [data-task]').evaluate_all('es=>es.map(e=>e.dataset.task)') == ['A', 'B']
     page.locator('#fe-cpu-reset').click()
     contained(page, '#fe-cpu-demo')
+    if page.viewport_size['width'] <= 560:
+        for selector in ('.fe-cpu-demo__conditions', '.fe-cpu-demo__comparison'):
+            table = page.locator(selector)
+            expect(table.locator('thead th')).to_have_count(4)
+            assert table.evaluate("""table => {
+                const scroller = table.parentElement;
+                return scroller.scrollWidth <= scroller.clientWidth + 1
+                    && table.scrollWidth <= table.clientWidth + 1;
+            }"""), f'Scheduling table overflows at narrow width: {selector}'
 
 
 def matrix(page, expect):
