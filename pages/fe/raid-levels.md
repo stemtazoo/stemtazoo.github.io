@@ -43,7 +43,10 @@ RAID5
 このページは、**RAIDレベルごとの高速化・冗長性・容量の違い**を比較します。データを複数ディスクへ分散した図の読み方は、[ストライピングの配置図](/fe/disk-striping/)で確認できます。
 
 <figure style="margin:16px 0 20px;">
-  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/raid-levels.png" width="1200" height="630" loading="lazy" decoding="async" alt="RAID0はデータを分散、RAID1は同じデータを複製、RAID5はデータとパリティを複数ディスクに分散して保存する比較図。" style="display:block;width:100%;max-width:100%;height:auto;">
+  <picture>
+    <source media="(max-width: 640px)" srcset="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/raid-levels-mobile.png" width="1122" height="1402">
+    <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/raid-levels.png" width="1200" height="630" loading="lazy" decoding="async" alt="RAID0はデータを分散、RAID1は同じデータを複製、RAID5はデータとパリティを複数ディスクに分散して保存する比較図。" style="display:block;width:100%;max-width:100%;height:auto;">
+  </picture>
 </figure>
 
 ## 直感的な説明
