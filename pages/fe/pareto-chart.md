@@ -38,7 +38,10 @@ last_modified_at: 2026-11-24
 このページは、**棒グラフと累積比率を読み、重点的に対策する項目を見つけること**を扱います。累積構成比にしきい値を設け、項目をA・B・Cに分ける計算は、[ABC分析](/fe/abc-analysis/)で確認できます。
 
 <figure style="margin:16px 0 20px;">
-  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/pareto-chart.png" width="1200" height="630" loading="lazy" decoding="async" alt="不良原因を多い順に並べた棒グラフと累積比率の折れ線。傷40件、寸法不良25件、汚れ15件の上位3原因で全体の80%を占める。" style="display:block;width:100%;max-width:100%;height:auto;">
+  <picture>
+    <source media="(max-width: 640px)" srcset="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/pareto-chart-mobile.png" width="1086" height="1448">
+    <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/pareto-chart.png" width="1200" height="630" loading="lazy" decoding="async" alt="不良原因を多い順に並べた棒グラフと累積比率の折れ線。傷40件、寸法不良25件、汚れ15件の上位3原因で全体の80%を占める。" style="display:block;width:100%;max-width:100%;height:auto;">
+  </picture>
   <figcaption style="margin-top:8px;font-size:0.88em;line-height:1.5;color:#555;">折れ線が80%に達する点の真下を見て、どの原因までが含まれるか確認しましょう。</figcaption>
 </figure>
 
