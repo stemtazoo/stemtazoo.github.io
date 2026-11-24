@@ -21,10 +21,23 @@ image:
 
 DDLとDMLの違いは、**操作する対象**で判断します。
 
-| 分類 | 何を操作する？ | 代表的なSQL |
-|---|---|---|
-| DDL | テーブルなどの構造 | `CREATE`、`ALTER`、`DROP` |
-| DML | テーブル内のデータ | `SELECT`、`INSERT`、`UPDATE`、`DELETE` |
+<table class="study-comparison study-comparison--pair" id="ddl-dml-pair" role="table" aria-label="DDLとDMLの比較">
+  <thead role="rowgroup">
+    <tr role="row"><th scope="col" role="columnheader">観点</th><th scope="col" role="columnheader" id="ddl-dml-pair-col-1">DDL</th><th scope="col" role="columnheader" id="ddl-dml-pair-col-2">DML</th></tr>
+  </thead>
+  <tbody role="rowgroup">
+    <tr role="row">
+      <th scope="row" role="rowheader" id="ddl-dml-pair-row-1">何を操作する？</th>
+      <td role="cell" headers="ddl-dml-pair-row-1 ddl-dml-pair-col-1"><span class="study-comparison__label" aria-hidden="true">DDL</span>テーブルなどの構造</td>
+      <td role="cell" headers="ddl-dml-pair-row-1 ddl-dml-pair-col-2"><span class="study-comparison__label" aria-hidden="true">DML</span>テーブル内のデータ</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="ddl-dml-pair-row-2">代表的なSQL</th>
+      <td role="cell" headers="ddl-dml-pair-row-2 ddl-dml-pair-col-1"><span class="study-comparison__label" aria-hidden="true">DDL</span><code>CREATE</code>、<code>ALTER</code>、<code>DROP</code></td>
+      <td role="cell" headers="ddl-dml-pair-row-2 ddl-dml-pair-col-2"><span class="study-comparison__label" aria-hidden="true">DML</span><code>SELECT</code>、<code>INSERT</code>、<code>UPDATE</code>、<code>DELETE</code></td>
+    </tr>
+  </tbody>
+</table>
 
 DS検定では、次のように切り分けると判断しやすいです。
 
