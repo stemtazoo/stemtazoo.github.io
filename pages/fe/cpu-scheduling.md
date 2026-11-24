@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: オペレーティングシステム
 fe_order: 50
 date: 2026-08-27
-last_modified_at: 2026-11-02
+last_modified_at: 2026-11-24
 related_articles:
   - /fe/task-scheduling/
   - /fe/preemptive-scheduling/
@@ -102,15 +102,9 @@ CPU中心：      CPU CPU CPU       CPU CPU CPU
 
 ### 触って覚える：同じタスクを4方式で比較する
 
-**方式を変えると、次にCPUを使うタスクはどう変わるでしょうか？**
+**まず「到着順（FCFS）」のまま「1単位進める」を押し、実行結果と横棒の左端を見てください。** 初期設定では A が最初にCPUを使います。予想は省略できます。
 
-初期設定では3タスクが同時刻に到着し、FCFS・SJF・優先度方式で**実行順序が異なります**。
-
-1. 方式を選び、**次に動くタスクを予想**する。
-2. 「1単位進める」でCPUの動きと待ち時間を確認する。
-3. ほかの方式に切り替えて、同じ条件で比較する。
-
-到着時刻・CPU処理時間・優先度も変更できます。**方式を切り替えても入力条件は保持**されます。
+次に「処理時間順（SJF）」に切り替え、同じように1単位進めます。到着時刻は3タスクとも同じですが、処理時間が最短の B が先に実行されます。「最初から」を押すと、方式と入力条件を保ったまま時刻0に戻ります。
 
 **この教材の前提条件**
 
@@ -135,19 +129,8 @@ CPU中心：      CPU CPU CPU       CPU CPU CPU
       <select id="fe-cpu-quantum"><option value="1">1</option><option value="2" selected>2</option><option value="3">3</option><option value="4">4</option></select>
     </label>
   </div>
-  <div class="fe-cpu-demo__scroll">
-    <table>
-      <caption>タスクの条件（値を変更できます）</caption>
-      <thead><tr><th scope="col">タスク</th><th scope="col">到着時刻</th><th scope="col">CPU処理時間</th><th scope="col">優先度</th></tr></thead>
-      <tbody>
-        <tr><th scope="row">A</th><td><input aria-label="Aの到着時刻" data-job="0" data-field="arrival" type="number" min="0" max="12" step="1" value="0"></td><td><input aria-label="Aの処理時間" data-job="0" data-field="burst" type="number" min="1" max="12" step="1" value="5"></td><td><input aria-label="Aの優先度" data-job="0" data-field="priority" type="number" min="1" max="9" step="1" value="3"></td></tr>
-        <tr><th scope="row">B</th><td><input aria-label="Bの到着時刻" data-job="1" data-field="arrival" type="number" min="0" max="12" step="1" value="0"></td><td><input aria-label="Bの処理時間" data-job="1" data-field="burst" type="number" min="1" max="12" step="1" value="2"></td><td><input aria-label="Bの優先度" data-job="1" data-field="priority" type="number" min="1" max="9" step="1" value="2"></td></tr>
-        <tr><th scope="row">C</th><td><input aria-label="Cの到着時刻" data-job="2" data-field="arrival" type="number" min="0" max="12" step="1" value="0"></td><td><input aria-label="Cの処理時間" data-job="2" data-field="burst" type="number" min="1" max="12" step="1" value="3"></td><td><input aria-label="Cの優先度" data-job="2" data-field="priority" type="number" min="1" max="9" step="1" value="1"></td></tr>
-      </tbody>
-    </table>
-  </div>
   <fieldset class="fe-cpu-demo__predict">
-    <legend>予想：次の1単位でCPUを使うのは？</legend>
+    <legend>予想（任意）：次の1単位でCPUを使うのは？</legend>
     <label><input type="radio" name="fe-cpu-prediction" value="A">A</label>
     <label><input type="radio" name="fe-cpu-prediction" value="B">B</label>
     <label><input type="radio" name="fe-cpu-prediction" value="C">C</label>
@@ -159,12 +142,23 @@ CPU中心：      CPU CPU CPU       CPU CPU CPU
     <button type="button" id="fe-cpu-reset">最初から</button>
     <button type="button" id="fe-cpu-all">最後まで実行</button>
   </div>
-  <p id="fe-cpu-status" role="status" aria-live="polite">初期状態：実行するタスクを予想してください。</p>
-  <p id="fe-cpu-feedback" aria-live="polite">予想を選択してから進めると、答え合わせができます。</p>
+  <p id="fe-cpu-status" role="status" aria-live="polite">初期状態：時刻0。</p>
+  <p id="fe-cpu-feedback" aria-live="polite">「1単位進める」で実行結果を確認できます。</p>
   <div class="fe-cpu-demo__scroll" tabindex="0" aria-label="CPU実行ガントチャート（横スクロール可）">
     <div id="fe-cpu-timeline" class="fe-cpu-demo__timeline" aria-label="ガントチャート">まだ実行していません。</div>
   </div>
   <div id="fe-cpu-remaining">残りCPU時間：A=5、B=2、C=3</div>
+  <div class="fe-cpu-demo__scroll">
+    <table>
+      <caption>タスクの条件（値を変更できます）</caption>
+      <thead><tr><th scope="col">タスク</th><th scope="col">到着時刻</th><th scope="col">CPU処理時間</th><th scope="col">優先度</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">A</th><td><input aria-label="Aの到着時刻" data-job="0" data-field="arrival" type="number" min="0" max="12" step="1" value="0"></td><td><input aria-label="Aの処理時間" data-job="0" data-field="burst" type="number" min="1" max="12" step="1" value="5"></td><td><input aria-label="Aの優先度" data-job="0" data-field="priority" type="number" min="1" max="9" step="1" value="3"></td></tr>
+        <tr><th scope="row">B</th><td><input aria-label="Bの到着時刻" data-job="1" data-field="arrival" type="number" min="0" max="12" step="1" value="0"></td><td><input aria-label="Bの処理時間" data-job="1" data-field="burst" type="number" min="1" max="12" step="1" value="2"></td><td><input aria-label="Bの優先度" data-job="1" data-field="priority" type="number" min="1" max="9" step="1" value="2"></td></tr>
+        <tr><th scope="row">C</th><td><input aria-label="Cの到着時刻" data-job="2" data-field="arrival" type="number" min="0" max="12" step="1" value="0"></td><td><input aria-label="Cの処理時間" data-job="2" data-field="burst" type="number" min="1" max="12" step="1" value="3"></td><td><input aria-label="Cの優先度" data-job="2" data-field="priority" type="number" min="1" max="9" step="1" value="1"></td></tr>
+      </tbody>
+    </table>
+  </div>
   <div class="fe-cpu-demo__scroll">
     <table>
       <caption>各方式を最後まで実行した場合の比較（入力を変えると更新）</caption>
@@ -287,8 +281,8 @@ CPU中心：      CPU CPU CPU       CPU CPU CPU
       timeline.appendChild(cell);
     });
     $("fe-cpu-remaining").textContent="残りCPU時間："+names.map((n,i)=>n+"="+remaining[i]).join("、");
-    $("fe-cpu-status").textContent=step===trace.length?"完了：時刻"+step+"。全タスクが終了しました。":"時刻"+step+"：次に実行するタスクを予想してください。";
-    $("fe-cpu-feedback").textContent=feedback||"予想を選択してから進めると、答え合わせができます。";
+    $("fe-cpu-status").textContent=step===trace.length?"完了：時刻"+step+"。全タスクが終了しました。":"時刻"+step+"：次の1単位を実行できます。";
+    $("fe-cpu-feedback").textContent=feedback||"「1単位進める」で実行結果を確認できます。";
     prev.disabled=step===0;next.disabled=step===trace.length;all.disabled=step===trace.length;
     quantum.disabled=false;
   }
@@ -296,10 +290,10 @@ CPU中心：      CPU CPU CPU       CPU CPU CPU
     if(step===trace.length)return;
     const selected=root.querySelector('input[name="fe-cpu-prediction"]:checked');
     const actual=trace[step];
-    feedback=selected?(selected.value===actual?"正解！":"予想と違いました。")+" 時刻"+step+"で実行したのは"+(actual==="-"?"待機":actual)+"です。":"時刻"+step+"で実行したのは"+(actual==="-"?"待機":actual)+"です。次は先に予想してみましょう。";
+    feedback=selected?(selected.value===actual?"正解！":"予想と違いました。")+" 時刻"+step+"で実行したのは"+(actual==="-"?"待機":actual)+"です。":"時刻"+step+"で実行したのは"+(actual==="-"?"待機":actual)+"です。";
     step++;root.querySelectorAll('input[name="fe-cpu-prediction"]').forEach(r=>r.checked=false);render();
   });
-  prev.addEventListener("click",()=>{if(step>0)step--;feedback="1単位戻しました。次を予想してください。";render();});
+  prev.addEventListener("click",()=>{if(step>0)step--;feedback="1単位戻しました。";render();});
   reset.addEventListener("click",()=>{step=0;feedback="初期状態に戻しました。";render();});
   all.addEventListener("click",()=>{step=trace.length;feedback="全タスクの実行が終了しました。方式を変えて比較しましょう。";render();});
   kind.addEventListener("change",rebuild);
