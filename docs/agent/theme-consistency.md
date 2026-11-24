@@ -31,6 +31,18 @@ The repository contains multiple study themes under `pages/`. Changes should be 
 - `_includes/gk_collect_urls.html`
 - `_includes/ds_section.html`
 
+## Responsive article comparison tables
+
+Apply across FE, GK, DS and SG when a prose comparison is difficult to read on a narrow phone; do not convert all tables automatically.
+
+- Two concepts compared across several criteria: use the opt-in `study-comparison study-comparison--pair` classes on one semantic HTML table. At 640px and below, each criterion becomes a card with two equal-width cells; at 641px and above retain the normal table.
+- Use one source of truth for the explanations, not separate desktop/mobile copies. Preserve row and column headers, explicit roles when CSS changes table display, unique header IDs and matching `headers` references. Each cell contains a real `<span class="study-comparison__label" aria-hidden="true">…</span>` matching its column header; it is visible on mobile and hidden on desktop. Color must not be the only distinction.
+- Keep normal font size, allow wrapping, use blue and teal for the two columns where compatible with the article image, and leave at least 16px after the mobile comparison. Do not shrink text to force it to fit.
+- For a term and its explanation, consider a stacked label/value card. For three or more concepts, consider stacked labeled values after checking readability; the pair class is only for exactly one row header plus two data cells. For numerical matrices, timing charts, calculation tables or data whose row/column alignment matters, retain table structure and intentional scrolling as needed. The pair class does not implement these other patterns.
+- Use shared CSS in `assets/css/style.scss`; avoid per-article copies for the supported pair pattern. Do not change unrelated tables, interactive controls or OGP assets. Remove adjacent summaries only when their meaning is fully retained elsewhere.
+- Check 320–390px viewport widths (including about 340px article width when possible), 640/641px boundary, desktop, CSS-disabled readability, header associations and screen-reader behavior; verify no page or card overflow, wrapping and following-block spacing. Record source checks separately from browser, assistive-technology and Pages build results.
+- Pilot evidence: [RISC/CISC](/fe/risc-cisc/) (PR #883, user Android screenshots on 2026-11-24) showed all five comparisons side by side with readable wrapping and no visible clipping; image colors were consistent. The shared-class migration and desktop/accessibility checks are separate from that evidence. Roll out selectively after validation.
+
 ## Shared Navigation And Sidebar
 
 The sidebar is a compact route to a reader's next useful page, not a list of every article. The four study entrances (G検定, DS検定, SG試験, FE試験) and site search must remain easy to reach on both desktop and mobile. The desktop sidebar can add a small number of links for the current study section; put article-specific next steps near the article body/footer rather than repeating them on every page.
