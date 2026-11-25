@@ -6,19 +6,40 @@ permalink: /gk/vae-vs-gan/
 tags: [gk, neural_network, generative_model, cheatsheet]
 gk_section: ディープラーニングの応用例/データ生成/生成モデル比較
 gk_order: 2
-last_modified_at: 2026-10-19
+last_modified_at: 2026-11-25
 ---
 
 ## まず結論
 
 VAEとGANはどちらも生成モデルですが、**どんな信号でパラメータを学習するか**が違います。このページは再構成・KL項と敵対的学習を区別するための比較です。入力画像を条件にするPix2Pixまで含む選び方は、[生成と条件付き画像変換の比較](/gk/vae-vs-gan-vs-pix2pix/)へ進めます。
 
-| 観点 | VAE | GAN |
-|---|---|---|
-| 中心構造 | Encoder / Decoder | Generator / Discriminator |
-| 潜在変数 | 確率分布として扱う | 潜在ノイズから生成 |
-| 学習の考え方 | 変分推論・再構成 | 敵対的学習 |
-| 代表的注意点 | 再構成とのトレードオフ | モード崩壊など |
+<table class="study-comparison study-comparison--pair" id="vae-gan-pair" role="table" aria-label="VAEとGANの比較">
+  <thead role="rowgroup">
+    <tr role="row"><th scope="col" role="columnheader">観点</th><th scope="col" role="columnheader" id="vae-gan-pair-col-1">VAE</th><th scope="col" role="columnheader" id="vae-gan-pair-col-2">GAN</th></tr>
+  </thead>
+  <tbody role="rowgroup">
+    <tr role="row">
+      <th scope="row" role="rowheader" id="vae-gan-pair-row-1">中心構造</th>
+      <td role="cell" headers="vae-gan-pair-row-1 vae-gan-pair-col-1"><span class="study-comparison__label" aria-hidden="true">VAE</span>Encoder / Decoder</td>
+      <td role="cell" headers="vae-gan-pair-row-1 vae-gan-pair-col-2"><span class="study-comparison__label" aria-hidden="true">GAN</span>Generator / Discriminator</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="vae-gan-pair-row-2">潜在変数</th>
+      <td role="cell" headers="vae-gan-pair-row-2 vae-gan-pair-col-1"><span class="study-comparison__label" aria-hidden="true">VAE</span>確率分布として扱う</td>
+      <td role="cell" headers="vae-gan-pair-row-2 vae-gan-pair-col-2"><span class="study-comparison__label" aria-hidden="true">GAN</span>潜在ノイズから生成</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="vae-gan-pair-row-3">学習の考え方</th>
+      <td role="cell" headers="vae-gan-pair-row-3 vae-gan-pair-col-1"><span class="study-comparison__label" aria-hidden="true">VAE</span>変分推論・再構成</td>
+      <td role="cell" headers="vae-gan-pair-row-3 vae-gan-pair-col-2"><span class="study-comparison__label" aria-hidden="true">GAN</span>敵対的学習</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="vae-gan-pair-row-4">代表的注意点</th>
+      <td role="cell" headers="vae-gan-pair-row-4 vae-gan-pair-col-1"><span class="study-comparison__label" aria-hidden="true">VAE</span>再構成とのトレードオフ</td>
+      <td role="cell" headers="vae-gan-pair-row-4 vae-gan-pair-col-2"><span class="study-comparison__label" aria-hidden="true">GAN</span>モード崩壊など</td>
+    </tr>
+  </tbody>
+</table>
 
 G検定では、**分布・変分推論 → VAE、敵対・識別器 → GAN**で切ります。
 
