@@ -1341,7 +1341,9 @@ table.study-comparison.study-comparison--pair .study-comparison__label { display
     min-width: 0;
     max-width: 100%;
     white-space: normal;
-    overflow-wrap: anywhere;
+    line-break: strict;
+    word-break: normal;
+    overflow-wrap: break-word;
     text-align: left;
     line-height: 1.55;
     border: 0;
@@ -1357,6 +1359,14 @@ table.study-comparison.study-comparison--pair .study-comparison__label { display
     padding: 8px;
     border-radius: 6px;
     color: #172b3c;
+  }
+  table.study-comparison.study-comparison--pair tbody td code {
+    color: #172b3c;
+    background: #f8fafc;
+    white-space: normal;
+    overflow-wrap: break-word;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
   }
   table.study-comparison.study-comparison--pair tbody td:nth-child(2) { background: #eaf2fc; }
   table.study-comparison.study-comparison--pair tbody td:nth-child(3) { background: #e8f5f1; }
