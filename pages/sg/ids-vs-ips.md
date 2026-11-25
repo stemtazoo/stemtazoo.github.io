@@ -4,7 +4,7 @@ title: IDSとIPSの違い【SG試験】
 description: IDSは不正な通信や攻撃の兆候を検知する仕組み、IPSは検知した不正通信を遮断する仕組みです。監視だけか、遮断まで行うかを軸に、ファイアウォール、WAF、SIEMとの違いを押さえ、SG試験で選択肢を切る判断基準を整理します。科目Aの用語理解と科目Bのケース判断で迷いやすい表現も確認します。
 permalink: /sg/ids-vs-ips/
 tags: [sg, sg-security-measures, network_security, monitoring, incident_response]
-last_modified_at: 2026-05-20
+last_modified_at: 2026-11-25
 ---
 
 ## まず結論
@@ -159,11 +159,28 @@ IPSは攻撃を止められる点が強みです。
 
 IDSとIPSは似ていますが、役割が違います。
 
-| 観点 | IDS | IPS |
-|---|---|---|
-| 主な役割 | 検知・通知 | 検知・遮断 |
-| 通信を止めるか | 止めない | 止める |
-| 試験でのキーワード | 監視、検知、アラート | 防止、遮断、ブロック |
+<table class="study-comparison study-comparison--pair" id="ids-ips-pair" role="table" aria-label="IDSとIPSの比較">
+  <thead role="rowgroup">
+    <tr role="row"><th scope="col" role="columnheader">観点</th><th scope="col" role="columnheader" id="ids-ips-pair-col-1">IDS</th><th scope="col" role="columnheader" id="ids-ips-pair-col-2">IPS</th></tr>
+  </thead>
+  <tbody role="rowgroup">
+    <tr role="row">
+      <th scope="row" role="rowheader" id="ids-ips-pair-row-1">主な役割</th>
+      <td role="cell" headers="ids-ips-pair-row-1 ids-ips-pair-col-1"><span class="study-comparison__label" aria-hidden="true">IDS</span>検知・通知</td>
+      <td role="cell" headers="ids-ips-pair-row-1 ids-ips-pair-col-2"><span class="study-comparison__label" aria-hidden="true">IPS</span>検知・遮断</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="ids-ips-pair-row-2">通信を止めるか</th>
+      <td role="cell" headers="ids-ips-pair-row-2 ids-ips-pair-col-1"><span class="study-comparison__label" aria-hidden="true">IDS</span>止めない</td>
+      <td role="cell" headers="ids-ips-pair-row-2 ids-ips-pair-col-2"><span class="study-comparison__label" aria-hidden="true">IPS</span>止める</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="ids-ips-pair-row-3">試験でのキーワード</th>
+      <td role="cell" headers="ids-ips-pair-row-3 ids-ips-pair-col-1"><span class="study-comparison__label" aria-hidden="true">IDS</span>監視、検知、アラート</td>
+      <td role="cell" headers="ids-ips-pair-row-3 ids-ips-pair-col-2"><span class="study-comparison__label" aria-hidden="true">IPS</span>防止、遮断、ブロック</td>
+    </tr>
+  </tbody>
+</table>
 
 SG試験では、**遮断するならIPS、通知だけならIDS**と判断します。
 
