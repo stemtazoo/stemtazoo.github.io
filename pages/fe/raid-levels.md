@@ -13,7 +13,7 @@ fe_section: テクノロジ系
 fe_subsection: コンピュータ構成要素
 fe_order: 42
 date: 2026-09-16
-last_modified_at: 2026-11-24
+last_modified_at: 2026-11-25
 ---
 
 ## まず結論
@@ -162,6 +162,31 @@ RAID5
 ```
 
 RAID1より容量を効率よく使いやすい一方で、パリティの計算や書込み処理が必要になります。
+
+### 触って覚える：ディスクが1台故障したら
+
+最初は「ディスク1を故障させる」を押し、ディスク1の内容とその下の結果を見てください。故障したまま「RAID1」「RAID5」に切り替えると、同じ故障に対する違いを比べられます。
+
+<link rel="stylesheet" href="{{ '/assets/css/first-step-demos.css' | relative_url }}">
+<div class="first-step-demo" data-first-step="raid" hidden>
+  <fieldset>
+    <legend>RAID方式</legend>
+    <label><input type="radio" name="demo-raid-mode" value="0" checked> RAID0</label>
+    <label><input type="radio" name="demo-raid-mode" value="1"> RAID1</label>
+    <label><input type="radio" name="demo-raid-mode" value="5"> RAID5</label>
+  </fieldset>
+  <div class="first-step-demo__actions">
+    <button type="button" data-action="fail">ディスク1を故障させる</button>
+    <button type="button" data-action="reset">故障を解除</button>
+  </div>
+  <ul class="first-step-demo__disks" data-board aria-label="ディスクごとの内容"></ul>
+  <p role="status" data-result></p>
+</div>
+<noscript><p>ディスク1台が故障すると、RAID0では失われたデータを復元できません。RAID1では同じデータの複製、RAID5では残りのデータとパリティから復元できます。</p></noscript>
+
+ディスクの配置はデータの1組分です。RAID1は2台に同じ内容を保存する例、RAID5は3台のうち1台にこの組のパリティがある例です。RAID5では、組によってパリティの位置が変わります。
+
+<script defer src="{{ '/assets/js/first-step-demos.js' | relative_url }}"></script>
 
 ## 科目Aでどう出る？
 

@@ -9,7 +9,7 @@ ds_area: dataengineering
 ds_section: data-processing
 prev: /ds/sql-where/
 next: /ds/self-join/
-last_modified_at: 2026-09-26
+last_modified_at: 2026-11-25
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -88,6 +88,24 @@ LEFT JOIN Projects P
 - 該当しなければ右側がNULLになる
 
 という結果になります。
+
+### 触って覚える：条件の場所で結果の行が変わる
+
+「WHEREに置く」を押し、案件がない鈴木さんの行が残るか見てください。最初は「ONに置く」が選ばれています。社員は3人で、佐藤さんには進行中の案件、田中さんには終了済みの案件があります。
+
+<link rel="stylesheet" href="{{ '/assets/css/first-step-demos.css' | relative_url }}">
+<div class="first-step-demo" data-first-step="join" hidden>
+  <fieldset>
+    <legend><code>P.status = 'active'</code> を書く場所</legend>
+    <label><input type="radio" name="demo-join-mode" value="on" checked> ONに置く</label>
+    <label><input type="radio" name="demo-join-mode" value="where"> WHEREに置く</label>
+  </fieldset>
+  <ul data-board aria-label="結合結果"></ul>
+  <p role="status" data-result></p>
+</div>
+<noscript><p>ONに条件を書くと、佐藤・鈴木・田中の3行が残り、鈴木と田中の案件はNULLになります。WHEREに書くと、進行中の案件を持つ佐藤だけが残ります。</p></noscript>
+
+<script defer src="{{ '/assets/js/first-step-demos.js' | relative_url }}"></script>
 
 ## どんな場面で使う？
 

@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ネットワーク
 fe_order: 20
 date: 2026-06-25
-last_modified_at: 2026-10-07
+last_modified_at: 2026-11-25
 ---
 
 ## まず結論
@@ -95,6 +95,26 @@ FE対策では、まず次の役割の違いを押さえると整理しやすく
 つまり、ECCメモリは**高速化ではなく信頼性を高める技術**です。
 
 なお、実際のECCメモリで使われる誤り訂正方式や訂正能力は実装によって異なります。「ECCメモリ＝必ず単純なハミング符号」「どんな誤りでも訂正できる」とは考えず、FEでは**冗長な情報を使ってメモリの誤りを検出・訂正する**という役割を中心に押さえます。
+
+### 触って覚える：検査結果から1ビット誤りの位置を探す
+
+位置6のボタンを押し、どの検査が不一致になるか見てください。不一致になった検査の番号を足すと、1ビット誤りの位置が分かります。「誤りを訂正」を押すと、特定した位置のビットが元に戻ります。
+
+<link rel="stylesheet" href="{{ '/assets/css/first-step-demos.css' | relative_url }}">
+<div class="first-step-demo" data-first-step="hamming" hidden>
+  <div class="first-step-demo__bits" data-board role="group" aria-label="位置ごとの受信ビット"></div>
+  <div class="first-step-demo__actions">
+    <button type="button" data-action="correct">誤りを訂正</button>
+    <button type="button" data-action="reset">最初から</button>
+  </div>
+  <ul data-checks aria-label="偶数パリティの検査結果"></ul>
+  <p role="status" data-result></p>
+</div>
+<noscript><p>位置6だけが反転した例では、位置2・3・6・7を見る検査2と、位置4・5・6・7を見る検査4が不一致になります。2＋4＝6なので、位置6を反転して訂正します。</p></noscript>
+
+検査では対象のビットに含まれる1の個数が偶数かを確認します。教材は7ビットの符号で、誤りは同時に1か所までです。別の位置を押すと、誤りはその位置だけに切り替わります。
+
+<script defer src="{{ '/assets/js/first-step-demos.js' | relative_url }}"></script>
 
 ## 科目Aでどう出る？
 

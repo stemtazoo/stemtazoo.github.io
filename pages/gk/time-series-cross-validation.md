@@ -6,7 +6,7 @@ permalink: /gk/time-series-cross-validation/
 tags: [gk, machine_learning, evaluation]
 gk_section: 機械学習の概要/モデルの選択・評価/データ分割・交差検証
 gk_order: 3
-last_modified_at: 2026-08-26
+last_modified_at: 2026-11-25
 ---
 
 ## まず結論
@@ -40,6 +40,30 @@ last_modified_at: 2026-08-26
 - 学習：21〜120日 → 検証：121〜140日
 
 どちらも**検証期間より未来のデータを学習に使わない**点が共通です。
+
+### 触って覚える：学習と検証を時間順に分ける
+
+「次の分割」を押して、学習と検証の月がどちらに動くか見てください。「ランダム分割の例」に切り替えると、検証する月より後の月が学習に含まれる例と比べられます。
+
+<link rel="stylesheet" href="{{ '/assets/css/first-step-demos.css' | relative_url }}">
+<div class="first-step-demo" data-first-step="time" hidden>
+  <fieldset>
+    <legend>分割方法</legend>
+    <label><input type="radio" name="demo-time-mode" value="time" checked> 時間順（拡大型）</label>
+    <label><input type="radio" name="demo-time-mode" value="mixed"> ランダム分割の例</label>
+  </fieldset>
+  <div class="first-step-demo__actions">
+    <button type="button" data-action="next">次の分割</button>
+    <button type="button" data-action="reset">最初から</button>
+  </div>
+  <ol class="first-step-demo__months" data-board aria-label="月ごとのデータの使い方"></ol>
+  <p role="status" data-result></p>
+</div>
+<noscript><p>時系列の例では1〜3月で学習・4月で検証し、次は1〜4月で学習・5月で検証します。2月を検証しながら3〜6月を学習に含めると、検証時点より後の情報を使うことになります。</p></noscript>
+
+ランダム分割は未来情報が混ざる固定例です。実際に過去の時点から未来を予測する場面を想定しています。
+
+<script defer src="{{ '/assets/js/first-step-demos.js' | relative_url }}"></script>
 
 ## いつ使う？（得意・不得意）
 
