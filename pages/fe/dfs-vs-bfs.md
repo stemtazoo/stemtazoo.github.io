@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: アルゴリズムとプログラミング
 fe_order: 45
 date: 2026-10-04
-last_modified_at: 2026-11-03
+last_modified_at: 2026-11-25
 ---
 
 ## まず結論
@@ -102,12 +102,33 @@ Gが追加されても、既に待っているE・Fが先に処理されます�
 
 ### 探索方法と性質を対応付ける
 
-| 観点 | 深さ優先探索（DFS） | 幅優先探索（BFS） |
-|---|---|---|
-| 進み方 | 一つの経路を深く進み、戻る | 開始点から浅い層の順に進む |
-| 主なデータ構造 | スタック、または再帰の呼出しスタック | キュー |
-| 最初に見つけた経路 | 最短とは限らない | 重みなしのグラフでは辺の数が最小の経路になる |
-| 保持する情報の特徴 | 戻るための情報などを保持する | 未処理の同じ層や次の層の候補を保持する |
+<table class="study-comparison study-comparison--pair" id="dfs-bfs-pair" role="table" aria-label="深さ優先探索と幅優先探索の比較">
+  <thead role="rowgroup">
+    <tr role="row"><th scope="col" role="columnheader">観点</th><th scope="col" role="columnheader" id="dfs-bfs-pair-col-1">深さ優先探索（DFS）</th><th scope="col" role="columnheader" id="dfs-bfs-pair-col-2">幅優先探索（BFS）</th></tr>
+  </thead>
+  <tbody role="rowgroup">
+    <tr role="row">
+      <th scope="row" role="rowheader" id="dfs-bfs-pair-row-1">進み方</th>
+      <td role="cell" headers="dfs-bfs-pair-row-1 dfs-bfs-pair-col-1"><span class="study-comparison__label" aria-hidden="true">深さ優先探索（DFS）</span>一つの経路を深く進み、戻る</td>
+      <td role="cell" headers="dfs-bfs-pair-row-1 dfs-bfs-pair-col-2"><span class="study-comparison__label" aria-hidden="true">幅優先探索（BFS）</span>開始点から浅い層の順に進む</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="dfs-bfs-pair-row-2">主なデータ構造</th>
+      <td role="cell" headers="dfs-bfs-pair-row-2 dfs-bfs-pair-col-1"><span class="study-comparison__label" aria-hidden="true">深さ優先探索（DFS）</span>スタック、または再帰の呼出しスタック</td>
+      <td role="cell" headers="dfs-bfs-pair-row-2 dfs-bfs-pair-col-2"><span class="study-comparison__label" aria-hidden="true">幅優先探索（BFS）</span>キュー</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="dfs-bfs-pair-row-3">最初に見つけた経路</th>
+      <td role="cell" headers="dfs-bfs-pair-row-3 dfs-bfs-pair-col-1"><span class="study-comparison__label" aria-hidden="true">深さ優先探索（DFS）</span>最短とは限らない</td>
+      <td role="cell" headers="dfs-bfs-pair-row-3 dfs-bfs-pair-col-2"><span class="study-comparison__label" aria-hidden="true">幅優先探索（BFS）</span>重みなしのグラフでは辺の数が最小の経路になる</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="dfs-bfs-pair-row-4">保持する情報の特徴</th>
+      <td role="cell" headers="dfs-bfs-pair-row-4 dfs-bfs-pair-col-1"><span class="study-comparison__label" aria-hidden="true">深さ優先探索（DFS）</span>戻るための情報などを保持する</td>
+      <td role="cell" headers="dfs-bfs-pair-row-4 dfs-bfs-pair-col-2"><span class="study-comparison__label" aria-hidden="true">幅優先探索（BFS）</span>未処理の同じ層や次の層の候補を保持する</td>
+    </tr>
+  </tbody>
+</table>
 
 幅優先探索で最短経路そのものを取り出すには、各頂点をどの頂点から発見したかも記録しておきます。探索順序を並べただけでは、目的地への経路にはなりません。
 
