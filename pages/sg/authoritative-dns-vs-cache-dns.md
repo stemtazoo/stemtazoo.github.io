@@ -6,7 +6,7 @@ permalink: /sg/authoritative-dns-vs-cache-dns/
 tags: [sg, sg-security-measures, network_security, dns]
 prev: /sg/dns-cache-poisoning/
 next: /sg/open-resolver/
-last_modified_at: 2026-09-26
+last_modified_at: 2026-11-25
 ---
 
 ## まず結論
@@ -15,10 +15,23 @@ last_modified_at: 2026-09-26
 
 SG試験では、次のように整理すると判断しやすくなります。
 
-| 種類 | 役割 | たとえるなら |
-|---|---|---|
-| 権威DNSサーバ | ドメインの正式なDNS情報を管理する | 公式の住所台帳 |
-| キャッシュDNSサーバ | 利用者の代わりにDNSを問い合わせ、結果を一時保存する | 住所を調べてくれる案内係 |
+<table class="study-comparison study-comparison--pair" id="dns-server-pair" role="table" aria-label="権威DNSサーバとキャッシュDNSサーバの比較">
+  <thead role="rowgroup">
+    <tr role="row"><th scope="col" role="columnheader">観点</th><th scope="col" role="columnheader" id="dns-server-pair-col-1">権威DNSサーバ</th><th scope="col" role="columnheader" id="dns-server-pair-col-2">キャッシュDNSサーバ</th></tr>
+  </thead>
+  <tbody role="rowgroup">
+    <tr role="row">
+      <th scope="row" role="rowheader" id="dns-server-pair-row-1">役割</th>
+      <td role="cell" headers="dns-server-pair-row-1 dns-server-pair-col-1"><span class="study-comparison__label" aria-hidden="true">権威DNSサーバ</span>ドメインの正式なDNS情報を管理する</td>
+      <td role="cell" headers="dns-server-pair-row-1 dns-server-pair-col-2"><span class="study-comparison__label" aria-hidden="true">キャッシュDNSサーバ</span>利用者の代わりにDNSを問い合わせ、結果を一時保存する</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="dns-server-pair-row-2">たとえるなら</th>
+      <td role="cell" headers="dns-server-pair-row-2 dns-server-pair-col-1"><span class="study-comparison__label" aria-hidden="true">権威DNSサーバ</span>公式の住所台帳</td>
+      <td role="cell" headers="dns-server-pair-row-2 dns-server-pair-col-2"><span class="study-comparison__label" aria-hidden="true">キャッシュDNSサーバ</span>住所を調べてくれる案内係</td>
+    </tr>
+  </tbody>
+</table>
 
 たとえば、`example.com` の正式なIPアドレス情報を管理しているのが権威DNSサーバです。
 

@@ -8,7 +8,7 @@ fe_section: 科目B対策
 fe_subsection: データ構造
 fe_order: 25
 date: 2026-08-09
-last_modified_at: 2026-10-30
+last_modified_at: 2026-11-25
 ux_readability_pilot: true
 ---
 
@@ -82,14 +82,43 @@ pop / dequeue
 
 ただし、**入れる場所・取り出す場所**が違います。
 
-| 見るポイント | スタック | キュー |
-|---|---|---|
-| 基本ルール | 後入れ先出し | 先入れ先出し |
-| 略称 | LIFO | FIFO |
-| データを入れる | 一番上に追加する | 列の後ろに追加する |
-| データを取り出す | 一番上から取り出す | 列の前から取り出す |
-| 操作名 | push / pop | enqueue / dequeue |
-| イメージ | 積み重ねた皿 | レジの順番待ち |
+<table class="study-comparison study-comparison--pair" id="stack-queue-pair" role="table" aria-label="スタックとキューの比較">
+  <thead role="rowgroup">
+    <tr role="row"><th scope="col" role="columnheader">見るポイント</th><th scope="col" role="columnheader" id="stack-queue-pair-col-1">スタック</th><th scope="col" role="columnheader" id="stack-queue-pair-col-2">キュー</th></tr>
+  </thead>
+  <tbody role="rowgroup">
+    <tr role="row">
+      <th scope="row" role="rowheader" id="stack-queue-pair-row-1">基本ルール</th>
+      <td role="cell" headers="stack-queue-pair-row-1 stack-queue-pair-col-1"><span class="study-comparison__label" aria-hidden="true">スタック</span>後入れ先出し</td>
+      <td role="cell" headers="stack-queue-pair-row-1 stack-queue-pair-col-2"><span class="study-comparison__label" aria-hidden="true">キュー</span>先入れ先出し</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="stack-queue-pair-row-2">略称</th>
+      <td role="cell" headers="stack-queue-pair-row-2 stack-queue-pair-col-1"><span class="study-comparison__label" aria-hidden="true">スタック</span>LIFO</td>
+      <td role="cell" headers="stack-queue-pair-row-2 stack-queue-pair-col-2"><span class="study-comparison__label" aria-hidden="true">キュー</span>FIFO</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="stack-queue-pair-row-3">データを入れる</th>
+      <td role="cell" headers="stack-queue-pair-row-3 stack-queue-pair-col-1"><span class="study-comparison__label" aria-hidden="true">スタック</span>一番上に追加する</td>
+      <td role="cell" headers="stack-queue-pair-row-3 stack-queue-pair-col-2"><span class="study-comparison__label" aria-hidden="true">キュー</span>列の後ろに追加する</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="stack-queue-pair-row-4">データを取り出す</th>
+      <td role="cell" headers="stack-queue-pair-row-4 stack-queue-pair-col-1"><span class="study-comparison__label" aria-hidden="true">スタック</span>一番上から取り出す</td>
+      <td role="cell" headers="stack-queue-pair-row-4 stack-queue-pair-col-2"><span class="study-comparison__label" aria-hidden="true">キュー</span>列の前から取り出す</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="stack-queue-pair-row-5">操作名</th>
+      <td role="cell" headers="stack-queue-pair-row-5 stack-queue-pair-col-1"><span class="study-comparison__label" aria-hidden="true">スタック</span>push / pop</td>
+      <td role="cell" headers="stack-queue-pair-row-5 stack-queue-pair-col-2"><span class="study-comparison__label" aria-hidden="true">キュー</span>enqueue / dequeue</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="stack-queue-pair-row-6">イメージ</th>
+      <td role="cell" headers="stack-queue-pair-row-6 stack-queue-pair-col-1"><span class="study-comparison__label" aria-hidden="true">スタック</span>積み重ねた皿</td>
+      <td role="cell" headers="stack-queue-pair-row-6 stack-queue-pair-col-2"><span class="study-comparison__label" aria-hidden="true">キュー</span>レジの順番待ち</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 同じA、B、Cを入れるとどうなる？
 
