@@ -44,8 +44,11 @@
   }
 
   function join(root, board, result) {
+    const clause = root.querySelector("[data-join-clause]");
+
     function draw() {
       const on = root.querySelector("input:checked").value === "on";
+      clause.textContent = (on ? " AND" : "WHERE") + " P.status = 'active';";
       const rows = ["佐藤：進行中の案件"];
       if (on) rows.push("鈴木：NULL", "田中：NULL");
       renderList(board, rows);

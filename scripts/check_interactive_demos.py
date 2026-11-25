@@ -1064,12 +1064,19 @@ def raid_first_step(page, expect):
 
 def join_first_step(page, expect):
     root = page.locator('[data-first-step="join"]')
+    sql = root.locator('.first-step-demo__sql')
+    clause = sql.locator('mark[data-join-clause]')
     rows = root.locator('[data-board] li')
+    expect(sql).to_contain_text('ON E.id = P.employee_id')
+    expect(clause).to_have_text("AND P.status = 'active';")
     expect(rows).to_have_text(['佐藤：進行中の案件', '鈴木：NULL', '田中：NULL'])
     root.locator('input[value="where"]').check()
+    expect(clause).to_have_text("WHERE P.status = 'active';")
     expect(rows).to_have_text(['佐藤：進行中の案件'])
     expect(root.locator('[data-result]')).to_contain_text('WHEREで結合後に絞る')
+    assert sql.evaluate('el => el.scrollWidth <= el.clientWidth + 1'), 'SQL example overflows'
     root.locator('input[value="on"]').check()
+    expect(clause).to_have_text("AND P.status = 'active';")
     expect(rows).to_have_count(3)
 
 

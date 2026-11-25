@@ -52,3 +52,22 @@
 .first-step-demo svg { display: block; width: 100%; max-width: 32rem; }
 .first-step-demo svg text { fill: currentColor; text-anchor: middle; font-size: 10px; }
 .first-step-demo [data-result] { margin: .65rem 0 0; overflow-wrap: anywhere; }
+
+.first-step-demo__sql {
+  margin: .5rem 0 .85rem;
+  padding: .65rem;
+  border: 1px solid #aeb9c6;
+  border-radius: .35rem;
+  background: #f3f6fa;
+  color: #1c2735;
+}
+.first-step-demo .first-step-demo__sql > code {
+  display: block;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.first-step-demo__sql mark { background: #fff0b3; color: #43310c; font-weight: 700; }

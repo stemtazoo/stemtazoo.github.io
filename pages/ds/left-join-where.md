@@ -91,7 +91,7 @@ LEFT JOIN Projects P
 
 ### 触って覚える：条件の場所で結果の行が変わる
 
-「WHEREに置く」を押し、案件がない鈴木さんの行が残るか見てください。最初は「ONに置く」が選ばれています。社員は3人で、佐藤さんには進行中の案件、田中さんには終了済みの案件があります。
+「WHEREに置く」を押し、SQLの強調行が `AND` から `WHERE` に変わるところと、案件がない鈴木さんの行が結果に残るかを見てください。最初は「ONに置く」が選ばれています。社員は3人で、佐藤さんには進行中の案件、田中さんには終了済みの案件があります。
 
 <link rel="stylesheet" href="{{ '/assets/css/first-step-demos.css' | relative_url }}">
 <div class="first-step-demo" data-first-step="join" hidden>
@@ -100,6 +100,13 @@ LEFT JOIN Projects P
     <label><input type="radio" name="demo-join-mode" value="on" checked> ONに置く</label>
     <label><input type="radio" name="demo-join-mode" value="where"> WHEREに置く</label>
   </fieldset>
+  <p id="left-join-demo-sql-title"><strong>現在のSQL</strong></p>
+  <div class="first-step-demo__sql" aria-labelledby="left-join-demo-sql-title" role="group"><code>SELECT E.name, P.project_name
+FROM Employees E
+LEFT JOIN Projects P
+  ON E.id = P.employee_id
+<mark data-join-clause> AND P.status = 'active';</mark></code></div>
+  <p><strong>結合結果</strong></p>
   <ul data-board aria-label="結合結果"></ul>
   <p role="status" data-result></p>
 </div>
