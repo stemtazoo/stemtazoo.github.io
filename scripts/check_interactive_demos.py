@@ -1048,7 +1048,89 @@ def csma_cd(page, expect):
     expect(medium).to_have_attribute('data-condition', 'idle')
 
 
-CHECKS = {'shared-exclusive-lock': lock, 'two-phase-commit': two_phase, 'disk-scheduling': disk,
+def raid_first_step(page, expect):
+    root = page.locator('[data-first-step="raid"]')
+    root.locator('[data-action="fail"]').press('Enter')
+    expect(root.locator('.is-failed')).to_contain_text('ディスク1：故障')
+    expect(root.locator('[data-result]')).to_contain_text('復元できません')
+    for mode, evidence in [('1', '複製'), ('5', 'パリティ')]:
+        root.locator(f'input[value="{mode}"]').check()
+        expect(root.locator('.is-failed')).to_have_count(1)
+        expect(root.locator('[data-result]')).to_contain_text('復元できます')
+        expect(root.locator('[data-result]')).to_contain_text(evidence)
+    root.locator('[data-action="reset"]').click()
+    expect(root.locator('.is-failed')).to_have_count(0)
+
+
+def join_first_step(page, expect):
+    root = page.locator('[data-first-step="join"]')
+    rows = root.locator('[data-board] li')
+    expect(rows).to_have_text(['佐藤：進行中の案件', '鈴木：NULL', '田中：NULL'])
+    root.locator('input[value="where"]').check()
+    expect(rows).to_have_text(['佐藤：進行中の案件'])
+    expect(root.locator('[data-result]')).to_contain_text('WHEREで結合後に絞る')
+    root.locator('input[value="on"]').check()
+    expect(rows).to_have_count(3)
+
+
+def kmeans_first_step(page, expect):
+    root = page.locator('[data-first-step="kmeans"]')
+    next_step = root.locator('[data-action="next"]')
+    result = root.locator('[data-result]')
+    next_step.press('Enter')
+    expect(result).to_contain_text('Aは1・2、Bは4・6・9・10')
+    expect(next_step).to_have_text('重心を更新する')
+    next_step.click()
+    expect(result).to_contain_text('A＝1.5、B＝7.25')
+    expect(root.locator('svg line').first).to_have_attribute('x1', '57.5')
+    next_step.click()
+    expect(result).to_contain_text('Aは1・2・4、Bは6・9・10')
+    next_step.click()
+    next_step.click()
+    expect(result).to_contain_text('完了')
+    expect(next_step).to_be_disabled()
+    root.locator('[data-action="reset"]').click()
+    expect(result).to_contain_text('A＝1、B＝4')
+
+
+def time_split_first_step(page, expect):
+    root = page.locator('[data-first-step="time"]')
+    next_step = root.locator('[data-action="next"]')
+    result = root.locator('[data-result]')
+    next_step.press('Enter')
+    expect(result).to_have_text('1〜4月で学習し、5月で検証します。')
+    next_step.click()
+    expect(next_step).to_be_disabled()
+    root.locator('input[value="mixed"]').check()
+    expect(root.locator('[data-board] li').nth(2)).to_have_text('3月：学習（未来）')
+    expect(result).to_contain_text('未来の情報')
+    root.locator('[data-action="reset"]').click()
+    expect(result).to_have_text('1〜3月で学習し、4月で検証します。')
+
+
+def hamming_first_step(page, expect):
+    root = page.locator('[data-first-step="hamming"]')
+    bit = root.locator('[data-bit="6"]')
+    bit.press('Enter')
+    expect(bit).to_have_attribute('aria-pressed', 'true')
+    expect(root.locator('[data-checks] li').nth(1)).to_contain_text('不一致')
+    expect(root.locator('[data-checks] li').nth(2)).to_contain_text('不一致')
+    expect(root.locator('[data-result]')).to_have_text('2＋4 → 誤りは位置6です。')
+    root.locator('[data-action="correct"]').click()
+    expect(root.locator('[data-result]')).to_contain_text('受信ビット列：0110011')
+    expect(bit).to_have_text('6：1')
+    root.locator('[data-bit="7"]').click()
+    expect(root.locator('[data-result]')).to_contain_text('位置7')
+    root.locator('[data-action="reset"]').click()
+    expect(root.locator('[data-action="correct"]')).to_be_disabled()
+
+
+CHECKS = {'raid-levels': raid_first_step,
+          'left-join-where': join_first_step,
+          'k-means': kmeans_first_step,
+          'time-series-cross-validation': time_split_first_step,
+          'hamming-code': hamming_first_step,
+          'shared-exclusive-lock': lock, 'two-phase-commit': two_phase, 'disk-scheduling': disk,
           'sql-ddl-dml': ddl_dml, 'cpu-scheduling': cpu, 'confusion-matrix': matrix, 'attention': attention,
           'binary-search': binary_search, 'cnn-output-size': cnn, 'adjacency-matrix': adjacency,
           'binary-tree-traversal': binary_tree_traversal,

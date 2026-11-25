@@ -6,7 +6,7 @@ permalink: /gk/k-means/
 tags: [gk, clustering]
 gk_section: 機械学習の概要/代表的な手法/教師なし学習/クラスタリング
 gk_order: 1
-last_modified_at: 2026-09-26
+last_modified_at: 2026-11-25
 ---
 
 ## まず結論
@@ -43,6 +43,25 @@ k-meansでは、各データ点と所属クラスタの重心との距離が小�
 5. 割り当てがほぼ変わらなくなるまで繰り返す
 
 **kはクラスタ数**です。近傍数を表す[k-NN](/gk/k-means-vs-knn/)のkとは意味が違います。
+
+### 触って覚える：点の割り当てと重心の更新
+
+「近い中心に割り当てる」を押し、どの点がA・Bのどちらに入るか見てください。次に「重心を更新する」を押すと、点の所属を保ったまま各中心がグループ内の点の平均へ動きます。
+
+<link rel="stylesheet" href="{{ '/assets/css/first-step-demos.css' | relative_url }}">
+<div class="first-step-demo" data-first-step="kmeans" hidden>
+  <div class="first-step-demo__actions">
+    <button type="button" data-action="next">近い中心に割り当てる</button>
+    <button type="button" data-action="reset">最初から</button>
+  </div>
+  <svg viewBox="0 0 300 105" role="img" aria-label="数直線上の点と中心A・B" data-board></svg>
+  <p role="status" data-result></p>
+</div>
+<noscript><p>数直線の点1・2・4・6・9・10を、中心A＝1、B＝4に割り当てると、Aは1・2、Bは4・6・9・10です。次の重心はA＝1.5、B＝7.25になり、再割り当てでは点4がAに移ります。</p></noscript>
+
+この例では計算を追いやすいよう、1次元の点を2グループに分けます。
+
+<script defer src="{{ '/assets/js/first-step-demos.js' | relative_url }}"></script>
 
 ## いつ使う？（得意・不得意）
 

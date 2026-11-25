@@ -1,0 +1,54 @@
+.first-step-demo {
+  border: 1px solid #8797a6;
+  border-radius: .75rem;
+  margin: 1rem 0;
+  padding: .8rem;
+}
+.first-step-demo[hidden] { display: none; }
+.first-step-demo fieldset { padding: .5rem; margin: 0 0 .75rem; min-width: 0; }
+.first-step-demo fieldset label {
+  display: inline-flex;
+  align-items: center;
+  gap: .25rem;
+  min-height: 44px;
+  margin-inline-end: .65rem;
+}
+.first-step-demo__actions, .first-step-demo__bits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45rem;
+  margin-bottom: .65rem;
+}
+.first-step-demo button {
+  font: inherit;
+  min-height: 44px;
+  padding: .35rem .65rem;
+  border: 1px solid #64748b;
+  border-radius: .4rem;
+  background: #edf2f7;
+  color: #1c2735;
+}
+.first-step-demo button[data-action]:first-child,
+.first-step-demo button[aria-pressed="true"] {
+  background: #14598b;
+  color: #fff;
+}
+.first-step-demo button:disabled { opacity: .6; }
+.first-step-demo :focus-visible { outline: 3px solid #ce8919; outline-offset: 2px; }
+.first-step-demo__disks, .first-step-demo__months {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .4rem;
+  padding: 0;
+  list-style: none;
+}
+.first-step-demo__disks li, .first-step-demo__months li {
+  padding: .4rem;
+  border: 1px solid #aeb9c6;
+  border-radius: .35rem;
+  overflow-wrap: anywhere;
+}
+.first-step-demo .is-failed { background: #fff0df; color: #813d07; }
+.first-step-demo svg { display: block; width: 100%; max-width: 32rem; }
+.first-step-demo svg text { fill: currentColor; text-anchor: middle; font-size: 10px; }
+.first-step-demo [data-result] { margin: .65rem 0 0; overflow-wrap: anywhere; }

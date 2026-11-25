@@ -174,5 +174,50 @@
       "selector": "noscript p",
       "text": "衝突を検出して中止"
     }
+  },
+  "raid-levels": {
+    "source": "pages/fe/raid-levels.md",
+    "root": "[data-first-step=\"raid\"]",
+    "url": "/fe/raid-levels/",
+    "static": {
+      "selector": "noscript p",
+      "text": "ディスク1台"
+    }
+  },
+  "left-join-where": {
+    "source": "pages/ds/left-join-where.md",
+    "root": "[data-first-step=\"join\"]",
+    "url": "/ds/left-join-where/",
+    "static": {
+      "selector": "noscript p",
+      "text": "3行"
+    }
+  },
+  "k-means": {
+    "source": "pages/gk/k-means.md",
+    "root": "[data-first-step=\"kmeans\"]",
+    "url": "/gk/k-means/",
+    "static": {
+      "selector": "noscript p",
+      "text": "再割り当て"
+    }
+  },
+  "time-series-cross-validation": {
+    "source": "pages/gk/time-series-cross-validation.md",
+    "root": "[data-first-step=\"time\"]",
+    "url": "/gk/time-series-cross-validation/",
+    "static": {
+      "selector": "noscript p",
+      "text": "学習"
+    }
+  },
+  "hamming-code": {
+    "source": "pages/fe/hamming-code.md",
+    "root": "[data-first-step=\"hamming\"]",
+    "url": "/fe/hamming-code/",
+    "static": {
+      "selector": "noscript p",
+      "text": "2＋4"
+    }
   }
 }
