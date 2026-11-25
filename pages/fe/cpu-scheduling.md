@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: オペレーティングシステム
 fe_order: 50
 date: 2026-08-27
-last_modified_at: 2026-11-24
+last_modified_at: 2026-11-25
 related_articles:
   - /fe/task-scheduling/
   - /fe/preemptive-scheduling/
@@ -149,7 +149,7 @@ CPU中心：      CPU CPU CPU       CPU CPU CPU
   </div>
   <div id="fe-cpu-remaining">残りCPU時間：A=5、B=2、C=3</div>
   <div class="fe-cpu-demo__scroll">
-    <table>
+    <table class="fe-cpu-demo__conditions">
       <caption>タスクの条件（値を変更できます）</caption>
       <thead><tr><th scope="col">タスク</th><th scope="col">到着時刻</th><th scope="col">CPU処理時間</th><th scope="col">優先度</th></tr></thead>
       <tbody>
@@ -160,7 +160,7 @@ CPU中心：      CPU CPU CPU       CPU CPU CPU
     </table>
   </div>
   <div class="fe-cpu-demo__scroll">
-    <table>
+    <table class="fe-cpu-demo__comparison">
       <caption>各方式を最後まで実行した場合の比較（入力を変えると更新）</caption>
       <thead><tr><th scope="col">方式</th><th scope="col">実行順序</th><th scope="col">平均待ち時間</th><th scope="col">平均ターンアラウンド時間</th></tr></thead>
       <tbody id="fe-cpu-comparison"><tr><td colspan="4">JavaScript有効時に結果を表示します。</td></tr></tbody>
@@ -192,7 +192,17 @@ CPU中心：      CPU CPU CPU       CPU CPU CPU
 .fe-cpu-demo__slot[data-task="-"]{background:#e2e8f0;color:#334155}
 .fe-cpu-demo__note{font-size:.9rem}
 .fe-cpu-demo :focus-visible{outline:3px solid #2563eb;outline-offset:2px}
-@media(max-width:560px){.fe-cpu-demo{padding:.65rem}.fe-cpu-demo__buttons button{flex:1 1 43%}}
+@media(max-width:560px){
+  .fe-cpu-demo{padding:.65rem}
+  .fe-cpu-demo__buttons button{flex:1 1 43%}
+  .fe-cpu-demo table{display:table;min-width:0;table-layout:fixed}
+  .fe-cpu-demo caption,.fe-cpu-demo th,.fe-cpu-demo td{white-space:normal;overflow-wrap:anywhere}
+  .fe-cpu-demo caption{text-align:left;margin-bottom:.4rem}
+  .fe-cpu-demo th,.fe-cpu-demo td{padding:.3rem .2rem;font-size:.875rem}
+  .fe-cpu-demo__conditions thead th:first-child{width:18%}
+  .fe-cpu-demo__conditions input[type=number]{width:100%;min-width:0;font-size:1rem}
+  .fe-cpu-demo__comparison thead th:nth-child(2){width:32%}
+}
 </style>
 <script>
 (function(){
