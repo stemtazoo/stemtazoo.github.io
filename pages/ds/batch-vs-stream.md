@@ -9,7 +9,7 @@ ds_area: dataengineering
 ds_section: data-processing
 prev: /ds/self-join/
 next: /ds/etl/
-last_modified_at: 2026-06-18
+last_modified_at: 2026-11-25
 ---
 
 ## まず結論
@@ -51,13 +51,38 @@ DS検定では、細かい実装よりも、次の判断が重要です。
 
 バッチ処理とストリーム処理は、データ処理のタイミングと処理単位が異なります。
 
-| 項目 | バッチ処理 | ストリーム処理 |
-|---|---|---|
-| 処理タイミング | 一定時間ごとにまとめて処理 | データ発生に近いタイミングで処理 |
-| 処理単位 | まとまったデータ | 連続的に流れるデータ |
-| 得意なこと | 大量データの一括集計 | 即時検知・リアルタイム監視 |
-| 代表例 | 日次集計、月次レポート | 不正検知、IoT監視、アラート |
-| 注意点 | 結果が出るまで時間差がある | システム設計が複雑になりやすい |
+<table class="study-comparison study-comparison--pair" id="batch-stream-pair" role="table" aria-label="バッチ処理とストリーム処理の比較">
+  <thead role="rowgroup">
+    <tr role="row"><th scope="col" role="columnheader">項目</th><th scope="col" role="columnheader" id="batch-stream-pair-col-1">バッチ処理</th><th scope="col" role="columnheader" id="batch-stream-pair-col-2">ストリーム処理</th></tr>
+  </thead>
+  <tbody role="rowgroup">
+    <tr role="row">
+      <th scope="row" role="rowheader" id="batch-stream-pair-row-1">処理タイミング</th>
+      <td role="cell" headers="batch-stream-pair-row-1 batch-stream-pair-col-1"><span class="study-comparison__label" aria-hidden="true">バッチ処理</span>一定時間ごとにまとめて処理</td>
+      <td role="cell" headers="batch-stream-pair-row-1 batch-stream-pair-col-2"><span class="study-comparison__label" aria-hidden="true">ストリーム処理</span>データ発生に近いタイミングで処理</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="batch-stream-pair-row-2">処理単位</th>
+      <td role="cell" headers="batch-stream-pair-row-2 batch-stream-pair-col-1"><span class="study-comparison__label" aria-hidden="true">バッチ処理</span>まとまったデータ</td>
+      <td role="cell" headers="batch-stream-pair-row-2 batch-stream-pair-col-2"><span class="study-comparison__label" aria-hidden="true">ストリーム処理</span>連続的に流れるデータ</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="batch-stream-pair-row-3">得意なこと</th>
+      <td role="cell" headers="batch-stream-pair-row-3 batch-stream-pair-col-1"><span class="study-comparison__label" aria-hidden="true">バッチ処理</span>大量データの一括集計</td>
+      <td role="cell" headers="batch-stream-pair-row-3 batch-stream-pair-col-2"><span class="study-comparison__label" aria-hidden="true">ストリーム処理</span>即時検知・リアルタイム監視</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="batch-stream-pair-row-4">代表例</th>
+      <td role="cell" headers="batch-stream-pair-row-4 batch-stream-pair-col-1"><span class="study-comparison__label" aria-hidden="true">バッチ処理</span>日次集計、月次レポート</td>
+      <td role="cell" headers="batch-stream-pair-row-4 batch-stream-pair-col-2"><span class="study-comparison__label" aria-hidden="true">ストリーム処理</span>不正検知、IoT監視、アラート</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="batch-stream-pair-row-5">注意点</th>
+      <td role="cell" headers="batch-stream-pair-row-5 batch-stream-pair-col-1"><span class="study-comparison__label" aria-hidden="true">バッチ処理</span>結果が出るまで時間差がある</td>
+      <td role="cell" headers="batch-stream-pair-row-5 batch-stream-pair-col-2"><span class="study-comparison__label" aria-hidden="true">ストリーム処理</span>システム設計が複雑になりやすい</td>
+    </tr>
+  </tbody>
+</table>
 
 ### バッチ処理
 
