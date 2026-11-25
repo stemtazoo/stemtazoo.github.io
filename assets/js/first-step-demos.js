@@ -125,10 +125,14 @@
   }
 
   function time(root, board, result, button) {
+    const next = button("next");
+    const fixedReason = root.querySelector("[data-fixed-reason]");
+    const isMixed = () => root.querySelector("input:checked").value === "mixed";
     let validation = 4;
 
     function draw() {
-      const mixed = root.querySelector("input:checked").value === "mixed";
+      const mixed = isMixed();
+      fixedReason.textContent = "";
       const testMonth = mixed ? 2 : validation;
       const months = Array.from({length: 6}, (_, i) => i + 1);
       renderList(board, months.map(month => {
@@ -141,12 +145,20 @@
       result.textContent = mixed
         ? "2月を検証するとき、3〜6月を学習に使うと未来の情報が混ざります。"
         : "1〜" + (validation - 1) + "月で学習し、" + validation + "月で検証します。";
-      button("next").disabled = mixed || validation === 6;
+      next.textContent = mixed ? "固定例の理由を見る" : "次の分割";
+      next.disabled = !mixed && validation === 6;
       button("reset").disabled = !mixed && validation === 4;
     }
 
     root.addEventListener("change", () => { validation = 4; draw(); });
-    button("next").addEventListener("click", () => { validation += 1; draw(); });
+    next.addEventListener("click", () => {
+      if (isMixed()) {
+        fixedReason.textContent = "2月より後の3〜6月が学習に混ざる様子を時間順の分割と比べられるよう、この例では月の配置を固定しています。";
+        return;
+      }
+      validation += 1;
+      draw();
+    });
     button("reset").addEventListener("click", () => {
       root.querySelector('input[value="time"]').checked = true;
       validation = 4;
