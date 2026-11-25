@@ -9,7 +9,7 @@ ds_area: dataengineering
 ds_section: security
 prev: /ds/primary-secondary-data/
 next: /ds/rainbow-table-attack/
-last_modified_at: 2026-08-16
+last_modified_at: 2026-11-25
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -20,12 +20,33 @@ last_modified_at: 2026-08-16
 
 共通鍵暗号方式と公開鍵暗号方式は、**鍵の使い方と役割が違います**。
 
-| 観点 | 共通鍵暗号方式 | 公開鍵暗号方式 |
-|---|---|---|
-| 鍵 | 同じ鍵を共有 | 公開鍵と秘密鍵のペア |
-| 速度 | 高速 | 比較的遅い |
-| 得意 | 大量データの暗号化 | 鍵共有、認証、電子署名など |
-| 主な注意点 | 鍵を安全に共有する必要がある | 処理負荷が大きい |
+<table class="study-comparison study-comparison--pair" id="symmetric-publickey-pair" role="table" aria-label="共通鍵暗号方式と公開鍵暗号方式の比較">
+  <thead role="rowgroup">
+    <tr role="row"><th scope="col" role="columnheader">観点</th><th scope="col" role="columnheader" id="symmetric-publickey-pair-col-1">共通鍵暗号方式</th><th scope="col" role="columnheader" id="symmetric-publickey-pair-col-2">公開鍵暗号方式</th></tr>
+  </thead>
+  <tbody role="rowgroup">
+    <tr role="row">
+      <th scope="row" role="rowheader" id="symmetric-publickey-pair-row-1">鍵</th>
+      <td role="cell" headers="symmetric-publickey-pair-row-1 symmetric-publickey-pair-col-1"><span class="study-comparison__label" aria-hidden="true">共通鍵暗号方式</span>同じ鍵を共有</td>
+      <td role="cell" headers="symmetric-publickey-pair-row-1 symmetric-publickey-pair-col-2"><span class="study-comparison__label" aria-hidden="true">公開鍵暗号方式</span>公開鍵と秘密鍵のペア</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="symmetric-publickey-pair-row-2">速度</th>
+      <td role="cell" headers="symmetric-publickey-pair-row-2 symmetric-publickey-pair-col-1"><span class="study-comparison__label" aria-hidden="true">共通鍵暗号方式</span>高速</td>
+      <td role="cell" headers="symmetric-publickey-pair-row-2 symmetric-publickey-pair-col-2"><span class="study-comparison__label" aria-hidden="true">公開鍵暗号方式</span>比較的遅い</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="symmetric-publickey-pair-row-3">得意</th>
+      <td role="cell" headers="symmetric-publickey-pair-row-3 symmetric-publickey-pair-col-1"><span class="study-comparison__label" aria-hidden="true">共通鍵暗号方式</span>大量データの暗号化</td>
+      <td role="cell" headers="symmetric-publickey-pair-row-3 symmetric-publickey-pair-col-2"><span class="study-comparison__label" aria-hidden="true">公開鍵暗号方式</span>鍵共有、認証、電子署名など</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="symmetric-publickey-pair-row-4">主な注意点</th>
+      <td role="cell" headers="symmetric-publickey-pair-row-4 symmetric-publickey-pair-col-1"><span class="study-comparison__label" aria-hidden="true">共通鍵暗号方式</span>鍵を安全に共有する必要がある</td>
+      <td role="cell" headers="symmetric-publickey-pair-row-4 symmetric-publickey-pair-col-2"><span class="study-comparison__label" aria-hidden="true">公開鍵暗号方式</span>処理負荷が大きい</td>
+    </tr>
+  </tbody>
+</table>
 
 DS検定では、**高速な通信 = 共通鍵暗号 / 安全な鍵共有や認証 = 公開鍵暗号**という役割の違いを押さえると判断しやすくなります。
 
