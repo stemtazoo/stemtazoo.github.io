@@ -101,11 +101,11 @@ LEFT JOIN Projects P
     <label><input type="radio" name="demo-join-mode" value="where"> WHEREに置く</label>
   </fieldset>
   <p id="left-join-demo-sql-title"><strong>現在のSQL</strong></p>
-  <pre class="first-step-demo__sql" aria-labelledby="left-join-demo-sql-title"><code>SELECT E.name, P.project_name
+  <div class="first-step-demo__sql" aria-labelledby="left-join-demo-sql-title" role="group"><code>SELECT E.name, P.project_name
 FROM Employees E
 LEFT JOIN Projects P
   ON E.id = P.employee_id
-<mark data-join-clause> AND P.status = 'active';</mark></code></pre>
+<mark data-join-clause> AND P.status = 'active';</mark></code></div>
   <p><strong>結合結果</strong></p>
   <ul data-board aria-label="結合結果"></ul>
   <p role="status" data-result></p>

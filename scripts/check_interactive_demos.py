@@ -1064,7 +1064,7 @@ def raid_first_step(page, expect):
 
 def join_first_step(page, expect):
     root = page.locator('[data-first-step="join"]')
-    sql = root.locator('pre')
+    sql = root.locator('.first-step-demo__sql')
     clause = sql.locator('mark[data-join-clause]')
     rows = root.locator('[data-board] li')
     expect(sql).to_contain_text('ON E.id = P.employee_id')
