@@ -7,7 +7,7 @@ categories: [data-engineering]
 tags: [ds, data-engineering, python]
 ds_area: dataengineering
 ds_section: programming
-last_modified_at: 2026-09-12
+last_modified_at: 2026-11-25
 ---
 
 ## まず結論
@@ -69,14 +69,43 @@ DS検定では、用語の意味を覚えるだけでなく、簡単な仕様や
 
 両者を比較すると、次のようになります。
 
-| 比較項目 | ブラックボックステスト | ホワイトボックステスト |
-|---|---|---|
-| 主に見るもの | 外部仕様、入力、出力 | ソースコード、内部構造、分岐 |
-| テスト項目の根拠 | 仕様書や要求事項 | プログラムの処理内容 |
-| 内部構造の確認 | 基本的に不要 | 必要 |
-| 代表的な考え方 | 同値分割、境界値分析 | 命令や分岐の網羅 |
-| 見つけやすい問題 | 仕様と異なる動作 | 通っていない処理や分岐 |
-| 見つけにくい問題 | 外部動作に現れない内部の問題 | 仕様そのものの不足や誤り |
+<table class="study-comparison study-comparison--pair" id="testing-pair" role="table" aria-label="ブラックボックステストとホワイトボックステストの比較">
+  <thead role="rowgroup">
+    <tr role="row"><th scope="col" role="columnheader">比較項目</th><th scope="col" role="columnheader" id="testing-pair-col-1">ブラックボックステスト</th><th scope="col" role="columnheader" id="testing-pair-col-2">ホワイトボックステスト</th></tr>
+  </thead>
+  <tbody role="rowgroup">
+    <tr role="row">
+      <th scope="row" role="rowheader" id="testing-pair-row-1">主に見るもの</th>
+      <td role="cell" headers="testing-pair-row-1 testing-pair-col-1"><span class="study-comparison__label" aria-hidden="true">ブラックボックステスト</span>外部仕様、入力、出力</td>
+      <td role="cell" headers="testing-pair-row-1 testing-pair-col-2"><span class="study-comparison__label" aria-hidden="true">ホワイトボックステスト</span>ソースコード、内部構造、分岐</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="testing-pair-row-2">テスト項目の根拠</th>
+      <td role="cell" headers="testing-pair-row-2 testing-pair-col-1"><span class="study-comparison__label" aria-hidden="true">ブラックボックステスト</span>仕様書や要求事項</td>
+      <td role="cell" headers="testing-pair-row-2 testing-pair-col-2"><span class="study-comparison__label" aria-hidden="true">ホワイトボックステスト</span>プログラムの処理内容</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="testing-pair-row-3">内部構造の確認</th>
+      <td role="cell" headers="testing-pair-row-3 testing-pair-col-1"><span class="study-comparison__label" aria-hidden="true">ブラックボックステスト</span>基本的に不要</td>
+      <td role="cell" headers="testing-pair-row-3 testing-pair-col-2"><span class="study-comparison__label" aria-hidden="true">ホワイトボックステスト</span>必要</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="testing-pair-row-4">代表的な考え方</th>
+      <td role="cell" headers="testing-pair-row-4 testing-pair-col-1"><span class="study-comparison__label" aria-hidden="true">ブラックボックステスト</span>同値分割、境界値分析</td>
+      <td role="cell" headers="testing-pair-row-4 testing-pair-col-2"><span class="study-comparison__label" aria-hidden="true">ホワイトボックステスト</span>命令や分岐の網羅</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="testing-pair-row-5">見つけやすい問題</th>
+      <td role="cell" headers="testing-pair-row-5 testing-pair-col-1"><span class="study-comparison__label" aria-hidden="true">ブラックボックステスト</span>仕様と異なる動作</td>
+      <td role="cell" headers="testing-pair-row-5 testing-pair-col-2"><span class="study-comparison__label" aria-hidden="true">ホワイトボックステスト</span>通っていない処理や分岐</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="testing-pair-row-6">見つけにくい問題</th>
+      <td role="cell" headers="testing-pair-row-6 testing-pair-col-1"><span class="study-comparison__label" aria-hidden="true">ブラックボックステスト</span>外部動作に現れない内部の問題</td>
+      <td role="cell" headers="testing-pair-row-6 testing-pair-col-2"><span class="study-comparison__label" aria-hidden="true">ホワイトボックステスト</span>仕様そのものの不足や誤り</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 同じプログラムで違いを確認する
 

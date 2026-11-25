@@ -8,7 +8,7 @@ fe_section: マネジメント系
 fe_subsection: プロジェクトマネジメント
 fe_order: 10
 date: 2026-08-10
-last_modified_at: 2026-09-20
+last_modified_at: 2026-11-25
 ---
 
 ## まず結論
@@ -110,12 +110,33 @@ A ────
 
 ### 2つを比較する
 
-| 見るポイント | クラッシング | ファストトラッキング |
-|---|---|---|
-| 何を変える？ | 資源量 | 作業の順序・重なり |
-| 典型例 | 増員、残業、設備追加 | 前倒し、並行実施 |
-| 起こりやすい影響 | コスト増 | 手戻り・リスク増 |
-| スコープ | 基本的に変えない | 基本的に変えない |
+<table class="study-comparison study-comparison--pair" id="schedule-shortening-pair" role="table" aria-label="クラッシングとファストトラッキングの比較">
+  <thead role="rowgroup">
+    <tr role="row"><th scope="col" role="columnheader">見るポイント</th><th scope="col" role="columnheader" id="schedule-shortening-pair-col-1">クラッシング</th><th scope="col" role="columnheader" id="schedule-shortening-pair-col-2">ファストトラッキング</th></tr>
+  </thead>
+  <tbody role="rowgroup">
+    <tr role="row">
+      <th scope="row" role="rowheader" id="schedule-shortening-pair-row-1">何を変える？</th>
+      <td role="cell" headers="schedule-shortening-pair-row-1 schedule-shortening-pair-col-1"><span class="study-comparison__label" aria-hidden="true">クラッシング</span>資源量</td>
+      <td role="cell" headers="schedule-shortening-pair-row-1 schedule-shortening-pair-col-2"><span class="study-comparison__label" aria-hidden="true">ファストトラッキング</span>作業の順序・重なり</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="schedule-shortening-pair-row-2">典型例</th>
+      <td role="cell" headers="schedule-shortening-pair-row-2 schedule-shortening-pair-col-1"><span class="study-comparison__label" aria-hidden="true">クラッシング</span>増員、残業、設備追加</td>
+      <td role="cell" headers="schedule-shortening-pair-row-2 schedule-shortening-pair-col-2"><span class="study-comparison__label" aria-hidden="true">ファストトラッキング</span>前倒し、並行実施</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="schedule-shortening-pair-row-3">起こりやすい影響</th>
+      <td role="cell" headers="schedule-shortening-pair-row-3 schedule-shortening-pair-col-1"><span class="study-comparison__label" aria-hidden="true">クラッシング</span>コスト増</td>
+      <td role="cell" headers="schedule-shortening-pair-row-3 schedule-shortening-pair-col-2"><span class="study-comparison__label" aria-hidden="true">ファストトラッキング</span>手戻り・リスク増</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="schedule-shortening-pair-row-4">スコープ</th>
+      <td role="cell" headers="schedule-shortening-pair-row-4 schedule-shortening-pair-col-1"><span class="study-comparison__label" aria-hidden="true">クラッシング</span>基本的に変えない</td>
+      <td role="cell" headers="schedule-shortening-pair-row-4 schedule-shortening-pair-col-2"><span class="study-comparison__label" aria-hidden="true">ファストトラッキング</span>基本的に変えない</td>
+    </tr>
+  </tbody>
+</table>
 
 このテーマは、基本情報技術者試験の「プロジェクトマネジメント」と関係する内容です。公式の出題範囲やシラバスは、[IPA：基本情報技術者試験](https://www.ipa.go.jp/shiken/kubun/fe.html) から確認できます。
 

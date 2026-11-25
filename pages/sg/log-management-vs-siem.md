@@ -4,7 +4,7 @@ title: ログ管理とSIEMの違い【SG試験】
 description: "ログ管理はログを記録・保管・確認できるようにする活動であり、SIEMは複数のログを集約・分析して異常を検知する仕組みです。SG試験・情報セキュリティマネジメント試験で混同しやすいログ管理、監査ログ、SIEM、SOCの違いを判断基準で整理します。"
 permalink: /sg/log-management-vs-siem/
 tags: [sg, sg-security-measures, log_management, monitoring, incident_response]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-11-25
 ---
 
 ## まず結論
@@ -136,11 +136,28 @@ SIEMは、単独のログでは見えにくい異常を、複数のログの組�
 
 SIEMは、そのログを集約・分析して、異常や攻撃の兆候を見つける仕組みです。
 
-| 観点 | ログ管理 | SIEM |
-|---|---|---|
-| 主な目的 | 記録・保管・確認 | 分析・検知・通知 |
-| 重視すること | 証跡を残す | 異常を見つける |
-| 試験でのキーワード | 保管、証跡、監査 | 集約、相関分析、アラート |
+<table class="study-comparison study-comparison--pair" id="log-siem-pair" role="table" aria-label="ログ管理とSIEMの比較">
+  <thead role="rowgroup">
+    <tr role="row"><th scope="col" role="columnheader">観点</th><th scope="col" role="columnheader" id="log-siem-pair-col-1">ログ管理</th><th scope="col" role="columnheader" id="log-siem-pair-col-2">SIEM</th></tr>
+  </thead>
+  <tbody role="rowgroup">
+    <tr role="row">
+      <th scope="row" role="rowheader" id="log-siem-pair-row-1">主な目的</th>
+      <td role="cell" headers="log-siem-pair-row-1 log-siem-pair-col-1"><span class="study-comparison__label" aria-hidden="true">ログ管理</span>記録・保管・確認</td>
+      <td role="cell" headers="log-siem-pair-row-1 log-siem-pair-col-2"><span class="study-comparison__label" aria-hidden="true">SIEM</span>分析・検知・通知</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="log-siem-pair-row-2">重視すること</th>
+      <td role="cell" headers="log-siem-pair-row-2 log-siem-pair-col-1"><span class="study-comparison__label" aria-hidden="true">ログ管理</span>証跡を残す</td>
+      <td role="cell" headers="log-siem-pair-row-2 log-siem-pair-col-2"><span class="study-comparison__label" aria-hidden="true">SIEM</span>異常を見つける</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="log-siem-pair-row-3">試験でのキーワード</th>
+      <td role="cell" headers="log-siem-pair-row-3 log-siem-pair-col-1"><span class="study-comparison__label" aria-hidden="true">ログ管理</span>保管、証跡、監査</td>
+      <td role="cell" headers="log-siem-pair-row-3 log-siem-pair-col-2"><span class="study-comparison__label" aria-hidden="true">SIEM</span>集約、相関分析、アラート</td>
+    </tr>
+  </tbody>
+</table>
 
 ログ管理はSIEMの前提になりますが、同じ意味ではありません。
 
