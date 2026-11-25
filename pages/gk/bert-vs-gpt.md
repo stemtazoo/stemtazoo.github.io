@@ -6,19 +6,40 @@ permalink: /gk/bert-vs-gpt/
 tags: [gk, nlp, transformer, cheatsheet]
 gk_section: ディープラーニングの応用例/自然言語処理/Transformer・言語モデル
 gk_order: 5
-last_modified_at: 2026-09-26
+last_modified_at: 2026-11-25
 ---
 
 ## まず結論
 
 BERTとGPTは、どちらもTransformer系ですが、**構造と代表的な事前学習の方法が違います。**
 
-| 観点 | BERT | GPT |
-|---|---|---|
-| 基本構造 | Encoder型 | Decoder型 |
-| 文脈 | 前後を利用 | 過去側を利用 |
-| 代表的な学習 | MLM | 次トークン予測 |
-| 代表的な用途 | 分類・抽出など | 生成・補完など |
+<table class="study-comparison study-comparison--pair" id="bert-gpt-pair" role="table" aria-label="BERTとGPTの比較">
+  <thead role="rowgroup">
+    <tr role="row"><th scope="col" role="columnheader">観点</th><th scope="col" role="columnheader" id="bert-gpt-pair-col-1">BERT</th><th scope="col" role="columnheader" id="bert-gpt-pair-col-2">GPT</th></tr>
+  </thead>
+  <tbody role="rowgroup">
+    <tr role="row">
+      <th scope="row" role="rowheader" id="bert-gpt-pair-row-1">基本構造</th>
+      <td role="cell" headers="bert-gpt-pair-row-1 bert-gpt-pair-col-1"><span class="study-comparison__label" aria-hidden="true">BERT</span>Encoder型</td>
+      <td role="cell" headers="bert-gpt-pair-row-1 bert-gpt-pair-col-2"><span class="study-comparison__label" aria-hidden="true">GPT</span>Decoder型</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="bert-gpt-pair-row-2">文脈</th>
+      <td role="cell" headers="bert-gpt-pair-row-2 bert-gpt-pair-col-1"><span class="study-comparison__label" aria-hidden="true">BERT</span>前後を利用</td>
+      <td role="cell" headers="bert-gpt-pair-row-2 bert-gpt-pair-col-2"><span class="study-comparison__label" aria-hidden="true">GPT</span>過去側を利用</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="bert-gpt-pair-row-3">代表的な学習</th>
+      <td role="cell" headers="bert-gpt-pair-row-3 bert-gpt-pair-col-1"><span class="study-comparison__label" aria-hidden="true">BERT</span>MLM</td>
+      <td role="cell" headers="bert-gpt-pair-row-3 bert-gpt-pair-col-2"><span class="study-comparison__label" aria-hidden="true">GPT</span>次トークン予測</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="bert-gpt-pair-row-4">代表的な用途</th>
+      <td role="cell" headers="bert-gpt-pair-row-4 bert-gpt-pair-col-1"><span class="study-comparison__label" aria-hidden="true">BERT</span>分類・抽出など</td>
+      <td role="cell" headers="bert-gpt-pair-row-4 bert-gpt-pair-col-2"><span class="study-comparison__label" aria-hidden="true">GPT</span>生成・補完など</td>
+    </tr>
+  </tbody>
+</table>
 
 G検定では、**理解か生成かという用途だけでなく、構造・学習目的を見る**のが安全です。
 
