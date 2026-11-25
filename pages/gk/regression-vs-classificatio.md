@@ -6,7 +6,7 @@ permalink: /gk/regression-vs-classification/
 tags: [gk, metrics]
 gk_section: 機械学習の概要/モデルの選択・評価
 gk_order: 11
-last_modified_at: 2026-08-21
+last_modified_at: 2026-11-25
 ---
 
 ## まず結論
@@ -72,12 +72,33 @@ G検定では、問題文を見たら最初に
 
 ## いつ使う？（得意・不得意）
 
-| 観点 | 回帰 | 分類 |
-|---|---|---|
-| 予測対象 | 連続値 | クラス・カテゴリ |
-| 代表例 | 価格、温度、売上 | 正常/異常、犬/猫 |
-| 主な評価 | 誤差の大きさ | 当たり方・見逃し・誤検知 |
-| 指標例 | RMSE、MAE、R² | Accuracy、Precision、Recall、F1 |
+<table class="study-comparison study-comparison--pair" id="regression-classification-pair" role="table" aria-label="回帰と分類の比較">
+  <thead role="rowgroup">
+    <tr role="row"><th scope="col" role="columnheader">観点</th><th scope="col" role="columnheader" id="regression-classification-pair-col-1">回帰</th><th scope="col" role="columnheader" id="regression-classification-pair-col-2">分類</th></tr>
+  </thead>
+  <tbody role="rowgroup">
+    <tr role="row">
+      <th scope="row" role="rowheader" id="regression-classification-pair-row-1">予測対象</th>
+      <td role="cell" headers="regression-classification-pair-row-1 regression-classification-pair-col-1"><span class="study-comparison__label" aria-hidden="true">回帰</span>連続値</td>
+      <td role="cell" headers="regression-classification-pair-row-1 regression-classification-pair-col-2"><span class="study-comparison__label" aria-hidden="true">分類</span>クラス・カテゴリ</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="regression-classification-pair-row-2">代表例</th>
+      <td role="cell" headers="regression-classification-pair-row-2 regression-classification-pair-col-1"><span class="study-comparison__label" aria-hidden="true">回帰</span>価格、温度、売上</td>
+      <td role="cell" headers="regression-classification-pair-row-2 regression-classification-pair-col-2"><span class="study-comparison__label" aria-hidden="true">分類</span>正常/異常、犬/猫</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="regression-classification-pair-row-3">主な評価</th>
+      <td role="cell" headers="regression-classification-pair-row-3 regression-classification-pair-col-1"><span class="study-comparison__label" aria-hidden="true">回帰</span>誤差の大きさ</td>
+      <td role="cell" headers="regression-classification-pair-row-3 regression-classification-pair-col-2"><span class="study-comparison__label" aria-hidden="true">分類</span>当たり方・見逃し・誤検知</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="regression-classification-pair-row-4">指標例</th>
+      <td role="cell" headers="regression-classification-pair-row-4 regression-classification-pair-col-1"><span class="study-comparison__label" aria-hidden="true">回帰</span>RMSE、MAE、R²</td>
+      <td role="cell" headers="regression-classification-pair-row-4 regression-classification-pair-col-2"><span class="study-comparison__label" aria-hidden="true">分類</span>Accuracy、Precision、Recall、F1</td>
+    </tr>
+  </tbody>
+</table>
 
 分類では、単に正解率を見るだけでなく、**FPとFNのどちらが困るか**で指標を選ぶことがあります。
 
