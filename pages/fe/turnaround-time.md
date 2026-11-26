@@ -3,17 +3,31 @@ layout: page
 title: ターンアラウンドタイムとは？到着時刻・待ち時間・処理時間の計算方法【基本情報技術者試験】
 description: ターンアラウンドタイムを、ジョブの到着から完了までに要する時間として整理します。到着時刻・開始時刻・完了時刻・待ち時間・処理時間の関係と、到着順実行の計算手順を科目A向けに解説します。
 permalink: /fe/turnaround-time/
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/turnaround-time.png
+  width: 1200
+  height: 630
+  alt: "ジョブCは3秒に到着、11秒に処理開始、14秒に完了。待ち時間8秒と処理時間3秒を合わせたターンアラウンドタイムは11秒。"
 tags: [fe, fe-technology, computer-system, scheduling]
 fe_section: テクノロジ系
 fe_subsection: コンピュータシステム
 fe_order: 70
 date: 2026-08-05
-last_modified_at: 2026-09-18
+last_modified_at: 2026-11-27
 ---
 
 ## まず結論
 
 ターンアラウンドタイムとは、**ジョブが到着してから処理が完了するまでの時間**です。
+
+<picture>
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/turnaround-time.png"
+       width="1200" height="630"
+       alt="ジョブCは3秒に到着、11秒に処理開始、14秒に完了。待ち時間8秒と処理時間3秒を合わせたターンアラウンドタイムは11秒。"
+       loading="lazy"
+       decoding="async"
+       style="display:block;width:100%;max-width:100%;height:auto;">
+</picture>
 
 計算式は次のとおりです。
 
