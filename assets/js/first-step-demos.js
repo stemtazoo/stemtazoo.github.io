@@ -371,7 +371,11 @@
   }
 
   function impurity(root, board, result, button) {
-    const calculation = root.querySelector("[data-calculation]");
+    const proportions = root.querySelector("[data-proportions]");
+    const giniValue = root.querySelector("[data-gini]");
+    const entropyValue = root.querySelector("[data-entropy]");
+    const giniFormula = root.querySelector("[data-gini-formula]");
+    const entropyFormula = root.querySelector("[data-entropy-formula]");
     let a = 5;
     const entropyTerm = p => p === 0 ? 0 : -p * Math.log2(p);
     const format = value => Number(value.toFixed(3)).toString();
@@ -382,10 +386,12 @@
       const entropy = entropyTerm(p) + entropyTerm(q);
       renderList(board, Array.from({length: 10}, (_, i) => i < a ? "A" : "B"));
       Array.from(board.children).forEach((card, i) => card.classList.toggle("is-selected", i < a));
-      calculation.textContent = "割合：A＝" + p + "、B＝" + q
-        + "。ジニ：1 − (" + p + "² ＋ " + q + "²) ＝ " + format(gini)
-        + "。エントロピー：各項 " + format(entropyTerm(p)) + " ＋ " + format(entropyTerm(q))
-        + " ＝ " + format(entropy) + "。";
+      proportions.textContent = "10個中 A：" + a + "個（" + a * 10 + "%）、B：" + b + "個（" + b * 10 + "%）";
+      giniValue.textContent = format(gini);
+      entropyValue.textContent = format(entropy);
+      giniFormula.textContent = "1 − (" + p + "² ＋ " + q + "²) ＝ " + format(gini);
+      entropyFormula.textContent = "Aの項 " + format(entropyTerm(p)) + " ＋ Bの項 "
+        + format(entropyTerm(q)) + " ≈ " + format(entropy);
       button("increase").disabled = a === 10;
       button("decrease").disabled = a === 0;
       result.textContent = "Aが" + a + "個、Bが" + b + "個。"
