@@ -21,6 +21,7 @@ last_modified_at: 2026-11-27
 デッドロックとは、**複数のトランザクションが、互いに相手のロックしている資源の解放を待ち続け、どの処理も先へ進めなくなる状態**です。
 
 <picture>
+  <source media="(max-width: 640px)" srcset="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/deadlock-mobile.png" width="1122" height="1402">
   <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/deadlock.png"
        width="1200" height="630"
        alt="通常のロック待ちはBがAの資源Xを待つ一方向の関係。デッドロックはXを保持するAとYを保持するBが互いの資源を待つ循環関係。"
