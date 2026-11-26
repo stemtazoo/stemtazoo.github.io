@@ -6,7 +6,7 @@ permalink: /gk/time-series-cross-validation/
 tags: [gk, machine_learning, evaluation]
 gk_section: 機械学習の概要/モデルの選択・評価/データ分割・交差検証
 gk_order: 3
-last_modified_at: 2026-11-25
+last_modified_at: 2026-11-26
 ---
 
 ## まず結論
@@ -43,7 +43,7 @@ last_modified_at: 2026-11-25
 
 ### 触って覚える：学習と検証を時間順に分ける
 
-「次の分割」を押して、学習と検証の月がどちらに動くか見てください。「ランダム分割の例」に切り替えると、検証する月より後の月が学習に含まれる例と比べられます。
+「次の分割」を押して、学習と検証の月がどちらに動くか見てください。「ランダム分割の例」に切り替えると、検証する月より後の月が学習に含まれる例と比べられます。「固定例の理由を見る」を押すと、月の配置を変えない理由が表示されます。
 
 <link rel="stylesheet" href="{{ '/assets/css/first-step-demos.css' | relative_url }}">
 <div class="first-step-demo" data-first-step="time" hidden>
@@ -56,6 +56,7 @@ last_modified_at: 2026-11-25
     <button type="button" data-action="next">次の分割</button>
     <button type="button" data-action="reset">最初から</button>
   </div>
+  <div role="status" data-fixed-reason></div>
   <ol class="first-step-demo__months" data-board aria-label="月ごとのデータの使い方"></ol>
   <p role="status" data-result></p>
 </div>
