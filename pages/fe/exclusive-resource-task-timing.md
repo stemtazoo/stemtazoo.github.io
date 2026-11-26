@@ -3,12 +3,17 @@ layout: page
 title: 排他的資源を使うタスクの実行時間とは？待ち時間をタイムチャートで求める【基本情報技術者試験】
 description: 複数CPUで並列実行するタスクが共通資源を排他的に使うときの実行時間を、CPU処理と資源待ちを分けたタイムチャートで整理し、FE試験で待ち時間を見落とさない判断手順を解説します。
 permalink: /fe/exclusive-resource-task-timing/
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/exclusive-resource-task-timing.png
+  width: 1200
+  height: 630
+  alt: "CPUが2台でも共有資源Rは一度に1タスクだけが使用できる。タスクAが20〜60msに資源Rを使用するため、タスクBは30〜60msに待機し、全体は120msで終了する。"
 tags: [fe, fe-technology, operating-system, scheduling]
 fe_section: テクノロジ系
 fe_subsection: オペレーティングシステム
 fe_order: 90
 date: 2026-08-11
-last_modified_at: 2026-10-22
+last_modified_at: 2026-11-27
 related_articles:
   - /fe/task-scheduling/
   - /fe/cpu-scheduling-idle-time/
@@ -18,6 +23,15 @@ related_articles:
 ## まず結論
 
 複数のタスクが同時に動けるシステムでも、**共通の資源を排他的に使用する区間では、同時にその資源を使えません。**
+
+<picture>
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/exclusive-resource-task-timing.png"
+       width="1200" height="630"
+       alt="CPUが2台でも共有資源Rは一度に1タスクだけが使用できる。タスクAが20〜60msに資源Rを使用するため、タスクBは30〜60msに待機し、全体は120msで終了する。"
+       loading="lazy"
+       decoding="async"
+       style="display:block;width:100%;max-width:100%;height:auto;">
+</picture>
 
 基本情報技術者試験では、次の順番で考えると実行時間を求めやすくなります。
 
