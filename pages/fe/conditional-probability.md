@@ -3,6 +3,11 @@ layout: page
 title: 条件付き確率とは？条件に合わせて分母を変える計算【基本情報技術者試験】
 description: 条件付き確率を「条件を満たす範囲に絞った割合」として整理します。200件の注文を分類した表から、通常の確率・同時確率・条件付き確率を計算し、条件を逆にした場合の分母の違いを比較。独立と排反の混同、条件なしの確率を掛けてよい場合も確認し、科目Aの計算問題に備えます。
 permalink: /fe/conditional-probability/
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/conditional-probability.png
+  width: 1200
+  height: 630
+  alt: "会員の注文80件のうちクーポン利用ありは24件で30%、クーポン利用ありの注文40件のうち会員は24件で60%となる比較図"
 tags: [fe, fe-technology, probability, statistics]
 fe_section: テクノロジ系
 fe_subsection: 基礎理論
@@ -20,6 +25,15 @@ last_modified_at: 2026-10-04
 > **条件を満たすものを分母にし、その中で求めたい事象も満たすものを分子にする。**
 
 「会員の注文でクーポンを利用した確率」と「クーポンを利用した注文が会員のものだった確率」は、分母が異なります。
+
+<picture>
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/conditional-probability.png"
+       width="1200" height="630"
+       alt="会員の注文80件のうちクーポン利用ありは24件で30%、クーポン利用ありの注文40件のうち会員は24件で60%となる比較図"
+       loading="lazy"
+       decoding="async"
+       style="display:block;width:100%;max-width:100%;height:auto;">
+</picture>
 
 ## 直感的な説明
 
