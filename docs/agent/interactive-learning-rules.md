@@ -228,6 +228,8 @@ Do not add an introductory table mechanically when the outputs are already famil
 
 - Clearly distinguish **changed**, **currently selected/compared**, and **confirmed/fixed** states when those distinctions matter. Never label a changed position as a comparison unless the trace actually records comparisons.
 - Describe the result in short Japanese text as well as with visual styling. Color alone must not carry meaning.
+- When changing code or an intermediate calculation is central to the learning goal, show the updated code or calculation alongside the result, and make the changed part easy to identify (for example, switching a LEFT JOIN condition between ON and WHERE).
+- When an action leaves the state unchanged, or a fixed example or final state prevents further progression, explain why in the lesson near the relevant control or result (for example, why a random-split comparison uses fixed months).
 - Explain the scope of simplified traces: representative steps are not necessarily every comparison, assignment, or swap.
 - Keep the learner's input, the displayed state, and the explanation synchronized after next, back, reset, mode changes, and boundary conditions.
 - Use deterministic examples where possible, and show the initial state and final state clearly.
