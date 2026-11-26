@@ -3,17 +3,31 @@ layout: page
 title: 二分探索とは？整列済みデータを半分ずつ絞り込む探索方法【基本情報技術者試験】
 description: 二分探索を整列済みデータを半分ずつ絞り込んで探す方法として整理し、線形探索との違い、計算量、科目Bの擬似言語問題での読み方をやさしく解説します。
 permalink: /fe/binary-search/
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/binary-search.png
+  width: 1200
+  height: 630
+  alt: "昇順に整列した2、5、8、12、16、23、38から16を探す。中央の12、23、16の順に比較し、探索範囲を絞り込む。"
 tags: [fe, fe-technology, algorithm, data-structure]
 fe_section: 科目B対策
 fe_subsection: アルゴリズム
 fe_order: 50
 date: 2026-06-23
-last_modified_at: 2026-11-24
+last_modified_at: 2026-11-27
 ---
 
 ## まず結論
 
 二分探索とは、**整列済みのデータを対象に、探索範囲を半分ずつ狭めて目的の値を探す方法**です。
+
+<picture>
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/binary-search.png"
+       width="1200" height="630"
+       alt="昇順に整列した2、5、8、12、16、23、38から16を探す。中央の12、23、16の順に比較し、探索範囲を絞り込む。"
+       loading="lazy"
+       decoding="async"
+       style="display:block;width:100%;max-width:100%;height:auto;">
+</picture>
 
 基本情報技術者試験では、線形探索との違いがよく問われます。
 
