@@ -171,6 +171,8 @@
     const transmitted = [0, 1, 1, 0, 0, 1, 1];
     const checks = [1, 2, 4];
     const checkList = root.querySelector("[data-checks]");
+    const receivedCode = root.querySelector("[data-received]");
+    const guide = root.querySelector("[data-hamming-guide]");
     let flipped = 0;
     let syndrome = 0;
 
@@ -186,38 +188,47 @@
     });
     board.append(...buttons);
 
-    function draw(corrected = 0) {
+    function draw(message = "すべての検査が一致しています。") {
       const received = transmitted.map((bit, index) => flipped === index + 1 ? 1 - bit : bit);
       buttons.forEach((element, index) => {
-        element.textContent = (index + 1) + "：" + received[index];
+        element.textContent = "位置" + (index + 1) + "：" + received[index];
         element.setAttribute("aria-label", "位置" + (index + 1) + "、値" + received[index]);
         element.setAttribute("aria-pressed", String(flipped === index + 1));
       });
       const failed = [];
       renderList(checkList, checks.map(check => {
         const positions = received.map((_, index) => index + 1).filter(position => position & check);
-        const ones = positions.reduce((sum, position) => sum + received[position - 1], 0);
-        if (ones % 2) failed.push(check);
-        return "検査" + check + "（位置" + positions.join("・") + "）：" + (ones % 2 ? "不一致" : "一致");
+        const bits = positions.map(position => received[position - 1]);
+        const ones = bits.reduce((sum, bit) => sum + bit, 0);
+        const odd = ones % 2 === 1;
+        if (odd) failed.push(check);
+        return "検査" + check + "（位置" + positions.join("・") + "）："
+          + bits.join("") + " → 1が" + ones + "個（" + (odd ? "奇数）→ 不一致" : "偶数）→ 一致");
       }));
       syndrome = failed.reduce((sum, check) => sum + check, 0);
+      receivedCode.textContent = received.join("");
       button("correct").disabled = syndrome === 0;
-      if (syndrome) {
-        result.textContent = failed.join("＋") + " → 誤りは位置" + syndrome + "です。";
-      } else {
-        result.textContent = (corrected ? "位置" + corrected + "を訂正しました。" : "すべての検査が一致しています。")
-          + "受信ビット列：" + received.join("");
-      }
+      guide.textContent = syndrome
+        ? "不一致になった検査の内訳を見てから「誤りを訂正」を押してください。"
+        : "「位置6：1」を押して、左から6番目のビットを反転させてください。";
+      const binary = syndrome.toString(2).padStart(3, "0");
+      result.textContent = syndrome
+        ? "検査4・2・1の結果は " + binary + "（不一致＝1）。"
+          + failed.slice().reverse().join("＋") + "＝" + syndrome + " → 左から位置" + syndrome + "です。"
+        : message;
     }
 
     button("correct").addEventListener("click", () => {
       const error = syndrome;
       if (error === 0) return;
       flipped = 0;
-      draw(error);
+      draw("位置" + error + "を訂正しました。すべての検査が一致しています。");
       buttons[error - 1].focus();
     });
-    button("reset").addEventListener("click", () => { flipped = 0; draw(); });
+    button("reset").addEventListener("click", () => {
+      flipped = 0;
+      draw("最初の状態に戻しました。「位置6：1」から試せます。");
+    });
     draw();
   }
 
