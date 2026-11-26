@@ -6,7 +6,12 @@ permalink: /gk/roc-auc/
 tags: [gk, 機械学習, 評価指標, 頻出]
 gk_section: 機械学習の概要/モデルの選択・評価/分類の評価指標
 gk_order: 6
-last_modified_at: 2026-11-17
+last_modified_at: 2026-11-27
+image:
+  path: "https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/roc-auc.png"
+  width: 1200
+  height: 630
+  alt: "横軸FPR（偽陽性率）、縦軸TPR（真陽性率）のROC曲線と、その下を塗りつぶしたAUC。対角線はランダムな分類の基準"
 ---
 
 ## まず結論
@@ -24,6 +29,10 @@ AUCは、そのROC曲線の下の面積で、**しきい値全体を通した識
 ```
 
 と切り分けます。
+
+<figure class="gk-eyecatch" style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/roc-auc.png" width="1200" height="630" alt="横軸FPR（偽陽性率）、縦軸TPR（真陽性率）のROC曲線と、その下を塗りつぶしたAUC。対角線はランダムな分類の基準" loading="lazy" decoding="async" style="display:block;width:100%;max-width:100%;height:auto;">
+</figure>
 
 ## 直感的な説明
 
