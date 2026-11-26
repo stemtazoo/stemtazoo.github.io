@@ -3,12 +3,17 @@ layout: page
 title: 処理時間順方式とは？短いジョブから実行する順番を時間軸で理解する【基本情報技術者試験】
 description: 処理時間順方式を、CPUが空いた時点で待っているジョブの中から処理時間が最も短いものを選ぶ方式として整理します。到着時刻を含む処理順の決め方を動く時間軸で確認し、ターンアラウンドタイム計算やプリエンプティブ方式との違いまで切り分けます。
 permalink: /fe/shortest-job-first-scheduling/
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/shortest-job-first-scheduling.png
+  width: 1734
+  height: 907
+  alt: "時刻2秒にCPUが空いたとき、到着済みのB（4秒）とC（3秒）からCを選択する。E（1秒）は未到着なので候補外。"
 tags: [fe, fe-technology, operating-system, scheduling]
 fe_section: テクノロジ系
 fe_subsection: オペレーティングシステム
 fe_order: 60
 date: 2026-09-18
-last_modified_at: 2026-10-08
+last_modified_at: 2026-11-26
 related_articles:
   - /fe/cpu-scheduling/
   - /fe/preemptive-scheduling/
@@ -18,6 +23,15 @@ related_articles:
 ## まず結論
 
 処理時間順方式とは、**CPUが空いたとき、すでに到着して待っているジョブの中から、処理時間が最も短いものを選んで実行する方式**です。
+
+<picture>
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/shortest-job-first-scheduling.png"
+       width="1734" height="907"
+       alt="時刻2秒にCPUが空いたとき、到着済みのB（4秒）とC（3秒）からCを選択する。E（1秒）は未到着なので候補外。"
+       loading="lazy"
+       decoding="async"
+       style="display:block;width:100%;max-width:100%;height:auto;">
+</picture>
 
 基本情報技術者試験では、次の順で考えると判断しやすくなります。
 
