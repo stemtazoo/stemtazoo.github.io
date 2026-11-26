@@ -3,17 +3,31 @@ layout: page
 title: デッドロックとは？ロック待ち・排他制御との違い【基本情報技術者試験】
 description: デッドロックを「一方向の待ち」と「循環待ち」の違いから整理し、共有ロック・専有ロック、2相ロッキング、ロック取得順序を使ったFE試験のトレース問題の解き方まで初心者向けに解説します。
 permalink: /fe/deadlock/
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/deadlock.png
+  width: 1200
+  height: 630
+  alt: "通常のロック待ちはBがAの資源Xを待つ一方向の関係。デッドロックはXを保持するAとYを保持するBが互いの資源を待つ循環関係。"
 tags: [fe, fe-technology, database]
 fe_section: テクノロジ系
 fe_subsection: データベース
 fe_order: 40
 date: 2026-07-16
-last_modified_at: 2026-11-03
+last_modified_at: 2026-11-27
 ---
 
 ## まず結論
 
 デッドロックとは、**複数のトランザクションが、互いに相手のロックしている資源の解放を待ち続け、どの処理も先へ進めなくなる状態**です。
+
+<picture>
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/deadlock.png"
+       width="1200" height="630"
+       alt="通常のロック待ちはBがAの資源Xを待つ一方向の関係。デッドロックはXを保持するAとYを保持するBが互いの資源を待つ循環関係。"
+       loading="lazy"
+       decoding="async"
+       style="display:block;width:100%;max-width:100%;height:auto;">
+</picture>
 
 基本情報技術者試験では、次の切り分けが重要です。
 
