@@ -8,7 +8,12 @@ fe_section: テクノロジ系
 fe_subsection: 基礎理論
 fe_order: 40
 date: 2026-08-20
-last_modified_at: 2026-10-18
+last_modified_at: 2026-11-26
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/markov-process.png
+  width: 1200
+  height: 630
+  alt: "マルコフ過程の確率計算。1本の経路A→B→Cの確率は0.5×0.4＝0.20と掛け算で求め、同じ到達先への複数経路の確率は足し合わせる。"
 ---
 
 ## まず結論
@@ -30,6 +35,13 @@ last_modified_at: 2026-10-18
 覚える一文はこれです。
 
 > **経路の中は掛ける。経路どうしは足す。**
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/markov-process.png"
+       width="1200" height="630" loading="lazy" decoding="async"
+       alt="マルコフ過程の確率計算。1本の経路A→B→Cの確率は0.5×0.4＝0.20と掛け算で求め、同じ到達先への複数経路の確率は足し合わせる。"
+       style="display:block;width:100%;max-width:100%;height:auto;">
+</figure>
 
 このページは、**現在の状態から数ステップ後の確率を求める計算**を中心に扱います。表の行・列の読み方や、同じ条件の確率の合計が1になる理由は、[遷移確率表の読み方](/fe/transition-probability/)で確認できます。
 
