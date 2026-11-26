@@ -9,7 +9,7 @@ ds_area: datascience
 ds_section: modeling
 prev: /ds/bias-variance-tradeoff/
 next: /ds/impurity/
-last_modified_at: 2026-09-26
+last_modified_at: 2026-11-26
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -76,6 +76,27 @@ DS検定では、「どちらが分岐基準として使われるか」「何を
 
 ただし、実務では結果はほぼ似ることが多いです。
 
+
+### 触って覚える：混ざり具合と2つの不純度
+
+10個のデータのうちAとBの個数を変えてみましょう。まず「Aを1つ増やす」を押し、半々から偏ると、2つの指標がどう下がるかを見てください。
+
+ジニ不純度は `1 − (pA² + pB²)`、エントロピー（底2）は `−(pA log₂ pA + pB log₂ pB)` です。ここでpAとpBは各クラスの割合です。割合0の項は0として扱います。
+
+<link rel="stylesheet" href="{{ '/assets/css/first-step-demos.css' | relative_url }}">
+<div class="first-step-demo" data-first-step="impurity" hidden>
+  <div class="first-step-demo__actions">
+    <button type="button" data-action="increase">Aを1つ増やす</button>
+    <button type="button" data-action="decrease">Bを1つ増やす</button>
+    <button type="button" data-action="reset">半々に戻す</button>
+  </div>
+  <ul class="first-step-demo__cards" data-board aria-label="2クラスのデータ数"></ul>
+  <div data-calculation></div>
+  <p role="status" data-result></p>
+</div>
+<noscript><p>AとBが5個ずつならジニ不純度0.5、エントロピー1（底2）。Aが10個なら、どちらも0です。</p></noscript>
+
+<script defer src="{{ '/assets/js/first-step-demos.js' | relative_url }}"></script>
 
 ## どんな場面で使う？
 

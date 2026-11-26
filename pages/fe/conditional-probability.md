@@ -13,7 +13,7 @@ fe_section: テクノロジ系
 fe_subsection: 基礎理論
 fe_order: 120
 date: 2026-10-04
-last_modified_at: 2026-10-04
+last_modified_at: 2026-11-26
 ---
 
 ## まず結論
@@ -89,6 +89,25 @@ Aを「クーポン利用あり」、Bを「会員」とすると、次のよう
 注文の例では、「会員である確率40%」に「会員の注文でクーポンを利用する確率30%」を掛けると、両方に当てはまる確率は0.4 × 0.3 = **12%**です。
 
 条件なしのクーポン利用率20%を掛けて、0.4 × 0.2としないように注意します。
+
+### 触って覚える：条件によって分母を変える
+
+最初は200件すべてが対象です。「会員の注文」を選んで、分母に含まれる区分と計算式を見てください。次に「クーポン利用あり」に切り替えると、同じ24件を分子に使っても結果が変わります。
+
+<link rel="stylesheet" href="{{ '/assets/css/first-step-demos.css' | relative_url }}">
+<div class="first-step-demo" data-first-step="conditional" hidden>
+  <fieldset>
+    <legend>分母の条件</legend>
+    <label><input type="radio" name="demo-conditional" value="all" checked> 条件なし</label>
+    <label><input type="radio" name="demo-conditional" value="member"> 会員の注文</label>
+    <label><input type="radio" name="demo-conditional" value="coupon"> クーポン利用あり</label>
+  </fieldset>
+  <ul class="first-step-demo__cards" data-board aria-label="注文の4区分"></ul>
+  <p role="status" data-result></p>
+</div>
+<noscript><p>会員の80件に絞ると24÷80＝30%、クーポン利用ありの40件に絞ると24÷40＝60%です。条件なしでクーポン利用率を求める場合は40÷200＝20%です。</p></noscript>
+
+<script defer src="{{ '/assets/js/first-step-demos.js' | relative_url }}"></script>
 
 ## 科目Aでどう出る？
 

@@ -219,5 +219,50 @@
       "selector": "noscript p",
       "text": "2＋4"
     }
+  },
+  "conditional-probability": {
+    "source": "pages/fe/conditional-probability.md",
+    "root": "[data-first-step=\"conditional\"]",
+    "url": "/fe/conditional-probability/",
+    "static": {
+      "selector": "noscript p",
+      "text": "24÷80"
+    }
+  },
+  "markov-process": {
+    "source": "pages/fe/markov-process.md",
+    "root": "[data-first-step=\"markov\"]",
+    "url": "/fe/markov-process/",
+    "static": {
+      "selector": "noscript p",
+      "text": "61%"
+    }
+  },
+  "full-adder": {
+    "source": "pages/fe/full-adder.md",
+    "root": "[data-first-step=\"adder\"]",
+    "url": "/fe/full-adder/",
+    "static": {
+      "selector": "noscript p",
+      "text": "2進数10"
+    }
+  },
+  "dropout": {
+    "source": "pages/gk/dropout.md",
+    "root": "[data-first-step=\"dropout\"]",
+    "url": "/gk/dropout/",
+    "static": {
+      "selector": "noscript p",
+      "text": "8個"
+    }
+  },
+  "gini-vs-entropy": {
+    "source": "pages/ds/gini-vs-entropy.md",
+    "root": "[data-first-step=\"impurity\"]",
+    "url": "/ds/gini-vs-entropy/",
+    "static": {
+      "selector": "noscript p",
+      "text": "ジニ不純度0.5"
+    }
   }
 }
