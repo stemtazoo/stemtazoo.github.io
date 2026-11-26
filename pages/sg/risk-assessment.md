@@ -3,15 +3,27 @@ layout: page
 title: "リスクアセスメントとは？手順とJISの考え方を整理【SG試験】"
 description: "リスクアセスメントはリスクを特定・分析・評価するプロセスです。JIS Q 31000・31010の考え方や準備段階の重要性、SG試験・情報セキュリティマネジメント試験のひっかけポイントを整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/risk-assessment/
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/sg/risk-assessment.png
+  width: 1734
+  height: 907
+  alt: "準備の後にリスク特定・分析・評価を行い、枠外のリスク対応へ進む流れ。リスクアセスメントの範囲は特定・分析・評価の3段階。"
 prev: /sg/risk-management/
 next: /sg/risk-criteria/
 tags: [sg, sg-security-management, risk_assessment, isms]
-last_modified_at: 2026-06-21
+last_modified_at: 2026-11-26
 ---
 
 ## まず結論
 - リスクアセスメントとは、リスクを特定・分析・評価して優先順位を決めるプロセスです  
 - SG試験では「対策を含まない点」と「事前準備の重要性」がよく問われます  
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/sg/risk-assessment.png"
+       alt="準備の後にリスク特定・分析・評価を行い、枠外のリスク対応へ進む流れ。リスクアセスメントの範囲は特定・分析・評価の3段階。"
+       width="1734" height="907" loading="lazy" decoding="async"
+       style="display:block;width:100%;max-width:100%;height:auto;">
+</figure>
 
 ---
 
