@@ -37,12 +37,35 @@ CPUスケジューリングとは、**実行可能な複数のタスクの中か
 
 基本情報技術者試験では、次の対応で切り分けると判断しやすくなります。
 
-| 方式 | 何を優先する？ | 試験での合図 |
-|---|---|---|
-| 到着順方式 | 先に来たタスク | 到着した順、FIFO |
-| ラウンドロビン方式 | 順番に一定時間ずつ | タイムクォンタム、一定時間で交代 |
-| 処理時間順方式 | 処理時間が短いタスク | 短い処理を優先、長いタスクが後回し |
-| 優先度方式 | 優先度が高いタスク | 優先順位、優先度 |
+<link rel="stylesheet" href="{{ '/assets/css/fe-visualizer.css' | relative_url }}">
+
+<table class="fe-control-compare">
+  <thead>
+    <tr><th scope="col">方式</th><th scope="col">何を優先する？</th><th scope="col">試験での合図</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">到着順方式</th>
+      <td><span class="fe-control-compare__label" aria-hidden="true">何を優先する？</span>先に来たタスク</td>
+      <td><span class="fe-control-compare__label" aria-hidden="true">試験での合図</span>到着した順、FIFO</td>
+    </tr>
+    <tr>
+      <th scope="row">ラウンドロビン方式</th>
+      <td><span class="fe-control-compare__label" aria-hidden="true">何を優先する？</span>順番に一定時間ずつ</td>
+      <td><span class="fe-control-compare__label" aria-hidden="true">試験での合図</span>タイムクォンタム、一定時間で交代</td>
+    </tr>
+    <tr>
+      <th scope="row">処理時間順方式</th>
+      <td><span class="fe-control-compare__label" aria-hidden="true">何を優先する？</span>処理時間が短いタスク</td>
+      <td><span class="fe-control-compare__label" aria-hidden="true">試験での合図</span>短い処理を優先、長いタスクが後回し</td>
+    </tr>
+    <tr>
+      <th scope="row">優先度方式</th>
+      <td><span class="fe-control-compare__label" aria-hidden="true">何を優先する？</span>優先度が高いタスク</td>
+      <td><span class="fe-control-compare__label" aria-hidden="true">試験での合図</span>優先順位、優先度</td>
+    </tr>
+  </tbody>
+</table>
 
 さらに、**入出力処理が主体のタスクとCPU処理が主体のタスクを同時に実行し、システム全体のスループットを高める**問題では、次の考え方が重要です。
 
