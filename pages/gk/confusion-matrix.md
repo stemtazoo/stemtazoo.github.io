@@ -6,7 +6,12 @@ permalink: /gk/confusion-matrix/
 tags: [gk, 機械学習, 評価指標, 頻出]
 gk_section: 機械学習の概要/モデルの選択・評価/分類の評価指標
 gk_order: 1
-last_modified_at: 2026-11-24
+last_modified_at: 2026-11-26
+image:
+  path: "https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/confusion-matrix.png"
+  width: 1200
+  height: 630
+  alt: "実際を行、予測を列にした混同行列。左上がTP（真陽性）、右上がFN（見逃し）、左下がFP（誤検知）、右下がTN（真陰性）"
 ---
 
 ## まず結論
@@ -21,6 +26,10 @@ FN → 見逃し
 ```
 
 混同行列は、Accuracy・Precision・Recall・F1-scoreなど、**多くの分類評価指標を理解する土台**です。
+
+<figure class="gk-eyecatch" style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/confusion-matrix.png" width="1200" height="630" alt="実際を行、予測を列にした混同行列。左上がTP（真陽性）、右上がFN（見逃し）、左下がFP（誤検知）、右下がTN（真陰性）" loading="lazy" decoding="async" style="display:block;width:100%;max-width:100%;height:auto;">
+</figure>
 
 ## 直感的な説明
 
