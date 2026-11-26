@@ -3,6 +3,11 @@ layout: page
 title: CPUスケジューリング方式とは？到着順・ラウンドロビン・処理時間順・優先度方式の違い【基本情報技術者試験】
 description: CPUスケジューリング方式を、到着順、ラウンドロビン、処理時間順、優先度方式に分けて整理し、I/O中心・CPU中心タスクの組合せ、スループット、スタベーションやエージングとの関係、FE試験での選択肢の切り方を解説します。
 permalink: /fe/cpu-scheduling/
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/cpu-scheduling.png
+  width: 1200
+  height: 630
+  alt: "CPUスケジューリング4方式の比較。到着順は先に来たタスク、ラウンドロビンは一定時間で交代、処理時間順は短いタスク、優先度方式は優先度が高いタスクを優先する。"
 tags: [fe, fe-technology, operating-system, scheduling]
 fe_section: テクノロジ系
 fe_subsection: オペレーティングシステム
@@ -20,6 +25,15 @@ related_articles:
 ## まず結論
 
 CPUスケジューリングとは、**実行可能な複数のタスクの中から、どのタスクにCPUを割り当てるか、その順番を決める仕組み**です。
+
+<picture>
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/cpu-scheduling.png"
+       width="1200" height="630"
+       alt="CPUスケジューリング4方式の比較。到着順は先に来たタスク、ラウンドロビンは一定時間で交代、処理時間順は短いタスク、優先度方式は優先度が高いタスクを優先する。"
+       loading="lazy"
+       decoding="async"
+       style="display:block;width:100%;max-width:100%;height:auto;">
+</picture>
 
 基本情報技術者試験では、次の対応で切り分けると判断しやすくなります。
 
