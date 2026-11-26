@@ -23,6 +23,7 @@ last_modified_at: 2026-10-03
 「故障しにくい」「必要なときに使える」「直しやすい」「データが正しい」「不正から守る」と意味に置き換えると、似た用語を切り分けやすくなります。特に、2つのSは別の英単語です。
 
 <picture>
+  <source media="(max-width: 640px)" srcset="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/rasis-mobile.png" width="1120" height="1400">
   <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/rasis.png"
        width="1200" height="630"
        alt="RASISの5要素の対応図。Rは信頼性、Aは可用性、最初のSは保守性、Iは保全性、最後のSは機密性・安全性"
