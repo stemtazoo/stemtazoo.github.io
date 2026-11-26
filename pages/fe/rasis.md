@@ -3,6 +3,11 @@ layout: page
 title: RASISとは？信頼性・可用性・保守性など5要素の違い【基本情報技術者試験】
 description: RASISの5要素を「故障しにくい・必要なときに使える・直しやすい・データが正しい・不正から守る」で切り分けます。2つのS、保守性と保全性の違い、MTBF・MTTR・稼働率との対応を整理し、予約システムの例から科目Aの用語問題で判断する手掛かりを確認できます。
 permalink: /fe/rasis/
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/rasis.png
+  width: 1200
+  height: 630
+  alt: "RASISの5要素の対応図。Rは信頼性、Aは可用性、最初のSは保守性、Iは保全性、最後のSは機密性・安全性"
 tags: [fe, fe-technology, system, security]
 fe_section: テクノロジ系
 fe_subsection: システム構成要素
@@ -16,6 +21,15 @@ last_modified_at: 2026-10-03
 **RASISは、コンピュータシステムを信頼性・可用性・保守性・保全性・機密性の5つの観点で評価する考え方**です。
 
 「故障しにくい」「必要なときに使える」「直しやすい」「データが正しい」「不正から守る」と意味に置き換えると、似た用語を切り分けやすくなります。特に、2つのSは別の英単語です。
+
+<picture>
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/rasis.png"
+       width="1200" height="630"
+       alt="RASISの5要素の対応図。Rは信頼性、Aは可用性、最初のSは保守性、Iは保全性、最後のSは機密性・安全性"
+       loading="lazy"
+       decoding="async"
+       style="display:block;width:100%;max-width:100%;height:auto;">
+</picture>
 
 ## 直感的な説明
 
