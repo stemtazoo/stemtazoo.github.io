@@ -6,7 +6,7 @@ permalink: /gk/dropout/
 tags: [gk, neural_network, regularization]
 gk_section: ディープラーニングの概要/正則化
 gk_order: 3
-last_modified_at: 2026-09-26
+last_modified_at: 2026-11-26
 ---
 
 ## まず結論
@@ -41,6 +41,38 @@ Dropoutは、いつも同じメンバーだけに頼らず、毎回少し違う�
 | 推論時 | 通常は無効化せず、全体を使う |
 
 実装では、学習時と推論時で出力の大きさが不自然に変わらないようスケーリングが行われます。G検定では細かな式より、**「学習時にランダム無効化」**を押さえれば十分です。
+
+### 触って覚える：学習時と推論時のDropout
+
+「次の学習例」を押し、8個のニューロンのうち出力を0にする位置が変わることを見てください。確率を変えたり、通常の推論時に切り替えたりして比べます。
+
+<link rel="stylesheet" href="{{ '/assets/css/first-step-demos.css' | relative_url }}">
+<div class="first-step-demo" data-first-step="dropout" hidden>
+  <fieldset>
+    <legend>モード</legend>
+    <label><input type="radio" name="demo-dropout-mode" value="train" checked> 学習時</label>
+    <label><input type="radio" name="demo-dropout-mode" value="infer"> 通常の推論時</label>
+  </fieldset>
+  <label>各ニューロンを無効化する確率
+    <select data-rate>
+      <option value="0">0%</option>
+      <option value="25" selected>25%</option>
+      <option value="50">50%</option>
+      <option value="75">75%</option>
+    </select>
+  </label>
+  <div class="first-step-demo__actions">
+    <button type="button" data-action="next">次の学習例</button>
+    <button type="button" data-action="reset">最初から</button>
+  </div>
+  <ul class="first-step-demo__cards" data-board aria-label="ニューロンの状態"></ul>
+  <p role="status" data-result></p>
+</div>
+<noscript><p>学習時はニューロンごとに指定された確率で無効化されます。例えば8個で50%でも、毎回必ず4個になるとは限りません。通常の推論時は8個すべてを使います。</p></noscript>
+
+教材は再現可能な3種類の抽選例を順に使います。各出力を独立に無効化する確率であり、毎回必ずその割合だけ無効になるとは限りません。出力のスケーリングは本文の説明を参照してください。
+
+<script defer src="{{ '/assets/js/first-step-demos.js' | relative_url }}"></script>
 
 ## いつ使う？（得意・不得意）
 

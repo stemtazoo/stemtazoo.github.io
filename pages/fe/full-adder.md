@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: コンピュータ構成要素
 fe_order: 620
 date: 2026-08-24
-last_modified_at: 2026-11-21
+last_modified_at: 2026-11-26
 image:
   path: "https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/full-adder.png"
   width: 1200
@@ -214,6 +214,25 @@ IPAの最新の基本情報技術者試験シラバス Ver.9.2 では、**AND回
 - [IPA：平成21年度秋期 基本情報技術者試験 解答例](https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000f3yi-att/2009h21a_fe_pm_ans.pdf)
 - [IPA：平成21年度秋期 基本情報技術者試験 採点講評](https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000f3yi-att/2009h21a_fe_pm_cmnt.pdf)
 - [IPA：平成25年度秋期 基本情報技術者試験 採点講評](https://www.ipa.go.jp/shiken/mondai-kaiotu/ug65p900000027za-att/2013h25a_fe_pm_cmnt.pdf)
+
+### 触って覚える：3つの入力を足す
+
+初期値はすべて0です。「A：0」を押して1にし、続けて「Cin：0」を押して、合計と2進数、CとSの変化を見てください。XOR（排他的論理和）は2入力が異なれば1、ANDは両方1なら1、ORはいずれかが1なら1です。
+
+<link rel="stylesheet" href="{{ '/assets/css/first-step-demos.css' | relative_url }}">
+<div class="first-step-demo" data-first-step="adder" hidden>
+  <div class="first-step-demo__actions">
+    <button type="button" data-action="a">A：0</button>
+    <button type="button" data-action="b">B：0</button>
+    <button type="button" data-action="cin">Cin：0</button>
+    <button type="button" data-action="reset">最初から</button>
+  </div>
+  <ul class="first-step-demo__cards" data-board aria-label="論理回路の途中結果と出力"></ul>
+  <p role="status" data-result></p>
+</div>
+<noscript><p>A＝1、B＝0、Cin＝1なら、1＋0＋1＝2（2進数10）。C＝1、S＝0です。</p></noscript>
+
+<script defer src="{{ '/assets/js/first-step-demos.js' | relative_url }}"></script>
 
 ## 科目Aでどう出る？
 

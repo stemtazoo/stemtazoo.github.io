@@ -71,3 +71,23 @@
   overflow-wrap: anywhere;
 }
 .first-step-demo__sql mark { background: #fff0b3; color: #43310c; font-weight: 700; }
+
+.first-step-demo__cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .45rem;
+  padding: 0;
+  margin: .7rem 0;
+  list-style: none;
+}
+.first-step-demo__cards li {
+  margin: 0;
+  padding: .45rem;
+  border: 1px solid #aeb9c6;
+  border-radius: .4rem;
+  overflow-wrap: anywhere;
+}
+.first-step-demo__cards .is-included { background: #edf5fc; color: #16476d; }
+.first-step-demo__cards .is-selected { background: #d6e9fc; color: #123e64; border: 2px solid #2563a5; }
+.first-step-demo [data-rate] { max-width: 100%; min-height: 44px; font: inherit; }
+.first-step-demo [data-calculation] { overflow-wrap: anywhere; }

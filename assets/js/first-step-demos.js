@@ -232,7 +232,174 @@
     draw();
   }
 
-  const lessons = {raid, join, kmeans, time, hamming};
+  function conditional(root, board, result) {
+    const labels = ["会員・利用あり：24件", "会員・利用なし：56件",
+      "非会員・利用あり：16件", "非会員・利用なし：104件"];
+    const cases = {
+      all: {den: [0, 1, 2, 3], num: [0, 2], label: "全体でクーポン利用あり"},
+      member: {den: [0, 1], num: [0], label: "会員の注文のうちクーポン利用あり"},
+      coupon: {den: [0, 2], num: [0], label: "クーポン利用ありのうち会員"}
+    };
+    const counts = [24, 56, 16, 104];
+    const sum = indexes => indexes.reduce((total, i) => total + counts[i], 0);
+
+    function draw() {
+      const {den, num, label} = cases[root.querySelector("input:checked").value];
+      renderList(board, labels.map((text, i) =>
+        text + "（" + (num.includes(i) ? "分子・分母" : den.includes(i) ? "分母" : "対象外") + "）"));
+      Array.from(board.children).forEach((card, i) => {
+        card.classList.toggle("is-included", den.includes(i));
+        card.classList.toggle("is-selected", num.includes(i));
+      });
+      const numerator = sum(num), denominator = sum(den);
+      result.textContent = label + "：分子" + numerator + " ÷ 分母" + denominator
+        + " ＝ " + (100 * numerator / denominator) + "%";
+    }
+
+    root.addEventListener("change", draw);
+    draw();
+  }
+
+  function markov(root, board, result, button) {
+    const calculation = root.querySelector("[data-calculation]");
+    const format = value => Number(value.toFixed(3)).toString();
+    let time, a, b;
+
+    function draw(previous) {
+      renderList(board, ["状態A：" + format(a * 100) + "%", "状態B：" + format(b * 100) + "%"]);
+      calculation.replaceChildren();
+      if (previous) {
+        const [oldA, oldB] = previous;
+        const terms = [[0.7, 0.4, a], [0.3, 0.6, b]];
+        terms.forEach(([fromA, fromB, value], i) => {
+          const line = document.createElement("p");
+          line.textContent = "状態" + ["A", "B"][i] + "：" + format(oldA * 100) + "% × " + fromA
+            + " ＋ " + format(oldB * 100) + "% × " + fromB + " ＝ " + format(value * 100) + "%";
+          calculation.append(line);
+        });
+      }
+      button("next").disabled = time === 3;
+      result.textContent = time === 0
+        ? "時点0。Aから始まります。「次の時点へ」を押してください。"
+        : "時点" + time + "。各到達先への確率を掛けて足しました。合計は100%。"
+          + (time === 3 ? "この教材は3回までの例です。「最初から」で戻れます。" : "");
+    }
+
+    function reset() {
+      time = 0; a = 1; b = 0;
+      draw();
+    }
+
+    button("next").addEventListener("click", () => {
+      const previous = [a, b];
+      a = previous[0] * 0.7 + previous[1] * 0.4;
+      b = previous[0] * 0.3 + previous[1] * 0.6;
+      time += 1;
+      draw(previous);
+    });
+    button("reset").addEventListener("click", reset);
+    reset();
+  }
+
+  function adder(root, board, result, button) {
+    const names = ["A", "B", "Cin"];
+    const keys = ["a", "b", "cin"];
+    const values = [0, 0, 0];
+
+    function draw() {
+      const [a, b, cin] = values;
+      const ab = a ^ b;
+      const s = ab ^ cin;
+      const c = (a & b) | (ab & cin);
+      keys.forEach((key, i) => {
+        button(key).textContent = names[i] + "：" + values[i];
+        button(key).setAttribute("aria-pressed", String(values[i] === 1));
+      });
+      renderList(board, [
+        "A XOR B ＝ " + ab,
+        "A AND B ＝ " + (a & b),
+        "(A XOR B) AND Cin ＝ " + (ab & cin),
+        "S（和）＝ " + s,
+        "C（桁上げ・2つのANDのOR）＝ " + c
+      ]);
+      result.textContent = values.join("＋") + "＝" + (a + b + cin)
+        + "（2進数 " + c + s + "） → C＝" + c + "、S＝" + s + (a + b + cin === 0 ? "。「A：0」から試せます。" : "");
+    }
+
+    keys.forEach((key, i) => button(key).addEventListener("click", () => {
+      values[i] = 1 - values[i];
+      draw();
+    }));
+    button("reset").addEventListener("click", () => { values.fill(0); draw(); });
+    draw();
+  }
+
+  function dropout(root, board, result, button) {
+    const examples = [
+      [0.12, 0.81, 0.31, 0.92, 0.56, 0.20, 0.67, 0.47],
+      [0.88, 0.05, 0.43, 0.71, 0.11, 0.37, 0.93, 0.62],
+      [0.49, 0.68, 0.03, 0.36, 0.14, 0.78, 0.22, 0.32]
+    ];
+    const rate = root.querySelector("[data-rate]");
+    let example = 0;
+
+    function draw() {
+      const training = root.querySelector("input:checked").value === "train";
+      const threshold = Number(rate.value) / 100;
+      const inactive = examples[example].map(score => training && score < threshold);
+      renderList(board, inactive.map((off, i) =>
+        "ニューロン" + (i + 1) + "：" + (off ? "無効（出力0）" : "有効")));
+      Array.from(board.children).forEach((card, i) => card.classList.toggle("is-failed", inactive[i]));
+      const count = inactive.filter(Boolean).length;
+      button("next").disabled = !training;
+      result.textContent = training
+        ? "学習例" + (example + 1) + "。確率" + rate.value + "%で無効になったのは"
+          + count + "個、有効は" + (8 - count) + "個です。次の学習例で別の抽選結果を見られます。"
+          + (threshold === 0 ? "確率0%なので次の学習例でも全て有効です。" : "")
+        : "通常の推論時はDropoutを使わないため全8個が有効です。学習例を進める操作は停止します。確率を変えても配置は変わりません。";
+    }
+
+    root.addEventListener("change", draw);
+    button("next").addEventListener("click", () => { example = (example + 1) % examples.length; draw(); });
+    button("reset").addEventListener("click", () => {
+      root.querySelector('input[value="train"]').checked = true;
+      rate.value = "25";
+      example = 0;
+      draw();
+    });
+    draw();
+  }
+
+  function impurity(root, board, result, button) {
+    const calculation = root.querySelector("[data-calculation]");
+    let a = 5;
+    const entropyTerm = p => p === 0 ? 0 : -p * Math.log2(p);
+    const format = value => Number(value.toFixed(3)).toString();
+
+    function draw() {
+      const b = 10 - a, p = a / 10, q = b / 10;
+      const gini = 1 - p * p - q * q;
+      const entropy = entropyTerm(p) + entropyTerm(q);
+      renderList(board, Array.from({length: 10}, (_, i) => i < a ? "A" : "B"));
+      Array.from(board.children).forEach((card, i) => card.classList.toggle("is-selected", i < a));
+      calculation.textContent = "割合：A＝" + p + "、B＝" + q
+        + "。ジニ：1 − (" + p + "² ＋ " + q + "²) ＝ " + format(gini)
+        + "。エントロピー：各項 " + format(entropyTerm(p)) + " ＋ " + format(entropyTerm(q))
+        + " ＝ " + format(entropy) + "。";
+      button("increase").disabled = a === 10;
+      button("decrease").disabled = a === 0;
+      result.textContent = "Aが" + a + "個、Bが" + b + "個。"
+        + (a === 0 || a === 10 ? "1種類だけなので両方0です。10個が上限です。"
+          : a === 5 ? "半々のとき混ざり具合が最大です。「Aを1つ増やす」から試せます。" : "半々から偏るため両方の値が小さくなります。");
+    }
+
+    button("increase").addEventListener("click", () => { a += 1; draw(); });
+    button("decrease").addEventListener("click", () => { a -= 1; draw(); });
+    button("reset").addEventListener("click", () => { a = 5; draw(); });
+    draw();
+  }
+
+  const lessons = {raid, join, kmeans, time, hamming, conditional, markov, adder, dropout, impurity};
   document.querySelectorAll("[data-first-step]").forEach(root => {
     const mount = lessons[root.dataset.firstStep];
     if (!mount) return;

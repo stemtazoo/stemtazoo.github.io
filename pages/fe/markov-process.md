@@ -117,6 +117,27 @@ A → B
 
 このテーマは、基本情報技術者試験の基礎理論や確率に関係します。公式の出題範囲やシラバスは、[IPA：基本情報技術者試験](https://www.ipa.go.jp/shiken/kubun/fe.html)から確認できます。
 
+### 触って覚える：確率を次の状態へ移す
+
+状態AとBの2状態の例です。最初は全てAです。「次の時点へ」を押してA・Bの確率と掛け算、足し算の内訳を見てください。もう一度押すと、1回目の確率を使って次の確率を計算します。
+
+<link rel="stylesheet" href="{{ '/assets/css/first-step-demos.css' | relative_url }}">
+<div class="first-step-demo" data-first-step="markov" hidden>
+  <p>遷移確率：AからAへ70%、Bへ30%。BからAへ40%、Bへ60%。</p>
+  <div class="first-step-demo__actions">
+    <button type="button" data-action="next">次の時点へ</button>
+    <button type="button" data-action="reset">最初から</button>
+  </div>
+  <ul class="first-step-demo__cards" data-board aria-label="各状態の確率"></ul>
+  <div data-calculation></div>
+  <p role="status" data-result></p>
+</div>
+<noscript><p>初期A＝100%、B＝0%。1回後はA＝70%、B＝30%。2回後のAは70%×0.7＋30%×0.4＝61%、Bは39%です。</p></noscript>
+
+この教材では同じ遷移確率を3回まで使います。
+
+<script defer src="{{ '/assets/js/first-step-demos.js' | relative_url }}"></script>
+
 ## 科目Aでどう出る？
 
 科目Aでは、状態遷移表を使って「2回後」「3回後」の状態確率を求める問題が出ます。

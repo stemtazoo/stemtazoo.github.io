@@ -1157,7 +1157,92 @@ def hamming_first_step(page, expect):
     expect(root.locator('[data-action="correct"]')).to_be_disabled()
 
 
-CHECKS = {'raid-levels': raid_first_step,
+def conditional_first_step(page, expect):
+    root = page.locator('[data-first-step="conditional"]')
+    result = root.locator('[data-result]')
+    expect(result).to_contain_text('分子40 ÷ 分母200 ＝ 20%')
+    root.locator('input[value="member"]').check()
+    expect(result).to_contain_text('分子24 ÷ 分母80 ＝ 30%')
+    expect(root.locator('.is-included')).to_have_count(2)
+    root.locator('input[value="coupon"]').check()
+    expect(result).to_contain_text('分子24 ÷ 分母40 ＝ 60%')
+    expect(root.locator('.is-selected')).to_have_count(1)
+
+
+def markov_first_step(page, expect):
+    root = page.locator('[data-first-step="markov"]')
+    board = root.locator('[data-board] li')
+    step = root.locator('[data-action="next"]')
+    step.press('Enter')
+    expect(board).to_have_text(['状態A：70%', '状態B：30%'])
+    step.click()
+    expect(board).to_have_text(['状態A：61%', '状態B：39%'])
+    expect(root.locator('[data-calculation]')).to_contain_text('70% × 0.7 ＋ 30% × 0.4 ＝ 61%')
+    step.click()
+    expect(step).to_be_disabled()
+    expect(root.locator('[data-result]')).to_contain_text('3回まで')
+    root.locator('[data-action="reset"]').click()
+    expect(board).to_have_text(['状態A：100%', '状態B：0%'])
+    expect(step).to_be_enabled()
+
+
+def adder_first_step(page, expect):
+    root = page.locator('[data-first-step="adder"]')
+    result = root.locator('[data-result]')
+    root.locator('[data-action="a"]').press('Enter')
+    expect(result).to_contain_text('C＝0、S＝1')
+    root.locator('[data-action="cin"]').click()
+    expect(result).to_contain_text('2進数 10')
+    expect(root.locator('[data-board]')).to_contain_text('(A XOR B) AND Cin ＝ 1')
+    root.locator('[data-action="b"]').click()
+    expect(result).to_contain_text('C＝1、S＝1')
+    root.locator('[data-action="reset"]').click()
+    expect(result).to_contain_text('C＝0、S＝0')
+
+
+def dropout_first_step(page, expect):
+    root = page.locator('[data-first-step="dropout"]')
+    result = root.locator('[data-result]')
+    next_sample = root.locator('[data-action="next"]')
+    expect(root.locator('.is-failed')).to_have_count(2)
+    initial = root.locator('.is-failed').all_text_contents()
+    next_sample.press('Enter')
+    assert root.locator('.is-failed').all_text_contents() != initial
+    root.locator('[data-rate]').select_option('75')
+    expect(result).to_contain_text('確率75%')
+    root.locator('input[value="infer"]').check()
+    expect(root.locator('.is-failed')).to_have_count(0)
+    expect(next_sample).to_be_disabled()
+    expect(result).to_contain_text('配置は変わりません')
+    root.locator('[data-rate]').select_option('50')
+    expect(root.locator('.is-failed')).to_have_count(0)
+    root.locator('[data-action="reset"]').click()
+    expect(root.locator('[data-rate]')).to_have_value('25')
+    expect(next_sample).to_be_enabled()
+
+
+def impurity_first_step(page, expect):
+    root = page.locator('[data-first-step="impurity"]')
+    calculation = root.locator('[data-calculation]')
+    expect(calculation).to_contain_text('＝ 0.5')
+    increase = root.locator('[data-action="increase"]')
+    increase.press('Enter')
+    expect(calculation).to_contain_text('＝ 0.48')
+    expect(calculation).to_contain_text('＝ 0.971')
+    for _ in range(4):
+        increase.click()
+    expect(increase).to_be_disabled()
+    expect(root.locator('[data-result]')).to_contain_text('両方0')
+    root.locator('[data-action="reset"]').click()
+    expect(root.locator('.is-selected')).to_have_count(5)
+
+
+CHECKS = {'conditional-probability': conditional_first_step,
+          'markov-process': markov_first_step,
+          'full-adder': adder_first_step,
+          'dropout': dropout_first_step,
+          'gini-vs-entropy': impurity_first_step,
+          'raid-levels': raid_first_step,
           'left-join-where': join_first_step,
           'k-means': kmeans_first_step,
           'time-series-cross-validation': time_split_first_step,
