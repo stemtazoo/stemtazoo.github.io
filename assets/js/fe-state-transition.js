@@ -30,14 +30,30 @@
     historyEl.replaceChildren();
     if (!records.length) {
       const li = document.createElement("li");
+      li.className = "fe-state-demo__history-empty";
       li.textContent = "まだ操作していません。";
+      historyEl.scrollTop = 0;
       historyEl.append(li);
     } else {
-      records.forEach((record, index) => {
+      records.forEach((record) => {
         const li = document.createElement("li");
-        li.textContent = `${index + 1}. ${record}`;
+        li.className = "fe-state-demo__history-item";
+        const eventLabel = document.createElement("div");
+        eventLabel.className = "fe-state-demo__history-event";
+        eventLabel.textContent = record.event;
+        const route = document.createElement("div");
+        route.className = "fe-state-demo__history-route";
+        const from = document.createElement("span");
+        from.textContent = record.from;
+        const arrow = document.createElement("span");
+        arrow.textContent = "→";
+        const to = document.createElement("strong");
+        to.textContent = record.to;
+        route.append(from, arrow, to);
+        li.append(eventLabel, route);
         historyEl.append(li);
       });
+      historyEl.scrollTop = historyEl.scrollHeight;
     }
   }
 
@@ -48,7 +64,7 @@
     const before = current;
     if (transition) {
       current = transition.to;
-      records.push(`${before} ─${event}→ ${current}`);
+      records.push({ from: before, event, to: current });
       statusEl.textContent = (prediction
         ? prediction === current ? "予想どおりです。 " : `予想は「${prediction}」でした。 `
         : "") + `「${before}」から「${event}」の矢印をたどり、「${current}」へ移りました。`;
