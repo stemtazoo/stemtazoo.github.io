@@ -267,6 +267,15 @@
 
     function draw(previous) {
       renderList(board, ["状態A：" + format(a * 100) + "%", "状態B：" + format(b * 100) + "%"]);
+      const graphValues = {
+        "[data-markov-time]": "時点" + time,
+        "[data-markov-a]": format(a * 100) + "%",
+        "[data-markov-b]": format(b * 100) + "%"
+      };
+      Object.entries(graphValues).forEach(([selector, value]) => {
+        const label = root.querySelector(selector);
+        if (label) label.textContent = value;
+      });
       calculation.replaceChildren();
       if (previous) {
         const [oldA, oldB] = previous;
