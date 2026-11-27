@@ -3,17 +3,31 @@ layout: page
 title: ハッシュ表とは？ハッシュ関数と基数変換法を整理【基本情報技術者試験】
 description: ハッシュ表を、キーから格納先アドレスを求めてデータを管理する構造として整理します。ハッシュ関数、基数変換法、除算法、衝突の意味と、進数変換だけの問題との違いをFE試験向けに解説します。
 permalink: /fe/hash-table/
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/hash-table.png
+  width: 1200
+  height: 630
+  alt: "キー123をハッシュ関数（mod 10）に入力し、余り3を格納先アドレスとして求める図。"
 tags: [fe, fe-technology, data-structure, algorithm]
 fe_section: 科目B対策
 fe_subsection: データ構造
 fe_order: 60
 date: 2026-07-30
-last_modified_at: 2026-10-13
+last_modified_at: 2026-11-27
 ---
 
 ## まず結論
 
 ハッシュ表とは、**キーをハッシュ関数に入力し、データを格納するアドレスを求めるデータ構造**です。
+
+<picture>
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/hash-table.png"
+       width="1200" height="630"
+       alt="キー123をハッシュ関数（mod 10）に入力し、余り3を格納先アドレスとして求める図。"
+       loading="lazy"
+       decoding="async"
+       style="display:block;width:100%;max-width:100%;height:auto;">
+</picture>
 
 基本情報技術者試験では、次の関係を最初に押さえます。
 
