@@ -14,17 +14,30 @@ ds_area: foundation
 ds_section: data-understanding
 prev: /ds/primary-data/
 next: /ds/publickey-vs-symmetric/
-last_modified_at: 2026-11-20
+last_modified_at: 2026-11-27
 ---
 
 ## まず結論
 
 **一次データと二次データの違いは、「誰が、何の目的で最初に収集・生成したデータか」で判断します。**
 
-| 分類 | 判断基準 | 例 |
-|---|---|---|
-| 一次データ | 自分たちが目的に合わせて直接収集した | 自社アンケート、実験結果、自社ログ |
-| 二次データ | 他者が収集・加工・公開した既存データを利用する | 政府統計、調査会社レポート、新聞記事 |
+<table class="study-comparison study-comparison--stack" role="table" aria-label="分類・判断基準・例">
+  <thead role="rowgroup">
+    <tr role="row"><th role="columnheader" scope="col" id="ds-primary-secondary-data-definition-c0">分類</th><th role="columnheader" scope="col" id="ds-primary-secondary-data-definition-c1">判断基準</th><th role="columnheader" scope="col" id="ds-primary-secondary-data-definition-c2">例</th></tr>
+  </thead>
+  <tbody role="rowgroup">
+    <tr role="row">
+      <th role="rowheader" scope="row" id="ds-primary-secondary-data-definition-r0" headers="ds-primary-secondary-data-definition-c0">一次データ</th>
+      <td role="cell" headers="ds-primary-secondary-data-definition-r0 ds-primary-secondary-data-definition-c1"><span class="study-comparison__label" aria-hidden="true">判断基準</span>自分たちが目的に合わせて直接収集した</td>
+      <td role="cell" headers="ds-primary-secondary-data-definition-r0 ds-primary-secondary-data-definition-c2"><span class="study-comparison__label" aria-hidden="true">例</span>自社アンケート、実験結果、自社ログ</td>
+    </tr>
+    <tr role="row">
+      <th role="rowheader" scope="row" id="ds-primary-secondary-data-definition-r1" headers="ds-primary-secondary-data-definition-c0">二次データ</th>
+      <td role="cell" headers="ds-primary-secondary-data-definition-r1 ds-primary-secondary-data-definition-c1"><span class="study-comparison__label" aria-hidden="true">判断基準</span>他者が収集・加工・公開した既存データを利用する</td>
+      <td role="cell" headers="ds-primary-secondary-data-definition-r1 ds-primary-secondary-data-definition-c2"><span class="study-comparison__label" aria-hidden="true">例</span>政府統計、調査会社レポート、新聞記事</td>
+    </tr>
+  </tbody>
+</table>
 
 DS検定では、**ダウンロードしたか、スクレイピングしたかという取得手段だけで決めない**ことが重要です。
 
