@@ -8,8 +8,25 @@ fe_section: テクノロジ系
 fe_subsection: システム開発技術
 fe_order: 90
 date: 2026-07-16
-last_modified_at: 2026-09-23
+last_modified_at: 2026-11-27
 ---
+
+<style>
+.fe-uml-interaction-figure {
+  margin: 1rem 0 1.25rem;
+  padding: .5rem;
+  border: 1px solid #d8dee4;
+  border-radius: 10px;
+  background: #fff;
+}
+.fe-uml-interaction-figure svg {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  margin: 0 auto;
+}
+</style>
 
 ## まず結論
 
@@ -40,14 +57,25 @@ last_modified_at: 2026-09-23
 
 一般に、オブジェクトを横方向に並べ、時間を上から下へ進めます。メッセージはオブジェクト間の矢印で表します。
 
-```text
-利用者      画面       サーバ
-  |          |           |
-  |--入力--->|           |
-  |          |--要求---->|
-  |          |<--結果----|
-  |<--表示---|           |
-```
+<figure class="fe-uml-interaction-figure">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 248" width="300" height="248" role="img" aria-labelledby="fe-seq-title fe-seq-desc">
+    <title id="fe-seq-title">シーケンス図：入力から表示まで</title>
+    <desc id="fe-seq-desc">利用者から画面への入力、画面からサーバへの要求、サーバから画面への結果、画面から利用者への表示の順に、上から下へメッセージが並ぶ。</desc>
+    <defs><marker id="fe-seq-arrow" viewBox="0 0 8 8" markerWidth="7" markerHeight="7" refX="7" refY="4" orient="auto"><path d="M1 1 L7 4 L1 7" fill="none" stroke="#263746" stroke-width="1.2"/></marker></defs>
+    <g fill="#e8f1f8" stroke="#7890a5">
+      <rect x="8" y="8" width="84" height="34" rx="3"/><rect x="108" y="8" width="84" height="34" rx="3"/><rect x="208" y="8" width="84" height="34" rx="3"/>
+    </g>
+    <g fill="#263746" font-size="15" text-anchor="middle"><text x="50" y="30">利用者</text><text x="150" y="30">画面</text><text x="250" y="30">サーバ</text></g>
+    <g stroke="#64748b" stroke-width="1.2" stroke-dasharray="5 4"><path d="M50 42 V236 M150 42 V236 M250 42 V236"/></g>
+    <g stroke="#263746" stroke-width="1.5" fill="none" marker-end="url(#fe-seq-arrow)">
+      <path d="M50 83 H150"/><path d="M150 122 H250"/><path d="M250 161 H150" stroke-dasharray="5 3"/><path d="M150 200 H50"/>
+    </g>
+    <g fill="#263746" font-size="14" text-anchor="middle"><text x="100" y="75">入力</text><text x="200" y="114">要求</text><text x="200" y="153">結果</text><text x="100" y="192">表示</text></g>
+    <text x="10" y="233" fill="#263746" font-size="12">時間 ↓</text>
+  </svg>
+</figure>
+
+この例では、入力 → 要求 → 結果 → 表示の順に進みます。結果の破線矢印は、サーバからの応答を表しています。
 
 処理の順番や、どの処理がどの処理を呼び出したかを読み取りやすい点が特徴です。
 
@@ -57,13 +85,24 @@ last_modified_at: 2026-09-23
 
 オブジェクト間のリンク上に、メッセージと実行順を示す番号を記載します。
 
-```text
-[利用者] -- 1:入力 --> [画面]
-                      |
-                      | 2:要求
-                      v
-                   [サーバ]
-```
+<figure class="fe-uml-interaction-figure">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 228" width="300" height="228" role="img" aria-labelledby="fe-comm-title fe-comm-desc">
+    <title id="fe-comm-title">コミュニケーション図：同じ4つのメッセージ</title>
+    <desc id="fe-comm-desc">利用者と画面、画面とサーバの間にリンクがある。番号1の入力は利用者から画面へ、2の要求は画面からサーバへ、3の結果はサーバから画面へ、4の表示は画面から利用者へ向かう。</desc>
+    <defs><marker id="fe-comm-arrow" viewBox="0 0 8 8" markerWidth="7" markerHeight="7" refX="7" refY="4" orient="auto"><path d="M1 1 L7 4 L1 7" fill="none" stroke="#263746" stroke-width="1.2"/></marker></defs>
+    <g fill="#e8f1f8" stroke="#7890a5">
+      <rect x="8" y="55" width="84" height="36" rx="3"/><rect x="208" y="55" width="84" height="36" rx="3"/><rect x="208" y="183" width="84" height="36" rx="3"/>
+    </g>
+    <g fill="#263746" font-size="15" text-anchor="middle"><text x="50" y="78">利用者</text><text x="250" y="78">画面</text><text x="250" y="206">サーバ</text></g>
+    <g fill="none" stroke="#64748b" stroke-width="1.3"><path d="M92 73 H208 M250 91 V183"/></g>
+    <g fill="none" stroke="#263746" stroke-width="1.5" marker-end="url(#fe-comm-arrow)">
+      <path d="M100 44 H200"/><path d="M200 101 H100"/><path d="M231 103 V171"/><path d="M269 171 V103"/>
+    </g>
+    <g fill="#263746" font-size="14"><text x="150" y="34" text-anchor="middle">1: 入力</text><text x="150" y="120" text-anchor="middle">4: 表示</text><text x="224" y="140" text-anchor="end">2: 要求</text><text x="281" y="140" text-anchor="middle" font-size="12"><tspan x="281" dy="0">3:</tspan><tspan x="281" dy="15">結果</tspan></text></g>
+  </svg>
+</figure>
+
+同じ4つのメッセージを、今度は番号順（1 → 2 → 3 → 4）に追います。実線のリンクはオブジェクト同士のつながりを、番号付きの矢印はメッセージの方向を表します。
 
 空間的な配置を見ることで、どのオブジェクト同士が関係しているかを把握しやすくなります。
 
