@@ -9,7 +9,7 @@ ds_area: datascience
 ds_section: modeling
 prev: /ds/bias-variance-tradeoff/
 next: /ds/impurity/
-last_modified_at: 2026-11-26
+last_modified_at: 2026-11-27
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -83,15 +83,42 @@ DS検定では、「どちらが分岐基準として使われるか」「何を
 
 ジニ不純度は `1 − (pA² + pB²)`、エントロピー（底2）は `−(pA log₂ pA + pB log₂ pB)` です。ここでpAとpBは各クラスの割合です。割合0の項は0として扱います。
 
-<link rel="stylesheet" href="{{ '/assets/css/first-step-demos.css' | relative_url }}">
+<style>
+  [data-first-step="impurity"] { box-sizing: border-box; border: 1px solid #8797a6; border-radius: .75rem; margin: 1rem 0; padding: .8rem; }
+  [data-first-step="impurity"][hidden] { display: none; }
+  [data-first-step="impurity"] .first-step-demo__actions { display: flex; flex-wrap: wrap; gap: .45rem; }
+  [data-first-step="impurity"] button { font: inherit; min-height: 44px; padding: .35rem .65rem; border: 1px solid #64748b; border-radius: .4rem; background: #edf2f7; color: #1c2735; }
+  [data-first-step="impurity"] button[data-action="increase"],
+  [data-first-step="impurity"] button[data-action="decrease"] { background: #14598b; color: #fff; }
+  [data-first-step="impurity"] button:disabled { opacity: .6; }
+  [data-first-step="impurity"] button:focus-visible { outline: 3px solid #ce8919; outline-offset: 2px; }
+  [data-first-step="impurity"] ul[data-board] { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .35rem; margin: .65rem 0; padding: 0; list-style: none; }
+  [data-first-step="impurity"] ul[data-board] li { display: grid; place-items: center; min-width: 0; min-height: 36px; padding: .15rem; margin: 0; border: 1px solid #bf9560; border-radius: .35rem; background: #fff0df; color: #813d07; font-weight: 700; }
+  [data-first-step="impurity"] ul[data-board] li.is-selected { background: #d6e9fc; color: #123e64; border-color: #2563a5; }
+  [data-first-step="impurity"] [data-calculation] { display: grid; gap: .65rem; }
+  [data-first-step="impurity"] .impurity-metric { border: 1px solid #aeb9c6; border-radius: .4rem; padding: .55rem .65rem; }
+  [data-first-step="impurity"] .impurity-metric p { margin: .3rem 0 0; overflow-wrap: anywhere; }
+  [data-first-step="impurity"] .impurity-metric strong { font-size: 1.15em; }
+  [data-first-step="impurity"] [data-result] { margin: .65rem 0 0; overflow-wrap: anywhere; }
+</style>
 <div class="first-step-demo" data-first-step="impurity" hidden>
   <div class="first-step-demo__actions">
     <button type="button" data-action="increase">Aを1つ増やす</button>
     <button type="button" data-action="decrease">Bを1つ増やす</button>
     <button type="button" data-action="reset">半々に戻す</button>
   </div>
+  <p data-proportions>10個中 A：5個（50%）、B：5個（50%）</p>
   <ul class="first-step-demo__cards" data-board aria-label="2クラスのデータ数"></ul>
-  <div data-calculation></div>
+  <div data-calculation>
+    <div class="impurity-metric">
+      <strong>ジニ不純度：<span data-gini>0.5</span></strong>
+      <p data-gini-formula></p>
+    </div>
+    <div class="impurity-metric">
+      <strong>エントロピー（底2）：<span data-entropy>1</span></strong>
+      <p data-entropy-formula></p>
+    </div>
+  </div>
   <p role="status" data-result></p>
 </div>
 <noscript><p>AとBが5個ずつならジニ不純度0.5、エントロピー1（底2）。Aが10個なら、どちらも0です。</p></noscript>

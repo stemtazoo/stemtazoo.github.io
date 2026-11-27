@@ -1223,18 +1223,29 @@ def dropout_first_step(page, expect):
 
 def impurity_first_step(page, expect):
     root = page.locator('[data-first-step="impurity"]')
-    calculation = root.locator('[data-calculation]')
-    expect(calculation).to_contain_text('＝ 0.5')
+    board = root.locator('[data-board]')
+    expect(root).to_have_css('border-top-width', '1px')
+    expect(board).to_have_css('display', 'grid')
+    assert board.evaluate("""el => getComputedStyle(el).gridTemplateColumns.split(' ').length === 5""")
+    expect(root.locator('[data-calculation] .impurity-metric')).to_have_count(2)
+    expect(root.locator('[data-gini]')).to_have_text('0.5')
+    expect(root.locator('[data-entropy]')).to_have_text('1')
     increase = root.locator('[data-action="increase"]')
     increase.press('Enter')
-    expect(calculation).to_contain_text('＝ 0.48')
-    expect(calculation).to_contain_text('＝ 0.971')
+    expect(root.locator('[data-proportions]')).to_have_text('10個中 A：6個（60%）、B：4個（40%）')
+    expect(root.locator('[data-gini]')).to_have_text('0.48')
+    expect(root.locator('[data-entropy]')).to_have_text('0.971')
+    expect(root.locator('[data-entropy-formula]')).to_contain_text('0.442 ＋ Bの項 0.529')
+    expect(root.locator('.is-selected')).to_have_count(6)
     for _ in range(4):
         increase.click()
     expect(increase).to_be_disabled()
+    expect(root.locator('[data-gini]')).to_have_text('0')
+    expect(root.locator('[data-entropy]')).to_have_text('0')
     expect(root.locator('[data-result]')).to_contain_text('両方0')
     root.locator('[data-action="reset"]').click()
     expect(root.locator('.is-selected')).to_have_count(5)
+    assert root.locator('[data-calculation]').evaluate('el => el.scrollWidth <= el.clientWidth + 1')
 
 
 CHECKS = {'conditional-probability': conditional_first_step,
