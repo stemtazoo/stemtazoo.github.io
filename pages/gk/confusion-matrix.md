@@ -6,7 +6,7 @@ permalink: /gk/confusion-matrix/
 tags: [gk, 機械学習, 評価指標, 頻出]
 gk_section: 機械学習の概要/モデルの選択・評価/分類の評価指標
 gk_order: 1
-last_modified_at: 2026-11-26
+last_modified_at: 2026-11-27
 image:
   path: "https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/confusion-matrix.png"
   width: 1200
@@ -71,12 +71,10 @@ FN → 見逃し
 
 ここから、例えば次の指標を作れます。
 
-```text
-Accuracy → 全体の正解割合
-Precision → 予測陽性の中で正解した割合
-Recall → 実際の陽性を拾えた割合
-F1-score → Precision と Recall のバランス
-```
+- **Accuracy：** 全体の正解割合
+- **Precision：** 予測陽性の中で正解した割合
+- **Recall：** 実際の陽性を拾えた割合
+- **F1-score：** Precision と Recall のバランス
 
 ただし、**すべての評価指標が1つの混同行列だけから求まるわけではありません**。例えばROC-AUCは、しきい値を動かしたときの複数の結果を使って評価します。
 
