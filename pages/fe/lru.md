@@ -3,17 +3,31 @@ layout: page
 title: LRUとは？FIFO・LFU・NRUとの違いとキャッシュ置換の判断方法【基本情報技術者試験】
 description: LRUを、最後に参照されてから最も時間が経ったブロックを置き換える方式として整理し、FIFO・LFU・NRUとの違いと参照列の読み方を解説します。
 permalink: /fe/lru/
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/lru.png
+  width: 1200
+  height: 630
+  alt: "満杯のキャッシュの最終参照時刻を比較し、A（09:18）、B（09:14）、C（09:11）、D（09:20）のうちCを置換対象とする図。"
 tags: [fe, fe-technology, computer-architecture, cache-memory]
 fe_section: テクノロジ系
 fe_subsection: コンピュータ構成要素
 fe_order: 85
 date: 2026-08-02
-last_modified_at: 2026-11-07
+last_modified_at: 2026-11-27
 ---
 
 ## まず結論
 
 LRUとは、**最後に参照されてから最も長い時間が経過したデータを置き換える方式**です。
+
+<picture>
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/lru.png"
+       width="1200" height="630"
+       alt="満杯のキャッシュの最終参照時刻を比較し、A（09:18）、B（09:14）、C（09:11）、D（09:20）のうちCを置換対象とする図。"
+       loading="lazy"
+       decoding="async"
+       style="display:block;width:100%;max-width:100%;height:auto;">
+</picture>
 
 LRUは、Least Recently Usedの略です。
 
