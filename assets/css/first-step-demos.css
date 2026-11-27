@@ -91,3 +91,37 @@
 .first-step-demo__cards .is-selected { background: #d6e9fc; color: #123e64; border: 2px solid #2563a5; }
 .first-step-demo [data-rate] { max-width: 100%; min-height: 44px; font: inherit; }
 .first-step-demo [data-calculation] { overflow-wrap: anywhere; }
+
+/* Markov lesson only: fixed transition probabilities versus changing state probabilities. */
+.first-step-demo[data-first-step="markov"] .first-step-demo__markov-graph {
+  width: 100%;
+  height: auto;
+  max-width: 420px;
+  margin: .5rem auto;
+  color: #263746;
+}
+.first-step-demo[data-first-step="markov"] .markov-edges {
+  fill: none;
+  stroke: #34465b;
+  stroke-width: 1.6;
+  stroke-linejoin: round;
+}
+.first-step-demo[data-first-step="markov"] .markov-edge-labels text,
+.first-step-demo[data-first-step="markov"] .markov-state-labels text {
+  font-size: 15px;
+  fill: #263746;
+}
+.first-step-demo[data-first-step="markov"] .markov-state-labels .markov-value {
+  font-size: 20px;
+  font-weight: 700;
+}
+.first-step-demo[data-first-step="markov"] .markov-time {
+  font-size: 14px;
+  font-weight: 700;
+}
+.first-step-demo[data-first-step="markov"] .markov-note { font-size: 12px; }
+.first-step-demo[data-first-step="markov"] .first-step-demo__markov-legend {
+  font-size: .9rem;
+  line-height: 1.5;
+  margin: .5rem 0 .8rem;
+}
