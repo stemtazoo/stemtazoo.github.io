@@ -11,7 +11,7 @@ image:
 prev: /sg/risk-management/
 next: /sg/risk-criteria/
 tags: [sg, sg-security-management, risk_assessment, isms]
-last_modified_at: 2026-11-26
+last_modified_at: 2026-11-27
 ---
 
 ## まず結論
@@ -88,12 +88,33 @@ JIS Q 31010
 
 SG試験では、次の4つを説明文と対応づける問題がよく出ます。
 
-| 手法 | キーワード | 選択肢での見分け方 |
-|---|---|---|
-| ベースラインアプローチ | 公開基準・ガイドライン・チェックリスト・ギャップ分析 | 「公表されている基準」「一定レベルを設定」「現状管理策との比較」があればこれ |
-| 詳細リスク分析 | 資産価値・脅威・脆弱性・セキュリティ要件の個別識別 | 「情報資産ごとに詳細評価」「資産単位で分析」はこれ |
-| 組合せアプローチ | 複数手法の併用 | 「長所を生かして組み合わせる」「効率と精度の両立」はこれ |
-| 非公式アプローチ | 担当者の経験・判断に依存 | 「組織や担当者の判断中心」「標準化されていない」はこれ |
+<table class="study-comparison study-comparison--stack" role="table" aria-label="手法・キーワード・選択肢での見分け方">
+  <thead role="rowgroup">
+    <tr role="row"><th role="columnheader" scope="col" id="sg-risk-assessment-definition-c0">手法</th><th role="columnheader" scope="col" id="sg-risk-assessment-definition-c1">キーワード</th><th role="columnheader" scope="col" id="sg-risk-assessment-definition-c2">選択肢での見分け方</th></tr>
+  </thead>
+  <tbody role="rowgroup">
+    <tr role="row">
+      <th role="rowheader" scope="row" id="sg-risk-assessment-definition-r0" headers="sg-risk-assessment-definition-c0">ベースラインアプローチ</th>
+      <td role="cell" headers="sg-risk-assessment-definition-r0 sg-risk-assessment-definition-c1"><span class="study-comparison__label" aria-hidden="true">キーワード</span>公開基準・ガイドライン・チェックリスト・ギャップ分析</td>
+      <td role="cell" headers="sg-risk-assessment-definition-r0 sg-risk-assessment-definition-c2"><span class="study-comparison__label" aria-hidden="true">選択肢での見分け方</span>「公表されている基準」「一定レベルを設定」「現状管理策との比較」があればこれ</td>
+    </tr>
+    <tr role="row">
+      <th role="rowheader" scope="row" id="sg-risk-assessment-definition-r1" headers="sg-risk-assessment-definition-c0">詳細リスク分析</th>
+      <td role="cell" headers="sg-risk-assessment-definition-r1 sg-risk-assessment-definition-c1"><span class="study-comparison__label" aria-hidden="true">キーワード</span>資産価値・脅威・脆弱性・セキュリティ要件の個別識別</td>
+      <td role="cell" headers="sg-risk-assessment-definition-r1 sg-risk-assessment-definition-c2"><span class="study-comparison__label" aria-hidden="true">選択肢での見分け方</span>「情報資産ごとに詳細評価」「資産単位で分析」はこれ</td>
+    </tr>
+    <tr role="row">
+      <th role="rowheader" scope="row" id="sg-risk-assessment-definition-r2" headers="sg-risk-assessment-definition-c0">組合せアプローチ</th>
+      <td role="cell" headers="sg-risk-assessment-definition-r2 sg-risk-assessment-definition-c1"><span class="study-comparison__label" aria-hidden="true">キーワード</span>複数手法の併用</td>
+      <td role="cell" headers="sg-risk-assessment-definition-r2 sg-risk-assessment-definition-c2"><span class="study-comparison__label" aria-hidden="true">選択肢での見分け方</span>「長所を生かして組み合わせる」「効率と精度の両立」はこれ</td>
+    </tr>
+    <tr role="row">
+      <th role="rowheader" scope="row" id="sg-risk-assessment-definition-r3" headers="sg-risk-assessment-definition-c0">非公式アプローチ</th>
+      <td role="cell" headers="sg-risk-assessment-definition-r3 sg-risk-assessment-definition-c1"><span class="study-comparison__label" aria-hidden="true">キーワード</span>担当者の経験・判断に依存</td>
+      <td role="cell" headers="sg-risk-assessment-definition-r3 sg-risk-assessment-definition-c2"><span class="study-comparison__label" aria-hidden="true">選択肢での見分け方</span>「組織や担当者の判断中心」「標準化されていない」はこれ</td>
+    </tr>
+  </tbody>
+</table>
 
 👉 判断ポイント  
 まず「**公開基準との比較か**」を見る。該当すればベースライン。  
