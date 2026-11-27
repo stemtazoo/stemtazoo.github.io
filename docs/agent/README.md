@@ -44,6 +44,7 @@ The front-matter guides refer to [shared metadata writing](metadata-rules.md). S
 | Always-on priorities, boundaries, MUSTs | `AGENTS.md` |
 | Task routing / when to load a guide | This file |
 | New article vs update, overlap, learning purpose, editorial roles, reader usefulness, learning paths | [editorial rules](editorial-rules.md) |
+| Mathematical notation and code-block distinction (FE/GK/DS/SG) | [Editorial rules](editorial-rules.md#mathematical-notation-across-fe-gk-ds-and-sg) |
 | Source selection, current vs original authority, freshness, supersession, source-addition decisions | [primary-source rules](primary-source-audit-rules.md) |
 | Practice-question answer display for FE/GK/DS/SG | [Shared answer disclosure rules](practice-question-answer-rules.md) |
 | Shared description-writing policy | [metadata rules](metadata-rules.md) |
