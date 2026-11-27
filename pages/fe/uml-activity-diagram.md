@@ -8,65 +8,23 @@ fe_section: テクノロジ系
 fe_subsection: ソフトウェア
 fe_order: 70
 date: 2026-10-05
-last_modified_at: 2026-10-08
+last_modified_at: 2026-11-27
 ---
 
 <style>
 .activity-flow {
   margin: 1.2rem 0;
-  padding: 1rem;
+  padding: .5rem;
   border: 1px solid #d8dee4;
   border-radius: 10px;
-  text-align: center;
-}
-.activity-start,
-.activity-end {
-  width: 1.25rem;
-  height: 1.25rem;
-  margin: .45rem auto;
-  border-radius: 50%;
-  background: #24292f;
-}
-.activity-end {
-  box-sizing: border-box;
-  border: 4px solid #24292f;
   background: #fff;
 }
-.activity-action {
-  display: inline-block;
-  min-width: 11rem;
-  padding: .55rem .8rem;
-  border: 1px solid #8c959f;
-  border-radius: 12px;
-  background: #f6f8fa;
-}
-.activity-arrow {
-  margin: .2rem 0;
-  font-size: 1.25rem;
-}
-.activity-branch {
-  display: inline-block;
-  margin: .2rem auto;
-  padding: .55rem .9rem;
-  border: 1px solid #8c959f;
-  transform: rotate(45deg);
-  background: #fff;
-}
-.activity-branch span {
+.activity-flow svg {
   display: block;
-  transform: rotate(-45deg);
-}
-.activity-options {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: .7rem;
-  max-width: 32rem;
-  margin: .7rem auto;
-}
-.activity-option {
-  padding: .65rem;
-  border: 1px solid #d8dee4;
-  border-radius: 8px;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  margin: 0 auto;
 }
 .uml-judge {
   display: grid;
@@ -80,7 +38,6 @@ last_modified_at: 2026-10-08
   border-radius: 8px;
 }
 @media (max-width: 600px) {
-  .activity-options,
   .uml-judge {
     grid-template-columns: 1fr;
   }
@@ -104,18 +61,43 @@ FEの科目Aでは、問題文に次のような表現があれば有力候補�
 例えば、注文を受けて在庫を確認する業務を考えてみます。
 
 <div class="activity-flow">
-  <div class="activity-start" aria-label="開始"></div>
-  <div class="activity-arrow">↓</div>
-  <div class="activity-action">注文を受ける</div>
-  <div class="activity-arrow">↓</div>
-  <div class="activity-branch"><span>在庫？</span></div>
-  <div class="activity-options">
-    <div class="activity-option"><strong>あり</strong><br>↓<br>出荷する</div>
-    <div class="activity-option"><strong>なし</strong><br>↓<br>入荷を待つ</div>
-  </div>
-  <div class="activity-arrow">↓</div>
-  <div class="activity-end" aria-label="終了"></div>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 352" width="300" height="352" role="img" aria-labelledby="activity-order-title activity-order-desc">
+    <title id="activity-order-title">注文処理のアクティビティ図</title>
+    <desc id="activity-order-desc">開始から注文を受け、在庫の有無で分岐する。在庫ありなら出荷する、なしなら入荷を待つ。どちらか一方の処理後に合流し、この例の処理範囲を終了する。</desc>
+    <defs>
+      <marker id="activity-order-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto" viewBox="0 0 7 6">
+        <path d="M0 0 L6 3 L0 6" fill="none" stroke="#24292f" stroke-width="1.2"/>
+      </marker>
+    </defs>
+    <g fill="none" stroke="#24292f" stroke-width="1.5" marker-end="url(#activity-order-arrow)">
+      <path d="M150 32 V54"/>
+      <path d="M150 94 V116"/>
+      <path d="M103 148 H75 V202"/>
+      <path d="M197 148 H225 V202"/>
+      <path d="M75 244 V280 H130"/>
+      <path d="M225 244 V280 H170"/>
+      <path d="M150 296 V320"/>
+    </g>
+    <circle cx="150" cy="22" r="10" fill="#24292f"/>
+    <rect x="82" y="54" width="136" height="40" rx="9" fill="#f6f8fa" stroke="#8c959f"/>
+    <path d="M150 116 L197 148 L150 180 L103 148 Z" fill="#fff3d7" stroke="#8c733e" stroke-width="1.5"/>
+    <rect x="8" y="202" width="134" height="42" rx="9" fill="#e6f3eb" stroke="#63836e"/>
+    <rect x="158" y="202" width="134" height="42" rx="9" fill="#f6f8fa" stroke="#8c959f"/>
+    <path d="M150 264 L170 280 L150 296 L130 280 Z" fill="#fff" stroke="#24292f" stroke-width="1.5"/>
+    <circle cx="150" cy="333" r="11" fill="#fff" stroke="#24292f" stroke-width="1.8"/>
+    <circle cx="150" cy="333" r="7" fill="#24292f"/>
+    <g fill="#24292f" font-size="15" text-anchor="middle">
+      <text x="150" y="79">注文を受ける</text>
+      <text x="150" y="153">在庫？</text>
+      <text x="47" y="174" font-size="14">[あり]</text>
+      <text x="253" y="174" font-size="14">[なし]</text>
+      <text x="75" y="228">出荷する</text>
+      <text x="225" y="228">入荷を待つ</text>
+    </g>
+  </svg>
 </div>
+
+在庫の有無でどちらか一方の処理に進み、合流して終了します。この例では入荷待ちまでを処理範囲とし、入荷後の出荷は省略しています。
 
 見るべきなのは、
 
