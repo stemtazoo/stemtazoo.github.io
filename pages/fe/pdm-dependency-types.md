@@ -8,7 +8,7 @@ fe_section: マネジメント系
 fe_subsection: プロジェクトマネジメント
 fe_order: 25
 date: 2026-08-28
-last_modified_at: 2026-11-23
+last_modified_at: 2026-11-28
 image:
   path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/pdm-dependency-types.png
   width: 1200
@@ -77,38 +77,131 @@ SF → 開始 → 終了
 
 文字だけで混乱するときは、**矢印の出発点と到着点が、開始か終了か**だけを見ます。
 
-```text
-FS：終了 → 開始
+<style>
+.fe-pdm-diagrams {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: .75rem;
+  margin: 1rem 0;
+}
+.fe-pdm-panel {
+  min-width: 0;
+  margin: 0;
+  padding: .5rem;
+  border: 1px solid #d8dee4;
+  border-radius: 10px;
+  background: #fff;
+  color: #263746;
+}
+.fe-pdm-panel figcaption {
+  color: #263746;
+  margin: .2rem .3rem;
+  font-size: 1rem;
+}
+.fe-pdm-panel svg {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  margin: 0 auto;
+}
+@media(max-width: 760px) {
+  .fe-pdm-diagrams { grid-template-columns: minmax(0,1fr); }
+}
+</style>
 
-先行A  ███████●
-              │
-              └────→ ●██████  後続B
-             Finish   Start
+<div class="fe-pdm-diagrams">
+  <figure class="fe-pdm-panel">
+    <figcaption><strong>FS：終了 → 開始</strong></figcaption>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 126" width="300" height="126" role="img" aria-labelledby="pdm-FS-title pdm-FS-desc">
+      <title id="pdm-FS-title">FS：終了から開始への依存関係</title>
+      <desc id="pdm-FS-desc">先行作業Aの終了端から後続作業Bの開始端へ矢印がつながる。時間差ゼロで条件を満たす配置例。</desc>
+      <g fill="#263746" font-size="14">
+        <text x="6" y="38">先行A</text><text x="6" y="96">後続B</text>
+      </g>
+      <rect x="82" y="20" width="112" height="24" rx="3" fill="#739ec9" stroke="#527ba5"/>
+      <rect x="194" y="78" width="92" height="24" rx="3" fill="#71ad95" stroke="#4c806d"/>
+      <g stroke="#a65308" stroke-width="2" fill="none" stroke-linejoin="round">
+        <path d="M194 32 V90 M190 83 L194 90 L198 83"/>
+      </g>
+      <circle cx="194" cy="32" r="3.5" fill="#a65308"/>
+      <g fill="#713e12" font-size="13" text-anchor="end">
+        <text x="182" y="59">終了（F）</text>
+        <text x="182" y="75">開始（S）</text>
+      </g>
+      <g stroke="#64748b" stroke-width="1.2" fill="none"><path d="M82 116 H286 M281 113 L286 116 L281 119"/></g>
+      <text x="6" y="120" fill="#475569" font-size="12">時間</text>
+    </svg>
+  </figure>
+  <figure class="fe-pdm-panel">
+    <figcaption><strong>SS：開始 → 開始</strong></figcaption>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 126" width="300" height="126" role="img" aria-labelledby="pdm-SS-title pdm-SS-desc">
+      <title id="pdm-SS-title">SS：開始から開始への依存関係</title>
+      <desc id="pdm-SS-desc">先行作業Aの開始端から後続作業Bの開始端へ矢印がつながる。時間差ゼロで条件を満たす配置例。</desc>
+      <g fill="#263746" font-size="14">
+        <text x="6" y="38">先行A</text><text x="6" y="96">後続B</text>
+      </g>
+      <rect x="82" y="20" width="124" height="24" rx="3" fill="#739ec9" stroke="#527ba5"/>
+      <rect x="82" y="78" width="92" height="24" rx="3" fill="#71ad95" stroke="#4c806d"/>
+      <g stroke="#a65308" stroke-width="2" fill="none" stroke-linejoin="round">
+        <path d="M82 32 V90 M78 83 L82 90 L86 83"/>
+      </g>
+      <circle cx="82" cy="32" r="3.5" fill="#a65308"/>
+      <g fill="#713e12" font-size="13" text-anchor="start">
+        <text x="94" y="59">開始（S）</text>
+        <text x="94" y="75">開始（S）</text>
+      </g>
+      <g stroke="#64748b" stroke-width="1.2" fill="none"><path d="M82 116 H286 M281 113 L286 116 L281 119"/></g>
+      <text x="6" y="120" fill="#475569" font-size="12">時間</text>
+    </svg>
+  </figure>
+  <figure class="fe-pdm-panel">
+    <figcaption><strong>FF：終了 → 終了</strong></figcaption>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 126" width="300" height="126" role="img" aria-labelledby="pdm-FF-title pdm-FF-desc">
+      <title id="pdm-FF-title">FF：終了から終了への依存関係</title>
+      <desc id="pdm-FF-desc">先行作業Aの終了端から後続作業Bの終了端へ矢印がつながる。時間差ゼロで条件を満たす配置例。</desc>
+      <g fill="#263746" font-size="14">
+        <text x="6" y="38">先行A</text><text x="6" y="96">後続B</text>
+      </g>
+      <rect x="82" y="20" width="124" height="24" rx="3" fill="#739ec9" stroke="#527ba5"/>
+      <rect x="124" y="78" width="82" height="24" rx="3" fill="#71ad95" stroke="#4c806d"/>
+      <g stroke="#a65308" stroke-width="2" fill="none" stroke-linejoin="round">
+        <path d="M206 32 V90 M202 83 L206 90 L210 83"/>
+      </g>
+      <circle cx="206" cy="32" r="3.5" fill="#a65308"/>
+      <g fill="#713e12" font-size="13" text-anchor="end">
+        <text x="194" y="59">終了（F）</text>
+        <text x="194" y="75">終了（F）</text>
+      </g>
+      <g stroke="#64748b" stroke-width="1.2" fill="none"><path d="M82 116 H286 M281 113 L286 116 L281 119"/></g>
+      <text x="6" y="120" fill="#475569" font-size="12">時間</text>
+    </svg>
+  </figure>
+  <figure class="fe-pdm-panel">
+    <figcaption><strong>SF：開始 → 終了</strong></figcaption>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 126" width="300" height="126" role="img" aria-labelledby="pdm-SF-title pdm-SF-desc">
+      <title id="pdm-SF-title">SF：開始から終了への依存関係</title>
+      <desc id="pdm-SF-desc">先行作業Aの開始端から後続作業Bの終了端へ矢印がつながる。時間差ゼロで条件を満たす配置例。</desc>
+      <g fill="#263746" font-size="14">
+        <text x="6" y="38">先行A</text><text x="6" y="96">後続B</text>
+      </g>
+      <rect x="174" y="20" width="112" height="24" rx="3" fill="#739ec9" stroke="#527ba5"/>
+      <rect x="82" y="78" width="92" height="24" rx="3" fill="#71ad95" stroke="#4c806d"/>
+      <g stroke="#a65308" stroke-width="2" fill="none" stroke-linejoin="round">
+        <path d="M174 32 V90 M170 83 L174 90 L178 83"/>
+      </g>
+      <circle cx="174" cy="32" r="3.5" fill="#a65308"/>
+      <g fill="#713e12" font-size="13" text-anchor="start">
+        <text x="186" y="59">開始（S）</text>
+        <text x="186" y="75">終了（F）</text>
+      </g>
+      <g stroke="#64748b" stroke-width="1.2" fill="none"><path d="M82 116 H286 M281 113 L286 116 L281 119"/></g>
+      <text x="6" y="120" fill="#475569" font-size="12">時間</text>
+    </svg>
+  </figure>
+</div>
 
-
-SS：開始 → 開始
-
-先行A  ●████████
-       │
-       └────→ ●██████  後続B
-      Start   Start
-
-
-FF：終了 → 終了
-
-先行A  ███████●
-              │
-後続B    █████● ←────┘
-             Finish
-
-
-SF：開始 → 終了
-
-先行A  ●████████
-       │
-後続B  ████● ←─┘
-      Start  Finish
-```
+青は先行作業A、緑は後続作業B、オレンジの矢印は依存関係です。時間は右に進みます。図は時間差ゼロで条件を満たす配置例であり、依存する時点が必ず同時になるという意味ではありません。
 
 図の横棒の長さではなく、**矢印がどの端からどの端へ結ばれているか**を見るのがポイントです。
 
@@ -298,15 +391,10 @@ F → S
 
 ### 迷ったら4マスで決める
 
-```text
-                    後続作業
-                 開始(S)   終了(F)
-              ┌────────┬────────┐
-先行  開始(S) │   SS   │   SF   │
-作業          ├────────┼────────┤
-      終了(F) │   FS   │   FF   │
-              └────────┴────────┘
-```
+| 先行作業 ＼ 後続作業 | 開始（S） | 終了（F） |
+|---|:---:|:---:|
+| 開始（S） | SS | SF |
+| 終了（F） | FS | FF |
 
 まず先行作業が「開始か終了か」で行を選び、次に後続作業が「開始か終了か」で列を選びます。
 
