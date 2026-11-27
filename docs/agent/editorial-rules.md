@@ -26,6 +26,28 @@ Before creating or editing content, agents must consider:
 
 Do not optimize only one page in isolation when the change affects site structure.
 
+## Mathematical Notation Across FE, GK, DS and SG
+
+Use MathJax as the default for standalone mathematical formulas, fractions, powers, roots, substitutions and derivations. The goal is readability, not converting every number into LaTeX. Define variables and units in nearby Japanese prose, preserve assumptions and distinguish exact equality from approximations.
+
+For display equations in article Markdown, place opening and closing double-dollar delimiters on their own lines, with blank lines outside:
+
+```markdown
+$
+\frac{n}{2m}+\frac{m}{2}
+$
+```
+
+Do not use raw \[ ... \] as display delimiters in ordinary Markdown: kramdown may consume the escaping before MathJax sees it. The FE block-search-average-comparisons article demonstrated this failure and the double-dollar repair was confirmed in a mobile screenshot. The existing page layout already loads MathJax; do not change shared scripts just to migrate article notation.
+
+- Use normal prose for simple values, units, short arithmetic and variable names when clearer; use inline dollar-delimited math only when it improves readability, and verify the output.
+- Keep actual Python, SQL, pseudocode, bit strings, commands, execution output and literal syntax examples in code blocks. Preserve procedural text diagrams and useful tables; do not mechanically convert every fenced block containing a number or equals sign.
+- For a mathematical formula inside a fenced text block, separate any explanatory labels into prose and render the formula with MathJax if that improves comprehension. Preserve the calculation, variable meanings, assumptions, units and exact/approximate distinction.
+- For conditional probability and absolute values use appropriate TeX commands such as \mid and \lvert ... \rvert instead of raw Markdown pipes; follow the [Pages compatibility guide](github-pages-compat.md#math-expressions-containing-vertical-bars) for non-MathJax exceptions. Do not insert raw pipes that break Markdown tables.
+- Split long equations into meaningful short steps where needed; do not shrink type just to squeeze a formula onto a phone. Check that formulas do not cause page-wide horizontal overflow.
+- Verify the changed source, built HTML, and actual rendered desktop and mobile page (around 340px article width), including fractions, signs, superscripts, units and wrapping. Report separately if any check is unavailable. A successful build does not prove MathJax rendered.
+- For existing articles, prioritize visibly broken formulas first, then math-only code blocks with clear readability gains. Review candidates individually; leave actual code and useful plain text intact. Cross-theme audit records belong in study-site-audit; do not bulk-rewrite articles solely because this rule was introduced.
+
 ## New Article Decision Workflow
 
 Consult relevant decisions in [study-site-audit](https://github.com/stemtazoo/study-site-audit) before creating a page. Check the recorded source commit and article hashes; old decisions supplement, rather than replace, the current four-theme search and learning-purpose comparison. If the audit repository is unavailable or no decision exists, continue these checks in the site repository. Record the compared pages, their distinct learning purposes, and the new/update/no-change reason.
