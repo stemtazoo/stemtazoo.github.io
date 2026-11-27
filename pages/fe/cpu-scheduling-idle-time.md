@@ -3,6 +3,11 @@ layout: page
 title: CPUスケジューリングとは？優先度とI/O待ちから遊休時間を求める方法【基本情報技術者試験】
 description: CPUスケジューリングを、優先度、実行可能状態、I/O待ち、CPUの遊休時間という観点から整理し、タイムチャート問題の解き方をわかりやすく解説します。
 permalink: /fe/cpu-scheduling-idle-time/
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/cpu-scheduling-idle-time.png
+  width: 1200
+  height: 630
+  alt: "CPUのタイムチャート。6〜8msと10〜11msは実行可能なタスクがなく、遊休時間は合計3ms。"
 tags: [fe, fe-technology, operating-system, scheduling]
 fe_section: テクノロジ系
 fe_subsection: オペレーティングシステム
@@ -18,6 +23,15 @@ related_articles:
 ## まず結論
 
 CPUスケジューリングとは、**複数のタスクのうち、次にどのタスクへCPUを割り当てるかを決める仕組み**です。
+
+<picture>
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/cpu-scheduling-idle-time.png"
+       width="1200" height="630"
+       alt="CPUのタイムチャート。6〜8msと10〜11msは実行可能なタスクがなく、遊休時間は合計3ms。"
+       loading="lazy"
+       decoding="async"
+       style="display:block;width:100%;max-width:100%;height:auto;">
+</picture>
 
 基本情報技術者試験では、次の順で考えると整理しやすくなります。
 
