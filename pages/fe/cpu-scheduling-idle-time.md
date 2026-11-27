@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: オペレーティングシステム
 fe_order: 80
 date: 2026-07-13
-last_modified_at: 2026-10-08
+last_modified_at: 2026-11-27
 related_articles:
   - /fe/cpu-scheduling/
   - /fe/preemptive-scheduling/
@@ -21,12 +21,10 @@ CPUスケジューリングとは、**複数のタスクのうち、次にどの
 
 基本情報技術者試験では、次の順で考えると整理しやすくなります。
 
-```text
 1. CPUを使えるタスクを確認する
 2. その中から優先度が高いタスクを選ぶ
 3. I/O待ちのタスクはCPUを使えない
 4. CPUを使えるタスクが1つもなければ遊休時間
-```
 
 特に大切なのは、**優先度が高くても、I/O待ち中ならCPUは使えない**という点です。
 
