@@ -91,14 +91,19 @@ last_modified_at: 2026-11-27
     <desc id="fe-comm-desc">利用者と画面、画面とサーバの間にリンクがある。番号1の入力は利用者から画面へ、2の要求は画面からサーバへ、3の結果はサーバから画面へ、4の表示は画面から利用者へ向かう。</desc>
     <defs><marker id="fe-comm-arrow" viewBox="0 0 8 8" markerWidth="7" markerHeight="7" refX="7" refY="4" orient="auto"><path d="M1 1 L7 4 L1 7" fill="none" stroke="#263746" stroke-width="1.2"/></marker></defs>
     <g fill="#e8f1f8" stroke="#7890a5">
-      <rect x="8" y="55" width="84" height="36" rx="3"/><rect x="208" y="55" width="84" height="36" rx="3"/><rect x="208" y="183" width="84" height="36" rx="3"/>
+      <rect x="8" y="55" width="84" height="36" rx="3"/><rect x="143" y="55" width="84" height="36" rx="3"/><rect x="143" y="183" width="84" height="36" rx="3"/>
     </g>
-    <g fill="#263746" font-size="15" text-anchor="middle"><text x="50" y="78">利用者</text><text x="250" y="78">画面</text><text x="250" y="206">サーバ</text></g>
-    <g fill="none" stroke="#64748b" stroke-width="1.3"><path d="M92 73 H208 M250 91 V183"/></g>
+    <g fill="#263746" font-size="15" text-anchor="middle"><text x="50" y="78">利用者</text><text x="185" y="78">画面</text><text x="185" y="206">サーバ</text></g>
+    <g fill="none" stroke="#64748b" stroke-width="1.3"><path d="M92 73 H143 M185 91 V183"/></g>
     <g fill="none" stroke="#263746" stroke-width="1.5" marker-end="url(#fe-comm-arrow)">
-      <path d="M100 44 H200"/><path d="M200 101 H100"/><path d="M231 103 V171"/><path d="M269 171 V103"/>
+      <path d="M58 44 H177"/><path d="M177 105 H58"/><path d="M165 108 V171"/><path d="M205 171 V108"/>
     </g>
-    <g fill="#263746" font-size="14"><text x="150" y="34" text-anchor="middle">1: 入力</text><text x="150" y="120" text-anchor="middle">4: 表示</text><text x="224" y="140" text-anchor="end">2: 要求</text><text x="281" y="140" text-anchor="middle" font-size="12"><tspan x="281" dy="0">3:</tspan><tspan x="281" dy="15">結果</tspan></text></g>
+    <g fill="#263746" font-size="14">
+      <text x="117.5" y="32" text-anchor="middle">1: 入力</text>
+      <text x="108" y="126" text-anchor="middle">4: 表示</text>
+      <text x="151" y="159" text-anchor="end">2: 要求</text>
+      <text x="219" y="159">3: 結果</text>
+    </g>
   </svg>
 </figure>
 
