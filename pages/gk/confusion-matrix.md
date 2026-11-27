@@ -62,12 +62,33 @@ FN → 見逃し
 
 各要素の意味は次のとおりです。
 
-| 記号 | 意味 | 試験での言い換え |
-| --- | --- | --- |
-| TP | 実際も陽性、予測も陽性 | 正しく陽性を検出 |
-| TN | 実際も陰性、予測も陰性 | 正しく陰性を判定 |
-| FP | 実際は陰性、予測は陽性 | 誤検知 |
-| FN | 実際は陽性、予測は陰性 | 見逃し |
+<table class="study-comparison study-comparison--stack" role="table" aria-label="記号・意味・試験での言い換え">
+  <thead role="rowgroup">
+    <tr role="row"><th role="columnheader" scope="col" id="gk-confusion-matrix-definition-c0">記号</th><th role="columnheader" scope="col" id="gk-confusion-matrix-definition-c1">意味</th><th role="columnheader" scope="col" id="gk-confusion-matrix-definition-c2">試験での言い換え</th></tr>
+  </thead>
+  <tbody role="rowgroup">
+    <tr role="row">
+      <th role="rowheader" scope="row" id="gk-confusion-matrix-definition-r0" headers="gk-confusion-matrix-definition-c0">TP</th>
+      <td role="cell" headers="gk-confusion-matrix-definition-r0 gk-confusion-matrix-definition-c1"><span class="study-comparison__label" aria-hidden="true">意味</span>実際も陽性、予測も陽性</td>
+      <td role="cell" headers="gk-confusion-matrix-definition-r0 gk-confusion-matrix-definition-c2"><span class="study-comparison__label" aria-hidden="true">試験での言い換え</span>正しく陽性を検出</td>
+    </tr>
+    <tr role="row">
+      <th role="rowheader" scope="row" id="gk-confusion-matrix-definition-r1" headers="gk-confusion-matrix-definition-c0">TN</th>
+      <td role="cell" headers="gk-confusion-matrix-definition-r1 gk-confusion-matrix-definition-c1"><span class="study-comparison__label" aria-hidden="true">意味</span>実際も陰性、予測も陰性</td>
+      <td role="cell" headers="gk-confusion-matrix-definition-r1 gk-confusion-matrix-definition-c2"><span class="study-comparison__label" aria-hidden="true">試験での言い換え</span>正しく陰性を判定</td>
+    </tr>
+    <tr role="row">
+      <th role="rowheader" scope="row" id="gk-confusion-matrix-definition-r2" headers="gk-confusion-matrix-definition-c0">FP</th>
+      <td role="cell" headers="gk-confusion-matrix-definition-r2 gk-confusion-matrix-definition-c1"><span class="study-comparison__label" aria-hidden="true">意味</span>実際は陰性、予測は陽性</td>
+      <td role="cell" headers="gk-confusion-matrix-definition-r2 gk-confusion-matrix-definition-c2"><span class="study-comparison__label" aria-hidden="true">試験での言い換え</span>誤検知</td>
+    </tr>
+    <tr role="row">
+      <th role="rowheader" scope="row" id="gk-confusion-matrix-definition-r3" headers="gk-confusion-matrix-definition-c0">FN</th>
+      <td role="cell" headers="gk-confusion-matrix-definition-r3 gk-confusion-matrix-definition-c1"><span class="study-comparison__label" aria-hidden="true">意味</span>実際は陽性、予測は陰性</td>
+      <td role="cell" headers="gk-confusion-matrix-definition-r3 gk-confusion-matrix-definition-c2"><span class="study-comparison__label" aria-hidden="true">試験での言い換え</span>見逃し</td>
+    </tr>
+  </tbody>
+</table>
 
 ここから、例えば次の指標を作れます。
 
