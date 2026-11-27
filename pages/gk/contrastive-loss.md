@@ -6,7 +6,7 @@ permalink: /gk/contrastive-loss/
 tags: [gk, neural_network, metrics]
 gk_section: ディープラーニングの概要/誤差関数
 gk_order: 3
-last_modified_at: 2026-11-24
+last_modified_at: 2026-11-27
 image:
   path: "https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/contrastive-loss.png"
   width: 1200
@@ -206,11 +206,28 @@ Triplet Lossも、埋め込み空間で距離を調整する損失です。
 
 ただし、Contrastive Lossは主に2つのデータのペアを使うのに対し、Triplet Lossは3つのデータを使います。
 
-| 観点 | Contrastive Loss | Triplet Loss |
-|---|---|---|
-| 入力 | 2つのデータのペア | anchor、positive、negative の3つ |
-| 学習の考え方 | 類似ペアは近く、非類似ペアは遠く | anchorをpositiveに近づけ、negativeから遠ざける |
-| よく出る語 | 類似ペア、非類似ペア、margin | anchor、positive、negative、margin |
+<table class="study-comparison study-comparison--pair" id="triplet-loss-pair" role="table" aria-label="Contrastive LossとTriplet Lossの比較">
+  <thead role="rowgroup">
+    <tr role="row"><th scope="col" role="columnheader">観点</th><th scope="col" role="columnheader" id="triplet-loss-pair-col-1">Contrastive Loss</th><th scope="col" role="columnheader" id="triplet-loss-pair-col-2">Triplet Loss</th></tr>
+  </thead>
+  <tbody role="rowgroup">
+    <tr role="row">
+      <th scope="row" role="rowheader" id="triplet-loss-pair-row-1">入力</th>
+      <td role="cell" headers="triplet-loss-pair-row-1 triplet-loss-pair-col-1"><span class="study-comparison__label" aria-hidden="true">Contrastive Loss</span>2つのデータのペア</td>
+      <td role="cell" headers="triplet-loss-pair-row-1 triplet-loss-pair-col-2"><span class="study-comparison__label" aria-hidden="true">Triplet Loss</span>anchor、positive、negative の3つ</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="triplet-loss-pair-row-2">学習の考え方</th>
+      <td role="cell" headers="triplet-loss-pair-row-2 triplet-loss-pair-col-1"><span class="study-comparison__label" aria-hidden="true">Contrastive Loss</span>類似ペアは近く、非類似ペアは遠く</td>
+      <td role="cell" headers="triplet-loss-pair-row-2 triplet-loss-pair-col-2"><span class="study-comparison__label" aria-hidden="true">Triplet Loss</span>anchorをpositiveに近づけ、negativeから遠ざける</td>
+    </tr>
+    <tr role="row">
+      <th scope="row" role="rowheader" id="triplet-loss-pair-row-3">よく出る語</th>
+      <td role="cell" headers="triplet-loss-pair-row-3 triplet-loss-pair-col-1"><span class="study-comparison__label" aria-hidden="true">Contrastive Loss</span>類似ペア、非類似ペア、margin</td>
+      <td role="cell" headers="triplet-loss-pair-row-3 triplet-loss-pair-col-2"><span class="study-comparison__label" aria-hidden="true">Triplet Loss</span>anchor、positive、negative、margin</td>
+    </tr>
+  </tbody>
+</table>
 
 どちらも距離学習で使われますが、**ペアか三つ組か**で区別すると分かりやすいです。
 
