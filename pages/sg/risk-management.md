@@ -3,10 +3,15 @@ layout: page
 title: "リスクマネジメントとは？全体像と残留リスクを整理【SG試験】"
 description: "リスクマネジメントは、リスクを特定・分析・評価し、対応後も残るリスクを含めて継続的に管理する活動です。リスクアセスメント、リスク対応、残留リスク、固有リスクとの違いをSG試験向けに整理します。 選択肢で問われる目的・対象・責任範囲を押さえ、似た用語や対策との違いを判断できるようにします。"
 permalink: /sg/risk-management/
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/sg/risk-management.png
+  width: 1200
+  height: 630
+  alt: "リスクアセスメントからリスク対応、残留リスクの管理へ進み、継続的に見直すリスクマネジメントの流れ。"
 prev: /sg/asset-register/
 next: /sg/risk-assessment/
 tags: [sg, sg-security-management, risk_assessment, isms]
-last_modified_at: 2026-05-06
+last_modified_at: 2026-11-27
 ---
 
 ## まず結論
@@ -15,6 +20,13 @@ last_modified_at: 2026-05-06
 - リスクアセスメントは、リスクマネジメントの一部です
 - SG試験では、**残留リスク・固有リスク・発見リスク・投機リスク**の違いが問われることがあります
 - 特に、**残留リスク＝リスク対応後に残るリスク**と判断できるようにしておくことが大切です
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/sg/risk-management.png"
+       alt="リスクアセスメントからリスク対応、残留リスクの管理へ進み、継続的に見直すリスクマネジメントの流れ。"
+       width="1200" height="630" loading="lazy" decoding="async"
+       style="display:block;width:100%;max-width:100%;height:auto;">
+</figure>
 
 ---
 
