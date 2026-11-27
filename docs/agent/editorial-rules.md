@@ -33,9 +33,9 @@ Use MathJax as the default for standalone mathematical formulas, fractions, powe
 For display equations in article Markdown, place opening and closing double-dollar delimiters on their own lines, with blank lines outside:
 
 ```markdown
-$
+$$
 \frac{n}{2m}+\frac{m}{2}
-$
+$$
 ```
 
 Do not use raw \[ ... \] as display delimiters in ordinary Markdown: kramdown may consume the escaping before MathJax sees it. The FE block-search-average-comparisons article demonstrated this failure and the double-dollar repair was confirmed in a mobile screenshot. The existing page layout already loads MathJax; do not change shared scripts just to migrate article notation.
