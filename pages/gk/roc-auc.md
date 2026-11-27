@@ -31,7 +31,10 @@ AUCは、そのROC曲線の下の面積で、**しきい値全体を通した識
 と切り分けます。
 
 <figure class="gk-eyecatch" style="margin:16px 0 20px;">
-  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/roc-auc.png" width="1200" height="630" alt="横軸FPR（偽陽性率）、縦軸TPR（真陽性率）のROC曲線と、その下を塗りつぶしたAUC。対角線はランダムな分類の基準" loading="lazy" decoding="async" style="display:block;width:100%;max-width:100%;height:auto;">
+  <picture>
+    <source media="(max-width: 640px)" srcset="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/roc-auc-mobile.png" width="1122" height="1402">
+    <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/gk/roc-auc.png" width="1200" height="630" alt="横軸FPR（偽陽性率）、縦軸TPR（真陽性率）のROC曲線と、その下を塗りつぶしたAUC。対角線はランダムな分類の基準" loading="lazy" decoding="async" style="display:block;width:100%;max-width:100%;height:auto;">
+  </picture>
 </figure>
 
 ## 直感的な説明
