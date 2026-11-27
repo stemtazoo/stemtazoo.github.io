@@ -1378,3 +1378,72 @@ table.study-comparison.study-comparison--pair .study-comparison__label { display
   table.study-comparison.study-comparison--pair td:nth-child(2) .study-comparison__label { color: #185898; }
   table.study-comparison.study-comparison--pair td:nth-child(3) .study-comparison__label { color: #08776e; }
 }
+
+/* Opt-in stacked term/description tables. Keep numeric and trace tables unchanged. */
+table.study-comparison.study-comparison--stack .study-comparison__label { display: none; }
+@media (max-width: 640px) {
+  table.study-comparison.study-comparison--stack {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    overflow-x: visible;
+    margin-bottom: 16px;
+    white-space: normal;
+    border: 0;
+    background: transparent;
+  }
+  table.study-comparison.study-comparison--stack thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+  table.study-comparison.study-comparison--stack tbody {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+    min-width: 0;
+  }
+  table.study-comparison.study-comparison--stack tbody tr {
+    display: block;
+    min-width: 0;
+    margin: 0;
+    border: 1px solid #c5d4df;
+    border-radius: 10px;
+    background: #f8fafc;
+    overflow: hidden;
+  }
+  table.study-comparison.study-comparison--stack tbody th,
+  table.study-comparison.study-comparison--stack tbody td {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    padding: 10px 12px;
+    white-space: normal;
+    line-break: strict;
+    word-break: normal;
+    overflow-wrap: break-word;
+    text-align: left;
+    line-height: 1.55;
+    border: 0;
+    color: #172b3c;
+  }
+  table.study-comparison.study-comparison--stack tbody th {
+    color: #173a52;
+    background: #e6f1f7;
+    font-weight: 700;
+  }
+  table.study-comparison.study-comparison--stack tbody td + td { border-top: 1px solid #dce5eb; }
+  table.study-comparison.study-comparison--stack .study-comparison__label {
+    display: block;
+    margin-bottom: 4px;
+    color: #37596c;
+    font-weight: 700;
+  }
+}

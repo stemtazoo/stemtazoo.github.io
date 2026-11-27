@@ -58,13 +58,33 @@ OSの判断で切り替える
 
 代表的な用語を整理すると、次のようになります。
 
-| 用語 | 判断のポイント |
-|---|---|
-| プリエンプティブ | OSが実行中タスクを中断して、別のタスクに切り替えられる |
-| ノンプリエンプティブ | 実行中タスクがCPUを手放すまで、他のタスクへ切り替えない |
-| ラウンドロビン方式 | 一定時間ごとに順番にCPUを割り当てる |
-| 優先順位方式 | 優先度が高いタスクを先に実行する |
-| 残余処理時間順方式 | 残りの処理時間が短いタスクを先に実行する |
+<table class="study-comparison study-comparison--stack" role="table" aria-label="用語・判断のポイント">
+  <thead role="rowgroup">
+    <tr role="row"><th role="columnheader" scope="col" id="fe-task-scheduling-definition-c0">用語</th><th role="columnheader" scope="col" id="fe-task-scheduling-definition-c1">判断のポイント</th></tr>
+  </thead>
+  <tbody role="rowgroup">
+    <tr role="row">
+      <th role="rowheader" scope="row" id="fe-task-scheduling-definition-r0" headers="fe-task-scheduling-definition-c0">プリエンプティブ</th>
+      <td role="cell" headers="fe-task-scheduling-definition-r0 fe-task-scheduling-definition-c1"><span class="study-comparison__label" aria-hidden="true">判断のポイント</span>OSが実行中タスクを中断して、別のタスクに切り替えられる</td>
+    </tr>
+    <tr role="row">
+      <th role="rowheader" scope="row" id="fe-task-scheduling-definition-r1" headers="fe-task-scheduling-definition-c0">ノンプリエンプティブ</th>
+      <td role="cell" headers="fe-task-scheduling-definition-r1 fe-task-scheduling-definition-c1"><span class="study-comparison__label" aria-hidden="true">判断のポイント</span>実行中タスクがCPUを手放すまで、他のタスクへ切り替えない</td>
+    </tr>
+    <tr role="row">
+      <th role="rowheader" scope="row" id="fe-task-scheduling-definition-r2" headers="fe-task-scheduling-definition-c0">ラウンドロビン方式</th>
+      <td role="cell" headers="fe-task-scheduling-definition-r2 fe-task-scheduling-definition-c1"><span class="study-comparison__label" aria-hidden="true">判断のポイント</span>一定時間ごとに順番にCPUを割り当てる</td>
+    </tr>
+    <tr role="row">
+      <th role="rowheader" scope="row" id="fe-task-scheduling-definition-r3" headers="fe-task-scheduling-definition-c0">優先順位方式</th>
+      <td role="cell" headers="fe-task-scheduling-definition-r3 fe-task-scheduling-definition-c1"><span class="study-comparison__label" aria-hidden="true">判断のポイント</span>優先度が高いタスクを先に実行する</td>
+    </tr>
+    <tr role="row">
+      <th role="rowheader" scope="row" id="fe-task-scheduling-definition-r4" headers="fe-task-scheduling-definition-c0">残余処理時間順方式</th>
+      <td role="cell" headers="fe-task-scheduling-definition-r4 fe-task-scheduling-definition-c1"><span class="study-comparison__label" aria-hidden="true">判断のポイント</span>残りの処理時間が短いタスクを先に実行する</td>
+    </tr>
+  </tbody>
+</table>
 
 タスクの状態は、ざっくり次のように考えると分かりやすいです。
 
