@@ -77,14 +77,37 @@ last_modified_at: 2026-11-27
 
 ジョブの処理では、主に次の時刻を使います。
 
-| 用語 | 意味 |
-|---|---|
-| 到着時刻 | ジョブがシステムへ到着した時刻 |
-| 開始時刻 | ジョブの実行が始まった時刻 |
-| 完了時刻 | ジョブの実行が終わった時刻 |
-| 処理時間 | 実際にCPUなどを使って処理した時間 |
-| 待ち時間 | 到着後、実行開始まで待った時間 |
-| ターンアラウンドタイム | 到着から完了までの時間 |
+<table class="study-comparison study-comparison--stack" role="table" aria-label="用語・意味">
+  <thead role="rowgroup">
+    <tr role="row"><th role="columnheader" scope="col" id="fe-turnaround-time-definition-c0">用語</th><th role="columnheader" scope="col" id="fe-turnaround-time-definition-c1">意味</th></tr>
+  </thead>
+  <tbody role="rowgroup">
+    <tr role="row">
+      <th role="rowheader" scope="row" id="fe-turnaround-time-definition-r0" headers="fe-turnaround-time-definition-c0">到着時刻</th>
+      <td role="cell" headers="fe-turnaround-time-definition-r0 fe-turnaround-time-definition-c1"><span class="study-comparison__label" aria-hidden="true">意味</span>ジョブがシステムへ到着した時刻</td>
+    </tr>
+    <tr role="row">
+      <th role="rowheader" scope="row" id="fe-turnaround-time-definition-r1" headers="fe-turnaround-time-definition-c0">開始時刻</th>
+      <td role="cell" headers="fe-turnaround-time-definition-r1 fe-turnaround-time-definition-c1"><span class="study-comparison__label" aria-hidden="true">意味</span>ジョブの実行が始まった時刻</td>
+    </tr>
+    <tr role="row">
+      <th role="rowheader" scope="row" id="fe-turnaround-time-definition-r2" headers="fe-turnaround-time-definition-c0">完了時刻</th>
+      <td role="cell" headers="fe-turnaround-time-definition-r2 fe-turnaround-time-definition-c1"><span class="study-comparison__label" aria-hidden="true">意味</span>ジョブの実行が終わった時刻</td>
+    </tr>
+    <tr role="row">
+      <th role="rowheader" scope="row" id="fe-turnaround-time-definition-r3" headers="fe-turnaround-time-definition-c0">処理時間</th>
+      <td role="cell" headers="fe-turnaround-time-definition-r3 fe-turnaround-time-definition-c1"><span class="study-comparison__label" aria-hidden="true">意味</span>実際にCPUなどを使って処理した時間</td>
+    </tr>
+    <tr role="row">
+      <th role="rowheader" scope="row" id="fe-turnaround-time-definition-r4" headers="fe-turnaround-time-definition-c0">待ち時間</th>
+      <td role="cell" headers="fe-turnaround-time-definition-r4 fe-turnaround-time-definition-c1"><span class="study-comparison__label" aria-hidden="true">意味</span>到着後、実行開始まで待った時間</td>
+    </tr>
+    <tr role="row">
+      <th role="rowheader" scope="row" id="fe-turnaround-time-definition-r5" headers="fe-turnaround-time-definition-c0">ターンアラウンドタイム</th>
+      <td role="cell" headers="fe-turnaround-time-definition-r5 fe-turnaround-time-definition-c1"><span class="study-comparison__label" aria-hidden="true">意味</span>到着から完了までの時間</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 待ち時間の計算
 
