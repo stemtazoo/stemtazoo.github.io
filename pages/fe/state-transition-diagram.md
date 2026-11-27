@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: システム開発技術
 fe_order: 100
 date: 2026-07-07
-last_modified_at: 2026-11-24
+last_modified_at: 2026-11-27
 image:
   path: "https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/state-transition-diagram.png"
   width: 1200
@@ -117,17 +117,39 @@ image:
 
 <div id="fe-state-demo" class="fe-state-demo" aria-label="設備制御の状態遷移を操作する教材">
   <p><strong>初期状態：停止中</strong></p>
-  <div class="fe-state-demo__states" aria-label="3つの状態。現在の状態は枠で強調">
-    <div class="fe-state-demo__state is-current" data-state="停止中" aria-current="step">停止中</div>
-    <div class="fe-state-demo__state" data-state="運転中">運転中</div>
-    <div class="fe-state-demo__state" data-state="異常停止">異常停止</div>
-  </div>
-  <p><strong>状態遷移図の矢印（イベント）</strong></p>
-  <ol class="fe-state-demo__transitions">
-    <li data-transition="停止中:起動">停止中 ──起動→ 運転中</li>
-    <li data-transition="運転中:異常検知">運転中 ──異常検知→ 異常停止</li>
-    <li data-transition="異常停止:リセット">異常停止 ──リセット→ 停止中</li>
-  </ol>
+  <svg class="fe-state-demo__diagram" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 224" width="280" height="224" role="img" aria-labelledby="fe-state-svg-title fe-state-svg-desc">
+    <title id="fe-state-svg-title">設備制御の状態遷移図</title>
+    <desc id="fe-state-svg-desc">停止中から起動で運転中へ、運転中から異常検知で異常停止へ、異常停止からリセットで停止中へ戻る。現在の状態は太い枠と「現在」、直前に通過した矢印は太線で示す。現在の状態と操作結果は図の下にも表示する。</desc>
+    <rect width="280" height="224" rx="8" fill="#fff"/>
+    <g class="fe-state-demo__edge" data-transition="停止中:起動">
+      <path d="M106 47 H174 M166 42 L174 47 L166 52"/>
+      <text x="140" y="32" text-anchor="middle">起動</text>
+    </g>
+    <g class="fe-state-demo__edge" data-transition="運転中:異常検知">
+      <path d="M223 76 V186 H189 M197 181 L189 186 L197 191"/>
+      <text x="210" y="132" text-anchor="end">異常検知</text>
+    </g>
+    <g class="fe-state-demo__edge" data-transition="異常停止:リセット">
+      <path d="M91 186 H57 V76 M52 84 L57 76 L62 84"/>
+      <text x="70" y="132">リセット</text>
+    </g>
+    <g class="fe-state-demo__node is-current" data-state="停止中" aria-current="step">
+      <rect x="8" y="22" width="98" height="54" rx="9"/>
+      <text x="57" y="44" text-anchor="middle">停止中</text>
+      <text class="fe-state-demo__current-label" x="57" y="64" text-anchor="middle">現在</text>
+    </g>
+    <g class="fe-state-demo__node" data-state="運転中">
+      <rect x="174" y="22" width="98" height="54" rx="9"/>
+      <text x="223" y="44" text-anchor="middle">運転中</text>
+      <text class="fe-state-demo__current-label" x="223" y="64" text-anchor="middle">現在</text>
+    </g>
+    <g class="fe-state-demo__node" data-state="異常停止">
+      <rect x="91" y="159" width="98" height="54" rx="9"/>
+      <text x="140" y="181" text-anchor="middle">異常停止</text>
+      <text class="fe-state-demo__current-label" x="140" y="201" text-anchor="middle">現在</text>
+    </g>
+  </svg>
+  <p class="fe-state-demo__legend">太い枠＋「現在」：今の状態 ／ 太い矢印：直前に通った遷移</p>
   <p>現在の状態：<strong data-current>停止中</strong></p>
   <label for="fe-state-prediction">次の状態を予想する（省略可）</label>
   <select id="fe-state-prediction" data-guess>
