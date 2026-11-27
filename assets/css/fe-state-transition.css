@@ -1,10 +1,15 @@
 .fe-state-demo{border:1px solid var(--border-color,#cbd5e1);border-radius:12px;padding:16px;margin:16px 0 24px;background:var(--main-bg,#fff)}
-.fe-state-demo__states{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:12px 0}
-.fe-state-demo__state{border:2px solid #aeb9c8;border-radius:10px;text-align:center;padding:12px 3px;font-weight:700;font-size:.93rem;overflow-wrap:anywhere}
-.fe-state-demo__state.is-current{border-color:#1463ae;background:#e4f2ff;color:#123d6b}
-.fe-state-demo__transitions{margin:8px 0 16px;padding-left:1.5em}
-.fe-state-demo__transitions li{padding:3px 4px;border-radius:5px}
-.fe-state-demo__transitions li.is-traversed{background:#e4f2ff;color:#123d6b;font-weight:700}
+.fe-state-demo__diagram{display:block;width:100%;max-width:420px;height:auto;margin:12px auto 6px}
+.fe-state-demo__node rect{fill:#f1f5f9;stroke:#64748b;stroke-width:1.5}
+.fe-state-demo__node text{fill:#263746;font-size:15px;font-weight:600}
+.fe-state-demo__node .fe-state-demo__current-label{font-size:13px;visibility:hidden}
+.fe-state-demo__node.is-current rect{fill:#e4f2ff;stroke:#1463ae;stroke-width:3}
+.fe-state-demo__node.is-current .fe-state-demo__current-label{visibility:visible;fill:#123d6b;font-weight:700}
+.fe-state-demo__edge path{fill:none;stroke:#475569;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.fe-state-demo__edge text{fill:#263746;font-size:14px}
+.fe-state-demo__edge.is-traversed path{stroke:#1463ae;stroke-width:3}
+.fe-state-demo__edge.is-traversed text{fill:#123d6b;font-weight:700}
+.fe-state-demo__legend{font-size:.9rem;line-height:1.5;margin:6px 0 12px}
 .fe-state-demo__controls{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
 .fe-state-demo button{min-height:44px;min-width:88px;padding:9px 13px;border:1px solid #2563a6;border-radius:8px;background:#1765a6;color:#fff;font:inherit;cursor:pointer}
 .fe-state-demo button[data-reset]{background:transparent;color:inherit;border-color:#8895a7}
@@ -14,4 +19,4 @@
 .fe-state-demo__result{border-radius:8px;background:var(--blockquote-bg,#f1f5f9);padding:10px 12px;margin-top:12px}
 .fe-state-demo__result p{margin:6px 0}
 .fe-state-demo [data-history]{margin:5px 0;padding-left:1.5em;max-height:180px;overflow:auto}
-@media(max-width:390px){.fe-state-demo{padding:12px}.fe-state-demo__states{gap:5px}.fe-state-demo__state{font-size:.81rem;padding:10px 2px}.fe-state-demo__controls button{flex:1 1 40%;min-width:0}}
+@media(max-width:390px){.fe-state-demo{padding:12px}.fe-state-demo__controls button{flex:1 1 40%;min-width:0}}
