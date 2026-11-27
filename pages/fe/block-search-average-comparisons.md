@@ -3,12 +3,17 @@ layout: page
 title: ブロック探索とは？平均比較回数を公式なしで求める方法【基本情報技術者試験】
 description: ブロック探索の平均比較回数を、公式の丸暗記ではなく「ブロックを探す」「ブロック内を探す」の2段階に分けて論理的に求める方法を解説します。
 permalink: /fe/block-search-average-comparisons/
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/block-search-average-comparisons.png
+  width: 1200
+  height: 630
+  alt: "ブロックを探す平均比較回数 n/(2m) とブロック内を探す平均比較回数 m/2 を足し合わせる図。"
 tags: [fe, fe-technology, algorithm, search]
 fe_section: テクノロジ系
 fe_subsection: アルゴリズムとプログラミング
 fe_order: 70
 date: 2026-07-13
-last_modified_at: 2026-09-20
+last_modified_at: 2026-11-27
 ---
 
 ## まず結論
@@ -29,6 +34,15 @@ last_modified_at: 2026-09-20
 です。
 
 大切なのは、**外側を半分、内側も半分探す**という考え方です。
+
+<picture>
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/block-search-average-comparisons.png"
+       width="1200" height="630"
+       alt="ブロックを探す平均比較回数 n/(2m) とブロック内を探す平均比較回数 m/2 を足し合わせる図。"
+       loading="lazy"
+       decoding="async"
+       style="display:block;width:100%;max-width:100%;height:auto;">
+</picture>
 
 このページでは、**ブロック探索の平均比較回数を求める計算**に絞っています。先頭から順番に探す基本は[線形探索](/fe/linear-search/)、探索範囲を半分ずつ絞る方法は[二分探索](/fe/binary-search/)で確認できます。
 
