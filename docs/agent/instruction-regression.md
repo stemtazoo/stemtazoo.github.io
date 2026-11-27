@@ -26,6 +26,11 @@ Behavioral dry runs produce decisions/outlines, not published test articles. Do 
 | GK-2 | Reorganize one GK portal branch. | Load GK index guide, use actual `pages/gk/Index.md`, inspect sibling/direct-parent placements, distinguish committed and deployed, check rendered visibility before completion. |
 | SHARED-1 | A cited RFC is superseded; a description is generic; low-traffic overlapping pages exist. | Shared source guide controls current/historical handling and repository-wide sweep; metadata guide controls specific description; evaluate learning purpose rather than automatic merge/deletion, and surface early judgment only if needed. |
 
+| MATH-FE | Block search formula uses raw bracket delimiters. | Follow shared editorial math rule; use double-dollar display math, preserve approximation and bit/pseudocode examples; verify phone rendering. |
+| MATH-GK | Loss formula and Python training code share an article. | Render mathematical formula with MathJax; keep executable code intact and preserve variable definitions. |
+| MATH-DS | Variance derivation uses a text fence and a NumPy example. | Render derivation as display math; retain denominator assumptions and runnable NumPy code; check narrow-screen wrapping. |
+| MATH-SG | Risk calculation appears beside a command and a short percentage. | Render standalone formula as math; keep commands and simple percentage in their appropriate formats; do not force unnecessary formula blocks. |
+
 ## Record results
 
 Keep dated run records under `docs/agent/regression-results/` (excluded from public site output). Record the base/updated commit, scenario IDs, evidence, pass/fail/blocked, execution method, unresolved concerns and deployment result. Avoid asserting a numeric score proves future agent reliability.
