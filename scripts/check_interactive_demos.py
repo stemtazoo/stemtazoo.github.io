@@ -140,21 +140,51 @@ def lock(page, expect):
 def two_phase(page, expect):
     root = '#fe-2pc-demo'
     selection(page, root, 'all')
+    graph = page.locator(root + ' .fe-2pc-demo__graph')
+
+    def check_graph(phase, preset):
+        expect(graph.locator('[data-2pc-phase]')).to_have_text(
+            ['開始前', '第1相：準備確認（未確定）', '第2相：最終決定'][phase])
+        for name in 'ABC':
+            node = graph.locator(f'[data-2pc-node="{name}"]')
+            expected = 'idle' if phase == 0 else (
+                ('no' if preset == 'one' and name == 'B' else 'ready') if phase == 1
+                else ('abort' if preset == 'one' else 'commit'))
+            expect(node).to_have_attribute('data-state', expected)
+            expect(node.locator('[data-2pc-status]')).to_have_text(
+                {'idle': '未確認', 'no': '準備NG', 'ready': '準備OK',
+                 'abort': '中止', 'commit': 'コミット'}[expected])
+            expect(node.locator('[data-2pc-detail]')).to_have_text(
+                '' if phase == 0 else '未確定' if phase == 1 else
+                'ロールバック' if preset == 'one' else '確定')
+            expect(graph.locator(f'[data-2pc-request="{name}"]')).to_have_attribute(
+                'visibility', 'hidden' if phase == 0 else 'visible')
+            expect(graph.locator(f'[data-2pc-reply="{name}"]')).to_have_attribute(
+                'visibility', 'visible' if phase == 1 else 'hidden')
+        assert graph.evaluate('el => el.scrollWidth <= el.clientWidth + 1')
+
+    check_graph(0, 'all')
     for preset, guess, verdict in [('one', 'abort', 'ABORT'), ('all', 'commit', 'COMMIT')]:
         page.locator(f'[data-preset="{preset}"]').click()
         selection(page, root, preset)
+        check_graph(0, preset)
         page.locator(f'input[name="fe-2pc-guess"][value="{guess}"]').check()
         expect(page.locator('#fe-2pc-guide')).to_contain_text('第1相へ：準備確認')
         page.locator('#fe-2pc-next').click()
+        check_graph(1, preset)
         expect(page.locator('#fe-2pc-guide')).to_contain_text('第2相へ：最終決定')
         expect(page.locator('#fe-2pc-status-A')).to_contain_text('未確定')
         page.locator('#fe-2pc-next').click()
+        check_graph(2, preset)
+        expect(graph.locator('[data-2pc-message]')).to_contain_text(verdict)
         expect(page.locator('#fe-2pc-decision')).to_contain_text(verdict)
         expect(page.locator('#fe-2pc-feedback')).to_contain_text('予想正解')
         expect(page.locator('#fe-2pc-next')).to_be_disabled()
         page.locator('#fe-2pc-prev').click()
+        check_graph(1, preset)
         expect(page.locator('#fe-2pc-status-A')).to_contain_text('未確定')
         page.locator('#fe-2pc-reset').click()
+        check_graph(0, preset)
         selection(page, root, preset)
     page.locator('[data-participant="A"]').select_option('no')
     selection(page, root, None)
