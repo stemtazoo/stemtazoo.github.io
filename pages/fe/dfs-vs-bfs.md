@@ -3,17 +3,31 @@ layout: page
 title: 深さ優先探索と幅優先探索の違いとは？探索順序とスタック・キュー【基本情報技術者試験】
 description: 深さ優先探索（DFS）と幅優先探索（BFS）を、同じ木の探索順序で比較します。深く進んで戻るDFSと、浅い層から調べるBFSをスタック・キューの取り出し順につなげて整理。最短経路を求められる条件、訪問済みの管理、隣接頂点の順序による違いを押さえ、科目Aの選択肢を判断します。
 permalink: /fe/dfs-vs-bfs/
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/dfs-vs-bfs.png
+  width: 1200
+  height: 630
+  alt: "同じ木を左から探索したときの初回訪問順を比較する図。DFSはA、B、D、G、E、C、Fの順、BFSはA、B、C、D、E、F、Gの順。"
 tags: [fe, fe-technology, algorithm, data-structure]
 fe_section: テクノロジ系
 fe_subsection: アルゴリズムとプログラミング
 fe_order: 45
 date: 2026-10-04
-last_modified_at: 2026-11-25
+last_modified_at: 2026-11-28
 ---
 
 ## まず結論
 
 **深さ優先探索（DFS）は、一つの経路を深く進み、先へ進めなくなったら戻って別の経路を調べます。幅優先探索（BFS）は、開始点から辺をたどる回数が少ない頂点から順に調べます。**
+
+<picture>
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/dfs-vs-bfs.png"
+       width="1200" height="630"
+       alt="同じ木を左から探索したときの初回訪問順を比較する図。DFSはA、B、D、G、E、C、Fの順、BFSはA、B、C、D、E、F、Gの順。"
+       loading="lazy"
+       decoding="async"
+       style="display:block;width:100%;max-width:100%;height:auto;">
+</picture>
 
 科目Aでは、次の対応が判断の手掛かりです。
 
