@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: 基礎理論
 fe_order: 40
 date: 2026-08-20
-last_modified_at: 2026-11-26
+last_modified_at: 2026-11-28
 image:
   path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/markov-process.png
   width: 1200
@@ -119,11 +119,40 @@ A → B
 
 ### 触って覚える：確率を次の状態へ移す
 
-状態AとBの2状態の例です。最初は全てAです。「次の時点へ」を押してA・Bの確率と掛け算、足し算の内訳を見てください。もう一度押すと、1回目の確率を使って次の確率を計算します。
+状態AとBの2状態の例です。最初は全てAです。「次の時点へ」を押して、図の中のA・Bの確率と掛け算、足し算の内訳を見てください。矢印の確率は変わりません。もう一度押すと、1回目の確率を使って次の確率を計算します。
 
 <link rel="stylesheet" href="{{ '/assets/css/first-step-demos.css' | relative_url }}">
 <div class="first-step-demo" data-first-step="markov" hidden>
-  <p>遷移確率：AからAへ70%、Bへ30%。BからAへ40%、Bへ60%。</p>
+  <svg class="first-step-demo__markov-graph" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 206" width="300" height="206" role="img" aria-labelledby="fe-markov-graph-title fe-markov-graph-desc">
+    <title id="fe-markov-graph-title">AとBの確率付き状態遷移図</title>
+    <desc id="fe-markov-graph-desc">AからAへ70%、AからBへ30%、BからAへ40%、BからBへ60%。矢印の遷移確率は固定で、状態内の確率は時点ごとに変化する。現在の確率と計算式は図の下にも表示する。</desc>
+    <defs>
+      <marker id="fe-markov-arrow" viewBox="0 0 8 8" markerWidth="7" markerHeight="7" refX="7" refY="4" orient="auto"><path d="M1 1 L7 4 L1 7" fill="none" stroke="#34465b" stroke-width="1.2"/></marker>
+    </defs>
+    <rect width="300" height="206" rx="8" fill="#fff"/>
+    <text class="markov-time" x="150" y="17" data-markov-time>時点0</text>
+    <g class="markov-edges" marker-end="url(#fe-markov-arrow)">
+      <path d="M47 88 C8 40 120 40 81 88"/>
+      <path d="M219 88 C180 40 292 40 253 88"/>
+      <path d="M104 104 Q150 74 196 104"/>
+      <path d="M196 139 Q150 169 104 139"/>
+    </g>
+    <g class="markov-edge-labels">
+      <text x="64" y="40">70%</text>
+      <text x="236" y="40">60%</text>
+      <text x="150" y="79">30%</text>
+      <text x="150" y="173">40%</text>
+    </g>
+    <rect x="24" y="88" width="80" height="72" rx="13" fill="#e2eefb" stroke="#527ba5" stroke-width="1.5"/>
+    <rect x="196" y="88" width="80" height="72" rx="13" fill="#e2f2e9" stroke="#4c806d" stroke-width="1.5"/>
+    <g class="markov-state-labels">
+      <text x="64" y="113">状態A</text><text x="236" y="113">状態B</text>
+      <text class="markov-value" x="64" y="143" data-markov-a>100%</text>
+      <text class="markov-value" x="236" y="143" data-markov-b>0%</text>
+    </g>
+    <text class="markov-note" x="150" y="196">矢印の確率は固定</text>
+  </svg>
+  <p class="first-step-demo__markov-legend">矢印の数値は移る確率（固定）、状態A・Bの中の数値は今その状態にいる確率（変化）です。</p>
   <div class="first-step-demo__actions">
     <button type="button" data-action="next">次の時点へ</button>
     <button type="button" data-action="reset">最初から</button>
