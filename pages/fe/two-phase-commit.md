@@ -237,6 +237,7 @@ A銀行：可       B銀行：不可
 .fe-2pc-demo__note{font-size:.9rem}
 .fe-2pc-demo :focus-visible{outline:3px solid #2563eb;outline-offset:2px}
 @media(max-width:560px){.fe-2pc-demo{padding:.65rem}}
+@media(max-width:360px){.fe-2pc-demo .fe-2pc-demo__actions{grid-template-columns:minmax(0,1fr)}}
 </style>
 <script>
 (function(){
