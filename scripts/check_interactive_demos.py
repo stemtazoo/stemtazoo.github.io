@@ -161,7 +161,17 @@ def two_phase(page, expect):
                 'visibility', 'hidden' if phase == 0 else 'visible')
             expect(graph.locator(f'[data-2pc-reply="{name}"]')).to_have_attribute(
                 'visibility', 'visible' if phase == 1 else 'hidden')
+        expect(graph.locator('.fe-2pc-demo__phases [aria-current="step"]')).to_have_count(1)
+        expect(graph.locator(f'#fe-2pc-phase-{phase}')).to_have_attribute('aria-current', 'step')
+        expect(page.locator(root + ' .fe-2pc-demo__cards')).to_have_count(0)
+        expect(page.locator(root + ' .fe-2pc-demo__sr-only')).to_have_count(1)
         assert graph.evaluate('el => el.scrollWidth <= el.clientWidth + 1')
+        assert page.locator('#fe-2pc-next').evaluate(
+            "el => getComputedStyle(el).backgroundColor === 'rgb(23, 100, 160)'")
+        assert page.locator('#fe-2pc-next').evaluate(
+            "el => Math.abs(el.getBoundingClientRect().width - el.parentElement.clientWidth) <= 2")
+        assert graph.evaluate("""el => Boolean(el.compareDocumentPosition(
+            document.querySelector('#fe-2pc-next')) & Node.DOCUMENT_POSITION_FOLLOWING)""")
 
     check_graph(0, 'all')
     for preset, guess, verdict in [('one', 'abort', 'ABORT'), ('all', 'commit', 'COMMIT')]:

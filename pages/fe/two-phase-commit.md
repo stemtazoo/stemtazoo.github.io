@@ -139,6 +139,56 @@ A銀行：可       B銀行：不可
     <label><input type="radio" name="fe-2pc-guess" value="commit">全員コミット</label>
     <label><input type="radio" name="fe-2pc-guess" value="abort">全員中止</label>
   </fieldset>
+  <figure class="fe-2pc-demo__graph">
+    <figcaption><strong>調停者と参加者の通信</strong></figcaption>
+  <ol class="fe-2pc-demo__phases" aria-label="2相コミットの処理段階">
+    <li id="fe-2pc-phase-0">開始前</li>
+    <li id="fe-2pc-phase-1">第1相</li>
+    <li id="fe-2pc-phase-2">第2相</li>
+  </ol>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 230" width="300" height="230" role="img" aria-labelledby="pc-graph-title pc-graph-desc">
+      <title id="pc-graph-title">2相コミットの通信と参加者の状態</title>
+      <desc id="pc-graph-desc">第1相は調停者から準備確認を送り参加者から回答を返す。第2相は調停者から全員へ確定または中止を指示する。図は各段階の通信をまとめた例で、障害や応答遅延は省略する。状態は下のテキストでも確認できる。</desc>
+      <rect width="300" height="230" rx="8" fill="#fff"/>
+      <rect x="6" y="8" width="288" height="60" rx="8" fill="#e2eefb" stroke="#527ba5"/>
+      <text x="150" y="31" class="pc-name">調停者</text>
+      <text x="150" y="51" data-2pc-message>まだ問い合わせていない</text>
+      <g data-2pc-request="A" visibility="hidden"><path d="M36 68 V108"/><path d="M31 101 L36 108 L41 101"/></g>
+      <g data-2pc-reply="A" visibility="hidden"><path d="M64 108 V68"/><path d="M59 75 L64 68 L69 75"/></g>
+      <g data-2pc-request="B" visibility="hidden"><path d="M136 68 V108"/><path d="M131 101 L136 108 L141 101"/></g>
+      <g data-2pc-reply="B" visibility="hidden"><path d="M164 108 V68"/><path d="M159 75 L164 68 L169 75"/></g>
+      <g data-2pc-request="C" visibility="hidden"><path d="M236 68 V108"/><path d="M231 101 L236 108 L241 101"/></g>
+      <g data-2pc-reply="C" visibility="hidden"><path d="M264 108 V68"/><path d="M259 75 L264 68 L269 75"/></g>
+      <g data-2pc-node="A" data-state="idle">
+        <rect x="6" y="108" width="88" height="62" rx="7"/>
+        <text x="50" y="128" class="pc-name">参加者A</text>
+        <text x="50" y="146" data-2pc-status="A">未確認</text>
+        <text x="50" y="161" data-2pc-detail="A"></text>
+      </g>
+      <g data-2pc-node="B" data-state="idle">
+        <rect x="106" y="108" width="88" height="62" rx="7"/>
+        <text x="150" y="128" class="pc-name">参加者B</text>
+        <text x="150" y="146" data-2pc-status="B">未確認</text>
+        <text x="150" y="161" data-2pc-detail="B"></text>
+      </g>
+      <g data-2pc-node="C" data-state="idle">
+        <rect x="206" y="108" width="88" height="62" rx="7"/>
+        <text x="250" y="128" class="pc-name">参加者C</text>
+        <text x="250" y="146" data-2pc-status="C">未確認</text>
+        <text x="250" y="161" data-2pc-detail="C"></text>
+      </g>
+      <text x="150" y="188" data-2pc-phase>開始前</text>
+      <text x="150" y="206" data-2pc-flow>通信なし</text>
+      <text x="150" y="222" data-2pc-flow-detail></text>
+    </svg>
+    <p class="fe-2pc-demo__graph-note">↓ 要求・指示　↑ 回答（各段階の通信をまとめて表示）</p>
+  </figure>
+  <div class="fe-2pc-demo__sr-only" aria-label="参加者ごとの状態">
+    <section><h4>参加者A</h4><p id="fe-2pc-status-A">未確認</p></section>
+    <section><h4>参加者B</h4><p id="fe-2pc-status-B">未確認</p></section>
+    <section><h4>参加者C</h4><p id="fe-2pc-status-C">未確認</p></section>
+  </div>
+  <p id="fe-2pc-decision" class="fe-2pc-demo__decision" aria-live="polite">調停者の決定：まだありません。</p>
   <p id="fe-2pc-guide" class="study-demo__guide" role="status" aria-live="polite">予想したら、すぐ下の「第1相へ：準備確認」を押してください。予想せずに進めることもできます。</p>
   <div class="fe-2pc-demo__actions study-demo__actions">
     <button type="button" id="fe-2pc-next">第1相へ：準備確認</button>
@@ -146,56 +196,7 @@ A銀行：可       B銀行：不可
     <button type="button" id="fe-2pc-reset">最初から</button>
   </div>
   <p id="fe-2pc-feedback" role="status" aria-live="polite">予想を選んで第1相へ進めてください。</p>
-  <figure class="fe-2pc-demo__graph">
-    <figcaption><strong>調停者と参加者の通信</strong></figcaption>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 286" width="300" height="286" role="img" aria-labelledby="pc-graph-title pc-graph-desc">
-      <title id="pc-graph-title">2相コミットの通信と参加者の状態</title>
-      <desc id="pc-graph-desc">第1相は調停者から準備確認を送り参加者から回答を返す。第2相は調停者から全員へ確定または中止を指示する。図は各段階の通信をまとめた例で、障害や応答遅延は省略する。状態は下のテキストでも確認できる。</desc>
-      <rect width="300" height="286" rx="8" fill="#fff"/>
-      <rect x="6" y="8" width="288" height="60" rx="8" fill="#e2eefb" stroke="#527ba5"/>
-      <text x="150" y="31" class="pc-name">調停者</text>
-      <text x="150" y="51" data-2pc-message>まだ問い合わせていない</text>
-      <g data-2pc-request="A" visibility="hidden"><path d="M36 68 V164"/><path d="M31 157 L36 164 L41 157"/></g>
-      <g data-2pc-reply="A" visibility="hidden"><path d="M64 164 V68"/><path d="M59 75 L64 68 L69 75"/></g>
-      <g data-2pc-request="B" visibility="hidden"><path d="M136 68 V164"/><path d="M131 157 L136 164 L141 157"/></g>
-      <g data-2pc-reply="B" visibility="hidden"><path d="M164 164 V68"/><path d="M159 75 L164 68 L169 75"/></g>
-      <g data-2pc-request="C" visibility="hidden"><path d="M236 68 V164"/><path d="M231 157 L236 164 L241 157"/></g>
-      <g data-2pc-reply="C" visibility="hidden"><path d="M264 164 V68"/><path d="M259 75 L264 68 L269 75"/></g>
-      <g data-2pc-node="A" data-state="idle">
-        <rect x="6" y="164" width="88" height="62" rx="7"/>
-        <text x="50" y="184" class="pc-name">参加者A</text>
-        <text x="50" y="202" data-2pc-status="A">未確認</text>
-        <text x="50" y="217" data-2pc-detail="A"></text>
-      </g>
-      <g data-2pc-node="B" data-state="idle">
-        <rect x="106" y="164" width="88" height="62" rx="7"/>
-        <text x="150" y="184" class="pc-name">参加者B</text>
-        <text x="150" y="202" data-2pc-status="B">未確認</text>
-        <text x="150" y="217" data-2pc-detail="B"></text>
-      </g>
-      <g data-2pc-node="C" data-state="idle">
-        <rect x="206" y="164" width="88" height="62" rx="7"/>
-        <text x="250" y="184" class="pc-name">参加者C</text>
-        <text x="250" y="202" data-2pc-status="C">未確認</text>
-        <text x="250" y="217" data-2pc-detail="C"></text>
-      </g>
-      <text x="150" y="244" data-2pc-phase>開始前</text>
-      <text x="150" y="262" data-2pc-flow>通信なし</text>
-      <text x="150" y="278" data-2pc-flow-detail></text>
-    </svg>
-    <p class="fe-2pc-demo__graph-note">下向き：調停者からの要求・指示。上向き：参加者からの回答。各段階の通信をまとめて表示します。</p>
-  </figure>
-  <ol class="fe-2pc-demo__phases" aria-label="2相コミットの処理段階">
-    <li id="fe-2pc-phase-0">開始前：調停者はまだ問い合わせていません。</li>
-    <li id="fe-2pc-phase-1">第1相：各参加者に準備できるか問い合わせる。</li>
-    <li id="fe-2pc-phase-2">第2相：全員OKならCOMMIT、1人でもNGならABORTを指示する。</li>
-  </ol>
-  <div class="fe-2pc-demo__cards" aria-label="参加者ごとの状態">
-    <section><h4>参加者A</h4><p id="fe-2pc-status-A">未確認</p></section>
-    <section><h4>参加者B</h4><p id="fe-2pc-status-B">未確認</p></section>
-    <section><h4>参加者C</h4><p id="fe-2pc-status-C">未確認</p></section>
-  </div>
-  <p id="fe-2pc-decision" class="fe-2pc-demo__decision" aria-live="polite">調停者の決定：まだありません。</p>
+
   <p class="fe-2pc-demo__note">第1相の「準備OK」は、まだコミット完了ではありません。第2相で調停者が最終決定を送り、全参加者の処理を確定または中止します。ケースを変えるとシミュレーションを最初からやり直します。</p>
 </div>
 <noscript><p>JavaScriptが使えない場合：全員OKなら「準備確認 → 全員コミット」、BだけNGなら「準備確認 → 全員中止」です。上の本文にも同じ例を掲載しています。</p></noscript>
@@ -225,17 +226,18 @@ A銀行：可       B銀行：不可
 .fe-2pc-demo__graph svg [data-2pc-request][data-decision="commit"] path{stroke:#357857;stroke-width:2.5}
 .fe-2pc-demo__graph svg [data-2pc-request][data-decision="abort"] path{stroke:#b33c32;stroke-width:2.5}
 .fe-2pc-demo__graph-note{font-size:.88rem;margin:.25rem 0}
-.fe-2pc-demo__phases{padding-left:1.5rem}
-.fe-2pc-demo__phases li{padding:.35rem;margin:.3rem 0;border-left:3px solid #94a3b8}
-.fe-2pc-demo__phases li.is-current{border-color:#2563eb;background:rgba(59,130,246,.1);font-weight:700}
-.fe-2pc-demo__cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.6rem}
-.fe-2pc-demo__cards section{border:1px solid #94a3b8;border-radius:8px;padding:.5rem;min-width:0}
-.fe-2pc-demo__cards h4{font-size:1rem;margin:0 0 .4rem}
-.fe-2pc-demo__cards p{margin:0;overflow-wrap:anywhere}
+.fe-2pc-demo__phases{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.35rem;list-style:none;margin:.5rem 0;padding:0}
+.fe-2pc-demo__phases li{margin:0;padding:.3rem .15rem;border:1px solid #cbd5e1;border-radius:5px;text-align:center;font-size:.85rem;min-width:0}
+.fe-2pc-demo__phases li.is-current{border:2px solid #1764a0;background:#e2eefb;color:#163d63;font-weight:700}
+.fe-2pc-demo__sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);clip-path:inset(50%);white-space:nowrap;border:0}
+.fe-2pc-demo .fe-2pc-demo__actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.5rem}
+.fe-2pc-demo .fe-2pc-demo__actions button{min-width:0;overflow-wrap:anywhere}
+.fe-2pc-demo #fe-2pc-next{grid-column:1/-1;background:#1764a0;color:#fff;border-color:#1764a0;font-weight:700}
 .fe-2pc-demo__decision{padding:.6rem;border-left:4px solid #2563eb;background:rgba(59,130,246,.08);font-weight:700}
 .fe-2pc-demo__note{font-size:.9rem}
 .fe-2pc-demo :focus-visible{outline:3px solid #2563eb;outline-offset:2px}
-@media(max-width:560px){.fe-2pc-demo{padding:.65rem}.fe-2pc-demo__cards{grid-template-columns:1fr}.fe-2pc-demo__actions button{flex:1 1 45%}}
+@media(max-width:560px){.fe-2pc-demo{padding:.65rem}}
+@media(max-width:360px){.fe-2pc-demo .fe-2pc-demo__actions{grid-template-columns:minmax(0,1fr)}}
 </style>
 <script>
 (function(){
@@ -258,7 +260,9 @@ A銀行：可       B銀行：不可
     for(let i=0;i<3;i++){
       const name=names[i],status=$("fe-2pc-status-"+name);
       status.textContent=phase===0?"未確認":phase===1?(selects[i].value==="yes"?"準備OK（未確定）":"準備NG（未確定）"):(result==="commit"?"コミット確定":"中止・ロールバック");
-      $("fe-2pc-phase-"+i).classList.toggle("is-current",phase===i);
+      const phaseItem=$("fe-2pc-phase-"+i);
+      phaseItem.classList.toggle("is-current",phase===i);
+      if(phase===i)phaseItem.setAttribute("aria-current","step");else phaseItem.removeAttribute("aria-current");
     }
     $("fe-2pc-decision").textContent=phase===0?"調停者の決定：まだありません。":phase===1?"調停者の決定：全員の回答を確認中。まだ最終決定していません。":"調停者の決定："+(result==="commit"?"全員にCOMMITを指示":"全員にABORTを指示");
     const graph=root.querySelector(".fe-2pc-demo__graph");
@@ -279,7 +283,7 @@ A銀行：可       B銀行：不可
       graph.querySelector('[data-2pc-reply="'+name+'"]').setAttribute("visibility",phase===1?"visible":"hidden");
     });
     $("fe-2pc-feedback").textContent=answer;
-    next.textContent=phase===0?"第1相へ：準備確認":"第2相へ：最終決定";
+    next.textContent=phase===0?"第1相へ：準備確認":phase===1?"第2相へ：最終決定":"全操作完了";
     StudyDemoUI.nextAction(next,$("fe-2pc-guide"),[
       "予想したら、すぐ下の「第1相へ：準備確認」を押してください。予想せずに進めることもできます。",
       "次は、すぐ下の「第2相へ：最終決定」を押して全体の結果を確認してください。",
