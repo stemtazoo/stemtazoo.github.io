@@ -131,6 +131,20 @@ If an interactive aid would not add meaningful learning value, say so briefly wh
 - Add a short instruction such as `見るポイント：...` so the learner knows what to observe.
 - Keep the interaction simpler than the concept it explains.
 
+### SVG diagrams and responsive visual relationships
+
+- Prefer inline SVG when the relative positions of nodes, arrow endpoints, branches, merges, time axes, loops or graph edges carry learning meaning, especially when ASCII diagrams require horizontal scrolling. Use semantic HTML tables or simple CSS for ordinary text, values and comparisons when sufficient. Do not retrofit all diagrams mechanically.
+- Use SVG + CSS for static diagrams; add JavaScript only when learner actions materially change the state or relationships. Use a viewBox, proportional sizing (width: 100%, height: auto), a sensible maximum width and local/scoped styles. Preserve the article's learning purpose and distinguish the diagram's role from the featured image.
+- Design for roughly 340 CSS pixels of available display width; verify actual content width, including padding, at 320 and 390 CSS pixel viewports and desktop. Avoid horizontal scrolling for the main diagram. Split independent comparisons into stacked panels on narrow screens instead of shrinking labels.
+- Keep arrowheads and endpoints semantically correct, labels legible and consistent in size, and text separated from arrows and nodes. Aim for about 8 CSS pixels of visible clearance where practical, not a fixed SVG coordinate distance; adjust geometry before reducing font size. Check actual rendered labels for clipping and overlap.
+- Use consistent colors for the same roles, with text, line weight, shape or labels as redundant cues. Provide accessible SVG names/descriptions and a text equivalent for essential information.
+- Derive dynamic SVG labels, highlighted nodes and visible edges from the same state used for calculations and feedback; synchronize next/back/reset/case changes and invalid operations. Distinguish fixed parameters from changing results, and actual wait edges from pending retries. Keep the diagram close to the controls.
+
+### Calculation and history presentation
+
+- When intermediate calculations are the learning objective, separate paths or calculation targets, show each operation and intermediate result, then emphasize the final result. Match the diagram's color semantics and avoid redundant visible cards while retaining accessible text.
+- For operation histories, separate the event from the before → after state when this improves clarity. Use one numbering mechanism, wrap long labels and keep the newest entry reachable. Use cards only when useful; simple histories may remain lists.
+
 ## Learning Design
 
 A good interactive aid should usually follow this flow:
@@ -263,6 +277,8 @@ For every new or modified interaction, record what was actually checked and what
 4. Smartphone layout, keyboard operation, readable contrast, and JavaScript-disabled fallback.
 5. Regression impact on other pages using the same CSS/JavaScript assets.
 6. GitHub Pages build and deployed page when available. Never equate a successful commit with a successful deployment.
+
+- When changing an existing registered lesson's DOM or UI, inspect its browser scenario and update affected assertions in the same PR. Preserve behavioral coverage; assert new visible values, relevant geometry/edge states, reset and boundaries rather than disabling obsolete checks. Review CI before recommending merge.
 
 #### Lightweight execution and reporting
 
