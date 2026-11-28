@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: ソフトウェア
 fe_order: 90
 date: 2026-08-02
-last_modified_at: 2026-08-29
+last_modified_at: 2026-11-28
 ---
 
 ## まず結論
@@ -142,13 +142,15 @@ last_modified_at: 2026-08-29
 
 修正費用の期待値は、次のように表せます。
 
-\[
-プログラム規模
-\times 潜在不良率
-\times 発見率
-\times 修正対象割合
-\times 1件当たり修正費用
-\]
+$$
+\begin{aligned}
+&\text{プログラム規模}\\
+&\quad\times\text{潜在不良率}\\
+&\quad\times\text{発見率}\\
+&\quad\times\text{修正対象割合}\\
+&\quad\times\text{1件当たり修正費用}
+\end{aligned}
+$$
 
 ### 計算例
 
