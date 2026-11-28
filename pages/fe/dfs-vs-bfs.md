@@ -21,6 +21,7 @@ last_modified_at: 2026-11-28
 **深さ優先探索（DFS）は、一つの経路を深く進み、先へ進めなくなったら戻って別の経路を調べます。幅優先探索（BFS）は、開始点から辺をたどる回数が少ない頂点から順に調べます。**
 
 <picture>
+  <source media="(max-width: 640px)" srcset="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/dfs-vs-bfs-mobile.png" width="1024" height="1536">
   <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/dfs-vs-bfs.png"
        width="1200" height="630"
        alt="同じ木を左から探索したときの初回訪問順を比較する図。DFSはA、B、D、G、E、C、Fの順、BFSはA、B、C、D、E、F、Gの順。"
