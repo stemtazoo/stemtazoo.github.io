@@ -8,7 +8,7 @@ fe_section: テクノロジ系
 fe_subsection: システム構成要素
 fe_order: 20
 date: 2026-08-12
-last_modified_at: 2026-11-22
+last_modified_at: 2026-11-28
 image:
   path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/mtbf-mttr.png
   width: 1200
@@ -32,7 +32,7 @@ MTTR
 → 小さいほどよい
 ```
 
-稼働時間を `t`、修理時間を `r` とすると、
+稼働時間を $t$、修理時間を $r$ とすると、
 
 ```text
 MTBF = 稼働時間 t の平均
@@ -67,12 +67,12 @@ MTBF・MTTRから求めた稼働率を、直列・並列構成へ広げる計算
 
 このとき、
 
-- `t1, t2, t3, ...` は、故障せずに動いていた時間
-- `r1, r2, r3, ...` は、故障してから直すまでの時間
+- $t_1,t_2,t_3,\ldots$ は、故障せずに動いていた時間
+- $r_1,r_2,r_3,\ldots$ は、故障してから直すまでの時間
 
 です。
 
-そのため、MTBFは `t` の平均、MTTRは `r` の平均になります。
+そのため、MTBFは $t$ の平均、MTTRは $r$ の平均になります。
 
 試験中は、次のように読むとシンプルです。
 
@@ -88,21 +88,21 @@ r = repair
 
 MTBFは **Mean Time Between Failures** の略で、日本語では平均故障間隔と呼ばれます。
 
-稼働時間が `t1, t2, ..., tn` のとき、
+稼働時間が $t_1,t_2,\ldots,t_n$ のとき、
 
-```text
-MTBF = (t1 + t2 + ... + tn) / n
-```
+$$
+\mathrm{MTBF}=\frac{t_1+t_2+\cdots+t_n}{n}
+$$
 
 です。
 
 一方、MTTRは **Mean Time To Repair** の略で、日本語では平均修理時間と呼ばれます。
 
-修理時間が `r1, r2, ..., rn` のとき、
+修理時間が $r_1,r_2,\ldots,r_n$ のとき、
 
-```text
-MTTR = (r1 + r2 + ... + rn) / n
-```
+$$
+\mathrm{MTTR}=\frac{r_1+r_2+\cdots+r_n}{n}
+$$
 
 です。
 
@@ -115,9 +115,9 @@ MTTR = (r1 + r2 + ... + rn) / n
 
 さらに、MTBFとMTTRから稼働率を求める代表的な式は次のとおりです。
 
-```text
-稼働率 = MTBF / (MTBF + MTTR)
-```
+$$
+\text{稼働率}=\frac{\mathrm{MTBF}}{\mathrm{MTBF}+\mathrm{MTTR}}
+$$
 
 直感的には、
 
@@ -185,7 +185,7 @@ MTTR = 平均(t)
 
 なら、役割が逆なので誤りです。
 
-また、`t + r` をそのままMTBFやMTTRとして平均している選択肢も、まず疑います。
+また、$t + r$ をそのままMTBFやMTTRとして平均している選択肢も、まず疑います。
 
 MTBFはあくまで**稼働時間の平均**、MTTRはあくまで**修理時間の平均**だからです。
 
@@ -238,11 +238,9 @@ MTTR = 100時間
 
 なら、
 
-```text
-稼働率 = 900 / (900 + 100)
-       = 0.9
-       = 90%
-```
+$$
+\begin{aligned}\text{稼働率}&=\frac{900}{900+100}\\&=0.9\\&=90\%\end{aligned}
+$$
 
 です。
 
@@ -290,7 +288,7 @@ MTTR
 - MTTRは小さいほどよい
 - ITILの保守性を問われたらMTRS（平均サービス回復時間）を選ぶ
 - MTBSIはサービス中断の間隔であり、回復時間ではない
-- 稼働率は `MTBF / (MTBF + MTTR)`
+- 稼働率は $\mathrm{MTBF}/(\mathrm{MTBF}+\mathrm{MTTR})$
 
 試験中は、まず
 
