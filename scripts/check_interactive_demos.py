@@ -1290,7 +1290,68 @@ def impurity_first_step(page, expect):
     assert root.locator('[data-calculation]').evaluate('el => el.scrollWidth <= el.clientWidth + 1')
 
 
-CHECKS = {'conditional-probability': conditional_first_step,
+def deadlock_wait_graph(page, expect):
+    root = page.locator('#fe-deadlock-demo')
+    graph = root.locator('.fe-deadlock-demo__graph')
+    step = root.locator('#fe-deadlock-step')
+    prev = root.locator('#fe-deadlock-prev')
+    reset = root.locator('#fe-deadlock-reset')
+    selector = root.locator('#fe-deadlock-case')
+    judgment = root.locator('#fe-deadlock-judgment')
+
+    def check(a, b, status):
+        expect(graph.locator('[data-deadlock-edge="A"]')).to_have_attribute(
+            'visibility', 'visible' if a else 'hidden')
+        expect(graph.locator('[data-deadlock-edge="B"]')).to_have_attribute(
+            'visibility', 'visible' if b else 'hidden')
+        expect(graph.locator('[data-deadlock-graph-status]')).to_have_text(status)
+        assert graph.evaluate('el => el.scrollWidth <= el.clientWidth + 1')
+
+    check(False, False, '待ち関係なし')
+    expect(prev).to_be_disabled()
+    step.press('Enter')
+    expect(graph.locator('[data-deadlock-held="A"]')).to_have_text('保持：X')
+    step.click()
+    expect(graph.locator('[data-deadlock-held="B"]')).to_have_text('保持：Y')
+    step.click()
+    check(True, False, '一方向の待ち')
+    expect(graph.locator('[data-deadlock-edge-label="A"]')).to_have_text('Yを待つ')
+    expect(judgment).to_contain_text('通常のロック待ち')
+    root.locator('input[value="blocked"]').check()
+    step.click()
+    check(True, True, '循環待ち：A → B → A')
+    expect(graph.locator('[data-deadlock-edge-label="B"]')).to_have_text('Xを待つ')
+    expect(judgment).to_contain_text('デッドロック発生')
+    expect(step).to_be_disabled()
+    expect(root.locator('#fe-deadlock-result')).to_contain_text('正解')
+    prev.click()
+    check(True, False, '一方向の待ち')
+    expect(step).to_be_enabled()
+    reset.click()
+    check(False, False, '待ち関係なし')
+    expect(graph.locator('[data-deadlock-held="A"]')).to_have_text('保持：なし')
+    selector.select_option('single')
+    step.click()
+    step.click()
+    check(False, True, '一方向の待ち')
+    step.click()
+    check(False, False, '解放済み・再要求待ち')
+    step.click()
+    expect(graph.locator('[data-deadlock-held="B"]')).to_have_text('保持：X')
+    check(False, False, '待ち関係なし')
+    step.click()
+    expect(step).to_be_disabled()
+    selector.select_option('ordered')
+    check(False, False, '待ち関係なし')
+    for _ in range(7):
+        step.click()
+        assert not graph.evaluate("el => el.classList.contains('is-cycle')")
+    expect(step).to_be_disabled()
+    check(False, False, '待ち関係なし')
+
+
+CHECKS = {'deadlock': deadlock_wait_graph,
+          'conditional-probability': conditional_first_step,
           'markov-process': markov_first_step,
           'full-adder': adder_first_step,
           'dropout': dropout_first_step,

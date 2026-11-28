@@ -13,7 +13,7 @@ fe_section: テクノロジ系
 fe_subsection: データベース
 fe_order: 40
 date: 2026-07-16
-last_modified_at: 2026-11-27
+last_modified_at: 2026-11-28
 ---
 
 ## まず結論
@@ -134,6 +134,36 @@ Bが処理を開始
       <h4>トランザクションB</h4><p id="fe-deadlock-b">保持：なし / 待ち：なし</p>
     </section>
   </div>
+  <figure class="fe-deadlock-demo__graph">
+    <figcaption><strong>待ちグラフ：誰が誰を待つ？</strong></figcaption>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200" width="280" height="200" role="img" aria-labelledby="deadlock-graph-title deadlock-graph-desc">
+      <title id="deadlock-graph-title">トランザクション間の待ち関係</title>
+      <desc id="deadlock-graph-desc">矢印は待つ側から資源を保持する側へ向かう。双方の矢印があると循環待ち。現在の関係は図の下にも表示する。</desc>
+      <rect width="280" height="200" rx="8" fill="#fff"/>
+      <g class="deadlock-node" data-deadlock-node="A">
+        <rect x="6" y="66" width="92" height="68" rx="9"/>
+        <text x="52" y="88" class="deadlock-node-title">A</text>
+        <text x="52" y="109" data-deadlock-held="A">保持：なし</text>
+        <text x="52" y="124" data-deadlock-wait="A">待ち：なし</text>
+      </g>
+      <g class="deadlock-node" data-deadlock-node="B">
+        <rect x="182" y="66" width="92" height="68" rx="9"/>
+        <text x="228" y="88" class="deadlock-node-title">B</text>
+        <text x="228" y="109" data-deadlock-held="B">保持：なし</text>
+        <text x="228" y="124" data-deadlock-wait="B">待ち：なし</text>
+      </g>
+      <g class="deadlock-edge" data-deadlock-edge="A" visibility="hidden">
+        <path d="M98 79 Q140 43 182 79 M174 77 L182 79 L180 71"/>
+        <text x="140" y="42" data-deadlock-edge-label="A"></text>
+      </g>
+      <g class="deadlock-edge" data-deadlock-edge="B" visibility="hidden">
+        <path d="M182 121 Q140 157 98 121 M106 123 L98 121 L100 129"/>
+        <text x="140" y="168" data-deadlock-edge-label="B"></text>
+      </g>
+      <text x="140" y="192" data-deadlock-graph-status>待ち関係なし</text>
+    </svg>
+    <p class="fe-deadlock-demo__graph-note">矢印：待つ側 → 保持している側</p>
+  </figure>
   <fieldset class="fe-deadlock-demo__prediction">
     <legend>予想：次のロック要求は？</legend>
     <label><input type="radio" name="fe-deadlock-guess" value="granted">取得できる</label>
@@ -149,8 +179,9 @@ Bが処理を開始
   <p id="fe-deadlock-result" role="status" aria-live="polite">初期状態：資源X・Yは空いています。</p>
   <p id="fe-deadlock-judgment" aria-live="polite">まだ循環待ちはありません。</p>
   <ol id="fe-deadlock-history" aria-label="操作履歴"><li>操作履歴はまだありません。</li></ol>
-  <p class="fe-deadlock-demo__note">ポイント：一方だけが待っていても、相手が処理を続けてロックを解放できるなら通常のロック待ちです。双方が相手のロックを保持したまま待つと循環待ちになります。</p>
+  <p class="fe-deadlock-demo__note">ポイント：一方だけが待っていても、相手が処理を続けてロックを解放できるなら通常のロック待ちです。双方が自分のロックを保持したまま相手のロックを待つと循環待ちになります。</p>
 </div>
+<noscript><p>JavaScriptが無効でも、AがXを保持してYを待ち、BがYを保持してXを待つと、A→B→Aの循環待ちになると確認できます。</p></noscript>
 
 <style>
 .fe-deadlock-demo{border:1px solid #94a3b8;border-radius:12px;padding:1rem;margin:1.2rem 0}
@@ -159,6 +190,17 @@ Bが処理を開始
 .fe-deadlock-demo__panel{border:1px solid #94a3b8;border-radius:8px;padding:.55rem;background:rgba(148,163,184,.08);min-width:0}
 .fe-deadlock-demo__panel h4{font-size:1rem;margin:0 0 .4rem}
 .fe-deadlock-demo__panel p{margin:0;overflow-wrap:anywhere}
+.fe-deadlock-demo__graph{margin:.7rem 0;padding:.5rem;border:1px solid #94a3b8;border-radius:8px;background:#fff;color:#263746}
+.fe-deadlock-demo__graph svg{display:block;width:100%;height:auto;max-width:420px;margin:0 auto}
+.fe-deadlock-demo__graph svg text{fill:#263746;text-anchor:middle;font-size:12px}
+.fe-deadlock-demo__graph .deadlock-node-title{font-size:17px;font-weight:700}
+.fe-deadlock-demo__graph .deadlock-node rect{fill:#e2eefb;stroke:#527ba5;stroke-width:1.5}
+.fe-deadlock-demo__graph .deadlock-edge path{fill:none;stroke:#526578;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.fe-deadlock-demo__graph .deadlock-edge text{font-size:14px;font-weight:600}
+.fe-deadlock-demo__graph.is-cycle .deadlock-edge path{stroke:#b33c32;stroke-width:3}
+.fe-deadlock-demo__graph.is-cycle .deadlock-node rect{fill:#fbe5e2;stroke:#b33c32;stroke-width:2}
+.fe-deadlock-demo__graph.is-cycle [data-deadlock-graph-status]{fill:#9c3029;font-weight:700}
+.fe-deadlock-demo__graph-note{font-size:.88rem;margin:.25rem 0}
 .fe-deadlock-demo__prediction{display:flex;flex-wrap:wrap;gap:.75rem;border:1px solid #94a3b8;border-radius:8px;padding:.7rem;margin:1rem 0}
 .fe-deadlock-demo__prediction legend{font-weight:700}
 .fe-deadlock-demo__next{padding:.65rem;border-left:4px solid #2563eb;background:rgba(59,130,246,.09);font-weight:700}
@@ -211,6 +253,21 @@ Bが処理を開始
     $("fe-deadlock-next").textContent=upcoming?"次の操作："+upcoming[0]+"が"+(upcoming[1]==="*"?"処理を完了しロック解除":upcoming[1]+"をロック要求"):"全操作が終了しました。";
     $("fe-deadlock-result").textContent=feedback||"初期状態：資源X・Yは空いています。";
     const waitingCount=Object.values(state.waiting).filter(Boolean).length;
+    const graph=root.querySelector(".fe-deadlock-demo__graph");
+    graph.classList.toggle("is-cycle",Boolean(state.cycle));
+    let visibleEdges=0;
+    for(const person of ["A","B"]){
+      const held=["X","Y"].filter(k=>state.owner[k]===person).join("・")||"なし";
+      const resource=state.waiting[person];
+      const blocker=resource&&state.owner[resource];
+      const visible=Boolean(blocker&&blocker!==person);
+      graph.querySelector('[data-deadlock-held="'+person+'"]').textContent="保持："+held;
+      graph.querySelector('[data-deadlock-wait="'+person+'"]').textContent="待ち："+(resource||"なし");
+      graph.querySelector('[data-deadlock-edge="'+person+'"]').setAttribute("visibility",visible?"visible":"hidden");
+      graph.querySelector('[data-deadlock-edge-label="'+person+'"]').textContent=visible?resource+"を待つ":"";
+      if(visible)visibleEdges++;
+    }
+    graph.querySelector("[data-deadlock-graph-status]").textContent=state.cycle?"循環待ち：A → B → A":visibleEdges?"一方向の待ち":waitingCount?"解放済み・再要求待ち":"待ち関係なし";
     $("fe-deadlock-judgment").textContent=state.cycle?"デッドロック発生！ A→B→Aの循環待ちです。":waitingCount?"通常のロック待ち（現時点では循環なし）です。":"循環待ちはありません。";
     const history=$("fe-deadlock-history");history.replaceChildren();
     (state.events.length?state.events:["操作履歴はまだありません。"]).forEach(message=>{
