@@ -9,7 +9,7 @@ ds_area: datascience
 ds_section: statistics
 prev: /ds/bayes-theorem/
 next: /ds/binomial-bernoulli/
-last_modified_at: 2026-08-13
+last_modified_at: 2026-11-28
 ---
 <div style="font-size: 14px; margin-bottom: 12px;">
   <a href="/ds/">DS検定トップ</a>
@@ -74,9 +74,9 @@ $$
 
 式の意味だけ理解しましょう。
 
-- \(\binom{n}{x}\)：成功がx回起こる「並び方の数」
-- \(p^x\)：成功がx回起こる確率
-- \((1-p)^{n-x}\)：失敗が残り回起こる確率
+- $\binom{n}{x}$：成功がx回起こる「並び方の数」
+- $p^x$：成功がx回起こる確率
+- $(1-p)^{n-x}$：失敗が残り回起こる確率
 
 つまり、
 
