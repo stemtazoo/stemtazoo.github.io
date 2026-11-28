@@ -3,16 +3,28 @@ layout: page
 title: "リスク対応とは？基本概念と4つの分類を整理【SG試験】"
 description: リスク対応は、リスク評価の結果をもとに、リスクを低減・回避・移転・受容のどれで扱うかを決めて実行することです。リスクアセスメントとの違い、保険や委託による移転、対策実施後の残留リスクをSG試験向けに整理します。科目Aの用語理解と科目Bのケース判断で迷いやすい表現も確認します。
 permalink: /sg/risk-treatment/
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/sg/risk-treatment.png
+  width: 1200
+  height: 630
+  alt: "リスク対応の4分類。回避は活動をやめる、低減は発生確率や影響を下げる、移転は損失負担を移す、受容は評価・承認のうえ受け入れる。"
 tags: [sg, sg-security-management, risk_assessment, it_security_operations]
 prev: /sg/risk-response-cia/
 next: /sg/rootkit/
-last_modified_at: 2026-10-21
+last_modified_at: 2026-11-28
 ---
 
 ## まず結論
 
 リスク対応とは、リスク評価の結果をもとに「そのリスクをどう扱うか（減らす・避ける・移転する・受け入れる）」を決めて実行することです。
 SG試験では「その対策がどの種類のリスク対応か」を判断させる問題がよく出ます。
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/sg/risk-treatment.png"
+       alt="リスク対応の4分類。回避は活動をやめる、低減は発生確率や影響を下げる、移転は損失負担を移す、受容は評価・承認のうえ受け入れる。"
+       width="1200" height="630" loading="lazy" decoding="async"
+       style="display:block;width:100%;max-width:100%;height:auto;">
+</figure>
 
 ---
 
