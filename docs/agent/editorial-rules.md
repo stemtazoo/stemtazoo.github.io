@@ -59,6 +59,11 @@ Use these FE pilot examples as references for presentation, not proof that every
 - [Defect repair cost](https://stemtazoo.github.io/fe/defect-repair-cost-expected-value/): use \text for Japanese units, \% for percentages, and fractions for per-unit rates when unit cancellation aids learning. Split long products vertically and align steps rather than reducing font size. Keep problem inputs and procedural diagrams intact.
 - [Graph theory](https://stemtazoo.github.io/fe/graph-theory-basics/): Japanese mathematical labels and short inline equations may coexist naturally.
 
+- [Binomial distribution](https://stemtazoo.github.io/ds/bernoulli-binomial/) and [Power law](https://stemtazoo.github.io/ds/power-law/): render binomial coefficients and exponents as math; check math in expanded answer disclosures, not just the main text. Distinguish individual pattern probability from total probability.
+- [Series and parallel availability](https://stemtazoo.github.io/fe/series-parallel-system-availability/): use aligned for side-by-side conceptual comparison in separate rows, with consistent labels and subscripts; state independence assumptions.
+- [Finite fractions and radix](https://stemtazoo.github.io/fe/finite-fraction-radix/): use subscripts for numeral bases and fractions for place values; preserve digit-conversion diagrams and apply denominator tests to reduced fractions.
+- [Economic order quantity](https://stemtazoo.github.io/fe/economic-order-quantity/): use nested square roots and fractions for formulas and show derivation steps; verify mobile width and retain model assumptions.
+
 These patterns were observed in Android Chrome screenshots on 2026-11-28. Unshown regions, desktop, and interactive operation require separate verification. Keep audit evidence in study-site-audit.
 
 ## New Article Decision Workflow
