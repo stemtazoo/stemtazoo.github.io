@@ -3,17 +3,31 @@ layout: page
 title: 二分木の走査とは？先行順・中間順・後行順の違い【基本情報技術者試験】
 description: 二分木の走査を、根を記録するタイミングで整理します。同じ木から先行順・中間順・後行順を求め、左部分木全体を処理する意味を確認。幅優先のレベル順との違いや、二分探索木を中間順でたどると昇順になる理由、子が片方だけの場合の扱いを押さえ、科目Aの順序問題に備えます。
 permalink: /fe/binary-tree-traversal/
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/binary-tree-traversal.png
+  width: 1200
+  height: 630
+  alt: "同じ二分木で先行順・中間順・後行順を比較し、根Aを記録する位置が最初・途中・最後になる違いを示す図。"
 tags: [fe, fe-technology, algorithm, data-structure]
 fe_section: テクノロジ系
 fe_subsection: アルゴリズムとプログラミング
 fe_order: 50
 date: 2026-10-04
-last_modified_at: 2026-11-03
+last_modified_at: 2026-11-28
 ---
 
 ## まず結論
 
 **二分木の走査は、木の各節点を決められた順序で処理することです。** 代表的な先行順・中間順・後行順は、左部分木と右部分木を調べる間の、どの時点で根を処理するかが異なります。
+
+<picture>
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/binary-tree-traversal.png"
+       width="1200" height="630"
+       alt="同じ二分木で先行順・中間順・後行順を比較し、根Aを記録する位置が最初・途中・最後になる違いを示す図。"
+       loading="lazy"
+       decoding="async"
+       style="display:block;width:100%;max-width:100%;height:auto;">
+</picture>
 
 このページでは「処理する」を、**節点の名前を一度記録すること**として説明します。
 
