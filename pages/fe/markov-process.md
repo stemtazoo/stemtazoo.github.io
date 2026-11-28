@@ -125,7 +125,7 @@ A → B
 <div class="first-step-demo" data-first-step="markov" hidden>
   <svg class="first-step-demo__markov-graph" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 206" width="300" height="206" role="img" aria-labelledby="fe-markov-graph-title fe-markov-graph-desc">
     <title id="fe-markov-graph-title">AとBの確率付き状態遷移図</title>
-    <desc id="fe-markov-graph-desc">AからAへ70%、AからBへ30%、BからAへ40%、BからBへ60%。矢印の遷移確率は固定で、状態内の確率は時点ごとに変化する。現在の確率と計算式は図の下にも表示する。</desc>
+    <desc id="fe-markov-graph-desc">AからAへ70%、AからBへ30%、BからAへ40%、BからBへ60%。矢印の遷移確率は固定で、状態内の確率は時点ごとに変化する。状態確率は図の下の結果文でも確認でき、計算式は到達先ごとに表示する。</desc>
     <defs>
       <marker id="fe-markov-arrow" viewBox="0 0 8 8" markerWidth="7" markerHeight="7" refX="7" refY="4" orient="auto"><path d="M1 1 L7 4 L1 7" fill="none" stroke="#34465b" stroke-width="1.2"/></marker>
     </defs>
@@ -157,8 +157,7 @@ A → B
     <button type="button" data-action="next">次の時点へ</button>
     <button type="button" data-action="reset">最初から</button>
   </div>
-  <ul class="first-step-demo__cards" data-board aria-label="各状態の確率"></ul>
-  <div data-calculation></div>
+  <div data-calculation aria-label="到達先ごとの計算内訳"></div>
   <p role="status" data-result></p>
 </div>
 <noscript><p>初期A＝100%、B＝0%。1回後はA＝70%、B＝30%。2回後のAは70%×0.7＋30%×0.4＝61%、Bは39%です。</p></noscript>

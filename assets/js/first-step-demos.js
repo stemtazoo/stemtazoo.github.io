@@ -266,7 +266,7 @@
     let time, a, b;
 
     function draw(previous) {
-      renderList(board, ["状態A：" + format(a * 100) + "%", "状態B：" + format(b * 100) + "%"]);
+      if (board) renderList(board, ["状態A：" + format(a * 100) + "%", "状態B：" + format(b * 100) + "%"]);
       const graphValues = {
         "[data-markov-time]": "時点" + time,
         "[data-markov-a]": format(a * 100) + "%",
@@ -280,17 +280,55 @@
       if (previous) {
         const [oldA, oldB] = previous;
         const terms = [[0.7, 0.4, a], [0.3, 0.6, b]];
+        const heading = document.createElement("p");
+        heading.className = "markov-calc-heading";
+        heading.textContent = "時点" + (time - 1) + " → 時点" + time + " の計算内訳";
+        calculation.append(heading);
         terms.forEach(([fromA, fromB, value], i) => {
-          const line = document.createElement("p");
-          line.textContent = "状態" + ["A", "B"][i] + "：" + format(oldA * 100) + "% × " + fromA
-            + " ＋ " + format(oldB * 100) + "% × " + fromB + " ＝ " + format(value * 100) + "%";
-          calculation.append(line);
+          const target = ["A", "B"][i];
+          const card = document.createElement("section");
+          card.className = "markov-calc-card markov-calc-card--" + target.toLowerCase();
+          const title = document.createElement("p");
+          title.className = "markov-calc-title";
+          title.textContent = "状態" + target + "への到達確率";
+          card.append(title);
+          const paths = [
+            ["A", oldA, fromA],
+            ["B", oldB, fromB]
+          ];
+          const parts = paths.map(([source, probability, rate]) => {
+            const contribution = probability * rate;
+            const row = document.createElement("div");
+            row.className = "markov-calc-path";
+            const label = document.createElement("span");
+            label.className = "markov-calc-route";
+            label.textContent = source + " → " + target;
+            const formula = document.createElement("span");
+            formula.className = "markov-calc-formula";
+            formula.textContent = format(probability * 100) + "% × " + rate + " ＝ " + format(contribution * 100) + "%";
+            row.append(label, formula);
+            card.append(row);
+            return contribution;
+          });
+          const summary = document.createElement("div");
+          summary.className = "markov-calc-sum";
+          const sumLabel = document.createElement("p");
+          sumLabel.textContent = "2つの経路を足し合わせる";
+          const equation = document.createElement("strong");
+          equation.textContent = format(parts[0] * 100) + "% ＋ " + format(parts[1] * 100) + "% ＝ " + format(value * 100) + "%";
+          summary.append(sumLabel, equation);
+          card.append(summary);
+          calculation.append(card);
         });
+        const total = document.createElement("p");
+        total.className = "markov-calc-total";
+        total.textContent = "状態A・Bの合計： " + format((a + b) * 100) + "%";
+        calculation.append(total);
       }
       button("next").disabled = time === 3;
       result.textContent = time === 0
-        ? "時点0。Aから始まります。「次の時点へ」を押してください。"
-        : "時点" + time + "。各到達先への確率を掛けて足しました。合計は100%。"
+        ? "時点0。状態A：100%、状態B：0%。「次の時点へ」を押してください。"
+        : "時点" + time + "。状態A：" + format(a * 100) + "%、状態B：" + format(b * 100) + "%。各経路の確率を掛けて足しました。"
           + (time === 3 ? "この教材は3回までの例です。「最初から」で戻れます。" : "");
     }
 

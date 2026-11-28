@@ -1171,18 +1171,60 @@ def conditional_first_step(page, expect):
 
 def markov_first_step(page, expect):
     root = page.locator('[data-first-step="markov"]')
-    board = root.locator('[data-board] li')
     step = root.locator('[data-action="next"]')
+    calculation = root.locator('[data-calculation]')
+    cards = calculation.locator('.markov-calc-card')
+    graph = root.locator('.first-step-demo__markov-graph')
+    result = root.locator('[data-result]')
+
+    def check_state(time, a, b):
+        expect(graph.locator('[data-markov-time]')).to_have_text(f'時点{time}')
+        expect(graph.locator('[data-markov-a]')).to_have_text(a)
+        expect(graph.locator('[data-markov-b]')).to_have_text(b)
+        expect(graph.locator('.markov-edge-labels text')).to_have_text(
+            ['70%', '60%', '30%', '40%'])
+        expect(result).to_contain_text(f'状態A：{a}、状態B：{b}')
+
+    def check_calculation(time, formulas_a, formulas_b, sum_a, sum_b):
+        expect(calculation.locator('.markov-calc-heading')).to_have_text(
+            f'時点{time - 1} → 時点{time} の計算内訳')
+        expect(cards).to_have_count(2)
+        for target, formulas, total in [('a', formulas_a, sum_a), ('b', formulas_b, sum_b)]:
+            card = calculation.locator(f'.markov-calc-card--{target}')
+            expect(card.locator('.markov-calc-title')).to_have_text(
+                f'状態{target.upper()}への到達確率')
+            expect(card.locator('.markov-calc-route')).to_have_text(
+                [f'A → {target.upper()}', f'B → {target.upper()}'])
+            expect(card.locator('.markov-calc-formula')).to_have_text(formulas)
+            expect(card.locator('.markov-calc-sum strong')).to_have_text(total)
+            assert card.evaluate('el => el.scrollWidth <= el.clientWidth + 1')
+        expect(calculation.locator('.markov-calc-total')).to_have_text('状態A・Bの合計： 100%')
+        assert calculation.evaluate('el => el.scrollWidth <= el.clientWidth + 1')
+
+    check_state(0, '100%', '0%')
+    expect(cards).to_have_count(0)
+    expect(step).to_be_enabled()
+    expect(root.locator('[data-board]')).to_have_count(0)
     step.press('Enter')
-    expect(board).to_have_text(['状態A：70%', '状態B：30%'])
+    check_state(1, '70%', '30%')
+    check_calculation(1, ['100% × 0.7 ＝ 70%', '0% × 0.4 ＝ 0%'],
+                      ['100% × 0.3 ＝ 30%', '0% × 0.6 ＝ 0%'],
+                      '70% ＋ 0% ＝ 70%', '30% ＋ 0% ＝ 30%')
     step.click()
-    expect(board).to_have_text(['状態A：61%', '状態B：39%'])
-    expect(root.locator('[data-calculation]')).to_contain_text('70% × 0.7 ＋ 30% × 0.4 ＝ 61%')
+    check_state(2, '61%', '39%')
+    check_calculation(2, ['70% × 0.7 ＝ 49%', '30% × 0.4 ＝ 12%'],
+                      ['70% × 0.3 ＝ 21%', '30% × 0.6 ＝ 18%'],
+                      '49% ＋ 12% ＝ 61%', '21% ＋ 18% ＝ 39%')
     step.click()
+    check_state(3, '58.3%', '41.7%')
+    check_calculation(3, ['61% × 0.7 ＝ 42.7%', '39% × 0.4 ＝ 15.6%'],
+                      ['61% × 0.3 ＝ 18.3%', '39% × 0.6 ＝ 23.4%'],
+                      '42.7% ＋ 15.6% ＝ 58.3%', '18.3% ＋ 23.4% ＝ 41.7%')
     expect(step).to_be_disabled()
-    expect(root.locator('[data-result]')).to_contain_text('3回まで')
+    expect(result).to_contain_text('3回まで')
     root.locator('[data-action="reset"]').click()
-    expect(board).to_have_text(['状態A：100%', '状態B：0%'])
+    check_state(0, '100%', '0%')
+    expect(calculation).to_be_empty()
     expect(step).to_be_enabled()
 
 
