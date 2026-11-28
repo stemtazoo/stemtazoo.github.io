@@ -264,5 +264,14 @@
       "selector": "noscript p",
       "text": "ジニ不純度0.5"
     }
+  },
+  "deadlock": {
+    "source": "pages/fe/deadlock.md",
+    "root": "#fe-deadlock-demo",
+    "url": "/fe/deadlock/",
+    "static": {
+      "selector": "noscript p",
+      "text": "循環待ち"
+    }
   }
 }
