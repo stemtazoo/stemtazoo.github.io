@@ -21,7 +21,10 @@ image:
 データベース正規化とは、**データの重複を減らし、更新・挿入・削除のときに起こる不整合を防ぐために、表を適切に分ける考え方**です。
 
 <figure style="margin:16px 0 20px;">
-  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/database-normalization.png" width="1200" height="630" alt="顧客情報を抜粋した注文表の分割前と分割後の比較。顧客C01の名前の更新が3か所から顧客表の1か所になり、顧客番号は表をつなぐキーとして残る。" style="display:block;width:100%;max-width:100%;height:auto;">
+  <picture>
+    <source media="(max-width: 640px)" srcset="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/database-normalization-mobile.png" width="1024" height="1536">
+    <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/database-normalization.png" width="1200" height="630" alt="顧客情報を抜粋した注文表の分割前と分割後の比較。顧客C01の名前の更新が3か所から顧客表の1か所になり、顧客番号は表をつなぐキーとして残る。" style="display:block;width:100%;max-width:100%;height:auto;">
+  </picture>
 </figure>
 
 FE試験では、まず第3正規形までを判断できれば十分です。
