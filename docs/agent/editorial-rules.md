@@ -48,6 +48,19 @@ Do not use raw \[ ... \] as display delimiters in ordinary Markdown: kramdown ma
 - Verify the changed source, built HTML, and actual rendered desktop and mobile page (around 340px article width), including fractions, signs, superscripts, units and wrapping. Report separately if any check is unavailable. A successful build does not prove MathJax rendered.
 - For existing articles, prioritize visibly broken formulas first, then math-only code blocks with clear readability gains. Review candidates individually; leave actual code and useful plain text intact. Cross-theme audit records belong in study-site-audit; do not bulk-rewrite articles solely because this rule was introduced.
 
+
+### Verified mathematical rendering patterns
+
+Use these FE pilot examples as references for presentation, not proof that every page or device renders correctly:
+
+- [Electric power and energy](https://stemtazoo.github.io/fe/electric-power-energy-wh/): use \mathrm{W} and \mathrm{Wh} for Latin unit symbols and \text{力率} for Japanese labels. Preserve the distinction between quantities and units.
+- [Communication paths](https://stemtazoo.github.io/fe/communication-paths-combination/) and [M/M/1](https://stemtazoo.github.io/fe/mm1-queueing-model/): use aligned for multi-step derivations, align relation signs, and keep subscripts consistent between formulas and summaries. Keep stability conditions with steady-state queue formulas.
+- [Normal distribution table](https://stemtazoo.github.io/fe/normal-distribution-table/): simple numeric values belong in plain prose, not inline code. Use inline math for meaningful mathematical symbols and table-cell equations; distinguish signed values from absolute distances. Check table scrolling separately.
+- [Defect repair cost](https://stemtazoo.github.io/fe/defect-repair-cost-expected-value/): use \text for Japanese units, \% for percentages, and fractions for per-unit rates when unit cancellation aids learning. Split long products vertically and align steps rather than reducing font size. Keep problem inputs and procedural diagrams intact.
+- [Graph theory](https://stemtazoo.github.io/fe/graph-theory-basics/): Japanese mathematical labels and short inline equations may coexist naturally.
+
+These patterns were observed in Android Chrome screenshots on 2026-11-28. Unshown regions, desktop, and interactive operation require separate verification. Keep audit evidence in study-site-audit.
+
 ## New Article Decision Workflow
 
 Consult relevant decisions in [study-site-audit](https://github.com/stemtazoo/study-site-audit) before creating a page. Check the recorded source commit and article hashes; old decisions supplement, rather than replace, the current four-theme search and learning-purpose comparison. If the audit repository is unavailable or no decision exists, continue these checks in the site repository. Record the compared pages, their distinct learning purposes, and the new/update/no-change reason.
