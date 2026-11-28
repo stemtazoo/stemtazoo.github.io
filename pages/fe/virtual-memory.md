@@ -3,12 +3,17 @@ layout: page
 title: 仮想記憶とは？主記憶・ページファイルとメモリ不足の切り分け【基本情報技術者試験】
 description: 仮想記憶を、プログラムが使うアドレスと物理メモリを分けて管理する仕組みとして整理します。RAM増設、ページファイルの拡張、ディスクの空き容量確保で何が変わるかを比較し、メモリ不足への一時対応と高速化の違いを、FE科目Aの判断基準として確認します。
 permalink: /fe/virtual-memory/
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/virtual-memory.png
+  width: 1200
+  height: 630
+  alt: "主記憶（RAM）を机、ページファイルを棚にたとえた図。資料を出し入れして利用できるが、棚の利用枠を広げても机の広さは変わらない。"
 tags: [fe, fe-technology, computer-system]
 fe_section: テクノロジ系
 fe_subsection: コンピュータシステム
 fe_order: 250
 date: 2026-10-02
-last_modified_at: 2026-11-03
+last_modified_at: 2026-11-28
 related_articles:
   - /fe/memory-management-methods/
   - /fe/paging/
@@ -22,6 +27,13 @@ related_articles:
 **仮想記憶は、プログラムが使うアドレスと実際の主記憶上の位置を分けて管理する仕組み**です。補助記憶も利用することで、物理メモリより大きな記憶領域を扱えるようになります。
 
 FE科目Aでは、**仮想記憶のための領域を増やすことと、RAMを増設することは別**と押さえます。ディスクの空き容量を増やすだけでも、RAMが増えるわけではありません。
+
+<img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/fe/virtual-memory.png"
+     width="1200" height="630"
+     alt="主記憶（RAM）を机、ページファイルを棚にたとえた図。資料を出し入れして利用できるが、棚の利用枠を広げても机の広さは変わらない。"
+     loading="lazy"
+     decoding="async"
+     style="display:block;width:100%;max-width:100%;height:auto;">
 
 ## 直感的な説明
 
