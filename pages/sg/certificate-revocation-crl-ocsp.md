@@ -3,15 +3,27 @@ layout: page
 title: "証明書失効（CRL / OCSP）とは？無効な証明書の見分け方【SG試験】"
 description: "証明書失効を、秘密鍵漏えいや所属変更などにより有効期限前のデジタル証明書を無効にする処理として整理します。認証局が公開する失効証明書一覧を取得するCRLと、証明書の状態をオンラインで照会するOCSPを比較し、有効期限内なら必ず信頼できる、CRLとOCSPは同じ仕組みというSG試験の誤答を見抜きます。"
 permalink: /sg/certificate-revocation-crl-ocsp/
+image:
+  path: https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/sg/certificate-revocation-crl-ocsp.png
+  width: 1200
+  height: 630
+  alt: "証明書失効の確認方法の比較。CRLは失効証明書の一覧で確認し、OCSPは証明書ごとにオンラインで状態を照会する。"
 prev: /sg/self-signed-certificate/
 next: /sg/secure-protocol/
 tags: [sg, crypto_auth, sg-security-overview, network]
-last_modified_at: 2026-09-26
+last_modified_at: 2026-11-28
 ---
 
 ## まず結論
 - 証明書失効は「有効期限内でも使えなくする仕組み」  
 - SG試験では「証明書の状態確認の方法」を判断させる問題が多い
+
+<figure style="margin:16px 0 20px;">
+  <img src="https://filedn.com/lT3xytsFKGXmaz5GJGqwvRz/stemtazoo/eyecatch/sg/certificate-revocation-crl-ocsp.png"
+       alt="証明書失効の確認方法の比較。CRLは失効証明書の一覧で確認し、OCSPは証明書ごとにオンラインで状態を照会する。"
+       width="1200" height="630" loading="lazy" decoding="async"
+       style="display:block;width:100%;max-width:100%;height:auto;">
+</figure>
 
 ---
 
